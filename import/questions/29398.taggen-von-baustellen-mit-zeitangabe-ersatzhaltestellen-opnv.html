@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Taggen von Baustellen (mit Zeitangabe) / Ersatzhaltestellen ÖPNV - OSM Help</title>
+        <meta name="description" content="Hallo, in der Stadt, die ich intensiv &#39;tagge&#39; stehen umfangreiche Baumaßnahmen über mehrere Jahre an. In diesem Zuge werden Straßen längere Zeit gesperrt, Straßen und Eisenbahnbrücken abgerissen und neu aufgebaut und Bushaltestellen durch Ersatzhaltestellen verlegt. Nach Abschluß der Arbeiten werden..." />
+        <meta name="keywords" content="zeit,baustelle,construction,lang-de,time" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/29398/taggen-von-baustellen-mit-zeitangabe-ersatzhaltestellen-opnv" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/29398/taggen-von-baustellen-mit-zeitangabe-ersatzhaltestellen-opnv?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hwvuugIV7Mj47kGFRdzrygWR9wDXelgW' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/29398/taggen-von-baustellen-mit-zeitangabe-ersatzhaltestellen-opnv">Taggen von Baustellen (mit Zeitangabe) / Ersatzhaltestellen ÖPNV</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-29398-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29398/up/" rel="nofollow"> </a>
+<div id="post-29398-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-29398-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29398/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/29398/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hallo,</p>
+<p>in der Stadt, die ich intensiv 'tagge' stehen umfangreiche Baumaßnahmen über mehrere Jahre an. In diesem Zuge werden <strong>Straßen längere Zeit</strong> gesperrt, Straßen und Eisenbahnbrücken abgerissen und neu aufgebaut und Bushaltestellen durch Ersatzhaltestellen verlegt. Nach Abschluß der Arbeiten werden die Straßen wieder befahrbar und die alten Haltestellen wieder geöffnet. Die Maßnahmen dauern ca. 3 - 4 Jahre. Dies ist m.E. ein Zeitrahmen, der es erforderlich macht, die Baustelle für Navigations- und Routingsysteme erkennbar zu machen, auch wenn ggf. noch nicht alle Systeme dies erkennen können.</p>
+<p>Meine Fragen:</p>
+<ol>
+<li>Wie tagge ich grds. Straßenbaustellen?</li>
+<li>Wie kann ich ein größeres Umbauareal taggen (eine ganzer Straßenzug wird verkehrsberuhigt umgebaut, also neue Pflasterung, neue Laternen etc.)?</li>
+<li>Kann man hier zeitliche Tags anbringen (gültig ab; gültig bis)?</li>
+<li>Verlegte Bus- und Zugrouten müssen nach meinem bisherigen Wissenstand vollständig neu erfasst werden. Kann man hier für die alten Routen eine Gültigkeit (gültig bis) angeben, um diese nicht bei Wiederherstellung vollständig neu zu erfassen? Bei ein oder zwei Routen wäre der Aufwand ja leistbar, aber es handelt sich um ca. 10 Busrouten!</li>
+<li>Kann man im Vorgriff die neuen Routen erfassen und mit einem 'gültig ab'-Tag kennzeichnen?</li>
+</ol>
+<p>Das sind erst mal die Frage, die sich mir zur Zeit stellen, da ich das erste Mal eine umfangreiche Baustelle taggen möchte, fällt mir sicher noch was im Laufe der Zeit ein.
+Ach ja, die ersten lohnenswerten Arbeiten (Ersatzhaltestellen) beginnen im April 2014, für ein paar schnelle Antworten wäre ich dankbar. 
+Zusatzanmerkung: Gibt es für so etwas eigentlich ein Proposal bzw. macht es Sinn, dass sich jemand (ich fühle mich damit allerdings überfordert) beschäftigt? Gefunden habe ich jedenfalls nichts, aber das heißt ja nix...</p>
+<p>Thoschi</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/zeit/" class="post-tag tag-link-zeit"
+                                        title="see questions tagged 'zeit'" rel="tag">zeit</a>
+                                
+                                    <a href="/tags/baustelle/" class="post-tag tag-link-baustelle"
+                                        title="see questions tagged 'baustelle'" rel="tag">baustelle</a>
+                                
+                                    <a href="/tags/construction/" class="post-tag tag-link-construction"
+                                        title="see questions tagged 'construction'" rel="tag">construction</a>
+                                
+                                    <a href="/tags/lang-de/" class="post-tag tag-link-lang-de"
+                                        title="see questions tagged 'lang-de'" rel="tag">lang-de</a>
+                                
+                                    <a href="/tags/time/" class="post-tag tag-link-time"
+                                        title="see questions tagged 'time'" rel="tag">time</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Dec '13, 10:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/35a4743c7dca0eb344edffa0d42922f2?s=32&amp;d=identicon&amp;r=g" alt="Thoschi's gravatar image" />
+    <p><a href="/users/6890/thoschi">Thoschi</a><br/>
+    <span class="score" title="14 reputation points">14</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Thoschi has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/29398/">
+                edited
+                <strong>28 Dec '13, 17:16</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-29398">
+    
+</div>
+<div id="comment-tools-29398" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29398-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/29398/taggen-von-baustellen-mit-zeitangabe-ersatzhaltestellen-opnv?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/29398/taggen-von-baustellen-mit-zeitangabe-ersatzhaltestellen-opnv?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/29398/taggen-von-baustellen-mit-zeitangabe-ersatzhaltestellen-opnv?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/29398/taggen-von-baustellen-mit-zeitangabe-ersatzhaltestellen-opnv?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="29399"></a>
+                    <div id="answer-container-29399" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29399-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29399/up/" rel="nofollow"> </a>
+<div id="post-29399-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-29399-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29399/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hallo Thoschi, vorneweg bitte nicht verzweifeln bei dem Thema, da zeitliche Sachen bei OSM ja durchaus kontrovers diskutiert werden (siehe u.A. <a href="http://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts">Comparison of life cycle concepts</a>) und auch das aktuell halten der Vor-Ort Situation einge Arbeit macht :)</p>
+<p>Nun zu deinen Fragen:</p>
+<p><strong>zu 1</strong>. Wie immer mehrere Ansätze, je nachdem wie detailliert du vorgehen willst:
+Entweder du markierst die ganze Gegend als <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dconstruction">landuse=construction</a>, oder du taggst Straßenabschnitte als <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dconstruction">highway=construction</a> ggF. ergänzt um construction=tertiary oder <a href="http://wiki.openstreetmap.org/wiki/Key:construction">was eben passt</a>.</p>
+<p><strong>zu 2.</strong> Ein extra Polygon mit <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dconstruction">landuse=construction</a></p>
+<p><strong>zu 3.</strong> Das ist mit <a href="http://wiki.openstreetmap.org/wiki/Key:start_date">start_date=*</a> möglich, aber wie man die zeitliche Dimension gut in OSM abbildet, ist eben nicht unumstritten...</p>
+<p><strong>zu 4.</strong> Überlege dir wirklich, ob du das angehen willst. Sprich ggF. mal mit der lokalen Community per ML oder Stammtisch, denn zusammen macht sich das einfacher und lassen sich vielleicht bessere Lösungen finden:</p>
+<ul>
+<li><a href="http://wiki.openstreetmap.org/wiki/Mappertreffen_Dortmund">https://wiki.openstreetmap.org/wiki/Mappertreffen_Dortmund</a></li>
+<li><a href="http://lists.openstreetmap.de/mailman/listinfo/ruhrgebiet">https://lists.openstreetmap.de/mailman/listinfo/ruhrgebiet</a></li>
+</ul>
+<p>Meine persönliche Meinung (ohne viele Infos) ist, dass ich die Sache die den ÖPNV betreffen erstmal so weit wie möglich lassen würde und ggF. nur deren Tags anpasse.<br>
+Eine genaue zeitliche Einschränkung der Routen ist mir nicht bekannt, es scheint nur <a href="http://wiki.openstreetmap.org/wiki/DE:Relation:route">state=temporaly</a> möglich zu sein.</p>
+<p><strong>zu 5.</strong> Mit <a href="http://wiki.openstreetmap.org/wiki/DE:Relation:route">state=proposed</a> wäre das sicherlich möglich, ohne dass bestehende Tools total durcheinander kommen. Ob das allerdings sinnvoll/machbar ist, das sollte vielleicht die lokale Community gemeinsam entscheiden...</p>
+<p>ÖPNV-Tagging selbst ist ein sehr komplexes Thema geworden, weshalb ich mich da weitestgehend raushalte. Es sollte auch überlegt werden, ob sich der erhebliche Aufwand lohnt das zu aktualisieren etc. In jedem Fall aber viel Erfolg und immer mutig sein, dann wird das schon :)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29399/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Dec '13, 11:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/49a7d0e0408e9cf2f698faac0f4d837a?s=32&amp;d=identicon&amp;r=g" alt="iii's gravatar image" />
+    <p><a href="/users/4984/iii">iii</a><br/>
+    <span class="score" title="4892 reputation points"><span class="">4.9k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="40 badges"><span class="silver">&#9679;</span><span class="badgecount">40</span></span><span title="82 badges"><span class="bronze">&#9679;</span><span class="badgecount">82</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="iii has 16 accepted answers">10&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/29399/">
+                edited
+                <strong>28 Dec '13, 12:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29399">
+    
+        <a name="29400"></a>
+        <div class="comment" id="comment-29400">
+            <div id="post-29400-score" class="comment-score"></div>
+            <div class="comment-text"><p>Vielen Dank für die schnelle Antwort,
+werde mich dann mal bei den beiden Gruppen informieren und ein kleines bisschen (Baugebiet) kann ich ja schon mal anfangen...:-)</p></div>
+            <div class="comment-info" id="comment-29400-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Dec '13, 11:26)</span>
+                <a class="comment-user userinfo" href="/users/6890/thoschi">Thoschi</a>
+                
+            </div>
+        </div>
+    
+        <a name="29401"></a>
+        <div class="comment" id="comment-29401">
+            <div id="post-29401-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hier gibst einer grosse Stelle <a href="http://www.openstreetmap.org/#map=14/52.3279/5.0325,">http://www.openstreetmap.org/#map=14/52.3279/5.0325,</a> mit en Planmassiger landuse=construction und einer neuer Planmassiger Übersicht mit highway=construction.</p></div>
+            <div class="comment-info" id="comment-29401-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Dec '13, 12:25)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+        <a name="29402"></a>
+        <div class="comment" id="comment-29402">
+            <div id="post-29402-score" class="comment-score"></div>
+            <div class="comment-text"><p>Anfangen ist immer gut, dann kann man an was konkretem auch diskutieren :)<br>
+P.S. Kannst du diese Antwort bitte noch als Kommentar umformen? Dann ist klarer, dass er sich auf meine Lösung bezieht.</p></div>
+            <div class="comment-info" id="comment-29402-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Dec '13, 13:56)</span>
+                <a class="comment-user userinfo" href="/users/4984/iii">iii</a>
+                
+            </div>
+        </div>
+    
+        <a name="29404"></a>
+        <div class="comment" id="comment-29404">
+            <div id="post-29404-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hallo Hendrikklaas,
+die Baustellenplanung sieht gut aus, ist aber eine völlig neue Bebauung auf "freiem Felde". Hier in Wetter wird der Umbau einer vorhandenen Einkaufsstraße mit langwierigen Streckensperrungen geplant. Auch der Neubau der Brücken erfolgt an der "alten" Stelle, nur wird der Verkehr (Individualverkehr und ÖPNV) weiträumig umgeleitet und die Straßen für Jahre zu Sackgassen bzw. Anliegerstraßen umgewandelt. Es ist hier also ein dynamischer Prozeß nach dem Motto "aus alt mach neu". Aber als Anregung für die "Construction-Site" für meine Belange auf jeden Fall gut zu gebrauchen.</p></div>
+            <div class="comment-info" id="comment-29404-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Dec '13, 15:13)</span>
+                <a class="comment-user userinfo" href="/users/6890/thoschi">Thoschi</a>
+                
+            </div>
+        </div>
+    
+        <a name="29416"></a>
+        <div class="comment" id="comment-29416">
+            <div id="post-29416-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Toschi, Ich weiss wie lange Bauprojecten dauern. Sehe Dich um, im Holländisch schade, aber das Bild genügt. Vom Freien Felder gibst ja keinem. Die hatten für 14 Tagen ein hundert Jährige Bauernhof uber 300m umgezogen. Und manche Hauser und Hausboote sind zerstört oder umgezogen. Vor 40 Jahre hatte Ich zwei Monater am Bau der U-Bahn im Hannover anbei die Continental Caouchouc Werke gearbeitet. Die Baustelle war 8 m. tief und hatte auch manche Anlieger freie Strassen. Machts Gut im 2014</p></div>
+            <div class="comment-info" id="comment-29416-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Dec '13, 00:25)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29399" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29399-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/29398/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hwvuugIV7Mj47kGFRdzrygWR9wDXelgW' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29398/taggen-von-baustellen-mit-zeitangabe-ersatzhaltestellen-opnv?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29398/taggen-von-baustellen-mit-zeitangabe-ersatzhaltestellen-opnv?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lang-de/"
+            class="tag-link-lang-de"
+            title="see questions tagged'lang-de'using tags"
+            rel="tag">lang-de</a> <span class="tag-number">&#215;286</span><br/>
+        
+        <a href="/tags/construction/"
+            class="tag-link-construction"
+            title="see questions tagged'construction'using tags"
+            rel="tag">construction</a> <span class="tag-number">&#215;35</span><br/>
+        
+        <a href="/tags/time/"
+            class="tag-link-time"
+            title="see questions tagged'time'using tags"
+            rel="tag">time</a> <span class="tag-number">&#215;29</span><br/>
+        
+        <a href="/tags/baustelle/"
+            class="tag-link-baustelle"
+            title="see questions tagged'baustelle'using tags"
+            rel="tag">baustelle</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/zeit/"
+            class="tag-link-zeit"
+            title="see questions tagged'zeit'using tags"
+            rel="tag">zeit</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 28, 2013, 10:55 a.m.">28 Dec '13, 10:55</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,950 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 29, 2013, 12:25 a.m.">29 Dec '13, 00:25</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/45652/sperrung-baustelle">Sperrung, Baustelle</a>
+        </p>
+        
+        <p>
+            <a href="/questions/85654/sperrung-baustelle">Sperrung, Baustelle</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1849/meer-blau-farben-garmin">Meer blau färben (Garmin)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2156/karte-mit-zum-beispiel-eingeblendetem-wanderweg-drucken">Karte mit zum Beispiel eingeblendetem Wanderweg drucken?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3454/data-is-not-loaded-to-potlatch-14-right-now">data is not loaded to potlatch 1.4 right now</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3585/garmin-aio-german-daily-nicht-mehr-aktualisiert-bzw-kleiner-und-luckenhaft">[closed] Garmin AIO german-daily nicht mehr aktualisiert bzw kleiner und lückenhaft</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4621/how-to-map-the-future">How to map the future?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3652/wie-bekomme-ich-openstreetmap-auf-mein-garmin-dakota-20">Wie bekomme ich OpenStreetMap auf mein Garmin Dakota 20?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4702/wanderkarte-erstellen-hochgeladenen-track-auf-hinterlegter-topo-anzeigen">Wanderkarte erstellen - hochgeladenen Track auf hinterlegter Topo anzeigen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2130/gpx-file-no-time-tag">GPX file : no time tag</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

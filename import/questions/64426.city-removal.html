@@ -1,0 +1,978 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>City Removal - OSM Help</title>
+        <meta name="description" content="I noticed a non existent city that is showing in Idaho. When viewing Idaho at a relatively high level you can see Boise and a city called &quot;round about&quot; which doesn&#39;t exist. It seems that it was erroneously placed on the map. I&#39;ve attempted to remove it but have been unsuccessful. I also noticed that..." />
+        <meta name="keywords" content="city,erroneous,removal" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/64426/city-removal" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/64426/city-removal?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='wtfhkPum0DrE9fO75qcyqapUe4gpajdv' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/64426/city-removal">City Removal</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-64426-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64426/up/" rel="nofollow"> </a>
+<div id="post-64426-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-64426-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64426/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/64426/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I noticed a non existent city that is showing in Idaho.  When viewing Idaho at a relatively high level you can see Boise and a city called "round about" which doesn't exist.  It seems that it was erroneously placed on the map.  I've attempted to remove it but have been unsuccessful.  I also noticed that when you zoom in the city disappears at a particular level with no apparent associated features.  </p>
+<p>Is there a way to remove this?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/city/" class="post-tag tag-link-city"
+                                        title="see questions tagged 'city'" rel="tag">city</a>
+                                
+                                    <a href="/tags/erroneous/" class="post-tag tag-link-erroneous"
+                                        title="see questions tagged 'erroneous'" rel="tag">erroneous</a>
+                                
+                                    <a href="/tags/removal/" class="post-tag tag-link-removal"
+                                        title="see questions tagged 'removal'" rel="tag">removal</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Jun '18, 22:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0804f84b523709ced12d0a75b2b3307e?s=32&amp;d=identicon&amp;r=g" alt="CGOGD's gravatar image" />
+    <p><a href="/users/15310/cgogd">CGOGD</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="CGOGD has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-64426">
+    
+        <a name="64431"></a>
+        <div class="comment" id="comment-64431">
+            <div id="post-64431-score" class="comment-score"></div>
+            <div class="comment-text"><p>location link: <a href="https://www.openstreetmap.org/#map=12/43.9237/-111.7423">https://www.openstreetmap.org/#map=12/43.9237/-111.7423</a>
+Currently I see it from z6 to z12.</p></div>
+            <div class="comment-info" id="comment-64431-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '18, 05:47)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64458"></a>
+        <div class="comment" id="comment-64458">
+            <div id="post-64458-score" class="comment-score"></div>
+            <div class="comment-text"><p>just a sidenote: the edits of the original <a href="https://www.openstreetmap.org/changeset/59229972">https://www.openstreetmap.org/changeset/59229972</a> which caused this wrong city were all undone in the meantime (just in case someone is curious).</p></div>
+            <div class="comment-info" id="comment-64458-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '18, 22:32)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64480"></a>
+        <div class="comment" id="comment-64480">
+            <div id="post-64480-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I just checked and it looks like there's only one tile with the name still left.  Progress.</p></div>
+            <div class="comment-info" id="comment-64480-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jul '18, 17:03)</span>
+                <a class="comment-user userinfo" href="/users/15310/cgogd">CGOGD</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64426" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64426-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/64426/city-removal?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/64426/city-removal?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/64426/city-removal?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/64426/city-removal?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="64432"></a>
+                    <div id="answer-container-64432" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64432-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64432/up/" rel="nofollow"> </a>
+<div id="post-64432-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-64432-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64432/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>With <a href="https://simon04.dev.openstreetmap.org/whodidit/?zoom=15&amp;lat=43.93315&amp;lon=-111.75499&amp;layers=BTT&amp;age=6%20month">https://simon04.dev.openstreetmap.org/whodidit/?zoom=15&amp;lat=43.93315&amp;lon=-111.75499&amp;layers=BTT&amp;age=6%20month</a> we find:</p>
+<ul>
+<li>The city was removed on 4th June ( <a href="https://www.openstreetmap.org/changeset/59522317">https://www.openstreetmap.org/changeset/59522317</a> ). It was a node with tags <code>name=round about</code>  and  <code>place=city</code></li>
+<li>Another attempt on 21th June because it still shows up on the rendered map ( <a href="https://www.openstreetmap.org/changeset/60056446">https://www.openstreetmap.org/changeset/60056446</a> ; note that the removed objects very very very unlikely are to blame: just buildings and a surveillance camera, ...)</li>
+</ul>
+<p>I had a look with <a href="https://overpass-turbo.eu/">https://overpass-turbo.eu/</a> with a scope of the whole North America area and could not find any other object there with the name "round about". (well, that one: <a href="https://www.openstreetmap.org/way/471941229">https://www.openstreetmap.org/way/471941229</a> , which is a street round about on Jamaica island)</p>
+<p>So, we have to wait for the update process of those zoom levels. 
+See <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> and also kocio's (18 Dec '17, 03:59) comment there : first Sunday of each month is the next update of the low zoom tiles. That would be 1st July. Last one was 3rd June which is why the last update did not remove the wrong label.</p>
+<p>The z12 tile is <a href="https://a.tile.openstreetmap.org/12/776/1490.png">https://a.tile.openstreetmap.org/12/776/1490.png</a> (via right click on <a href="https://mc.bbbike.org/mc">https://mc.bbbike.org/mc</a>  map). Before <a href="https://a.tile.openstreetmap.org/12/776/1490.png/status">its status</a>: "Tile is clean. Last rendered at Mon Jun 04 03:37:19 2018."</p>
+<p>I have appended <code>/dirty</code> to its URL to request re-rendering. That made it update before the schedule. Now it is this status: "Tile is clean. Last rendered at Fri Jun 29 05:07:32 2018. ". And the label is gone. I did so for z11-z6 too. Already (after not more than 2 minutes) all wrong labels are gone.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64432/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Jun '18, 06:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/64432/">
+                edited
+                <strong>29 Jun '18, 06:42</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64432">
+    
+        <a name="64448"></a>
+        <div class="comment" id="comment-64448">
+            <div id="post-64448-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks very much for your assistance.  You stated that the status is:</p>
+
+<p>"Tile is clean. Last rendered at Fri Jun 29 05:07:32 2018.". And the label is gone.</p>
+
+<p>I checked the map and it is still showing for me so I assume you can see the tiles before they are pushed to the public. If it should be updated on July 1st I'll just check it again on Monday.  Much appreciated.</p></div>
+            <div class="comment-info" id="comment-64448-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '18, 16:50)</span>
+                <a class="comment-user userinfo" href="/users/15310/cgogd">CGOGD</a>
+                
+            </div>
+        </div>
+    
+        <a name="64452"></a>
+        <div class="comment" id="comment-64452">
+            <div id="post-64452-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/15310/cgogd">@CGOGD</a>: you're welcome!</p>
+
+<p>I have no special access. Very very likely it is just your browser showing you cached map tiles. <a href="https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache#Bypassing_cache">Bypass your browser's cache</a> to request fresh tiles from the servers.</p></div>
+            <div class="comment-info" id="comment-64452-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '18, 18:53)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64454"></a>
+        <div class="comment" id="comment-64454">
+            <div id="post-64454-score" class="comment-score"></div>
+            <div class="comment-text"><p>No cache.  I run my browser in private mode normally.  Just to make sure I tried to clear caches on other browsers and try a different system and it is still coming up showing the errant tiles.  Do you have a link to see the map with the clean tiles?  In addition, I am using the default layer that comes up with browsing right to OpenStreetMap.org.  Thanks.</p></div>
+            <div class="comment-info" id="comment-64454-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '18, 21:05)</span>
+                <a class="comment-user userinfo" href="/users/15310/cgogd">CGOGD</a>
+                
+            </div>
+        </div>
+    
+        <a name="64456"></a>
+        <div class="comment" id="comment-64456">
+            <div id="post-64456-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/15310/cgogd">@CGOGD</a>: hmm, what do you see at <a href="https://a.tile.openstreetmap.org/12/776/1490.png">https://a.tile.openstreetmap.org/12/776/1490.png</a> ? Or try this: <a href="https://www.openstreetmap.org/#map=12/43.9237/-111.7852&amp;layers=M">https://www.openstreetmap.org/#map=12/43.9237/-111.7852&amp;layers=M</a>   </p>
+
+<p>If it still shows up the old, wrong label, then it may be that the tile cache server which is serving you did not catch up correctly with the tile rendering server. See <a href="/questions/64393/a-lot-of-the-time-openstreetmaporg-tiles-not-rendering-whatsoever/64402">Simon's answer over there</a>. <a href="https://tile.openstreetmap.org/cgi-bin/debug">https://tile.openstreetmap.org/cgi-bin/debug</a> shows "Cache Server: konqi.openstreetmap.org" for me (from Germany). <a href="https://dns.openstreetmap.org/tile.openstreetmap.org.html">https://dns.openstreetmap.org/tile.openstreetmap.org.html</a> shows a map of (usual? current?) countries and their servers.  If that is the issue why you still do not see the updated tiles, then... I guess just waiting is best.</p></div>
+            <div class="comment-info" id="comment-64456-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '18, 21:42)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64457"></a>
+        <div class="comment" id="comment-64457">
+            <div id="post-64457-score" class="comment-score"></div>
+            <div class="comment-text"><p>On both of the links provided, I still see the old wrong label.  My cache server is stormfly-02.openstreetmap.org, which may explain the discrepancy.  I'll just wait and post an update on Monday.  Thanks again for all of your help.</p></div>
+            <div class="comment-info" id="comment-64457-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '18, 21:56)</span>
+                <a class="comment-user userinfo" href="/users/15310/cgogd">CGOGD</a>
+                
+            </div>
+        </div>
+    
+        <a name="64466"></a>
+        <div class="comment not_top_scorer" id="comment-64466">
+            <div id="post-64466-score" class="comment-score"></div>
+            <div class="comment-text"><p>Usually re-rendering of low zoom (z0-z12) happens twice a month, and you can't force the refresh, but there are some problems and they wait before they update the style (which triggers low zoom re-rendering):</p>
+
+<p><a href="https://github.com/openstreetmap/chef/issues/170">https://github.com/openstreetmap/chef/issues/170</a></p></div>
+            <div class="comment-info" id="comment-64466-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jun '18, 15:00)</span>
+                <a class="comment-user userinfo" href="/users/11332/kocio">kocio</a>
+                
+            </div>
+        </div>
+    
+        <a name="64467"></a>
+        <div class="comment not_top_scorer" id="comment-64467">
+            <div id="post-64467-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/11332/kocio">@kocio</a>: okay, but why do I see the tiles without a wrong label   after I applied /dirty?  Furthermore <a href="https://a.tile.openstreetmap.org/12/776/1490.png/status">https://a.tile.openstreetmap.org/12/776/1490.png/status</a> says the tile has been re-rendered.</p></div>
+            <div class="comment-info" id="comment-64467-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jun '18, 17:02)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64476"></a>
+        <div class="comment not_top_scorer" id="comment-64476">
+            <div id="post-64476-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not sure, but new update seems to be done and the label is gone now:</p>
+
+<p>"Last rendered at Sun Jul 01 17:11:23 2018."</p></div>
+            <div class="comment-info" id="comment-64476-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jul '18, 01:11)</span>
+                <a class="comment-user userinfo" href="/users/11332/kocio">kocio</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64432" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64432-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="64427"></a>
+                    <div id="answer-container-64427" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64427-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64427/up/" rel="nofollow"> </a>
+<div id="post-64427-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-64427-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64427/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I also see it at zoom level 12 but not level 13 and above. The tiles for lower zoom levels are updated less frequently so it is possible that you have correctly removed it but will need to wait to see the change at lower zooms.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64427/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Jun '18, 23:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8da3fc19d7250ff5fbdbcbf467f9458f?s=32&amp;d=identicon&amp;r=g" alt="alan_gr's gravatar image" />
+    <p><a href="/users/14272/alan_gr">alan_gr</a><br/>
+    <span class="score" title="2623 reputation points"><span class="">2.6k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="45 badges"><span class="bronze">&#9679;</span><span class="badgecount">45</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="alan_gr has 10 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64427">
+    
+        <a name="64428"></a>
+        <div class="comment" id="comment-64428">
+            <div id="post-64428-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your response.  Do you know approximately how long it takes to update the tiles?  It's been there for at least a week.  Or alternatively do you know if anybody can be contacted to expedite the process?</p>
+
+<p>Thanks again.</p></div>
+            <div class="comment-info" id="comment-64428-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '18, 23:24)</span>
+                <a class="comment-user userinfo" href="/users/15310/cgogd">CGOGD</a>
+                
+            </div>
+        </div>
+    
+        <a name="64477"></a>
+        <div class="comment" id="comment-64477">
+            <div id="post-64477-score" class="comment-score">1</div>
+            <div class="comment-text"><p>For general rules of updating z0-z12 see here:</p>
+
+<p><a href="https://wiki.openstreetmap.org/wiki/Standard_tile_layer#OSM_servers_deployment">https://wiki.openstreetmap.org/wiki/Standard_tile_layer#OSM_servers_deployment</a></p></div>
+            <div class="comment-info" id="comment-64477-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jul '18, 01:18)</span>
+                <a class="comment-user userinfo" href="/users/11332/kocio">kocio</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64427" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64427-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/64426/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='wtfhkPum0DrE9fO75qcyqapUe4gpajdv' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64426/city-removal?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64426/city-removal?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/city/"
+            class="tag-link-city"
+            title="see questions tagged'city'using tags"
+            rel="tag">city</a> <span class="tag-number">&#215;107</span><br/>
+        
+        <a href="/tags/removal/"
+            class="tag-link-removal"
+            title="see questions tagged'removal'using tags"
+            rel="tag">removal</a> <span class="tag-number">&#215;12</span><br/>
+        
+        <a href="/tags/erroneous/"
+            class="tag-link-erroneous"
+            title="see questions tagged'erroneous'using tags"
+            rel="tag">erroneous</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 28, 2018, 10:26 p.m.">28 Jun '18, 22:26</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,452 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 2, 2018, 5:03 p.m.">02 Jul '18, 17:03</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/6209/added-a-city-marker-and-it-is-not-visible-in-view-mode">[closed] Added a city marker and it is not visible in View mode.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8460/extracting-city-level">Extracting city level</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8752/how-to-tag-green-vegetated-areas-within-urban-areas">How to tag green (vegetated) areas within urban areas?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9109/limit-nominatim-search-to-a-specific-city-or-even-a-zip-code">limit nominatim search to a specific city or even a zip code</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9885/duplicate-accounts">Duplicate accounts</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10204/reverse-geo-coding-consistently-returns-incorrect-data">Reverse Geo-coding consistently returns incorrect data.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12242/reverse-geocoding-yields-wrong-address">Reverse geocoding yields wrong address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12762/landuse-commercial">landuse = commercial</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12932/how-can-i-export-the-entire-city-street-map">How can I export the entire city street map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5845/create-3d-model-of-city-from-svg-files">Create 3D model of city from SVG files?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

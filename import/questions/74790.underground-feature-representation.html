@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Underground feature representation - OSM Help</title>
+        <meta name="description" content="I just mapped two superposed features. A large public place (highway=pedestrian; area=yes) and an underlying parking (location=underground) with its ways (highway=service; service=parking_aisle; location=underground).  I am rather disappointed to see the result on the map (mapnik) because the underg..." />
+        <meta name="keywords" content="underground,parking_aisle,multi-storey,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/74790/underground-feature-representation" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/74790/underground-feature-representation?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='laZm4NkofXBCbpinmAXgONYdSzBB8AaR' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/74790/underground-feature-representation">Underground feature representation</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-74790-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74790/up/" rel="nofollow"> </a>
+<div id="post-74790-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-74790-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74790/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/74790/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I just mapped two superposed features. A large public place (highway=pedestrian; area=yes) and an underlying parking (location=underground) with its ways (highway=service; service=parking_aisle; location=underground). </p>
+<p>I am rather disappointed to see the result on the map (mapnik) because the underground parking aisles appear on the public place on the surface. I have tried level and layer tags to potentially change their representation without success. Any idea on how to manage this issue or is it the expected result?</p>
+<p>Here is the case: <a href="https://www.openstreetmap.org/#map=19/45.39973/-71.89598">https://www.openstreetmap.org/#map=19/45.39973/-71.89598</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/underground/" class="post-tag tag-link-underground"
+                                        title="see questions tagged 'underground'" rel="tag">underground</a>
+                                
+                                    <a href="/tags/parking_aisle/" class="post-tag tag-link-parking_aisle"
+                                        title="see questions tagged 'parking_aisle'" rel="tag">parking_aisle</a>
+                                
+                                    <a href="/tags/multi-storey/" class="post-tag tag-link-multi-storey"
+                                        title="see questions tagged 'multi-storey'" rel="tag">multi-storey</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 May '20, 14:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a504353df13461ace2c733906a99ce16?s=32&amp;d=identicon&amp;r=g" alt="jfd553's gravatar image" />
+    <p><a href="/users/9697/jfd553">jfd553</a><br/>
+    <span class="score" title="389 reputation points">389</span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="32 badges"><span class="bronze">&#9679;</span><span class="badgecount">32</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jfd553 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/74790/">
+                edited
+                <strong>13 May '20, 14:37</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-74790">
+    
+</div>
+<div id="comment-tools-74790" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74790-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/74790/underground-feature-representation?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/74790/underground-feature-representation?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/74790/underground-feature-representation?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/74790/underground-feature-representation?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="74792"></a>
+                    <div id="answer-container-74792" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74792-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74792/up/" rel="nofollow"> </a>
+<div id="post-74792-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-74792-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74792/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="jfd553 has selected this answer as the correct answer"
+        href="/accept_answer/74792/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There's actually a recently <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/4118">filed issue</a> which relates to part of this question.</p>
+<p>However, how to render underground facilities is a more broadly-based question and there is currently no good answer, see <a href="https://www.openstreetmap.org/#map=18/53.40820/-2.97929">for instance</a> passages to access an underground metro station. The CartoCSS styles get more and more complex with additional layers, and most of these underground features are currently edge cases which probably don't justify the major work required to resolve the rendering in a small number of areas. This is especially so as the tagging may evolve as there are more people mapping them.</p>
+<p>It is quite likely that for the kind of map output you expect that additional post-processing over-and-above the current architecture of the Carto CSS style which is constrained by needing to stay close to OSM because it is refreshed continually. There are probably cases where underground service roads should be shown as well as those where it would be preferred that they are not.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74792/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 May '20, 15:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74792">
+    
+        <a name="74793"></a>
+        <div class="comment" id="comment-74793">
+            <div id="post-74793-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Well, I then understand why I initially did not find any satisfying answer. Thank.</p></div>
+            <div class="comment-info" id="comment-74793-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '20, 15:37)</span>
+                <a class="comment-user userinfo" href="/users/9697/jfd553">jfd553</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74792" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74792-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="74806"></a>
+                    <div id="answer-container-74806" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74806-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74806/up/" rel="nofollow"> </a>
+<div id="post-74806-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-74806-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74806/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi jfd553,</p>
+<p>Have a look here, <a href="https://www.openstreetmap.org/#map=19/51.92319/4.46459">https://www.openstreetmap.org/#map=19/51.92319/4.46459</a>
+Otherwise I would use layers or levels the last is more 3D mapping IMHO or enlighthen the object with underground=yes. In case of a park simple covered=yes.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74806/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 May '20, 14:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74806">
+    
+</div>
+<div id="comment-tools-74806" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74806-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/74790/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='laZm4NkofXBCbpinmAXgONYdSzBB8AaR' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74790/underground-feature-representation?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74790/underground-feature-representation?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/underground/"
+            class="tag-link-underground"
+            title="see questions tagged'underground'using tags"
+            rel="tag">underground</a> <span class="tag-number">&#215;12</span><br/>
+        
+        <a href="/tags/parking_aisle/"
+            class="tag-link-parking_aisle"
+            title="see questions tagged'parking_aisle'using tags"
+            rel="tag">parking_aisle</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/multi-storey/"
+            class="tag-link-multi-storey"
+            title="see questions tagged'multi-storey'using tags"
+            rel="tag">multi-storey</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 13, 2020, 2:20 p.m.">13 May '20, 14:20</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,190 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 14, 2020, 2:54 p.m.">14 May '20, 14:54</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/79603/parking-aisles-in-underground-multi-storey">parking aisles in underground multi-storey</a>
+        </p>
+        
+        <p>
+            <a href="/questions/522/how-do-i-map-a-basement-that-extends-beyond-the-foundation">How do I map a basement that extends beyond the foundation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1580/should-i-tag-name-for-the-way-or-for-the-relation">Should I tag &quot;name&quot; for the way or for the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile">How to trigger a repaint for a specific OSM map tile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">Can I influence what gets rendered in the main Mapnik layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1181/should-i-map-underground-water-tunnels">Should I map underground water tunnels?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1004/simple-legendkey">Simple legend/key?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1746/running-generate_image-gives-features-only-present-in-mapnik-version-071-error">Running generate_image gives &quot;features only present in Mapnik version 0.7.1&quot; error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1774/features-not-exported-in-svg-export">Features not exported in SVG export</a>
+        </p>
+        
+        <p>
+            <a href="/questions/498/uploading-a-small-bit-of-new-tiger-data-and-3-other-unrelated-questions">Uploading a small bit of new TIGER data (and 3 other unrelated questions)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

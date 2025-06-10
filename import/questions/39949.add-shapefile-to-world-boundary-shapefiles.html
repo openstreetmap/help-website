@@ -1,0 +1,790 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Add shapefile to world boundary shapefiles - OSM Help</title>
+        <meta name="description" content="I want to display the Ordnance Survey National Grid as a tile layer in my android application. I&#39;ve downloaded the grid data as various shapefiles from here: https://github.com/charlesroper/OSGB_Grids My options are to display the grid using the MapsForge library locally on the android device or to ..." />
+        <meta name="keywords" content="shapefile,import" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/39949/add-shapefile-to-world-boundary-shapefiles" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/39949/add-shapefile-to-world-boundary-shapefiles?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='uJU2CuLKOumoVutN70oS68smQB7WhYUz' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/39949/add-shapefile-to-world-boundary-shapefiles">Add shapefile to world boundary shapefiles</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-39949-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39949/up/" rel="nofollow"> </a>
+<div id="post-39949-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-39949-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39949/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/39949/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I want to display the Ordnance Survey National Grid as a tile layer in my android application.
+I've downloaded the grid data as various shapefiles from here: <a href="https://github.com/charlesroper/OSGB_Grids">https://github.com/charlesroper/OSGB_Grids</a></p>
+<p>My options are to display the grid using the MapsForge library locally on the android device or to import the grid data into my tileserver (setup using the Switch2OSM tutorial).
+I've decided to use my tileserver.</p>
+<p>So far i've tried:</p>
+<ul>
+<li>
+<p>Converting the shapefile grid data to osm (xml) format using JOSM and then importing the osm data to my tileserver using osm2pgsql.
+This fails to import anything, i suspect the osm tags are not recognised by osm2pgsql.</p>
+</li>
+<li>
+<p>Converting the shapefile grid data to osm (xml) format using Merkaator and then importing the osm data to my tileserver using osm2pgsql.
+This fails with osm2pgswl reporting many 'BoundingBox' tag not recognised errors.</p>
+</li>
+</ul>
+<p>I've also tried using shp2pgsql but my skills are not sufficient to understand the instructions :(.</p>
+<p>Anyway i had an idea - can't i simply add my grid shapefile to the tileserver's existing shapefiles and then let mapnik/tile_mod render the shapefile data along with the existing shapefile data?
+That is render the shapefile directly without importing it into PostgreSQL.</p>
+<p>So i uploaded my grid shapefiles to my server, uploading them to the directory /usr/local/share/world_boundaries.
+I restarted the tileserver and looked at the slippymap.html map - no sign of my os grid on the rendered tiles.</p>
+<p>Can anyone suggest how i'd add my os grid shapefile to my tileserver so that it's rendered along with the existing world boundary shapefile data?</p>
+<p>Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/shapefile/" class="post-tag tag-link-shapefile"
+                                        title="see questions tagged 'shapefile'" rel="tag">shapefile</a>
+                                
+                                    <a href="/tags/import/" class="post-tag tag-link-import"
+                                        title="see questions tagged 'import'" rel="tag">import</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Jan '15, 10:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fc25b1c88a406013979438b60ab69e2e?s=32&amp;d=identicon&amp;r=g" alt="warwound's gravatar image" />
+    <p><a href="/users/10254/warwound">warwound</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="warwound has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-39949">
+    
+        <a name="39950"></a>
+        <div class="comment" id="comment-39950">
+            <div id="post-39950-score" class="comment-score"></div>
+            <div class="comment-text"><p>The shapefiles are in OSGB36 projection, ESPG:27700, for osm2pgsql they need to be in WGS84 (ESPG:43260). However JOSM should manage the conversion, so you need to tell us what tags you have on the grid data. Even then you need some kind of rendering rules to pull them into a your tiles.</p></div>
+            <div class="comment-info" id="comment-39950-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Jan '15, 11:23)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40008"></a>
+        <div class="comment" id="comment-40008">
+            <div id="post-40008-score" class="comment-score"></div>
+            <div class="comment-text"><p>My goal is for my tileserver to serve semi transparent tiles which contain <em>nothing but the grid data</em>.
+I'll display these tiles as a  tile overlay in my android application on top of the existing map tiles.
+So i'd display say Google's road map or satellite map tiles with my grid tiles on top.</p>
+
+<p>For this project i don't want to display any OSM data rendered from PostgresSQL and i don't want to display the existing world boundary shapefile data.
+I just want a transparent tile with the grid data rendered onto it.</p>
+
+<p>Is that possible?</p>
+
+<p>How can i reconfigure my tileserver so that it renders just the grid shapefile and nothing else?</p></div>
+            <div class="comment-info" id="comment-40008-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jan '15, 07:46)</span>
+                <a class="comment-user userinfo" href="/users/10254/warwound">warwound</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39949" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39949-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/39949/add-shapefile-to-world-boundary-shapefiles?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/39949/add-shapefile-to-world-boundary-shapefiles?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/39949/add-shapefile-to-world-boundary-shapefiles?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/39949/add-shapefile-to-world-boundary-shapefiles?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="39951"></a>
+                    <div id="answer-container-39951" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-39951-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39951/up/" rel="nofollow"> </a>
+<div id="post-39951-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-39951-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39951/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>shp2pgsql is pretty simple. You'd usually run it like this:</p>
+<pre><code>shp2pgsql -s 4326 -I myshapefile.shp table_name | psql -d database_name -q
+</code></pre>
+<p>That will import myshapefile.shp into database <code>database_name</code>, creating a new table called <code>table_name</code>.</p>
+<p>The number after -s is the EPSG code for the projection. 4326 is raw latitude and longitude, i.e. not really projected at all. The code for OSGB (the National Grid) is 27700. So if you use <code>-s 27700</code>, that will read a shapefile in OSGB, and store it in the database like that.</p>
+<p>Alternatively, you might want to reproject on import - that is, read an OSGB shapefile, but store it in 4326 (or something else). That's easy too - just separate the two projections with a colon:</p>
+<pre><code>shp2pgsql -s 27700:4326 -I myshapefile.shp table_name | psql -d database_name -q
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/39951/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Jan '15, 12:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-39951">
+    
+</div>
+<div id="comment-tools-39951" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39951-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="40010"></a>
+                    <div id="answer-container-40010" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40010-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40010/up/" rel="nofollow"> </a>
+<div id="post-40010-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-40010-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40010/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I've now found the various .xml.inc files located in the mapnik-styles/inc directory.</p>
+<p>I updated layers.xml.inc adding a new entry:</p>
+<p>&lt;!ENTITY layer-osgrid SYSTEM "layer-osgrid.xml.inc"&gt;</p>
+<p>Then i created the file layer-osgrid.xml.inc:</p>
+<p>&lt;Style name="osgrid"&gt;
+    &lt;Rule&gt;
+      &amp;maxscale_zoom4;
+      &amp;minscale_zoom16;
+      &lt;LineSymbolizer stroke-linejoin="round" stroke="grey" stroke-width="4" stroke-opacity="0.8"/&gt;
+    &lt;/Rule&gt;
+&lt;/Style&gt;
+&lt;Layer name="osgrid" status="on" srs="&amp;srs27700;"&gt;
+    &lt;StyleName&gt;osgrid&lt;/StyleName&gt;
+    &lt;Datasource&gt;
+      &lt;Parameter name="type"&gt;shape&lt;/Parameter&gt;
+      &lt;Parameter name="file"&gt;&amp;world_boundaries;/OSGB_Grid_1km&lt;/Parameter&gt;
+    &lt;/Datasource&gt;
+&lt;/Layer&gt;</p>
+<p>In my world_boundaries directory i uploaded the OSGB_Grid_1km.shp grid shapefile.
+I also used shapeindex to create an index file for OSGB_Grid_1km.shp.</p>
+<p>Lastly i ran this command:</p>
+<p>python generate_xml.py --dbname gis --world_boundaries "/usr/local/share/world_boundaries" --accept-none</p>
+<p>I deleted all cached tiles and restarted my tileserver hoping to see some grids rendered on the tiles but nothing gets rendered.</p>
+<p>I'll experiment more later...</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40010/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Jan '15, 10:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fc25b1c88a406013979438b60ab69e2e?s=32&amp;d=identicon&amp;r=g" alt="warwound's gravatar image" />
+    <p><a href="/users/10254/warwound">warwound</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="warwound has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40010">
+    
+</div>
+<div id="comment-tools-40010" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40010-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/39949/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='uJU2CuLKOumoVutN70oS68smQB7WhYUz' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39949/add-shapefile-to-world-boundary-shapefiles?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39949/add-shapefile-to-world-boundary-shapefiles?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/import/"
+            class="tag-link-import"
+            title="see questions tagged'import'using tags"
+            rel="tag">import</a> <span class="tag-number">&#215;196</span><br/>
+        
+        <a href="/tags/shapefile/"
+            class="tag-link-shapefile"
+            title="see questions tagged'shapefile'using tags"
+            rel="tag">shapefile</a> <span class="tag-number">&#215;87</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 1, 2015, 10:22 a.m.">01 Jan '15, 10:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,478 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 4, 2015, 10:07 a.m.">04 Jan '15, 10:07</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/31868/how-do-i-convert-shp-files-to-gpx">How do I convert shp files to GPX</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62831/is-it-possible-to-import-a-shp-file-of-a-whole-bundesland-federal-state">Is it possible to import a shp file of a whole Bundesland (federal state)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2">Importing shapefile and saving to OSM with Potlatch2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21371/how-to-import-building-shapefiles">[closed] How to Import Building Shapefiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43388/need-help-with-shapefile-import-to-corrct-postcode-boundaries-in-osm">Need help with shapefile import to corrct postcode boundaries in OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61176/improving-watercourse-data">Improving Watercourse Data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5716/can-i-import-shape-files">Can I import shape files?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9622/numeros-de-portal-en-shp-como-los-subo-todos-de-una-en-addrhousenumber">números de portal en SHP como los subo todos de una en addr:housenumber</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18166/ogr2osm-imported-data-shifted-by-176m-222exported-from-arcgis">Ogr2Osm: Imported data shifted by 176m, 222°(exported from ArcGIS)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/74936/resource-to-learn-how-to-upload-shapefile">Resource to Learn How to Upload Shapefile</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

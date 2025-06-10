@@ -1,0 +1,736 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How can I make sense of munin.openstreetmap.org? - OSM Help</title>
+        <meta name="description" content="There are so many servers and graphs on munin.openstreetmap.org - what do they tell me about the project? What can I, as a non-sysadmin, learn from these graphs? Which are the important ones? (relayed from talk-de)" />
+        <meta name="keywords" content="munin,server" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='VLGUEknIdC4uJ11f2dxnZi6mkQUlgZLP' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg">How can I make sense of munin.openstreetmap.org?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-527-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/527/up/" rel="nofollow"> </a>
+<div id="post-527-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-527-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/527/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/527/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   2
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>There are so many servers and graphs on <a href="http://munin.openstreetmap.org">munin.openstreetmap.org</a> - what do they tell me about the project? What can I, as a non-sysadmin, learn from these graphs? Which are the important ones?</p>
+<p>(relayed from talk-de)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/munin/" class="post-tag tag-link-munin"
+                                        title="see questions tagged 'munin'" rel="tag">munin</a>
+                                
+                                    <a href="/tags/server/" class="post-tag tag-link-server"
+                                        title="see questions tagged 'server'" rel="tag">server</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Aug '10, 10:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-527">
+    
+</div>
+<div id="comment-tools-527" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-527-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="529"></a>
+                    <div id="answer-container-529" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-529-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/529/up/" rel="nofollow"> </a>
+<div id="post-529-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-529-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/529/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Frederik Ramm has selected this answer as the correct answer"
+        href="/accept_answer/529/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The first thing to remember about munin graphs is that they only tell you what's happening on the servers and it's extremely difficult to figure out <em>why</em> it might be happening from the graphs alone. For example, if editing seems slow and munin says the load is unusually high on the database server, this doesn't by itself say what the cause is, or what the solution might be.</p>
+<p>On the other hand, the munin graphs can be very interesting and provide useful information to anyone interested in the technical side of OSM. </p>
+<p>The first thing to look at is the <a href="http://wiki.openstreetmap.org/wiki/Servers">servers page on the wiki</a>. These do change from time to time, so it's best to look there for whatever the current state is. It is impossible to say which are the important ones, as this entirely depends on which of the OSM services you consider important. For example, if you're looking at the maps then the mapnik tile server might be the most important. If you're editing, then the rails front-end, back-end and database servers are all important.</p>
+<p>Each of the servers on the wiki page has a direct link to munin. Following this will bring you to the summary page of munin, which shows the daily and weekly graphs for each of the monitors. There are many of these monitors, and while each is important in its own right, there are some which give a better overall understanding. One of these is "<a href="http://en.wikipedia.org/wiki/Load_Average">load average</a>" in the system section. To get an idea of the historical values of any graph, click on it to be taken to a page which additionally shows monthly and yearly graphs. If the current load average is much higher than historical values I know that this server is working much harder than usual.</p>
+<p>Other useful graphs are the memory and CPU usage (in the system section) and disk I/O (in the disk section), which can help shed some light on why load might be high.</p>
+<p>Some servers are running services which provide more detail. For example, the database server currently uses <a href="http://www.postgresql.org/">PostgreSQL</a> as the main database and this has it's own plugins in the "postgresql" section. An interesting one to look at is the "database size" graph which, although it changes slowly, shows the total amount of data in OSM. Another is the number of transactions, which roughly equates to the number of operations being executed on the database and has a distinctive daily cycle, caused by people using OSM across the world in varying amounts.</p>
+<p>Another, on the mapnik tile server, is the "mod_tile" section. If, at some point in the future, the mapnik tiles aren't being served with mod_tile this will go away, perhaps replaced with something else. In the meantime, it is interesting to look at the "freshness of served tiles" graph, which shows the count of how many tiles were served to clients in which state. It's also worth looking at the network traffic graphs, as sometimes slow tile-serving can be a result of many other clients attempting to access the server.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/529/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Aug '10, 15:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d53ec2d1ec832fdf10f72222db4fa710?s=32&amp;d=identicon&amp;r=g" alt="Matt's gravatar image" />
+    <p><a href="/users/109/matt">Matt</a><br/>
+    <span class="score" title="1161 reputation points"><span class="">1.2k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="18 badges"><span class="silver">&#9679;</span><span class="badgecount">18</span></span><span title="18 badges"><span class="bronze">&#9679;</span><span class="badgecount">18</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Matt has one accepted answer">33&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-529">
+    
+</div>
+<div id="comment-tools-529" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-529-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="528"></a>
+                    <div id="answer-container-528" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-528-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/528/up/" rel="nofollow"> </a>
+<div id="post-528-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-528-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/528/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>That is an interesting question, but one that is difficult to answer in that generality, as it will depend on what exactly you would want to see. Furthermore, the graphs are mainly meant for sysadmins, so many of the graphs are rather uninteresting for "normal users".</p>
+<p>However, there are a couple of graphs, that can help the general users understand the status of the OpenStreetMap servers and if they are experiencing a load that makes it likely that the users will see detrimental effects.</p>
+<p>The answer probably splits into three categories:</p>
+<p>1) The map tile server: This machine is called yevaud and thus its munin graphs are <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/">here</a>
+Here, the most interesting graphs are probably in the "renderd" section.</p>
+<p>The first of the graphs, show the <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/replication_delay2.html">database lag</a>. I.e. the time the rendering is behind the main database and thus the minimum amount of time it takes before edits made in OSM can possibly show up on the map. Typical lags are in the range of 1 - 10 minutes. </p>
+<p>The second graph shows the rendering <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/renderd_queue.html">queue lengths</a>. I.e. how many tiles are currently waiting to be rerendered. The priority queue is filled with requests whos tiles don't yet exists and thus if not rendered on time will result in a "more OSM coming soon" tile. The render queue is used for tiles that are out of date and which the server tries to render "on the fly" to ensure that users always see the most up to date tiles. However, if tiles can't be rendered quickly enough, they get rendered in the background and get added to the overflow queue, the "dirty queue".  The "dirty queue" shows you how long you can expect it to take for your tiles to get rerendered and show up to date information.</p>
+<p>The third graph, shows how many tiles are currently being <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/renderd_processed.html">rendered</a>. Here, perhaps the most interesting part is the "dropped" value, which shows how many requests for updating tiles get dropped as the "dirty queue" is full. If requests get dropped, then the next time you visit the tiles, they may still not have updated and means that you may see more out of date tiles, or odd artefacts with parts of the map having been updated and other adjacent parts not. Otherwise, the graphs show if the rendering is working at all.</p>
+<p>The other major graph that is of interest, is perhaps the <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/if_eth1.html">Network graph</a> which shows how much data the server is handing out. Given that the network of the hoster is only a 100Mbit/s, in extreme traffic spikes, you might see that the tile server is limited by the network and thus can't hand out tiles fast enough.</p>
+<p>2) Editing and the rails servers <a href="http://munin.openstreetmap.org/openstreetmap/puff.openstreetmap/#passenger">Puff</a>, <a href="http://munin.openstreetmap.org/openstreetmap/norbert.openstreetmap/index.html#passenger">Norbert</a></p>
+<p>TODO: needs to be covered in an update</p>
+<p>3) Other services like <a href="http://munin.openstreetmap.org/openstreetmap/katie.openstreetmap/#nominatim">Nominatim</a>, <a href="http://[wiki]http://munin.openstreetmap.org">[wiki]http://munin.openstreetmap.org</a>/openstreetmap/konqi.openstreetmap/index.html</p>
+<p>TODO: needs explanation of the graphs</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/528/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Aug '10, 15:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32c974c4ca8b246698c2b82c64924da5?s=32&amp;d=identicon&amp;r=g" alt="apmon's gravatar image" />
+    <p><a href="/users/65/apmon">apmon</a><br/>
+    <span class="score" title="6527 reputation points"><span class="">6.5k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="apmon has 9 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-528">
+    
+        <a name="531"></a>
+        <div class="comment" id="comment-531">
+            <div id="post-531-score" class="comment-score"></div>
+            <div class="comment-text"><p>Great answer as well, Matt's and yours should really be merged into one! Voted both up but can "accept" only one...</p></div>
+            <div class="comment-info" id="comment-531-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Aug '10, 18:27)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-528" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-528-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/527/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='VLGUEknIdC4uJ11f2dxnZi6mkQUlgZLP' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/server/"
+            class="tag-link-server"
+            title="see questions tagged'server'using tags"
+            rel="tag">server</a> <span class="tag-number">&#215;123</span><br/>
+        
+        <a href="/tags/munin/"
+            class="tag-link-munin"
+            title="see questions tagged'munin'using tags"
+            rel="tag">munin</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 1, 2010, 10:11 a.m.">01 Aug '10, 10:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,925 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 1, 2010, 6:27 p.m.">01 Aug '10, 18:27</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1706/how-do-i-use-the-osm-tile-map-server-in-mapinfo">How do I use the osm tile map server in mapinfo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3334/frequent-internal-server-error-when-uploading-to-osm">Frequent &quot;Internal Server Error&quot; when uploading to OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3375/editing-for-my-own-map">editing for my own map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4422/rails-port-and-osm-server">Rails Port and OSM Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4433/server-problems">[closed] server problems??</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap">How to create fantasy/imaginary maps with OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5170/setting-up-own-osm-server-mirror-server">Setting up own OSM Server / Mirror Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5986/how-to-install-own-tile-serverrenderer">how to install own tile server/renderer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

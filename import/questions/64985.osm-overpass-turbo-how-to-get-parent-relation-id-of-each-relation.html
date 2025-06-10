@@ -1,0 +1,843 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>(OSM, overpass-turbo) How to get parent relation ID of each relation? - OSM Help</title>
+        <meta name="description" content="[out:csv(::type, ::id, name, admin_level)];  area[name=&quot;Portugal&quot;]; rel(area)[admin_level=4][name]; out;  I have this but I also wanted a column with the id of the relation to which each relation listed immediately belongs (parent). A search on OSM has in the result &quot;...part of relation x&quot;, but how ..." />
+        <meta name="keywords" content="overpass,overpass-turbo" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/64985/osm-overpass-turbo-how-to-get-parent-relation-id-of-each-relation" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/64985/osm-overpass-turbo-how-to-get-parent-relation-id-of-each-relation?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='duwacyRAJtIc89QnRq6LnCalXTOMVcPq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/64985/osm-overpass-turbo-how-to-get-parent-relation-id-of-each-relation">(OSM, overpass-turbo) How to get parent relation ID of each relation?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-64985-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64985/up/" rel="nofollow"> </a>
+<div id="post-64985-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-64985-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64985/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/64985/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <pre><code>[out:csv(::type, ::id, name, admin_level)]; 
+area[name="Portugal"];
+rel(area)[admin_level=4][name];
+out;
+</code></pre>
+<p>I have this but I also wanted a column with the id of the relation to which each relation listed immediately belongs (parent). A search on OSM has in the result "...part of relation x", but how can I get that kind of information here through overpass-turbo?</p>
+<p>A parent of a relation x is the relation at the admin_level above which has that relation x as a child.</p>
+<p>I wanted something like: ::type, ::id, name, admin_level, <strong><em>::parent id</em></strong></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/overpass-turbo/" class="post-tag tag-link-overpass-turbo"
+                                        title="see questions tagged 'overpass-turbo'" rel="tag">overpass-turbo</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Jul '18, 15:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7dcc267e54465a74eea1ce059e3432f9?s=32&amp;d=identicon&amp;r=g" alt="andrefrsilva's gravatar image" />
+    <p><a href="/users/15449/andrefrsilva">andrefrsilva</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andrefrsilva has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-64985">
+    
+</div>
+<div id="comment-tools-64985" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64985-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/64985/osm-overpass-turbo-how-to-get-parent-relation-id-of-each-relation?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/64985/osm-overpass-turbo-how-to-get-parent-relation-id-of-each-relation?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/64985/osm-overpass-turbo-how-to-get-parent-relation-id-of-each-relation?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/64985/osm-overpass-turbo-how-to-get-parent-relation-id-of-each-relation?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="64987"></a>
+                    <div id="answer-container-64987" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64987-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64987/up/" rel="nofollow"> </a>
+<div id="post-64987-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-64987-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64987/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can use the <code>convert</code> statement to modify each element with the parent relation id:</p>
+<pre><code>[out:csv(::type, ::id, name, admin_level,parent)]; 
+rel[name="Portugal"][admin_level=2]-&gt;.c;
+.c map_to_area;
+rel(area)[admin_level=4][name];
+convert rel ::id = id(), ::=::,parent=c.set(id());
+out;
+</code></pre>
+<p>It is necessary to save the country into a result set, so that the set can be named in the convert statement.</p>
+<p>An alternate strategy is to make a second script where you recurse up relations and then post-process the json to get the parent information. This is ultimately the strategy the OSM website is using, the canonical information about relation membership is the list of children in each relation. It might be caching the reverse information somewhere, but that would be rebuilt each time a relation is edited.</p>
+<p>(edited to move answer up from comment)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64987/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Jul '18, 16:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c860445e868ebb21da141635a4aa7b06?s=32&amp;d=identicon&amp;r=g" alt="maxerickson's gravatar image" />
+    <p><a href="/users/10973/maxerickson">maxerickson</a><br/>
+    <span class="score" title="12700 reputation points"><span class="">12.7k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="176 badges"><span class="bronze">&#9679;</span><span class="badgecount">176</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="maxerickson has 93 accepted answers">32&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/64987/">
+                edited
+                <strong>28 Jul '18, 18:14</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64987">
+    
+        <a name="64988"></a>
+        <div class="comment" id="comment-64988">
+            <div id="post-64988-score" class="comment-score"></div>
+            <div class="comment-text"><p>I also thought about using something like this:</p>
+
+<p>[out:csv(::type, ::id, name, admin_level, ::parent_id)];
+area["name"="Portugal"][admin_level=2]-&gt;.parent;
+   //somehow saving the id of this parent to parent_id// </p>
+
+<p>then:<br>
+rel<a href="area.parent"> admin_level = 4 </a>; 
+out;</p>
+
+<p>but how?</p></div>
+            <div class="comment-info" id="comment-64988-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '18, 17:15)</span>
+                <a class="comment-user userinfo" href="/users/15449/andrefrsilva">andrefrsilva</a>
+                
+            </div>
+        </div>
+    
+        <a name="64989"></a>
+        <div class="comment" id="comment-64989">
+            <div id="post-64989-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oh, I didn't realize that the parent would be available. Here's a step in the right direction, <a href="http://overpass-turbo.eu/s/ACK">http://overpass-turbo.eu/s/ACK</a> just need to figure out how to pull the Portugal id into it instead of writing "blah".</p>
+
+<p>(Which I'm not sure is currently possible)</p></div>
+            <div class="comment-info" id="comment-64989-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '18, 17:36)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="64990"></a>
+        <div class="comment" id="comment-64990">
+            <div id="post-64990-score" class="comment-score"></div>
+            <div class="comment-text"><p>And here you go: <a href="http://overpass-turbo.eu/s/ACT">http://overpass-turbo.eu/s/ACT</a></p>
+
+<p>I found the answer in <a href="https://dev.overpass-api.de/blog/final_0_7_54.html">https://dev.overpass-api.de/blog/final_0_7_54.html</a>, the <a href="https://dev.overpass-api.de/blog/">blog there</a> is I think still the best place for information about the recently released features.</p></div>
+            <div class="comment-info" id="comment-64990-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '18, 18:00)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="64992"></a>
+        <div class="comment" id="comment-64992">
+            <div id="post-64992-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks a lot maxerickson! However, this way it just ends up as some "manual" input, and not the actual "parent" id. If I use admin_level=5 it continues to give out as "parent" what is now "grandparent". <br>
+The goal would be to use this with several levels (in my initial case, using admin_level bigger and then &lt;&lt;; to have layers of family before). <br>
+::id, name, admin_level, ::parent_id   </p>
+
+<p></p><hr>
+<p>id 1, name 1, level 1, parent 1
+...
+id 2, name 2, level 2, parent 2 (its actual parent)
+...</p><p></p></div>
+            <div class="comment-info" id="comment-64992-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '18, 18:35)</span>
+                <a class="comment-user userinfo" href="/users/15449/andrefrsilva">andrefrsilva</a>
+                
+            </div>
+        </div>
+    
+        <a name="64993"></a>
+        <div class="comment" id="comment-64993">
+            <div id="post-64993-score" class="comment-score"></div>
+            <div class="comment-text"><p>The technique should work using other flow control, you'd just have to use lots of named sets and foreach loops to keep track of everything.</p>
+
+<p>I'm pretty sure I'd do it in Python using json, where it'd be easy to build up mapping between children and parents.</p></div>
+            <div class="comment-info" id="comment-64993-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '18, 18:42)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="64994"></a>
+        <div class="comment not_top_scorer" id="comment-64994">
+            <div id="post-64994-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok. And do you know if it is possible to use id instead of "name", since there might be different relations with the same "name" and ending up causing mistakes?</p></div>
+            <div class="comment-info" id="comment-64994-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '18, 18:48)</span>
+                <a class="comment-user userinfo" href="/users/15449/andrefrsilva">andrefrsilva</a>
+                
+            </div>
+        </div>
+    
+        <a name="64995"></a>
+        <div class="comment not_top_scorer" id="comment-64995">
+            <div id="post-64995-score" class="comment-score"></div>
+            <div class="comment-text"><p>rel(id) will fetch the relation with that id.</p></div>
+            <div class="comment-info" id="comment-64995-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '18, 18:55)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="64996"></a>
+        <div class="comment not_top_scorer" id="comment-64996">
+            <div id="post-64996-score" class="comment-score"></div>
+            <div class="comment-text"><p>Instead of rel[name="Portugal"][admin_level=2]-&gt;.c; .c map_to_area; rel(area)[admin_level=6][name];  what should I use? (Being id=295480)</p></div>
+            <div class="comment-info" id="comment-64996-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '18, 19:03)</span>
+                <a class="comment-user userinfo" href="/users/15449/andrefrsilva">andrefrsilva</a>
+                
+            </div>
+        </div>
+    
+        <a name="64998"></a>
+        <div class="comment not_top_scorer" id="comment-64998">
+            <div id="post-64998-score" class="comment-score"></div>
+            <div class="comment-text"><p>You'd replace <code>rel[name="Portugal"][admin_level=2]-&gt;.c;</code> with <code>rel(295480)-&gt;.c;</code> and keep the rest of it.</p></div>
+            <div class="comment-info" id="comment-64998-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '18, 20:24)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="65021"></a>
+        <div class="comment not_top_scorer" id="comment-65021">
+            <div id="post-65021-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, thanks. This is what's lacking: <a href="https://overpass-turbo.eu/s/AFo">https://overpass-turbo.eu/s/AFo</a></p></div>
+            <div class="comment-info" id="comment-65021-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jul '18, 16:00)</span>
+                <a class="comment-user userinfo" href="/users/15449/andrefrsilva">andrefrsilva</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64987" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64987-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/64985/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='duwacyRAJtIc89QnRq6LnCalXTOMVcPq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64985/osm-overpass-turbo-how-to-get-parent-relation-id-of-each-relation?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64985/osm-overpass-turbo-how-to-get-parent-relation-id-of-each-relation?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/overpass-turbo/"
+            class="tag-link-overpass-turbo"
+            title="see questions tagged'overpass-turbo'using tags"
+            rel="tag">overpass-turbo</a> <span class="tag-number">&#215;228</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 28, 2018, 3:17 p.m.">28 Jul '18, 15:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,284 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 30, 2018, 4 p.m.">30 Jul '18, 16:00</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/41754/extracting-node-from-highways">Extracting node from highways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44673/overpass-turboql-find-ways-that-are-normally-mapped-as-areas">Overpass Turbo/QL Find ways that are normally mapped as areas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36071/overpass-turbo-loaded-and-displayed-difference">Overpass Turbo, loaded and displayed difference.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40932/a-umap-with-lots-of-data-through-overpass">a umap with lots of data through overpass</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42695/overpass-query-only-some-nodes-of-way">overpass query only some nodes of way</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43114/how-can-i-dissolve-intersecting-polygons-with-overpass">How can I dissolve intersecting polygons with Overpass?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34786/overpass-turbo-searching-in-multiple-countries">Overpass Turbo searching in multiple Countries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35676/overpass-api-length-of-a-way">Overpass API: Length of a way</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40274/overpass-command-line-how-to-view-the-results-on-a-map">Overpass (command line): how to view the results on a map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44697/find-entrances-into-boundary-areas-like-national-parks">Find entrances into boundary areas like national parks</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

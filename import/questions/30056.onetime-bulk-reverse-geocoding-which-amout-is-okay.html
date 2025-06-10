@@ -1,0 +1,859 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Onetime bulk reverse geocoding: which amout is okay? - OSM Help</title>
+        <meta name="description" content="Hello, In a project I currently working for there&#39;s a need of reverse geocoding of ~15 000 - 20 000 latitude and longitude coordinates. To be more specific I&#39;m not interested in exact street address but just in administrative entities for these coordinates, cities or towns maximum. Nominatim usage p..." />
+        <meta name="keywords" content="bulk,reversegeocoding,geocoding,nominatim" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Fseaa5pIbyMzDYqWzL2pJ4sqO5XRA8Uw' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay">Onetime bulk reverse geocoding: which amout is okay?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-30056-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30056/up/" rel="nofollow"> </a>
+<div id="post-30056-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-30056-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30056/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/30056/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>In a project I currently working for there's a need of reverse geocoding of ~15 000 - 20 000 latitude and longitude coordinates. To be more specific I'm not interested in exact street address  but just in administrative entities for these coordinates, cities or towns maximum.</p>
+<p>Nominatim usage policy doesn't encourage bulk geocoding and amount of my requests is quite large but I have a very simple single-threaded script to do it which seems to fall under the limitations of usage policies. 
+The speed is not critical and setting up local Nominatim server is quite an overkill for this task. Unfortunately even business geocoding solution are aimed more for regular application use while I'm in fact interested in the data itself.</p>
+<p>So there're my main questions:</p>
+<ol>
+<li>Is it possible to reverse geocode about ~20000 using public API. If not then what amount of requests is acceptable under usage policies?</li>
+<li>If it is, should I force something like 1 second wait intervals between requests to ensure lower load on public servers.</li>
+<li>Should I notify about my bulk geocoding</li>
+</ol>
+<p>Sorry if there're somewhere <em>exactly</em> the same questions I couldn't found one</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bulk/" class="post-tag tag-link-bulk"
+                                        title="see questions tagged 'bulk'" rel="tag">bulk</a>
+                                
+                                    <a href="/tags/reversegeocoding/" class="post-tag tag-link-reversegeocoding"
+                                        title="see questions tagged 'reversegeocoding'" rel="tag">reversegeocoding</a>
+                                
+                                    <a href="/tags/geocoding/" class="post-tag tag-link-geocoding"
+                                        title="see questions tagged 'geocoding'" rel="tag">geocoding</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Jan '14, 06:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/26df8ab333942090a045ff20f28d5cb1?s=32&amp;d=identicon&amp;r=g" alt="seqai's gravatar image" />
+    <p><a href="/users/8196/seqai">seqai</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="seqai has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/30056/">
+                edited
+                <strong>22 Jan '14, 12:17</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-30056">
+    
+        <a name="52212"></a>
+        <div class="comment" id="comment-52212">
+            <div id="post-52212-score" class="comment-score">1</div>
+            <div class="comment-text"><p>For info I converted an extra "answer" here to a question.  It is now at <a href="https://help.openstreetmap.org/questions/52210/interested-in-building-a-bulk-geocoder-app-that-could-be-used-locally-in-the-browse">https://help.openstreetmap.org/questions/52210/interested-in-building-a-bulk-geocoder-app-that-could-be-used-locally-in-the-browse</a> .</p></div>
+            <div class="comment-info" id="comment-52212-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Sep '16, 10:49)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-30056" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30056-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="30060"></a>
+                    <div id="answer-container-30060" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30060-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30060/up/" rel="nofollow"> </a>
+<div id="post-30060-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-30060-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30060/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="seqai has selected this answer as the correct answer"
+        href="/accept_answer/30060/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim Usage Policy</a> for OSM's own Nominatim instance says </p>
+<blockquote>
+<p>As a general rule, bulk geocoding of larger amounts of data is not encouraged. If you have regular 
+geocoding tasks, please, look into alternatives below. Smaller one-time bulk tasks may be 
+permissible, if these additional rules are followed</p>
+<ul>
+<li>
+<p>limit your requests to a single thread</p>
+</li>
+<li>
+<p>limited to 1 machine only, no distributed scripts (including multiple Amazon EC2 instances or similar)</p>
+</li>
+<li>
+<p>Results must be cached on your side. Clients sending repeatedly the same query may be classified as faulty and blocked. </p>
+</li>
+</ul>
+</blockquote>
+<p>If you say that speed is not critical for you, then to be absolutely safe I'd insert a longer pause between requests - say, 5 seconds - which would take your total run time to about 1.5 days, and you could be sure not to tax OSM's servers too much.</p>
+<p>You could also look into <a href="http://developer.mapquest.com/web/products/open/nominatim">MapQuest's Nominatim Server</a> the usage policy of which is somewhat more relaxed than OpenStreetMap's (they have bigger machines).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30060/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jan '14, 06:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/30060/">
+                edited
+                <strong>22 Jan '14, 06:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30060">
+    
+        <a name="30062"></a>
+        <div class="comment" id="comment-30062">
+            <div id="post-30062-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I think that currently it's the best solution for me. If constant requests for almost 2 days is not a problem then I think I'll go for it. The script is really tiny and I can use it even on my ancient notebook running it for couple of days.
+From MapQuest usage policies I understood that they're more oriented towards software and web-developers so I'm not sure that onetime bulk geocoding falls under it.
+Thank you very much!</p></div>
+            <div class="comment-info" id="comment-30062-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jan '14, 07:02)</span>
+                <a class="comment-user userinfo" href="/users/8196/seqai">seqai</a>
+                
+            </div>
+        </div>
+    
+        <a name="30070"></a>
+        <div class="comment" id="comment-30070">
+            <div id="post-30070-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/8196/seqai"></a><a href="/users/8196/seqai">@seqai</a>: By the way: <a href="/questions/30066/nominatim-doesnt-respond-as-of-22-1-2014-0814-cet">Today there seem to be problems</a> with the osm.org Nominatim server, so I suggest not to start today. <a href="http://munin.openstreetmap.org/openstreetmap/poldi.openstreetmap/index.html#nominatim">Here are the stats</a> if you want to look for low load times or problems.</p></div>
+            <div class="comment-info" id="comment-30070-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jan '14, 12:16)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30071"></a>
+        <div class="comment" id="comment-30071">
+            <div id="post-30071-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/8196/seqai">@seqai</a>: Oh, and since you say that you have a simple script: take care to set a proper user agent (maybe your email address or a reference to this question here?). This is mentioned in the "requirements" on the policy page which also mentions one request per second as maximum.</p></div>
+            <div class="comment-info" id="comment-30071-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jan '14, 12:24)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30074"></a>
+        <div class="comment" id="comment-30074">
+            <div id="post-30074-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5179/aseerel4c26">@aseerel4c26</a> Thank you for notifying about the problems, though I've already had my script running and loaded 1510 coordinates with 5 sec pause between requests and haven't met any problems. I've included this exact information ou mentioned (email and link to this question as it's requested in policies) in the User-agent. For now I'm going to pause to wait until everything is ok.</p></div>
+            <div class="comment-info" id="comment-30074-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jan '14, 12:43)</span>
+                <a class="comment-user userinfo" href="/users/8196/seqai">seqai</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-30060" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30060-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="30061"></a>
+                    <div id="answer-container-30061" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30061-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30061/up/" rel="nofollow"> </a>
+<div id="post-30061-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-30061-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30061/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>To get which country and city some coordinate is in, you can use <a href="http://wiki.osm.org/wiki/Overpass_API">Overpass API</a>. Please see this <a href="http://overpass-turbo.eu/s/2bM">the example</a>. You can start it with the button "Execute".</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30061/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jan '14, 06:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fcfdb0825826fd13d2ff0d83d58819c6?s=32&amp;d=identicon&amp;r=g" alt="Roland%20Olbricht's gravatar image" />
+    <p><a href="/users/3480/roland-olbricht">Roland Olbricht</a><br/>
+    <span class="score" title="6666 reputation points"><span class="">6.7k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Roland Olbricht has 40 accepted answers">36&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30061">
+    
+</div>
+<div id="comment-tools-30061" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30061-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/30056/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Fseaa5pIbyMzDYqWzL2pJ4sqO5XRA8Uw' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/geocoding/"
+            class="tag-link-geocoding"
+            title="see questions tagged'geocoding'using tags"
+            rel="tag">geocoding</a> <span class="tag-number">&#215;133</span><br/>
+        
+        <a href="/tags/reversegeocoding/"
+            class="tag-link-reversegeocoding"
+            title="see questions tagged'reversegeocoding'using tags"
+            rel="tag">reversegeocoding</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/bulk/"
+            class="tag-link-bulk"
+            title="see questions tagged'bulk'using tags"
+            rel="tag">bulk</a> <span class="tag-number">&#215;17</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 22, 2014, 6:17 a.m.">22 Jan '14, 06:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>18,820 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 24, 2016, 10:49 a.m.">24 Sep '16, 10:49</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/85625/how-to-get-lat-long-of-address-from-osm-file">How to get lat long of address from osm file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33976/nominatim-with-all-tags">Nominatim with all tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61456/incorrect-data-received-in-reverse-geocoding">Incorrect data received in reverse geocoding</a>
+        </p>
+        
+        <p>
+            <a href="/questions/74027/places-not-found-cant-use-reverse-geocoding-api">Places not found, can&#39;t use reverse geocoding API</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65659/geocode-apisearchphp-doesnt-return-specific-data">Geocode api(search.php) doesn&#39;t return specific data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44800/how-to-get-continent-of-geo-locationlatitude-and-longtitude">How to get continent of geo-location(latitude and longtitude)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14474/what-information-does-it-take-to-geoquery-a-street-address">What information does it take to geoquery a street address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12392/local-nominatim-server-bulk-support">Local Nominatim Server - Bulk support?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15474/the-search-shows-a-bavarian-city-as-being-in-thuringen">The search shows a Bavarian city as being in Thüringen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1391/why-does-nominatim-not-pick-up-a-country-name">Why does Nominatim not pick up a country name?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to tag storm sewers (especially ones dangerous to bicycles) - OSM Help</title>
+        <meta name="description" content="My city hasn&#39;t gotten enlightened yet with respect to bicycling, and so we have a lot of storm sewers with wide openings, parallel to the street, that are dangerous to bicycles and small motorcycles. Is there a way to tag storm sewers in general? Key:manhole doesn&#39;t seem right. Thanks!" />
+        <meta name="keywords" content="sewer,bicycle,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/40670/how-to-tag-storm-sewers-especially-ones-dangerous-to-bicycles" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/40670/how-to-tag-storm-sewers-especially-ones-dangerous-to-bicycles?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Y1J8q7amZOZIRrEgUgrCOGWI5S8Vx3aF' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/40670/how-to-tag-storm-sewers-especially-ones-dangerous-to-bicycles">How to tag storm sewers (especially ones dangerous to bicycles)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-40670-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40670/up/" rel="nofollow"> </a>
+<div id="post-40670-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-40670-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40670/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/40670/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>My city hasn't gotten enlightened yet with respect to bicycling, and so we have a lot of storm sewers with wide openings, parallel to the street, that are dangerous to bicycles and small motorcycles.</p>
+<p>Is there a way to tag storm sewers in general?  Key:manhole doesn't seem right.  Thanks!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/sewer/" class="post-tag tag-link-sewer"
+                                        title="see questions tagged 'sewer'" rel="tag">sewer</a>
+                                
+                                    <a href="/tags/bicycle/" class="post-tag tag-link-bicycle"
+                                        title="see questions tagged 'bicycle'" rel="tag">bicycle</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Jan '15, 20:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e81394b007264247f2acb0e57e596301?s=32&amp;d=identicon&amp;r=g" alt="Federico%20Mena%20Quintero's gravatar image" />
+    <p><a href="/users/6421/federico-mena-quintero">Federico Men...</a><br/>
+    <span class="score" title="471 reputation points">471</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="17 badges"><span class="bronze">&#9679;</span><span class="badgecount">17</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Federico Mena Quintero has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/40670/">
+                edited
+                <strong>28 Jan '15, 21:49</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-40670">
+    
+        <a name="40673"></a>
+        <div class="comment" id="comment-40673">
+            <div id="post-40673-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Hi Federico Mena Quintero, what do you mean by storm sewers ? Do you have a link or specimen ?</p></div>
+            <div class="comment-info" id="comment-40673-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jan '15, 21:11)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+        <a name="40674"></a>
+        <div class="comment" id="comment-40674">
+            <div id="post-40674-score" class="comment-score">3</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> I think this is talking about what I'd call a storm drain (see <a href="http://en.wikipedia.org/wiki/Storm_drain">http://en.wikipedia.org/wiki/Storm_drain</a> ).  In places subject to cyclones such as parts of Australia, then can be quite large and quite a hazard.</p></div>
+            <div class="comment-info" id="comment-40674-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jan '15, 21:19)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42871"></a>
+        <div class="comment" id="comment-42871">
+            <div id="post-42871-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I think this is the sort of thing the questioner is talking about: <a href="http://corneliusnews.net/blog/2012/07/16/drainage-grates-on-n-main-st-are-bicycle-hazards/">http://corneliusnews.net/blog/2012/07/16/drainage-grates-on-n-main-st-are-bicycle-hazards/</a></p></div>
+            <div class="comment-info" id="comment-42871-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '15, 14:38)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+        <a name="42873"></a>
+        <div class="comment" id="comment-42873">
+            <div id="post-42873-score" class="comment-score">1</div>
+            <div class="comment-text"><p>neuhausr has it right - I'm talking about drains whose openings are larger than a bicycle wheel, so you can fall in and fly over the handlebars quite easily.</p></div>
+            <div class="comment-info" id="comment-42873-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '15, 16:39)</span>
+                <a class="comment-user userinfo" href="/users/6421/federico-mena-quintero">Federico Men...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40670" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40670-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/40670/how-to-tag-storm-sewers-especially-ones-dangerous-to-bicycles?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/40670/how-to-tag-storm-sewers-especially-ones-dangerous-to-bicycles?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/40670/how-to-tag-storm-sewers-especially-ones-dangerous-to-bicycles?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/40670/how-to-tag-storm-sewers-especially-ones-dangerous-to-bicycles?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="42824"></a>
+                    <div id="answer-container-42824" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-42824-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42824/up/" rel="nofollow"> </a>
+<div id="post-42824-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-42824-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42824/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Federico Mena Quintero has selected this answer as the correct answer"
+        href="/accept_answer/42824/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The best fitting tag currently in use is:</p>
+<pre><code>manhole=drain
+</code></pre>
+<p>This tag has been used 4157 times. I couldn't find a good alternative on <a href="http://taginfo.openstreetmap.org/keys/manhole#values">taginfo</a> or in the wiki.</p>
+<p>Edit: Because of the discussion on this question and answer, I have started a <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Utility_Schema">proposal</a> and would appreciate all your input.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/42824/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 May '15, 09:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8cacb06102b20d5548277426738c6468?s=32&amp;d=identicon&amp;r=g" alt="Ashley%20Laurens's gravatar image" />
+    <p><a href="/users/10924/ashley-laurens">Ashley Laurens</a><br/>
+    <span class="score" title="260 reputation points">260</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ashley Laurens has 2 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/42824/">
+                edited
+                <strong>06 May '15, 04:21</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-42824">
+    
+        <a name="42830"></a>
+        <div class="comment not_top_scorer" id="comment-42830">
+            <div id="post-42830-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I'm not sure that's quite the same thing.  "manhole=drain" is mostly used on nodes above the drain, which might be what the questioner was asking, but might not.  If you look at an example one:</p>
+
+<p><a href="http://www.openstreetmap.org/node/3097308015">http://www.openstreetmap.org/node/3097308015</a></p>
+
+<p>you can see that the drain itself has been mapped as <a href="http://www.openstreetmap.org/way/300811530">http://www.openstreetmap.org/way/300811530</a> (waterway=ditch, tunnel=culvert).  In the case of the storm sewer itself, I'd probably go with waterway=drain (and appropriate layer and tunnel tags).</p></div>
+            <div class="comment-info" id="comment-42830-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '15, 13:03)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42833"></a>
+        <div class="comment" id="comment-42833">
+            <div id="post-42833-score" class="comment-score">3</div>
+            <div class="comment-text"><p>I may very well have misunderstood what sort of object he was referring to, but from his description of the problem it made me thing of a stormwater capture pit like ones I used to work with. The old drawing I used to work from is available at <a href="http://www.brisbane.qld.gov.au/planning-building/planning-guidelines-and-tools/superseded-brisbane-city-plan-2000/superseded-standard-drawings">http://www.brisbane.qld.gov.au/planning-building/planning-guidelines-and-tools/superseded-brisbane-city-plan-2000/superseded-standard-drawings</a> just select drawing UMS-331 from the drainage pull down.</p>
+
+<p>The older (stopped being installed in Brisbane around 1998) had a grate for traffic which had steel bars running n the same direction as the traffic which was disastrous for cyclists as front wheels would drop into the grate if they rode over it. Newer grate designs have bars on both directions which were still problematic but better, and the newest have much thicker metal at the top providing a safer riding surface. </p>
+
+<p>The way you linked to looked to me to be an above ground drainage ditch which then flows underground through a pipe or rectangular culvert, in which case a manhole=drain would be (from my interpretation of the tags) an inlet structure to let more water into the pipe or culvert. The underground pipe in either case is not a hazard.</p></div>
+            <div class="comment-info" id="comment-42833-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '15, 13:16)</span>
+                <a class="comment-user userinfo" href="/users/10924/ashley-laurens">Ashley Laurens</a>
+                
+            </div>
+        </div>
+    
+        <a name="42876"></a>
+        <div class="comment" id="comment-42876">
+            <div id="post-42876-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Thank you, I think I'll use manhole=drain.  I hadn't noticed the "drain: for removing excess rainfall (storm/rain drain)" in the wiki.</p></div>
+            <div class="comment-info" id="comment-42876-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '15, 16:44)</span>
+                <a class="comment-user userinfo" href="/users/6421/federico-mena-quintero">Federico Men...</a>
+                
+            </div>
+        </div>
+    
+        <a name="42886"></a>
+        <div class="comment" id="comment-42886">
+            <div id="post-42886-score" class="comment-score">2</div>
+            <div class="comment-text"><p>In GB manholes are the access lids that can be lifted for men to get in to clean  and repair water, power or telecom pipes or cables, if they are deep, such as drains  they will have steps and be large enough for a man to climb down. They don't usually have grills for water get in. But can be a slip hazard for cycles. The drain holes in the road side gutter are not called manholes. <a href="http://en.wikipedia.org/wiki/Manhole">http://en.wikipedia.org/wiki/Manhole</a></p></div>
+            <div class="comment-info" id="comment-42886-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 11:08)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="42887"></a>
+        <div class="comment not_top_scorer" id="comment-42887">
+            <div id="post-42887-score" class="comment-score">1</div>
+            <div class="comment-text"><p>And I would not call it a manhole in other situations either, but manhole is the only current tag in either the wiki or taginfo. Does this highlight an issure where a proposal may need to be drawn up for drainage objects?</p></div>
+            <div class="comment-info" id="comment-42887-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 11:12)</span>
+                <a class="comment-user userinfo" href="/users/10924/ashley-laurens">Ashley Laurens</a>
+                
+            </div>
+        </div>
+    
+        <a name="42888"></a>
+        <div class="comment not_top_scorer" id="comment-42888">
+            <div id="post-42888-score" class="comment-score"></div>
+            <div class="comment-text"><p>An issue, yes Ashley and this is a drain. <a href="http://en.wikipedia.org/wiki/Storm_drain">http://en.wikipedia.org/wiki/Storm_drain</a>
+as SomenoeElse pointed out,  maybe drain grill is the name we need.</p></div>
+            <div class="comment-info" id="comment-42888-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 11:19)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="42889"></a>
+        <div class="comment not_top_scorer" id="comment-42889">
+            <div id="post-42889-score" class="comment-score"></div>
+            <div class="comment-text"><p>And like many things represented in OSM they are called many different things of varying levels of technicality. As a civil Draughtsperson I am familiar with stormwater inlet devices of various types admittedly this familiarity is limited to those used in Australia. Manholes are also the name given to structures used for people to access underground ducting for any type of drainage as well as other underground infrastructure.  </p>
+
+<p>I will choose not to be insulted that you ignored (or missed) that I also linked to a (admittedly more technical) reference document for what I thought Fredrico was concerned with and why and that he confirmed what the structure was in a comment replying to neuhauser.</p></div>
+            <div class="comment-info" id="comment-42889-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 11:28)</span>
+                <a class="comment-user userinfo" href="/users/10924/ashley-laurens">Ashley Laurens</a>
+                
+            </div>
+        </div>
+    
+        <a name="42890"></a>
+        <div class="comment" id="comment-42890">
+            <div id="post-42890-score" class="comment-score">4</div>
+            <div class="comment-text"><p>Not having the expertise of <a href="http://help.openstreetmap.org/users/10924/ashley-laurens">@Ashley Laurens</a>, but it does seem that we are missing tags for something relevant. I believe these are called gullies in the UK, which might be a starting point (at least that's what the council call them if I need to report a blocked one). (Intrigued because I noticed kerbstones with circular holes in the other day and discover this is a new type).</p></div>
+            <div class="comment-info" id="comment-42890-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 11:44)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42896"></a>
+        <div class="comment not_top_scorer" id="comment-42896">
+            <div id="post-42896-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry, no  insult intended. I thought another illustration would help, I have now navigated through to the technical drawings. I know that manhole was the closest tag, but think it is too wrong to use.  I would like a better description/tag I suspect you may agree.</p></div>
+            <div class="comment-info" id="comment-42896-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 13:52)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="42900"></a>
+        <div class="comment" id="comment-42900">
+            <div id="post-42900-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Did some searching, it looks like the UK term for the covering is called a gully grating. (The street gully is what we'd call a street gutter in the US) The catchbasin (or sump--small reservoir where water initially goes directly under the road that traps grit, etc) is a gully pot.</p></div>
+            <div class="comment-info" id="comment-42900-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 16:15)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-42824" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42824-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/40670/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Y1J8q7amZOZIRrEgUgrCOGWI5S8Vx3aF' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40670/how-to-tag-storm-sewers-especially-ones-dangerous-to-bicycles?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40670/how-to-tag-storm-sewers-especially-ones-dangerous-to-bicycles?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/bicycle/"
+            class="tag-link-bicycle"
+            title="see questions tagged'bicycle'using tags"
+            rel="tag">bicycle</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/sewer/"
+            class="tag-link-sewer"
+            title="see questions tagged'sewer'using tags"
+            rel="tag">sewer</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 28, 2015, 8:14 p.m.">28 Jan '15, 20:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,496 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 6, 2015, 4:21 a.m.">06 May '15, 04:21</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13643/how-to-tag-a-self-serve-bike-repair-stand">[closed] How to tag a self serve bike repair stand?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43732/type-of-bicycle-parking">type of bicycle parking</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6320/how-do-i-map-a-sidewalkpavement-with-shared-use-for-bicycle-and-pedestrians">How do I map a sidewalk/pavement with shared use for bicycle and pedestrians?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13642/how-to-tag-a-self-serve-bike-repair-stand">How to tag a self serve bike repair stand?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23865/what-tag-should-i-use-for-this-barrier">What tag should I use for this barrier?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28173/suggestion-how-to-mark-and-show-bicycle-paths-on-a-map">suggestion how to mark and show bicycle paths (on a map)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2339/restricted-lanes-with-lanes-tag">Restricted lanes with &quot;lanes&quot; tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6237/how-to-tag-that-a-path-is-impassable-for-bikes">How to tag that a path is impassable for bikes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11261/how-do-i-tag-wheelchair-accessible-bicycle-parking">How do I tag wheelchair accessible bicycle parking?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53009/monument-memorial-how-to-tag-it-bicycle-related">Monument / memorial, how to tag it, bicycle related.</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

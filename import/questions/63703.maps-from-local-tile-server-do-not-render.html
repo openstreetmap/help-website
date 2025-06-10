@@ -1,0 +1,955 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Maps from local tile server do not render - OSM Help</title>
+        <meta name="description" content="I worked through the excellent guide on installing a tile server in Ubuntu 18.04. Frankly, this is one of the best guides I’ve ever used, and I’ve slogged through quite a few over the years. I ran into a couple of block walls at the end though. First, I want to say everything installed without any n..." />
+        <meta name="keywords" content="rendering,humanitarian,mod_tile,tile_server" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/63703/maps-from-local-tile-server-do-not-render" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/63703/maps-from-local-tile-server-do-not-render?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='jc5pkpAJwYomdMR6P65TvJqQLxNBau6E' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/63703/maps-from-local-tile-server-do-not-render">Maps from local tile server do not render</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-63703-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63703/up/" rel="nofollow"> </a>
+<div id="post-63703-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-63703-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63703/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/63703/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I worked through the excellent guide on installing a tile server in Ubuntu 18.04. Frankly, this is one of the best guides I’ve ever used, and I’ve slogged through quite a few over the years.</p>
+<p>I ran into a couple of block walls at the end though. First, I want to say everything installed without any noted errors. I did get a ton of warnings (like this: Warning: amenity-points.mss:2468:6 Styles do not match layer selector .text-low-zoom.) when running carto, but that seems to be about all.</p>
+<p>I installed the Switcheroo Redirector extension in Chrome and pointed things towards my public ip address, but I keep getting Content Security Policy notices: </p>
+<pre><code>Refused to load the image '&lt;URL&gt;' because it violates the following Content Security Policy directive: "img-src 'self' data: &lt;URL&gt; *.wp.com *.tile.openstreetmap.org *.tile.thunderforest.com *.openstreetmap.fr piwik.openstreetmap.org developer.mapquest.com”.
+</code></pre>
+<p>Initially I thought this issue was related to my server (I’m no expert on CSP!) so I added mod_headers and added very permissive policy directives. Chrome continued to refuse to load the Humanitarian Layer, but it does load the other three layers. I’ve since concluded the CPS notifications were coming from OpenStreetMap instead.</p>
+<p>I also threw together some html/css/javascript and used Leaflet to display a page. I did this with MapBox and it worked, so I’m confident my test code is acceptable. But, when I try to point towards my own server (same platform at this point), all I can get is a blank screen showing the map canvas without any graphics:</p>
+<p><img src="https://help.openstreetmap.org/upfiles/PastedGraphic-1.png" alt="alt text"></p>
+<p>This occurs in both Chrome and Safari; neither browser reports any errors, all statuses are 200. </p>
+<p>Syslog during an Apache start: 
+May 24 07:59:58 ubuntu systemd<a href="https://help.openstreetmap.org/upfiles/PastedGraphic-1.png">1</a>: Starting The Apache HTTP Server...
+May 24 07:59:58 ubuntu apachectl[95797]: [Thu May 24 07:59:58.490304 2018] [tile:notice] [pid 95800:tid 140608967183296] Loading tile config ajt at /hot/ for zooms 0 - 20 from tile directory /var/lib/mod_tile with extension .png and mime type image/png
+May 24 07:59:58 ubuntu systemd<a href="https://help.openstreetmap.org/upfiles/PastedGraphic-1.png">1</a>: Started The Apache HTTP Server.</p>
+<p>Contents of /var/lib/mod_tile/ajt:</p>
+<p><img src="https://help.openstreetmap.org/upfiles/PastedGraphic-2.png" alt="alt text"></p>
+<p>I’m not sure how many of these directories should be here? I do want to say that when I try to use this link in Chrome w/ the extension, and I get the CSP notifications, if I click on one of the PNGs shown in the notification, I will get a tile to load and display. And, an additional folder gets created under /var/lib/mod_tile/ajt. I assume from this that my actual renderer works? </p>
+<p>Does this mean my problem is in how my Apache server is handing off the work to the tile server? Is my mod_tile broken? </p>
+<p>Here is my output from <a href="http://ipaddress/mod_tile">http://ipaddress/mod_tile</a> after loading two png files using the method I described two paragraphs above. </p>
+<pre><code>NoResp200: 2
+NoResp304: 0
+NoResp404: 0
+NoResp503: 0
+NoResp5XX: 0
+NoRespOther: 0
+NoFreshCache: 1
+NoOldCache: 0
+NoVeryOldCache: 0
+NoFreshRender: 1
+NoOldRender: 0
+NoVeryOldRender: 0
+NoRespZoom00: 0
+NoRespZoom01: 0
+NoRespZoom02: 0
+NoRespZoom03: 0
+NoRespZoom04: 0
+NoRespZoom05: 0
+NoRespZoom06: 0
+NoRespZoom07: 0
+NoRespZoom08: 0
+NoRespZoom09: 0
+NoRespZoom10: 0
+NoRespZoom11: 0
+NoRespZoom12: 0
+NoRespZoom13: 0
+NoRespZoom14: 2
+NoRespZoom15: 0
+NoRespZoom16: 0
+NoRespZoom17: 0
+NoRespZoom18: 0
+NoRespZoom19: 0
+NoRespZoom20: 0
+NoTileBufferReads: 2
+DurationTileBufferReads: 126
+NoTileBufferReadZoom00: 0
+DurationTileBufferReadZoom00: 0
+NoTileBufferReadZoom01: 0
+DurationTileBufferReadZoom01: 0
+NoTileBufferReadZoom02: 0
+DurationTileBufferReadZoom02: 0
+NoTileBufferReadZoom03: 0
+DurationTileBufferReadZoom03: 0
+NoTileBufferReadZoom04: 0
+DurationTileBufferReadZoom04: 0
+NoTileBufferReadZoom05: 0
+DurationTileBufferReadZoom05: 0
+NoTileBufferReadZoom06: 0
+DurationTileBufferReadZoom06: 0
+NoTileBufferReadZoom07: 0
+DurationTileBufferReadZoom07: 0
+NoTileBufferReadZoom08: 0
+DurationTileBufferReadZoom08: 0
+NoTileBufferReadZoom09: 0
+DurationTileBufferReadZoom09: 0
+NoTileBufferReadZoom10: 0
+DurationTileBufferReadZoom10: 0
+NoTileBufferReadZoom11: 0
+DurationTileBufferReadZoom11: 0
+NoTileBufferReadZoom12: 0
+DurationTileBufferReadZoom12: 0
+NoTileBufferReadZoom13: 0
+DurationTileBufferReadZoom13: 0
+NoTileBufferReadZoom14: 2
+DurationTileBufferReadZoom14: 126
+NoTileBufferReadZoom15: 0
+DurationTileBufferReadZoom15: 0
+NoTileBufferReadZoom16: 0
+DurationTileBufferReadZoom16: 0
+NoTileBufferReadZoom17: 0
+DurationTileBufferReadZoom17: 0
+NoTileBufferReadZoom18: 0
+DurationTileBufferReadZoom18: 0
+NoTileBufferReadZoom19: 0
+DurationTileBufferReadZoom19: 0
+NoTileBufferReadZoom20: 0
+DurationTileBufferReadZoom20: 0
+NoRes200Layer/hot/: 2
+NoRes404Layer/hot/: 0
+</code></pre>
+<p>I’m concluding from this that my web server is not handing off to mod_tile, but I don’t know why, nor am I sure what troubleshooting step I can take next.</p>
+<p>Any help would be greatly appreciated! I hope to hear back from you soon. In the meantime, I’ll start trying to look closer at mod_tile, and running renderd with more logging.</p>
+<p>UPDATE:</p>
+<p>I installed and configure munin to provide stats. I'm getting nothing from renderd:</p>
+<p><img src="https://help.openstreetmap.org/upfiles/renderd_output.png" alt="alt text"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/humanitarian/" class="post-tag tag-link-humanitarian"
+                                        title="see questions tagged 'humanitarian'" rel="tag">humanitarian</a>
+                                
+                                    <a href="/tags/mod_tile/" class="post-tag tag-link-mod_tile"
+                                        title="see questions tagged 'mod_tile'" rel="tag">mod_tile</a>
+                                
+                                    <a href="/tags/tile_server/" class="post-tag tag-link-tile_server"
+                                        title="see questions tagged 'tile_server'" rel="tag">tile_server</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 May '18, 17:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9d2fa479c7f7984fd8fd435b2badbc4d?s=32&amp;d=identicon&amp;r=g" alt="tim_rohrer's gravatar image" />
+    <p><a href="/users/15159/tim_rohrer">tim_rohrer</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tim_rohrer has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/63703/">
+                edited
+                <strong>24 May '18, 19:50</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-63703">
+    
+        <a name="63706"></a>
+        <div class="comment" id="comment-63706">
+            <div id="post-63706-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've added an answer at <a href="https://help.openstreetmap.org/questions/63690/tiles-not-creating">https://help.openstreetmap.org/questions/63690/tiles-not-creating</a> - based largely on what you have found out!</p>
+
+<p>In your case the fact that tiles are getting generated (as the "ls -al" shows) means that the link to mod_tile is working, but as you've since found the CSP (I think) is stopping Chromium from serving tiles.</p></div>
+            <div class="comment-info" id="comment-63706-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '18, 18:42)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63713"></a>
+        <div class="comment" id="comment-63713">
+            <div id="post-63713-score" class="comment-score"></div>
+            <div class="comment-text"><p>Unfortunately, when I created my own leaflet-based site, and tested against my local server, I still only get the blank screen shown above.</p>
+
+<p>In my server, CSP is not active. No errors or issues are noted in the browser.</p>
+
+<p>I'm still working to pore through more logs, but not getting much to speak of.</p></div>
+            <div class="comment-info" id="comment-63713-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '18, 19:02)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+        <a name="63718"></a>
+        <div class="comment" id="comment-63718">
+            <div id="post-63718-score" class="comment-score"></div>
+            <div class="comment-text"><p>Does your leaflet-based site work with osm's tile servers?</p></div>
+            <div class="comment-info" id="comment-63718-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '18, 20:47)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63719"></a>
+        <div class="comment" id="comment-63719">
+            <div id="post-63719-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tested against MapBox, yes I'm confident my code is acceptable. Do you think there is something different that should cause me to try and point towards osm's tile servers directly?</p>
+
+<p>I'm in the process of redownloading shape files since, well, I don't know what else to try.</p></div>
+            <div class="comment-info" id="comment-63719-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '18, 20:54)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+        <a name="63742"></a>
+        <div class="comment" id="comment-63742">
+            <div id="post-63742-score" class="comment-score"></div>
+            <div class="comment-text"><p>I still have not gotten this figured out, and mucking with the shape files made things worse. I've started over, and we'll see how it goes. </p>
+
+<p>I'm still curious about the warnings I get with carto, although I've been told those shouldn't be a factor.</p>
+
+<p>On a related note, what are the roles of the .lua and .style files used in the osm2pgsql process? Do they contain data that is actually imported into the gis database? Ultimately, if there is a problem with the openstreetmap-carto configuration, does that mean the database needs to be regenerated? </p>
+
+<p>Any known tests for this?</p></div>
+            <div class="comment-info" id="comment-63742-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '18, 19:07)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+        <a name="63743"></a>
+        <div class="comment not_top_scorer" id="comment-63743">
+            <div id="post-63743-score" class="comment-score"></div>
+            <div class="comment-text"><p>The .style file (such as <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/openstreetmap-carto.style">this one</a>) determines what database columns are created, and the .lua file (such as <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/openstreetmap-carto.lua">here</a>) allows fine-grained control over data as it is imported.</p>
+
+<p>I've you've been using the lua transforms to move OSM data into a different column then yes, you might need to reload data after changing a .lua file.  If you've not changed that you won't need to, though.</p>
+
+<p>The bit of the <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">switch2osm guide</a> that says "Point a web browser at: <a href="http://yourserveripaddress/hot/0/0/0.png">http://yourserveripaddress/hot/0/0/0.png"</a> is the basic test to check that your tile server's working.</p>
+
+<p>Another thing that you might try is (on one session) "sudo tail -f /var/log/syslog" and on another "sudo /etc/init.d/renderd restart"</p></div>
+            <div class="comment-info" id="comment-63743-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '18, 21:34)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63751"></a>
+        <div class="comment not_top_scorer" id="comment-63751">
+            <div id="post-63751-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>. I just set up another server and ran through the setup process. Basically the same, although I created a different user.</p>
+
+<p>I am able to display the /hot/0/0/0.png, so I'm glad to hear your comment there.</p>
+
+<p>Maybe I need to start a new question and post some code, but I've run my JS against MapBox and it works. So, that leads me to think my URL template is wrong/misunderstood? The forms I've tried that don't produce errors include:  http://&lt;internalip&gt;/#map=13/40.3743/49.7134 and http://&lt;internalip&gt;#map=13/40.373/49.7134.</p>
+
+<p>To confirm, I should be able to files served up to the user on the node as the tile server, correct?</p></div>
+            <div class="comment-info" id="comment-63751-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 May '18, 02:18)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-63703" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63703-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/63703/maps-from-local-tile-server-do-not-render?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/63703/maps-from-local-tile-server-do-not-render?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/63703/maps-from-local-tile-server-do-not-render?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/63703/maps-from-local-tile-server-do-not-render?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="63752"></a>
+                    <div id="answer-container-63752" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-63752-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63752/up/" rel="nofollow"> </a>
+<div id="post-63752-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-63752-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63752/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="SomeoneElse has selected this answer as the correct answer"
+        href="/accept_answer/63752/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I am happy to report I figured it out. As <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> pointed out, the successful loading of <code>0/0/0.png</code> is a good indication that the tile server is working. This caused me to return to look closer at the leaflet.js code I had cobbled together. In hindsight, I think I should have caught this earlier.</p>
+<p>The URL Template is where I found my error. Although I didn't see this in the leaflet.js documentation, the lat, lng, and zoom values are automatically picked up from the <code>setView</code> function of <code>L.map</code>, and are not explicitly stated in <code>L.tileLayer</code>. In fact, <code>L.tileLayer</code> is (as it does say in the documentation) a template; it turns out it is one that automatically (if you will) populates. </p>
+<p>Perhaps this will be of help to someone in the future.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/63752/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 May '18, 05:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9d2fa479c7f7984fd8fd435b2badbc4d?s=32&amp;d=identicon&amp;r=g" alt="tim_rohrer's gravatar image" />
+    <p><a href="/users/15159/tim_rohrer">tim_rohrer</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tim_rohrer has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-63752">
+    
+        <a name="71679"></a>
+        <div class="comment" id="comment-71679">
+            <div id="post-71679-score" class="comment-score"></div>
+            <div class="comment-text"><p>So what should I do to correct this? I'm having the same issues but didn't understood how to solve it.</p></div>
+            <div class="comment-info" id="comment-71679-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Nov '19, 19:40)</span>
+                <a class="comment-user userinfo" href="/users/16880/carlosguedes">carlosguedes</a>
+                
+            </div>
+        </div>
+    
+        <a name="71680"></a>
+        <div class="comment" id="comment-71680">
+            <div id="post-71680-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Carlos, do you have a public link to your setup to inspect you leaflet code? That would be the easiest way to help you out. Otherwise (if it's small) just post your leaflet code here or at paste bin or somewhere were we can have a look.</p></div>
+            <div class="comment-info" id="comment-71680-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Nov '19, 20:40)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="71683"></a>
+        <div class="comment" id="comment-71683">
+            <div id="post-71683-score" class="comment-score"></div>
+            <div class="comment-text"><p>The Leaflet file is the raw one used by the tutorial <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/manually-building-a-tile-server-18-04-lts/</a></p>
+
+<p>I just posted my question in another topic to don't make a mess <a href="https://help.openstreetmap.org/questions/71682/private-tile-server-not-rendering">https://help.openstreetmap.org/questions/71682/private-tile-server-not-rendering</a></p></div>
+            <div class="comment-info" id="comment-71683-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Nov '19, 02:04)</span>
+                <a class="comment-user userinfo" href="/users/16880/carlosguedes">carlosguedes</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-63752" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63752-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/63703/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='jc5pkpAJwYomdMR6P65TvJqQLxNBau6E' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63703/maps-from-local-tile-server-do-not-render?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63703/maps-from-local-tile-server-do-not-render?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/mod_tile/"
+            class="tag-link-mod_tile"
+            title="see questions tagged'mod_tile'using tags"
+            rel="tag">mod_tile</a> <span class="tag-number">&#215;80</span><br/>
+        
+        <a href="/tags/humanitarian/"
+            class="tag-link-humanitarian"
+            title="see questions tagged'humanitarian'using tags"
+            rel="tag">humanitarian</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/tile_server/"
+            class="tag-link-tile_server"
+            title="see questions tagged'tile_server'using tags"
+            rel="tag">tile_server</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 24, 2018, 5:44 p.m.">24 May '18, 17:44</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,690 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 17, 2019, 2:06 a.m.">17 Nov '19, 02:06</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/59629/error-using-renderd">Error using renderd</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63505/streaming-tiles-mod_tile-and-rendering-renderd-on-another-server">Streaming tiles (mod_tile) and rendering (renderd) on another server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41075/how-check-a-tile-server-is-working-right">How check a tile server is working right??</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46499/performance-problem-rendering-tiles-using-the-openstreetmap-carto-stylesheet">Performance problem rendering tiles using the openstreetmap-carto stylesheet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62157/cannot-connect-to-socket-while-using-render_list">Cannot connect to socket while using render_list</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62564/failed-to-send-render-cmd-and-sending-notdone-response">Failed to send render cmd and Sending NotDone Response.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18237/map-not-updating-to-changes-made">map not updating to changes made</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38013/assistance-with-coastline-rendering-issues-for-oahu-hawaii">Assistance with coastline rendering issues for Oahu, Hawaii</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44572/compiling-mod_tile-problem">Compiling mod_tile problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68714/how-to-serve-tiles-for-nginx-webserver">How to serve tiles for Nginx webserver?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

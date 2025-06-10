@@ -1,0 +1,864 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can I revert part of a changeset without affecting the rest? - OSM Help</title>
+        <meta name="description" content="I was adding all AH-roads in the south caucasus as relations just recently. Nevertheless, the relation http://www.openstreetmap.org/browse/relation/1770126 of the AH-81 is now empty except of one member. This happened in changeset http://www.openstreetmap.org/browse/changeset/9571754 Is it possible ..." />
+        <meta name="keywords" content="changeset,revert,relations" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/8863/can-i-revert-part-of-a-changeset-without-affecting-the-rest" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/8863/can-i-revert-part-of-a-changeset-without-affecting-the-rest?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='7gLggtuyO7guU1EEgbIN9w67wq6iHGYD' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/8863/can-i-revert-part-of-a-changeset-without-affecting-the-rest">Can I revert part of a changeset without affecting the rest?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-8863-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8863/up/" rel="nofollow"> </a>
+<div id="post-8863-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-8863-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8863/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/8863/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I was adding all AH-roads in the south caucasus as relations just recently. Nevertheless, the relation <a href="http://www.openstreetmap.org/browse/relation/1770126">http://www.openstreetmap.org/browse/relation/1770126</a> of the AH-81 is now empty except of one member. This happened in changeset <a href="http://www.openstreetmap.org/browse/changeset/9571754">http://www.openstreetmap.org/browse/changeset/9571754</a></p>
+<p>Is it possible to revert the changes on the relations, without reverting the rest of the changeset? It seems that user baxi does valuable contributions on the map of Azerbaijan.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/changeset/" class="post-tag tag-link-changeset"
+                                        title="see questions tagged 'changeset'" rel="tag">changeset</a>
+                                
+                                    <a href="/tags/revert/" class="post-tag tag-link-revert"
+                                        title="see questions tagged 'revert'" rel="tag">revert</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Nov '11, 13:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/139902838ec4406143a7d9f286419a52?s=32&amp;d=identicon&amp;r=g" alt="moszkva%20ter's gravatar image" />
+    <p><a href="/users/1933/moszkva-ter">moszkva ter</a><br/>
+    <span class="score" title="2125 reputation points"><span class="">2.1k</span></span><span title="22 badges"><span class="badge1">&#9679;</span><span class="badgecount">22</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="60 badges"><span class="bronze">&#9679;</span><span class="badgecount">60</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="moszkva ter has 8 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8863/">
+                edited
+                <strong>07 Nov '11, 20:38</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9fe361843971cf8b23dc93517f00b996?s=32&amp;d=identicon&amp;r=g" alt="Jonathan%20Bennett's gravatar image" />
+            <p><a href="/users/6/jonathan-bennett">Jonathan Ben...</a><br/>
+            <span class="score" title="8261 reputation points"><span class="">8.3k</span></span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="85 badges"><span class="silver">&#9679;</span><span class="badgecount">85</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-8863">
+    
+</div>
+<div id="comment-tools-8863" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8863-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/8863/can-i-revert-part-of-a-changeset-without-affecting-the-rest?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/8863/can-i-revert-part-of-a-changeset-without-affecting-the-rest?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/8863/can-i-revert-part-of-a-changeset-without-affecting-the-rest?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/8863/can-i-revert-part-of-a-changeset-without-affecting-the-rest?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="8864"></a>
+                    <div id="answer-container-8864" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8864-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8864/up/" rel="nofollow"> </a>
+<div id="post-8864-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-8864-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8864/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It is possible. I don't know the simplest method. The one I use involves downloading the previous version via the api as a .osm file, tweaking the version number to the current version, opening it in JOSM and checking for deleted ways, etc after downloading incomplete members, then upload. </p>
+<p>I'm working on this relation for you now.</p>
+<p>Edit: woodpeck_repair got there before I did. I was warned of a conflict when trying to upload the repaired relation, so checked what had changed.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8864/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Nov '11, 13:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f25a8392e12ed696b16554b3d08e4e2b?s=32&amp;d=identicon&amp;r=g" alt="EdLoach's gravatar image" />
+    <p><a href="/users/339/edloach">EdLoach ♦</a><br/>
+    <span class="score" title="19478 reputation points"><span class="">19.5k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="156 badges"><span class="silver">&#9679;</span><span class="badgecount">156</span></span><span title="280 badges"><span class="bronze">&#9679;</span><span class="badgecount">280</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="EdLoach has 93 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8864/">
+                edited
+                <strong>07 Nov '11, 13:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8864">
+    
+        <a name="8865"></a>
+        <div class="comment" id="comment-8865">
+            <div id="post-8865-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Ed, sorry, I seem to have interfered with your work - only saw this after I had already fixed the problem. I had to undelete a few ways before I would restore the relation to the last version before baxi's edit. - To the original poster: Such questions should definitely put on the mailing list and not on <a href="http://help.osm.org">help.osm.org</a> because the object-specific information in these postings is of little value for posterity!</p></div>
+            <div class="comment-info" id="comment-8865-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '11, 13:35)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="8866"></a>
+        <div class="comment" id="comment-8866">
+            <div id="post-8866-score" class="comment-score"></div>
+            <div class="comment-text"><p>No problems. I would have removed the 0 node ways (the deleted ones) from the relation when restoring, rather than undeleting them, and leave the manual checking of gaps to the original poster. Perhaps Frederik you could stick an answer on saying something like "It is possible, but such requests should be sent to &lt;list detail=""&gt;" and I'll then delete mine which is a bit lacking in detail.</p></div>
+            <div class="comment-info" id="comment-8866-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '11, 13:42)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="8867"></a>
+        <div class="comment" id="comment-8867">
+            <div id="post-8867-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your help, guys! <em>thumbs up</em>
+Next time, I will ask a mailing list instead. Which one is the best for these issues?</p></div>
+            <div class="comment-info" id="comment-8867-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '11, 14:22)</span>
+                <a class="comment-user userinfo" href="/users/1933/moszkva-ter">moszkva ter</a>
+                
+            </div>
+        </div>
+    
+        <a name="8868"></a>
+        <div class="comment" id="comment-8868">
+            <div id="post-8868-score" class="comment-score"></div>
+            <div class="comment-text"><p>If it was me, I'd ask on the #OSM IRC channel.  That has the advantage that everyone who might decide to help will see both the request for help and anyone saying "I'll fix it" as soon as the request and responses are made.</p>
+
+<p>I've responded to requests for help on mailing lists before, and in one case (talk-au was being moderated at the time) the conversation was less than snappy.</p></div>
+            <div class="comment-info" id="comment-8868-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '11, 14:41)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8864" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8864-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="10569"></a>
+                    <div id="answer-container-10569" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-10569-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10569/up/" rel="nofollow"> </a>
+<div id="post-10569-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-10569-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10569/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>JOSM has a reverter plugin, and your partial revert could be accomplished with it. It can't do it exactly as you want with a few clicks, but it has the option to "revert only selected objects".</p>
+<p>Basically the workflow should be as such: you would first select the relation (JOSM search allows you to select even deleted objects, if you have it loaded). Then, after the "revert selected", you would tell JOSM to download all the relation members, and remove any still deleted ways from the relation - you could even select those ways with the JOSM search - and then upload the relation only (<i>Upload selected</i> in the menu).</p>
+<p>Just remember to doublecheck the outcome, before you upload the changes; as others said:</p>
+<blockquote>
+<p>Under no circumstances should you
+attempt a revert if you are not 100%
+sure that, should something go wrong,
+you can fix it again.</p>
+</blockquote>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/10569/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Feb '12, 13:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/54b673553098748d5c57bd19ae4157dd?s=32&amp;d=identicon&amp;r=g" alt="alv's gravatar image" />
+    <p><a href="/users/359/alv">alv</a><br/>
+    <span class="score" title="180 reputation points">180</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="alv has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/10569/">
+                edited
+                <strong>13 Feb '12, 13:42</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-10569">
+    
+        <a name="10619"></a>
+        <div class="comment" id="comment-10619">
+            <div id="post-10619-score" class="comment-score"></div>
+            <div class="comment-text"><p>Another problem... in the changeset, several relations were emptied. I tried it now with relation 176922 (Asian Highway AH5), but I get the error: 
+Upload failed, because the dataset does not fulfill one condition.
+Response Code = 412, Error Header=&lt;precondition failed:="" relation="" with="" id="" 176922="" cannot="" be="" saved="" due="" to="" way="" with="" id="" 127474940=""&gt;</p>
+
+<p>The conflicting way is this one, <a href="http://www.openstreetmap.org/browse/way/127474940/history">http://www.openstreetmap.org/browse/way/127474940/history</a>
+a road that has later been deleted due to road construction in this area
+:(</p></div>
+            <div class="comment-info" id="comment-10619-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Feb '12, 10:11)</span>
+                <a class="comment-user userinfo" href="/users/1933/moszkva-ter">moszkva ter</a>
+                
+            </div>
+        </div>
+    
+        <a name="10621"></a>
+        <div class="comment" id="comment-10621">
+            <div id="post-10621-score" class="comment-score"></div>
+            <div class="comment-text"><p>Er - <a href="http://www.openstreetmap.org/browse/way/127474940/history">http://www.openstreetmap.org/browse/way/127474940/history</a> was deleted 28th Nov and says "New road in Igoeti".  The coords of one node are 41.999649, 44.389927 - I doubt you can get bitterballen there!</p></div>
+            <div class="comment-info" id="comment-10621-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Feb '12, 10:31)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-10569" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10569-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/8863/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='7gLggtuyO7guU1EEgbIN9w67wq6iHGYD' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8863/can-i-revert-part-of-a-changeset-without-affecting-the-rest?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8863/can-i-revert-part-of-a-changeset-without-affecting-the-rest?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/changeset/"
+            class="tag-link-changeset"
+            title="see questions tagged'changeset'using tags"
+            rel="tag">changeset</a> <span class="tag-number">&#215;127</span><br/>
+        
+        <a href="/tags/revert/"
+            class="tag-link-revert"
+            title="see questions tagged'revert'using tags"
+            rel="tag">revert</a> <span class="tag-number">&#215;86</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 7, 2011, 1:16 p.m.">07 Nov '11, 13:16</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,104 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 17, 2012, 10:32 a.m.">17 Feb '12, 10:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/25749/how-to-change-the-comment-in-a-changeset">How to change the comment in a changeset?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31804/problems-reverting-changeset">Problems reverting changeset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7227/how-can-i-call-away-a-saved-changeset">[closed] How can I call away a saved changeset?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18860/jeddah-area-getting-automatic-edits">Jeddah area getting automatic &quot;edits&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26469/revert-total-changeset-wanted">Revert total changeset wanted!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31695/revert-total-changeset-wanted-21190743">[closed] Revert total changeset wanted (21190743)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/731/how-can-i-revert-a-changeset">How can I revert a changeset?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1895/how-to-close-a-changeset-in-potlatch-2">How to close a changeset in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7346/border-between-south-ossetia-and-georgia-missing-again">Border between South Ossetia and Georgia missing (again)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32542/where-to-report-abusive-changesets">Where to report abusive changesets ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

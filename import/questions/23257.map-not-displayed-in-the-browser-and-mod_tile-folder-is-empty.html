@@ -1,0 +1,1237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Map not displayed in the browser and mod_tile folder is empty - OSM Help</title>
+        <meta name="description" content="Hi All, I tried to set MapServer (http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/), the only change was that I replaced planet map with india map (with the same name as planet_osm.pbf). I did all the steps as explained, once rendered and restarted the apache server...on ac..." />
+        <meta name="keywords" content="rendering,mapserver,mapnik,geoserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='oLbUt8bGymkCGAJvqikBPqFZllTwuEto' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty">Map not displayed in the browser and mod_tile folder is empty</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-23257-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23257/up/" rel="nofollow"> </a>
+<div id="post-23257-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-23257-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23257/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/23257/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi All,</p>
+<p>I tried to set MapServer (<a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/),">http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/),</a> the only change was that I replaced planet map with india map (with the same name as planet_osm.pbf).</p>
+<p>I did all the steps as explained, once rendered and restarted the apache server...on accessing <a href="http://localhost/osm_tiles/0/0/0.png">http://localhost/osm_tiles/0/0/0.png</a> is giving me NOT FOUND ERROR.</p>
+<p>When I run "renderd -f -c /usr/local/etc/renderd.conf" I am getting the following console output</p>
+<pre><code>sanal@sanal-virtual-machine:~/src/mapnik-style/inc$ renderd -f -c /usr/local/etc/renderd.conf
+    renderd[25743]: Rendering daemon started
+    renderd[25743]: Initiating reqyest_queue
+    renderd[25743]: Parsing section renderd
+    renderd[25743]: Parsing render section 0
+    renderd[25743]: Parsing section renderd01
+    renderd[25743]: Parsing render section 1
+    renderd[25743]: Parsing section renderd02
+    renderd[25743]: Parsing render section 2
+    renderd[25743]: Parsing section mapnik
+    renderd[25743]: Parsing section default
+    renderd[25743]: Parsing section style2
+    renderd[25743]: config renderd: unix socketname=/var/run/renderd/renderd.sock
+    renderd[25743]: config renderd: num_threads=4
+    renderd[25743]: config renderd: num_slaves=8
+    renderd[25743]: config renderd: tile_dir=/var/lib/mod_tile
+    renderd[25743]: config renderd: stats_file=/var/run/renderd/renderd.stats
+    renderd[25743]: config mapnik:  plugins_dir=/usr/local/lib/mapnik/input
+    renderd[25743]: config mapnik:  font_dir=/usr/share/fonts/truetype/ttf-dejavu
+    renderd[25743]: config mapnik:  font_dir_recurse=1
+    renderd[25743]: config renderd(0): Active
+    renderd[25743]: config renderd(0): unix socketname=/var/run/renderd/renderd.sock
+    renderd[25743]: config renderd(0): num_threads=4
+    renderd[25743]: config renderd(0): tile_dir=/var/lib/mod_tile
+    renderd[25743]: config renderd(0): stats_file=/var/run/renderd/renderd.stats
+    renderd[25743]: config renderd(1): unix socketname=/var/run/renderd/renderd.sock
+    renderd[25743]: config renderd(1): num_threads=4
+    renderd[25743]: config renderd(1): tile_dir=/var/lib/mod_tile
+    renderd[25743]: config renderd(1): stats_file=(null)
+    renderd[25743]: config renderd(2): unix socketname=/var/run/renderd/renderd.sock
+    renderd[25743]: config renderd(2): num_threads=4
+    renderd[25743]: config renderd(2): tile_dir=/var/lib/mod_tile
+    renderd[25743]: config renderd(2): stats_file=(null)
+    renderd[25743]: config map 0:   name(default) file(/home/sanal/src/mapnik-style/osm.xml) uri(/osm_tiles/) htcp() host(localhost)
+    renderd[25743]: config map 1:   name(style2) file() uri() htcp() host()
+    renderd[25743]: Initialising unix server socket on /var/run/renderd/renderd.sock
+    renderd[25743]: Created server socket 5
+    renderd[25743]: Renderd is using mapnik version 3.0.0
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-Bold.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Oblique.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Oblique.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-BoldOblique.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-ExtraLight.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-BoldItalic.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Bold.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Bold.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Italic.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-BoldOblique.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Bold.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Italic.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-BoldOblique.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Bold.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-BoldItalic.ttf
+    renderd[25743]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-Oblique.ttf
+    Running in foreground mode...
+    renderd[25743]: Starting stats thread
+    renderd[25743]: Initialising unix client socket on /var/run/renderd/renderd.sock
+    renderd[25743]: socket /var/run/renderd/renderd.sock initialised to fd 6
+    renderd[25743]: Initialising unix client socket on /var/run/renderd/renderd.sock
+    debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile
+    renderd[25743]: Initialising unix client socket on /var/run/renderd/renderd.sock
+    renderd[25743]: socket /var/run/renderd/renderd.sock initialised to fd 7
+    renderd[25743]: socket /var/run/renderd/renderd.sock initialised to fd 8
+    debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile
+    debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile
+    debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile
+    renderd[25743]: Initialising unix client socket on /var/run/renderd/renderd.sock
+    renderd[25743]: socket /var/run/renderd/renderd.sock initialised to fd 9
+    renderd[25743]: Initialising unix client socket on /var/run/renderd/renderd.sock
+    renderd[25743]: socket /var/run/renderd/renderd.sock initialised to fd 10
+    renderd[25743]: Initialising unix client socket on /var/run/renderd/renderd.sock
+    renderd[25743]: socket /var/run/renderd/renderd.sock initialised to fd 11
+    renderd[25743]: DEBUG: Got incoming connection, fd 14, number 1
+    renderd[25743]: DEBUG: Got incoming connection, fd 15, number 2
+    renderd[25743]: DEBUG: Got incoming connection, fd 16, number 3
+    renderd[25743]: DEBUG: Got incoming connection, fd 17, number 4
+    renderd[25743]: Initialising unix client socket on /var/run/renderd/renderd.sock
+    renderd[25743]: DEBUG: Got incoming connection, fd 18, number 5
+    renderd[25743]: DEBUG: Got incoming connection, fd 20, number 6
+    renderd[25743]: socket /var/run/renderd/renderd.sock initialised to fd 19
+    renderd[25743]: DEBUG: Got incoming connection, fd 21, number 7
+    renderd[25743]: Initialising unix client socket on /var/run/renderd/renderd.sock
+    renderd[25743]: socket /var/run/renderd/renderd.sock initialised to fd 22
+    renderd[25743]: DEBUG: Got incoming connection, fd 23, number 8
+    renderd[25743]: Using web mercator projection settings
+    renderd[25743]: Using web mercator projection settings
+    renderd[25743]: Using web mercator projection settings
+    renderd[25743]: Using web mercator projection settings
+
+    &gt; Blockquote
+    &gt; 
+    &gt; Blockquote
+</code></pre>
+<p>and when I restarted apache server it gave me this </p>
+<pre><code>    sanal@sanal-virtual-machine:/var/lib$ sudo /etc/init.d/apache2 restart
+ * Restarting web server apache2                                                                                         [Wed Jun 12 16:21:35 2013] [warn] module tile_module is already loaded, skipping
+[Wed Jun 12 16:21:35 2013] [warn] Could not determine host name of server to configure tile-json request. Using localhost instead
+[Wed Jun 12 16:21:35 2013] [notice] Loading tile config default at /osm_tiles/ for zooms 0 - 20 from tile directory /var/lib/mod_tile with extension .png and mime type image/png
+[Wed Jun 12 16:21:35 2013] [warn] Could not determine host name of server to configure tile-json request. Using localhost instead
+[Wed Jun 12 16:21:35 2013] [notice] Loading tile config style2 at  for zooms 0 - 20 from tile directory /var/lib/mod_tile with extension .png and mime type image/png
+ ... waiting .[Wed Jun 12 16:21:37 2013] [warn] module tile_module is already loaded, skipping
+[Wed Jun 12 16:21:37 2013] [warn] Could not determine host name of server to configure tile-json request. Using localhost instead
+[Wed Jun 12 16:21:37 2013] [notice] Loading tile config default at /osm_tiles/ for zooms 0 - 20 from tile directory /var/lib/mod_tile with extension .png and mime type image/png
+[Wed Jun 12 16:21:37 2013] [warn] Could not determine host name of server to configure tile-json request. Using localhost instead
+[Wed Jun 12 16:21:37 2013] [notice] Loading tile config style2 at  for zooms 0 - 20 from tile directory /var/lib/mod_tile with extension .png and mime type image/png
+</code></pre>
+<p>and my renderd.conf file contents is below</p>
+<p>[renderd]
+    socketname=/var/run/renderd/renderd.sock
+    num_threads=4
+    tile_dir=/var/lib/mod_tile
+    stats_file=/var/run/renderd/renderd.stats</p>
+<pre><code>[renderd01]
+;iphostname=::1
+;ipport=7654
+;num_threads=4
+;tile_dir=<a>rados://tiles/etc/ceph/ceph.conf</a>
+;stats_file=/var/run/renderd/renderd.stats
+
+[renderd02]
+;iphostname=::1
+;ipport=7654
+;num_threads=8
+;tile_dir=memcached://
+;stats_file=/var/run/renderd/renderd.stats
+
+[mapnik]
+plugins_dir=/usr/local/lib/mapnik/input
+font_dir=/usr/share/fonts/truetype/ttf-dejavu
+font_dir_recurse=1
+
+[default]
+URI=/osm_tiles/
+TILEDIR=/var/lib/mod_tile
+XML=/home/sanal/src/mapnik-style/osm.xml
+HOST=localhost
+TILESIZE=256
+;HTCPHOST=proxy.openstreetmap.org
+;MINZOOM=0
+;MAXZOOM=18
+;TYPE=png image/png
+;DESCRIPTION=This is a description of the tile layer used in the tile json request
+;ATTRIBUTION=&amp;copy;&lt;a href=\"http://www.openstreetmap.org/\"&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\"http://wiki.openstreetmap.org/wiki/Contributors\"&gt;contributors&lt;/a&gt;, &lt;a href=\"http://opendatacommons.org/licenses/odbl/\"&gt;ODbL&lt;/a&gt;
+;SERVER_ALIAS=<a href="http://localhost/">http://localhost/</a>
+;CORS=<a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a>
+
+[style2]
+;URI=/osm_tiles2/
+;TILEDIR=<a>rados://tiles/etc/ceph/ceph.conf</a>
+;TILESIZE=512
+;XML=/home/jburgess/osm/svn.openstreetmap.org/applications/rendering/mapnik/osm-local2.xml
+;HOST=tile.openstreetmap.org
+;HTCPHOST=proxy.openstreetmap.org
+;MINZOOM=0
+;MAXZOOM=22
+;TYPE=png image/png
+;DESCRIPTION=This is a description of the tile layer used in the tile json request
+;ATTRIBUTION=&amp;copy;&lt;a href=\"http://www.openstreetmap.org/\"&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\"http://wiki.openstreetmap.org/wiki/Contributors\"&gt;contributors&lt;/a&gt;, &lt;a href=\"http://opendatacommons.org/licenses/odbl/\"&gt;ODbL&lt;/a&gt;
+;SERVER_ALIAS=<a href="http://localhost/">http://localhost/</a>
+;CORS=*
+</code></pre>
+<p>Please help me in fixing this...thanks in advance</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/mapserver/" class="post-tag tag-link-mapserver"
+                                        title="see questions tagged 'mapserver'" rel="tag">mapserver</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                                    <a href="/tags/geoserver/" class="post-tag tag-link-geoserver"
+                                        title="see questions tagged 'geoserver'" rel="tag">geoserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Jun '13, 12:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/48c18f08bf31cc32ee48a884ae4f62da?s=32&amp;d=identicon&amp;r=g" alt="Sanal's gravatar image" />
+    <p><a href="/users/6623/sanal">Sanal</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Sanal has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-23257">
+    
+        <a name="23259"></a>
+        <div class="comment" id="comment-23259">
+            <div id="post-23259-score" class="comment-score"></div>
+            <div class="comment-text"><p>What does "ls -al /var/lib/mod_tile/" return?</p></div>
+            <div class="comment-info" id="comment-23259-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '13, 12:04)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23261"></a>
+        <div class="comment" id="comment-23261">
+            <div id="post-23261-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have changed the permissions of mod_tile 
+drwxrwxrwx 2 sanal         root          4096 Jun 12 10:54 mod_tile</p></div>
+            <div class="comment-info" id="comment-23261-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '13, 12:14)</span>
+                <a class="comment-user userinfo" href="/users/6623/sanal">Sanal</a>
+                
+            </div>
+        </div>
+    
+        <a name="23262"></a>
+        <div class="comment" id="comment-23262">
+            <div id="post-23262-score" class="comment-score"></div>
+            <div class="comment-text"><p>That should allow you to write to it, sure!  For info what you should see in the renderd debug output in response to browsing to <a href="http://yourserveraddress/osm_tiles/0/0/0.png">http://yourserveraddress/osm_tiles/0/0/0.png</a> is something like:</p>
+
+<pre><code>renderd[16245]: Using web mercator projection settings
+renderd[16245]: Using web mercator projection settings
+renderd[16245]: Using web mercator projection settings
+renderd[16245]: Using web mercator projection settings
+renderd[16245]: DEBUG: Got incoming connection, fd 12, number 1
+renderd[16245]: DEBUG: Got command Render fd(12) xml(default), z(0), x(0), y(0)
+renderd[16245]: DEBUG: START TILE default 0 0-0 0-0, age 19.84 days
+renderd[16245]: DEBUG: Connection 0, fd 12 closed, now 0 left
+renderd[16245]: DEBUG: DONE TILE default 0 0-0 0-0 in 5.732 seconds
+debug: Creating and writing a metatile to /var/lib/mod_tile/default/0/0/0/0/0/0.meta
+</code></pre></div>
+            <div class="comment-info" id="comment-23262-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '13, 12:22)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23295"></a>
+        <div class="comment" id="comment-23295">
+            <div id="post-23295-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/387/someoneelse">@SomeoneElse</a></p>
+
+<p>This is the output to</p>
+
+<pre><code>sanal@sanal-virtual-machine:~$ ls -al /var/lib/mod_tile/
+total 8
+drwxrwxrwx  2 sanal root 4096 Jun 12 10:54 .
+drwxr-xr-x 65 root  root 4096 Jun 12 13:19
+</code></pre></div>
+            <div class="comment-info" id="comment-23295-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jun '13, 04:25)</span>
+                <a class="comment-user userinfo" href="/users/6623/sanal">Sanal</a>
+                
+            </div>
+        </div>
+    
+        <a name="23297"></a>
+        <div class="comment" id="comment-23297">
+            <div id="post-23297-score" class="comment-score"></div>
+            <div class="comment-text"><p>on render the output is </p>
+
+<pre><code>renderd[13603]: Using web mercator projection settings
+renderd[13603]: Using web mercator projection settings
+renderd[13603]: Using web mercator projection settings
+renderd[13603]: DEBUG: Got incoming connection, fd 25, number 9
+renderd[13603]: DEBUG: Got command RenderPrio fd(25) xml(default), z(0), x(0), y(0)
+renderd[13603]: Dispatching request to slave thread on fd 6
+renderd[13603]: DEBUG: Got command Render fd(14) xml(default), z(0), x(0), y(0)
+renderd[13603]: DEBUG: Connection 8, fd 25 closed, now 8 left
+</code></pre></div>
+            <div class="comment-info" id="comment-23297-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jun '13, 04:26)</span>
+                <a class="comment-user userinfo" href="/users/6623/sanal">Sanal</a>
+                
+            </div>
+        </div>
+    
+        <a name="23552"></a>
+        <div class="comment not_top_scorer" id="comment-23552">
+            <div id="post-23552-score" class="comment-score"></div>
+            <div class="comment-text"><p>Unfortunately, the next step is probably to try and add some more debug to the rendering code to try and see what's not working.<br>
+</p>
+
+<p>Even if you're not a C programmer this needn't be too scary since you should be able to copy some of the existing debug messages, and the "make" instructions are contained on the switch2osm page.</p></div>
+            <div class="comment-info" id="comment-23552-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jun '13, 13:04)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="24819"></a>
+        <div class="comment not_top_scorer" id="comment-24819">
+            <div id="post-24819-score" class="comment-score"></div>
+            <div class="comment-text"><p>I m also facing the same problem someone please answer this question </p></div>
+            <div class="comment-info" id="comment-24819-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '13, 06:52)</span>
+                <a class="comment-user userinfo" href="/users/7006/san">san</a>
+                
+            </div>
+        </div>
+    
+        <a name="30682"></a>
+        <div class="comment not_top_scorer" id="comment-30682">
+            <div id="post-30682-score" class="comment-score"></div>
+            <div class="comment-text"><p>i am also having same problem, i did every thing as given in <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/">http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/</a>
+help me to get out of this issue</p></div>
+            <div class="comment-info" id="comment-30682-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '14, 12:30)</span>
+                <a class="comment-user userinfo" href="/users/8219/arun-kmp">Arun kmp</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23257" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23257-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="26104"></a>
+                    <div id="answer-container-26104" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-26104-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26104/up/" rel="nofollow"> </a>
+<div id="post-26104-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-26104-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26104/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I followed tutorial on osm2switch and installed the server on ubuntu 11.10. but I am also getting the similar problem No output is shown on <a href="http://localhost/osm_tiles/0/0/0.png.">http://localhost/osm_tiles/0/0/0.png.</a> But fortunately maps are available on localhost/osm/slippymap.html page. </p>
+<p>Can any body resolve this problem</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/26104/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Sep '13, 05:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/46fe2c2acfb7bcb45ce82c411406d2e4?s=32&amp;d=identicon&amp;r=g" alt="SUKHJIT%20SINGH%20SEHRA's gravatar image" />
+    <p><a href="/users/5203/sukhjit-singh-sehra">SUKHJIT SING...</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SUKHJIT SINGH SEHRA has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-26104">
+    
+</div>
+<div id="comment-tools-26104" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26104-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="27686"></a>
+                    <div id="answer-container-27686" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27686-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27686/up/" rel="nofollow"> </a>
+<div id="post-27686-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-27686-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27686/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I was having this problem too, but I think I've found the solution.<br>
+</p>
+<p>The problem is that the tiles are being generated as <a href="http://localhost/osm_tiles/0/0/0.png.">http://localhost/osm_tiles/0/0/0.png.</a> 
+Of course localhost is translated to the machine you're browsing from, so what that should be is
+<a href="http://tile.mytileserver.org/osm_tiles/0/0/0.png">http://tile.mytileserver.org/osm_tiles/0/0/0.png</a> or
+<a href="http://10.10.10.10/osm_tiles/0/0/0.png.">http://10.10.10.10/osm_tiles/0/0/0.png.</a></p>
+<p>So first thing to do is to set your hostname. I used tile.mytileserver.org eg
+    nano /etc/hostname -&gt; tile.mytileserver.org
+    hostname -F /etc/hostname
+    nano /etc/hosts -&gt; tile.mytileserver.org</p>
+<p>Then change the value for &lt;paraeter name="host"&gt;&lt;/parameter&gt; in 
+/etc/mapnik-osm-data/inc/datasource-settings.xml.inc</p>
+<p>If you're using slippymap.html, open that at /var/www/osm/slippymap.html and change localhost to tile.mytileserver.org</p>
+<p>Previously I tried changing the HOST parameter in /etc/renderd.conf and the Server parameter in /etc/apache2/sites-enabled/tileserver-site so if the above doesn't work, you might want to look at those too.<br>
+</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27686/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Nov '13, 04:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ea8055d4c79c7fc1838076887670b188?s=32&amp;d=identicon&amp;r=g" alt="Plutocrat's gravatar image" />
+    <p><a href="/users/7712/plutocrat">Plutocrat</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Plutocrat has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27686/">
+                edited
+                <strong>01 Nov '13, 04:26</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27686">
+    
+</div>
+<div id="comment-tools-27686" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27686-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="33257"></a>
+                    <div id="answer-container-33257" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33257-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33257/up/" rel="nofollow"> </a>
+<div id="post-33257-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33257-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33257/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>No one have an answer for this question... so many threads, no answer.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33257/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 May '14, 06:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/98a3cef6fd42a9093690c87d2eed2777?s=32&amp;d=identicon&amp;r=g" alt="alexlana's gravatar image" />
+    <p><a href="/users/8865/alexlana">alexlana</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="alexlana has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33257">
+    
+        <a name="33259"></a>
+        <div class="comment" id="comment-33259">
+            <div id="post-33259-score" class="comment-score">1</div>
+            <div class="comment-text"><p>There are a large number of possible reasons why it might not work: software versions in different distributions, permissions in various places, missing fonts (depending on machine setup), possible apache issues such as the one that <a href="/users/7712/plutocrat">@Plutocrat</a> above mentioned, and more. </p>
+
+<p>It's probably easiest to create a wiki page behind your user page describing what you've done, what you've tried and what still doesn't work, and then asking on IRC (#osm should have people with some experience of tile server setup; if it doesn't then try #osm=dev).</p></div>
+            <div class="comment-info" id="comment-33259-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 May '14, 10:11)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33284"></a>
+        <div class="comment" id="comment-33284">
+            <div id="post-33284-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, it can be anything. The problem is that I am not a programer, and this issue took me all my week and weekend, my nights... it's a beautiful project, but it's useless for designers, business people, someone looking for fun... and it's only because nobody think about the layer that reach non-programers. All what I need is some healthy image to download and use on Virtualbox... like that:
+<a href="http://tek.io/1ge1kuq">http://tek.io/1ge1kuq</a></p>
+
+<p>Sorry if it is not the right place for post that, but after dozens of installations, searches on google, Virtualbox snapshots, log reads... I quit...</p></div>
+            <div class="comment-info" id="comment-33284-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 May '14, 08:23)</span>
+                <a class="comment-user userinfo" href="/users/8865/alexlana">alexlana</a>
+                
+            </div>
+        </div>
+    
+        <a name="33287"></a>
+        <div class="comment" id="comment-33287">
+            <div id="post-33287-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/8865/alexlana">@alexlana</a> - the reason why I suggested IRC is that it allows faster communication with people trying to help.  Asking here is not wrong, (better as a new question than as an "answer" to a previous one though) but it wouldn't be as fast a conversation.</p>
+
+<p>However, we don't actually know what <em>your</em> problem is yet (beyond "it doesn't work").  That's why I suggested putting some details together explaining it.</p></div>
+            <div class="comment-info" id="comment-33287-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 May '14, 10:46)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33257" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33257-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/23257/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='oLbUt8bGymkCGAJvqikBPqFZllTwuEto' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/mapserver/"
+            class="tag-link-mapserver"
+            title="see questions tagged'mapserver'using tags"
+            rel="tag">mapserver</a> <span class="tag-number">&#215;14</span><br/>
+        
+        <a href="/tags/geoserver/"
+            class="tag-link-geoserver"
+            title="see questions tagged'geoserver'using tags"
+            rel="tag">geoserver</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 12, 2013, 12:02 p.m.">12 Jun '13, 12:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>26,582 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 18, 2014, 10:46 a.m.">18 May '14, 10:46</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/6201/what-happens-if-i-make-an-edit-and-my-data-doesnt-appear-on-the-map">[closed] What happens if I make an edit and my data doesn&#39;t appear on the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6676/how-to-render-shortened-street-names">How to render shortened street names?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4607/is-there-a-way-to-get-a-county-city-and-suburb-name-rendered-without-using-a-place-node">Is there a way to get a county, city and suburb name rendered without using a place=* node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5509/if-ill-make-patch-for-rendering-keysurface-for-mapnik-will-someone-apply-it">[closed] If I&#39;ll make patch for rendering Key:surface for Mapnik will someone apply it?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6241/change-request-adding-a-feature-to-the-default-osm-map-style">Change request / adding a feature to the default OSM Map style</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6521/missing-amenity-name-in-mapnik-bug-or-feature">Missing amenity name in mapnik - bug or feature?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1887/mapnik-does-not-render-my-new-ways-already-for-a-couple-of-day-now">Mapnik does not render my new ways already for a couple of day now</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2041/why-does-the-background-colour-change-in-mapnik-from-zoom-level-18-to-17">Why does the background colour change in Mapnik from zoom level 18 to 17?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5503/are-there-any-plans-to-implement-keysurface-rendering-ever">[closed] Are there any plans to implement Key:surface rendering ever?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7291/label-rendering-errors-at-fernvale-qld-australia">label rendering errors at Fernvale, Qld, Australia</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

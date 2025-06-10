@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Do Speed Limit Defaults Exist? - OSM Help</title>
+        <meta name="description" content="After getting routed through a tiny town with 20 MPH roads last night, I have decided to add some maxspeed information to my local streets. There are very few streets with this information. So, my question is whether I need to enter this tag for all streets, or are there some defaults that exist alr..." />
+        <meta name="keywords" content="default,maxspeed,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/51975/do-speed-limit-defaults-exist" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/51975/do-speed-limit-defaults-exist?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='guu4dRR9tpqHfNzpJXBVUGOOiTbtFNan' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/51975/do-speed-limit-defaults-exist">Do Speed Limit Defaults Exist?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-51975-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51975/up/" rel="nofollow"> </a>
+<div id="post-51975-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-51975-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51975/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/51975/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>After getting routed through a tiny town with 20 MPH roads last night, I have decided to add some maxspeed information to my local streets. There are very few streets with this information.</p>
+<p>So, my question is whether I need to enter this tag for all streets, or are there some defaults that exist already? For example, residential streets have a default speed limit of 30 MPH unless otherwise posted, by law. Does this default exist within the OSM data? Or is it required to put that into every residential street? That would seem like a lot of work. What have other people done who have undertaken this effort?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/default/" class="post-tag tag-link-default"
+                                        title="see questions tagged 'default'" rel="tag">default</a>
+                                
+                                    <a href="/tags/maxspeed/" class="post-tag tag-link-maxspeed"
+                                        title="see questions tagged 'maxspeed'" rel="tag">maxspeed</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Sep '16, 20:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cb68523a12e3580728c6bee495ae602e?s=32&amp;d=identicon&amp;r=g" alt="mtc's gravatar image" />
+    <p><a href="/users/12686/mtc">mtc</a><br/>
+    <span class="score" title="411 reputation points">411</span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="29 badges"><span class="bronze">&#9679;</span><span class="badgecount">29</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mtc has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-51975">
+    
+</div>
+<div id="comment-tools-51975" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51975-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/51975/do-speed-limit-defaults-exist?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/51975/do-speed-limit-defaults-exist?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/51975/do-speed-limit-defaults-exist?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/51975/do-speed-limit-defaults-exist?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="51976"></a>
+                    <div id="answer-container-51976" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51976-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51976/up/" rel="nofollow"> </a>
+<div id="post-51976-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-51976-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51976/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="mtc has selected this answer as the correct answer"
+        href="/accept_answer/51976/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Many people tag all speed limits explicitly. If you don't do that, you will depend on the navigation software. Not all software based on OpenStreetMap data adds those defaults in case they are not set. There is no such thing as "a default speed limit per country by OSM", in the end it's the developer of the navigation software that has to fill in the blanks.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51976/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Sep '16, 20:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/813a136afe7d4c95fd5bccdd78705e0e?s=32&amp;d=identicon&amp;r=g" alt="escada's gravatar image" />
+    <p><a href="/users/5390/escada">escada</a><br/>
+    <span class="score" title="19043 reputation points"><span class="">19.0k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="166 badges"><span class="silver">&#9679;</span><span class="badgecount">166</span></span><span title="302 badges"><span class="bronze">&#9679;</span><span class="badgecount">302</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="escada has 97 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51976">
+    
+</div>
+<div id="comment-tools-51976" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51976-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="51977"></a>
+                    <div id="answer-container-51977" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51977-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51977/up/" rel="nofollow"> </a>
+<div id="post-51977-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-51977-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51977/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I wish there was: A while back before I became disenchanted with the <a href="https://en.wiktionary.org/wiki/bikeshedding">"bike shedding"</a> and other issues with the tagging mailing list, I suggested that there ought to be a way to tag administrative boundaries with default information including default speed limits.</p>
+<p>A data consumer could then look through the administrative areas (local, regional, state, country, etc.) with the most local taking precedence and determine a reasonable assumed value. Seemed to me that putting a hand full of default speed tags on the administrative border for say, California, would be preferable to tagging maxspeed and maxspeed:hgv a few million highway segments. But it was for some reason shot down as hard to maintain and being confusing.</p>
+<p>So I create my own routing.xml file for OsmAnd to have it actually work well in my area. And I slowly add speed tagging to roads that I drive.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51977/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Sep '16, 21:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f60af53a4eba0c21f25c22674fb4a8cc?s=32&amp;d=identicon&amp;r=g" alt="n76's gravatar image" />
+    <p><a href="/users/5918/n76">n76</a><br/>
+    <span class="score" title="10839 reputation points"><span class="">10.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="82 badges"><span class="silver">&#9679;</span><span class="badgecount">82</span></span><span title="172 badges"><span class="bronze">&#9679;</span><span class="badgecount">172</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="n76 has 48 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51977">
+    
+        <a name="51978"></a>
+        <div class="comment" id="comment-51978">
+            <div id="post-51978-score" class="comment-score"></div>
+            <div class="comment-text"><p>opening_hours.js uses nested tables of the names that nominatim returns to store information associated with admin boundaries. So for instance, California is stored in ['us']['California']:</p>
+
+<p><a href="https://github.com/opening-hours/opening_hours.js/blob/master/opening_hours.js#L1912">https://github.com/opening-hours/opening_hours.js/blob/master/opening_hours.js#L1912</a></p>
+
+<p>Doing it in one file probably isn't the right thing, but a similar approach might work out.</p>
+
+<p>One benefit is that you could have profiles simply by having different data trees for each type of vehicle, you wouldn't have to have tags on the admin boundaries for each type of highway * each type of vehicle.</p></div>
+            <div class="comment-info" id="comment-51978-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '16, 22:53)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="51980"></a>
+        <div class="comment" id="comment-51980">
+            <div id="post-51980-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can appreciate your frustration. If the people managing the database actually want each road contain the data of maxspeed, then why is it not added programmatically? Surely it is easier to do a import of maxspeed="30 MPH" on every residential road, than have a herculean effort of typing tag-key-combo that into map editors for every road in the database.</p>
+
+<p>On further consideration of my original question, I am planning on mapping maxspeed for non-residential roads, since those are the primary ones that will be used by routing software. I have been reviewing the <a href="http://product.itoworld.com/map/124">ITO Speed Limits Map</a>, and that method is what seems to be done in other locales in USA.</p></div>
+            <div class="comment-info" id="comment-51980-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '16, 03:21)</span>
+                <a class="comment-user userinfo" href="/users/12686/mtc">mtc</a>
+                
+            </div>
+        </div>
+    
+        <a name="51982"></a>
+        <div class="comment" id="comment-51982">
+            <div id="post-51982-score" class="comment-score"></div>
+            <div class="comment-text"><p>I believe the reason that the non-residential roads are more likely to have maxspeed tags in the United States is simply that it is more likely that a mapper will have driven them. That is my behavior and from what I observe when I come into an area new to me that seems to be and explanation of the tagging I see.</p>
+
+<p>I'll tag all the speeds for the roads I drive while commuting to work, running errands, etc. And I will almost never side track into residential areas simply to gather speed limits. The residential road speed limits I've collected were mostly a side effect of walking those street to gather addr:housenumber data.</p></div>
+            <div class="comment-info" id="comment-51982-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '16, 04:05)</span>
+                <a class="comment-user userinfo" href="/users/5918/n76">n76</a>
+                
+            </div>
+        </div>
+    
+        <a name="51984"></a>
+        <div class="comment" id="comment-51984">
+            <div id="post-51984-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> "each type of highway * each type of vehicle" isn't really needed, that would only be the worst case. Instead one would set a default speed for urban, rural and motorways for all vehicle types and then just add a list of exceptions which should be fairly small.</p></div>
+            <div class="comment-info" id="comment-51984-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '16, 07:50)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="51986"></a>
+        <div class="comment" id="comment-51986">
+            <div id="post-51986-score" class="comment-score"></div>
+            <div class="comment-text"><p>Re 'Surely it is easier to do a import of maxspeed="30 MPH" ': to do that would negate the hard work of people who've actually surveyed which speed limits are 30mph (and which are not).  As you yourself has said it's easy for routers to work with regional defaults.</p></div>
+            <div class="comment-info" id="comment-51986-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '16, 10:06)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52055"></a>
+        <div class="comment not_top_scorer" id="comment-52055">
+            <div id="post-52055-score" class="comment-score"></div>
+            <div class="comment-text"><p>I assume the import process can skip entering data for highways which have an existing maxspeed=* entry. Am I wrong?</p></div>
+            <div class="comment-info" id="comment-52055-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Sep '16, 00:01)</span>
+                <a class="comment-user userinfo" href="/users/12686/mtc">mtc</a>
+                
+            </div>
+        </div>
+    
+        <a name="52072"></a>
+        <div class="comment not_top_scorer" id="comment-52072">
+            <div id="post-52072-score" class="comment-score"></div>
+            <div class="comment-text"><p>It is highly recommended that an import or a mechanical edit does not alter the values that are already in OSM. Maybe there is indeed an exception added by a mapper that did a survey. This should always have precedence over automatically generated values without local survey/knowledge.</p></div>
+            <div class="comment-info" id="comment-52072-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Sep '16, 14:59)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51977" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51977-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/51975/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='guu4dRR9tpqHfNzpJXBVUGOOiTbtFNan' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51975/do-speed-limit-defaults-exist?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51975/do-speed-limit-defaults-exist?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/maxspeed/"
+            class="tag-link-maxspeed"
+            title="see questions tagged'maxspeed'using tags"
+            rel="tag">maxspeed</a> <span class="tag-number">&#215;46</span><br/>
+        
+        <a href="/tags/default/"
+            class="tag-link-default"
+            title="see questions tagged'default'using tags"
+            rel="tag">default</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 10, 2016, 8:10 p.m.">10 Sep '16, 20:10</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,198 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 16, 2016, 2:59 p.m.">16 Sep '16, 14:59</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/23662/how-to-set-default-maxspeed-in-a-country">How to set default maxspeed in a country?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35817/how-to-create-a-maxspeed-zone">How to create a maxspeed zone?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/125/how-do-i-stop-rivers-from-rendering-where-the-riverbanks-are-mapped">How do I stop rivers from rendering where the riverbanks are mapped?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/134/how-do-i-map-a-road-that-has-traffic-lights-only-in-one-direction">How do I map a road that has traffic lights only in one direction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/153/how-do-you-tell-if-a-minor-service-road-is-accessprivate-destination-or-permissive">How do you tell if a minor service road is access=private, destination, or permissive?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/162/how-do-i-tag-ways-with-partial-access">How do I tag ways with partial access?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/228/uk-road-was-detrunked-why-does-osm-still-have-it-tagged-highwaytrunk">[UK road] was detrunked; why does OSM still have it tagged highway=trunk?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/170/does-the-legal-status-of-a-road-public-or-private-ownership-always-matter-when-dealing-with-access-tags">Does the legal status of a road (public or private ownership) always matter when dealing with access tags?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/240/how-can-i-get-a-list-of-all-objects-with-a-certain-tag">How can I get a list of all objects with a certain tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/129/how-to-tag-a-no-entrance-except-to-bus-and-bicycle">How to tag a &#39;no entrance except to bus and bicycle&#39;?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,814 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to merge nodes in Potlatch 2 - OSM Help</title>
+        <meta name="description" content="I want to join together this junction in Potlatch 2  At the moment there are two ways passing over eachother, and two nodes which need to become one Do I need to select both nodes and then do a &quot;merge nodes&quot; operation? How do I do this in Potlatch 2?" />
+        <meta name="keywords" content="potlatch2,editing" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/3549/how-to-merge-nodes-in-potlatch-2" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/3549/how-to-merge-nodes-in-potlatch-2?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='j3dKTuMFhpDzBJ5oAdtFxq1jAFiZ2JIF' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/3549/how-to-merge-nodes-in-potlatch-2">How to merge nodes in Potlatch 2</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-3549-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3549/up/" rel="nofollow"> </a>
+<div id="post-3549-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-3549-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3549/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/3549/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I want to join together this junction in Potlatch 2</p>
+<p><img alt="alt text" src="/upfiles/merge_nodes_potlatch_2.png"></p>
+<p>At the moment there are two ways passing over eachother, and two nodes which need to become one</p>
+<p>Do I need to select both nodes and then do a "merge nodes" operation? How do I do this in Potlatch 2?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/potlatch2/" class="post-tag tag-link-potlatch2"
+                                        title="see questions tagged 'potlatch2'" rel="tag">potlatch2</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Mar '11, 23:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-3549">
+    
+</div>
+<div id="comment-tools-3549" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3549-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/3549/how-to-merge-nodes-in-potlatch-2?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/3549/how-to-merge-nodes-in-potlatch-2?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/3549/how-to-merge-nodes-in-potlatch-2?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/3549/how-to-merge-nodes-in-potlatch-2?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="3569"></a>
+                    <div id="answer-container-3569" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3569-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3569/up/" rel="nofollow"> </a>
+<div id="post-3569-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-3569-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3569/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Harry Wood has selected this answer as the correct answer"
+        href="/accept_answer/3569/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>ponzu is correct about Shift-clicking the intersection point.</p>
+<p>You can also move the node so that it's over the other way (i.e. in the right place for the junction) and press 'J' for join. It should make the intersection. You'll be able to tell it's succeeded because the node will be redrawn with the black [_] border.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3569/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Mar '11, 12:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3569">
+    
+        <a name="3605"></a>
+        <div class="comment" id="comment-3605">
+            <div id="post-3605-score" class="comment-score"></div>
+            <div class="comment-text"><p>best not to write "ponzu is correct" in case he removes his answer later.</p></div>
+            <div class="comment-info" id="comment-3605-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '11, 09:11)</span>
+                <a class="comment-user userinfo" href="/users/3/andy-allan">Andy Allan</a>
+                
+            </div>
+        </div>
+    
+        <a name="8576"></a>
+        <div class="comment" id="comment-8576">
+            <div id="post-8576-score" class="comment-score"></div>
+            <div class="comment-text"><p>best not to refer to literal portions of other answers in case those are removed later, possibly in response to sensible criticism ;)</p></div>
+            <div class="comment-info" id="comment-8576-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 10:54)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3569" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3569-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="3553"></a>
+                    <div id="answer-container-3553" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3553-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3553/up/" rel="nofollow"> </a>
+<div id="post-3553-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-3553-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3553/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In Potlatch 2, if you want to create an intersection where two ways are crossing, you Shift-click the intersection point and a junction node appears.</p>
+<p>I am not sure what you mean by wanting two nodes to become one. If there are nodes in each way that are at, or close to, the location of the intended junction, they may just get in the way. I would delete them either before or after you make the junction as mentioned above.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3553/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Mar '11, 08:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c23c2891306229bb036de7ce63bb8c9b?s=32&amp;d=identicon&amp;r=g" alt="ponzu's gravatar image" />
+    <p><a href="/users/831/ponzu">ponzu</a><br/>
+    <span class="score" title="2104 reputation points"><span class="">2.1k</span></span><span title="49 badges"><span class="badge1">&#9679;</span><span class="badgecount">49</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="83 badges"><span class="bronze">&#9679;</span><span class="badgecount">83</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ponzu has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3553/">
+                edited
+                <strong>05 Mar '11, 08:57</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3553">
+    
+        <a name="3776"></a>
+        <div class="comment" id="comment-3776">
+            <div id="post-3776-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's the way to do this if I was adding one of the two roads in. I know about shift click and this isn't quite the answer I'm looking for. The roads are already in place, and I haven't shown this, but imagine the roads are extending off in long and winding ways off the edge of the pictured area, so redrawing them is not an option.</p>
+
+<p>There is actually shift-click based workaround, which would be to cut one of the two roads at either side of the junction, delete and redraw a short way using shift click to make the desired connection, and then re-merge the ways afterwards. But that's pants</p></div>
+            <div class="comment-info" id="comment-3776-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Mar '11, 15:55)</span>
+                <a class="comment-user userinfo" href="/users/107/harry-wood">Harry Wood</a>
+                
+            </div>
+        </div>
+    
+        <a name="3781"></a>
+        <div class="comment" id="comment-3781">
+            <div id="post-3781-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Harry - really not sure why none of the above answers work for you. Are you reading them right?</p>
+
+<p>Option 1 (as explained by Ponzu). Select a way. Hold down Shift and click the point where the ways cross. The same new node will be inserted into both ways. You'll be able to tell because of the [_] outline.</p>
+
+<p>Option 2 (as explained by me). Move an existing node on one way so that it's over where the other way goes underneath. Press J for join.</p>
+
+<p>No need to split or redraw any ways at all.</p></div>
+            <div class="comment-info" id="comment-3781-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Mar '11, 19:00)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="3797"></a>
+        <div class="comment" id="comment-3797">
+            <div id="post-3797-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well I accepted your answer Richard. Pressing J works great (Option 2) ...it's also the exact solution I was looking for (thinking in terms of 'merging nodes')</p>
+
+<p>But I've just understood what Ponzu meant about shift clicking, maybe because of your alternative description here. With both ways already in place, you can shift click to add a new node into them both at the same time. So sorry yes that also works great (Option 1)  ...although in this case would leave me with more nodes than I needed</p></div>
+            <div class="comment-info" id="comment-3797-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Mar '11, 15:08)</span>
+                <a class="comment-user userinfo" href="/users/107/harry-wood">Harry Wood</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3553" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3553-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/3549/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='j3dKTuMFhpDzBJ5oAdtFxq1jAFiZ2JIF' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3549/how-to-merge-nodes-in-potlatch-2?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3549/how-to-merge-nodes-in-potlatch-2?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/potlatch2/"
+            class="tag-link-potlatch2"
+            title="see questions tagged'potlatch2'using tags"
+            rel="tag">potlatch2</a> <span class="tag-number">&#215;210</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 4, 2011, 11:11 p.m.">04 Mar '11, 23:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,820 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 21, 2011, 10:54 a.m.">21 Oct '11, 10:54</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/6006/potlatch-bug-with-street-names">Potlatch bug with street names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8636/how-to-make-custom-ways-in-potlatch2-color-line-type-description-etc">How to make custom ways in potlatch2? (color, line type, description etc)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2933/is-there-a-good-workflow-to-change-a-bunch-of-street-ends-to-turning-circles-in-potlatch-12">Is there a good workflow to change a bunch of street ends to turning circles in Potlatch 1/2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5730/split-one-polygon-into-two-in-potlatch-2">Split One Polygon into Two in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6801/in-potlatch2-what-symbol-should-i-use-for-a-drug-store-like-schlecker">In Potlatch2, what symbol should I use for a drug-store like &quot;Schlecker&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8294/potlatch-2-not-working-no-editing-functions">potlatch 2 not working - no editing functions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2221/is-there-a-way-to-resolve-conflicts-in-potlatch-2">Is there a way to resolve conflicts in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2391/starting-potlatch2-from-the-gpx-traces-list">Starting Potlatch2 from the GPX traces list</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4609/can-i-delete-a-relation-in-potlatch2">Can I delete a relation in Potlatch2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9808/potlatch-2-does-not-request-comments-on-edits">Potlatch 2: does not request comments on edits</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

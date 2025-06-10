@@ -1,0 +1,747 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>compile error in mod_tile on fedora 18 - OSM Help</title>
+        <meta name="description" content="I am going through the process of building a map server on fedora 18 (cos that is what I&#39;ve got, so don&#39;t ask) and got an error building mod_map : apxs:Error: Command failed with rc=65536 When I switched off the compiler warnings it showed this error from libtool: ./mod_tile.c:661:28: error: &#39;conn_r..." />
+        <meta name="keywords" content="mod_map,mod_tile.c,mod_authnz_external" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/20943/compile-error-in-mod_tile-on-fedora-18" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/20943/compile-error-in-mod_tile-on-fedora-18?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='JQKTP1xgHwo7NLPpmOHAqe6cw1ae6JDE' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/20943/compile-error-in-mod_tile-on-fedora-18">compile error in mod_tile on fedora 18</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-20943-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20943/up/" rel="nofollow"> </a>
+<div id="post-20943-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-20943-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20943/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/20943/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am going through the process of building a map server on fedora 18 (cos that is what I've got, so don't ask) and got an error building mod_map :
+apxs:Error: Command failed with rc=65536</p>
+<p>When I switched off the compiler warnings it showed this error from libtool:
+./mod_tile.c:661:28: error: 'conn_rec' has no member named 'remote_ip'</p>
+<p>This is a described in <a href="https://code.google.com/p/mod-auth-external/issues/detail?id=8">https://code.google.com/p/mod-auth-external/issues/detail?id=8</a>
+Where they helpfully write:
+"The remote_ip field in the conn_rec structure was removed in Apache 2.4.1 and replaced with client_ip and useragent_ip."</p>
+<p>In mod_tile.c I replaced the 3 occurrences of remote_ip with client_ip and the mod compiled. great.
+But i dont know yet if it will run. 
+Still, I thought I ought to tell someone... you probably know all this already I am sure, but if not could you pass this on to a developer? I don't know who that might be. I have only just started playing around with this stuff and don't know my way around.
+Oh, and I downloaded the code about 4 hours ago and I am writing this on Sat Mar 23 23:19:58 GMT 2013
+so goodnight.</p>
+<p>Panca Kanga</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mod_map/" class="post-tag tag-link-mod_map"
+                                        title="see questions tagged 'mod_map'" rel="tag">mod_map</a>
+                                
+                                    <a href="/tags/mod_tile.c/" class="post-tag tag-link-mod_tile.c"
+                                        title="see questions tagged 'mod_tile.c'" rel="tag">mod_tile.c</a>
+                                
+                                    <a href="/tags/mod_authnz_external/" class="post-tag tag-link-mod_authnz_external"
+                                        title="see questions tagged 'mod_authnz_external'" rel="tag">mod_authnz_external</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Mar '13, 23:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1bca123c0c1f7ff52cb5ac0972837cc7?s=32&amp;d=identicon&amp;r=g" alt="Panca%20Kanga's gravatar image" />
+    <p><a href="/users/5906/panca-kanga">Panca Kanga</a><br/>
+    <span class="score" title="30 reputation points">30</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Panca Kanga has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-20943">
+    
+</div>
+<div id="comment-tools-20943" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20943-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/20943/compile-error-in-mod_tile-on-fedora-18?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/20943/compile-error-in-mod_tile-on-fedora-18?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/20943/compile-error-in-mod_tile-on-fedora-18?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/20943/compile-error-in-mod_tile-on-fedora-18?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="20963"></a>
+                    <div id="answer-container-20963" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-20963-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20963/up/" rel="nofollow"> </a>
+<div id="post-20963-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-20963-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20963/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>mod_tile should now compile with apache 2.4. If there are any additional fixes required to build mod_tile on Fedora 18, please let me know.</p>
+<p>Thank you for reporting the issue.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/20963/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Mar '13, 02:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32c974c4ca8b246698c2b82c64924da5?s=32&amp;d=identicon&amp;r=g" alt="apmon's gravatar image" />
+    <p><a href="/users/65/apmon">apmon</a><br/>
+    <span class="score" title="6527 reputation points"><span class="">6.5k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="apmon has 9 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-20963">
+    
+        <a name="20974"></a>
+        <div class="comment" id="comment-20974">
+            <div id="post-20974-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for working on it so quickly. It compiled and installed under my fedora 18 system.
+I am just working through the steps at <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/">http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/</a>
+It seems very clearly written though I keep making silly mistakes. I should just follow the instructions
+and not mess about. I think I will download the UK tonight and wait and see how it goes with that map set installed. Currently renderd says it is writing mod_tile/default/0/0/0/0/0/0.meta but httpd cannot see
+it and when I look it is not there. Maybe because I have installed a too small dataset (of Nepal.) 
+I am not writing expecting an `answer' BTW.</p></div>
+            <div class="comment-info" id="comment-20974-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '13, 21:43)</span>
+                <a class="comment-user userinfo" href="/users/5906/panca-kanga">Panca Kanga</a>
+                
+            </div>
+        </div>
+    
+        <a name="21006"></a>
+        <div class="comment" id="comment-21006">
+            <div id="post-21006-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Sorry, there was another bug in renderd, that caused tiles to not be written out. This should be fixed now as well.</p></div>
+            <div class="comment-info" id="comment-21006-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '13, 16:43)</span>
+                <a class="comment-user userinfo" href="/users/65/apmon">apmon</a>
+                
+            </div>
+        </div>
+    
+        <a name="21013"></a>
+        <div class="comment" id="comment-21013">
+            <div id="post-21013-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oh, it was a little bug was it? I thought it was  me. I had moved the install to another disk, and also I was switching selinux on and off trying various ways of setting <em>that</em>. 
+The recompile with the V.29407 code does indeed get everything going. Yep, there is the world at 0/0/0. Excellent.
+I am only installing the map server at home for my own satisfaction and not expecting a 4-hour call-out on a bug report! However I am sure this speedy fix will help others with more serious needs.
+I am still grateful though. Thanx. 
+Hmm ... But no sign of Nepal yet... I think I had better get England into the db and then see where I can find. I downloaded England last night and I will let it load in tonight.
+Panca Kanga.</p></div>
+            <div class="comment-info" id="comment-21013-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '13, 22:01)</span>
+                <a class="comment-user userinfo" href="/users/5906/panca-kanga">Panca Kanga</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-20963" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20963-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="20956"></a>
+                    <div id="answer-container-20956" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-20956-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20956/up/" rel="nofollow"> </a>
+<div id="post-20956-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-20956-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20956/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I found this patch this afternoon: 
+<a href="http://www.michael-joost.de/mod_tile_apache2.4.patch">http://www.michael-joost.de/mod_tile_apache2.4.patch</a></p>
+<p>It is provided to meet  the  errors like I was having yesterday and also sorts out the renamed unixd_set_global_perms. 
+On top of that it fixes the compiler warnings about getting long int instead of apr_uint64_t &amp;etc. 
+Except unfortunately it does not apply correctly to my copy of mod_tile.c extracted from build 29393. (I assume it is intended  to be applied with the gnu patch(1)).
+However not quite working does not matter 'cos looking at the patch shows you what needs doing. The main problems were the implicit declarations and it is obvious where to fix  them once you know what to change them to. 
+It seems all the funny ints can be left to get on with it.</p>
+<p>Onwards and upwards..</p>
+<p>BTW. The preview of this note looks funny all the _ have disappeared. What to do about it?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/20956/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Mar '13, 22:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1bca123c0c1f7ff52cb5ac0972837cc7?s=32&amp;d=identicon&amp;r=g" alt="Panca%20Kanga's gravatar image" />
+    <p><a href="/users/5906/panca-kanga">Panca Kanga</a><br/>
+    <span class="score" title="30 reputation points">30</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Panca Kanga has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-20956">
+    
+</div>
+<div id="comment-tools-20956" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20956-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/20943/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='JQKTP1xgHwo7NLPpmOHAqe6cw1ae6JDE' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20943/compile-error-in-mod_tile-on-fedora-18?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20943/compile-error-in-mod_tile-on-fedora-18?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mod_authnz_external/"
+            class="tag-link-mod_authnz_external"
+            title="see questions tagged'mod_authnz_external'using tags"
+            rel="tag">mod_authnz_external</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/mod_map/"
+            class="tag-link-mod_map"
+            title="see questions tagged'mod_map'using tags"
+            rel="tag">mod_map</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/mod_tile.c/"
+            class="tag-link-mod_tile.c"
+            title="see questions tagged'mod_tile.c'using tags"
+            rel="tag">mod_tile.c</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 23, 2013, 11:24 p.m.">23 Mar '13, 23:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,904 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 27, 2013, 4:48 p.m.">27 Mar '13, 16:48</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

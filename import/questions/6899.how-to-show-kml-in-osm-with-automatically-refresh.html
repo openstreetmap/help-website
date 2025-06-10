@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>[closed] How to show KML in OSM with automatically refresh ? - OSM Help</title>
+        <meta name="description" content="I&#39;ve got a complexion with this JavaScript. I&#39;ve done several research but yet to succeed. Anyone? &amp;lt;script type=&quot;text/javascript&quot;&amp;gt; var map;  function init() { // Create the map object map = new OpenLayers.Map({  allOverlays: true,  controls: [  new OpenLayers.Control.Navigation(),  new OpenLay..." />
+        <meta name="keywords" content="openstreetmap,kml,javascript" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/6899/how-to-show-kml-in-osm-with-automatically-refresh" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/6899/how-to-show-kml-in-osm-with-automatically-refresh?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='4vIlFniYMXC5iCfHlz1f0o1le47lKCjZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/6899/how-to-show-kml-in-osm-with-automatically-refresh">[closed] How to show KML in OSM with automatically refresh ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-6899-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6899/up/" rel="nofollow"> </a>
+<div id="post-6899-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-6899-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6899/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/6899/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I've got a complexion with this JavaScript. I've done several research but yet to succeed. Anyone?</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+var map;
+
+function init() {
+// Create the map object
+map = new OpenLayers.Map({
+        allOverlays: true,
+        controls: [
+            new OpenLayers.Control.Navigation(),
+            new OpenLayers.Control.PanZoom(),
+        ]
+    });
+    var osm_layer = new OpenLayers.Layer.OSM();
+    map.addLayer(osm_layer);
+
+map.setCenter(
+            new OpenLayers.LonLat(mylon,mylat).transform(
+                new OpenLayers.Projection("EPSG:4326"),
+                map.getProjectionObject()
+            ), 12
+        ); */        
+}
+
+var KMLURL = 'myfile.kml?' + Math.random();
+
+var MyKmlLayer= new OpenLayers.Layer.Vector("This Is My KML Layer", {
+        //Set your projection and strategies//
+        projection: new OpenLayers.Projection("EPSG:4326"),
+        strategies: [new OpenLayers.Strategy.Fixed()],
+        //set the protocol with a url//
+        protocol: new OpenLayers.Protocol.HTTP({
+            //set the url to your variable//
+            url: KMLURL,
+            //format this layer as KML//
+            format: new OpenLayers.Format.KML({
+                //maxDepth is how deep it will follow network links//
+                maxDepth: 1,
+                //extract styles from the KML Layer//
+                extractStyles: true,
+                //extract attributes from the KML Layer//
+                extractAttributes: true
+            })
+        })
+    });
+
+window.setInterval(UpdateKmlLayer, 5000, MyKmlLayer);
+
+function UpdateKmlLayer(layer) {
+        //setting loaded to false unloads the layer//
+        layer.loaded = false;
+        //setting visibility to true forces a reload of the layer//
+        layer.setVisibility(true);
+        //the refresh will force it to get the new KML data//
+        layer.refresh({ force: true, params: { 'key': Math.random()} });
+    }
+}
+&lt;/script&gt;
+</code></pre>
+<p>Thank you in advance. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                                    <a href="/tags/kml/" class="post-tag tag-link-kml"
+                                        title="see questions tagged 'kml'" rel="tag">kml</a>
+                                
+                                    <a href="/tags/javascript/" class="post-tag tag-link-javascript"
+                                        title="see questions tagged 'javascript'" rel="tag">javascript</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Aug '11, 08:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/96b4bf504743155d2eef7efd49cea622?s=32&amp;d=identicon&amp;r=g" alt="zearth's gravatar image" />
+    <p><a href="/users/1865/zearth">zearth</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="zearth has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6899/">
+                closed
+                <strong>05 Aug '11, 09:41</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9fe361843971cf8b23dc93517f00b996?s=32&amp;d=identicon&amp;r=g" alt="Jonathan%20Bennett's gravatar image" />
+            <p><a href="/users/6/jonathan-bennett">Jonathan Ben...</a><br/>
+            <span class="score" title="8261 reputation points"><span class="">8.3k</span></span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="85 badges"><span class="silver">&#9679;</span><span class="badgecount">85</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-6899">
+    
+        <a name="6903"></a>
+        <div class="comment" id="comment-6903">
+            <div id="post-6903-score" class="comment-score">2</div>
+            <div class="comment-text"><p>First, this isn't really an OpenStreetMap question, but an OpenLayers one (or even just a JavaScript one) -- you may get an answer by asking in a forum for OpenLayers.</p>
+
+<p>Even then you should try to come up with a better worded question, rather than simply dumping your code and expecting everyone to find the problem. State what you've tried that didn't work, and what results you got instead.</p></div>
+            <div class="comment-info" id="comment-6903-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '11, 09:45)</span>
+                <a class="comment-user userinfo" href="/users/6/jonathan-bennett">Jonathan Ben...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6899" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6899-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="question-status" style="margin-bottom:15px">
+            <h3>
+                The question has been closed for the following reason "Question is off-topic or not relevant" by
+                <a href="/users/6/jonathan-bennett">Jonathan Bennett</a>
+                 05 Aug '11, 09:41
+            </h3>
+            </div>
+            
+            
+        <form id="fmanswer" action="/questions/6899/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='4vIlFniYMXC5iCfHlz1f0o1le47lKCjZ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6899/how-to-show-kml-in-osm-with-automatically-refresh?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6899/how-to-show-kml-in-osm-with-automatically-refresh?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+        <a href="/tags/javascript/"
+            class="tag-link-javascript"
+            title="see questions tagged'javascript'using tags"
+            rel="tag">javascript</a> <span class="tag-number">&#215;60</span><br/>
+        
+        <a href="/tags/kml/"
+            class="tag-link-kml"
+            title="see questions tagged'kml'using tags"
+            rel="tag">kml</a> <span class="tag-number">&#215;49</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 5, 2011, 8:46 a.m.">05 Aug '11, 08:46</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,813 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 5, 2011, 9:45 a.m.">05 Aug '11, 09:45</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/45043/get-coordinates-from-osm-website-with-javascript">Get coordinates from OSM website with Javascript</a>
+        </p>
+        
+        <p>
+            <a href="/questions/88117/in-openstreemap-how-to-make-a-html-code-that-when-i-move-the-mouse-over-the-map-it-will-display-in-real-time-the-coordinates-in-a-small-tooltip">in openstreemap how to make a html code that when i move the mouse over the map it will display in real time the coordinates in a small tooltip?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16577/openlayers-display-pacific-marks-popup-using-onclick-event">Openlayers: display pacific marks popup using onclick event</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24987/import-kml-into-osm-file">Import .kml into .osm file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73935/use-bike-layer-openstreetmap-javascript">Use Bike layer openstreetMap javascript</a>
+        </p>
+        
+        <p>
+            <a href="/questions/76593/get-polygon-shapefilekml-for-a-nodelocation-in-openstreetmap">Get polygon shapefile/KML for a node/location in openstreetmap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8177/learning-site">learning site</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14779/nominatim-search">Nominatim search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20717/how-to-reference-openstreetmap-in-our-application">How to reference OpenStreetMap in our application</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1737/problem-with-some-name-tags-in-bulgarian-map">Problem with some name tags in Bulgarian map</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

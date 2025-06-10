@@ -1,0 +1,946 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to create a world map with some countries colored in? - OSM Help</title>
+        <meta name="description" content="How do I make a presentation that shows a world map where some countries are colored, in the Middle East and Africa." />
+        <meta name="keywords" content="world,rendering" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/1222/how-to-create-a-world-map-with-some-countries-colored-in" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/1222/how-to-create-a-world-map-with-some-countries-colored-in?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='VP71TljNYPZBzq0XYCH63JUas9VzBU6U' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/1222/how-to-create-a-world-map-with-some-countries-colored-in">How to create a world map with some countries colored in?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-1222-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1222/up/" rel="nofollow"> </a>
+<div id="post-1222-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-1222-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1222/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/1222/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How do I make a presentation that shows a world map where some countries are colored, in the Middle East and Africa.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/world/" class="post-tag tag-link-world"
+                                        title="see questions tagged 'world'" rel="tag">world</a>
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Oct '10, 13:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/77ae2634ce4a00acec2dbbdb729ef6ea?s=32&amp;d=identicon&amp;r=g" alt="buster's gravatar image" />
+    <p><a href="/users/330/buster">buster</a><br/>
+    <span class="score" title="61 reputation points">61</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="buster has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/1222/">
+                edited
+                <strong>19 Oct '10, 17:06</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9fe361843971cf8b23dc93517f00b996?s=32&amp;d=identicon&amp;r=g" alt="Jonathan%20Bennett's gravatar image" />
+            <p><a href="/users/6/jonathan-bennett">Jonathan Ben...</a><br/>
+            <span class="score" title="8261 reputation points"><span class="">8.3k</span></span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="85 badges"><span class="silver">&#9679;</span><span class="badgecount">85</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-1222">
+    
+        <a name="1223"></a>
+        <div class="comment" id="comment-1223">
+            <div id="post-1223-score" class="comment-score">-2</div>
+            <div class="comment-text"><p>What do you mean with "some countries are colored"? Do you want to use directly one the map renderers from <a href="http://www.openstreetmap.org?">www.openstreetmap.org?</a> Do you prefer to download the data and draw a map by yourself?</p>
+
+<p>Please be more specific</p></div>
+            <div class="comment-info" id="comment-1223-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '10, 15:00)</span>
+                <a class="comment-user userinfo" href="/users/319/temporalista">temporalista</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1222" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1222-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/1222/how-to-create-a-world-map-with-some-countries-colored-in?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/1222/how-to-create-a-world-map-with-some-countries-colored-in?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/1222/how-to-create-a-world-map-with-some-countries-colored-in?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/1222/how-to-create-a-world-map-with-some-countries-colored-in?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="1224"></a>
+                    <div id="answer-container-1224" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1224-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1224/up/" rel="nofollow"> </a>
+<div id="post-1224-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-1224-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1224/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For a simple map you could take a normal svg image from the internett like <a href="http://en.wikipedia.org/wiki/File:Islam_by_country.svg">this one</a> and use a vector imaging tool to change the colors.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1224/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Oct '10, 16:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44a4438f0146dfd898e24c221fd28b58?s=32&amp;d=identicon&amp;r=g" alt="Gnonthgol's gravatar image" />
+    <p><a href="/users/131/gnonthgol">Gnonthgol ♦</a><br/>
+    <span class="score" title="13750 reputation points"><span class="">13.8k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="103 badges"><span class="silver">&#9679;</span><span class="badgecount">103</span></span><span title="198 badges"><span class="bronze">&#9679;</span><span class="badgecount">198</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gnonthgol has 57 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1224">
+    
+</div>
+<div id="comment-tools-1224" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1224-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="43761"></a>
+                    <div id="answer-container-43761" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-43761-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43761/up/" rel="nofollow"> </a>
+<div id="post-43761-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-43761-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43761/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can use <a href="http://paintmaps.com">paintmaps.com</a> for coloring maps of the countires.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/43761/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jun '15, 23:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc2ef831c14b3d2a50e1bae395c76d88?s=32&amp;d=identicon&amp;r=g" alt="hy34's gravatar image" />
+    <p><a href="/users/11148/hy34">hy34</a><br/>
+    <span class="score" title="16 reputation points">16</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hy34 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-43761">
+    
+        <a name="43782"></a>
+        <div class="comment" id="comment-43782">
+            <div id="post-43782-score" class="comment-score"></div>
+            <div class="comment-text"><p>What is the data source of this webservice? What licence is used for its output?</p>
+
+<p>Is it related to OSM in any way? Couldn't find any hint.</p></div>
+            <div class="comment-info" id="comment-43782-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '15, 16:33)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-43761" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43761-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="16640"></a>
+                    <div id="answer-container-16640" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16640-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16640/up/" rel="nofollow"> </a>
+<div id="post-16640-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16640-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16640/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>At a small scale, it is not possible to export the OSM data.</p>
+<p>« Zone trop grande
+Cette zone est trop vaste pour être exportée comme données XML OpenStreetMap. Veuillez zoomer ou sélectionner une zone plus petite. »</p>
+<p>Would it be possible to derive an OWM dataset, or Open World Map from the OSM data, by simplifying the geometry of features. The purpose would be thematic world maps.
+Right now, an alternate source of data DCW or vMap0 is quite old, and not up-to-date.</p>
+<p>Of course, the process – including map generalization – would not be easy to design and maintain.</p>
+<p>Are there other sources, like :
+- WikiMiniAtlas
+<a href="http://wiki.openstreetmap.org/wiki/WikiMiniAtlas">http://wiki.openstreetmap.org/wiki/WikiMiniAtlas</a>
+- Worldmapper
+(as referred in <a href="http://wiki.openstreetmap.org/wiki/Pufferfish_Display">http://wiki.openstreetmap.org/wiki/Pufferfish_Display</a> )
+- World Maps Offline
+(as referred in <a href="http://wiki.openstreetmap.org/wiki/World_Maps_Offline">http://wiki.openstreetmap.org/wiki/World_Maps_Offline</a> )</p>
+<p>Keywords : world map ; worldmap</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16640/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Oct '12, 15:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/971d8c0a90ac73fc848e375757f6d72f?s=32&amp;d=identicon&amp;r=g" alt="Pascal%20Boulerie%20ENSG's gravatar image" />
+    <p><a href="/users/4153/pascal-boulerie-ensg">Pascal Boule...</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Pascal Boulerie ENSG has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16640/">
+                edited
+                <strong>03 Oct '12, 15:25</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16640">
+    
+</div>
+<div id="comment-tools-16640" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16640-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="43800"></a>
+                    <div id="answer-container-43800" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-43800-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43800/up/" rel="nofollow"> </a>
+<div id="post-43800-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-43800-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43800/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>TileMill has a sample world map (based on OSM, I think) that you could use for this - it's named "Geography Class":</p>
+<p><a href="https://www.mapbox.com/blog/customizing-geography-class/">https://www.mapbox.com/blog/customizing-geography-class/</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/43800/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Jun '15, 08:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8200fa5c0cc8feb096558c5972a6191c?s=32&amp;d=identicon&amp;r=g" alt="Piskvor's gravatar image" />
+    <p><a href="/users/9641/piskvor">Piskvor</a><br/>
+    <span class="score" title="1266 reputation points"><span class="">1.3k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="35 badges"><span class="bronze">&#9679;</span><span class="badgecount">35</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Piskvor has 9 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-43800">
+    
+</div>
+<div id="comment-tools-43800" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43800-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/1222/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='VP71TljNYPZBzq0XYCH63JUas9VzBU6U' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1222/how-to-create-a-world-map-with-some-countries-colored-in?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1222/how-to-create-a-world-map-with-some-countries-colored-in?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/world/"
+            class="tag-link-world"
+            title="see questions tagged'world'using tags"
+            rel="tag">world</a> <span class="tag-number">&#215;15</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 18, 2010, 1:26 p.m.">18 Oct '10, 13:26</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>23,740 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 26, 2015, 8:28 a.m.">26 Jun '15, 08:28</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/125/how-do-i-stop-rivers-from-rendering-where-the-riverbanks-are-mapped">How do I stop rivers from rendering where the riverbanks are mapped?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/139/how-can-i-design-some-simple-maps">How can I design some simple maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a>
+        </p>
+        
+        <p>
+            <a href="/questions/242/how-to-download-rendered-osm-maps">How to download rendered OSM maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/361/why-render-abandoned-railways">[closed] Why render abandoned railways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/460/is-there-any-way-to-group-the-rendering-of-changes-to-the-public-map">Is there any way to group the rendering of changes to the public map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/815/am-i-doing-ok">Am i doing ok ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/840/problem-with-map-scale-when-generating-maps-with-osmarender">Problem with map scale when generating maps with Osmarender</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1/how-do-you-make-the-osm2pgsql-diff-imports-run-faster-than-molasses-on-postgres-84">How do you make the osm2pgsql diff imports run faster than molasses on postgres 8.4?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,652 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Using OSM for calculating distance in desktop application using java - OSM Help</title>
+        <meta name="description" content="I would like make a simple desktop application that can calculate the distance between two cities given by the user. I know that there is no practical purpose for this but I would just like to build it as a programming exercise. I&#39;m having a hard time however with finding the right documentation for..." />
+        <meta name="keywords" content="application,java,desktop" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/52219/using-osm-for-calculating-distance-in-desktop-application-using-java" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52219/using-osm-for-calculating-distance-in-desktop-application-using-java?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='cQONRCpPH14RniO1A9Qjm6R2kjFFQC1E' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52219/using-osm-for-calculating-distance-in-desktop-application-using-java">Using OSM for calculating distance in desktop application using java</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52219-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52219/up/" rel="nofollow"> </a>
+<div id="post-52219-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52219-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52219/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52219/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I would like make a simple desktop application that can calculate the distance between two cities given by the user. I know that there is no practical purpose for this but I would just like to build it as a programming exercise. I'm having a hard time however with finding the right documentation for this. I would like to do this through an API request and it should be street level routing. </p>
+<p>Is there anybody that could help me out here by pointing me in the right direction?</p>
+<p>Thanks in advance.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/application/" class="post-tag tag-link-application"
+                                        title="see questions tagged 'application'" rel="tag">application</a>
+                                
+                                    <a href="/tags/java/" class="post-tag tag-link-java"
+                                        title="see questions tagged 'java'" rel="tag">java</a>
+                                
+                                    <a href="/tags/desktop/" class="post-tag tag-link-desktop"
+                                        title="see questions tagged 'desktop'" rel="tag">desktop</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Sep '16, 15:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5a5c75833d95234d8e367502f3b50049?s=32&amp;d=identicon&amp;r=g" alt="Tezen's gravatar image" />
+    <p><a href="/users/12813/tezen">Tezen</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tezen has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52219/">
+                edited
+                <strong>28 Sep '16, 14:37</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52219">
+    
+        <a name="52253"></a>
+        <div class="comment" id="comment-52253">
+            <div id="post-52253-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Please EDIT your question and tell us whether you want to have the needed routing data via online download / API request ... or via offline map files on your PC / device ... and then: do you want to know direct lien connection, or street level routing?</p></div>
+            <div class="comment-info" id="comment-52253-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Sep '16, 20:39)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52219" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52219-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52219/using-osm-for-calculating-distance-in-desktop-application-using-java?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52219/using-osm-for-calculating-distance-in-desktop-application-using-java?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52219/using-osm-for-calculating-distance-in-desktop-application-using-java?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52219/using-osm-for-calculating-distance-in-desktop-application-using-java?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52286"></a>
+                    <div id="answer-container-52286" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52286-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52286/up/" rel="nofollow"> </a>
+<div id="post-52286-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-52286-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52286/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Tezen has selected this answer as the correct answer"
+        href="/accept_answer/52286/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You should have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> and its sub-page about <a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">online routing</a></p>
+<p>Please try each online service listed there, and evaluate yourself whether the user interface comes near your aim, or that you can do some coding for your own.</p>
+<p>Also pay attention to the age of each routing database ... some are outdated.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52286/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Sep '16, 18:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52286">
+    
+</div>
+<div id="comment-tools-52286" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52286-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52219/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='cQONRCpPH14RniO1A9Qjm6R2kjFFQC1E' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52219/using-osm-for-calculating-distance-in-desktop-application-using-java?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52219/using-osm-for-calculating-distance-in-desktop-application-using-java?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/java/"
+            class="tag-link-java"
+            title="see questions tagged'java'using tags"
+            rel="tag">java</a> <span class="tag-number">&#215;76</span><br/>
+        
+        <a href="/tags/application/"
+            class="tag-link-application"
+            title="see questions tagged'application'using tags"
+            rel="tag">application</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/desktop/"
+            class="tag-link-desktop"
+            title="see questions tagged'desktop'using tags"
+            rel="tag">desktop</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 25, 2016, 3:04 p.m.">25 Sep '16, 15:04</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,780 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 28, 2016, 6:45 p.m.">28 Sep '16, 18:45</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/10881/using-osm-in-my-desktop-application">Using OSM in my desktop application</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38534/map-application">map application</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1348/samsung-s8500-wave-vs-osm">Samsung S8500 Wave VS OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3056/power-user-android-app">Power-user Android app?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3868/mobile-application-using-josm">mobile application using JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4276/how-do-i-give-osmosis-more-temporary-storage">How do I give Osmosis more temporary storage.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8747/can-i-use-osm-maps-as-a-part-of-a-free-mobile-application">Can I use OSM maps as a part of a free mobile application?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6888/java-slippy-map-api">Java slippy map API</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10066/what-is-wrong-with-my-batch-file">What is wrong with my batch file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2905/osmosis-not-running">Osmosis not running</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

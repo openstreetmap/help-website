@@ -1,0 +1,784 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Creating brand in OSM - OSM Help</title>
+        <meta name="description" content="Hello, I would like to ask for information about OSM and Wikidata.  The thing is that I know that some brands (supermarkets, fast-food chains, gas stations and so on) are set as brand in OSM (iD editor). So if when I write McDonald&#39;s in the OSM search engine while editing, I will automatically be of..." />
+        <meta name="keywords" content="ideditor,brand,wikidata" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/69377/creating-brand-in-osm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/69377/creating-brand-in-osm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='PsAPTUgiOqNDn4thKMClozTYzrAmo2wc' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/69377/creating-brand-in-osm">Creating brand in OSM</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-69377-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69377/up/" rel="nofollow"> </a>
+<div id="post-69377-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-69377-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69377/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/69377/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I would like to ask for information about OSM and Wikidata. </p>
+<p>The thing is that I know that some brands (supermarkets, fast-food chains, gas stations and so on) are set as brand in OSM (iD editor). So if when I write McDonald's in the OSM search engine while editing, I will automatically be offered a "McDonald's Burger Fast Food" version, and this option will also show the brand's logo right next to the text. In the description of this newly created point, it will automatically fill in – brand:McDonald’s, brand:wikidata - Q38076, brand:wikipedia - en:McDonald's, cousine, takeaway, amenity and name, as you can see below.</p>
+<p>Well, and I would like to create such an attribute or a faster picking option on one supermarket chain, but I don't know how to achieve it. I have a Wikidata and a Wikipedia page already created but I don't know how to link it to something like you can see on the images. </p>
+<p>Thank you very much for your answer!</p>
+<p>image<img src="https://i.ibb.co/ZTtsjJz/Mc-Donald-s-OSM.png" alt="" title="McDonald's Example"></p>
+<p>image<img src="https://i.ibb.co/3cd3Xjn/Mc-Donald-s-OSM-2.png" alt="" title="McDonald's Example2"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/brand/" class="post-tag tag-link-brand"
+                                        title="see questions tagged 'brand'" rel="tag">brand</a>
+                                
+                                    <a href="/tags/wikidata/" class="post-tag tag-link-wikidata"
+                                        title="see questions tagged 'wikidata'" rel="tag">wikidata</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 May '19, 20:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f9d95173348c42ff98fc54b78fa59b48?s=32&amp;d=identicon&amp;r=g" alt="Rick%20Richards's gravatar image" />
+    <p><a href="/users/16726/rick-richards">Rick Richards</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Rick Richards has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-69377">
+    
+</div>
+<div id="comment-tools-69377" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69377-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/69377/creating-brand-in-osm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/69377/creating-brand-in-osm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/69377/creating-brand-in-osm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/69377/creating-brand-in-osm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="69378"></a>
+                    <div id="answer-container-69378" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69378-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69378/up/" rel="nofollow"> </a>
+<div id="post-69378-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-69378-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69378/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Rick Richards has selected this answer as the correct answer"
+        href="/accept_answer/69378/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hey Rick Richards, glad you are enjoying the brand feature in iD!</p>
+<p>If you want to open an issue in <a href="https://github.com/osmlab/name-suggestion-index">https://github.com/osmlab/name-suggestion-index</a> project, it will be picked up by iD.
+Or if you don't want to use GitHub, just post the details here and I will add it.  Thanks!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69378/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 May '19, 22:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5372740989fdca18458f194a285fcb3e?s=32&amp;d=identicon&amp;r=g" alt="bhousel's gravatar image" />
+    <p><a href="/users/7499/bhousel">bhousel</a><br/>
+    <span class="score" title="2089 reputation points"><span class="">2.1k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="28 badges"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="bhousel has 13 accepted answers">38&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69378">
+    
+        <a name="69384"></a>
+        <div class="comment" id="comment-69384">
+            <div id="post-69384-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thank you for clarifying my question!</p>
+
+<p>I would like to do it myself, because I don't want to bother you, but I don't know how so if you can add it, it would be perfect.</p>
+
+<p>Should it look like this?  </p>
+
+<p>"shop/supermarket|Fresh": {<br>
+    "tags": {                           <br>
+      "shop": "supermarket",<br>
+      "brand": "Fresh",<br>
+      "brand:wikidata": "Q50737403",<br>
+      "brand:wikipedia": "sk:Fresh", <br>
+      "name": "Fresh"<br>
+    }<br>
+  },  </p>
+
+<p>How long can it take to be implemented in iD/OSM?<br>
+If you need more information please let me know here. Thanks again!</p></div>
+            <div class="comment-info" id="comment-69384-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '19, 09:08)</span>
+                <a class="comment-user userinfo" href="/users/16726/rick-richards">Rick Richards</a>
+                
+            </div>
+        </div>
+    
+        <a name="69394"></a>
+        <div class="comment" id="comment-69394">
+            <div id="post-69394-score" class="comment-score"></div>
+            <div class="comment-text"><p>Looks good to me!  If you want to add it yourself you can open a Pull Request to that project.<br>
+It will be added the next time we update the brands in iD, probably within a few days.</p></div>
+            <div class="comment-info" id="comment-69394-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '19, 16:54)</span>
+                <a class="comment-user userinfo" href="/users/7499/bhousel">bhousel</a>
+                
+            </div>
+        </div>
+    
+        <a name="69397"></a>
+        <div class="comment" id="comment-69397">
+            <div id="post-69397-score" class="comment-score"></div>
+            <div class="comment-text"><p>I would like to, but I really don't know how to proceed :-/<br>
+First of all, I clicked on the "New pull request" button, then I need to choose "base" branch and somenting that I can compare with it, but I absolutely don't know what to choose. (And also, I'm not sure if I'm in the right section at all.)  I want to learn this process for further need, but It's little bit disappointing for me :-/  Can you somehow help me with it? Thanks!</p></div>
+            <div class="comment-info" id="comment-69397-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '19, 21:17)</span>
+                <a class="comment-user userinfo" href="/users/16726/rick-richards">Rick Richards</a>
+                
+            </div>
+        </div>
+    
+        <a name="69400"></a>
+        <div class="comment" id="comment-69400">
+            <div id="post-69400-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Maybe take a look at <a href="https://gist.github.com/Chaser324/ce0505fbed06b947d962">https://gist.github.com/Chaser324/ce0505fbed06b947d962</a> </p>
+
+<p>(I think it is not too bad, it's rather brief though)</p>
+
+<p>There's quite a lot of complexity to deal with the first couple of times you make a pull request on github, it ends up making collaboration quite a bit easier.</p>
+
+<p>Conceptually, you make a working copy of the project (clone), make your changes (commit), introduce them to github (push), and then use github to propose merging those changes to the main copy of the project (pull request).</p></div>
+            <div class="comment-info" id="comment-69400-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '19, 21:53)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="69401"></a>
+        <div class="comment not_top_scorer" id="comment-69401">
+            <div id="post-69401-score" class="comment-score"></div>
+            <div class="comment-text"><p>no worries Rick Richards, I just added it.</p></div>
+            <div class="comment-info" id="comment-69401-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '19, 22:08)</span>
+                <a class="comment-user userinfo" href="/users/7499/bhousel">bhousel</a>
+                
+            </div>
+        </div>
+    
+        <a name="69402"></a>
+        <div class="comment not_top_scorer" id="comment-69402">
+            <div id="post-69402-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you Max, I will read it surely!  And thank you Bryan! Just one last thing. Can you send me a link, where can I see progress/acceptation of this request? Thanks again! I really appreciate your help.</p></div>
+            <div class="comment-info" id="comment-69402-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '19, 22:23)</span>
+                <a class="comment-user userinfo" href="/users/16726/rick-richards">Rick Richards</a>
+                
+            </div>
+        </div>
+    
+        <a name="69403"></a>
+        <div class="comment" id="comment-69403">
+            <div id="post-69403-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://github.com/osmlab/name-suggestion-index/commit/e9c49e775c9cfc60619a1ee3a411ffcc87f8d177">https://github.com/osmlab/name-suggestion-index/commit/e9c49e775c9cfc60619a1ee3a411ffcc87f8d177</a></p></div>
+            <div class="comment-info" id="comment-69403-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '19, 22:24)</span>
+                <a class="comment-user userinfo" href="/users/7499/bhousel">bhousel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69378" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69378-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/69377/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='PsAPTUgiOqNDn4thKMClozTYzrAmo2wc' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69377/creating-brand-in-osm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69377/creating-brand-in-osm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/wikidata/"
+            class="tag-link-wikidata"
+            title="see questions tagged'wikidata'using tags"
+            rel="tag">wikidata</a> <span class="tag-number">&#215;19</span><br/>
+        
+        <a href="/tags/brand/"
+            class="tag-link-brand"
+            title="see questions tagged'brand'using tags"
+            rel="tag">brand</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 30, 2019, 8:52 p.m.">30 May '19, 20:52</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,359 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 31, 2019, 10:24 p.m.">31 May '19, 22:24</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/21766/why-is-there-no-live-editing-in-potlatch-2-and-id">Why is there no live editing in Potlatch 2 and iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21854/punkte-auswahlen-ideditor-von-mapbox">Punkte auswählen (ideditor von mapbox)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22082/naming-petrol-stations-banks">Naming Petrol Stations &amp; Banks</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22184/cant-save-new-note-using-the-new-id-editor">Can&#39;t save new note using the new iD editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22224/id-editor-questions">[closed] iD editor questions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22230/how-to-use-a-shapefile-in-id">[closed] How to use a shapefile in iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22234/how-to-display-longitude-and-latitude-in-id">How to display longitude and latitude in iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22378/is-there-a-way-to-view-node-or-way-ids-in-the-id-editor">Is there a way to view node or way IDs in the iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22379/list-of-keyboard-shortcuts-for-id-editor">List of keyboard shortcuts for iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21145/entrance-tag-preset-in-id-editor">entrance tag preset in iD editor?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

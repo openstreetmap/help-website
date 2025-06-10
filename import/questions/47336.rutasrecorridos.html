@@ -1,0 +1,651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Rutas/Recorridos - OSM Help</title>
+        <meta name="description" content="Para un proyecto que estoy haciendo necesito hacer las rutas para que sigan la acera y no la carretera, asi que aver si alguien me podría ayudar un poco me ayudaría. Así como un poco mas de información de como funciona el sistema de rutas. Exactamente a lo que me refiero es de cuando digo de ir de u..." />
+        <meta name="keywords" content="ruta,rutas,lang-es" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/47336/rutasrecorridos" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/47336/rutasrecorridos?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Qf9ucSbdQe2x1iQAB5XS8gAMLJGkM7Ib' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/47336/rutasrecorridos">Rutas/Recorridos</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-47336-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47336/up/" rel="nofollow"> </a>
+<div id="post-47336-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-47336-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47336/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/47336/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Para un proyecto que estoy haciendo necesito hacer las rutas para que sigan la acera y no la carretera, asi que aver si alguien me podría ayudar un poco me ayudaría. Así como un poco mas de información de como funciona el sistema de rutas. Exactamente a lo que me refiero es de cuando digo de ir de una calle con numero x a otra calle las ordenes que me da y el recorrido que sigue, es eso lo que quiero editar. Muchas gracias de antemano.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ruta/" class="post-tag tag-link-ruta"
+                                        title="see questions tagged 'ruta'" rel="tag">ruta</a>
+                                
+                                    <a href="/tags/rutas/" class="post-tag tag-link-rutas"
+                                        title="see questions tagged 'rutas'" rel="tag">rutas</a>
+                                
+                                    <a href="/tags/lang-es/" class="post-tag tag-link-lang-es"
+                                        title="see questions tagged 'lang-es'" rel="tag">lang-es</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Dec '15, 21:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5894dcb145d23eb16eec38c71ca3c716?s=32&amp;d=identicon&amp;r=g" alt="iTheNoob's gravatar image" />
+    <p><a href="/users/11807/ithenoob">iTheNoob</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="iTheNoob has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47336/">
+                edited
+                <strong>31 Dec '15, 00:15</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-47336">
+    
+</div>
+<div id="comment-tools-47336" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47336-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/47336/rutasrecorridos?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/47336/rutasrecorridos?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/47336/rutasrecorridos?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/47336/rutasrecorridos?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="47340"></a>
+                    <div id="answer-container-47340" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47340-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47340/up/" rel="nofollow"> </a>
+<div id="post-47340-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-47340-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47340/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>En el mapa debes editar o añadir nodos, vías y elementos de uso peatonal o preferencial como ser aceras (footways), plataformas (platforms), escaleras (steps), obstáculos (access), pasos de peatones (crossing), vías peatonales o preferenciales (pedestrian/living_street), senderos y caminos (path/tracks) y otros. La superficie y rugosidad a cualquier elemento anterior ayudará. Todo esto será insumo para el servicio de ruteo. (ver como editar <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dfootway">aquí</a>)</p>
+<p>El proyecto por si mismo no provee nada más que acceso a los datos, es decir, consultar o descargar un elemento, área, frontera o región. El servicio que necesitas proviene de proyectos o empresas como ser osrm, graphhopper, mapzen, yours, mapquest, etc (ver más <a href="http://wiki.openstreetmap.org/wiki/Routing">aquí</a>). El que ves en la página osm.org es sólo demostrativo y para feedback de mapeadores.</p>
+<p>Según con qué lenguaje de programación realices tu proyecto será más o menos sencillo obtener la ruta según el perfil, en este caso, peatonal. Casi todos tienen interfaces de usuario que puedes probar una vez que hayas editado en el mapa. Incluso hay para celulares.</p>
+<p>A grandes rasgos, el servicio de ruteo funciona obteniendo el punto inicial y final, luego a partir de algún algoritmo (distancia corta, rápido, etc) obtiene la mejor ruta utilizando los datos del mapa, y luego devuelve la ruta para mostrar con las indicaciones, y otros datos. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47340/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Dec '15, 23:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b28923423b98dace80389ae64c99bf93?s=32&amp;d=identicon&amp;r=g" alt="5m4u9's gravatar image" />
+    <p><a href="/users/7558/5m4u9">5m4u9</a><br/>
+    <span class="score" title="156 reputation points">156</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="5m4u9 has one accepted answer">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47340">
+    
+        <a name="47352"></a>
+        <div class="comment" id="comment-47352">
+            <div id="post-47352-score" class="comment-score"></div>
+            <div class="comment-text"><p>Muchas gracias por contestar y feliz año nuevo.
+Tu respuesta me ha ayudado a verlo mas claro. Cuando tenga mas tiempo avanzare mas y ya diré algo si tengo una nueva duda.</p></div>
+            <div class="comment-info" id="comment-47352-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Jan '16, 19:56)</span>
+                <a class="comment-user userinfo" href="/users/11807/ithenoob">iTheNoob</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47340" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47340-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/47336/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Qf9ucSbdQe2x1iQAB5XS8gAMLJGkM7Ib' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47336/rutasrecorridos?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47336/rutasrecorridos?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lang-es/"
+            class="tag-link-lang-es"
+            title="see questions tagged'lang-es'using tags"
+            rel="tag">lang-es</a> <span class="tag-number">&#215;81</span><br/>
+        
+        <a href="/tags/ruta/"
+            class="tag-link-ruta"
+            title="see questions tagged'ruta'using tags"
+            rel="tag">ruta</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/rutas/"
+            class="tag-link-rutas"
+            title="see questions tagged'rutas'using tags"
+            rel="tag">rutas</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 30, 2015, 9:39 p.m.">30 Dec '15, 21:39</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,315 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 1, 2016, 9:21 p.m.">01 Jan '16, 21:21</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/27769/crear-rutas-de-transporte-publico-transantiago">Crear rutas de transporte público TRANSANTIAGO</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39194/ayuda-pintar-ruta-con-mapquest-routemanagercreateroutep1p2">Ayuda Pintar Ruta con mapquest routeManager.createRoute(p1,p2)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9431/actualizacion-mapa-region-de-residencia-actual">actualizacion mapa region de residencia actual</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9475/eliminar-edicion-subida-con-merkaator">eliminar edición subida con Merkaator</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9507/alguien-sabe-como-fijar-un-nodo-sabiendo-las-coordenadas-de-longitud-y-latitud">alguien sabe cómo fijar un  nodo sabiendo las coordenadas de longitud y latitud ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9549/me-sale-couldnt-load-the-map-en-potlatch2">Me sale &quot;Couldn&#39;t load the map&quot; en potlatch2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9622/numeros-de-portal-en-shp-como-los-subo-todos-de-una-en-addrhousenumber">números de portal en SHP como los subo todos de una en addr:housenumber</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9592/al-editar-con-potlatch2-y-pedir-las-coordenadas-no-aparecen">Al editar con Potlatch2 y pedir las coordenadas, no aparecen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9634/problema-para-ver-el-mapa-de-el-salvador-aparece-cortada-y-sale-la-imagen-que-uno-toma-como-referencia-para-hacer-las-calles">Problema para ver el Mapa de El Salvador (aparece cortada y sale: la imagen que uno toma como referencia para hacer las calles)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9473/hidrantes-soterrados">Hidrantes soterrados</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

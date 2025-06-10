@@ -1,0 +1,786 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Problem uploading GPX to private server - OSM Help</title>
+        <meta name="description" content="Hello guys, I am trying to upload GPX tracks to my private OSM server but it seems like i am running into a server error while doing so Here is the cURL command i am using curl -u arsaXXXX:XXXXX -H &quot;Expect: &quot; -F &quot;file=@C:\Users\arsa3858\Desktop\1.gpx -F description=description \ -F tags=tags -F visi..." />
+        <meta name="keywords" content="tile,api,gpx,upload,server" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/37451/problem-uploading-gpx-to-private-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/37451/problem-uploading-gpx-to-private-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zy0G7JBtziVChiCWz0ru1mMxxpARGZe2' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/37451/problem-uploading-gpx-to-private-server">Problem uploading GPX to private server</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-37451-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37451/up/" rel="nofollow"> </a>
+<div id="post-37451-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-37451-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37451/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/37451/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello guys,</p>
+<p>I am trying to upload GPX tracks to my private OSM server but it seems like i am running into a server error while doing so</p>
+<p>Here is the cURL command i am using</p>
+<p><code>curl -u arsaXXXX:XXXXX -H "Expect: " -F "file=<a href="http://help.openstreetmap.org/users/23/cohort">@C</a>:\Users\arsa3858\Desktop\1.gpx -F description=description \ -F tags=tags -F visibility=public <a href="http://b20003:3000/api/0.6/gpx/create">http://b20003:3000/api/0.6/gpx/create</a></code></p>
+<p>Below is the error report that i am seeing , i understand that its a ruby on rails server problem but i have no idea how to go about fixing this.  Thanks in advance for your help</p>
+<pre><code>API threw unexpected Errno::ENOENT exception: No such file or directory - (/tmp/0.7056756430417218, /home/osm/traces/11.gpx)
+/usr/lib/ruby/1.9.1/fileutils.rb:519:in `rename'
+/usr/lib/ruby/1.9.1/fileutils.rb:519:in `block in mv'
+/usr/lib/ruby/1.9.1/fileutils.rb:1515:in `block in fu_each_src_dest'
+/usr/lib/ruby/1.9.1/fileutils.rb:1531:in `fu_each_src_dest0'
+/usr/lib/ruby/1.9.1/fileutils.rb:1513:in `fu_each_src_dest'
+/usr/lib/ruby/1.9.1/fileutils.rb:508:in `mv'
+/data/src/openstreetmap-website-master/app/controllers/trace_controller.rb:374:in `block in do_create'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.5/lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `block in transaction'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.5/lib/active_record/connection_adapters/abstract/database_statements.rb:221:in `within_new_transaction'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.5/lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `transaction'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.5/lib/active_record/transactions.rb:209:in `transaction'
+/var/lib/gems/1.9.1/gems/deadlock_retry-1.2.0/lib/deadlock_retry.rb:31:in `transaction_with_deadlock_handling'
+/data/src/openstreetmap-website-master/app/controllers/trace_controller.rb:368:in `do_create'
+/data/src/openstreetmap-website-master/app/controllers/trace_controller.rb:330:in `api_create'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/abstract_controller/base.rb:189:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/callbacks.rb:514:in `block in _run__252704330398790117__process_action__callbacks'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/callbacks.rb:212:in `block in _conditional_callback_around_5'
+/data/src/openstreetmap-website-master/app/controllers/application_controller.rb:322:in `api_call_handle_error'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/callbacks.rb:211:in `_conditional_callback_around_5'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/callbacks.rb:513:in `_run__252704330398790117__process_action__callbacks'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/notifications.rb:159:in `block in instrument'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/notifications.rb:159:in `instrument'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.5/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/abstract_controller/base.rb:136:in `process'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/abstract_controller/rendering.rb:44:in `process'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_controller/metal.rb:195:in `dispatch'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_controller/metal.rb:231:in `block in action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/journey/router.rb:59:in `each'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/journey/router.rb:59:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/routing/route_set.rb:674:in `call'
+/var/lib/gems/1.9.1/gems/oauth-plugin-0.5.1/lib/oauth/rack/oauth_filter.rb:75:in `call'
+/var/lib/gems/1.9.1/gems/rack-cors-0.2.9/lib/rack/cors.rb:54:in `call'
+/data/src/openstreetmap-website-master/config/initializers/cors.rb:9:in `call'
+/var/lib/gems/1.9.1/gems/http_accept_language-2.0.1/lib/http_accept_language/middleware.rb:13:in `call'
+/var/lib/gems/1.9.1/gems/rack-openid-1.4.2/lib/rack/openid.rb:98:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:35:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.5/lib/active_record/migration.rb:373:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/callbacks.rb:373:in `_run__4521713156344120633__call__callbacks'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/var/lib/gems/1.9.1/gems/railties-4.0.5/lib/rails/rack/logger.rb:38:in `call_app'
+/var/lib/gems/1.9.1/gems/railties-4.0.5/lib/rails/rack/logger.rb:20:in `block in call'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/tagged_logging.rb:26:in `tagged'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/tagged_logging.rb:68:in `tagged'
+/var/lib/gems/1.9.1/gems/railties-4.0.5/lib/rails/rack/logger.rb:20:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.5/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.5/lib/action_dispatch/middleware/static.rb:64:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/var/lib/gems/1.9.1/gems/railties-4.0.5/lib/rails/engine.rb:511:in `call'
+/var/lib/gems/1.9.1/gems/railties-4.0.5/lib/rails/application.rb:97:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 90ms (Views: 0.7ms | ActiveRecord: 2.7ms)
+</code></pre>
+<p>Atjun</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tile/" class="post-tag tag-link-tile"
+                                        title="see questions tagged 'tile'" rel="tag">tile</a>
+                                
+                                    <a href="/tags/api/" class="post-tag tag-link-api"
+                                        title="see questions tagged 'api'" rel="tag">api</a>
+                                
+                                    <a href="/tags/gpx/" class="post-tag tag-link-gpx"
+                                        title="see questions tagged 'gpx'" rel="tag">gpx</a>
+                                
+                                    <a href="/tags/upload/" class="post-tag tag-link-upload"
+                                        title="see questions tagged 'upload'" rel="tag">upload</a>
+                                
+                                    <a href="/tags/server/" class="post-tag tag-link-server"
+                                        title="see questions tagged 'server'" rel="tag">server</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Oct '14, 10:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0be8b0bc55610645ad634cb9f680c48f?s=32&amp;d=identicon&amp;r=g" alt="Osm_Enthu's gravatar image" />
+    <p><a href="/users/9036/osm_enthu">Osm_Enthu</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Osm_Enthu has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37451/">
+                edited
+                <strong>09 Oct '14, 10:21</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+            <p><a href="/users/158/scai">scai ♦</a><br/>
+            <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-37451">
+    
+        <a name="37455"></a>
+        <div class="comment" id="comment-37455">
+            <div id="post-37455-score" class="comment-score"></div>
+            <div class="comment-text"><p>There is some error within the path of the file , seems like the uploaded gpx trace needs to be saved on the server but the destination address isnt correct/ does not exist</p></div>
+            <div class="comment-info" id="comment-37455-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '14, 12:47)</span>
+                <a class="comment-user userinfo" href="/users/9036/osm_enthu">Osm_Enthu</a>
+                
+            </div>
+        </div>
+    
+        <a name="37456"></a>
+        <div class="comment" id="comment-37456">
+            <div id="post-37456-score" class="comment-score"></div>
+            <div class="comment-text"><p>Source:</p>
+
+<p><a href="https://trac.openstreetmap.org/ticket/1396#comment:1">https://trac.openstreetmap.org/ticket/1396#comment:1</a></p></div>
+            <div class="comment-info" id="comment-37456-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '14, 12:59)</span>
+                <a class="comment-user userinfo" href="/users/9036/osm_enthu">Osm_Enthu</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37451" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37451-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/37451/problem-uploading-gpx-to-private-server?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/37451/problem-uploading-gpx-to-private-server?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/37451/problem-uploading-gpx-to-private-server?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/37451/problem-uploading-gpx-to-private-server?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="37482"></a>
+                    <div id="answer-container-37482" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-37482-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37482/up/" rel="nofollow"> </a>
+<div id="post-37482-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-37482-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37482/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>So , i seem to have figured this problem out.</p>
+<p>The path of the </p>
+<p>gpx_trace_dir: "/home/../osm/traces"
+  gpx_image_dir: "/home/../osm/images"</p>
+<p>needs to be matching to your exact home folder location.</p>
+<p>You can find these paths in the application.yml file in /openstreetmap-website/config</p>
+<p>Happy coding !</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/37482/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Oct '14, 08:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0be8b0bc55610645ad634cb9f680c48f?s=32&amp;d=identicon&amp;r=g" alt="Osm_Enthu's gravatar image" />
+    <p><a href="/users/9036/osm_enthu">Osm_Enthu</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Osm_Enthu has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-37482">
+    
+</div>
+<div id="comment-tools-37482" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37482-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/37451/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zy0G7JBtziVChiCWz0ru1mMxxpARGZe2' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37451/problem-uploading-gpx-to-private-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37451/problem-uploading-gpx-to-private-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/api/"
+            class="tag-link-api"
+            title="see questions tagged'api'using tags"
+            rel="tag">api</a> <span class="tag-number">&#215;290</span><br/>
+        
+        <a href="/tags/gpx/"
+            class="tag-link-gpx"
+            title="see questions tagged'gpx'using tags"
+            rel="tag">gpx</a> <span class="tag-number">&#215;255</span><br/>
+        
+        <a href="/tags/server/"
+            class="tag-link-server"
+            title="see questions tagged'server'using tags"
+            rel="tag">server</a> <span class="tag-number">&#215;123</span><br/>
+        
+        <a href="/tags/upload/"
+            class="tag-link-upload"
+            title="see questions tagged'upload'using tags"
+            rel="tag">upload</a> <span class="tag-number">&#215;117</span><br/>
+        
+        <a href="/tags/tile/"
+            class="tag-link-tile"
+            title="see questions tagged'tile'using tags"
+            rel="tag">tile</a> <span class="tag-number">&#215;57</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 9, 2014, 10:11 a.m.">09 Oct '14, 10:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,269 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 10, 2014, 8:55 a.m.">10 Oct '14, 08:55</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/15147/osm-api-06-upload-gpx-track">osm api 0.6 upload GPX track</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37501/regarding-gpx-data-import-to-database-private-server">Regarding GPX data import to database private server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63845/404-error-on-gpx-upload-api">404 error on GPX upload API</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6778/trace-id-list-or-gpx-id-retrieved-from-a-bounding-box">Trace id list or (gpx id) retrieved from a bounding box</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5440/why-arent-my-uploaded-gps-traces-shown-on-the-maps">Why aren&#39;t my uploaded GPS traces shown on the maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5986/how-to-install-own-tile-serverrenderer">how to install own tile server/renderer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2408/upload-gpx-trackno-display-on-profile-no-error-of-osm-server-no-mail">[closed] Upload GPX track...no display on profile, no error of OSM server, no mail</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1706/how-do-i-use-the-osm-tile-map-server-in-mapinfo">How do I use the osm tile map server in mapinfo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/752/how-do-i-get-the-id-of-the-newest-gpx-file-uploaded-to-openstreetmap">How do I get the ID of the newest GPX file uploaded to OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/846/upload-big-gpx-file">Upload big gpx file?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

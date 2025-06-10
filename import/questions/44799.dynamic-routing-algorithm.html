@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>[closed] Dynamic routing algorithm - OSM Help</title>
+        <meta name="description" content="I have a graph extracted from an American city: vertices represent road intersections, edges/arcs represent road segments connecting the intersections. For each road segment, I have the length and allowed driving speed. Furthermore, roads belong to different classes such as highway/residential/prima..." />
+        <meta name="keywords" content="routing,algorithm" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/44799/dynamic-routing-algorithm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/44799/dynamic-routing-algorithm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='36noICjvdcLSROs0Qfu4VRUM0g059ONH' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/44799/dynamic-routing-algorithm">[closed] Dynamic routing algorithm</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-44799-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44799/up/" rel="nofollow"> </a>
+<div id="post-44799-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-44799-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44799/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/44799/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a graph extracted from an American city: vertices represent road intersections, edges/arcs represent road segments connecting the intersections. For each road segment, I have the length and allowed driving speed. Furthermore, roads belong to different classes such as highway/residential/primary roads/....</p>
+<p>I am looking for a routing algorithm which does the following:</p>
+<ul>
+<li>Compute a pairwise travel time matrix for each intersection (i.e how long it would take to travel from intersection i to intersection j.</li>
+<li>Query the quickest route from intersection i to j and returns a path (sequence of edges/arcs).
+The algorithm should be able to take updates into consideration. For instance, if there is a congestion on road segment (x,y) which increases its anticipated travel time, or if road segment (x,y) becomes blocked, the data structures should be updated incrementally, thereby updating all affected shortest paths (i.e. update all shortest paths through (x,y)).</li>
+<li>The distance matrix will be queried very often so this should be precomputed, but the actual shortest paths can be computed at a later stage if that's more efficient. The number of nodes in the graph is roughly 5000-10000.</li>
+</ul>
+<p>I was hoping that people could refer me to literature about this, preferably something that doesn't take weeks to implement. Obviously, simply running Dijkstra for each intersection takes too long. Running Floyd–Warshall all-pairs shortest path algorithm could be a possibility, but I'm not so sure how to update the result if the cost of one of the edges/arcs changes. Furthermore, it seems to be a slow approach since the algorithm ignores that most of the routes go through a small subset of the road segments.</p>
+<p>I'm not looking for an exact approach. A good approximation suffices. Any pointers to literature or algorithm descriptions are welcome. I presume that any kind of routing software needs a similar algorithm. I'm mainly interested in something that works; it shouldn't necessarily be state of the art.
+I'm not sure what would be a good place to ask this question?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/routing/" class="post-tag tag-link-routing"
+                                        title="see questions tagged 'routing'" rel="tag">routing</a>
+                                
+                                    <a href="/tags/algorithm/" class="post-tag tag-link-algorithm"
+                                        title="see questions tagged 'algorithm'" rel="tag">algorithm</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Aug '15, 04:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6feb1ed05cdbdc6c0d788f514fd07e1a?s=32&amp;d=identicon&amp;r=g" alt="JorisK's gravatar image" />
+    <p><a href="/users/11094/jorisk">JorisK</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JorisK has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/44799/">
+                closed
+                <strong>19 Aug '15, 12:52</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+            <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+            <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-44799">
+    
+        <a name="44807"></a>
+        <div class="comment" id="comment-44807">
+            <div id="post-44807-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>I'm not sure what would be a good place to ask this question?</p>
+</blockquote>
+
+<p>Since I cannot find any immediate connection to OpenStreetMap in your question (maybe you just forgot to mention it?), may I suggest to try on gis.stackexchange.com instead and close this question?</p>
+
+<p>OSM universe offers different routers like OSRM or GraphHopper. Please give the search on this page a try.</p></div>
+            <div class="comment-info" id="comment-44807-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '15, 17:46)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-44799" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44799-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="question-status" style="margin-bottom:15px">
+            <h3>
+                The question has been closed for the following reason "Question is off-topic or not relevant. Generic question with no OSM content, more suitable for GIS StackExchange." by
+                <a href="/users/647/sk53">SK53</a>
+                 19 Aug '15, 12:52
+            </h3>
+            </div>
+            
+            
+        <form id="fmanswer" action="/questions/44799/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='36noICjvdcLSROs0Qfu4VRUM0g059ONH' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/44799/dynamic-routing-algorithm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/44799/dynamic-routing-algorithm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/routing/"
+            class="tag-link-routing"
+            title="see questions tagged'routing'using tags"
+            rel="tag">routing</a> <span class="tag-number">&#215;305</span><br/>
+        
+        <a href="/tags/algorithm/"
+            class="tag-link-algorithm"
+            title="see questions tagged'algorithm'using tags"
+            rel="tag">algorithm</a> <span class="tag-number">&#215;14</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 18, 2015, 4:32 a.m.">18 Aug '15, 04:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,750 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 19, 2015, 12:52 p.m.">19 Aug '15, 12:52</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/30121/tweaking-routing-algorithm">Tweaking routing algorithm</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29152/looking-for-an-algorithm-to-walk-on-new-paths">[closed] looking for an algorithm to walk on new paths</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30272/how-the-routing-osrm-algorithm-works">how the routing OSRM algorithm works?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45665/convert-moving-duration-into-routes">[closed] Convert moving duration into routes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/687/are-motorcars-allowed-on-track-roads">Are motorcars allowed on &#39;track&#39; roads ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/737/is-there-any-windows-ce-navigation-software-that-uses-osm-data">Is there any Windows CE navigation software that uses OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/275/how-do-i-connect-a-high-speed-bidirectional-trunk-road-to-the-network">How do I connect a high speed bidirectional (trunk) road to the network ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1033/is-there-any-free-libre-traffic-information-data">Is there any free (libre) traffic information data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/467/how-do-i-use-osm-maps-in-my-gps">How do I use OSM maps in my GPS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/852/routing-by-address">Routing by Address</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

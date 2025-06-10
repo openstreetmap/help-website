@@ -1,0 +1,814 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Do relations auto-delete when there are no members? - OSM Help</title>
+        <meta name="description" content="If I remove all the ways (2, in this case) from a relation, does the relation automatically get deleted? I needed to basically &#39;merge&#39; 2 route relations, but it was easier to just remove the 2 ways that were in the wrong relation and add them to the right one, then delete the empty relation. But aft..." />
+        <meta name="keywords" content="ideditor,relations" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/51979/do-relations-auto-delete-when-there-are-no-members" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/51979/do-relations-auto-delete-when-there-are-no-members?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='xflPufbXFaYlJsr6Y09jTgqRh2W1RDXT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/51979/do-relations-auto-delete-when-there-are-no-members">Do relations auto-delete when there are no members?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-51979-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51979/up/" rel="nofollow"> </a>
+<div id="post-51979-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-51979-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51979/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/51979/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>If I remove all the ways (2, in this case) from a relation, does the relation automatically get deleted?</p>
+<p>I needed to basically 'merge' 2 route relations, but it was easier to just remove the 2 ways that were in the wrong relation and add them to the right one, then delete the empty relation. But after removing the 2 ways, I couldn't see any way to select the empty relation. Looking at the changeset information later, it looks like it got deleted automatically. Is this correct?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Sep '16, 01:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c1e98ded2982cd352d4c77075aa0cd74?s=32&amp;d=identicon&amp;r=g" alt="ljb_nj's gravatar image" />
+    <p><a href="/users/11758/ljb_nj">ljb_nj</a><br/>
+    <span class="score" title="659 reputation points">659</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ljb_nj has one accepted answer">12&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-51979">
+    
+        <a name="51981"></a>
+        <div class="comment" id="comment-51981">
+            <div id="post-51981-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I would like to see some wiki page on the topic of editing existing relations, in JOSM. I always feel like I am screwing them up, and when I try to delete them entirely, I often get errors that have me poking around trying to fix it. I hope someone answering this question can point us to a good online tutorial.</p></div>
+            <div class="comment-info" id="comment-51981-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '16, 03:25)</span>
+                <a class="comment-user userinfo" href="/users/12686/mtc">mtc</a>
+                
+            </div>
+        </div>
+    
+        <a name="51987"></a>
+        <div class="comment" id="comment-51987">
+            <div id="post-51987-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you think it's worth creating a wiki page about something then obviously go ahead and create it - it's a wiki!  </p>
+
+<p>If you want to go through various drafts and get other people's opinions on it before making it "live" then create it below your user account and ask for feedback on it first.</p></div>
+            <div class="comment-info" id="comment-51987-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '16, 10:09)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="51989"></a>
+        <div class="comment" id="comment-51989">
+            <div id="post-51989-score" class="comment-score"></div>
+            <div class="comment-text"><p>With SimonPoole's hint, I looked further at the specific editor, and found this iD issue: <a href="https://github.com/openstreetmap/iD/issues/465">"What to do with emptied relations"</a>.</p>
+
+<p>The resolution of that issue was that iD does delete any relation that becomes empty.</p></div>
+            <div class="comment-info" id="comment-51989-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '16, 15:48)</span>
+                <a class="comment-user userinfo" href="/users/11758/ljb_nj">ljb_nj</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51979" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51979-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/51979/do-relations-auto-delete-when-there-are-no-members?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/51979/do-relations-auto-delete-when-there-are-no-members?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/51979/do-relations-auto-delete-when-there-are-no-members?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/51979/do-relations-auto-delete-when-there-are-no-members?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="51985"></a>
+                    <div id="answer-container-51985" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51985-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51985/up/" rel="nofollow"> </a>
+<div id="post-51985-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-51985-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51985/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The OSM API does not delete empty relations*. Depending on what you are using your editor may do so, but I'm not aware of one that does. A warning is clearly in order, auto-deleting is probably not (there are a couple of reasons why you temporarily might want to keep an empty relation around).</p>
+<p>Relations are really easy, they are simply lists of other OSM objects. </p>
+<p>Difficulties happen because some times they are very large (and very large lists are hard to manipulate in any medium) and when there are complicated implied or explicit rules in the tagging scheme that define the required relationships between the objects in the relations. </p>
+<p>JOSM has of late started popping up relation related error messages that are a nuisance and are not really helpful. Typically for example when splitting a way you want the resulting two parts to remain in the relation except if the relation in question is a turn restriction. This however can easily be handled by the editor without involving the user at the time they are splitting the way.</p>
+<p>(* empty relations have no associated geometry and as such will not be retrievable except if their id is known once they are stored in the database, so in general they are useless.)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51985/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Sep '16, 08:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/51985/">
+                edited
+                <strong>11 Sep '16, 09:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51985">
+    
+        <a name="51988"></a>
+        <div class="comment" id="comment-51988">
+            <div id="post-51988-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I'm using iD (I put that in the tags, but I should have mentioned it too).</p>
+
+<p>Here is the changeset: <a href="https://www.openstreetmap.org/changeset/42068474">https://www.openstreetmap.org/changeset/42068474</a></p>
+
+<p>I deleted all (2) ways from this relation: <a href="https://www.openstreetmap.org/relation/5880967">https://www.openstreetmap.org/relation/5880967</a></p>
+
+<p>The history of that relation is that it used to have 2 member ways: <a href="https://www.openstreetmap.org/relation/5880967/history">https://www.openstreetmap.org/relation/5880967/history</a></p>
+
+<p>I'm pretty sure I just removed the relation from both those ways, but did nothing to delete the relation. Yet the changeset says the relation was deleted. Perhaps iD did that?</p>
+
+<p>I agree that in general automatically deleting a relation that becomes empty would be a bad idea. But perhaps it makes sense for iD, given the typical user base (such as me).</p></div>
+            <div class="comment-info" id="comment-51988-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '16, 15:21)</span>
+                <a class="comment-user userinfo" href="/users/11758/ljb_nj">ljb_nj</a>
+                
+            </div>
+        </div>
+    
+        <a name="51998"></a>
+        <div class="comment" id="comment-51998">
+            <div id="post-51998-score" class="comment-score"></div>
+            <div class="comment-text"><p>The wiki has a useful <a href="http://wiki.openstreetmap.org/wiki/Empty_relations">article about empty relations</a>, including a link to a tool that lists them, and some hint on why they appear and how to handle them. Info about iD is currently missing, if you use that editor please update the wiki page.</p></div>
+            <div class="comment-info" id="comment-51998-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Sep '16, 09:14)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51985" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51985-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="52091"></a>
+                    <div id="answer-container-52091" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52091-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52091/up/" rel="nofollow"> </a>
+<div id="post-52091-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-52091-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52091/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yes, iD does delete the Relation when it no longer has any members.</p>
+<p>see:  <a href="https://github.com/openstreetmap/iD/blob/c8e4f76c230512dc82dc060bf337e3ba489b113e/modules/actions/delete_member.js#L10-L11"><code>delete_member.js</code></a>  and  <a href="https://github.com/openstreetmap/iD/blob/c8e4f76c230512dc82dc060bf337e3ba489b113e/modules/core/relation.js#L67-L69"><code>relation.js#isDegenerate</code></a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52091/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Sep '16, 02:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5372740989fdca18458f194a285fcb3e?s=32&amp;d=identicon&amp;r=g" alt="bhousel's gravatar image" />
+    <p><a href="/users/7499/bhousel">bhousel</a><br/>
+    <span class="score" title="2089 reputation points"><span class="">2.1k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="28 badges"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="bhousel has 13 accepted answers">38&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52091">
+    
+</div>
+<div id="comment-tools-52091" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52091-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/51979/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='xflPufbXFaYlJsr6Y09jTgqRh2W1RDXT' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51979/do-relations-auto-delete-when-there-are-no-members?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51979/do-relations-auto-delete-when-there-are-no-members?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 11, 2016, 1:33 a.m.">11 Sep '16, 01:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,656 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 18, 2016, 2:49 a.m.">18 Sep '16, 02:49</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/67024/convert-areas-to-lines-with-relations-id">Convert areas to lines with relations (iD)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34441/add-a-part-of-a-path-to-relation-in-id">Add a part of a path to relation in iD</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55622/how-to-create-placeisland-out-of-naturalcoastline-in-id">How to create place=island out of natural=coastline in iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65954/editing-members-of-a-relation-in-id-editor">Editing members of a relation in iD editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/72115/id-user-need-to-merge-two-relations-i-think">ID User: need to merge two relations (I think)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59476/id-how-to-remove-a-relation">[closed] iD: how to remove a relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">How do I map an island in a lake using iD editor and the multipolygon tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1225/place-names-at-different-zoom-levels">Place names at different zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/924/is-there-a-list-of-most-important-relations-in-the-world-like-longest-rivers-country-borders-etc">Is there a list of most important relations in the world? Like longest rivers, country borders etc...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/372/is-there-a-limit-to-the-number-of-ways-containing-a-node">Is there a limit to the number of ways containing a node?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

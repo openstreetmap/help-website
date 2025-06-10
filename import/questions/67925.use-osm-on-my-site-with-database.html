@@ -1,0 +1,723 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>use OSM on my site with database - OSM Help</title>
+        <meta name="description" content="Hi all, there are a lot of info or thread dedicated to the usage of OSM with database and so on but I wasn&#39;t able to figure out if I can do what I have in mind for mi site. I want to build section on my site to reviews POI focused on my town so I want to have a map where I can extract data of the PO..." />
+        <meta name="keywords" content="usage,extract,databse,poi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/67925/use-osm-on-my-site-with-database" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/67925/use-osm-on-my-site-with-database?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='0O8vvjLJj1Ms0sjWF9WlIEjINpKWSOCB' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/67925/use-osm-on-my-site-with-database">use OSM on my site with database</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-67925-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/67925/up/" rel="nofollow"> </a>
+<div id="post-67925-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-67925-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/67925/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/67925/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all, there are a lot of info or thread dedicated to the usage of OSM with database and so on but I wasn't able to figure out if I can do what I have in mind for mi site.</p>
+<p>I want to build section on my site to reviews POI focused on my town so I want to have a map where I can extract data of the POI already on OSM but at the seme time let the user to add more information on the POI already existing or adding a new one. All info will be stored on my database so that when some one will search for a POI on my site it will show a dedicated page to that POI but also its position on the map.</p>
+<p>Thanks in advance to everyone that will helping me to point in the right direction.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/usage/" class="post-tag tag-link-usage"
+                                        title="see questions tagged 'usage'" rel="tag">usage</a>
+                                
+                                    <a href="/tags/extract/" class="post-tag tag-link-extract"
+                                        title="see questions tagged 'extract'" rel="tag">extract</a>
+                                
+                                    <a href="/tags/databse/" class="post-tag tag-link-databse"
+                                        title="see questions tagged 'databse'" rel="tag">databse</a>
+                                
+                                    <a href="/tags/poi/" class="post-tag tag-link-poi"
+                                        title="see questions tagged 'poi'" rel="tag">poi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Feb '19, 17:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/57584e9a4373f37c12d336aedb91955b?s=32&amp;d=identicon&amp;r=g" alt="cpqueen10's gravatar image" />
+    <p><a href="/users/16261/cpqueen10">cpqueen10</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cpqueen10 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/67925/">
+                edited
+                <strong>09 Feb '19, 09:37</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-67925">
+    
+</div>
+<div id="comment-tools-67925" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-67925-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/67925/use-osm-on-my-site-with-database?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/67925/use-osm-on-my-site-with-database?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/67925/use-osm-on-my-site-with-database?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/67925/use-osm-on-my-site-with-database?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="67945"></a>
+                    <div id="answer-container-67945" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-67945-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/67945/up/" rel="nofollow"> </a>
+<div id="post-67945-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-67945-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/67945/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><small>(First, welcome, great that you want to use OSM! Second, I suggest to <a href="https://www.openstreetmap.org/welcome">get a bit involved</a> and just try to put your favourite restaurant on the map (if not already existing) or similar simple POI stuff. Do not use other maps for your edits, but only your personal real-world observation.)</small></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Develop">https://wiki.openstreetmap.org/wiki/Develop</a> (mostly the right box "Using OpenStreetMap for Development"). You can do nearly everything with OSM, because our <a href="https://wiki.openstreetmap.org/wiki/Downloading_data">data</a> is <a href="https://www.openstreetmap.org/copyright">free</a>. Displaying a <a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">slippy map</a> with POI markers is quite <em>easy</em> with leaflet (also used on <a href="https://www.openstreetmap.org/">osm.org</a>) or openlayers.</p>
+<p>Regarding pulling POI out of OSM you can have a look at other projects, e.g. <a href="https://wiki.openstreetmap.org/wiki/OpenStreetBrowser">https://wiki.openstreetmap.org/wiki/OpenStreetBrowser</a> or <a href="https://wiki.openstreetmap.org/wiki/Wheelmap">https://wiki.openstreetmap.org/wiki/Wheelmap</a> (their code is free software, so you can look at / use it).</p>
+<p>If you want to let your users add new info to the POIs it gets a bit <em>tricky</em>: </p>
+<ul>
+<li>If you want to store that info in your own database ...<ul>
+<li>... and you want to continue to get updates from the OSM database you need to somehow link your data for the POIs to the POIs from OSM. <a href="https://wiki.openstreetmap.org/wiki/Elements">OSM object</a> ids are not guaranteed to be stable and hence the same POI may have a new id after some years/months/days (see also <a href="https://wiki.openstreetmap.org/wiki/Persistent_Place_Identifier">https://wiki.openstreetmap.org/wiki/Persistent_Place_Identifier</a> ). </li>
+<li>... and you do NOT want to continue to get updates from the OSM database you can just do a one-time import of all relevant POIs into your database and subsequently do all changes on this POI set.</li>
+</ul>
+</li>
+<li>If you do NOT want to store that info in your own database have a look at the project wheelmap (mentioned above), which also lets users add/change POI information, but they does not write this info to an own database, but instead write this info back to the main, public OSM database. This approach <em>only is possible if the user-entered info is useful for many many people</em> (e.g. the suitability of POIs for wheelchairs is such a useful info, see the related issues of <a href="https://wiki.openstreetmap.org/wiki/Good_practice">Good_practice</a> and <a href="https://wiki.openstreetmap.org/wiki/Verifiability">Verifiability</a>).</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/67945/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Feb '19, 10:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/67945/">
+                edited
+                <strong>09 Feb '19, 10:41</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-67945">
+    
+        <a name="68224"></a>
+        <div class="comment" id="comment-68224">
+            <div id="post-68224-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your answer!I apologies for the timing but other problems keep me away from this project.
+I will read all your useful suggestion.
+Can I ask you just which is your opinion on the database that I should use to store the one-time import of relevant POIs and let user to add yours? FYI I already use mysql for all other data.
+Thanks in advance</p></div>
+            <div class="comment-info" id="comment-68224-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '19, 01:59)</span>
+                <a class="comment-user userinfo" href="/users/16261/cpqueen10">cpqueen10</a>
+                
+            </div>
+        </div>
+    
+        <a name="68226"></a>
+        <div class="comment" id="comment-68226">
+            <div id="post-68226-score" class="comment-score"></div>
+            <div class="comment-text"><p>When you start combining POIs from OSM with your own POIs, you have to make sure you do not violate our license, see e.g. <a href="https://wiki.openstreetmap.org/wiki/License/Use_Cases#Case_4:_I_want_to_publish_something_based_on_OSM_and_some_data_I_obtained_elswhere">https://wiki.openstreetmap.org/wiki/License/Use_Cases#Case_4:_I_want_to_publish_something_based_on_OSM_and_some_data_I_obtained_elswhere</a></p></div>
+            <div class="comment-info" id="comment-68226-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '19, 07:03)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="68237"></a>
+        <div class="comment" id="comment-68237">
+            <div id="post-68237-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok thanks to point this license question, from what I read (and hopefully understood) is that:</p>
+
+<p>1)I have to credit OSM for the data that I will use (and this was never under discussion), than if I use for example phone numbers of POIs from OSM data and than use my data when OSM data will be missing, I'm doing a derivative database and for this reason I have to share the data. The question at this point is...how? I mean, I have to share only if someone asks me or I have to add by hand all the new data as a normal user or I have to send the database to someone?</p>
+
+<p>2)If I create in my database a POI that is not present at all in OSM data (so I will not use any data but only place it on the map) will this be considered a "collective" database?</p>
+
+<p>Thanks in advance</p></div>
+            <div class="comment-info" id="comment-68237-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '19, 01:53)</span>
+                <a class="comment-user userinfo" href="/users/16261/cpqueen10">cpqueen10</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-67945" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-67945-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/67925/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='0O8vvjLJj1Ms0sjWF9WlIEjINpKWSOCB' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/67925/use-osm-on-my-site-with-database?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/67925/use-osm-on-my-site-with-database?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/poi/"
+            class="tag-link-poi"
+            title="see questions tagged'poi'using tags"
+            rel="tag">poi</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/usage/"
+            class="tag-link-usage"
+            title="see questions tagged'usage'using tags"
+            rel="tag">usage</a> <span class="tag-number">&#215;104</span><br/>
+        
+        <a href="/tags/extract/"
+            class="tag-link-extract"
+            title="see questions tagged'extract'using tags"
+            rel="tag">extract</a> <span class="tag-number">&#215;83</span><br/>
+        
+        <a href="/tags/databse/"
+            class="tag-link-databse"
+            title="see questions tagged'databse'using tags"
+            rel="tag">databse</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 7, 2019, 5:27 p.m.">07 Feb '19, 17:27</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,128 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 4, 2019, 1:54 a.m.">04 Mar '19, 01:54</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/41718/how-to-get-more-information-on-information-points-poi">How to get more information on information points (POI)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61431/clarification-on-osm-poi-usage-and-odbl-share-alike">Clarification on OSM POI usage and ODbl share-alike</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64999/getting-hospitals-close-to-coordinates-use-nominatim-or-overpass-api-500-queriesd">getting hospitals close to coordinates: use Nominatim or Overpass API (&lt;500 queries/d)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/713/how-to-extract-partial-data-for-large-regions">How to extract partial data for large regions ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">Can I influence what gets rendered in the main Mapnik layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1138/looking-for-an-overview-of-professional-uses-of-openstreetmap-maps-data">Looking for an overview of professional uses of OpenStreetMap maps / data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1194/what-osm-is-not">What OSM is not</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1311/how-do-i-create-a-map-for-printing-with-specific-poi">How do I create a map for printing with specific POI?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1167/charging-money-for-creating-and-uploading-pois">Charging money for creating and uploading POIs</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

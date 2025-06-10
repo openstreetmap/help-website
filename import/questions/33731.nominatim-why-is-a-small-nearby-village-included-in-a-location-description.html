@@ -1,0 +1,777 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Nominatim - Why is a small nearby village included in a location description? - OSM Help</title>
+        <meta name="description" content="Looking at http://nominatim.openstreetmap.org/details.php?place_id=35602344, http://nominatim.openstreetmap.org/details.php?place_id=39331659 and a good number of the roads around the area, they all seem to incorrectly include &#39;Wick&#39; using the place node of a small nearby village - http://www.openst..." />
+        <meta name="keywords" content="node,wrongname,place,name,nominatim" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/33731/nominatim-why-is-a-small-nearby-village-included-in-a-location-description" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/33731/nominatim-why-is-a-small-nearby-village-included-in-a-location-description?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='E2b74cfJNRQGg4s9ekwCUznEMnkV5DsO' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/33731/nominatim-why-is-a-small-nearby-village-included-in-a-location-description">Nominatim - Why is a small nearby village included in a location description?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-33731-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33731/up/" rel="nofollow"> </a>
+<div id="post-33731-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-33731-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33731/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/33731/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Looking at <a href="http://nominatim.openstreetmap.org/details.php?place_id=35602344">http://nominatim.openstreetmap.org/details.php?place_id=35602344</a>, <a href="http://nominatim.openstreetmap.org/details.php?place_id=39331659">http://nominatim.openstreetmap.org/details.php?place_id=39331659</a> and a good number of the roads around the area, they all seem to incorrectly include 'Wick' using the place node of a small nearby village - <a href="http://www.openstreetmap.org/node/30133595">http://www.openstreetmap.org/node/30133595</a></p>
+<p>I haven't been able to work out why Nominatim includes the 'Wick' place node in this case, can anyone help explain it for me? Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/node/" class="post-tag tag-link-node"
+                                        title="see questions tagged 'node'" rel="tag">node</a>
+                                
+                                    <a href="/tags/wrongname/" class="post-tag tag-link-wrongname"
+                                        title="see questions tagged 'wrongname'" rel="tag">wrongname</a>
+                                
+                                    <a href="/tags/place/" class="post-tag tag-link-place"
+                                        title="see questions tagged 'place'" rel="tag">place</a>
+                                
+                                    <a href="/tags/name/" class="post-tag tag-link-name"
+                                        title="see questions tagged 'name'" rel="tag">name</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jun '14, 15:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/68791600aba005984a3eddbd82f6c0ce?s=32&amp;d=identicon&amp;r=g" alt="Elliveny's gravatar image" />
+    <p><a href="/users/7931/elliveny">Elliveny</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Elliveny has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/33731/">
+                edited
+                <strong>05 Jun '14, 16:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-33731">
+    
+</div>
+<div id="comment-tools-33731" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33731-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/33731/nominatim-why-is-a-small-nearby-village-included-in-a-location-description?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/33731/nominatim-why-is-a-small-nearby-village-included-in-a-location-description?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/33731/nominatim-why-is-a-small-nearby-village-included-in-a-location-description?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/33731/nominatim-why-is-a-small-nearby-village-included-in-a-location-description?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="33734"></a>
+                    <div id="answer-container-33734" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33734-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33734/up/" rel="nofollow"> </a>
+<div id="post-33734-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-33734-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33734/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>That's because <em>Wick</em> is just a node and therefore hasn't an exact boundary. As a consequence, Nominatim has to guess it's boundary and obviously it can't be 100% right about it.</p>
+<p>But I wonder whether <em>Whick</em> is really a village and not just a suburb?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33734/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jun '14, 18:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33734">
+    
+        <a name="33751"></a>
+        <div class="comment" id="comment-33751">
+            <div id="post-33751-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Suburb or city doesn't really matter for Nominatim. I had to draw a administrative boundary around a neigborhood node in order to prevent Nominatim to add it to each street in the village.</p></div>
+            <div class="comment-info" id="comment-33751-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '14, 12:49)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="33754"></a>
+        <div class="comment" id="comment-33754">
+            <div id="post-33754-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Sure, Nominatim can't know whether the streets are located inside the neighborhood if there is no exact boundary either. But in this case the mentioned places are already part of another suburb. So if Wick really is a suburb and gets tagged as a suburb, then Nominatim would no longer assign these places to Whick. Of course this is only half the solution, because the suburbs don't have an exact boundary either.</p></div>
+            <div class="comment-info" id="comment-33754-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '14, 13:05)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33842"></a>
+        <div class="comment" id="comment-33842">
+            <div id="post-33842-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/5390/escada">@escada</a> - Can you provide an example? I'm keen to dig into this a bit more and could do with something to compare to please.</p></div>
+            <div class="comment-info" id="comment-33842-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jun '14, 14:11)</span>
+                <a class="comment-user userinfo" href="/users/7931/elliveny">Elliveny</a>
+                
+            </div>
+        </div>
+    
+        <a name="33843"></a>
+        <div class="comment" id="comment-33843">
+            <div id="post-33843-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've added the relation Bosstraat <a href="http://www.openstreetmap.org/relation/3777416">http://www.openstreetmap.org/relation/3777416</a>
+Unfortunately, I now notice that it does not work. e.g. Oude Reetse Baan 89, Boom is still linked to this neighborhood. It is certainly not part of it. I though I edited some address at that time and I got rid of the pesky "Bosstraat"</p></div>
+            <div class="comment-info" id="comment-33843-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jun '14, 14:27)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="33844"></a>
+        <div class="comment" id="comment-33844">
+            <div id="post-33844-score" class="comment-score"></div>
+            <div class="comment-text"><p><em>Oude Reetse Baan 89, Boom</em> is linked to the <a href="http://www.openstreetmap.org/node/2886010337">neighborhood node</a> and not the relation you created, according to <a href="http://nominatim.openstreetmap.org/details.php?place_id=3676767676">Nominatim's detail page</a> (funny place ID, btw.). I'm not quite sure how to prevent that and it seems appropriate to ask a new question about this issue.</p></div>
+            <div class="comment-info" id="comment-33844-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jun '14, 15:25)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33845"></a>
+        <div class="comment not_top_scorer" id="comment-33845">
+            <div id="post-33845-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't know if it would work at all. But I do know that if it works, then you need to use matching importance for the admin level and the place node. Relation Bosstraat is at admin level 10 (calculated importance=20). The node for Bosstraat is tagged as neighbourhood (calculated importance=22).</p>
+
+<p>See: <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Country_to_street_level">Nominatim Development Overview</a></p></div>
+            <div class="comment-info" id="comment-33845-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jun '14, 15:35)</span>
+                <a class="comment-user userinfo" href="/users/2933/cartinus">cartinus</a>
+                
+            </div>
+        </div>
+    
+        <a name="33897"></a>
+        <div class="comment not_top_scorer" id="comment-33897">
+            <div id="post-33897-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yesterday I removed the place node and now it seems that everything is OK. The neighborhood is only added to those streets that are actually in the neighborhood, due to the administrative boundary. I'll now try to add the admin centre again and see what happens.</p></div>
+            <div class="comment-info" id="comment-33897-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '14, 06:03)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33734" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33734-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/33731/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='E2b74cfJNRQGg4s9ekwCUznEMnkV5DsO' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33731/nominatim-why-is-a-small-nearby-village-included-in-a-location-description?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33731/nominatim-why-is-a-small-nearby-village-included-in-a-location-description?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/name/"
+            class="tag-link-name"
+            title="see questions tagged'name'using tags"
+            rel="tag">name</a> <span class="tag-number">&#215;219</span><br/>
+        
+        <a href="/tags/node/"
+            class="tag-link-node"
+            title="see questions tagged'node'using tags"
+            rel="tag">node</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/place/"
+            class="tag-link-place"
+            title="see questions tagged'place'using tags"
+            rel="tag">place</a> <span class="tag-number">&#215;43</span><br/>
+        
+        <a href="/tags/wrongname/"
+            class="tag-link-wrongname"
+            title="see questions tagged'wrongname'using tags"
+            rel="tag">wrongname</a> <span class="tag-number">&#215;11</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 5, 2014, 3:54 p.m.">05 Jun '14, 15:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,121 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 12, 2014, 6:03 a.m.">12 Jun '14, 06:03</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/15984/place-boundary-tags-reorganization-for-an-entire-country">place, boundary tags reorganization for an entire country</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18486/islet-names-doesnt-show">Islet names doesn&#39;t show</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1391/why-does-nominatim-not-pick-up-a-country-name">Why does Nominatim not pick up a country name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10851/place-node-vs-area">place=* - node vs. area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/589/how-to-tag-non-settlement-place-names">How to tag &#39;non-settlement&#39; place names?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16317/warum-werden-straen-bei-suche-nicht-gefunden">Warum werden Straßen bei Suche nicht gefunden?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3942/how-to-map-inhabited-places-settlements">How to map inhabited places (settlements)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">How do I list all the streets in a city with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10147/how-to-correct-the-details-of-a-place">How to correct the details of a place?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20521/operator-does-not-exist-unknown-text">operator does not exist: unknown =&gt; text</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

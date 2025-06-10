@@ -1,0 +1,753 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to add a road name and how to amend a road name - OSM Help</title>
+        <meta name="description" content="Apologies if these questions have been previously asked but I am new to this. The main road near to my home is incorrectly named. It is shown as &#39;DRUMERS LANE&#39; when it should be &#39;DUMERS LANE&#39; This is in the UK with a post code of M26 2PJ. Also, although my home address is shown on Google maps, it is..." />
+        <meta name="keywords" content="omissions,errors" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/5241/how-to-add-a-road-name-and-how-to-amend-a-road-name" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/5241/how-to-add-a-road-name-and-how-to-amend-a-road-name?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='SCRafJV9LX7bqQPjszIlrF4mHstRLA7P' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/5241/how-to-add-a-road-name-and-how-to-amend-a-road-name">How to add a road name and how to amend a road name</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-5241-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5241/up/" rel="nofollow"> </a>
+<div id="post-5241-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-5241-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5241/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/5241/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Apologies if these questions have been previously asked but I am new to this. The main road near to my home is incorrectly named. It is shown as 'DRUMERS LANE' when it should be 'DUMERS LANE' This is in the UK with a post code of M26 2PJ. Also, although my home address is shown on Google maps, it is not named on this database. The address is 'RIVERSIDE CLOSE' which runs off 'RIVERSIDE ROAD' again with a post code of M26 2PJ. I have submitted the errors via the error reporting facility on the relevant mobile application, but nothing has changed. Will this get picked up from this forum? Can I edit these details myself, if not how do I notify these errors?
+Thank you. <br>
+</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/omissions/" class="post-tag tag-link-omissions"
+                                        title="see questions tagged 'omissions'" rel="tag">omissions</a>
+                                
+                                    <a href="/tags/errors/" class="post-tag tag-link-errors"
+                                        title="see questions tagged 'errors'" rel="tag">errors</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 May '11, 15:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8e37ca12b304e74e9db26fe68e9f5d9b?s=32&amp;d=identicon&amp;r=g" alt="VinnyGee's gravatar image" />
+    <p><a href="/users/1389/vinnygee">VinnyGee</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="VinnyGee has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-5241">
+    
+        <a name="5242"></a>
+        <div class="comment" id="comment-5242">
+            <div id="post-5242-score" class="comment-score"></div>
+            <div class="comment-text"><p>Seems like you already have found out how to edit roads. :-)</p>
+
+<p><a href="http://www.openstreetmap.org/?way=4972553">http://www.openstreetmap.org/?way=4972553</a></p>
+
+<p>That road is built up of multiple segments, so you have to edit all of them. It may take a while before the changes get rendered and show up on the map.</p></div>
+            <div class="comment-info" id="comment-5242-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 May '11, 15:30)</span>
+                <a class="comment-user userinfo" href="/users/652/gnurk">gnurk</a>
+                
+            </div>
+        </div>
+    
+        <a name="5243"></a>
+        <div class="comment" id="comment-5243">
+            <div id="post-5243-score" class="comment-score"></div>
+            <div class="comment-text"><p>You've also almost added Riverside Close successfully, but it is lacking the tags which it needs to make it appear. 
+<a href="http://www.openstreetmap.org/browse/way/113711075">http://www.openstreetmap.org/browse/way/113711075</a>
+You have added the tags to one of the roads nodes, and not the whole road. If you select the road so it is highlighted in yellow and select Residential Road as a type instead of "Unknown", things might become clearer. Oh, and the end of the road needs extending to join Riverside Road.</p></div>
+            <div class="comment-info" id="comment-5243-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 May '11, 15:40)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5244"></a>
+        <div class="comment" id="comment-5244">
+            <div id="post-5244-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for that folks, I've added Riverside Close but I can't seem to get the road name to read right, it's all cramped up at one end of the road and is unreadable and I can't seem to get it right, any thoughts?</p></div>
+            <div class="comment-info" id="comment-5244-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 May '11, 16:49)</span>
+                <a class="comment-user userinfo" href="/users/1389/vinnygee">VinnyGee</a>
+                
+            </div>
+        </div>
+    
+        <a name="5246"></a>
+        <div class="comment" id="comment-5246">
+            <div id="post-5246-score" class="comment-score"></div>
+            <div class="comment-text"><p>Probably because you have parts of the way overlapping, see what EdLoach wrote above. I'd this a lot when starting and was rather mystified as to what was causing it.</p></div>
+            <div class="comment-info" id="comment-5246-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 May '11, 17:01)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5248"></a>
+        <div class="comment" id="comment-5248">
+            <div id="post-5248-score" class="comment-score"></div>
+            <div class="comment-text"><p>See what you mean, but how do I remove the overlapping sections. I can see that I should have highlighted the beginning and the end of the road and any road curvature, but realised too late!!!</p></div>
+            <div class="comment-info" id="comment-5248-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 May '11, 17:11)</span>
+                <a class="comment-user userinfo" href="/users/1389/vinnygee">VinnyGee</a>
+                
+            </div>
+        </div>
+    
+        <a name="5298"></a>
+        <div class="comment not_top_scorer" id="comment-5298">
+            <div id="post-5298-score" class="comment-score"></div>
+            <div class="comment-text"><p>It will probably be easiest to delete the road and draw it again.  To try and fix it you can select an end point of your road and use the delete or - key on your keyboard to remove nodes.  To delete the whole road use shift+delete.  The editor isn't designed to handle this kind of overlap which is why it is messy and hard to fix.</p></div>
+            <div class="comment-info" id="comment-5298-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 May '11, 15:07)</span>
+                <a class="comment-user userinfo" href="/users/1002/quantumstate">quantumstate</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5241" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5241-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/5241/how-to-add-a-road-name-and-how-to-amend-a-road-name?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/5241/how-to-add-a-road-name-and-how-to-amend-a-road-name?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/5241/how-to-add-a-road-name-and-how-to-amend-a-road-name?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/5241/how-to-add-a-road-name-and-how-to-amend-a-road-name?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="5250"></a>
+                    <div id="answer-container-5250" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5250-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5250/up/" rel="nofollow"> </a>
+<div id="post-5250-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-5250-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5250/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>First of all, this is a valuable question as it incorporates quite a lot of user experience. Thank you for asking it. I'll try and answer each part of the rest of the question separately.</p>
+<p><strong>Incorrectly named roads</strong> arise on OpenStreetMap for a range of reasons, but the commonest is just through typos when entering the name! Usually to correct them all that is required is to use the on-line editor Potlatch, click on the road and edit the name field shown in the editor. A road may be split into several segments, for instance if the road has two or more speed limits, in which case the name needs to be edited for each segment.</p>
+<p>If you prefer not to edit, then as you say <strong>you can report a bug</strong>. There is no guarantee that a bug reported through an app will be noticeable by OpenStreetMap editors unless the bug is transmitted back to OSM. The bugs reported by Skobbler apps are most likely to be noticed as these are presented in the on-line editor as a separate layer (<a href="http://www.mapdust.com/">MapDust</a>). Also there is <a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a> which has a similar interface. I don't see your bugs in these two layers. </p>
+<p>In the UK we also have a layer which highlights road names which do not match those of the Ordnance Survey (<a href="http://wiki.openstreetmap.org/wiki/OSM_and_OSL_differences_analysis">ITO OS Locator</a>).</p>
+<p>Unfortunately, whether <strong>bugs are resolved or not</strong> depends on how many contributors are active in the area. For some reason, the North-West of England has disproportionately few contributors, so there are also fewer people to check over bugs and fix them. As you have found the best way to fix them in this case is to edit them yourself. Various pieces of advice have been given about some of the detailed practicabilities in comments on your question.</p>
+<p>Details about how to go about adding roads and postcodes are probably best answered in other questions.</p>
+<p>Having brought our attention to your problem I note that MapDust has a good number of bugs of a similar nature in the area N of Manchester. I'm sure that there will now be a flurry of effort to fix them.</p>
+<p>Other places were detailed assistance can be sought include the country specific mailing lists (in this case talk-gb), the IRC channel, and the forum. See <a href="http://wiki.openstreetmap.org/wiki/Contact">Contact</a> on the OSM Wiki.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5250/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 May '11, 17:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5250">
+    
+        <a name="5252"></a>
+        <div class="comment" id="comment-5252">
+            <div id="post-5252-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks very your prompt and concise reply, I'll persevere to see if I can get the road name to read correctly, if not I'll report it as a bug, many thanks.</p></div>
+            <div class="comment-info" id="comment-5252-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 May '11, 18:08)</span>
+                <a class="comment-user userinfo" href="/users/1389/vinnygee">VinnyGee</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5250" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5250-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/5241/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='SCRafJV9LX7bqQPjszIlrF4mHstRLA7P' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5241/how-to-add-a-road-name-and-how-to-amend-a-road-name?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5241/how-to-add-a-road-name-and-how-to-amend-a-road-name?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/errors/"
+            class="tag-link-errors"
+            title="see questions tagged'errors'using tags"
+            rel="tag">errors</a> <span class="tag-number">&#215;45</span><br/>
+        
+        <a href="/tags/omissions/"
+            class="tag-link-omissions"
+            title="see questions tagged'omissions'using tags"
+            rel="tag">omissions</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 17, 2011, 3:04 p.m.">17 May '11, 15:04</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,677 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 19, 2011, 3:07 p.m.">19 May '11, 15:07</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/678/problem-installing-gosmore">Problem installing gosmore?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">What are the most common mapping mistakes that other users make?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1126/correcting-other-peoples-mapping">Correcting other people&#39;s mapping</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1695/potlatch-2-error-on-upload">Potlatch 2 Error on upload</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1771/fixing-the-error-of-not-joining-ways">Fixing the error of NOT joining ways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1941/very-incorrect-road-names-how-to-fix">VERY incorrect road names - how to fix?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5356/who-edited-my-map-corrections-and-made-it-all-wrong-again">who edited my map corrections and made it all wrong again</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5558/correcting-map-errors">Correcting map errors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5629/no-outer-way-errors">No outer way errors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/644/where-is-the-site-with-a-list-of-openstreetmap-errors">Where is the site with a list of OpenStreetMap errors?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

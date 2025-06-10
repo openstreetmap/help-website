@@ -1,0 +1,709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Sensible spec for Overpass APi instance - OSM Help</title>
+        <meta name="description" content="Does anyone have an idea of a &#39;sensible&#39; spec for a global Overpass API instance? I am doing some research into Big Data techniques for OSM, and would like to use Overpass as a comparator system, but a lot of the installation details seem to be quite old, so I was wondering if anyone had done it rec..." />
+        <meta name="keywords" content="overpass,scientific,server" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/41895/sensible-spec-for-overpass-api-instance" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/41895/sensible-spec-for-overpass-api-instance?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='y0nngiSFGTqCy8Ik1kfFvWlSz7Bimti6' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/41895/sensible-spec-for-overpass-api-instance">Sensible spec for Overpass APi instance</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-41895-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/41895/up/" rel="nofollow"> </a>
+<div id="post-41895-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-41895-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/41895/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/41895/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Does anyone have an idea of a 'sensible' spec for a global Overpass API instance? I am <a href="https://lists.openstreetmap.org/pipermail/dev/2015-January/028227.html">doing some research</a> into Big Data techniques for OSM, and would like to use Overpass as a comparator system, but a lot of the installation details seem to be quite old, so I was wondering if anyone had done it recently and was able to give a reasonable spec and any idea of how long things might take.</p>
+<p>Many thanks</p>
+<p>Stephen</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/scientific/" class="post-tag tag-link-scientific"
+                                        title="see questions tagged 'scientific'" rel="tag">scientific</a>
+                                
+                                    <a href="/tags/server/" class="post-tag tag-link-server"
+                                        title="see questions tagged 'server'" rel="tag">server</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Mar '15, 23:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/201c52faa380da64ae76e493d12c0f1d?s=32&amp;d=identicon&amp;r=g" alt="stev's gravatar image" />
+    <p><a href="/users/10112/stev">stev</a><br/>
+    <span class="score" title="51 reputation points">51</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stev has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/41895/">
+                edited
+                <strong>25 Mar '15, 06:24</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/49a7d0e0408e9cf2f698faac0f4d837a?s=32&amp;d=identicon&amp;r=g" alt="iii's gravatar image" />
+            <p><a href="/users/4984/iii">iii</a><br/>
+            <span class="score" title="4892 reputation points"><span class="">4.9k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="40 badges"><span class="silver">&#9679;</span><span class="badgecount">40</span></span><span title="82 badges"><span class="bronze">&#9679;</span><span class="badgecount">82</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-41895">
+    
+        <a name="41898"></a>
+        <div class="comment" id="comment-41898">
+            <div id="post-41898-score" class="comment-score"></div>
+            <div class="comment-text"><p>So you are asking for a doc to clone your own instance?</p></div>
+            <div class="comment-info" id="comment-41898-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '15, 06:23)</span>
+                <a class="comment-user userinfo" href="/users/4984/iii">iii</a>
+                
+            </div>
+        </div>
+    
+        <a name="41901"></a>
+        <div class="comment" id="comment-41901">
+            <div id="post-41901-score" class="comment-score"></div>
+            <div class="comment-text"><p>It is for my own instance yes. Testing, not production. I don't need a doc as such, I just want to know what is a reasonable spec, because I'm going to have to rent the server myself, so I don't want to underspec it and not be able to import the planet, or overspec it and pay too much money. I was guessing about 2GB of RAM, and 200GB HDD space. The latter sounds like very little and may be way out of date based on what I've read..</p></div>
+            <div class="comment-info" id="comment-41901-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '15, 09:38)</span>
+                <a class="comment-user userinfo" href="/users/10112/stev">stev</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-41895" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-41895-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/41895/sensible-spec-for-overpass-api-instance?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/41895/sensible-spec-for-overpass-api-instance?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/41895/sensible-spec-for-overpass-api-instance?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/41895/sensible-spec-for-overpass-api-instance?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="41914"></a>
+                    <div id="answer-container-41914" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-41914-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/41914/up/" rel="nofollow"> </a>
+<div id="post-41914-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-41914-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/41914/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="stev has selected this answer as the correct answer"
+        href="/accept_answer/41914/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I would recommend to ask this question on the dedicated developer list for Overpass API to get some expert-level feedback:</p>
+<p><a href="http://listes.openstreetmap.fr/wws/info/overpass">http://listes.openstreetmap.fr/wws/info/overpass</a></p>
+<p>When posting your question, could you please also include some pointers to the installation documentation you've tried out before. Also, please include further details like: </p>
+<ul>
+<li>do you need current data only or also attic data (=previous object versions). </li>
+<li>How about meta data for objects, is this also required for your use case?</li>
+<li>Do you need continuous updates or a one-time set up of the db only?</li>
+<li>Do you want to import all objects or only certain types (e.g. only highway=*, etc.)</li>
+</ul>
+<p>Roland (developer of Overpass API) has recently started to integrate db compression features. However, this is not officially released yet. The Overpass API development list archive has very detailed steps on how to set this up. This might also help to save some disk space.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/41914/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Mar '15, 14:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/264d84ab05b942224b05960903eba7a7?s=32&amp;d=identicon&amp;r=g" alt="mmd's gravatar image" />
+    <p><a href="/users/8708/mmd">mmd</a><br/>
+    <span class="score" title="5682 reputation points"><span class="">5.7k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="53 badges"><span class="silver">&#9679;</span><span class="badgecount">53</span></span><span title="88 badges"><span class="bronze">&#9679;</span><span class="badgecount">88</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmd has 44 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/41914/">
+                edited
+                <strong>25 Mar '15, 14:11</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-41914">
+    
+        <a name="41984"></a>
+        <div class="comment" id="comment-41984">
+            <div id="post-41984-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks, I didn't realise there was a mailing list</p></div>
+            <div class="comment-info" id="comment-41984-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Mar '15, 13:42)</span>
+                <a class="comment-user userinfo" href="/users/10112/stev">stev</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-41914" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-41914-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/41895/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='y0nngiSFGTqCy8Ik1kfFvWlSz7Bimti6' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/41895/sensible-spec-for-overpass-api-instance?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/41895/sensible-spec-for-overpass-api-instance?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/server/"
+            class="tag-link-server"
+            title="see questions tagged'server'using tags"
+            rel="tag">server</a> <span class="tag-number">&#215;123</span><br/>
+        
+        <a href="/tags/scientific/"
+            class="tag-link-scientific"
+            title="see questions tagged'scientific'using tags"
+            rel="tag">scientific</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 24, 2015, 11:48 p.m.">24 Mar '15, 23:48</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,358 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 29, 2015, 1:42 p.m.">29 Mar '15, 13:42</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/79685/general-overpass-servor-error">General Overpass Servor Error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51506/who-can-install-overpass-on-my-server">Who can install Overpass on my server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58912/umap-fehlerhafte-serverantwort">UMAP: fehlerhafte Serverantwort</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61716/server-limitations">Server limitations</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60222/converting-interpreter-query-to-local-query">Converting interpreter query to local query.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55828/overpass-returns-429-every-time-for-some-queries-but-not-for-others">Overpass returns 429 every time for some queries, but not for others</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4422/rails-port-and-osm-server">Rails Port and OSM Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3375/editing-for-my-own-map">editing for my own map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5170/setting-up-own-osm-server-mirror-server">Setting up own OSM Server / Mirror Server</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

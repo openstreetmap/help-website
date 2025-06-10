@@ -1,0 +1,678 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>how to filter tile content in server? - OSM Help</title>
+        <meta name="description" content="Hi, I just created my own tile server using the script in http://opentileserver.org/ Installation worked and now i am able to serve the map of a country. I would like to offer a clean map focussing on cultural heritage, so i would like to filter some information that shows in the tiles, like restaur..." />
+        <meta name="keywords" content="filtering,server,tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/54771/how-to-filter-tile-content-in-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54771/how-to-filter-tile-content-in-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='AsXIQhvk31SVEpg4JBt64LutDSSHbrDu' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54771/how-to-filter-tile-content-in-server">how to filter tile content in server?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54771-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54771/up/" rel="nofollow"> </a>
+<div id="post-54771-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-54771-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54771/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54771/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I just created my own tile server using the script in <a href="http://opentileserver.org/">http://opentileserver.org/</a></p>
+<p>Installation worked and now i am able to serve the map of a country.</p>
+<p>I would like to offer a clean map focussing on cultural heritage, so i would like to filter some information that shows in the tiles, like restaurants, bars, shops, etc...</p>
+<p>Is it possible?</p>
+<p>Thanks!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/filtering/" class="post-tag tag-link-filtering"
+                                        title="see questions tagged 'filtering'" rel="tag">filtering</a>
+                                
+                                    <a href="/tags/server/" class="post-tag tag-link-server"
+                                        title="see questions tagged 'server'" rel="tag">server</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Feb '17, 17:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0a5c61f3bdee2e3090a81ce95fe6a44a?s=32&amp;d=identicon&amp;r=g" alt="liborio's gravatar image" />
+    <p><a href="/users/13385/liborio">liborio</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="liborio has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54771">
+    
+</div>
+<div id="comment-tools-54771" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54771-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54771/how-to-filter-tile-content-in-server?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54771/how-to-filter-tile-content-in-server?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54771/how-to-filter-tile-content-in-server?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54771/how-to-filter-tile-content-in-server?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54779"></a>
+                    <div id="answer-container-54779" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54779-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54779/up/" rel="nofollow"> </a>
+<div id="post-54779-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-54779-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54779/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="liborio has selected this answer as the correct answer"
+        href="/accept_answer/54779/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It is, but the base style Carto-CSS is very complex. You could change what get's rendered in two ways:</p>
+<ul>
+<li>Alter the SQL statements which pull data from PostGIS </li>
+<li>Change styling rules</li>
+</ul>
+<p>However, probably the easiest way is to do this with a LUA script. An example is that of <a href="https://github.com/SomeoneElseOSM/SomeoneElse-style/blob/master/style.lua">SomeoneElse</a>. This is quite involved but has a good number of useful examples. </p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> may also be of some use if your requirements are fairly simple.</p>
+<p>The advantage of using a pre-processing step is that then there is no need to try &amp; keep synchronising with changes to the main CartoCSS repository.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54779/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Feb '17, 12:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54779">
+    
+        <a name="54780"></a>
+        <div class="comment" id="comment-54780">
+            <div id="post-54780-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks SK53,</p>
+
+<p>I have been reading this morning about it and checking the files in openstreetmap-carto.</p>
+
+<p>Whas checking the database SELECTs included in "project.mml" (was thinking to make more restrictive the SELECT that use INCLUDE from amenities and shops).</p>
+
+<p>Alsho checked the "amenity-points.mss" and the filter based in "zoom". Had the doubt if could be possible to change some filters for zoom&gt;20 (so they will never validate) or even just remove the style (dont know if that would work).</p>
+
+<p>If i change de SELECTs and run again the "osm2pgsql" would it replace my current tiles? Or would be better a clean install?</p>
+
+<p>Thanks!</p></div>
+            <div class="comment-info" id="comment-54780-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '17, 12:39)</span>
+                <a class="comment-user userinfo" href="/users/13385/liborio">liborio</a>
+                
+            </div>
+        </div>
+    
+        <a name="54783"></a>
+        <div class="comment" id="comment-54783">
+            <div id="post-54783-score" class="comment-score"></div>
+            <div class="comment-text"><p>Both should work &amp; changing either mml or mss means you use the same DB schema. I would recommend forking he project on github and maintain your changes in your forked repository.</p></div>
+            <div class="comment-info" id="comment-54783-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '17, 17:19)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54779" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54779-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54771/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='AsXIQhvk31SVEpg4JBt64LutDSSHbrDu' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54771/how-to-filter-tile-content-in-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54771/how-to-filter-tile-content-in-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/server/"
+            class="tag-link-server"
+            title="see questions tagged'server'using tags"
+            rel="tag">server</a> <span class="tag-number">&#215;123</span><br/>
+        
+        <a href="/tags/filtering/"
+            class="tag-link-filtering"
+            title="see questions tagged'filtering'using tags"
+            rel="tag">filtering</a> <span class="tag-number">&#215;18</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 22, 2017, 5:45 p.m.">22 Feb '17, 17:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,493 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 23, 2017, 5:19 p.m.">23 Feb '17, 17:19</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/50649/tile-server-hardware-to-support-18k-requestsmin">Tile server hardware to support 18k requests/min</a>
+        </p>
+        
+        <p>
+            <a href="/questions/78714/host-tile-server-on-same-server-as-my-app">Host Tile Server on same server as my app ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34953/tileserver-switch2osm-adjust-cache-size-problem">tileserver switch2osm adjust cache size problem.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47730/strategies-to-keep-cost-of-hosting-your-own-map-server-and-geocoder-low">Strategies to keep cost of hosting your own map server and geocoder low</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56557/plotting-data-on-my-tile-server">Plotting data on my tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68173/build-tile-server-manually-with-postgres-db-on-a-different-server">build tile server manually with Postgres db on a different server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16917/own-openstreetmap-tile-server-oneclick">Own OpenStreetMap Tile Server OneClick</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16972/configure-linux-for-osm-tile-server">Configure Linux for OSM Tile Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35317/local-tile-server-from-packages-404-when-displaying-tiles">Local Tile Server from Packages: 404 when displaying tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/85397/tile-server-capabilities">tile server capabilities</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

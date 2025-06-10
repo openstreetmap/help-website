@@ -1,0 +1,788 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to check density at current point? - OSM Help</title>
+        <meta name="description" content="I need to know the population or buildings density at current point. I see there is a tag &quot;population&quot; and osm-analytics.org, but how can I ask in js to get information about the density, say 1km2 around some chosen point? Thanks!" />
+        <meta name="keywords" content="analytics,density" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/74574/how-to-check-density-at-current-point" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/74574/how-to-check-density-at-current-point?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='1kZUWQMXUiH82EP2JBpWEbkHWXkThQCj' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/74574/how-to-check-density-at-current-point">How to check density at current point?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-74574-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74574/up/" rel="nofollow"> </a>
+<div id="post-74574-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-74574-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74574/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/74574/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I need to know the population or buildings density at current point. I see there is a tag "population" and osm-analytics.org, but how can I ask in js to get information about the density, say 1km2 around some chosen point?
+Thanks!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/analytics/" class="post-tag tag-link-analytics"
+                                        title="see questions tagged 'analytics'" rel="tag">analytics</a>
+                                
+                                    <a href="/tags/density/" class="post-tag tag-link-density"
+                                        title="see questions tagged 'density'" rel="tag">density</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 May '20, 19:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b52d2a609c4afd95fff41c3ae8c812f9?s=32&amp;d=identicon&amp;r=g" alt="jujo0's gravatar image" />
+    <p><a href="/users/18233/jujo0">jujo0</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jujo0 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-74574">
+    
+</div>
+<div id="comment-tools-74574" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74574-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/74574/how-to-check-density-at-current-point?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/74574/how-to-check-density-at-current-point?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/74574/how-to-check-density-at-current-point?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/74574/how-to-check-density-at-current-point?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="74583"></a>
+                    <div id="answer-container-74583" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74583-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74583/up/" rel="nofollow"> </a>
+<div id="post-74583-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-74583-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74583/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="jujo0 has selected this answer as the correct answer"
+        href="/accept_answer/74583/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I guess you want to read about the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>, for this kind of queries.</p>
+<p>Please use <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">overpass turbo</a> to test your queries.</p>
+<p>This <a href="https://overpass-turbo.eu/s/TAP">query</a> will return all the buildings in the viewing bbox. I leave you to calculate a fitting 1km bounding box around some point. Don't forget that in urban areas, it will mean a lot of data !</p>
+<p>If you don't need the geometry of each building, <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Center">center</a> will help you, like in this <a href="https://overpass-turbo.eu/s/TAS">query</a>. Overpass is a very powerful language...</p>
+<p>Some background in this <a href="https://gis.stackexchange.com/questions/239492/finding-residential-buildings-with-overpass-turbo">question</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74583/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 May '20, 20:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74583">
+    
+        <a name="74584"></a>
+        <div class="comment" id="comment-74584">
+            <div id="post-74584-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you!</p></div>
+            <div class="comment-info" id="comment-74584-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '20, 20:53)</span>
+                <a class="comment-user userinfo" href="/users/18233/jujo0">jujo0</a>
+                
+            </div>
+        </div>
+    
+        <a name="74587"></a>
+        <div class="comment" id="comment-74587">
+            <div id="post-74587-score" class="comment-score"></div>
+            <div class="comment-text"><p>No problem. Please mark the answer as accepted if it suits you.</p>
+
+<p>Don't hesitate to ask more specific questions later.</p></div>
+            <div class="comment-info" id="comment-74587-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '20, 22:08)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+        <a name="74613"></a>
+        <div class="comment" id="comment-74613">
+            <div id="post-74613-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried to make a rectangle, +/-0.0018 deg (~200m) from some point, but poly keeps on being triangular. Is it a normal behaviour? My query looks like this (I must have changed dots to commas for the code to appear normally):
+<code>[out:json][timeout:25];
+// gather results
+(
+  // query part for: “building”
+  way["building"](poly:"52.209156623640474 18.2667298038213 52.245156623640476 18.2667298038213 52.209156623640474 18.230729803821298 52.209156623640474 18.2667298038213");
+  //relation["building"](poly:"52.22661090011143 18.259625256876017 52.22661090011143 18.25602525687602 52.22661090011143 18.259625256876017 52.23021090011144 18.259625256876017");
+);
+out center;</code></p></div>
+            <div class="comment-info" id="comment-74613-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '20, 21:17)</span>
+                <a class="comment-user userinfo" href="/users/18233/jujo0">jujo0</a>
+                
+            </div>
+        </div>
+    
+        <a name="74614"></a>
+        <div class="comment" id="comment-74614">
+            <div id="post-74614-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't understand your problem, I guess the code isn't complete. The simplest is to Share an url to overpass turbo IMHO.</p>
+
+<p>But I would have computed the bounding box in JS, before creating the query.</p></div>
+            <div class="comment-info" id="comment-74614-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '20, 21:24)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74583" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74583-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="74577"></a>
+                    <div id="answer-container-74577" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74577-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74577/up/" rel="nofollow"> </a>
+<div id="post-74577-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-74577-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74577/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hello,</p>
+<p>Short answer is, the information is not in OSM.</p>
+<p>The tag population is mostly here to know how to sort the cities, to show the biggest ones' labels first.
+It's usually not really up-to-date or precise.</p>
+<p>You could make an educated guess from the number (and size) of buildings, but you'll have to filter out non-residential buildings.</p>
+<p>I'm afraid you'll have to turn to other sources for your query.</p>
+<p>Regards.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74577/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 May '20, 20:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74577">
+    
+        <a name="74582"></a>
+        <div class="comment" id="comment-74582">
+            <div id="post-74582-score" class="comment-score"></div>
+            <div class="comment-text"><p>Could I somehow get the info about buildings including non-residential ones at some certain point, 1x1km square?</p></div>
+            <div class="comment-info" id="comment-74582-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '20, 20:39)</span>
+                <a class="comment-user userinfo" href="/users/18233/jujo0">jujo0</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74577" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74577-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/74574/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='1kZUWQMXUiH82EP2JBpWEbkHWXkThQCj' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74574/how-to-check-density-at-current-point?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74574/how-to-check-density-at-current-point?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/density/"
+            class="tag-link-density"
+            title="see questions tagged'density'using tags"
+            rel="tag">density</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/analytics/"
+            class="tag-link-analytics"
+            title="see questions tagged'analytics'using tags"
+            rel="tag">analytics</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 3, 2020, 7:04 p.m.">03 May '20, 19:04</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,129 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 4, 2020, 9:34 p.m.">04 May '20, 21:34</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/34996/is-there-a-method-to-set-width-of-steets">Is there a method to set width of steets?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39110/how-do-i-study-poi-density-in-osm">How do I study POI density in OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48562/maximal-point-density-allowed">Maximal point density allowed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65137/any-tool-or-plugin-for-josm-to-reduce-density-of-nodes-on-a-way">Any tool or plugin for JOSM to reduce density of nodes on a way</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

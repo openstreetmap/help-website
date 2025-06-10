@@ -1,0 +1,770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Configure Linux for OSM Tile Server - OSM Help</title>
+        <meta name="description" content="Background: I am a Linux newbie. I have set up an OSM planet import and pre-rendered alot of the planet on a Windows machine. Now I want to take the next step and move to a Linux box so I can render tiles on the fly and use things like mod_tile to keep my database up to date via http://switch2osm.or..." />
+        <meta name="keywords" content="tileserver,server,linux" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/16972/configure-linux-for-osm-tile-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/16972/configure-linux-for-osm-tile-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='m5umLcWHHwbcYaHlY08wb9OAooXM2v9q' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/16972/configure-linux-for-osm-tile-server">Configure Linux for OSM Tile Server</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-16972-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16972/up/" rel="nofollow"> </a>
+<div id="post-16972-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-16972-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16972/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/16972/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Background:
+I am a Linux newbie. I have set up an OSM planet import and pre-rendered alot of the planet on a Windows machine. Now I want to take the next step and move to a Linux box so I can render tiles on the fly and use things like mod_tile to keep my database up to date via <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/">http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/</a> .</p>
+<p>Questions:</p>
+<ol>
+<li>My company's IT is setting up a virtual Linux box for me to test/play on with 500 GB of space. They have asked me some questions about the Linux configuration that I need help on. What filesystem should I create in Linux? After some research I came up with either XFS or JFS using the FHS standard. XFS or JFS and not ext3 becuase something about the number of inodes available in ext3 could run out after millions of tiles causing my system to become logically out of space??? Does this make sense and does anyone have any suggestions on this?</li>
+<li>They also asked me how I want my 500GB allocated to each volume inside the filesystem, mentioning terms like "UO1". I have no idea what this means or how to answer. Can someone help me?</li>
+<li>My company only supports Redhat. Does anyone know if Redhat will impose any issues regarding the questions above or following the instructions at <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/">http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/</a> ?</li>
+</ol>
+<p>Thanks, Matt</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                                    <a href="/tags/server/" class="post-tag tag-link-server"
+                                        title="see questions tagged 'server'" rel="tag">server</a>
+                                
+                                    <a href="/tags/linux/" class="post-tag tag-link-linux"
+                                        title="see questions tagged 'linux'" rel="tag">linux</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Oct '12, 19:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fbb15843641ffaf1c2259cc7ebb4735c?s=32&amp;d=identicon&amp;r=g" alt="maw269's gravatar image" />
+    <p><a href="/users/233/maw269">maw269</a><br/>
+    <span class="score" title="115 reputation points">115</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="maw269 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16972/">
+                edited
+                <strong>25 Nov '13, 14:49</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-16972">
+    
+        <a name="16974"></a>
+        <div class="comment" id="comment-16974">
+            <div id="post-16974-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not a filesystem expert but <em>ext4</em> with the <em>dir_index</em> option should suffice.</p></div>
+            <div class="comment-info" id="comment-16974-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Oct '12, 20:05)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16991"></a>
+        <div class="comment" id="comment-16991">
+            <div id="post-16991-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Well Redhat uses a different package manager than Ubuntu so those two "apt-get" commands at the beginning aren't going to work. I haven't used Redhat in a while but I think it has a "yum" command that will install packages much like apt-get does. Package names and versions might not match up exactly either although I would imagine that they would be fairly close.</p></div>
+            <div class="comment-info" id="comment-16991-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '12, 05:42)</span>
+                <a class="comment-user userinfo" href="/users/2498/toebee">ToeBee</a>
+                
+            </div>
+        </div>
+    
+        <a name="34382"></a>
+        <div class="comment" id="comment-34382">
+            <div id="post-34382-score" class="comment-score"></div>
+            <div class="comment-text"><p>Were you able to implement this on Redhat? If yes, can you please share what challenges you faced, and the workaround you had to use? Thank you in advance. </p></div>
+            <div class="comment-info" id="comment-34382-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jun '14, 16:10)</span>
+                <a class="comment-user userinfo" href="/users/9116/dk2005">dk2005</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16972" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16972-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/16972/configure-linux-for-osm-tile-server?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/16972/configure-linux-for-osm-tile-server?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/16972/configure-linux-for-osm-tile-server?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/16972/configure-linux-for-osm-tile-server?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="16994"></a>
+                    <div id="answer-container-16994" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16994-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16994/up/" rel="nofollow"> </a>
+<div id="post-16994-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-16994-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16994/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="maw269 has selected this answer as the correct answer"
+        href="/accept_answer/16994/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I suspect that it's not going to be straightforward.  The <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/">switch2osm instructions</a> say "get XYZ from Ubuntu, build ABC from source".  I'm guessing that you'd get two sorts of problems:</p>
+<ul>
+<li>Your Redhat version may have versions of packages to what are in Ubuntu 12.04, which work differently, or some may not be available.<br>
+</li>
+<li>There may filesystem differences for e.g. Apache which means that you need to play around with e.g. mod_tile to get it to work.  If you don't have a local Ubuntu system to compare with resolving this may be tricky.</li>
+</ul>
+<p>I'd be tempted to progress to a "planet import and update in Redhat" in stages:</p>
+<ol>
+<li>First of all create a small VM somewhere (perhaps at home) and install Ubuntu in it, and then run through the switch2osm instructions, but using a very small country as the import data.  Get rendering and updates to it working.</li>
+<li>Do the same again, but with Redhat.  You'll probably need to figure out where to get some packages and versions from, and probably build more from source.  You'll also need to compare file locations between Ubuntu and Redhat, and edit config files and rebuild accordingly.</li>
+<li>Once you've done that you should be able to scale up to a larger VM and be able to at least understand the questions your IT department (bless 'em) are asking.</li>
+</ol>
+<p>With regard to the specific questions:</p>
+<ul>
+<li>I believe that the way that rendered tiles are stored was changed a year or more ago, so I suspect running out of inodes on ext3 is unlikely to be an issue, at least in stage (2) above.</li>
+<li>A poke around on the Internet suggests that "u01", "u02" etc. are Redhat's way of specifying "/usr" etc.  When doing (2) if everything is on one partition no part will run out of space first and you can see where stuff goes, and modify install scripts accordingly if necessary.</li>
+</ul>
+<p>(I've not used a Redhat system for around 10 years, so take this answer with a large pinch of salt!)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16994/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Oct '12, 10:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16994/">
+                edited
+                <strong>25 Nov '13, 14:49</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16994">
+    
+        <a name="16999"></a>
+        <div class="comment" id="comment-16999">
+            <div id="post-16999-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Excellent suggestions everyone. I will start with Ubuntu then transition to Redhat (fingers crossed). I will start small and not worry so much about disk allocation at this moment. Once I have everything up and running, I can get a feel for the actual space required for items that will not grow (applications) and also get a feel for the % of space required for items that will grow when moving to larger geographies (the DB and tilestore). I can then scale this space accordingly.</p>
+
+<p>It also sounds like I will have to do some research to find Redhat eqivalents to Ubuntu commands. I hope I don't have to build too many things from source as that is out of my lane, but I have some developers at the office that can help me, I suppose.</p>
+
+<p>I will get back to this forum if I get things working and maybe create a page somewhere with the Redhat eqivalent to <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/.">http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/.</a> </p>
+
+<p>If you come by this page in the future and don't find my final results, ping me because I probably forgot to update this page.
+Cheers</p></div>
+            <div class="comment-info" id="comment-16999-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '12, 17:50)</span>
+                <a class="comment-user userinfo" href="/users/233/maw269">maw269</a>
+                
+            </div>
+        </div>
+    
+        <a name="20287"></a>
+        <div class="comment" id="comment-20287">
+            <div id="post-20287-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Well, I've gotten all the way to installing mapnik0.7.3 and creating a static image with generate_image.py. No luck so far with getting mod_tile to compile. Not looking good :-(</p></div>
+            <div class="comment-info" id="comment-20287-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '13, 22:32)</span>
+                <a class="comment-user userinfo" href="/users/233/maw269">maw269</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16994" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16994-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/16972/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='m5umLcWHHwbcYaHlY08wb9OAooXM2v9q' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16972/configure-linux-for-osm-tile-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16972/configure-linux-for-osm-tile-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/server/"
+            class="tag-link-server"
+            title="see questions tagged'server'using tags"
+            rel="tag">server</a> <span class="tag-number">&#215;123</span><br/>
+        
+        <a href="/tags/linux/"
+            class="tag-link-linux"
+            title="see questions tagged'linux'using tags"
+            rel="tag">linux</a> <span class="tag-number">&#215;30</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 17, 2012, 7:39 p.m.">17 Oct '12, 19:39</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,171 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 27, 2014, 4:59 p.m.">27 Jun '14, 16:59</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/54771/how-to-filter-tile-content-in-server">how to filter tile content in server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/78714/host-tile-server-on-same-server-as-my-app">Host Tile Server on same server as my app ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35317/local-tile-server-from-packages-404-when-displaying-tiles">Local Tile Server from Packages: 404 when displaying tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50649/tile-server-hardware-to-support-18k-requestsmin">Tile server hardware to support 18k requests/min</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56557/plotting-data-on-my-tile-server">Plotting data on my tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68173/build-tile-server-manually-with-postgres-db-on-a-different-server">build tile server manually with Postgres db on a different server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16917/own-openstreetmap-tile-server-oneclick">Own OpenStreetMap Tile Server OneClick</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34953/tileserver-switch2osm-adjust-cache-size-problem">tileserver switch2osm adjust cache size problem.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47730/strategies-to-keep-cost-of-hosting-your-own-map-server-and-geocoder-low">Strategies to keep cost of hosting your own map server and geocoder low</a>
+        </p>
+        
+        <p>
+            <a href="/questions/85397/tile-server-capabilities">tile server capabilities</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

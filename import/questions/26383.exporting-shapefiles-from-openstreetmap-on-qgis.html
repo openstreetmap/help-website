@@ -1,0 +1,837 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Exporting shapefiles from OpenStreetMap on QGis - OSM Help</title>
+        <meta name="description" content="Hello, I&#39;m a student working on a thesis of traffic optimization. I&#39;m getting desperate: I need a shapefile out of a little portion of a city (Milan, in my case). I achieved that by downloading the portion of the map in &quot;.osm&quot;, installing the OpenStreetMap plugin on QGis, and exported in shapefiles...." />
+        <meta name="keywords" content="shapefile,gis,osm,traffic_signals" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/26383/exporting-shapefiles-from-openstreetmap-on-qgis" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/26383/exporting-shapefiles-from-openstreetmap-on-qgis?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='a2snollPv5zWCb8LZSfEiz6FZDRJlK8U' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/26383/exporting-shapefiles-from-openstreetmap-on-qgis">Exporting shapefiles from OpenStreetMap on QGis</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-26383-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26383/up/" rel="nofollow"> </a>
+<div id="post-26383-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-26383-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26383/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/26383/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, I'm a student working on a thesis of traffic optimization.
+I'm getting desperate: I need a shapefile out of a little portion of a city (Milan, in my case).
+I achieved that by downloading the portion of the map in ".osm", installing the OpenStreetMap plugin on QGis, and exported in shapefiles.
+The main problem I found is that during this operation I lose a lot of data (my main problem is that I lose traffic lights information).
+I can clearly see that the traffic light is handled as a point in QGis and OSM but as I export as a shapefile and import it back in QGis I lose all the traffic ligths I had when I imported the portion of the map from OSM.
+I don't really know if I expalained myself well, my brain is actually dried out after all the searches I did on google and relatives.
+I'd gladly appreciate any tip or advice on how to get a shapefile with informations on traffic lights in it.
+Thanks in advance.</p>
+<p>P.S. I need the map in shapefile format because I've to load it on Repast Simphony</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/shapefile/" class="post-tag tag-link-shapefile"
+                                        title="see questions tagged 'shapefile'" rel="tag">shapefile</a>
+                                
+                                    <a href="/tags/gis/" class="post-tag tag-link-gis"
+                                        title="see questions tagged 'gis'" rel="tag">gis</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/traffic_signals/" class="post-tag tag-link-traffic_signals"
+                                        title="see questions tagged 'traffic_signals'" rel="tag">traffic_signals</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Sep '13, 14:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/218091ef6c8ffad55923d77a99713432?s=32&amp;d=identicon&amp;r=g" alt="MassimoUNIMIB's gravatar image" />
+    <p><a href="/users/7389/massimounimib">MassimoUNIMIB</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="MassimoUNIMIB has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/26383/">
+                edited
+                <strong>16 Sep '13, 14:55</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-26383">
+    
+        <a name="26400"></a>
+        <div class="comment" id="comment-26400">
+            <div id="post-26400-score" class="comment-score">3</div>
+            <div class="comment-text"><p>two hint for you:</p>
+
+<p>Be sure that the OSM-import-plugin of QGIS can work with all you data: There is currently a problem with object id numbers szored in 64-bit data:</p>
+
+<p><a href="http://wiki.openstreetmap.org/wiki/64-bit_Identifiers">http://wiki.openstreetmap.org/wiki/64-bit_Identifiers</a></p>
+
+<p>and:</p>
+
+<p>all about OSM2Shapefile should be collected at <a href="http://wiki.openstreetmap.org/wiki/Shapefile">http://wiki.openstreetmap.org/wiki/Shapefile</a></p></div>
+            <div class="comment-info" id="comment-26400-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Sep '13, 17:08)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+        <a name="26403"></a>
+        <div class="comment" id="comment-26403">
+            <div id="post-26403-score" class="comment-score">2</div>
+            <div class="comment-text"><p>one more idea: you can use ogr2ogr (<a href="http://www.gdal.org/ogr/index.html)">http://www.gdal.org/ogr/index.html)</a> to read the .osm file, then produce a shapefile from it.  Once the data is in shapefile format, the 64-bit data isn't an issue.</p></div>
+            <div class="comment-info" id="comment-26403-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Sep '13, 17:28)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+        <a name="26418"></a>
+        <div class="comment" id="comment-26418">
+            <div id="post-26418-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello everyone, thanks for the quick answers!
+My data is still pretty small, a little square located here: <a href="http://www.openstreetmap.org/#map=16/45.5012/9.2365">http://www.openstreetmap.org/#map=16/45.5012/9.2365</a> .
+I'm now triyng the ogr2ogr's way but I'm encountering new problems: it seems the driver doesn't like the geometry type "Geometry Collection" saying that shapefiles don't support that kind of geometry(Error6).
+I've tried to bypass (with skipfailures) it but it gives Error 1 "Non increasing node id. Use OSM_USE_CUSTOM_INDEXING=ON.
+I'm feeling a bit lost, probably because I can't find proper documentation anywhere!Can you point me to it?</p></div>
+            <div class="comment-info" id="comment-26418-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Sep '13, 08:53)</span>
+                <a class="comment-user userinfo" href="/users/7389/massimounimib">MassimoUNIMIB</a>
+                
+            </div>
+        </div>
+    
+        <a name="26438"></a>
+        <div class="comment" id="comment-26438">
+            <div id="post-26438-score" class="comment-score">1</div>
+            <div class="comment-text"><p>to extract points try something like this:</p>
+
+<p>ogr2ogr -where "OGR_GEOMETRY='Point'" -lco SHPT=POINT outfile.shp infile.osm</p>
+
+<p>Also, make sure you're using GDAL 1.10</p></div>
+            <div class="comment-info" id="comment-26438-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Sep '13, 16:01)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+        <a name="26493"></a>
+        <div class="comment" id="comment-26493">
+            <div id="post-26493-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello, I tried that but it still gives me the same error: Non increasing node id. Use etc...". I found a temporary solution by downloading arcGis for desktop and converting the .osm maps with it. It still has some problems (it doubles some points and lines, but I guess I'll fix them with my software). Thanks for replying anyway! Bye.</p></div>
+            <div class="comment-info" id="comment-26493-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Sep '13, 09:51)</span>
+                <a class="comment-user userinfo" href="/users/7389/massimounimib">MassimoUNIMIB</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26383" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26383-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/26383/exporting-shapefiles-from-openstreetmap-on-qgis?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/26383/exporting-shapefiles-from-openstreetmap-on-qgis?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/26383/exporting-shapefiles-from-openstreetmap-on-qgis?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/26383/exporting-shapefiles-from-openstreetmap-on-qgis?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="26495"></a>
+                    <div id="answer-container-26495" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-26495-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26495/up/" rel="nofollow"> </a>
+<div id="post-26495-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-26495-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26495/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I find that far &amp; away the simplest way to get shapefiles from OSM data out of QGIS is to use osm2pgsql to import the data to a PostGIS database and then pull the data into QGIS that way. </p>
+<p>A couple of things are necessary: use the hstore option to get all the tags; and create a view on the standard tables loaded by osm2pgsql to shorten all column names to &lt;= 10 characters if you need those with long names, such as <code>addr:housenumber</code> (otherwise QGIS gets stroppy, saving the data as a Shape file).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/26495/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Sep '13, 11:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-26495">
+    
+</div>
+<div id="comment-tools-26495" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26495-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="26504"></a>
+                    <div id="answer-container-26504" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-26504-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26504/up/" rel="nofollow"> </a>
+<div id="post-26504-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-26504-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26504/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You could take your OSM file, use OSMConvert to convert it to a CSV and then import that into qgis.</p>
+<p>Also, you could use osmfilter to only keep relevant data.</p>
+<p>See <a href="http://wiki.openstreetmap.org/wiki/Osmconvert#Writing_CSV_Files">http://wiki.openstreetmap.org/wiki/Osmconvert#Writing_CSV_Files</a> .</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/26504/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Sep '13, 15:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/806d5a652505590a9eba797ad5bea8db?s=32&amp;d=identicon&amp;r=g" alt="gormo's gravatar image" />
+    <p><a href="/users/4653/gormo">gormo</a><br/>
+    <span class="score" title="2928 reputation points"><span class="">2.9k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="26 badges"><span class="silver">&#9679;</span><span class="badgecount">26</span></span><span title="60 badges"><span class="bronze">&#9679;</span><span class="badgecount">60</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gormo has 13 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-26504">
+    
+</div>
+<div id="comment-tools-26504" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26504-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/26383/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='a2snollPv5zWCb8LZSfEiz6FZDRJlK8U' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26383/exporting-shapefiles-from-openstreetmap-on-qgis?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26383/exporting-shapefiles-from-openstreetmap-on-qgis?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/shapefile/"
+            class="tag-link-shapefile"
+            title="see questions tagged'shapefile'using tags"
+            rel="tag">shapefile</a> <span class="tag-number">&#215;87</span><br/>
+        
+        <a href="/tags/gis/"
+            class="tag-link-gis"
+            title="see questions tagged'gis'using tags"
+            rel="tag">gis</a> <span class="tag-number">&#215;37</span><br/>
+        
+        <a href="/tags/traffic_signals/"
+            class="tag-link-traffic_signals"
+            title="see questions tagged'traffic_signals'using tags"
+            rel="tag">traffic_signals</a> <span class="tag-number">&#215;21</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 16, 2013, 2:54 p.m.">16 Sep '13, 14:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,374 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 19, 2013, 3:41 p.m.">19 Sep '13, 15:41</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/18166/ogr2osm-imported-data-shifted-by-176m-222exported-from-arcgis">Ogr2Osm: Imported data shifted by 176m, 222°(exported from ArcGIS)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21154/importing-only-items-with-certain-tags-into-qgis">Importing only items with certain Tags into QGIS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7255/how-to-setup-gis-server-on-debian">How to setup GIS Server on Debian</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2">Importing shapefile and saving to OSM with Potlatch2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19336/get-city-borders-for-finland">Get city borders for Finland</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20797/where-to-find-lake-shapesdata-for-sweden">Where to find lake shapes/data for Sweden?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/148/how-can-i-use-openstreetmap-data-in-my-gis-program">How can I use OpenStreetMap data in my GIS program?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6907/how-to-download-the-territorial-borders-violet-line-as-a-shapefile">how to download the territorial borders (violet line) as a shapefile</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11385/osm-coordinate-system-for-arcmap">OSM coordinate system for ArcMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22724/add-a-custom-marker-issues-need-an-example">[closed] Add a custom marker - issues, need an example</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

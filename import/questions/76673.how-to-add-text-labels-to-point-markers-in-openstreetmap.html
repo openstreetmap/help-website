@@ -1,0 +1,839 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to add text labels to point markers in OpenStreetMap? - OSM Help</title>
+        <meta name="description" content="I have looked at this webpage: link text [https://mediarealm.com.au/articles/openstreetmap-openlayers-map-markers/]  and I learned from it how to make markers on Openstreetmap. But I can&#39;t figure out how to make simple text labels appear beside the markers. My question is what is the simplest way to..." />
+        <meta name="keywords" content="marker,labels,openlayers" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/76673/how-to-add-text-labels-to-point-markers-in-openstreetmap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/76673/how-to-add-text-labels-to-point-markers-in-openstreetmap?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Q7IXHCfE1O19Ad5fDw5ezoHayqZJV090' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/76673/how-to-add-text-labels-to-point-markers-in-openstreetmap">How to add text labels to point markers in OpenStreetMap?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-76673-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76673/up/" rel="nofollow"> </a>
+<div id="post-76673-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-76673-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76673/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/76673/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have looked at this webpage:
+<a href="https://mediarealm.com.au/articles/openstreetmap-openlayers-map-markers/">link text</a> [<a href="https://mediarealm.com.au/articles/openstreetmap-openlayers-map-markers/]">https://mediarealm.com.au/articles/openstreetmap-openlayers-map-markers/]</a>
+ and I learned from it how to make markers on Openstreetmap. But I can't figure out how to make simple text labels appear beside the markers. My question is what is the simplest way to add labels to point markers ? </p>
+<p>Here is "my" html code, which executes fine, but I want very much to place labels beside some or all of the point markers.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;OpenStreetMap &amp;amp; OpenLayers - Marker Example&lt;/title&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+    &lt;link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css"&gt;
+    &lt;script src="https://openlayers.org/en/v4.6.5/build/ol.js" type="text/javascript"&gt;&lt;/script&gt;
+
+  &lt;script&gt;
+    /* OSM &amp; OL example code provided by <a href="https://mediarealm.com.au/">https://mediarealm.com.au/</a> */
+    var map;
+    var mapLat = 48.7776;
+        var mapLng = 9.2325;
+    var mapDefaultZoom = 18;
+
+    function initialize_map() {
+      map = new ol.Map({
+        target: "map",
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM({
+                      url: "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                })
+            })
+        ],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([mapLng, mapLat]),
+            zoom: mapDefaultZoom
+        })
+      });
+    }
+
+    function add_map_point(lat, lng) {
+      var vectorLayer = new ol.layer.Vector({
+        source:new ol.source.Vector({
+          features: [new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.transform([parseFloat(lng), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857')),
+            })]
+        }),
+        style: new ol.style.Style({
+          image: new ol.style.Icon({
+            anchor: [0.5, 0.5],
+            anchorXUnits: "fraction",
+            anchorYUnits: "fraction",
+            src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg"
+          })
+        })
+      });
+
+      map.addLayer(vectorLayer); 
+    }
+
+
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload="initialize_map(); 
+add_map_point(48.77896195414604,9.230028522859172); 
+add_map_point(48.7786801583205,9.230559183581361);
+add_map_point(48.77839084836044,9.231098387395592);
+add_map_point(48.77821941685653,9.231418825146253);
+add_map_point(48.77804116552051,9.231760731524432);
+add_map_point(48.77798478095757,9.231857591770742);
+add_map_point(48.77793479182441,9.231959233055916);
+add_map_point(48.77789216864531,9.232040697691321);
+add_map_point(48.77784976059397,9.232119391875452);
+add_map_point(48.77781607964182,9.232180591830247);
+add_map_point(48.77777605784195,9.232255409342331);
+add_map_point(48.777739956673585,9.23232386240085);
+add_map_point(48.777706621280934,9.232386290075267);
+add_map_point(48.77763025798431,9.232529500384944);
+add_map_point(48.77761124414772,9.232578962345501);
+add_map_point(48.777568643085125,9.232685348589783);
+add_map_point(48.77754476950222,9.232746865393798);
+add_map_point(48.77750088469463,9.232827356487206);
+add_map_point(48.77745878318328,9.232910790311317);
+add_map_point(48.77741595800813,9.232988600498913);
+add_map_point(48.777372755115806,9.233068552599766);
+add_map_point(48.777201514799266,9.233379369818085);
+add_map_point(48.77702467842831,9.23369803172393);
+add_map_point(48.776762657751405,9.234164000387091);
+add_map_point(48.77647984081625,9.234622534964592); 
+"&gt;
+  &lt;div id="map" style="width: 100vw; height: 100vh;"&gt;&lt;/div&gt;
+hallo
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/marker/" class="post-tag tag-link-marker"
+                                        title="see questions tagged 'marker'" rel="tag">marker</a>
+                                
+                                    <a href="/tags/labels/" class="post-tag tag-link-labels"
+                                        title="see questions tagged 'labels'" rel="tag">labels</a>
+                                
+                                    <a href="/tags/openlayers/" class="post-tag tag-link-openlayers"
+                                        title="see questions tagged 'openlayers'" rel="tag">openlayers</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Sep '20, 06:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8c554f4407ec63d0211bf83fae0b11df?s=32&amp;d=identicon&amp;r=g" alt="funOne's gravatar image" />
+    <p><a href="/users/18988/funone">funOne</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="funOne has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/76673/">
+                edited
+                <strong>17 Sep '20, 21:48</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+            <p><a href="/users/10133/tzorn">TZorn</a><br/>
+            <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-76673">
+    
+        <a name="76674"></a>
+        <div class="comment" id="comment-76674">
+            <div id="post-76674-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Could you fix/edit your question please? The links have gone missing.</p></div>
+            <div class="comment-info" id="comment-76674-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Sep '20, 07:41)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="76687"></a>
+        <div class="comment" id="comment-76687">
+            <div id="post-76687-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried to paste my entire html document into a code block, but about half of it did not arrive inside the code block, and I don't know why not. If there is somebody who knows how to edit my question, so as to format the text so that everything between "&lt;!DOCTYPE html&gt;" and "&lt;/html&gt;" appears as code, then I thank you.</p></div>
+            <div class="comment-info" id="comment-76687-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Sep '20, 20:39)</span>
+                <a class="comment-user userinfo" href="/users/18988/funone">funOne</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-76673" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76673-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/76673/how-to-add-text-labels-to-point-markers-in-openstreetmap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/76673/how-to-add-text-labels-to-point-markers-in-openstreetmap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/76673/how-to-add-text-labels-to-point-markers-in-openstreetmap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/76673/how-to-add-text-labels-to-point-markers-in-openstreetmap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="76676"></a>
+                    <div id="answer-container-76676" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76676-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76676/up/" rel="nofollow"> </a>
+<div id="post-76676-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-76676-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76676/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="funOne has selected this answer as the correct answer"
+        href="/accept_answer/76676/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Without knowing what you have tried so far (your question does not include links) I suggest you have a look at <a href="https://wiki.openstreetmap.org/wiki/UMap">uMap</a>. There you are flexible to add markers with text labels of different kinds and appearances. Chose one of the instances given on the wiki page I linked to and give it a try.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76676/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Sep '20, 08:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76676">
+    
+        <a name="76685"></a>
+        <div class="comment" id="comment-76685">
+            <div id="post-76685-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for telling me about uMap. That would be a perfectly good solution, except that their tiles won't load to a zoom level greater than 17 in the area that I am concerned with. Here is the map I created with uMap: [<a href="http://umap.openstreetmap.fr/en/map/anonymous-edit/499933:HZ_0NpNev93W6HehUzJ2OItXQsw">http://umap.openstreetmap.fr/en/map/anonymous-edit/499933:HZ_0NpNev93W6HehUzJ2OItXQsw</a> ]. An alternative solution might be something like what is contained in this script here: [<a href="http://dev.openlayers.org/examples/vector-features-with-text.html">http://dev.openlayers.org/examples/vector-features-with-text.html</a> ]. There you can see markers, but there are also text labels with the markers. I have tried to download the html source code of that page and to load it from my own computer, but that doesn't work, possibly because my browser doesn't know where to find some remote scripts that are given with reltive path names. So I am not even able to dissect that example, which is surprisingly the only example of Openlayers that I could find where label appear beside markers.</p>
+
+<p>At the end of the day, all I want to do is place a marker at a location in WGS84 coordinates and place a text label beside the marker, and then zoom in to level 19. Any help is appreciated!</p></div>
+            <div class="comment-info" id="comment-76685-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Sep '20, 20:22)</span>
+                <a class="comment-user userinfo" href="/users/18988/funone">funOne</a>
+                
+            </div>
+        </div>
+    
+        <a name="76688"></a>
+        <div class="comment" id="comment-76688">
+            <div id="post-76688-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/18988/funone">@funOne</a> for me tiles are loading to a max zoom of 20 with that umap link. If the server has not had to display that area recently it can take a while to render depending on server load. </p>
+
+<p>Note also that the umap background can be changed to openstreetmap.org's default if you wish (although that only goes to z19). </p>
+
+<p>You can set the starting view with the <img alt="diagonal arrows pointing inward to dot" src="https://wiki.openstreetmap.org/w/images/thumb/9/98/Icon-center.PNG/30px-Icon-center.PNG"> icon on the right.</p></div>
+            <div class="comment-info" id="comment-76688-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Sep '20, 21:17)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+        <a name="76689"></a>
+        <div class="comment" id="comment-76689">
+            <div id="post-76689-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have waited for more than one hour, in which time the tile still has not loaded. Thanks for suggesting that I try changing from umap background to openstreetmap background. Openstreetmap background tile loads within 4.2 seconds: good enough. You mentioned how to set the starting view using the graphical interface. But how to set the starting map background to use Openstreetmap rather than OSM-Fr?</p></div>
+            <div class="comment-info" id="comment-76689-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Sep '20, 23:26)</span>
+                <a class="comment-user userinfo" href="/users/18988/funone">funOne</a>
+                
+            </div>
+        </div>
+    
+        <a name="76692"></a>
+        <div class="comment" id="comment-76692">
+            <div id="post-76692-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You can change the starting layer also in the right hand editing panel. It's the same icon as in the left hand panel.</p></div>
+            <div class="comment-info" id="comment-76692-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Sep '20, 08:21)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-76676" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76676-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/76673/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Q7IXHCfE1O19Ad5fDw5ezoHayqZJV090' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76673/how-to-add-text-labels-to-point-markers-in-openstreetmap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76673/how-to-add-text-labels-to-point-markers-in-openstreetmap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openlayers/"
+            class="tag-link-openlayers"
+            title="see questions tagged'openlayers'using tags"
+            rel="tag">openlayers</a> <span class="tag-number">&#215;122</span><br/>
+        
+        <a href="/tags/marker/"
+            class="tag-link-marker"
+            title="see questions tagged'marker'using tags"
+            rel="tag">marker</a> <span class="tag-number">&#215;98</span><br/>
+        
+        <a href="/tags/labels/"
+            class="tag-link-labels"
+            title="see questions tagged'labels'using tags"
+            rel="tag">labels</a> <span class="tag-number">&#215;63</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 17, 2020, 6:53 a.m.">17 Sep '20, 06:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,070 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 18, 2020, 8:21 a.m.">18 Sep '20, 08:21</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/16169/openlayers-how-to-open-the-popup-when-marker-is-dragged">OpenLayers - how to open the popup when marker is dragged</a>
+        </p>
+        
+        <p>
+            <a href="/questions/74230/marker-labels">marker labels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12658/markers-not-displayed-in-xhtml">[closed] Markers not displayed in xhtml</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15441/openlayers-how-do-a-create-a-moveable-marker">Openlayers - how do a create a moveable marker?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1315/how-to-combine-marker-and-popup">how to combine marker and popup?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43276/map-without-names-toolserver-locale-no-longer-available">Map without names: toolserver / locale no longer available</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10488/openlayers-adding-poi-with-description">[closed] Openlayers - adding POI with description</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11409/feature-and-popup">feature and popup</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15152/openlayers-marker-for-start-of-gpx-track-and-centering-the-map-on-the-trace">Openlayers - marker for start of GPX track and centering the map on the trace</a>
+        </p>
+        
+        <p>
+            <a href="/questions/74521/add-labeldescription-on-position-marker">Add label/description on position marker</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,916 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>JOSM relation editor - what do element highlight colors mean? - OSM Help</title>
+        <meta name="description" content="In the JOSM relation editor, what do the highlighted element colors mean? " />
+        <meta name="keywords" content="josm,colors,relation,editor,highlight" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/74118/josm-relation-editor-what-do-element-highlight-colors-mean" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/74118/josm-relation-editor-what-do-element-highlight-colors-mean?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='teDw2GzWHWBMVWNhdJsWRaUq2jlAvPE8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/74118/josm-relation-editor-what-do-element-highlight-colors-mean">JOSM relation editor - what do element highlight colors mean?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-74118-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74118/up/" rel="nofollow"> </a>
+<div id="post-74118-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-74118-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74118/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/74118/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>In the JOSM relation editor, what do the highlighted element colors mean?</p>
+<p><img src="https://help.openstreetmap.org/upfiles/gbage_Y6lpy7c.jpg" alt="alt text"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/colors/" class="post-tag tag-link-colors"
+                                        title="see questions tagged 'colors'" rel="tag">colors</a>
+                                
+                                    <a href="/tags/relation/" class="post-tag tag-link-relation"
+                                        title="see questions tagged 'relation'" rel="tag">relation</a>
+                                
+                                    <a href="/tags/editor/" class="post-tag tag-link-editor"
+                                        title="see questions tagged 'editor'" rel="tag">editor</a>
+                                
+                                    <a href="/tags/highlight/" class="post-tag tag-link-highlight"
+                                        title="see questions tagged 'highlight'" rel="tag">highlight</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Apr '20, 23:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/97e2f141b910d9a08dabfc0865382491?s=32&amp;d=identicon&amp;r=g" alt="chachafish's gravatar image" />
+    <p><a href="/users/10935/chachafish">chachafish</a><br/>
+    <span class="score" title="411 reputation points">411</span><span title="12 badges"><span class="badge1">&#9679;</span><span class="badgecount">12</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="chachafish has one accepted answer">8&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-74118">
+    
+</div>
+<div id="comment-tools-74118" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74118-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/74118/josm-relation-editor-what-do-element-highlight-colors-mean?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/74118/josm-relation-editor-what-do-element-highlight-colors-mean?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/74118/josm-relation-editor-what-do-element-highlight-colors-mean?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/74118/josm-relation-editor-what-do-element-highlight-colors-mean?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="74128"></a>
+                    <div id="answer-container-74128" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74128-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74128/up/" rel="nofollow"> </a>
+<div id="post-74128-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-74128-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74128/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I see the same as <a href="https://help.openstreetmap.org/users/10935/chachafish"><a href="https://help.openstreetmap.org/users/10935/chachafish">@chachafish</a></a>.
+That is, I have no elements selected and in the left panel I see the same ones highlighted in pink and nothing in the right panel. <br>
+I expect these are the ways that have been added to the relation twice, once as 'forward' and again as 'backward' roles.    At least all those highlighted in this manner appear twice and I could not readily see any others listed more than once.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74128/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Apr '20, 09:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e5674dd96938593e0af5130dfffe0f90?s=32&amp;d=identicon&amp;r=g" alt="nevw's gravatar image" />
+    <p><a href="/users/7380/nevw">nevw</a><br/>
+    <span class="score" title="9843 reputation points"><span class="">9.8k</span></span><span title="26 badges"><span class="badge1">&#9679;</span><span class="badgecount">26</span></span><span title="90 badges"><span class="silver">&#9679;</span><span class="badgecount">90</span></span><span title="178 badges"><span class="bronze">&#9679;</span><span class="badgecount">178</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="nevw has 32 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/74128/">
+                edited
+                <strong>13 Apr '20, 09:47</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74128">
+    
+        <a name="74129"></a>
+        <div class="comment" id="comment-74129">
+            <div id="post-74129-score" class="comment-score"></div>
+            <div class="comment-text"><p>Interesting. It's too bad there is no definitive guide to the vagaries and uses of the Relation Editor. I've come up against questions about its use and had them answered in this forum too. </p>
+
+<p>After reading these answers I edited a relation and purposely added a duplicate member. Sure enough, both "copies" turn light green when selected while the selection itself in the right-hand side turns pink.</p>
+
+<p>Good to know.</p></div>
+            <div class="comment-info" id="comment-74129-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '20, 10:56)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="74132"></a>
+        <div class="comment" id="comment-74132">
+            <div id="post-74132-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes quite correct pink highlight indicate sections that appear twice in the relation roles, forward and backward. I'd previously only commented on yellowish/green and blue.</p></div>
+            <div class="comment-info" id="comment-74132-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '20, 11:45)</span>
+                <a class="comment-user userinfo" href="/users/2925/bcnorwich">BCNorwich</a>
+                
+            </div>
+        </div>
+    
+        <a name="74134"></a>
+        <div class="comment" id="comment-74134">
+            <div id="post-74134-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yep, that's it! I remember the pink highlights first started popping up as I was adding ways twice, once on the trip there and once on the trip back. I was afraid this was JOSM trying to tell me something was wrong.  But, nothing is wrong. It's all correct. Thanks :)</p></div>
+            <div class="comment-info" id="comment-74134-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '20, 14:46)</span>
+                <a class="comment-user userinfo" href="/users/10935/chachafish">chachafish</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74128" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74128-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="74123"></a>
+                    <div id="answer-container-74123" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74123-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74123/up/" rel="nofollow"> </a>
+<div id="post-74123-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-74123-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74123/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I would expect that those are the ways you have selected. Aren't they visible in the right-hand side of the relation editor as well?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74123/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Apr '20, 06:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/813a136afe7d4c95fd5bccdd78705e0e?s=32&amp;d=identicon&amp;r=g" alt="escada's gravatar image" />
+    <p><a href="/users/5390/escada">escada</a><br/>
+    <span class="score" title="19043 reputation points"><span class="">19.0k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="166 badges"><span class="silver">&#9679;</span><span class="badgecount">166</span></span><span title="302 badges"><span class="bronze">&#9679;</span><span class="badgecount">302</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="escada has 97 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74123">
+    
+        <a name="74125"></a>
+        <div class="comment" id="comment-74125">
+            <div id="post-74125-score" class="comment-score"></div>
+            <div class="comment-text"><p>No, I double checked and they're definitely not selected. A selected element is highlighted in blue and it's highlighted in yellowish green in the panel on the right.</p></div>
+            <div class="comment-info" id="comment-74125-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '20, 07:11)</span>
+                <a class="comment-user userinfo" href="/users/10935/chachafish">chachafish</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74123" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74123-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="74126"></a>
+                    <div id="answer-container-74126" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74126-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74126/up/" rel="nofollow"> </a>
+<div id="post-74126-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-74126-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74126/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi,
+escada is correct. Your screen shot shows only half of the relation editor. </p>
+<p>If you hover your cursor over the right side edge of the editor box the cursor should change to a double ended arrow. Then left click hold and drag the editors right side to the right. The editor should box expand to show all of the selection area. You should find that the mambers and selection highlighted items correspond.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74126/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Apr '20, 09:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e3283a6b5f83e16214ec39a1478f64f0?s=32&amp;d=identicon&amp;r=g" alt="BCNorwich's gravatar image" />
+    <p><a href="/users/2925/bcnorwich">BCNorwich</a><br/>
+    <span class="score" title="6299 reputation points"><span class="">6.3k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="BCNorwich has 44 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74126">
+    
+        <a name="74127"></a>
+        <div class="comment" id="comment-74127">
+            <div id="post-74127-score" class="comment-score"></div>
+            <div class="comment-text"><p>The blue (one or many items) is as selected from within the relation editor box, which are then highlighted on the main map.</p>
+
+<p>The yellowish green (both sides of the editor box) are items selected from the main map,</p></div>
+            <div class="comment-info" id="comment-74127-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '20, 09:20)</span>
+                <a class="comment-user userinfo" href="/users/2925/bcnorwich">BCNorwich</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74126" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74126-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/74118/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='teDw2GzWHWBMVWNhdJsWRaUq2jlAvPE8' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74118/josm-relation-editor-what-do-element-highlight-colors-mean?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74118/josm-relation-editor-what-do-element-highlight-colors-mean?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/relation/"
+            class="tag-link-relation"
+            title="see questions tagged'relation'using tags"
+            rel="tag">relation</a> <span class="tag-number">&#215;128</span><br/>
+        
+        <a href="/tags/editor/"
+            class="tag-link-editor"
+            title="see questions tagged'editor'using tags"
+            rel="tag">editor</a> <span class="tag-number">&#215;48</span><br/>
+        
+        <a href="/tags/colors/"
+            class="tag-link-colors"
+            title="see questions tagged'colors'using tags"
+            rel="tag">colors</a> <span class="tag-number">&#215;27</span><br/>
+        
+        <a href="/tags/highlight/"
+            class="tag-link-highlight"
+            title="see questions tagged'highlight'using tags"
+            rel="tag">highlight</a> <span class="tag-number">&#215;13</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 12, 2020, 11:37 p.m.">12 Apr '20, 23:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,689 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 13, 2020, 2:46 p.m.">13 Apr '20, 14:46</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/74340/how-to-add-existing-child-relation-to-parent-vice-versa-using-josm">How to add existing child relation to parent &amp; vice-versa using JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm">What are the main things that I&#39;m missing out by using the iD editor instead of JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4044/how-to-display-a-specific-way-in-red-in-a-viewer">How to display a specific way in red in a viewer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8197/re-ordering-sorting-ways-in-a-relation">Re-ordering / sorting ways in a relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26213/bus-route-passes-twice-through-a-way-is-it-correct-to-add-it-twice-to-the-relation">Bus route passes twice through a way. Is it correct to add it twice to the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32885/wrong-error-report-in-josms-validation">Wrong Error report in JOSM&#39;s Validation (?)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5584/should-i-use-potlatch-or-josm">Should I use Potlatch or JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5175/selecting-an-inner-relation">Selecting an inner relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7943/how-can-i-switch-to-a-lighter-background-in-josm">How can I switch to a lighter background in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14352/what-are-the-color-meanings-in-josm">What are the color meanings in josm?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

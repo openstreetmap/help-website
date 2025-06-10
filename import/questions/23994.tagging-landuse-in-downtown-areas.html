@@ -1,0 +1,964 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tagging landuse in downtown areas - OSM Help</title>
+        <meta name="description" content="I&#39;ve run into this problem with several towns and cities now: throughout much of the city it&#39;s clear what landuse=* tag to use: residential, industrial, retail, commercial, occasionally some less-common tag. But then there&#39;s the downtown/city centre. Here the zoning is typically very mixed-use, many..." />
+        <meta name="keywords" content="downtown,city,mixed-use,landuse,centre" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/23994/tagging-landuse-in-downtown-areas" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/23994/tagging-landuse-in-downtown-areas?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='HgL1cIVcqyi0jgBf8d3qvmO0SnrFolza' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/23994/tagging-landuse-in-downtown-areas">Tagging landuse in downtown areas</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-23994-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23994/up/" rel="nofollow"> </a>
+<div id="post-23994-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-23994-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23994/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/23994/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I've run into this problem with several towns and cities now: throughout much of the city it's clear what landuse=* tag to use: residential, industrial, retail, commercial, occasionally some less-common tag.  But then there's the downtown/city centre.  Here the zoning is typically very mixed-use, many buildings have shops ("retail") on the ground floor and either apartments ("residential") or offices ("commercial") upstairs, there tend to be lots of areas with civic buildings (library, police station, town hall) that don't obviously fit any of the major land-use categories, and to the extent that any single tag does fit, it changes on a building-by-building basis.</p>
+<p>I guess this problem isn't quite exclusive to downtown areas, but it is specific to (relatively) high-density city areas, I think.  What is the appropriate way to tag these areas?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/downtown/" class="post-tag tag-link-downtown"
+                                        title="see questions tagged 'downtown'" rel="tag">downtown</a>
+                                
+                                    <a href="/tags/city/" class="post-tag tag-link-city"
+                                        title="see questions tagged 'city'" rel="tag">city</a>
+                                
+                                    <a href="/tags/mixed-use/" class="post-tag tag-link-mixed-use"
+                                        title="see questions tagged 'mixed-use'" rel="tag">mixed-use</a>
+                                
+                                    <a href="/tags/landuse/" class="post-tag tag-link-landuse"
+                                        title="see questions tagged 'landuse'" rel="tag">landuse</a>
+                                
+                                    <a href="/tags/centre/" class="post-tag tag-link-centre"
+                                        title="see questions tagged 'centre'" rel="tag">centre</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jul '13, 06:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4a4c8a91603aa21e05f5a441d5c13f26?s=32&amp;d=identicon&amp;r=g" alt="blahedo's gravatar image" />
+    <p><a href="/users/4851/blahedo">blahedo</a><br/>
+    <span class="score" title="736 reputation points">736</span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="19 badges"><span class="silver">&#9679;</span><span class="badgecount">19</span></span><span title="28 badges"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="blahedo has 2 accepted answers">50&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-23994">
+    
+        <a name="24013"></a>
+        <div class="comment" id="comment-24013">
+            <div id="post-24013-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Since this question is coming back at regural intervals since years, I think we need to start a real discussion and find a consensus for a new "landuse" value which could be formalized in the wiki. Otherwise we will continue with the current "do whatever you want" chaos (I mean, when the primary use is unclear). 
+<br>But this 'help' tool is not the right place for discussions.</p></div>
+            <div class="comment-info" id="comment-24013-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '13, 13:04)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23994" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23994-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/23994/tagging-landuse-in-downtown-areas?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/23994/tagging-landuse-in-downtown-areas?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/23994/tagging-landuse-in-downtown-areas?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/23994/tagging-landuse-in-downtown-areas?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="23996"></a>
+                    <div id="answer-container-23996" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23996-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23996/up/" rel="nofollow"> </a>
+<div id="post-23996-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-23996-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23996/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There's a number of mappers who seem to think that any place that is not covered by at least some landuse area is incompletely mapped. But there's no shame in <em>not</em> having a landuse tag if the predominant landuse is not obvious. (The wiki recommends to tag landuse "for describing the primary use" of land, which would imply that the absence of a primary use would also mean the absence of a landuse tag.)</p>
+<p>If you browse through the <a href="http://taginfo.openstreetmap.org/keys/landuse#values">values for the landuse key on taginfo</a> you'll find that people have invented a number of semicolon-based solutions, or landuse=government, or even landuse=mixed, for the situations you describe. </p>
+<p>My suggestion is to use one of the widely used landuse tags if they describe the predominant use of the area, and not tag any landuse if there is no obvious predominant use.</p>
+<p>The idea that every point on the surface of the planet must be described by some kind of landuse ("because otherwise it looks white on the map!!!!") is questionable.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23996/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jul '13, 07:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23996">
+    
+        <a name="24020"></a>
+        <div class="comment" id="comment-24020">
+            <div id="post-24020-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Well, aside from "it looks white on the map", it draws a distinction between "no uses for this land" and "so many land uses we can't figure out what do do with it so we'll just leave it blank".  There are chunks of land, even in cities, that are simply not used, and there's no problem leaving them blank.  It seems odd to say that the very densest, most used areas have "no" landuse.</p></div>
+            <div class="comment-info" id="comment-24020-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '13, 19:59)</span>
+                <a class="comment-user userinfo" href="/users/4851/blahedo">blahedo</a>
+                
+            </div>
+        </div>
+    
+        <a name="24034"></a>
+        <div class="comment" id="comment-24034">
+            <div id="post-24034-score" class="comment-score"></div>
+            <div class="comment-text"><p>If they are really not used, then there is nothing and you can't map anything. The densest mixed use areas have roads and buildings, when you map these the difference should be fairly obvious to anyone.</p></div>
+            <div class="comment-info" id="comment-24034-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '13, 15:10)</span>
+                <a class="comment-user userinfo" href="/users/2933/cartinus">cartinus</a>
+                
+            </div>
+        </div>
+    
+        <a name="24055"></a>
+        <div class="comment" id="comment-24055">
+            <div id="post-24055-score" class="comment-score">4</div>
+            <div class="comment-text"><p>The non-presence of a landuse tag does not say that they have "no" landuse; it says that they have no prevalent landuse.</p></div>
+            <div class="comment-info" id="comment-24055-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jul '13, 19:35)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23996" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23996-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="23997"></a>
+                    <div id="answer-container-23997" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23997-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23997/up/" rel="nofollow"> </a>
+<div id="post-23997-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-23997-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23997/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The way I have approached this is to think of the primary categories as a hierarchy, something like retail -&gt; commercial -&gt; industrial -&gt; residential. These days there is little overlap of industrial/residential, but in town and city centres if the predominant ground floor usage is retail I'll tag the landuse as retail, if office buildings at ground floor level, then commercial and so forth.</p>
+<p>Thus an area like that around <a href="http://osm.org/go/0C0WATH9Z-">Langstrasse</a> in Zurich, where there are shops (and dodgy nightclubs) on the ground floor and in basements, offices in higher levels of buildings and apartments in the attics, would be tagged retail. This makes sense if you think about what you observe in terms of movement and types of people in the area (footfall). You will also see this reflected in rental values for the ground floor sites, local authority zoning regulations etc.</p>
+<p>In South-east Asia where the shop-house is a long-standing feature of even small towns it might be reasonable to use a different tag.</p>
+<p>Once you have applied the main landuse tag there is plenty of scope for adding additional tags, such as residential=*. For instance I have used residential=student_village to distinguish residential landuse for gated sets of flats which can only be rented to students. Once could also imagine adding tags for secondary landuse (e.g., landuse=retail, secondary_landuse=residential), although I am unaware of such usage.</p>
+<p>The key to these things is to ask what you want to use it for. We have established that OSM landuse has a good correspondence (both qualitatively and quantitatively, see slides of my talk at <a href="http://sotm-eu.org/talk@38.html">SotM-EU</a>) with other landuse/landcover schemes such as CORINE and Urban Atlas of the European Environment Agency. Example applications of landuse/landcover include: hydrological models (using assumptions about runoff and surface sealing), ecological information (my own interest), resource utilisation, traffic demand models, etc. Within OSM we may well use landuse to determine if areas have been adequately mapped: landuse=retail with no shop=* nodes or ways points to missing data and so forth.</p>
+<p>For civic buildings and so on (notably Schools and Hospitals) I would agree with Frederik Ramm's answer, we don't have (or necessarily need) a landuse tag to cover everything.</p>
+<p>This answer is a lightly edited version of <a href="http://forum.openstreetmap.org/viewtopic.php?pid=314936#p314936">a post</a> on a similar topic on OSM Forum.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23997/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jul '13, 07:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23997">
+    
+        <a name="24021"></a>
+        <div class="comment" id="comment-24021">
+            <div id="post-24021-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is sort of what I've been doing, but it's sort of unsatisfying in that it addresses "vertical multi-use" very differently from "horizontal multi-use", and in any case it's certainly not documented anywhere on the wiki that I've found.  It also sort of goes against the idea that "landuse" is not about tagging building-by-building, but is a sort of indication of the overall neighbourhood.  In a downtown of a small- to mid-size city, the overall area is... downtowny.</p></div>
+            <div class="comment-info" id="comment-24021-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '13, 20:05)</span>
+                <a class="comment-user userinfo" href="/users/4851/blahedo">blahedo</a>
+                
+            </div>
+        </div>
+    
+        <a name="24028"></a>
+        <div class="comment" id="comment-24028">
+            <div id="post-24028-score" class="comment-score"></div>
+            <div class="comment-text"><p>Landuse is about the land, not the sky. And 'downtowny' usually implies a retail core with a commercial doughnut, at least in most cities in Europe and North America (perhaps less so in the latter because retail may have moved out of town). You can envisage the doughnut as being 3-D with commercial activities above the retail and residential being above that. You can of course use mixed as a value, but I dont think this tells you anything. If shops and offices are really mixed hugger-mugger then fall back to commercial.</p></div>
+            <div class="comment-info" id="comment-24028-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '13, 09:03)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23997" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23997-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="42172"></a>
+                    <div id="answer-container-42172" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-42172-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42172/up/" rel="nofollow"> </a>
+<div id="post-42172-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-42172-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42172/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Actually (at least here in Germany) there are certain areas dedicated to certain kinds of use. That may be </p>
+<ul>
+<li>farmland</li>
+<li>forest</li>
+<li>natural reserve/nature park</li>
+<li>industrial</li>
+<li>business (which is not the same as industrial due to emission regulations, so offices and repair shops may be allowed, but no production exhausting smoke or emitting noise)</li>
+<li>residential + business</li>
+<li>residential + trade</li>
+<li>purely residential.</li>
+</ul>
+<p>This is <strong>not</strong> at the discretion of the mapper, but official municipal documentation in a <strong>legally binding land-use plan</strong>.</p>
+<p>Regarding these facts, at least these most common land uses should be reflected in OSM. Especially the mixed cases are very common here.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/42172/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Apr '15, 21:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/74ef8b68851c06264de20d13b649e3b9?s=32&amp;d=identicon&amp;r=g" alt="HolgerJ's gravatar image" />
+    <p><a href="/users/10793/holgerj">HolgerJ</a><br/>
+    <span class="score" title="10 reputation points">10</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="HolgerJ has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/42172/">
+                edited
+                <strong>07 Apr '15, 21:57</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-42172">
+    
+        <a name="42177"></a>
+        <div class="comment" id="comment-42177">
+            <div id="post-42177-score" class="comment-score">1</div>
+            <div class="comment-text"><p>if you want a map from the government, get one from the government. In addition we are not necessarily allowed to use the governmental plans as source!</p></div>
+            <div class="comment-info" id="comment-42177-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Apr '15, 02:11)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-42172" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42172-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/23994/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='HgL1cIVcqyi0jgBf8d3qvmO0SnrFolza' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23994/tagging-landuse-in-downtown-areas?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23994/tagging-landuse-in-downtown-areas?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/city/"
+            class="tag-link-city"
+            title="see questions tagged'city'using tags"
+            rel="tag">city</a> <span class="tag-number">&#215;107</span><br/>
+        
+        <a href="/tags/landuse/"
+            class="tag-link-landuse"
+            title="see questions tagged'landuse'using tags"
+            rel="tag">landuse</a> <span class="tag-number">&#215;103</span><br/>
+        
+        <a href="/tags/centre/"
+            class="tag-link-centre"
+            title="see questions tagged'centre'using tags"
+            rel="tag">centre</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/downtown/"
+            class="tag-link-downtown"
+            title="see questions tagged'downtown'using tags"
+            rel="tag">downtown</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/mixed-use/"
+            class="tag-link-mixed-use"
+            title="see questions tagged'mixed-use'using tags"
+            rel="tag">mixed-use</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 5, 2013, 6:08 a.m.">05 Jul '13, 06:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,550 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 8, 2015, 2:38 a.m.">08 Apr '15, 02:38</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/12762/landuse-commercial">landuse = commercial</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30049/mapping-combined-commercialretail-area">Mapping Combined Commercial/Retail Area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1535/holes-in-scrub-relations-inner-outer">Holes in scrub (relations, inner &amp; outer)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2590/tagging-disused-quarries">Tagging disused quarries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2725/tagging-a-school-playing-field">Tagging a school playing field?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2888/how-to-tag-a-horticultural-plot-of-land">How to tag a horticultural plot of land?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3277/how-should-one-tag-a-playing-field-with-pitches-marked-on-it">How should one tag a playing field with pitches marked on it?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3239/i-see-these-areas-with-striples-in-bing-how-should-i-tag-them">I see these areas with striples in Bing. How should I tag them?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3489/rendering-of-multipolygons-tagged-with-landuse-tags">Rendering of multipolygons tagged with landuse tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2457/what-is-the-easiest-way-of-adding-lots-of-landuse-polygons">What is the easiest way of adding lots of landuse polygons</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

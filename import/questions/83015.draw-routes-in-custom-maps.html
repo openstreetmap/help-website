@@ -1,0 +1,939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Draw routes in custom maps - OSM Help</title>
+        <meta name="description" content="Hi there, my question was asked a couple of times, but none of the answers did the trick for me. What I want: for my trip journal I want to have pictures of the routes I travelled. Lets say I do a trip from Munich to Barcelona, visiting some places in Italy and France on the way. I want to add all v..." />
+        <meta name="keywords" content="umap,osm,maps" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/83015/draw-routes-in-custom-maps" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/83015/draw-routes-in-custom-maps?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zpGi8AZLzWBsXHhtULLIzHghJXCZDvHT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/83015/draw-routes-in-custom-maps">Draw routes in custom maps</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-83015-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83015/up/" rel="nofollow"> </a>
+<div id="post-83015-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-83015-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83015/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/83015/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi there,
+my question was asked a couple of times, but none of the answers did the trick for me.</p>
+<p>What I want: for my trip journal I want to have pictures of the routes I travelled.
+Lets say I do a trip from Munich to Barcelona, visiting some places in Italy and France on the way.
+I want to add all visited places as markers and have them connected as a street route, covering the streets I went.
+Unfortunately, I do not have gpx data, thus, I need to redraw the routes from memory.
+When the map is set up, I want to make a screenshot and add it to my journal.</p>
+<p>Most of the times this question is ask, someone recommends umap.
+However, in umap one can add markers and draw freehand lines and areas, I found no way of connecting markers with routes.
+google mymaps on the other hand explicitly has a button "add route" which allows entering start and destination and even allows do drag and move the route if the routing algo picks the wrong streets.
+As to my understanding, umap does not offer this.</p>
+<p>Am I wrong? Can umap to this?
+If not, how can I achieve this using OSM data?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/umap/" class="post-tag tag-link-umap"
+                                        title="see questions tagged 'umap'" rel="tag">umap</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/maps/" class="post-tag tag-link-maps"
+                                        title="see questions tagged 'maps'" rel="tag">maps</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Jan '22, 10:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9bb6c38085dacfdb1f29293d4659d2a5?s=32&amp;d=identicon&amp;r=g" alt="luge86's gravatar image" />
+    <p><a href="/users/21261/luge86">luge86</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="luge86 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-83015">
+    
+</div>
+<div id="comment-tools-83015" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83015-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/83015/draw-routes-in-custom-maps?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/83015/draw-routes-in-custom-maps?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/83015/draw-routes-in-custom-maps?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/83015/draw-routes-in-custom-maps?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="83021"></a>
+                    <div id="answer-container-83021" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83021-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83021/up/" rel="nofollow"> </a>
+<div id="post-83021-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-83021-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83021/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Have a look at <a href="https://facilmap.org/">FacilMap</a>. It's an easy to use webapp. You can draw routes by clicking and dragging markers. You can also save the routes in a collaborative map.</p>
+<p>Regards.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83021/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jan '22, 12:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/83021/">
+                edited
+                <strong>09 Jan '22, 12:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83021">
+    
+</div>
+<div id="comment-tools-83021" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83021-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="83023"></a>
+                    <div id="answer-container-83023" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83023-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83023/up/" rel="nofollow"> </a>
+<div id="post-83023-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-83023-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83023/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The workflow with uMap is this : </p>
+<ul>
+<li>compute the route with your favorite router. I like brouter for bike trips, graphhopper otherwise.</li>
+<li>export the route, usually as GPX.</li>
+<li>import the gpx in uMap.</li>
+</ul>
+<p>A bit cumbersome indeed.</p>
+<p>Regards.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83023/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jan '22, 12:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83023">
+    
+</div>
+<div id="comment-tools-83023" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83023-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="83017"></a>
+                    <div id="answer-container-83017" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83017-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83017/up/" rel="nofollow"> </a>
+<div id="post-83017-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-83017-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83017/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hello Everybody,
+I am novice on this platform and I am very interested in the answer to the above question.
+Thank you to the one who will help us.
+pmmy49</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83017/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jan '22, 11:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5e06add16c83059348cc94b5bde81e10?s=32&amp;d=identicon&amp;r=g" alt="pmmy49's gravatar image" />
+    <p><a href="/users/21262/pmmy49">pmmy49</a><br/>
+    <span class="score" title="10 reputation points">10</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="pmmy49 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83017">
+    
+        <a name="83022"></a>
+        <div class="comment" id="comment-83022">
+            <div id="post-83022-score" class="comment-score"></div>
+            <div class="comment-text"><p>Please upvote the question, or even add a comment, instead of adding an "answer".</p></div>
+            <div class="comment-info" id="comment-83022-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '22, 12:38)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83017" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83017-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="83019"></a>
+                    <div id="answer-container-83019" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83019-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83019/up/" rel="nofollow"> </a>
+<div id="post-83019-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-83019-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83019/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I suggest that you could use Qgis to do this. Create a gpx track in Alltrails or similar apps and save the gpx and open in Qgis. Add the OpenStreetMap as a background map. Add all your georeferenced photos to Qgis.
+Download the qgis2web plugin to Qgis and use it to export your map to a html file which you can embed in an iframe on the web.
+There are many utube examples on using qgis2web with QGIS and on displaying photos on the web. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83019/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jan '22, 11:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e5674dd96938593e0af5130dfffe0f90?s=32&amp;d=identicon&amp;r=g" alt="nevw's gravatar image" />
+    <p><a href="/users/7380/nevw">nevw</a><br/>
+    <span class="score" title="9843 reputation points"><span class="">9.8k</span></span><span title="26 badges"><span class="badge1">&#9679;</span><span class="badgecount">26</span></span><span title="90 badges"><span class="silver">&#9679;</span><span class="badgecount">90</span></span><span title="178 badges"><span class="bronze">&#9679;</span><span class="badgecount">178</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="nevw has 32 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/83019/">
+                edited
+                <strong>09 Jan '22, 12:19</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83019">
+    
+</div>
+<div id="comment-tools-83019" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83019-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/83015/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zpGi8AZLzWBsXHhtULLIzHghJXCZDvHT' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83015/draw-routes-in-custom-maps?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83015/draw-routes-in-custom-maps?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/umap/"
+            class="tag-link-umap"
+            title="see questions tagged'umap'using tags"
+            rel="tag">umap</a> <span class="tag-number">&#215;314</span><br/>
+        
+        <a href="/tags/maps/"
+            class="tag-link-maps"
+            title="see questions tagged'maps'using tags"
+            rel="tag">maps</a> <span class="tag-number">&#215;126</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 9, 2022, 10:08 a.m.">09 Jan '22, 10:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,133 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 9, 2022, 12:48 p.m.">09 Jan '22, 12:48</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/52701/sattelite-data-update">Sattelite data update?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/69723/edit-map-impossible">[closed] Edit Map Impossible</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites">what is the best solution for creating personalised maps for use on client websites?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40689/easy-and-quick-way-to-add-pois-from-osm-to-umap">easy and quick way to add POIs from OSM to uMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55473/umap-linking-public-data-to-custom-markers-or-surfaces-hosted-in-private-umap-instance">[UMAP] Linking public data to custom markers or surfaces hosted in private UMAP instance</a>
+        </p>
+        
+        <p>
+            <a href="/questions/67768/total-length-of-the-streets">total length of the streets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15608/newbee-how-do-i-download-maps-what-changed">Newbee-How do I download maps?  What changed?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21539/render-kml-10mb-kml-file-cordinates-data-on-osm-map-throws-stop-running-script-error-in-openlayerjs-file">[closed] render kml 10mb KML file cordinates data on OSM map throws stop running script error in OpenLayer.js file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29743/how-to-install-indias-map-for-beon-road-app-for-bada-os-20">[closed] how to install India&#39;s map for BEON ROAD app for BADA os 2.0</a>
+        </p>
+        
+        <p>
+            <a href="/questions/76284/error-403-forbidden-when-trying-to-post-coordenates-to-my-map">Error 403 - Forbidden when trying to post coordenates to my map</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

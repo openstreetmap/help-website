@@ -1,0 +1,845 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Generating OSM png tiles for offline use - OSM Help</title>
+        <meta name="description" content="I&#39;m very new and very confused about how to accomplish a seemingly simple task: generate my own OSM .png tiles for offline use. Since I want to be able to have a huge amount of tiles, I don&#39;t want to load the server by downloading tiles directly from tile.openstreetmap.org. I was using Creating your..." />
+        <meta name="keywords" content="carto,tiles,osm,mapnik,generate_tiles" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/70014/generating-osm-png-tiles-for-offline-use" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/70014/generating-osm-png-tiles-for-offline-use?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='TSfP4okbO0lWvjWUW3j6GlphgDNYKnuv' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/70014/generating-osm-png-tiles-for-offline-use">Generating OSM png tiles for offline use</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-70014-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70014/up/" rel="nofollow"> </a>
+<div id="post-70014-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-70014-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70014/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/70014/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm very new and very confused about how to accomplish a seemingly simple task: generate my own OSM .png tiles for offline use. Since I want to be able to have a huge amount of tiles, I don't want to load the server by downloading tiles directly from <code>tile.openstreetmap.org</code>.</p>
+<p>I was using <a href="https://wiki.openstreetmap.org/wiki/Creating_your_own_tiles#Creating_tiles_using_Mapnik_and_generate_tiles.py">Creating your own tiles</a>, but learned that this method is outdated with the new styling method: <a href="https://github.com/openstreetmap/mapnik-stylesheets/issues/15">mapnik-stylesheets issue #15</a></p>
+<p>Since this is all new to me, I'm quite confused at the sheer number of methods and tools I've seen recommended to download, format, and render OSM tiles. As far as my progress, here are the steps I have taken:</p>
+<ol>
+<li>Created a Postgres database named <code>gis</code>, enabling the <code>postgis</code> and <code>hstore</code> extensions</li>
+<li>Downloaded <code>arizona-latest.osm.pbf</code> from <a href="https://download.geofabrik.de/north-america.html">https://download.geofabrik.de/north-america.html</a></li>
+<li>Used <code>osm2pgsql</code> to import <code>arizona-latest.osm.pbf</code> into the Postgres database <code>gis</code>: <code>osm2pgsql -G --hstore --style openstreetmap-carto.style --tag-transform-script openstreetmap-carto.lua -d gis --slim --flat-nodes /home/user/nodes.cache --cache 5000 /home/user/downloads/arizona-latest.osm.pbf</code></li>
+<li>Generated shapefiles using <code>scripts/get-shapefiles.py</code> in the <code>openstreetmap-carto</code> directory</li>
+<li>Created <code>osm.xml</code> by running <code>carto project.mml &gt; osm.xml</code></li>
+<li>Successfully generated an image using <code>generate_image.py</code> from the outdated <code>mapnik-stylesheets</code> with warnings about failing to understand the new <code>carto</code> xml format.</li>
+<li>Failed to generate tiles using <code>generate_tiles.py</code> from the outdated <code>mapnik-stylesheets</code> with the same errors from <code>generate_image.py</code>.</li>
+</ol>
+<p>I'm at a loss at where to go from here with my current understanding of how this all works. If anyone can point me in the right direction, I'd greatly appreciate it.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/carto/" class="post-tag tag-link-carto"
+                                        title="see questions tagged 'carto'" rel="tag">carto</a>
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                                    <a href="/tags/generate_tiles/" class="post-tag tag-link-generate_tiles"
+                                        title="see questions tagged 'generate_tiles'" rel="tag">generate_tiles</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Jul '19, 00:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/705ee46fd6a481b68447d9311e9c0647?s=32&amp;d=identicon&amp;r=g" alt="Karmic%20Creditor's gravatar image" />
+    <p><a href="/users/16912/karmic-creditor">Karmic Creditor</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Karmic Creditor has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-70014">
+    
+</div>
+<div id="comment-tools-70014" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70014-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/70014/generating-osm-png-tiles-for-offline-use?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/70014/generating-osm-png-tiles-for-offline-use?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/70014/generating-osm-png-tiles-for-offline-use?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/70014/generating-osm-png-tiles-for-offline-use?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="70015"></a>
+                    <div id="answer-container-70015" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-70015-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70015/up/" rel="nofollow"> </a>
+<div id="post-70015-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-70015-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70015/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Karmic Creditor has selected this answer as the correct answer"
+        href="/accept_answer/70015/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>What I'd suggest is:</p>
+<ul>
+<li>Set up a tile server as per <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">the switch2osm guide</a>.</li>
+<li>Follow <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1804_tileserver_load#Force_Rendering_Tiles">this diary entry</a> to generate tiles.</li>
+</ul>
+<p>The problem with generate_tiles.py is that it'll complain about unused font definitions in the stylesheet.</p>
+<p>Edit:  As noted below this will generate metatiles, not .png tiles, which probably isn't the best route here.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/70015/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Jul '19, 00:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/70015/">
+                edited
+                <strong>13 Jul '19, 11:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-70015">
+    
+        <a name="70016"></a>
+        <div class="comment" id="comment-70016">
+            <div id="post-70016-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I did have to edit the <code>osm.xml</code> to remove all fonts except <code>Deja Vu Sans</code> because of the complaining. The errors/warnings I get when running the scripts are similar to <code>attribute 'maximum-scale-denominator' with value '100000' at line 0</code>, which, if I understand correctly, is because of the new styles used by OSM. I will try your method and report back.</p></div>
+            <div class="comment-info" id="comment-70016-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '19, 00:58)</span>
+                <a class="comment-user userinfo" href="/users/16912/karmic-creditor">Karmic Creditor</a>
+                
+            </div>
+        </div>
+    
+        <a name="70020"></a>
+        <div class="comment" id="comment-70020">
+            <div id="post-70020-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a></p>
+
+<p>The method you suggested works great. One thing I'm curious about is the diary entry you mentioned. When calling <code>render_list</code>, it seems to create <code>.meta</code> files. Does this produce <code>.png</code> files somewhere I'm not looking?</p></div>
+            <div class="comment-info" id="comment-70020-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '19, 06:01)</span>
+                <a class="comment-user userinfo" href="/users/16912/karmic-creditor">Karmic Creditor</a>
+                
+            </div>
+        </div>
+    
+        <a name="70033"></a>
+        <div class="comment" id="comment-70033">
+            <div id="post-70033-score" class="comment-score">2</div>
+            <div class="comment-text"><p>.meta files are containers that contain 64 PNG files each. To extract .png from .meta, either run mod_tile in your Apache web server and run lots and lots of "wget" or "curl" commands against your own web server, or use <a href="https://github.com/geofabrik/meta2tile">https://github.com/geofabrik/meta2tile</a> to go from meta to png without mod_tile/Apache.</p></div>
+            <div class="comment-info" id="comment-70033-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '19, 10:01)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="70035"></a>
+        <div class="comment" id="comment-70035">
+            <div id="post-70035-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It sounds like you're nearly there - just one comment about "I did have to edit the osm.xml to remove all fonts except Deja Vu Sans because of the complaining":</p>
+
+<p>You might find it easier to edit the stylesheet (the thing you run "carto" on) rather than editing the generated .xml directly.  If you can find out what's causing the problem you can probably edit it out in one place in a .mss file rather than many from the generated .xml.</p></div>
+            <div class="comment-info" id="comment-70035-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '19, 11:15)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="70041"></a>
+        <div class="comment" id="comment-70041">
+            <div id="post-70041-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you two for the help. I will use meta2tile when the render_list completes</p></div>
+            <div class="comment-info" id="comment-70041-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '19, 12:14)</span>
+                <a class="comment-user userinfo" href="/users/16912/karmic-creditor">Karmic Creditor</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-70015" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70015-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="79278"></a>
+                    <div id="answer-container-79278" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79278-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79278/up/" rel="nofollow"> </a>
+<div id="post-79278-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-79278-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79278/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>(Two years later) You could also use my beefed up version of <a href="https://github.com/StyXman/osm-tile-tools/"><code>generate_tiles.py</code></a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79278/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Mar '21, 20:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e4587465b2b1b94834e5e625b80a29dd?s=32&amp;d=identicon&amp;r=g" alt="Marcos%20Dione's gravatar image" />
+    <p><a href="/users/15564/marcos-dione">Marcos Dione</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Marcos Dione has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79278">
+    
+</div>
+<div id="comment-tools-79278" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79278-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/70014/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='TSfP4okbO0lWvjWUW3j6GlphgDNYKnuv' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70014/generating-osm-png-tiles-for-offline-use?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70014/generating-osm-png-tiles-for-offline-use?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+        <a href="/tags/generate_tiles/"
+            class="tag-link-generate_tiles"
+            title="see questions tagged'generate_tiles'using tags"
+            rel="tag">generate_tiles</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/carto/"
+            class="tag-link-carto"
+            title="see questions tagged'carto'using tags"
+            rel="tag">carto</a> <span class="tag-number">&#215;23</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 13, 2019, 12:23 a.m.">13 Jul '19, 00:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>18,725 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 15, 2021, 8:38 p.m.">15 Mar '21, 20:38</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/84596/how-to-download-free-xyz-maptiles-bmp-or-jpg-image">How to Download Free XYZ MapTiles BMP OR JPG Image</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26249/tiles-for-hires-device">Tiles for hires device</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62785/edit-osm-and-make-some-changes-on-nominatim-addresses-and-create-custom-map">Edit OSM and make some changes on nominatim addresses and create custom map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/87585/tiles-not-displaying-on-tile-server">Tiles not displaying on tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33317/osm-tiles-png-generation">OSM Tiles (png) generation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8849/how-to-force-mapnik-render-only-not-empty-tiles">How to force mapnik render only not empty tiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8506/mapnik-image-generations-returns-error">mapnik image generations returns error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10417/how-to-render-tiles-for-india-map">How to render tiles for India Map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7654/creating-png-tiles-for-all-zoom-levels">Creating PNG tiles for all zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7916/mapnik-ubuntu">Mapnik, Ubuntu</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

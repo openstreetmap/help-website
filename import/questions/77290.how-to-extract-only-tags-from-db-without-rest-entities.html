@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to extract only tags from DB without rest entities - OSM Help</title>
+        <meta name="description" content="The problem which I faced is quite complex. I work with OSM editor where I can override some ways properties. Those properties are tags called &quot;maxspeed:backward&quot; and &quot;maxspeed:forward&quot;. Sometimes I want to update my local map with OSM official data (new roads, roads under constructions etc.).  What..." />
+        <meta name="keywords" content="filter,merge,osmfilter,osmosis,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/77290/how-to-extract-only-tags-from-db-without-rest-entities" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/77290/how-to-extract-only-tags-from-db-without-rest-entities?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FSMa7FjcRrQl3L596u4HdoAzrJ8HhxUz' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/77290/how-to-extract-only-tags-from-db-without-rest-entities">How to extract only tags from DB without rest entities</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-77290-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/77290/up/" rel="nofollow"> </a>
+<div id="post-77290-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-77290-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/77290/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/77290/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>The problem which I faced is quite complex. I work with OSM editor where I can override some ways properties. Those properties are tags called "maxspeed:backward" and "maxspeed:forward".
+Sometimes I want to update my local map with OSM official data (new roads, roads under constructions etc.). <br>
+What I want is to merge my local map with official osm to keep all road and nodes changes from official source but keep my tags with values from editor. I work with Postgres DB, osmosis (merge tool), osmfilter and osmconvert tools.<br><br>
+This is process which I found out:
+<br>1. Take my local map from editor and filter out only tags. With no nodes, ways, relations.
+<br>2. Take official OSM map and filter out only tags (the same as step 1)
+<br>3. Merge those sources with osmosis with conflictResult strategy - my local tag values override official OSM map.
+<br>4. Again take official OSM map but now I drop tags, so I get full map without tags I'm using.
+<br>5. Merge result from step 3 (correct tags and values) with result from step 4 (official map without tags) with conflictResult strategy - official map nodes override my local.
+<br> <br>
+What I want to achieve is go teg most current map with my own tags.
+<br>I have a problem with step 1. Can I retrieve from DB ONLY tags? Without any nodes or another informations which could override official map in step 5? What I can see in DB tags are placed in separate table and has got reference to whe <code>way_id</code>, so if I merge that values with another source with the same <code>way_id</code>.<br><br>
+What I try with osmfilter is: <br>
+<code>./osmfilter $EDITED_OSM_NAME --keep-tags="all maxspeed:backward= maxspeed:forward= maxspeed="  -o=$EDITED_OSM_TAGS</code> <br>
+It filter correctly- only listed tags are in output pbf file, but is there any possibility to retreive them without any nodes,ways,relations etc?
+<br>
+<br> I have also tried something with <br><code>--drop-relations</code>,<code>--drop-ways</code>,<code>--drop-nodes</code>, <code>--ignore-dependencies</code> but it didn't work the way I wish.
+<br><br>Thank you in advance for help.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/filter/" class="post-tag tag-link-filter"
+                                        title="see questions tagged 'filter'" rel="tag">filter</a>
+                                
+                                    <a href="/tags/merge/" class="post-tag tag-link-merge"
+                                        title="see questions tagged 'merge'" rel="tag">merge</a>
+                                
+                                    <a href="/tags/osmfilter/" class="post-tag tag-link-osmfilter"
+                                        title="see questions tagged 'osmfilter'" rel="tag">osmfilter</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Oct '20, 14:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/735ed8c1abf1a1f7b907b78d9594303c?s=32&amp;d=identicon&amp;r=g" alt="engopy's gravatar image" />
+    <p><a href="/users/19203/engopy">engopy</a><br/>
+    <span class="score" title="126 reputation points">126</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="engopy has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/77290/">
+                edited
+                <strong>29 Oct '20, 09:20</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-77290">
+    
+</div>
+<div id="comment-tools-77290" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-77290-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/77290/how-to-extract-only-tags-from-db-without-rest-entities?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/77290/how-to-extract-only-tags-from-db-without-rest-entities?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/77290/how-to-extract-only-tags-from-db-without-rest-entities?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/77290/how-to-extract-only-tags-from-db-without-rest-entities?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="77318"></a>
+                    <div id="answer-container-77318" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-77318-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/77318/up/" rel="nofollow"> </a>
+<div id="post-77318-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-77318-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/77318/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hello! Try to use QGis, I once found instructions in yuotube on how to sort and unload certain tags, try to search, if you can't find it, I'll try to find it then and send it exactly where I saw it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/77318/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Oct '20, 08:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bfd43e5ecd2d06a1e20975a1e024514?s=32&amp;d=identicon&amp;r=g" alt="Viki_travel_weak's gravatar image" />
+    <p><a href="/users/16848/viki_travel_weak">Viki_travel_...</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Viki_travel_weak has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-77318">
+    
+</div>
+<div id="comment-tools-77318" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-77318-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="77393"></a>
+                    <div id="answer-container-77393" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-77393-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/77393/up/" rel="nofollow"> </a>
+<div id="post-77393-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-77393-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/77393/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Maybe my answer will be valuable for anyone who faces the same problem.<br>
+Just to remind, I want to download official OSM map but keep my local informations (in my case <code>maxspeed</code> tags).<br>
+Process which I wrote goes like this:<br>
+1) When my current changes are saved in local OSM editor, than I run my SQL script directly on Postgres database. That script export all tags from <code>maxspeed</code>, <code>maxspedd:forward</code>, <code>maxspeed:backward</code> from <code>way_tags</code> table to the CSV file.</p>
+<hr>
+<pre><code>CREATE TABLE IF NOT EXISTS temp_tags (LIKE way_tags);
+ALTER TABLE temp_tags 
+ADD COLUMN IF NOT EXISTS ah_edited boolean default TRUE;
+
+ALTER TABLE way_tags
+ADD COLUMN IF NOT EXISTS ah_edited boolean DEFAULT FALSE;
+
+
+COPY 
+  (SELECT DISTINCT ON(way_id, k)
+  way_tags.way_id, way_tags.k, way_tags.v, way_tags.version, way_tags.ah_edited
+  FROM way_tags
+  JOIN ways ON way_tags.way_id = ways.way_id AND way_tags.version = ways.version
+  JOIN changesets on ways.changeset_id=changesets.id
+  JOIN users ON changesets.user_id=users.id
+  WHERE (k like 'maxspeed:backward'
+         OR k like 'maxspeed:forward'
+         OR k like 'maxspeed')
+  AND ((users.email like '%admin.com%' AND ways.changeset_id != 0)
+        OR way_tags.ah_edited = TRUE)
+  ORDER BY way_id, k, version desc)  TO STDOUT (format csv, delimiter ';', header false);
+
+ALTER TABLE way_tags
+DROP COLUMN IF EXISTS ah_edited;
+
+DROP TABLE IF EXISTS temp_tags;
+</code></pre>
+<hr>
+<p>As some can notice I use additional column <code>ah_edited</code> just to keep information that information is my edited one and should overwrite the "world" data if exists with the same tag.<br>
+After doing SAVE in OSM editor, in fact we save two copies of the same tags but with different version and incremented <code>changeset_id</code> - that's why I look for tags which has that value !=0, and I use DISTINCT ON function which returns higher version value (after my modifications).<br>
+Thanks to that I got an CSV with my tags which I want to keep in the future downloaded map.<br><br>
+ 2) Truncate DB<br>
+3) Download latest map version from geofabrik.de<br>
+4) Upload map to the database<br></p>
+<p><em>Here lets pause for a moment<br>Our data we can divide into two groups -&gt; completely new tags for some ways, and already existing in official maps but our values should overwrite them. That's why I divided that process into two parts.</em><br><br>
+5) Insert new values to the DB
+    --  Get table to the original structure</p>
+<pre><code>ALTER TABLE way_tags
+ADD COLUMN IF NOT EXISTS ah_edited boolean default FALSE;
+
+--  Create temp table from CSV which holds pre-merge changes
+CREATE TABLE IF NOT EXISTS temp_tags (LIKE way_tags);
+
+COPY temp_tags(way_id, k, v, version, ah_edited) FROM '/home/map-data/exportedTags.csv'     (FORMAT csv, delimiter ';', header false);
+
+--  Add edidtion column to the way_tags and insert unique values which only AH added
+
+INSERT INTO way_tags (way_id, k, v, version, ah_edited)
+SELECT temp_tags.way_id, temp_tags.k, temp_tags.v, w.version, temp_tags.ah_edited  
+FROM temp_tags 
+FULL JOIN way_tags ON temp_tags.way_id = way_tags.way_id AND temp_tags.k like way_tags.k
+JOIN ways w ON w.way_id = temp_tags.way_id
+WHERE way_tags.way_id IS NULL;
+
+--  DROP temp table from CSV which holds pre-merge changes
+DROP TABLE public.temp_tags;
+</code></pre>
+<p><br>
+6) Next we update already existing values
+    CREATE TABLE IF NOT EXISTS temp_tags (LIKE way_tags);
+    ALTER TABLE temp_tags 
+    ADD COLUMN IF NOT EXISTS ah_edited boolean default true;</p>
+<pre><code>COPY temp_tags(way_id, k, v, version, ah_edited) FROM '/home/map-data/exportedTags.csv' (FORMAT csv, delimiter ';', header false);
+
+UPDATE temp_tags SET ah_edited= TRUE;
+
+
+--  Add edidtion column to the way_tags and insert unique values which only AH added
+
+ALTER TABLE way_tags
+ADD COLUMN IF NOT EXISTS ah_edited boolean default FALSE;
+
+UPDATE way_tags 
+SET v=csv_source.v, ah_edited = true
+FROM  temp_tags csv_source 
+WHERE csv_source.way_id = way_tags.way_id
+AND csv_source.k like way_tags.k
+AND csv_source.ah_edited = true;
+
+--  DROP temp table from CSV which holds pre-merge changes
+DROP TABLE public.temp_tags;
+</code></pre>
+<p><br>
+<em>I know that I create and drop temporal tables every time, but every script is written to be executable independly</em><br>
+Almost done. Thanks to that We have got our datas in DB but... are not visible in editor. During read process PBF to the editor some inner structures are created that's why We need to save our map to the PBF file and reaload again.<br>
+And again little problem... OSM doesn't know our <code>ah_edited</code> column values. He will restore column, but not values. That way I need to run one little script:<br></p>
+<pre><code>--  Create temp table from CSV which holds pre-merge changes
+CREATE TABLE IF NOT EXISTS temp_tags (LIKE way_tags);
+
+ALTER TABLE temp_tags 
+ADD COLUMN IF NOT EXISTS ah_edited boolean default TRUE;
+
+COPY temp_tags(way_id, k, v, version, ah_edited) FROM '/home/map-data/exportedTags.csv' (FORMAT csv, delimiter ';', header false);
+
+--  Add edidtion column to the way_tags and insert unique values which only AH added
+
+ALTER TABLE way_tags
+ADD COLUMN IF NOT EXISTS ah_edited boolean default FALSE;
+
+UPDATE way_tags 
+SET ah_edited = true
+FROM  temp_tags
+WHERE way_tags.way_id = temp_tags.way_id
+AND way_tags.k = temp_tags.k;
+
+--  DROP temp table from CSV which holds pre-merge changes
+DROP TABLE public.temp_tags;
+</code></pre>
+<p>Voila! Done. We have new OSM map with our custom tags transferred.
+<br>
+Additional information. I use additional column <code>ah_edited</code> to keep information for the further process that one specific values are edited by me, and I want it to be exported into CSV in the future. After that process, our changeset_id values are set to 0 so we don't have any current information which informations were changed by me as owner -&gt; that's why I use <code>ah_edited</code> column.<br><br>
+P.S. I know it's complicated, but it works and I couldn't find any answer for my question.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/77393/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Nov '20, 11:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/735ed8c1abf1a1f7b907b78d9594303c?s=32&amp;d=identicon&amp;r=g" alt="engopy's gravatar image" />
+    <p><a href="/users/19203/engopy">engopy</a><br/>
+    <span class="score" title="126 reputation points">126</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="engopy has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/77393/">
+                edited
+                <strong>04 Nov '20, 11:10</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-77393">
+    
+</div>
+<div id="comment-tools-77393" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-77393-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/77290/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FSMa7FjcRrQl3L596u4HdoAzrJ8HhxUz' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/77290/how-to-extract-only-tags-from-db-without-rest-entities?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/77290/how-to-extract-only-tags-from-db-without-rest-entities?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/filter/"
+            class="tag-link-filter"
+            title="see questions tagged'filter'using tags"
+            rel="tag">filter</a> <span class="tag-number">&#215;66</span><br/>
+        
+        <a href="/tags/osmfilter/"
+            class="tag-link-osmfilter"
+            title="see questions tagged'osmfilter'using tags"
+            rel="tag">osmfilter</a> <span class="tag-number">&#215;60</span><br/>
+        
+        <a href="/tags/merge/"
+            class="tag-link-merge"
+            title="see questions tagged'merge'using tags"
+            rel="tag">merge</a> <span class="tag-number">&#215;41</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 28, 2020, 2:45 p.m.">28 Oct '20, 14:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,953 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 4, 2020, 11:10 a.m.">04 Nov '20, 11:10</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/41392/how-best-to-filter-main-roads-highways-from-a-large-pbf-file">How best to filter &#39;main&#39; roads (highways) from a large PBF file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77109/translate-josm-filter-to-osmosisosmfilter">Translate JOSM Filter to Osmosis/Osmfilter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30952/osmosis-filter-for-certain-ways-and-nodes">Osmosis: Filter for certain ways and nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24838/diffpatch-osm-files-using-foreign-key">Diff/patch .osm files using foreign key</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28117/filter-out-data-that-have-been-edited-after-some-timestamp">Filter out data that have been edited after some timestamp</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29597/write-error-when-filtering-nodes-with-osmfilter-on-windows">Write error when filtering nodes with osmfilter on Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12469/osmosis-merge-issue-pipeline-entities-are-not-sorted-or-contain-multiple-versions">Osmosis - merge issue (Pipeline entities are not sorted or contain multiple versions)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9553/it-is-possible-hide-hotels-and-restaurants-on-extracted-maps">It is possible hide Hotels And Restaurants? (on extracted maps)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22547/data-disappearing-in-osmosis-tag-filter-powerline">Data disappearing in Osmosis Tag Filter (power=line)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19904/merging-osm-files-with-osmosis-and-import-to-postgres-with-osm2pgsql">Merging OSM files with OSMOSIS and import to Postgres with OSM2PGSQL</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

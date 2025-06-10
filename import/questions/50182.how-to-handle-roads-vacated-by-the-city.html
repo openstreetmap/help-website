@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to handle roads vacated by the city? - OSM Help</title>
+        <meta name="description" content="It&#39;s not uncommon in St. Louis, MO for the city to vacate the public surface rights of a city street and grant use to a private organization. One such example can be seen at Indiana Ave between Potomac and Miami: http://www.openstreetmap.org/?mlat=38.59053&amp;amp;mlon=-90.22482#map=17/38.59053/-90.2248..." />
+        <meta name="keywords" content="closed_way,access,private,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/50182/how-to-handle-roads-vacated-by-the-city" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/50182/how-to-handle-roads-vacated-by-the-city?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='yDnd2pAG4juEvpdX4Or72zgp2UsNrr4g' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/50182/how-to-handle-roads-vacated-by-the-city">How to handle roads vacated by the city?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-50182-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50182/up/" rel="nofollow"> </a>
+<div id="post-50182-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-50182-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50182/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/50182/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>It's not uncommon in St. Louis, MO for the city to vacate the public surface rights of a city street and grant use to a private organization. One such example can be seen at Indiana Ave between Potomac and Miami:</p>
+<p><a href="http://www.openstreetmap.org/?mlat=38.59053&amp;mlon=-90.22482#map=17/38.59053/-90.22482&amp;layers=N">http://www.openstreetmap.org/?mlat=38.59053&amp;mlon=-90.22482#map=17/38.59053/-90.22482&amp;layers=N</a></p>
+<p>A fence now stands at both ends of the block. I could simply mark these streets "private," but, while a street nominally still exists at this location, there's no longer actually any type of traffic on it (private or otherwise). In addition, the organization that's been given use is now free to do whatever they want with it. There are many other instances in the city where the street is turned into green space or has a structure erected upon it. In any case, it's unlikely that this will ever again be a part of the street grid.</p>
+<p>Should I remove these altogether? Tag them as private? Any other ideas? I recently tagged a group of such streets at another site as <code>access=no</code> but I wanted to check for some consensus before I move forward with any others. You can see those changes here:</p>
+<p><a href="http://www.openstreetmap.org/changeset/39914456">http://www.openstreetmap.org/changeset/39914456</a></p>
+<p>For the curious, here is the board bill that vacated the street in my first example (PDF):</p>
+<p><a href="https://www.stlouis-mo.gov/internal-apps/legislative/upload/Ordinances/BOAPdf/66263x00.pdf">https://www.stlouis-mo.gov/internal-apps/legislative/upload/Ordinances/BOAPdf/66263x00.pdf</a></p>
+<p>I wonder, tangentially, if any of you have seen this sort of thing in other cities. I imagine it must be common in other places that have seen similar population losses.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/closed_way/" class="post-tag tag-link-closed_way"
+                                        title="see questions tagged 'closed_way'" rel="tag">closed_way</a>
+                                
+                                    <a href="/tags/access/" class="post-tag tag-link-access"
+                                        title="see questions tagged 'access'" rel="tag">access</a>
+                                
+                                    <a href="/tags/private/" class="post-tag tag-link-private"
+                                        title="see questions tagged 'private'" rel="tag">private</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Jun '16, 19:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bc6023f6fc4754cdc48990821c02d063?s=32&amp;d=identicon&amp;r=g" alt="lwburk's gravatar image" />
+    <p><a href="/users/12416/lwburk">lwburk</a><br/>
+    <span class="score" title="96 reputation points">96</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="lwburk has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-50182">
+    
+        <a name="50272"></a>
+        <div class="comment" id="comment-50272">
+            <div id="post-50272-score" class="comment-score">2</div>
+            <div class="comment-text"><p>It really depends on the specific situation. Is it still possible to use this street, e.g. by employers, emergency vehicles, mail service, garbage collection etc.? If not, is it still allowed to walk or cycle along the street?</p></div>
+            <div class="comment-info" id="comment-50272-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '16, 09:18)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="50289"></a>
+        <div class="comment" id="comment-50289">
+            <div id="post-50289-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah, that's a good point. In almost all of these cases the street turns into a private way for employees of the organization that petitioned for the closure. There are other cases, too, but that's the most common situation.</p></div>
+            <div class="comment-info" id="comment-50289-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '16, 18:16)</span>
+                <a class="comment-user userinfo" href="/users/12416/lwburk">lwburk</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50182" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50182-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/50182/how-to-handle-roads-vacated-by-the-city?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/50182/how-to-handle-roads-vacated-by-the-city?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/50182/how-to-handle-roads-vacated-by-the-city?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/50182/how-to-handle-roads-vacated-by-the-city?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="50186"></a>
+                    <div id="answer-container-50186" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50186-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50186/up/" rel="nofollow"> </a>
+<div id="post-50186-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-50186-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50186/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="lwburk has selected this answer as the correct answer"
+        href="/accept_answer/50186/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If it still physically looks like a street but public access is not allowed, I'd mark it <code>access=no</code> or <code>access=private</code>. I assume to keep the public out some sort of barrier like a fence or gate has been installed at either end which should be added.</p>
+<p>If it no longer looks like a street, maybe the pavement has been removed and gardens or some other linear feature has been built, then I'd remove the OSM way and then map what has replaced it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50186/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Jun '16, 23:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f60af53a4eba0c21f25c22674fb4a8cc?s=32&amp;d=identicon&amp;r=g" alt="n76's gravatar image" />
+    <p><a href="/users/5918/n76">n76</a><br/>
+    <span class="score" title="10839 reputation points"><span class="">10.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="82 badges"><span class="silver">&#9679;</span><span class="badgecount">82</span></span><span title="172 badges"><span class="bronze">&#9679;</span><span class="badgecount">172</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="n76 has 48 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50186">
+    
+        <a name="50187"></a>
+        <div class="comment" id="comment-50187">
+            <div id="post-50187-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5918/stf">@stf</a>: but if it IS (use and look) not a street (for anybody), like lwburk tells, why tag it as street?</p></div>
+            <div class="comment-info" id="comment-50187-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jun '16, 23:25)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="50190"></a>
+        <div class="comment" id="comment-50190">
+            <div id="post-50190-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Your favorite satellite view will show that (in this particular case) the pavement still exists. There is no general case. Sometimes the old street remains; sometimes it doesn't. There is a closure before the board right now that would replace a downtown block with a dog park and some parking spaces. So I assume that the context matters.</p></div>
+            <div class="comment-info" id="comment-50190-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '16, 00:39)</span>
+                <a class="comment-user userinfo" href="/users/12416/lwburk">lwburk</a>
+                
+            </div>
+        </div>
+    
+        <a name="50191"></a>
+        <div class="comment" id="comment-50191">
+            <div id="post-50191-score" class="comment-score"></div>
+            <div class="comment-text"><p><em>Many</em> of these are to close the street grid off to the public in industrial centers. In those cases the roads remain very much in use, but only for employees of those businesses. But they close for many other reasons. Declining cities appear almost desperate in their attempts to appease the remaining organizations, often at the cost of the public good.</p></div>
+            <div class="comment-info" id="comment-50191-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '16, 00:41)</span>
+                <a class="comment-user userinfo" href="/users/12416/lwburk">lwburk</a>
+                
+            </div>
+        </div>
+    
+        <a name="50271"></a>
+        <div class="comment" id="comment-50271">
+            <div id="post-50271-score" class="comment-score">3</div>
+            <div class="comment-text"><p>A road in an industrial center that's in use only for employees sounds like "highway=service" + "access=private".</p></div>
+            <div class="comment-info" id="comment-50271-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '16, 08:19)</span>
+                <a class="comment-user userinfo" href="/users/11913/carnildo">Carnildo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50186" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50186-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="50188"></a>
+                    <div id="answer-container-50188" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50188-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50188/up/" rel="nofollow"> </a>
+<div id="post-50188-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-50188-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50188/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Depending on how the road is used now, I would go for <code>disused:highway=residential</code> + <code>highway=footway</code> (or something, maybe <code>highway=service</code>). I guess an additional <code>access=private</code> + <code>foot=permissive</code> would be reasonable here. Do NOT use <code>access=no</code> since you easily forget people who are still allowed to use it. And map the fence barriers (with accompanying) access tags.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50188/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Jun '16, 23:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/50188/">
+                edited
+                <strong>14 Jun '16, 06:25</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50188">
+    
+</div>
+<div id="comment-tools-50188" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50188-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/50182/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='yDnd2pAG4juEvpdX4Or72zgp2UsNrr4g' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50182/how-to-handle-roads-vacated-by-the-city?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50182/how-to-handle-roads-vacated-by-the-city?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/access/"
+            class="tag-link-access"
+            title="see questions tagged'access'using tags"
+            rel="tag">access</a> <span class="tag-number">&#215;98</span><br/>
+        
+        <a href="/tags/private/"
+            class="tag-link-private"
+            title="see questions tagged'private'using tags"
+            rel="tag">private</a> <span class="tag-number">&#215;51</span><br/>
+        
+        <a href="/tags/closed_way/"
+            class="tag-link-closed_way"
+            title="see questions tagged'closed_way'using tags"
+            rel="tag">closed_way</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 13, 2016, 7:12 p.m.">13 Jun '16, 19:12</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,109 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 17, 2016, 6:16 p.m.">17 Jun '16, 18:16</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/4737/best-practices-for-applying-accessprivate">Best practices for applying access=private?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42103/tagging-limited-access-on-a-service-road">Tagging Limited Access on a Service Road</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7038/tagging-roads-with-traffic-type-dependent-access-restrictions">Tagging roads with traffic type dependent access restrictions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6071/no-entry-sign-at-end-of-two-way-street-how-to-tag">No entry sign at end of two-way street... how to tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/153/how-do-you-tell-if-a-minor-service-road-is-accessprivate-destination-or-permissive">How do you tell if a minor service road is access=private, destination, or permissive?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/162/how-do-i-tag-ways-with-partial-access">How do I tag ways with partial access?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/310/how-do-you-tag-gates-that-are-open-most-of-the-time">How do you tag gates that are open most of the time?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/170/does-the-legal-status-of-a-road-public-or-private-ownership-always-matter-when-dealing-with-access-tags">Does the legal status of a road (public or private ownership) always matter when dealing with access tags?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4817/how-to-tag-a-fire-department-controlled-gate">How to tag a fire department-controlled gate?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6237/how-to-tag-that-a-path-is-impassable-for-bikes">How to tag that a path is impassable for bikes?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

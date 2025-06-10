@@ -1,0 +1,872 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Determining the identity of features? - OSM Help</title>
+        <meta name="description" content="If I map a trail with a GPS am I permitted to determine from, say, an OS map whether it is classed as a bridleway or as public footpath in order to tag it correctly in OSM? Similarly if I map the perimeter of a pond or lake can I determine the name of the lake from an OS map for tagging in OSM? In s..." />
+        <meta name="keywords" content="name,copyright" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/1286/determining-the-identity-of-features" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/1286/determining-the-identity-of-features?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='siEzq0C7xPEA2oWYa9zEulneNxlzuKwG' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/1286/determining-the-identity-of-features">Determining the identity of features?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-1286-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1286/up/" rel="nofollow"> </a>
+<div id="post-1286-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-1286-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1286/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/1286/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>If I map a trail with a GPS am I permitted to determine from, say, an OS map whether it is classed as a bridleway or as public footpath in order to tag it correctly in OSM? Similarly if I map the perimeter of a pond or lake can I determine the name of the lake from an OS map for tagging in OSM?</p>
+<p>In summary I'm asking the validity of determining the "identity" of a feature from  "official" sources but not actually mapping the feature from those sources.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/name/" class="post-tag tag-link-name"
+                                        title="see questions tagged 'name'" rel="tag">name</a>
+                                
+                                    <a href="/tags/copyright/" class="post-tag tag-link-copyright"
+                                        title="see questions tagged 'copyright'" rel="tag">copyright</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Oct '10, 17:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/956d6fda0f51e8001832540fa2c716a5?s=32&amp;d=identicon&amp;r=g" alt="vagabond's gravatar image" />
+    <p><a href="/users/351/vagabond">vagabond</a><br/>
+    <span class="score" title="195 reputation points">195</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="vagabond has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/1286/">
+                edited
+                <strong>25 Oct '10, 15:29</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dee41dcf0aa0c08cf6b0eb935b7504b7?s=32&amp;d=identicon&amp;r=g" alt="TomH's gravatar image" />
+            <p><a href="/users/1/tomh">TomH ♦♦</a><br/>
+            <span class="score" title="3325 reputation points"><span class="">3.3k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="43 badges"><span class="bronze">&#9679;</span><span class="badgecount">43</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-1286">
+    
+        <a name="2822"></a>
+        <div class="comment" id="comment-2822">
+            <div id="post-2822-score" class="comment-score"></div>
+            <div class="comment-text"><p>your question as promoted me to ask one about the Definitive map.the answer may help us all</p></div>
+            <div class="comment-info" id="comment-2822-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '11, 09:15)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1286" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1286-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/1286/determining-the-identity-of-features?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/1286/determining-the-identity-of-features?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/1286/determining-the-identity-of-features?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/1286/determining-the-identity-of-features?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="1287"></a>
+                    <div id="answer-container-1287" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1287-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1287/up/" rel="nofollow"> </a>
+<div id="post-1287-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-1287-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1287/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>No, I'm afraid you're not permitted to do this. If all OSM contributors did this then a substantial part of the rights in the map would be deemed to belong to the Ordnance Survey (or whoever).</p>
+<p>Instead, you should use on-the-ground evidence such as signs, and your own personal knowledge. OSM is an iterative map - it gets better over time through the attention of many contributors - so don't be scared of making an educated guess (for example, the regular presence of horses might suggest it's a bridleway rather than a footpath) and adding a little 'note' tag to say so.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1287/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Oct '10, 18:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1287">
+    
+        <a name="2818"></a>
+        <div class="comment" id="comment-2818">
+            <div id="post-2818-score" class="comment-score"></div>
+            <div class="comment-text"><p>I thought the purpose of the definitive map (held by local authority) was to check the status of rights way either foot path, bridal way or byway, also commons/access land. surely if we walk a path which might have had it's markers ripped down how would we find out its status</p></div>
+            <div class="comment-info" id="comment-2818-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '11, 07:48)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="2828"></a>
+        <div class="comment" id="comment-2828">
+            <div id="post-2828-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Some of the names are available in the OS OpenData that vagabond mentions and these can be used.</p></div>
+            <div class="comment-info" id="comment-2828-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '11, 11:01)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1287" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1287-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1370"></a>
+                    <div id="answer-container-1370" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1370-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1370/up/" rel="nofollow"> </a>
+<div id="post-1370-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-1370-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1370/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I came across <a href="http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">this page</a> on the OS Opendata Project which may be of help to UK OSM cartographers.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1370/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Oct '10, 16:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/956d6fda0f51e8001832540fa2c716a5?s=32&amp;d=identicon&amp;r=g" alt="vagabond's gravatar image" />
+    <p><a href="/users/351/vagabond">vagabond</a><br/>
+    <span class="score" title="195 reputation points">195</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="vagabond has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1370">
+    
+</div>
+<div id="comment-tools-1370" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1370-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="2826"></a>
+                    <div id="answer-container-2826" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2826-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2826/up/" rel="nofollow"> </a>
+<div id="post-2826-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-2826-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2826/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can use old maps to get names, you need maps older than 1961, database copyright is 50 years. You can not scan those maps and publish them though since the design is still under copyright, but not the data. </p>
+<p>(IIRC IANAL) This is the situation in Sweden, should apply to other EU countries?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2826/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Feb '11, 10:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dd3858f5f89f5a6b738f9dbe59824440?s=32&amp;d=identicon&amp;r=g" alt="emj's gravatar image" />
+    <p><a href="/users/188/emj">emj</a><br/>
+    <span class="score" title="2024 reputation points"><span class="">2.0k</span></span><span title="12 badges"><span class="badge1">&#9679;</span><span class="badgecount">12</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="47 badges"><span class="bronze">&#9679;</span><span class="badgecount">47</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="emj has 11 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2826">
+    
+        <a name="2833"></a>
+        <div class="comment" id="comment-2833">
+            <div id="post-2833-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can use old maps in GB too (the original question mentioned the OS, so I'm assuming it's from GB) but you may need to be a little careful.  Locally (East midlands of England) come places have changed greatly in significance and some names have changed completely.</p>
+
+<p>However, as Ed mentions in the comment to the other answer, OS Opendata has (since April last year) been an available source of current names.  It's not always 100% correct (see the talk-GB mailing list for ways that this is being checked, marked and fed back to the OS) but it's more up to date than historical sources.</p></div>
+            <div class="comment-info" id="comment-2833-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '11, 11:31)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-2826" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2826-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/1286/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='siEzq0C7xPEA2oWYa9zEulneNxlzuKwG' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1286/determining-the-identity-of-features?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1286/determining-the-identity-of-features?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/name/"
+            class="tag-link-name"
+            title="see questions tagged'name'using tags"
+            rel="tag">name</a> <span class="tag-number">&#215;219</span><br/>
+        
+        <a href="/tags/copyright/"
+            class="tag-link-copyright"
+            title="see questions tagged'copyright'using tags"
+            rel="tag">copyright</a> <span class="tag-number">&#215;115</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 23, 2010, 5:41 p.m.">23 Oct '10, 17:41</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,430 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 9, 2011, 11:31 a.m.">09 Feb '11, 11:31</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/223/who-do-i-ask-for-permission-to-use-osm-maps">Who do I ask for permission to use OSM maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/313/how-do-i-find-the-name-of-a-motorway_junction">How do I find the name of a motorway_junction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/589/how-to-tag-non-settlement-place-names">How to tag &#39;non-settlement&#39; place names?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps">Can Google Maps take OSM data and use it in their own maps ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/953/translating-place-names">Translating place names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1029/put-the-place-name-in-amenities">Put the place name in amenities ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1059/how-do-you-set-the-name-of-a-street">How do you set the name of a street?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1225/place-names-at-different-zoom-levels">Place names at different zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1226/names-for-valleys-mountains-etc">Names for Valleys, Mountains etc.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/217/how-to-deal-with-copyright-violations-in-our-osm-data">How to deal with copyright violations in our OSM data?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

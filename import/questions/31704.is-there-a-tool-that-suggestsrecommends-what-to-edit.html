@@ -1,0 +1,946 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Is there a tool that suggests/recommends what to edit? - OSM Help</title>
+        <meta name="description" content="Is there any tool that helps users in contributing to OSM via recommendations on what and where to edit? Something that directs contributors to a specific location and tells them what needs to be edited there? Or even something that assigns specific tasks to contributors? There is information on the..." />
+        <meta name="keywords" content="editing" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/31704/is-there-a-tool-that-suggestsrecommends-what-to-edit" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/31704/is-there-a-tool-that-suggestsrecommends-what-to-edit?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='9hkuYblsQItFeOMceBTbEp97JzAVGuaN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/31704/is-there-a-tool-that-suggestsrecommends-what-to-edit">Is there a tool that suggests/recommends what to edit?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-31704-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31704/up/" rel="nofollow"> </a>
+<div id="post-31704-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-31704-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31704/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/31704/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is there any tool that helps users in contributing to OSM via recommendations on what and where to edit?
+Something that directs contributors to a specific location and tells them what needs to be edited there? Or even something that assigns specific tasks to contributors?</p>
+<p>There is information on the <em>how</em> of editing. But I couldn't get information on the <em>what</em>, as in what needs to be edited on OSM. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Mar '14, 17:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ce2105c628f0492c916ba08fab8455d4?s=32&amp;d=identicon&amp;r=g" alt="vr3690's gravatar image" />
+    <p><a href="/users/8445/vr3690">vr3690</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="vr3690 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-31704">
+    
+        <a name="31718"></a>
+        <div class="comment" id="comment-31718">
+            <div id="post-31718-score" class="comment-score">3</div>
+            <div class="comment-text"><p>With all the tools listed here: Please always keep in mind that tools only show hints what <em>might</em> be wrong. It does not mean that something <em>is</em> wrong. Please do not <a href="//wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">map for a quality assurance tool</a>. Many tools also have a "false positive" button to hide such wrong hints; some sadly do not.</p>
+
+<p>If possible take care to view object histories, to understand why something is the way way it is. You may find hints to systematic bad edits or to a user who may just needs some communication/help to learn how to do it better in future.</p></div>
+            <div class="comment-info" id="comment-31718-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Mar '14, 12:37)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31704" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31704-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/31704/is-there-a-tool-that-suggestsrecommends-what-to-edit?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/31704/is-there-a-tool-that-suggestsrecommends-what-to-edit?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/31704/is-there-a-tool-that-suggestsrecommends-what-to-edit?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/31704/is-there-a-tool-that-suggestsrecommends-what-to-edit?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="31705"></a>
+                    <div id="answer-container-31705" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31705-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31705/up/" rel="nofollow"> </a>
+<div id="post-31705-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-31705-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31705/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You are likely asking the wrong question. The great strength of OSM is that the data is gathered by local mappers on the ground, on location.</p>
+<p>So the first and most important thing to check: is the area around me mapped correctly and is it complete? The result will depend very much on where you actually live and work, and could mean mapping from scratch to just adding details.</p>
+<p>The size of the area you want to take responsibility for is up to you, but do be the steward for a piece of the world.</p>
+<p>I could write a lot more on the topic, but I believe that the above is really the important bit.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31705/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Mar '14, 17:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31705/">
+                edited
+                <strong>19 Mar '14, 17:58</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31705">
+    
+        <a name="31706"></a>
+        <div class="comment" id="comment-31706">
+            <div id="post-31706-score" class="comment-score"></div>
+            <div class="comment-text"><p>That makes sense. Now let's imagine two situations (non exhaustive) that I feel are likely: (1) A new user that lives and works in areas that have been thoroughly mapped. Where does such a person go from there? Let's say there are some aspects of those areas that do need improving, how is the user supposed to know of the same? That's like finding a needle in a haystack. (2) A user that has been contributing for a while and has mapped an area to a great extent and either wants some variety or doesn't really know what to do next? What do such users do?</p></div>
+            <div class="comment-info" id="comment-31706-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Mar '14, 18:54)</span>
+                <a class="comment-user userinfo" href="/users/8445/vr3690">vr3690</a>
+                
+            </div>
+        </div>
+    
+        <a name="31707"></a>
+        <div class="comment" id="comment-31707">
+            <div id="post-31707-score" class="comment-score"></div>
+            <div class="comment-text"><p>If the where is restricted to  users' location, do you think providing them with the what can help? I am new to OSM and have very little experience with the community. But, I would love to understand how you feel about this.</p></div>
+            <div class="comment-info" id="comment-31707-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Mar '14, 18:58)</span>
+                <a class="comment-user userinfo" href="/users/8445/vr3690">vr3690</a>
+                
+            </div>
+        </div>
+    
+        <a name="31708"></a>
+        <div class="comment" id="comment-31708">
+            <div id="post-31708-score" class="comment-score">1</div>
+            <div class="comment-text"><p>As I wrote I could carry on for a while (see for example my keynote at FOSSGIS 2013). Essentially you can go in to maintenance mode and use one of the <a href="//wiki.openstreetmap.org/wiki/Quality_assurance">QA sites</a> (keepright, osmose) to pinpoint stuff that is questionable, or you start on a specific "new" topic, which for example could be 3d mapping.</p></div>
+            <div class="comment-info" id="comment-31708-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Mar '14, 19:00)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31710"></a>
+        <div class="comment" id="comment-31710">
+            <div id="post-31710-score" class="comment-score"></div>
+            <div class="comment-text"><p>I found this in the wiki <a href="http://wiki.openstreetmap.org/wiki/OpenFixMap">http://wiki.openstreetmap.org/wiki/OpenFixMap</a></p></div>
+            <div class="comment-info" id="comment-31710-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Mar '14, 19:49)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="31720"></a>
+        <div class="comment not_top_scorer" id="comment-31720">
+            <div id="post-31720-score" class="comment-score"></div>
+            <div class="comment-text"><p>OpenFixMap doesn't look particularly useful unless you're somewhere that there's osmose support (i.e. France), given that Mapdust and OpenStreetBugs are both dead.</p></div>
+            <div class="comment-info" id="comment-31720-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Mar '14, 13:15)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31724"></a>
+        <div class="comment not_top_scorer" id="comment-31724">
+            <div id="post-31724-score" class="comment-score"></div>
+            <div class="comment-text"><p>Mapdust is dead? I just took a look, and there are over 270000 open bugs there, so it doesn't seem dead to me. Sure, about 3/4 of them have the default bug text and are probably useless, but that still leaves almost 60000 potential bugs that might need to be looked at.</p></div>
+            <div class="comment-info" id="comment-31724-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Mar '14, 18:25)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="31725"></a>
+        <div class="comment" id="comment-31725">
+            <div id="post-31725-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/8189/alester">@alester</a> The RSS feeds stopped working some time ago.  Even many of the bugs without the default text are created in a location unrelated to the problem (or the problem is a Mapdust software bug such as "volume control does not work").  The web site's dreadful (try and move the mouse over a bug and it moves out of the way!).  I did use to monitor Mapdust bugs locally, but I'd guess that only 1 in 200 were of any value.  When the RSS feeds broke, I stopped.</p></div>
+            <div class="comment-info" id="comment-31725-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Mar '14, 19:32)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31705" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31705-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="31709"></a>
+                    <div id="answer-container-31709" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31709-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31709/up/" rel="nofollow"> </a>
+<div id="post-31709-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-31709-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31709/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="http://maproulette.org/">MapRoulette</a> is one such tool.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31709/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Mar '14, 19:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31709">
+    
+</div>
+<div id="comment-tools-31709" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31709-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="31712"></a>
+                    <div id="answer-container-31712" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31712-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31712/up/" rel="nofollow"> </a>
+<div id="post-31712-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-31712-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31712/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are many <a href="https://wiki.openstreetmap.org/wiki/Quality_assurance">Quality Assurance</a> tools available for OSM. Just to name a few:</p>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/Keep_Right">Keep Right</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/OSM_Inspector">OSM Inspector</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Notes">Notes</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Osmose">Osmose</a></li>
+</ul>
+<p>There is also a nice plugin for JOSM available, <a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance_Tools_script">Quality Assurance Tools script</a>, which offers a nice in-editor interface for multiple quality assurance tools.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31712/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Mar '14, 07:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31712">
+    
+</div>
+<div id="comment-tools-31712" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31712-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/31704/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='9hkuYblsQItFeOMceBTbEp97JzAVGuaN' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31704/is-there-a-tool-that-suggestsrecommends-what-to-edit?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31704/is-there-a-tool-that-suggestsrecommends-what-to-edit?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 19, 2014, 5:51 p.m.">19 Mar '14, 17:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,704 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 20, 2014, 7:32 p.m.">20 Mar '14, 19:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/60/what-is-the-difference-between-live-and-with-save-mode-in-map-edit-with-potlatch">What is the difference between live and with save mode in map edit (with Potlatch)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don&#39;t show up on the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/216/what-should-i-do-about-vandalism">What should I do about vandalism?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/231/how-can-i-edit-all-ways-with-certain-tag-in-an-area">How can I edit all ways with certain tag in an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/497/how-can-i-edit-gpx-tracks-in-potlatch-2">How can I edit GPX tracks in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/954/how-do-i-set-my-home-location">How do I set my home location?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1012/fixing-a-subway-stop">Fixing a subway stop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch">How do I ensure that ways are connected in Potlatch ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,872 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Lossy and Lossless Methods Getting OSM Data - OSM Help</title>
+        <meta name="description" content="This is a question pertaining to osm2pgsql, osm2pgrouting and nominatim. As I understand it, these are &#39;lossy&#39; methods for getting data from OSM and into a PostGIS database. I was wondering:   In which ways are these methods &#39;lossy&#39; (what data is lost)?  and  are there any known methods that are los..." />
+        <meta name="keywords" content="nominatim,osm2pgsql,postgis,database" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/22889/lossy-and-lossless-methods-getting-osm-data" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/22889/lossy-and-lossless-methods-getting-osm-data?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qOUuGk7jsJRXiqvz2kBz6VShzsFbQ0iK' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/22889/lossy-and-lossless-methods-getting-osm-data">Lossy and Lossless Methods Getting OSM Data</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-22889-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22889/up/" rel="nofollow"> </a>
+<div id="post-22889-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-22889-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22889/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/22889/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>This is a question pertaining to osm2pgsql, osm2pgrouting and nominatim.</p>
+<p>As I understand it, these are 'lossy' methods for getting data from OSM and into a PostGIS database.</p>
+<p>I was wondering: </p>
+<ul>
+<li>In which ways are these methods 'lossy' (what data is lost)?</li>
+</ul>
+<p>and</p>
+<ul>
+<li>are there any known methods that are lossless?</li>
+</ul>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                                    <a href="/tags/postgis/" class="post-tag tag-link-postgis"
+                                        title="see questions tagged 'postgis'" rel="tag">postgis</a>
+                                
+                                    <a href="/tags/database/" class="post-tag tag-link-database"
+                                        title="see questions tagged 'database'" rel="tag">database</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 May '13, 15:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8a28a2bb64d641dfb063564bbc283316?s=32&amp;d=identicon&amp;r=g" alt="FortyLashes's gravatar image" />
+    <p><a href="/users/6521/fortylashes">FortyLashes</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="FortyLashes has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/22889/">
+                edited
+                <strong>30 May '13, 19:25</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+            <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+            <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-22889">
+    
+</div>
+<div id="comment-tools-22889" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22889-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/22889/lossy-and-lossless-methods-getting-osm-data?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/22889/lossy-and-lossless-methods-getting-osm-data?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/22889/lossy-and-lossless-methods-getting-osm-data?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/22889/lossy-and-lossless-methods-getting-osm-data?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="22892"></a>
+                    <div id="answer-container-22892" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22892-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22892/up/" rel="nofollow"> </a>
+<div id="post-22892-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-22892-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22892/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="FortyLashes has selected this answer as the correct answer"
+        href="/accept_answer/22892/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yes, these are lossy methods. For example, osm2pgsql drops coastlines, and the main outputs manipulate data into OGC simple features, which loses information regarding routing relationships.</p>
+<p>You can load osm data into postgres in a lossless fashion using osmosis and the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#API_Database_Tasks">--write-apidb</a> or <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PostGIS_Tasks_.28Snapshot_Schema.29">--write-pgsql</a> outputs, depending on what schema you wish to use.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22892/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 May '13, 19:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3743b1b368f5e209eb8aad30164acc4?s=32&amp;d=identicon&amp;r=g" alt="Andy%20Allan's gravatar image" />
+    <p><a href="/users/3/andy-allan">Andy Allan</a><br/>
+    <span class="score" title="12456 reputation points"><span class="">12.5k</span></span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="128 badges"><span class="silver">&#9679;</span><span class="badgecount">128</span></span><span title="153 badges"><span class="bronze">&#9679;</span><span class="badgecount">153</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andy Allan has 46 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22892">
+    
+        <a name="23378"></a>
+        <div class="comment" id="comment-23378">
+            <div id="post-23378-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/3/andy-allan">@Andy Allan</a> Sorry for not getting back sooner!  Thank you for that!  I have been looking into Osmosis - that is awesome you can do lossless!</p></div>
+            <div class="comment-info" id="comment-23378-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '13, 18:06)</span>
+                <a class="comment-user userinfo" href="/users/6521/fortylashes">FortyLashes</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-22892" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22892-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="23380"></a>
+                    <div id="answer-container-23380" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23380-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23380/up/" rel="nofollow"> </a>
+<div id="post-23380-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-23380-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23380/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The most common lossless DB schemas are apidb, pgsnapshot, pgsimple and OSM3S. </p>
+<p>apidb</p>
+<ul>
+<li>can store history</li>
+<li>is not spatially enabled</li>
+<li>uses postgresql</li>
+<li>takes weeks to import</li>
+<li>takes more than 1TB</li>
+</ul>
+<p>pgsnapshot</p>
+<ul>
+<li>is current data only</li>
+<li>is spatially enabled</li>
+<li>uses postgresql + postgis</li>
+<li>can have geometries built for ways</li>
+<li>takes days to import</li>
+<li>takes a couple hundred GB</li>
+<li>uses hstore to store tags</li>
+</ul>
+<p>pgsimple is pgsnapshot with separate tables for tags instead of hstore</p>
+<p>OSM3S</p>
+<ul>
+<li>is current data only</li>
+<li>is custom database software</li>
+<li>is primary used by overpass API</li>
+</ul>
+<p>None of them are well-suited for rendering. The main uses for these database types are analysis and when you want to be able to produce a .osm file for an area.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23380/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Jun '13, 20:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5634c46072077e10f5b7c0da9b4bbb62?s=32&amp;d=identicon&amp;r=g" alt="pnorman's gravatar image" />
+    <p><a href="/users/290/pnorman">pnorman</a><br/>
+    <span class="score" title="2352 reputation points"><span class="">2.4k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="21 badges"><span class="silver">&#9679;</span><span class="badgecount">21</span></span><span title="40 badges"><span class="bronze">&#9679;</span><span class="badgecount">40</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="pnorman has 9 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23380">
+    
+</div>
+<div id="comment-tools-23380" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23380-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="22904"></a>
+                    <div id="answer-container-22904" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22904-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22904/up/" rel="nofollow"> </a>
+<div id="post-22904-score" class="post-score"
+    title="current number of votes">
+    -5
+</div>
+<a id="post-22904-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22904/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I assume that by "OSM data" you mean the OSM source data and by "lossy method" you mean that the output dataset, after processing it by a "method", contains at least one less (missing) or changed object compared to the input dataset. If these assumptions are correct my answers to your questions are:<br>
+-Yes, all "methods" are lossy (regardless of the programing language and source type in apps). Namely, the OSM source data contains many (but really many) errors of formal and logical nature. Some of the erroneous objects must be ignored and many of them are changed by a data-preparation "method". But the data-preparation is done by teams and as a rule teams have different filings for criteria what to ignore, what and how to change and so on. Therefor the "lossy" nature of the "methods" considerably vary. In my opinion/experience about 90% of all errors may be repaired.<br>
+-Yes, downloading the latest regular OSM dump will provide you with exactly the same objects as they are in the database of the OSM source data. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22904/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 May '13, 08:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/03cd9ea0efd97a7040fda0d6a76aba8e?s=32&amp;d=identicon&amp;r=g" alt="sanser's gravatar image" />
+    <p><a href="/users/3194/sanser">sanser</a><br/>
+    <span class="score" title="695 reputation points">695</span><span title="38 badges"><span class="badge1">&#9679;</span><span class="badgecount">38</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="55 badges"><span class="bronze">&#9679;</span><span class="badgecount">55</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sanser has 2 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22904">
+    
+</div>
+<div id="comment-tools-22904" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22904-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/22889/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='qOUuGk7jsJRXiqvz2kBz6VShzsFbQ0iK' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22889/lossy-and-lossless-methods-getting-osm-data?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22889/lossy-and-lossless-methods-getting-osm-data?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/postgis/"
+            class="tag-link-postgis"
+            title="see questions tagged'postgis'using tags"
+            rel="tag">postgis</a> <span class="tag-number">&#215;134</span><br/>
+        
+        <a href="/tags/database/"
+            class="tag-link-database"
+            title="see questions tagged'database'using tags"
+            rel="tag">database</a> <span class="tag-number">&#215;118</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 30, 2013, 3:31 p.m.">30 May '13, 15:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,494 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 14, 2013, 8:02 p.m.">14 Jun '13, 20:02</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/12388/best-way-to-get-all-cities-of-a-specific-area">Best way to get all cities of a specific area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12286/how-can-i-get-the-zone-administrive-of-a-city-from-postgis-nominatim-import">How can I get the zone administrive of a city from postgis (nominatim import)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed">Why is my import of planet-latest.osm KILLED?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11405/xmlpostgresql-rendering">XML/Postgresql Rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2680/can-i-produce-a-database-of-addresses-from-osm-data">Can I produce a database of addresses from OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12330/nominatim-setupphp-problem">Nominatim setup.php problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9875/duplicate-key-value-violates-unique-constraint-planet_osm_nodes_pkey">duplicate key value violates unique constraint &quot;planet_osm_nodes_pkey&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8363/how-to-setup-postgis-server-and-import-osm-file-on-windows">How to setup PostGIS server and import .osm-file on Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10677/setting-postgis-as-a-datasource">Setting PostGIS as a datasource</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12561/was-does-the-leading-space-mean-in-wordword_token">Was does the leading space mean in word.word_token?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

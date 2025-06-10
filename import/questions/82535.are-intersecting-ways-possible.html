@@ -1,0 +1,692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Are intersecting ways possible? - OSM Help</title>
+        <meta name="description" content="Is it possible for a set of two consecutive nodes to be part of more than one &#39;way&#39;? I am trying to identify a unique &#39;way&#39; that contains these two consecutive nodes." />
+        <meta name="keywords" content="ways,nodes,osm" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/82535/are-intersecting-ways-possible" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/82535/are-intersecting-ways-possible?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='TGHKmTJSceXRW1QZ28lUruSivZrIWylQ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/82535/are-intersecting-ways-possible">Are intersecting ways possible?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-82535-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82535/up/" rel="nofollow"> </a>
+<div id="post-82535-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-82535-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82535/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/82535/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is it possible for a set of two consecutive nodes to be part of more than one 'way'? I am trying to identify a unique 'way' that contains these two consecutive nodes.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ways/" class="post-tag tag-link-ways"
+                                        title="see questions tagged 'ways'" rel="tag">ways</a>
+                                
+                                    <a href="/tags/nodes/" class="post-tag tag-link-nodes"
+                                        title="see questions tagged 'nodes'" rel="tag">nodes</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Nov '21, 07:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc43ae77e987854246ab4f6c496da9a2?s=32&amp;d=identicon&amp;r=g" alt="ayuz's gravatar image" />
+    <p><a href="/users/21024/ayuz">ayuz</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ayuz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/82535/">
+                edited
+                <strong>10 Nov '21, 07:22</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-82535">
+    
+</div>
+<div id="comment-tools-82535" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82535-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/82535/are-intersecting-ways-possible?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/82535/are-intersecting-ways-possible?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/82535/are-intersecting-ways-possible?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/82535/are-intersecting-ways-possible?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="82536"></a>
+                    <div id="answer-container-82536" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-82536-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82536/up/" rel="nofollow"> </a>
+<div id="post-82536-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-82536-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82536/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="ayuz has selected this answer as the correct answer"
+        href="/accept_answer/82536/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>That happens a lot, actually, when objects share a common border, e.g. adjacent buildings or adjacent landuses. Each object will have its own way but they share common nodes.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/82536/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Nov '21, 08:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-82536">
+    
+        <a name="82537"></a>
+        <div class="comment" id="comment-82537">
+            <div id="post-82537-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hm I see. Thanks for the answer. I think in my use case, I am only interested in roads so if the roads are guaranteed to be unique that is fine. Can you explain if that is the case?</p></div>
+            <div class="comment-info" id="comment-82537-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '21, 08:17)</span>
+                <a class="comment-user userinfo" href="/users/21024/ayuz">ayuz</a>
+                
+            </div>
+        </div>
+    
+        <a name="82538"></a>
+        <div class="comment" id="comment-82538">
+            <div id="post-82538-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't know of any specific examples, but I know there are places in the world that have elevated highways with other roads underneath, so you might also need to consider the layer tag. Apart from that I can't immediately think of why two different roads would contain the same two consecutive nodes.</p></div>
+            <div class="comment-info" id="comment-82538-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '21, 10:21)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="82539"></a>
+        <div class="comment" id="comment-82539">
+            <div id="post-82539-score" class="comment-score"></div>
+            <div class="comment-text"><p>Stacked highways should be mapped separately with separate nodes in my opinion. But of course my opinion does not rule out that such roads have been mapped differently.</p>
+
+<p>I guess there will be a significant amount of road "loops" where one road separates from  another roads only to re-join it shortly after (e.g. a separate lane at a bus stop). In that case two consecutive nodes of one way will be shared with one other way (on that way the nodes should not be consecutive, though).</p>
+
+<p>Sometimes highways are mapped not as line features but as areas. That is often done for pedestrian areas but also for other roads. There are different ways of tagging but such area could just be tagged with <code>highway=xyz</code> and <code>area=yes</code>. Such areas may be joined to other road areas or line roads on their boarders. </p>
+
+<p>There are some highway features (not highways in a strict sense) like <code>highway_rest_area</code> or <code>highway_emergency_bay</code> that could again overlap with real roads or one and other.</p>
+
+<p>And of course you may be faced with mapping errors where for example an angled intersection is not mapped properly but the two intersecting roads share a short way.</p></div>
+            <div class="comment-info" id="comment-82539-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '21, 10:58)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-82536" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82536-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/82535/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='TGHKmTJSceXRW1QZ28lUruSivZrIWylQ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/82535/are-intersecting-ways-possible?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/82535/are-intersecting-ways-possible?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/nodes/"
+            class="tag-link-nodes"
+            title="see questions tagged'nodes'using tags"
+            rel="tag">nodes</a> <span class="tag-number">&#215;205</span><br/>
+        
+        <a href="/tags/ways/"
+            class="tag-link-ways"
+            title="see questions tagged'ways'using tags"
+            rel="tag">ways</a> <span class="tag-number">&#215;167</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 10, 2021, 7:14 a.m.">10 Nov '21, 07:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,550 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 10, 2021, 10:58 a.m.">10 Nov '21, 10:58</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/83405/distribution-of-the-nodes">Distribution of the Nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30843/how-to-route-origin-to-destination-using-only-osm-data">How to route origin to destination using only OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/78779/how-to-identify-the-ids-of-nodes-on-ways-in-an-osm-extract">How to identify the id&#39;s of nodes on ways in an OSM extract?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/86040/does-number-of-osm-nodes-corresponds-to-physical-distance">Does number of OSM nodes corresponds to physical distance?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52382/can-two-ways-share-a-node-if-they-do-not-intersect">Can two ways share a node if they do not intersect?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/923/how-do-i-realize-a-node-or-way-is-a-member-of-a-relation">How do I realize a node or way is a member of a relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18153/storing-nodes-roads-and-intersections">Storing nodes, roads and intersections</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19799/calculating-the-distance-length-of-an-osm-way">Calculating the distance (length) of an OSM Way</a>
+        </p>
+        
+        <p>
+            <a href="/questions/372/is-there-a-limit-to-the-number-of-ways-containing-a-node">Is there a limit to the number of ways containing a node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14146/extracting-nodes-and-ways-only">Extracting nodes and ways only</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

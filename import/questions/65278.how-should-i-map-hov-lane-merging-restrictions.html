@@ -1,0 +1,661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How should I map HOV lane merging restrictions? - OSM Help</title>
+        <meta name="description" content="In my city, we have HOV (High-occupancy vehicle) lanes that you can only merge in and out of in certain sections. I would like to map this, but I can&#39;t find any way to map merging restrictions. There is no physical barrier, only paint/signs, so I&#39;m quite certain that it should be mapped as a single ..." />
+        <meta name="keywords" content="hov,restrictions,merging,carpool,lane" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/65278/how-should-i-map-hov-lane-merging-restrictions" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/65278/how-should-i-map-hov-lane-merging-restrictions?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ZTmUVi2RljVB5e0CdotUQLj5tiZGDHX7' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/65278/how-should-i-map-hov-lane-merging-restrictions">How should I map HOV lane merging restrictions?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-65278-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/65278/up/" rel="nofollow"> </a>
+<div id="post-65278-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-65278-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/65278/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/65278/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>In my city, we have HOV (High-occupancy vehicle) lanes that you can only merge in and out of in certain sections. I would like to map this, but I can't find any way to map merging restrictions. There is no physical barrier, only paint/signs, so I'm quite certain that it should be mapped as a single way.</p>
+<p>There are 5 total lanes, 1 HOV (2+) and 4 regular. I've mapped this as:</p>
+<ul>
+<li>highway=motorway</li>
+<li>lanes=5</li>
+<li>motor_vehicle:lanes=no||||</li>
+<li>hov=designated||||</li>
+<li>hov:minimum=2</li>
+</ul>
+<p>How do I map the no merging sections? How do I map the sections where you are allowed to merge?<br>
+Bonus: there are signs that tell you to exit the HOV lane to make specific exits. Can I tag those as well?</p>
+<p><img src="https://help.openstreetmap.org/upfiles/HOV_entrance.jpg" alt="An HOV lane entrance"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/hov/" class="post-tag tag-link-hov"
+                                        title="see questions tagged 'hov'" rel="tag">hov</a>
+                                
+                                    <a href="/tags/restrictions/" class="post-tag tag-link-restrictions"
+                                        title="see questions tagged 'restrictions'" rel="tag">restrictions</a>
+                                
+                                    <a href="/tags/merging/" class="post-tag tag-link-merging"
+                                        title="see questions tagged 'merging'" rel="tag">merging</a>
+                                
+                                    <a href="/tags/carpool/" class="post-tag tag-link-carpool"
+                                        title="see questions tagged 'carpool'" rel="tag">carpool</a>
+                                
+                                    <a href="/tags/lane/" class="post-tag tag-link-lane"
+                                        title="see questions tagged 'lane'" rel="tag">lane</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Aug '18, 20:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0c5a51d9131f6b7fa6a7d715f2578df3?s=32&amp;d=identicon&amp;r=g" alt="legoman's gravatar image" />
+    <p><a href="/users/15516/legoman">legoman</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="legoman has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/65278/">
+                edited
+                <strong>11 Aug '18, 21:24</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e5674dd96938593e0af5130dfffe0f90?s=32&amp;d=identicon&amp;r=g" alt="nevw's gravatar image" />
+            <p><a href="/users/7380/nevw">nevw</a><br/>
+            <span class="score" title="9843 reputation points"><span class="">9.8k</span></span><span title="26 badges"><span class="badge1">&#9679;</span><span class="badgecount">26</span></span><span title="90 badges"><span class="silver">&#9679;</span><span class="badgecount">90</span></span><span title="178 badges"><span class="bronze">&#9679;</span><span class="badgecount">178</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-65278">
+    
+</div>
+<div id="comment-tools-65278" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-65278-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/65278/how-should-i-map-hov-lane-merging-restrictions?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/65278/how-should-i-map-hov-lane-merging-restrictions?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/65278/how-should-i-map-hov-lane-merging-restrictions?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/65278/how-should-i-map-hov-lane-merging-restrictions?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="65282"></a>
+                    <div id="answer-container-65282" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-65282-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/65282/up/" rel="nofollow"> </a>
+<div id="post-65282-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-65282-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/65282/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I figured it out. There's a proposed key change:lanes that's pretty well used.<br>
+<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/change">https://wiki.openstreetmap.org/wiki/Proposed_features/change</a><br>
+So additionally I'd tag the restricted sections as:<br>
+change:lanes=no|not_left|yes|yes|yes</p>
+<p>and the non-restricted sections as:<br>
+change:lanes=yes|yes|yes|yes|eys</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/65282/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Aug '18, 05:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0c5a51d9131f6b7fa6a7d715f2578df3?s=32&amp;d=identicon&amp;r=g" alt="legoman's gravatar image" />
+    <p><a href="/users/15516/legoman">legoman</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="legoman has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-65282">
+    
+</div>
+<div id="comment-tools-65282" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-65282-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/65278/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ZTmUVi2RljVB5e0CdotUQLj5tiZGDHX7' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/65278/how-should-i-map-hov-lane-merging-restrictions?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/65278/how-should-i-map-hov-lane-merging-restrictions?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/restrictions/"
+            class="tag-link-restrictions"
+            title="see questions tagged'restrictions'using tags"
+            rel="tag">restrictions</a> <span class="tag-number">&#215;23</span><br/>
+        
+        <a href="/tags/lane/"
+            class="tag-link-lane"
+            title="see questions tagged'lane'using tags"
+            rel="tag">lane</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/merging/"
+            class="tag-link-merging"
+            title="see questions tagged'merging'using tags"
+            rel="tag">merging</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/hov/"
+            class="tag-link-hov"
+            title="see questions tagged'hov'using tags"
+            rel="tag">hov</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/carpool/"
+            class="tag-link-carpool"
+            title="see questions tagged'carpool'using tags"
+            rel="tag">carpool</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 11, 2018, 8:30 p.m.">11 Aug '18, 20:30</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,317 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 12, 2018, 5:28 a.m.">12 Aug '18, 05:28</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/57470/reversible-way-for-hovs">Reversible Way for HOVs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2339/restricted-lanes-with-lanes-tag">Restricted lanes with &quot;lanes&quot; tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8834/commuter-lanes-policy">Commuter Lanes policy</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5449/how-can-i-merge-two-parts-of-the-same-road">How can I merge two parts of the same road?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7102/merging-duplicate-ways-river">Merging duplicate ways (river)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7289/tagging-road-into-camp-grounds">Tagging Road into Camp Grounds</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3530/what-is-the-proper-way-to-add-no-u-turn-restrictions-when-the-road-is-divided">What is the proper way to add &quot;No U Turn&quot; restrictions when the road is divided?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9085/building-lane-model-for-osmhow-can-i-get-multiple-gpx-from-osm-for-repeated-roads">［Building Lane Model for OSM］How can I get multiple gpx from osm for repeated roads?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15492/disappearing-data-whowhyundelete">Disappearing data: who/why/undelete?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1559/is-it-ok-to-use-a-gps-device-in-brunei">Is it OK to use a GPS device in Brunei?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

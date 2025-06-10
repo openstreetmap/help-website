@@ -1,0 +1,785 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>refactoring an XSLT processor with minor correction [beginner-question] - OSM Help</title>
+        <meta name="description" content="i have a extremely large xml-file - which is derived from the field of geo informatics. i got it from a German subsite or the OpenStreetMap-Project: the Geograpical-Engineering-site that deilvers a weekly snapshot of OpenStreetMap of a certain area: i took the germany.osm.bz2 from here http://ftp5.g..." />
+        <meta name="keywords" content="openstreetmap,xml,xslt,mysql" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/12334/refactoring-an-xslt-processor-with-minor-correction-beginner-question" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/12334/refactoring-an-xslt-processor-with-minor-correction-beginner-question?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='l5x76psDGJQGz3rhlpdHxHE5YLO22igZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/12334/refactoring-an-xslt-processor-with-minor-correction-beginner-question">refactoring an XSLT processor with minor correction [beginner-question]</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-12334-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12334/up/" rel="nofollow"> </a>
+<div id="post-12334-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-12334-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12334/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/12334/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>i have a extremely large xml-file - which is derived from the field of geo informatics. i got it from a German subsite or the OpenStreetMap-Project: the Geograpical-Engineering-site that deilvers a weekly snapshot of OpenStreetMap of a certain area: i took the germany.osm.bz2 from here <a href="http://ftp5.gwdg.de/pub/misc/openstreetmap/download.geofabrik.de/">http://ftp5.gwdg.de/pub/misc/openstreetmap/download.geofabrik.de/</a></p>
+<p>For doing some tests with xslt i want to run a request to find out certain entity - let us take for example the restaurants. we want to find out all the restaurants in the area.</p>
+<p>now we can run that directly on the  bz2 compressed file, that we downloaded - for example if we use the following code:</p>
+<pre><code>bzcat germany.osm.bz2 | xsltproc restaurants.xslt - &gt; restaurants,csv
+</code></pre>
+<p>well i splitted the file with xml_split -which is a great perl-module from CPAN.</p>
+<p><strong>The problem:</strong> with the  following xslt-processor  i get only bad results - the parsed files werent not parsed enough i only get a minor set of informations when i run the code on a xml-file. see the xslt-processor - and below - a litte data-chunk out of the file i run and parse if you want to check it - just get the little dataset - note it is a splitted  file </p>
+<p>here you can get it: <a href="https://rapidshare.com/#!download|643p12|2523227518|germany-001.xml|100000">https://rapidshare.com/#!download|643p12|2523227518|germany-001.xml|100000</a></p>
+<p>Note: see therefore the important lines:   <code>xmlns:xml_split="http://xmltwig.com/xml_split"</code>
+and this one here: </p>
+<pre><code> &lt;xsl:for-each select="xml_split:root/node/tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a>='amenity' and <a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>='restaurant']"&gt;
+</code></pre>
+<p><strong>Note</strong>- you can run a little test - and see how long it takes to parse
+time xsltproc restaurants.xslt germany-001.xml &gt; restaurants-001.csv</p>
+<pre><code>real    0m0.308s
+user    0m0.283s
+sys     0m0.022s
+</code></pre>
+<p>here we have the xslt-processor that contains the code for parsing...:</p>
+<pre><code>&lt;xsl:stylesheet version = '1.0'
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:xml_split="http://xmltwig.com/xml_split"
+        xmlns:xsl='http://www.w3.org/1999/XSL/Transform'&gt;
+
+    &lt;xsl:output method="text" encoding="UTF-8"/&gt;
+    &lt;xsl:template match="/"&gt;
+
+            &lt;xsl:for-each select="xml_split:root/node/tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a>='amenity' and <a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>='restaurant']"&gt;
+            &lt;xsl:value-of select="../<a href="/users/260/idoneus"><a href="/users/260/idoneus">@id</a></a>"/&gt;
+            &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+            &lt;xsl:value-of select="../@lat"/&gt;
+            &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+            &lt;xsl:value-of select="../<a href="/users/1350/longestaugust">@lon</a>"/&gt;
+            &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+            &lt;xsl:for-each select="../tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a>='name']"&gt;
+                &lt;xsl:value-of select="<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>"/&gt;
+            &lt;/xsl:for-each&gt;
+            &lt;xsl:text&gt;&amp;#x0A;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a> = 'cuisine']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a> = 'wheelchair']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a> = 'website']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a> = 'addr:country']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a> = 'addr:city']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;        
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a> = 'addr:street']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a> = 'addr:housenumber']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x0A;&lt;/xsl:text&gt;
+    &lt;/xsl:for-each&gt;
+    &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;
+</code></pre>
+<p>and here below we have a data-chunk out of the xml-file that we have parsed: see it</p>
+<pre><code>&lt;node id="52768810" lat="48.2044749" lon="11.3249434" version="7" changeset="9490517" user="wheelmap_visitor" uid="290680" timestamp="2011-10-07T20:24:46Z"&gt;
+    &lt;tag k="addr:city" v="Olching" /&gt;
+    &lt;tag k="addr:country" v="DE" /&gt;
+    &lt;tag k="addr:housenumber" v="72" /&gt;
+    &lt;tag k="addr:postcode" v="82140" /&gt;
+    &lt;tag k="addr:street" v="Hauptstraße" /&gt;
+    &lt;tag k="amenity" v="restaurant" /&gt;
+    &lt;tag k="cuisine" v="mexican" /&gt;
+    &lt;tag k="email" v="info@cantina-olching.de" /&gt;
+    &lt;tag k="name" v="La Cantina" /&gt;
+    &lt;tag k="opening_hours" v="Mo-Su 17:00-01:00" /&gt;
+    &lt;tag k="phone" v="+49 (8142) 444393" /&gt;
+    &lt;tag k="website" v="http://www.cantina-olching.com/" /&gt;
+    &lt;tag k="wheelchair" v="no" /&gt;
+&lt;/node&gt;
+</code></pre>
+<p>see the results - note there are missing some parts - unfortunatly..</p>
+<pre><code>51923772    49.0812534  8.5637183   Zur Talschänke
+
+52040576    49.4635433  12.4287292  Emil-Kemmer-Haus
+
+52141326    49.4144243  12.4143153  Gasthaus Plecher
+
+52623232    48.9293634  8.2722549   Korfu
+
+52664989    49.0435133  8.3919370   Restaurant Zentrum
+
+52754898    49.3243828  12.3618662  Gasthaus Irlbacher
+
+52762875    49.0099641  8.2528132   Langasthof Stober
+
+52765672    50.0082768  9.2139632   Wirtshaus im Frohnrad
+
+52768810    48.2044749  11.3249434  La Cantina
+
+52768816    48.2051698  11.3257964  Indian Palace
+
+52768826    48.2073264  11.3276147  Dorfstub'n
+
+52768830    48.2075968  11.3281055  Le Candele
+
+52774284    49.0319471  8.2888353   Zum Anker
+</code></pre>
+<p>well it is somewhat a problem that i get the results - ive tried alot but at the moment i am glueless why i get the little output - that is totally contrary to the tags i have in the xslt -processor - any idea and hint will be greatly appreciatdd</p>
+<p>btw: after all i want to run approx 5000 files that are the result of the split - and subsequently i want to collect all the results in a mysql-database... </p>
+<p>here you can get the <strong>original-file:</strong> 
+<a href="http://ftp5.gwdg.de/pub/misc/openstreetmap/download.geofabrik.de">http://ftp5.gwdg.de/pub/misc/openstreetmap/download.geofabrik.de</a> ( germany.osm.bz2  01-Apr-2012 14:51  1.7G )</p>
+<p>and here a <strong>splitted one:</strong> 
+<a href="https://rapidshare.com/#!download|643p12|2523227518|germany-001.xml|100000">https://rapidshare.com/#!download|643p12|2523227518|germany-001.xml|100000</a></p>
+<p>i have to refactor the coed -so the question - is - how can i get the mysql-results on a efficient way? </p>
+<p><strong>update:</strong>thx to the first answer in this thread i startet to refactor the code - but still lack of some better results. i have to retry it again..lots of changes were suggested - i did a quick walktrough on the xslt-parser: with the first trial of refactoring i got some funny results. But i will try again - i go trough all the xslt-processor-code and have a closer look if i find the errors and  finally i try to refactor all the xslt-file. - any pointers and subbestions or code-snippets are greatly wellcome. </p>
+<p>Well to me it looks like our <code>./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a> = '???']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a></code> xpath should be somewhat <code>../tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a>='???']</code>, because our context node is our original matching <code>tag</code> element, not the <code>node</code> element.</p>
+<p>we should consider somewhat changing the context node to make this code clearer and avoid errors like this:</p>
+<pre><code>&lt;xsl:for-each select="xml_split:root/node[tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a>='amenity' and <a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>='restaurant']]"&gt;
+</code></pre>
+<p>Then we can use XPaths like select="tag/<a href="/users/260/idoneus"><a href="/users/260/idoneus">@id</a></a>"<code>and</code>tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a></a></a></a></a>='country']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a></a></a></a>`.</p>
+<p>But above all we should consider refactoring this code to make better use of <code>template</code> instead of <code>for-each</code>.</p>
+<p>what do you think - any pointer towards the refactoring is grealy appreciated</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                                    <a href="/tags/xml/" class="post-tag tag-link-xml"
+                                        title="see questions tagged 'xml'" rel="tag">xml</a>
+                                
+                                    <a href="/tags/xslt/" class="post-tag tag-link-xslt"
+                                        title="see questions tagged 'xslt'" rel="tag">xslt</a>
+                                
+                                    <a href="/tags/mysql/" class="post-tag tag-link-mysql"
+                                        title="see questions tagged 'mysql'" rel="tag">mysql</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Apr '12, 16:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/600fc90e36ff81dfaba666708cf91dc5?s=32&amp;d=identicon&amp;r=g" alt="tagtheworld's gravatar image" />
+    <p><a href="/users/3389/tagtheworld">tagtheworld</a><br/>
+    <span class="score" title="0 reputation points">0</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tagtheworld has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12334/">
+                edited
+                <strong>24 Apr '12, 16:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-12334">
+    
+</div>
+<div id="comment-tools-12334" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12334-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/12334/refactoring-an-xslt-processor-with-minor-correction-beginner-question?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/12334/refactoring-an-xslt-processor-with-minor-correction-beginner-question?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/12334/refactoring-an-xslt-processor-with-minor-correction-beginner-question?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/12334/refactoring-an-xslt-processor-with-minor-correction-beginner-question?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="12337"></a>
+                    <div id="answer-container-12337" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12337-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12337/up/" rel="nofollow"> </a>
+<div id="post-12337-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-12337-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12337/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is not an XSLT help desk. Your problem is not related to OSM except that you use OSM test data; it would probably be better to discuss these things in a forum dedicated to XML processing in general. </p>
+<p>You write that eventually you want the data in a MySQL database. Is there any reason why you don't just bin the whole XSLT stuff and import the data into MySQL using Osmosis or something like <a href="https://github.com/skyebook/OSMGenerator?">https://github.com/skyebook/OSMGenerator?</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12337/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '12, 19:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12337">
+    
+        <a name="12338"></a>
+        <div class="comment" id="comment-12338">
+            <div id="post-12338-score" class="comment-score"></div>
+            <div class="comment-text"><p>hello frederik thx for the answer - well it would be very interesting to import the whole stuff into a mysql-db. at which stage can we do a import into mysql!? At a very early stage of the data-processing,,,,</p></div>
+            <div class="comment-info" id="comment-12338-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '12, 20:21)</span>
+                <a class="comment-user userinfo" href="/users/3389/tagtheworld">tagtheworld</a>
+                
+            </div>
+        </div>
+    
+        <a name="12339"></a>
+        <div class="comment" id="comment-12339">
+            <div id="post-12339-score" class="comment-score"></div>
+            <div class="comment-text"><p>hello after a quick look at the options of importing i muse bout the db-shemes. Is it possible to do certain requests on the data - if they are imported into mysql - i heard about the problem of consistency and such issues . i will dig deeper into the issues - come back and report all the findings. greeting</p></div>
+            <div class="comment-info" id="comment-12339-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '12, 20:41)</span>
+                <a class="comment-user userinfo" href="/users/3389/tagtheworld">tagtheworld</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12337" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12337-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/12334/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='l5x76psDGJQGz3rhlpdHxHE5YLO22igZ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12334/refactoring-an-xslt-processor-with-minor-correction-beginner-question?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12334/refactoring-an-xslt-processor-with-minor-correction-beginner-question?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+        <a href="/tags/xml/"
+            class="tag-link-xml"
+            title="see questions tagged'xml'using tags"
+            rel="tag">xml</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/mysql/"
+            class="tag-link-mysql"
+            title="see questions tagged'mysql'using tags"
+            rel="tag">mysql</a> <span class="tag-number">&#215;21</span><br/>
+        
+        <a href="/tags/xslt/"
+            class="tag-link-xslt"
+            title="see questions tagged'xslt'using tags"
+            rel="tag">xslt</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 24, 2012, 4:33 p.m.">24 Apr '12, 16:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,498 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 24, 2012, 8:41 p.m.">24 Apr '12, 20:41</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/12253/xslt-processor-gives-back-top-results-on-one-dataset-and-no-results-on-another">xslt-processor gives back top-results on one dataset and no results on another</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12077/change-xslt-to-match-all-osm-tags-in-a-gis-file">change xslt to match all OSM tags in a GIS-file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12240/add-new-xml-elements-in-a-xslt-processor-beginner-question">Add new xml-elements in a xslt-processor [beginner-question]</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73476/why-my-osm-file-xml-pbf-osm-osmpbf-cant-be-displayed-in-josm-but-not-in-qgis">Why my osm file (.xml .pbf, .osm, .osm.pbf) can&#39;t be displayed in JOSM but not in QGIS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12409/how-to-overhaul-the-xslt-processor-to-give-back-better-results-on-a-xml-file">[closed] how to overhaul the xslt-processor to give back better results on a xml-file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2505/i-see-some-nodes-on-the-map-but-i-cant-find-them-in-planetosm-why">I see some nodes on the map, but I can&#39;t find them in Planet.osm. Why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12112/transforming-xml-output-from-a-xapi-search-how-to-store-this-in-a-mysql-database">transforming xml-output from a xapi-search: how to store this in a mysql-database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8236/transforming-xml-output-from-xapi-search">Transforming XML output from XAPI search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12100/xapi-request-runs-into-server-error-how-can-make-sense-of-xapi">xapi-request runs into server error - How can make sense of XAPI</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2336/how-do-i-recover-my-account-details">[closed] How do I recover my account details?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

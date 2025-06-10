@@ -1,0 +1,879 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Get distance from gpx programmatic-ally using javascript - OSM Help</title>
+        <meta name="description" content="I have a gpx file. I mapped the route to a local openstreetmap (followed https://wiki.openstreetmap.org/wiki/Openlayers_Track_example example). My requirement is to get distance of the route. How can i achieve that? I need to achieve it programmatic-ally using javascript.  Please help, Thanks." />
+        <meta name="keywords" content="calculation,distance,javascript,gpx" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/33195/get-distance-from-gpx-programmatic-ally-using-javascript" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/33195/get-distance-from-gpx-programmatic-ally-using-javascript?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='jKNwwUQQMhu7SA9Yn7dluoPtg1vLG98i' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/33195/get-distance-from-gpx-programmatic-ally-using-javascript">Get distance from gpx programmatic-ally using javascript</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-33195-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33195/up/" rel="nofollow"> </a>
+<div id="post-33195-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33195-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33195/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/33195/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a gpx file. I mapped the route to a local openstreetmap (followed <a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">https://wiki.openstreetmap.org/wiki/Openlayers_Track_example</a> example).</p>
+<p>My requirement is to get distance of the route. How can i achieve that? I need to achieve it programmatic-ally using javascript. </p>
+<p>Please help, Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/calculation/" class="post-tag tag-link-calculation"
+                                        title="see questions tagged 'calculation'" rel="tag">calculation</a>
+                                
+                                    <a href="/tags/distance/" class="post-tag tag-link-distance"
+                                        title="see questions tagged 'distance'" rel="tag">distance</a>
+                                
+                                    <a href="/tags/javascript/" class="post-tag tag-link-javascript"
+                                        title="see questions tagged 'javascript'" rel="tag">javascript</a>
+                                
+                                    <a href="/tags/gpx/" class="post-tag tag-link-gpx"
+                                        title="see questions tagged 'gpx'" rel="tag">gpx</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>15 May '14, 12:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4cb6366ce1566eab1149c611c79b25c5?s=32&amp;d=identicon&amp;r=g" alt="ErmaIsabel's gravatar image" />
+    <p><a href="/users/8858/ermaisabel">ErmaIsabel</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ErmaIsabel has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/33195/">
+                edited
+                <strong>15 May '14, 13:24</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-33195">
+    
+        <a name="33196"></a>
+        <div class="comment" id="comment-33196">
+            <div id="post-33196-score" class="comment-score">1</div>
+            <div class="comment-text"><p>What about an external solution (as gpsPrune for example), or does it need to be a webimplementation?</p></div>
+            <div class="comment-info" id="comment-33196-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 May '14, 12:45)</span>
+                <a class="comment-user userinfo" href="/users/4984/iii">iii</a>
+                
+            </div>
+        </div>
+    
+        <a name="33199"></a>
+        <div class="comment" id="comment-33199">
+            <div id="post-33199-score" class="comment-score"></div>
+            <div class="comment-text"><p>So there is no relation to OSM at all, right? It is just how to calculate the distance from a "route" inside a gpx file?  OSM is just the background for viewing, right?</p></div>
+            <div class="comment-info" id="comment-33199-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 May '14, 13:26)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33195" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33195-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/33195/get-distance-from-gpx-programmatic-ally-using-javascript?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/33195/get-distance-from-gpx-programmatic-ally-using-javascript?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/33195/get-distance-from-gpx-programmatic-ally-using-javascript?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/33195/get-distance-from-gpx-programmatic-ally-using-javascript?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="33197"></a>
+                    <div id="answer-container-33197" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33197-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33197/up/" rel="nofollow"> </a>
+<div id="post-33197-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33197-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33197/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi Ermalsabel,
+the short answer :
+1) Get a (free) copy of <a href="http://www.garmin.com/en-US/shop/downloads/basecamp">BaseCamp</a>
+2) Import your *.gpx file in BaseCamp
+3) Right Click the file
+4) Choose open. One of the statistics is the total lenght</p>
+<p>The long answer :
+1) Get a (free) copy of eg <a href="http://www.gpsbabel.org/download.html">GpsBabel</a>
+2) Convert the <em>.gpx to </em>.csv
+3) Use a spreadsheet to calculate any statistic</p>
+<p>I use Excel but others will work. Calculating distances can be done with <a href="http://en.wikipedia.org/wiki/Great-circle_distance"> The haversine formula </a> but also more straight forward with the spherical law of cosines if you use double precision variables. Also use double precision to calculate time and average speed if there are a few thousand data points in your *.Gpx log as adding increase the error proportionally.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33197/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 May '14, 12:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5c3b258ebdc5943f1ab6008f146e7f7c?s=32&amp;d=identicon&amp;r=g" alt="Gys%20de%20Jongh's gravatar image" />
+    <p><a href="/users/8791/gys-de-jongh">Gys de Jongh</a><br/>
+    <span class="score" title="713 reputation points">713</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gys de Jongh has 5 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33197">
+    
+        <a name="33198"></a>
+        <div class="comment" id="comment-33198">
+            <div id="post-33198-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Thank you very much for your reply.I need to achieve it programmatic-ally using javascript. Sorry my question doesn't explain much</p></div>
+            <div class="comment-info" id="comment-33198-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 May '14, 13:08)</span>
+                <a class="comment-user userinfo" href="/users/8858/ermaisabel">ErmaIsabel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33197" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33197-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="33247"></a>
+                    <div id="answer-container-33247" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33247-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33247/up/" rel="nofollow"> </a>
+<div id="post-33247-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33247-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33247/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Openlayers is a JavaScript lib that allows to show maps on websites. It also contains stuff to handle gpx data, and a few geometric functions that would very probably answer your need.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33247/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 May '14, 18:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3c7cffe544d6a1c46c97a25b2fdcdedc?s=32&amp;d=identicon&amp;r=g" alt="yvecai's gravatar image" />
+    <p><a href="/users/5587/yvecai">yvecai</a><br/>
+    <span class="score" title="1481 reputation points"><span class="">1.5k</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="26 badges"><span class="bronze">&#9679;</span><span class="badgecount">26</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="yvecai has 7 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33247">
+    
+</div>
+<div id="comment-tools-33247" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33247-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="33248"></a>
+                    <div id="answer-container-33248" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33248-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33248/up/" rel="nofollow"> </a>
+<div id="post-33248-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33248-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33248/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>GPX files are XML. Its been a while since I've played with Javascript so I can't remember if the XML calls I was using are built in or were part of a library. But anyway, your first step is parsing the GPX to get an array of data.</p>
+<p>You may find a bunch of "wpt" (waypoint) elements which you want to ignore. Then there can be one or more "trk" (track) elements that you are interested in. Each track element contains a bunch of "trkpt" elements with "lat" and "lon" attributes. You want to add the distances between each track element to get the total length of the track.</p>
+<p>However you don't want the angular distance summed: Convert it to feet/meters or what ever units you need first. There are some quick and dirty conversions you could do but you'll probably want to read up on the official equations for converting spherical coordinates to linear distances. Since that is just math, you can do it in Javascript.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33248/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 May '14, 19:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f60af53a4eba0c21f25c22674fb4a8cc?s=32&amp;d=identicon&amp;r=g" alt="n76's gravatar image" />
+    <p><a href="/users/5918/n76">n76</a><br/>
+    <span class="score" title="10839 reputation points"><span class="">10.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="82 badges"><span class="silver">&#9679;</span><span class="badgecount">82</span></span><span title="172 badges"><span class="bronze">&#9679;</span><span class="badgecount">172</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="n76 has 48 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33248">
+    
+</div>
+<div id="comment-tools-33248" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33248-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/33195/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='jKNwwUQQMhu7SA9Yn7dluoPtg1vLG98i' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33195/get-distance-from-gpx-programmatic-ally-using-javascript?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33195/get-distance-from-gpx-programmatic-ally-using-javascript?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/gpx/"
+            class="tag-link-gpx"
+            title="see questions tagged'gpx'using tags"
+            rel="tag">gpx</a> <span class="tag-number">&#215;255</span><br/>
+        
+        <a href="/tags/distance/"
+            class="tag-link-distance"
+            title="see questions tagged'distance'using tags"
+            rel="tag">distance</a> <span class="tag-number">&#215;63</span><br/>
+        
+        <a href="/tags/javascript/"
+            class="tag-link-javascript"
+            title="see questions tagged'javascript'using tags"
+            rel="tag">javascript</a> <span class="tag-number">&#215;60</span><br/>
+        
+        <a href="/tags/calculation/"
+            class="tag-link-calculation"
+            title="see questions tagged'calculation'using tags"
+            rel="tag">calculation</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 15, 2014, 12:02 p.m.">15 May '14, 12:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,226 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 16, 2014, 7:41 p.m.">16 May '14, 19:41</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/53147/how-to-display-additional-data-of-gpx-in-popup">How to display additional data of GPX in popup</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77493/how-the-get-distance-by-using-adress-and-postal-code-on-a-website">How the get distance by using adress and postal code on a website</a>
+        </p>
+        
+        <p>
+            <a href="/questions/752/how-do-i-get-the-id-of-the-newest-gpx-file-uploaded-to-openstreetmap">How do I get the ID of the newest GPX file uploaded to OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/846/upload-big-gpx-file">Upload big gpx file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx">application or web interface for freehand plotting tracks on OSM as saving as gpx?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/915/how-to-get-administrative-boundaries-in-a-gps-format-ideally-in-igc">How to get administrative boundaries in a GPS format, ideally in .igc?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/966/point-and-click-to-get-distance-of-a-track">Point and click to get distance of a track</a>
+        </p>
+        
+        <p>
+            <a href="/questions/938/can-not-see-the-gps-track">Can not see the GPS track</a>
+        </p>
+        
+        <p>
+            <a href="/questions/999/how-to-extract-elevation-information-from-tracks-in-josm">How to extract elevation information from tracks in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/828/uploading-a-gpx-from-ttgpslogger-doesnt-work">Uploading a GPX from TTGpsLogger doesn&#39;t work</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

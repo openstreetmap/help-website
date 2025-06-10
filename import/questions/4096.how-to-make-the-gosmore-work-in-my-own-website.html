@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to make the gosmore work in my own website - OSM Help</title>
+        <meta name="description" content="http://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine I installed the Gosmore engine as it says in that web pag(i built an apache server),but it did not work. i am not very sure about my operation. Gosmore can not find the Pak file." />
+        <meta name="keywords" content="gosmore" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/4096/how-to-make-the-gosmore-work-in-my-own-website" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/4096/how-to-make-the-gosmore-work-in-my-own-website?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='6ACsGHAG5yy9advfeaOAzUgWq0w8dkK6' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/4096/how-to-make-the-gosmore-work-in-my-own-website">How to make the gosmore work in my own website</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-4096-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4096/up/" rel="nofollow"> </a>
+<div id="post-4096-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-4096-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4096/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/4096/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p><a href="http://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine">http://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine</a></p>
+<p>I installed the Gosmore engine as it says in that web pag(i built an apache server),but it did not work. i am not very sure about my operation.
+Gosmore can not find the Pak file.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/gosmore/" class="post-tag tag-link-gosmore"
+                                        title="see questions tagged 'gosmore'" rel="tag">gosmore</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Mar '11, 19:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/af1ec8bbb972abf519b0c265336d7911?s=32&amp;d=identicon&amp;r=g" alt="monument's gravatar image" />
+    <p><a href="/users/1050/monument">monument</a><br/>
+    <span class="score" title="69 reputation points">69</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="monument has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/4096/">
+                edited
+                <strong>25 Mar '11, 19:40</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-4096">
+    
+</div>
+<div id="comment-tools-4096" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4096-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/4096/how-to-make-the-gosmore-work-in-my-own-website?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/4096/how-to-make-the-gosmore-work-in-my-own-website?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/4096/how-to-make-the-gosmore-work-in-my-own-website?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/4096/how-to-make-the-gosmore-work-in-my-own-website?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="4097"></a>
+                    <div id="answer-container-4097" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4097-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4097/up/" rel="nofollow"> </a>
+<div id="post-4097-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-4097-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4097/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Did you see the description of gosmores CGI interface in the <a href="http://wiki.openstreetmap.org/wiki/Gosmore#Cgi_Routing_Interface">wiki</a>?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4097/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Mar '11, 19:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/465f344e31e8ba1be0e0401414815db0?s=32&amp;d=identicon&amp;r=g" alt="petschge's gravatar image" />
+    <p><a href="/users/8/petschge">petschge</a><br/>
+    <span class="score" title="8279 reputation points"><span class="">8.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="73 badges"><span class="silver">&#9679;</span><span class="badgecount">73</span></span><span title="98 badges"><span class="bronze">&#9679;</span><span class="badgecount">98</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="petschge has 29 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4097">
+    
+        <a name="4098"></a>
+        <div class="comment" id="comment-4098">
+            <div id="post-4098-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes ,i read it,but i am not very clear.
+when i installed the engine，i just read the pag 
+<a href="http://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine">http://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine</a></p></div>
+            <div class="comment-info" id="comment-4098-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '11, 19:44)</span>
+                <a class="comment-user userinfo" href="/users/1050/monument">monument</a>
+                
+            </div>
+        </div>
+    
+        <a name="4099"></a>
+        <div class="comment" id="comment-4099">
+            <div id="post-4099-score" class="comment-score">1</div>
+            <div class="comment-text"><p>All that tells you is "install gosmore" and "make a pak file available". The other site tells you how you actually can "talk" to gosmore in a programm.</p></div>
+            <div class="comment-info" id="comment-4099-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '11, 19:53)</span>
+                <a class="comment-user userinfo" href="/users/8/petschge">petschge</a>
+                
+            </div>
+        </div>
+    
+        <a name="4100"></a>
+        <div class="comment" id="comment-4100">
+            <div id="post-4100-score" class="comment-score"></div>
+            <div class="comment-text"><p>thank you for your guidance, but Gosmore show that it did not find the pak file,is there anything wrong with my operation?</p></div>
+            <div class="comment-info" id="comment-4100-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '11, 20:10)</span>
+                <a class="comment-user userinfo" href="/users/1050/monument">monument</a>
+                
+            </div>
+        </div>
+    
+        <a name="4101"></a>
+        <div class="comment" id="comment-4101">
+            <div id="post-4101-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't know. You didn't really tell use how and where you installed gosmore and which pak file you used and where it is stored.</p></div>
+            <div class="comment-info" id="comment-4101-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '11, 20:15)</span>
+                <a class="comment-user userinfo" href="/users/8/petschge">petschge</a>
+                
+            </div>
+        </div>
+    
+        <a name="4102"></a>
+        <div class="comment" id="comment-4102">
+            <div id="post-4102-score" class="comment-score"></div>
+            <div class="comment-text"><p>i want to upload the pictures,but...it did not show the pictures,all red X.....</p></div>
+            <div class="comment-info" id="comment-4102-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '11, 20:40)</span>
+                <a class="comment-user userinfo" href="/users/1050/monument">monument</a>
+                
+            </div>
+        </div>
+    
+        <a name="4108"></a>
+        <div class="comment not_top_scorer" id="comment-4108">
+            <div id="post-4108-score" class="comment-score"></div>
+            <div class="comment-text"><p>By the way <a href="http://,http://wiki.openstreetmap.org">,http://wiki.openstreetmap.org</a>/wiki/Gosmore#Cgi_Routing_Interface
+this page is an example in linux,is there any help for windows, i got the gosmore for windows....</p></div>
+            <div class="comment-info" id="comment-4108-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '11, 21:01)</span>
+                <a class="comment-user userinfo" href="/users/1050/monument">monument</a>
+                
+            </div>
+        </div>
+    
+        <a name="4125"></a>
+        <div class="comment not_top_scorer" id="comment-4125">
+            <div id="post-4125-score" class="comment-score"></div>
+            <div class="comment-text"><p>For all I know the CGI interface of apache works the same whether on linux or on windows.</p></div>
+            <div class="comment-info" id="comment-4125-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '11, 08:59)</span>
+                <a class="comment-user userinfo" href="/users/8/petschge">petschge</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4097" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4097-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="4155"></a>
+                    <div id="answer-container-4155" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4155-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4155/up/" rel="nofollow"> </a>
+<div id="post-4155-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-4155-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4155/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Firstly note that I forked YOURS to make the <a href="http://Osm.org">Osm.org</a> Routing Demo. You can grab <a href="http://nroets.dev.openstreetmap.org/">my latest tarball</a>. My changes include support for IE, restricting jQuery to it's own namespace, making routes dragable and many bug fixes.</p>
+<p>The best way to install gosmore is to follow the instructions on the Gosmore wiki page, i.e. svn co, configure and make. The "make install" step is not necessary. Then rebuild with an extract and test it e.g.</p>
+<p>QUERY_STRING="flat=45.303213&amp;flon=-63.304713&amp;tlat=44.6890011&amp;tlon=-63.8092375fast=1&amp;v=motorcar"  ./gosmore</p>
+<p>Although there are scripts for rebuilding the complete planet (in 2 sections), it is strongly advised that you use the <a href="http://wiki.openstreetmap.org/wiki/Osm.org_Routing_Demo#Can_I_use_the_service_in_other_websites_.2F_applications_.3F">shared infrastructure</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4155/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Mar '11, 15:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d25927545eb18b4d577280081df5ce6b?s=32&amp;d=identicon&amp;r=g" alt="Nic%20Roets's gravatar image" />
+    <p><a href="/users/75/nic-roets">Nic Roets</a><br/>
+    <span class="score" title="583 reputation points">583</span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Nic Roets has one accepted answer">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4155">
+    
+</div>
+<div id="comment-tools-4155" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4155-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/4096/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='6ACsGHAG5yy9advfeaOAzUgWq0w8dkK6' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4096/how-to-make-the-gosmore-work-in-my-own-website?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4096/how-to-make-the-gosmore-work-in-my-own-website?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/gosmore/"
+            class="tag-link-gosmore"
+            title="see questions tagged'gosmore'using tags"
+            rel="tag">gosmore</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 25, 2011, 7:30 p.m.">25 Mar '11, 19:30</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,224 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 28, 2011, 3:14 p.m.">28 Mar '11, 15:14</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/304/how-to-start-gosmore-on-an-md-97430">How to start gosmore on an MD 97430?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/678/problem-installing-gosmore">Problem installing gosmore?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4481/problem-using-gosmore-to-rebuild-a-pak-file-from-osm-data">Problem using gosmore to rebuild a .pak file from osm data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10890/gosmore-how-to-get-a-map-on-screen">Gosmore, how to get a map on screen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12151/rebuild-of-gosmore">rebuild of gosmore</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14073/is-gosmore-down">[closed] Is Gosmore down?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15847/error-building-gosmore-under-ubuntu-1204">Error building Gosmore under ubuntu 12.04</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36739/offline-multi-modal-routing-on-mobile">Offline multi-modal routing on mobile</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38373/yournavigation-server-is-down">Yournavigation Server is down</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

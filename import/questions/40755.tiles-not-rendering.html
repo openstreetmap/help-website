@@ -1,0 +1,958 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tiles not rendering - OSM Help</title>
+        <meta name="description" content="Since about 2015-01-29 I&#39;ve seen a problem with tiles not rendering at any zoom level on OpenStreetMap.org. The missing tiles are in diagonal lines from lower left to upper right, touching at the corners. I&#39;ve tried clearing the Web browser cache and reloading the page, to no avail. It happens at al..." />
+        <meta name="keywords" content="rendering,tiles,browser" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/40755/tiles-not-rendering" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/40755/tiles-not-rendering?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='0xt9OEz0BBd9iSuGPWqTZ22EGPYaQ0Mb' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/40755/tiles-not-rendering">Tiles not rendering</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-40755-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40755/up/" rel="nofollow"> </a>
+<div id="post-40755-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-40755-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40755/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/40755/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Since about 2015-01-29 I've seen a problem with tiles not rendering <em>at any zoom level</em> on OpenStreetMap.org.  The missing tiles are in diagonal lines from lower left to upper right, touching at the corners.  I've tried clearing the Web browser cache and reloading the page, to no avail.  It happens at all hours of the day and night now, making OpenStreetMap.org essentially useless and very difficult to use when one edits offline with JOSM and would then like to verify results after uploading changes.</p>
+<p>Is anyone else seeing this problem?  Does anyone know what is causing it?</p>
+<p>Update 2015-04-04:  Viewing OpenStreetMap.de (the German site) with the same machine and same browser renders correctly, with no missing tiles.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                                    <a href="/tags/browser/" class="post-tag tag-link-browser"
+                                        title="see questions tagged 'browser'" rel="tag">browser</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Feb '15, 21:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/073c91b59675b4570a152fce196e97f7?s=32&amp;d=identicon&amp;r=g" alt="user8192's gravatar image" />
+    <p><a href="/users/2397/user8192">user8192</a><br/>
+    <span class="score" title="20 reputation points">20</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="user8192 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/40755/">
+                edited
+                <strong>05 Apr '15, 02:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-40755">
+    
+        <a name="40756"></a>
+        <div class="comment" id="comment-40756">
+            <div id="post-40756-score" class="comment-score">4</div>
+            <div class="comment-text"><p>tiles are loaded from different tile servers (at least different URLs). Just one of the three (a, b, c) fails, which is the pattern you seeing. I also had this today, but some minutes later those tiles loaded normally again. </p>
+
+<p>It might be useful to know from which country you are accessing. I am from Germany.</p>
+
+<p>Workaroung: use other tiles. E.g. the Humanitarian ones are also updated quite fast (less than ten minutes at my edit now).</p></div>
+            <div class="comment-info" id="comment-40756-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Feb '15, 23:00)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40762"></a>
+        <div class="comment" id="comment-40762">
+            <div id="post-40762-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am in California, United States. Per your suggestion, I used the "Layers" menu at the right of the OpenStreetMap.org page to switch from Standard to Humanitarian view. There are no missing tiles in this view, but some features added several days ago, such as gates, service roads and buildings, are not displayed in Cycle Map, Transport Map, MapQuest Open or Humanitarian views.</p>
+
+<p>We can only hope that someone is working on it and will get it fixed soon. How can one tell if it is the a.tile, b.tile or c.tile server with problems, from the latitude and longitude of the missing squares?</p></div>
+            <div class="comment-info" id="comment-40762-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '15, 18:46)</span>
+                <a class="comment-user userinfo" href="/users/2397/user8192">user8192</a>
+                
+            </div>
+        </div>
+    
+        <a name="40763"></a>
+        <div class="comment" id="comment-40763">
+            <div id="post-40763-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If you do a "nslookup a.tile.openstreetmap.org" you'll get the same answer for a, b or c - that's just a cheat to help tiles load faster.</p>
+
+<p>I see:</p>
+
+<p>Name:    london.tile.openstreetmap.org
+Address:  185.73.44.30
+Aliases:  a.tile.openstreetmap.org
+          tile.geo.openstreetmap.org
+          gb.tile.openstreetmap.org</p>
+
+<p>from the UK which shows me where my tiles are coming from.</p></div>
+            <div class="comment-info" id="comment-40763-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '15, 20:07)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40765"></a>
+        <div class="comment not_top_scorer" id="comment-40765">
+            <div id="post-40765-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: ah, okay. I get germany.tile.openstreetmap.org (and the same IP) for all three names. However, I do not have the non-loading tiles problem now.</p></div>
+            <div class="comment-info" id="comment-40765-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '15, 23:43)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40772"></a>
+        <div class="comment" id="comment-40772">
+            <div id="post-40772-score" class="comment-score">1</div>
+            <div class="comment-text"><p>When I perform "nslookup a.tile.openstreetmap.org", it responds with the result</p>
+
+<p>Name:   corvallis.tile.openstreetmap.org </p>
+
+<p>Address: 140.211.167.105</p>
+
+<p>where "corvallis" most likely means Corvallis, Oregon, USA.  Same result for "b.tile" and "c.tile". Now we are getting somewhere.  It's probably a mirror in the United States that has gone bad.  Perhaps it is located at Oregon State University, Corvallis.  Does anyone have an idea how to contact the person(s) responsible for that server?</p></div>
+            <div class="comment-info" id="comment-40772-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Feb '15, 12:00)</span>
+                <a class="comment-user userinfo" href="/users/2397/user8192">user8192</a>
+                
+            </div>
+        </div>
+    
+        <a name="40773"></a>
+        <div class="comment not_top_scorer" id="comment-40773">
+            <div id="post-40773-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you give the URL of a tile (typically via right-click / view image) that does not work for you?</p></div>
+            <div class="comment-info" id="comment-40773-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Feb '15, 12:23)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40776"></a>
+        <div class="comment not_top_scorer" id="comment-40776">
+            <div id="post-40776-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/2397/user8192">@user8192</a>: yes, that's right. Just for info: "<a href="http://dns.openstreetmap.org/tile.openstreetmap.org.html">United States via corvallis</a>"</p></div>
+            <div class="comment-info" id="comment-40776-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Feb '15, 13:41)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43673"></a>
+        <div class="comment not_top_scorer" id="comment-43673">
+            <div id="post-43673-score" class="comment-score"></div>
+            <div class="comment-text"><p>I still have this problem and it has been months now, how can it works in Humanitarian layer, but not in Standard layer?</p></div>
+            <div class="comment-info" id="comment-43673-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jun '15, 09:46)</span>
+                <a class="comment-user userinfo" href="/users/11132/gutenye">gutenye</a>
+                
+            </div>
+        </div>
+    
+        <a name="43674"></a>
+        <div class="comment" id="comment-43674">
+            <div id="post-43674-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/11132/gutenye">@gutenye</a> the tiles from the Humanitarian level are not distributed via the tile cache network (IMHO). As pointed out earlier the fastest way to get your problem addressed (if it is actually possible) is to join #osm-dev and give some details.</p></div>
+            <div class="comment-info" id="comment-43674-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jun '15, 09:52)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40755" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40755-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/40755/tiles-not-rendering?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/40755/tiles-not-rendering?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/40755/tiles-not-rendering?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/40755/tiles-not-rendering?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="40774"></a>
+                    <div id="answer-container-40774" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40774-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40774/up/" rel="nofollow"> </a>
+<div id="post-40774-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-40774-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40774/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The most effective way of communicating with the admins is by mentioning it in the <a href="http://irc://irc.oftc.net/osm-dev">#osm-dev</a> <a href="http://wiki.osm.org/wiki/IRC">IRC</a> channel.  Obviously it might take a while for any question to be answered, as the people running the site are volunteers with day jobs.  </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40774/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Feb '15, 12:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40774">
+    
+        <a name="40775"></a>
+        <div class="comment" id="comment-40775">
+            <div id="post-40775-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the tip.  It's now 5 a.m. here on the west coast of the U.S., so it's unlikely anyone at OSU Corvallis is online at the moment, but I just posted a question about the tile server status on the channel anyway.</p></div>
+            <div class="comment-info" id="comment-40775-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Feb '15, 13:05)</span>
+                <a class="comment-user userinfo" href="/users/2397/user8192">user8192</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40774" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40774-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="40899"></a>
+                    <div id="answer-container-40899" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40899-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40899/up/" rel="nofollow"> </a>
+<div id="post-40899-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-40899-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40899/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>user8192, we, too, have been seeing this issue for several days.</p>
+<p>Are you a Time Warner customer? Time Warner's DNS servers (209.18.47.61 and 209.18.47.62) intermittently return no such name when asked to resolve b.tile.openstreetmap.org and c.tile.openstreetmap.org.</p>
+<p>I do not see these failures when querying other DNS servers (e.g., Google Public DNS and Amazon DNS as well as OpenStreetMap's DNS servers).</p>
+<p>The issue only affects the Standard tiles since other tiles are served from other hostnames.</p>
+<p>We are complaining to Time Warner. </p>
+<p><em>Update:</em> We complained to Time Warner about their DNS servers and now no longer see the problem, user8192. Let me know if you still see the issue and if you are a Time Warner customer.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40899/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Feb '15, 20:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3171902d4de6e63728ca4dd1ecf51486?s=32&amp;d=identicon&amp;r=g" alt="ccwf's gravatar image" />
+    <p><a href="/users/10453/ccwf">ccwf</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ccwf has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/40899/">
+                edited
+                <strong>10 Feb '15, 00:25</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40899">
+    
+        <a name="42124"></a>
+        <div class="comment" id="comment-42124">
+            <div id="post-42124-score" class="comment-score">1</div>
+            <div class="comment-text"><p>No, I'm a Charter Communications customer, but I don't use Charter's DNS servers since they redirect "404 Not Found" to spammy link farm pages. My primary DNS is set to 8.8.8.8 (Google Public); the secondary DNS is set to 4.2.2.4 (Level 3 Communications). I could try some different name servers to see if it fixes the problem. Interestingly, using the same browser on the same machine, there is no problem seeing www.openstreetmap.de, the German version, although there is a rather big lag between my editing on the west coast of the U.S. and changes appearing on the German site.</p></div>
+            <div class="comment-info" id="comment-42124-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Apr '15, 02:25)</span>
+                <a class="comment-user userinfo" href="/users/2397/user8192">user8192</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40899" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40899-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/40755/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='0xt9OEz0BBd9iSuGPWqTZ22EGPYaQ0Mb' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40755/tiles-not-rendering?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40755/tiles-not-rendering?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+        <a href="/tags/browser/"
+            class="tag-link-browser"
+            title="see questions tagged'browser'using tags"
+            rel="tag">browser</a> <span class="tag-number">&#215;25</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 2, 2015, 9:23 p.m.">02 Feb '15, 21:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,786 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 21, 2015, 9:52 a.m.">21 Jun '15, 09:52</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/24465/10s-of-thousands-of-pois-howto-display-to-the-user-on-top-of-a-map">10&#39;s of thousands of POI&#39;s - Howto display to the user on top of a map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15548/can-i-render-opencyclemap-at-home">Can I render OpenCycleMap at home?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/840/problem-with-map-scale-when-generating-maps-with-osmarender">Problem with map scale when generating maps with Osmarender</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8395/how-to-set-zoom-levels-while-generating-tiles">How to set zoom levels while generating tiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/242/how-to-download-rendered-osm-maps">How to download rendered OSM maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13250/what-is-the-correct-projection-i-should-use-with-mapnik">What is the correct projection I should use with Mapnik?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3909/tile-rendering-queue-limit">Tile rendering queue limit?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2562/trinidad-coastline-not-rerendering">Trinidad coastline not rerendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5274/uk-topographic-maps">UK topographic maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8641/what-is-the-best-way-to-render-tiles-and-to-bind-them-to-my-osm-server">[closed] What is the best way to render tiles and to bind them to my osm server?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

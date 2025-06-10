@@ -1,0 +1,1031 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Highlight untagged and unconnected nodes in a way - OSM Help</title>
+        <meta name="description" content="While editing some cities I see a lot of unneeded/excessive nodes. For example, here:  See that the street is straight and the left middle node is unneeded. I found question 8348 but I just can&#39;t select everything and simplify (it can remove valid nodes or just can&#39;t remove the node (caused by too h..." />
+        <meta name="keywords" content="highlight,nodes,excessive,unneeded,remove" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/22384/highlight-untagged-and-unconnected-nodes-in-a-way" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/22384/highlight-untagged-and-unconnected-nodes-in-a-way?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='nDs3Lg2A4QBaZoaJdG6wN8WUCqu5eb4Z' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/22384/highlight-untagged-and-unconnected-nodes-in-a-way">Highlight untagged and unconnected nodes in a way</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-22384-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22384/up/" rel="nofollow"> </a>
+<div id="post-22384-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-22384-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22384/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/22384/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>While editing some cities I see a lot of unneeded/excessive nodes.
+For example, here:</p>
+<p><img alt="Unneeded node" src="http://i.imgur.com/wk4jMHc.png"></p>
+<p>See that the street is straight and the left middle node is unneeded.
+I found <a href="https://help.openstreetmap.org/questions/8348/is-there-an-efficient-way-to-delete-excessiveredundant-nodes">question 8348</a> but I just can't select everything and simplify (it can remove valid nodes or just can't remove the node (caused by too high or too low max-error value)) nor I can select everything and straight them too.</p>
+<p>While looking at the data with a lower zoom level it's also difficult to spot this small square in JOSM.</p>
+<p>Another example:</p>
+<p><img alt="Nodes" src="http://i.imgur.com/9IC9H6r.png"></p>
+<p>And the nodes that probably aren't needed:</p>
+<p><img alt="Unneeded nodes 2" src="http://i.imgur.com/7ZRBhjk.png"></p>
+<p>So my problem is: is it possible to highlight these kind of nodes in JOSM, please? (nodes that are part of a way, have no tags nor are connected to anything else (another ways, for example)).
+Something to display them with a big icon and/or color, like this:</p>
+<p><img alt="Highleted" src="http://i.imgur.com/QF4jjQv.png"></p>
+<p>There is no problem that it's an ugly view but I need a quick way to view these possible spurious nodes (so I can then review them manually and remove if needed).</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/highlight/" class="post-tag tag-link-highlight"
+                                        title="see questions tagged 'highlight'" rel="tag">highlight</a>
+                                
+                                    <a href="/tags/nodes/" class="post-tag tag-link-nodes"
+                                        title="see questions tagged 'nodes'" rel="tag">nodes</a>
+                                
+                                    <a href="/tags/excessive/" class="post-tag tag-link-excessive"
+                                        title="see questions tagged 'excessive'" rel="tag">excessive</a>
+                                
+                                    <a href="/tags/unneeded/" class="post-tag tag-link-unneeded"
+                                        title="see questions tagged 'unneeded'" rel="tag">unneeded</a>
+                                
+                                    <a href="/tags/remove/" class="post-tag tag-link-remove"
+                                        title="see questions tagged 'remove'" rel="tag">remove</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 May '13, 15:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c605758904cf00f577053e4e130f89a2?s=32&amp;d=identicon&amp;r=g" alt="naoliv's gravatar image" />
+    <p><a href="/users/4861/naoliv">naoliv</a><br/>
+    <span class="score" title="600 reputation points">600</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="naoliv has 3 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/22384/">
+                edited
+                <strong>17 May '13, 02:58</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-22384">
+    
+        <a name="22465"></a>
+        <div class="comment" id="comment-22465">
+            <div id="post-22465-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Not every untagged node which is not connected to more than one road is unneeded. In fact, except for the Tiger import and some bad GPX-trace-to-OSM-way conversions most of these nodes are really useful. Besides there is no way to automagically decide whether such a node is unneeded or not.</p></div>
+            <div class="comment-info" id="comment-22465-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '13, 07:20)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="22471"></a>
+        <div class="comment" id="comment-22471">
+            <div id="post-22471-score" class="comment-score"></div>
+            <div class="comment-text"><p>I know. This is exactly why I need only to highlight the nodes and not an automated process to remove them.
+By highlight the nodes I can review them manually.</p></div>
+            <div class="comment-info" id="comment-22471-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '13, 11:45)</span>
+                <a class="comment-user userinfo" href="/users/4861/naoliv">naoliv</a>
+                
+            </div>
+        </div>
+    
+        <a name="22472"></a>
+        <div class="comment" id="comment-22472">
+            <div id="post-22472-score" class="comment-score"></div>
+            <div class="comment-text"><p>Although <a href="http://wiki.openstreetmap.org/wiki/JOSM/Search_function">JOSM's search function</a> is very powerful it doesn't seem to support all of your constraints.</p></div>
+            <div class="comment-info" id="comment-22472-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '13, 12:07)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="22473"></a>
+        <div class="comment not_top_scorer" id="comment-22473">
+            <div id="post-22473-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can some kind of custom map style/MapCSS be created for this?</p></div>
+            <div class="comment-info" id="comment-22473-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '13, 12:10)</span>
+                <a class="comment-user userinfo" href="/users/4861/naoliv">naoliv</a>
+                
+            </div>
+        </div>
+    
+        <a name="22474"></a>
+        <div class="comment" id="comment-22474">
+            <div id="post-22474-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I'm not familiar with MapCSS but I guess it is possible given the already different style of single and multiple connected nodes. Still I wouldn't worry too much about them. Removing them is probably not worth the effort. But if you create such a style then publishing it doesn't harm, too :).</p></div>
+            <div class="comment-info" id="comment-22474-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '13, 12:36)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="22495"></a>
+        <div class="comment not_top_scorer" id="comment-22495">
+            <div id="post-22495-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, edited the initial question to give a better explanation.
+I don't need an automated tool to simplify nor nothing. I just want to have the middle nodes somehow highlighted.</p></div>
+            <div class="comment-info" id="comment-22495-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 May '13, 02:57)</span>
+                <a class="comment-user userinfo" href="/users/4861/naoliv">naoliv</a>
+                
+            </div>
+        </div>
+    
+        <a name="22539"></a>
+        <div class="comment" id="comment-22539">
+            <div id="post-22539-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I think this condition is needed: highlight NodeA if it</p>
+
+<ul>
+<li>is member of exactly one way AND</li>
+<li>is not a member of a relation AND </li>
+<li>has no tags AND</li>
+<li>has a node before (A-1) and after (A+1) in the way AND</li>
+<li>the absolute difference of (angle to North of the line between NodeA-1 and NodeA the angle to North of the line between NodeA and NodeA+1) is &lt;= $threshold</li>
+</ul>
+
+<p>$threshold may be 0 or 0.001 or something (depends on personal taste).</p></div>
+            <div class="comment-info" id="comment-22539-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 May '13, 12:09)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-22384" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22384-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/22384/highlight-untagged-and-unconnected-nodes-in-a-way?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/22384/highlight-untagged-and-unconnected-nodes-in-a-way?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/22384/highlight-untagged-and-unconnected-nodes-in-a-way?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/22384/highlight-untagged-and-unconnected-nodes-in-a-way?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="22650"></a>
+                    <div id="answer-container-22650" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22650-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22650/up/" rel="nofollow"> </a>
+<div id="post-22650-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-22650-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22650/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="SomeoneElse has selected this answer as the correct answer"
+        href="/accept_answer/22650/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Answering my own question, I did create a <a href="//wiki.openstreetmap.org/wiki/MapCSS">MapCSS</a> style:</p>
+<hr>
+<pre><code>way[highway] &gt; node {
+  symbol-size:10;
+  symbol-shape: square;
+  symbol-stroke-color: #00ffff;
+  symbol-fill-color: blue;
+}
+
+node:connection, node:tagged {
+  symbol-size:5;
+  symbol-fill-color: #808080;
+  symbol-stroke-color: #808080;
+}
+</code></pre>
+<hr>
+<p>The first block will highlight with a blue square every node that is part of a way tagged with highway=* (even nodes that are tagged or connected to other ways, but they are handled after).</p>
+<p>Second block will make nodes that are connected to other ways (<em>node:connection</em>) or nodes that have any tags (<em>node:tagged</em>) have a gray color and a smaller size (to stay less noticeable in JOSM).</p>
+<p>This:</p>
+<p><img alt="Original" src="http://i.imgur.com/sLdZoCy.png"></p>
+<p>Is now seen as this with the style:</p>
+<p><img alt="Highlighted" src="http://i.imgur.com/xUfXQsi.png"></p>
+<p>Like aseerel4c26 suggested, missing features are:</p>
+<ul>
+<li>Ignore initial/final nodes of the way</li>
+<li>Ignore highways that are also part of a relation</li>
+<li>Highlight only nodes within a certain angle threshold (so real curved ways could be ignored)</li>
+</ul>
+<p>It is perfectly fitting my needs but any kind of suggestion/improvements are welcome.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22650/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 May '13, 21:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c605758904cf00f577053e4e130f89a2?s=32&amp;d=identicon&amp;r=g" alt="naoliv's gravatar image" />
+    <p><a href="/users/4861/naoliv">naoliv</a><br/>
+    <span class="score" title="600 reputation points">600</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="naoliv has 3 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/22650/">
+                edited
+                <strong>25 May '13, 00:25</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22650">
+    
+        <a name="22652"></a>
+        <div class="comment" id="comment-22652">
+            <div id="post-22652-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks for sharing!</p>
+
+<p>And for those wondering what to do with the junk above... Use a text editor, paste the code, and save it as foo.css (or similar) anywhere. Then add the file path to JOSM in Edit/Preferences/Map Settings/Map Paint Styles.</p>
+
+<p>I've used JOSM for years, but apparently there are still many things to find out. :)</p></div>
+            <div class="comment-info" id="comment-22652-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '13, 21:39)</span>
+                <a class="comment-user userinfo" href="/users/652/gnurk">gnurk</a>
+                
+            </div>
+        </div>
+    
+        <a name="22659"></a>
+        <div class="comment" id="comment-22659">
+            <div id="post-22659-score" class="comment-score"></div>
+            <div class="comment-text"><p>Very good, naoliv! For other who don't understand the CSS syntax that good, could you mention (please add it with the "edit" function) what the rule does? It is not as restrictive in highlighting as my suggested conditions (yes, those are not useful as they are, practically) are, right?</p></div>
+            <div class="comment-info" id="comment-22659-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '13, 23:21)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="22745"></a>
+        <div class="comment" id="comment-22745">
+            <div id="post-22745-score" class="comment-score">1</div>
+            <div class="comment-text"><p>aseerel4c26, I did edit it like you suggested. And as you said, it doesn't implement all the rules from your other comment (but as it is now, it's perfectly fitting my needs). Thanks!</p></div>
+            <div class="comment-info" id="comment-22745-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '13, 20:30)</span>
+                <a class="comment-user userinfo" href="/users/4861/naoliv">naoliv</a>
+                
+            </div>
+        </div>
+    
+        <a name="22750"></a>
+        <div class="comment" id="comment-22750">
+            <div id="post-22750-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks again, <a href="//wiki.openstreetmap.org/w/index.php?title=JOSM/Advanced_Tricks&amp;diff=prev&amp;oldid=907158">ment</a><a href="//wiki.openstreetmap.org/w/index.php?title=MapCSS&amp;diff=prev&amp;oldid=907159">ioned</a> in the relevant (hopefully) wiki pages.</p></div>
+            <div class="comment-info" id="comment-22750-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '13, 00:32)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-22650" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22650-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="22537"></a>
+                    <div id="answer-container-22537" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22537-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22537/up/" rel="nofollow"> </a>
+<div id="post-22537-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-22537-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22537/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In your private data version you can remove (or do whatever you want with) these "unneeded" points. But, please, be careful doing similar changes to the OSM source data. There may be some, to us unknown, reasons for uploading these "unneeded"/redundant points by local editors. Besides, the cases you refer to are just a little fraction of the redundant node cases. The node redundancy comes from point replications, colinear (and almost colinear) neighbouring vector/line-segments, cases like ...A,B,C,B,C...C,D..., overlapping (or almost overlapping) ways/polylines in the same or different object classes and so on. The number of "unneeded" nodes in a Planet dump may easily exceed 10**8 (hundred million).</p>
+<p>So, my suggestion is, do not worry about these "unneeded" points in the OSM source data. In raster mapping (rendered/pre-rasterized map images on servers) you will never see them. In vector mapping (rendering/rasterization on the clients, parametric data transmission) mappers will remove this redundancy anyway especially in mobile mapping (simply, it is too expensive to transmit them in cellular networks). </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22537/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 May '13, 08:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/03cd9ea0efd97a7040fda0d6a76aba8e?s=32&amp;d=identicon&amp;r=g" alt="sanser's gravatar image" />
+    <p><a href="/users/3194/sanser">sanser</a><br/>
+    <span class="score" title="695 reputation points">695</span><span title="38 badges"><span class="badge1">&#9679;</span><span class="badgecount">38</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="55 badges"><span class="bronze">&#9679;</span><span class="badgecount">55</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sanser has 2 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22537">
+    
+        <a name="22541"></a>
+        <div class="comment" id="comment-22541">
+            <div id="post-22541-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Sorry if I look rude here (it's really not the intention) but I know what I am doing. In no way I am going to destroy data (and exactly because of this I don't want to use any kind of automated process to remove the nodes).
+Like I said before, I just need help in highlighting these nodes.</p>
+
+<p>The majority of the cases that I see in my area are nodes created by new users.</p>
+
+<p>If I am doing some QA work or updating an area, I see no problem in also removing spurious nodes.</p></div>
+            <div class="comment-info" id="comment-22541-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 May '13, 14:25)</span>
+                <a class="comment-user userinfo" href="/users/4861/naoliv">naoliv</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-22537" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22537-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/22384/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='nDs3Lg2A4QBaZoaJdG6wN8WUCqu5eb4Z' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22384/highlight-untagged-and-unconnected-nodes-in-a-way?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22384/highlight-untagged-and-unconnected-nodes-in-a-way?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nodes/"
+            class="tag-link-nodes"
+            title="see questions tagged'nodes'using tags"
+            rel="tag">nodes</a> <span class="tag-number">&#215;205</span><br/>
+        
+        <a href="/tags/remove/"
+            class="tag-link-remove"
+            title="see questions tagged'remove'using tags"
+            rel="tag">remove</a> <span class="tag-number">&#215;31</span><br/>
+        
+        <a href="/tags/highlight/"
+            class="tag-link-highlight"
+            title="see questions tagged'highlight'using tags"
+            rel="tag">highlight</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/excessive/"
+            class="tag-link-excessive"
+            title="see questions tagged'excessive'using tags"
+            rel="tag">excessive</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/unneeded/"
+            class="tag-link-unneeded"
+            title="see questions tagged'unneeded'using tags"
+            rel="tag">unneeded</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 13, 2013, 3:29 p.m.">13 May '13, 15:29</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,527 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 25, 2013, 12:32 a.m.">25 May '13, 00:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8348/is-there-an-efficient-way-to-delete-excessiveredundant-nodes">[closed] Is there an efficient way to delete excessive/redundant nodes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51634/umap-how-to-delete-or-hide-node-icons">uMap - How to delete or hide node icons?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/495/what-tags-should-i-add-to-a-heliport">What tags should I add to a heliport?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1103/should-i-tag-nodes-or-areas-for-amenity-and-tourism">Should I tag nodes or areas for amenity and tourism?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1208/why-do-some-nodes-appear-with-flashing-red-circles">Why do some nodes appear with flashing red circles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1598/change-same-attribute-of-a-lot-of-nodes">Change same attribute of a lot of nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2197/drawing-over-traces">drawing over traces</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1764/rendering-waterfalls">Rendering waterfalls</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2997/speed-limit-nodes-keep-or-delete">Speed limit nodes: keep or delete?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/923/how-do-i-realize-a-node-or-way-is-a-member-of-a-relation">How do I realize a node or way is a member of a relation?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

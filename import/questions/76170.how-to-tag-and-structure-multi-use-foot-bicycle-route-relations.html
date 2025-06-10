@@ -1,0 +1,828 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to tag and structure multi use (foot, bicycle) route relations? - OSM Help</title>
+        <meta name="description" content="I&#39;ve been having some disagreements about whether or not the Trans-Canada Trail should have a route relation tagged as a bicycle route, as it has had since at least 2011. The argument presented against it, is that it is not exclusively for bicycle use, and some sections are not for bicycle use at al..." />
+        <meta name="keywords" content="multi-use,route,bicycle,tagging,relations" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/76170/how-to-tag-and-structure-multi-use-foot-bicycle-route-relations" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/76170/how-to-tag-and-structure-multi-use-foot-bicycle-route-relations?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='m9Zn5XZVqnSgPSLRI8ZdC6fECl32e0rq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/76170/how-to-tag-and-structure-multi-use-foot-bicycle-route-relations">How to tag and structure multi use (foot, bicycle) route relations?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-76170-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76170/up/" rel="nofollow"> </a>
+<div id="post-76170-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-76170-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76170/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/76170/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I've been having some disagreements about whether or not the <a href="https://en.wikipedia.org/wiki/Trans_Canada_Trail">Trans-Canada Trail</a> should have a route relation tagged as a bicycle route, as it has had since at least 2011.</p>
+<p>The argument presented against it, is that it is not exclusively for bicycle use, and some sections are not for bicycle use at all. At places alternative routes for foot and bicycles, in other places there is not a designated route for bicycles. As such there are discontinuities in the bicycle route. </p>
+<p>They only want a foot relation to exist, and all sections of the route that are exclusively for bicycle use to be removed from the relation.</p>
+<p>I feel that the appropriate way to structure this on OSM is with a couple relations, one for the bicycle sections, one for foot (and if there are other people interested in it, additional relations for the sections designated for horseback, etc). This is what I've seen done with other multi-use recreational routes, and it seems a sensible approach. </p>
+<p>I do not think the relatively short discontinuities in the designated bicycle sections of the TCT disqualify it from tagging as a national bicycle route. </p>
+<p>Am I mistaken on my understanding of the OSM approach here?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/multi-use/" class="post-tag tag-link-multi-use"
+                                        title="see questions tagged 'multi-use'" rel="tag">multi-use</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/bicycle/" class="post-tag tag-link-bicycle"
+                                        title="see questions tagged 'bicycle'" rel="tag">bicycle</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Aug '20, 19:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f88a467aa884aeb760041004f62448ee?s=32&amp;d=identicon&amp;r=g" alt="keithonearth's gravatar image" />
+    <p><a href="/users/9027/keithonearth">keithonearth</a><br/>
+    <span class="score" title="2939 reputation points"><span class="">2.9k</span></span><span title="56 badges"><span class="badge1">&#9679;</span><span class="badgecount">56</span></span><span title="76 badges"><span class="silver">&#9679;</span><span class="badgecount">76</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="keithonearth has 3 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-76170">
+    
+</div>
+<div id="comment-tools-76170" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76170-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/76170/how-to-tag-and-structure-multi-use-foot-bicycle-route-relations?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/76170/how-to-tag-and-structure-multi-use-foot-bicycle-route-relations?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/76170/how-to-tag-and-structure-multi-use-foot-bicycle-route-relations?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/76170/how-to-tag-and-structure-multi-use-foot-bicycle-route-relations?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="76184"></a>
+                    <div id="answer-container-76184" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76184-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76184/up/" rel="nofollow"> </a>
+<div id="post-76184-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-76184-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76184/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are two popular ways to do this:</p>
+<ul>
+<li>Create two separate relations, one <code>route=hiking</code>, one <code>route=bicycle</code></li>
+<li>Create a single relation, with <code>route=hiking;bicycle</code></li>
+</ul>
+<p>The latter is not universally supported by renderers/routers but is used sometimes in North America.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76184/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Aug '20, 14:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76184">
+    
+</div>
+<div id="comment-tools-76184" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76184-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="76186"></a>
+                    <div id="answer-container-76186" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76186-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76186/up/" rel="nofollow"> </a>
+<div id="post-76186-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-76186-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76186/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The current state of the Trans-Canada Trail on OSM is a bit of a mess.</p>
+<ul>
+<li>There's a <code>type=route</code> + <code>route=hiking</code> <a href="https://www.openstreetmap.org/relation/3060299">Trans-Canada Trail super-super-relation</a> whose memebers are the super-relations for each province -- plus a few stray segments that may be mistakes? (Also the Quebec sub-relation is named "<a href="https://www.openstreetmap.org/relation/8274591">Trans Canada Trail (Montréal to Gatineau)</a>" rather than "Trans Canada Trial (Quebec)".)</li>
+<li>The Canada page of the OSM wiki suggests that if <em>all</em> the TCT segments in a particular province are cyclable, then that province's TCT route relation should be tagged as a <code>network=ncn</code> bicycle route (<a href="https://wiki.openstreetmap.org/wiki/Canada#Trans_Canada_Trail">https://wiki.openstreetmap.org/wiki/Canada#Trans_Canada_Trail</a>).</li>
+<li>Perhaps for this reason, the province-level super-relations are not consistent -- some are <code>route=hiking</code>, some are <code>route=bicycle</code>. But there other inconsistencies as well: Some are <code>type=superroute</code> (an undocumented relation type) instead of route, some contain individual segments as well as sub-relations.</li>
+</ul>
+<p>From your description, the <a href="https://thegreattrail.ca">Trans-Canada Trail website</a>, and a quick browse of relevant OSM elements and changesets, my conclusion is: While it might be valid to use <code>route=bicycle</code> on some sub-relations, it's not appropriate for the main TCT super-super-relation. </p>
+<p>If (and only if) the "alternative routes for foot and bicycle" that you mention are part of the official published route -- that is, if there are official Trans-Candada Trail signs or maps that say "bicycles go this way, foot traffic go that way" -- then I believe those bicycle sections belong in the route sub-relations. I'd add them with <code>role=alternate</code> (which is undocumented but heavily used.)</p>
+<p>See also the changeset comment for <a href="https://www.openstreetmap.org/changeset/87691196">changeset 87691196</a> which links to a Facebook (yech) discussion about this question. The recommendation there is to create seperate cycle routes as part the Bike Across Canada Route, which is still under development. <em>Edit -- See Richard's comment below, the Bike Across Canada Route is currently just a dream, so probably best to avoid working on it in OSM for now.</em></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76186/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Aug '20, 16:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/977d95e2184a885d9a01fb3297225872?s=32&amp;d=identicon&amp;r=g" alt="jmapb's gravatar image" />
+    <p><a href="/users/14350/jmapb">jmapb</a><br/>
+    <span class="score" title="3387 reputation points"><span class="">3.4k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">&#9679;</span><span class="badgecount">33</span></span><span title="61 badges"><span class="bronze">&#9679;</span><span class="badgecount">61</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jmapb has 22 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/76186/">
+                edited
+                <strong>18 Aug '20, 20:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76186">
+    
+        <a name="76187"></a>
+        <div class="comment" id="comment-76187">
+            <div id="post-76187-score" class="comment-score">2</div>
+            <div class="comment-text"><p>The "Bike Across Canada Route" is entirely the invention of an enthusiastic person with no official status, signposting, etc. etc. I can well believe it might be better than the notorious TCT, but it doesn't merit inclusion in OSM.</p></div>
+            <div class="comment-info" id="comment-76187-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '20, 16:18)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="76188"></a>
+        <div class="comment" id="comment-76188">
+            <div id="post-76188-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ah, good to know. Then my conclusion is: As of now, there is <strong>no</strong> national cycle route in Canada, and the TCT should remain route=hiking (even though it apparently includes some sections that are traversable only by boat! That's another discussion I guess.)</p></div>
+            <div class="comment-info" id="comment-76188-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '20, 16:23)</span>
+                <a class="comment-user userinfo" href="/users/14350/jmapb">jmapb</a>
+                
+            </div>
+        </div>
+    
+        <a name="76189"></a>
+        <div class="comment" id="comment-76189">
+            <div id="post-76189-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think that it's important to differentiate between the super-relation and the sub-relations, and I failed to do so. I was talking about the sub-relations, as those are the ones that I have been editing. I have failed to pay much attention to the super relation at all.</p>
+
+<p>When you say "some subsections" do you mean <em>all</em> sections that are designated as a bicycle route should be in bicycle sub-relation? To me it makes sense to do so. It is also worth pointing out that there are many sections that are specifically for cycling, and not a designated walking route.</p>
+
+<p>The enthusiastic individual who has invented the "Bike Across Canada Route"(s) frequently cites facebook as a source, and has made significant detrimental edits to the TCT.</p></div>
+            <div class="comment-info" id="comment-76189-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '20, 17:24)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+        <a name="76190"></a>
+        <div class="comment" id="comment-76190">
+            <div id="post-76190-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ultimately this is going to be a decision for the "local" (Canada is huge!) community. My best <em>interpretation</em> of the community consensus is:</p>
+
+<ul>
+<li>Super-super-relation for the entire TCT is <code>route=hiking</code></li>
+<li>Super-relation for an individual province should be <code>route=bicycle</code> if the officially designated TCT route in that province is cyclable end-to-end. (The wiki link I included says these should be tagged <code>network=ncn</code>, but best I can tell there is no national cycle network in Canada, just regional cycle routes which are often part of the TCT. So possibly <code>network=rcn</code> would be better -- again, up to the local community, but IMO it would be nice if all of the fully-cyclable provinces were tagged the same way.)</li>
+<li>Lowest-level route relations (the sub-relations of the province-level routes) should likewise be <code>route=bicycle</code> if that portion of the official TCT is cyclable -- and should be tagged <code>network=rcn</code> or <code>network=lcn</code> as appropriate.</li>
+</ul></div>
+            <div class="comment-info" id="comment-76190-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '20, 17:38)</span>
+                <a class="comment-user userinfo" href="/users/14350/jmapb">jmapb</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-76186" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76186-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/76170/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='m9Zn5XZVqnSgPSLRI8ZdC6fECl32e0rq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76170/how-to-tag-and-structure-multi-use-foot-bicycle-route-relations?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76170/how-to-tag-and-structure-multi-use-foot-bicycle-route-relations?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/bicycle/"
+            class="tag-link-bicycle"
+            title="see questions tagged'bicycle'using tags"
+            rel="tag">bicycle</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/multi-use/"
+            class="tag-link-multi-use"
+            title="see questions tagged'multi-use'using tags"
+            rel="tag">multi-use</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 17, 2020, 7:06 p.m.">17 Aug '20, 19:06</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,271 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 18, 2020, 8:48 p.m.">18 Aug '20, 20:48</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/76051/can-a-route-relation-be-added-with-stateproposed-if-informal-groups-propose-the-route-or-does-it-need-to-be-an-official-body">Can a route relation be added with &quot;state=proposed&quot;, if informal groups propose the route, or does it need to be an official body?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2545/tag-tram-tracks-with-name-ref-or-use-relationroute">Tag tram tracks with name=*, ref=* - or use Relation:route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5894/how-to-taggroup-buildings-that-are-made-up-of-more-than-one-area">How to tag/group buildings that are made up of more than one area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2353/tagging-a-building-used-for-exhibitions-concerts-performances-etc">tagging a building used for exhibitions, concerts, performances etc</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or">Roundabouts as part of bus routes (or cycle routes, or…)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2969/how-to-tag-a-multi-function-facility">How to tag a multi-function facility?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1580/should-i-tag-name-for-the-way-or-for-the-relation">Should I tag &quot;name&quot; for the way or for the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1083/tagging-seasonal-use-roads-questions-road-type-blockout-months-4x4">Tagging &quot;seasonal use roads&quot; (questions: road type, blockout months, 4x4)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2339/restricted-lanes-with-lanes-tag">Restricted lanes with &quot;lanes&quot; tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2590/tagging-disused-quarries">Tagging disused quarries</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Wrong Error report in JOSM&#39;s Validation (?) - OSM Help</title>
+        <meta name="description" content="Hi, I&#39;m a user of JOSM, not a develloper. I have ask similar questions in the Dutch user forum, but only got replies like : &quot;Yep, the validation in JOSM might not be optimal&quot; I&#39;m a user and editor of the recreational cycle network in The Netherlands and it can cost me considerable time to figure out..." />
+        <meta name="keywords" content="role,route,validator,relation,josm" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/32885/wrong-error-report-in-josms-validation" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/32885/wrong-error-report-in-josms-validation?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='wF5Z1Ic1ESBdg5ocu6Pg6NYgL94bUD05' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/32885/wrong-error-report-in-josms-validation">Wrong Error report in JOSM&#39;s Validation (?)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-32885-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32885/up/" rel="nofollow"> </a>
+<div id="post-32885-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32885-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32885/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/32885/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+I'm a user of JOSM, not a develloper. I have ask similar questions in the Dutch user forum, but only got replies like : "Yep, the validation in JOSM might not be optimal"</p>
+<p>I'm a user and editor of the recreational cycle network in The Netherlands and it can cost me considerable time to figure out what's wrong with network relations. Especially so when infact the error report is the only thing that's wrong  :(</p>
+<p>Here is one of many examples :</p>
+<p>network=rcn
+note=23-62
+route=bicycle
+type=route
+Relation ID=<a href="http://www.openstreetmap.org/relation/1263377#map=16/51.6589/5.2782">1263377</a></p>
+<p>JOSM 7000 Validation :
+Role forward unknown
+Role backward unknown</p>
+<p><a href="http://ra.osmsurround.org/">http://ra.osmsurround.org/</a></p>
+<p>Great! This relation seems ok. This relation can be connected as one piece.</p>
+<p>Rating
+The relation analyzer (RA) tries to assemble the relation data to see if it is in one piece (either a line with just two ends, or Y-shaped, or more complicated). The pieces are assembled using rules which include looking at roles such as "forward" and "backward". If a relation cannot be connected into one single piece, the RA will create more than one.</p>
+<p>Can someone enlight me please ?</p>
+<p>Gys</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/role/" class="post-tag tag-link-role"
+                                        title="see questions tagged 'role'" rel="tag">role</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/validator/" class="post-tag tag-link-validator"
+                                        title="see questions tagged 'validator'" rel="tag">validator</a>
+                                
+                                    <a href="/tags/relation/" class="post-tag tag-link-relation"
+                                        title="see questions tagged 'relation'" rel="tag">relation</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 May '14, 20:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5c3b258ebdc5943f1ab6008f146e7f7c?s=32&amp;d=identicon&amp;r=g" alt="Gys%20de%20Jongh's gravatar image" />
+    <p><a href="/users/8791/gys-de-jongh">Gys de Jongh</a><br/>
+    <span class="score" title="713 reputation points">713</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gys de Jongh has 5 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/32885/">
+                edited
+                <strong>06 May '14, 01:20</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-32885">
+    
+        <a name="32918"></a>
+        <div class="comment" id="comment-32918">
+            <div id="post-32918-score" class="comment-score"></div>
+            <div class="comment-text"><p>User SomeOneElse (Andy) mailed two very useful links. I copied them below to clarify a few points.</p>
+
+<p>The route looks like two letters Y joined together :</p>
+
+<p><a href="http://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN">http://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN</a></p>
+
+<p>It might look odd but Imo this is a combination of 3 factors :</p>
+
+<p>1) The elaborate cycle infra structure in The Netherlands. For our local hero have a look at this blog :  <a href="http://bicycledutch.wordpress.com/">http://bicycledutch.wordpress.com/</a> </p>
+
+<p>The two branches of the top Y are two completely separate bicycle tracks along a motorway. Same for the two branches of the lower Y.</p>
+
+<p>This piece :</p>
+
+<p><a href="http://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN">http://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN</a></p>
+
+<p>has no attached role is an old village road with no separate bicycle tracks. The cycle route uses this piece both to travel from 23 to 62 as well as to travel from 62 to 23</p>
+
+<p>2) The actual route made by the people who maintain them. Which is apparent from the little whight/green cycle node signs. The little piece with the backward role is not a oneway road. It connects the residential road with the roundabout. You could travel in the other direction then the direction in which the road was drawn. Meaning you won't get trouble with the police. But the people who maintain the network decided that you should only use that piece opposite to the direction it was drawn.</p>
+
+<p>3) In which case Osm wants the role to be "backward" or I could change the direction of drawing of that piece of road to stop JOSM from cying "wolf" But that is not recommended and feels like tagging for the renderer.</p>
+
+<p>If you zoom a bit further on the link to the relation than you will see that the top Y ends in two rcn_ref=23 and the lower Y ends in two rcn_ref=62 . Both rcn_ref=23 and rcn_ref=62 are just on the left and right side of the road.</p>
+
+<p>The physical situation for both is a motorway with two completely separate bicyle tracks. So the two nodes rcn_ref=62 are maybe 20 meters apart. Same for rcn_ref=23. In that case the recommende solution is two nodes with the same number in stead of painstakingly splitting up to connect the cycletrack for 23-62 with the cycle track for 62-23</p>
+
+<p>So,
+I really don't see anything wrong.</p>
+
+<p>The relation is continuous now. It was not before. This actually is the reason I edited it. I must have travalled this route by bike a few hundred times at least, so I know the situation.  JOSM validation can generate a "not continuous error" but it nolonger does so.</p>
+
+<p>The "wrong role" error in the JOSM validator can be selected while you have the relation editor open, but nothing is highligted there. On the map the whole relation is highligted. Not very helpfull  :(</p>
+
+<p>Gys</p></div>
+            <div class="comment-info" id="comment-32918-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 May '14, 21:17)</span>
+                <a class="comment-user userinfo" href="/users/8791/gys-de-jongh">Gys de Jongh</a>
+                
+            </div>
+        </div>
+    
+        <a name="32920"></a>
+        <div class="comment" id="comment-32920">
+            <div id="post-32920-score" class="comment-score"></div>
+            <div class="comment-text"><p>If I use this </p>
+
+<p><a href="http://yournavigation.org/index.php">http://yournavigation.org/index.php</a></p>
+
+<p>service  and zoom in maximally then the shortes bicycle route from the western rcn_ref=23 to the western rcn_ref=62 is drawn completely as intended by the maintainers of the cycle network.</p>
+
+<p>The shortes bicycle route from eastern rcn_ref=62 to the eastern rcn_ref=23 is drawn as intended by the maintainers of the cycle network if I add one extra waypoint in the first roudabout junction Postweg/Loonsebaan. If I leave this extra waypoint out then then the calculated route follows this roundabout junction in the other direction. Which is both legal and possible but not as intended by the maintainers of the cycle network. </p>
+
+<p>Again the route relation seems perfectly Ok</p></div>
+            <div class="comment-info" id="comment-32920-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 May '14, 21:18)</span>
+                <a class="comment-user userinfo" href="/users/8791/gys-de-jongh">Gys de Jongh</a>
+                
+            </div>
+        </div>
+    
+        <a name="32922"></a>
+        <div class="comment not_top_scorer" id="comment-32922">
+            <div id="post-32922-score" class="comment-score"></div>
+            <div class="comment-text"><p>sorry, Gys, you are <a href="/faq/">wrong</a> in this help site. Please discuss such specific problems <a href="//wiki.openstreetmap.org/wiki/Contact">elsewhere</a> - eg. in the <a href="http://forum.openstreetmap.org/">forum</a>.</p></div>
+            <div class="comment-info" id="comment-32922-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 01:28)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32923"></a>
+        <div class="comment" id="comment-32923">
+            <div id="post-32923-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="/users/5179/aseerel4c26">@aseerel4c26</a> Er, what?  Asking how JOSM picks up rules for different relation types seems to me exactly on-topic for this help site.  As mentioned above, this question was previously asked in the forum (and also on the newbies list), so sending the user back there is unlikely to help.</p></div>
+            <div class="comment-info" id="comment-32923-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 01:32)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32926"></a>
+        <div class="comment not_top_scorer" id="comment-32926">
+            <div id="post-32926-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/387/someoneelse"></a><a href="/users/387/someoneelse">@SomeoneElse</a>: I think a forum is exactly the best place for the specific problem. By the way: no forum link to the first post given. :-(  What can be said in general, is in my answer below ... but the question (and "comments" - which were "answers" too) is much too specific for this site. You notice it already by the use of the "answer" function for a additional comments (which are TL;DR).</p>
+
+<p>Oh, and if the question is "how JOSM picks up rules for different relation types",  then it has the wrong title.</p></div>
+            <div class="comment-info" id="comment-32926-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 01:43)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32930"></a>
+        <div class="comment" id="comment-32930">
+            <div id="post-32930-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="/users/5179/aseerel4c26">@aseerel4c26</a>: Congrats you just restored my trust in humanity. In any forum there will always be a helpful guy who replies that this is the wrong forum or points to a spelling error. Godwins Law
+Thanks</p></div>
+            <div class="comment-info" id="comment-32930-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 07:47)</span>
+                <a class="comment-user userinfo" href="/users/8791/gys-de-jongh">Gys de Jongh</a>
+                
+            </div>
+        </div>
+    
+        <a name="32933"></a>
+        <div class="comment not_top_scorer" id="comment-32933">
+            <div id="post-32933-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5179/aseerel4c26">@aseerel4c26</a> If you think the comments are Tl;Dr have JOSM check your attention span and go back to Imgur</p></div>
+            <div class="comment-info" id="comment-32933-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 08:06)</span>
+                <a class="comment-user userinfo" href="/users/8791/gys-de-jongh">Gys de Jongh</a>
+                
+            </div>
+        </div>
+    
+        <a name="32938"></a>
+        <div class="comment not_top_scorer" id="comment-32938">
+            <div id="post-32938-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/8791/gys-de-jongh"></a><a href="/users/8791/gys-de-jongh">@Gys de Jongh</a>: is there any need for those personal attacks? Please ...</p></div>
+            <div class="comment-info" id="comment-32938-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 13:46)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32941"></a>
+        <div class="comment" id="comment-32941">
+            <div id="post-32941-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Good question, on an issue which has been bugging quite a lot of us without any resolution. Thanks for raising it and getting us just a little further on the way to resolving the issue.</p></div>
+            <div class="comment-info" id="comment-32941-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 18:12)</span>
+                <a class="comment-user userinfo" href="/users/8800/frankl2009">Frankl2009</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32885" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32885-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/32885/wrong-error-report-in-josms-validation?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/32885/wrong-error-report-in-josms-validation?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/32885/wrong-error-report-in-josms-validation?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/32885/wrong-error-report-in-josms-validation?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="32928"></a>
+                    <div id="answer-container-32928" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32928-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32928/up/" rel="nofollow"> </a>
+<div id="post-32928-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-32928-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32928/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It's a bug in the JOSM validator, I think.  For <code>item name="Bicycle route"</code> <code>"data/defaultpresets.xml"</code> contains:</p>
+<pre><code>        &lt;roles&gt;
+            &lt;role key="" text="route segment" requisite="required" type="way"/&gt;
+        &lt;/roles&gt;
+</code></pre>
+<p>whereas for <code>item name="Piste route"</code> it contains:</p>
+<pre><code>        &lt;roles&gt;
+           &lt;role key="" text="route segment" requisite="optional" type="way" /&gt;
+            &lt;role key="forward" text="forward segment" requisite="optional" type="way" /&gt;
+            &lt;role key="backward" text="backward segment" requisite="optional" type="way" /&gt;
+            &lt;role key="link" text="link segment" requisite="optional" type="way" /&gt;
+            &lt;role key="shortcut" text="shortcut segment" requisite="optional" type="way" /&gt;
+            &lt;role key="variant" text="variant segment" requisite="optional" type="way" /&gt;
+            &lt;role key="start" text="entry points" requisite="optional" type="node" /&gt;
+        &lt;/roles&gt;
+</code></pre>
+<p>I can see no logical reason why a bicycle route way can't be oneway.</p>
+<p>A similar symptom was reported <a href="http://josm.openstreetmap.de/ticket/8266">here</a> (although that looks like it wasn't actually a bug as such - it was due to a confusion of the "new" and "old" public transport schemas).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32928/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 May '14, 03:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32928">
+    
+        <a name="32932"></a>
+        <div class="comment" id="comment-32932">
+            <div id="post-32932-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Andy, Imo you traced down the error in JOSM's validator. This will be most helpful for The Netherlands. We have a very dense cycle network which is becomming almost impossible to maintain because about 30% of the routes are polluted with JOSM validator errors. I will post a link on the forum here : <a href="http://forum.openstreetmap.org/viewforum.php?id=12">http://forum.openstreetmap.org/viewforum.php?id=12</a></p>
+
+<p>Thanks again
+Gys</p></div>
+            <div class="comment-info" id="comment-32932-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 07:59)</span>
+                <a class="comment-user userinfo" href="/users/8791/gys-de-jongh">Gys de Jongh</a>
+                
+            </div>
+        </div>
+    
+        <a name="32935"></a>
+        <div class="comment" id="comment-32935">
+            <div id="post-32935-score" class="comment-score">4</div>
+            <div class="comment-text"><p>JOSM developers are very unlikely to notice complaints on the Dutch forum and only slightly more likely to notice problems reported here. So I create a bug report for this issue: <a href="http://josm.openstreetmap.de/ticket/9992">http://josm.openstreetmap.de/ticket/9992</a></p></div>
+            <div class="comment-info" id="comment-32935-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 11:21)</span>
+                <a class="comment-user userinfo" href="/users/2933/cartinus">cartinus</a>
+                
+            </div>
+        </div>
+    
+        <a name="32936"></a>
+        <div class="comment" id="comment-32936">
+            <div id="post-32936-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Gys, for maintaining the cycle and walking networks in Belgium and The Netherlands, you're better off with e.g. <a href="http://osma.vmarc.be/">http://osma.vmarc.be/</a> which has specialized tests and knowledge about those type of networks.</p></div>
+            <div class="comment-info" id="comment-32936-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 12:34)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="32942"></a>
+        <div class="comment" id="comment-32942">
+            <div id="post-32942-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks escada,
+I find myself frequently looking at this : <a href="http://osma.vmarc.be/en/network/1061480">http://osma.vmarc.be/en/network/1061480</a> because it's in my back yard. Note the frustrating numbers of "Errors" I would like to get rid of all of them :(</p></div>
+            <div class="comment-info" id="comment-32942-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 20:32)</span>
+                <a class="comment-user userinfo" href="/users/8791/gys-de-jongh">Gys de Jongh</a>
+                
+            </div>
+        </div>
+    
+        <a name="32944"></a>
+        <div class="comment" id="comment-32944">
+            <div id="post-32944-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/2933/cartinus">@cartinus</a> thanks a lot ! I don't know what you did, but to me it sounds like exactly what I would have liked to do : wake up the programmers to improver their error checking in JOSM  :)</p>
+
+<p>Thanks again
+Gys</p></div>
+            <div class="comment-info" id="comment-32944-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 20:42)</span>
+                <a class="comment-user userinfo" href="/users/8791/gys-de-jongh">Gys de Jongh</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32928" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32928-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="32924"></a>
+                    <div id="answer-container-32924" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32924-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32924/up/" rel="nofollow"> </a>
+<div id="post-32924-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32924-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32924/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In general, <a href="//wiki.openstreetmap.org/wiki/JOSM/Validator">JOSM's validator</a> is just a tool like <a href="//wiki.openstreetmap.org/wiki/Quality_assurance">many others</a> which <em>might</em> help you to spot problems in the data. It <em>may have false positives</em>. JOSM's validator has different issue classes (error, warning, info) which show you the severity of the shown issue and – IMHO – correlate with false positive error rate.  Such tools are never 100 % right.</p>
+<p>Regarding the validator's warning about relation member roles also see the <em>similar</em> (core) problem <a href="/questions/28602/">what-does-the-warning-role-reverse-unknown-role-verification-problem-mean-in-josm</a>.</p>
+<p>If you feel that a false positive is a programming error (e.g. a systematic false positive which occurs very often which was not shown in the older versions) or if there are many false positives which could be easily avoided, please report to the programmers of JOSM (bug tracker, see first link).</p>
+<p>Also see my comment above for other discussion places.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32924/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 May '14, 01:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/32924/">
+                edited
+                <strong>07 May '14, 02:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32924">
+    
+        <a name="32931"></a>
+        <div class="comment" id="comment-32931">
+            <div id="post-32931-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5179/aseerel4c26">@aseerel4c26</a>: If a tool bites you it's a bug and as I told you 1) I'm not a programmer of JOSM just a user 2)I posted this on several fora already</p></div>
+            <div class="comment-info" id="comment-32931-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 07:53)</span>
+                <a class="comment-user userinfo" href="/users/8791/gys-de-jongh">Gys de Jongh</a>
+                
+            </div>
+        </div>
+    
+        <a name="32937"></a>
+        <div class="comment" id="comment-32937">
+            <div id="post-32937-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/8791/gys-de-jongh"></a><a href="/users/8791/gys-de-jongh">@Gys de Jongh</a>: Sure, I read that you are no programmer but I told you how to report it to the programmers. Programmers depend on feedback and bugreports of the users. It seems you missed this. In the meantime, Cartinus has reported it there (see his comment above).</p></div>
+            <div class="comment-info" id="comment-32937-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 13:45)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32943"></a>
+        <div class="comment" id="comment-32943">
+            <div id="post-32943-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5179/aseerel4c26">@aseerel4c26</a> Can you please fire your other brain cell ?
+What do you think I'm doing ?
+I started this thread by saying that I'm not a programmer and want to provide feedback to the guys who devellop JOSM and posted this at the appropriate sites.</p></div>
+            <div class="comment-info" id="comment-32943-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 20:36)</span>
+                <a class="comment-user userinfo" href="/users/8791/gys-de-jongh">Gys de Jongh</a>
+                
+            </div>
+        </div>
+    
+        <a name="32945"></a>
+        <div class="comment" id="comment-32945">
+            <div id="post-32945-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/8791/gys-de-jongh">@Gys de Jongh</a>: unbelievable, I hope someone soon deletes your comment (this one then too, of course).</p></div>
+            <div class="comment-info" id="comment-32945-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '14, 20:54)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32924" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32924-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/32885/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='wF5Z1Ic1ESBdg5ocu6Pg6NYgL94bUD05' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32885/wrong-error-report-in-josms-validation?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32885/wrong-error-report-in-josms-validation?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/relation/"
+            class="tag-link-relation"
+            title="see questions tagged'relation'using tags"
+            rel="tag">relation</a> <span class="tag-number">&#215;128</span><br/>
+        
+        <a href="/tags/validator/"
+            class="tag-link-validator"
+            title="see questions tagged'validator'using tags"
+            rel="tag">validator</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/role/"
+            class="tag-link-role"
+            title="see questions tagged'role'using tags"
+            rel="tag">role</a> <span class="tag-number">&#215;12</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 5, 2014, 8:42 p.m.">05 May '14, 20:42</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>14,155 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 7, 2014, 8:54 p.m.">07 May '14, 20:54</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/38591/why-does-the-josm-validator-create-this-warning">Why does the JOSM validator create this warning?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43774/route-relations-that-can-terminate-at-more-than-one-platform-of-a-station">Route relations that can terminate at more than one platform of a station</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26213/bus-route-passes-twice-through-a-way-is-it-correct-to-add-it-twice-to-the-relation">Bus route passes twice through a way. Is it correct to add it twice to the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/74340/how-to-add-existing-child-relation-to-parent-vice-versa-using-josm">How to add existing child relation to parent &amp; vice-versa using JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24758/how-to-create-a-public-transport-route-which-only-runs-on-a-part-of-a-streets-way-divide-the-way">How to create a public transport route which only runs on a part of a street&#39;s way? Divide the way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25122/how-to-add-part-of-a-way-to-a-relation">How to add part of a way to a relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25399/how-do-i-create-a-scenic-route">How do I create a Scenic Route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10910/school-with-multiple-buildings-multipolygon">School with multiple buildings: multipolygon?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13355/using-route-relations-in-garmin-hcx">Using route relations in Garmin Hcx</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5175/selecting-an-inner-relation">Selecting an inner relation</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

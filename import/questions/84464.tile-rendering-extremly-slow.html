@@ -1,0 +1,878 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tile rendering extremly slow - OSM Help</title>
+        <meta name="description" content="I imported the planet and tried to zoom on New York as an exmple. It took like 5 Minutes to load tiles. Examples of a tile loading time at zoom 12: Queued at 42.90 s Started at 42.91 s Resource Scheduling  Queueing 1.79 ms Connection Start  Stalled 15.61 s Request/Response  Request sent 80 μs Waitin..." />
+        <meta name="keywords" content="rendering,renderd,postgresql,osm2pgsql,tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/84464/tile-rendering-extremly-slow" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/84464/tile-rendering-extremly-slow?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='W9bKNw8IH1lWWEt62hbSzSNQXAxAoBRU' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/84464/tile-rendering-extremly-slow">Tile rendering extremly slow</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-84464-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/84464/up/" rel="nofollow"> </a>
+<div id="post-84464-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-84464-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/84464/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/84464/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I imported the planet and tried to zoom on New York as an exmple. It took like 5 Minutes to load tiles.</p>
+<p><strong>Examples of a tile loading time at zoom 12:</strong></p>
+<pre><code>Queued at 42.90 s
+Started at 42.91 s
+Resource Scheduling     
+Queueing 1.79 ms
+Connection Start        
+Stalled 15.61 s
+Request/Response        
+Request sent    80 μs
+Waiting (TTFB) 119.53 ms
+Content Download 1.50 ms
+Total       15.73 s
+
+Queued at 42.90 s
+Started at 42.90 s
+Resource Scheduling     
+Queueing 1.44 ms
+Connection Start        
+Stalled 3.86 ms
+DNS Lookup 23 μs
+Initial connection 28.44 ms
+Request/Response        
+Request sent 42 μs
+Waiting (TTFB) 15.42 s
+Content Download 1.17 ms
+Total       15.46 s
+</code></pre>
+<p>Stalled and Waiting (TTFB) are always almost 90% of loading time !</p>
+<p><strong>Machine specs:</strong></p>
+<pre><code>128GB Ram
+16 Cores
+</code></pre>
+<p>I used the openstreetmap carto style .</p>
+<p><strong>My import command:</strong></p>
+<pre><code>docker run -v /home/admin_akanea/planet-latest.osm.pbf:/data/region.osm.pbf -v osm-data:/data/database/ -v osm-tiles:/data/tiles/ -e "FLAT_NODES=enabled" overv/openstreetmap-tile-server import
+</code></pre>
+<p><strong>My run commande:</strong></p>
+<pre><code>docker run --restart=always -p 80:80 -p 443:443 -e THREADS=8 -e "OSM2PGSQL_EXTRA_ARGS=-C 16107" --shm-size="2GB" -v /var/www/html/gis-frontend:/var/www/html -v osm-data:/data/database/ -v osm-tiles:/data/tiles/ -d overv/openstreetmap-tile-server run
+</code></pre>
+<p><strong>My render command:</strong></p>
+<pre><code>sudo -u renderer renderd -f -c /usr/local/etc/renderd.conf
+</code></pre>
+<p><strong>My renderd.conf:</strong></p>
+<pre><code>[renderd]
+num_threads=8
+tile_dir=/var/lib/mod_tile
+stats_file=/var/run/renderd/renderd.stats
+
+[mapnik]
+plugins_dir=/usr/lib/mapnik/3.0/input
+font_dir=/usr/share/fonts
+font_dir_recurse=1
+
+[ajt]
+URI=/tile/
+TILEDIR=/var/lib/mod_tile
+XML=/home/renderer/src/openstreetmap-carto/mapnik.xml
+HOST=localhost
+TILESIZE=256
+MAXZOOM=20
+</code></pre>
+<p><strong>My Apache conf:</strong></p>
+<pre><code>&lt;VirtualHost *:80&gt;
+
+ServerAdmin admin@admin.com
+
+LoadTileConfigFile /usr/local/etc/renderd.conf
+ModTileRenderdSocketName /var/run/renderd/renderd.sock
+ModTileRequestTimeout 500
+ModTileMissingRequestTimeout 500
+ModTileMaxLoadMissing 50
+
+DocumentRoot /var/www/html/live
+Alias /beta /var/www/html/beta
+Alias /pilot /var/www/html/pilot
+
+LogLevel info
+ErrorLog /var/log/apache2/error_http_osm.log
+CustomLog /var/log/apache2/access_http_osm.log combined
+
+&lt;IfDefine ALLOW_CORS&gt;
+    Header set Access-Control-Allow-Origin "*"
+&lt;/IfDefine&gt;
+
+#RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+&lt;/VirtualHost&gt;
+</code></pre>
+<p><strong>My Postgres conf:</strong></p>
+<pre><code>max_connections = 500
+shared_buffers = 32GB
+temp_buffers = 8GB
+work_mem = 2GB
+maintenance_work_mem = 5GB
+effective_io_concurrency = 1000
+max_worker_processes = 8
+max_parallel_workers_per_gather = 4
+max_parallel_workers = 8
+max_parallel_maintenance_workers = 2
+fsync off
+synchronous_commit off
+wal_buffers = -1
+checkpoint_completion_target = 0.9
+min_wal_size = 50GB
+max_wal_size = 5GB
+random_page_cost = 1.1
+effective_cache_size = 96GB
+default_statistics_target = 100
+autovacuum = on
+</code></pre>
+<p><strong>Postgres indexes list:</strong></p>
+<pre><code>    SELECT
+      schema_name,
+      relname,
+      pg_size_pretty(table_size) AS size,
+      table_size
+    FROM (
+           SELECT
+             pg_catalog.pg_namespace.nspname           AS schema_name,
+             relname,
+             pg_relation_size(pg_catalog.pg_class.oid) AS table_size
+           FROM pg_catalog.pg_class
+             JOIN pg_catalog.pg_namespace ON relnamespace = pg_catalog.pg_namespace.oid
+         ) t
+    WHERE schema_name NOT LIKE 'pg_%'
+    ORDER BY table_size DESC;
+    schema_name     |                   relname                   |    size    |  table_size
+--------------------+---------------------------------------------+------------+--------------
+ public             | planet_osm_polygon                          | 151 GB     | 162362638336
+ public             | planet_osm_polygon_way_idx                  | 84 GB      |  90535403520
+ public             | planet_osm_line                             | 82 GB      |  87825956864
+ public             | planet_osm_line_way_idx                     | 33 GB      |  35687972864
+ public             | planet_osm_point                            | 24 GB      |  25987817472
+ public             | planet_osm_polygon_nobuilding               | 13 GB      |  13502365696
+ public             | planet_osm_polygon_osm_id_idx               | 12 GB      |  13105840128
+ public             | planet_osm_point_way_idx                    | 9109 MB    |   9551224832
+ public             | planet_osm_roads                            | 8650 MB    |   9070534656
+ public             | idx_poly_text_poly                          | 8309 MB    |   8712740864
+ public             | planet_osm_line_label                       | 7751 MB    |   8127275008
+ public             | idx_line_name                               | 7377 MB    |   7735803904
+ public             | planet_osm_line_name                        | 7346 MB    |   7702609920
+ public             | planet_osm_line_osm_id_idx                  | 5354 MB    |   5614149632
+ public             | idx_poly_idlanduse                          | 4732 MB    |   4961574912
+ public             | planet_osm_polygon_way_area_z10             | 4469 MB    |   4686422016
+ public             | planet_osm_point_osm_id_idx                 | 3692 MB    |   3871670272
+ public             | planet_osm_roads_way_idx                    | 1748 MB    |   1833238528
+ public             | idx_line_ref                                | 1476 MB    |   1547665408
+ public             | idx_line_waterway                           | 1420 MB    |   1489387520
+ public             | planet_osm_line_waterway                    | 1402 MB    |   1470603264
+ public             | idx_point_power                             | 1267 MB    |   1328185344
+ public             | idx_point_natural                           | 1036 MB    |   1086332928
+ public             | idx_point_highway                           | 962 MB     |   1008328704
+ public             | planet_osm_polygon_water                    | 852 MB     |    893165568
+ public             | planet_osm_polygon_name                     | 692 MB     |    725213184
+ public             | idx_line_access                             | 631 MB     |    661463040
+ public             | idx_point_amenity                           | 617 MB     |    646799360
+ public             | idx_poly_wayarea_text                       | 612 MB     |    642195456
+ public             | idx_poly_amenity                            | 521 MB     |    546209792
+ public             | planet_osm_roads_roads_ref                  | 360 MB     |    377847808
+ public             | planet_osm_roads_osm_id_idx                 | 330 MB     |    345915392
+ public             | idx_point_place                             | 321 MB     |    336666624
+ public             | idx_point_barrier                           | 310 MB     |    325574656
+ public             | idx_line_bridge                             | 297 MB     |    311795712
+ public             | planet_osm_point_place                      | 296 MB     |    309960704
+ public             | idx_point_shop                              | 212 MB     |    222355456
+ public             | idx_line_tunnel                             | 193 MB     |    202244096
+ public             | idx_line_railway                            | 179 MB     |    187981824
+ public             | planet_osm_roads_admin                      | 175 MB     |    183640064
+ public             | planet_osm_polygon_way_area_z6              | 171 MB     |    179650560
+ public             | idx_point_railway                           | 143 MB     |    150208512
+ public             | idx_point_man_made                          | 128 MB     |    134463488
+ public             | idx_point_tourism                           | 115 MB     |    120553472
+ public             | idx_line_power                              | 95 MB      |    100032512
+ public             | planet_osm_line_river                       | 85 MB      |     89628672
+ public             | icesheet_outlines                           | 69 MB      |     72638464
+ public             | idx_point_historic                          | 52 MB      |     54231040
+ public             | idx_point_leisure                           | 46 MB      |     48545792
+ public             | idx_poly_barrier                            | 42 MB      |     43565056
+ public             | idx_line_cutline                            | 15 MB      |     15392768
+ public             | icesheet_polygons                           | 13 MB      |     13524992
+ public             | idx_point_waterway                          | 12 MB      |     12468224
+ public             | simplified_water_polygons                   | 10 MB      |     10567680
+ public             | planet_osm_roads_admin_low                  | 10 MB      |     10518528
+ public             | idx_poly_aeroway                            | 8920 kB    |      9134080
+ public             | water_polygons                              | 8328 kB    |      8527872
+ public             | idx_point_aeroway                           | 8024 kB    |      8216576
+ public             | idx_point_aerialway                         | 7800 kB    |      7987200
+ public             | idx_point_landuse                           | 7048 kB    |      7217152
+ public             | spatial_ref_sys                             | 6936 kB    |      7102464
+ public             | icesheet_outlines_way_idx                   | 3744 kB    |      3833856
+ public             | planet_osm_polygon_military                 | 3216 kB    |      3293184
+ public             | idx_point_military                          | 2480 kB    |      2539520
+ public             | ferry_idx                                   | 2008 kB    |      2056192
+ public             | planet_osm_line_ferry                       | 1744 kB    |      1785856
+ public             | idx_line_aerialway                          | 1608 kB    |      1646592
+ public             | icesheet_polygons_way_idx                   | 784 kB     |       802816
+ public             | water_polygons_way_idx                      | 696 kB     |       712704
+ public             | simplified_water_polygons_way_idx           | 664 kB     |       679936
+ public             | spatial_ref_sys_pkey                        | 304 kB     |       311296
+ public             | idx_poly_aerialway                          | 232 kB     |       237568
+ public             | planet_osm_polygon_admin                    | 224 kB     |       229376
+ public             | ne_110m_admin_0_boundary_lines_land         | 96 kB      |        98304
+ information_schema | sql_features                                | 64 kB      |        65536
+</code></pre>
+<p><em>planet_osm_line_way_idx</em> and <em>planet_osm_polygon_way_idx</em> are present on top of all the indices mentioned on the OSM github documentation.</p>
+<p><strong>Postgres used indices</strong></p>
+<pre><code>SELECT relname, indexrelname, idx_scan, idx_tup_read, idx_tup_fetch FROM pg_stat_all_indexes WHERE
+   schemaname = 'public';
+    relname         |                indexrelname    | idx_scan | idx_tup_read | idx_tup_fetch
+--------------------+--------------------------------+----------+--------------+--------------
+ spatial_ref_sys    | spatial_ref_sys_pkey           |        0 |            0 |             0
+ planet_osm_roads   | planet_osm_roads_way_idx       |       15 |      2138301 |         29584
+ planet_osm_roads   | planet_osm_roads_osm_id_idx    |       18 |     18174150 |             0
+ planet_osm_roads   | planet_osm_roads_admin         |      288 |       882471 |        400284
+ planet_osm_roads   | planet_osm_roads_admin_low     |        6 |        16986 |         16986
+ planet_osm_roads   | planet_osm_roads_roads_ref     |       22 |       528508 |        308310
+ external_data      | external_data_pkey             |        0 |            0 |             0
+ planet_osm_point   | planet_osm_point_osm_id_idx    |        0 |            0 |             0
+ planet_osm_point   | planet_osm_point_place         |      199 |      1487141 |       1487141
+ planet_osm_point   | idx_point_aerialway            |       68 |        13617 |             0
+ planet_osm_point   | idx_point_aeroway              |        0 |            0 |             0
+ planet_osm_point   | idx_point_amenity              |       66 |        61187 |             0
+ planet_osm_point   | idx_point_barrier              |       66 |        28584 |             0
+ planet_osm_point   | idx_point_highway              |       84 |        61419 |         61419
+ planet_osm_point   | idx_point_historic             |       66 |         1184 |             0
+ planet_osm_point   | idx_point_landuse              |        0 |            0 |             0
+ planet_osm_point   | idx_point_leisure              |        0 |            0 |             0
+ planet_osm_point   | idx_point_lock                 |        0 |            0 |             0
+ planet_osm_point   | idx_point_man_made             |       66 |         7185 |             0
+ planet_osm_point   | idx_point_military             |        0 |            0 |             0
+ planet_osm_point   | idx_point_natural              |       28 |        22390 |         22390
+ planet_osm_point   | idx_point_place                |       17 |          815 |           815
+ planet_osm_point   | idx_point_power                |       47 |        10545 |         10545
+ planet_osm_point   | idx_point_railway              |      202 |        70737 |             0
+ planet_osm_point   | idx_point_shop                 |        0 |            0 |             0
+ planet_osm_point   | idx_point_tourism              |        0 |            0 |             0
+ planet_osm_point   | idx_point_waterway             |       19 |            8 |             8
+ planet_osm_point   | planet_osm_point_way_idx       |      282 |     40882004 |      12771340
+ icesheet_polygons  | icesheet_polygons_way_idx      |      103 |            2 |             2
+ planet_osm_line    | planet_osm_line_way_idx        |     3747 |     52539025 |      21471779
+ planet_osm_line    | planet_osm_line_osm_id_idx     |        0 |            0 |             0
+ planet_osm_line    | planet_osm_line_ferry          |      160 |         2100 |          2100
+ planet_osm_line    | planet_osm_line_label          |       37 |        44611 |         44611
+ planet_osm_line    | planet_osm_line_river          |       29 |       138888 |        138888
+ planet_osm_line    | planet_osm_line_waterway       |       89 |        69436 |         69436
+ planet_osm_line    | idx_line_ref                   |      101 |       127452 |        127452
+ planet_osm_line    | idx_line_tunnel                |        0 |            0 |             0
+ planet_osm_line    | idx_line_waterway              |       93 |        40684 |         40684
+ planet_osm_line    | ferry_idx                      |        0 |            0 |             0
+ planet_osm_line    | idx_line_access                |        0 |            0 |             0
+ planet_osm_line    | idx_line_aerialway             |        0 |            0 |             0
+ planet_osm_line    | idx_line_bridge                |      151 |       343569 |        343569
+ planet_osm_line    | idx_line_cutline               |       47 |            1 |             1
+ planet_osm_line    | idx_line_name                  |        0 |            0 |             0
+ planet_osm_line    | idx_line_power                 |       75 |         1888 |          1888
+ planet_osm_line    | idx_line_railway               |      403 |       961742 |        780485
+ planet_osm_line    | planet_osm_line_name           |       64 |       379879 |        379879
+ water_polygons     | water_polygons_way_idx         |       87 |          195 |           195
+ icesheet_outlines  | icesheet_outlines_way_idx      |      103 |            8 |             8
+ planet_osm_polygon | planet_osm_polygon_way_idx     |      920 |    168508409 |      76768381
+ planet_osm_polygon | planet_osm_polygon_osm_id_idx  |      440 |          440 |             0
+ planet_osm_polygon | planet_osm_polygon_admin       |      204 |          704 |           704
+ planet_osm_polygon | planet_osm_polygon_military    |       96 |         3816 |          3816
+ planet_osm_polygon | planet_osm_polygon_name        |      264 |      3867380 |       3867380
+ planet_osm_polygon | planet_osm_polygon_nobuilding  |       76 |      1963628 |        798344
+ planet_osm_polygon | planet_osm_polygon_water       |      100 |      1222659 |        796849
+ planet_osm_polygon | planet_osm_polygon_way_area_z10|       89 |      7167601 |        514467
+ planet_osm_polygon | planet_osm_polygon_way_area_z6 |       42 |        80558 |         29574
+ planet_osm_polygon | idx_poly_idlanduse             |       47 |        96564 |         96564
+ planet_osm_polygon | idx_poly_wayarea_text          |        0 |            0 |             0
+ planet_osm_polygon | idx_poly_text_poly             |      175 |     12853588 |       2815848
+ planet_osm_polygon | idx_poly_aerialway             |        0 |            0 |             0
+ planet_osm_polygon | idx_poly_aeroway               |        0 |            0 |             0
+ planet_osm_polygon | idx_poly_amenity               |        0 |            0 |             0
+</code></pre>
+<p>The last two columns are interesting : <em>idx_tup_read</em> and <em>idx_tup_fetch</em>. Especially <em>idx_tup_fetch</em> counts how many rows are returned directly from the index without scanning the table itselt. We can see that <em>planet_osm_line_way_idx</em> and <em>planet_osm_polygon_way_idx</em> are well used.</p>
+<p><strong>Postgres explain analyze requests:</strong></p>
+<pre><code>explain analyze SELECT ST_AsBinary("way") AS geom,"name","way_area" FROM (select way,way_area,name
+from planet_osm_polygon
+where name is not null
+and (waterway is null or waterway != 'riverbank')
+and place is null
+order by way_area desc
+) as text WHERE "way" &amp;&amp; ST_SetSRID('BOX3D(1171604.841520746 6470654.265434774,1172064.955953034 6470860.847424781)'::box3d, 900913);
+                                                                                                                                                            QUERY PLAN
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Subquery Scan on text  (cost=6.14..6.28 rows=1 width=55) (actual time=39.916..111.339 rows=26 loops=1)
+   -&gt;  Sort  (cost=6.14..6.15 rows=1 width=226) (actual time=36.297..36.311 rows=26 loops=1)
+         Sort Key: planet_osm_polygon.way_area DESC
+         Sort Method: quicksort  Memory: 28kB
+         -&gt;  Index Scan using planet_osm_polygon_way_idx on planet_osm_polygon  (cost=0.55..6.13 rows=1 width=226) (actual time=6.615..36.254 rows=26 loops=1)
+               Index Cond: (way &amp;&amp; '01030000A031BF0D00010000000500000053E76DD794E0314122E2FC90FFAE5841000000000000000053E76DD794E0314126353C3633AF584100000000000000008A56B9F460E2314126353C3633AF584100000000000000008A56B9F460E2314122E2FC90FFAE584
+1000000000000000053E76DD794E0314122E2FC90FFAE58410000000000000000'::geometry)
+               Filter: ((name IS NOT NULL) AND (place IS NULL) AND ((waterway IS NULL) OR (waterway &lt;&gt; 'riverbank'::text)))
+               Rows Removed by Filter: 29
+ Planning Time: 2.620 ms
+ Execution Time: 111.408 ms
+(10 rows)
+</code></pre>
+<p><em>planet_osm_polygon_way_idx</em> is used and the execution time is 111.408 ms (not minutes as I have on my browser) !</p>
+<p><strong>Important is that the postgres and tile server are running in docker containers.</strong></p>
+<p>If you need any more information just ask and thanks for the reading and for your help.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/renderd/" class="post-tag tag-link-renderd"
+                                        title="see questions tagged 'renderd'" rel="tag">renderd</a>
+                                
+                                    <a href="/tags/postgresql/" class="post-tag tag-link-postgresql"
+                                        title="see questions tagged 'postgresql'" rel="tag">postgresql</a>
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 May '22, 13:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4b54c1e96079cace9610d4a444944462?s=32&amp;d=identicon&amp;r=g" alt="Hamza's gravatar image" />
+    <p><a href="/users/21742/hamza">Hamza</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hamza has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/84464/">
+                edited
+                <strong>13 May '22, 15:44</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-84464">
+    
+        <a name="84467"></a>
+        <div class="comment" id="comment-84467">
+            <div id="post-84467-score" class="comment-score">3</div>
+            <div class="comment-text"><p>You have given a lot of information but one crucial bit is missing: What kind of disks do you have in your machine? Do you have local, non-virtualised NVMe/SSD? Or old-style magentic disks? Or maybe some sort of SAN or other network-attached disk? How long did the initial planet import take?</p></div>
+            <div class="comment-info" id="comment-84467-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '22, 16:29)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="84487"></a>
+        <div class="comment" id="comment-84487">
+            <div id="post-84487-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your reply, it's a VM with a disk that uses an SSD SAN as PVSCSI (para virtualized). Planet import took almost 28 hours.</p></div>
+            <div class="comment-info" id="comment-84487-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '22, 08:16)</span>
+                <a class="comment-user userinfo" href="/users/21742/hamza">Hamza</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-84464" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-84464-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/84464/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='W9bKNw8IH1lWWEt62hbSzSNQXAxAoBRU' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/84464/tile-rendering-extremly-slow?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/84464/tile-rendering-extremly-slow?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/postgresql/"
+            class="tag-link-postgresql"
+            title="see questions tagged'postgresql'using tags"
+            rel="tag">postgresql</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/renderd/"
+            class="tag-link-renderd"
+            title="see questions tagged'renderd'using tags"
+            rel="tag">renderd</a> <span class="tag-number">&#215;105</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 13, 2022, 1:47 p.m.">13 May '22, 13:47</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,436 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 16, 2022, 8:16 a.m.">16 May '22, 08:16</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/73457/tile-rendering-extremly-slow">Tile rendering extremly slow</a>
+        </p>
+        
+        <p>
+            <a href="/questions/79182/how-to-build-a-high-performance-tile-server">How to build a high performance tile server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64738/why-do-i-need-to-specify-the-style-when-importing-data-to-postgis-how-should-that-work-with-multiple-styles">Why do I need to specify the style when importing data to postgis? How should that work with multiple styles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/69662/help-me-understand-how-the-user-accounts-are-used-in-the-switch2osm-server-set-up-instructions">Help me understand how the user accounts are used in the switch2osm server set up instructions.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70916/polygons-not-getting-rendered-on-my-setup">Polygons not getting rendered on my setup</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73929/improving-performance-of-renderd">Improving performance of renderd</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24290/local-tile-server-extremely-slow-rendering">Local Tile Server - EXTREMELY slow rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56349/ssd-iops-suggestion-for-osm-tile-server">SSD IOPS suggestion for OSM tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/67712/adding-data-to-runnning-postgresql-with-osm2pgsql">Adding data to (runnning) postgresql with osm2pgsql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17225/setting-up-my-own-tile-server">Setting up my own tile server</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

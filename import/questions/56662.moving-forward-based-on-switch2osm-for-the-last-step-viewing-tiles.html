@@ -1,0 +1,816 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Moving forward based on switch2osm for the last step Viewing tiles - OSM Help</title>
+        <meta name="description" content="hi all,  I had at last installed ubuntu 16.04 and based on these steps from this link https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/ all is working as per the link thank you for the author. I have few queries.  How to further harden this ubuntu machine and in future there is upd..." />
+        <meta name="keywords" content="openstreetmap,stylesheet" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/56662/moving-forward-based-on-switch2osm-for-the-last-step-viewing-tiles" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/56662/moving-forward-based-on-switch2osm-for-the-last-step-viewing-tiles?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FvOS3mEa7GF3reDdhki52Y9WFxr55zxe' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/56662/moving-forward-based-on-switch2osm-for-the-last-step-viewing-tiles">Moving forward based on switch2osm for the last step Viewing tiles</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-56662-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56662/up/" rel="nofollow"> </a>
+<div id="post-56662-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56662-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56662/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/56662/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>hi all,
+       I had at last installed ubuntu 16.04 and based on these steps from this link <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> all is working as per the link thank you for the author. I have few queries.</p>
+<ol>
+<li>How to further harden this ubuntu machine and in future there is update should I update or will it break my maps?</li>
+<li>How to add more country map ? What will need to be updated I mean the steps?</li>
+<li>In future when there is updates for the countries which I have included how to updated them?</li>
+<li>I am stucked at this step Viewing tiles.I dont get it how to test this ? I dont get this steps We’ll add “<a href="http://tile-a.openstreetmap.fr/hot/”">http://tile-a.openstreetmap.fr/hot/”</a> as “From” and “<a href="http://yourserveripaddress/hot/”">http://yourserveripaddress/hot/”</a> as “To”, and do the same also for “tile-b” and “tile-c”.</li>
+<li>How to make the openstreet map look like how the mapbox map is?</li>
+</ol>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                                    <a href="/tags/stylesheet/" class="post-tag tag-link-stylesheet"
+                                        title="see questions tagged 'stylesheet'" rel="tag">stylesheet</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Jun '17, 16:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/26750873415fcbe30ebf2fdeab499d99?s=32&amp;d=identicon&amp;r=g" alt="newbie14's gravatar image" />
+    <p><a href="/users/13794/newbie14">newbie14</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="newbie14 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-56662">
+    
+</div>
+<div id="comment-tools-56662" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56662-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/56662/moving-forward-based-on-switch2osm-for-the-last-step-viewing-tiles?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/56662/moving-forward-based-on-switch2osm-for-the-last-step-viewing-tiles?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/56662/moving-forward-based-on-switch2osm-for-the-last-step-viewing-tiles?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/56662/moving-forward-based-on-switch2osm-for-the-last-step-viewing-tiles?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="56663"></a>
+                    <div id="answer-container-56663" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56663-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56663/up/" rel="nofollow"> </a>
+<div id="post-56663-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56663-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56663/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Taking these one at a time:</p>
+<p><strong>How to further harden this ubuntu machine and in future there is update should I update or will it break my maps?</strong></p>
+<p>You shouldn't have a problem applying regular Ubuntu 16.04 LTS updates.  Upgrading to 18.04 LTS (which I guess will be out early 2018) would cause a problem, as I believe that some of the stuff in the repositories used by those instructions needs updating before then.  That's a year away though and will be fixed by then.</p>
+<p>Whether other stuff that you may want to do to "harden" the server will break things rather depends on what you're actually doing.</p>
+<p><strong>How to add more country map ? What will need to be updated I mean the steps?</strong></p>
+<p>It'll likely be fastest to combine the data that you want to load into one file and then run "osm2pgsql" again with the "create" argument.</p>
+<p><strong>In future when there is updates for the countries which I have included how to updated them?</strong></p>
+<p>I described what you'd need to do to do that <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load#Updating_your_database_as_people_edit_OpenStreetMap">here</a>.  I didn't include that in the main "switch2osm" article to avoid confusing people too much.</p>
+<p><strong>I am stucked at this step Viewing tiles.I dont get it how to test this ?</strong> </p>
+<p>This is talking about using the "switcheroo" browser extension within the Chrome or Chromium browser.  If a link such as <a href="http://yourserveripaddress/hot/0/0/0.png">http://yourserveripaddress/hot/0/0/0.png</a> works then perhaps we need to explain a bit more about installing switcheroo and configuring it (once installed you have to click on the "S" that appears to the right of the addreess bar - hopefully things become more clear then).</p>
+<p><strong>How to make the openstreet map look like how the mapbox map is?</strong></p>
+<p>One question that immediately springs to mind is "which Mapbox map?".  They have lots of different map styles.  Of those styles that are publically available you'd need to check the licence file such as <a href="https://github.com/mapbox/osm-bright/blob/master/LICENSE.txt">here</a> for OSM Bright to see what you're allowed to do with it.  Also some more recent Mapbox styles are designed for use with Mapbox studio rather than the tools described in the switch2osm guide.  Another issue is that Mapbox may not be happy about you copying the map style that you are interested in (see <a href="https://github.com/osm2vectortiles/osm2vectortiles/issues/387">here</a> for such an issue in another map style).  With any style if the licence file isn't clear enough, you'll want to check with the style's authors that it's OK to copy in this way.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56663/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jun '17, 17:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56663">
+    
+        <a name="56664"></a>
+        <div class="comment" id="comment-56664">
+            <div id="post-56664-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> 1) I plant to use this server purely to server map and nonamtim for reverse geo code. So what hardenning can I do any tips?</p></div>
+            <div class="comment-info" id="comment-56664-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '17, 18:05)</span>
+                <a class="comment-user userinfo" href="/users/13794/newbie14">newbie14</a>
+                
+            </div>
+        </div>
+    
+        <a name="56665"></a>
+        <div class="comment" id="comment-56665">
+            <div id="post-56665-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>  2) I am not clear how to combine the data say I want to do for thailand and malaysia now. But now I have only loaded for malaysia?</p></div>
+            <div class="comment-info" id="comment-56665-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '17, 18:06)</span>
+                <a class="comment-user userinfo" href="/users/13794/newbie14">newbie14</a>
+                
+            </div>
+        </div>
+    
+        <a name="56666"></a>
+        <div class="comment" id="comment-56666">
+            <div id="post-56666-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>  3) I am not clear on the osmosis? I know you trying to run a crontab or maybe if I want to do manually is it possible too?</p></div>
+            <div class="comment-info" id="comment-56666-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '17, 18:09)</span>
+                <a class="comment-user userinfo" href="/users/13794/newbie14">newbie14</a>
+                
+            </div>
+        </div>
+    
+        <a name="56667"></a>
+        <div class="comment" id="comment-56667">
+            <div id="post-56667-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>  4) Can I straight move to open layers rather than doing this chrome extension?</p></div>
+            <div class="comment-info" id="comment-56667-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '17, 18:10)</span>
+                <a class="comment-user userinfo" href="/users/13794/newbie14">newbie14</a>
+                
+            </div>
+        </div>
+    
+        <a name="56668"></a>
+        <div class="comment" id="comment-56668">
+            <div id="post-56668-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>  5) Yes I want to use osm brigh but is that permissible to use or only map box not so clear on the terms there. I saw you did before for 14.04 here is the link <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/</a></p></div>
+            <div class="comment-info" id="comment-56668-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '17, 18:13)</span>
+                <a class="comment-user userinfo" href="/users/13794/newbie14">newbie14</a>
+                
+            </div>
+        </div>
+    
+        <a name="56670"></a>
+        <div class="comment not_top_scorer" id="comment-56670">
+            <div id="post-56670-score" class="comment-score"></div>
+            <div class="comment-text"><p>1) Not sure - someone else may be able to answer that more comprehensively</p>
+
+<p>2) The best current suggestion for that is probably <a href="https://wiki.openstreetmap.org/wiki/Osmium">https://wiki.openstreetmap.org/wiki/Osmium</a> .  Also see <a href="https://help.openstreetmap.org/questions/5389/merging-2-countries-with-osm2pgsql">https://help.openstreetmap.org/questions/5389/merging-2-countries-with-osm2pgsql</a> and <a href="https://help.openstreetmap.org/questions/19904/merging-osm-files-with-osmosis-and-import-to-postgres-with-osm2pgsql">https://help.openstreetmap.org/questions/19904/merging-osm-files-with-osmosis-and-import-to-postgres-with-osm2pgsql</a> .  </p>
+
+<p>3) Yes, you can do it manually every now and again, but if the data's significantly out of date it'll be quicker to reload rather than update.</p>
+
+<p>4) Absolutely (or use Leaflet, which a lot of people find easier than OpenLayers).  </p>
+
+<p>5) There shouldn't be a problem with <a href="https://github.com/mapbox/osm-bright/">https://github.com/mapbox/osm-bright/</a> .  Do be aware that it hasn't been updated for a year.  I'd expect you'll have to solve a few problems as you go, if data that it uses has changed.  Also there are a few issues with that style (such as everything with a name tag being rendered) that don't exist with some other styles.</p></div>
+            <div class="comment-info" id="comment-56670-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '17, 18:43)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56698"></a>
+        <div class="comment not_top_scorer" id="comment-56698">
+            <div id="post-56698-score" class="comment-score"></div>
+            <div class="comment-text"><p>1) Ok I will find myself on the hardening
+2) I read a lot it say download osmium? The merging part I am not too sure what is the correct method many answer are with different option. So can you tell me what is the exact method?
+3) I am wondering say I have run this command and again I run osm2pgsql -d gis --create --slim  -G --hstore --tag-transform-script ~/src/openstreetmap-carto/openstreetmap-carto.lua -C 2500 --number-processes 1 -S ~/src/openstreetmap-carto/openstreetmap-carto.style ~/data/azerbaijan-latest.osm.pbf what will happened to existing data ? Will that wiped off?
+I am also not sure how to rerun updates manually?
+4) I am exploring both leaflet and openlayer but people saying openlayers have more features.
+5) Is there any other good style sheet which you will recommend or go with the default version?</p></div>
+            <div class="comment-info" id="comment-56698-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jun '17, 16:39)</span>
+                <a class="comment-user userinfo" href="/users/13794/newbie14">newbie14</a>
+                
+            </div>
+        </div>
+    
+        <a name="56704"></a>
+        <div class="comment not_top_scorer" id="comment-56704">
+            <div id="post-56704-score" class="comment-score"></div>
+            <div class="comment-text"><p>(answering the easy ones first)</p>
+
+<p>3) That'll remove all data from the database and re-add the data in the file that you supply, in your example "azerbaijan-latest.osm.pbf".  The answer to "how to apply updates manually" depends on how long between manual updates you plan to leave it.  If you just want to catch up a day or so, then the example already mentioned at <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load#Updating_your_database_as_people_edit_OpenStreetMap">https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load#Updating_your_database_as_people_edit_OpenStreetMap</a> should work.  If much longer, then I'll be quicker to reload the database than apply updates.</p>
+
+<p>4) I think you'll find Leaflet easier.</p>
+
+<p>5) It depends on what features you are particularly interested in showing and where in the world you are.  The default OSM style is a compromise designed to work everywhere, but something else might be better for you.  OSM Bright is relatively easy to modify, but you might need to fix a few minor issues to get it working as it hasn't been touched for a while.</p></div>
+            <div class="comment-info" id="comment-56704-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jun '17, 09:59)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56705"></a>
+        <div class="comment not_top_scorer" id="comment-56705">
+            <div id="post-56705-score" class="comment-score"></div>
+            <div class="comment-text"><p>2) For the merging which is the correct method to do ? I see many different google links a bit lost there.</p>
+
+<p>3) Maybe I dont need to catch in a day or so for now. I will do manual right. What do you mean by quicket to reload the database meaning the manual way right. Another thing is that when I do the manual update is this the only step needed or any other steps need to be executed?</p>
+
+<p>5) So which style do you recommend which does not compromise anything? I am sorry very new to all this. I also even leaflet and open layers have .css what is thay css does?</p></div>
+            <div class="comment-info" id="comment-56705-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jun '17, 10:06)</span>
+                <a class="comment-user userinfo" href="/users/13794/newbie14">newbie14</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56663" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56663-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/56662/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FvOS3mEa7GF3reDdhki52Y9WFxr55zxe' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56662/moving-forward-based-on-switch2osm-for-the-last-step-viewing-tiles?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56662/moving-forward-based-on-switch2osm-for-the-last-step-viewing-tiles?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+        <a href="/tags/stylesheet/"
+            class="tag-link-stylesheet"
+            title="see questions tagged'stylesheet'using tags"
+            rel="tag">stylesheet</a> <span class="tag-number">&#215;24</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 18, 2017, 4:18 p.m.">18 Jun '17, 16:18</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,445 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 21, 2017, 10:06 a.m.">21 Jun '17, 10:06</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/639/how-do-i-use-openstreetmap-tiles-as-a-wms-background-in-josm">How do I use OpenStreetMap tiles as a WMS background in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1574/is-it-openstreetmap-or-open-street-maps">Is it OpenStreetMap or Open Street Maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1737/problem-with-some-name-tags-in-bulgarian-map">Problem with some name tags in Bulgarian map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2310/maps-for-we-travel">Maps for We-Travel?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2336/how-do-i-recover-my-account-details">[closed] How do I recover my account details?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2505/i-see-some-nodes-on-the-map-but-i-cant-find-them-in-planetosm-why">I see some nodes on the map, but I can&#39;t find them in Planet.osm. Why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2629/how-can-i-match-a-key-containing-a-colon-in-an-osmlib-stylesheet">How can I match a key containing a colon in an OSMLib stylesheet?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3174/how-to-integrate-openstreet-map-in-my-site">[closed] How to integrate openstreet map in my site?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5226/image-corrupt-or-truncated">Image corrupt or truncated</a>
+        </p>
+        
+        <p>
+            <a href="/questions/534/how-does-nominatim-have-data-that-is-not-in-openstreetmap">How does Nominatim have data that is not in OpenStreetMap?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

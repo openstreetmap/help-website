@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to use the SRTM data from bbbike.org to draw contour lines in private server? - OSM Help</title>
+        <meta name="description" content="I would like to create a tile server in order to bulk download map tiles for personal use. I have followed the switch2osm guide and I managed to setup an OSM tile server with a small regional DB that works nicely. However, I would also like to get contour lines on my tiles. I have already read the i..." />
+        <meta name="keywords" content="bbbike.org,switch2osm,contours,srtm" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/42005/how-to-use-the-srtm-data-from-bbbikeorg-to-draw-contour-lines-in-private-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/42005/how-to-use-the-srtm-data-from-bbbikeorg-to-draw-contour-lines-in-private-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='V5GEOq8FgLJ1UsV4uXa5kVt7sJHHtSHD' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/42005/how-to-use-the-srtm-data-from-bbbikeorg-to-draw-contour-lines-in-private-server">How to use the SRTM data from bbbike.org to draw contour lines in private server?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-42005-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42005/up/" rel="nofollow"> </a>
+<div id="post-42005-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-42005-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42005/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/42005/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I would like to create a tile server in order to bulk download map tiles for personal use.
+I have followed the switch2osm guide and I managed to setup an OSM tile server with a small regional DB that works nicely.</p>
+<p>However, I would also like to get contour lines on my tiles.</p>
+<p>I have already read the information about SRTM, the contour lines and hill shading in the wiki, but it looks like an overly complicated process.</p>
+<p>After looking around, I found that bbbike.org allows to extract regions of the map, and one of the options allows the extraction of SRTM data: <a href="http://extract.bbbike.org/">http://extract.bbbike.org/</a></p>
+<p><a href="http://download.bbbike.org/osm/planet/srtm/">Here</a> actually, they even have the entire planet SRTM pbf file available for download.</p>
+<p>Can someone please explain how these data could be properly imported in the postgres database? Also, is there any further configuration that needs to be done in Mapnik or any other component?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bbbike.org/" class="post-tag tag-link-bbbike.org"
+                                        title="see questions tagged 'bbbike.org'" rel="tag">bbbike.org</a>
+                                
+                                    <a href="/tags/switch2osm/" class="post-tag tag-link-switch2osm"
+                                        title="see questions tagged 'switch2osm'" rel="tag">switch2osm</a>
+                                
+                                    <a href="/tags/contours/" class="post-tag tag-link-contours"
+                                        title="see questions tagged 'contours'" rel="tag">contours</a>
+                                
+                                    <a href="/tags/srtm/" class="post-tag tag-link-srtm"
+                                        title="see questions tagged 'srtm'" rel="tag">srtm</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Mar '15, 23:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d5625c6ca5fca65ee63be21d3980a55e?s=32&amp;d=identicon&amp;r=g" alt="cyberang3l's gravatar image" />
+    <p><a href="/users/10746/cyberang3l">cyberang3l</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cyberang3l has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/42005/">
+                edited
+                <strong>30 Mar '15, 14:19</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-42005">
+    
+</div>
+<div id="comment-tools-42005" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42005-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/42005/how-to-use-the-srtm-data-from-bbbikeorg-to-draw-contour-lines-in-private-server?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/42005/how-to-use-the-srtm-data-from-bbbikeorg-to-draw-contour-lines-in-private-server?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/42005/how-to-use-the-srtm-data-from-bbbikeorg-to-draw-contour-lines-in-private-server?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/42005/how-to-use-the-srtm-data-from-bbbikeorg-to-draw-contour-lines-in-private-server?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="42052"></a>
+                    <div id="answer-container-42052" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-42052-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42052/up/" rel="nofollow"> </a>
+<div id="post-42052-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-42052-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42052/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I managed to import the data and configure them to appear on my map.</p>
+<p>Steps I followed:</p>
+<ol>
+<li>This tutorial in order to setup a tile server: <a href="https://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/">https://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/</a></li>
+<li>On the "import map data" step, I extracted the part of the map I was interested from <a href="http://extract.bbbike.org/">http://extract.bbbike.org/</a> (choose the format OSM -&gt; Protocolbuffer (PBF)) and used this file for my database.</li>
+<li>At this point you should test that you have a working tile server, that is able to serve tiles if you visit <a href="http://ip.of.your.server/osm/0/0/0.png">http://ip.of.your.server/osm/0/0/0.png</a></li>
+<li>Now it is time to add the SRTM data. Go again to the website <a href="http://extract.bbbike.org/">http://extract.bbbike.org/</a> and choose the same part of the map that chose when you extracted the database that you used on step 2. This time, choose the format "SRTM Europe PBF (25m)" if your extract is located in Europe, or "SRTM World PBF (40m)" if your extract is located anywhere else in the world. Download this file.</li>
+<li>Add the following lines at the end of the files <code>/usr/share/osm2pgsql/default.style</code> and <code>/usr/share/osm2pgsql/osm2pgsql/default.style</code>. These lines will force osm2pgsql in the next step to generate three additional table columns in the database, that are needed for the SRTM data. (probably you don't need to add the lines to both of the files, but I don't know which is the correct file so I added the lines to both of them and it worked)</li>
+</ol>
+<p></p><pre>     # Contour lines
+     node,way    contour                 text    linear
+     way         contour_ext             text    linear
+     way         ele                     text    linear
+ </pre><p></p>
+<ol>
+<li>
+<p>Append the SRTM data into the database with the command <code>osm2pgsql --append --slim -d gis srtm-data.pbf</code></p>
+</li>
+<li>
+<p>Add the following XML text in the file <code>/etc/mapnik-osm-carto-data/osm.xml</code>, after the <code>landcover-line</code> Layer (around line 720 in the file).</p>
+<p>&lt;layer name="srtm-minor" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=<a href="http://help.openstreetmap.org/users/2957/nullpointer"><a href="http://help.openstreetmap.org/users/2957/nullpointer"><a href="http://help.openstreetmap.org/users/2957/nullpointer">@null</a></a></a> +wktext +no_defs +over"&gt;
+   &lt;stylename&gt;contours-minor&lt;/stylename&gt;
+   
+   &lt;datasource&gt;
+      &lt;parameter name="type"&gt;&lt;![CDATA[postgis]]&gt;&lt;/parameter&gt;
+      &lt;parameter name="table"&gt;&lt;![CDATA[(SELECT way,ele,ele as name FROM planet_osm_line WHERE contour_ext = 'elevation_minor') AS "contours-minor"]]&gt;&lt;/parameter&gt;
+      &lt;parameter name="dbname"&gt;&lt;![CDATA[gis]]&gt;&lt;/parameter&gt;
+   &lt;/datasource&gt;
+&lt;/layer&gt;
+&lt;layer name="srtm-medium" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=<a href="http://help.openstreetmap.org/users/2957/nullpointer"><a href="http://help.openstreetmap.org/users/2957/nullpointer"><a href="http://help.openstreetmap.org/users/2957/nullpointer">@null</a></a></a> +wktext +no_defs +over"&gt;
+   &lt;stylename&gt;contours-medium&lt;/stylename&gt;
+   &lt;stylename&gt;contours-medium-text&lt;/stylename&gt;
+   &lt;datasource&gt;
+      &lt;parameter name="type"&gt;&lt;![CDATA[postgis]]&gt;&lt;/parameter&gt;
+      &lt;parameter name="table"&gt;&lt;![CDATA[(SELECT way,ele,ele as name FROM planet_osm_line WHERE contour_ext = 'elevation_medium') AS "contours-medium"]]&gt;&lt;/parameter&gt;
+      &lt;parameter name="dbname"&gt;&lt;![CDATA[gis]]&gt;&lt;/parameter&gt;
+   &lt;/datasource&gt;
+&lt;/layer&gt;
+&lt;layer name="srtm-major" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=<a href="http://help.openstreetmap.org/users/2957/nullpointer"><a href="http://help.openstreetmap.org/users/2957/nullpointer"><a href="http://help.openstreetmap.org/users/2957/nullpointer">@null</a></a></a> +wktext +no_defs +over"&gt;
+   &lt;stylename&gt;contours-major&lt;/stylename&gt;
+   &lt;stylename&gt;contours-major-text&lt;/stylename&gt;
+   &lt;datasource&gt;
+      &lt;parameter name="type"&gt;&lt;![CDATA[postgis]]&gt;&lt;/parameter&gt;
+      &lt;parameter name="table"&gt;&lt;![CDATA[(SELECT way,ele,ele as name FROM planet_osm_line WHERE contour_ext = 'elevation_major') AS "contours-major"]]&gt;&lt;/parameter&gt;
+      &lt;parameter name="dbname"&gt;&lt;![CDATA[gis]]&gt;&lt;/parameter&gt;
+   &lt;/datasource&gt;
+&lt;/layer&gt;</p>
+<p>&lt;style name="contours-minor"&gt;
+   &lt;rule&gt;
+      &lt;maxscaledenominator&gt;70000&lt;/maxscaledenominator&gt;
+      &lt;minscaledenominator&gt;2000&lt;/minscaledenominator&gt;
+      &lt;linesymbolizer stroke="#9cb197" stroke-width="0.3"/&gt;
+   &lt;/rule&gt;
+&lt;/style&gt;
+&lt;style name="contours-medium"&gt;
+   &lt;rule&gt;
+      &lt;maxscaledenominator&gt;300000&lt;/maxscaledenominator&gt;
+      &lt;minscaledenominator&gt;70000&lt;/minscaledenominator&gt;
+      &lt;linesymbolizer stroke="#9cb197" stroke-width="0.5"/&gt;
+   &lt;/rule&gt;
+   &lt;rule&gt;
+      &lt;maxscaledenominator&gt;70000&lt;/maxscaledenominator&gt;
+      &lt;minscaledenominator&gt;2000&lt;/minscaledenominator&gt;
+      &lt;linesymbolizer stroke="#747b90" stroke-width="0.5"/&gt;
+   &lt;/rule&gt;
+&lt;/style&gt;
+&lt;style name="contours-major"&gt;
+   &lt;rule&gt;
+      &lt;maxscaledenominator&gt;600000&lt;/maxscaledenominator&gt;
+      &lt;minscaledenominator&gt;300000&lt;/minscaledenominator&gt;
+      &lt;linesymbolizer stroke="#9cb197" stroke-width="0.7"/&gt;
+   &lt;/rule&gt;
+   &lt;rule&gt;
+      &lt;maxscaledenominator&gt;300000&lt;/maxscaledenominator&gt;
+      &lt;minscaledenominator&gt;70000&lt;/minscaledenominator&gt;
+      &lt;linesymbolizer stroke="#747b90" stroke-width="0.7"/&gt;
+   &lt;/rule&gt;
+   &lt;rule&gt;
+      &lt;maxscaledenominator&gt;70000&lt;/maxscaledenominator&gt;
+      &lt;minscaledenominator&gt;2000&lt;/minscaledenominator&gt;
+      &lt;linesymbolizer stroke="#855d62" stroke-width="0.7"/&gt;
+   &lt;/rule&gt;
+&lt;/style&gt;
+&lt;style name="contours-medium-text"&gt;
+   &lt;rule&gt;
+      &lt;maxscaledenominator&gt;70000&lt;/maxscaledenominator&gt;
+      &lt;minscaledenominator&gt;2000&lt;/minscaledenominator&gt;
+      &lt;textsymbolizer size="10" fill="#9c9" fontset-name="fontset-1" halo-radius="1" wrap-width="14"&gt;&lt;![CDATA[[name]]]&gt;&lt;/textsymbolizer&gt;
+      &lt;textsymbolizer fontset-name="fontset-0" size="10" fill="#747b90" halo-radius="1" placement="line"&gt;&lt;![CDATA[[ele]]]&gt;&lt;/textsymbolizer&gt;
+   &lt;/rule&gt;
+&lt;/style&gt;
+&lt;style name="contours-major-text"&gt;
+   &lt;rule&gt;
+      &lt;maxscaledenominator&gt;300000&lt;/maxscaledenominator&gt;
+      &lt;minscaledenominator&gt;70000&lt;/minscaledenominator&gt;
+      &lt;textsymbolizer fontset-name="fontset-1" size="10" fill="#747b90" halo-radius="1" placement="line"&gt;&lt;![CDATA[[ele]]]&gt;&lt;/textsymbolizer&gt;
+   &lt;/rule&gt;
+   &lt;rule&gt;
+      &lt;maxscaledenominator&gt;70000&lt;/maxscaledenominator&gt;
+      &lt;minscaledenominator&gt;2000&lt;/minscaledenominator&gt;
+      &lt;textsymbolizer fontset-name="fontset-1" size="10" fill="#855d62" halo-radius="1" placement="line"&gt;&lt;![CDATA[[ele]]]&gt;&lt;/textsymbolizer&gt;
+   &lt;/rule&gt;
+&lt;/style&gt;</p>
+</li>
+<li>
+<p>Restart renderd, and you should have the contour lines shown on the map. Probably you will need to tune the <code>osm.xml</code> file, because I noticed that it gets bloated with the contour lines and the default style provided by osm.xml that already shows too many things on the map.</p>
+</li>
+</ol>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/42052/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Mar '15, 02:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d5625c6ca5fca65ee63be21d3980a55e?s=32&amp;d=identicon&amp;r=g" alt="cyberang3l's gravatar image" />
+    <p><a href="/users/10746/cyberang3l">cyberang3l</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cyberang3l has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/42052/">
+                wikified
+                <strong>31 Mar '15, 15:06</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-42052">
+    
+        <a name="42053"></a>
+        <div class="comment" id="comment-42053">
+            <div id="post-42053-score" class="comment-score"></div>
+            <div class="comment-text"><p>Does anyone know how to insert XML code properly in an answer?</p></div>
+            <div class="comment-info" id="comment-42053-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Mar '15, 02:05)</span>
+                <a class="comment-user userinfo" href="/users/10746/cyberang3l">cyberang3l</a>
+                
+            </div>
+        </div>
+    
+        <a name="42054"></a>
+        <div class="comment" id="comment-42054">
+            <div id="post-42054-score" class="comment-score"></div>
+            <div class="comment-text"><p>Also, how can I continue the list numbering after a code block? In the preview is was shown correctly, but now that I see the answer posted, after each code block the ordered lists start counting from 1 again.</p></div>
+            <div class="comment-info" id="comment-42054-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Mar '15, 02:08)</span>
+                <a class="comment-user userinfo" href="/users/10746/cyberang3l">cyberang3l</a>
+                
+            </div>
+        </div>
+    
+        <a name="42070"></a>
+        <div class="comment" id="comment-42070">
+            <div id="post-42070-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Nice answer. Welcome to markdown :-(</p></div>
+            <div class="comment-info" id="comment-42070-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Mar '15, 14:17)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42072"></a>
+        <div class="comment" id="comment-42072">
+            <div id="post-42072-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Alternatively you could present your solution in a blog entry via your OSM user account.</p></div>
+            <div class="comment-info" id="comment-42072-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Mar '15, 14:41)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42073"></a>
+        <div class="comment not_top_scorer" id="comment-42073">
+            <div id="post-42073-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: … where there is also Markdown, isn't it?</p>
+
+<p><a href="http://help.openstreetmap.org/users/10746/cyberang3l">@cyberang3l</a>: the "preview" does work partly. Use <a href="http://daringfireball.net/projects/markdown/dingus">http://daringfireball.net/projects/markdown/dingus</a> instead for previewing "complex" stuff. And <a href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a> should explain the formatting … however, I did not get the XML block to work, too.</p></div>
+            <div class="comment-info" id="comment-42073-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Mar '15, 15:04)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42122"></a>
+        <div class="comment" id="comment-42122">
+            <div id="post-42122-score" class="comment-score">2</div>
+            <div class="comment-text"><p>For anyone interested, I collected a few different map styles and I made a script for easy installation in one go. One of the map styles is the OSM Bright map that includes contour lines. I didn't use the XML code above, but I incorporated the change in the CartoCSS.</p>
+
+<p>You can check it out here: <a href="https://github.com/cyberang3l/osm-maps">https://github.com/cyberang3l/osm-maps</a></p></div>
+            <div class="comment-info" id="comment-42122-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Apr '15, 00:56)</span>
+                <a class="comment-user userinfo" href="/users/10746/cyberang3l">cyberang3l</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-42052" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42052-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/42005/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='V5GEOq8FgLJ1UsV4uXa5kVt7sJHHtSHD' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/42005/how-to-use-the-srtm-data-from-bbbikeorg-to-draw-contour-lines-in-private-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/42005/how-to-use-the-srtm-data-from-bbbikeorg-to-draw-contour-lines-in-private-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/switch2osm/"
+            class="tag-link-switch2osm"
+            title="see questions tagged'switch2osm'using tags"
+            rel="tag">switch2osm</a> <span class="tag-number">&#215;36</span><br/>
+        
+        <a href="/tags/contours/"
+            class="tag-link-contours"
+            title="see questions tagged'contours'using tags"
+            rel="tag">contours</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/srtm/"
+            class="tag-link-srtm"
+            title="see questions tagged'srtm'using tags"
+            rel="tag">srtm</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/bbbike.org/"
+            class="tag-link-bbbike.org"
+            title="see questions tagged'bbbike.org'using tags"
+            rel="tag">bbbike.org</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 29, 2015, 11:49 p.m.">29 Mar '15, 23:49</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,447 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 4, 2015, 12:56 a.m.">04 Apr '15, 00:56</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/2367/how-to-show-elevation-contours-in-josm">[closed] How to show elevation contours in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32465/messy-contours-layer">[closed] Messy contours layer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8702/anomaly-in-contour-lines">Anomaly in contour lines</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10614/need-clarification-on-tile-creation-strategy">Need clarification on tile creation strategy</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12698/contours-not-displaying-on-local-mapnik-rendering">Contours not displaying on local mapnik rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14932/why-are-the-cache-duration-settings-configured-in-mod_tile-being-ignored">Why are the cache duration settings configured in mod_tile being ignored?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17225/setting-up-my-own-tile-server">Setting up my own tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15487/morocco-query">Morocco query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17307/osm-data-with-contour-lines-for-garmin">OSM data with contour lines for Garmin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10498/what-is-this-strm-thing">What is this STRM thing?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

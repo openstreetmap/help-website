@@ -1,0 +1,694 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Is it possible to use OSM to publish data and get the attribution? - OSM Help</title>
+        <meta name="description" content="I downloaded a list of addresses published by a public institution (ISTAT) I geocoded them (by using Googlev3 API and a script I wrote on purpose) and obtained a shp file I want to publish this shp file on OSM I want to do it because I want to &quot;put my name on them&quot;. The list of address is published ..." />
+        <meta name="keywords" content="attribution,publishing" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/70941/is-it-possible-to-use-osm-to-publish-data-and-get-the-attribution" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/70941/is-it-possible-to-use-osm-to-publish-data-and-get-the-attribution?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='u3jKXScqq8EhSYTSj4f5OCEpXudBXsGM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/70941/is-it-possible-to-use-osm-to-publish-data-and-get-the-attribution">Is it possible to use OSM to publish data and get the attribution?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-70941-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70941/up/" rel="nofollow"> </a>
+<div id="post-70941-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-70941-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70941/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/70941/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I downloaded a list of addresses published by a public institution (ISTAT)
+I geocoded them (by using Googlev3 API and a script I wrote on purpose) and obtained a shp file
+I want to publish this shp file on OSM
+I want to do it because I want to "put my name on them".
+The list of address is published under CC-BY-SA licence, so I will publish the shp file under the same licence.
+However, I want that it is recognized that it is me who geocoded the data, so I want to get the attribution of the file, together with the original source publisher (ISTAT).
+My aim is that, if somebody uses the shp file to make some analysis and publishes the results, I get quoted as one of the sources of the data.
+Is it possible to do it with OSM?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/attribution/" class="post-tag tag-link-attribution"
+                                        title="see questions tagged 'attribution'" rel="tag">attribution</a>
+                                
+                                    <a href="/tags/publishing/" class="post-tag tag-link-publishing"
+                                        title="see questions tagged 'publishing'" rel="tag">publishing</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Sep '19, 15:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1f59549ff121858900f1eeecdbd1aeab?s=32&amp;d=identicon&amp;r=g" alt="Tms91's gravatar image" />
+    <p><a href="/users/17246/tms91">Tms91</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tms91 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/70941/">
+                edited
+                <strong>27 Sep '19, 15:20</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-70941">
+    
+        <a name="70942"></a>
+        <div class="comment" id="comment-70942">
+            <div id="post-70942-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Did you manually geocode the addresses (for example by walking to each address and taking a GPS measurement there), or did you use another database/map/service to do the geocoding?</p></div>
+            <div class="comment-info" id="comment-70942-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Sep '19, 15:19)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="70943"></a>
+        <div class="comment" id="comment-70943">
+            <div id="post-70943-score" class="comment-score"></div>
+            <div class="comment-text"><p>I used Googlev3 API, I wrote some code to use it (question updated)</p></div>
+            <div class="comment-info" id="comment-70943-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Sep '19, 15:21)</span>
+                <a class="comment-user userinfo" href="/users/17246/tms91">Tms91</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-70941" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70941-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/70941/is-it-possible-to-use-osm-to-publish-data-and-get-the-attribution?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/70941/is-it-possible-to-use-osm-to-publish-data-and-get-the-attribution?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/70941/is-it-possible-to-use-osm-to-publish-data-and-get-the-attribution?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/70941/is-it-possible-to-use-osm-to-publish-data-and-get-the-attribution?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="70944"></a>
+                    <div id="answer-container-70944" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-70944-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70944/up/" rel="nofollow"> </a>
+<div id="post-70944-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-70944-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70944/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Tms91 has selected this answer as the correct answer"
+        href="/accept_answer/70944/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think that you should probably have asked these questions:</p>
+<ol>
+<li>
+<p>Can I publish a shape file on OSM? The answer is no, OSM is not a generic geodata distribution platform; depending on what is in your shape file, some or all of the contents of your shape file could probably added to OSM but that is a manual process where you'll be going through each individual object, checking if it already is present in OSM, adding it if not, choosing the right OSM tags to represent it etc.</p>
+</li>
+<li>
+<p>Can I add data to OSM under a CC-BY-SA license, or otherwise ensure I am attributed as the creator? The answer to the first part of the question is no, anything you add to OSM must be distributable under OSM's Open Database License which is not compatible with CC-BY-SA. The answer to the second part of the question is that if anyone checks the object history on OSM they will see that it was contributed by you, but you cannot force OSM data users to attribute you.</p>
+</li>
+<li>
+<p>Can I add locations to OSM which I have geocoded using Google? The answer is no, you generally cannot do that because the data is derived from Google and - at least in <em>our</em> conservative interpretation of intellectual property rights - cannot be reused at all without Google's consent.</p>
+</li>
+</ol>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/70944/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Sep '19, 15:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-70944">
+    
+        <a name="70946"></a>
+        <div class="comment" id="comment-70946">
+            <div id="post-70946-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Points 2 and 3 are explicit in the Contributor Terms to which you assented when signing up to OSM (<a href="https://wiki.osmfoundation.org/wiki/Licence/Contributor_Terms).">https://wiki.osmfoundation.org/wiki/Licence/Contributor_Terms).</a> See terms 1a and 4.</p></div>
+            <div class="comment-info" id="comment-70946-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Sep '19, 10:19)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-70944" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70944-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/70941/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='u3jKXScqq8EhSYTSj4f5OCEpXudBXsGM' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70941/is-it-possible-to-use-osm-to-publish-data-and-get-the-attribution?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70941/is-it-possible-to-use-osm-to-publish-data-and-get-the-attribution?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/attribution/"
+            class="tag-link-attribution"
+            title="see questions tagged'attribution'using tags"
+            rel="tag">attribution</a> <span class="tag-number">&#215;34</span><br/>
+        
+        <a href="/tags/publishing/"
+            class="tag-link-publishing"
+            title="see questions tagged'publishing'using tags"
+            rel="tag">publishing</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 27, 2019, 3:16 p.m.">27 Sep '19, 15:16</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,640 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 28, 2019, 10:19 a.m.">28 Sep '19, 10:19</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/7652/making-many-maps-from-osm-for-a-project-how-to-attribute">Making Many Maps from OSM for a project (how to attribute)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12861/can-attribution-be-given-to-openstreetmaps-at-the-end-of-the-television-show-instead-of-on-the-maps-during-the-show">Can attribution be given to OpenStreetMaps at the end of the television show instead of on the maps during the show?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13379/license-question-save-attribution-with-copied-data">License question: Save attribution with copied data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15071/license-question-osm-and-my-attribute">License question: OSM and my attribute.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19531/edits-do-not-appear-in-view-mode">Edits do not appear in view mode</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20705/why-is-the-attribution-information-not-updated">Why is the attribution information not updated?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26082/licence-of-a-modified-osm-still-image-used-in-a-video">Licence of a modified OSM still image used in a video.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26229/exact-phrase-for-crediting-osm-in-the-video-endtitles">Exact phrase for crediting OSM in the video endtitles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27013/use-of-software">Use of Software</a>
+        </p>
+        
+        <p>
+            <a href="/questions/700/publishing-an-openstreetmap">Publishing an OpenStreetMap</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

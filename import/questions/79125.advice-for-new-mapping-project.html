@@ -1,0 +1,705 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>advice for new mapping project - OSM Help</title>
+        <meta name="description" content="I&#39;m looking to start a project. Not done any mapping before.  Wondering if the editing tools for OSM allow users to draw polygons on a new layer on a map that are linked and tagged across different categories. The polygons would ideally be able to be different colours and when selecting a particular..." />
+        <meta name="keywords" content="project,new,polygons" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/79125/advice-for-new-mapping-project" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/79125/advice-for-new-mapping-project?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='2mT1X1fytncxr43WnObKzDMklUMGVFOM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/79125/advice-for-new-mapping-project">advice for new mapping project</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-79125-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79125/up/" rel="nofollow"> </a>
+<div id="post-79125-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-79125-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79125/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/79125/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm looking to start a project. Not done any mapping before. </p>
+<p>Wondering if the editing tools for OSM allow users to draw polygons on a new layer on a map that are linked and tagged across different categories. The polygons would ideally be able to be different colours and when selecting a particular tag, you would have the option to highlight all the other polygons on the map that share that tag, and also potentially bring up an info box with additional info as well as the tags/categories. Is this possible?</p>
+<p>Thank you for any help. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/project/" class="post-tag tag-link-project"
+                                        title="see questions tagged 'project'" rel="tag">project</a>
+                                
+                                    <a href="/tags/new/" class="post-tag tag-link-new"
+                                        title="see questions tagged 'new'" rel="tag">new</a>
+                                
+                                    <a href="/tags/polygons/" class="post-tag tag-link-polygons"
+                                        title="see questions tagged 'polygons'" rel="tag">polygons</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Mar '21, 12:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3740ef42fdfc334a7aa9b5a9029cb036?s=32&amp;d=identicon&amp;r=g" alt="Development%20of%20London's gravatar image" />
+    <p><a href="/users/19830/development-of-london">Development ...</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Development of London has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-79125">
+    
+        <a name="79127"></a>
+        <div class="comment" id="comment-79127">
+            <div id="post-79127-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I think you might mix up a couple of things in your question (mapping, editors, drawing polygons, linking to categories, highlighting, ...). It does not become very clear what you are trying to achieve. Could you tell us a bit more what your project is about, what you want to do, what other users should be able to do? Private/public use? ...</p></div>
+            <div class="comment-info" id="comment-79127-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '21, 12:57)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="79128"></a>
+        <div class="comment" id="comment-79128">
+            <div id="post-79128-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks for the reply. What I am trying to do is map out the development of London by building types and time periods. So I wanted to take a base map (the OSM humanitarian one looked quite clean and good) and draw several polygons on top of it for, for example, all London squares, or areas built by Thomas Cubitt or all Victorian industrial workers dwellings built by philanthropists like Peabody blocks etc. etc.</p>
+
+<p>So 1) these things (buildings, spaces, areas etc.) would each have their own polygon overlaid onto the basemap, as and when they're identified in the city by me, and 2) the polygons would have tags that shows, for e.g. it relates or is seeking to show a neighbourhood built by Cubitt, and clicking on the tag will highlight all the other polygons tagged with (i.e. other areas built by) 'Thomas Cubitt' as identified on the map.</p>
+
+<p>Additionally, as well as the tags themselves (for which I'd require multiple ones per polygon) I'd like to provide information on the building etc. and for e.g. link to wikipedia article or other resources. It is a personal project for now, but could become a resource were I to progress it far enough and make it worth making it public.</p></div>
+            <div class="comment-info" id="comment-79128-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '21, 13:39)</span>
+                <a class="comment-user userinfo" href="/users/19830/development-of-london">Development ...</a>
+                
+            </div>
+        </div>
+    
+        <a name="79129"></a>
+        <div class="comment" id="comment-79129">
+            <div id="post-79129-score" class="comment-score"></div>
+            <div class="comment-text"><p>I went on irc chat to ask and it sounds like umap might be the place to start (rather than iD or JOSM? which if i understand correctly relate to editing the OSM itself? which I'm not interested in) but I am not clear if umap has all the functionality I require. Sorry I posted my initial question on the understanding iD or JOSM is designed to to what I'm looking to do, but now it doesn't sound like it is, but am still unsure of next steps.</p></div>
+            <div class="comment-info" id="comment-79129-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '21, 13:39)</span>
+                <a class="comment-user userinfo" href="/users/19830/development-of-london">Development ...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79125" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79125-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/79125/advice-for-new-mapping-project?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/79125/advice-for-new-mapping-project?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/79125/advice-for-new-mapping-project?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/79125/advice-for-new-mapping-project?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="79130"></a>
+                    <div id="answer-container-79130" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79130-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79130/up/" rel="nofollow"> </a>
+<div id="post-79130-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-79130-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79130/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>uMap could solve some of the things you want to do. It will provide an OSM based background map. You can create different layers (e.g. one for Bubitt, one for xyz or by time period) and add polygons to them. You can turn on and off those layers separately. You can also add information to the objects that can be shown as tool-tip or pop-up when hovering over or clicking on an object. </p>
+<p>I don't believe you can do what you are asking about clicking on tags and highlighting the other likewise tagged objects. Maybe you can achieve that with a bit of scripting using Leaflet or OpenLayers but I'm not expert on those.</p>
+<p>And you are right about iD and JOSM. They are used to edit the underlying map data not for visualizing something on top of a map.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79130/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Mar '21, 13:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/79130/">
+                edited
+                <strong>04 Mar '21, 13:52</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79130">
+    
+        <a name="79131"></a>
+        <div class="comment" id="comment-79131">
+            <div id="post-79131-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks for the reply again. Noted re: what umap can and can't do, I will have to have a look at it and possibly research alternatives. I don't know anything about scripting etc. so not sure I will venture into that. The tagging and 'highlighting others with the same tags' is really key so rather than doing one layer for things tagged with the same tags, was looking to get everything on the same layer, but doing it by different layers may be the compromise needed if doing it across the same layer with the tagging/highlighting system means it will be too complex to do and require use of a complicated (for a non-expert) piece of software</p></div>
+            <div class="comment-info" id="comment-79131-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '21, 14:15)</span>
+                <a class="comment-user userinfo" href="/users/19830/development-of-london">Development ...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79130" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79130-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/79125/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='2mT1X1fytncxr43WnObKzDMklUMGVFOM' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79125/advice-for-new-mapping-project?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79125/advice-for-new-mapping-project?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/new/"
+            class="tag-link-new"
+            title="see questions tagged'new'using tags"
+            rel="tag">new</a> <span class="tag-number">&#215;37</span><br/>
+        
+        <a href="/tags/polygons/"
+            class="tag-link-polygons"
+            title="see questions tagged'polygons'using tags"
+            rel="tag">polygons</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/project/"
+            class="tag-link-project"
+            title="see questions tagged'project'using tags"
+            rel="tag">project</a> <span class="tag-number">&#215;14</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 4, 2021, 12:10 p.m.">04 Mar '21, 12:10</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,328 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 4, 2021, 2:15 p.m.">04 Mar '21, 14:15</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1393/how-to-propose-a-new-project">How to propose a new project?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4907/can-i-insert-new-icon">can I insert new icon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13492/correcting-mistakes-adding-new-buildings">Correcting mistakes, adding new buildings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7768/maps-update-for-nz">Maps update for NZ</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11358/wrong-description-when-searching-address">Wrong description when searching address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11761/how-do-i-start-a-new-way">How do I start a new way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">Town nodes and Polygons that fail to confine the Name within an area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13873/how-to-create-new-markers">how to create new markers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15875/how-to-output-from-tilemill-in-a-format-like-openstreetmaporg-standard">How to output from TileMill in a format like openstreetmap.org standard</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1608/map-update-volunteer">Map update volunteer?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,932 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can I influence what gets rendered in the main Mapnik layer? - OSM Help</title>
+        <meta name="description" content="I notice some POIs (schools, kindergardens...) are not rendered at all. Is it possible to customise rendering? The CloudMade renderer (maps.cloudmade.com) has a better set up for POIs IMHO. Related question: Is there a Mapnik layer rendering setting for osm.org?" />
+        <meta name="keywords" content="mapnik,poi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='dqWenPvaqQJCBJhDxpzem9BLL27gNCnn' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">Can I influence what gets rendered in the main Mapnik layer?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-1107-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1107/up/" rel="nofollow"> </a>
+<div id="post-1107-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-1107-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1107/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/1107/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   4
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I notice some POIs (schools, kindergardens...) are not rendered at all. Is it possible to customise rendering? The CloudMade renderer (<a href="http://maps.cloudmade.com">maps.cloudmade.com</a>) has a better set up for POIs IMHO.</p>
+<p>Related question: <a href="http://help.openstreetmap.org/questions/7560/is-there-a-mapnik-layer-rendering-setting-for-osmorg">Is there a Mapnik layer rendering setting for </a><a href="http://osm.org">osm.org</a>?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                                    <a href="/tags/poi/" class="post-tag tag-link-poi"
+                                        title="see questions tagged 'poi'" rel="tag">poi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Oct '10, 08:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7d327873d48d28e563c9ad7259853c35?s=32&amp;d=identicon&amp;r=g" alt="Kozuch's gravatar image" />
+    <p><a href="/users/237/kozuch">Kozuch</a><br/>
+    <span class="score" title="1720 reputation points"><span class="">1.7k</span></span><span title="58 badges"><span class="badge1">&#9679;</span><span class="badgecount">58</span></span><span title="72 badges"><span class="silver">&#9679;</span><span class="badgecount">72</span></span><span title="85 badges"><span class="bronze">&#9679;</span><span class="badgecount">85</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kozuch has one accepted answer">8&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/1107/">
+                edited
+                <strong>26 Feb '12, 19:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-1107">
+    
+        <a name="9599"></a>
+        <div class="comment" id="comment-9599">
+            <div id="post-9599-score" class="comment-score"></div>
+            <div class="comment-text"><p>See also: <strong><a href="http://help.openstreetmap.org/questions/7560/is-there-a-mapnik-layer-rendering-setting-for-osmorg">Mapnik rendering setting</a></strong></p></div>
+            <div class="comment-info" id="comment-9599-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '11, 14:56)</span>
+                <a class="comment-user userinfo" href="/users/237/kozuch">Kozuch</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1107" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1107-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="1110"></a>
+                    <div id="answer-container-1110" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1110-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1110/up/" rel="nofollow"> </a>
+<div id="post-1110-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-1110-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1110/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Kozuch has selected this answer as the correct answer"
+        href="/accept_answer/1110/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can file a bug at <a href="http://trac.openstreetmap.org/newticket">OSM trac</a> with mapnik as the component. The ticket should include an example area and a precise description of how it is now and how you want it. To speed up the request you might find or make an icon if there is none already, or otherwise propose a rendering.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1110/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Oct '10, 09:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44a4438f0146dfd898e24c221fd28b58?s=32&amp;d=identicon&amp;r=g" alt="Gnonthgol's gravatar image" />
+    <p><a href="/users/131/gnonthgol">Gnonthgol ♦</a><br/>
+    <span class="score" title="13750 reputation points"><span class="">13.8k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="103 badges"><span class="silver">&#9679;</span><span class="badgecount">103</span></span><span title="198 badges"><span class="bronze">&#9679;</span><span class="badgecount">198</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gnonthgol has 57 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/1110/">
+                edited
+                <strong>25 Feb '12, 20:56</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7d327873d48d28e563c9ad7259853c35?s=32&amp;d=identicon&amp;r=g" alt="Kozuch's gravatar image" />
+            <p><a href="/users/237/kozuch">Kozuch</a><br/>
+            <span class="score" title="1720 reputation points"><span class="">1.7k</span></span><span title="58 badges"><span class="badge1">&#9679;</span><span class="badgecount">58</span></span><span title="72 badges"><span class="silver">&#9679;</span><span class="badgecount">72</span></span><span title="85 badges"><span class="bronze">&#9679;</span><span class="badgecount">85</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1110">
+    
+</div>
+<div id="comment-tools-1110" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1110-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1109"></a>
+                    <div id="answer-container-1109" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1109-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1109/up/" rel="nofollow"> </a>
+<div id="post-1109-score" class="post-score"
+    title="current number of votes">
+    9
+</div>
+<a id="post-1109-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1109/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The Mapnik tiles as displayed on <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> are generated according to a style sheet that you can find in our <a href="http://trac.openstreetmap.org/browser/applications/rendering/mapnik">SVN repository</a> and you are welcome to submit change requests via <a href="http://trac.openstreetmap.org/">trac</a>. However, the omission of many POIs on that map happens for a reason - we don't want it to look too cluttered.</p>
+<p>There is no individual customisation but of course you can <a href="http://wiki.openstreetmap.org">set up your own tileserver</a>.</p>
+<p>And of course, if you want custom styles, there's nothing against just using the CloudMade system that you talk about - after all, it's the same data.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1109/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Oct '10, 09:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1109">
+    
+</div>
+<div id="comment-tools-1109" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1109-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1115"></a>
+                    <div id="answer-container-1115" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1115-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1115/up/" rel="nofollow"> </a>
+<div id="post-1115-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-1115-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1115/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You may want to use (and, perhaps, contribute to) the Osmarender layer instead. This renders many more POIs - as a result of which it looks less professional, of course, but if sheer quantity of information is your preference then it'll probably suit you.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1115/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Oct '10, 18:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/1115/">
+                edited
+                <strong>11 Oct '10, 09:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1115">
+    
+</div>
+<div id="comment-tools-1115" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1115-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="3081"></a>
+                    <div id="answer-container-3081" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3081-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3081/up/" rel="nofollow"> </a>
+<div id="post-3081-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-3081-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3081/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As Frederik said, you can make your own tiles. But you can also add an overlay on a existing map with the POI you want to shown. There is two ways for achieving that:</p>
+<ul>
+<li>vectorial layer with openlayers as describe <a href="http://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">here</a></li>
+<li>build your own tiles with transparent background with only your wanted POIs</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3081/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Feb '11, 16:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2839f25c5f2da24f6ffd25de1641684?s=32&amp;d=identicon&amp;r=g" alt="NicolasDumoulin's gravatar image" />
+    <p><a href="/users/868/nicolasdumoulin">NicolasDumoulin</a><br/>
+    <span class="score" title="3327 reputation points"><span class="">3.3k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="NicolasDumoulin has 15 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3081">
+    
+</div>
+<div id="comment-tools-3081" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3081-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/1107/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='dqWenPvaqQJCBJhDxpzem9BLL27gNCnn' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/poi/"
+            class="tag-link-poi"
+            title="see questions tagged'poi'using tags"
+            rel="tag">poi</a> <span class="tag-number">&#215;181</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 10, 2010, 8:05 a.m.">10 Oct '10, 08:05</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,320 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 26, 2012, 7:04 p.m.">26 Feb '12, 19:04</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">Why do the changes I have made to coastline not appear on the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/498/uploading-a-small-bit-of-new-tiger-data-and-3-other-unrelated-questions">Uploading a small bit of new TIGER data (and 3 other unrelated questions)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/786/is-there-a-way-to-undelete-a-deleted-node-poi">Is there a way to undelete a deleted node (POI) ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1004/simple-legendkey">Simple legend/key?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile">How to trigger a repaint for a specific OSM map tile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1167/charging-money-for-creating-and-uploading-pois">Charging money for creating and uploading POIs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1194/what-osm-is-not">What OSM is not</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1311/how-do-i-create-a-map-for-printing-with-specific-poi">How do I create a map for printing with specific POI?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15/getting-point-of-interest-data-from-openstreetmap">Getting point of interest data from OpenStreetMap</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Windows Batch-File: do something after Osmosis - OSM Help</title>
+        <meta name="description" content="hi, I have build a Batch-file for processing OSM. i whant to call Osmosis multiple times and call an other program after that  so i do that: osmosis\bin\osmosis.bat --rx file=&quot;gesamtbereich-map.osm&quot; --bounding-box top=53.743 left=9.669 bottom=53.287 right=10.317 --wx file=&quot;grossberich-map.osm&quot; echo ..." />
+        <meta name="keywords" content="windows,batch,osmosis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/5090/windows-batch-file-do-something-after-osmosis" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/5090/windows-batch-file-do-something-after-osmosis?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Y04vaEtpEz8v3r5an5jijMf5qkKjYSZH' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/5090/windows-batch-file-do-something-after-osmosis">Windows Batch-File: do something after Osmosis</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-5090-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5090/up/" rel="nofollow"> </a>
+<div id="post-5090-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-5090-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5090/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/5090/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>hi,
+I have build a Batch-file for processing OSM.
+i whant to call Osmosis multiple times and call an other program after that </p>
+<p>so i do that:</p>
+<pre><code>osmosis\bin\osmosis.bat --rx file="gesamtbereich-map.osm" --bounding-box top=53.743 left=9.669 bottom=53.287 right=10.317 --wx file="grossberich-map.osm"
+echo test
+</code></pre>
+<p>but after osmosis the "test" wouldn't be printed.</p>
+<p>the only result is that:</p>
+<pre><code>Der Befehl "JAVACMD" ist entweder falsch geschrieben oder
+konnte nicht gefunden werden.
+10.05.2011 15:23:05 org.openstreetmap.osmosis.core.Osmosis run
+INFO: Osmosis Version 0.38
+10.05.2011 15:23:05 org.openstreetmap.osmosis.core.Osmosis run
+INFO: Preparing pipeline.
+10.05.2011 15:23:05 org.openstreetmap.osmosis.core.Osmosis run
+INFO: Launching pipeline execution.
+10.05.2011 15:23:05 org.openstreetmap.osmosis.core.Osmosis run
+INFO: Pipeline executing, waiting for completion.
+10.05.2011 15:23:06 org.openstreetmap.osmosis.core.Osmosis run
+INFO: Pipeline complete.
+10.05.2011 15:23:06 org.openstreetmap.osmosis.core.Osmosis run
+INFO: Total execution time: 1437 milliseconds.
+</code></pre>
+<p>where is the "test"?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/windows/" class="post-tag tag-link-windows"
+                                        title="see questions tagged 'windows'" rel="tag">windows</a>
+                                
+                                    <a href="/tags/batch/" class="post-tag tag-link-batch"
+                                        title="see questions tagged 'batch'" rel="tag">batch</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 May '11, 14:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/db9d4c9ffd75f95f97122bbc97b90a64?s=32&amp;d=identicon&amp;r=g" alt="josias's gravatar image" />
+    <p><a href="/users/126/josias">josias</a><br/>
+    <span class="score" title="598 reputation points">598</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="josias has 3 accepted answers">33&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-5090">
+    
+</div>
+<div id="comment-tools-5090" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5090-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/5090/windows-batch-file-do-something-after-osmosis?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/5090/windows-batch-file-do-something-after-osmosis?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/5090/windows-batch-file-do-something-after-osmosis?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/5090/windows-batch-file-do-something-after-osmosis?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="5091"></a>
+                    <div id="answer-container-5091" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5091-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5091/up/" rel="nofollow"> </a>
+<div id="post-5091-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-5091-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5091/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="josias has selected this answer as the correct answer"
+        href="/accept_answer/5091/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are a couple of things you might want to try. You could for example try adding call before the osmosis line to see if that completes the osmosis line before returning to the batch file. Alternatively you could put multiple commands on a single line separated by &amp;&amp; as per the batch file I use for keeping a local .osm file synced (imagine that the following is all on a single line):</p>
+<pre><code>osmosis --rri --simc --rx tendring.osm --ac --bp clipIncompleteEntities=yes file=<a href="http://tendring.txt">tendring.txt</a> --wx new.osm &amp;&amp; copy new.osm tendring.osm /y &amp;&amp; del new.osm
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5091/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 May '11, 14:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f25a8392e12ed696b16554b3d08e4e2b?s=32&amp;d=identicon&amp;r=g" alt="EdLoach's gravatar image" />
+    <p><a href="/users/339/edloach">EdLoach ♦</a><br/>
+    <span class="score" title="19478 reputation points"><span class="">19.5k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="156 badges"><span class="silver">&#9679;</span><span class="badgecount">156</span></span><span title="280 badges"><span class="bronze">&#9679;</span><span class="badgecount">280</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="EdLoach has 93 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5091">
+    
+        <a name="5092"></a>
+        <div class="comment" id="comment-5092">
+            <div id="post-5092-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Using CALL works for me in a test batch script. Very useful answer. You could also use cygwin which will run the osmosis.bat DOS batch file successfully.</p></div>
+            <div class="comment-info" id="comment-5092-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '11, 15:04)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5093"></a>
+        <div class="comment" id="comment-5093">
+            <div id="post-5093-score" class="comment-score">1</div>
+            <div class="comment-text"><p>thanks, that works:
+  call osmosis.bat</p></div>
+            <div class="comment-info" id="comment-5093-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '11, 16:01)</span>
+                <a class="comment-user userinfo" href="/users/126/josias">josias</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5091" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5091-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/5090/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Y04vaEtpEz8v3r5an5jijMf5qkKjYSZH' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5090/windows-batch-file-do-something-after-osmosis?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5090/windows-batch-file-do-something-after-osmosis?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/windows/"
+            class="tag-link-windows"
+            title="see questions tagged'windows'using tags"
+            rel="tag">windows</a> <span class="tag-number">&#215;48</span><br/>
+        
+        <a href="/tags/batch/"
+            class="tag-link-batch"
+            title="see questions tagged'batch'using tags"
+            rel="tag">batch</a> <span class="tag-number">&#215;12</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 10, 2011, 2:25 p.m.">10 May '11, 14:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,828 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 10, 2011, 4:01 p.m.">10 May '11, 16:01</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/32697/osmosis-how-to-make-map-from-osm">Osmosis: how to make *.map from *.osm?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14206/incorrect-data-check">incorrect data check</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68416/errors-installing-osmosis-on-window-10-64-bit">Errors installing Osmosis on Window 10 64-bit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77011/solved-osmosis-not-writing-file-for-me-windows-10">[Solved] osmosis not writing file for me - Windows 10</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2296/extracting-bounding-boxes-osmosis-usage-on-windows">Extracting bounding boxes - Osmosis usage on Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2905/osmosis-not-running">Osmosis not running</a>
+        </p>
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4065/getting-specific-poi-data-and-keeping-them-up-to-date">Getting specific POI data - and keeping them up to date.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2017/how-can-i-import-data-to-osm-from-a-csv-file">How can I import data to OSM from a .csv file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3214/installing-osmosis-on-osx">Installing Osmosis on OSX</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

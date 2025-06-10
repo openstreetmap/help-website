@@ -1,0 +1,1004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>OpenStreetMap instance is unusable with latest planet, but works with last year PBF - OSM Help</title>
+        <meta name="description" content="I&#39;m running a custom OpenStreetMap instance on my server, with both the standard openstreetmap-carto style and a custom style. The current version up and running in production uses a planet file from 2019-09-12. I now want to update the data from the latest planet file on my dev server. I have a scr..." />
+        <meta name="keywords" content="openstreetmap-carto,slow,renderd,osm2pgsql,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/76287/openstreetmap-instance-is-unusable-with-latest-planet-but-works-with-last-year-pbf" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/76287/openstreetmap-instance-is-unusable-with-latest-planet-but-works-with-last-year-pbf?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CP8Pj6fZG2w7EsWa870Sa7OC1NQAOCxb' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/76287/openstreetmap-instance-is-unusable-with-latest-planet-but-works-with-last-year-pbf">OpenStreetMap instance is unusable with latest planet, but works with last year PBF</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-76287-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76287/up/" rel="nofollow"> </a>
+<div id="post-76287-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-76287-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76287/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/76287/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm running a custom OpenStreetMap instance on my server, with both the standard openstreetmap-carto style and a custom style. The current version up and running in production uses a planet file from 2019-09-12.</p>
+<p>I now want to update the data from the latest planet file on my dev server.</p>
+<p>I have a script that will:</p>
+<ul>
+<li>download the latest file</li>
+<li>tune the database for the import</li>
+<li>drop and recreate the database</li>
+<li>import the PBF</li>
+<li>create the indexes</li>
+<li>tune the database for production use</li>
+</ul>
+<p>The server is a quad-core i7-6700 with 64 GB of RAM, a 1 To SSD (storing the database) and 8 TB of hard drives (storing the tiles).</p>
+<p>Here's the script code:</p>
+<pre><code># Define some values:
+PBF=~/data/planet-latest.osm.pbf
+THREADS=8
+CORES=4
+
+# Download latest PBF:
+wget <a href="https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf">https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf</a> -O $PBF
+
+# Drop the databse:
+sudo -u postgres dropdb osm
+
+# Recreate the databse:
+sudo mkdir -p /ssd/db/osm
+sudo chown postgres /ssd/db/osm
+sudo -u postgres psql -c "CREATE TABLESPACE osm_tablespace LOCATION '/ssd/db/osm';"
+sudo -u postgres createdb -E UTF8 -O myusername -D osm_tablespace osm
+
+# Setup PostGIS:
+sudo -u postgres psql osm -c "CREATE EXTENSION postgis;"
+sudo -u postgres psql osm -c "CREATE EXTENSION hstore;"
+sudo -u postgres psql osm -c "ALTER TABLE geography_columns OWNER TO myusername;"
+sudo -u postgres psql osm -c "ALTER TABLE geometry_columns OWNER TO myusername;"
+sudo -u postgres psql osm -c "ALTER TABLE raster_columns OWNER TO myusername;"
+sudo -u postgres psql osm -c "ALTER TABLE raster_overviews OWNER TO myusername;"
+sudo -u postgres psql osm -c "ALTER TABLE spatial_ref_sys OWNER TO myusername;"
+
+# Fine tune for import
+if [ ! -f /etc/postgresql/10/main/postgresql.conf.bak ]; then
+    sudo cp /etc/postgresql/10/main/postgresql.conf /etc/postgresql/10/main/postgresql.conf.bak
+fi
+
+sudo rm /etc/postgresql/10/main/postgresql.conf
+sudo cp /etc/postgresql/10/main/postgresql.conf.bak /etc/postgresql/10/main/postgresql.conf
+
+sudo tee -a /etc/postgresql/10/main/postgresql.conf &lt;&lt; EOF
+synchronous_commit = off        # /!\ Use these for OSM import only
+fsync = off                     # /!\ Use these for OSM import only
+random_page_cost = 1.1
+wal_buffers = 16MB
+effective_cache_size = 48GB
+maintenance_work_mem = 8GB
+shared_buffers = 16GB
+work_mem = 4GB
+autovacuum = on
+effective_io_concurrency = 200
+max_connections = 300
+checkpoint_completion_target = 0.7
+default_statistics_target = 100
+min_wal_size = 1GB
+max_wal_size = 4GB
+max_worker_processes = $THREADS
+max_parallel_workers_per_gather = $CORES
+max_parallel_workers = $THREADS
+EOF
+
+sudo service postgresql restart
+
+# Import the PBF:
+mkdir -p /ssd/flat-nodes
+
+osm2pgsql \
+    -d osm \
+    --create --slim --multi-geometry --hstore --drop \
+    --cache 20000 \
+    --number-processes 1 \
+    --tag-transform-script ~/src/map-styles/openstreetmap-carto/openstreetmap-carto.lua \
+    --style ~/src/map-styles/openstreetmap-carto/openstreetmap-carto.style \
+    --flat-nodes /ssd/flat-nodes/osm.cache \
+    "$PBF"
+
+# Create the indexes:
+cd ~/src/map-styles/openstreetmap-carto
+psql -d osm -f indexes.sql
+
+# Fine tune for production:
+sudo rm /etc/postgresql/10/main/postgresql.conf
+sudo cp /etc/postgresql/10/main/postgresql.conf.bak /etc/postgresql/10/main/postgresql.conf
+
+sudo tee -a /etc/postgresql/10/main/postgresql.conf &lt;&lt; EOF
+#synchronous_commit = off        # /!\ Use these for OSM import only
+#fsync = off                     # /!\ Use these for OSM import only
+random_page_cost = 1.1
+wal_buffers = 16MB
+effective_cache_size = 48GB
+maintenance_work_mem = 8GB
+shared_buffers = 16GB
+work_mem = 1GB
+autovacuum = on
+effective_io_concurrency = 200
+max_connections = 300
+checkpoint_completion_target = 0.7
+default_statistics_target = 100
+min_wal_size = 1GB
+max_wal_size = 4GB
+max_worker_processes = $THREADS
+max_parallel_workers_per_gather = $CORES
+max_parallel_workers = $THREADS
+EOF
+</code></pre>
+<p>I have already successfully used that script in the past. But if I run it now, my map becomes super slow (with both openstreetmap-carto style and mine), like if it was missing all the indexes. Running the script on the 2019-09-12 PBF results in a perfectly usable map.</p>
+<p>What could be wrong? Did the OSM database schema change since last year? Do I need to delete the flat-nodes files before importing again?</p>
+<p>Thanks in advance</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap-carto/" class="post-tag tag-link-openstreetmap-carto"
+                                        title="see questions tagged 'openstreetmap-carto'" rel="tag">openstreetmap-carto</a>
+                                
+                                    <a href="/tags/slow/" class="post-tag tag-link-slow"
+                                        title="see questions tagged 'slow'" rel="tag">slow</a>
+                                
+                                    <a href="/tags/renderd/" class="post-tag tag-link-renderd"
+                                        title="see questions tagged 'renderd'" rel="tag">renderd</a>
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Aug '20, 12:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a711e0129f307399a857a6f9b4bfd0e3?s=32&amp;d=identicon&amp;r=g" alt="timautin's gravatar image" />
+    <p><a href="/users/15303/timautin">timautin</a><br/>
+    <span class="score" title="151 reputation points">151</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="timautin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-76287">
+    
+        <a name="76288"></a>
+        <div class="comment" id="comment-76288">
+            <div id="post-76288-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you clarify what exactly is super slow. The script runs and completes within the expected time, and then the map tiles are slow? (Yes you should have deleted the node cache file but it would only slow down the import, not the tile serving.) Are you using renderd or tirex or ...? Did you clean old tiles from your tile cache or are they still there? Is there a planet-import-complete file in your tile directory?</p></div>
+            <div class="comment-info" id="comment-76288-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '20, 12:48)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="76289"></a>
+        <div class="comment" id="comment-76289">
+            <div id="post-76289-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your comment. By slow I mean that generating my test tile takes 1-2 mn when it should takes 6-8 seconds. The import ran fine (in 24h). I'm using renderd and mapnik, and yes I deleted the old tiles. I have no planet-import-complete   in my mod_tile directory, what is that file? I don't think I ever had one, is this new?
+EDIT: creating the file and restarting Apache + renderd does not change anything.</p></div>
+            <div class="comment-info" id="comment-76289-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '20, 12:54)</span>
+                <a class="comment-user userinfo" href="/users/15303/timautin">timautin</a>
+                
+            </div>
+        </div>
+    
+        <a name="76291"></a>
+        <div class="comment" id="comment-76291">
+            <div id="post-76291-score" class="comment-score"></div>
+            <div class="comment-text"><p>The planet-import-complete file is not required, i was just asking to better understand your setup.</p></div>
+            <div class="comment-info" id="comment-76291-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '20, 13:06)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-76287" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76287-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/76287/openstreetmap-instance-is-unusable-with-latest-planet-but-works-with-last-year-pbf?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/76287/openstreetmap-instance-is-unusable-with-latest-planet-but-works-with-last-year-pbf?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/76287/openstreetmap-instance-is-unusable-with-latest-planet-but-works-with-last-year-pbf?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/76287/openstreetmap-instance-is-unusable-with-latest-planet-but-works-with-last-year-pbf?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="76351"></a>
+                    <div id="answer-container-76351" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76351-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76351/up/" rel="nofollow"> </a>
+<div id="post-76351-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-76351-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76351/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As Jochen Topo suggested in comments, I simply ran out of disk space during the import. Making some room fixed the problem.</p>
+<p>It's a 960GB SSD, on which I only had 128 GB of data. So 832 GB of free disk space is no longer enough to create a planet OSM DB. Looks like we'll pretty soon need 2 TB SSDs.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76351/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Aug '20, 18:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a711e0129f307399a857a6f9b4bfd0e3?s=32&amp;d=identicon&amp;r=g" alt="timautin's gravatar image" />
+    <p><a href="/users/15303/timautin">timautin</a><br/>
+    <span class="score" title="151 reputation points">151</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="timautin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76351">
+    
+</div>
+<div id="comment-tools-76351" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76351-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="76290"></a>
+                    <div id="answer-container-76290" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76290-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76290/up/" rel="nofollow"> </a>
+<div id="post-76290-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-76290-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76290/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>What you are seeing is the normal effect of having deleted your tile cache. Tiles on z0-8 can easily take minutes - tiles in very dense areas might take longer than 10 minutes even with fast disks (remember, it always computes 8x8 tiles at once). The fact that it was faster before was not due to your indexes, but due to the cache which you have deleted. </p>
+<p>Try rendering a tile on zoom 18, that should be relatively quick. Then use the appropriate render_list commands to pre-render your area of interest for zoom 0-12 (if the area is not the whole planet, perhaps look at <a href="https://github.com/alx77/render_list_geo.pl).">https://github.com/alx77/render_list_geo.pl).</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76290/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Aug '20, 13:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76290">
+    
+        <a name="76292"></a>
+        <div class="comment" id="comment-76292">
+            <div id="post-76292-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry I should have added more details: my test tile is a zoom 13 tile, that I use to check that everything works properly after each update. Usually my process is: delete the tile cache, recreate the DB (+ indexes), check that my test tile (13/4231/3002) is still generated in 6-8 secs, and then re-generate the cache. EDIT: an explain analyse shows that the indexes are correctly used. EDIT 2: I have no /ssd/flat-nodes/osm.cache file, is that normal? I don't have one either on the (working) production server.</p></div>
+            <div class="comment-info" id="comment-76292-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '20, 13:08)</span>
+                <a class="comment-user userinfo" href="/users/15303/timautin">timautin</a>
+                
+            </div>
+        </div>
+    
+        <a name="76295"></a>
+        <div class="comment" id="comment-76295">
+            <div id="post-76295-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, I'm missing the planet_osm_polygon_way_idx index, that's very likely the problem (I'm creating it, il will take a while). Isn't it supposed to be created by osm2pgsql?</p></div>
+            <div class="comment-info" id="comment-76295-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '20, 14:46)</span>
+                <a class="comment-user userinfo" href="/users/15303/timautin">timautin</a>
+                
+            </div>
+        </div>
+    
+        <a name="76296"></a>
+        <div class="comment" id="comment-76296">
+            <div id="post-76296-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Oh yes, not having that index will certainly slow down rendering a lot! And yes, it should be generated by osm2pgsql. Make sure you have the geometry indexes on the other tables as well.</p></div>
+            <div class="comment-info" id="comment-76296-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '20, 15:37)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="76297"></a>
+        <div class="comment" id="comment-76297">
+            <div id="post-76297-score" class="comment-score"></div>
+            <div class="comment-text"><p>Which version of osm2pgsql are you using?</p></div>
+            <div class="comment-info" id="comment-76297-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '20, 15:50)</span>
+                <a class="comment-user userinfo" href="/users/112/jochen-topf">Jochen Topf</a>
+                
+            </div>
+        </div>
+    
+        <a name="76299"></a>
+        <div class="comment" id="comment-76299">
+            <div id="post-76299-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Older versions of osm2pgsql have a bug where no error is shown if index creation failes. So maybe you ran out of disk space or so and the index wasn't created, but no error was shown. The newest version of osm2pgsql doesn't have this bug any more.</p></div>
+            <div class="comment-info" id="comment-76299-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '20, 16:48)</span>
+                <a class="comment-user userinfo" href="/users/112/jochen-topf">Jochen Topf</a>
+                
+            </div>
+        </div>
+    
+        <a name="76302"></a>
+        <div class="comment not_top_scorer" id="comment-76302">
+            <div id="post-76302-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks guys. Back after a few more investigations: creating the index myself does not solve the problem, and the created index is 25GB vs 37GB on the prod server. I'm thus restarting the whole import process with the osm2pgsql output saved in a file this time (by the way, don't osm2pgsql has a way to output its log to a file?), because on the previous import I didn't notice anything wrong and didn't keep the output. 
+The drive had 755GB available, which I thought was enough, isn't it? I'll make some room before restarting the import. 
+I'm using osm2pgsql v 0.96.0</p></div>
+            <div class="comment-info" id="comment-76302-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '20, 18:20)</span>
+                <a class="comment-user userinfo" href="/users/15303/timautin">timautin</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-76290" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76290-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/76287/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='CP8Pj6fZG2w7EsWa870Sa7OC1NQAOCxb' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76287/openstreetmap-instance-is-unusable-with-latest-planet-but-works-with-last-year-pbf?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76287/openstreetmap-instance-is-unusable-with-latest-planet-but-works-with-last-year-pbf?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/renderd/"
+            class="tag-link-renderd"
+            title="see questions tagged'renderd'using tags"
+            rel="tag">renderd</a> <span class="tag-number">&#215;105</span><br/>
+        
+        <a href="/tags/slow/"
+            class="tag-link-slow"
+            title="see questions tagged'slow'using tags"
+            rel="tag">slow</a> <span class="tag-number">&#215;33</span><br/>
+        
+        <a href="/tags/openstreetmap-carto/"
+            class="tag-link-openstreetmap-carto"
+            title="see questions tagged'openstreetmap-carto'using tags"
+            rel="tag">openstreetmap-carto</a> <span class="tag-number">&#215;22</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 25, 2020, 12:42 p.m.">25 Aug '20, 12:42</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,301 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 29, 2020, 6:42 p.m.">29 Aug '20, 18:42</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/73457/tile-rendering-extremly-slow">Tile rendering extremly slow</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17225/setting-up-my-own-tile-server">Setting up my own tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54560/slow-generation-of-tiles-for-whole-europe">Slow generation of tiles for whole Europe</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64738/why-do-i-need-to-specify-the-style-when-importing-data-to-postgis-how-should-that-work-with-multiple-styles">Why do I need to specify the style when importing data to postgis? How should that work with multiple styles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64602/how-to-specify-multiple-style-file-with-osm2pgsql-query">How to specify multiple style file with osm2pgsql query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20159/fail-to-connect-my-tiles-server">Fail to connect my tiles server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16938/own-tile-server-on-ubuntu-rendering-slow">Own tile server on Ubuntu rendering slow</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16037/how-to-render-high-zoom-level-maps-with-renderd">How to render high zoom level maps with renderd ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16966/open-street-map-no-map-for-default">Open Street Map &quot;no map for: default&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11542/mapnik-error-column-generatorsource-does-not-exist">Mapnik error:  column &quot;generator:source&quot; does not exist</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

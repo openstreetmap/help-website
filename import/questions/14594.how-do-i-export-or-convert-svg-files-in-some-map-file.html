@@ -1,0 +1,916 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I export or convert SVG files in some map file? - OSM Help</title>
+        <meta name="description" content="I´ve used the Maperitive to convert my .OSM to .SVG file and it worked fine. I edited some colors on the map (colors of highways and lands) and I placed icons and images to attend my need. Now, what can I do with the edited .SVG file? I want to host my map like in that example -&amp;gt; http://beta1234...." />
+        <meta name="keywords" content="svg,maperitive,editor" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/14594/how-do-i-export-or-convert-svg-files-in-some-map-file" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/14594/how-do-i-export-or-convert-svg-files-in-some-map-file?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='l77nkKc36lPwMlQkc1NWQCQee2ptX8xw' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/14594/how-do-i-export-or-convert-svg-files-in-some-map-file">How do I export or convert SVG files in some map file?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-14594-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/14594/up/" rel="nofollow"> </a>
+<div id="post-14594-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-14594-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/14594/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/14594/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I´ve used the Maperitive to convert my .OSM to .SVG file and it worked fine. I edited some colors on the map (colors of highways and lands) and I placed icons and images to attend my need. Now, what can I do with the edited .SVG file? I want to host my map like in that example -&gt; <a href="http://beta1234.com.sunflower.arvixe.com/maps/.">http://beta1234.com.sunflower.arvixe.com/maps/.</a> </p>
+<p>I´ve seen that exists MapBox but it ask for MBTiles and I just have the .SVG file that I already mencioned. </p>
+<p>Then, what is my next step?</p>
+<p>Regards,
+Gilliard.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/svg/" class="post-tag tag-link-svg"
+                                        title="see questions tagged 'svg'" rel="tag">svg</a>
+                                
+                                    <a href="/tags/maperitive/" class="post-tag tag-link-maperitive"
+                                        title="see questions tagged 'maperitive'" rel="tag">maperitive</a>
+                                
+                                    <a href="/tags/editor/" class="post-tag tag-link-editor"
+                                        title="see questions tagged 'editor'" rel="tag">editor</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Jul '12, 20:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b4c566bb2435d700fef4a64bf39842b9?s=32&amp;d=identicon&amp;r=g" alt="Gilliard%20Lopes's gravatar image" />
+    <p><a href="/users/4161/gilliard-lopes">Gilliard Lopes</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gilliard Lopes has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-14594">
+    
+</div>
+<div id="comment-tools-14594" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-14594-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/14594/how-do-i-export-or-convert-svg-files-in-some-map-file?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/14594/how-do-i-export-or-convert-svg-files-in-some-map-file?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/14594/how-do-i-export-or-convert-svg-files-in-some-map-file?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/14594/how-do-i-export-or-convert-svg-files-in-some-map-file?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="14596"></a>
+                    <div id="answer-container-14596" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-14596-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/14596/up/" rel="nofollow"> </a>
+<div id="post-14596-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-14596-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/14596/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you want to host it like that, you need web map tiles, not SVG. Here's a tutorial on how I did that sample map: <a href="http://braincrunch.tumblr.com/post/9921938947/maperitive-tutorial-a-hiking-web-map-in-ten-easy-steps">Maperitive Tutorial: A Hiking Web Map In Ten Easy Steps</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/14596/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Jul '12, 21:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/591340f954c00c8208d5ffe668f50a05?s=32&amp;d=identicon&amp;r=g" alt="Breki's gravatar image" />
+    <p><a href="/users/118/breki">Breki</a><br/>
+    <span class="score" title="2040 reputation points"><span class="">2.0k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="18 badges"><span class="silver">&#9679;</span><span class="badgecount">18</span></span><span title="43 badges"><span class="bronze">&#9679;</span><span class="badgecount">43</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Breki has 5 accepted answers">10&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-14596">
+    
+        <a name="14603"></a>
+        <div class="comment" id="comment-14603">
+            <div id="post-14603-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello Breki, thanks for your answer, I began on the world of the maps just a few days ago. I readed and executed your tutorial but </p>
+
+<p>I didn´t explain properly what I really need to do, let me show you some examples, I need to:</p>
+
+<ol>
+<li>
+<p>Change the color of streets and blocks of the map to my own style, for example I like blue and yellow colors for streets and blocks on the white color;</p>
+</li>
+<li>
+<p>Add multiple pictures / icons that will be side by side and need to be carefully placed on the map (some I will need to rotate to fit better in a corner of the block) and I hope that these images are part of the background of the map that are not inserted as markers.</p>
+</li>
+<li>
+<p>Save my new map with all changes and host on my website to the others users navigate on map like I navigated on your map, with zoom and pan, I think the term is "slippy map" for that, is it correct?</p>
+</li>
+<li>
+<p>Later, i will create some events (click, mouseover, etc) to the region of the image through an API as OpenLayer and Leaflet;</p>
+</li>
+</ol>
+
+<p>Note that it is a hard work to place the images side by side in a specific location of each block. So I thought the best way was convert the map to .SVG so I could use Inkscape to do the job of moving images on the background of the map, rotate them and fit them properly.</p>
+
+<p>I´ve found two images in the Google Images that sounds like what I need to do:</p>
+
+<p><a href="http://dl.dropbox.com/u/19078716/cm01.jpg">http://dl.dropbox.com/u/19078716/cm01.jpg</a>
+<a href="http://dl.dropbox.com/u/19078716/cm02.jpg">http://dl.dropbox.com/u/19078716/cm02.jpg</a></p>
+
+<p>Sorry for the huge email but I'm very lost with so much information at once.</p>
+
+<p>Regards.</p></div>
+            <div class="comment-info" id="comment-14603-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '12, 23:55)</span>
+                <a class="comment-user userinfo" href="/users/4161/gilliard-lopes">Gilliard Lopes</a>
+                
+            </div>
+        </div>
+    
+        <a name="14604"></a>
+        <div class="comment" id="comment-14604">
+            <div id="post-14604-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You approach is valid, since you need a lot of manual postprocessing. There are two problems I see: 1) I don't know of any tools that can generate slippy maps from SVG, 2) your manual postprocessing will have to be done separately for each zoom level you want to have on your web map.
+I guess the closest thing I see helping you is MAPublisher (<a href="http://www.avenza.com/mapublisher),">http://www.avenza.com/mapublisher),</a> but it costs allota.</p></div>
+            <div class="comment-info" id="comment-14604-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Jul '12, 08:47)</span>
+                <a class="comment-user userinfo" href="/users/118/breki">Breki</a>
+                
+            </div>
+        </div>
+    
+        <a name="14623"></a>
+        <div class="comment" id="comment-14623">
+            <div id="post-14623-score" class="comment-score"></div>
+            <div class="comment-text"><p>I talked to support from MAPublisher and they answered to me: "You can really only create static maps for publication, as pdf's or Illustrator documents or Flash based maps using MAPublisher". 
+So I think MAPublisher is not the most appropriate for the app I want to build =(
+Do you have another suggest?</p></div>
+            <div class="comment-info" id="comment-14623-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Jul '12, 17:00)</span>
+                <a class="comment-user userinfo" href="/users/4161/gilliard-lopes">Gilliard Lopes</a>
+                
+            </div>
+        </div>
+    
+        <a name="14627"></a>
+        <div class="comment" id="comment-14627">
+            <div id="post-14627-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Well, given how pricey their software is, this is a bit odd :). Here's another idea (but it will require a custom job for Maperitive, so you'd better contact me directly): prepare the data in JOSM, as an offline OSM XML file (which you mustn't upload to the server!). Draw extra OSM ways around the city blocks, putting an OSM node for each icon you want to place there. Then add the tag for each that node, telling the ID (or name) of the establishment. The rest would be a custom Maperitive script and you'd get web tiles directly, without the SVG and manual postprocessing.</p></div>
+            <div class="comment-info" id="comment-14627-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Jul '12, 18:35)</span>
+                <a class="comment-user userinfo" href="/users/118/breki">Breki</a>
+                
+            </div>
+        </div>
+    
+        <a name="14637"></a>
+        <div class="comment" id="comment-14637">
+            <div id="post-14637-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the help Breki! I will study the OSM Wiki. 
+I´ve found (by Vincent de Phily) a plugin to JOSM that allows to load icons and display them as JOSM layer (with the rotate and scale functions). I dont know if it solves my problem because I do not know still tinkering with the data from JOSM.  Here is the link for the plugin: <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer</a>
+<a href="http://josm.openstreetmap.de/wiki/Help/Plugin/PicLayer">http://josm.openstreetmap.de/wiki/Help/Plugin/PicLayer</a></p>
+
+<p>According your experience on OSM, do you think it is suitable for my purpose?</p>
+
+<p>How can I contact you directly to talk about that?</p>
+
+<p>Thanks again =)</p></div>
+            <div class="comment-info" id="comment-14637-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jul '12, 00:26)</span>
+                <a class="comment-user userinfo" href="/users/4161/gilliard-lopes">Gilliard Lopes</a>
+                
+            </div>
+        </div>
+    
+        <a name="14641"></a>
+        <div class="comment not_top_scorer" id="comment-14641">
+            <div id="post-14641-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not sure PicLayer will help you here. I haven't used it, but based on the documentation, it sounds like a plugin for loading single georeferenced map images and not for a multitude of small icons. You can send me an email to igor.brejc (gmail.com).</p></div>
+            <div class="comment-info" id="comment-14641-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jul '12, 05:07)</span>
+                <a class="comment-user userinfo" href="/users/118/breki">Breki</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-14596" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-14596-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="14609"></a>
+                    <div id="answer-container-14609" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-14609-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/14609/up/" rel="nofollow"> </a>
+<div id="post-14609-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-14609-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/14609/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'd still go with a standard slippymap (many tutorials around) rather than some export-and-postprocess strategy. One easy way to customize the rendering is <a href="http://mapbox.com/">mapbox</a>'s <a href="http://mapbox.com/tilemill/">tilemill</a>.</p>
+<p>Once you've got your baselayer, you can create you picture layer in whichever image editor you like.</p>
+<ul>
+<li>Create your image at the highest zoom you plan to use</li>
+<li>Make the non-picture parts of your layer transparent, so only the pictures show when you add the layer to the slippymap.</li>
+<li>Make a resized copy of your image layer for each zoom (divide by 2 each time)</li>
+<li>Split the images into tiles. I'm actually not sure how to automate that step. Maybe tilemill has a handy feature for that.</li>
+<li>Add the image layer to your slippymap's baselayer.</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/14609/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Jul '12, 11:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d20f86db9a6f03cb070e9fbaaf0b7228?s=32&amp;d=identicon&amp;r=g" alt="Vincent%20de%20Phily's gravatar image" />
+    <p><a href="/users/867/vincent-de-phily">Vincent de P... ♦</a><br/>
+    <span class="score" title="17304 reputation points"><span class="">17.3k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="152 badges"><span class="silver">&#9679;</span><span class="badgecount">152</span></span><span title="249 badges"><span class="bronze">&#9679;</span><span class="badgecount">249</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vincent de Phily has 64 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-14609">
+    
+        <a name="14624"></a>
+        <div class="comment" id="comment-14624">
+            <div id="post-14624-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your answer Vincent!</p>
+
+<p>I don´t understand how I can do these steps.</p>
+
+<p>"Once you've got your baselayer, you can create you picture layer in whichever image editor you like"</p>
+
+<p>Baselayer is just the background with my style? is something like that -&gt; <a href="http://maps.cloudmade.com/?lat=-8.069831&amp;lng=-34.879553&amp;zoom=16&amp;styleId=68443&amp;opened_tab=0">http://maps.cloudmade.com/?lat=-8.069831&amp;lng=-34.879553&amp;zoom=16&amp;styleId=68443&amp;opened_tab=0</a></p>
+
+<p>My picture layer that you say will be composed of a layer with the background image of a region of the map that I export from OSM (in .png for example) to open it in an editor (like Photoshop) and I'll place my icons in another layer (with transparent background) and then save the final image (in .png) without the layer that has the background of the map, leaving only the icons on a transparent background? and make images like that for each zoom?</p>
+
+<p>and how can I add that image layer in my slippymap´s baselayer?</p>
+
+<p>I am noob and completely lost ;)</p>
+
+<p>Thanks again.</p></div>
+            <div class="comment-info" id="comment-14624-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Jul '12, 17:15)</span>
+                <a class="comment-user userinfo" href="/users/4161/gilliard-lopes">Gilliard Lopes</a>
+                
+            </div>
+        </div>
+    
+        <a name="14626"></a>
+        <div class="comment" id="comment-14626">
+            <div id="post-14626-score" class="comment-score">2</div>
+            <div class="comment-text"><p>That would be very impractical (or even impossible) if the map area is anything but tiny - the bitmap size would too big for any software to handle this. If you had a slippy map that's, say 100x100 tiles large, you'd end up with a 25600x25600 bitmap.</p></div>
+            <div class="comment-info" id="comment-14626-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Jul '12, 18:24)</span>
+                <a class="comment-user userinfo" href="/users/118/breki">Breki</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-14609" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-14609-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/14594/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='l77nkKc36lPwMlQkc1NWQCQee2ptX8xw' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/14594/how-do-i-export-or-convert-svg-files-in-some-map-file?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/14594/how-do-i-export-or-convert-svg-files-in-some-map-file?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editor/"
+            class="tag-link-editor"
+            title="see questions tagged'editor'using tags"
+            rel="tag">editor</a> <span class="tag-number">&#215;48</span><br/>
+        
+        <a href="/tags/maperitive/"
+            class="tag-link-maperitive"
+            title="see questions tagged'maperitive'using tags"
+            rel="tag">maperitive</a> <span class="tag-number">&#215;48</span><br/>
+        
+        <a href="/tags/svg/"
+            class="tag-link-svg"
+            title="see questions tagged'svg'using tags"
+            rel="tag">svg</a> <span class="tag-number">&#215;47</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 25, 2012, 8:34 p.m.">25 Jul '12, 20:34</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,283 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 27, 2012, 5:07 a.m.">27 Jul '12, 05:07</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3430/map-resolution-after-rendering">Map resolution after rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18031/maperitive-problem-for-exporting-to-svg-access-denied">Maperitive - Problem for exporting to SVG (access denied)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60674/maperitive-ruleset-thats-kept-current-with-osm-carto">Maperitive ruleset that&#39;s kept current with OSM-carto?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape">How can I export svg files with layers editable in inkscape ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2391/starting-potlatch2-from-the-gpx-traces-list">Starting Potlatch2 from the GPX traces list</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2986/how-to-use-natural-boundaries-like-meandering-streams-for-parallel-areas-in-potlatch2">How to use natural boundaries like meandering streams for parallel areas in Potlatch2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1792/exporting-a-relatively-large-map">Exporting a relatively large map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4324/openstreetmap-time-machine">OpenStreetMap time machine</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5584/should-i-use-potlatch-or-josm">Should I use Potlatch or JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1059/how-do-you-set-the-name-of-a-street">How do you set the name of a street?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

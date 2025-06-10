@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to draw coastline with ocean &amp; sea - OSM Help</title>
+        <meta name="description" content="Hi All, I&#39;m importing the raw OSM data into SHP files. I&#39;m doing something similar as http://download.geofabrik.de/  after having my SHP files, I use my GIS system to create my Legend. the pint is it looks like I miss some of the data when importing the OSM into SHP file(s). I&#39;m using the http://www..." />
+        <meta name="keywords" content="shapefile,costa,identify,sea,ocean" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/23218/how-to-draw-coastline-with-ocean-sea" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/23218/how-to-draw-coastline-with-ocean-sea?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='umg5w3cD3iwLVmo6a1OUwr7DLlyr7MiB' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/23218/how-to-draw-coastline-with-ocean-sea">How to draw coastline with ocean &amp; sea</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-23218-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23218/up/" rel="nofollow"> </a>
+<div id="post-23218-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23218-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23218/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/23218/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi All,</p>
+<p>I'm importing the raw OSM data into SHP files. I'm doing something similar as <a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a> 
+after having my SHP files, I use my GIS system to create my Legend.
+the pint is it looks like I miss some of the data when importing the OSM into SHP file(s).
+I'm using the <a href="http://www.openstreetbrowser.org/">http://www.openstreetbrowser.org/</a> to try and identify the layer/data objects i miss but i cannot find the right objects.
+for example:
+this location: 51.22757, 2.93639 // <a href="http://www.openstreetbrowser.org/whats_here%3D51.22757%2C2.93639?zoom=16&amp;lat=35.63607&amp;lon=139.78090&amp;basemap=osb&amp;categories=&amp;layers=&amp;overlays=">http://www.openstreetbrowser.org/whats_here%3D51.22757%2C2.93639?zoom=16&amp;lat=35.63607&amp;lon=139.78090&amp;basemap=osb&amp;categories=&amp;layers=&amp;overlays=</a></p>
+<p>or this one: 
+35.63705, 139.77983 // <a href="http://www.openstreetbrowser.org/whats_here%3D139.78019597788375%2C35.636687359617866?zoom=16&amp;lat=35.63607&amp;lon=139.78090&amp;basemap=osb&amp;categories=&amp;layers=&amp;overlays=">http://www.openstreetbrowser.org/whats_here%3D139.78019597788375%2C35.636687359617866?zoom=16&amp;lat=35.63607&amp;lon=139.78090&amp;basemap=osb&amp;categories=&amp;layers=&amp;overlays=</a></p>
+<p>I have also issue with the ocean &amp; sea... how can I identify it in the OSM raw date.</p>
+<p>Thank you in advance for any help or hint.</p>
+<p>Gil-ad</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/shapefile/" class="post-tag tag-link-shapefile"
+                                        title="see questions tagged 'shapefile'" rel="tag">shapefile</a>
+                                
+                                    <a href="/tags/costa/" class="post-tag tag-link-costa"
+                                        title="see questions tagged 'costa'" rel="tag">costa</a>
+                                
+                                    <a href="/tags/identify/" class="post-tag tag-link-identify"
+                                        title="see questions tagged 'identify'" rel="tag">identify</a>
+                                
+                                    <a href="/tags/sea/" class="post-tag tag-link-sea"
+                                        title="see questions tagged 'sea'" rel="tag">sea</a>
+                                
+                                    <a href="/tags/ocean/" class="post-tag tag-link-ocean"
+                                        title="see questions tagged 'ocean'" rel="tag">ocean</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Jun '13, 09:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4804bf7aec2b321005e930bedcb3c1bf?s=32&amp;d=identicon&amp;r=g" alt="Garad's gravatar image" />
+    <p><a href="/users/6612/garad">Garad</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Garad has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-23218">
+    
+</div>
+<div id="comment-tools-23218" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23218-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/23218/how-to-draw-coastline-with-ocean-sea?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/23218/how-to-draw-coastline-with-ocean-sea?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/23218/how-to-draw-coastline-with-ocean-sea?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/23218/how-to-draw-coastline-with-ocean-sea?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="23416"></a>
+                    <div id="answer-container-23416" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23416-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23416/up/" rel="nofollow"> </a>
+<div id="post-23416-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23416-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23416/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Garad has selected this answer as the correct answer"
+        href="/accept_answer/23416/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can find shapefiles with coastline data at <a href="http://www.openstreetmapdata.com">www.openstreetmapdata.com</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23416/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Jun '13, 10:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2d4dfcdcde73aa5e2ffa4a9b3a7cb51d?s=32&amp;d=identicon&amp;r=g" alt="Jochen%20Topf's gravatar image" />
+    <p><a href="/users/112/jochen-topf">Jochen Topf</a><br/>
+    <span class="score" title="5244 reputation points"><span class="">5.2k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="50 badges"><span class="silver">&#9679;</span><span class="badgecount">50</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jochen Topf has 32 accepted answers">31&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23416">
+    
+        <a name="23417"></a>
+        <div class="comment" id="comment-23417">
+            <div id="post-23417-score" class="comment-score"></div>
+            <div class="comment-text"><p>I was looking into the available download data and try to import it.
+but.. it looks like the date is in a different projection then the one we use.
+I'm using the <a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a> SHP files (created by the OSM2SHP utility). it looks like the data provided on your web site is not in the same SHP format/projection .</p>
+
+<p>can you help and advice?</p>
+
+<p>Thank you,</p>
+
+<p>Gil-ad</p></div>
+            <div class="comment-info" id="comment-23417-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jun '13, 11:45)</span>
+                <a class="comment-user userinfo" href="/users/6612/garad">Garad</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23416" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23416-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/23218/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='umg5w3cD3iwLVmo6a1OUwr7DLlyr7MiB' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23218/how-to-draw-coastline-with-ocean-sea?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23218/how-to-draw-coastline-with-ocean-sea?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/shapefile/"
+            class="tag-link-shapefile"
+            title="see questions tagged'shapefile'using tags"
+            rel="tag">shapefile</a> <span class="tag-number">&#215;87</span><br/>
+        
+        <a href="/tags/sea/"
+            class="tag-link-sea"
+            title="see questions tagged'sea'using tags"
+            rel="tag">sea</a> <span class="tag-number">&#215;17</span><br/>
+        
+        <a href="/tags/ocean/"
+            class="tag-link-ocean"
+            title="see questions tagged'ocean'using tags"
+            rel="tag">ocean</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/costa/"
+            class="tag-link-costa"
+            title="see questions tagged'costa'using tags"
+            rel="tag">costa</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/identify/"
+            class="tag-link-identify"
+            title="see questions tagged'identify'using tags"
+            rel="tag">identify</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 11, 2013, 9:45 a.m.">11 Jun '13, 09:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,953 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 16, 2013, 6:58 p.m.">16 Jun '13, 18:58</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/50506/detect-if-latlong-is-in-oceanseawater">Detect if Lat/Long is in ocean/sea/water</a>
+        </p>
+        
+        <p>
+            <a href="/questions/75303/seaocean-polygons-help-please">Sea/Ocean Polygons help, please!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/85692/looking-for-maps-of-the-seas">Looking for maps of the seas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2147/how-to-create-a-customised-shapefile-from-osm-file">How to create a customised shapefile from OSM file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6337/icon-for-beaches-or-access-to-the-water">Icon for beaches or access to the water</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6907/how-to-download-the-territorial-borders-violet-line-as-a-shapefile">how to download the territorial borders (violet line) as a shapefile</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5716/can-i-import-shape-files">Can I import shape files?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8428/how-to-use-from-an-url-a-shapefile-in-potlatch-to-avoid-the-error-the-file-could-not-be-loaded">How to use (from an URL) a Shapefile in Potlatch to avoid the error &quot;The file could not be loaded&quot;?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8444/is-there-any-possibility-to-download-data-into-shape-format-shp">Is there any possibility to download data into shape format? (.shp)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7059/uploading-current-city-shp-file">uploading Current City .shp file</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

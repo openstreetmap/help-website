@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Adding planned roads to existing map - OSM Help</title>
+        <meta name="description" content="Hello! I have to create a navigation system app for a piece of land (1km * 1km). Currently, the piece of land is empty but there are plans for adding roads.  My task is to add the planned roads onto an existing map. Navigation is also required for the added roads. Where do I start and what are the a..." />
+        <meta name="keywords" content="openstreetmap,roads,navigation,josm,tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/69206/adding-planned-roads-to-existing-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/69206/adding-planned-roads-to-existing-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='pg6hoYGDqZgyeX3jrHmpQohmlGu93HRZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/69206/adding-planned-roads-to-existing-map">Adding planned roads to existing map</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-69206-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69206/up/" rel="nofollow"> </a>
+<div id="post-69206-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-69206-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69206/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/69206/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello!</p>
+<p>I have to create a navigation system app for a piece of land (1km * 1km). Currently, the piece of land is empty but there are plans for adding roads. 
+My task is to add the planned roads onto an existing map. Navigation is also required for the added roads.</p>
+<p>Where do I start and what are the applications I need to do this? Do I need to host my own tile server? </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                                    <a href="/tags/roads/" class="post-tag tag-link-roads"
+                                        title="see questions tagged 'roads'" rel="tag">roads</a>
+                                
+                                    <a href="/tags/navigation/" class="post-tag tag-link-navigation"
+                                        title="see questions tagged 'navigation'" rel="tag">navigation</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 May '19, 10:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/75bfa1e4f41ffdd694ed68100d668b1b?s=32&amp;d=identicon&amp;r=g" alt="Feruses's gravatar image" />
+    <p><a href="/users/16672/feruses">Feruses</a><br/>
+    <span class="score" title="15 reputation points">15</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Feruses has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-69206">
+    
+</div>
+<div id="comment-tools-69206" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69206-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/69206/adding-planned-roads-to-existing-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/69206/adding-planned-roads-to-existing-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/69206/adding-planned-roads-to-existing-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/69206/adding-planned-roads-to-existing-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="69207"></a>
+                    <div id="answer-container-69207" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69207-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69207/up/" rel="nofollow"> </a>
+<div id="post-69207-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-69207-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69207/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Creating a full OSM stack for this is likely far more work than you are willing to do.</p>
+<p>The simplest way forward would likely be this:</p>
+<ol>
+<li>Obtain an OSM data file for the region of interest, e.g. by downloading it from OSM in JOSM.</li>
+<li>Modify the file in the JOSM editor (you cannot use Id for this), adding the planned roads as if they were already there. Do <em>not</em> upload your changes to OSM! Save them to a file only.</li>
+<li><em>perhaps</em> renumber the file to get rid of negative IDs - might not be necessary, depends on whether the tools below can work with negative IDs or not. The command-line "osmium" tool can renumber.</li>
+<li>load the file into Maperitive and create a map, or map tiles, from there (alternatively, set up a tile server with osm2pgsql, mapnik, renderd, mod_tile as documented on switch2osm.org to get the "true" OSM look and feel but this is likely overkill)</li>
+<li>for navigation, download Graphhopper and load the file into it</li>
+</ol>
+<p>Of course if you want a web site that shows your modified map and allows navigation, you'll have to code that yourself using your self-made tiles and your local Graphhopper service.</p>
+<p>Please do not under any circumstances upload planned road data to the main OSM database. Firstly, we don't generally record planning data, and secondly, routers would not use these planned roads anyway. In your own local file you can act as if the planned roads were real, nobody cares, but you cannot do that on OSM. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69207/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 May '19, 10:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/69207/">
+                edited
+                <strong>16 May '19, 10:19</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69207">
+    
+        <a name="69208"></a>
+        <div class="comment" id="comment-69208">
+            <div id="post-69208-score" class="comment-score"></div>
+            <div class="comment-text"><p>I will try this out. Thank you very much!</p></div>
+            <div class="comment-info" id="comment-69208-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '19, 10:24)</span>
+                <a class="comment-user userinfo" href="/users/16672/feruses">Feruses</a>
+                
+            </div>
+        </div>
+    
+        <a name="69209"></a>
+        <div class="comment" id="comment-69209">
+            <div id="post-69209-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi! When I tried opening my OSM file (modified with JOSM) on Maperitive, I received this error "Script execution error (line 1): The file could not be loaded: Node <a href="https://help.openstreetmap.org/users/5110/latroc">@lat</a> attribute is missing." Do you know what the issue is?</p></div>
+            <div class="comment-info" id="comment-69209-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '19, 10:49)</span>
+                <a class="comment-user userinfo" href="/users/16672/feruses">Feruses</a>
+                
+            </div>
+        </div>
+    
+        <a name="69211"></a>
+        <div class="comment" id="comment-69211">
+            <div id="post-69211-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I guess you might have deleted a node, and JOSM perhaps leaves the deleted node in the file with an action=delete marker but drops lat/lon attributes, and then Maperitive is unhappy. You'd have to find the objects with action=delete in the XML file and remove them, OR you could use JOSM's "purge" function (instead of "delete") to get rid of them; "purge" does not leave a "deleted" object in the file.</p></div>
+            <div class="comment-info" id="comment-69211-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '19, 12:18)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="69217"></a>
+        <div class="comment" id="comment-69217">
+            <div id="post-69217-score" class="comment-score"></div>
+            <div class="comment-text"><p>I would also add that if you want to be able to do offline navigation on a phone, you can complete steps 1 and 2 and then run that osm file through <a href="https://wiki.openstreetmap.org/wiki/OsmAndMapCreator">OsmAndMapCreator</a> to give you a *.obf that can be sideloaded onto your mobile device.</p></div>
+            <div class="comment-info" id="comment-69217-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '19, 19:57)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+        <a name="69252"></a>
+        <div class="comment" id="comment-69252">
+            <div id="post-69252-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks a lot for your help! I managed to modify my map via JOSM and created the map tiles through Maperitive. I would like to ask, how do I go about adding these map tiles into my web application?</p></div>
+            <div class="comment-info" id="comment-69252-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 May '19, 03:21)</span>
+                <a class="comment-user userinfo" href="/users/16672/feruses">Feruses</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69207" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69207-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/69206/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='pg6hoYGDqZgyeX3jrHmpQohmlGu93HRZ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69206/adding-planned-roads-to-existing-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69206/adding-planned-roads-to-existing-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/roads/"
+            class="tag-link-roads"
+            title="see questions tagged'roads'using tags"
+            rel="tag">roads</a> <span class="tag-number">&#215;86</span><br/>
+        
+        <a href="/tags/navigation/"
+            class="tag-link-navigation"
+            title="see questions tagged'navigation'using tags"
+            rel="tag">navigation</a> <span class="tag-number">&#215;50</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 16, 2019, 10:03 a.m.">16 May '19, 10:03</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,976 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 21, 2019, 3:21 a.m.">21 May '19, 03:21</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/69253/how-to-add-own-edited-map-tiles-into-my-webpage">How to add own edited map tiles into my webpage</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53247/tile-server-error-for-ways-conflict-for-planet-file-during-installation">Tile server error for ways conflict for planet file during installation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18258/josm-routing-how-to-establish-road-hierarchy">JOSM Routing - How to Establish Road Hierarchy</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52185/what-is-the-tile-server-the-id-editor-used-to-renderd">What is the tile server the iD editor used to renderd?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/639/how-do-i-use-openstreetmap-tiles-as-a-wms-background-in-josm">How do I use OpenStreetMap tiles as a WMS background in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52973/tile-server-for-planet-working-slow-and-shows-error-on-high-end-server">tile server for planet working slow and shows error on high end server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37183/openstreetmap-carto-for-switch2osm-from-packages">openstreetmap-carto for switch2osm &#39;&#39;from packages&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36731/how-to-use-bing-street-maps-on-josm">How to use Bing Street Maps on JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49550/navigation-static-map">Navigation static map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52943/openstreetmap-display-cities-with-latin-alphabet-or-english-names">OpenStreetMap Display Cities with Latin Alphabet or English Names?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

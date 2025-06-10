@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Extracting Polygons from OSM planet. - OSM Help</title>
+        <meta name="description" content="Hi! I&#39;m brand new to OSM data, so please be patient with me :) I want to extract administrative (or for that sake all named) polygons from OSM data. I have read https://help.openstreetmap.org/questions/8273/how-do-i-extract-the-polygon-of-an-administrative-boundary, but it does not work for me. Here..." />
+        <meta name="keywords" content="extract,polygon,rel2poly" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/17340/extracting-polygons-from-osm-planet" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/17340/extracting-polygons-from-osm-planet?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CviVxmxPmydQKrlDN2Sf4LPbum6qLGyT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/17340/extracting-polygons-from-osm-planet">Extracting Polygons from OSM planet.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-17340-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17340/up/" rel="nofollow"> </a>
+<div id="post-17340-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-17340-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17340/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/17340/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi!</p>
+<p>I'm brand new to OSM data, so please be patient with me :)</p>
+<p>I want to extract administrative (or for that sake all named) polygons from OSM data. I have read <a href="https://help.openstreetmap.org/questions/8273/how-do-i-extract-the-polygon-of-an-administrative-boundary,">https://help.openstreetmap.org/questions/8273/how-do-i-extract-the-polygon-of-an-administrative-boundary,</a> but it does not work for me. Here's what happens on my machine:</p>
+<pre><code>$ bzcat great_britain.osm.bz2 | perl rel2poly.pl 
+Killed
+</code></pre>
+<p>I assume that is due to the process running out of memory (It's a VM without swap space...). However, I am not entirely sure that script does what I want. I read somewhere that it translates full relations to polygons. And AFAI understand, there are no full relations in the OSM extracts? I also don't speak pearl to check. If I was to write a python (right choice?) script to derive named polygons from OSM extracts how would I process the data? Here's my understanding of the data. Pleas correct me where I'm wrong:</p>
+<ol>
+<li>Nodes are points on the map having lat/lons.</li>
+<li>Ways are collections of nodes. There are closed ways (polygons) and opened ways (paths)</li>
+<li>Relations connect ways and nodes. All ways of a relation form polygons too.</li>
+<li>All of the above (nodes, ways and relations) have tags containing meta data as names, types, links, and so on.</li>
+<li>In the extract I downloaded the relations contain references to nodes and ways, but not the nodes and ways themselves.</li>
+</ol>
+<p>So my script would have to </p>
+<ol>
+<li>load all nodes</li>
+<li>load all ways</li>
+<li>expand all ways with the referenced nodes</li>
+<li>load all relations</li>
+<li>expand all relations with the referenced ways</li>
+<li>for every relation that has a name tag, list the latlons of the nodes on the ways.</li>
+</ol>
+<p>Is that right? Is that what the perl script does anyways? Is it easier/faster to load the data into postgres using one of the available tools instead of processing the data in a script?</p>
+<p>All suggestions are appreciated!
+  K</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/extract/" class="post-tag tag-link-extract"
+                                        title="see questions tagged 'extract'" rel="tag">extract</a>
+                                
+                                    <a href="/tags/polygon/" class="post-tag tag-link-polygon"
+                                        title="see questions tagged 'polygon'" rel="tag">polygon</a>
+                                
+                                    <a href="/tags/rel2poly/" class="post-tag tag-link-rel2poly"
+                                        title="see questions tagged 'rel2poly'" rel="tag">rel2poly</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>31 Oct '12, 22:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/680bc1d9127776b4acb2e6af485a6869?s=32&amp;d=identicon&amp;r=g" alt="konstantin's gravatar image" />
+    <p><a href="/users/4888/konstantin">konstantin</a><br/>
+    <span class="score" title="61 reputation points">61</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="konstantin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-17340">
+    
+        <a name="17344"></a>
+        <div class="comment" id="comment-17344">
+            <div id="post-17344-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just to get around the memory issue (and to see if it actually does what you want) maybe try a smaller input file, like perhaps one of the English counties from <a href="http://download.geofabrik.de/openstreetmap/europe/great_britain/england/">here</a>?</p></div>
+            <div class="comment-info" id="comment-17344-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Oct '12, 23:01)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17340" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17340-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/17340/extracting-polygons-from-osm-planet?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/17340/extracting-polygons-from-osm-planet?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/17340/extracting-polygons-from-osm-planet?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/17340/extracting-polygons-from-osm-planet?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="17370"></a>
+                    <div id="answer-container-17370" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17370-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17370/up/" rel="nofollow"> </a>
+<div id="post-17370-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-17370-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17370/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can use the administrative boundary data only as input. This reduces the amount of data by orders of magnitude.</p>
+<p>For example</p>
+<p><a href='http://overpass-api.de/api/interpreter?data=(rel[name="United+Kingdom"];>;);out;'>http://overpass-api.de/api/interpreter?data=(rel[name="United Kingdom"];&gt;;);out;</a></p>
+<p>will return exactly the boundary data of the nation "United Kingdom".</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17370/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Nov '12, 19:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fcfdb0825826fd13d2ff0d83d58819c6?s=32&amp;d=identicon&amp;r=g" alt="Roland%20Olbricht's gravatar image" />
+    <p><a href="/users/3480/roland-olbricht">Roland Olbricht</a><br/>
+    <span class="score" title="6666 reputation points"><span class="">6.7k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Roland Olbricht has 40 accepted answers">36&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17370">
+    
+</div>
+<div id="comment-tools-17370" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17370-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="17347"></a>
+                    <div id="answer-container-17347" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17347-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17347/up/" rel="nofollow"> </a>
+<div id="post-17347-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-17347-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17347/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Extracting multipolygon data from OSM is hard. Don't try to write the code yourself, there are already several implementations out there that do that. I always recommend <a href="http://wiki.osm.org/wiki/Osmium">Osmium/osmjs</a>, but I am biased. :-)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17347/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Nov '12, 08:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2d4dfcdcde73aa5e2ffa4a9b3a7cb51d?s=32&amp;d=identicon&amp;r=g" alt="Jochen%20Topf's gravatar image" />
+    <p><a href="/users/112/jochen-topf">Jochen Topf</a><br/>
+    <span class="score" title="5244 reputation points"><span class="">5.2k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="50 badges"><span class="silver">&#9679;</span><span class="badgecount">50</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jochen Topf has 32 accepted answers">31&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17347">
+    
+        <a name="17351"></a>
+        <div class="comment" id="comment-17351">
+            <div id="post-17351-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ha, Jochen, now I understand how you're biased!
+Osmium seems like a tool that could do what I need. I will give it a shot. However, you mention several implementations, the most popular probably being Osmosis. Are there more? Could you point me there?</p>
+
+<p>Thanks!</p></div>
+            <div class="comment-info" id="comment-17351-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Nov '12, 10:10)</span>
+                <a class="comment-user userinfo" href="/users/4888/konstantin">konstantin</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17347" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17347-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/17340/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='CviVxmxPmydQKrlDN2Sf4LPbum6qLGyT' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17340/extracting-polygons-from-osm-planet?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17340/extracting-polygons-from-osm-planet?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/polygon/"
+            class="tag-link-polygon"
+            title="see questions tagged'polygon'using tags"
+            rel="tag">polygon</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/extract/"
+            class="tag-link-extract"
+            title="see questions tagged'extract'using tags"
+            rel="tag">extract</a> <span class="tag-number">&#215;83</span><br/>
+        
+        <a href="/tags/rel2poly/"
+            class="tag-link-rel2poly"
+            title="see questions tagged'rel2poly'using tags"
+            rel="tag">rel2poly</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 31, 2012, 10:25 p.m.">31 Oct '12, 22:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,124 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 1, 2012, 7:17 p.m.">01 Nov '12, 19:17</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/70189/how-to-export-all-polygons-in-a-chosen-area">how to export all polygons in a chosen area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8117/getting-city-border-from-osm-data">Getting city border from osm data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8273/how-do-i-extract-the-polygon-of-an-administrative-boundary">How do I extract the polygon of an administrative boundary?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50350/extract-all-polygons-for-postal-codes-in-germany-to-view-in-qgis">Extract all polygons for postal codes in Germany to view in QGIS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/80335/find-cities-boundary-in-a-specific-country">find cities boundary in a specific country</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45718/clip-part-from-map-with-a-boundary-polygon-and-adjust-intersected-polygons-from-boundary">Clip part from map with a boundary polygon and adjust intersected polygons from boundary</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7711/bounding-box-polygon-for-osmosis">bounding-box polygon for osmosis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3919/how-can-i-find-and-modify-a-boundary">How can I find and modify a boundary?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3646/extracting-country-specific-data">Extracting country specific data.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1590/export-road-way-data-for-large-regions">Export Road (Way) data for large regions</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

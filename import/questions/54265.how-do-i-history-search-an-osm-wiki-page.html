@@ -1,0 +1,923 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I history search an OSM Wiki page? - OSM Help</title>
+        <meta name="description" content="Hi I want to find when a specific sentence was added to an OSM Wiki page. It doesn&#39;t have a link to WikiBlame as in Wikipedia. Is it possible? " />
+        <meta name="keywords" content="wiki,search,history" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/54265/how-do-i-history-search-an-osm-wiki-page" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54265/how-do-i-history-search-an-osm-wiki-page?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='kjx8ZfcDFI7TKczDGADrAQHluMdeQ7B4' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54265/how-do-i-history-search-an-osm-wiki-page">How do I history search an OSM Wiki page?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54265-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54265/up/" rel="nofollow"> </a>
+<div id="post-54265-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-54265-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54265/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54265/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   2
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi</p>
+<p>I want to find when a specific sentence was added to an OSM Wiki page. It doesn't have a link to WikiBlame as in Wikipedia. Is it possible? </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/wiki/" class="post-tag tag-link-wiki"
+                                        title="see questions tagged 'wiki'" rel="tag">wiki</a>
+                                
+                                    <a href="/tags/search/" class="post-tag tag-link-search"
+                                        title="see questions tagged 'search'" rel="tag">search</a>
+                                
+                                    <a href="/tags/history/" class="post-tag tag-link-history"
+                                        title="see questions tagged 'history'" rel="tag">history</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Jan '17, 18:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c9c8b421ad22f51ddd62f23413717036?s=32&amp;d=identicon&amp;r=g" alt="DaveF's gravatar image" />
+    <p><a href="/users/1532/davef">DaveF</a><br/>
+    <span class="score" title="3264 reputation points"><span class="">3.3k</span></span><span title="84 badges"><span class="badge1">&#9679;</span><span class="badgecount">84</span></span><span title="98 badges"><span class="silver">&#9679;</span><span class="badgecount">98</span></span><span title="133 badges"><span class="bronze">&#9679;</span><span class="badgecount">133</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DaveF has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54265">
+    
+</div>
+<div id="comment-tools-54265" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54265-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54265/how-do-i-history-search-an-osm-wiki-page?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54265/how-do-i-history-search-an-osm-wiki-page?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54265/how-do-i-history-search-an-osm-wiki-page?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54265/how-do-i-history-search-an-osm-wiki-page?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54279"></a>
+                    <div id="answer-container-54279" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54279-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54279/up/" rel="nofollow"> </a>
+<div id="post-54279-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-54279-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54279/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>See <a href="https://lists.openstreetmap.org/pipermail/tagging/2015-May/024339.html">https://lists.openstreetmap.org/pipermail/tagging/2015-May/024339.html</a> : "actually wikiblame apparently works out of the box if you know which parameters to enter".</p>
+<p>So, we can use <a href="http://wikipedia.ramselehof.de/wikiblame?user_lang=en&amp;lang=blank&amp;project=wiki.openstreetmap">Flominator's WikiBlame (with parameters set for the OpenStreetMap wiki)</a>. You just need to enter the "page" and "search for" boxes and press start.</p>
+<p>Example:
+<img src="/upfiles/Screenshot_20170125_082220.png" alt="screenshot"></p>
+<p>It found the <a href="https://wiki.openstreetmap.org/w/index.php?title=ID&amp;diff=prev&amp;oldid=1038817">correct addition diff</a> for the example search.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54279/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Jan '17, 00:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54279/">
+                edited
+                <strong>25 Jan '17, 07:45</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54279">
+    
+</div>
+<div id="comment-tools-54279" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54279-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="54269"></a>
+                    <div id="answer-container-54269" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54269-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54269/up/" rel="nofollow"> </a>
+<div id="post-54269-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-54269-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54269/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><s>I am not aware of tools for this.</s></p>
+<p>You can do a manual <a href="//en.wikipedia.org/wiki/Binary_search_algorithm">binary search</a> through the history (clicking the diff links and check if your target sentence is present on the page while using a version selection approximately according to the binary search algorithm). This is what I sometimes do.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54269/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jan '17, 19:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54269/">
+                edited
+                <strong>25 Jan '17, 07:47</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54269">
+    
+</div>
+<div id="comment-tools-54269" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54269-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="54270"></a>
+                    <div id="answer-container-54270" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54270-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54270/up/" rel="nofollow"> </a>
+<div id="post-54270-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-54270-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54270/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You could look at the full page history and select the version that is half way between the oldest and newest page to see if the specific sentence you are looking for was added before or after that version. Then repeat the process in the half of the history where the specific sentence appears to have been added. This can be a bit of a laborious process if there are hundreds of edits but with this sort of binary search you should only need to look at a dozen versions of the page even if it was edited a thousand times. </p>
+<p>Also, if you click on the "cur" link for a version you can see how the historic version differs from the current version. If you click on the "prev" link for a version you can see what changes were made to create that version. If you click on the radio buttons of two versions and then click "Compare selected revisions" you can see the changes made between two versions of a page. Helpfully, the difference pages allow you to step back and forth to see the differences between earlier and later revisions too. You might also find the edit comments will assist you identifying the version, as you might find when a section was added.</p>
+<p>I know this might still seem a rather tedious method but it is faster than stepping though each revision of a page, revision by revision.  </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54270/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jan '17, 20:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1a623cf4b5df74bee1b91d0c21736921?s=32&amp;d=identicon&amp;r=g" alt="Huttite's gravatar image" />
+    <p><a href="/users/11060/huttite">Huttite</a><br/>
+    <span class="score" title="560 reputation points">560</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Huttite has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54270">
+    
+        <a name="54278"></a>
+        <div class="comment" id="comment-54278">
+            <div id="post-54278-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/11060/huttite">@Huttite</a> &amp; <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> Thanks for the replies but divide in two is specifically what I want to avoid. As you point out it's laborious.</p>
+
+<p>As it's already written &amp; in use on the main Wiki site, you'd think it couldn't be that much hassle to install in on OSM's one.</p></div>
+            <div class="comment-info" id="comment-54278-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '17, 00:48)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+        <a name="54281"></a>
+        <div class="comment" id="comment-54281">
+            <div id="post-54281-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/1532/davef">@DaveF</a>: yes, I fully agree, most such server-side tools are likely available as source code (and are free software) and are easily adjustable. If there is a "blame" tool which would run on the client-side it would possibly just need a replacement of one string in its JavaScript code.</p></div>
+            <div class="comment-info" id="comment-54281-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '17, 07:42)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="54284"></a>
+        <div class="comment" id="comment-54284">
+            <div id="post-54284-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's beyond my knowledge, but I've <a href="https://lists.openstreetmap.org/pipermail/dev/2017-January/thread.html#29668">enquired on OSM-Dev</a></p></div>
+            <div class="comment-info" id="comment-54284-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '17, 13:06)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+        <a name="54291"></a>
+        <div class="comment" id="comment-54291">
+            <div id="post-54291-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/1532/davef">@DaveF</a>: you are asking for something to be "'built in'" - what do you mean?  Do you mean a tool should available as link from the wiki history page? That is easy and would just need a wiki admin to add a bit to the history page's header. We could add Flominator's tool there (I just would first ask him due to a bit more resource consumption by our users). Meta: I took the liberty to add the link to your comment.</p></div>
+            <div class="comment-info" id="comment-54291-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '17, 20:49)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="54292"></a>
+        <div class="comment" id="comment-54292">
+            <div id="post-54292-score" class="comment-score"></div>
+            <div class="comment-text"><p>I mean I'd like it to be available on OSM Wiki as it is on Wikipedia
+Note "Revision History Search" about 5 lines down:</p>
+
+<p><a href="https://en.wikipedia.org/w/index.php?title=Main_Page&amp;action=history">https://en.wikipedia.org/w/index.php?title=Main_Page&amp;action=history</a></p>
+
+<p>Are there major overheads invovled in that?</p>
+
+<p>Is anyone aware of a specific OSM contributor dealing with OSM wiki who could be contacted?</p></div>
+            <div class="comment-info" id="comment-54292-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '17, 22:36)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54270" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54270-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54265/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='kjx8ZfcDFI7TKczDGADrAQHluMdeQ7B4' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54265/how-do-i-history-search-an-osm-wiki-page?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54265/how-do-i-history-search-an-osm-wiki-page?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/search/"
+            class="tag-link-search"
+            title="see questions tagged'search'using tags"
+            rel="tag">search</a> <span class="tag-number">&#215;193</span><br/>
+        
+        <a href="/tags/history/"
+            class="tag-link-history"
+            title="see questions tagged'history'using tags"
+            rel="tag">history</a> <span class="tag-number">&#215;89</span><br/>
+        
+        <a href="/tags/wiki/"
+            class="tag-link-wiki"
+            title="see questions tagged'wiki'using tags"
+            rel="tag">wiki</a> <span class="tag-number">&#215;71</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 24, 2017, 6:45 p.m.">24 Jan '17, 18:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,366 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 25, 2017, 10:36 p.m.">25 Jan '17, 22:36</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3472/how-can-i-search-the-wiki">[closed] How can I search the Wiki?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/83104/osm-wiki-page-history">OSM Wiki page history</a>
+        </p>
+        
+        <p>
+            <a href="/questions/74/is-everybody-allowed-to-post-news-items-in-the-openstreetmap-wiki">Is everybody allowed to post news items in the OpenStreetMap wiki?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/446/how-to-translate-wiki-templatecatmain">How to translate wiki Template:Catmain</a>
+        </p>
+        
+        <p>
+            <a href="/questions/602/how-do-i-change-the-edit-box-on-the-wiki-from-vector-to-monobook">[closed] How do I change the edit box on the wiki from Vector to Monobook?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/671/how-do-i-propose-an-official-tag">How do I propose an official tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/889/search-by-a-tag">Search by a tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/794/protocol-for-documenting-key-values-on-the-wiki">Protocol for documenting key values on the wiki?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1089/how-do-i-remove-search-marker-in-the-map">How do I remove Search-Marker in the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/444/how-to-delete-a-wiki-page">How to delete a wiki page</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,693 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Creating new symbols and upload it on OSM map - OSM Help</title>
+        <meta name="description" content="Hi everyone,   I wanted to edit types of traffic signs on OSM map to be visible to everyone, but besides sign for parking places and bus stops, I hadn&#39;t found any other category for traffic signs like speed limit, animals on the road... Please could anyone explain me the process of creating new symb..." />
+        <meta name="keywords" content="symbols,new,upload" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/45725/creating-new-symbols-and-upload-it-on-osm-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/45725/creating-new-symbols-and-upload-it-on-osm-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='8LuCPSUuZ0faDhpWTELMAzHjqEFpPRud' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/45725/creating-new-symbols-and-upload-it-on-osm-map">Creating new symbols and upload it on OSM map</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-45725-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45725/up/" rel="nofollow"> </a>
+<div id="post-45725-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-45725-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45725/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/45725/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi everyone, 
+ I wanted to edit types of traffic signs on OSM map to be visible to everyone, but besides sign for parking places and bus stops, I hadn't found any other category for traffic signs like speed limit, animals on the road... Please could anyone explain me the process of creating new symbols and uploading it onto OSM map?</p>
+<p>Thank you in advance!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/symbols/" class="post-tag tag-link-symbols"
+                                        title="see questions tagged 'symbols'" rel="tag">symbols</a>
+                                
+                                    <a href="/tags/new/" class="post-tag tag-link-new"
+                                        title="see questions tagged 'new'" rel="tag">new</a>
+                                
+                                    <a href="/tags/upload/" class="post-tag tag-link-upload"
+                                        title="see questions tagged 'upload'" rel="tag">upload</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Oct '15, 18:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c76f63e167f48154697aa397300b7733?s=32&amp;d=identicon&amp;r=g" alt="Mimacha011's gravatar image" />
+    <p><a href="/users/11551/mimacha011">Mimacha011</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Mimacha011 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-45725">
+    
+</div>
+<div id="comment-tools-45725" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45725-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/45725/creating-new-symbols-and-upload-it-on-osm-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/45725/creating-new-symbols-and-upload-it-on-osm-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/45725/creating-new-symbols-and-upload-it-on-osm-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/45725/creating-new-symbols-and-upload-it-on-osm-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="45728"></a>
+                    <div id="answer-container-45728" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-45728-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45728/up/" rel="nofollow"> </a>
+<div id="post-45728-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-45728-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45728/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As a mapper (surveyor) you can decide what you upload to OSM (<a href="http://wiki.openstreetmap.org/wiki/Key:traffic_sign">our Wiki</a> has more on traffic signs), but you cannot control what appears on (any given) map. You have to understand that there are many maps made from OSM data, and the ones on www.openstreetmap.org are just example. Which traffic signs these map show, is at the map designer's discretion. You can of course make your own map from OSM data that shows each and every traffic sign but that requires getting to understand the process of map making ("rendering") as well as a suitable server on which you can run it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/45728/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Oct '15, 22:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-45728">
+    
+        <a name="45729"></a>
+        <div class="comment" id="comment-45729">
+            <div id="post-45729-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your answer. 
+And what about uploading that new symbol onto main OSM maps? Does that requires a period of time for approval to appear on map? Could you recommend me some website where could I find out more about this specific topic? All the best!</p></div>
+            <div class="comment-info" id="comment-45729-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Oct '15, 22:46)</span>
+                <a class="comment-user userinfo" href="/users/11551/mimacha011">Mimacha011</a>
+                
+            </div>
+        </div>
+    
+        <a name="45732"></a>
+        <div class="comment" id="comment-45732">
+            <div id="post-45732-score" class="comment-score">6</div>
+            <div class="comment-text"><p>Every OSM map is maintained by different people. The standard map on www.openstreetmap.org for example is a <a href="https://github.com/gravitystorm/openstreetmap-carto">GitHub based project</a> - you can open an issue there and attach your images. However be prepared to accept a polite "no" as an answer; the goal of that map is to be a usable general-purpose map that shows off OSM, not a map that shows everything everyone would like to be present (that would make the map totally unusable due to excessive detail). </p>
+
+<p>You might also consider talking to the people at <a href="http://www.itoworld.com/map/main">ITO</a> who make a range of special-interest OpenStreetMap based maps; perhaps there's room for a traffic sign map there.</p></div>
+            <div class="comment-info" id="comment-45732-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Oct '15, 07:18)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="45755"></a>
+        <div class="comment" id="comment-45755">
+            <div id="post-45755-score" class="comment-score">2</div>
+            <div class="comment-text"><p>You can take a look at <a href="http://wiki.openstreetmap.org/wiki/Finland:Traffic_signs">Finnish Traffic Signs (wiki page)</a>, which is a style for JOSM, one of the editors for OSM. All Finnish traffic signs are visible. The Dutch community made a similar style for their traffic signs.
+One of the problems with coming up with a global map for traffic signs is that they might look (totally) different in different countries. And when you show them all, they will clutter up the map easily, see the screenshot on the wiki page.</p></div>
+            <div class="comment-info" id="comment-45755-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Oct '15, 16:55)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="45794"></a>
+        <div class="comment" id="comment-45794">
+            <div id="post-45794-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you very much for usable piece of information. :)</p></div>
+            <div class="comment-info" id="comment-45794-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Oct '15, 21:43)</span>
+                <a class="comment-user userinfo" href="/users/11551/mimacha011">Mimacha011</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-45728" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45728-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/45725/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='8LuCPSUuZ0faDhpWTELMAzHjqEFpPRud' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45725/creating-new-symbols-and-upload-it-on-osm-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45725/creating-new-symbols-and-upload-it-on-osm-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/upload/"
+            class="tag-link-upload"
+            title="see questions tagged'upload'using tags"
+            rel="tag">upload</a> <span class="tag-number">&#215;117</span><br/>
+        
+        <a href="/tags/new/"
+            class="tag-link-new"
+            title="see questions tagged'new'using tags"
+            rel="tag">new</a> <span class="tag-number">&#215;37</span><br/>
+        
+        <a href="/tags/symbols/"
+            class="tag-link-symbols"
+            title="see questions tagged'symbols'using tags"
+            rel="tag">symbols</a> <span class="tag-number">&#215;11</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 5, 2015, 6:55 p.m.">05 Oct '15, 18:55</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,319 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 7, 2015, 9:43 p.m.">07 Oct '15, 21:43</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/48375/josm-upload-error-on-osm-map-that-is-only-20-hours-old">JOSM upload error on osm map that is only 20 hours old</a>
+        </p>
+        
+        <p>
+            <a href="/questions/846/upload-big-gpx-file">Upload big gpx file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1750/can-i-add-a-photo-if-so-how">Can I Add a Photo? If so, how?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1393/how-to-propose-a-new-project">How to propose a new project?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1472/failed-to-upload-gps-track">Failed to upload GPS track</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1608/map-update-volunteer">Map update volunteer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/883/track-upload">[closed] track upload</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1917/inserting-timestamp-in-tracks-drawn-from-gpsmapedit">Inserting Timestamp in tracks drawn from GPSMapEdit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2016/logging-traces-and-updating-the-map">Logging traces and updating the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/297/does-it-make-sense-to-upload-aviation-tracks-to-osm">Does it make sense to upload aviation tracks to osm?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

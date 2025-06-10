@@ -1,0 +1,703 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to enter a street name that is foreign and transliterated to the local version - OSM Help</title>
+        <meta name="description" content="Hello, I&#39;m mapping a Greek town. My understanding from what I&#39;ve read here and there is that I should not attempt to translate or transliterate local street names; instead, enter them in Greek only. However, there is a street whose name is of a German&#39;s, Wilhelm Dörpfeld, and it is locally known tra..." />
+        <meta name="keywords" content="i18n,internationalization,translation,transliteration,localization" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/59738/how-to-enter-a-street-name-that-is-foreign-and-transliterated-to-the-local-version" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/59738/how-to-enter-a-street-name-that-is-foreign-and-transliterated-to-the-local-version?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='N7H87BpEeJFimT15xs5IGQqFI9XeMReo' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/59738/how-to-enter-a-street-name-that-is-foreign-and-transliterated-to-the-local-version">How to enter a street name that is foreign and transliterated to the local version</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-59738-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59738/up/" rel="nofollow"> </a>
+<div id="post-59738-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-59738-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59738/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/59738/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I'm mapping a Greek town. My understanding from what I've read here and there is that I should not attempt to translate or transliterate local street names; instead, enter them in Greek only.</p>
+<p>However, there is a street whose name is of a German's, Wilhelm Dörpfeld, and it is locally known transliterated to Greek. I guess the main name of the street on OSM must be the Greek-transliterated name, as this is what it's known as locally. But we can't expect automatic tools to transliterate it back to Latin correctly, so I believe the Latin version should also be entered. In what language? German? (In that case English viewers should automatically get the German version instead of the Greek version [whether in the Greek alphabet or transliterated back to Latin], and I'm not certain map renderers are that smart.)</p>
+<p>Another option could be to add the main street name in German, and add a Greek transl[iter]ation.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/i18n/" class="post-tag tag-link-i18n"
+                                        title="see questions tagged 'i18n'" rel="tag">i18n</a>
+                                
+                                    <a href="/tags/internationalization/" class="post-tag tag-link-internationalization"
+                                        title="see questions tagged 'internationalization'" rel="tag">internationalization</a>
+                                
+                                    <a href="/tags/translation/" class="post-tag tag-link-translation"
+                                        title="see questions tagged 'translation'" rel="tag">translation</a>
+                                
+                                    <a href="/tags/transliteration/" class="post-tag tag-link-transliteration"
+                                        title="see questions tagged 'transliteration'" rel="tag">transliteration</a>
+                                
+                                    <a href="/tags/localization/" class="post-tag tag-link-localization"
+                                        title="see questions tagged 'localization'" rel="tag">localization</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Sep '17, 08:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/39d2ea0a36d1740e5f544076955a4b30?s=32&amp;d=identicon&amp;r=g" alt="aptiko's gravatar image" />
+    <p><a href="/users/14232/aptiko">aptiko</a><br/>
+    <span class="score" title="135 reputation points">135</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aptiko has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/59738/">
+                edited
+                <strong>21 Sep '17, 08:24</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-59738">
+    
+</div>
+<div id="comment-tools-59738" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59738-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/59738/how-to-enter-a-street-name-that-is-foreign-and-transliterated-to-the-local-version?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/59738/how-to-enter-a-street-name-that-is-foreign-and-transliterated-to-the-local-version?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/59738/how-to-enter-a-street-name-that-is-foreign-and-transliterated-to-the-local-version?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/59738/how-to-enter-a-street-name-that-is-foreign-and-transliterated-to-the-local-version?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="59754"></a>
+                    <div id="answer-container-59754" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-59754-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59754/up/" rel="nofollow"> </a>
+<div id="post-59754-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-59754-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59754/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="aptiko has selected this answer as the correct answer"
+        href="/accept_answer/59754/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi,</p>
+<p>First of all, set the <code>name=*</code> tag to the street name as it appears on street signs.  This is the default name that international renderers will use.</p>
+<p>Secondly, add a <code>name:xx</code> tag for the other language.  (This matters for searching.)  If the name on street signs is in Greek, then add a <code>name:de=Wilhelm Dörpfeld</code> tag to record the German name; if the street signs are in German, use <code>name:el=...</code> with the name transliterated into Greek.  You can even add all three of <code>name</code>, <code>name:el</code>, and <code>name:de</code> (two of them would have the same value).</p>
+<p>If the street signs name is in Greek, you can additionally record the name in German in the <code>int_name=*</code> tag, to explicitly record the "other preferred" variant of the name.  This would help renderers show to non-Greek speakers the German, rather than Greek, spelling of the name.  (There is also a <code>loc_name</code> tag for the converse case, but a case could be made that using it would be redundant since renderers should know to look for a <code>name:el</code> tag in Greece.)</p>
+<p>See:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:name">https://wiki.openstreetmap.org/wiki/Key:name</a> and <a href="https://wiki.openstreetmap.org/wiki/Names">https://wiki.openstreetmap.org/wiki/Names</a> for various name tags</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Multilingual_names#Greece">https://wiki.openstreetmap.org/wiki/Multilingual_names#Greece</a> for some Greece-specific conventions (not directly applicable here)</p>
+<p>HTH!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/59754/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Sep '17, 20:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8440750fd002fd989ab2e6b613ca3ccb?s=32&amp;d=identicon&amp;r=g" alt="dsh4's gravatar image" />
+    <p><a href="/users/13665/dsh4">dsh4</a><br/>
+    <span class="score" title="867 reputation points">867</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="13 badges"><span class="silver">&#9679;</span><span class="badgecount">13</span></span><span title="30 badges"><span class="bronze">&#9679;</span><span class="badgecount">30</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dsh4 has one accepted answer">4&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-59754">
+    
+        <a name="59823"></a>
+        <div class="comment" id="comment-59823">
+            <div id="post-59823-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not in this specific case, but generally, <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names#Greece">https://wiki.openstreetmap.org/wiki/Multilingual_names#Greece</a> seems to imply that the transliterated name should be entered in <code>int_name</code>. Is that true? I recall seeing elsewhere that transliterating should be avoided (because it can be done by automated tools).</p></div>
+            <div class="comment-info" id="comment-59823-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '17, 12:38)</span>
+                <a class="comment-user userinfo" href="/users/14232/aptiko">aptiko</a>
+                
+            </div>
+        </div>
+    
+        <a name="59837"></a>
+        <div class="comment" id="comment-59837">
+            <div id="post-59837-score" class="comment-score"></div>
+            <div class="comment-text"><p>I agree; that link's suggestion about int_name seems odd for the reason you give and for two other reasons:</p>
+
+<ul>
+<li>
+<p>There's a "script code" suffix, e.g., name:latn / name:cyrl for name in Latin / Cyrillic script (used in the Balkan), so conceivably there could be a name:latn / name:[Greek Script code] tag pair instead.</p>
+</li>
+<li>
+<p>The documentation of name keys suggests that "int_name" should be about "This feature is internationally known by a name other than its official name", not about transliteration issues.</p>
+</li>
+</ul>
+
+<p>I suggest you take this up with the Greek OSM community.  See <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Greece#Community">https://wiki.openstreetmap.org/wiki/WikiProject_Greece#Community</a> (and note that the "Names" section on that page repeats the advice about int_name).</p></div>
+            <div class="comment-info" id="comment-59837-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '17, 23:26)</span>
+                <a class="comment-user userinfo" href="/users/13665/dsh4">dsh4</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-59754" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59754-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/59738/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='N7H87BpEeJFimT15xs5IGQqFI9XeMReo' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/59738/how-to-enter-a-street-name-that-is-foreign-and-transliterated-to-the-local-version?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/59738/how-to-enter-a-street-name-that-is-foreign-and-transliterated-to-the-local-version?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/localization/"
+            class="tag-link-localization"
+            title="see questions tagged'localization'using tags"
+            rel="tag">localization</a> <span class="tag-number">&#215;23</span><br/>
+        
+        <a href="/tags/translation/"
+            class="tag-link-translation"
+            title="see questions tagged'translation'using tags"
+            rel="tag">translation</a> <span class="tag-number">&#215;17</span><br/>
+        
+        <a href="/tags/internationalization/"
+            class="tag-link-internationalization"
+            title="see questions tagged'internationalization'using tags"
+            rel="tag">internationalization</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/i18n/"
+            class="tag-link-i18n"
+            title="see questions tagged'i18n'using tags"
+            rel="tag">i18n</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/transliteration/"
+            class="tag-link-transliteration"
+            title="see questions tagged'transliteration'using tags"
+            rel="tag">transliteration</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 21, 2017, 8:22 a.m.">21 Sep '17, 08:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,745 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 25, 2017, 11:26 p.m.">25 Sep '17, 23:26</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/717/how-can-i-help-translate-openstreetmap-into-my-langugage">How can I help translate OpenStreetMap into my langugage</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52013/russia-malyy-and-russian-transliteration">Russia - Malyy and Russian transliteration</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39/is-there-any-possibility-to-have-an-i18n-ed-version-of-this-tool">Is there any possibility to have an i18n-ed version of this tool?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/308/when-starts-dehelpopenstreetmaporg">[closed] When starts de.help.openstreetmap.org ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1966/how-to-select-language-for-main-map-page">How to select language for main map page?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3867/translation-tools-for-names-and-tags">Translation tools for names and tags?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7492/transliterating-arabic-names">transliterating arabic names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6192/georgia-localized-names">Georgia - localized names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5299/downloading-osm-data-for-offline-geocoding">Downloading OSM Data for Offline geocoding</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1585/wrong-translation">[closed] Wrong translation</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

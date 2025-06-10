@@ -1,0 +1,814 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Map with little information - OSM Help</title>
+        <meta name="description" content="I&#39;m totally new at OSM. I would like to extract e map of Berlin containing only the names of the streets and no other information. Is it possible to do that with OSM? Should I use a particular software to do that? Would it be correct to think that names of streets and all other information is contai..." />
+        <meta name="keywords" content="layers,export,extract" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/68012/map-with-little-information" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/68012/map-with-little-information?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='uTTboA05GxRDib8iJ2IoVUcFMWmGbRx0' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/68012/map-with-little-information">Map with little information</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-68012-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68012/up/" rel="nofollow"> </a>
+<div id="post-68012-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-68012-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68012/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/68012/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm totally new at OSM.</p>
+<p>I would like to extract e map of Berlin containing only the names of the streets and no other information. Is it possible to do that with OSM? Should I use a particular software to do that?</p>
+<p>Would it be correct to think that names of streets and all other information is contained in layers? Should I strip a certain number of layers? How should I do it?</p>
+<p>I'm grateful to those, who will take time to give me an answer.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/layers/" class="post-tag tag-link-layers"
+                                        title="see questions tagged 'layers'" rel="tag">layers</a>
+                                
+                                    <a href="/tags/export/" class="post-tag tag-link-export"
+                                        title="see questions tagged 'export'" rel="tag">export</a>
+                                
+                                    <a href="/tags/extract/" class="post-tag tag-link-extract"
+                                        title="see questions tagged 'extract'" rel="tag">extract</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>15 Feb '19, 01:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/026fcce2d7827f63185b73969cfe13b4?s=32&amp;d=identicon&amp;r=g" alt="Juanaines's gravatar image" />
+    <p><a href="/users/16286/juanaines">Juanaines</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Juanaines has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/68012/">
+                edited
+                <strong>15 Feb '19, 06:29</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-68012">
+    
+        <a name="68014"></a>
+        <div class="comment" id="comment-68014">
+            <div id="post-68014-score" class="comment-score"></div>
+            <div class="comment-text"><p>hi, welcome! With OSM you can access the raw data - so nearly everything is possible (it just <em>may</em> need some effort on your side).</p>
+
+<p>Please specify what a "map" is for you. Which format do you need it in? Where/how do you want to use this map? Do you want to do it one time or every week?</p></div>
+            <div class="comment-info" id="comment-68014-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Feb '19, 06:31)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="68015"></a>
+        <div class="comment" id="comment-68015">
+            <div id="post-68015-score" class="comment-score"></div>
+            <div class="comment-text"><p>OSM data does not have a layer model, so your assumption is wrong.</p></div>
+            <div class="comment-info" id="comment-68015-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Feb '19, 10:25)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="68016"></a>
+        <div class="comment" id="comment-68016">
+            <div id="post-68016-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you want the list of street names to have location data associated with them or just a raw list of names?</p></div>
+            <div class="comment-info" id="comment-68016-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Feb '19, 13:22)</span>
+                <a class="comment-user userinfo" href="/users/16260/rassilon">Rassilon</a>
+                
+            </div>
+        </div>
+    
+        <a name="68024"></a>
+        <div class="comment" id="comment-68024">
+            <div id="post-68024-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I thank all of you.
+I'm glad to learn that my assumption concerning the layers was wrong.</p>
+
+<p>To aseereI4c26 I will answer
+ - I would do it only once.
+ - I would use it for some articles about Berlin that I'm writing for Wikipedia.
+I would use this simple map in order to show the administrative units ans sub-units of
+ the town, tracing their frontiers and filling them with different colors.
+ - I cannot really answer the question "what a map is for me". I guess something that shows on a computer screen as a design corresponding to a peace of the Earth.</p>
+
+<p>I started to read a book by Jonathan Bennet, which explain how to conceive a map as a set of data - but this book is oriented to helping you to add a new piece of map or adding new pieces of information to a map.
+I am looking in a certain way for the opposite: there is a map (of the world) with plenty of information. I would like (1)to extract the part of this map relative to Berlin and (2) choose which information to keep. 
+Is there a book or an article which explains how to do it?</p>
+
+<p>Tank you again.
+Piero</p></div>
+            <div class="comment-info" id="comment-68024-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Feb '19, 00:41)</span>
+                <a class="comment-user userinfo" href="/users/16286/juanaines">Juanaines</a>
+                
+            </div>
+        </div>
+    
+        <a name="68028"></a>
+        <div class="comment" id="comment-68028">
+            <div id="post-68028-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/16286/pierocaracciolo"></a><a href="https://help.openstreetmap.org/users/16286/pierocaracciolo">@pierocaracciolo</a>: thanks, let me put your request into short clear words: <em>make a schematic map graphic (possibly in svg as output format) of a city with only few information (streets, street names, and you plan to colourise the administrative units and sub-units of  the town.</em>  If that is true, please edit your question text and title accordingly. Your "(1) and (2)" in your last comment is also a good description what you want to do.</p></div>
+            <div class="comment-info" id="comment-68028-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Feb '19, 09:25)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="68029"></a>
+        <div class="comment not_top_scorer" id="comment-68029">
+            <div id="post-68029-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/16286/pierocaracciolo">@pierocaracciolo</a>: since in the end you want to use the produced map for Wikipedia and instead of doing it yourself, you could ask your fellow experienced Wikipedia map makers for help: <a href="https://en.wikipedia.org/wiki/Wikipedia:Graphics_Lab/Map_workshop">https://en.wikipedia.org/wiki/Wikipedia:Graphics_Lab/Map_workshop</a> (if you ask there, please mention it here) .  But likely someone here will provide you with a good way to go, too.</p></div>
+            <div class="comment-info" id="comment-68029-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Feb '19, 09:28)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="68037"></a>
+        <div class="comment not_top_scorer" id="comment-68037">
+            <div id="post-68037-score" class="comment-score"></div>
+            <div class="comment-text"><p>A deep thank you.</p></div>
+            <div class="comment-info" id="comment-68037-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Feb '19, 17:03)</span>
+                <a class="comment-user userinfo" href="/users/16286/juanaines">Juanaines</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68012" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68012-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/68012/map-with-little-information?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/68012/map-with-little-information?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/68012/map-with-little-information?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/68012/map-with-little-information?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="68025"></a>
+                    <div id="answer-container-68025" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-68025-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68025/up/" rel="nofollow"> </a>
+<div id="post-68025-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-68025-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68025/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I am sorry, your first post sounded like you only wanted the names, but no streets. So you are saying you want a map with only streets and street names? You can download the OSM map here <a href="http://download.geofabrik.de/europe/germany/berlin.html">http://download.geofabrik.de/europe/germany/berlin.html</a>
+Not sure which program or format would be best but in my limited experience I would download the shapefile and load it into QGIS. Then right click on the file in the layers box and check out the filters.
+Others probably know a better way.</p>
+<p>Edit: I just checked that Berlin file. Even easier just unzip it and there will be a file called gis_osm_roads_free_1.shp that has only the streets.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/68025/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Feb '19, 01:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a69c47928edc8d3686d5236d45f1f146?s=32&amp;d=identicon&amp;r=g" alt="Rassilon's gravatar image" />
+    <p><a href="/users/16260/rassilon">Rassilon</a><br/>
+    <span class="score" title="15 reputation points">15</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Rassilon has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/68025/">
+                edited
+                <strong>16 Feb '19, 02:19</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-68025">
+    
+        <a name="68038"></a>
+        <div class="comment" id="comment-68038">
+            <div id="post-68038-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you a lot.</p></div>
+            <div class="comment-info" id="comment-68038-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Feb '19, 17:04)</span>
+                <a class="comment-user userinfo" href="/users/16286/juanaines">Juanaines</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68025" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68025-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/68012/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='uTTboA05GxRDib8iJ2IoVUcFMWmGbRx0' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68012/map-with-little-information?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68012/map-with-little-information?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/export/"
+            class="tag-link-export"
+            title="see questions tagged'export'using tags"
+            rel="tag">export</a> <span class="tag-number">&#215;315</span><br/>
+        
+        <a href="/tags/extract/"
+            class="tag-link-extract"
+            title="see questions tagged'extract'using tags"
+            rel="tag">extract</a> <span class="tag-number">&#215;83</span><br/>
+        
+        <a href="/tags/layers/"
+            class="tag-link-layers"
+            title="see questions tagged'layers'using tags"
+            rel="tag">layers</a> <span class="tag-number">&#215;69</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 15, 2019, 1:02 a.m.">15 Feb '19, 01:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,166 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 17, 2019, 5:04 p.m.">17 Feb '19, 17:04</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/28727/cant-export-anything-other-than-osm">Can&#39;t export anything other than OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48693/downloading-and-parsing-osm-graph-data">Downloading and parsing OSM graph data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10478/exporting-osm-tiles">Exporting OSM Tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23478/help-finding-additional-layers">Help Finding Additional Layers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41915/extract-osm-data-for-zoom-1-4">Extract osm data for zoom 1-4</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42113/how-to-share-download-an-image-of-one-layer-and-not-only-the-standard-layer">How to share (download) an image of one layer and not only the &quot;standard layer&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1590/export-road-way-data-for-large-regions">Export Road (Way) data for large regions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/713/how-to-extract-partial-data-for-large-regions">How to extract partial data for large regions ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13155/how-to-extract-a-trail-on-osm-and-put-in-on-my-gps">How to extract a trail on OSM and put in on my GPS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1546/osm-in-we-travel">OSM in We-Travel</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

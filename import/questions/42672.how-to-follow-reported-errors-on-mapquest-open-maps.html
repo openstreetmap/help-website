@@ -1,0 +1,954 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to follow reported errors on mapquest open maps? - OSM Help</title>
+        <meta name="description" content="Hello,  I bought a software that uses openstreetmap API. I&#39;ve noticed some mapping errors while using this software, so I&#39;d like to report them. For example on that website http://open.mapquest.fr/ , if I search &quot;rue pasteur villeneuve d&#39;ascq (France)&quot; I get 2 results. This is a mistake, only the fi..." />
+        <meta name="keywords" content="mapquest,reporting,newbie,error" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/42672/how-to-follow-reported-errors-on-mapquest-open-maps" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/42672/how-to-follow-reported-errors-on-mapquest-open-maps?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='aly6zBiKw9dtjkBhX1rBkfMgjAqpuDz3' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/42672/how-to-follow-reported-errors-on-mapquest-open-maps">How to follow reported errors on mapquest open maps?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-42672-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42672/up/" rel="nofollow"> </a>
+<div id="post-42672-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-42672-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42672/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/42672/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, </p>
+<p>I bought a software that uses openstreetmap API. I've noticed some mapping errors while using this software, so I'd like to report them.</p>
+<p>For example on that website <a href="http://open.mapquest.fr/">http://open.mapquest.fr/</a> , if I search "rue pasteur villeneuve d'ascq (France)" I get 2 results. This is a mistake, only the first result is correct.</p>
+<p>So I clicked on "report an error" for the 2nd result and explained this.
+I got a message "Error created: 3146532"</p>
+<p>What is this number related to? 
+How can I follow this error? Who's in charge of correcting, and how can I know it's done? </p>
+<p>Thanks, and sorry for asking such a basic question, I'm quite new to all of this. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mapquest/" class="post-tag tag-link-mapquest"
+                                        title="see questions tagged 'mapquest'" rel="tag">mapquest</a>
+                                
+                                    <a href="/tags/reporting/" class="post-tag tag-link-reporting"
+                                        title="see questions tagged 'reporting'" rel="tag">reporting</a>
+                                
+                                    <a href="/tags/newbie/" class="post-tag tag-link-newbie"
+                                        title="see questions tagged 'newbie'" rel="tag">newbie</a>
+                                
+                                    <a href="/tags/error/" class="post-tag tag-link-error"
+                                        title="see questions tagged 'error'" rel="tag">error</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Apr '15, 08:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/aa10dd57089a2fc8df7a7e474e9ed9e7?s=32&amp;d=identicon&amp;r=g" alt="A%20Macquet's gravatar image" />
+    <p><a href="/users/10910/a-macquet">A Macquet</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="A Macquet has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/42672/">
+                edited
+                <strong>30 Apr '15, 14:33</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-42672">
+    
+        <a name="42735"></a>
+        <div class="comment" id="comment-42735">
+            <div id="post-42735-score" class="comment-score">2</div>
+            <div class="comment-text"><p>If you want to report a problem with our map data in future, it is more easy/useful if you use our error reporting system: "<a href="//wiki.openstreetmap.org/wiki/Notes">Notes</a>" – or try to fix yourself (see also Simon's answer). Just be careful to not "fix" something which is not broken in the data but in the software (Nominatim or whereever). :-)</p></div>
+            <div class="comment-info" id="comment-42735-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '15, 13:51)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42739"></a>
+        <div class="comment" id="comment-42739">
+            <div id="post-42739-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Just be careful to not "fix" something
+which is not broken in the data but in
+the software (Nominatim or whereever).</p>
+</blockquote>
+
+<p>I'm sorry I don't get it. What do you mean? </p>
+
+<p>In the future, should I correct the map directly on openstreetmap.org through the iD tool? It's quiet easy to use.</p></div>
+            <div class="comment-info" id="comment-42739-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '15, 14:18)</span>
+                <a class="comment-user userinfo" href="/users/10910/a-macquet">A Macquet</a>
+                
+            </div>
+        </div>
+    
+        <a name="42741"></a>
+        <div class="comment" id="comment-42741">
+            <div id="post-42741-score" class="comment-score"></div>
+            <div class="comment-text"><p>I mean that e.g. for <a href="https://www.openstreetmap.org/search?query=Berliner+Stra%C3%9Fe%2C+Frankfurt+am+Main#map=17/50.11431/8.68329">this query</a> several results are right, so there you should not edit the data to only get one result. More or less applicable info/explanation of such issues: <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer</a></p>
+
+<p>Yes, you should correct the map directly if the data is wrong. If you are not sure, just ask.</p></div>
+            <div class="comment-info" id="comment-42741-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '15, 14:28)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42742"></a>
+        <div class="comment" id="comment-42742">
+            <div id="post-42742-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, thank you very much for your help and explanations.</p></div>
+            <div class="comment-info" id="comment-42742-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '15, 14:41)</span>
+                <a class="comment-user userinfo" href="/users/10910/a-macquet">A Macquet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-42672" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42672-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/42672/how-to-follow-reported-errors-on-mapquest-open-maps?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/42672/how-to-follow-reported-errors-on-mapquest-open-maps?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/42672/how-to-follow-reported-errors-on-mapquest-open-maps?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/42672/how-to-follow-reported-errors-on-mapquest-open-maps?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="42673"></a>
+                    <div id="answer-container-42673" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-42673-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42673/up/" rel="nofollow"> </a>
+<div id="post-42673-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-42673-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42673/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi and welcome to OpenStreetMap</p>
+<p>While reporting an error is naturally OK, OSM is really about fixing issues and mapping yourself. And, just on 1st principles, given that you are the person that has run in to an issue you are the best suited and motivated to resolve the problem.</p>
+<p>Most things in OSM are fairly easy to do, so you shouldn't have concerns. If you want to try and fix the issue yourself  <a href="http://www.openstreetmap.org/fixthemap">http://www.openstreetmap.org/fixthemap</a> Further there is a strong French OSM community that you can turn to for help <a href="http://openstreetmap.fr/">http://openstreetmap.fr/</a> </p>
+<p>Now back to your concrete issue: many organisations use OSM data to power their applications and MapQuest is one of them. There are a number of MQ employees in the active OSM community and I'll point your question out to them given that they know what is actually being done behind the scenes.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/42673/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Apr '15, 08:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/42673/">
+                edited
+                <strong>29 Apr '15, 09:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-42673">
+    
+        <a name="42675"></a>
+        <div class="comment" id="comment-42675">
+            <div id="post-42675-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hi Simon and thanks for answering me.</p>
+
+<p>Yeah if someone from MQ could tell me what happens once an error number is given after a click on "report en error", I'd appreciate.
+Because once you've have clicked, you really don't know what happens next.</p>
+
+<p>Meanwhile I'll try to fix the issue by myself.</p></div>
+            <div class="comment-info" id="comment-42675-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '15, 08:57)</span>
+                <a class="comment-user userinfo" href="/users/10910/a-macquet">A Macquet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-42673" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42673-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="42702"></a>
+                    <div id="answer-container-42702" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-42702-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42702/up/" rel="nofollow"> </a>
+<div id="post-42702-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-42702-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42702/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Those errors go to <a href="http://wiki.openstreetmap.org/wiki/MapDust">MapDust</a>. In this particular case you can see that the OpenStreetMap-hosted Nominatim instance also <a href="http://nominatim.openstreetmap.org/search.php?q=rue+pasteur+villeneuve+d%27ascq+%28France%29">returns two results</a>, so there's nothing MapQuest specific happening with the error.</p>
+<p>This specific result appears to be because there are two streets named Rue Pasteur, one a <a href="http://nominatim.openstreetmap.org/details.php?place_id=89563321">tertiary highway</a> and the other a <a href="http://nominatim.openstreetmap.org/details.php?place_id=121180864">pedestrian highway</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/42702/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Apr '15, 18:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5634c46072077e10f5b7c0da9b4bbb62?s=32&amp;d=identicon&amp;r=g" alt="pnorman's gravatar image" />
+    <p><a href="/users/290/pnorman">pnorman</a><br/>
+    <span class="score" title="2352 reputation points"><span class="">2.4k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="21 badges"><span class="silver">&#9679;</span><span class="badgecount">21</span></span><span title="40 badges"><span class="bronze">&#9679;</span><span class="badgecount">40</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="pnorman has 9 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-42702">
+    
+        <a name="42704"></a>
+        <div class="comment" id="comment-42704">
+            <div id="post-42704-score" class="comment-score"></div>
+            <div class="comment-text"><p>A bit more clear (regarding the original question): so, to "follow reported errors on [Mapquest] maps" you need to go to <a href="http://www.mapdust.com">http://www.mapdust.com</a> and enter the error number in the big search box ("Bug ID") on the top. There you can see comments from other user and/or leave additional comments yourself.</p>
+
+<p>You may want to integrate this into your answer, <a href="http://help.openstreetmap.org/users/290/pnorman"></a><a href="http://help.openstreetmap.org/users/290/pnorman">@pnorman</a>.</p></div>
+            <div class="comment-info" id="comment-42704-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '15, 20:56)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42706"></a>
+        <div class="comment" id="comment-42706">
+            <div id="post-42706-score" class="comment-score"></div>
+            <div class="comment-text"><p>regarding the problem itself and to make it explicit: as far as I can see this (several objects with the same street name) is a perfectly okay data situation (with our current, usual street data model/tagging). Nothing has to be fixed in the data here. </p>
+
+<p>Oh, wait, A Macquet says "only the first result is correct". Is the street named wrongly?  Okay, well, we will discuss it at the bug report - that is the better location. The bug is there: <a href="http://www.mapdust.com/detail/3146532">http://www.mapdust.com/detail/3146532</a> - <a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@A</a> Macquet: please click on the "comments / additional info" tab to see my comment and leave your answer there.</p></div>
+            <div class="comment-info" id="comment-42706-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '15, 21:06)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42723"></a>
+        <div class="comment" id="comment-42723">
+            <div id="post-42723-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi</p>
+
+<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> -&gt; thanks for the informations about mapdust. I answered you there for details about my request.</p></div>
+            <div class="comment-info" id="comment-42723-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '15, 09:09)</span>
+                <a class="comment-user userinfo" href="/users/10910/a-macquet">A Macquet</a>
+                
+            </div>
+        </div>
+    
+        <a name="42945"></a>
+        <div class="comment" id="comment-42945">
+            <div id="post-42945-score" class="comment-score"></div>
+            <div class="comment-text"><p>Looking at Mapdust plugin's changelog, I gotta wonder if that database is dead, and if there's any OSMbugs style conflation with Notes upcoming.</p></div>
+            <div class="comment-info" id="comment-42945-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '15, 18:32)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+        <a name="42946"></a>
+        <div class="comment" id="comment-42946">
+            <div id="post-42946-score" class="comment-score">1</div>
+            <div class="comment-text"><p>FWIW "scout" notes get added straight into OSM.  Telenav bought Skobbler, and "Scout" is their product in the US, I believe.  To see current "scout" notes you can look at:</p>
+
+<p><a href="http://api.openstreetmap.org/api/0.6/notes/search?q=scout&amp;closed=0">http://api.openstreetmap.org/api/0.6/notes/search?q=scout&amp;closed=0</a></p>
+
+<p>Like Skobbler notes, many are not especially helpful:</p>
+
+<p><a href="https://www.openstreetmap.org/note/359352">https://www.openstreetmap.org/note/359352</a></p>
+
+<p>IMHO it wouldn't be beneficial to add the notes from mapdust to OSM as notes - most of them are useless.</p></div>
+            <div class="comment-info" id="comment-42946-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '15, 18:56)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-42702" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42702-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/42672/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='aly6zBiKw9dtjkBhX1rBkfMgjAqpuDz3' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/42672/how-to-follow-reported-errors-on-mapquest-open-maps?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/42672/how-to-follow-reported-errors-on-mapquest-open-maps?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/error/"
+            class="tag-link-error"
+            title="see questions tagged'error'using tags"
+            rel="tag">error</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/newbie/"
+            class="tag-link-newbie"
+            title="see questions tagged'newbie'using tags"
+            rel="tag">newbie</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/mapquest/"
+            class="tag-link-mapquest"
+            title="see questions tagged'mapquest'using tags"
+            rel="tag">mapquest</a> <span class="tag-number">&#215;28</span><br/>
+        
+        <a href="/tags/reporting/"
+            class="tag-link-reporting"
+            title="see questions tagged'reporting'using tags"
+            rel="tag">reporting</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 29, 2015, 8:24 a.m.">29 Apr '15, 08:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,834 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 7, 2015, 6:56 p.m.">07 May '15, 18:56</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/47255/how-to-get-accident-or-vandalism-fixed-in-northfield-nj">How to get accident or vandalism fixed in Northfield, NJ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18197/reporting-base-map-error-needing-correction">reporting base map error needing correction</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30517/how-do-i-modify-the-key-for-many-elements-around-a-university-campus">How do I modify the key for many elements around a university campus?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39706/an-error-occurred-while-trying-to-save">An error occurred while trying to save</a>
+        </p>
+        
+        <p>
+            <a href="/questions/816/how-can-i-draw-attention-of-other-osm-users-to-unnamed-and-missing-streets-in-a-city">How can I draw attention of other OSM users to unnamed and missing streets in a city?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30133/correction-of-road-on-north-of-minas-gerais">Correction of road, on north of Minas Gerais.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1012/fixing-a-subway-stop">Fixing a subway stop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24/how-does-tilesathome-th-work">How does tilesAtHome (t@h) work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1301/ajax-issues-with-nominatim">[closed] Ajax issues with nominatim?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

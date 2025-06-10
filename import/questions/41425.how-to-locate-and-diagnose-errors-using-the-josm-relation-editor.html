@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to locate and diagnose errors using the JOSM Relation Editor - OSM Help</title>
+        <meta name="description" content="I received the dreaded &quot;multipolygon not closed&quot; error message recently. There was apparently a &quot;gap&quot; somewhere that prevented the 105-member multipolygon I was working on from compiling as it should. Try as I might I could not locate the error or gap or whatever the problem was by using any of the ..." />
+        <meta name="keywords" content="josm,zoom,relations,gap" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/41425/how-to-locate-and-diagnose-errors-using-the-josm-relation-editor" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/41425/how-to-locate-and-diagnose-errors-using-the-josm-relation-editor?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='OTRMSo9QWlZ51tUmxjtnclvaAaQuXvqa' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/41425/how-to-locate-and-diagnose-errors-using-the-josm-relation-editor">How to locate and diagnose errors using the JOSM Relation Editor</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-41425-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/41425/up/" rel="nofollow"> </a>
+<div id="post-41425-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-41425-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/41425/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/41425/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I received the dreaded "multipolygon not closed" error message recently. There was apparently a "gap" somewhere that prevented the 105-member multipolygon I was working on from compiling as it should. Try as I might I could not locate the error or gap or whatever the problem was by using any of the built-in functions of the Relation Editor. I was able to resolve the problem but the Relation Editor wasn't much help. </p>
+<p>There is a function in the Relation Editor that is supposed to allow one to visualize, even to highlight, such a "gap" and perhaps it did that, but it never told me what sort of gap it was. I was looking for a place where I had forgotten to join two ways. That is the usual reason for such an error message. As it turned out, I had forgotten to change the role of a large way segment from inner to outer. But neither the message nor the Relation Editor UI gave me that critical piece of information.</p>
+<p>The only readable mention besides patch reports in the JOSM Wiki about "zoom to gap" I was able to find was this: "When fixing larger (route-)relations it would be very helpful if there were buttons within the Relation Editor for jumping to the next or previous gap in the graph." I would add, and then add to the documentation a short description of how to use those buttons. A definition of exactly what a gap is would also help.</p>
+<p>Taking a look at the Relation Editor dialog box on <a href="http://josm.openstreetmap.de/wiki/Help/Dialog/RelationEditor">this page</a>, we can see three columns in the the <em>Members</em> section at lower left. There are explanations that help me understand what <em>Role</em> and <em>Refers To</em> mean but what about the third column? I'm sure it has a useful function but I cannot determine what that might be. Also, on the far left there is a Sort button. Press it to sort the Members, Press it again to sort them in reverse. But what is the sorting based on? Moreover, why would one sort them in the first place?</p>
+<p>The Relation Editor is a powerful tool that is, IMO, really not documented very well. Reading the Help pages is sort of like listening to a hundred TV News reports about a war. The overall story about how to use the tool effectively is hidden within a thousand small stories.</p>
+<p>I'm not complaining about the tool itself or the people who wrote the code to implement it but I need to learn how to use it more effectively. Is there anyplace where this is all written down and explained?</p>
+<p><a href="http://josm.openstreetmap.de/attachment/wiki/Help/Dialog/RelationEditor/relation_editor.png">Relation Editor window</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/zoom/" class="post-tag tag-link-zoom"
+                                        title="see questions tagged 'zoom'" rel="tag">zoom</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                                    <a href="/tags/gap/" class="post-tag tag-link-gap"
+                                        title="see questions tagged 'gap'" rel="tag">gap</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Feb '15, 10:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/04dddf6f5ffde333747d385af3ce5829?s=32&amp;d=identicon&amp;r=g" alt="AlaskaDave's gravatar image" />
+    <p><a href="/users/5016/alaskadave">AlaskaDave</a><br/>
+    <span class="score" title="5415 reputation points"><span class="">5.4k</span></span><span title="76 badges"><span class="badge1">&#9679;</span><span class="badgecount">76</span></span><span title="107 badges"><span class="silver">&#9679;</span><span class="badgecount">107</span></span><span title="164 badges"><span class="bronze">&#9679;</span><span class="badgecount">164</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AlaskaDave has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-41425">
+    
+        <a name="41435"></a>
+        <div class="comment" id="comment-41435">
+            <div id="post-41435-score" class="comment-score"></div>
+            <div class="comment-text"><p>An alternative (not JOSM and works only works if the relation is already uploaded): With <a href="http://ra.osmsurround.org/analyzeRelation">http://ra.osmsurround.org/analyzeRelation</a> you can see the gaps easily on a map (markers at all ends).</p></div>
+            <div class="comment-info" id="comment-41435-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '15, 13:09)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-41425" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-41425-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/41425/how-to-locate-and-diagnose-errors-using-the-josm-relation-editor?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/41425/how-to-locate-and-diagnose-errors-using-the-josm-relation-editor?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/41425/how-to-locate-and-diagnose-errors-using-the-josm-relation-editor?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/41425/how-to-locate-and-diagnose-errors-using-the-josm-relation-editor?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="41434"></a>
+                    <div id="answer-container-41434" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-41434-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/41434/up/" rel="nofollow"> </a>
+<div id="post-41434-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-41434-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/41434/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="AlaskaDave has selected this answer as the correct answer"
+        href="/accept_answer/41434/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I am not sure if I am understanding your problem correctly, but will try:</p>
+<p>@"what about the third column": see <a href="https://josm.openstreetmap.de/wiki/Help/Dialog/RelationEditor">Help/Dialog/RelationEditor</a>: "on the right information about neighbor ways' connections useful for consistency checks like checking that the members of a multipolygon form closed ways or that a route is a complete line without missing some ways in the middle."</p>
+<p>This only works in a useful way if the relation members are sorted. You can do that either manually or with the button which you have discovered. If I remember correctly: If you just press the button it sorts all the members. But you also could select only a part of the members (in the "Members" list) and then press it - then only those will be sorted. What the sorting does? From what I saw in the past it tries to sort them in a way that they are in an order which allows you do jump from one member to the next member. Meaning: the end nodes of a member way will be shared with the previous/next member way in the "Members" list. </p>
+<p>The red points (see the "third column") mean that there is no connection to the prev/next member.</p>
+<p><em>Addition:</em> Apparently you were quoting from (among others) <a href="https://josm.openstreetmap.de/ticket/7168">ticket 7168</a> ("Add a "jump to gap" functionality to the relation editor") – which has been implemented if I read correctly. I think I never used this function myself. Okay, I think I have found it: It is accessible via a right click in the "Members" list. But <em>seems</em> to only work with sorted members, it just searches for the next red point in the "third column". <em>/Addition</em></p>
+<p>Just a general note: I think it is a good practise not to blindly click the sort button when you encounter a relation which appears to be slightly unsorted. At least check  which  type of relation it is, maybe check the history for comments.</p>
+<p>And one more: Once you've understood the relation editor and tried a few times, please help to improve the JOSM help page. It is a wiki, you do not need to be a programmer to change it. Sign up, log in and edit.</p>
+<p>The JOSM help should be the "place where this is all written down and explained". You will find a bit also at e.g. <a href="https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing#Relations">https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing#Relations</a> but that is more basic.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/41434/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Mar '15, 12:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/41434/">
+                edited
+                <strong>01 Mar '15, 20:21</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-41434">
+    
+        <a name="41436"></a>
+        <div class="comment" id="comment-41436">
+            <div id="post-41436-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks asseerel, that's a help. I will try to educate myself more fully as I go and, should I gain enough experience and understanding, would definitely add some clarifications to the Wiki. </p>
+
+<p>I will also give the <em>Relation Analyzer</em> a shot tomorrow.</p></div>
+            <div class="comment-info" id="comment-41436-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '15, 13:14)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-41434" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-41434-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="41428"></a>
+                    <div id="answer-container-41428" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-41428-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/41428/up/" rel="nofollow"> </a>
+<div id="post-41428-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-41428-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/41428/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi Alaska Dave, why going into the Relation Editor ? If you use JOSM, the build in tool validations with warnings; makes perfectly clear with yellow dots where the mistake can be found.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/41428/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Feb '15, 15:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-41428">
+    
+        <a name="41433"></a>
+        <div class="comment" id="comment-41433">
+            <div id="post-41433-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Not really. In a a large relation with many members the yellow overlay is not enough to pinpoint where the error is. Nor do the yellow lines or error message indicate what the error is. In the case I mentioned the polygon was indeed "not closed" but it was because an inner member should have been an outer. A better error message would have saved much time.</p></div>
+            <div class="comment-info" id="comment-41433-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '15, 23:45)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="41455"></a>
+        <div class="comment" id="comment-41455">
+            <div id="post-41455-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, looking at the yellow dots or ways solves the problem most of the time.</p></div>
+            <div class="comment-info" id="comment-41455-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '15, 15:24)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-41428" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-41428-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/41425/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='OTRMSo9QWlZ51tUmxjtnclvaAaQuXvqa' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/41425/how-to-locate-and-diagnose-errors-using-the-josm-relation-editor?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/41425/how-to-locate-and-diagnose-errors-using-the-josm-relation-editor?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/zoom/"
+            class="tag-link-zoom"
+            title="see questions tagged'zoom'using tags"
+            rel="tag">zoom</a> <span class="tag-number">&#215;107</span><br/>
+        
+        <a href="/tags/gap/"
+            class="tag-link-gap"
+            title="see questions tagged'gap'using tags"
+            rel="tag">gap</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 28, 2015, 10:43 a.m.">28 Feb '15, 10:43</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,981 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 2, 2015, 3:24 p.m.">02 Mar '15, 15:24</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/9613/filter-relation-by-member-tag">Filter relation by member tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28602/what-does-the-warning-role-reverse-unknown-role-verification-problem-mean-in-josm">What does the warning &quot;role reverse unknown - role verification problem&quot; mean in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8196/adding-ways-to-relation-without-visual-editor">Adding ways to relation without visual editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9139/removing-inner-relations">Removing inner relations</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21377/help-me-understand-warning-messages-for-relation-id2871705">Help me understand warning messages for relation id=2871705</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27086/problem-with-relation-roles">Problem with relation roles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4255/josm-copy-relations-from-one-way-to-another">JOSM - Copy relations from one way to another</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5629/no-outer-way-errors">No outer way errors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/903/relations-in-josm">Relations in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34169/is-it-possible-to-load-all-relation-members-to-josm-via-remote-control">Is it possible to load all relation members to JOSM via remote control?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can I render high Zoom tiles by render_list command ? - OSM Help</title>
+        <meta name="description" content="Hello  I am refering this  https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1804_tileserver_load#An_example_site for zoom upto 10 , i need to do bellow  render_list -n 1 -s /var/run/renderd/renderd.sock -z 0 -Z 10 -m ajt -a now  if i do bellow, will it render zoom level upto 18 , i actual..." />
+        <meta name="keywords" content="rendering" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/64107/can-i-render-high-zoom-tiles-by-render_list-command" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/64107/can-i-render-high-zoom-tiles-by-render_list-command?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='xuUy6m5rbW0Qv3sU3Y4qcg2ncfnvxRUa' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/64107/can-i-render-high-zoom-tiles-by-render_list-command">Can I render high Zoom tiles by render_list command ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-64107-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64107/up/" rel="nofollow"> </a>
+<div id="post-64107-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-64107-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64107/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/64107/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello 
+I am refering this 
+<a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1804_tileserver_load#An_example_site">https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1804_tileserver_load#An_example_site</a>
+for zoom upto 10 , i need to do bellow
+ render_list -n 1 -s /var/run/renderd/renderd.sock -z 0 -Z 10 -m ajt  -a</p>
+<p>now </p>
+<p>if i do bellow, will it render zoom level upto 18  , i actually tryed but dont think it work, it always does upto 9
+ render_list -n 1 -s /var/run/renderd/renderd.sock -z 0 -Z 18 -m ajt  -a</p>
+<p>Please let me know </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Jun '18, 18:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7bb2a94f867841b58214be09992831d3?s=32&amp;d=identicon&amp;r=g" alt="fosiul's gravatar image" />
+    <p><a href="/users/15162/fosiul">fosiul</a><br/>
+    <span class="score" title="96 reputation points">96</span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="fosiul has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-64107">
+    
+</div>
+<div id="comment-tools-64107" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64107-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/64107/can-i-render-high-zoom-tiles-by-render_list-command?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/64107/can-i-render-high-zoom-tiles-by-render_list-command?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/64107/can-i-render-high-zoom-tiles-by-render_list-command?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/64107/can-i-render-high-zoom-tiles-by-render_list-command?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="64113"></a>
+                    <div id="answer-container-64113" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64113-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64113/up/" rel="nofollow"> </a>
+<div id="post-64113-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-64113-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64113/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="fosiul has selected this answer as the correct answer"
+        href="/accept_answer/64113/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It wouldn't be practical to use "<code>render_list</code>" to try and render all tiles worldwide up to zoom level 18, for the reasons described <a href="https://wiki.openstreetmap.org/wiki/Tile_disk_usage">here</a>.  Most tiles at that zoom level are just sea; there's no point in pre-rendering them.  Assuming that you actually have an area that you are interested in I'd suggesting using <a href="https://github.com/alx77/render_list_geo.pl"><code></code></a><code><a href="https://github.com/alx77/render_list_geo.pl">https://github.com/alx77/render_list_geo.pl</a></code> to pre-render tiles in that area.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64113/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jun '18, 00:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64113">
+    
+        <a name="64115"></a>
+        <div class="comment" id="comment-64115">
+            <div id="post-64115-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>,
+Thanks, basically I am interested in 3 Country for now , UK,Spain and Bangladesh. 
+my understanding is, if i can render all tiles with zoom 18 before hand , it will speed up the user experinece when they will use our map,  system will not need to render the tile on demand, 
+is that a right assumption ? 
+what i see is, when i browse somes tiles of  some new area it takes bit time to come but next time when i try to view those area it comes very fast .</p>
+
+<p>Please let  me know.</p>
+
+<p>Thanks</p></div>
+            <div class="comment-info" id="comment-64115-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '18, 01:02)</span>
+                <a class="comment-user userinfo" href="/users/15162/fosiul">fosiul</a>
+                
+            </div>
+        </div>
+    
+        <a name="64153"></a>
+        <div class="comment" id="comment-64153">
+            <div id="post-64153-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>,</p>
+
+<p>after I ran render with  "render_list -n 1 -s /var/run/renderd/renderd.sock -z 0 -Z 11 -m ajt -a" 
+now lower tiles in one country (Bangladesh ) is not showing .</p>
+
+<p>I can see Rendering happening when i try to browse the map but on Screen is totally white. 
+Ref:<a href="https://ibb.co/cwUyso">https://ibb.co/cwUyso</a>
+however some higher zoom map are showing although not fully visible.
+<a href="https://ibb.co/bQaeXo">https://ibb.co/bQaeXo</a>
+and map for UK is fine.</p>
+
+<p>Please let me know what could be wrong ? I am forcing rendering with Zoom 10 again to see if that helps</p>
+
+<p>but Please put some light on this</p>
+
+<p>Thanks</p></div>
+            <div class="comment-info" id="comment-64153-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jun '18, 09:17)</span>
+                <a class="comment-user userinfo" href="/users/15162/fosiul">fosiul</a>
+                
+            </div>
+        </div>
+    
+        <a name="64154"></a>
+        <div class="comment" id="comment-64154">
+            <div id="post-64154-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Is there definitely data from UK,Spain and Bangladesh in your rendering database?  <a href="https://www.openstreetmap.org/way/75134987">https://www.openstreetmap.org/way/75134987</a> is a tertiary road in Bangladesh, so:</p>
+
+<pre><code>psql gis
+SELECT tags FROM planet_osm_ways WHERE (id = 75134987);
+</code></pre>
+
+<p>should return something.  If it doesn't maybe you loaded Bangladesh first, and then replaced it with the UK?  You'll need to combine it all the data together to load it in the rendering database.</p></div>
+            <div class="comment-info" id="comment-64154-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jun '18, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64158"></a>
+        <div class="comment" id="comment-64158">
+            <div id="post-64158-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi 
+Yes, Currently I only loaded Bangladsh and UK.  ( I have not loaded the spain yet)
+UK map does not have any problem, but Bangladesh map, it was fine, but after Rendering with  11, now low zoom map not comming at all, but some high zoom map comming but they not complete ...</p>
+
+<p>Your Sql provie bellow out put so does it mean Bangaldesh Data got removed ?  then how i am seeing some Map with high zoom ? ( may be comming from cache ? ) </p>
+
+<p>postgres@opentile2:~$ psql gis
+psql (9.5.12)
+Type "help" for help.</p>
+
+<p>gis=# SELECT tags FROM planet_osm_ways WHERE (id = 75134987);
+ tags</p>
+
+<p></p><hr>
+<p>(0 rows)</p>
+<p>Also intially i did this </p>
+<p>osm2pgsql -d gis --create --slim  -G --hstore --tag-transform-script src/openstreetmap-carto/openstreetmap-carto.lua -C 2500 --number-processes 1 -S src/openstreetmap-carto/openstreetmap-carto.style data/bangladesh-latest.osm.pbf</p>
+<p>then last week in inserted UK data 
+osm2pgsql -d gis --create --slim  -G --hstore --tag-transform-script src/openstreetmap-carto/openstreetmap-carto.lua -C 2500 --number-processes 1 -S src/openstreetmap-carto/openstreetmap-carto.style data/great-britain-latest.osm.pbf</p>
+<p>so how do i combine both country ?</p><p></p></div>
+            <div class="comment-info" id="comment-64158-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jun '18, 11:43)</span>
+                <a class="comment-user userinfo" href="/users/15162/fosiul">fosiul</a>
+                
+            </div>
+        </div>
+    
+        <a name="64159"></a>
+        <div class="comment" id="comment-64159">
+            <div id="post-64159-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>so how do i combine both country ?</p>
+</blockquote>
+
+<p>osmosis is one way to do it, osmium probably another.  Have a look on this help site and elsewhere for osmosis examples.</p></div>
+            <div class="comment-info" id="comment-64159-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jun '18, 12:42)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64160"></a>
+        <div class="comment not_top_scorer" id="comment-64160">
+            <div id="post-64160-score" class="comment-score"></div>
+            <div class="comment-text"><p>ok let me have a look now  however, </p>
+
+<p>Can i use --append  ?
+ref : <a href="https://gis.stackexchange.com/questions/50745/merging-osm-files-with-osmosis-and-import-to-postgres-with-osm2pgsql">https://gis.stackexchange.com/questions/50745/merging-osm-files-with-osmosis-and-import-to-postgres-with-osm2pgsql</a></p>
+
+<p>or do you prefer to use osmosis ? </p>
+
+<p>also what I dont understand is, when I am go through the map of Dhaka, i see bellow log 
+why its trying to render if database does not have any information ?
+or its nothing to do with Rendering and having data into database ? </p>
+
+<p>ing render cmd(3 ajt 19/393731/226371) with protocol version 2 to fd 20
+Jun 11 12:42:17 opentile2 renderd[1804]: DEBUG: Sending render cmd(3 ajt 19/393730/226370) with protocol version 2 to fd 19
+Jun 11 12:42:17 opentile2 renderd[1804]: DEBUG: Connection 1, fd 20 closed, now 4 left
+Jun 11 12:42:17 opentile2 renderd[1804]: DEBUG: Connection 3, fd 23 closed, now 3 left
+Jun 11 12:42:17 opentile2 renderd[1804]: DEBUG: Connection 0, fd 19 closed, now 2 left
+Jun 11 12:42:17 opentile2 renderd[1804]: DEBUG: Connection 1, fd 22 closed, now 1 left
+Jun 11 12:42:17 opentile2 renderd[1804]: DEBUG: Connection 0, fd 21 closed, now 0 left</p></div>
+            <div class="comment-info" id="comment-64160-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jun '18, 12:45)</span>
+                <a class="comment-user userinfo" href="/users/15162/fosiul">fosiul</a>
+                
+            </div>
+        </div>
+    
+        <a name="64190"></a>
+        <div class="comment not_top_scorer" id="comment-64190">
+            <div id="post-64190-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeOneElse</a>,</p>
+
+<p>After I completed insert by using  "--append" , i started to render tiles with bellow by forcing to render</p>
+
+<p>sudo  render_list -n 4 -s /var/run/renderd/renderd.sock -z 1 -Z 10 -f  -m ajt  -a</p>
+
+<p>now what is worried me is, I had bangladesh Tiles in past , then while i try to insert UK map, bagnaldesh map got removed but what about those tiles which was creted in past ? </p>
+
+<p>by using -f , will it remove those old tiles for bangladesh and will re created again ? </p>
+
+<p>or it will keep the old tiles and will create new  one ? </p>
+
+<p>do you think it can cause problem ? </p>
+
+<p>Please let me know</p></div>
+            <div class="comment-info" id="comment-64190-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jun '18, 01:32)</span>
+                <a class="comment-user userinfo" href="/users/15162/fosiul">fosiul</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64113" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64113-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/64107/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='xuUy6m5rbW0Qv3sU3Y4qcg2ncfnvxRUa' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64107/can-i-render-high-zoom-tiles-by-render_list-command?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64107/can-i-render-high-zoom-tiles-by-render_list-command?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 8, 2018, 6:08 p.m.">08 Jun '18, 18:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,180 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 13, 2018, 1:32 a.m.">13 Jun '18, 01:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/125/how-do-i-stop-rivers-from-rendering-where-the-riverbanks-are-mapped">How do I stop rivers from rendering where the riverbanks are mapped?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/139/how-can-i-design-some-simple-maps">How can I design some simple maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a>
+        </p>
+        
+        <p>
+            <a href="/questions/242/how-to-download-rendered-osm-maps">How to download rendered OSM maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/361/why-render-abandoned-railways">[closed] Why render abandoned railways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/460/is-there-any-way-to-group-the-rendering-of-changes-to-the-public-map">Is there any way to group the rendering of changes to the public map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/815/am-i-doing-ok">Am i doing ok ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/840/problem-with-map-scale-when-generating-maps-with-osmarender">Problem with map scale when generating maps with Osmarender</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1/how-do-you-make-the-osm2pgsql-diff-imports-run-faster-than-molasses-on-postgres-84">How do you make the osm2pgsql diff imports run faster than molasses on postgres 8.4?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

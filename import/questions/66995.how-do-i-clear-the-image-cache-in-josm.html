@@ -1,0 +1,790 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I clear the image cache in JOSM - OSM Help</title>
+        <meta name="description" content="Is there a simple method to clear the imagery cache in JOSM? When I go to download an area near where I&#39;m mapping, boundaries of the Kodiak NWR I replaced two weeks ago still show unless I zoom in very close. Presumably, the data is stored somewhere and takes a while (a long while?) to update on JOS..." />
+        <meta name="keywords" content="josm,clear,image_cache" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/66995/how-do-i-clear-the-image-cache-in-josm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/66995/how-do-i-clear-the-image-cache-in-josm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='BG3U7m9CkgNEH03PopBipJBmH1vAnNxK' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/66995/how-do-i-clear-the-image-cache-in-josm">How do I clear the image cache in JOSM</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-66995-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66995/up/" rel="nofollow"> </a>
+<div id="post-66995-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-66995-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66995/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/66995/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is there a simple method to clear the imagery cache in JOSM?</p>
+<p>When I go to download an area near where I'm mapping, boundaries of the Kodiak NWR I replaced two weeks ago still show unless I zoom in very close. Presumably, the data is stored somewhere and takes a while (a long while?) to update on JOSM's internal slippy map.</p>
+<p>Cheers,</p>
+<p>Dave</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/clear/" class="post-tag tag-link-clear"
+                                        title="see questions tagged 'clear'" rel="tag">clear</a>
+                                
+                                    <a href="/tags/image_cache/" class="post-tag tag-link-image_cache"
+                                        title="see questions tagged 'image_cache'" rel="tag">image_cache</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Nov '18, 06:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/04dddf6f5ffde333747d385af3ce5829?s=32&amp;d=identicon&amp;r=g" alt="AlaskaDave's gravatar image" />
+    <p><a href="/users/5016/alaskadave">AlaskaDave</a><br/>
+    <span class="score" title="5415 reputation points"><span class="">5.4k</span></span><span title="76 badges"><span class="badge1">&#9679;</span><span class="badgecount">76</span></span><span title="107 badges"><span class="silver">&#9679;</span><span class="badgecount">107</span></span><span title="164 badges"><span class="bronze">&#9679;</span><span class="badgecount">164</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AlaskaDave has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/66995/">
+                edited
+                <strong>30 Nov '18, 06:02</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-66995">
+    
+</div>
+<div id="comment-tools-66995" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66995-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/66995/how-do-i-clear-the-image-cache-in-josm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/66995/how-do-i-clear-the-image-cache-in-josm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/66995/how-do-i-clear-the-image-cache-in-josm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/66995/how-do-i-clear-the-image-cache-in-josm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="66998"></a>
+                    <div id="answer-container-66998" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-66998-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66998/up/" rel="nofollow"> </a>
+<div id="post-66998-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-66998-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66998/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Go to JOSM's imagery preferences, go to the <a href="https://josm.openstreetmap.de/wiki/Help/Preferences/Imagery#Cachecontents">"Cache contents"</a> tab, and use the "Clear" button in the relevant line. </p>
+<p>The tiles for the JOSM download dialog window can be deleted by using the "delete" button in <a href="https://josm.openstreetmap.de/ticket/17054">the "<em>Mapnik</em>"</a> line (needs restarting afterwards).  <br>
+Technical details (and the hard way of deletion): The tiles are saved in  <code>~/.cache/JOSM/tiles</code>. For me exactly in the files <code>TMS_BLOCK_v2.data</code> and <code>TMS_BLOCK_v2.key</code> (stored with the key "Mapnik" if I see correctly). Deletion of the whole directory or just both files results in JOSM downloading the tiles when opening the download dialog.</p>
+<p>Tested with version 14460 on Linux. For cache paths of other operating systems see <a href="https://josm.openstreetmap.de/wiki/Help/Preferences#JOSMpreferencedatacachedirectories">JOSM help</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/66998/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Nov '18, 06:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/66998/">
+                edited
+                <strong>01 Dec '18, 10:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-66998">
+    
+        <a name="67004"></a>
+        <div class="comment" id="comment-67004">
+            <div id="post-67004-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I cleared all imagery caches and restarted JOSM but that did not do it. By the way, the caches are named for the imagery source. Hence, there are Clear buttons for DigitalGlobe-Premium, DigitalGlobe-standard, USGS Topo, etc.  </p>
+
+<p>It's the slippy map that displays the outdated information, not the display inside the editor window. I guess we need to find a way to clear that.</p></div>
+            <div class="comment-info" id="comment-67004-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '18, 13:07)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="67018"></a>
+        <div class="comment" id="comment-67018">
+            <div id="post-67018-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/5016/alaskadave"></a><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>, oh, I interpreted "Kodiak NWR" to be a imagery name, sorry. Have updated my answer.</p>
+
+<p>So, which imagery are you downloading? Or do you mean the imagery in the JOSM Download area selection dialog? This one is apparently independent from the "OpenStreetMap Carto (Standard)" background imagery layer. Whyever... I have updated my answer. Does it work for you?</p></div>
+            <div class="comment-info" id="comment-67018-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '18, 21:10)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="67020"></a>
+        <div class="comment" id="comment-67020">
+            <div id="post-67020-score" class="comment-score"></div>
+            <div class="comment-text"><p>Let me explain. I added the Kodiak National Wildlife Refuge to OSM piece by piece (it's a huge refuge) over a period of two or three weeks. The original small piece still shows up at low zoom in the JOSM Download area window even though the refuge is now complete. I know it takes a while for the rendering on the slippy map to catch up with reality but two weeks seemed an awfully long time. I was looking for a way to speed that process up. I thought perhaps there was a way to force it by deleting any cached imagery. </p>
+
+<p>I deleted the Mapnik cache along with the other image caches and restarted during my first try at this. It had no effect. I might try deleting the images in the cache but this isn't a big deal. Maybe I'll just have to be patient.</p>
+
+<p>Dave</p>
+
+<p>(I'm also running the latest JOSM - v14460 on Windows 10)</p></div>
+            <div class="comment-info" id="comment-67020-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Dec '18, 01:49)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="67022"></a>
+        <div class="comment" id="comment-67022">
+            <div id="post-67022-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: hmm, well, is the Kodiak NWR shown in your updated version in your browser? If not then probably the rendering is just not yet updated. Note that lower zoom levels will take longer to update.</p>
+
+<p>For a better understanding you may want to start JOSM from command line, then you see JOSM logging network requests (tile downloads) in the command line window.</p></div>
+            <div class="comment-info" id="comment-67022-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Dec '18, 09:06)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="67023"></a>
+        <div class="comment" id="comment-67023">
+            <div id="post-67023-score" class="comment-score"></div>
+            <div class="comment-text"><p>No problem. I'll just wait. It took several weeks for the Download window to show a state park I added. </p>
+
+<p>Thanks for your help.</p></div>
+            <div class="comment-info" id="comment-67023-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Dec '18, 10:18)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="67026"></a>
+        <div class="comment not_top_scorer" id="comment-67026">
+            <div id="post-67026-score" class="comment-score"></div>
+            <div class="comment-text"><p>At the moment, rendering at z13 and higher shouldn't be delayed except when the style has been refreshed. It seems here something got stuck.</p>
+
+<p>You can ask the server to generate a new tile, by visiting, for example, <a href="https://a.tile.openstreetmap.org/9/36/156.png/dirty">https://a.tile.openstreetmap.org/9/36/156.png/dirty</a> which is just a nearby tile url with <code>/dirty</code> appended. Doing that for several zoom levels has things looking a bit better, but there are still some zooms that aren't updated.</p></div>
+            <div class="comment-info" id="comment-67026-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Dec '18, 13:35)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="67036"></a>
+        <div class="comment not_top_scorer" id="comment-67036">
+            <div id="post-67036-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>,</p>
+
+<p>Thank you. I might try that in the future but I think I'll just wait it out. I've moved on to other projects now.</p></div>
+            <div class="comment-info" id="comment-67036-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Dec '18, 10:18)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-66998" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66998-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/66995/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='BG3U7m9CkgNEH03PopBipJBmH1vAnNxK' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/66995/how-do-i-clear-the-image-cache-in-josm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/66995/how-do-i-clear-the-image-cache-in-josm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/clear/"
+            class="tag-link-clear"
+            title="see questions tagged'clear'using tags"
+            rel="tag">clear</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/image_cache/"
+            class="tag-link-image_cache"
+            title="see questions tagged'image_cache'using tags"
+            rel="tag">image_cache</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 30, 2018, 6:01 a.m.">30 Nov '18, 06:01</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,046 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 2, 2018, 10:18 a.m.">02 Dec '18, 10:18</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/579/what-does-a-basic-dgps-set-cost-for-improving-accuracy-especially-next-to-tall-buildings">What does a basic DGPS set cost for improving accuracy, especially next to tall buildings?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/595/josm-how-to-set-a-hotkey-for-hiding-showing-the-wms-layer">JOSM: How to set a hotkey for hiding / showing the WMS layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/639/how-do-i-use-openstreetmap-tiles-as-a-wms-background-in-josm">How do I use OpenStreetMap tiles as a WMS background in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/864/how-to-add-node-with-exact-coordinates-in-josm">How to add node with exact coordinates in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/903/relations-in-josm">Relations in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/999/how-to-extract-elevation-information-from-tracks-in-josm">How to extract elevation information from tracks in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1087/can-i-download-only-a-subset-of-data-in-josm">Can I download only a subset of data in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1252/rotate-polygon-in-josm">Rotate polygon in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/248/how-to-see-roads-underneath-areas-in-josm">How to see roads underneath areas in JOSM ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

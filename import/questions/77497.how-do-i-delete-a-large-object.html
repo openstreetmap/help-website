@@ -1,0 +1,733 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I delete a large object - OSM Help</title>
+        <meta name="description" content="On the map at https://www.openstreetmap.org/edit#map=16/29.1269/-81.1454 there is part of a large parcel of land. It&#39;s labeled &quot;Port Orange City Forest&quot;. (There are other pieces of land with the same name that are south of I-4. I&#39;m only concerned about the one on the north side.) According to the Vo..." />
+        <meta name="keywords" content="large_area,delete" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/77497/how-do-i-delete-a-large-object" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/77497/how-do-i-delete-a-large-object?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='DsNO830VEsFfyuKcNsIPOE7gFyoscL1R' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/77497/how-do-i-delete-a-large-object">How do I delete a large object</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-77497-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/77497/up/" rel="nofollow"> </a>
+<div id="post-77497-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-77497-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/77497/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/77497/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>On the map at <a href="https://www.openstreetmap.org/edit#map=16/29.1269/-81.1454">https://www.openstreetmap.org/edit#map=16/29.1269/-81.1454</a> there is part of a large parcel of land.  It's labeled "Port Orange City Forest".  (There are other pieces of land with the same name that are south of I-4.  I'm only concerned about the one on the north side.)</p>
+<p>According to the Volusia County Property Appraiser, this land isn't owned by the City of Port Orange but by the City of Daytona Beach.  It is the site of the First Step Homeless Shelter (the construction area on US-92 on the north side).  The land has no special designation.  According to the Volusia County Property Appraiser, the Short Parcel ID is 610100000020.</p>
+<p>The issue is that I'd like to delete the border that identifies it as Port Orange City Forest.  But when I try to, I get an error message that I can't delete it because not enough of the feature is currently visible. But if I scroll out then I can't edit anything because I'm scrolled out too far.</p>
+<p>So.  How am I supposed to delete this sucker.  I don't think it's worth trying to see if I can connect my laptop to the television. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/large_area/" class="post-tag tag-link-large_area"
+                                        title="see questions tagged 'large_area'" rel="tag">large_area</a>
+                                
+                                    <a href="/tags/delete/" class="post-tag tag-link-delete"
+                                        title="see questions tagged 'delete'" rel="tag">delete</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Nov '20, 21:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2cfd0bb46691a581540c6bc9403b674f?s=32&amp;d=identicon&amp;r=g" alt="FredrikC's gravatar image" />
+    <p><a href="/users/17411/fredrikc">FredrikC</a><br/>
+    <span class="score" title="118 reputation points">118</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="FredrikC has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-77497">
+    
+</div>
+<div id="comment-tools-77497" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-77497-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/77497/how-do-i-delete-a-large-object?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/77497/how-do-i-delete-a-large-object?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/77497/how-do-i-delete-a-large-object?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/77497/how-do-i-delete-a-large-object?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="77498"></a>
+                    <div id="answer-container-77498" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-77498-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/77498/up/" rel="nofollow"> </a>
+<div id="post-77498-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-77498-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/77498/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="FredrikC has selected this answer as the correct answer"
+        href="/accept_answer/77498/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hackish solution remove nodes from the whole thing till it is small enough that you can delete it (unjoin the nodes first from any other ways pls), or non-hackish solution: use essentially any other editor that supports geometry edits.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/77498/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Nov '20, 21:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/77498/">
+                edited
+                <strong>10 Nov '20, 21:59</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-77498">
+    
+</div>
+<div id="comment-tools-77498" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-77498-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="77501"></a>
+                    <div id="answer-container-77501" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-77501-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/77501/up/" rel="nofollow"> </a>
+<div id="post-77501-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-77501-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/77501/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Pleas note that the <a href="https://www.openstreetmap.org/way/688694513">object</a> you are planning to delete belongs to a <a href="https://www.openstreetmap.org/relation/9572162">relation (multipolygon)</a> and describes the outline of a protected area. I'm not familiar with the laws in your region but it might totally possible that a patch of land owned by the City of Daytona Beach still belongs to a protected area with the name of Port Orange City Forest. </p>
+<p>So before just deleting the object you should make sure the protected area is actually wrong or has been changed. Maybe the outline needs to be changed by moving some nodes rather then the whole outline deleted.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/77501/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Nov '20, 08:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-77501">
+    
+        <a name="77507"></a>
+        <div class="comment" id="comment-77507">
+            <div id="post-77507-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually I work for the City of Daytona Beach.  There are no protections on that land.  In fact, we've contracted with a paving company to dig up as much sand and topsoil as they're willing to pay for.</p>
+
+<p>I'm not saying I agree with this decision, just that it was made and is happening.</p></div>
+            <div class="comment-info" id="comment-77507-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Nov '20, 13:50)</span>
+                <a class="comment-user userinfo" href="/users/17411/fredrikc">FredrikC</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-77501" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-77501-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/77497/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='DsNO830VEsFfyuKcNsIPOE7gFyoscL1R' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/77497/how-do-i-delete-a-large-object?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/77497/how-do-i-delete-a-large-object?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/delete/"
+            class="tag-link-delete"
+            title="see questions tagged'delete'using tags"
+            rel="tag">delete</a> <span class="tag-number">&#215;102</span><br/>
+        
+        <a href="/tags/large_area/"
+            class="tag-link-large_area"
+            title="see questions tagged'large_area'using tags"
+            rel="tag">large_area</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 10, 2020, 9:28 p.m.">10 Nov '20, 21:28</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,309 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 11, 2020, 1:50 p.m.">11 Nov '20, 13:50</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/878/how-can-i-delete-my-account">How can I delete my account?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1363/closed-roads-delete-tag">Closed Roads Delete? Tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2506/plymouth-uk-retail-area">Plymouth UK retail area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3142/delete-a-duplicate-road">delete a duplicate road</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3560/keyboard-shortcuts-alternative">[closed] keyboard shortcuts alternative</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4085/delete_account">[closed] Delete_account</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5037/how-do-i-get-my-account-deleted">How do I get my account deleted?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6688/should-i-delete-my-answer-if-incorrect">Should I delete my answer if incorrect</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9193/unable-to-delete-a-trace">Unable to delete a trace</a>
+        </p>
+        
+        <p>
+            <a href="/questions/444/how-to-delete-a-wiki-page">How to delete a wiki page</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

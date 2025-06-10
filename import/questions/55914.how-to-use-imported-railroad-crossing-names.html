@@ -1,0 +1,842 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to Use Imported &quot;Railroad Crossing Names&quot; - OSM Help</title>
+        <meta name="description" content="From the GNIS Import, there are many names which (I am assuming) are railroad crossing locations. This situation may be limited to US-ian users, from what I understand of GNIS data. In one example that I am seeing, there is one called Martin Crossing which is located by a straight stretch of Martin ..." />
+        <meta name="keywords" content="crossing,railway,place,lifecycle,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/55914/how-to-use-imported-railroad-crossing-names" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55914/how-to-use-imported-railroad-crossing-names?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='n1Y50lWnZ5UEXoeB5EowgxUjILC24nSK' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55914/how-to-use-imported-railroad-crossing-names">How to Use Imported &quot;Railroad Crossing Names&quot;</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55914-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55914/up/" rel="nofollow"> </a>
+<div id="post-55914-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-55914-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55914/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55914/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>From the GNIS Import, there are many names which (I am assuming) are railroad crossing locations. This situation may be limited to US-ian users, from what I understand of GNIS data.</p>
+<p>In one example that I am seeing, there is one called Martin Crossing which is located by a straight stretch of Martin Road. Now here is the tricky bit: This railroad area has been unused for many, many years and the path is only used by the occasional hiker. There is not any indication that there was a railroad crossing here except for the name. So, how should this be modified? The import defaulted all GNIS nodes as place=HAMLET which is just obviously wrong.</p>
+<ol>
+<li>Delete the whole thing. The railroad crossing is gone and the name should go with it.</li>
+<li>Change the <strong>place=hamlet</strong> to <strong>place=neighborhood</strong> or <strong>place=locality</strong></li>
+<li>Use a motorway junction node (inappropriate) <strong>junction=yes</strong> , <strong>name=Martin Crossing</strong></li>
+<li>Use railway tags, with the lifecycle <em>disused</em> prefix: <strong>disused:railway=level_crossing</strong> , <strong>name=Martin Crossing</strong></li>
+</ol>
+<p>I am also finding references to railroad station names, from the import as well, such as the Fremont Station place=hamlet. I have been changing them to place=neighborhood nodes, but it really "grinds my gears" that these railroad names will be continued to be used by OSM users, simply because some import brought in some data about an infrastructure that no longer exists. I would enjoy deleting them, but I recognize this is information might be interesting from a historical perspective. What are other people doing with there situations?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/crossing/" class="post-tag tag-link-crossing"
+                                        title="see questions tagged 'crossing'" rel="tag">crossing</a>
+                                
+                                    <a href="/tags/railway/" class="post-tag tag-link-railway"
+                                        title="see questions tagged 'railway'" rel="tag">railway</a>
+                                
+                                    <a href="/tags/place/" class="post-tag tag-link-place"
+                                        title="see questions tagged 'place'" rel="tag">place</a>
+                                
+                                    <a href="/tags/lifecycle/" class="post-tag tag-link-lifecycle"
+                                        title="see questions tagged 'lifecycle'" rel="tag">lifecycle</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Apr '17, 14:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cb68523a12e3580728c6bee495ae602e?s=32&amp;d=identicon&amp;r=g" alt="mtc's gravatar image" />
+    <p><a href="/users/12686/mtc">mtc</a><br/>
+    <span class="score" title="411 reputation points">411</span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="29 badges"><span class="bronze">&#9679;</span><span class="badgecount">29</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mtc has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55914/">
+                edited
+                <strong>28 Apr '17, 15:15</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55914">
+    
+        <a name="55920"></a>
+        <div class="comment" id="comment-55920">
+            <div id="post-55920-score" class="comment-score">2</div>
+            <div class="comment-text"><p>mtc, maybey a bit late, but do you have a picture of it or a link ?</p></div>
+            <div class="comment-info" id="comment-55920-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Apr '17, 15:51)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55914" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55914-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55914/how-to-use-imported-railroad-crossing-names?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55914/how-to-use-imported-railroad-crossing-names?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55914/how-to-use-imported-railroad-crossing-names?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55914/how-to-use-imported-railroad-crossing-names?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55919"></a>
+                    <div id="answer-container-55919" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55919-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55919/up/" rel="nofollow"> </a>
+<div id="post-55919-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-55919-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55919/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="mtc has selected this answer as the correct answer"
+        href="/accept_answer/55919/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If there's not a trace of it on the ground then I'd certainly not map anything that points to a railway crossing, past or present. Remember that if you delete the node from OSM (which is what I would do) you don't delete the information from the face of the Earth - someone who is interested in doing historical research could, and likely will, still use the GNIS data set and/or OpenHistoricalMap.</p>
+<p>If there's an indication that the <em>name</em> is still in use locally ("I saw a flock of pheasants out there by Martin Crossing") then a <code>place=locality</code> might be borderline acceptable (I say "borderline" because there's nothing on the ground that makes this verifiable - but if local people agree the place is called by that name then I guess it's good enough). A tag of <code>place=neighbourhood</code> would not be right.  </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55919/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Apr '17, 14:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55919">
+    
+        <a name="55936"></a>
+        <div class="comment" id="comment-55936">
+            <div id="post-55936-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your thoughts. I can see how this is the correct approach, now. I do fret about deleting data, though. See my comment below about how OSM / GNIS references are getting into the local language use, so it becomes impossible to say there is no local use, since the locals use the OSM / GNIS name data.</p>
+
+<p>I also appreciate your insights into limiting place=neighborhood and place=locality. I know that I have been using neighbourhoods for non-urban areas, when I was trying to save some of this GNIS import data. I wish there were some better guidelines for handling those nodes. I have contacted the importer "Beej" a couple times, who believes these nodes are a starting point for local mappers, to be changed as appropriate. Unfortunately, what is appropriate in each situation can be rather tricky.</p></div>
+            <div class="comment-info" id="comment-55936-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '17, 15:24)</span>
+                <a class="comment-user userinfo" href="/users/12686/mtc">mtc</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55919" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55919-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55918"></a>
+                    <div id="answer-container-55918" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55918-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55918/up/" rel="nofollow"> </a>
+<div id="post-55918-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-55918-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55918/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If it definitely a railroad-related feature, then using a railway tag makes sense. railway=level_crossing is for where a road and railway cross. If this is a junction of rails, then railway=switch would be better, or if a place where rails cross but don't connect, railway=railway_crossing.</p>
+<p>If railroad tags don't seem appropriate, I wouldn't change these to place=neighborhood, as that is likely inaccurate. According to the wiki, a neighborhood is a named part of an urban area. As you've described these locations, place=locality would be better as it's for "an unpopulated named place".</p>
+<p>It's hard to make a call about deleting or not without local knowledge. In a way keeping these visible might allow local mappers to notice the name and delete it or fix it as appropriate.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55918/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Apr '17, 14:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cebf8499a8a3009705e261cfd224e8c0?s=32&amp;d=identicon&amp;r=g" alt="neuhausr's gravatar image" />
+    <p><a href="/users/595/neuhausr">neuhausr</a><br/>
+    <span class="score" title="7460 reputation points"><span class="">7.5k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="70 badges"><span class="silver">&#9679;</span><span class="badgecount">70</span></span><span title="121 badges"><span class="bronze">&#9679;</span><span class="badgecount">121</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="neuhausr has 36 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55918">
+    
+        <a name="55921"></a>
+        <div class="comment" id="comment-55921">
+            <div id="post-55921-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The GNIS information was likely sourced from USGS topographic maps, in this case some version of <a href="https://ngmdb.usgs.gov/img4/ht_icons/Browse/NH/NH_Epping_329550_1995_24000.jpg">https://ngmdb.usgs.gov/img4/ht_icons/Browse/NH/NH_Epping_329550_1995_24000.jpg</a> (by the freeway junction on the bottom half of the image).</p>
+
+<p>I haven't looked into it much, but such names do seem to be whatever the railway called the spot more than anything else. Locally many such places have grown into small settlements.</p></div>
+            <div class="comment-info" id="comment-55921-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Apr '17, 16:40)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="55922"></a>
+        <div class="comment" id="comment-55922">
+            <div id="post-55922-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, the examples along the former railway line there are pretty clearly names used by the railroad. However, that is no guarantee that they are still called by that name so some research or local knowledge is really preferred.</p></div>
+            <div class="comment-info" id="comment-55922-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Apr '17, 17:03)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+        <a name="55935"></a>
+        <div class="comment" id="comment-55935">
+            <div id="post-55935-score" class="comment-score">1</div>
+            <div class="comment-text"><p>In regards to a railroad-related feature, this location was originally a railroad-related feature, but has been abandoned by that company. All that remains is a long, empty swath of land that stretches from town to town. Here is an article on the topic for that town:</p>
+
+<p><a href="http://thisweekinraymond.com/walking-east-to-epping-on-the-rockingham-rail-trail-p4620-169.htm">http://thisweekinraymond.com/walking-east-to-epping-on-the-rockingham-rail-trail-p4620-169.htm</a></p>
+
+<p>In regards to the local use of the name, I am actually a local. It is my opinion that the occasional local use of these names come from people using online maps, such as OSM, which have imported this GNIS data! I see them mentioned on real estate listings and other sources that collect data online, but cannot recollect pre-Internet usage. The amount of usage of these GNIS terms depends on whether there are other commonly used names and notable locations for the area. The GNIS terms are creeping into local language as net-savvy outsiders immigrate to the local community. So that leads to the complicated question, should OSM mappers use the local language of the community that gets their language from OSM? I answer this myself with the mantra, "Map what is visibly verifiable on-the-ground."</p></div>
+            <div class="comment-info" id="comment-55935-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '17, 15:09)</span>
+                <a class="comment-user userinfo" href="/users/12686/mtc">mtc</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55918" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55918-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55914/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='n1Y50lWnZ5UEXoeB5EowgxUjILC24nSK' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55914/how-to-use-imported-railroad-crossing-names?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55914/how-to-use-imported-railroad-crossing-names?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/railway/"
+            class="tag-link-railway"
+            title="see questions tagged'railway'using tags"
+            rel="tag">railway</a> <span class="tag-number">&#215;68</span><br/>
+        
+        <a href="/tags/place/"
+            class="tag-link-place"
+            title="see questions tagged'place'using tags"
+            rel="tag">place</a> <span class="tag-number">&#215;43</span><br/>
+        
+        <a href="/tags/crossing/"
+            class="tag-link-crossing"
+            title="see questions tagged'crossing'using tags"
+            rel="tag">crossing</a> <span class="tag-number">&#215;41</span><br/>
+        
+        <a href="/tags/lifecycle/"
+            class="tag-link-lifecycle"
+            title="see questions tagged'lifecycle'using tags"
+            rel="tag">lifecycle</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 27, 2017, 2:08 p.m.">27 Apr '17, 14:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,974 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 28, 2017, 3:24 p.m.">28 Apr '17, 15:24</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13009/which-tag-for-a-place-in-the-french-meaning-of-it">Which tag for a place (in the french meaning of it)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50942/does-disusedrailway-require-railwaydisused">Does disused:railway=* require railway=disused?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5410/what-is-best-practice-for-mapping-signal-controlled-pedestrian-crossings-at-road-junctions">What is best practice for mapping signal controlled pedestrian crossings at road junctions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10837/how-do-i-tag-a-pedestrian-foot-crossing-on-a-railway-line">How do I tag a pedestrian foot crossing on a railway line?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it">Is there any way to know if a road has railway (tram) tracks embedded in it?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29955/mapping-elevated-crossing-for-pedestrianbicycles">Mapping elevated crossing for pedestrian/bicycles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3989/what-is-the-meaning-of-railwaystation-on-a-closed-way">What is the meaning of railway=station on a closed way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area">When does it make sense to use place=* on an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6123/how-do-i-tag-a-toucan-pedestrian-bike-crossing">How do I tag a toucan (pedestrian + bike) crossing?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61483/how-to-map-pick-up-and-drop-off-points-at-stations-etc">How to map pick up and drop off points (at stations etc)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

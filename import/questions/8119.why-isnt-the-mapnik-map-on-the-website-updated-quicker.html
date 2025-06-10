@@ -1,0 +1,916 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why isn&#39;t the mapnik map on the website updated quicker? - OSM Help</title>
+        <meta name="description" content="When people edit the OpenStreetMap with editors like Potlatch or JOSM and save their edits, it&#39;s often taken long time before the main map (Mapnik) on the main website (openstreetmap.org) is updated. The map around e.g. zoom level 14 is updated quite quick (in hours) while on zoom level 11 and lower..." />
+        <meta name="keywords" content="openstreetmap,rendering,updates,mapnik,map" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='1qRidFFfC6Q90BpoYYpUpXz1D7Zkstpf' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker">Why isn&#39;t the mapnik map on the website updated quicker?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-8119-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8119/up/" rel="nofollow"> </a>
+<div id="post-8119-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-8119-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8119/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/8119/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   2
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When people edit the OpenStreetMap with editors like Potlatch or JOSM and save their edits, it's often taken long time before the main map (Mapnik) on the main website (<a href="http://openstreetmap.org">openstreetmap.org</a>) is updated. The map around e.g. zoom level 14 is updated quite quick (in hours) while on zoom level 11 and lower it often takes many weeks (or months?) before the map is updated.</p>
+<p>I feel this is a <strong>big problem</strong>. When people do something, they want quick feedback. If it takes to long time, people lose motivation to contribute, because it's not rewarding. Simple, contributing to OpenStreetMap is not rewarding when it takes so long time to get the visual map feedback.</p>
+<p>What is the reason to why the mapnik map on the main website is not updated more often? Is it just some settings or is it simply lack of CPU power?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/updates/" class="post-tag tag-link-updates"
+                                        title="see questions tagged 'updates'" rel="tag">updates</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Sep '11, 14:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b1d217a3a6e04cf4654372068beef20d?s=32&amp;d=identicon&amp;r=g" alt="Jonas_'s gravatar image" />
+    <p><a href="/users/2094/jonas_">Jonas_</a><br/>
+    <span class="score" title="662 reputation points">662</span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="33 badges"><span class="bronze">&#9679;</span><span class="badgecount">33</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jonas_ has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8119/">
+                edited
+                <strong>25 Sep '11, 19:23</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-8119">
+    
+</div>
+<div id="comment-tools-8119" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8119-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="8120"></a>
+                    <div id="answer-container-8120" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8120-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8120/up/" rel="nofollow"> </a>
+<div id="post-8120-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-8120-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8120/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Jonas_ has selected this answer as the correct answer"
+        href="/accept_answer/8120/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The main mapnik map is redered by a single computer (<a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html">yevaud</a>). You can help speed up the servers by <a href="http://donate.openstreetmap.org/">donating to OSMF</a>.</p>
+<p>As you have mentioned, tiles on higher zoom levels are usually rendered anew when viewed after a change has been made in their area. Due to the amount of data required to render tiles at low zoom levels and the relatively small changes in these tiles over time, they are rendered less frequently. (Often, a change that affects a z17 or z18 tile is not even visible on a lower zoom, so no reason to re-render the lower zooms on every change.) Sadly there is no mechanism that would tell us when a change is visible on a lower zoom level and when not; such a mechanism could help making better decisions about re-rendering but it will likely use the same amount of time as simply rendering the tile.</p>
+<p>(Side note: coastlines are an exception to this; they are processed seperatly, error checked and saved to shapefiles for rendering. This is done on an irregular basis.)</p>
+<p>If there are major changes to the data like a new country or landmass or major visual improvements you can contact administrators over <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a> and they might rerender the tiles.</p>
+<p>The main map is just one of the many ways of providing feedback to the contributors. Osmarender renders zoom levels 12 and up at once.</p>
+<p>As a programmer you might also help by speeding up <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> the database importer used for mapnik. Or you can try to speed up mapnik itself. Aside from that there are a lot of problems we need developers for so you are welcome to pick an area you want to help develop.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8120/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Sep '11, 15:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44a4438f0146dfd898e24c221fd28b58?s=32&amp;d=identicon&amp;r=g" alt="Gnonthgol's gravatar image" />
+    <p><a href="/users/131/gnonthgol">Gnonthgol ♦</a><br/>
+    <span class="score" title="13750 reputation points"><span class="">13.8k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="103 badges"><span class="silver">&#9679;</span><span class="badgecount">103</span></span><span title="198 badges"><span class="bronze">&#9679;</span><span class="badgecount">198</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gnonthgol has 57 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8120/">
+                edited
+                <strong>25 Sep '11, 18:22</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+            <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+            <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8120">
+    
+        <a name="8132"></a>
+        <div class="comment" id="comment-8132">
+            <div id="post-8132-score" class="comment-score"></div>
+            <div class="comment-text"><p>It looks like also Osmarender has this big problem on the mainsite. The tiles in level z0-z12 are not rendered for a long time. You are right about Mapnik, level z0-z12 is never rendered by yevaud this year: <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/renderd_zoom.html">http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/renderd_zoom.html</a></p></div>
+            <div class="comment-info" id="comment-8132-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '11, 12:54)</span>
+                <a class="comment-user userinfo" href="/users/2094/jonas_">Jonas_</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8120" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8120-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="27009"></a>
+                    <div id="answer-container-27009" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27009-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27009/up/" rel="nofollow"> </a>
+<div id="post-27009-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-27009-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27009/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Interesting point about the dependencies at a lower level. If the net change is insignificant at a lower (nearer Z0 level)then re-rendering could be avoided. One possible strategy is to use Merkle trees (<a href="http://en.wikipedia.org/wiki/Merkle_tree)">http://en.wikipedia.org/wiki/Merkle_tree)</a> to determine impact to the parent image via use of reverse hashes. If the changes made to the current rendered tile has net change to the parent (or ancestors) then a dirty bit could be applied to an Z/X/Y hierarchical index so subsequent impact can be determined ahead of planet updates.</p>
+<p>(now moving somewhat off topic)</p>
+<p>The use of hashes can also reduce the effort in rendering and storing duplicate tiles. For example, the ocean tiles will invariably render the same (or similar hashes). Creating the equivalent of symlinks to fixed tiles would result in a reduced saturated rendered filesystem. There are transmission benefits to recognising duplicated tiles by maintaining a map of hash-to-tiles so that duplicated tiles can be referenced rather than explicitly instantiated by server filesystem AND client (possibly by the use of a return code and a reference to the hash).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27009/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Oct '13, 06:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a77126808802b84219d4d152e898fc75?s=32&amp;d=identicon&amp;r=g" alt="geo-san's gravatar image" />
+    <p><a href="/users/7550/geo-san">geo-san</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="geo-san has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27009">
+    
+        <a name="27010"></a>
+        <div class="comment" id="comment-27010">
+            <div id="post-27010-score" class="comment-score">1</div>
+            <div class="comment-text"><p>This is an interesting approach but not suited for this help site, see Richard's answer.</p></div>
+            <div class="comment-info" id="comment-27010-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Oct '13, 07:23)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27009" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27009-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="8139"></a>
+                    <div id="answer-container-8139" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8139-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8139/up/" rel="nofollow"> </a>
+<div id="post-8139-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-8139-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8139/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is really the wrong place to be offering help as a software developer. By definition this site is focused towards more basic questions.</p>
+<p>You should post to the <a href="http://lists.openstreetmap.org/listinfo/dev">dev@ mailing list</a> instead.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8139/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Sep '11, 19:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8139">
+    
+        <a name="8140"></a>
+        <div class="comment" id="comment-8140">
+            <div id="post-8140-score" class="comment-score">3</div>
+            <div class="comment-text"><p>I just wanted to know why the main map wasn't updated for long time. In level z0-z12 (both mapnik and osmarender)</p></div>
+            <div class="comment-info" id="comment-8140-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '11, 19:22)</span>
+                <a class="comment-user userinfo" href="/users/2094/jonas_">Jonas_</a>
+                
+            </div>
+        </div>
+    
+        <a name="8141"></a>
+        <div class="comment" id="comment-8141">
+            <div id="post-8141-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Maybe, but you sounded more as if you wanted to open a discussion - elaborating why you think it is a problem and inviting comments -, and again, that would have been a good posting on the mailing list and a less good posting for help.</p></div>
+            <div class="comment-info" id="comment-8141-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '11, 19:54)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8139" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8139-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/8119/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='1qRidFFfC6Q90BpoYYpUpXz1D7Zkstpf' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/updates/"
+            class="tag-link-updates"
+            title="see questions tagged'updates'using tags"
+            rel="tag">updates</a> <span class="tag-number">&#215;35</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 24, 2011, 2:56 p.m.">24 Sep '11, 14:56</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,632 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 8, 2013, 7:23 a.m.">08 Oct '13, 07:23</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/7969/how-often-is-the-higher-levels-rendered-on-the-mapnik-map">How often is the higher levels rendered on the mapnik map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14916/mapnik-problems-rendering-tiles-in-utm-projection">Mapnik: Problems rendering tiles in UTM projection</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12718/how-to-add-mapnik-osmdroid-zip-files-to-sd-card-from-code">How to add Mapnik osmdroid zip files to sd card from code</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16824/mapview-zoomlistner-for-mapsforge">[closed] Mapview ZoomListner for Mapsforge</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40697/socket-bind-failed">Socket bind Failed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54119/why-doesnt-the-standard-style-map-get-updated">Why doesn&#39;t the standard style map get updated?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24591/create-my-own-addresses-roads-and-ways-on-a-custom-world-map">Create my own addresses, roads and ways on a custom world map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11179/wie-haufig-wird-die-standard-karte-auf-osmorg-aktualisiert">Wie häufig wird die Standard-Karte auf OSM.org aktualisiert?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a>
+        </p>
+        
+        <p>
+            <a href="/questions/139/how-can-i-design-some-simple-maps">How can I design some simple maps?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

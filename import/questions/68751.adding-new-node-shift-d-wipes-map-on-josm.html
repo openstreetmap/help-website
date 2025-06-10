@@ -1,0 +1,614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Adding new node (Shift-D) wipes map on JOSM - OSM Help</title>
+        <meta name="description" content="Hello, When I try to add a new node using coordinates (Shift-D command), the rest of the data on the map disappears. The data doesn&#39;t seem to be deleted because the file still has the same amount of nodes and ways.  This seems to be an interface or display thing? I haven&#39;t been able to find any post..." />
+        <meta name="keywords" content="node,josm,shift-d,wipe,map" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/68751/adding-new-node-shift-d-wipes-map-on-josm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/68751/adding-new-node-shift-d-wipes-map-on-josm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='OtZWnAdjqTGoy5sdk4svISj7YI3O3lsv' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/68751/adding-new-node-shift-d-wipes-map-on-josm">Adding new node (Shift-D) wipes map on JOSM</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-68751-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68751/up/" rel="nofollow"> </a>
+<div id="post-68751-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-68751-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68751/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/68751/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,
+When I try to add a new node using coordinates (Shift-D command), the rest of the data on the map disappears.</p>
+<p>The data doesn't seem to be deleted because the file still has the same amount of nodes and ways. </p>
+<p>This seems to be an interface or display thing? I haven't been able to find any post about it. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/node/" class="post-tag tag-link-node"
+                                        title="see questions tagged 'node'" rel="tag">node</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/shift-d/" class="post-tag tag-link-shift-d"
+                                        title="see questions tagged 'shift-d'" rel="tag">shift-d</a>
+                                
+                                    <a href="/tags/wipe/" class="post-tag tag-link-wipe"
+                                        title="see questions tagged 'wipe'" rel="tag">wipe</a>
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Apr '19, 19:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8386ef7c51e0af20ceed80c7af0a9a31?s=32&amp;d=identicon&amp;r=g" alt="ymtopcu's gravatar image" />
+    <p><a href="/users/16524/ymtopcu">ymtopcu</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ymtopcu has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-68751">
+    
+        <a name="68755"></a>
+        <div class="comment" id="comment-68755">
+            <div id="post-68755-score" class="comment-score"></div>
+            <div class="comment-text"><p>Which JOSM version? I don't experience this issue with the latest josm-tested (14945). Maybe Shift-D toggles your layer visibility?</p></div>
+            <div class="comment-info" id="comment-68755-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '19, 08:54)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="68758"></a>
+        <div class="comment" id="comment-68758">
+            <div id="post-68758-score" class="comment-score">2</div>
+            <div class="comment-text"><p>To rule out the obvious: Are you sure you are adding the point at the correct coordinate and it is not just JOSM recentering the view on the new point's location away from the previously downloaded data? If you scroll out, does the other data re-appear somewhere?</p></div>
+            <div class="comment-info" id="comment-68758-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '19, 09:36)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="68762"></a>
+        <div class="comment" id="comment-68762">
+            <div id="post-68762-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you very much for your replies.</p>
+
+<p>I've been playing around with different layers to see if adding a node on a new layer would make it so the rest of the map is still visible. Unfortunately no: the rest of the map still disappears, even if the new node I am adding is on a layer entirely by itself. </p>
+
+<p>Its interesting you ask if other data is visible. When I zoom out, oddly enough, just one random node is visible but the rest of the map is not (so I end up seeing this one random node from the old map, along with the new one I am trying to add) </p>
+
+<p>This one random node was one I added some time ago: its position is accurate to where the new node I am trying to add would be. </p>
+
+<p>The camera does recenter when I add a node of course, but when I zoom out, I only see this one particular node remaining from the map. The rest of it is missing. </p>
+
+<p>I am using version 14824</p></div>
+            <div class="comment-info" id="comment-68762-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '19, 17:27)</span>
+                <a class="comment-user userinfo" href="/users/16524/ymtopcu">ymtopcu</a>
+                
+            </div>
+        </div>
+    
+        <a name="68764"></a>
+        <div class="comment" id="comment-68764">
+            <div id="post-68764-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/16524/ymtopcu">@ymtopcu</a>: Please try zooming in on that random old node. When you're zoomed out far enough, even several square kilometers' worth of map data will shrink into a single point and look exactly like a single node.</p>
+
+<p>If that doesn't help, press Ctrl+A to select all elements no matter where they are. (Only works in the current layer though!) What is the result of that?</p></div>
+            <div class="comment-info" id="comment-68764-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '19, 19:16)</span>
+                <a class="comment-user userinfo" href="/users/14/tordanik">Tordanik</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68751" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68751-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/68751/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='OtZWnAdjqTGoy5sdk4svISj7YI3O3lsv' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68751/adding-new-node-shift-d-wipes-map-on-josm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68751/adding-new-node-shift-d-wipes-map-on-josm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/node/"
+            class="tag-link-node"
+            title="see questions tagged'node'using tags"
+            rel="tag">node</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/shift-d/"
+            class="tag-link-shift-d"
+            title="see questions tagged'shift-d'using tags"
+            rel="tag">shift-d</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/wipe/"
+            class="tag-link-wipe"
+            title="see questions tagged'wipe'using tags"
+            rel="tag">wipe</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 10, 2019, 7:09 p.m.">10 Apr '19, 19:09</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,643 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 11, 2019, 7:16 p.m.">11 Apr '19, 19:16</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/29417/what-does-josms-unconnected-nodes-without-physical-tags-mean">What does JOSM&#39;s &quot;Unconnected nodes without physical tags&quot; mean?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66020/missing-crossplus-sign-for-adding-node-between-two-connected-nodes-in-josm">Missing cross/plus sign for adding node between two connected nodes in josm</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5164/how-to-map-loading-docks">How to map Loading Docks?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17773/new-road-not-visible-in-the-map">[closed] New road not visible in the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48375/josm-upload-error-on-osm-map-that-is-only-20-hours-old">JOSM upload error on osm map that is only 20 hours old</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65483/unwanted-stripped-background-in-josm">Unwanted stripped background in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/864/how-to-add-node-with-exact-coordinates-in-josm">How to add node with exact coordinates in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4044/how-to-display-a-specific-way-in-red-in-a-viewer">How to display a specific way in red in a viewer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12195/why-with-my-vista-notebook-i-cannot-load-down-a-map-into-josm">why with my vista-notebook I cannot load down a map into josm?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66802/josm-create-node-at-midpoint-of-way-without-dragging-the-way">JOSM create node at midpoint of way without dragging the way</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

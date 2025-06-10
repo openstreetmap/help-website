@@ -1,0 +1,1370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I enable the &quot;remote control&quot; in JOSM? - OSM Help</title>
+        <meta name="description" content="I am trying to edit some data and I am getting the following error message upon hitting the edit tab:  &quot;Editing failed - make sure JOSM or Merkaartor is loaded and the remote control option is enabled&quot;.  I have JOSM loaded, but not sure how or where, to enable the &#39;remote control option&#39;." />
+        <meta name="keywords" content="website,josm,editing,josm_remote_control" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/2208/how-do-i-enable-the-remote-control-in-josm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/2208/how-do-i-enable-the-remote-control-in-josm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='eD2Uhsee8dbVUrC3uEo2i7Nf9keU8jbH' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/2208/how-do-i-enable-the-remote-control-in-josm">How do I enable the &quot;remote control&quot; in JOSM?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-2208-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2208/up/" rel="nofollow"> </a>
+<div id="post-2208-score" class="post-score"
+    title="current number of votes">
+    13
+</div>
+<a id="post-2208-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2208/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/2208/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am trying to edit some data  and I am getting the following error message upon hitting the edit tab:</p>
+<pre><code>      "Editing failed - make sure JOSM or Merkaartor is loaded and the remote control option is enabled".
+</code></pre>
+<p>I have JOSM loaded, but not sure how or where, to enable the 'remote control option'.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/website/" class="post-tag tag-link-website"
+                                        title="see questions tagged 'website'" rel="tag">website</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/josm_remote_control/" class="post-tag tag-link-josm_remote_control"
+                                        title="see questions tagged 'josm_remote_control'" rel="tag">josm_remote_control</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>15 Jan '11, 01:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/313eb5f3fc1c0070395eef634f46708e?s=32&amp;d=identicon&amp;r=g" alt="Bennet%20Campoverde's gravatar image" />
+    <p><a href="/users/680/bennet-campoverde">Bennet Campo...</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bennet Campoverde has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/2208/">
+                edited
+                <strong>30 Apr '15, 17:00</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-2208">
+    
+        <a name="2990"></a>
+        <div class="comment" id="comment-2990">
+            <div id="post-2990-score" class="comment-score"></div>
+            <div class="comment-text"><p>What browser do you use? The noscript addon for Firefox will interfere with remote control.</p></div>
+            <div class="comment-info" id="comment-2990-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '11, 18:59)</span>
+                <a class="comment-user userinfo" href="/users/188/emj">emj</a>
+                
+            </div>
+        </div>
+    
+        <a name="2993"></a>
+        <div class="comment" id="comment-2993">
+            <div id="post-2993-score" class="comment-score">5</div>
+            <div class="comment-text"><p>The thing in NoScript that interferes with JOSM remote control is the ABE, the Application Boundaries Enforcer. The ABE by default prevents pages on the internet from fiddling around with your local computer. You will find the ABE settings under the Advanced tab in the NoScript options dialog. Either you may disable the ABE completely (lazy, but somewhat bad idea) or write a customized ruleset that lets the commands to JOSM pass through.</p>
+
+<p>The documentation is found here:
+<a href="http://noscript.net/abe/">http://noscript.net/abe/</a></p></div>
+            <div class="comment-info" id="comment-2993-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '11, 21:03)</span>
+                <a class="comment-user userinfo" href="/users/652/gnurk">gnurk</a>
+                
+            </div>
+        </div>
+    
+        <a name="35319"></a>
+        <div class="comment" id="comment-35319">
+            <div id="post-35319-score" class="comment-score"></div>
+            <div class="comment-text"><p>… for this NoScript issue see <a href="#24836">an answer below</a>.</p></div>
+            <div class="comment-info" id="comment-35319-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jul '14, 20:11)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43271"></a>
+        <div class="comment" id="comment-43271">
+            <div id="post-43271-score" class="comment-score"></div>
+            <div class="comment-text"><p>I had the same problem and this is my solution: I changed the system-ABE from</p>
+
+<p>Site LOCAL
+Accept from LOCAL
+Deny</p>
+
+<p>to</p>
+
+<p>Site LOCAL
+Accept from LOCAL
+Accept from *.openstreetmap.org
+Deny</p></div>
+            <div class="comment-info" id="comment-43271-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 May '15, 07:33)</span>
+                <a class="comment-user userinfo" href="/users/11033/caigner">caigner</a>
+                
+            </div>
+        </div>
+    
+        <a name="56476"></a>
+        <div class="comment" id="comment-56476">
+            <div id="post-56476-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have the exact same error message:  "Editing failed - make sure JOSM or Merkaartor is loaded and the remote control option is enabled",
+and I see the answer:</p>
+
+<p>Site LOCAL Accept from LOCAL Deny
+to
+Site LOCAL Accept from LOCAL Accept from *.openstreetmap.org Deny</p>
+
+<p>However, as non-expert I do not know in what file to make this change and where this file resides. A search in my computer (windows 7) for the extension ".abe" returns nothing.</p>
+
+<p>Can some one please tell me in detail how to get this editor started?</p>
+
+<p>max</p></div>
+            <div class="comment-info" id="comment-56476-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '17, 20:01)</span>
+                <a class="comment-user userinfo" href="/users/13783/maxwyss">maxwyss</a>
+                
+            </div>
+        </div>
+    
+        <a name="56484"></a>
+        <div class="comment not_top_scorer" id="comment-56484">
+            <div id="post-56484-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/13783/maxwyss">@maxwyss</a>, you do not edit file, that is an option in NoScript dialogs... see other answers like this <a href="https://help.openstreetmap.org/answer_link/24836/">https://help.openstreetmap.org/answer_link/24836/</a></p></div>
+            <div class="comment-info" id="comment-56484-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jun '17, 02:28)</span>
+                <a class="comment-user userinfo" href="/users/6497/matija-nalis">Matija Nalis</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-2208" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2208-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/2208/how-do-i-enable-the-remote-control-in-josm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/2208/how-do-i-enable-the-remote-control-in-josm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/2208/how-do-i-enable-the-remote-control-in-josm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/2208/how-do-i-enable-the-remote-control-in-josm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="33833"></a>
+                    <div id="answer-container-33833" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33833-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33833/up/" rel="nofollow"> </a>
+<div id="post-33833-score" class="post-score"
+    title="current number of votes">
+    22
+</div>
+<a id="post-33833-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33833/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>also, if you're started having problems in April of 2014 or later, it could be the HTTPS certificate problem, as OpenStreetMap "Edit with remote control" started using HTTPS port on TCP/8112 (it used plaintext HTTP on TCP/8111 before, so there was no certificate and no problem).</p>
+<p>To fix it, go to  <a href="https://127.0.0.1:8112/">https://127.0.0.1:8112/</a> and accept invalid certificate. </p>
+<p>See <a href="https://github.com/openstreetmap/openstreetmap-website/issues/740">github issue 740</a> for more info</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33833/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jun '14, 18:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/666391973130e371bf8092f70c43df28?s=32&amp;d=identicon&amp;r=g" alt="Matija%20Nalis's gravatar image" />
+    <p><a href="/users/6497/matija-nalis">Matija Nalis</a><br/>
+    <span class="score" title="750 reputation points">750</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Matija Nalis has 2 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33833">
+    
+        <a name="35316"></a>
+        <div class="comment" id="comment-35316">
+            <div id="post-35316-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Thanks, your answer help me to deal with that problem.
+I tried since a week and nothing in the JOSM wiki page <a href="//josm.openstreetmap.de/wiki/Help/Preferences/RemoteControl">Help/Preferences/RemoteControl</a> helps to resolve that.</p></div>
+            <div class="comment-info" id="comment-35316-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jul '14, 19:15)</span>
+                <a class="comment-user userinfo" href="/users/9345/fabient">FabienT</a>
+                
+            </div>
+        </div>
+    
+        <a name="35368"></a>
+        <div class="comment" id="comment-35368">
+            <div id="post-35368-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/9345/fabient">@FabienT</a> you should probably report that to JOSM help web page maintainer (or fix it yourself if you have wiki account there)</p></div>
+            <div class="comment-info" id="comment-35368-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jul '14, 13:49)</span>
+                <a class="comment-user userinfo" href="/users/6497/matija-nalis">Matija Nalis</a>
+                
+            </div>
+        </div>
+    
+        <a name="35372"></a>
+        <div class="comment" id="comment-35372">
+            <div id="post-35372-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="/users/6497/matija-nalis">@Matija Nalis</a> and <a href="/users/9345/fabient">@FabienT</a>: I just have added a paragraph to this wiki page.</p></div>
+            <div class="comment-info" id="comment-35372-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jul '14, 14:06)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33833" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33833-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="2210"></a>
+                    <div id="answer-container-2210" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2210-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2210/up/" rel="nofollow"> </a>
+<div id="post-2210-score" class="post-score"
+    title="current number of votes">
+    13
+</div>
+<a id="post-2210-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2210/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In the JOSM menu select Edit/Preferences.../ or press F12</p>
+<p>Click on the remote control icon</p>
+<p>Select "Enable Remote Control" and click OK.</p>
+<p>(If you have a JOSM version older than 3715, then RemoteControl is only available as a plugin. You can either get the plugin, or update JOSM.)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2210/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Jan '11, 09:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c2a980da3fdfa1ee2659ad70d1e21f31?s=32&amp;d=identicon&amp;r=g" alt="gnurk's gravatar image" />
+    <p><a href="/users/652/gnurk">gnurk</a><br/>
+    <span class="score" title="6114 reputation points"><span class="">6.1k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="60 badges"><span class="silver">&#9679;</span><span class="badgecount">60</span></span><span title="96 badges"><span class="bronze">&#9679;</span><span class="badgecount">96</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gnurk has 18 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/2210/">
+                edited
+                <strong>15 Jan '11, 09:52</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+            <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+            <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2210">
+    
+        <a name="9700"></a>
+        <div class="comment" id="comment-9700">
+            <div id="post-9700-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think JOSM should come with the remote control turned ON by default (maybe it already does since I my configuration files are quite old, I only update the program file).</p></div>
+            <div class="comment-info" id="comment-9700-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '11, 10:07)</span>
+                <a class="comment-user userinfo" href="/users/237/kozuch">Kozuch</a>
+                
+            </div>
+        </div>
+    
+        <a name="24840"></a>
+        <div class="comment" id="comment-24840">
+            <div id="post-24840-score" class="comment-score"></div>
+            <div class="comment-text"><p>In my experience on Ubuntu and MacOS, JOSM has to be up and running for the remote control to work. So I start JOSM, go back to the browser and then select edit in remote control with JOSM.</p></div>
+            <div class="comment-info" id="comment-24840-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '13, 15:16)</span>
+                <a class="comment-user userinfo" href="/users/5918/n76">n76</a>
+                
+            </div>
+        </div>
+    
+        <a name="40699"></a>
+        <div class="comment" id="comment-40699">
+            <div id="post-40699-score" class="comment-score"></div>
+            <div class="comment-text"><p>does anybody have a .jar file of the old remote control plugin?</p>
+
+<p>I am trying to get this working on an old Java 5 system running JOSM 3377, and the automatic plugin downloading no longer works. thanks</p></div>
+            <div class="comment-info" id="comment-40699-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '15, 18:14)</span>
+                <a class="comment-user userinfo" href="/users/10402/m-toups">M Toups</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-2210" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2210-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24836"></a>
+                    <div id="answer-container-24836" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24836-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24836/up/" rel="nofollow"> </a>
+<div id="post-24836-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-24836-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24836/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If the problem is NoScript then you can to allow the request through the ABE blocker rules as follows:</p>
+<p>1) Open the NoScripts options dialog,<br>
+2) Goto the Advanced pane then the ABE sub-pane<br>
+3) Change the SYSTEM rule to read:</p>
+<pre><code>Site <a href="http://127.0.0.1:8111">http://127.0.0.1:8111</a>
+Accept from *.openstreetmap.org
+Deny
+
+Site LOCAL
+Accept from LOCAL
+Deny
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24836/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Aug '13, 12:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3b4d87de47d4e361532e61ce04e9b66?s=32&amp;d=identicon&amp;r=g" alt="Joe%20E's gravatar image" />
+    <p><a href="/users/902/joe-e">Joe E</a><br/>
+    <span class="score" title="91 reputation points">91</span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Joe E has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24836">
+    
+        <a name="24853"></a>
+        <div class="comment" id="comment-24853">
+            <div id="post-24853-score" class="comment-score">2</div>
+            <div class="comment-text"><p>If one does not like wildcards and likes also other OSM-related sites to be able to call JOSM, use something like this:</p>
+
+<pre><code># LOCAL
+## Allow
+### JOSM call is allowed from OSM related sites
+Site 127.0.0.1:8111 localhost:8111 127.0.0.1:8112 localhost:8112
+Accept GET from www.openstreetmap.org maps.skobbler.de tools.geofabrik.de overpass-turbo.eu taginfo.openstreetmap.org keepright.ipax.at keepright.at ra.osmsurround.org map.project-osrm.org
+Deny
+
+## Deny all others - prevent Internet sites from requesting LAN resources.
+Site LOCAL
+Accept from LOCAL
+Deny
+</code></pre></div>
+            <div class="comment-info" id="comment-24853-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Aug '13, 00:41)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32001"></a>
+        <div class="comment" id="comment-32001">
+            <div id="post-32001-score" class="comment-score"></div>
+            <div class="comment-text"><p>You may also run into this problem when using the JOSM remote control links from maproulette.org.</p>
+
+<pre><code>Site 127.0.0.1:8111
+Accept from maproulette.org
+</code></pre>
+
+<p>placed in front of the general DENY rule will help here too.</p></div>
+            <div class="comment-info" id="comment-32001-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Mar '14, 16:14)</span>
+                <a class="comment-user userinfo" href="/users/7097/chaos99">Chaos99</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24836" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24836-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="2213"></a>
+                    <div id="answer-container-2213" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2213-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2213/up/" rel="nofollow"> </a>
+<div id="post-2213-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-2213-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2213/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you are using Opera there are also security issues in the browser that you need to address. The warning it would normally show is hidden in an invisible iframe so the edit option silently fails. To overcome this you can go into Preferences (Ctrl-F12), Advanced, Security, Trusted Websites, Secure Internal Hosts and add 127.0.0.1 (<a href="http://openstreetmap.org">openstreetmap.org</a> edit option) and localhost (OSM Inspector). I guess there may be security issues that permanently flagging the sites as secure may raise, but as the links work with other browsers I don't think that it can be a major risk.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2213/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Jan '11, 12:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f25a8392e12ed696b16554b3d08e4e2b?s=32&amp;d=identicon&amp;r=g" alt="EdLoach's gravatar image" />
+    <p><a href="/users/339/edloach">EdLoach ♦</a><br/>
+    <span class="score" title="19478 reputation points"><span class="">19.5k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="156 badges"><span class="silver">&#9679;</span><span class="badgecount">156</span></span><span title="280 badges"><span class="bronze">&#9679;</span><span class="badgecount">280</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="EdLoach has 93 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/2213/">
+                edited
+                <strong>11 Feb '11, 15:15</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2213">
+    
+</div>
+<div id="comment-tools-2213" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2213-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="59926"></a>
+                    <div id="answer-container-59926" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-59926-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59926/up/" rel="nofollow"> </a>
+<div id="post-59926-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-59926-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59926/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I had another problem with remote control not working today. Here is what I did to troubleshoot it:</p>
+<p>First, I started JOSM, and verified it had "Enable remote control" and "Enable HTTPS support" enabled. It was, so I didn't need to enable it and restart JOSM. Next I did in shell:</p>
+<pre><code>telnet localhost 8112
+</code></pre>
+<p>if it said the following: </p>
+<pre><code>Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+</code></pre>
+<p>Then it would mean that JOSM, networking and local firewall on the machine are working, and that the problem is somewhere in the web browser (for which I'd then try to open "https://localhost:8112/" to debug further, whitelist certicates etc). </p>
+<p>But in my case it hanged after "Trying 127.0.0.1..." and never showed "Connected to 127.0.0.1", which indicated that the problem is either JOSM or network/firewall. Then I did:</p>
+<pre><code>netstat -tlpn
+</code></pre>
+<p>to verify if JOSM is listening (that is on Debian GNU/Linux,on MS-windows it would be something like "netstat -a"?):</p>
+<p>It should output something like:</p>
+<pre><code>Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp6       0      0 ::1:8111                :::*                    LISTEN      20297/java
+tcp6       0      0 127.0.0.1:8111          :::*                    LISTEN      20297/java
+tcp6       0      0 ::1:8112                :::*                    LISTEN      20297/java
+tcp6       0      0 127.0.0.1:8112          :::*                    LISTEN      20297/java
+</code></pre>
+<p>to indicate JOSM is listening on both port 8111 and 8112. But in my case the list was empty. If it wasn't empty, it would strongly indicate problem in local firewall, so I'd try disabling firewall and trying "telnet" again. But as it was empty, it indicated that problem is that JOSM didn't listen on that port - which is either problem in JOSM (less likely, as I was running stable version and lots of people would be making noise about it) or a problem in local machine networking.</p>
+<p>I found a log in ~/.xsession-errors, and it contained:</p>
+<pre><code>WARNING: Cannot start IPv4 remotecontrol server on port 8111: Cannot assign requested address (Bind failed)
+WARNING: Cannot start IPv6 remotecontrol server on port 8111: Cannot assign requested address (Bind failed)
+WARNING: Cannot start IPv4 remotecontrol https server on port 8112: Cannot assign requested address (Bind failed)
+WARNING: Cannot start IPv6 remotecontrol https server on port 8112: Cannot assign requested address (Bind failed)
+</code></pre>
+<p>then I started JOSM manually under strace with:</p>
+<pre><code>strace -o /tmp/log.txt -s999 -tt -f java -jar josm-tested.jar
+grep -w 8112 /tmp/log.txt
+</code></pre>
+<p>and it showed:</p>
+<pre><code>bind(38, {sa_family=AF_INET6, sin6_port=htons(8112), inet_pton(AF_INET6, "::ffff:127.0.0.1", &amp;sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, 28) = -1 EADDRNOTAVAIL (Cannot assign requested address)
+</code></pre>
+<p>"EADDRNOTAVAIL" means that no network interface on computer has requested address (127.0.0.1 in this case). I did "ip addr show" and found out that my  computer really did not have "127.0.0.1" as the "lo" interface was down due to some other problem. So simple "/etc/init.d/networking start" fixed it (which is unlikely to be anybody elses problem, but hopefully those troubleshooting steps would help to narrow down problem).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/59926/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Oct '17, 16:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/666391973130e371bf8092f70c43df28?s=32&amp;d=identicon&amp;r=g" alt="Matija%20Nalis's gravatar image" />
+    <p><a href="/users/6497/matija-nalis">Matija Nalis</a><br/>
+    <span class="score" title="750 reputation points">750</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Matija Nalis has 2 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-59926">
+    
+</div>
+<div id="comment-tools-59926" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59926-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/2208/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='eD2Uhsee8dbVUrC3uEo2i7Nf9keU8jbH' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/2208/how-do-i-enable-the-remote-control-in-josm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/2208/how-do-i-enable-the-remote-control-in-josm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/website/"
+            class="tag-link-website"
+            title="see questions tagged'website'using tags"
+            rel="tag">website</a> <span class="tag-number">&#215;111</span><br/>
+        
+        <a href="/tags/josm_remote_control/"
+            class="tag-link-josm_remote_control"
+            title="see questions tagged'josm_remote_control'using tags"
+            rel="tag">josm_remote_control</a> <span class="tag-number">&#215;18</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 15, 2011, 1:13 a.m.">15 Jan '11, 01:13</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>43,386 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 2, 2017, 4:56 p.m.">02 Oct '17, 16:56</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/79825/open-josm-with-remote-control-loads-data-correctly-but-error-is-still-issued">Open JOSM with remote control loads data correctly but error is still issued.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30688/cannot-launch-josm-from-openstreetmap-anymore">cannot launch josm from OpenstreetMap anymore</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26517/how-do-i-get-a-copy-of-a-way-id-in-josm">How do I get a copy of a Way ID in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29435/lost-in-confusion-in-josm">Lost in Confusion in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29436/weird-arrows-in-a-gpx-track-recording">Weird arrows in a gpx track recording</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14352/what-are-the-color-meanings-in-josm">What are the color meanings in josm?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5400/edit-certain-subsets-of-objects-in-josm">Edit certain subsets of objects in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17833/how-to-addedit-city-name">how to add/edit city name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28637/how-to-repurpose-mouse-buttons-in-josm">How to repurpose mouse buttons in JOSM</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

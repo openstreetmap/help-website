@@ -1,0 +1,556 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Aerial imagery in Nominatim - OSM Help</title>
+        <meta name="description" content="I am able to load self-created aerial Imagery (WMS or TMS) on JOSM for editing with mapwarper.net, How can I load this imagery to mapnik o how to see it on my nominatim webpage?  Edit: I&#39;m using a virtualBox with ubuntu 14.04 Lts over windows 7 professional. I installed my tile server following http..." />
+        <meta name="keywords" content="aerial,imagery,osm,nominatim" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/37026/aerial-imagery-in-nominatim" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/37026/aerial-imagery-in-nominatim?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='5inmlSoGB5Vq3KfjkXIGrSxVpm4jOZ58' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/37026/aerial-imagery-in-nominatim">Aerial imagery in Nominatim</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-37026-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37026/up/" rel="nofollow"> </a>
+<div id="post-37026-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-37026-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37026/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/37026/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am able to load self-created aerial Imagery (WMS or TMS) on JOSM for editing with mapwarper.net, How can I load this imagery to mapnik o how to see it on my nominatim webpage? </p>
+<p>Edit: I'm using a virtualBox with ubuntu 14.04 Lts over windows 7 professional. I installed my tile server following <a href="http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/">http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/</a> and I browsed to localhost/osm/slippy.html and I saw my imported country map just fine.</p>
+<p>At this point I was needing a way to search for address or a place I have added to my local osm data, so I decide to install Nominatin and after several hours trying to compile it, I could compile the source Nominatin-2.2.0, the other source I found in many tutorials won compile fauling the ./autoconfig command. Later after hours of trial and error I could change the niminatim tile.js to point to my recent installed tile server (could not find an explained instructions to do that). After I get Nominating working I could browse to localhost/nominatim (nominatim webpage) and see my tiles and I could make searches to my local data for address and places.</p>
+<p>At this point I need a way to edit the map of my server so I decided to install the RailsPort. I did it but nither in these help or in google I could find how to point the RailsPort to my server so the maps I see when I browse localhost:3000 is the data from openstreetmap.org (if you have any instructions for these please send them). As I failed to use the RailsPort I decided to use offline editing with JOSM, so I downloaded my area of interest, show the imagery and edit the map, reimported the osm data to my local server, the same to Nominatim and whe browse to localhost/nominatim I could see my edits.</p>
+<p>Finally I need to see imagery (I will take aerial photos) in my localhost/nominatim togheter with mapnik tiles.</p>
+<p>If there is a better way to do what I want to do, please tell me. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/aerial/" class="post-tag tag-link-aerial"
+                                        title="see questions tagged 'aerial'" rel="tag">aerial</a>
+                                
+                                    <a href="/tags/imagery/" class="post-tag tag-link-imagery"
+                                        title="see questions tagged 'imagery'" rel="tag">imagery</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Sep '14, 14:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/aa72aa602077b8920143545f9243885c?s=32&amp;d=identicon&amp;r=g" alt="eyemax's gravatar image" />
+    <p><a href="/users/9658/eyemax">eyemax</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="eyemax has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37026/">
+                edited
+                <strong>25 Sep '14, 05:32</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-37026">
+    
+        <a name="37032"></a>
+        <div class="comment" id="comment-37032">
+            <div id="post-37032-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Please EDIT your question and tell us in detail:</p>
+
+<p>What framework do you use to display map tiles rendered by mapnik? OpenLayers, Leaflet or something else?</p>
+
+<p>What is exactly "your nominatim webpage"?</p></div>
+            <div class="comment-info" id="comment-37032-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Sep '14, 17:08)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37026" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37026-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/37026/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='5inmlSoGB5Vq3KfjkXIGrSxVpm4jOZ58' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37026/aerial-imagery-in-nominatim?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37026/aerial-imagery-in-nominatim?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/imagery/"
+            class="tag-link-imagery"
+            title="see questions tagged'imagery'using tags"
+            rel="tag">imagery</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/aerial/"
+            class="tag-link-aerial"
+            title="see questions tagged'aerial'using tags"
+            rel="tag">aerial</a> <span class="tag-number">&#215;38</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 24, 2014, 2:29 p.m.">24 Sep '14, 14:29</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,786 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 25, 2014, 5:32 a.m.">25 Sep '14, 05:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13736/how-can-i-get-the-osm-db-in-my-own-server-having-polygonic-data">How can I get the OSM DB in my own server having polygonic data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13825/permission-issue-of-so-file-in-nominatim-osm-postgres-db">Permission issue of .so file in Nominatim osm postgres DB</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4738/creating-own-aerial-images-from-an-air-balloon">Creating own aerial images from an air balloon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13183/to-find-nearest-places-using-mapquest-open-js-sdk">To find nearest places using mapquest open js sdk</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">Which is more reliable..? GPS traces or aerial imagery?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13762/how-to-check-nominatim-planet-import-execution-is-running-in-background-or-terminated">How to check Nominatim planet import execution is running in background or terminated?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/802/can-we-get-more-updated-aerial-imagery-from-bing-or-mapquest-or-anything-but-yahoo">Can we get more updated aerial imagery from Bing or Mapquest or anything, but Yahoo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1702/how-old-are-the-bing-images">How old are the Bing images?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12671/getting-error-when-importing-data-using-nominatim-index_placex-update-failed-error-upper-bound-of-for-loop-cannot-be-null">Getting error when importing data using Nominatim : index_placex: UPDATE failed: ERROR:  upper bound of FOR loop cannot be null</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13870/different-result-of-nominatim-on-my-server-while-comparing-with-original">Different result of nominatim on my server while comparing with original</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

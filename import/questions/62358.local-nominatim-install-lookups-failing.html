@@ -1,0 +1,840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Local Nominatim install lookups failing - OSM Help</title>
+        <meta name="description" content="This is my second shot at posting - first went away when I validated my email. I&#39;m trying to get a local instance of nominatim 3.1.0 running on FreeBSD 11.1 and PG 9.5. I followed the instructions published here: https://nominatim.org/release-docs/latest/admin/Installation/. I did not encounter any ..." />
+        <meta name="keywords" content="nominatim,local" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/62358/local-nominatim-install-lookups-failing" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/62358/local-nominatim-install-lookups-failing?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='0ybtrALO9xSP4hZaQIzLoDHiERd7Byjm' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/62358/local-nominatim-install-lookups-failing">Local Nominatim install lookups failing</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-62358-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/62358/up/" rel="nofollow"> </a>
+<div id="post-62358-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-62358-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/62358/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/62358/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>This is my second shot at posting - first went away when I validated my email.</p>
+<p>I'm trying to get a local instance of nominatim 3.1.0 running on FreeBSD 11.1 and PG 9.5.  I followed the instructions published here: <a href="https://nominatim.org/release-docs/latest/admin/Installation/.">https://nominatim.org/release-docs/latest/admin/Installation/.</a> I did not encounter any errors during the install and the apache/php side of things seems to be working nicely.  I installed no additional components (no TIGER, wikipedia, etc.).  I installed New Jersey from here: <a href="http://download.geofabrik.de/north-america.html">http://download.geofabrik.de/north-america.html</a></p>
+<p>However I can only query by zipcode.  Entering a street name, city, town or place name gives no results. Zipcodes return a result, but clicking on the "details" link gives me an error.  This example is zip "07960" and the URL that produces the below error is <a href="http://myinstall/details.php?place_id=430312">http://myinstall/details.php?place_id=430312</a></p>
+<pre><code>Bad Request 
+Nominatim has encountered an error with your request. Details:
+Unknown place id.
+</code></pre>
+<p>Poking around in the database, some seemingly important tables are empty:</p>
+<pre><code>nominatim=# select count(*) from location_area;
+ count
+-------
+     0
+(1 row)
+
+nominatim=# select count(*) from search_name;
+ count
+-------
+     0
+(1 row)
+</code></pre>
+<p>Places seem populated:</p>
+<pre><code>nominatim=# select count(*) from place;
+ count
+--------
+ 329248
+(1 row)
+
+nominatim=# select count(*) from placex;
+ count
+--------
+ 325948
+(1 row)
+</code></pre>
+<p>I'm stumped.  I went through the install a second time to make sure I was doing things correctly and to gather logs of the whole process.  The gist below contains the cmake output, (g)make output, setup.php output and the pgsql log.  Nothing stands out as an error in the setup log, but this is my first try at anything GIS-related so I have no idea what I'm looking at.</p>
+<p><a href="https://gist.github.com/sporkman/969be026d7048eda54d1060312f8fedb">https://gist.github.com/sporkman/969be026d7048eda54d1060312f8fedb</a></p>
+<p>Any ideas?  The empty tables seem like a big hint, not sure what populates them though.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/local/" class="post-tag tag-link-local"
+                                        title="see questions tagged 'local'" rel="tag">local</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Feb '18, 09:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8d055a5c91585c6899a51494d0b6c8e4?s=32&amp;d=identicon&amp;r=g" alt="spork123's gravatar image" />
+    <p><a href="/users/14796/spork123">spork123</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="spork123 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-62358">
+    
+        <a name="62366"></a>
+        <div class="comment" id="comment-62366">
+            <div id="post-62366-score" class="comment-score"></div>
+            <div class="comment-text"><p>Could you please add the contents of your local settings file(build/settings/local.php)?</p></div>
+            <div class="comment-info" id="comment-62366-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '18, 12:03)</span>
+                <a class="comment-user userinfo" href="/users/2921/lonvia">lonvia</a>
+                
+            </div>
+        </div>
+    
+        <a name="62369"></a>
+        <div class="comment" id="comment-62369">
+            <div id="post-62369-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, both installation and output of the setup.php look fine. And placex being filled is a good sign. The 'Create Search indices' step taking only 3 second could be suspicious. Best next good step is to try the installation with a small full country, e.g. Luxembourg or Monaco, so we can rule out the input file new-jersey causes this.</p></div>
+            <div class="comment-info" id="comment-62369-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '18, 13:35)</span>
+                <a class="comment-user userinfo" href="/users/150/mtmail">mtmail</a>
+                
+            </div>
+        </div>
+    
+        <a name="62374"></a>
+        <div class="comment" id="comment-62374">
+            <div id="post-62374-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, here's more info...  local overrides are minimal:</p>
+
+<pre><code>[spork@nominatim /home/nominatim/Nominatim-3.1.0]$ cat build/settings/local.php
+&lt;?php
+
+ @define('CONST_Database_Web_User', 'www');
+ @define('CONST_Website_BaseURL', '/');
+
+?&gt;
+</code></pre>
+
+<p>Also php version just in case there's an issue there:</p>
+
+<pre><code>[nominatim@nominatim /usr/home/nominatim/Nominatim-3.1.0]$ php -v
+PHP 5.6.32 (cli) (built: Jan  2 2018 01:29:52)
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+</code></pre>
+
+<p>Postgresql/related Versions:</p>
+
+<pre><code>postgis24-2.4.2                Geographic objects support for PostgreSQL databases
+postgresql95-client-9.5.10     PostgreSQL database (client)
+postgresql95-contrib-9.5.10    The contrib utilities from the PostgreSQL distribution
+postgresql95-server-9.5.10     PostgreSQL is the most advanced open-source database available anywhere
+</code></pre>
+
+<p>Also, for reference, the entire nominatim source and build directories are owned by a "nominatim" user, and this user was also used to perform all database operations.  I manually "dropdb nominatim" between tests.</p>
+
+<p>I grabbed Luxembourg and verified the checksum is OK:</p>
+
+<pre><code>[nominatim@nominatim /usr/home/nominatim/Nominatim-3.1.0]$ fetch <a href="http://download.geofabrik.de/europe/luxembourg-latest.osm.pbf">http://download.geofabrik.de/europe/luxembourg-latest.osm.pbf</a>
+luxembourg-latest.osm.pbf                     100% of   22 MB  728 kBps 00m32s
+[nominatim@nominatim /usr/home/nominatim/Nominatim-3.1.0]$ md5 luxembourg-latest.osm.pbf
+MD5 (luxembourg-latest.osm.pbf) = 4042514b653f6732342ae4bc0a4763ad
+</code></pre>
+
+<p>I searched for a number of towns listed here (<a href="https://en.wikipedia.org/wiki/List_of_towns_in_Luxembourg)">https://en.wikipedia.org/wiki/List_of_towns_in_Luxembourg)</a> and came up with no results. I searched on a postcode and after trying a few got a hit on "8070".  And like the New Jersey data, the details link lead to the same error (partial URL: details.php?place_id=210598).  Like NJ, "location_area" is empty, "place" and "placex" are populated. Not sure what other tables are important. Of note, a dump of this db, uncompressed is about 304MB.  There's something in there. :)</p>
+
+<p>I'm attaching the debug output for the successful and unsuccessful searches as screenshots.  The setup.php log is here: <a href="https://gist.github.com/sporkman/6829ef07576678c884119bb2ee4f3c01">https://gist.github.com/sporkman/6829ef07576678c884119bb2ee4f3c01</a></p>
+
+<p>Scanning the log, things that look weird to me:</p>
+
+<ul>
+<li>Line 11 NOTICE:  table "place" does not exist, skipping (very early in  the process) </li>
+<li>As you noted, lots of things are taking just seconds to  complete.  That said this is a VM with SSD storage and lots of CPU.</li>
+<li>Lines 55-80 note that a function and a bunch of tables don't exist, but I assume they get created </li>
+<li>All the "indexing ranks" lines state that nothing was done ("Done 0 in 0 @ 0.000000 per second - FINISHED") - this "Done 0" repeats on lines 109-214, so whatever that indexing is supposed to be doing, it doesn't seem to be actually doing any work</li>
+<li>Is there a way to get verbose output on what queries are being run here?</li>
+</ul></div>
+            <div class="comment-info" id="comment-62374-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '18, 20:04)</span>
+                <a class="comment-user userinfo" href="/users/14796/spork123">spork123</a>
+                
+            </div>
+        </div>
+    
+        <a name="62375"></a>
+        <div class="comment" id="comment-62375">
+            <div id="post-62375-score" class="comment-score"></div>
+            <div class="comment-text"><p>ps - sorry for "answering", this is too big for a comment and there's no formatting in comments.</p></div>
+            <div class="comment-info" id="comment-62375-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '18, 20:05)</span>
+                <a class="comment-user userinfo" href="/users/14796/spork123">spork123</a>
+                
+            </div>
+        </div>
+    
+        <a name="62377"></a>
+        <div class="comment not_top_scorer" id="comment-62377">
+            <div id="post-62377-score" class="comment-score"></div>
+            <div class="comment-text"><p>300MB is still reasonable. The country_grid.sql.gz is already 100MB uncompressed and imported for partitioning data regardless. The "NOTICE: table "place" does not exist, skipping" are fine, postgresql doesn't have a silent "create this table if it doesnt exist yet" afaik so this goes to the output. Have you applied any of the <a href="http://www.nominatim.org/release-docs/latest/admin/Installation/#postgresql-tuning">http://www.nominatim.org/release-docs/latest/admin/Installation/#postgresql-tuning</a> changes? For such a small import tuning makes no difference, I'm just wondering if there were any Postgresql config changes. Lastly can we rule out the harddrive is full (though usually Postgresql will print an error). I think it's the first time we see this kind of error, or rather lack of error message while looping through 0 places.</p></div>
+            <div class="comment-info" id="comment-62377-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '18, 21:22)</span>
+                <a class="comment-user userinfo" href="/users/150/mtmail">mtmail</a>
+                
+            </div>
+        </div>
+    
+        <a name="62378"></a>
+        <div class="comment not_top_scorer" id="comment-62378">
+            <div id="post-62378-score" class="comment-score"></div>
+            <div class="comment-text"><p>meta <a href="https://help.openstreetmap.org/users/14796/spork123">@spork123</a>: there is formatting in comments - just no preview. You can use the preview of the answer or use <a href="https://daringfireball.net/projects/markdown/dingus">https://daringfireball.net/projects/markdown/dingus</a> for previewing which is more accurate anyway. (note: I have converted your "answer" to a "comment".)</p></div>
+            <div class="comment-info" id="comment-62378-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '18, 22:18)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="62380"></a>
+        <div class="comment not_top_scorer" id="comment-62380">
+            <div id="post-62380-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think I lost a reply, but the short version just that drive space is fine.</p>
+
+<p>PG changes: shared_buffers = 1500MB, work_mem = 50MB, maintenance_work_mem = 512MB, synchronous_commit = off (for import), checkpoint_timeout = 10min, checkpoint_completion_target = 0.9 and the rest is stock.</p>
+
+<p>PHP modules/PEAR: json, openssl, pgsql, xml, zlib and pear-1.10.5, pear-DB-1.9.2</p>
+
+<p>I've been stepping through setup.php to see what it does, and now I see that the indexing step is handled by an executable: build/nominatim/nominatim - I'm going to assume that's where the issue is.  Any thoughts on debugging that?  It's not doing an instant segfault or anything, so that's good.  But does it make any interesting assumptions about what OS it's running on?</p></div>
+            <div class="comment-info" id="comment-62380-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '18, 23:24)</span>
+                <a class="comment-user userinfo" href="/users/14796/spork123">spork123</a>
+                
+            </div>
+        </div>
+    
+        <a name="62381"></a>
+        <div class="comment not_top_scorer" id="comment-62381">
+            <div id="post-62381-score" class="comment-score"></div>
+            <div class="comment-text"><p>btw, thanks <a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, I had no idea.</p>
+
+<p>So this indexer.  Either it's silently failing or it's not seeing whatever input data it wants.  Can anyone elaborate on what it's looking for so I can verify the input data exists?  </p>
+
+<p>Manual run:</p>
+
+<pre><code>[nominatim@nominatim /usr/home/nominatim/Nominatim-3.1.0/build]$ nominatim/nominatim -i -d nominatim -P 5432 -t  1 -R 4
+nominatim version 3.1.0
+
+Starting indexing rank (0 to 4) using 1 threads
+Starting rank 0
+  Done 0 in 0 @ 0.000000 per second - FINISHED
+
+Starting rank 1
+  Done 0 in 0 @ 0.000000 per second - FINISHED
+(etc.)
+</code></pre></div>
+            <div class="comment-info" id="comment-62381-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '18, 23:38)</span>
+                <a class="comment-user userinfo" href="/users/14796/spork123">spork123</a>
+                
+            </div>
+        </div>
+    
+        <a name="62383"></a>
+        <div class="comment not_top_scorer" id="comment-62383">
+            <div id="post-62383-score" class="comment-score"></div>
+            <div class="comment-text"><p>Even more data.  Installed using the same process on Ubuntu 16.04 LTS.  Same dataset and all, biggest difference was that I saw the index process actually generate quite a bit of output.  And it worked as well.</p>
+
+<p>Experiments to narrow this down to the index process that calls the "nominatim" binary:</p>
+
+<ul>
+<li>Copy "broken"/not properly indexed database dump to working ubuntu server, load it up, use "setup.php --create-functions" to create missing functions and note that the previously working Ubuntu setup stopped working with the same results as the FreeBSD install I've been working on</li>
+<li>Manually run "setup.php --index" on this "broken" data on the Ubuntu server, and after that process completes, everything is working normally again</li>
+<li>Dump this "good" database, copy it to FreeBSD server.  As above, manually create functions.  This install now works normally.</li>
+</ul>
+
+<p>What does this show?  Given a properly indexed db, the FreeBSD version works, which means the frontend is OK, osm2pgsql works, the nominatim.so module for PG works. It also shows that the data the indexer needs to function is present (proven when copying "bad" db to ubuntu and indexing it).  So something is up with the indexer, no?</p></div>
+            <div class="comment-info" id="comment-62383-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '18, 05:45)</span>
+                <a class="comment-user userinfo" href="/users/14796/spork123">spork123</a>
+                
+            </div>
+        </div>
+    
+        <a name="62480"></a>
+        <div class="comment not_top_scorer" id="comment-62480">
+            <div id="post-62480-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hey all, is this better handled in a github ticket?</p></div>
+            <div class="comment-info" id="comment-62480-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '18, 01:00)</span>
+                <a class="comment-user userinfo" href="/users/14796/spork123">spork123</a>
+                
+            </div>
+        </div>
+    
+        <a name="62492"></a>
+        <div class="comment" id="comment-62492">
+            <div id="post-62492-score" class="comment-score">3</div>
+            <div class="comment-text"><p>This looks like a compatibility bug in nominatim.index,c and will require some debugging on your side. Please open a new bug on github.</p></div>
+            <div class="comment-info" id="comment-62492-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '18, 09:38)</span>
+                <a class="comment-user userinfo" href="/users/2921/lonvia">lonvia</a>
+                
+            </div>
+        </div>
+    
+        <a name="62499"></a>
+        <div class="comment not_top_scorer" id="comment-62499">
+            <div id="post-62499-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/14796/spork123">@spork123</a>: please link the issue here once you have created it.</p></div>
+            <div class="comment-info" id="comment-62499-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '18, 19:53)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-62358" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-62358-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/62358/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='0ybtrALO9xSP4hZaQIzLoDHiERd7Byjm' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/62358/local-nominatim-install-lookups-failing?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/62358/local-nominatim-install-lookups-failing?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/local/"
+            class="tag-link-local"
+            title="see questions tagged'local'using tags"
+            rel="tag">local</a> <span class="tag-number">&#215;39</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 24, 2018, 9:16 a.m.">24 Feb '18, 09:16</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,182 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 2, 2018, 7:53 p.m.">02 Mar '18, 19:53</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/43672/nominatim-setup-for-own-tile-server">Nominatim setup for own tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14261/why-does-it-show-the-spanish-name-pensilvania-in-a-nominatim-page">Why does it show the Spanish name &quot;Pensilvania&quot; in a Nominatim page?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47165/local-nominatim-sometimes-returns-no-results">Local Nominatim sometimes returns no results</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68310/my-local-server-returns-no-search-results-found-for-every-query">my local server returns: No search results found, for every query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1447/nominatim-search">nominatim search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1841/confused-about-nominatim-and-county-boundaries">[closed] Confused about Nominatim and County Boundaries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer">Why does Nominatim return an error for queries from Internet Explorer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2680/can-i-produce-a-database-of-addresses-from-osm-data">Can I produce a database of addresses from OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1391/why-does-nominatim-not-pick-up-a-country-name">Why does Nominatim not pick up a country name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2572/i-added-some-road-name-and-are-not-found-on-nominatim">I added some road name and are not found on nominatim</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,970 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I list all the streets in a city with nominatim? - OSM Help</title>
+        <meta name="description" content="I&#39;d like to list the names of every streets in a given city (from OSM data). How can I do that? I&#39;ve tried with nominatim a query like: http://nominatim.openstreetmap.org/search?q=residentials%20in%20delft,netherlands But it returns an empty result (while if I look for &quot;pubs&quot;, it works fine). Using ..." />
+        <meta name="keywords" content="query,nominatim,street,name" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='lW4itcrFCeW0Nb0Cw5xpSdfkbVpDdnxE' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">How do I list all the streets in a city with nominatim?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-2980-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2980/up/" rel="nofollow"> </a>
+<div id="post-2980-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-2980-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2980/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/2980/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'd like to list the names of every streets in a given city (from OSM data). How can I do that?</p>
+<p>I've tried with nominatim a query like:
+<a href="http://nominatim.openstreetmap.org/search?q=residentials%20in%20delft,netherlands">http://nominatim.openstreetmap.org/search?q=residentials%20in%20delft,netherlands</a></p>
+<p>But it returns an empty result (while if I look for "pubs", it works fine). Using the details.php, I see that nominatim can list them:
+<a href="http://open.mapquestapi.com/nominatim/v1/details.php?place_id=7227120">http://open.mapquestapi.com/nominatim/v1/details.php?place_id=7227120</a></p>
+<p>I'm working around using Xapi and a bounding box, but that works kind of ok only if the city is not surrounded too closely by other cities. Example of such a query:
+<a href="http://azure.openstreetmap.org/xapi/api/0.6/*[highway=residential][bbox=2.8634295463562,49.2131958007812,2.936068534807,49.2601203918457]">http://azure.openstreetmap.org/xapi/api/0.6/*[highway=residential][bbox=2.8634295463562,49.2131958007812,2.936068534807,49.2601203918457]</a></p>
+<p>Can anyone suggest me a way to get it working via nominatim?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/query/" class="post-tag tag-link-query"
+                                        title="see questions tagged 'query'" rel="tag">query</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/street/" class="post-tag tag-link-street"
+                                        title="see questions tagged 'street'" rel="tag">street</a>
+                                
+                                    <a href="/tags/name/" class="post-tag tag-link-name"
+                                        title="see questions tagged 'name'" rel="tag">name</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Feb '11, 11:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/eea25ff6647bea6fd95feb3afdcac3b2?s=32&amp;d=identicon&amp;r=g" alt="%C3%89ric%20Piel's gravatar image" />
+    <p><a href="/users/846/eric-piel">Éric Piel</a><br/>
+    <span class="score" title="116 reputation points">116</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Éric Piel has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-2980">
+    
+</div>
+<div id="comment-tools-2980" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2980-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="3132"></a>
+                    <div id="answer-container-3132" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3132-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3132/up/" rel="nofollow"> </a>
+<div id="post-3132-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-3132-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3132/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you want to do it regularly for lots of cities this is the way:</p>
+<ol>
+<li><a href="http://dev.openstreetmap.org/~bretth/osmosis-build/osmosis-latest.zip">download osmosis</a> (and perhaps <a href="http://osmembrane.de">osmembrane</a> which is a beta GUI for osmosis)</li>
+<li>download your country extract  <a href="http://download.geofabrik.de/osm/europe/">netherlands.osm.pbf</a> (~430MB)</li>
+<li>create a <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">polygon file parseable</a> by osmois (see <a href="http://trac.openstreetmap.org/browser/applications/utils/osm-extract/polygons/osm2poly.pl">osm2polygon</a>)</li>
+<li>run osmosis with the polygon and extract all ways that have the tags name=* and highway=residential<ol>
+<li><a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--way-key_.28--wk.29">way-key</a> name,highway</li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">tag filter</a> reject-node, reject-relation</li>
+</ol>
+</li>
+</ol>
+<p>Then just filter out all the names in the resulting OSM xml file match all lines containing <code>k="name" v="</code> this can be done in many ways. Parsing Sweden (~70MB) with osmosis takes about 16 seconds on a 4 year old desktop machine..</p>
+<p>This is my osmosis line without poly file</p>
+<pre><code>osmosis-0.38/bin/osmosis --read-pbf file=sweden.osm.pbf  \
+--bounding-box left=17.8 right=18.16 top=59.45 bottom=59.27 \
+--way-key keyList=highway \
+--way-key keyList=name \
+--tag-filter reject-nodes \
+--tag-filter reject-relations \
+--write-xml Stockholm-names.osm
+</code></pre>
+<p>Then I run:</p>
+<pre><code>sed -n 's/.*k="name" v="//;T;s|"/&gt;||;p' Stockholm-names.osm |sort -u
+</code></pre>
+<p><strong>Creating a Polygon file</strong></p>
+<p>With Josm  I created the a .osm file like this, </p>
+<pre><code>&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;osm version='0.6' generator='JOSM'&gt;
+  &lt;bounds minlat='59.323463999999994' minlon='18.0798161' maxlat='59.323715799999995' maxlon='18.0805349' origin='CGImap 0.0.2' /&gt;
+  &lt;bounds minlat='59.323463999999994' minlon='18.0798161' maxlat='59.323715799999995' maxlon='18.0805349' origin='OpenStreetMap server' /&gt;
+  &lt;node id='-28' visible='true' lat='59.30925658' lon='18.044743' /&gt;
+  &lt;node id='-26' visible='true' lat='59.31157127' lon='18.035956' /&gt;
+  &lt;node id='-24' visible='true' lat='59.31533231' lon='18.025752' /&gt;
+  &lt;node id='-22' visible='true' lat='59.31779123' lon='18.026035' /&gt;
+  &lt;node id='-20' visible='true' lat='59.31938219' lon='18.028019' /&gt;
+  &lt;node id='-18' visible='true' lat='59.32024996' lon='18.037940' /&gt;
+  &lt;node id='-16' visible='true' lat='59.32256391' lon='18.048995' /&gt;
+  &lt;node id='-14' visible='true' lat='59.32184082' lon='18.068552' /&gt;
+  &lt;node id='-12' visible='true' lat='59.31865904' lon='18.086693' /&gt;
+  &lt;node id='-10' visible='true' lat='59.31692339' lon='18.108802' /&gt;
+  &lt;node id='-8' visible='true' lat='59.31157127' lon='18.103133' /&gt;
+  &lt;node id='-6' visible='true' lat='59.30621830' lon='18.098881' /&gt;
+  &lt;node id='-4' visible='true' lat='59.30260096' lon='18.077056' /&gt;
+  &lt;node id='-2' visible='true' lat='59.30274566' lon='18.068552' /&gt;
+  &lt;node id='-1' visible='true' lat='59.30549486' lon='18.058065' /&gt;
+  &lt;way id='-3' action='modify' visible='true'&gt;
+    &lt;nd ref='-1' /&gt;
+    &lt;nd ref='-2' /&gt;
+    &lt;nd ref='-4' /&gt;
+    &lt;nd ref='-6' /&gt;
+    &lt;nd ref='-8' /&gt;
+    &lt;nd ref='-10' /&gt;
+    &lt;nd ref='-12' /&gt;
+    &lt;nd ref='-14' /&gt;
+    &lt;nd ref='-16' /&gt;
+    &lt;nd ref='-18' /&gt;
+    &lt;nd ref='-20' /&gt;
+    &lt;nd ref='-22' /&gt;
+    &lt;nd ref='-24' /&gt;
+    &lt;nd ref='-26' /&gt;
+    &lt;nd ref='-28' /&gt;
+    &lt;nd ref='-1' /&gt;
+    &lt;tag k='polygon_file' v='sodermalm' /&gt;
+    &lt;tag k='polygon_id' v='1' /&gt;
+  &lt;/way&gt;
+&lt;/osm&gt;
+</code></pre>
+<p>With 
+<a href="http://trac.openstreetmap.org/export/25346/applications/utils/osm-extract/polygons/osm2poly.pl">perl osm2poly.pl &lt;sodermalm_poly.osm&gt;sodermalm.poly</a> I got this:</p>
+<pre><code>sodermalm
+1
+   1.805807E+01   5.930549E+01
+   1.806855E+01   5.930275E+01
+   1.807706E+01   5.930260E+01
+   1.809888E+01   5.930622E+01
+   1.810313E+01   5.931157E+01
+   1.810880E+01   5.931692E+01
+   1.808669E+01   5.931866E+01
+   1.806855E+01   5.932184E+01
+   1.804900E+01   5.932256E+01
+   1.803794E+01   5.932025E+01
+   1.802802E+01   5.931938E+01
+   1.802604E+01   5.931779E+01
+   1.802575E+01   5.931533E+01
+   1.803596E+01   5.931157E+01
+   1.804474E+01   5.930926E+01
+   1.805807E+01   5.930549E+01
+END
+END
+</code></pre>
+<p>Then I ran osmosis:</p>
+<pre><code>osmosis-0.38/bin/osmosis --read-pbf file=sweden.osm.pbf  \
+-bounding-polygon file=osmosis-0.38/sodermalm.poly \
+--way-key keyList=highway \
+--way-key keyList=name \
+--tag-filter reject-nodes \
+--tag-filter reject-relations \
+--write-xml Stockholm-names.osm
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3132/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Feb '11, 13:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dd3858f5f89f5a6b738f9dbe59824440?s=32&amp;d=identicon&amp;r=g" alt="emj's gravatar image" />
+    <p><a href="/users/188/emj">emj</a><br/>
+    <span class="score" title="2024 reputation points"><span class="">2.0k</span></span><span title="12 badges"><span class="badge1">&#9679;</span><span class="badgecount">12</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="47 badges"><span class="bronze">&#9679;</span><span class="badgecount">47</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="emj has 11 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3132/">
+                edited
+                <strong>17 Feb '11, 14:27</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3132">
+    
+        <a name="25710"></a>
+        <div class="comment" id="comment-25710">
+            <div id="post-25710-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've been gathering poly files for cities at <a href="https://github.com/JamesChevalier/cities">https://github.com/JamesChevalier/cities</a>
+The method that I go through to create the poly files is in the readme file (displayed at the bottom of the page).</p></div>
+            <div class="comment-info" id="comment-25710-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '13, 03:04)</span>
+                <a class="comment-user userinfo" href="/users/7201/jameschevalier">JamesChevalier</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3132" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3132-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="3055"></a>
+                    <div id="answer-container-3055" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3055-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3055/up/" rel="nofollow"> </a>
+<div id="post-3055-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-3055-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3055/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Nominatim is designed to be a geocoding and reverse geocoding system rather than a general method of downloading data from OpenStreetMap and as such only a limited number of 'special' phrases work - normally restricted to points of interest.  That said there will shortly be a downloadable version of the nominatim data set available which you could filter yourself for this information.  Please watch for anouncements on the <a>geocoding mailing list</a>.</p>
+<p>In the mean time you can download a suitable OSM file (either from xapi, or a planet extract or even the full planet file) and filter it using the bounding-polygon option of <a>Osmosis</a>.  You may be able to download the polygon from OSM, in other cases you will have to draw it yourself.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3055/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Feb '11, 09:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bda08a105bb6a4a606d47c1b27187fac?s=32&amp;d=identicon&amp;r=g" alt="twain's gravatar image" />
+    <p><a href="/users/4/twain">twain</a><br/>
+    <span class="score" title="2381 reputation points"><span class="">2.4k</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="38 badges"><span class="bronze">&#9679;</span><span class="badgecount">38</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="twain has 15 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3055/">
+                edited
+                <strong>15 Feb '11, 09:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3055">
+    
+        <a name="30191"></a>
+        <div class="comment" id="comment-30191">
+            <div id="post-30191-score" class="comment-score"></div>
+            <div class="comment-text"><p>You mention 'You may be able to download the polygon from OSM' ... Where (when they exist) are those available?</p></div>
+            <div class="comment-info" id="comment-30191-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jan '14, 18:25)</span>
+                <a class="comment-user userinfo" href="/users/7201/jameschevalier">JamesChevalier</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3055" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3055-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="3077"></a>
+                    <div id="answer-container-3077" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3077-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3077/up/" rel="nofollow"> </a>
+<div id="post-3077-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-3077-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3077/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You should also take a look at <a href="http://maposmatic.org/">http://maposmatic.org/</a> , which does pretty much what you are looking for and allows you to download either a rendered version or the raw data. They explain how they did it in the "about" page, and the tool they wrote is available. It requires that you have a local installation of OSM tools and database.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3077/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Feb '11, 15:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d20f86db9a6f03cb070e9fbaaf0b7228?s=32&amp;d=identicon&amp;r=g" alt="Vincent%20de%20Phily's gravatar image" />
+    <p><a href="/users/867/vincent-de-phily">Vincent de P... ♦</a><br/>
+    <span class="score" title="17304 reputation points"><span class="">17.3k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="152 badges"><span class="silver">&#9679;</span><span class="badgecount">152</span></span><span title="249 badges"><span class="bronze">&#9679;</span><span class="badgecount">249</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vincent de Phily has 64 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3077/">
+                edited
+                <strong>15 Feb '11, 15:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3077">
+    
+</div>
+<div id="comment-tools-3077" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3077-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/2980/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='lW4itcrFCeW0Nb0Cw5xpSdfkbVpDdnxE' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/name/"
+            class="tag-link-name"
+            title="see questions tagged'name'using tags"
+            rel="tag">name</a> <span class="tag-number">&#215;219</span><br/>
+        
+        <a href="/tags/query/"
+            class="tag-link-query"
+            title="see questions tagged'query'using tags"
+            rel="tag">query</a> <span class="tag-number">&#215;147</span><br/>
+        
+        <a href="/tags/street/"
+            class="tag-link-street"
+            title="see questions tagged'street'using tags"
+            rel="tag">street</a> <span class="tag-number">&#215;142</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 12, 2011, 11:29 a.m.">12 Feb '11, 11:29</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>40,023 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 24, 2014, 6:25 p.m.">24 Jan '14, 18:25</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/6006/potlatch-bug-with-street-names">Potlatch bug with street names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17315/how-do-i-find-the-nearest-cities-to-a-point-using-latitude-and-longitude-in-nominatim">How do I find the nearest cities to a point using latitude and longitude in nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3584/change-street-name">Change Street Name</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5819/added-street-doesnt-show-up-on-search">Added street doesn&#39;t show up on search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10170/view-streets-with-missing-names">View streets with missing names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16317/warum-werden-straen-bei-suche-nicht-gefunden">Warum werden Straßen bei Suche nicht gefunden?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1391/why-does-nominatim-not-pick-up-a-country-name">Why does Nominatim not pick up a country name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2756/how-do-i-change-a-street-name">How do I change a street name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5307/in-pdf-some-text-is-only-searchable-with-the-backwards-spelling-of-the-street-name">In PDF some text is only searchable with the backwards spelling of the street name.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18717/the-name-of-a-street-is-wrong">[closed] The name of a street is wrong</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to overlay and base tiles from different tile servers with 0 lines-of-code - OSM Help</title>
+        <meta name="description" content="Does anyone know of a free tile server that returns a png tile combining two (or more) layer tiles from different base and layer tile servers in one layer? For instance, I want to combine (without any coding by me please) the following base and layer tiles:  https://a.tile.openstreetmap.org/${z}/${x..." />
+        <meta name="keywords" content="tile_server,overlay,flatten,base,combining" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/74566/how-to-overlay-and-base-tiles-from-different-tile-servers-with-0-lines-of-code" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/74566/how-to-overlay-and-base-tiles-from-different-tile-servers-with-0-lines-of-code?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='GF5tt3nAgd6zaw73ahzIcce1FLTRMPLT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/74566/how-to-overlay-and-base-tiles-from-different-tile-servers-with-0-lines-of-code">How to overlay and base tiles from different tile servers with 0 lines-of-code</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-74566-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74566/up/" rel="nofollow"> </a>
+<div id="post-74566-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-74566-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74566/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/74566/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Does anyone know of a free tile server that returns a png tile combining two (or more) layer tiles from different base and layer tile servers in one layer?
+For instance, I want to combine (without any coding by me please) the following base and layer tiles:
+ <a href="https://a.tile.openstreetmap.org/${z}/${x}/${y}.png">https://a.tile.openstreetmap.org/${z}/${x}/${y}.png</a> 
+ <a href="http://tiles.openseamap.org/seamark/${z}/${x}/${y}.png">http://tiles.openseamap.org/seamark/${z}/${x}/${y}.png</a></p>
+<p>It would be great if I could query a server like this:
+I specify on this  ‘flattening meta tile server’ the two or Maybe more tile servers (in the right order of the layers), in return the server issues some unique identifier, for instance ‘12345’, and after that I can get my tiles using:
+<a href="https://flattened.tiles.openstreetmap.org/12345/${z}/${x}/${y}.png">https://flattened.tiles.openstreetmap.org/12345/${z}/${x}/${y}.png</a> </p>
+<p>Kind regards, Jasper</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tile_server/" class="post-tag tag-link-tile_server"
+                                        title="see questions tagged 'tile_server'" rel="tag">tile_server</a>
+                                
+                                    <a href="/tags/overlay/" class="post-tag tag-link-overlay"
+                                        title="see questions tagged 'overlay'" rel="tag">overlay</a>
+                                
+                                    <a href="/tags/flatten/" class="post-tag tag-link-flatten"
+                                        title="see questions tagged 'flatten'" rel="tag">flatten</a>
+                                
+                                    <a href="/tags/base/" class="post-tag tag-link-base"
+                                        title="see questions tagged 'base'" rel="tag">base</a>
+                                
+                                    <a href="/tags/combining/" class="post-tag tag-link-combining"
+                                        title="see questions tagged 'combining'" rel="tag">combining</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 May '20, 14:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3d509943e71a0f9306faf574e3baca30?s=32&amp;d=identicon&amp;r=g" alt="jjddgg's gravatar image" />
+    <p><a href="/users/18313/jjddgg">jjddgg</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jjddgg has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-74566">
+    
+        <a name="74572"></a>
+        <div class="comment" id="comment-74572">
+            <div id="post-74572-score" class="comment-score">2</div>
+            <div class="comment-text"><p>There ain't no such things as a free lunch - someone, somewhere, is going to have to may hosting and bandwidth costs, and these are going to be significant since every time you make a tile request it's going to have to hit this third-party server, which is then going to have to query two other tile servers.</p>
+
+<p>Why not just overlay <a href="http://tiles.openseamap.org/seamark/12/2049/1323.png">seamarks</a> over <a href="https://a.tile.openstreetmap.org/12/2049/1323.png">other tiles</a> using leaflet?</p>
+
+<p>There are lots of examples on the <a href="https://leafletjs.com/examples.html">leaflet site</a>.  If you want to see an example, have a look at the overlays <a href="https://map.atownsend.org.uk/maps/map/map.html">here</a>.  The <a href="https://github.com/SomeoneElseOSM/SomeoneElse-map/blob/master/map/Scripts/leaflet_embed_small.js#L68">code</a> for that is simple - not 0 lines of code, but only about 6 - 3 to define a map layer used as an overlay and 3 to use it.</p></div>
+            <div class="comment-info" id="comment-74572-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '20, 17:27)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74566" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74566-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/74566/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='GF5tt3nAgd6zaw73ahzIcce1FLTRMPLT' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74566/how-to-overlay-and-base-tiles-from-different-tile-servers-with-0-lines-of-code?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74566/how-to-overlay-and-base-tiles-from-different-tile-servers-with-0-lines-of-code?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overlay/"
+            class="tag-link-overlay"
+            title="see questions tagged'overlay'using tags"
+            rel="tag">overlay</a> <span class="tag-number">&#215;42</span><br/>
+        
+        <a href="/tags/base/"
+            class="tag-link-base"
+            title="see questions tagged'base'using tags"
+            rel="tag">base</a> <span class="tag-number">&#215;6</span><br/>
+        
+        <a href="/tags/tile_server/"
+            class="tag-link-tile_server"
+            title="see questions tagged'tile_server'using tags"
+            rel="tag">tile_server</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/combining/"
+            class="tag-link-combining"
+            title="see questions tagged'combining'using tags"
+            rel="tag">combining</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/flatten/"
+            class="tag-link-flatten"
+            title="see questions tagged'flatten'using tags"
+            rel="tag">flatten</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 3, 2020, 2:27 p.m.">03 May '20, 14:27</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,091 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 3, 2020, 5:27 p.m.">03 May '20, 17:27</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/773/map-for-railway-networks">Map for railway network(s)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1406/how-can-i-pick-areas-in-the-data-overlay-that-are-hidden-by-other-areas">How can I pick areas in the data overlay that are hidden by other areas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1586/is-there-a-tileset-like-the-hybrid-label-overlay-in-google-maps">Is there a tileset like the hybrid label overlay in google maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2144/using-slippy-map-data-overlay-cant-select-items-in-forest-area">[closed] Using slippy-map data overlay, can&#39;t select items in forest area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2811/how-can-i-download-all-the-data">How can I download all the data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3210/creating-layers-on-offline-tiles">creating layers on offline tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3452/getting-to-the-base-map">Getting to the base map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6312/catchment-areas">Catchment areas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8681/problem-using-osm-data-with-google-maps-api-v3">Problem using OSM data with Google Maps API V3</a>
+        </p>
+        
+        <p>
+            <a href="/questions/741/why-no-map-base-south-of-east-india-docks-when-exporting-an-osmarender-image">Why no map base south of East India Docks when exporting an Osmarender Image</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

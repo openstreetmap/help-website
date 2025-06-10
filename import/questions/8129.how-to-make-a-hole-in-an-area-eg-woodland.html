@@ -1,0 +1,1002 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to make a hole in an area, eg woodland. - OSM Help</title>
+        <meta name="description" content="I wish to mark an area in a wood that is not wood such as in this example but can&#39;t figure out how to do it. I think it requires using a multipolygon and discovered this page but am afraid I don&#39;t understand. Can someone explain the &#39;how to&#39; in simple English please? I now use Potlatch 2. Thanks" />
+        <meta name="keywords" content="potlatch2,josm,hole,multipolygon" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='MUNZefkRLrHVcHDHIF9rAJTOzs2wYmyS' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland">How to make a hole in an area, eg woodland.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-8129-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8129/up/" rel="nofollow"> </a>
+<div id="post-8129-score" class="post-score"
+    title="current number of votes">
+    14
+</div>
+<a id="post-8129-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8129/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/8129/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I wish to mark an area in a wood that is not wood such as in <a href="http://www.openstreetmap.org/?lat=51.45477&amp;lon=-2.76774&amp;zoom=16&amp;layers=M">this example</a> but can't figure out how to do it. I think it requires using a multipolygon and discovered <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">this page</a> but am afraid I don't understand. Can someone explain the 'how to' in simple English please? I now use Potlatch 2.</p>
+<p>Thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/potlatch2/" class="post-tag tag-link-potlatch2"
+                                        title="see questions tagged 'potlatch2'" rel="tag">potlatch2</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/hole/" class="post-tag tag-link-hole"
+                                        title="see questions tagged 'hole'" rel="tag">hole</a>
+                                
+                                    <a href="/tags/multipolygon/" class="post-tag tag-link-multipolygon"
+                                        title="see questions tagged 'multipolygon'" rel="tag">multipolygon</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Sep '11, 11:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/45d62517b772d1ae37975c05be147cf9?s=32&amp;d=identicon&amp;r=g" alt="FollowMeChaps's gravatar image" />
+    <p><a href="/users/2139/followmechaps">FollowMeChaps</a><br/>
+    <span class="score" title="325 reputation points">325</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="FollowMeChaps has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8129/">
+                edited
+                <strong>24 Apr '13, 02:29</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-8129">
+    
+</div>
+<div id="comment-tools-8129" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8129-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="8143"></a>
+                    <div id="answer-container-8143" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8143-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8143/up/" rel="nofollow"> </a>
+<div id="post-8143-score" class="post-score"
+    title="current number of votes">
+    26
+</div>
+<a id="post-8143-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8143/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <ul>
+<li>Draw the outer way</li>
+<li>Set the natural=woodland tag</li>
+<li>Draw the inner way</li>
+<li>Select both ways at the same time
+   (by holding ctrl or shift key while selecting)</li>
+<li><strong>In Potlatch 2</strong>: Click the multipolygon toolbox icon (top right)</li>
+<li><strong>In JOSM</strong>: Choose the 'tools' menu -&gt; 'Create multipolygon'</li>
+<li><strong>In iD</strong> - (The new editor) Choose the 'merge' tool in the context menu</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8143/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Sep '11, 02:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8143/">
+                edited
+                <strong>05 Mar '14, 16:44</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/eca34689e074411e0daca0d994f532b3?s=32&amp;d=identicon&amp;r=g" alt="tyr_asd's gravatar image" />
+            <p><a href="/users/3005/tyr_asd">tyr_asd</a><br/>
+            <span class="score" title="1196 reputation points"><span class="">1.2k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="19 badges"><span class="silver">&#9679;</span><span class="badgecount">19</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8143">
+    
+        <a name="8146"></a>
+        <div class="comment" id="comment-8146">
+            <div id="post-8146-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Many thanks Harry, that worked!</p>
+
+<p>I'd worked out part of that multipolygon malarke but would never have got there myself without your help - thanks again.</p>
+
+<p>I can't seem to find much Potlatch 2 help on the web, am I missing something?</p>
+
+<p>Robin</p></div>
+            <div class="comment-info" id="comment-8146-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Sep '11, 09:04)</span>
+                <a class="comment-user userinfo" href="/users/2139/followmechaps">FollowMeChaps</a>
+                
+            </div>
+        </div>
+    
+        <a name="8250"></a>
+        <div class="comment" id="comment-8250">
+            <div id="post-8250-score" class="comment-score"></div>
+            <div class="comment-text"><p>The internal help in Potlatch2 is internal, and isn't hosted on the web anywhere as far as I'm aware.  There is this though, which may or may not be 100% up to date:</p>
+
+<p><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer</a></p></div>
+            <div class="comment-info" id="comment-8250-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Oct '11, 13:14)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="18594"></a>
+        <div class="comment" id="comment-18594">
+            <div id="post-18594-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is not the good place for your concern. Go to <a href="https://trac.openstreetmap.org/">https://trac.openstreetmap.org/</a> and create a new 'ticket'</p></div>
+            <div class="comment-info" id="comment-18594-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '12, 10:37)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+        <a name="18596"></a>
+        <div class="comment" id="comment-18596">
+            <div id="post-18596-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Although <a href="https://trac.openstreetmap.org/">https://trac.openstreetmap.org/</a> is the place to report most OSM issues, JOSM has it's own trac, <a href="http://josm.openstreetmap.de/report">here</a>.</p></div>
+            <div class="comment-info" id="comment-18596-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '12, 11:29)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="22390"></a>
+        <div class="comment not_top_scorer" id="comment-22390">
+            <div id="post-22390-score" class="comment-score"></div>
+            <div class="comment-text"><p>See this question AND Richard's answer. <a href="https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations">https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations</a></p></div>
+            <div class="comment-info" id="comment-22390-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '13, 19:22)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="30850"></a>
+        <div class="comment not_top_scorer" id="comment-30850">
+            <div id="post-30850-score" class="comment-score"></div>
+            <div class="comment-text"><p>Careful. All answers/suggestions are incomplete (strictly taken - wrong). The question was - how to convert a simple area to a complex area (not how to upload a complex area). The suggested procedures lead to two (almost) overlapping objects. You will never see your hole. There is already a huge number of similar errors in OSM data.</p></div>
+            <div class="comment-info" id="comment-30850-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Feb '14, 10:16)</span>
+                <a class="comment-user userinfo" href="/users/3194/sanser">sanser</a>
+                
+            </div>
+        </div>
+    
+        <a name="31333"></a>
+        <div class="comment" id="comment-31333">
+            <div id="post-31333-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Sanser, you are talking nonsense.</p></div>
+            <div class="comment-info" id="comment-31333-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Mar '14, 18:17)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8143" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8143-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="30829"></a>
+                    <div id="answer-container-30829" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30829-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30829/up/" rel="nofollow"> </a>
+<div id="post-30829-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-30829-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30829/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In the new iD editor you can also do that! Draw both areas, select them by Control-clicking on both and press the big plus icon: "Merge". Alternatively press "C" on your keyboard.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30829/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Feb '14, 20:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b4e1e135978fb51d473bf4a1d625b753?s=32&amp;d=identicon&amp;r=g" alt="Daniels's gravatar image" />
+    <p><a href="/users/8353/daniels">Daniels</a><br/>
+    <span class="score" title="76 reputation points">76</span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Daniels has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30829">
+    
+        <a name="32467"></a>
+        <div class="comment" id="comment-32467">
+            <div id="post-32467-score" class="comment-score"></div>
+            <div class="comment-text"><p>Awesome! Thanks, it works in I.D.</p></div>
+            <div class="comment-info" id="comment-32467-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Apr '14, 07:07)</span>
+                <a class="comment-user userinfo" href="/users/7959/thedutchman13">TheDutchMan13</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-30829" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30829-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="22409"></a>
+                    <div id="answer-container-22409" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22409-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22409/up/" rel="nofollow"> </a>
+<div id="post-22409-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-22409-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22409/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For Potlatch2 its easy to make a multipolygon. First make the polygons,and tag each one separately. After that ctrl click each of the ways until all are highlighted then click the square in a square icon: then save it. Very simple. see pic <img alt="alt text" src="http://help.openstreetmap.org/upfiles/0000000_muliti_polygon_1.JPG"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22409/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 May '13, 07:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/22409/">
+                edited
+                <strong>08 May '14, 14:39</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22409">
+    
+</div>
+<div id="comment-tools-22409" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22409-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/8129/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='MUNZefkRLrHVcHDHIF9rAJTOzs2wYmyS' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/potlatch2/"
+            class="tag-link-potlatch2"
+            title="see questions tagged'potlatch2'using tags"
+            rel="tag">potlatch2</a> <span class="tag-number">&#215;210</span><br/>
+        
+        <a href="/tags/multipolygon/"
+            class="tag-link-multipolygon"
+            title="see questions tagged'multipolygon'using tags"
+            rel="tag">multipolygon</a> <span class="tag-number">&#215;132</span><br/>
+        
+        <a href="/tags/hole/"
+            class="tag-link-hole"
+            title="see questions tagged'hole'using tags"
+            rel="tag">hole</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 25, 2011, 11:35 a.m.">25 Sep '11, 11:35</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>22,588 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 8, 2014, 2:39 p.m.">08 May '14, 14:39</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/17536/why-are-fewer-tags-shown-in-potlatch-2-than-in-josm">Why are fewer tags shown in Potlatch 2 than in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40792/editing-large-multipolygons-in-josm">Editing large multipolygons in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10910/school-with-multiple-buildings-multipolygon">School with multiple buildings: multipolygon?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14732/using-inner-and-outer-relations">Using Inner and Outer Relations</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17833/how-to-addedit-city-name">how to add/edit city name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21377/help-me-understand-warning-messages-for-relation-id2871705">Help me understand warning messages for relation id=2871705</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7465/how-do-i-best-edit-shared-nodes-in-potlatch-eg-between-two-polygons">How do I best edit &quot;shared nodes&quot; in Potlatch (e.g. between two polygons)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9074/level-of-tiling-in-osm-potlatch-vs-josm-haiti">level of tiling in OSM  Potlatch vs JOSM - Haiti</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10984/upload-potlatch2-xml-raw-data-using-josm">Upload Potlatch2 XML Raw data using JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45021/multipolygon-in-changeset-not-rendering">multipolygon in changeset not rendering</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

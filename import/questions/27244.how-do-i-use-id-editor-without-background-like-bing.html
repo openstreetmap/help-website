@@ -1,0 +1,914 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>how do I use id editor without background like bing - OSM Help</title>
+        <meta name="description" content="In potlatch2 I was able to work without any background which is faster. How is this done in id?" />
+        <meta name="keywords" content="ideditor,background" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/27244/how-do-i-use-id-editor-without-background-like-bing" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/27244/how-do-i-use-id-editor-without-background-like-bing?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mLz5sVFQZ8xH5edIV2FqJhQ0NLidSWwL' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/27244/how-do-i-use-id-editor-without-background-like-bing">how do I use id editor without background like bing</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-27244-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27244/up/" rel="nofollow"> </a>
+<div id="post-27244-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-27244-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27244/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/27244/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>In potlatch2 I was able to work without any background which is faster. How is this done in id?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/background/" class="post-tag tag-link-background"
+                                        title="see questions tagged 'background'" rel="tag">background</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Oct '13, 21:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/83e18b36cdfac8da38cdf30d141151d5?s=32&amp;d=identicon&amp;r=g" alt="hfst's gravatar image" />
+    <p><a href="/users/3135/hfst">hfst</a><br/>
+    <span class="score" title="306 reputation points">306</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="20 badges"><span class="bronze">&#9679;</span><span class="badgecount">20</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hfst has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27244/">
+                edited
+                <strong>17 Oct '13, 02:25</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-27244">
+    
+</div>
+<div id="comment-tools-27244" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27244-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/27244/how-do-i-use-id-editor-without-background-like-bing?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/27244/how-do-i-use-id-editor-without-background-like-bing?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/27244/how-do-i-use-id-editor-without-background-like-bing?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/27244/how-do-i-use-id-editor-without-background-like-bing?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="27343"></a>
+                    <div id="answer-container-27343" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27343-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27343/up/" rel="nofollow"> </a>
+<div id="post-27343-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-27343-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27343/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="hfst has selected this answer as the correct answer"
+        href="/accept_answer/27343/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The <a href="https://github.com/systemed/iD/issues/1472">set None as a background</a> setting in iD now no longer loads background images.</p>
+<p>One other way would be to use Custom imagery with a URL of about:blank. </p>
+<p>If there's ever a feature in the latest version of iD that hasn't made it to the OpenStreetMap website you can use the absolute latest version of iD <a href="http://openstreetmap.us/iD/master/">on the OpenStreetMap US Chapter website</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27343/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Oct '13, 07:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5634c46072077e10f5b7c0da9b4bbb62?s=32&amp;d=identicon&amp;r=g" alt="pnorman's gravatar image" />
+    <p><a href="/users/290/pnorman">pnorman</a><br/>
+    <span class="score" title="2352 reputation points"><span class="">2.4k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="21 badges"><span class="silver">&#9679;</span><span class="badgecount">21</span></span><span title="40 badges"><span class="bronze">&#9679;</span><span class="badgecount">40</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="pnorman has 9 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27343/">
+                edited
+                <strong>29 Oct '13, 21:22</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27343">
+    
+</div>
+<div id="comment-tools-27343" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27343-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="27593"></a>
+                    <div id="answer-container-27593" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27593-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27593/up/" rel="nofollow"> </a>
+<div id="post-27593-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-27593-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27593/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>These days (28.10.13) a version with "None" as background is integrated to <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a>. With this my question is obsolete.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27593/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Oct '13, 20:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/83e18b36cdfac8da38cdf30d141151d5?s=32&amp;d=identicon&amp;r=g" alt="hfst's gravatar image" />
+    <p><a href="/users/3135/hfst">hfst</a><br/>
+    <span class="score" title="306 reputation points">306</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="20 badges"><span class="bronze">&#9679;</span><span class="badgecount">20</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hfst has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27593/">
+                edited
+                <strong>28 Oct '13, 20:15</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27593">
+    
+</div>
+<div id="comment-tools-27593" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27593-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="27246"></a>
+                    <div id="answer-container-27246" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27246-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27246/up/" rel="nofollow"> </a>
+<div id="post-27246-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-27246-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27246/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You could try setting custom to localhost/z/x/y.jpg (and perhaps also background to 0% brightness) in the background menu you get when you press b. It <strong><em>seems</em></strong> to work here...</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27246/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Oct '13, 22:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f25a8392e12ed696b16554b3d08e4e2b?s=32&amp;d=identicon&amp;r=g" alt="EdLoach's gravatar image" />
+    <p><a href="/users/339/edloach">EdLoach ♦</a><br/>
+    <span class="score" title="19478 reputation points"><span class="">19.5k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="156 badges"><span class="silver">&#9679;</span><span class="badgecount">156</span></span><span title="280 badges"><span class="bronze">&#9679;</span><span class="badgecount">280</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="EdLoach has 93 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27246">
+    
+        <a name="27251"></a>
+        <div class="comment" id="comment-27251">
+            <div id="post-27251-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Nearly! if you enter localhost/z/x/y.jpg iD queries <a href="http://www.openstreetmap.org/localhost/z/x/y.jpg">http://www.openstreetmap.org/localhost/z/x/y.jpg</a> (which returns a HTTP 404 error). What you wanted is likely <a href="http://localhost">http://localhost</a> (no parameters needed for no function). The network debug view of firefox shows no queries then. <a>nothinghere://example.com</a>  as entry works too. 0 % brightness is not needed as black is black for me.</p>
+
+<p>The real solution (a "no" background entry) may be too difficult to understand for id users (in the programmers view) ... since gps traces are not really supported - what else would you want to use to work with? ;-)</p></div>
+            <div class="comment-info" id="comment-27251-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Oct '13, 02:12)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27254"></a>
+        <div class="comment" id="comment-27254">
+            <div id="post-27254-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You don't need any background or traces if you just want to add/modify/delete information on already existing POIs :)</p></div>
+            <div class="comment-info" id="comment-27254-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Oct '13, 06:23)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27264"></a>
+        <div class="comment" id="comment-27264">
+            <div id="post-27264-score" class="comment-score">2</div>
+            <div class="comment-text"><p>You could also take a look at <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a>, which lets you have no background (or more than one) and generally has good performance compared to iD or Potlach.</p></div>
+            <div class="comment-info" id="comment-27264-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Oct '13, 15:35)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27267"></a>
+        <div class="comment" id="comment-27267">
+            <div id="post-27267-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/158/scai">@scai</a>: please note the ironic meaning. :-)</p></div>
+            <div class="comment-info" id="comment-27267-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Oct '13, 17:01)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27270"></a>
+        <div class="comment" id="comment-27270">
+            <div id="post-27270-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/4975/vincent">@Vincent</a>: if I wanted to use JOSM or potlach2 I woundn't ask for ID.</p></div>
+            <div class="comment-info" id="comment-27270-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Oct '13, 19:40)</span>
+                <a class="comment-user userinfo" href="/users/3135/hfst">hfst</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27246" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27246-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/27244/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mLz5sVFQZ8xH5edIV2FqJhQ0NLidSWwL' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27244/how-do-i-use-id-editor-without-background-like-bing?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27244/how-do-i-use-id-editor-without-background-like-bing?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/background/"
+            class="tag-link-background"
+            title="see questions tagged'background'using tags"
+            rel="tag">background</a> <span class="tag-number">&#215;53</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 16, 2013, 9:27 p.m.">16 Oct '13, 21:27</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,663 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 29, 2013, 9:22 p.m.">29 Oct '13, 21:22</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/73560/cant-use-gsimapsstd-background">Can&#39;t use GSImaps/std background</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36050/fix-alignments-in-id-persistence-sharing">Fix alignments in iD: persistence, sharing?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31679/can-i-use-a-geo-rectified-image-with-a-tile-based-url-tms-in-id">Can I use a geo-rectified image with a tile-based url (TMS) in iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40158/how-to-use-a-wms-layer-as-background-in-id-editor">How to use a WMS layer as background in iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/75737/use-opencyclemap-in-the-id-editor">Use opencyclemap in the ID editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77518/how-do-i-change-background-in-id-editor-to-os-open-map-local">How do i change background in ID editor to &#39;OS open map local&#39;?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22230/how-to-use-a-shapefile-in-id">[closed] How to use a shapefile in iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23757/id-is-it-possible-to-see-underlying-gps-traces-perhaps-via-a-custom-background">iD - Is it possible to see underlying GPS traces, perhaps via a custom background?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7517/osm-routable-land-ocean-background-same-color">OSM Routable Land &amp; Ocean Background Same Color</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7359/background-layer-options-missing">Background layer options missing?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

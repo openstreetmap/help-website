@@ -1,0 +1,888 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to edit using iPad - OSM Help</title>
+        <meta name="description" content="I am trying to edit the name of a couple of rivers, this is my first attempt at editing the map.  I have managed to edit one small part of the river, however I can&#39;t see how to edit the rest. The area is Burnley ,Lancashire and the point on the map is Rowley lake. The lake is fed at one end by a riv..." />
+        <meta name="keywords" content="ipad,editing,ios" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/61995/how-to-edit-using-ipad" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61995/how-to-edit-using-ipad?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='NudWDK5Zv9jXcXwR8vgsyCA9LLudmaMV' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61995/how-to-edit-using-ipad">How to edit using iPad</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61995-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61995/up/" rel="nofollow"> </a>
+<div id="post-61995-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-61995-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61995/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61995/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am trying to edit the name of a couple of rivers, this is my first attempt at editing the map. </p>
+<p>I have managed to edit one small part of the river, however I can't see how to edit the rest. The area is Burnley ,Lancashire and the point on the map is Rowley lake. The lake is fed at one end by a river called the river Brun, this fills Rowley lake and then exits at the opposite end with the river Brun again and continues down (I've named this tonight the river Brun) and is then intersected by another river flowing into it... At the moment this is wrongly named as the Thursden Brook, however this does start off as the Thursden brook much further back up river, and I'm trying to change this to match the os map data and my personal knowledge that the Thursden brook becomes the River Don where it is intersected by the (todmordon road) going over it. The other problem is that the way that the map has been drawn is incorrect as the river Brun is the main river with the Don flowing into it, however the map suggests that the Thursden brook is the main river with the Brun running into that which is wrong.</p>
+<p>Again I don't know how to change the points on the map to relay that information. Can anyone help to make the change please. Or suggest how I might do it on my iPad. </p>
+<p>Thanks ... </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ipad/" class="post-tag tag-link-ipad"
+                                        title="see questions tagged 'ipad'" rel="tag">ipad</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/ios/" class="post-tag tag-link-ios"
+                                        title="see questions tagged 'ios'" rel="tag">ios</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Feb '18, 23:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/771a214727d80ef6b2d8c362eeaeb5fd?s=32&amp;d=identicon&amp;r=g" alt="Lockett190's gravatar image" />
+    <p><a href="/users/14723/lockett190">Lockett190</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Lockett190 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61995/">
+                edited
+                <strong>07 Feb '18, 21:36</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61995">
+    
+        <a name="62054"></a>
+        <div class="comment" id="comment-62054">
+            <div id="post-62054-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I still can't make the changes that I would like to, can anyone make them for me at all. </p>
+
+<p>I can explain all of the changes needed. </p></div>
+            <div class="comment-info" id="comment-62054-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '18, 11:19)</span>
+                <a class="comment-user userinfo" href="/users/14723/lockett190">Lockett190</a>
+                
+            </div>
+        </div>
+    
+        <a name="62055"></a>
+        <div class="comment" id="comment-62055">
+            <div id="post-62055-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you have access to any other general-purpose computing devices at all (PCs, Macs, Phones etc.)?</p></div>
+            <div class="comment-info" id="comment-62055-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '18, 11:21)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="62056"></a>
+        <div class="comment" id="comment-62056">
+            <div id="post-62056-score" class="comment-score"></div>
+            <div class="comment-text"><p>No I only have my iPad at the moment. </p></div>
+            <div class="comment-info" id="comment-62056-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '18, 11:53)</span>
+                <a class="comment-user userinfo" href="/users/14723/lockett190">Lockett190</a>
+                
+            </div>
+        </div>
+    
+        <a name="62057"></a>
+        <div class="comment" id="comment-62057">
+            <div id="post-62057-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you associated a bluetooth mouse with it?</p></div>
+            <div class="comment-info" id="comment-62057-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '18, 12:29)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="62058"></a>
+        <div class="comment" id="comment-62058">
+            <div id="post-62058-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/14723/lockett190">@Lockett190</a>, Email sent via OSM offering assistance.</p></div>
+            <div class="comment-info" id="comment-62058-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '18, 14:20)</span>
+                <a class="comment-user userinfo" href="/users/2925/bcnorwich">BCNorwich</a>
+                
+            </div>
+        </div>
+    
+        <a name="62066"></a>
+        <div class="comment not_top_scorer" id="comment-62066">
+            <div id="post-62066-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/14723/lockett190">@Lockett190</a>: in general <a href="https://wiki.openstreetmap.org/wiki/Notes">Notes</a> (please be logged-in when you create a note and watch for clarification requests) would be a good way to go in your case. However, thanks to BCNorwich, you can this time do it via mail, fine.</p></div>
+            <div class="comment-info" id="comment-62066-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Feb '18, 07:45)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61995" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61995-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61995/how-to-edit-using-ipad?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61995/how-to-edit-using-ipad?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61995/how-to-edit-using-ipad?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61995/how-to-edit-using-ipad?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61997"></a>
+                    <div id="answer-container-61997" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61997-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61997/up/" rel="nofollow"> </a>
+<div id="post-61997-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-61997-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61997/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hello, Working with the iD editor (which I see you are using), to name one part of a river diferently to another part you have to first split the river into two sections. Then the two sections of river can have different names.</p>
+<p>(iD Editor) 
+First select the feature/river you you wish to split. If there is not a node at the exact place you want to make a split then double left click to create a node where the split is to be made.</p>
+<p>Right click on the node where the split is to be made, a menu drops down, left click the scissors icon (Split). The feature/river is now in two sections.</p>
+<p>Select the section you want to rename, edit the name field in the left panel. </p>
+<p>If you are satisfied with the changes save them. Done.</p>
+<p>Regards Bernard</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61997/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Feb '18, 07:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e3283a6b5f83e16214ec39a1478f64f0?s=32&amp;d=identicon&amp;r=g" alt="BCNorwich's gravatar image" />
+    <p><a href="/users/2925/bcnorwich">BCNorwich</a><br/>
+    <span class="score" title="6299 reputation points"><span class="">6.3k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="BCNorwich has 44 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61997/">
+                edited
+                <strong>07 Feb '18, 07:53</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61997">
+    
+        <a name="62005"></a>
+        <div class="comment" id="comment-62005">
+            <div id="post-62005-score" class="comment-score"></div>
+            <div class="comment-text"><p>Bernard, thanks so much for your answer and help. My only trouble is I can't left or right click on the iPad which is where I'm missing the actions I think. </p>
+
+<p>Dave. </p></div>
+            <div class="comment-info" id="comment-62005-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Feb '18, 21:45)</span>
+                <a class="comment-user userinfo" href="/users/14723/lockett190">Lockett190</a>
+                
+            </div>
+        </div>
+    
+        <a name="62007"></a>
+        <div class="comment" id="comment-62007">
+            <div id="post-62007-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/14723/lockett190">@Lockett190</a>: it is just a guess: try to tap with two fingers instead of a right click. And for the left click: a single-finger tap does not work?</p></div>
+            <div class="comment-info" id="comment-62007-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Feb '18, 21:50)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61997" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61997-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="62006"></a>
+                    <div id="answer-container-62006" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-62006-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/62006/up/" rel="nofollow"> </a>
+<div id="post-62006-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-62006-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/62006/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For simpler editing you can use one of two apps listed at <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS#Editing_the_map">https://wiki.openstreetmap.org/wiki/Apple_iOS#Editing_the_map</a> . For more advanced editing you could use the OSM default editor on <a href="https://www.openstreetmap.org">https://www.openstreetmap.org</a> (which <a href="https://help.openstreetmap.org/users/2925/bcnorwich">@BCNorwich</a> described for your use case).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/62006/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Feb '18, 21:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-62006">
+    
+</div>
+<div id="comment-tools-62006" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-62006-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61995/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='NudWDK5Zv9jXcXwR8vgsyCA9LLudmaMV' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61995/how-to-edit-using-ipad?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61995/how-to-edit-using-ipad?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/ios/"
+            class="tag-link-ios"
+            title="see questions tagged'ios'using tags"
+            rel="tag">ios</a> <span class="tag-number">&#215;50</span><br/>
+        
+        <a href="/tags/ipad/"
+            class="tag-link-ipad"
+            title="see questions tagged'ipad'using tags"
+            rel="tag">ipad</a> <span class="tag-number">&#215;11</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 6, 2018, 11:21 p.m.">06 Feb '18, 23:21</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,505 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 13, 2018, 7:45 a.m.">13 Feb '18, 07:45</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/16306/how-do-i-edit-an-osm-business-address-on-an-ipad">How do I edit an OSM business address on an iPad?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19135/osm-for-apple-ipad-mini">OSM for Apple Ipad mini</a>
+        </p>
+        
+        <p>
+            <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don&#39;t show up on the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/231/how-can-i-edit-all-ways-with-certain-tag-in-an-area">How can I edit all ways with certain tag in an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/497/how-can-i-edit-gpx-tracks-in-potlatch-2">How can I edit GPX tracks in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/954/how-do-i-set-my-home-location">How do I set my home location?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1012/fixing-a-subway-stop">Fixing a subway stop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/216/what-should-i-do-about-vandalism">What should I do about vandalism?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

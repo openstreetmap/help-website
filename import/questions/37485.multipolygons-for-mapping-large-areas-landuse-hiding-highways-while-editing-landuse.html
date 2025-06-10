@@ -1,0 +1,929 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Multipolygons for mapping large areas landuse /  hiding highways while editing landuse - OSM Help</title>
+        <meta name="description" content="Hello, I&#39;m new to openstreetmap. I&#39;m starting to map in my town which is in a rural area with lots of unmapped area. Its comprised of forest broken up with scattered houses and farmland. I have a few questions:   Are multipolygons easy to edit? I was thinking about drawing out large tracts of forest..." />
+        <meta name="keywords" content="nature_reserve,multipolygon" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/37485/multipolygons-for-mapping-large-areas-landuse-hiding-highways-while-editing-landuse" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/37485/multipolygons-for-mapping-large-areas-landuse-hiding-highways-while-editing-landuse?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ZcIi2pllS9BgCFEVlrCqEWiSyyEyrQU9' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/37485/multipolygons-for-mapping-large-areas-landuse-hiding-highways-while-editing-landuse">Multipolygons for mapping large areas landuse /  hiding highways while editing landuse</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-37485-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37485/up/" rel="nofollow"> </a>
+<div id="post-37485-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-37485-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37485/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/37485/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I'm new to openstreetmap.  I'm starting to map in my town which is in a rural area with lots of unmapped area.  Its comprised of forest broken up with scattered houses and farmland.  I have a few questions:</p>
+<ul>
+<li>
+<p>Are multipolygons easy to edit?  I was thinking about drawing out large tracts of forests and then subdividing the smaller polygons of residential and farmland within using multipolygons.  Or is it better to break up the forest into smaller polygons the share borders with farmland and residential areas?  I think I tried to edit a multipolygon and got some relation errors, but maybe that once get a hang of them they are ok to work with?  </p>
+</li>
+<li>
+<p>I use JOSM for editing.  Is there a plugin or setting to hide highways?  I was hoping to be able to hide highways while drawing landuse polygons.</p>
+</li>
+<li>
+<p>Is there a good way to make the boundaries of forested nature reserves easily visible? I have been trying to look around at other countries to see how its done. The leisure=nature reserve border is a light dashed green line (which is used in Sweden, I believe). If the area within and around the nature reserve is tagged as landuse=forest, then the nature reserve border is not easily visible. It seems like the nature reserve border should be something that stands out at all zoom levels.</p>
+</li>
+</ul>
+<p>I will likely ask around in sweden forum as well to see how others are doing things.  It seems like there is a few different places to ask questions: IRC, help, forum, mailing list.   </p>
+<p>Thanks for help</p>
+<p>seahik</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/nature_reserve/" class="post-tag tag-link-nature_reserve"
+                                        title="see questions tagged 'nature_reserve'" rel="tag">nature_reserve</a>
+                                
+                                    <a href="/tags/multipolygon/" class="post-tag tag-link-multipolygon"
+                                        title="see questions tagged 'multipolygon'" rel="tag">multipolygon</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Oct '14, 11:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fdf9c1412cde7c351e48ea138c737351?s=32&amp;d=identicon&amp;r=g" alt="sea%20hik's gravatar image" />
+    <p><a href="/users/9797/sea-hik">sea hik</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sea hik has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37485/">
+                edited
+                <strong>10 Oct '14, 12:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-37485">
+    
+        <a name="37487"></a>
+        <div class="comment" id="comment-37487">
+            <div id="post-37487-score" class="comment-score">1</div>
+            <div class="comment-text"><p>As for your second point, JOSM has <a href="https://josm.openstreetmap.de/wiki/Help/Dialog/Filter">filters</a>
+Create one with just highway=* (or even just highway, can't test it right now)</p></div>
+            <div class="comment-info" id="comment-37487-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 12:55)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="37488"></a>
+        <div class="comment not_top_scorer" id="comment-37488">
+            <div id="post-37488-score" class="comment-score"></div>
+            <div class="comment-text"><p>as for your third point, where do you want to make it visible ? In JOSM ?  Then you can use <a href="https://josm.openstreetmap.de/wiki/Help/Styles/MapCSSTutorial">MapCSS</a></p></div>
+            <div class="comment-info" id="comment-37488-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 12:58)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="37489"></a>
+        <div class="comment" id="comment-37489">
+            <div id="post-37489-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Escada - Thank you for the filter.  Seems to work great.  Would you by chance know if the filter disables any underlying snapping behaviour to the hidden elements.  I would like to hide the highways and avoid snapping to them when drawing landuse polygons.  </p>
+
+<p>For my third question, I was referring to how things appear on the Standard layer on OSM.</p></div>
+            <div class="comment-info" id="comment-37489-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 13:37)</span>
+                <a class="comment-user userinfo" href="/users/9797/sea-hik">sea hik</a>
+                
+            </div>
+        </div>
+    
+        <a name="37490"></a>
+        <div class="comment" id="comment-37490">
+            <div id="post-37490-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I think it avoids snapping, to avoid snapping you can also use CTRL-click.</p>
+
+<p>You cannot change the appearance of the standard layer, without modifying the underlying style file.
+You can always ask the maintainers whether they want to do this. The place to do that is <a href="https://github.com/gravitystorm/openstreetmap-carto/issues">github</a></p></div>
+            <div class="comment-info" id="comment-37490-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 14:05)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="37491"></a>
+        <div class="comment" id="comment-37491">
+            <div id="post-37491-score" class="comment-score">2</div>
+            <div class="comment-text"><p>For your 1st point, I suggest that you don't make them too big, cumbersome and complex otherwise a new mapper will not be able to confidently edit anything in the area lest he breaks something. KISS is in general a good principle to apply.</p></div>
+            <div class="comment-info" id="comment-37491-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 14:16)</span>
+                <a class="comment-user userinfo" href="/users/7380/nevw">nevw</a>
+                
+            </div>
+        </div>
+    
+        <a name="37492"></a>
+        <div class="comment" id="comment-37492">
+            <div id="post-37492-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Nevw - that makes sense, thanks.  By the way, would you happen to know if mapping landuse is in general a lower priority in osm?</p></div>
+            <div class="comment-info" id="comment-37492-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 14:23)</span>
+                <a class="comment-user userinfo" href="/users/9797/sea-hik">sea hik</a>
+                
+            </div>
+        </div>
+    
+        <a name="37494"></a>
+        <div class="comment not_top_scorer" id="comment-37494">
+            <div id="post-37494-score" class="comment-score"></div>
+            <div class="comment-text"><p>On the "where to contact" question - different country and language communities tend to use different mechanisms (mailing lists, the forum, IRC, Facebook Groups and more).  With IRC though, you may need to hang around for a 10 minutes or so to get an answer.</p></div>
+            <div class="comment-info" id="comment-37494-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 14:36)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="37495"></a>
+        <div class="comment not_top_scorer" id="comment-37495">
+            <div id="post-37495-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Individual mappers decide their own priorities and preferences. I find land use is often difficult to ascertain - managed forest or wood or wildlife reserve? Boundaries are also difficult to define, even with satellite imagery or looking over an area from the boundary. Whereas other elements like roads and buildings are more easily checked during a gps survey in person.</p></div>
+            <div class="comment-info" id="comment-37495-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 15:14)</span>
+                <a class="comment-user userinfo" href="/users/7380/nevw">nevw</a>
+                
+            </div>
+        </div>
+    
+        <a name="37497"></a>
+        <div class="comment not_top_scorer" id="comment-37497">
+            <div id="post-37497-score" class="comment-score">1</div>
+            <div class="comment-text"><p>re OSM's priorities: There is no one priority for OSM--some people map everything in an area, while others focus on one specific kind of feature. I have definitely seen people focus on landuse--I think it esp appeals to people who loved SimCity :) Personally, after the transportation network, I think POIs and addresses are the info we could add which would create more value for people than landuse. But I add plenty of obscure things, too! Scratch your itch.</p></div>
+            <div class="comment-info" id="comment-37497-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 15:22)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37485" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37485-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/37485/multipolygons-for-mapping-large-areas-landuse-hiding-highways-while-editing-landuse?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/37485/multipolygons-for-mapping-large-areas-landuse-hiding-highways-while-editing-landuse?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/37485/multipolygons-for-mapping-large-areas-landuse-hiding-highways-while-editing-landuse?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/37485/multipolygons-for-mapping-large-areas-landuse-hiding-highways-while-editing-landuse?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="37493"></a>
+                    <div id="answer-container-37493" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-37493-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37493/up/" rel="nofollow"> </a>
+<div id="post-37493-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-37493-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37493/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi sea hik, avoid large areas or multipolygons, there have been some questions about them read these lines. Besides there’s a limit of 2000 on the amount of nodes used in a way (string or multipolygon).
+<a href="https://help.openstreetmap.org/search/?csrfmiddlewaretoken=jVfxwqdgjonh8Cj1qHBy7W8vdAXDXUXw&amp;q=multipolygon&amp;t=question">https://help.openstreetmap.org/search/?csrfmiddlewaretoken=jVfxwqdgjonh8Cj1qHBy7W8vdAXDXUXw&amp;q=multipolygon&amp;t=question</a>
+I would not make the make a forest multi larger than necessary and use every path or track to make another parcel just as nevw stated. Avoid connecting forest borders to the way next to it, leave some space in between.
+It ain't forest but the border lines are separated just to let the water in. The first imports shared the connecting borders you will have to split them manually.
+<a href="http://www.openstreetmap.org/#map=17/52.48683/4.82834">http://www.openstreetmap.org/#map=17/52.48683/4.82834</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/37493/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Oct '14, 14:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-37493">
+    
+        <a name="37500"></a>
+        <div class="comment" id="comment-37500">
+            <div id="post-37500-score" class="comment-score"></div>
+            <div class="comment-text"><p>That is incredible detail on your linked map.
+When I started mapping near me, I was re-using highway nodes for landuse.  But I've since gone in a manually changed them all to be separate.  It almost seems like landuse should be a separate layer in osm from highways.</p>
+
+<p>I still struggle with decision on whether to make all my landuse polygons share borders with each other.  It seems strange to leave small gaps of undesignated landuse, like for example when landuse crosses a road.</p></div>
+            <div class="comment-info" id="comment-37500-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 15:47)</span>
+                <a class="comment-user userinfo" href="/users/9797/sea-hik">sea hik</a>
+                
+            </div>
+        </div>
+    
+        <a name="37507"></a>
+        <div class="comment" id="comment-37507">
+            <div id="post-37507-score" class="comment-score"></div>
+            <div class="comment-text"><p>I do not leave gaps. What is the reality ? E.g. Does the forest ends where the farmland begins ? If so, why would you leave a gap ? It's different when they are separated by a road</p></div>
+            <div class="comment-info" id="comment-37507-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 20:31)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="37509"></a>
+        <div class="comment" id="comment-37509">
+            <div id="post-37509-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi remember how roads were created, in between 2 parcels. Farmers / owners did not want to lose fertile soil to a way. Neither is a road ploughed, except a right of way. Remember OSM is schematic. The roadside or shoulder could be used for harvesting grass by another farmer. Landuse borders join the ditch all together, sometimes even with a fence in the middle. Forest parcels could join borders, separate them if necessary ! Make up your mind, look in the neighborhood / forum, have fun and keep mapping.</p></div>
+            <div class="comment-info" id="comment-37509-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 21:00)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+        <a name="37510"></a>
+        <div class="comment" id="comment-37510">
+            <div id="post-37510-score" class="comment-score"></div>
+            <div class="comment-text"><p>escada - its landuse around roads that I meant.  I've seen people leave a gap near the road.  But I've decided to attach the landuse edge to the landuse edge that starts on otherside of road.  In otherwords not leaving a gap. Not sure if thats best way or not.  I'll keep checking in to see how others are doing it near me.</p></div>
+            <div class="comment-info" id="comment-37510-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '14, 21:42)</span>
+                <a class="comment-user userinfo" href="/users/9797/sea-hik">sea hik</a>
+                
+            </div>
+        </div>
+    
+        <a name="37511"></a>
+        <div class="comment" id="comment-37511">
+            <div id="post-37511-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Along with Hendrick I also want to encourage you to keep those multipolygons small as they will be much easier to manage later. There are a  number of wood multipolygons I work with here in northern Thailand, one of which is nearing 700 individual pieces. Every time I work on one of these monsters I must download the entire thing so as to be sure any changes I make are being done correctly. This is a good time to take a coffee break. Splitting a large multipolygon into smaller, more user-friendly pieces later is quite a chore.</p></div>
+            <div class="comment-info" id="comment-37511-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Oct '14, 00:51)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="37512"></a>
+        <div class="comment not_top_scorer" id="comment-37512">
+            <div id="post-37512-score" class="comment-score"></div>
+            <div class="comment-text"><p>As for shared boundaries, it seems I am always looking for some sort of natural boundary where big multipolygons can be split so I recommend not sharing. Roads and rivers are places where landuse or forest multipolygons are naturally divided and the OSM should reflect that. Separating those boundaries later, should that become necessary, is another big chore that can be avoided by taking a little extra time initially.</p>
+
+<p>By the way,  the Make Parallel Copies of Ways add on in JOSM is an easy way to create those separate boundaries. I use it all the time for boundaries and riverbanks.</p>
+
+<p>Cheers</p></div>
+            <div class="comment-info" id="comment-37512-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Oct '14, 00:51)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37493" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37493-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/37485/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ZcIi2pllS9BgCFEVlrCqEWiSyyEyrQU9' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37485/multipolygons-for-mapping-large-areas-landuse-hiding-highways-while-editing-landuse?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37485/multipolygons-for-mapping-large-areas-landuse-hiding-highways-while-editing-landuse?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/multipolygon/"
+            class="tag-link-multipolygon"
+            title="see questions tagged'multipolygon'using tags"
+            rel="tag">multipolygon</a> <span class="tag-number">&#215;132</span><br/>
+        
+        <a href="/tags/nature_reserve/"
+            class="tag-link-nature_reserve"
+            title="see questions tagged'nature_reserve'using tags"
+            rel="tag">nature_reserve</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 10, 2014, 11:47 a.m.">10 Oct '14, 11:47</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,834 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 11, 2014, 12:57 a.m.">11 Oct '14, 00:57</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/58894/issues-with-editing-nature-reserves-with-multiple-relations">Issues with Editing Nature Reserves with Multiple Relations</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4105/opencyclemap-potlach2-multipolygon-howto">Opencyclemap Potlach2 multipolygon howto?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland">How to make a hole in an area, eg woodland.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4434/overlapping-polygons-">overlapping polygons - ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5642/disappearing-golf-course">Disappearing golf course</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7465/how-do-i-best-edit-shared-nodes-in-potlatch-eg-between-two-polygons">How do I best edit &quot;shared nodes&quot; in Potlatch (e.g. between two polygons)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4340/isolating-buildings-and-all-member-ways-using-the-filter-objects-tool">Isolating buildings (and all member ways) using the Filter objects tool</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10311/adding-admin-boundaries-and-multipolygons-the-fast-way">adding admin boundaries and multipolygons the fast way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10313/pbfosm-file-move-multipolygon-tags-from-members-to-relation">pbf/osm-file: move multipolygon tags from members to relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3489/rendering-of-multipolygons-tagged-with-landuse-tags">Rendering of multipolygons tagged with landuse tags</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

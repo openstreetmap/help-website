@@ -1,0 +1,728 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>What to map if I know the turn:lanes value but not where the turn lanes start? - OSM Help</title>
+        <meta name="description" content="The documentation for turn:lanes says the tag should be applied &quot;from the first indication ... to the junction&quot;. What if I know the lane turning indications but not the position along the road where they start (for example, the position where the road widens with the addition of the turn lanes)? Is ..." />
+        <meta name="keywords" content="turnlanes" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/80073/what-to-map-if-i-know-the-turnlanes-value-but-not-where-the-turn-lanes-start" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/80073/what-to-map-if-i-know-the-turnlanes-value-but-not-where-the-turn-lanes-start?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mcU7TIFaX08xtmloV6hWiFIkKU4rAdEJ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/80073/what-to-map-if-i-know-the-turnlanes-value-but-not-where-the-turn-lanes-start">What to map if I know the turn:lanes value but not where the turn lanes start?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-80073-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80073/up/" rel="nofollow"> </a>
+<div id="post-80073-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-80073-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80073/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/80073/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p><a href="https://wiki.openstreetmap.org/wiki/Key:turn">The documentation for <code>turn:lanes</code></a> says the tag should be applied "from the first indication ... to the junction".  What if I know the lane turning indications but not the position along the road where they start (for example, the position where the road widens with the addition of the turn lanes)?  Is there a way I can usefully contribute this information to the map?  Often, during a trip I'm taking for another reason, I can remember the turning indications but I don't want to go to the extra trouble to try to record the starting position.</p>
+<p>So far, I've been adding the <code>turn:lanes</code> tag to the last way before the junction, which may be short or long depending on how the road is currently segmented on OSM (which would depend on what segments needed to be tagged differently for other reasons).  In effect, I was thinking of the <code>turn:lanes</code> tag as applying to the <em>end</em> of the way.  I believed that even if my practice didn't follow the standard, it was still better than not having the data.  And indeed, the main router that I use (OsmAnd) showed the same lane guidance regardless of the length of the last way, as long as it didn't extend beyond the previous junction.  But I recently realized that two problems can occur if the way extends beyond the previous junction, which is the case with <a href="https://www.openstreetmap.org/way/76696898">one way I recently changed</a> (at version 5):</p>
+<ol>
+<li>If a route includes a turn at the previous junction, OsmAnd shows lane guidance based on my <code>turn:lanes</code> value there even though it was not intended to apply to the previous junction.</li>
+<li>If another user later splits the way, the editor may copy the tag to both new ways, and the fact that I intended it to apply only to the second way would be forgotten.</li>
+</ol>
+<p>So now I'm wondering both how I should fix my previous edits and what I should do in the future if I know the turn indications but not where they start.  In some cases, I may be able to get the starting point from imagery, but not in all cases.  Would the following be reasonable: add the tag to the last way, but if that way extends beyond the previous junction, split it there before adding the tag to the second part?  Then is there a way I can record for other mappers (e.g., in a <code>note</code> tag) the fact that I didn't know the real starting point, so that if they do know it, they know it's safe to overwrite my data?  (If it would be better to take this discussion to another place, such as the "tagging" mailing list, I'm open to doing so.)</p>
+<p>For that matter, is <code>turn:lanes</code> data on OpenStreetMap valuable enough that I should even bother to collect it and address this question in the first place?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/turnlanes/" class="post-tag tag-link-turnlanes"
+                                        title="see questions tagged 'turnlanes'" rel="tag">turnlanes</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 May '21, 20:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a09c08e1ae93a83e9102b6715fc75b4c?s=32&amp;d=identicon&amp;r=g" alt="Matt%20McCutchen's gravatar image" />
+    <p><a href="/users/20190/matt-mccutchen">Matt McCutchen</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Matt McCutchen has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-80073">
+    
+        <a name="80074"></a>
+        <div class="comment" id="comment-80074">
+            <div id="post-80074-score" class="comment-score"></div>
+            <div class="comment-text"><p>Out of curiosity: How are you able to identify the turn lanes without knowing where they start?</p></div>
+            <div class="comment-info" id="comment-80074-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '21, 22:50)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+        <a name="80075"></a>
+        <div class="comment" id="comment-80075">
+            <div id="post-80075-score" class="comment-score"></div>
+            <div class="comment-text"><p>As I'm moving, I can see where the lanes start, but I have no way to locate the point precisely on the map.  Even if my phone is recording a GPS trace, if I'm driving, I may not have a free hand to push a button to make a mark at the current location, or even if I did, the latency of my GPS receiver may make it hard to get an accurate location.</p></div>
+            <div class="comment-info" id="comment-80075-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '21, 23:14)</span>
+                <a class="comment-user userinfo" href="/users/20190/matt-mccutchen">Matt McCutchen</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80073" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80073-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/80073/what-to-map-if-i-know-the-turnlanes-value-but-not-where-the-turn-lanes-start?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/80073/what-to-map-if-i-know-the-turnlanes-value-but-not-where-the-turn-lanes-start?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/80073/what-to-map-if-i-know-the-turnlanes-value-but-not-where-the-turn-lanes-start?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/80073/what-to-map-if-i-know-the-turnlanes-value-but-not-where-the-turn-lanes-start?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="80076"></a>
+                    <div id="answer-container-80076" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80076-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80076/up/" rel="nofollow"> </a>
+<div id="post-80076-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-80076-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80076/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As you have discovered, <code>turn:lanes</code> tagging applies to the entire length of a way. There may be some applications (e.g. lane guidance in some routing software) where this distinction doesn't have a visible effect, but it does matter for other use cases. For example, a renderer with support for lanes will display the turn lanes along the entire length of the way.</p>
+<p>Of course, it would be ideal if you could make out the start of the turn lanes on the aerial imagery background or with street-level images that are permitted for use in OSM mapping (e.g. Mapillary, KartaView) and split the way in that location.</p>
+<p>If that's not possible, though, you could split the way quite close to the junction and tag only the short bit immediately adjacent to the junction with <code>turn:lane</code> information. This reflects the knowledge you actually have: Only the last bit before the junction will have lane information, because that's what you remember. Lane information for the rest of the street will remain untagged and thus unknown. If a future mapper figures out the exact location where the turn lanes start, they can move the split node (or merge the short way back with the longer section as needed).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80076/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 May '21, 23:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0626be5f46f32fce501353e8a5ec399c?s=32&amp;d=identicon&amp;r=g" alt="Tordanik's gravatar image" />
+    <p><a href="/users/14/tordanik">Tordanik</a><br/>
+    <span class="score" title="11998 reputation points"><span class="">12.0k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="106 badges"><span class="silver">&#9679;</span><span class="badgecount">106</span></span><span title="147 badges"><span class="bronze">&#9679;</span><span class="badgecount">147</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tordanik has 58 accepted answers">35&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/80076/">
+                edited
+                <strong>08 May '21, 23:39</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80076">
+    
+        <a name="80077"></a>
+        <div class="comment" id="comment-80077">
+            <div id="post-80077-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks.  As a newcomer, I assumed that artificially splitting ways was undesirable, but if you don't think it's a big deal, I'll go with that solution for now.  Maybe I'll invent a tag, <code>fixme:turn:lanes:start=resurvey</code>, to indicate that the starting point of the <code>turn:lanes</code> is unknown.</p></div>
+            <div class="comment-info" id="comment-80077-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 May '21, 01:31)</span>
+                <a class="comment-user userinfo" href="/users/20190/matt-mccutchen">Matt McCutchen</a>
+                
+            </div>
+        </div>
+    
+        <a name="80085"></a>
+        <div class="comment" id="comment-80085">
+            <div id="post-80085-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I think a textual fixme tag would be better, like fixme="start of turn lane imprecise". If you invent a new tag it won't be displayed by any tool.</p></div>
+            <div class="comment-info" id="comment-80085-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 May '21, 18:41)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+        <a name="80247"></a>
+        <div class="comment" id="comment-80247">
+            <div id="post-80247-score" class="comment-score"></div>
+            <div class="comment-text"><p>Adding nodes to change geometry is normal. Splitting the way at a node is necessary when way information is different for each side of the way. If you are mapping lane information, you will be doing this regularly unless working in an area where it has already been done.
+  If you have data that likely needs correction such as guessing at the location the turn lane starts then you could use a fixme or a map note to draw attention/reminder to it. If you plan to fix in short order they make it easy to find and you can even note there that you will resurvey it but if not then other mappers can take what is there to further revise it.
+  New tags are best when trying to present something that doesn't fit current tagging. New tags are worth documenting and discussing so people can be aware of them and may have feedback to further improve the idea. I don't know if anyone looks out for fixme: tags but editors definitely draw attention to fixme itself. You could store the entire information within the fixme message if you felt that what you were about to add could be wrong data; someone could copy it into proper tags when ready.</p></div>
+            <div class="comment-info" id="comment-80247-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 May '21, 20:28)</span>
+                <a class="comment-user userinfo" href="/users/16568/mirror176">mirror176</a>
+                
+            </div>
+        </div>
+    
+        <a name="81644"></a>
+        <div class="comment" id="comment-81644">
+            <div id="post-81644-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the further advice.  (Somehow I did not get email notifications for the last two comments.)  As of now, I've been able to collect the missing information to eliminate all my existing <code>fixme:turn:lanes:start=resurvey</code> tags.  If I have the same situation in the future, I'll use <code>fixme</code> with a textual explanation for the time being; I'll wait to propose a structured tag for informal standardization until it seems worth it.  I get the sense that making map notes for small things like this will just clutter the set of notes and make it harder for users to find more important notes; if OSM had a better system for categorizing notes, that would help, though using <code>fixme</code> tags and searching for them is probably a decent solution too.</p></div>
+            <div class="comment-info" id="comment-81644-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '21, 17:47)</span>
+                <a class="comment-user userinfo" href="/users/20190/matt-mccutchen">Matt McCutchen</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80076" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80076-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/80073/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mcU7TIFaX08xtmloV6hWiFIkKU4rAdEJ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80073/what-to-map-if-i-know-the-turnlanes-value-but-not-where-the-turn-lanes-start?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80073/what-to-map-if-i-know-the-turnlanes-value-but-not-where-the-turn-lanes-start?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/turnlanes/"
+            class="tag-link-turnlanes"
+            title="see questions tagged'turnlanes'using tags"
+            rel="tag">turnlanes</a> <span class="tag-number">&#215;16</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 8, 2021, 8:29 p.m.">08 May '21, 20:29</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,200 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 6, 2021, 5:47 p.m.">06 Sep '21, 17:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8801/how-to-tag-different-lanes-rfc">[closed] How to tag different lanes? RFC</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10023/adding-a-dedicated-turn-lane">Adding a dedicated turn lane</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17433/turning-zone-for-trucks">Turning zone for trucks</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22651/how-to-map-suicide-lane-used-for-turning-in-both-directions">How to map &quot;suicide lane&quot; used for turning in both directions?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36463/whats-the-best-way-to-map-turn-lanes">What&#39;s the best way to map turn lanes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41995/are-two-way-center-turn-lanes-included-in-lanes">Are two-way center turn lanes included in &quot;lanes=&quot;?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44214/confused-on-what-the-osm-way-is-for-turn-lanes">Confused on what the &#39;OSM way&#39; is for turn lanes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45201/what-is-the-difference-between-slight_right-and-right">What is the difference between slight_right and right?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64525/roundabout-with-first-exit-only-lane">Roundabout with &quot;first exit only&quot; lane</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64617/how-to-map-center-turn-lanes">How to map Center Turn Lanes?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

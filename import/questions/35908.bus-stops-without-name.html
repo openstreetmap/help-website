@@ -1,0 +1,990 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bus stops without name - OSM Help</title>
+        <meta name="description" content="Seems like a simple question: How to tag bus stops without a name? highway=bus_stop tells me to tag a node next to one side of the highway way. Ok, but i prefer public_transport=stop_position with public_transport=platform. As far as I understand I need to add a key:name on both nodes or add a publi..." />
+        <meta name="keywords" content="bus,public-transport,busstops,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/35908/bus-stops-without-name" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/35908/bus-stops-without-name?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='dUiBMJtg2tZugNUjU8iMysy5epMAaLW4' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/35908/bus-stops-without-name">Bus stops without name</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-35908-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35908/up/" rel="nofollow"> </a>
+<div id="post-35908-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-35908-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35908/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/35908/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Seems like a simple question: How to tag bus stops without a name?</p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop">highway=bus_stop</a> tells me to tag a node next to one side of the highway way. Ok, but i prefer <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_position">public_transport=stop_position</a> with <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dplatform">public_transport=platform</a>. As far as I understand I need to add a <a href="http://wiki.openstreetmap.org/wiki/Key:name">key:name</a> on both nodes or add a <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_area">public_transport=stop_area</a> relation. Unfortunately this also needs a <a href="http://wiki.openstreetmap.org/wiki/Key:name">key:name</a>. So what can I do?</p>
+<p>I also read <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Noname">Proposed features/Noname</a> and <a href="http://wiki.openstreetmap.org/wiki/Names#No_name">Names/No_Name</a> but could not find an answer. The closest "answer" I have found is <a href="https://help.openstreetmap.org/answer_link/19204/">this</a> but I am still not sure if this is correct.</p>
+<p>(Background: I am trying to add some bus stations on a bus route like <a href="http://www.openstreetmap.org/relation/3586878#map=13/-25.5733/-54.5335&amp;layers=T">this</a> in Brazil. But the bus stops seem to be unnamed and I have no idea how to "link" the platforms with stop_positions).</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bus/" class="post-tag tag-link-bus"
+                                        title="see questions tagged 'bus'" rel="tag">bus</a>
+                                
+                                    <a href="/tags/public-transport/" class="post-tag tag-link-public-transport"
+                                        title="see questions tagged 'public-transport'" rel="tag">public-transport</a>
+                                
+                                    <a href="/tags/busstops/" class="post-tag tag-link-busstops"
+                                        title="see questions tagged 'busstops'" rel="tag">busstops</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Aug '14, 05:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/490606febe7fb9d385ad826263611247?s=32&amp;d=identicon&amp;r=g" alt="jkirk's gravatar image" />
+    <p><a href="/users/9469/jkirk">jkirk</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jkirk has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-35908">
+    
+</div>
+<div id="comment-tools-35908" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35908-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/35908/bus-stops-without-name?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/35908/bus-stops-without-name?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/35908/bus-stops-without-name?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/35908/bus-stops-without-name?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="35910"></a>
+                    <div id="answer-container-35910" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35910-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35910/up/" rel="nofollow"> </a>
+<div id="post-35910-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-35910-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35910/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="jkirk has selected this answer as the correct answer"
+        href="/accept_answer/35910/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Just tag it with noname=yes. You could also add a note so other mappers know for sure there is (currently) no name. Nobody knows whether this might change in the future.</p>
+<p>If the busstop has no name, you can safely ignore the "need to add" from the public transport "specification". </p>
+<p>Or you could ask the locals, whether they give the busstop a name.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35910/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Aug '14, 08:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/813a136afe7d4c95fd5bccdd78705e0e?s=32&amp;d=identicon&amp;r=g" alt="escada's gravatar image" />
+    <p><a href="/users/5390/escada">escada</a><br/>
+    <span class="score" title="19043 reputation points"><span class="">19.0k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="166 badges"><span class="silver">&#9679;</span><span class="badgecount">166</span></span><span title="302 badges"><span class="bronze">&#9679;</span><span class="badgecount">302</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="escada has 97 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35910">
+    
+        <a name="35978"></a>
+        <div class="comment" id="comment-35978">
+            <div id="post-35978-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok. I could do that but that does not solve the "link-problem". How is the "stop_position"(s) linked with "platform"(s) (for the very same bus stop) if no bus stop name is given?</p></div>
+            <div class="comment-info" id="comment-35978-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Aug '14, 05:45)</span>
+                <a class="comment-user userinfo" href="/users/9469/jkirk">jkirk</a>
+                
+            </div>
+        </div>
+    
+        <a name="35980"></a>
+        <div class="comment" id="comment-35980">
+            <div id="post-35980-score" class="comment-score">1</div>
+            <div class="comment-text"><p>by adding a stop area relation: <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_area">http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_area</a></p></div>
+            <div class="comment-info" id="comment-35980-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Aug '14, 06:08)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="36028"></a>
+        <div class="comment" id="comment-36028">
+            <div id="post-36028-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you very much. I just tried(tm) adding a stop_area without a name like <a href="http://www.openstreetmap.org/relation/3975420">http://www.openstreetmap.org/relation/3975420</a> and it worked. I was thinking all the time that relations are linked with an unique name (which is not needed as the relation has a unique ID).</p>
+
+<p>But: part of the confusion seems to come from this: <a href="http://wiki.openstreetmap.org/wiki/Bus_stop#Stop_area">http://wiki.openstreetmap.org/wiki/Bus_stop#Stop_area</a></p>
+
+<p>There the name-tag is mandatory. Shouldn't that be corrected?</p></div>
+            <div class="comment-info" id="comment-36028-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Aug '14, 17:40)</span>
+                <a class="comment-user userinfo" href="/users/9469/jkirk">jkirk</a>
+                
+            </div>
+        </div>
+    
+        <a name="36029"></a>
+        <div class="comment" id="comment-36029">
+            <div id="post-36029-score" class="comment-score">1</div>
+            <div class="comment-text"><p>And one more thing: look at this stop_area: <a href="http://www.openstreetmap.org/relation/949291#map=18/47.08459/15.45657&amp;layers=T">http://www.openstreetmap.org/relation/949291#map=18/47.08459/15.45657&amp;layers=T</a></p>
+
+<p>and compare it with "my" newly created one: <a href="http://www.openstreetmap.org/relation/3975420#map=18/-25.53994/-54.58729&amp;layers=T">http://www.openstreetmap.org/relation/3975420#map=18/-25.53994/-54.58729&amp;layers=T</a></p>
+
+<p>The first stop_area is surrounded with a nice border. Why isn't that shown on the second stop_area?</p></div>
+            <div class="comment-info" id="comment-36029-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Aug '14, 17:45)</span>
+                <a class="comment-user userinfo" href="/users/9469/jkirk">jkirk</a>
+                
+            </div>
+        </div>
+    
+        <a name="36030"></a>
+        <div class="comment" id="comment-36030">
+            <div id="post-36030-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/9469/jkirk"></a><a href="http://help.openstreetmap.org/users/9469/jkirk">@jkirk</a> - (re the name-tag being mandatory) that's part of the problem with the "public transport v2" stuff on that page.  It's simply not a good fit for public transport in most of the world, is overcomplicated, and deters people from capturing useful information.  Personally, where the wiki's wrong in cases like this I just ignore it - I've largely given up arguing with the people who edit the wiki (who in some cases don't seem to do much mapping).</p></div>
+            <div class="comment-info" id="comment-36030-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Aug '14, 17:48)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35910" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35910-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="35949"></a>
+                    <div id="answer-container-35949" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35949-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35949/up/" rel="nofollow"> </a>
+<div id="post-35949-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-35949-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35949/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is a classic example of the JOSM validator creating false negatives. </p>
+<p>There is no reason why a bus stop needs a name. Although in most countries in Western Europe this is typical nowadays, but it's not so long ago that bus stops only had signs. Of course bus stops had informal names, but its relatively recently that transport authorities have tried to codify naming. Elsewhere in the world I would expect standard names for bus stops not to exist. The JOSM validator is then raising incorrect errors.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35949/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Aug '14, 09:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35949">
+    
+        <a name="35979"></a>
+        <div class="comment" id="comment-35979">
+            <div id="post-35979-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah, but the JOSM validator is my minor problem. How is the "stop_position" linked with the "platform" without a name tag?</p></div>
+            <div class="comment-info" id="comment-35979-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Aug '14, 05:47)</span>
+                <a class="comment-user userinfo" href="/users/9469/jkirk">jkirk</a>
+                
+            </div>
+        </div>
+    
+        <a name="35985"></a>
+        <div class="comment" id="comment-35985">
+            <div id="post-35985-score" class="comment-score"></div>
+            <div class="comment-text"><p>Use official bus stop number as ref and use the ref in the relation.</p></div>
+            <div class="comment-info" id="comment-35985-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Aug '14, 09:58)</span>
+                <a class="comment-user userinfo" href="/users/155/erkinalp">erkinalp</a>
+                
+            </div>
+        </div>
+    
+        <a name="35989"></a>
+        <div class="comment" id="comment-35989">
+            <div id="post-35989-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It's not just JOSM that's broken then!</p></div>
+            <div class="comment-info" id="comment-35989-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Aug '14, 13:25)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36013"></a>
+        <div class="comment" id="comment-36013">
+            <div id="post-36013-score" class="comment-score"></div>
+            <div class="comment-text"><p>If the bus stop is served by a bus route then just add the platform node to that bus route as well as the street the bus uses. The stop_position node is then linked because it is part of the street.</p>
+
+<p>If the bus stop isn't served by a bus route, i.e. buses don't stop there regularly, then there is by definition anyway no stop postion and it doesn't make sense to map one.</p></div>
+            <div class="comment-info" id="comment-36013-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Aug '14, 07:54)</span>
+                <a class="comment-user userinfo" href="/users/3480/roland-olbricht">Roland Olbricht</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35949" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35949-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="35920"></a>
+                    <div id="answer-container-35920" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35920-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35920/up/" rel="nofollow"> </a>
+<div id="post-35920-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-35920-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35920/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Most timetables that i have seen use landmarks such as " The Golden Lion "  " The Market Square XXX" or the name of the street crossing the route which is close to the stop, isn't that the solution for the "name"?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35920/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Aug '14, 13:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/35920/">
+                edited
+                <strong>17 Aug '14, 13:11</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35920">
+    
+</div>
+<div id="comment-tools-35920" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35920-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/35908/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='dUiBMJtg2tZugNUjU8iMysy5epMAaLW4' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/35908/bus-stops-without-name?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/35908/bus-stops-without-name?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/bus/"
+            class="tag-link-bus"
+            title="see questions tagged'bus'using tags"
+            rel="tag">bus</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/public-transport/"
+            class="tag-link-public-transport"
+            title="see questions tagged'public-transport'using tags"
+            rel="tag">public-transport</a> <span class="tag-number">&#215;62</span><br/>
+        
+        <a href="/tags/busstops/"
+            class="tag-link-busstops"
+            title="see questions tagged'busstops'using tags"
+            rel="tag">busstops</a> <span class="tag-number">&#215;39</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 17, 2014, 5:33 a.m.">17 Aug '14, 05:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,902 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 20, 2014, 5:51 p.m.">20 Aug '14, 17:51</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/70448/mapping-an-unmarked-bus-stop-ie-no-post-sign-or-other-physical-indicator">Mapping an unmarked bus stop, i.e. no post, sign or other physical indicator</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19189/naming-bus-stops">Naming bus stops</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70225/tag-for-drop-off-area-along-road">Tag for drop off area along road</a>
+        </p>
+        
+        <p>
+            <a href="/questions/80870/bus-stop-used-by-multiple-networks-with-multiple-names">Bus Stop Used by Multiple Networks with Multiple Names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39020/fixing-public-transit-mistake">Fixing Public Transit Mistake</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14628/where-should-i-tag-highwaybus_stop-on-stop_positions-or-platforms">Where should I tag highway=bus_stop, on stop_positions or platforms?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9625/how-long-does-it-take-to-see-bus-routes-in-osm-public-transport">How long does it take to see bus routes in OSM Public Transport ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17460/how-to-mark-a-bus-lane">How to mark a bus lane</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2545/tag-tram-tracks-with-name-ref-or-use-relationroute">Tag tram tracks with name=*, ref=* - or use Relation:route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6861/can-i-use-openstreetmap-to-make-a-town-transit-map">Can I use OpenStreetMap to make a town transit map?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

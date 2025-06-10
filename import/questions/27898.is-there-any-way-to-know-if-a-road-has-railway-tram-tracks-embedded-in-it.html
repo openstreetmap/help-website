@@ -1,0 +1,888 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Is there any way to know if a road has railway (tram) tracks embedded in it? - OSM Help</title>
+        <meta name="description" content="The recommended way to specify that a road has tram tracks embedded is to &quot;draw a new way for the tram tracks but reuse the nodes as the street where they run completely parallel.&quot; (Tram Wiki Page)  My question now is, if I want to mark a road as &#39;dangerous for cycling&#39; because it has embedded tram ..." />
+        <meta name="keywords" content="tram,shared,railway,tagging,embedded" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='M5g93dTTHWgZ1g2Umt5Oo3nuH46LTKiy' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it">Is there any way to know if a road has railway (tram) tracks embedded in it?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-27898-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27898/up/" rel="nofollow"> </a>
+<div id="post-27898-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-27898-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27898/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/27898/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>The recommended way to specify that a road has tram tracks embedded is to "draw a new way for the tram tracks but reuse the nodes as the street where they run completely parallel." (<a href="http://wiki.openstreetmap.org/wiki/Tram">Tram Wiki Page</a>)<br>
+</p>
+<p>My question now is, if I want to mark a road as 'dangerous for cycling' because it has embedded tram tracks (just an exaple) how can I get that information?</p>
+<p>Is there any relation, or tag <em>on the street edge</em> that can be used to specify/know if there are tracks in it?</p>
+<p>Thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tram/" class="post-tag tag-link-tram"
+                                        title="see questions tagged 'tram'" rel="tag">tram</a>
+                                
+                                    <a href="/tags/shared/" class="post-tag tag-link-shared"
+                                        title="see questions tagged 'shared'" rel="tag">shared</a>
+                                
+                                    <a href="/tags/railway/" class="post-tag tag-link-railway"
+                                        title="see questions tagged 'railway'" rel="tag">railway</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                                    <a href="/tags/embedded/" class="post-tag tag-link-embedded"
+                                        title="see questions tagged 'embedded'" rel="tag">embedded</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Nov '13, 10:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a68fa05bfe3350374945749f1fce99ea?s=32&amp;d=identicon&amp;r=g" alt="marcoq's gravatar image" />
+    <p><a href="/users/7763/marcoq">marcoq</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="marcoq has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27898/">
+                edited
+                <strong>08 Nov '13, 13:53</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-27898">
+    
+</div>
+<div id="comment-tools-27898" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27898-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="27916"></a>
+                    <div id="answer-container-27916" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27916-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27916/up/" rel="nofollow"> </a>
+<div id="post-27916-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-27916-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27916/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In the Netherlands it is common to map embedded tram tracks in a single way as the highway, and it is rendered without problems on Mapnik, see <a href="http://www.openstreetmap.org/browse/way/7372002">http://www.openstreetmap.org/browse/way/7372002</a>
+So I dont understand why this method isn't recommended in the wiki.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27916/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Nov '13, 18:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0f5ffc3756c4662b9dfad80b7665ac6c?s=32&amp;d=identicon&amp;r=g" alt="ligfietser's gravatar image" />
+    <p><a href="/users/1077/ligfietser">ligfietser</a><br/>
+    <span class="score" title="2894 reputation points"><span class="">2.9k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="27 badges"><span class="silver">&#9679;</span><span class="badgecount">27</span></span><span title="57 badges"><span class="bronze">&#9679;</span><span class="badgecount">57</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ligfietser has 8 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27916">
+    
+</div>
+<div id="comment-tools-27916" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27916-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="27905"></a>
+                    <div id="answer-container-27905" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27905-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27905/up/" rel="nofollow"> </a>
+<div id="post-27905-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-27905-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27905/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>AFAIK, no official way to represent this configuration on the map.</p>
+<p>Drawing two ways, one for the road, the other for the tram track, reusing the nodes where they overlap <strong>will</strong> trigger the "overlapping ways" validation warning in JOSM. Other mappers will be tempted to "fix" it. Also, they are two different, separate ways from the point of view of routing software.</p>
+<p>Drawing two ways as above, but not reusing the nodes is even worse, because there will not be even the hint of the overlapping segments telling that there are two ways there, one for the trams and other for the vehicles. Software will try to "get" the nearest way from your point of view, and will select one of the two, since it is very hard to manually adjust two ways to exactly the same coordinates. Probably will trigger lots of "crossing ways" validation warnings.</p>
+<p>Drawing one way with both the railway and highway tags set is not recommended as per the wiki page, but I could not find exactly why for the specific case of street that have the tram line embedded. I believe that the main reason is because it would be difficult for the rendering software to decide what to render (if the highway, the tram line would appear broken, else the street would). And I think, why not, since the street and the embedded tram line effectively <em>use the same space on the ground</em>? Also, for bus lines, there is already the "lanes:psv" (and other tags) to represent multiple types of vehicles sharing the same way.</p>
+<p>Drawing parallel, but not overlapping ways would be right only when the tram line and the street didn't share the same physical space, i.e. no cars/pedestrians allowed over the rails and (obviously) no trams running over the street...</p>
+<p>In short, if I had to choose, I would pick the third option, because, even if it makes things difficult for the rendering software, is the best form to allow for the fact that both share the same physical space on the ground.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27905/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Nov '13, 13:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/94b019f273c04cd88bc1c8dd0a8f2161?s=32&amp;d=identicon&amp;r=g" alt="MCPicoli's gravatar image" />
+    <p><a href="/users/4231/mcpicoli">MCPicoli</a><br/>
+    <span class="score" title="2172 reputation points"><span class="">2.2k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="47 badges"><span class="bronze">&#9679;</span><span class="badgecount">47</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="MCPicoli has 10 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27905">
+    
+        <a name="27907"></a>
+        <div class="comment" id="comment-27907">
+            <div id="post-27907-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I agree using both the railway and highway tags seems to be the better solution, even after considering the shortcomings listed here (<a href="https://help.openstreetmap.org/questions/2306/what-is-the-proper-way-to-tag-tram-tracks-embedded-in-a-street).">https://help.openstreetmap.org/questions/2306/what-is-the-proper-way-to-tag-tram-tracks-embedded-in-a-street).</a> 
+Using both tags would be coherent with the way cycleways and lanes are handled: adding cycleway=lane if shared, or creating a new way with highway=cycleway if separated, and using the oneway:bicycle for conflicts. (<a href="http://wiki.openstreetmap.org/wiki/Bicycle)">http://wiki.openstreetmap.org/wiki/Bicycle)</a><br>
+Anyway, yes, I understand the reasons for the discussion.</p></div>
+            <div class="comment-info" id="comment-27907-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '13, 13:51)</span>
+                <a class="comment-user userinfo" href="/users/7763/marcoq">marcoq</a>
+                
+            </div>
+        </div>
+    
+        <a name="27909"></a>
+        <div class="comment" id="comment-27909">
+            <div id="post-27909-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is there any tag the can be added to the street itself to mark that it has railway tracks (when the railway is on a different osm-way) without causing rendering problems? Or is this considered problematic because it adds semantic duplications?</p></div>
+            <div class="comment-info" id="comment-27909-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '13, 14:15)</span>
+                <a class="comment-user userinfo" href="/users/7763/marcoq">marcoq</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27905" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27905-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="27937"></a>
+                    <div id="answer-container-27937" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27937-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27937/up/" rel="nofollow"> </a>
+<div id="post-27937-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-27937-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27937/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>From a data processing point of view, there are several ways to attack the problem.</p>
+<p>A relatively fool-proof way would probably be this:</p>
+<ul>
+<li>Import your data into a spatial database (e.g. use osm2pgsql to import into PostGIS)</li>
+<li>To find out whether a road is "dangerous", convert the road's linear geometry into an area (called "buffering", usually with ST_BUFFER or similar), and ask the database whether there is anything called railway=tram inside that buffer.</li>
+</ul>
+<p>This would capture all the different ways of tram mapping, but it might require some refining (what if the tram is on a bridge over the street or what if it just crosses the street).</p>
+<p>Another option is to first process all ways tagged railway=tram, split them into two-node bits ("there is a tram directly connecting node A with node B", "there is a tram directly connecting node B with node C", etc.); store that in a suitable memory structure, and when processing the roads later, simply check if any pair of two consecutive road nodes is found in your tram segment table.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27937/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Nov '13, 14:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27937">
+    
+        <a name="27965"></a>
+        <div class="comment" id="comment-27965">
+            <div id="post-27965-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for the suggestions. The problem with the buffer is that when tracks are drawn individually it's difficult to understand if they are actually in shared space, or just on the side of the road (<a href="http://www.openstreetmap.org/#map=19/45.46340/9.18864).">http://www.openstreetmap.org/#map=19/45.46340/9.18864).</a> And if I understand correctly also the second option wouldn't work in this scenario.</p></div>
+            <div class="comment-info" id="comment-27965-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Nov '13, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/7763/marcoq">marcoq</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27937" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27937-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/27898/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='M5g93dTTHWgZ1g2Umt5Oo3nuH46LTKiy' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/railway/"
+            class="tag-link-railway"
+            title="see questions tagged'railway'using tags"
+            rel="tag">railway</a> <span class="tag-number">&#215;68</span><br/>
+        
+        <a href="/tags/shared/"
+            class="tag-link-shared"
+            title="see questions tagged'shared'using tags"
+            rel="tag">shared</a> <span class="tag-number">&#215;15</span><br/>
+        
+        <a href="/tags/tram/"
+            class="tag-link-tram"
+            title="see questions tagged'tram'using tags"
+            rel="tag">tram</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/embedded/"
+            class="tag-link-embedded"
+            title="see questions tagged'embedded'using tags"
+            rel="tag">embedded</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 8, 2013, 10:33 a.m.">08 Nov '13, 10:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>23,059 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 11, 2013, 9:32 a.m.">11 Nov '13, 09:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/55914/how-to-use-imported-railroad-crossing-names">How to Use Imported &quot;Railroad Crossing Names&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3989/what-is-the-meaning-of-railwaystation-on-a-closed-way">What is the meaning of railway=station on a closed way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2545/tag-tram-tracks-with-name-ref-or-use-relationroute">Tag tram tracks with name=*, ref=* - or use Relation:route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50942/does-disusedrailway-require-railwaydisused">Does disused:railway=* require railway=disused?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61483/how-to-map-pick-up-and-drop-off-points-at-stations-etc">How to map pick up and drop off points (at stations etc)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/85815/change-from-tram-to-light-railway">Change from tram to light railway</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2306/what-is-the-proper-way-to-tag-tram-tracks-embedded-in-a-street">What is the proper way to tag tram tracks embedded in a street?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2307/does-the-name-tag-make-sense-for-a-tram-track">Does the &quot;name=*&quot; tag make sense for a tram track?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/162/how-do-i-tag-ways-with-partial-access">How do I tag ways with partial access?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/153/how-do-you-tell-if-a-minor-service-road-is-accessprivate-destination-or-permissive">How do you tell if a minor service road is access=private, destination, or permissive?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,733 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Basic method for downloading ways within a region - OSM Help</title>
+        <meta name="description" content="Hi,  I&#39;m writing a Java Android app that requires me to download all the ways within a certain region but can find no example of a method for doing so. Could anyone point me in the right direction? Many thanks" />
+        <meta name="keywords" content="ways,android,java" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/73233/basic-method-for-downloading-ways-within-a-region" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/73233/basic-method-for-downloading-ways-within-a-region?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='SdEAPtJaVKH8IyqI3r7RqWMt6rwQMBO6' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/73233/basic-method-for-downloading-ways-within-a-region">Basic method for downloading ways within a region</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-73233-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73233/up/" rel="nofollow"> </a>
+<div id="post-73233-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73233-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73233/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/73233/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, </p>
+<p>I'm writing a Java Android app that requires me to download all the ways within a certain region but can find no example of a method for doing so.</p>
+<p>Could anyone point me in the right direction?</p>
+<p>Many thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ways/" class="post-tag tag-link-ways"
+                                        title="see questions tagged 'ways'" rel="tag">ways</a>
+                                
+                                    <a href="/tags/android/" class="post-tag tag-link-android"
+                                        title="see questions tagged 'android'" rel="tag">android</a>
+                                
+                                    <a href="/tags/java/" class="post-tag tag-link-java"
+                                        title="see questions tagged 'java'" rel="tag">java</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>26 Feb '20, 01:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/754e2add86ca3b2c635d07dd996f616c?s=32&amp;d=identicon&amp;r=g" alt="Wally's gravatar image" />
+    <p><a href="/users/17956/wally">Wally</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Wally has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-73233">
+    
+</div>
+<div id="comment-tools-73233" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73233-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/73233/basic-method-for-downloading-ways-within-a-region?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/73233/basic-method-for-downloading-ways-within-a-region?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/73233/basic-method-for-downloading-ways-within-a-region?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/73233/basic-method-for-downloading-ways-within-a-region?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="73237"></a>
+                    <div id="answer-container-73237" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73237-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73237/up/" rel="nofollow"> </a>
+<div id="post-73237-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73237-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73237/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Large scale <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">extracts</a> are served by several providers based on the main <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">planet file</a>. </p>
+<p>Any filtering for the feature types you're after will probably need to be done on your servers according to your specific criteria. (<a href="">Osmosis</a> seems frequently mentions in this forum for such taks but I have no first hand knowledge of this.)</p>
+<p>I believe the likes of OsmAnd pull whole planet dumps and keep them updated with the minutely diffs. These are then run through their conversion software and then split into the region's their users can download in app. For subscription customers this is done on an hourly basis.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmosis">https://wiki.openstreetmap.org/wiki/Osmosis</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73237/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Feb '20, 08:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ec8a0cf213f9797ad1c1ae2c28c2332d?s=32&amp;d=identicon&amp;r=g" alt="InsertUser's gravatar image" />
+    <p><a href="/users/4426/insertuser">InsertUser</a><br/>
+    <span class="score" title="11005 reputation points"><span class="">11.0k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="69 badges"><span class="silver">&#9679;</span><span class="badgecount">69</span></span><span title="185 badges"><span class="bronze">&#9679;</span><span class="badgecount">185</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="InsertUser has 73 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73237">
+    
+</div>
+<div id="comment-tools-73237" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73237-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="73239"></a>
+                    <div id="answer-container-73239" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73239-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73239/up/" rel="nofollow"> </a>
+<div id="post-73239-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73239-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73239/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Are you sure you only want the ways - without the accompanying nodes you will not know the geometry of the ways (just "there is a street named X with speed limit Y somewhere in the area I requested")? And without the relations you will also miss some semantic information - what looks to you like two featureless ways can turn out to be a building if you look at the relation that combines the two.</p>
+<p>A common tool for downloading data in an area is Overpass. Its query language is described here <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a> and an example that does what you want is here <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Usage_examples:_All_data_in_a_bounding_box.">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Usage_examples:_All_data_in_a_bounding_box.</a> There are a couple of free and public Overpass servers (see <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Public_Overpass_API_instances)">https://wiki.openstreetmap.org/wiki/Overpass_API#Public_Overpass_API_instances)</a> however if your app makes intensive use of the service and/or you need to rely on it you should probably set up your own server (everything is Open Source).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73239/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Feb '20, 10:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73239">
+    
+        <a name="73242"></a>
+        <div class="comment" id="comment-73242">
+            <div id="post-73242-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the replies.</p>
+
+<p>Basically what I'm after is all the walkable highways - i.e. roads and paths - within a region and I want to be able to extract the routes as sequences of coordinates which, as I understand it I can extract from the nodes.</p>
+
+<p>I should say I'm very new to OSM and am finding it hard to find a straightforward introduction to the data types and how they can be used within a java program.</p>
+
+<p>Many thanks for your help.</p></div>
+            <div class="comment-info" id="comment-73242-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '20, 11:38)</span>
+                <a class="comment-user userinfo" href="/users/17956/wally">Wally</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73239" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73239-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/73233/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='SdEAPtJaVKH8IyqI3r7RqWMt6rwQMBO6' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73233/basic-method-for-downloading-ways-within-a-region?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73233/basic-method-for-downloading-ways-within-a-region?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/android/"
+            class="tag-link-android"
+            title="see questions tagged'android'using tags"
+            rel="tag">android</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/ways/"
+            class="tag-link-ways"
+            title="see questions tagged'ways'using tags"
+            rel="tag">ways</a> <span class="tag-number">&#215;167</span><br/>
+        
+        <a href="/tags/java/"
+            class="tag-link-java"
+            title="see questions tagged'java'using tags"
+            rel="tag">java</a> <span class="tag-number">&#215;76</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 26, 2020, 1:58 a.m.">26 Feb '20, 01:58</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,895 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 26, 2020, 11:38 a.m.">26 Feb '20, 11:38</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/61543/how-can-visualize-a-grib-data-on-my-map-in-java">How can visualize a grib data on my map in Java?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/84582/osm-in-android-fragment-became-blank-tiles">OSM in android fragment became blank tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20695/lib-for-java-obf-pbf-or-other-format">Lib for Java OBF PBF or other format</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61537/how-to-create-a-custom-tile-in-java">How to create a custom tile in Java</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61597/how-can-speed-up-loading-and-setting-tiles-osmdroid">How can speed up loading and setting tiles - OSMDROID</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64669/change-epsg-in-osm">Change EPSG in OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14923/generate-map-and-use-it-in-android-and-desktop-application">Generate Map and use it in android and desktop application</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15496/sql-statement-to-get-all-of-the-xy-pairs-from-a-way">SQL Statement to get all of the X/Y pairs from a way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38534/map-application">map application</a>
+        </p>
+        
+        <p>
+            <a href="/questions/87099/openweather-api-tiles">openweather api tiles</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

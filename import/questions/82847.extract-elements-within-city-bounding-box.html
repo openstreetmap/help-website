@@ -1,0 +1,834 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Extract elements within city bounding box - OSM Help</title>
+        <meta name="description" content="Given a city name, I&#39;m trying to extract all nodes and ways that are located inside this city. But instead of a polygon shaped region, I want all elements inside the bounding box that surrounds this polygon shaped city region. I checked out Osmium-tool, but it only provides two functionalities:  tag..." />
+        <meta name="keywords" content="filter,osmium" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/82847/extract-elements-within-city-bounding-box" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/82847/extract-elements-within-city-bounding-box?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Saz0EzdiKolT7G11NAMj13LaEVtSoAJ5' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/82847/extract-elements-within-city-bounding-box">Extract elements within city bounding box</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-82847-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82847/up/" rel="nofollow"> </a>
+<div id="post-82847-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-82847-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82847/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/82847/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Given a city name, I'm trying to extract all nodes and ways that are located inside this city.
+But instead of a polygon shaped region, I want all elements inside the bounding box that surrounds this polygon shaped city region.</p>
+<p>I checked out Osmium-tool, but it only provides two functionalities:</p>
+<ul>
+<li><code>tags-filter</code>: extract data filtered by tags (i.e. city name)</li>
+<li><code>extract</code>: extract data given bounding box coordinates</li>
+</ul>
+<p>The first only returns the data inside the polygon shaped region and the second requires bounding box coordinates.</p>
+<p>So is there a lib or a tool to extract that data or at least finds bounding box coordinates for a given city?</p>
+<p>Thanks in advance!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/filter/" class="post-tag tag-link-filter"
+                                        title="see questions tagged 'filter'" rel="tag">filter</a>
+                                
+                                    <a href="/tags/osmium/" class="post-tag tag-link-osmium"
+                                        title="see questions tagged 'osmium'" rel="tag">osmium</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Dec '21, 10:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4404ad9bdd18f47ae5bd0f0551047e19?s=32&amp;d=identicon&amp;r=g" alt="PoRouS's gravatar image" />
+    <p><a href="/users/21173/porous">PoRouS</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="PoRouS has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-82847">
+    
+</div>
+<div id="comment-tools-82847" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82847-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/82847/extract-elements-within-city-bounding-box?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/82847/extract-elements-within-city-bounding-box?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/82847/extract-elements-within-city-bounding-box?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/82847/extract-elements-within-city-bounding-box?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="82851"></a>
+                    <div id="answer-container-82851" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-82851-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82851/up/" rel="nofollow"> </a>
+<div id="post-82851-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-82851-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82851/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Determining a bounding box for a polygon is kind of trivial. If you have the polygon in any kind of textual representation it should only take minutes in your favorite scripting language to determine the required values. </p>
+<p>So the problem is more finding the polygon data for the specific city, in many countries you should be able to get that from OSM itself, in other places you might need to use 3rd party sources or simply draw a bounding box yourself.  </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/82851/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Dec '21, 18:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-82851">
+    
+        <a name="82854"></a>
+        <div class="comment" id="comment-82854">
+            <div id="post-82854-score" class="comment-score"></div>
+            <div class="comment-text"><p><code>osmium fileinfo</code> will also give you the bounding box of an OSM file. So if you have a relation for your city, Osmium can help you.</p></div>
+            <div class="comment-info" id="comment-82854-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Dec '21, 18:55)</span>
+                <a class="comment-user userinfo" href="/users/112/jochen-topf">Jochen Topf</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-82851" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82851-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="82866"></a>
+                    <div id="answer-container-82866" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-82866-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82866/up/" rel="nofollow"> </a>
+<div id="post-82866-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-82866-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82866/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thank you both for the very fast answers!</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole"><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a></a> Yes, given the coordinates of the polygon nodes would make it easy to calculate a bounding box. But osmium tags-filter just filters and extracts the nodes into a file, so I don't have direct access to the coordinates, only afterwards. I was hoping that there is a functionality that handles that for me.</p>
+<p><a href="https://help.openstreetmap.org/users/112/jochen-topf"><a href="https://help.openstreetmap.org/users/112/jochen-topf">@Jochen Topf</a></a> If I filter the country map for the city relation, then the bounding box of the resulting OSM file still contains the values of the whole country and not that of the extracted relation.</p>
+<p>So probably I can solve it that way:<br>
+ - use libosmium to filter the data for the relation of the city<br>
+ - extract all nodes of that relation<br>
+ - determine min and max longitude and latitude coordinates to determine city bounding box<br>
+ - use osmium-tool to extract the data within this bounding box</p>
+<p>But unfortunately, I'm struggling to access the nodes of a relation in libosmium. I hope you can give me a hint.<br>
+I'm trying to use the following handler for that, but I'm stuck here:</p>
+<pre><code>class NamesHandler : public osmium::handler::Handler {
+public:
+static void relation(const osmium::Relation&amp; relation)
+{
+    osmium::TagsFilter filter { false };
+    filter.add_rule(true, "name", "Friedrichshafen");
+    if (!osmium::tags::match_any_of(relation.tags(), filter))
+        return;
+
+    for (const auto&amp; member : relation.members()) {
+        const auto&amp; object = member.get_object();
+        if (!object.is_compatible_to(osmium::item_type::node))
+            continue;
+
+        // TODO: convert osmium::OSMObject to osmium::Node to access the location function
+    }
+}
+};
+
+int main()
+{
+    NamesHandler names_handler;
+    osmium::io::Reader reader { "input.pbf", osmium::osm_entity_bits::relation };
+    osmium::apply(reader, names_handler);
+</code></pre>
+<p>}</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/82866/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Dec '21, 11:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4404ad9bdd18f47ae5bd0f0551047e19?s=32&amp;d=identicon&amp;r=g" alt="PoRouS's gravatar image" />
+    <p><a href="/users/21173/porous">PoRouS</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="PoRouS has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/82866/">
+                edited
+                <strong>17 Dec '21, 12:37</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-82866">
+    
+        <a name="82867"></a>
+        <div class="comment" id="comment-82867">
+            <div id="post-82867-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can use <code>osmium getid -r</code> to get everything belonging to a relation out of an OSM file. You can use a link like <a href="https://www.openstreetmap.org/api/0.6/relation/65606/full">https://www.openstreetmap.org/api/0.6/relation/65606/full</a> (here for the London relation) to get that data from the API. There are so many different ways of doing these things depening on what exactly you want to do that this goes beyond what can be answered here in a simple way.</p></div>
+            <div class="comment-info" id="comment-82867-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Dec '21, 12:57)</span>
+                <a class="comment-user userinfo" href="/users/112/jochen-topf">Jochen Topf</a>
+                
+            </div>
+        </div>
+    
+        <a name="82878"></a>
+        <div class="comment" id="comment-82878">
+            <div id="post-82878-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks again for the hint. </p>
+
+<p>I found another way using libosmium to find the nodes for a specified relation.
+My code is based on this example: <a href="https://github.com/osmcode/libosmium/blob/master/examples/osmium_area_test.cpp">https://github.com/osmcode/libosmium/blob/master/examples/osmium_area_test.cpp</a></p>
+
+<p>I adapted the area callback to the following to gather the bounding box:</p>
+
+<pre><code>static void area(const osmium::Area&amp; area)
+{
+    double lonMin = 180;
+    double lonMax = -180;
+    double latMin = 90;
+    double latMax = -90;
+    for (auto oit = area.cbegin&lt;osmium::OuterRing&gt;(); oit != area.cend&lt;osmium::OuterRing&gt;(); ++oit) {
+        const osmium::NodeRefList&amp; nodes = *oit;
+        for (const auto&amp; node : nodes) {
+            lonMin = std::min(lonMin, node.lon());
+            lonMax = std::max(lonMax, node.lon());
+            latMin = std::min(latMin, node.lat());
+            latMax = std::max(latMax, node.lat());
+        }
+    }
+
+    std::cout &lt;&lt; "Bounding box:\n";
+    std::cout &lt;&lt; "(" &lt;&lt; lonMin &lt;&lt; "," &lt;&lt; latMin &lt;&lt; "," &lt;&lt; lonMax &lt;&lt; "," &lt;&lt; latMax &lt;&lt; ")\n";
+}
+</code></pre>
+
+<p>For the germany map this query takes pretty long, so I reduced the map beforehand with osmium-tool by filtering out relations that I need:</p>
+
+<pre><code>osmium tags-filter germany-latest.osm.pbf wr/boundary=administrative -o germany_filtered.pbf --overwrite
+</code></pre></div>
+            <div class="comment-info" id="comment-82878-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Dec '21, 09:33)</span>
+                <a class="comment-user userinfo" href="/users/21173/porous">PoRouS</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-82866" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82866-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/82847/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Saz0EzdiKolT7G11NAMj13LaEVtSoAJ5' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/82847/extract-elements-within-city-bounding-box?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/82847/extract-elements-within-city-bounding-box?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/filter/"
+            class="tag-link-filter"
+            title="see questions tagged'filter'using tags"
+            rel="tag">filter</a> <span class="tag-number">&#215;66</span><br/>
+        
+        <a href="/tags/osmium/"
+            class="tag-link-osmium"
+            title="see questions tagged'osmium'using tags"
+            rel="tag">osmium</a> <span class="tag-number">&#215;38</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 16, 2021, 10:32 a.m.">16 Dec '21, 10:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,515 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 20, 2021, 10:26 a.m.">20 Dec '21, 10:26</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/45175/osmium-filter-by-bounding-box">Osmium - filter by bounding box</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6892/displaying-only-specific-pois-on-the-map">Displaying only specific POIs on the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17864/how-to-filter-data">How to filter data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9553/it-is-possible-hide-hotels-and-restaurants-on-extracted-maps">It is possible hide Hotels And Restaurants? (on extracted maps)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11943/errors-in-osmium-installation">Errors in osmium installation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12524/highway-filtering">Highway Filtering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7782/compiling-osmium-on-ubuntu">Compiling osmium on Ubuntu</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18877/errors-when-compiling-osmium-example">Errors when compiling Osmium example</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18917/error-when-execute-osmjs-osmium">Error when execute osmjs -  osmium</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5400/edit-certain-subsets-of-objects-in-josm">Edit certain subsets of objects in JOSM</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

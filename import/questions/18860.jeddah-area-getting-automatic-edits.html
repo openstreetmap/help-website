@@ -1,0 +1,810 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Jeddah area getting automatic &quot;edits&quot; - OSM Help</title>
+        <meta name="description" content="I noticed that i recent months there have been strange edits in the OSM data in the Jeddah area in Saudi Arabia. Sections of roads had vanished and I&#39;ve fixed them manually. Now I noticed that the Saabaar junction at highway 5 (22.420715, 39.1989674) has been revered to quite an old state. There is ..." />
+        <meta name="keywords" content="revert,changeset,bot,robot" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/18860/jeddah-area-getting-automatic-edits" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/18860/jeddah-area-getting-automatic-edits?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='cy243MNWLcka5tztgHKNs6NbzLb2MVfT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/18860/jeddah-area-getting-automatic-edits">Jeddah area getting automatic &quot;edits&quot;</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-18860-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18860/up/" rel="nofollow"> </a>
+<div id="post-18860-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-18860-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18860/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/18860/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I noticed that i recent months there have been strange edits in the OSM data in the Jeddah area in Saudi Arabia. Sections of roads had vanished and I've fixed them manually.</p>
+<p>Now I noticed that the Saabaar junction at highway 5 (22.420715, 39.1989674) has been revered to quite an old state. There is extensive building going on there and all my edits are gone. The ownership for the changes seems to be by "General Dreedle". Following links I find out that that is a bot that that prevents vandals making spurious changes. </p>
+<p>The General Dreedle login points to Richard, whose page points here.</p>
+<p>What is going on? Have I been labeled a vandal?</p>
+<p>I have not tried reverting changes before. What is the best way to find a change set ID history for a node? I am using JOSM.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/revert/" class="post-tag tag-link-revert"
+                                        title="see questions tagged 'revert'" rel="tag">revert</a>
+                                
+                                    <a href="/tags/changeset/" class="post-tag tag-link-changeset"
+                                        title="see questions tagged 'changeset'" rel="tag">changeset</a>
+                                
+                                    <a href="/tags/bot/" class="post-tag tag-link-bot"
+                                        title="see questions tagged 'bot'" rel="tag">bot</a>
+                                
+                                    <a href="/tags/robot/" class="post-tag tag-link-robot"
+                                        title="see questions tagged 'robot'" rel="tag">robot</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jan '13, 10:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1f71898dc0a455e56025a67a96b350ac?s=32&amp;d=identicon&amp;r=g" alt="HeikkiL's gravatar image" />
+    <p><a href="/users/5332/heikkil">HeikkiL</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="HeikkiL has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-18860">
+    
+</div>
+<div id="comment-tools-18860" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18860-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/18860/jeddah-area-getting-automatic-edits?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/18860/jeddah-area-getting-automatic-edits?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/18860/jeddah-area-getting-automatic-edits?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/18860/jeddah-area-getting-automatic-edits?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="18861"></a>
+                    <div id="answer-container-18861" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18861-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18861/up/" rel="nofollow"> </a>
+<div id="post-18861-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-18861-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18861/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Looking at <a href="http://www.openstreetmap.org/browse/way/161147071/history">http://www.openstreetmap.org/browse/way/161147071/history</a> as one example it appears that General Dreedle has removed RR8's edits and actually reverted it back to your last version.</p>
+<p>Do you have an example of an object where your edits were reverted?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18861/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jan '13, 10:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dee41dcf0aa0c08cf6b0eb935b7504b7?s=32&amp;d=identicon&amp;r=g" alt="TomH's gravatar image" />
+    <p><a href="/users/1/tomh">TomH ♦♦</a><br/>
+    <span class="score" title="3325 reputation points"><span class="">3.3k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="43 badges"><span class="bronze">&#9679;</span><span class="badgecount">43</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TomH has 9 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18861">
+    
+        <a name="18862"></a>
+        <div class="comment" id="comment-18862">
+            <div id="post-18862-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks Tom. I can now see better what is going on. Clearly, my edits are not targeted.</p>
+
+<p>Still, there are edits missing. Your link to history shows a way coming from east and turning north. It now splits to two lanes and continues over the motorway as a bridge. There is no connection to north any more. I can not see how I can revive those ways?</p></div>
+            <div class="comment-info" id="comment-18862-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jan '13, 11:03)</span>
+                <a class="comment-user userinfo" href="/users/5332/heikkil">HeikkiL</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18861" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18861-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="18865"></a>
+                    <div id="answer-container-18865" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18865-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18865/up/" rel="nofollow"> </a>
+<div id="post-18865-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-18865-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18865/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Actually, it's not just General Dreedle who is editing here.  <a href="http://www.openstreetmap.org/browse/way/129972636/history">Here's</a> an example of another deleted way of yours.</p>
+<p>If you want to look at deleted ways you can go into the old Potlatch editor by adding "&amp;editor=potlatch" to the end of the edit URL:</p>
+<p><a href="http://www.openstreetmap.org/edit?lat=22.41948&amp;lon=39.20067&amp;zoom=16&amp;way=161147071&amp;editor=potlatch">http://www.openstreetmap.org/edit?lat=22.41948&amp;lon=39.20067&amp;zoom=16&amp;way=161147071&amp;editor=potlatch</a></p>
+<p>and then select advanced / undelete.  You'll get a bit of a rat's nest though, and you'll need to manually join undeleted ways to current ones.  There's no Bing imagery there either.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18865/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jan '13, 11:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18865">
+    
+        <a name="18866"></a>
+        <div class="comment" id="comment-18866">
+            <div id="post-18866-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for tracking this down, SomeoneElse. This seems to be the edit that changed the Saabaar Junction, too. Looking at this user's other edits, I can not see any intended malice in his actions, though. Looks like the edits are based on Bing imagery that  does not show the bridge and other roads that under construction around the new railway station. That is an interesting topic in itself: how to convince other contributors that your edit is valid even when satellite images show otherwise!</p></div>
+            <div class="comment-info" id="comment-18866-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jan '13, 12:19)</span>
+                <a class="comment-user userinfo" href="/users/5332/heikkil">HeikkiL</a>
+                
+            </div>
+        </div>
+    
+        <a name="18867"></a>
+        <div class="comment" id="comment-18867">
+            <div id="post-18867-score" class="comment-score"></div>
+            <div class="comment-text"><p>Indeed it is - I'll be having a similar conversation myself with a local mapper in the next day or so.  In your case it's someone who's only been mapping for 2 or 3 months, so be gentle with them!</p></div>
+            <div class="comment-info" id="comment-18867-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jan '13, 12:26)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="18868"></a>
+        <div class="comment" id="comment-18868">
+            <div id="post-18868-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Just to add a bit of background - General Dreedle is designed to fire very rapidly (usually within 10 minutes) after a persistent vandal has edited the area, which minimises the chance of any "collateral damage" from a clash of edits. It therefore shouldn't damage your edits in any way. You certainly haven't been labelled a vandal: the General has a very short list of users it reverts!</p></div>
+            <div class="comment-info" id="comment-18868-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jan '13, 12:34)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="18869"></a>
+        <div class="comment" id="comment-18869">
+            <div id="post-18869-score" class="comment-score">3</div>
+            <div class="comment-text"><p>I manually added the missing bridge and roads from a saved xml file. Case closed. Thanks for everyone!</p></div>
+            <div class="comment-info" id="comment-18869-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jan '13, 12:40)</span>
+                <a class="comment-user userinfo" href="/users/5332/heikkil">HeikkiL</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18865" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18865-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/18860/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='cy243MNWLcka5tztgHKNs6NbzLb2MVfT' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18860/jeddah-area-getting-automatic-edits?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18860/jeddah-area-getting-automatic-edits?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/changeset/"
+            class="tag-link-changeset"
+            title="see questions tagged'changeset'using tags"
+            rel="tag">changeset</a> <span class="tag-number">&#215;127</span><br/>
+        
+        <a href="/tags/revert/"
+            class="tag-link-revert"
+            title="see questions tagged'revert'using tags"
+            rel="tag">revert</a> <span class="tag-number">&#215;86</span><br/>
+        
+        <a href="/tags/bot/"
+            class="tag-link-bot"
+            title="see questions tagged'bot'using tags"
+            rel="tag">bot</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/robot/"
+            class="tag-link-robot"
+            title="see questions tagged'robot'using tags"
+            rel="tag">robot</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 5, 2013, 10:28 a.m.">05 Jan '13, 10:28</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,078 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 5, 2013, 12:40 p.m.">05 Jan '13, 12:40</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/26469/revert-total-changeset-wanted">Revert total changeset wanted!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31804/problems-reverting-changeset">Problems reverting changeset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7346/border-between-south-ossetia-and-georgia-missing-again">Border between South Ossetia and Georgia missing (again)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25749/how-to-change-the-comment-in-a-changeset">How to change the comment in a changeset?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1895/how-to-close-a-changeset-in-potlatch-2">How to close a changeset in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31695/revert-total-changeset-wanted-21190743">[closed] Revert total changeset wanted (21190743)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/731/how-can-i-revert-a-changeset">How can I revert a changeset?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7227/how-can-i-call-away-a-saved-changeset">[closed] How can I call away a saved changeset?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8863/can-i-revert-part-of-a-changeset-without-affecting-the-rest">Can I revert part of a changeset without affecting the rest?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32542/where-to-report-abusive-changesets">Where to report abusive changesets ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

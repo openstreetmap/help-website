@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>openstreetmap-website production depolyment - OSM Help</title>
+        <meta name="description" content="i am trying to install the openstreetmap website in production, as i see in the installation and configuring page  link text,link text it is recommended to install the Phusion Passenger, CGIMap so while i was trying to figure out how to do this i have found This Docker container for OpenStreetMap We..." />
+        <meta name="keywords" content="installation" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/60986/openstreetmap-website-production-depolyment" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/60986/openstreetmap-website-production-depolyment?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='8EEf72fuqRCTWo776gI4NXOzisd7lNRO' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/60986/openstreetmap-website-production-depolyment">openstreetmap-website production depolyment</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-60986-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60986/up/" rel="nofollow"> </a>
+<div id="post-60986-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60986-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60986/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/60986/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>i am trying to install the openstreetmap website in production, as i see in the installation and configuring page 
+<a href="https://github.com/openstreetmap/openstreetmap-website/blob/master/INSTALL.md">link text</a>,<a href="https://github.com/openstreetmap/openstreetmap-website/blob/master/CONFIGURE.md">link text</a>
+it is recommended to install the Phusion Passenger, CGIMap</p>
+<p>so while i was trying to figure out how to do this i have found This Docker container for OpenStreetMap Website (aka 'Rails Port') 
+<a href="https://github.com/geo-data/openstreetmap-website-docker">link text</a>,<a href="https://github.com/geo-data/openstreetmap-website-docker/blob/master/Dockerfile">link text</a>,<a href="https://github.com/geo-data/openstreetmap-website-docker/blob/master/run.sh">link text</a></p>
+<p>but it is a bit old so i haven't been able to follow it while still use the new instructions from the official osm-website installation page</p>
+<p>so can you help me and others make a good documentation with all recommendations for linux newbies like me :)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/installation/" class="post-tag tag-link-installation"
+                                        title="see questions tagged 'installation'" rel="tag">installation</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Dec '17, 06:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f8c47b3830f7447fdc5ebd166eb210c6?s=32&amp;d=identicon&amp;r=g" alt="engragy's gravatar image" />
+    <p><a href="/users/14383/engragy">engragy</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="engragy has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-60986">
+    
+        <a name="60989"></a>
+        <div class="comment" id="comment-60989">
+            <div id="post-60989-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Can you explain what you're original goal is? The <code>openstreetmap-website</code> is not really something someone would have to deploy normally. What are you trying to do?</p></div>
+            <div class="comment-info" id="comment-60989-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '17, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/30/rorym">rorym</a>
+                
+            </div>
+        </div>
+    
+        <a name="60997"></a>
+        <div class="comment" id="comment-60997">
+            <div id="post-60997-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi rorym
+I am building a geo-social website with openstreetmap in its core and as I did understand I need the api to reply for map requests and also the site will offer the ability for users to edit the map in their neighborhood</p></div>
+            <div class="comment-info" id="comment-60997-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '17, 16:00)</span>
+                <a class="comment-user userinfo" href="/users/14383/engragy">engragy</a>
+                
+            </div>
+        </div>
+    
+        <a name="60998"></a>
+        <div class="comment" id="comment-60998">
+            <div id="post-60998-score" class="comment-score"></div>
+            <div class="comment-text"><p>So to be clear - you want users to be able to contribute data to your a database at your own site, and that data won't ever go to openstreetmap.org?</p>
+
+<p>If you do want data to be contributed to openstreetmap.org you probably need to create a different website rather than doing what you are currently doing.</p></div>
+            <div class="comment-info" id="comment-60998-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '17, 16:03)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61002"></a>
+        <div class="comment not_top_scorer" id="comment-61002">
+            <div id="post-61002-score" class="comment-score"></div>
+            <div class="comment-text"><p>hi someoneelse
+i do plan to upload changes in the database through josm as change sets or if i can make changes uploaded automatically that would be great, but if there is another way i would like to know about it as it will make things easier for me</p></div>
+            <div class="comment-info" id="comment-61002-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '17, 17:51)</span>
+                <a class="comment-user userinfo" href="/users/14383/engragy">engragy</a>
+                
+            </div>
+        </div>
+    
+        <a name="61003"></a>
+        <div class="comment not_top_scorer" id="comment-61003">
+            <div id="post-61003-score" class="comment-score"></div>
+            <div class="comment-text"><p>So when someone uses your website will they be updating the data at your site or at OSM?</p></div>
+            <div class="comment-info" id="comment-61003-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '17, 18:04)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61004"></a>
+        <div class="comment not_top_scorer" id="comment-61004">
+            <div id="post-61004-score" class="comment-score"></div>
+            <div class="comment-text"><p>the data will be updated on my website which will work for my country (egypt), but i don't know if there is something to make the changes apply to osm instantly rather than uploading changes afterwards if that is not acceptable for osm team,
+i really do admire the osm project and opensource projects as a whole but the reason i thought about making an osm server on localhost instead of using it is that a highspeed internet in my country is very expensive and also i read about limits for using osm because of resources</p></div>
+            <div class="comment-info" id="comment-61004-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '17, 18:24)</span>
+                <a class="comment-user userinfo" href="/users/14383/engragy">engragy</a>
+                
+            </div>
+        </div>
+    
+        <a name="61005"></a>
+        <div class="comment" id="comment-61005">
+            <div id="post-61005-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If you want to use the data to update OSM you really want the users to be editing there directly, otherwise you'll just get into a complete mess where someone in "your" OSM has added an object, and someone in "the real" OSM has also added it, causing duplication.</p>
+
+<p>One way to do what you want might be to host a version of iD in your website pointing at OSM, and have the maps on your site updated based on OSM minutely diffs.</p></div>
+            <div class="comment-info" id="comment-61005-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '17, 18:31)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61007"></a>
+        <div class="comment not_top_scorer" id="comment-61007">
+            <div id="post-61007-score" class="comment-score"></div>
+            <div class="comment-text"><p>awesome solution, so you mean when someone make an edit it will go to real osm with minutely diffs technique and i configure a script to receive diffs for my tiles .. right</p></div>
+            <div class="comment-info" id="comment-61007-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '17, 18:44)</span>
+                <a class="comment-user userinfo" href="/users/14383/engragy">engragy</a>
+                
+            </div>
+        </div>
+    
+        <a name="61008"></a>
+        <div class="comment" id="comment-61008">
+            <div id="post-61008-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Nearly - they're updating OSM directly, and you update the tiles at your end based on minutely diffs.  See <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load#Updating_your_database_as_people_edit_OpenStreetMap">https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load#Updating_your_database_as_people_edit_OpenStreetMap</a> for one example of how to do that.</p></div>
+            <div class="comment-info" id="comment-61008-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '17, 18:47)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61087"></a>
+        <div class="comment not_top_scorer" id="comment-61087">
+            <div id="post-61087-score" class="comment-score"></div>
+            <div class="comment-text"><p>hi someoneelse
+can you tell me how to configure my local id editor to point the users edits to openstreetmap.org</p></div>
+            <div class="comment-info" id="comment-61087-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Dec '17, 12:52)</span>
+                <a class="comment-user userinfo" href="/users/14383/engragy">engragy</a>
+                
+            </div>
+        </div>
+    
+        <a name="61088"></a>
+        <div class="comment not_top_scorer" id="comment-61088">
+            <div id="post-61088-score" class="comment-score"></div>
+            <div class="comment-text"><p>No, never done that, sorry...</p></div>
+            <div class="comment-info" id="comment-61088-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Dec '17, 14:30)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61632"></a>
+        <div class="comment not_top_scorer" id="comment-61632">
+            <div id="post-61632-score" class="comment-score"></div>
+            <div class="comment-text"><p>I created a new question <a href="https://help.openstreetmap.org/questions/61630/how-to-change-openstreetmap-tiles-update-expire-to-use-geofabrik-updates">https://help.openstreetmap.org/questions/61630/how-to-change-openstreetmap-tiles-update-expire-to-use-geofabrik-updates</a> from a comment here.</p></div>
+            <div class="comment-info" id="comment-61632-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '18, 23:13)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60986" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60986-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/60986/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='8EEf72fuqRCTWo776gI4NXOzisd7lNRO' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60986/openstreetmap-website-production-depolyment?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60986/openstreetmap-website-production-depolyment?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/installation/"
+            class="tag-link-installation"
+            title="see questions tagged'installation'using tags"
+            rel="tag">installation</a> <span class="tag-number">&#215;61</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 4, 2017, 6:49 a.m.">04 Dec '17, 06:49</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,371 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 14, 2018, 11:13 p.m.">14 Jan '18, 23:13</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/4722/i-downloaded-josm-testedjar-now-what">I downloaded josm-tested.jar, now what?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6684/how-to-install-openstreetmap-for-working-offline">How to install OpenStreetMap for working offline</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server">Installing OSM (main objective is reverse geocoding) on windows 2008 server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10955/nominatim-planet_osm_rels-does-not-exist">Nominatim: planet_osm_rels does not exist</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11943/errors-in-osmium-installation">Errors in osmium installation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12373/import-error-with-nominatim-installation-no-data-and-db-error-insufficient-permissions">Import error with Nominatim installation: No Data and DB Error: insufficient permissions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12958/set-up-nominatim">Set up Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14846/segmentation-fault-after-building-a-tile-server">segmentation fault after building a tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15563/nominatim-install-problem-final-step-php">Nominatim Install Problem, Final Step. PHP?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3651/problem-installing-the-nominatim-web-front-end">Problem installing the Nominatim web front-end</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

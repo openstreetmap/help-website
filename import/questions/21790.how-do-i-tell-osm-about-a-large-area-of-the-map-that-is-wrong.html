@@ -1,0 +1,948 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I tell OSM about a large area of the map that is wrong? - OSM Help</title>
+        <meta name="description" content="How can I inform OSM about a map discrepancy (error) so they can update the tiles? For instance if you look at Columbia, SC there is a very large lake called Lake Murray. At zoom level 10 and lower it displays fine. If you zoom in to any levels above 10, the lake disappears and the islands in the la..." />
+        <meta name="keywords" content="water,report,large_area,error" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/21790/how-do-i-tell-osm-about-a-large-area-of-the-map-that-is-wrong" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/21790/how-do-i-tell-osm-about-a-large-area-of-the-map-that-is-wrong?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='QIv3wn8NA3Y50QZYUIVpjBexLkHDo2AA' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/21790/how-do-i-tell-osm-about-a-large-area-of-the-map-that-is-wrong">How do I tell OSM about a large area of the map that is wrong?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-21790-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21790/up/" rel="nofollow"> </a>
+<div id="post-21790-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-21790-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21790/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/21790/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How can I inform OSM about a map discrepancy (error) so they can update the tiles? For instance if you look at Columbia, SC there is a very large lake called Lake Murray. At zoom level 10 and lower it displays fine. If you zoom in to any levels above 10, the lake disappears and the islands in the lake look like little ponds instead of being green land.</p>
+<p>Here is a permalink to the area. This is level 10 which displays the lake, if you zoom in one more level it disappears:
+<a href="http://www.openstreetmap.org/?lat=34.111&amp;lon=-81.216&amp;zoom=10&amp;layers=M">http://www.openstreetmap.org/?lat=34.111&amp;lon=-81.216&amp;zoom=10&amp;layers=M</a> </p>
+<p>What is the standard way to report issues like this and how long does it typically take to resolve them? (I understand I'm not the only one in the world providing discrepencies, but just curious how long the average turn around time is on issues like this).</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/water/" class="post-tag tag-link-water"
+                                        title="see questions tagged 'water'" rel="tag">water</a>
+                                
+                                    <a href="/tags/report/" class="post-tag tag-link-report"
+                                        title="see questions tagged 'report'" rel="tag">report</a>
+                                
+                                    <a href="/tags/large_area/" class="post-tag tag-link-large_area"
+                                        title="see questions tagged 'large_area'" rel="tag">large_area</a>
+                                
+                                    <a href="/tags/error/" class="post-tag tag-link-error"
+                                        title="see questions tagged 'error'" rel="tag">error</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Apr '13, 16:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bf02bce9b57773717a999004753d4a7b?s=32&amp;d=identicon&amp;r=g" alt="Russ's gravatar image" />
+    <p><a href="/users/6219/russ">Russ</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Russ has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/21790/">
+                edited
+                <strong>25 Nov '13, 14:49</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-21790">
+    
+</div>
+<div id="comment-tools-21790" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21790-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/21790/how-do-i-tell-osm-about-a-large-area-of-the-map-that-is-wrong?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/21790/how-do-i-tell-osm-about-a-large-area-of-the-map-that-is-wrong?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/21790/how-do-i-tell-osm-about-a-large-area-of-the-map-that-is-wrong?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/21790/how-do-i-tell-osm-about-a-large-area-of-the-map-that-is-wrong?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="21795"></a>
+                    <div id="answer-container-21795" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-21795-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21795/up/" rel="nofollow"> </a>
+<div id="post-21795-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-21795-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21795/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Russ has selected this answer as the correct answer"
+        href="/accept_answer/21795/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>One great tool is <a href="http://tools.geofabrik.de/osmi/">OSM Inspector</a>, a QA tool which includes checks for Multipolygon geometry.  As you can see at <a href="http://tools.geofabrik.de/osmi/?view=multipolygon&amp;lon=-81.43958&amp;lat=34.05725&amp;zoom=10&amp;opacity=0.62&amp;overlays=ring_not_closed_hull,unconnected_end_nodes">this link</a> (until it gets updated--<a href="http://www.openstreetmap.org/browse/changeset/15852306">I think I corrected the issue</a>) there was a gap in the outer ring of the multipolygon for the lake.  Once the tiles get re-rendered, and you refresh your view, it should show correctly.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/21795/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '13, 19:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cebf8499a8a3009705e261cfd224e8c0?s=32&amp;d=identicon&amp;r=g" alt="neuhausr's gravatar image" />
+    <p><a href="/users/595/neuhausr">neuhausr</a><br/>
+    <span class="score" title="7460 reputation points"><span class="">7.5k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="70 badges"><span class="silver">&#9679;</span><span class="badgecount">70</span></span><span title="121 badges"><span class="bronze">&#9679;</span><span class="badgecount">121</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="neuhausr has 36 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-21795">
+    
+        <a name="21796"></a>
+        <div class="comment" id="comment-21796">
+            <div id="post-21796-score" class="comment-score">2</div>
+            <div class="comment-text"><p>This is awesome! How can I learn more about fixing problem areas? Is there some documentation that teaches about the xml structure? Do I need to do anything special to become a developer to make change sets?</p></div>
+            <div class="comment-info" id="comment-21796-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '13, 19:53)</span>
+                <a class="comment-user userinfo" href="/users/6219/russ">Russ</a>
+                
+            </div>
+        </div>
+    
+        <a name="21888"></a>
+        <div class="comment" id="comment-21888">
+            <div id="post-21888-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Great questions! OSM Inspector and KeepRight (<a href="http://keepright.ipax.at/)">http://keepright.ipax.at/)</a> are two of the best QA tools, IMO.  You can find more on the wiki: <a href="http://wiki.openstreetmap.org/wiki/QA">http://wiki.openstreetmap.org/wiki/QA</a>  Info on the xml format is also on the wiki: <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">http://wiki.openstreetmap.org/wiki/OSM_XML</a> To make a changeset, you just need to go to <a href="http://www.openstreetmap.org/,">http://www.openstreetmap.org/,</a> create a user account (sign up link in upper right), login, navigate to where you want to edit, click edit, and create, edit and tag features.  Once you click Save, the editing application (default online is Potlatch 2) takes care of the xml, changeset, etc.</p></div>
+            <div class="comment-info" id="comment-21888-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Apr '13, 15:14)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-21795" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21795-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="21799"></a>
+                    <div id="answer-container-21799" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-21799-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21799/up/" rel="nofollow"> </a>
+<div id="post-21799-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-21799-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21799/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>(Although your original issue has already been solved, I wanted to give a general answer to the question of how to tell OSM about issues on the map)</p>
+<p>The best way to tell OpenStreetMap about an area that is wrong is by fixing it your self. Anyone can create an account on OSM.org and click the edit button and start improving the data. As the person who spotted the error, you are probably one of the best qualified to fix the issue with your knowledge about the problem and the local area. Once your changes are saved, they are immediately available to everyone who uses OSM data, so it is also the fastest way to ensure the issue gets resolved. (Although it might <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">take a while for the tiles to get re-rendered</a>).</p>
+<p>However, despite the effort to improve the editing tools for new users, not everyone might feel comfortable (or currently have the time) to edit the data directly, especially for some of the more complex features (like multi-polygons or other relations). Therefore it is now possible to leave a note on the map for other users or mappers to see. If you zoom in to where there is an issue with the map you can click on "add a note" in the bottom right corner of the page. This allows you to add a note to mappers which will then hopefully see it and fix the issue. Remember, the more precise the note is located and the issue described, the easier it is for someone else to fix the issue and likely the faster it gets resolved.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/21799/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '13, 21:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32c974c4ca8b246698c2b82c64924da5?s=32&amp;d=identicon&amp;r=g" alt="apmon's gravatar image" />
+    <p><a href="/users/65/apmon">apmon</a><br/>
+    <span class="score" title="6527 reputation points"><span class="">6.5k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="apmon has 9 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-21799">
+    
+</div>
+<div id="comment-tools-21799" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21799-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="21792"></a>
+                    <div id="answer-container-21792" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-21792-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21792/up/" rel="nofollow"> </a>
+<div id="post-21792-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-21792-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21792/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The lake and the islands are part of a multipolygon  see <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">http://wiki.openstreetmap.org/wiki/Relation:multipolygon</a>   A quick look at two islands and two sections of the perimeter reveals they were formed in 2010 so if it was displaying OK I suspect someone as broken the lake polygon. It as a lot of nodes and it needs someone with some skill and confidence to sort it, It was also probably made with data other than BING which was unavailable at the time, so it may well be improved by being mapped from Bing by somebody who as the necessary skills.You could ask the original Mapper.<br>
+</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/21792/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '13, 18:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-21792">
+    
+        <a name="21793"></a>
+        <div class="comment" id="comment-21793">
+            <div id="post-21793-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for the information. How does an average API user (me) know who the original mapper is? Once we know who it is how do we know about contacting them? The multipolygon link was helpful and informative.</p></div>
+            <div class="comment-info" id="comment-21793-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '13, 18:44)</span>
+                <a class="comment-user userinfo" href="/users/6219/russ">Russ</a>
+                
+            </div>
+        </div>
+    
+        <a name="21794"></a>
+        <div class="comment" id="comment-21794">
+            <div id="post-21794-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually with this understanding of multipolygons I think I know what the problem is. The problem is simply the color of the islands and the color of the lake are inverting at zoom &gt; 10. Essentially the islands should be white, but they show blue, the water should show blue, but shows white. Perhaps this problem will be somewhat easy to solve!</p></div>
+            <div class="comment-info" id="comment-21794-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '13, 18:46)</span>
+                <a class="comment-user userinfo" href="/users/6219/russ">Russ</a>
+                
+            </div>
+        </div>
+    
+        <a name="21797"></a>
+        <div class="comment" id="comment-21797">
+            <div id="post-21797-score" class="comment-score"></div>
+            <div class="comment-text"><p>This Q&amp;A is part of what you want <a href="https://help.openstreetmap.org/questions/10236/how-to-contact-another-mapper">https://help.openstreetmap.org/questions/10236/how-to-contact-another-mapper</a></p></div>
+            <div class="comment-info" id="comment-21797-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '13, 20:34)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="21798"></a>
+        <div class="comment" id="comment-21798">
+            <div id="post-21798-score" class="comment-score"></div>
+            <div class="comment-text"><p>and a bit more for JOSM users <a href="https://help.openstreetmap.org/questions/5356/who-edited-my-map-corrections-and-made-it-all-wrong-again">https://help.openstreetmap.org/questions/5356/who-edited-my-map-corrections-and-made-it-all-wrong-again</a></p></div>
+            <div class="comment-info" id="comment-21798-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '13, 20:41)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="21800"></a>
+        <div class="comment" id="comment-21800">
+            <div id="post-21800-score" class="comment-score"></div>
+            <div class="comment-text"><p>In the potlatch2 editor you can find who mapped a way by highlighting it, then in the side box click on advanced at the bottom, then click on way number at top. and some details including the mapper will show.</p></div>
+            <div class="comment-info" id="comment-21800-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '13, 21:05)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-21792" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21792-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/21790/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='QIv3wn8NA3Y50QZYUIVpjBexLkHDo2AA' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/21790/how-do-i-tell-osm-about-a-large-area-of-the-map-that-is-wrong?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/21790/how-do-i-tell-osm-about-a-large-area-of-the-map-that-is-wrong?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/error/"
+            class="tag-link-error"
+            title="see questions tagged'error'using tags"
+            rel="tag">error</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/water/"
+            class="tag-link-water"
+            title="see questions tagged'water'using tags"
+            rel="tag">water</a> <span class="tag-number">&#215;79</span><br/>
+        
+        <a href="/tags/report/"
+            class="tag-link-report"
+            title="see questions tagged'report'using tags"
+            rel="tag">report</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/large_area/"
+            class="tag-link-large_area"
+            title="see questions tagged'large_area'using tags"
+            rel="tag">large_area</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 24, 2013, 4:14 p.m.">24 Apr '13, 16:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,869 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 25, 2013, 2:49 p.m.">25 Nov '13, 14:49</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/22823/street-omissions-in-streets-in-walpole-ma-us">Street omissions in streets in Walpole MA US</a>
+        </p>
+        
+        <p>
+            <a href="/questions/816/how-can-i-draw-attention-of-other-osm-users-to-unnamed-and-missing-streets-in-a-city">How can I draw attention of other OSM users to unnamed and missing streets in a city?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21090/part-of-a-road-is-missing-in-osm-how-do-i-report-this-so-that-it-can-be-updated">Part of a road is missing in OSM – how do I report this so that it can be updated?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34057/river-appears-to-flood-its-surroundings">River appears to flood its surroundings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10986/i-dont-want-to-fix-an-mapping-error-but-i-do-want-to-report-one">I don&#39;t want to fix an mapping error, but I do want to report one …</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1849/meer-blau-farben-garmin">Meer blau färben (Garmin)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1531/coastal-lines-and-land-are-do-not-match-messed-things-up">Coastal lines and land are do not match (Messed things up?)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1229/a-little-problem-with-water-and-dirt-getting-mixed">[closed] A little problem with water and dirt getting mixed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2130/gpx-file-no-time-tag">GPX file : no time tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1301/ajax-issues-with-nominatim">[closed] Ajax issues with nominatim?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

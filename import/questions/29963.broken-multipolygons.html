@@ -1,0 +1,763 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Broken multipolygons? - OSM Help</title>
+        <meta name="description" content="What is the story with the following multipolygons?  New Jersey, USA: 235961, 276888 Georgia, USA: 143646, 143639, 143464  JOSM and Mapnik seem to say they are legal, complete loops. However OSM Inspector says they are unclosed rings. What&#39;s actually going on?" />
+        <meta name="keywords" content="multipolygon" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/29963/broken-multipolygons" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/29963/broken-multipolygons?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='SyHTz1ZBHfmGSPu7Pkd15MSmiEeya0w4' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/29963/broken-multipolygons">Broken multipolygons?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-29963-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29963/up/" rel="nofollow"> </a>
+<div id="post-29963-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-29963-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29963/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/29963/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>What is the story with the following multipolygons?</p>
+<ul>
+<li>New Jersey, USA: <a href="http://www.openstreetmap.org/relation/235961">235961</a>, <a href="http://www.openstreetmap.org/relation/276888">276888</a></li>
+<li>Georgia, USA: <a href="http://www.openstreetmap.org/relation/143646">143646</a>, <a href="http://www.openstreetmap.org/relation/143639">143639</a>, <a href="http://www.openstreetmap.org/relation/143464">143464</a></li>
+</ul>
+<p>JOSM and Mapnik seem to say they are legal, complete loops.<br>
+However OSM Inspector says they are unclosed rings.</p>
+<p>What's actually going on?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/multipolygon/" class="post-tag tag-link-multipolygon"
+                                        title="see questions tagged 'multipolygon'" rel="tag">multipolygon</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Jan '14, 07:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ed0b2a6757c7515c4f9c529b2eb08ae3?s=32&amp;d=identicon&amp;r=g" alt="eric22's gravatar image" />
+    <p><a href="/users/5206/eric22">eric22</a><br/>
+    <span class="score" title="401 reputation points">401</span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="13 badges"><span class="silver">&#9679;</span><span class="badgecount">13</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="eric22 has 2 accepted answers">50&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/29963/">
+                edited
+                <strong>19 Jan '14, 09:25</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/49a7d0e0408e9cf2f698faac0f4d837a?s=32&amp;d=identicon&amp;r=g" alt="iii's gravatar image" />
+            <p><a href="/users/4984/iii">iii</a><br/>
+            <span class="score" title="4892 reputation points"><span class="">4.9k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="40 badges"><span class="silver">&#9679;</span><span class="badgecount">40</span></span><span title="82 badges"><span class="bronze">&#9679;</span><span class="badgecount">82</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-29963">
+    
+</div>
+<div id="comment-tools-29963" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29963-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/29963/broken-multipolygons?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/29963/broken-multipolygons?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/29963/broken-multipolygons?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/29963/broken-multipolygons?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="29979"></a>
+                    <div id="answer-container-29979" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29979-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29979/up/" rel="nofollow"> </a>
+<div id="post-29979-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-29979-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29979/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="eric22 has selected this answer as the correct answer"
+        href="/accept_answer/29979/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The OSM Inspector sometimes claims that a ring is not closed when instead the polygon has an inner ring touching an outer ring. This may occasionally confuse the ring building logic in OSMI, leading to the "ring not closed" complaint instead of correctly saying "inner touches outer".</p>
+<p>I checked one of your examples and found exactly that: <a href="http://www.openstreetmap.org/relation/143464#map=16/33.2530/-84.5717">http://www.openstreetmap.org/relation/143464#map=16/33.2530/-84.5717</a> (right edge of the "hole" in the forest).</p>
+<p>The data also contains a ton of useless tags that should never have been imported in the first place.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29979/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Jan '14, 19:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29979">
+    
+        <a name="30163"></a>
+        <div class="comment" id="comment-30163">
+            <div id="post-30163-score" class="comment-score"></div>
+            <div class="comment-text"><p>That solves the problem for the Georgia multipolygons. But I can't find a similar problem with the New Jersey multipolygons. The most I can find is an inner ring touching another inner ring. Do you have any other ideas?</p></div>
+            <div class="comment-info" id="comment-30163-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '14, 20:31)</span>
+                <a class="comment-user userinfo" href="/users/5206/eric22">eric22</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29979" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29979-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="29965"></a>
+                    <div id="answer-container-29965" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29965-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29965/up/" rel="nofollow"> </a>
+<div id="post-29965-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-29965-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29965/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>What is going one is that these (imported) multipolygons are bigger than you (or anyone else) can manage easily. You should split these at bigger roads (forest does not grow on highways) and deal with much smaller relations.</p>
+<p>Otherwise you will waste some hours to find the mistake. Some seconds to fix it. And in a month or two you can do it again. In the meantime only few advanced contributors have the courage to modify such big relations. Meaning this place will evolve much slower than it could.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29965/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Jan '14, 10:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f7f8127223bd00c9e8f569ce2e9ddf22?s=32&amp;d=identicon&amp;r=g" alt="RM87's gravatar image" />
+    <p><a href="/users/268/rm87">RM87</a><br/>
+    <span class="score" title="3346 reputation points"><span class="">3.3k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="37 badges"><span class="silver">&#9679;</span><span class="badgecount">37</span></span><span title="53 badges"><span class="bronze">&#9679;</span><span class="badgecount">53</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RM87 has 20 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/29965/">
+                edited
+                <strong>19 Jan '14, 10:27</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29965">
+    
+        <a name="29980"></a>
+        <div class="comment" id="comment-29980">
+            <div id="post-29980-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not sure I agree. If you open JOSM and choose "Download object" and the multipolygon number, you can work on a multipolygon easily without being confused by other objects. (You just have to be aware that your changes might affect other objects, and download those as necessary before editing, to avoid conflicts.)</p>
+
+<p>I think Frederik is right that the problem is inner ways touching outer ways. The issue is some kind of multipolygon complexity, not the absolute number/length of ways...</p></div>
+            <div class="comment-info" id="comment-29980-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '14, 20:15)</span>
+                <a class="comment-user userinfo" href="/users/5206/eric22">eric22</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29965" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29965-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/29963/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='SyHTz1ZBHfmGSPu7Pkd15MSmiEeya0w4' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29963/broken-multipolygons?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29963/broken-multipolygons?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/multipolygon/"
+            class="tag-link-multipolygon"
+            title="see questions tagged'multipolygon'using tags"
+            rel="tag">multipolygon</a> <span class="tag-number">&#215;132</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 19, 2014, 7:15 a.m.">19 Jan '14, 07:15</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,023 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 23, 2014, 8:31 p.m.">23 Jan '14, 20:31</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3489/rendering-of-multipolygons-tagged-with-landuse-tags">Rendering of multipolygons tagged with landuse tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4105/opencyclemap-potlach2-multipolygon-howto">Opencyclemap Potlach2 multipolygon howto?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4340/isolating-buildings-and-all-member-ways-using-the-filter-objects-tool">Isolating buildings (and all member ways) using the Filter objects tool</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4434/overlapping-polygons-">overlapping polygons - ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5642/disappearing-golf-course">Disappearing golf course</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7465/how-do-i-best-edit-shared-nodes-in-potlatch-eg-between-two-polygons">How do I best edit &quot;shared nodes&quot; in Potlatch (e.g. between two polygons)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland">How to make a hole in an area, eg woodland.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10311/adding-admin-boundaries-and-multipolygons-the-fast-way">adding admin boundaries and multipolygons the fast way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10313/pbfosm-file-move-multipolygon-tags-from-members-to-relation">pbf/osm-file: move multipolygon tags from members to relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3462/multipolygon-innerouter">multipolygon inner/outer</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to update the map when a major river disapears? - OSM Help</title>
+        <meta name="description" content="Recently it&#39;s been in the news that a major glacier has retreated dramatically due to climate change, and due to the topography it has stopped draining into the river it usually does, and started draining into a different river. This has effectively caused the first river to cease to exist. Here is ..." />
+        <meta name="keywords" content="news,armchair-mapping,climate_change" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/55728/how-to-update-the-map-when-a-major-river-disapears" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55728/how-to-update-the-map-when-a-major-river-disapears?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='efwaTYlpK384jqj35JjA0bPiQK8d3JLt' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55728/how-to-update-the-map-when-a-major-river-disapears">How to update the map when a major river disapears?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55728-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55728/up/" rel="nofollow"> </a>
+<div id="post-55728-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-55728-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55728/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55728/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Recently it's been in the news that a major glacier has retreated dramatically due to climate change, and due to the topography it has stopped draining into the river it usually does, and started draining into a different river. This has effectively caused the first river to cease to exist.</p>
+<p><a href="http://www.openstreetmap.org/note/967758">Here is a note</a> on the subject, with some links to news articles. I'm not sure what to do about this, as we do not have more than a general description of the fact that this river has dried up.</p>
+<p>Additionally the area is pretty poorly mapped to start with, due to poorly done imports that are common in the remote parts of Canada. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/news/" class="post-tag tag-link-news"
+                                        title="see questions tagged 'news'" rel="tag">news</a>
+                                
+                                    <a href="/tags/armchair-mapping/" class="post-tag tag-link-armchair-mapping"
+                                        title="see questions tagged 'armchair-mapping'" rel="tag">armchair-mapping</a>
+                                
+                                    <a href="/tags/climate_change/" class="post-tag tag-link-climate_change"
+                                        title="see questions tagged 'climate_change'" rel="tag">climate_change</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Apr '17, 09:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f88a467aa884aeb760041004f62448ee?s=32&amp;d=identicon&amp;r=g" alt="keithonearth's gravatar image" />
+    <p><a href="/users/9027/keithonearth">keithonearth</a><br/>
+    <span class="score" title="2939 reputation points"><span class="">2.9k</span></span><span title="56 badges"><span class="badge1">&#9679;</span><span class="badgecount">56</span></span><span title="76 badges"><span class="silver">&#9679;</span><span class="badgecount">76</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="keithonearth has 3 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55728">
+    
+        <a name="55742"></a>
+        <div class="comment" id="comment-55742">
+            <div id="post-55742-score" class="comment-score">1</div>
+            <div class="comment-text"><p>From the reports I have read, the riverbed still exists but the flow rate has reduced to almost nothing. The Slims river has not vanished, it just doesn't have water flowing in the channel at the moment because the glacier that feeds it has retreated so far that is is now preferring to flow into a different riverbed instead.</p>
+
+<p>(See <a href="http://www.google.com/webhp?q=slims+river+dries+up+climate+change">http://www.google.com/webhp?q=slims+river+dries+up+climate+change</a> for a sample of news reports.)</p></div>
+            <div class="comment-info" id="comment-55742-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Apr '17, 04:47)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+        <a name="55777"></a>
+        <div class="comment" id="comment-55777">
+            <div id="post-55777-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes Huttite, that is my understanding. But I will add that, from the news articles I've read, it sounds like the flow has been reduced enough that it sounds like it should not be considered a river any more. Maybe an intermittent stream.</p></div>
+            <div class="comment-info" id="comment-55777-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '17, 21:43)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+        <a name="55801"></a>
+        <div class="comment" id="comment-55801">
+            <div id="post-55801-score" class="comment-score"></div>
+            <div class="comment-text"><p>The note you refer to seems to be suggesting that we should be <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>, rather than tagging to represent the reality that the water flow has reduced or dried up. Retagging as an intermittent stream may be better than nothing, but you probably still want to reflect where the old river banks are, since under flood conditions the stream would naturally flow between the river banks. With the river dry, you might also want to represent the landforms that now appear in the river bed, such as shingle banks and rock pools.</p></div>
+            <div class="comment-info" id="comment-55801-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 07:44)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55728" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55728-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55728/how-to-update-the-map-when-a-major-river-disapears?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55728/how-to-update-the-map-when-a-major-river-disapears?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55728/how-to-update-the-map-when-a-major-river-disapears?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55728/how-to-update-the-map-when-a-major-river-disapears?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55738"></a>
+                    <div id="answer-container-55738" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55738-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55738/up/" rel="nofollow"> </a>
+<div id="post-55738-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-55738-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55738/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The melt water from the glacier takes a new route but I would assume that localised rainfall events would produce an intermittent stream along the track downstream from where it rerouted and if not and it remains permanently dry, perhaps it could be marked as a gully.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55738/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Apr '17, 19:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e5674dd96938593e0af5130dfffe0f90?s=32&amp;d=identicon&amp;r=g" alt="nevw's gravatar image" />
+    <p><a href="/users/7380/nevw">nevw</a><br/>
+    <span class="score" title="9843 reputation points"><span class="">9.8k</span></span><span title="26 badges"><span class="badge1">&#9679;</span><span class="badgecount">26</span></span><span title="90 badges"><span class="silver">&#9679;</span><span class="badgecount">90</span></span><span title="178 badges"><span class="bronze">&#9679;</span><span class="badgecount">178</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="nevw has 32 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55738">
+    
+</div>
+<div id="comment-tools-55738" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55738-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55730"></a>
+                    <div id="answer-container-55730" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55730-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55730/up/" rel="nofollow"> </a>
+<div id="post-55730-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-55730-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55730/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi what about intermittent=yes to explain the wet and dry changes within the tagging scheme, together with a note=due to climate change no water/river/stream. And after some time you could simply delete the river from the valley as it no longer excist and would not become a river again.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55730/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Apr '17, 10:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55730/">
+                edited
+                <strong>21 Apr '17, 10:40</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55730">
+    
+        <a name="55735"></a>
+        <div class="comment" id="comment-55735">
+            <div id="post-55735-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I was under the impression that the <code>intermediate=yes</code> tag on a riverbank area did not change the way the river renders. Not that default rendering is the only consideration, but I am interested in how this suggestion would render. Additionally this does not seem to reflect reality very closely, as the river is gone permanently.</p></div>
+            <div class="comment-info" id="comment-55735-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Apr '17, 17:38)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+        <a name="55737"></a>
+        <div class="comment" id="comment-55737">
+            <div id="post-55737-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> : If the river has ceased to exist, then I do not think intermittent = yes is the right way to tag it. If it does not exist, it should not exist on the map either.</p></div>
+            <div class="comment-info" id="comment-55737-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Apr '17, 18:00)</span>
+                <a class="comment-user userinfo" href="/users/12689/mmahmud">mmahmud</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55730" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55730-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55736"></a>
+                    <div id="answer-container-55736" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55736-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55736/up/" rel="nofollow"> </a>
+<div id="post-55736-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-55736-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55736/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi, if something does not exist but is still on the map, you should simply update it by removing it. In the comment, mention why you removed and what is your source. But kindly be 100% sure that what you are updating is correct.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55736/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Apr '17, 17:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c482180b767d07897d150d7b426ca4e0?s=32&amp;d=identicon&amp;r=g" alt="mmahmud's gravatar image" />
+    <p><a href="/users/12689/mmahmud">mmahmud</a><br/>
+    <span class="score" title="638 reputation points">638</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="25 badges"><span class="bronze">&#9679;</span><span class="badgecount">25</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmahmud has one accepted answer">3&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55736">
+    
+        <a name="55799"></a>
+        <div class="comment" id="comment-55799">
+            <div id="post-55799-score" class="comment-score"></div>
+            <div class="comment-text"><p>I do not think this is a case were the river (or riverbed) no longer exists. The geographical features of the river banks and riverbed persists despite the source of the river's water flow being diverted elsewhere. Some other geophysical or human activity needs to occur to erase the river features. A few thousand years of erosion, or a large bulldozer flattening out the area might be needed.</p></div>
+            <div class="comment-info" id="comment-55799-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 07:12)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+        <a name="55800"></a>
+        <div class="comment" id="comment-55800">
+            <div id="post-55800-score" class="comment-score"></div>
+            <div class="comment-text"><p>It is said that the river has ceased to exist. If there are no river, why there should be on the map?</p></div>
+            <div class="comment-info" id="comment-55800-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 07:17)</span>
+                <a class="comment-user userinfo" href="/users/12689/mmahmud">mmahmud</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55736" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55736-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55728/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='efwaTYlpK384jqj35JjA0bPiQK8d3JLt' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55728/how-to-update-the-map-when-a-major-river-disapears?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55728/how-to-update-the-map-when-a-major-river-disapears?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/armchair-mapping/"
+            class="tag-link-armchair-mapping"
+            title="see questions tagged'armchair-mapping'using tags"
+            rel="tag">armchair-mapping</a> <span class="tag-number">&#215;6</span><br/>
+        
+        <a href="/tags/news/"
+            class="tag-link-news"
+            title="see questions tagged'news'using tags"
+            rel="tag">news</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/climate_change/"
+            class="tag-link-climate_change"
+            title="see questions tagged'climate_change'using tags"
+            rel="tag">climate_change</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 21, 2017, 9:35 a.m.">21 Apr '17, 09:35</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,539 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 24, 2017, 7:44 a.m.">24 Apr '17, 07:44</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/74/is-everybody-allowed-to-post-news-items-in-the-openstreetmap-wiki">Is everybody allowed to post news items in the OpenStreetMap wiki?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3239/i-see-these-areas-with-striples-in-bing-how-should-i-tag-them">I see these areas with striples in Bing. How should I tag them?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8128/accessibility-mapping">Accessibility mapping</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26432/use-on-local-news-broadcast">Use on Local News Broadcast</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47658/should-i-map-a-web-of-trails">Should I map a web of trails?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50019/armchair-mapping-populated-places-using-aerial-imagery">Armchair mapping populated places using aerial imagery</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55509/how-to-draw-attention-to-under-mapped-areas">How to draw attention to under-mapped areas?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

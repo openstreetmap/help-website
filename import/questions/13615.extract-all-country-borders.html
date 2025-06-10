@@ -1,0 +1,898 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Extract all country borders - OSM Help</title>
+        <meta name="description" content="What I would like to do is extract all country borders into 1 vector map. I have chosen OSM because of its regular updates and high resolution required for the project. Also will need to to extract major roads and rivers at some point into another vector map. How can I go about ding these things? Th..." />
+        <meta name="keywords" content="country,borders,extract" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/13615/extract-all-country-borders" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/13615/extract-all-country-borders?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='RfbRNK5AAom20kGBDQvbFF3JhrTdBtMp' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/13615/extract-all-country-borders">Extract all country borders</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-13615-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13615/up/" rel="nofollow"> </a>
+<div id="post-13615-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-13615-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13615/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/13615/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>What I would like to do is extract all country borders into 1 vector map.</p>
+<p>I have chosen OSM because of its regular updates and high resolution required for the project.</p>
+<p>Also will need to to extract major roads and rivers at some point into another vector map.</p>
+<p>How can I go about ding these things?</p>
+<p>Thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/country/" class="post-tag tag-link-country"
+                                        title="see questions tagged 'country'" rel="tag">country</a>
+                                
+                                    <a href="/tags/borders/" class="post-tag tag-link-borders"
+                                        title="see questions tagged 'borders'" rel="tag">borders</a>
+                                
+                                    <a href="/tags/extract/" class="post-tag tag-link-extract"
+                                        title="see questions tagged 'extract'" rel="tag">extract</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Jun '12, 09:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0dc847b1bc00d07449e18feb3772c0ae?s=32&amp;d=identicon&amp;r=g" alt="stuart576's gravatar image" />
+    <p><a href="/users/3876/stuart576">stuart576</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stuart576 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-13615">
+    
+        <a name="13618"></a>
+        <div class="comment" id="comment-13618">
+            <div id="post-13618-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have looked at the, 'Tag:boundary=administrative' wiki and I guess I should use that, but what programs can I use, I've had a little play with GRASS and Osmosis but I'm not really sure what I am doing. Any advice?</p></div>
+            <div class="comment-info" id="comment-13618-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '12, 10:09)</span>
+                <a class="comment-user userinfo" href="/users/3876/stuart576">stuart576</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13615" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13615-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/13615/extract-all-country-borders?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/13615/extract-all-country-borders?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/13615/extract-all-country-borders?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/13615/extract-all-country-borders?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="13619"></a>
+                    <div id="answer-container-13619" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13619-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13619/up/" rel="nofollow"> </a>
+<div id="post-13619-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-13619-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13619/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is not a trivial task and it would be much easier for you to use the ready-made polygons from <a href="http://naturalearthdata.com/.">http://naturalearthdata.com/.</a> </p>
+<p>If you really want to go down the OSM route then try the links presented in this blog article: <a href="http://www.openstreetmap.org/user/dbusse/diary/17043">http://www.openstreetmap.org/user/dbusse/diary/17043</a> - be aware that country borders will include maritime borders and that you need to intersect them with the coastline (try <a href="http://www.openstreetmapdata.com/">http://www.openstreetmapdata.com/</a> ) to get "proper" country outlines. We are talking about very detailed polygons, some with hundreds of thousands of points, so be warned that not every GIS program on every computer will simply process them.</p>
+<p>A good tool to export OSM data to shape files is "osmjs" but it probably requires some OSM and Linux knowledge to operate.</p>
+<p>The OSM wiki has a list of OSM businesses here: <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> - some of them will be able to do this processing for you.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13619/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Jun '12, 10:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/13619/">
+                edited
+                <strong>19 Jun '12, 14:37</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3743b1b368f5e209eb8aad30164acc4?s=32&amp;d=identicon&amp;r=g" alt="Andy%20Allan's gravatar image" />
+            <p><a href="/users/3/andy-allan">Andy Allan</a><br/>
+            <span class="score" title="12456 reputation points"><span class="">12.5k</span></span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="128 badges"><span class="silver">&#9679;</span><span class="badgecount">128</span></span><span title="153 badges"><span class="bronze">&#9679;</span><span class="badgecount">153</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13619">
+    
+        <a name="13620"></a>
+        <div class="comment" id="comment-13620">
+            <div id="post-13620-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the help so far, I have managed to get Osmosis working, but I have been unable to remove all but country borders (admin_level=2) from my maps, my test maps are South America and Great Britain. I have tried these commands so far:</p></div>
+            <div class="comment-info" id="comment-13620-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '12, 14:32)</span>
+                <a class="comment-user userinfo" href="/users/3876/stuart576">stuart576</a>
+                
+            </div>
+        </div>
+    
+        <a name="13621"></a>
+        <div class="comment" id="comment-13621">
+            <div id="post-13621-score" class="comment-score"></div>
+            <div class="comment-text"><p>Osmosisosmosis-0.40.1bin&gt;osmosis.bat --read-pbf "......MAP DataOSM PlanetSouth Americasouth-america
+.osm.pbf" --wkv keyValueList="admin_level=2" --used-node --write-xml output2.osm</p>
+
+<p>Osmosisosmosis-0.40.1bin&gt;osmosis.bat --read-pbf "......MAP DataOSM PlanetSouth Americasouth-america
+.osm.pbf" --tf accept-ways boundary=administrative --tf reject-relations --used-node --write-xml output.osm</p>
+
+<p>But neither leave me with what I want. Any advice on how to exclude everything except admin_level=2 ?</p></div>
+            <div class="comment-info" id="comment-13621-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '12, 14:32)</span>
+                <a class="comment-user userinfo" href="/users/3876/stuart576">stuart576</a>
+                
+            </div>
+        </div>
+    
+        <a name="13623"></a>
+        <div class="comment" id="comment-13623">
+            <div id="post-13623-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You don't write what the problem with these approaches is. I believe the first fails because you need to write admin_level.2 not admin_level=2 in --wkv. Check this mailing list thread where the issue is discussed: <a href="http://www.mail-archive.com/dev@openstreetmap.org/msg15500.html">http://www.mail-archive.com/dev@openstreetmap.org/msg15500.html</a></p></div>
+            <div class="comment-info" id="comment-13623-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '12, 14:44)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13619" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13619-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="13747"></a>
+                    <div id="answer-container-13747" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13747-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13747/up/" rel="nofollow"> </a>
+<div id="post-13747-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-13747-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13747/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> ... you can reduce big country extracts to any elements you want by filtering.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13747/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jun '12, 16:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13747">
+    
+</div>
+<div id="comment-tools-13747" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13747-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="43960"></a>
+                    <div id="answer-container-43960" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-43960-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43960/up/" rel="nofollow"> </a>
+<div id="post-43960-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-43960-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43960/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If only the administrative boundary data is needed you can get it under <a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/43960/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Jul '15, 14:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bc6d0b055d631830f7891d3f89edb66b?s=32&amp;d=identicon&amp;r=g" alt="katpatuka's gravatar image" />
+    <p><a href="/users/32/katpatuka">katpatuka</a><br/>
+    <span class="score" title="1041 reputation points"><span class="">1.0k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="26 badges"><span class="silver">&#9679;</span><span class="badgecount">26</span></span><span title="36 badges"><span class="bronze">&#9679;</span><span class="badgecount">36</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="katpatuka has 2 accepted answers">12&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/43960/">
+                edited
+                <strong>03 Jul '15, 14:24</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-43960">
+    
+</div>
+<div id="comment-tools-43960" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43960-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/13615/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='RfbRNK5AAom20kGBDQvbFF3JhrTdBtMp' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13615/extract-all-country-borders?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13615/extract-all-country-borders?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/extract/"
+            class="tag-link-extract"
+            title="see questions tagged'extract'using tags"
+            rel="tag">extract</a> <span class="tag-number">&#215;83</span><br/>
+        
+        <a href="/tags/country/"
+            class="tag-link-country"
+            title="see questions tagged'country'using tags"
+            rel="tag">country</a> <span class="tag-number">&#215;58</span><br/>
+        
+        <a href="/tags/borders/"
+            class="tag-link-borders"
+            title="see questions tagged'borders'using tags"
+            rel="tag">borders</a> <span class="tag-number">&#215;49</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 19, 2012, 9:42 a.m.">19 Jun '12, 09:42</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>48,609 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 3, 2015, 2:24 p.m.">03 Jul '15, 14:24</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/39423/road-over-country-border-continuity">road over country border continuity</a>
+        </p>
+        
+        <p>
+            <a href="/questions/87892/how-to-download-country-and-other-boundaries-and-work-out-what-boundaries-a-node-is-in">How to download country and other boundaries and work out what boundaries a node is in</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3646/extracting-country-specific-data">Extracting country specific data.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17530/map-for-iban-usage-in-countries">Map for IBAN usage in countries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48698/can-i-create-tile-server-of-some-country-only">Can i create tile server of some country only?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/72644/how-to-highlight-country-borders-in-html-map-embed">How to highlight country borders in HTML map embed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7449/osmosis-sourecode-merge">Osmosis sourecode &quot;--merge&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7436/how-to-avoid-exceeding-roads-through-country-borders">How to avoid exceeding roads through country borders ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42138/how-to-download-osm-data-for-specific-countries">How to download OSM data for specific countries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2905/osmosis-not-running">Osmosis not running</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

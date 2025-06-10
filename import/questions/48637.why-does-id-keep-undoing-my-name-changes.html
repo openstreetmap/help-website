@@ -1,0 +1,713 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>[closed] Why does iD keep undoing my name changes? - OSM Help</title>
+        <meta name="description" content="I&#39;m trying to use iD to edit the names of some tracks (old forest roads that are also part of a trail system). I select way #1, change the name, and either click off it or press Enter or click on the checkmark. The new name appears on the map in the editor. Then I click on the next one, way #2. As s..." />
+        <meta name="keywords" content="ideditor,bug" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/48637/why-does-id-keep-undoing-my-name-changes" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/48637/why-does-id-keep-undoing-my-name-changes?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='suNyDUGfPY7hO0EZqBHJpU1roQykYHCC' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/48637/why-does-id-keep-undoing-my-name-changes">[closed] Why does iD keep undoing my name changes?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-48637-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48637/up/" rel="nofollow"> </a>
+<div id="post-48637-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-48637-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48637/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/48637/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm trying to use iD to edit the names of some tracks (old forest roads that are also part of a trail system). I select way #1, change the name, and either click off it or press Enter or click on the checkmark.  The new name appears on the map in the editor.  Then I click on the next one, way #2. As soon as I start typing a non-space character to edit the name of way #2, the name of way #1 reverts to what it was before my edit.  The new name for way #2 appears on the map, but way #1 is back at its original name. If I click on way #1, it shows the old name tag value, while way #2 shows the new name tag value.</p>
+<p>The first time this happened, I had gone through a series of about 6 of them, then went back to check before saving my changes.  Only the last change 'took'. All the others had reverted, one at a time, as I was working. It's completely repeatable too.</p>
+<p>I did find two work-arounds: (1) Rather than edit the names, delete the existing name (with the trash icon) and then enter it back with corrections. (2) Edit the name under All Tags, rather than at the top of the sidebar (under All fields). (Perhaps these will help track down the problem.)</p>
+<p>Can anyone confirm this?  (P.S. in reference to my previous question, I would be happy to open a github issue for this, but I want confirmation of the problem first, to make sure it isn't some error on my part.)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/bug/" class="post-tag tag-link-bug"
+                                        title="see questions tagged 'bug'" rel="tag">bug</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Mar '16, 03:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c1e98ded2982cd352d4c77075aa0cd74?s=32&amp;d=identicon&amp;r=g" alt="ljb_nj's gravatar image" />
+    <p><a href="/users/11758/ljb_nj">ljb_nj</a><br/>
+    <span class="score" title="659 reputation points">659</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ljb_nj has one accepted answer">12&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48637/">
+                closed
+                <strong>15 Mar '16, 06:46</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-48637">
+    
+        <a name="48659"></a>
+        <div class="comment" id="comment-48659">
+            <div id="post-48659-score" class="comment-score"></div>
+            <div class="comment-text"><p>Odd.  I tried to reproduce it on the dev server and was unable to (<a href="http://api06.dev.openstreetmap.org/changeset/76511">http://api06.dev.openstreetmap.org/changeset/76511</a> ).  That was with Windows 7, The browser was SeaMonkey 2.39.</p></div>
+            <div class="comment-info" id="comment-48659-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Mar '16, 20:06)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="48667"></a>
+        <div class="comment" id="comment-48667">
+            <div id="post-48667-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried it again, same problem. I tried both Seamonkey-2.39 and Firefox-38.7ESR (both on Linux) with the same results. </p>
+
+<p>At the bottom right corner, iD says it is version 1.9.1 for me. Is that the same as on your development server (which I assume I have no access to)?</p>
+
+<p>To clarify, here is exactly how I reproduce it. In iD, click on a track,
+footpath, or other named way. At the top of the left sidebar, under Name,
+click at the end, and add a suffix. For example, edit "Main Street" to be
+"Main Street 2". As soon as I type the 2, the Save button on the toolbar
+lights up, the change counter goes to 1, and the edited name appears on the map.</p>
+
+<p>Now click on another named way (track, footpath, etc). Then click at the end of the Name field in the sidebar, and add a suffix. As soon as I type a non-space character there, the first name I edited changes back to its original value on the map.  The name of the currently selected way changes to the new value on the map, but the change counter at the top is still 1. The first change was undone by the second change.</p>
+
+<p>(Then I undo and don't save anything to OSM. There is no need to save changes to demonstrate the problem I'm having.)</p></div>
+            <div class="comment-info" id="comment-48667-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Mar '16, 21:45)</span>
+                <a class="comment-user userinfo" href="/users/11758/ljb_nj">ljb_nj</a>
+                
+            </div>
+        </div>
+    
+        <a name="48669"></a>
+        <div class="comment" id="comment-48669">
+            <div id="post-48669-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Yes - I can reproduce it, but only when both suffixes I add start with a space.  So if I (in my example) change "Main Street" to "Main Street 2" and "b2" to "b2 b", I see the problem.  If either of the two suffices don't start with a space, I don't see the problem.</p>
+
+<p>And yes, the dev server (which you can create an account on if you want) is running iD 1.9.1.</p></div>
+            <div class="comment-info" id="comment-48669-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Mar '16, 21:58)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="48670"></a>
+        <div class="comment" id="comment-48670">
+            <div id="post-48670-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wow, OK. That is very weird and I'm not even sure how to write it up. What I'm seeing is that any name edit with leading space is undoing the previous name edit (whether it had a leading space or not). I think I'll write up an issue for the iD tracker with what I have. Maybe we'll be lucky and a developer will look at it and immediately know what's going on.</p>
+
+<p>Thanks for confirming this.</p></div>
+            <div class="comment-info" id="comment-48670-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Mar '16, 22:17)</span>
+                <a class="comment-user userinfo" href="/users/11758/ljb_nj">ljb_nj</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48637" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48637-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="question-status" style="margin-bottom:15px">
+            <h3>
+                The question has been closed for the following reason "Problem is fixed (see github link)" by
+                <a href="/users/5179/aseerel4c26">aseerel4c26</a>
+                 15 Mar '16, 06:46
+            </h3>
+            </div>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/48637/why-does-id-keep-undoing-my-name-changes?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/48637/why-does-id-keep-undoing-my-name-changes?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/48637/why-does-id-keep-undoing-my-name-changes?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/48637/why-does-id-keep-undoing-my-name-changes?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="48675"></a>
+                    <div id="answer-container-48675" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48675-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48675/up/" rel="nofollow"> </a>
+<div id="post-48675-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-48675-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48675/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="ljb_nj has selected this answer as the correct answer"
+        href="/accept_answer/48675/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thanks for the report, I opened an issue on the iD issue tracker. 
+<a href="https://github.com/openstreetmap/iD/issues/3035">https://github.com/openstreetmap/iD/issues/3035</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48675/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Mar '16, 00:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5372740989fdca18458f194a285fcb3e?s=32&amp;d=identicon&amp;r=g" alt="bhousel's gravatar image" />
+    <p><a href="/users/7499/bhousel">bhousel</a><br/>
+    <span class="score" title="2089 reputation points"><span class="">2.1k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="28 badges"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="bhousel has 13 accepted answers">38&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48675">
+    
+</div>
+<div id="comment-tools-48675" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48675-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/48637/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='suNyDUGfPY7hO0EZqBHJpU1roQykYHCC' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48637/why-does-id-keep-undoing-my-name-changes?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48637/why-does-id-keep-undoing-my-name-changes?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/bug/"
+            class="tag-link-bug"
+            title="see questions tagged'bug'using tags"
+            rel="tag">bug</a> <span class="tag-number">&#215;84</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 12, 2016, 3:13 a.m.">12 Mar '16, 03:13</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,736 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 15, 2016, 6:46 a.m.">15 Mar '16, 06:46</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/48600/does-local-gpx-file-checkbox-work-in-the-new-id-19x">Does &quot;Local GPX file&quot; checkbox work in the new iD 1.9.x?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55069/id-editor-unable-to-select-anything">iD editor: Unable to select anything</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37589/how-do-i-report-a-minor-glitch-zooming-in-the-id-editor">[closed] How do I report a minor glitch? Zooming in the iD editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38953/problem-bei-eingabe-von-adressdaten-in-id">Problem bei Eingabe von Adressdaten in ID</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49434/cant-save-edits-in-id-despite-comment">Can&#39;t save edits in ID, despite comment</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54535/how-to-move-a-single-node-using-id-editor">[closed] How to move a single node using iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27829/is-this-a-bug-in-id-editor-box-for-adding-info-regarding-an-edit-filled-blue">Is this a bug in iD editor? box for adding info regarding an edit filled blue</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34313/in-id-i-cant-select-a-way-by-clicking-on-it-in-chrome-only">[closed] In iD I can&#39;t select a way by clicking on it (in Chrome only)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37935/ways-bugging-up">Ways bugging up?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9270/farsi-interface-has-problem">Farsi Interface has Problem</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

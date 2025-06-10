@@ -1,0 +1,707 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Overpass-api: Union of data types with &#39;area&#39; filter - OSM Help</title>
+        <meta name="description" content="I&#39;m failing to get a union of node/way/relation using the area filter. It&#39;s returning only the first types (ie node). How do I return all? http://overpass-api.de/api/interpreter?data=[out:xml];area[name=&#39;London&#39;];(node&#39;fhrs:id&#39;;way&#39;fhrs:id&#39;;relation&#39;fhrs:id&#39;;);out body;&amp;gt;;out skel qt;&quot;" />
+        <meta name="keywords" content="overpass-api,area" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/54575/overpass-api-union-of-data-types-with-area-filter" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54575/overpass-api-union-of-data-types-with-area-filter?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gfL5Q65pS8JcCNml7A7auUoKcj6oOwCP' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54575/overpass-api-union-of-data-types-with-area-filter">Overpass-api: Union of data types with &#39;area&#39; filter</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54575-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54575/up/" rel="nofollow"> </a>
+<div id="post-54575-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54575-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54575/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54575/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm failing to get a union of node/way/relation using the area filter. It's returning only the first types (ie node). How do I return all?</p>
+<p><a href="http://overpass-api.de/api/interpreter?data=[out:xml];area[name='London'];(node">http://overpass-api.de/api/interpreter?data=[out:xml];area[name='London'];(node</a><a href="area">'fhrs:id'</a>;way<a href="area">'fhrs:id'</a>;relation<a href="area">'fhrs:id'</a>;);out body;&gt;;out skel qt;"</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass-api/" class="post-tag tag-link-overpass-api"
+                                        title="see questions tagged 'overpass-api'" rel="tag">overpass-api</a>
+                                
+                                    <a href="/tags/area/" class="post-tag tag-link-area"
+                                        title="see questions tagged 'area'" rel="tag">area</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Feb '17, 20:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c9c8b421ad22f51ddd62f23413717036?s=32&amp;d=identicon&amp;r=g" alt="DaveF's gravatar image" />
+    <p><a href="/users/1532/davef">DaveF</a><br/>
+    <span class="score" title="3264 reputation points"><span class="">3.3k</span></span><span title="84 badges"><span class="badge1">&#9679;</span><span class="badgecount">84</span></span><span title="98 badges"><span class="silver">&#9679;</span><span class="badgecount">98</span></span><span title="133 badges"><span class="bronze">&#9679;</span><span class="badgecount">133</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DaveF has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54575">
+    
+</div>
+<div id="comment-tools-54575" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54575-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54575/overpass-api-union-of-data-types-with-area-filter?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54575/overpass-api-union-of-data-types-with-area-filter?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54575/overpass-api-union-of-data-types-with-area-filter?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54575/overpass-api-union-of-data-types-with-area-filter?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54578"></a>
+                    <div id="answer-container-54578" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54578-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54578/up/" rel="nofollow"> </a>
+<div id="post-54578-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-54578-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54578/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="DaveF has selected this answer as the correct answer"
+        href="/accept_answer/54578/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The help site seems to have mangled your url. Maybe the Overpass Turbo wizard does what you want?</p>
+<p><a href="http://overpass-turbo.eu/s/mC7">http://overpass-turbo.eu/s/mC7</a></p>
+<p>That's the result of <code>"fhrs:id"=* in London</code> in the Wizard input box.</p>
+<p>Turbo has a special operator to lookup places in Nominatim, but the area syntax works too:</p>
+<p><a href="http://overpass-turbo.eu/s/mC8">http://overpass-turbo.eu/s/mC8</a></p>
+<p>If your url is mostly intact, the main issue is likely that the area filter has to be applied to each query as in the above links.</p>
+<p>If you need the data outside Turbo, the "Export" button provides a range of options.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54578/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Feb '17, 23:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c860445e868ebb21da141635a4aa7b06?s=32&amp;d=identicon&amp;r=g" alt="maxerickson's gravatar image" />
+    <p><a href="/users/10973/maxerickson">maxerickson</a><br/>
+    <span class="score" title="12700 reputation points"><span class="">12.7k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="176 badges"><span class="bronze">&#9679;</span><span class="badgecount">176</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="maxerickson has 93 accepted answers">32&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54578">
+    
+        <a name="54580"></a>
+        <div class="comment" id="comment-54580">
+            <div id="post-54580-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the reply. Turbo was my starting point, but I want to automate the download process via a windows batch file.</p>
+
+<p>The Overpass help is quite confusing, but it appears that overpass.api doesn't accept (area.searchArea). It also seems to not like quote marks (") but I haven't worked out why. </p>
+
+<p>When exported as overpassQL your Turbo routine returns the error: 'Invalid IPv6 numeric address.' (As did my attempts).</p></div>
+            <div class="comment-info" id="comment-54580-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Feb '17, 00:17)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+        <a name="54581"></a>
+        <div class="comment" id="comment-54581">
+            <div id="post-54581-score" class="comment-score"></div>
+            <div class="comment-text"><p>The named areas are a feature of Overpass API. The <code>{{geocodeArea:London}}</code> in the first link is an Overpass Turbo feature, but I've swapped it out in the second link (and the "Export" feature on the Turbo website will do that for you anyway). You want to use the "raw data directly from Overpass API" export option to pull the data somewhere else.</p>
+
+<p><a href="http://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%0Aarea%5Bname%3DLondon%5D-%3E.searchArea%3B%0A%28%0A%20%20node%5B%22fhrs%3Aid%22%5D%28area.searchArea%29%3B%0A%20%20way%5B%22fhrs%3Aid%22%5D%28area.searchArea%29%3B%0A%20%20relation%5B%22fhrs%3Aid%22%5D%28area.searchArea%29%3B%0A%29%3B%0Aout%20body%3B%0A%3E%3B%0Aout%20skel%20qt%3B">I just successfully fetched this url using wget</a></p></div>
+            <div class="comment-info" id="comment-54581-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Feb '17, 00:57)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="54593"></a>
+        <div class="comment" id="comment-54593">
+            <div id="post-54593-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks. Got there in the end with your last example.</p>
+
+<p>Apologies for my first post's copy/paste but this forum won't format it properly. Trying to post <a href="http://overpass-api.de/api/interpreter?data=[out:xml][timeout:25];area(3600065606);(node['fhrs:id'](area);way['fhrs:id'](area);relation['fhrs:id'](area);">this api call</a>;out center;)  (&lt;Markdown won't create link or code element! it gets confused by the brackets)</p>
+
+<p>Which I'd extrapolated from <a href="https://help.openstreetmap.org/questions/19063/get-city-nodes-within-a-country-using-overpass-api">This OSM Help Question</a></p>
+
+<p>As I said I only get the first item (nodes) returned. Is it possible to get it to work, or is your solution the only way?</p></div>
+            <div class="comment-info" id="comment-54593-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Feb '17, 14:09)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+        <a name="54595"></a>
+        <div class="comment" id="comment-54595">
+            <div id="post-54595-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, it is necessary to either use the named area or to repeat the area statement for each query. The node(area) query overwrites the input set, so the way(area) query looks for areas in the result of the node query, and of course there are none.</p>
+
+<p>It's possible to explicitly include the area in each query rather than doing it before the query: node(area:3600065606),way(area(3600065606) etc. I find the method using a named set clearer.</p>
+
+<p>The docs have more about it: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29</a></p></div>
+            <div class="comment-info" id="comment-54595-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Feb '17, 14:44)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54578" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54578-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54575/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gfL5Q65pS8JcCNml7A7auUoKcj6oOwCP' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54575/overpass-api-union-of-data-types-with-area-filter?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54575/overpass-api-union-of-data-types-with-area-filter?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/area/"
+            class="tag-link-area"
+            title="see questions tagged'area'using tags"
+            rel="tag">area</a> <span class="tag-number">&#215;213</span><br/>
+        
+        <a href="/tags/overpass-api/"
+            class="tag-link-overpass-api"
+            title="see questions tagged'overpass-api'using tags"
+            rel="tag">overpass-api</a> <span class="tag-number">&#215;54</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 9, 2017, 8:19 p.m.">09 Feb '17, 20:19</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,748 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 10, 2017, 2:44 p.m.">10 Feb '17, 14:44</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/56576/overpass-area-query-by-id-instead-of-by-name">Overpass area query by ID instead of by NAME</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66060/points-of-interests-on-openstreetmap-nodes-or-closed-ways">Points of Interests on OpenStreetMap: nodes or closed ways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1325/too-large-a-download-area">Too large a download area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2733/why-are-these-car-parks-refusing-to-render">Why are these car parks refusing to render?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2881/big-area-of-national-park-and-limit-of-2000-points">big area of national park and limit of 2000 points</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3045/how-to-handle-tribal-areas">How to handle tribal areas?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3942/how-to-map-inhabited-places-settlements">How to map inhabited places (settlements)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3250/osmlib-ruby-export-kml-polygons">OsmLib Ruby Export KML Polygons</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3989/what-is-the-meaning-of-railwaystation-on-a-closed-way">What is the meaning of railway=station on a closed way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2457/what-is-the-easiest-way-of-adding-lots-of-landuse-polygons">What is the easiest way of adding lots of landuse polygons</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

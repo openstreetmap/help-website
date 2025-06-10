@@ -1,0 +1,661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to tag parts of a building which cross a road and are part of a multipolygon? - OSM Help</title>
+        <meta name="description" content="I have a problem with the mall that I have fiddled with in this changeset. The problem is that the two building parts 370434881 and 370434882 cross a road. They are first-floor parts of the mall where the road passes under. You can see them in for example this picture: I suppose I could try tagging ..." />
+        <meta name="keywords" content="building,covered,layer" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/60298/how-to-tag-parts-of-a-building-which-cross-a-road-and-are-part-of-a-multipolygon" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/60298/how-to-tag-parts-of-a-building-which-cross-a-road-and-are-part-of-a-multipolygon?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='A7cJtda5LHGNxQtTGLObGDBRQCTvCT9C' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/60298/how-to-tag-parts-of-a-building-which-cross-a-road-and-are-part-of-a-multipolygon">How to tag parts of a building which cross a road and are part of a multipolygon?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-60298-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60298/up/" rel="nofollow"> </a>
+<div id="post-60298-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60298-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60298/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/60298/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a problem with the mall that I have fiddled with in <a href="https://www.openstreetmap.org/changeset/53202753#map=18/57.04728/9.92735">this changeset</a>.
+The problem is that the two building parts 370434881 and 370434882 cross a road. They are first-floor parts of the mall where the road passes under. You can see them in for example this picture:<img src="https://migogaalborg.dk/wp-content/uploads/2016/06/Friis-edit.jpg" alt="alt text"></p>
+<p>I suppose I could try tagging them like the nearby passage through the building part 370411677, but I think of these parts of the mall as less of a tunnel through a building than smaller building parts crossing the road.</p>
+<p>I have currently tried tagging the building parts as <code>level=1</code> and the the parts of the road beneath them as <code>covered=yes</code>. This usually works for roofs over gas stations etc., but in this case here, the road parts are not rendered as covered by the building. I suspect this is because the building parts are members of the larger mall multipolygon 441887338 which is tagged as a building and is implicitly layer 0?</p>
+<p>How would you suggest tagging this situation to get the road correctly rendered as covered by the buildings?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/building/" class="post-tag tag-link-building"
+                                        title="see questions tagged 'building'" rel="tag">building</a>
+                                
+                                    <a href="/tags/covered/" class="post-tag tag-link-covered"
+                                        title="see questions tagged 'covered'" rel="tag">covered</a>
+                                
+                                    <a href="/tags/layer/" class="post-tag tag-link-layer"
+                                        title="see questions tagged 'layer'" rel="tag">layer</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Oct '17, 12:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/299be62a6d830e72cba2f73d38fcc3f9?s=32&amp;d=identicon&amp;r=g" alt="ThomasA's gravatar image" />
+    <p><a href="/users/14361/thomasa">ThomasA</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ThomasA has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-60298">
+    
+</div>
+<div id="comment-tools-60298" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60298-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/60298/how-to-tag-parts-of-a-building-which-cross-a-road-and-are-part-of-a-multipolygon?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/60298/how-to-tag-parts-of-a-building-which-cross-a-road-and-are-part-of-a-multipolygon?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/60298/how-to-tag-parts-of-a-building-which-cross-a-road-and-are-part-of-a-multipolygon?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/60298/how-to-tag-parts-of-a-building-which-cross-a-road-and-are-part-of-a-multipolygon?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="60300"></a>
+                    <div id="answer-container-60300" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-60300-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60300/up/" rel="nofollow"> </a>
+<div id="post-60300-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-60300-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60300/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>How would you suggest tagging this situation to get the road correctly rendered as covered by the buildings?</p>
+</blockquote>
+<p>This is not the question you should be asking. Instead, you should be asking a question like, "How would you suggest tagging this situation to best represent the reality on-the-ground?" The rendering will vary depending on the data consumer, so don't worry about that part. Just make sure the objects are tagged as accurately as you can.</p>
+<p>As for how I would tag it, I would tag the building part as layer=1 (because it physically crosses above the implicit layer=0 highway) and the highway underneath as covered=yes. At the time of my writing this, it appears that this is how these objects are already tagged, so I don't see any reason to change anything. The "Standard" rendering at osm.org renders highways differently when tagged with covered=yes, so there's already an indication that a portion of the highway is covered.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/60300/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Oct '17, 20:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/087bb38ba920baadf1df9dfc473208ec?s=32&amp;d=identicon&amp;r=g" alt="alester's gravatar image" />
+    <p><a href="/users/8189/alester">alester</a><br/>
+    <span class="score" title="6631 reputation points"><span class="">6.6k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="66 badges"><span class="silver">&#9679;</span><span class="badgecount">66</span></span><span title="100 badges"><span class="bronze">&#9679;</span><span class="badgecount">100</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="alester has 37 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-60300">
+    
+        <a name="60306"></a>
+        <div class="comment" id="comment-60306">
+            <div id="post-60306-score" class="comment-score"></div>
+            <div class="comment-text"><p>I guess my question here is then: Should the mall be represented by a multipolygon (as it is now)? The entire multipolygon is implicitly <code>layer=0</code>, but that does not accurately reflect the two building parts crossing the road which are individually tagged <code>layer=1</code>.</p></div>
+            <div class="comment-info" id="comment-60306-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 09:18)</span>
+                <a class="comment-user userinfo" href="/users/14361/thomasa">ThomasA</a>
+                
+            </div>
+        </div>
+    
+        <a name="60334"></a>
+        <div class="comment" id="comment-60334">
+            <div id="post-60334-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, the mall should be represented as a multipolygon because it has a hole.</p>
+
+<p>The way <a href="https://www.openstreetmap.org/way/370434882">https://www.openstreetmap.org/way/370434882</a> is tagged with building:part=yes and layer=1.  As far as I understand the building:part spec that's the correct tagging: the building part is a separate way that overlaps the base building (which, in this case, happens to be a multipolygon).</p></div>
+            <div class="comment-info" id="comment-60334-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 20:14)</span>
+                <a class="comment-user userinfo" href="/users/13665/dsh4">dsh4</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60300" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60300-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/60298/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='A7cJtda5LHGNxQtTGLObGDBRQCTvCT9C' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60298/how-to-tag-parts-of-a-building-which-cross-a-road-and-are-part-of-a-multipolygon?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60298/how-to-tag-parts-of-a-building-which-cross-a-road-and-are-part-of-a-multipolygon?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/building/"
+            class="tag-link-building"
+            title="see questions tagged'building'using tags"
+            rel="tag">building</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/layer/"
+            class="tag-link-layer"
+            title="see questions tagged'layer'using tags"
+            rel="tag">layer</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/covered/"
+            class="tag-link-covered"
+            title="see questions tagged'covered'using tags"
+            rel="tag">covered</a> <span class="tag-number">&#215;12</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 25, 2017, 12:31 p.m.">25 Oct '17, 12:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,755 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 27, 2017, 8:14 p.m.">27 Oct '17, 20:14</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/64679/accepted-standards-for-building-covered">Accepted standards for building covered</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26511/how-to-tag-a-building-with-several-independent-and-uprising-parts">How to tag a building with several independent and uprising parts ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36572/what-is-the-proper-way-to-mark-up-a-path-covered-by-a-roof">What is the proper way to mark up a path covered by a roof?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52269/building-as-layer1-drawn-over-a-pedestrian-street-area-does-not-show-up-on-osm-standard-layer">Building as layer=1 drawn over a pedestrian street area does not show up on OSM-Standard layer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/82858/a-building-over-pedestrian-area">A building over pedestrian area.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47410/dropdown-menu-covered-by-osm-map-on-my-website">Dropdown menu covered by OSM map on my website</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15348/how-to-tag-a-path-thats-below-a-building">How to tag a path thats below a building</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2226/how-to-tag-building-names-that-are-part-of-bigger-common-areas">How to tag building names that are part of bigger, common areas?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1818/how-can-i-find-an-icon-for-public-swimming-pool">How can I find an icon for public swimming pool</a>
+        </p>
+        
+        <p>
+            <a href="/questions/978/how-to-i-tag-an-abandoned-building">How to I tag an abandoned building?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

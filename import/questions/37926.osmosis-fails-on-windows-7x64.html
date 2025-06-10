@@ -1,0 +1,797 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Osmosis fails on WIndows 7x64 - OSM Help</title>
+        <meta name="description" content="Hello, I downloaded the latest version of osmosis today (10/24/2014). Unzipped it and typed osmosis.exe and it looked correct. I got all the everything&#39;s ok messages. Now I go to load a small pbf file, and I get this: &amp;gt; C:\osmosis-latest\bin&amp;gt;osmosis -v --read-pbf file=C:\temp\osm\sample.pbf --..." />
+        <meta name="keywords" content="postgresql,osmosis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/37926/osmosis-fails-on-windows-7x64" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/37926/osmosis-fails-on-windows-7x64?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='c1ni22zqU6bm5m845tLOovM1fTxVQOPG' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/37926/osmosis-fails-on-windows-7x64">Osmosis fails on WIndows 7x64</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-37926-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37926/up/" rel="nofollow"> </a>
+<div id="post-37926-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-37926-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37926/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/37926/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I downloaded the latest version of osmosis today (10/24/2014).  Unzipped it and typed osmosis.exe and it looked correct.  I got all the everything's ok messages.</p>
+<p>Now I go to load a small pbf file, and I get this:</p>
+<pre><code>&gt; C:\osmosis-latest\bin&gt;osmosis -v --read-pbf file=C:\temp\osm\sample.pbf --buffer
+ bufferCapacity=100000 --log-progress --write-apidb host=localhost database=test
+osm user=&lt;username&gt; password=&lt;password&gt;
+Oct 24, 2014 11:10:07 AM org.openstreetmap.osmosis.core.Osmosis run
+INFO: Osmosis Version 0.43.1
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.TaskRegistrar loadJPFPlu
+gins
+FINE: Searching for JPF plugins.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.TaskRegistrar loadJPFPlu
+gins
+FINE: Registering the core plugin.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.TaskRegistrar loadJPFPlu
+gins
+FINE: Registering the extension plugins.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.Osmosis run
+INFO: Preparing pipeline.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.Pipeline
+ prepare
+FINE: Building tasks.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.Pipeline
+ buildTasks
+FINE: Created task "1-read-pbf"
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.Pipeline
+ buildTasks
+FINE: Created task "2-buffer"
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.Pipeline
+ buildTasks
+FINE: Created task "3-log-progress"
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.Pipeline
+ buildTasks
+FINE: Created task "4-write-apidb"
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.Pipeline
+ prepare
+FINE: Connecting tasks.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.PipeTask
+s putTask
+FINE: Task "1-read-pbf" produced unnamed pipe stored at level 1 in the default p
+ipe stack.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.Pipeline
+ connectTasks
+FINE: Connected task "1-read-pbf"
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.PipeTask
+s retrieveTask
+FINE: Task "2-buffer" consumed unnamed pipe stored at level 1 in the default pip
+e stack.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.PipeTask
+s putTask
+FINE: Task "2-buffer" produced unnamed pipe stored at level 1 in the default pip
+e stack.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.Pipeline
+ connectTasks
+FINE: Connected task "2-buffer"
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.PipeTask
+s retrieveTask
+FINE: Task "3-log-progress" consumed unnamed pipe stored at level 1 in the defau
+lt pipe stack.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.PipeTask
+s putTask
+FINE: Task "3-log-progress" produced unnamed pipe stored at level 1 in the defau
+lt pipe stack.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.Pipeline
+ connectTasks
+FINE: Connected task "3-log-progress"
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.PipeTask
+s retrieveTask
+FINE: Task "4-write-apidb" consumed unnamed pipe stored at level 1 in the defaul
+t pipe stack.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.Pipeline
+ connectTasks
+FINE: Connected task "4-write-apidb"
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.Osmosis run
+INFO: Launching pipeline execution.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.ActiveTa
+skManager execute
+FINE: Launching task 1-read-pbf in a new thread.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.ActiveTa
+skManager execute
+FINE: Launching task 2-buffer in a new thread.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.PassiveT
+askManager execute
+FINE: Task 3-log-progress is passive, no execution required.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.PassiveT
+askManager execute
+FINE: Task 4-write-apidb is passive, no execution required.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.Osmosis run
+INFO: Pipeline executing, waiting for completion.
+Oct 24, 2014 11:10:08 AM org.openstreetmap.osmosis.core.pipeline.common.ActiveTa
+skManager waitForCompletion
+FINE: Waiting for task 1-read-pbf to complete.
+Oct 24, 2014 11:10:09 AM org.openstreetmap.osmosis.core.pipeline.common.ActiveTa
+skManager waitForCompletion
+SEVERE: Thread for task 1-read-pbf failed
+org.openstreetmap.osmosis.core.OsmosisRuntimeException: An output error has occu
+rred, aborting.
+        at org.openstreetmap.osmosis.core.store.DataPostbox.checkForOutputErrors
+(DataPostbox.java:160)
+        at org.openstreetmap.osmosis.core.store.DataPostbox.populateCentralQueue
+(DataPostbox.java:216)
+        at org.openstreetmap.osmosis.core.store.DataPostbox.put(DataPostbox.java
+:303)
+        at org.openstreetmap.osmosis.core.buffer.v0_6.EntityBuffer.process(Entit
+yBuffer.java:48)
+        at crosby.binary.osmosis.OsmosisBinaryParser.parseDense(OsmosisBinaryPar
+ser.java:138)
+        at org.openstreetmap.osmosis.osmbinary.BinaryParser.parse(BinaryParser.j
+ava:124)
+        at org.openstreetmap.osmosis.osmbinary.BinaryParser.handleBlock(BinaryPa
+rser.java:68)
+        at org.openstreetmap.osmosis.osmbinary.file.FileBlock.process(FileBlock.
+java:135)
+        at org.openstreetmap.osmosis.osmbinary.file.BlockInputStream.process(Blo
+ckInputStream.java:34)
+        at crosby.binary.osmosis.OsmosisReader.run(OsmosisReader.java:45)
+        at java.lang.Thread.run(Unknown Source)
+
+Oct 24, 2014 11:10:09 AM org.openstreetmap.osmosis.core.pipeline.common.ActiveTa
+skManager waitForCompletion
+FINE: Waiting for task 2-buffer to complete.
+Oct 24, 2014 11:10:09 AM org.openstreetmap.osmosis.core.pipeline.common.ActiveTa
+skManager waitForCompletion
+SEVERE: Thread for task 2-buffer failed
+org.openstreetmap.osmosis.core.OsmosisRuntimeException: Unable to create results
+et.
+        at org.openstreetmap.osmosis.apidb.common.DatabaseContext.executeQuery(D
+atabaseContext.java:429)
+        at org.openstreetmap.osmosis.apidb.v0_6.impl.SchemaVersionValidator.vali
+dateDBVersion(SchemaVersionValidator.java:82)
+        at org.openstreetmap.osmosis.apidb.v0_6.impl.SchemaVersionValidator.vali
+dateVersion(SchemaVersionValidator.java:55)
+        at org.openstreetmap.osmosis.apidb.v0_6.ApidbWriter.initialize(ApidbWrit
+er.java:324)
+        at org.openstreetmap.osmosis.apidb.v0_6.ApidbWriter.process(ApidbWriter.
+java:1089)
+        at org.openstreetmap.osmosis.core.progress.v0_6.EntityProgressLogger.pro
+cess(EntityProgressLogger.java:71)
+        at org.openstreetmap.osmosis.core.buffer.v0_6.EntityBuffer.run(EntityBuf
+fer.java:84)
+        at java.lang.Thread.run(Unknown Source)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "schema_migrations
+" does not exist
+  Position: 21
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryEx
+ecutorImpl.java:2103)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutor
+Impl.java:1836)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.ja
+va:257)
+        at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Stat
+ement.java:512)
+        at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(Abstract
+Jdbc2Statement.java:374)
+        at org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc
+2Statement.java:254)
+        at org.openstreetmap.osmosis.apidb.common.DatabaseContext.executeQuery(D
+atabaseContext.java:424)
+        ... 7 more
+
+Oct 24, 2014 11:10:09 AM org.openstreetmap.osmosis.core.pipeline.common.PassiveT
+askManager waitForCompletion
+FINE: Task 3-log-progress is passive, no completion wait required.
+Oct 24, 2014 11:10:09 AM org.openstreetmap.osmosis.core.pipeline.common.PassiveT
+askManager waitForCompletion
+FINE: Task 4-write-apidb is passive, no completion wait required.
+Oct 24, 2014 11:10:09 AM org.openstreetmap.osmosis.core.Osmosis main
+SEVERE: Execution aborted.
+org.openstreetmap.osmosis.core.OsmosisRuntimeException: One or more tasks failed
+.
+        at org.openstreetmap.osmosis.core.pipeline.common.Pipeline.waitForComple
+tion(Pipeline.java:146)
+        at org.openstreetmap.osmosis.core.Osmosis.run(Osmosis.java:92)
+        at org.openstreetmap.osmosis.core.Osmosis.main(Osmosis.java:37)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.launchStandard(Laun
+cher.java:329)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.jav
+a:239)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(La
+uncher.java:409)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:
+352)
+        at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+</code></pre>
+<p>Not pretty at all I know, but I don't know where to start to debug this issue.  Can anyone provide some insight into this issue?</p>
+<p>Thanks
+A</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/postgresql/" class="post-tag tag-link-postgresql"
+                                        title="see questions tagged 'postgresql'" rel="tag">postgresql</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Oct '14, 16:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/728321acc3469682288102302efc6341?s=32&amp;d=identicon&amp;r=g" alt="ajc2014's gravatar image" />
+    <p><a href="/users/9885/ajc2014">ajc2014</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ajc2014 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37926/">
+                edited
+                <strong>24 Oct '14, 16:54</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/264d84ab05b942224b05960903eba7a7?s=32&amp;d=identicon&amp;r=g" alt="mmd's gravatar image" />
+            <p><a href="/users/8708/mmd">mmd</a><br/>
+            <span class="score" title="5682 reputation points"><span class="">5.7k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="53 badges"><span class="silver">&#9679;</span><span class="badgecount">53</span></span><span title="88 badges"><span class="bronze">&#9679;</span><span class="badgecount">88</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-37926">
+    
+        <a name="37927"></a>
+        <div class="comment" id="comment-37927">
+            <div id="post-37927-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am starting with a clean database, postgresql 9.2 x64, postgis 2.0, I ran the create schema scripts before trying to run osmosis as well.</p></div>
+            <div class="comment-info" id="comment-37927-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '14, 16:22)</span>
+                <a class="comment-user userinfo" href="/users/9885/ajc2014">ajc2014</a>
+                
+            </div>
+        </div>
+    
+        <a name="37928"></a>
+        <div class="comment" id="comment-37928">
+            <div id="post-37928-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you already check whether the PBF file is broken?</p></div>
+            <div class="comment-info" id="comment-37928-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '14, 16:28)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="37929"></a>
+        <div class="comment" id="comment-37929">
+            <div id="post-37929-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can load the pbf using osm2pgsql, but not using osmosis.  I wanted to change from osm2pgsql to osmosis, because I want to load the whole planet and osm2pgsql crashes whereas it has been reported that osmosis will load the whole planet on a windows box.</p></div>
+            <div class="comment-info" id="comment-37929-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '14, 16:37)</span>
+                <a class="comment-user userinfo" href="/users/9885/ajc2014">ajc2014</a>
+                
+            </div>
+        </div>
+    
+        <a name="37930"></a>
+        <div class="comment" id="comment-37930">
+            <div id="post-37930-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are there environmental parameters I need to set outside of the batch file?</p></div>
+            <div class="comment-info" id="comment-37930-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '14, 16:38)</span>
+                <a class="comment-user userinfo" href="/users/9885/ajc2014">ajc2014</a>
+                
+            </div>
+        </div>
+    
+        <a name="37932"></a>
+        <div class="comment" id="comment-37932">
+            <div id="post-37932-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a> does this allow you to update the database?</p></div>
+            <div class="comment-info" id="comment-37932-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '14, 17:09)</span>
+                <a class="comment-user userinfo" href="/users/9885/ajc2014">ajc2014</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37926" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37926-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/37926/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='c1ni22zqU6bm5m845tLOovM1fTxVQOPG' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37926/osmosis-fails-on-windows-7x64?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37926/osmosis-fails-on-windows-7x64?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/postgresql/"
+            class="tag-link-postgresql"
+            title="see questions tagged'postgresql'using tags"
+            rel="tag">postgresql</a> <span class="tag-number">&#215;165</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 24, 2014, 4:19 p.m.">24 Oct '14, 16:19</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,944 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 24, 2014, 5:15 p.m.">24 Oct '14, 17:15</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/29549/which-schematools-to-use">which schema/tools to use</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59542/filtering-osc-files-and-import-to-postgresql">Filtering osc files and import to PostgreSQL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11330/using-osmosis-bzcat-and-postgresql">Using Osmosis, bzcat and Postgresql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24766/unable-to-write-osm-data-into-database">Unable to write osm data into database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32366/extract-single-points-of-interest-from-osm-when-described-both-as-nodes-and-ways">Extract single points of interest from OSM when described both as nodes and ways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51995/duplicate-key-value-violates-unique-constraint-relations_pkey">duplicate key value violates unique constraint &quot;relations_pkey&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3030/disk-space-required-for-importing-planetosm-into-postgresql-w-osmosis">Disk space required for importing planet.osm into PostgreSQL w/ Osmosis?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5066/error-while-following-osmosis-import-to-database-examples">Error while following osmosis import to database examples</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19919/postgis-db-to-osm-pbf-file">Postgis DB to osm pbf file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59610/osmosis-postgresql-error">Osmosis PostgreSQL error</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

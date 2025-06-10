@@ -1,0 +1,701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>What is the best way to address / add POIs and Amenities? - OSM Help</title>
+        <meta name="description" content="I have been looking in Germany and other &quot;Example&quot; countries, and still have not found a definitive answer. Some people put the Tags on the building polygon some put it on the area polygon when available. Some add the tags to a entrance node to the building and some add the tags to a node and move i..." />
+        <meta name="keywords" content="addressing,amenity,example,tagging,poi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='fBrxuGRfR3OqrUOTS7Ftm9iak5ZitHZo' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities">What is the best way to address / add POIs and Amenities?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-17389-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17389/up/" rel="nofollow"> </a>
+<div id="post-17389-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-17389-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17389/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/17389/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have been looking in Germany and other "Example" countries, and still have not found a definitive answer.  Some people put the Tags on the building polygon some put it on the area polygon when available.  Some add the tags to a entrance node to the building and some add the tags to a node and move it to the center of the building while some move it near the entrance.</p>
+<p>Which way helps OSM the most and is the most useful way to tag them.  I already know to use the addr: tags instead of relations since it is quicker to parse and use.  Please chime in and give your case for the best way to tag.    I want to start adding addresses and Store POIs in commercial districts and would like some solid advice.<br>
+</p>
+<p><a href="http://www.openstreetmap.org/?lat=41.20145693421364&amp;lon=-73.20170044898987&amp;zoom=18">Here is an example of a Hospital I fixed up.</a> And this is <a href="http://www.openstreetmap.org/?lat=41.17583245038986&amp;lon=-73.22762131690979&amp;zoom=18">an area I would like to add more POIs and make more consistent</a>.  Please give me any helpful suggestions.<br>
+</p>
+<p>Also are there any good examples you could link to, because that would be great.  I like learning by examining great examples.  P.S. I am not that fond of relations but can do them if need be, I really want the best for this project. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/addressing/" class="post-tag tag-link-addressing"
+                                        title="see questions tagged 'addressing'" rel="tag">addressing</a>
+                                
+                                    <a href="/tags/amenity/" class="post-tag tag-link-amenity"
+                                        title="see questions tagged 'amenity'" rel="tag">amenity</a>
+                                
+                                    <a href="/tags/example/" class="post-tag tag-link-example"
+                                        title="see questions tagged 'example'" rel="tag">example</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                                    <a href="/tags/poi/" class="post-tag tag-link-poi"
+                                        title="see questions tagged 'poi'" rel="tag">poi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Nov '12, 00:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/602a4908e9bea5a3f086bd91654717c4?s=32&amp;d=identicon&amp;r=g" alt="redsteakraw's gravatar image" />
+    <p><a href="/users/4901/redsteakraw">redsteakraw</a><br/>
+    <span class="score" title="1040 reputation points"><span class="">1.0k</span></span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="24 badges"><span class="silver">&#9679;</span><span class="badgecount">24</span></span><span title="37 badges"><span class="bronze">&#9679;</span><span class="badgecount">37</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="redsteakraw has 2 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-17389">
+    
+</div>
+<div id="comment-tools-17389" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17389-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="17391"></a>
+                    <div id="answer-container-17391" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17391-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17391/up/" rel="nofollow"> </a>
+<div id="post-17391-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-17391-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17391/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>My POV of Best Practice:<br>
+Nodes are the easiest and fastest way to map a POI. If a user knows details of a POI but not the outline of the building and no imagery is available it is the most logic thing to use.</p>
+<p>When there is a way for the building, put the data on the way. Don't add the data to a node and the way. This kind of redundancy is not wanted.</p>
+<p>Exceptions: When the building contains multiple POI you can<br>
+a) put the POI data on the node for the entrance which leads to the POI in real life or, if that isn't possible<br>
+b) just add the POI data to a node inside the building.<br>
+</p>
+<p>For relations: It is mostly discouraged using them. They break quite easily and are hard to restore. Also I map quite a lot but have seen only ten (or so) of them. Additionally: At least I haven't heard of any tools checking for address relations. So maybe you put a lot of work into them but they will hardly get used.</p>
+<p>hth<br>
+malenki</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17391/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Nov '12, 02:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a18e2b8eb41515c09bb66159941584bf?s=32&amp;d=identicon&amp;r=g" alt="malenki's gravatar image" />
+    <p><a href="/users/583/malenki">malenki</a><br/>
+    <span class="score" title="4713 reputation points"><span class="">4.7k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="46 badges"><span class="silver">&#9679;</span><span class="badgecount">46</span></span><span title="83 badges"><span class="bronze">&#9679;</span><span class="badgecount">83</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="malenki has 10 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17391">
+    
+        <a name="17393"></a>
+        <div class="comment" id="comment-17393">
+            <div id="post-17393-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have used relations for buildings with courtyards, also for areas that are related yet non physically next to each other.  It is a pain which is why I don't like to use them.  It is only slightly easier if I use Merkaartor and start from scratch.</p></div>
+            <div class="comment-info" id="comment-17393-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Nov '12, 03:17)</span>
+                <a class="comment-user userinfo" href="/users/4901/redsteakraw">redsteakraw</a>
+                
+            </div>
+        </div>
+    
+        <a name="17396"></a>
+        <div class="comment" id="comment-17396">
+            <div id="post-17396-score" class="comment-score"></div>
+            <div class="comment-text"><p>Re: relations. I guess it depends where you map. associatedStreet relations is what we locally decided what is easier to map, and they are supported by nominatim. We have roughly 1500+ in a fairly rural area of about 300 square km (currently 1805 relations for an area extract, but there are a few multipolygons and boundaries in there too).</p></div>
+            <div class="comment-info" id="comment-17396-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Nov '12, 09:07)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="17436"></a>
+        <div class="comment" id="comment-17436">
+            <div id="post-17436-score" class="comment-score">2</div>
+            <div class="comment-text"><p>We locally decided to standardize on addr:street and removed the few associatedStreet relations I had created before because they added unnecessary complexity and served no useful purpose.</p>
+
+<p>Using addr:street, combined with editor presets, makes a common beginner task - adding or correcting an address - as easy as "click on the building, notice the 'address' dialog, type in the house number and street name in those text boxes." I fail to understand how associatedStreet could be considered <em>easier</em> than that.</p></div>
+            <div class="comment-info" id="comment-17436-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Nov '12, 05:39)</span>
+                <a class="comment-user userinfo" href="/users/14/tordanik">Tordanik</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17391" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17391-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/17389/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='fBrxuGRfR3OqrUOTS7Ftm9iak5ZitHZo' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/poi/"
+            class="tag-link-poi"
+            title="see questions tagged'poi'using tags"
+            rel="tag">poi</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/amenity/"
+            class="tag-link-amenity"
+            title="see questions tagged'amenity'using tags"
+            rel="tag">amenity</a> <span class="tag-number">&#215;94</span><br/>
+        
+        <a href="/tags/addressing/"
+            class="tag-link-addressing"
+            title="see questions tagged'addressing'using tags"
+            rel="tag">addressing</a> <span class="tag-number">&#215;30</span><br/>
+        
+        <a href="/tags/example/"
+            class="tag-link-example"
+            title="see questions tagged'example'using tags"
+            rel="tag">example</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 2, 2012, 12:52 a.m.">02 Nov '12, 00:52</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,337 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 3, 2012, 5:39 a.m.">03 Nov '12, 05:39</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/61770/need-a-valid-tagging-example-for-amenityfuel">Need a valid tagging example for amenity=fuel</a>
+        </p>
+        
+        <p>
+            <a href="/questions/71127/multi-use-small-buildings">Multi-use small buildings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6115/tagging-members-only-fuel-station">Tagging &quot;Members Only&quot; Fuel Station</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3680/how-can-i-add-a-hackspace-to-the-map">How can I add a hackspace to the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4670/how-do-i-tag-a-pub-or-restaurant-that-offers-bed-and-breakfast">How do I tag a pub or restaurant that offers bed and breakfast?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6107/how-to-tag-a-bank-that-does-not-offer-service-to-the-general-public">How to tag a bank that does not offer service to the general public?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1103/should-i-tag-nodes-or-areas-for-amenity-and-tourism">Should I tag nodes or areas for amenity and tourism?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/739/how-to-mark-a-postbox-as-disused-or-temporarily-removed">How to mark a postbox as disused or temporarily removed ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity">Should all buildings at in a university campus be tagged amenity=university?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1365/for-groups-of-phone-booths-should-i-add-a-single-poi-or-multiple-pois">For groups of phone booths, should I add a single POI or multiple POIs?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

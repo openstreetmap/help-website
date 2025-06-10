@@ -1,0 +1,115 @@
++++
+type = "question"
+title = "restrictions"
+description = '''Could you please turn off restrictions on using map from ip adresses 195.248.69.42 195.248.69.43 195.248.69.44 195.248.69.45'''
+date = "2023-08-14T07:50:00Z"
+lastmod = "2023-08-15T07:18:00Z"
+weight = 87671
+keywords = [ "restrictions" ]
+aliases = [ "/questions/87671" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [restrictions](/questions/87671/restrictions)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-87671-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-87671-score" class="post-score" title="current number of votes">
+0
+</div>
+<span id="post-87671-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span> <span id="favorite-mark" class="ajax-command favorite-mark" rel="nofollow" title="mark/unmark this question as favorite (click again to cancel)"> </span>
+<div id="favorite-count" class="favorite-count">
+&#10;</div>
+</div></td>
+<td><div id="item-right">
+<div class="question-body">
+<p>Could you please turn off restrictions on using map from ip adresses</p>
+<p>195.248.69.42</p>
+<p>195.248.69.43</p>
+<p>195.248.69.44</p>
+<p>195.248.69.45</p>
+</div>
+<div id="question-tags" class="tags-container tags">
+<span class="post-tag tag-link-restrictions" rel="tag" title="see questions tagged &#39;restrictions&#39;">restrictions</span>
+</div>
+<div id="question-controls" class="post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>asked <strong>14 Aug '23, 07:50</strong></p>
+<img src="https://secure.gravatar.com/avatar/4da5bf155126158ab1cdc27770e697fd?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="StanTheMan&#39;s gravatar image" />
+<p><span>StanTheMan</span><br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="StanTheMan has no accepted answers">0%</span></p>
+</div>
+</div>
+<div id="comments-container-87671" class="comments-container">
+<span id="87674"></span>
+<div id="comment-87674" class="comment">
+<div id="post-87674-score" class="comment-score">
+&#10;</div>
+<div class="comment-text">
+<p>What URL are you trying to access and what error do you actually get?</p>
+</div>
+<div id="comment-87674-info" class="comment-info">
+<span class="comment-age">(14 Aug '23, 17:53)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
+</div>
+</div>
+<span id="87677"></span>
+<div id="comment-87677" class="comment">
+<div id="post-87677-score" class="comment-score">
+&#10;</div>
+<div class="comment-text">
+<p>Url: osmotr.itbroker.ru/inspection/508283/map</p>
+<p>!error<a href="https://help.openstreetmap.org/upfiles/6B818482-F25E-4AA6-8FED-7F44EBFC5D64.jpeg">1</a></p>
+<p>White screen</p>
+</div>
+<div id="comment-87677-info" class="comment-info">
+<span class="comment-age">(15 Aug '23, 07:17)</span> <span class="comment-user userinfo">StanTheMan</span>
+</div>
+</div>
+<span id="87678"></span>
+<div id="comment-87678" class="comment">
+<div id="post-87678-score" class="comment-score">
+&#10;</div>
+<div class="comment-text">
+<p><img src="https://help.openstreetmap.org/upfiles/79846625-1F7B-432A-A40F-E5D22EBEA8FB.jpeg" alt="alt text" /></p>
+</div>
+<div id="comment-87678-info" class="comment-info">
+<span class="comment-age">(15 Aug '23, 07:18)</span> <span class="comment-user userinfo">StanTheMan</span>
+</div>
+</div>
+</div>
+<div id="comment-tools-87671" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-87671-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+

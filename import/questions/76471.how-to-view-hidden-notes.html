@@ -1,0 +1,975 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>how to view hidden notes - OSM Help</title>
+        <meta name="description" content="The article https://wiki.openstreetmap.org/wiki/Notes#Resolving_notes says &quot;Resolved notes are not removed or deleted. After a period of seven days they are hidden from view.&quot;. But how can we view hidden notes? I did not find it. Thanks. Update: In related questions, I just saw an answer mentioning ..." />
+        <meta name="keywords" content="notes,rss" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/76471/how-to-view-hidden-notes" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/76471/how-to-view-hidden-notes?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='2a7bwPsmWwYz3DAYuccWJXgpHMGCUOsK' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/76471/how-to-view-hidden-notes">how to view hidden notes</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-76471-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76471/up/" rel="nofollow"> </a>
+<div id="post-76471-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-76471-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76471/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/76471/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   2
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>The article <a href="https://wiki.openstreetmap.org/wiki/Notes#Resolving_notes">https://wiki.openstreetmap.org/wiki/Notes#Resolving_notes</a> says "Resolved notes are not removed or deleted. After a period of seven days they are hidden from view.".
+But how can we view hidden notes? I did not find it.
+Thanks.</p>
+<p>Update: In related questions, I just saw an answer mentioning the RSS feed <a href="http://api.openstreetmap.org/api/0.6/notes/feed?bbox=smaller_longitude,smaller_latitude,larger_longitude,larger_latitude">http://api.openstreetmap.org/api/0.6/notes/feed?bbox=smaller_longitude,smaller_latitude,larger_longitude,larger_latitude</a> on <a href="https://help.openstreetmap.org/questions/25795/is-there-an-rss-feed-for-map-notes">https://help.openstreetmap.org/questions/25795/is-there-an-rss-feed-for-map-notes</a> but it does not show hidden notes. Maybe there is an additional parameter that needs to be used.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/notes/" class="post-tag tag-link-notes"
+                                        title="see questions tagged 'notes'" rel="tag">notes</a>
+                                
+                                    <a href="/tags/rss/" class="post-tag tag-link-rss"
+                                        title="see questions tagged 'rss'" rel="tag">rss</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Sep '20, 01:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ed31503abe430abcd04be91c89b723f7?s=32&amp;d=identicon&amp;r=g" alt="baptx's gravatar image" />
+    <p><a href="/users/18936/baptx">baptx</a><br/>
+    <span class="score" title="141 reputation points">141</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="baptx has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/76471/">
+                edited
+                <strong>19 Jan '22, 10:21</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+            <p><a href="/users/10133/tzorn">TZorn</a><br/>
+            <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-76471">
+    
+</div>
+<div id="comment-tools-76471" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76471-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/76471/how-to-view-hidden-notes?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/76471/how-to-view-hidden-notes?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/76471/how-to-view-hidden-notes?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/76471/how-to-view-hidden-notes?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="76477"></a>
+                    <div id="answer-container-76477" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76477-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76477/up/" rel="nofollow"> </a>
+<div id="post-76477-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-76477-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76477/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="SomeoneElse has selected this answer as the correct answer"
+        href="/accept_answer/76477/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The solution was to add <code>&amp;closed=-1</code> to <a href="http://api.openstreetmap.org/api/0.6/notes/feed?bbox=smaller_longitude,smaller_latitude,larger_longitude,larger_latitude,">http://api.openstreetmap.org/api/0.6/notes/feed?bbox=smaller_longitude,smaller_latitude,larger_longitude,larger_latitude,</a> like described here:
+<a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Map_Notes_API">https://wiki.openstreetmap.org/wiki/API_v0.6#Map_Notes_API</a></p>
+<p>The link is mentioned on <a href="https://wiki.openstreetmap.org/wiki/Notes/API_and_development">https://wiki.openstreetmap.org/wiki/Notes/API_and_development</a> (which is mentioned on <a href="https://wiki.openstreetmap.org/wiki/Notes">https://wiki.openstreetmap.org/wiki/Notes</a> ).</p>
+<p>If there are other ways to display hidden notes, feel free to share.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76477/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Sep '20, 11:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ed31503abe430abcd04be91c89b723f7?s=32&amp;d=identicon&amp;r=g" alt="baptx's gravatar image" />
+    <p><a href="/users/18936/baptx">baptx</a><br/>
+    <span class="score" title="141 reputation points">141</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="baptx has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/76477/">
+                edited
+                <strong>06 Sep '20, 12:58</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e5674dd96938593e0af5130dfffe0f90?s=32&amp;d=identicon&amp;r=g" alt="nevw's gravatar image" />
+            <p><a href="/users/7380/nevw">nevw</a><br/>
+            <span class="score" title="9843 reputation points"><span class="">9.8k</span></span><span title="26 badges"><span class="badge1">&#9679;</span><span class="badgecount">26</span></span><span title="90 badges"><span class="silver">&#9679;</span><span class="badgecount">90</span></span><span title="178 badges"><span class="bronze">&#9679;</span><span class="badgecount">178</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76477">
+    
+        <a name="83109"></a>
+        <div class="comment" id="comment-83109">
+            <div id="post-83109-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you please add the rss tag to this question so it's easier for folks to find in the future?</p></div>
+            <div class="comment-info" id="comment-83109-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '22, 03:06)</span>
+                <a class="comment-user userinfo" href="/users/19406/ray331">ray331</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-76477" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76477-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="76473"></a>
+                    <div id="answer-container-76473" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76473-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76473/up/" rel="nofollow"> </a>
+<div id="post-76473-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-76473-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76473/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi, Have a look here :- <a href="http://resultmaps.neis-one.org/osm-notes">http://resultmaps.neis-one.org/osm-notes</a>  scroll down select your country. Theres an option to download a file of closed notes. I've no idea how to open it on a map though.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76473/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Sep '20, 08:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e3283a6b5f83e16214ec39a1478f64f0?s=32&amp;d=identicon&amp;r=g" alt="BCNorwich's gravatar image" />
+    <p><a href="/users/2925/bcnorwich">BCNorwich</a><br/>
+    <span class="score" title="6299 reputation points"><span class="">6.3k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="BCNorwich has 44 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76473">
+    
+        <a name="76474"></a>
+        <div class="comment" id="comment-76474">
+            <div id="post-76474-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello, is it an official tool from OpenStreetMap or is there another one? I noticed I can only download the RSS feed of closed notes for the last 7 days (e.g. France: <a href="https://resultmaps.neis-one.org/osm-notes-country-feed?c=France&amp;a=closed).">https://resultmaps.neis-one.org/osm-notes-country-feed?c=France&amp;a=closed).</a> How can we see notes created a few months ago? Is it possible to view notes from a specific city / area instead of a whole country? I updated my question with more details I found recently.</p></div>
+            <div class="comment-info" id="comment-76474-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '20, 09:47)</span>
+                <a class="comment-user userinfo" href="/users/18936/baptx">baptx</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-76473" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76473-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="86447"></a>
+                    <div id="answer-container-86447" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-86447-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86447/up/" rel="nofollow"> </a>
+<div id="post-86447-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-86447-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86447/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>With <strong>JOSM</strong> you can easily download notes as you wish, even all closed notes, no matter how long ago they were closed.</p>
+<p>To set JOSM to download notes according to your needs, you have to go to <strong>preferences (F12)</strong>, enable the <strong>Expert Mode</strong> if you haven't it enabled, click on the <strong>Advanced Preferences</strong> tab and seach for <em>notes</em>, as shown in this image:</p>
+<p><img alt="alt text" src="https://help.openstreetmap.org/upfiles/notesJOSMpreferencesChangeClosedNotesKeys2_cxU0YHj.png"></p>
+<p>There, you will have several notes settings. For what you are asking, the two keys you are interested in are <strong>osm.notes.daysClosed</strong> and <strong>osm.notes.downloadLimit</strong>.</p>
+<p><strong>osm.notes.daysClosed</strong>: This key lets you specify how many days closed notes should be downloaded. <strong>Default is 7</strong>, that means that JOSM would download all notes that were closed during the last 7 days. It will add, obviously, all open notes.</p>
+<p>You can change that value to any other number. If you want <strong>only open notes</strong> to be downloaded, you will set it to <strong>0</strong>. And for what you are interested, if you want to <strong>download all notes, open or closed</strong>, whatever the time they were closed, you should set the value to <strong>-1</strong>.</p>
+<p><strong>osm.notes.downloadLimit</strong>: This key is important because, if you are going to download all open and closed notes for a certain area, their number could be big. This key lets you decide the maximum number of notes JOSM will download. <strong>Default is 1000</strong>, but you can change it to any number from <strong>1</strong> up to <strong>10000</strong>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/86447/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jan '23, 14:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d45c161edd4b471fd947a7ec574274ca?s=32&amp;d=identicon&amp;r=g" alt="edvac's gravatar image" />
+    <p><a href="/users/3339/edvac">edvac</a><br/>
+    <span class="score" title="665 reputation points">665</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="edvac has 4 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/86447/">
+                edited
+                <strong>07 Jan '23, 14:13</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-86447">
+    
+</div>
+<div id="comment-tools-86447" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86447-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="85470"></a>
+                    <div id="answer-container-85470" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85470-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85470/up/" rel="nofollow"> </a>
+<div id="post-85470-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85470-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85470/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The API method is simple, but requires specifying 4 coordinates (in the correct order...).
+In the end, I found it much easier to do with this script, where I can pass "top left URL" and "bottom right URL" from osm.org:
+<a href="https://github.com/richlv/osmnotes">https://github.com/richlv/osmnotes</a></p>
+<p>Example:</p>
+<pre><code>perl osmnotes.pl --topleft 'https://www.openstreetmap.org/#map=18/57.08172/24.32869&amp;layers=N' --bottomright 'https://www.openstreetmap.org/#map=18/57.07927/24.33861' --closed 70
+</code></pre>
+<p>Disclaimer: I wrote that script some time ago.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85470/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Aug '22, 11:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ba4d3e91f235ed21dacc1766b94e26a8?s=32&amp;d=identicon&amp;r=g" alt="Richlv's gravatar image" />
+    <p><a href="/users/10/richlv">Richlv</a><br/>
+    <span class="score" title="1740 reputation points"><span class="">1.7k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="31 badges"><span class="silver">&#9679;</span><span class="badgecount">31</span></span><span title="42 badges"><span class="bronze">&#9679;</span><span class="badgecount">42</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richlv has 5 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/85470/">
+                edited
+                <strong>29 Aug '22, 11:52</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85470">
+    
+</div>
+<div id="comment-tools-85470" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85470-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/76471/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='2a7bwPsmWwYz3DAYuccWJXgpHMGCUOsK' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76471/how-to-view-hidden-notes?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76471/how-to-view-hidden-notes?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/notes/"
+            class="tag-link-notes"
+            title="see questions tagged'notes'using tags"
+            rel="tag">notes</a> <span class="tag-number">&#215;45</span><br/>
+        
+        <a href="/tags/rss/"
+            class="tag-link-rss"
+            title="see questions tagged'rss'using tags"
+            rel="tag">rss</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 6, 2020, 1:18 a.m.">06 Sep '20, 01:18</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,655 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 7, 2023, 2:13 p.m.">07 Jan '23, 14:13</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/25795/is-there-an-rss-feed-for-map-notes">Is there an RSS feed for map notes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/83110/is-there-an-rss-feed-for-map-notes-that-doesnt-include-comments">Is there an RSS feed for map notes that doesn&#39;t include comments?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23069/show-map-notes-by-default">Show map notes by default</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23398/how-to-mark-things-that-are-still-to-do">How to mark things that are still to do?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24701/what-do-i-need-to-do-to-add-a-note-nothing-happens-on-clicking-the-add-note-button">What do I need to do to add a note? Nothing happens on clicking the &quot;Add Note&quot; button.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25797/what-is-the-difference-between-keyfixme-and-notes-and-when-should-i-use-them">What is the difference between key:fixme and notes and when should I use them?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23106/removing-anonymous-notes-from-map">Removing anonymous notes from map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26654/how-can-i-get-an-rssatom-feed-of-pois-that-have-a-specific-attribute-value-whenever-its-added">How can I get an RSS/Atom feed of POIs that have a specific attribute value whenever it&#39;s added?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27811/notes-marker-too-similar-to-location-marker-bug">&quot;notes&quot; marker too similar to location marker (bug?)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7858/is-there-rssatom-feed-for-watching-history-of-objects-mainly-relations">Is there RSS/Atom feed for watching history of objects (mainly relations)?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

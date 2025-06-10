@@ -1,0 +1,1196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Using longer coordinates from Earth in Open Street Map - How? - OSM Help</title>
+        <meta name="description" content="Hi all, Firstly, I&#39;m no expert at computer programming or GPS but I am in real need of some expert advice! I have plotted out lots of points in Google Earth using the drop pins. I have saved these places as a KML file and then opened that in Excel to get the coordinates. So far so good. An example o..." />
+        <meta name="keywords" content="earth,excel,transfer,coordinates,gps" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/34763/using-longer-coordinates-from-earth-in-open-street-map-how" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/34763/using-longer-coordinates-from-earth-in-open-street-map-how?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='g0l0f08epcbZPrxMEHpehNZFAFY01TSW' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/34763/using-longer-coordinates-from-earth-in-open-street-map-how">Using longer coordinates from Earth in Open Street Map - How?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-34763-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34763/up/" rel="nofollow"> </a>
+<div id="post-34763-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-34763-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34763/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/34763/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all,</p>
+<p>Firstly, I'm no expert at computer programming or GPS but I am in real need of some expert advice!</p>
+<p>I have plotted out lots of points in Google Earth using the drop pins. I have saved these places as a KML file and then opened that in Excel to get the coordinates. So far so good. An example of one of these coordinates is the middle of the road to the entrance to a station car park:</p>
+<p>-0.495209547    51.9623976</p>
+<p>However, I need to input these coordinates into a program that uses Open Street Map. Copying these coordinates over does not seem too work, they seem to be too long and it gets shortened automatically to:</p>
+<p>-0.49521        51.96240</p>
+<p>The problem is, this location is about 25 metres to the right and not my exact location. If I MANUALLY (so using my eye to place the pin in the centre of the road at the junction (so it might not be 100% accurate but near enough)) plot the location I need directly into Open Street Map, it tells the coordinates are:</p>
+<p>-0.49568        51.96240</p>
+<p>Notice the difference with first value... When copied from Excel to Open Street Map, it rounds the last few digits up to 1. But the actual value I need (according to my manual plot in Open Street Map), the above value of -0.49568.</p>
+<p>Is there a way that I can use/convert the longer version of the coordinates I have into the slightly shorter coordinates that Open Street Map appears to use, but Open Street Map actually plotting the same exact position? Is someone able to explain why this happens please?</p>
+<p>Any help greatly appreciated as I have hundreds of these pins to transfer over and I don't want to manually plot them all!</p>
+<p>Thanks,</p>
+<p>Matt </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/earth/" class="post-tag tag-link-earth"
+                                        title="see questions tagged 'earth'" rel="tag">earth</a>
+                                
+                                    <a href="/tags/excel/" class="post-tag tag-link-excel"
+                                        title="see questions tagged 'excel'" rel="tag">excel</a>
+                                
+                                    <a href="/tags/transfer/" class="post-tag tag-link-transfer"
+                                        title="see questions tagged 'transfer'" rel="tag">transfer</a>
+                                
+                                    <a href="/tags/coordinates/" class="post-tag tag-link-coordinates"
+                                        title="see questions tagged 'coordinates'" rel="tag">coordinates</a>
+                                
+                                    <a href="/tags/gps/" class="post-tag tag-link-gps"
+                                        title="see questions tagged 'gps'" rel="tag">gps</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Jul '14, 11:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/61a2f039dc6555c24299e746df819824?s=32&amp;d=identicon&amp;r=g" alt="Matthew's gravatar image" />
+    <p><a href="/users/9214/matthew">Matthew</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Matthew has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-34763">
+    
+        <a name="34776"></a>
+        <div class="comment" id="comment-34776">
+            <div id="post-34776-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Please do <strong>not</strong> enter data in OSM using coordinates that you derived from Google imagery, as that is incompatible with Google's TOS and OSM's license. You may display that Google-tainted data over an OSM basemap, but not import it into the OSM database.</p></div>
+            <div class="comment-info" id="comment-34776-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 14:59)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34763" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34763-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/34763/using-longer-coordinates-from-earth-in-open-street-map-how?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/34763/using-longer-coordinates-from-earth-in-open-street-map-how?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/34763/using-longer-coordinates-from-earth-in-open-street-map-how?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/34763/using-longer-coordinates-from-earth-in-open-street-map-how?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="34829"></a>
+                    <div id="answer-container-34829" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34829-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34829/up/" rel="nofollow"> </a>
+<div id="post-34829-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-34829-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34829/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You also need to keep in mind that precision may not be the only problem here. There's also the matter of accuracy. The Google Earth imagery is almost always misaligned to some degree. In some places it can be within a few feet, but I've seen examples where the imagery is out by hundreds of feet. If you want a marker in a particular spot in OSM, you'll want to get the coordinates from OSM to avoid this error.</p>
+<p>Also, the rounding error between the first two sets of coordinates in your question comes out to a difference of about 3 inches. When you take into consideration that the imagery can be misaligned by many times that, the rounding error becomes negligible.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34829/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Jul '14, 16:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/087bb38ba920baadf1df9dfc473208ec?s=32&amp;d=identicon&amp;r=g" alt="alester's gravatar image" />
+    <p><a href="/users/8189/alester">alester</a><br/>
+    <span class="score" title="6631 reputation points"><span class="">6.6k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="66 badges"><span class="silver">&#9679;</span><span class="badgecount">66</span></span><span title="100 badges"><span class="bronze">&#9679;</span><span class="badgecount">100</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="alester has 37 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34829">
+    
+</div>
+<div id="comment-tools-34829" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34829-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="34764"></a>
+                    <div id="answer-container-34764" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34764-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34764/up/" rel="nofollow"> </a>
+<div id="post-34764-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-34764-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34764/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is no need to move the pin manually if you already have the exact coordinates. Just use the following URL by replacing <em>LAT</em> and <em>LON</em>:</p>
+<pre><code><a href="http://www.openstreetmap.org/?mlat=LAT&amp;mlon=LON">http://www.openstreetmap.org/?mlat=LAT&amp;mlon=LON</a>
+</code></pre>
+<p>E.g. for the coordinates you mentioned:</p>
+<pre><code><a href="http://www.openstreetmap.org/?mlat=51.9623976&amp;mlon=-0.495209547">http://www.openstreetmap.org/?mlat=51.9623976&amp;mlon=-0.495209547</a>
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34764/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '14, 11:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34764/">
+                edited
+                <strong>09 Jul '14, 11:58</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34764">
+    
+</div>
+<div id="comment-tools-34764" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34764-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="34768"></a>
+                    <div id="answer-container-34768" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34768-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34768/up/" rel="nofollow"> </a>
+<div id="post-34768-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-34768-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34768/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>What I suspect you're seeing is at the limits of imagery alignment / OSM accuracy.</p>
+<p>Here's what I see with your 51.9623976 -0.495209547 co-ordinates in Google Earth:</p>
+<p><img alt="alt text" src="http://help.openstreetmap.org/upfiles/ge_pin.png"></p>
+<p>and here's what I see in OSM:</p>
+<p><img alt="alt text" src="http://help.openstreetmap.org/upfiles/osm_pin.png"></p>
+<p>If we assume the railway line in OSM is in the middle of both tracks and correct (and the GPS traces for it in OSM, and the Bing imagery would suggest that it pretty much is), then the discrepancy's &lt; 5m.</p>
+<p>Are you seeing something different?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34768/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '14, 12:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34768/">
+                edited
+                <strong>09 Jul '14, 13:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34768">
+    
+        <a name="34767"></a>
+        <div class="comment" id="comment-34767">
+            <div id="post-34767-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for that, although the second link shows the wrong location, that link shows the location about 25 metres to the right of where the location I want is in my Google Earth. Although I did just stumble across this:</p>
+
+<p><a href="http://www.satsig.net/degrees-minutes-seconds-calculator.htm">http://www.satsig.net/degrees-minutes-seconds-calculator.htm</a></p>
+
+<p>The coordinates in Google Earth are for this example are 0°29'44.48"W 51°57'44.57"N. I put this into the above website and it gave me the correct location in the short version of decimal value. These values are correct (and I realised I need the 4 and 5 decimal point values for my project). But the decimal value that Google spits out in it's KML file is to about 9 decimal points (in this case -0.495209547    51.9623976). So I think my question is (I think!), what is the best (and easiest) way to convert the long decimal coordinates I have in Excel, into the the shorter ones that appear in Open Street Maps (I noticed on your second link, once I clicked it right at the very end, the URL ends with these shorted coordinates "51.9624/-0.4952"). Does that make sense or have I completely over complicated the situation!?</p>
+
+<p>Cheers,</p>
+
+<p>Matt</p></div>
+            <div class="comment-info" id="comment-34767-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 12:25)</span>
+                <a class="comment-user userinfo" href="/users/9214/matthew">Matthew</a>
+                
+            </div>
+        </div>
+    
+        <a name="34769"></a>
+        <div class="comment" id="comment-34769">
+            <div id="post-34769-score" class="comment-score"></div>
+            <div class="comment-text"><p>Maybe there is something wrong with my Google Earth, I'm lost as your answer makes sense.</p>
+
+<p><img alt="alt text" src="http://help.openstreetmap.org/upfiles/GooleEarht_1.jpg"></p>
+
+<p>That is where I want the decimal degree coordinates. I've saved this pin in Earth as an KML file, opened it in Excel and the coordinates it gives me in Excel are: -0.495209547 51.9623976</p>
+
+<p>But if you put these decimal degree coordinates into OSM, you get this:</p>
+
+<p><img alt="alt text" src="http://help.openstreetmap.org/upfiles/OSM1.jpg"></p>
+
+<p>Note that the pin is OSM is now about 25 metres to the right of my original pin in Earth, it should be just under the 'n' of 'Toddington Road'.</p>
+
+<p>Cheers</p>
+
+<p>Matt</p></div>
+            <div class="comment-info" id="comment-34769-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 12:57)</span>
+                <a class="comment-user userinfo" href="/users/9214/matthew">Matthew</a>
+                
+            </div>
+        </div>
+    
+        <a name="34770"></a>
+        <div class="comment" id="comment-34770">
+            <div id="post-34770-score" class="comment-score">2</div>
+            <div class="comment-text"><p>If you search for a feature using Google tools, you won't necessarily get the actual location of that feature back - just something fairly near it.  You're searching for 0°29'44.48"W 51°57'44.57"N and are receiving 51.9623976, -0.495209547 back, but (as a search in Google Earth shows) they're not the same location.  If the column in your Excel spreadsheet was obtained this way, all values may have the same problem.</p>
+
+<p>As you've noticed, whenever you move the map in OSM you'll see co-ordinates in the address bar.  I'd ignore Google altogether and just use those.</p></div>
+            <div class="comment-info" id="comment-34770-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 13:01)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34771"></a>
+        <div class="comment" id="comment-34771">
+            <div id="post-34771-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The short coordinates after <em>#map=</em> are just for the browser's viewport. They <em>don't</em> affect the position of the pin which will still use the long coordinates given via <em>mlat=</em> and <em>mlon=</em>.</p></div>
+            <div class="comment-info" id="comment-34771-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 13:05)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34768" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34768-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="34775"></a>
+                    <div id="answer-container-34775" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34775-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34775/up/" rel="nofollow"> </a>
+<div id="post-34775-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-34775-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34775/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>To your point about decimal degrees getting rounded, it looks like the data itself goes to 7 decimal places. For example, see <a href="http://www.openstreetmap.org/node/2009506481">http://www.openstreetmap.org/node/2009506481</a></p>
+<p>I don't know about the other editors, but while editing in Potlatch 2, you can view the mouse lat/long by checking the box in Options. That only shows to 5 decimal places, but would allow you to get very close. </p>
+<p>I know you want to be precise, but given that .00001 decimal degrees is around a meter, that's probably no more than the error which likely exists in the imagery.</p>
+<p>Edit: didn't answer the last part of your question, about getting your points entered in a non-manual way. Two points: </p>
+<ol>
+<li>if you created your points using Google Earth, it may not be appropriate for you to enter them into OSM. See <a href="http://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F">FAQ about Google data</a>. </li>
+<li>you'll be more likely able to import your data if you turn your spreadsheet into a <a href="http://wiki.openstreetmap.org/wiki/Gpx">.gpx</a>, <a href="http://wiki.openstreetmap.org/wiki/KML">.kml</a>, or <a href="http://wiki.openstreetmap.org/wiki/Shp">.shp</a> file. In Potlatch 2, you can import these files by going to Background &gt; Vector file. I know you can do so in JOSM too. I think in iD you can import .gpx.</li>
+</ol>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34775/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '14, 14:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cebf8499a8a3009705e261cfd224e8c0?s=32&amp;d=identicon&amp;r=g" alt="neuhausr's gravatar image" />
+    <p><a href="/users/595/neuhausr">neuhausr</a><br/>
+    <span class="score" title="7460 reputation points"><span class="">7.5k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="70 badges"><span class="silver">&#9679;</span><span class="badgecount">70</span></span><span title="121 badges"><span class="bronze">&#9679;</span><span class="badgecount">121</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="neuhausr has 36 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34775/">
+                edited
+                <strong>09 Jul '14, 15:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34775">
+    
+</div>
+<div id="comment-tools-34775" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34775-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="34803"></a>
+                    <div id="answer-container-34803" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34803-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34803/up/" rel="nofollow"> </a>
+<div id="post-34803-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-34803-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34803/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>May have solved the mystery... In the data that Google Earth spits out, there is a Longitude column and a Latitude column. These you would assume, would contain the correct Longitude and Latitude and this is what I had been looking at and getting the problems with. It appears these are incorrect though. There is another column towards the end of the row that has the LON, LAT and ALT combined in one cell. If I actually break these numbers up manually into three, and then use the LON and LAT from there, I finally get the results I want in OSM. And these numbers that are combined in this one cell are slightly different to the original ones I was looking at. At first I thought Excel might be trying to round up or down the numbers in the individual columns containing the LON and LAT separately. But looking at the raw data, it appears not.</p>
+<p>So I have no idea why Earth is spitting out a second set of near correct coordinates for a point, there seems no reason. Anyone heard of anything like this before?</p>
+<p>Cheers,</p>
+<p>Matt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34803/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Jul '14, 16:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/61a2f039dc6555c24299e746df819824?s=32&amp;d=identicon&amp;r=g" alt="Matthew's gravatar image" />
+    <p><a href="/users/9214/matthew">Matthew</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Matthew has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34803">
+    
+        <a name="34806"></a>
+        <div class="comment" id="comment-34806">
+            <div id="post-34806-score" class="comment-score">1</div>
+            <div class="comment-text"><p>That'd be a question for Google rather than OSM - as I said above:</p>
+
+<pre><code>If you search for a feature using Google tools, you won't necessarily get the actual location of that feature back - just something fairly near it.
+</code></pre></div>
+            <div class="comment-info" id="comment-34806-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jul '14, 17:20)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34807"></a>
+        <div class="comment" id="comment-34807">
+            <div id="post-34807-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't know the details of your process, but kml files may include lat and long as attributes, as well as the actual lat/long coordinates. While you'd think they're the same, maybe they're not?</p></div>
+            <div class="comment-info" id="comment-34807-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jul '14, 17:24)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34803" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34803-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/34763/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='g0l0f08epcbZPrxMEHpehNZFAFY01TSW' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34763/using-longer-coordinates-from-earth-in-open-street-map-how?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34763/using-longer-coordinates-from-earth-in-open-street-map-how?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/gps/"
+            class="tag-link-gps"
+            title="see questions tagged'gps'using tags"
+            rel="tag">gps</a> <span class="tag-number">&#215;235</span><br/>
+        
+        <a href="/tags/coordinates/"
+            class="tag-link-coordinates"
+            title="see questions tagged'coordinates'using tags"
+            rel="tag">coordinates</a> <span class="tag-number">&#215;144</span><br/>
+        
+        <a href="/tags/transfer/"
+            class="tag-link-transfer"
+            title="see questions tagged'transfer'using tags"
+            rel="tag">transfer</a> <span class="tag-number">&#215;12</span><br/>
+        
+        <a href="/tags/excel/"
+            class="tag-link-excel"
+            title="see questions tagged'excel'using tags"
+            rel="tag">excel</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/earth/"
+            class="tag-link-earth"
+            title="see questions tagged'earth'using tags"
+            rel="tag">earth</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 9, 2014, 11:47 a.m.">09 Jul '14, 11:47</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,497 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 11, 2014, 4:53 p.m.">11 Jul '14, 16:53</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/60270/exporting-highway-gps-coordinates-lat-and-long-to-database-excel">Exporting Highway GPS coordinates (lat and long) to database / excel</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56687/can-i-put-directly-gps-coordinates-in-id-browser-osm">can i put directly gps coordinates in id browser OSM ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8133/plotting-gps-coordinates-on-a-map">Plotting GPS coordinates on a map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28148/how-to-find-gps-coordinates">How to find GPS coordinates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42494/how-precise-is-the-embedded-gps-of-a-compact-camera">How precise is the embedded GPS of a compact camera?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42589/relation-between-gps-and-cartesian-coordinates">Relation between GPS and cartesian coordinates</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14660/determine-the-border-gps-coordinates-of-the-currently-zoomed-in-view">Determine the border gps-coordinates of the currently zoomed in view</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8422/show-10000-gps-coordinates-on-a-map">Show 10000 GPS Coordinates on a Map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15786/gps-coordinates-for-15m-addresses">GPS coordinates for 1.5M addresses</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32175/gps-coordinates-to-street-address">GPS Coordinates to street address</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

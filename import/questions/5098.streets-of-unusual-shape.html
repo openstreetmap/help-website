@@ -1,0 +1,922 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Streets of unusual shape - OSM Help</title>
+        <meta name="description" content="Hello there. In OSM roads are generally lines, but in real life they are often more sophisticated. Is there a way to outline street&#39;s shape? Here is an example: http://maps.google.com/maps?f=q&amp;amp;source=s_q&amp;amp;hl=pl&amp;amp;geocode=&amp;amp;q=Wroc%C5%82aw&amp;amp;aq=&amp;amp;sll=37.0625,-95.677068&amp;amp;sspn=52.815..." />
+        <meta name="keywords" content="bridge,shape,road" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/5098/streets-of-unusual-shape" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/5098/streets-of-unusual-shape?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='7ejyol0PesJkUlMmlRytRdsIc65Cmb1c' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/5098/streets-of-unusual-shape">Streets of unusual shape</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-5098-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5098/up/" rel="nofollow"> </a>
+<div id="post-5098-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-5098-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5098/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/5098/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello there. In OSM roads are generally lines, but in real life they are often more sophisticated. Is there a way to outline street's shape?</p>
+<p>Here is an example:<br>
+<a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pl&amp;geocode=&amp;q=Wroc%C5%82aw&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=52.815565,64.951172&amp;ie=UTF8&amp;hq=&amp;hnear=Wroc%C5%82aw,+Dolno%C5%9Bl%C4%85skie,+Polska&amp;ll=51.129741,16.860441&amp;spn=0.002582,0.003964&amp;t=h&amp;z=18">http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pl&amp;geocode=&amp;q=Wroc%C5%82aw&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=52.815565,64.951172&amp;ie=UTF8&amp;hq=&amp;hnear=Wroc%C5%82aw,+Dolno%C5%9Bl%C4%85skie,+Polska&amp;ll=51.129741,16.860441&amp;spn=0.002582,0.003964&amp;t=h&amp;z=18</a></p>
+<p>As you see, some nice bus maneuver ground. </p>
+<p>Related question: how to draw a bridge which has multiple roads on itself? I have a bridge that carries a car road, tram rails, a pedestrian path and a cycle path. Should I mark them as 4 separate bridges?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bridge/" class="post-tag tag-link-bridge"
+                                        title="see questions tagged 'bridge'" rel="tag">bridge</a>
+                                
+                                    <a href="/tags/shape/" class="post-tag tag-link-shape"
+                                        title="see questions tagged 'shape'" rel="tag">shape</a>
+                                
+                                    <a href="/tags/road/" class="post-tag tag-link-road"
+                                        title="see questions tagged 'road'" rel="tag">road</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 May '11, 18:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/961457bc769068768b2e2a20a37c40d2?s=32&amp;d=identicon&amp;r=g" alt="haael's gravatar image" />
+    <p><a href="/users/1229/haael">haael</a><br/>
+    <span class="score" title="152 reputation points">152</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="haael has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/5098/">
+                edited
+                <strong>12 May '11, 13:55</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0e92f2d89853fd4e04c4b40a921e519b?s=32&amp;d=identicon&amp;r=g" alt="Pieren's gravatar image" />
+            <p><a href="/users/87/pieren">Pieren</a><br/>
+            <span class="score" title="9847 reputation points"><span class="">9.8k</span></span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="157 badges"><span class="bronze">&#9679;</span><span class="badgecount">157</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-5098">
+    
+</div>
+<div id="comment-tools-5098" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5098-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/5098/streets-of-unusual-shape?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/5098/streets-of-unusual-shape?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/5098/streets-of-unusual-shape?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/5098/streets-of-unusual-shape?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="5160"></a>
+                    <div id="answer-container-5160" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5160-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5160/up/" rel="nofollow"> </a>
+<div id="post-5160-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-5160-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5160/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="haael has selected this answer as the correct answer"
+        href="/accept_answer/5160/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is currently no agreed way in OSM to map a highway as a closed area (a polygon) rather than a linear way (a polyline). Indeed, mapping solely as an area would break a lot of rendering and routing software which expects highways to be linear.</p>
+<p>The subject is <a href="http://gis.638310.n2.nabble.com/Feature-Proposal-RFC-area-highway-td6351114.html">under discussion by some people</a>. However, with the best will in the world, the people discussing it are not developers and so it is not necessarily the case  that whatever scheme they devise will ever be adopted by any rendering or routing tools.</p>
+<p>Some people, myself included, are of the firm opinion that to do this "properly" would require API-level changes rather than just messily grafting on new metadata within the existing spec. It will also require serious thought as to how the option is presented in editing software while maintaining an understandable and coherent UI.</p>
+<p>For now, I would suggest that you map using ways, and if you still have some spare time, find some more stuff to map!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5160/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 May '11, 19:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/5160/">
+                edited
+                <strong>12 May '11, 19:45</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5160">
+    
+        <a name="5227"></a>
+        <div class="comment" id="comment-5227">
+            <div id="post-5227-score" class="comment-score">1</div>
+            <div class="comment-text"><p>OK, my solution proposal: add a landuse value: road area. Just like "river" (way) and "riverbank" (area). Roads would still be ways, but if its shape is too sophisticated, it could be outlined by a road area.</p></div>
+            <div class="comment-info" id="comment-5227-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '11, 17:52)</span>
+                <a class="comment-user userinfo" href="/users/1229/haael">haael</a>
+                
+            </div>
+        </div>
+    
+        <a name="5228"></a>
+        <div class="comment" id="comment-5228">
+            <div id="post-5228-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ugh, this was just what other discussed in the link you have given. Silly me.</p></div>
+            <div class="comment-info" id="comment-5228-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '11, 17:53)</span>
+                <a class="comment-user userinfo" href="/users/1229/haael">haael</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5160" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5160-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5104"></a>
+                    <div id="answer-container-5104" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5104-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5104/up/" rel="nofollow"> </a>
+<div id="post-5104-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-5104-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5104/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In OSM, roads/streets/paths etc are mapped as ways. A way is a sequence of nodes (points). A way can have a minimum of 2 nodes, in which case it will be a straight line between the points. If the road is not a straight line, then it is necessary to draw a way with more nodes in it, so it follows the curves more accurately.</p>
+<p>How to draw a way or add nodes to a way will depend on which editor you are using. For instructions, you could start by looking at the <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">Beginners' guide</a> or the <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">Potlatch 2 primer</a> or the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Basic_editing">JOSM guide</a>. For how many nodes to use to map a curve, see the question <a href="http://help.openstreetmap.org/questions/2197/drawing-over-traces">drawing over traces</a>. Also note that a single road may have to mapped as several separate ways if different tags apply to different parts of it, eg if the name or maxspeed changes. </p>
+<p>For bridges, this is probably best asked as a separate question but anyway:
+If the road, railway and paths are each mapped as separate ways, then each one of them should have a way tagged as <code>bridge=yes</code>. It is true that most renderers will show this on the map as several separate bridges. There is a <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels">proposed bridge relation</a> which would group the ways together, and show they are all part of the same bridge, and let you draw the bridge outline. Though this is just a proposal, I don't think it is currently used by any renderers.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5104/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 May '11, 00:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/aa505c046b1c010e997a7849c6f3dbbe?s=32&amp;d=identicon&amp;r=g" alt="Vclaw's gravatar image" />
+    <p><a href="/users/62/vclaw">Vclaw</a><br/>
+    <span class="score" title="9217 reputation points"><span class="">9.2k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="95 badges"><span class="silver">&#9679;</span><span class="badgecount">95</span></span><span title="141 badges"><span class="bronze">&#9679;</span><span class="badgecount">141</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vclaw has 41 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5104">
+    
+        <a name="5108"></a>
+        <div class="comment" id="comment-5108">
+            <div id="post-5108-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I think the question wasn't about straight roads vs curves (which you explained) but on lines vs polygons for roads. You could replace the first couple of paragraphs of your answer with details about streets-as-areas.</p></div>
+            <div class="comment-info" id="comment-5108-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 May '11, 08:35)</span>
+                <a class="comment-user userinfo" href="/users/3/andy-allan">Andy Allan</a>
+                
+            </div>
+        </div>
+    
+        <a name="5112"></a>
+        <div class="comment" id="comment-5112">
+            <div id="post-5112-score" class="comment-score"></div>
+            <div class="comment-text"><p>No, no, no. My situation is that a street can not be approximated by a line. It has sophisticated <em>contour</em>.</p></div>
+            <div class="comment-info" id="comment-5112-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 May '11, 11:50)</span>
+                <a class="comment-user userinfo" href="/users/1229/haael">haael</a>
+                
+            </div>
+        </div>
+    
+        <a name="5115"></a>
+        <div class="comment" id="comment-5115">
+            <div id="post-5115-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Do you mean that it is not a single line or curve, but in GIS speak a polyline? If that is the case you create multiple ways sharing the same tags. There is no need for a 1:1 relationship between a road/street &amp; an OSM way.</p></div>
+            <div class="comment-info" id="comment-5115-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 May '11, 12:15)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5123"></a>
+        <div class="comment" id="comment-5123">
+            <div id="post-5123-score" class="comment-score">2</div>
+            <div class="comment-text"><p>maybe best if haael can provide a link so we can see the actual street that's causing issues.</p></div>
+            <div class="comment-info" id="comment-5123-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 May '11, 16:10)</span>
+                <a class="comment-user userinfo" href="/users/3/andy-allan">Andy Allan</a>
+                
+            </div>
+        </div>
+    
+        <a name="5129"></a>
+        <div class="comment" id="comment-5129">
+            <div id="post-5129-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here You are the links:</p>
+
+<p><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pl&amp;geocode=&amp;q=Wroc%C5%82aw&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=52.815565,64.951172&amp;ie=UTF8&amp;hq=&amp;hnear=Wroc%C5%82aw,+Dolno%C5%9Bl%C4%85skie,+Polska&amp;ll=51.129741,16.860441&amp;spn=0.002582,0.003964&amp;t=h&amp;z=18">http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pl&amp;geocode=&amp;q=Wroc%C5%82aw&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=52.815565,64.951172&amp;ie=UTF8&amp;hq=&amp;hnear=Wroc%C5%82aw,+Dolno%C5%9Bl%C4%85skie,+Polska&amp;ll=51.129741,16.860441&amp;spn=0.002582,0.003964&amp;t=h&amp;z=18</a></p>
+
+<p>As You see, some nice bus maneuver ground. I marked it as a parking for now.</p></div>
+            <div class="comment-info" id="comment-5129-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 May '11, 21:42)</span>
+                <a class="comment-user userinfo" href="/users/1229/haael">haael</a>
+                
+            </div>
+        </div>
+    
+        <a name="5130"></a>
+        <div class="comment not_top_scorer" id="comment-5130">
+            <div id="post-5130-score" class="comment-score"></div>
+            <div class="comment-text"><p>Example no 2:</p>
+
+<p><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pl&amp;geocode=&amp;q=Wroc%C5%82aw&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=52.815565,64.951172&amp;ie=UTF8&amp;hq=&amp;hnear=Wroc%C5%82aw,+Dolno%C5%9Bl%C4%85skie,+Polska&amp;ll=51.123117,16.920509&amp;spn=0.001291,0.001982&amp;t=h&amp;z=19">http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pl&amp;geocode=&amp;q=Wroc%C5%82aw&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=52.815565,64.951172&amp;ie=UTF8&amp;hq=&amp;hnear=Wroc%C5%82aw,+Dolno%C5%9Bl%C4%85skie,+Polska&amp;ll=51.123117,16.920509&amp;spn=0.001291,0.001982&amp;t=h&amp;z=19</a></p>
+
+<p>This is harder to see because of the trees, but we have a quite narrow road here that gets wider and one of its tracks is used as a parking. Plus, some nice muddle of footpaths, bike paths and stairs.</p>
+
+<p>The mark for restaurant is few meters off, by the way. Too bad for Google Maps.</p></div>
+            <div class="comment-info" id="comment-5130-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 May '11, 21:47)</span>
+                <a class="comment-user userinfo" href="/users/1229/haael">haael</a>
+                
+            </div>
+        </div>
+    
+        <a name="5131"></a>
+        <div class="comment not_top_scorer" id="comment-5131">
+            <div id="post-5131-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ur-example:</p>
+
+<p><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pl&amp;geocode=&amp;q=Wroc%C5%82aw&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=52.815565,64.951172&amp;ie=UTF8&amp;hq=&amp;hnear=Wroc%C5%82aw,+Dolno%C5%9Bl%C4%85skie,+Polska&amp;ll=51.121489,16.937125&amp;spn=0.002583,0.003964&amp;t=h&amp;z=18">http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pl&amp;geocode=&amp;q=Wroc%C5%82aw&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=52.815565,64.951172&amp;ie=UTF8&amp;hq=&amp;hnear=Wroc%C5%82aw,+Dolno%C5%9Bl%C4%85skie,+Polska&amp;ll=51.121489,16.937125&amp;spn=0.002583,0.003964&amp;t=h&amp;z=18</a></p>
+
+<p>A pedestrian/cycle path that suddenly gets wider. How to mark a such widening?</p></div>
+            <div class="comment-info" id="comment-5131-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 May '11, 21:49)</span>
+                <a class="comment-user userinfo" href="/users/1229/haael">haael</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5104" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5104-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/5098/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='7ejyol0PesJkUlMmlRytRdsIc65Cmb1c' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5098/streets-of-unusual-shape?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5098/streets-of-unusual-shape?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/road/"
+            class="tag-link-road"
+            title="see questions tagged'road'using tags"
+            rel="tag">road</a> <span class="tag-number">&#215;223</span><br/>
+        
+        <a href="/tags/bridge/"
+            class="tag-link-bridge"
+            title="see questions tagged'bridge'using tags"
+            rel="tag">bridge</a> <span class="tag-number">&#215;71</span><br/>
+        
+        <a href="/tags/shape/"
+            class="tag-link-shape"
+            title="see questions tagged'shape'using tags"
+            rel="tag">shape</a> <span class="tag-number">&#215;11</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 10, 2011, 6:06 p.m.">10 May '11, 18:06</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,715 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 16, 2011, 5:53 p.m.">16 May '11, 17:53</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1755/how-do-i-enter-a-bridge-on-a-stretch-of-road-8-km-long-when-highlighted">How do I enter a Bridge on a stretch of road 8 km long when highlighted</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16435/must-a-bridge-break-up-a-continuous-road-way">Must a bridge break up a continuous road way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/67645/drain-under-road">drain under road</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1625/bridge-wont-render-correctly">Bridge won&#39;t render correctly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1871/about-naming-roads">About naming roads</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1874/bridge-tag-on-a-node">bridge tag on a node</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1804/is-it-easy-to-extract-the-shape-of-country-across-api">Is it easy to extract the shape of country across API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2031/industrial-areas-road-tag">Industrial Areas - Road Tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2365/how-to-mark-bad-road-condition">How to mark bad road condition?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1909/bridges-duplicating-highway-segments">Bridges duplicating highway segments</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

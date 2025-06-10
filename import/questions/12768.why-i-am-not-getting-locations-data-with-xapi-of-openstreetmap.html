@@ -1,0 +1,960 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why i am not getting locations data with xapi of openstreetmap? - OSM Help</title>
+        <meta name="description" content="Hi i am developing an android application. There i am using openstreetmap api to get the locations data to show in my application. It is worked well in past but not working now. I tried to get server response in browser and i got the message &quot;Http/1.1 Service Unavailable&quot;. I dont know whats happened..." />
+        <meta name="keywords" content="query,android,xapi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/12768/why-i-am-not-getting-locations-data-with-xapi-of-openstreetmap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/12768/why-i-am-not-getting-locations-data-with-xapi-of-openstreetmap?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='vJxprPNg6KwNuZXeqwhCxaWH5IpIjFHD' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/12768/why-i-am-not-getting-locations-data-with-xapi-of-openstreetmap">Why i am not getting locations data with xapi of openstreetmap?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-12768-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12768/up/" rel="nofollow"> </a>
+<div id="post-12768-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-12768-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12768/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/12768/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi i am developing an android application. There i am using openstreetmap api to get the locations data to show in my application. It is worked well in past but not working now. I tried to get server response in browser and i got the message "<strong>Http/1.1 Service Unavailable</strong>". I dont know whats happened. 
+ I am using the api link is below</p>
+<pre><code><a href="http://open.mapquestapi.com/xapi/api/0.6/node[amenity=hospital][bbox=lat1,lan1,lat2,lan2]">http://open.mapquestapi.com/xapi/api/0.6/node[amenity=hospital][bbox=lat1,lan1,lat2,lan2]</a>
+</code></pre>
+<p>Please suggest me whats happened. I thought it is the problem of openstreetmap server.If it is server problem how can i use it in my application. There is any alternative for that service.</p>
+<p>Thanks in advance</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/query/" class="post-tag tag-link-query"
+                                        title="see questions tagged 'query'" rel="tag">query</a>
+                                
+                                    <a href="/tags/android/" class="post-tag tag-link-android"
+                                        title="see questions tagged 'android'" rel="tag">android</a>
+                                
+                                    <a href="/tags/xapi/" class="post-tag tag-link-xapi"
+                                        title="see questions tagged 'xapi'" rel="tag">xapi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 May '12, 13:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/720d7c5aec834858ddf04544e867e2cf?s=32&amp;d=identicon&amp;r=g" alt="Purpletalk's gravatar image" />
+    <p><a href="/users/3622/purpletalk">Purpletalk</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Purpletalk has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12768/">
+                retagged
+                <strong>18 May '12, 07:55</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fcfdb0825826fd13d2ff0d83d58819c6?s=32&amp;d=identicon&amp;r=g" alt="Roland%20Olbricht's gravatar image" />
+            <p><a href="/users/3480/roland-olbricht">Roland Olbricht</a><br/>
+            <span class="score" title="6666 reputation points"><span class="">6.7k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-12768">
+    
+        <a name="12787"></a>
+        <div class="comment" id="comment-12787">
+            <div id="post-12787-score" class="comment-score"></div>
+            <div class="comment-text"><p>I also had issues with the existing J/XAPI providers, that's why I run my private Overpass API (it is quite easy to install and fast to run). You can check my question her: <a href="http://help.openstreetmap.org/questions/12252/how-to-install-private-xapi-server">http://help.openstreetmap.org/questions/12252/how-to-install-private-xapi-server</a></p></div>
+            <div class="comment-info" id="comment-12787-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 May '12, 10:59)</span>
+                <a class="comment-user userinfo" href="/users/191/ivanatora">ivanatora</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12768" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12768-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/12768/why-i-am-not-getting-locations-data-with-xapi-of-openstreetmap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/12768/why-i-am-not-getting-locations-data-with-xapi-of-openstreetmap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/12768/why-i-am-not-getting-locations-data-with-xapi-of-openstreetmap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/12768/why-i-am-not-getting-locations-data-with-xapi-of-openstreetmap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="12788"></a>
+                    <div id="answer-container-12788" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12788-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12788/up/" rel="nofollow"> </a>
+<div id="post-12788-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-12788-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12788/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can use Overpass API instead. Just try instead</p>
+<pre><code><a href="http://overpass.osm.rambler.ru/cgi/xapi?node[amenity=hospital][bbox=lon1,lat1,lon2,lat2]">http://overpass.osm.rambler.ru/cgi/xapi?node[amenity=hospital][bbox=lon1,lat1,lon2,lat2]</a>
+</code></pre>
+<p>Please note that the order is (on both services) "lon, then lat". For example</p>
+<pre><code><a href="http://overpass.osm.rambler.ru/cgi/xapi?node[amenity=hospital][bbox=7.0,50.6,7.3,50.8]">http://overpass.osm.rambler.ru/cgi/xapi?node[amenity=hospital][bbox=7.0,50.6,7.3,50.8]</a>
+</code></pre>
+<p>gives all hospitals around my home (Bonn, Germany, roughly 50.6 north, 7.1 east). If you need meta data, use</p>
+<pre><code><a href="http://overpass.osm.rambler.ru/cgi/xapi?node[amenity=hospital][bbox=7.0,50.6,7.3,50.8][@meta]">http://overpass.osm.rambler.ru/cgi/xapi?node[amenity=hospital][bbox=7.0,50.6,7.3,50.8][@meta]</a>
+</code></pre>
+<p>instead.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12788/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 May '12, 11:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fcfdb0825826fd13d2ff0d83d58819c6?s=32&amp;d=identicon&amp;r=g" alt="Roland%20Olbricht's gravatar image" />
+    <p><a href="/users/3480/roland-olbricht">Roland Olbricht</a><br/>
+    <span class="score" title="6666 reputation points"><span class="">6.7k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Roland Olbricht has 40 accepted answers">36&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12788">
+    
+</div>
+<div id="comment-tools-12788" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12788-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="12771"></a>
+                    <div id="answer-container-12771" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12771-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12771/up/" rel="nofollow"> </a>
+<div id="post-12771-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-12771-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12771/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think this was because the service is unavailable.
+<a href="http://wiki.openstreetmap.org/wiki/Xapi#Implementations">Here</a> are some alternatives.
+But I recon the mapquestapi will be back, otherwise you can <a href="http://developer.mapquest.com/web/info/contact">contact the people at mapquest</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12771/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 May '12, 19:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ec2962c6ef6aab7940982ed25f2ca544?s=32&amp;d=identicon&amp;r=g" alt="TheOddOne2's gravatar image" />
+    <p><a href="/users/2640/theoddone2">TheOddOne2</a><br/>
+    <span class="score" title="685 reputation points">685</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="21 badges"><span class="bronze">&#9679;</span><span class="badgecount">21</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TheOddOne2 has one accepted answer">3&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12771/">
+                edited
+                <strong>17 May '12, 19:55</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12771">
+    
+        <a name="12784"></a>
+        <div class="comment" id="comment-12784">
+            <div id="post-12784-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not sure how distinct the "open" mapquest people are from the "other" ones, but <a href="http://mapquest.open-street-map.sgizmo.com/s3/">http://mapquest.open-street-map.sgizmo.com/s3/</a> also suggests open@mapquest.com as a contact email.</p></div>
+            <div class="comment-info" id="comment-12784-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 May '12, 10:10)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12771" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12771-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="12797"></a>
+                    <div id="answer-container-12797" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12797-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12797/up/" rel="nofollow"> </a>
+<div id="post-12797-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-12797-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12797/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I have same problem with you.
+IMHO the server under maintenance. I have got this problem since last week.</p>
+<p>And thank you you for give me another alternate API ini 
+    <a href="http://overpass.osm.rambler.ru/cgi/xapi?node[amenity=hospital]">http://overpass.osm.rambler.ru/cgi/xapi?node[amenity=hospital]</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12797/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 May '12, 02:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8898e6548c63ddaf80128e357004fcc2?s=32&amp;d=identicon&amp;r=g" alt="FarizRamadhan's gravatar image" />
+    <p><a href="/users/3630/farizramadhan">FarizRamadhan</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="FarizRamadhan has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12797">
+    
+        <a name="12836"></a>
+        <div class="comment" id="comment-12836">
+            <div id="post-12836-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi <a href="/users/3630/farizramadhan">@FarizRamadhan</a> the alternative service is working for me better. But is there any limitations to use the api service. And can we get result every time or it is also fall down with server down problem?</p></div>
+            <div class="comment-info" id="comment-12836-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 May '12, 11:10)</span>
+                <a class="comment-user userinfo" href="/users/3622/purpletalk">Purpletalk</a>
+                
+            </div>
+        </div>
+    
+        <a name="12839"></a>
+        <div class="comment" id="comment-12839">
+            <div id="post-12839-score" class="comment-score"></div>
+            <div class="comment-text"><p>I test it in my own application. Yes , I agree with you there any limitation to use the api service in <a href="http://overpass.osm.rambler.ru/cgi/xapi?.">http://overpass.osm.rambler.ru/cgi/xapi?.</a></p>
+
+<p>I can't get the image view / get map in overpass.osm.rambler.ru so I test get map in open.streetmap and it's still working well. I check <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a> and than you can see just 'XAPI server being down'. My conclution is we can still get another service in open.streetmap but not for xapi now..</p></div>
+            <div class="comment-info" id="comment-12839-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 May '12, 12:25)</span>
+                <a class="comment-user userinfo" href="/users/3630/farizramadhan">FarizRamadhan</a>
+                
+            </div>
+        </div>
+    
+        <a name="12847"></a>
+        <div class="comment" id="comment-12847">
+            <div id="post-12847-score" class="comment-score"></div>
+            <div class="comment-text"><p>So no problem with this service? Can we use it in client applications or will it create any internal problem in feature? I am in confusion to use it in my application.</p></div>
+            <div class="comment-info" id="comment-12847-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 May '12, 13:48)</span>
+                <a class="comment-user userinfo" href="/users/3622/purpletalk">Purpletalk</a>
+                
+            </div>
+        </div>
+    
+        <a name="12848"></a>
+        <div class="comment" id="comment-12848">
+            <div id="post-12848-score" class="comment-score"></div>
+            <div class="comment-text"><p>The problem just on 'XAPI Service'. I think there no problem in another service.</p></div>
+            <div class="comment-info" id="comment-12848-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 May '12, 14:06)</span>
+                <a class="comment-user userinfo" href="/users/3630/farizramadhan">FarizRamadhan</a>
+                
+            </div>
+        </div>
+    
+        <a name="12857"></a>
+        <div class="comment" id="comment-12857">
+            <div id="post-12857-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you <a href="/users/3630/farizramadhan">@FarizRamadhan</a></p></div>
+            <div class="comment-info" id="comment-12857-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '12, 06:12)</span>
+                <a class="comment-user userinfo" href="/users/3622/purpletalk">Purpletalk</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12797" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12797-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/12768/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='vJxprPNg6KwNuZXeqwhCxaWH5IpIjFHD' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12768/why-i-am-not-getting-locations-data-with-xapi-of-openstreetmap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12768/why-i-am-not-getting-locations-data-with-xapi-of-openstreetmap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/android/"
+            class="tag-link-android"
+            title="see questions tagged'android'using tags"
+            rel="tag">android</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/query/"
+            class="tag-link-query"
+            title="see questions tagged'query'using tags"
+            rel="tag">query</a> <span class="tag-number">&#215;147</span><br/>
+        
+        <a href="/tags/xapi/"
+            class="tag-link-xapi"
+            title="see questions tagged'xapi'using tags"
+            rel="tag">xapi</a> <span class="tag-number">&#215;32</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 17, 2012, 1:39 p.m.">17 May '12, 13:39</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,641 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 22, 2012, 6:12 a.m.">22 May '12, 06:12</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8373/obtaining-a-list-of-items-with-tag-x-but-not-tag-y">Obtaining a list of items with &quot;tag x but not tag y&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12675/xapi-query-dont-return-the-associated-node-where-is-my-mistake">xapi query don&#39;t return the associated node =&gt; where is my mistake</a>
+        </p>
+        
+        <p>
+            <a href="/questions/889/search-by-a-tag">Search by a tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1034/what-are-the-software-options-for-a-symbian-smartphone">What are the software options for a Symbian smartphone?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1472/failed-to-upload-gps-track">Failed to upload GPS track</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">How do I list all the streets in a city with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3646/extracting-country-specific-data">Extracting country specific data.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3056/power-user-android-app">Power-user Android app?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3988/speeding-up-openstreetmap-postgis-querying">Speeding up OpenStreetMap PostGIS querying</a>
+        </p>
+        
+        <p>
+            <a href="/questions/972/get-administrative-boundaries-admin_level-4-of-the-planet">Get administrative boundaries (admin_level &lt;= 4) of the planet</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

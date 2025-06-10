@@ -1,0 +1,881 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>7931 segmentation fault (Renderd is using mapnik version 3.1.0) - OSM Help</title>
+        <meta name="description" content="How this error could be explained? It was about a week for me to try to install mapnik. I finally found the manual bellow.  It brought me as far as installing apache on one of the two boxes were I am trying to set it up.  Second box could not even get mod-tiles built.  But here I am stuck when tryin..." />
+        <meta name="keywords" content="renderd,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/60822/7931-segmentation-fault-renderd-is-using-mapnik-version-310" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/60822/7931-segmentation-fault-renderd-is-using-mapnik-version-310?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='SvlHa22DkVL0l3Ks5hmrKIgi1KIjOA3u' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/60822/7931-segmentation-fault-renderd-is-using-mapnik-version-310">7931 segmentation fault (Renderd is using mapnik version 3.1.0)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-60822-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60822/up/" rel="nofollow"> </a>
+<div id="post-60822-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60822-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60822/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/60822/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How this error could be explained?
+It was about a week for me to try to install mapnik. I finally found the manual bellow. </p>
+<p>It brought me as far as installing apache on one of the two boxes were I am trying to set it up. </p>
+<p>Second box could not even get mod-tiles built. </p>
+<p>But here I am stuck when trying to call renderd from a command line (does not work from httpd either).  This box is relatively weak. Has 512MB ram and I use it as it is easy to respawn it clean. Second box I have is very powerful (16GB of RAM) but there I stuck with (mapnik/box2d.hpp: No such file or directory error when building mod-tiles).  </p>
+<p><a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a></p>
+<pre><code>renderd -f -c /usr/local/etc/renderd.conf
+
+renderd[7931]: Rendering daemon started
+renderd[7931]: Initiating request_queue
+renderd[7931]: Parsing section renderd
+renderd[7931]: Parsing render section 0
+renderd[7931]: Parsing section mapnik
+renderd[7931]: Parsing section ajt
+renderd[7931]: config renderd: unix socketname=/var/run/renderd/renderd.sock
+renderd[7931]: config renderd: num_threads=4
+renderd[7931]: config renderd: num_slaves=0
+renderd[7931]: config renderd: tile_dir=/mapnik/mod_tile
+renderd[7931]: config renderd: stats_file=/var/run/renderd/renderd.stats
+renderd[7931]: config mapnik:  plugins_dir=/usr/lib/mapnik/3.0/input
+renderd[7931]: config mapnik:  font_dir=/usr/share/fonts/truetype
+renderd[7931]: config mapnik:  font_dir_recurse=1
+renderd[7931]: config renderd(0): Active
+renderd[7931]: config renderd(0): unix socketname=/var/run/renderd/renderd.sock
+renderd[7931]: config renderd(0): num_threads=4
+renderd[7931]: config renderd(0): tile_dir=/mapnik/mod_tile
+renderd[7931]: config renderd(0): stats_file=/var/run/renderd/renderd.stats
+renderd[7931]: config map 0:   name(ajt) file(/mapnik/mapnik.xml) uri(/hot/) htcp() host(localhost)
+renderd[7931]: Initialising unix server socket on /var/run/renderd/renderd.sock
+renderd[7931]: Created server socket 5
+renderd[7931]: Renderd is using mapnik version 3.1.0
+[1]    7931 segmentation fault (core dumped)  renderd -f -c /usr/local/etc/renderd.con
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/renderd/" class="post-tag tag-link-renderd"
+                                        title="see questions tagged 'renderd'" rel="tag">renderd</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Nov '17, 23:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0af3a91d5ddde7174bf4031d70564f8e?s=32&amp;d=identicon&amp;r=g" alt="Oblomingo's gravatar image" />
+    <p><a href="/users/14479/oblomingo">Oblomingo</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Oblomingo has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-60822">
+    
+        <a name="60826"></a>
+        <div class="comment" id="comment-60826">
+            <div id="post-60826-score" class="comment-score"></div>
+            <div class="comment-text"><p>"segmentation fault (core dumped)" just means "something went wrong".  Without more information about how you got to that position it's difficult to say anything more helpful.</p>
+
+<p>What OS and what version are you running on each box?</p>
+
+<p>What did you install on each and in what order?</p>
+
+<p>In particular, what comments did you type in what order to get the "mapnik/box2d.hpp: No such file or directory error" error?</p></div>
+            <div class="comment-info" id="comment-60826-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '17, 00:04)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60827"></a>
+        <div class="comment" id="comment-60827">
+            <div id="post-60827-score" class="comment-score"></div>
+            <div class="comment-text"><p>May I ask to ignore "mapnik/box2d.hpp". This is related to a different server. Here I am getting only one error 7931 segmentation fault </p>
+
+<p>It happens when I run the following command </p>
+
+<p>renderd -f -c /usr/local/etc/renderd.conf</p>
+
+<p>Content of the file </p>
+
+<p>[renderd]
+num_threads=1
+tile_dir=/mapnik/mod_tile
+stats_file=/mapnik/renderd.stats</p>
+
+<p>[mapnik]
+plugins_dir=/usr/lib/mapnik/3.0/input
+font_dir=/usr/share/fonts/truetype
+font_dir_recurse=1</p>
+
+<p>[ajt]
+URI=/hot/
+TILEDIR=/mapnik/mod_tile
+XML=/home/stan/src/openstreetmap-carto/mapnik.xml
+HOST=localhost
+TILESIZE=256
+MAXZOOM=20</p>
+
+<p>Running it on
+Ubuntu 16.04.3 LTS</p>
+
+<p>Does this renderd has any kind of traditional log where it reports details of what it is doing. I can see something is printed to console but as you noticed it is not enough to get to the root of the problem.</p>
+
+<p>Thank you btw for looking into it.</p></div>
+            <div class="comment-info" id="comment-60827-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '17, 01:02)</span>
+                <a class="comment-user userinfo" href="/users/14479/oblomingo">Oblomingo</a>
+                
+            </div>
+        </div>
+    
+        <a name="60828"></a>
+        <div class="comment" id="comment-60828">
+            <div id="post-60828-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Does this renderd has any kind of traditional log where it reports details of what it is doing. </p>
+</blockquote>
+
+<p>Yes, when run that way it should output to stdout, but it's falling over before it got a chance.</p>
+
+<p>It seems odd that (for example) you've got things pointing at "/mapnik/" rather than "/var/lib"?  Also it's odd that you're telling it "num_threads=1" yet it starts 4, and uses a different stats file.</p>
+
+<p>It's a long time since I've tried to render tiles on something with as little memory as 512Mb, but I have done it in the past (albeit with older versions of everything).</p>
+
+<p>Where did the mapnik you're using come from?  <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> fetches it via apt-get, and when I restart renderd here I see "Renderd is using mapnik version 3.0.9" rather than 3.1.0.  Are you perhaps trying to use a self-built mapnik version?  </p>
+
+<p>I've never had a lot of success with that: <a href="https://github.com/mapnik/mapnik/issues/3462">https://github.com/mapnik/mapnik/issues/3462</a> :)</p></div>
+            <div class="comment-info" id="comment-60828-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '17, 01:21)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60829"></a>
+        <div class="comment not_top_scorer" id="comment-60829">
+            <div id="post-60829-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<blockquote>
+<p>pointing at "/mapnik/" rather than "/var/lib
+I tried to change path because I thought issue might be related to permissions. So I moved all stuff to one folder and give all permissions.</p>
+<p>Where did the mapnik you're using come from?
+Yes, I tried to follow these steps.</p>
+<p>Are you perhaps trying to use a self-built mapnik version
+First I tried to build mapnik myself semi/successfully as I never was able to get a test cases passed. There might be a bug in mapnik that when it inits posgres test databases it does not add extension postgis_topology because it expects it would be added with postgis when it should be another way around for the latest versions of postgres. Long story short my self build version of mapnik could not be tested because test database did not have raster types (could only be added by postgis_topology extension that is not in mapnik test init script). So I stopped building source and switched to binaries. However you might be right and there is somewhere a collision between self build and binary packages. Not sure how could it be checked.</p>
+</blockquote>
+</blockquote></div>
+            <div class="comment-info" id="comment-60829-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '17, 01:39)</span>
+                <a class="comment-user userinfo" href="/users/14479/oblomingo">Oblomingo</a>
+                
+            </div>
+        </div>
+    
+        <a name="60830"></a>
+        <div class="comment not_top_scorer" id="comment-60830">
+            <div id="post-60830-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can try to use "locate libmapnik" - your self built version would be probably somewhere in the /usr/local.</p></div>
+            <div class="comment-info" id="comment-60830-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '17, 02:20)</span>
+                <a class="comment-user userinfo" href="/users/11332/kocio">kocio</a>
+                
+            </div>
+        </div>
+    
+        <a name="60840"></a>
+        <div class="comment not_top_scorer" id="comment-60840">
+            <div id="post-60840-score" class="comment-score"></div>
+            <div class="comment-text"><p>I traced libmapnik down and uninstalled it. So now version 3.0.9 is reported in the log file. However result is the same - segmentation fails. </p>
+
+<p>BOX 512MB 
+renderd[26381]: Renderd is using mapnik version 3.0.9
+[1]    26380 segmentation fault (core dumped)  sudo -u renderaccount renderd -f -c /usr/local/etc/renderd.conf</p>
+
+<p>I tried doing the same on the more powerful box where mapnik was built from source and error is the same. Problem seems to be not related to hardware available as box with 512MB memory is failing the same way as box with 16GB</p>
+
+<p>BOX 16GB 
+renderd[22083]: Initialising unix server socket on /var/run/renderd/renderd.sock
+renderd[22083]: Created server socket 5
+renderd[22083]: Renderd is using mapnik version 3.1.0
+[1]    22083 segmentation fault (core dumped)  renderd -f -c /usr/local/etc/renderd.conf</p></div>
+            <div class="comment-info" id="comment-60840-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '17, 15:41)</span>
+                <a class="comment-user userinfo" href="/users/14479/oblomingo">Oblomingo</a>
+                
+            </div>
+        </div>
+    
+        <a name="60841"></a>
+        <div class="comment not_top_scorer" id="comment-60841">
+            <div id="post-60841-score" class="comment-score"></div>
+            <div class="comment-text"><p>It seems to fail because of this line</p>
+
+<p>plugins_dir=/usr/lib/mapnik/3.0/input</p>
+
+<p>without this line it starts but later complain that plugin dir is not set. However there is no segmentation error. Content of the folder seems to be correct</p>
+
+<p>-rwxrwxrwx 1 renderaccount renderaccount 619K Dec  3  2015 topojson.input
+-rwxrwxrwx 1 renderaccount renderaccount 148K Dec  3  2015 sqlite.input
+-rwxrwxrwx 1 renderaccount renderaccount 171K Dec  3  2015 shape.input
+-rwxrwxrwx 1 renderaccount renderaccount 159K Dec  3  2015 raster.input
+-rwxrwxrwx 1 renderaccount renderaccount 248K Dec  3  2015 postgis.input
+-rwxrwxrwx 1 renderaccount renderaccount 191K Dec  3  2015 pgraster.input
+-rwxrwxrwx 1 renderaccount renderaccount 135K Dec  3  2015 ogr.input
+-rwxrwxrwx 1 renderaccount renderaccount 755K Dec  3  2015 geojson.input
+-rwxrwxrwx 1 renderaccount renderaccount  71K Dec  3  2015 gdal.input
+-rwxrwxrwx 1 renderaccount renderaccount 664K Dec  3  2015 csv.input</p></div>
+            <div class="comment-info" id="comment-60841-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '17, 15:57)</span>
+                <a class="comment-user userinfo" href="/users/14479/oblomingo">Oblomingo</a>
+                
+            </div>
+        </div>
+    
+        <a name="60842"></a>
+        <div class="comment not_top_scorer" id="comment-60842">
+            <div id="post-60842-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you can reproduce the problem (perhaps in a virtual machine installed under VirtualBox running on the larger machine) using an "off the shelf" copy of 16.04 LTS then people will have a chance of being able to investigate it.  Until then all we can say that there's something different about your systems that's causing the problems, and only you have access there.</p>
+
+<p>I last ran through the "switch2osm" page on 22/10/2017 and at that time "it just worked".  Obviously new versions of software come out all the time and something might have broken, but I'm guessing that it's actually related to your previous self-build of mapnik and python-mapnik.</p></div>
+            <div class="comment-info" id="comment-60842-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '17, 16:00)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60843"></a>
+        <div class="comment" id="comment-60843">
+            <div id="post-60843-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I run command 
+mapnik-config --input-plugins
+It gave me a different directory
+/usr/local/lib/mapnik/input
+I changed renderd.conf
+plugins_dir=/usr/local/lib/mapnik/input
+and it started working</p>
+
+<p>At least fixed one box. Second box (the one with 512MB memory does not work no matter how renderd.conf looks like - but ok. at least something works)</p></div>
+            <div class="comment-info" id="comment-60843-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '17, 16:29)</span>
+                <a class="comment-user userinfo" href="/users/14479/oblomingo">Oblomingo</a>
+                
+            </div>
+        </div>
+    
+        <a name="60846"></a>
+        <div class="comment not_top_scorer" id="comment-60846">
+            <div id="post-60846-score" class="comment-score"></div>
+            <div class="comment-text"><p>Finally I got a second box running.</p>
+
+<p>Solution was</p>
+
+<ol>
+<li>
+<p>Increased memory to 1GB</p>
+</li>
+<li>
+<p>Built mapnik 3.1 (and python bindings) from source (map available in ubuntu repo (version 3.0.9) did not work on neither boxes I tried) </p>
+</li>
+<li>
+<p>Was very hard to build mod_tiles with mapnik version 3.1. It was trying to use some artifacts left after mapnik build and build was failing with bizarre messages as it was not what it expexted. So I had to delete some of the mapnik build artifacts in order to make mod_tiles succeed. </p>
+</li>
+</ol>
+
+<p>At the end got everything working. May be if I tried from a clean slate then "switch2osm" way would also work but I give it a serious doubt. Both boxes I have only worked on mapnik build from source</p></div>
+            <div class="comment-info" id="comment-60846-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '17, 00:50)</span>
+                <a class="comment-user userinfo" href="/users/14479/oblomingo">Oblomingo</a>
+                
+            </div>
+        </div>
+    
+        <a name="60847"></a>
+        <div class="comment" id="comment-60847">
+            <div id="post-60847-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Good that you got it working, but in both cases you'd half-built-from source first, so you likely had a mixture of stuff lying around.</p>
+
+<p>It might be useful if you could explain what you actually did rather than just say e.g. "So I had to delete some of the mapnik build artifacts" - that doesn't help anyone who's trying to do it in the future.</p></div>
+            <div class="comment-info" id="comment-60847-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '17, 01:14)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60851"></a>
+        <div class="comment not_top_scorer" id="comment-60851">
+            <div id="post-60851-score" class="comment-score"></div>
+            <div class="comment-text"><p>May be. But in one case I have deleted (uninstall) source build mapnik alltogether and made sure I had only ubuntu supplied version left (3.0.9) and it did not work (segmentation error)</p>
+
+<p>when I was trying to build mod_tiles it was complaining that it could not find jpeg turbo lib referring some unusual path /home/travis/.. (travis is not a user on this server)</p>
+
+<p>mod_tile libtool: error: cannot find the library '/home/travis/build/mapbox/mason/mason_packages/linux-x86_64/jpeg_turbo/1.5.1/lib/libjpeg.la'</p>
+
+<p>It also was giving warning that some libs were moved. I could not reproduce it anymore. </p>
+
+<p>I decided to delete mason_packages folder and as strange it was - it helped</p>
+
+<p>rm -rf /home/myuser/src/mapnik/mason_packages/</p>
+
+<p>After I deleted it mod_tiles was successfully built and rendering starts working</p></div>
+            <div class="comment-info" id="comment-60851-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '17, 03:29)</span>
+                <a class="comment-user userinfo" href="/users/14479/oblomingo">Oblomingo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60822" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60822-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/60822/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='SvlHa22DkVL0l3Ks5hmrKIgi1KIjOA3u' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60822/7931-segmentation-fault-renderd-is-using-mapnik-version-310?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60822/7931-segmentation-fault-renderd-is-using-mapnik-version-310?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/renderd/"
+            class="tag-link-renderd"
+            title="see questions tagged'renderd'using tags"
+            rel="tag">renderd</a> <span class="tag-number">&#215;105</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 27, 2017, 11:08 p.m.">27 Nov '17, 23:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,849 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 29, 2017, 3:29 a.m.">29 Nov '17, 03:29</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/24290/local-tile-server-extremely-slow-rendering">Local Tile Server - EXTREMELY slow rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37471/mapnik-not-rendering-changes">Mapnik not rendering Changes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17225/setting-up-my-own-tile-server">Setting up my own tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20159/fail-to-connect-my-tiles-server">Fail to connect my tiles server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34960/error-on-rendering-what-unable-to-find-specified-font-face">Error on rendering: what():  Unable to find specified font face &#39;&#39;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35950/mapnik-pgraster-plugin-creating-8x8-tiles-with-visible-boundaries">Mapnik PGRaster Plugin creating 8x8 tiles with visible boundaries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16037/how-to-render-high-zoom-level-maps-with-renderd">How to render high zoom level maps with renderd ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16966/open-street-map-no-map-for-default">Open Street Map &quot;no map for: default&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18237/map-not-updating-to-changes-made">map not updating to changes made</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37611/renderd-doesnt-update-tiles">Renderd doesn&#39;t update tiles</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

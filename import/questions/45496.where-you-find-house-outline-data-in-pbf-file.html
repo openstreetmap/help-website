@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Where you find house outline data in PBF file? - OSM Help</title>
+        <meta name="description" content="Using Osmosis I&#39;ve read the entire world PBF file. However, so far I&#39;ve been unable to find house outline data. For example, my neighborhood in Forest Knolls, San Francisco has house outlines when viewed on the OSM website, but when I filter all the ways/nodes in the world PBF file to a bounding box..." />
+        <meta name="keywords" content="building,pbf,outlines" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/45496/where-you-find-house-outline-data-in-pbf-file" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/45496/where-you-find-house-outline-data-in-pbf-file?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='nH66DHr3lDHzfmYqJhuXp2V7KMLzPJrd' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/45496/where-you-find-house-outline-data-in-pbf-file">Where you find house outline data in PBF file?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-45496-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45496/up/" rel="nofollow"> </a>
+<div id="post-45496-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-45496-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45496/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/45496/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Using Osmosis I've read the entire world PBF file.  However, so far I've been unable to find house outline data.  For example, my neighborhood in Forest Knolls, San Francisco has house outlines when viewed on the OSM website, but when I filter all the ways/nodes in the world PBF file to a bounding box of my neighborhood, I don't see house outlines.  So, the question is, where can the house outline data be found in the PBF file?</p>
+<p>In response to the comment requesting further information...</p>
+<p>I downloaded the current "planet-latest.osm.pbf" as of about six weeks ago (the date on my copy of the file shows Aug 3, 2015).  This file is about 30 GB and and contains something close to 3.5 billion records (about 3 billion nodes and about 500 million ways).  When filtered to US only records it has about 560 million nodes and I forget, maybe 30 million ways.</p>
+<p>Describing the full filtering process is fairly complex, since the amount of data is quite large and various algorithms I attempted exceeded my 32GB of RAM (partially because Java built-in data structures have huge amounts of overhead).  So I created a fairly elaborate multipass algorithm that first filtered to find all ways and nodes in the US and wrote the data out to intermediate files and then repeated this process starting with the intermediate files to create state level files (one of course being California).  Then finally filtered to a particular test neighborhood (my neighborhood in SF).  So there's a lot of things that <em>could</em> have gone wrong, but if I knew where to start looking (where the house outline data is) then it would be easier for me to track what might have gone wrong.</p>
+<p>So basically I'm wondering if house outlines are stored as ways, or as nodes, or what?  I thought they would be stored as ways that then referred to a list of node Ids that would specify the exact shape of the house outline.  However, so far I can't see anything in the PBF file that confirms my guess.</p>
+<p>TIA,
+   Roger</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/building/" class="post-tag tag-link-building"
+                                        title="see questions tagged 'building'" rel="tag">building</a>
+                                
+                                    <a href="/tags/pbf/" class="post-tag tag-link-pbf"
+                                        title="see questions tagged 'pbf'" rel="tag">pbf</a>
+                                
+                                    <a href="/tags/outlines/" class="post-tag tag-link-outlines"
+                                        title="see questions tagged 'outlines'" rel="tag">outlines</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Sep '15, 00:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b44d7798a9612803956406cbc311c124?s=32&amp;d=identicon&amp;r=g" alt="Mirage's gravatar image" />
+    <p><a href="/users/11499/mirage">Mirage</a><br/>
+    <span class="score" title="39 reputation points">39</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Mirage has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/45496/">
+                edited
+                <strong>22 Sep '15, 19:49</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-45496">
+    
+        <a name="45498"></a>
+        <div class="comment" id="comment-45498">
+            <div id="post-45498-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Could you amend your question with a description of what data you downloaded and how you filtered it? Perhaps there is something wrong with the process.</p></div>
+            <div class="comment-info" id="comment-45498-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Sep '15, 01:23)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-45496" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45496-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/45496/where-you-find-house-outline-data-in-pbf-file?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/45496/where-you-find-house-outline-data-in-pbf-file?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/45496/where-you-find-house-outline-data-in-pbf-file?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/45496/where-you-find-house-outline-data-in-pbf-file?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="45499"></a>
+                    <div id="answer-container-45499" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-45499-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45499/up/" rel="nofollow"> </a>
+<div id="post-45499-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-45499-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45499/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Your process is, lets say, overly complex. </p>
+<p>First read up on the OSM data model <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> and other pages (it helps to know what you are looking for before you start looking).</p>
+<p>Then get a metro extract from <a href="https://mapzen.com/data/metro-extracts">https://mapzen.com/data/metro-extracts</a> or a state level extract. In general it is easier to first pair down size/area of an extract before doing anything else. Then use for example osmfilter (<a href="http://wiki.openstreetmap.org/wiki/Osmfilter)">http://wiki.openstreetmap.org/wiki/Osmfilter)</a> to extract the nodes and ways for the building outlines (you will need to convert to standard XML format first). You are looking for ways that have a building tag.</p>
+<p>Note after this process you will have a file containing nodes and ways, no already built geometries.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/45499/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Sep '15, 08:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-45499">
+    
+        <a name="45501"></a>
+        <div class="comment" id="comment-45501">
+            <div id="post-45501-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Some elements of your suggestion are exactly what I <em>don't</em> want to do.  Mainly I don't want to work with XML at all, partially because it's hugely inefficient, and partially because I loath it and think it's one of the worst file formats to ever be foisted on the world of programmers.</p>
+
+<p>However, you do answer the core of my question, for which I'm truly grateful.  So it is pretty much as I expected, now I just have to trace the migration of the building tagged ways from the original PBF file to the final state way file and determine where data was lost.</p>
+
+<p>I won't go into my reasons for creating this, in your words, "overly complex" approach, let's just say that I needed to do all these steps anyway, so it didn't seem overly complex to me.</p>
+
+<p>BTW, I did read the <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> pages, but reading and being sure that you understand what every element is truly representing are different things entirely.</p>
+
+<p>Thanks again for your answer.</p></div>
+            <div class="comment-info" id="comment-45501-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Sep '15, 09:49)</span>
+                <a class="comment-user userinfo" href="/users/11499/mirage">Mirage</a>
+                
+            </div>
+        </div>
+    
+        <a name="45503"></a>
+        <div class="comment" id="comment-45503">
+            <div id="post-45503-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You don't need to use XML for osmfilter; you can use .o5m instead.</p></div>
+            <div class="comment-info" id="comment-45503-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Sep '15, 10:08)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="45504"></a>
+        <div class="comment" id="comment-45504">
+            <div id="post-45504-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Working with a small XML file is far faster than trying to prune down the planet, but extracts are available as PBFs too, and osmfilter, osmconvert, and osmosis all work fine with them.</p>
+
+<p>If, starting from an extract, you still have problems, you could post a new question, including the command lines.</p></div>
+            <div class="comment-info" id="comment-45504-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Sep '15, 10:26)</span>
+                <a class="comment-user userinfo" href="/users/290/pnorman">pnorman</a>
+                
+            </div>
+        </div>
+    
+        <a name="45506"></a>
+        <div class="comment" id="comment-45506">
+            <div id="post-45506-score" class="comment-score">2</div>
+            <div class="comment-text"><p>XML may be ugly but you can easily do a "grep building myfile.osm" and you'd probably have saved yourself a lot of time (and maybe wouldn't even have had to ask this question). It is not the worst idea to start with XML when you do something with OSM, and upgrade to an efficient format like PBF later - for easier debugging.</p></div>
+            <div class="comment-info" id="comment-45506-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Sep '15, 10:57)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="45507"></a>
+        <div class="comment not_top_scorer" id="comment-45507">
+            <div id="post-45507-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks for all the help, after a small fix here is my first trivial render of Forest Knolls in San Francisco.  So now I have house outlines.  Now just need to work on OpenGL rendering so it will all look pretty.</p>
+
+<p><a href="/upfiles/FirstForestKnollsMap.JPG"><img alt="house outlines" src="/upfiles/FirstForestKnollsMap.JPG" width="150 px" height="150 px"></a></p></div>
+            <div class="comment-info" id="comment-45507-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Sep '15, 12:48)</span>
+                <a class="comment-user userinfo" href="/users/11499/mirage">Mirage</a>
+                
+            </div>
+        </div>
+    
+        <a name="45508"></a>
+        <div class="comment not_top_scorer" id="comment-45508">
+            <div id="post-45508-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Was it a bug in your code or another issue? Maybe you can shed some light for others running into the same problem.</p></div>
+            <div class="comment-info" id="comment-45508-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Sep '15, 13:43)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="45516"></a>
+        <div class="comment" id="comment-45516">
+            <div id="post-45516-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Yeah, it was a bug in my code, so probably not much help for others.  I made a stupid error where in one pass I was attempting to grab node data from one of my HashMaps, but rather than looking up each way's indexed node Id in my HashMap, I looked up the index itself in my HashMap.  Looking up a "for" loop index in my HashMap is basically a meaningless operation, so everything that happened from there forward was just garbage.  Almost surprising that the program didn't just crash.  I'm not sure if this is an indication that I write good fault tolerant code, or that I write bad code that helps hide actual bugs.</p></div>
+            <div class="comment-info" id="comment-45516-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '15, 03:59)</span>
+                <a class="comment-user userinfo" href="/users/11499/mirage">Mirage</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-45499" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45499-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/45496/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='nH66DHr3lDHzfmYqJhuXp2V7KMLzPJrd' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45496/where-you-find-house-outline-data-in-pbf-file?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45496/where-you-find-house-outline-data-in-pbf-file?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/building/"
+            class="tag-link-building"
+            title="see questions tagged'building'using tags"
+            rel="tag">building</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/pbf/"
+            class="tag-link-pbf"
+            title="see questions tagged'pbf'using tags"
+            rel="tag">pbf</a> <span class="tag-number">&#215;60</span><br/>
+        
+        <a href="/tags/outlines/"
+            class="tag-link-outlines"
+            title="see questions tagged'outlines'using tags"
+            rel="tag">outlines</a> <span class="tag-number">&#215;13</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 22, 2015, 12:25 a.m.">22 Sep '15, 00:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,959 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 23, 2015, 3:59 a.m.">23 Sep '15, 03:59</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/64488/separating-existing-commercial-building-into-two-buildings">Separating existing commercial building into two buildings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28570/correcting-building-traces">Correcting building traces</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62179/amenities-standalone-nodes-or-outline-nodes">Amenities - standalone nodes or outline nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/80614/hole-in-outline-in-relation">Hole in Outline in Relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57190/techniques-to-create-large-number-of-building-outlines">Techniques to create large number of building outlines</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2226/how-to-tag-building-names-that-are-part-of-bigger-common-areas">How to tag building names that are part of bigger, common areas?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1818/how-can-i-find-an-icon-for-public-swimming-pool">How can I find an icon for public swimming pool</a>
+        </p>
+        
+        <p>
+            <a href="/questions/978/how-to-i-tag-an-abandoned-building">How to I tag an abandoned building?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4172/display-bug">Display Bug?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1623/how-do-i-tag-a-skywalk-skyway-sky-bridge">How do I tag a skywalk / skyway / sky bridge?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

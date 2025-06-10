@@ -1,0 +1,759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why are some ways mapped as road footprints when this creates routing problems? - OSM Help</title>
+        <meta name="description" content="I have noticed certain areas have many ways mapped as the footprints of the physical roads, such as this in Indio, California. However, this polygon way itself comprises an ordered list of nodes in its perimeter. Any routing queries passing through this way must traverse the perimeter nodes in order..." />
+        <meta name="keywords" content="openstreetmap,map,ways,mapping,way" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/52986/why-are-some-ways-mapped-as-road-footprints-when-this-creates-routing-problems" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52986/why-are-some-ways-mapped-as-road-footprints-when-this-creates-routing-problems?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='iXg8VDRLs4ojerAElHIelBRi5X2gDUWs' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52986/why-are-some-ways-mapped-as-road-footprints-when-this-creates-routing-problems">Why are some ways mapped as road footprints when this creates routing problems?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52986-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52986/up/" rel="nofollow"> </a>
+<div id="post-52986-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-52986-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52986/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52986/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have noticed certain areas have many ways mapped as the footprints of the physical roads, such as <a href="https://www.openstreetmap.org/way/407550221#map=19/33.74460/-116.28984">this in Indio, California</a>. However, this polygon way itself comprises an ordered list of nodes in its perimeter. Any routing queries passing through this way must traverse the perimeter nodes in order. </p>
+<p>In other words, in the real world I can traverse this way as a <a href="https://www.google.com/maps/place/33%C2%B044'40.6%22N+116%C2%B017'23.4%22W/@33.7444395,-116.290113,225m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d33.7446!4d-116.28984">straight-line path</a>, but in OSM I must traverse this way as a twisting, curling path along its perimeter. This causes shortest-path routing problems when I use this way data in other applications. Similarly, certain areas such as <a href="https://www.openstreetmap.org/way/412802431">this in Folsom, California</a> represent houses' driveways as disconnected way polygons.</p>
+<p>My question is: are these polygon representations of ways correct? If so, why?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                                    <a href="/tags/ways/" class="post-tag tag-link-ways"
+                                        title="see questions tagged 'ways'" rel="tag">ways</a>
+                                
+                                    <a href="/tags/mapping/" class="post-tag tag-link-mapping"
+                                        title="see questions tagged 'mapping'" rel="tag">mapping</a>
+                                
+                                    <a href="/tags/way/" class="post-tag tag-link-way"
+                                        title="see questions tagged 'way'" rel="tag">way</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Nov '16, 21:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8eb28ad933ae655db57b6c6b8563eb67?s=32&amp;d=identicon&amp;r=g" alt="gboeing's gravatar image" />
+    <p><a href="/users/12827/gboeing">gboeing</a><br/>
+    <span class="score" title="136 reputation points">136</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gboeing has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52986">
+    
+        <a name="53005"></a>
+        <div class="comment" id="comment-53005">
+            <div id="post-53005-score" class="comment-score"></div>
+            <div class="comment-text"><p>All those abstract and unsquare polygons in the Folsom area look like a cubist painting!</p></div>
+            <div class="comment-info" id="comment-53005-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Nov '16, 19:35)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52986" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52986-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52986/why-are-some-ways-mapped-as-road-footprints-when-this-creates-routing-problems?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52986/why-are-some-ways-mapped-as-road-footprints-when-this-creates-routing-problems?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52986/why-are-some-ways-mapped-as-road-footprints-when-this-creates-routing-problems?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52986/why-are-some-ways-mapped-as-road-footprints-when-this-creates-routing-problems?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52989"></a>
+                    <div id="answer-container-52989" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52989-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52989/up/" rel="nofollow"> </a>
+<div id="post-52989-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-52989-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52989/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="gboeing has selected this answer as the correct answer"
+        href="/accept_answer/52989/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Tagging it in the way that you have linked to is bad practice and not recommended by most OSM mappers, for exactly the reasons you describe.</p>
+<p>The more accepted tagging is <code>area:highway=service</code> (see <a href="http://taginfo.openstreetmap.org/keys/area%3Ahighway">http://taginfo.openstreetmap.org/keys/area%3Ahighway</a> and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/area:highway).">https://wiki.openstreetmap.org/wiki/Proposed_features/area:highway).</a> Previously some mappers would use a standard highway tag with <code>area=yes</code>, but this does not degrade gracefully for those clients that don't check the <code>area</code> tag.</p>
+<p>In any case, you should supply a routable centreline with a standard <code>highway</code> tag as well as the polygon outline.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52989/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Nov '16, 22:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52989">
+    
+</div>
+<div id="comment-tools-52989" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52989-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="52990"></a>
+                    <div id="answer-container-52990" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52990-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52990/up/" rel="nofollow"> </a>
+<div id="post-52990-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-52990-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52990/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Currently none of the main-stream routing engines support routing over areas properly (not that it can't be done, if just hasn't been). </p>
+<p>The camps are slightly divided on if additional ways should be added to improve routing till the point in time that area routing is supported more wide spread, or if such ways should not be added. </p>
+<p>Doing the first naturally removes pressure on the routing engine developers to actually fix the issue, doing the later makes current apps work better.</p>
+<p>As you can see, there is not going to be a hard and fast answer to your question.</p>
+<p>PS: it should be noted, as Richard has pointed out, that the tagging of the driveways is broken in any case, landuse residential should be used for the whole area in question not for individual driveways. And if you are mapping the driveways as areas (with better tagging), you should likely be mapping the actual roads that way too.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52990/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Nov '16, 23:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52990/">
+                edited
+                <strong>17 Nov '16, 07:49</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52990">
+    
+</div>
+<div id="comment-tools-52990" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52990-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52986/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='iXg8VDRLs4ojerAElHIelBRi5X2gDUWs' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52986/why-are-some-ways-mapped-as-road-footprints-when-this-creates-routing-problems?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52986/why-are-some-ways-mapped-as-road-footprints-when-this-creates-routing-problems?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+        <a href="/tags/mapping/"
+            class="tag-link-mapping"
+            title="see questions tagged'mapping'using tags"
+            rel="tag">mapping</a> <span class="tag-number">&#215;193</span><br/>
+        
+        <a href="/tags/ways/"
+            class="tag-link-ways"
+            title="see questions tagged'ways'using tags"
+            rel="tag">ways</a> <span class="tag-number">&#215;167</span><br/>
+        
+        <a href="/tags/way/"
+            class="tag-link-way"
+            title="see questions tagged'way'using tags"
+            rel="tag">way</a> <span class="tag-number">&#215;91</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 16, 2016, 9:58 p.m.">16 Nov '16, 21:58</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,404 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 17, 2016, 7:35 p.m.">17 Nov '16, 19:35</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/16506/is-mapforge-is-rasterbase-or-vectorbase">Is Mapforge is Rasterbase or Vectorbase</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17773/new-road-not-visible-in-the-map">[closed] New road not visible in the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker">Why isn&#39;t the mapnik map on the website updated quicker?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16048/how-to-map-a-permanent-barrier-across-a-road">How to map a permanent barrier across a road?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/119/can-a-way-contain-the-same-node-more-than-just-at-the-beginning-and-end">Can a way contain the same node more than just at the beginning and end?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16824/mapview-zoomlistner-for-mapsforge">[closed] Mapview ZoomListner for Mapsforge</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13673/custom-map-solution-using-opensteetmap">Custom map solution using opensteetmap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12718/how-to-add-mapnik-osmdroid-zip-files-to-sd-card-from-code">How to add Mapnik osmdroid zip files to sd card from code</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14779/nominatim-search">Nominatim search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19036/why-is-osm-serving-map-as-raster-instead-of-svg">Why is OSM serving map as raster instead of SVG?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

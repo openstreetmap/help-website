@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>segmentation fault when loading mod_tile.so - OSM Help</title>
+        <meta name="description" content="After following Ubuntu tile server setup instructions I encounter the following segmentation fault any time Apache2 is started. I&#39;ve attempted re-installing mod_tile from SVN but still hit this crash. user@host:~$ sudo /etc/init.d/apache2 start  * Starting web server apache2 [Fri Jan 11 13:25:59 201..." />
+        <meta name="keywords" content="segmentation,mod_tile,apache2" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/18988/segmentation-fault-when-loading-mod_tileso" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/18988/segmentation-fault-when-loading-mod_tileso?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='VG6ZDC24d6g4IctiT2sOwzO7q0URuEiW' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/18988/segmentation-fault-when-loading-mod_tileso">segmentation fault when loading mod_tile.so</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-18988-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18988/up/" rel="nofollow"> </a>
+<div id="post-18988-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-18988-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18988/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/18988/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>After following <a href="http://wiki.openstreetmap.org/wiki/Ubuntu_tile_server" title="Ubuntu tile server setup instructions">Ubuntu tile server setup instructions</a> I encounter the following segmentation fault any time Apache2 is started. I've attempted <a href="http://wiki.openstreetmap.org/wiki/Mod_tile#Install_mod_tile_From_Source" title="Install mod_tile from source">re-installing mod_tile from SVN</a> but still hit this crash.</p>
+<pre><code>user@host:~$ sudo /etc/init.d/apache2 start
+ * Starting web server apache2                                                                                                                                                                                                                                                                                                [Fri Jan 11 13:25:59 2013] [notice] Committing tile config default
+[Fri Jan 11 13:25:59 2013] [notice] Loading tile config default at /osm/ for zooms 0 - 18 from tile directory /var/lib/mod_tile with extension .png and mime type image/png
+*** glibc detected *** /usr/sbin/apache2: double free or corruption (fasttop): 0x00007fa6fc5859f0 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x7eb96)[0x7fa6fa7f9b96]
+/usr/lib/apache2/modules/mod_tile.so(+0xaa00)[0x7fa6f7847a00]
+/usr/sbin/apache2(+0x417d1)[0x7fa6fb6567d1]
+/usr/sbin/apache2(ap_walk_config+0xb7)[0x7fa6fb658807]
+/usr/sbin/apache2(+0x3b20a)[0x7fa6fb65020a]
+/usr/sbin/apache2(+0x417ee)[0x7fa6fb6567ee]
+/usr/sbin/apache2(ap_walk_config+0xb7)[0x7fa6fb658807]
+/usr/sbin/apache2(ap_process_config_tree+0xd2)[0x7fa6fb659722]
+/usr/sbin/apache2(main+0x98d)[0x7fa6fb641f5d]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xed)[0x7fa6fa79c76d]
+/usr/sbin/apache2(+0x2d2a9)[0x7fa6fb6422a9]
+======= Memory map: ========
+.... omitted ....
+</code></pre>
+<p>So I grabbed a core dump and did some mucking around in gdb at frame 4 we see load_tile_config() get called then everything falls to pieces. Appears to be a double free in mod_tile.c in load_tile_config(), a quick look through the function didn't turn up anything that should cause the crash but I don't know this code base so maybe I missed something :/</p>
+<pre><code>#0  0x00007f5e09a65425 in __GI_raise (sig=&lt;optimized out&gt;) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+#1  0x00007f5e09a68b8b in __GI_abort () at abort.c:91
+#2  0x00007f5e09aa339e in __libc_message (do_abort=2, fmt=0x7f5e09bad028 "*** glibc detected *** %s: %s: 0x%s ***\n") at ../sysdeps/unix/sysv/linux/libc_fatal.c:201
+#3  0x00007f5e09aadb96 in malloc_printerr (action=3, str=0x7f5e09bad218 "double free or corruption (fasttop)", ptr=&lt;optimized out&gt;) at malloc.c:5007
+#4  0x00007f5e06afba00 in load_tile_config () from /usr/lib/apache2/modules/mod_tile.so
+#5  0x00007f5e0a90a7d1 in invoke_cmd (cmd=0x7f5e06cff9c0 &lt;tile_cmds&gt;, parms=parms@entry=0x7fffa0cb77e0, mconfig=0x0, args=0x7f5e06a7c369 "") at config.c:791
+#6  0x00007f5e0a90c807 in ap_walk_config_sub (section_vector=0x7f5e0a82fea8, parms=0x7fffa0cb77e0, current=0x7f5e06a7c318) at config.c:1164
+#7  ap_walk_config (current=0x7f5e06a7c318, parms=parms@entry=0x7fffa0cb77e0, section_vector=0x7f5e0a82fea8) at config.c:1197
+#8  0x00007f5e0a90420a in virtualhost_section (cmd=0x7fffa0cb77e0, dummy=&lt;optimized out&gt;, arg=&lt;optimized out&gt;) at core.c:2234
+#9  0x00007f5e0a90a7ee in invoke_cmd (cmd=0x7f5e0ab365d0 &lt;core_cmds+80&gt;, parms=parms@entry=0x7fffa0cb77e0, mconfig=0x7f5e0a87e318, args=0x7f5e06a7c0d8 "*:80&gt;") at config.c:758
+#10 0x00007f5e0a90c807 in ap_walk_config_sub (section_vector=0x7f5e0a87dee0, parms=0x7fffa0cb77e0, current=0x7f5e06a7c098) at config.c:1164
+#11 ap_walk_config (current=0x7f5e06a7c098, parms=parms@entry=0x7fffa0cb77e0, section_vector=0x7f5e0a87dee0) at config.c:1197
+#12 0x00007f5e0a90d722 in ap_process_config_tree (s=s@entry=0x7f5e0a8b5578, conftree=&lt;optimized out&gt;, p=0x7f5e0a8bc028, ptemp=&lt;optimized out&gt;) at config.c:1792
+#13 0x00007f5e0a8f5f5d in main (argc=3, argv=0x7fffa0cb7a38) at main.c:647
+</code></pre>
+<p>Any help/advice?</p>
+<p><strong>Config files</strong></p>
+<p><a href="http://www.nullagent.com/public/scratch/renderd.conf">/etc/renderd.conf</a></p>
+<p><a href="http://www.nullagent.com/public/scratch/apache2.conf">/etc/apache2/apache2.conf</a></p>
+<p><a href="http://www.nullagent.com/public/scratch/tile.load">/etc/apache2/mods-available/tile.load</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/segmentation/" class="post-tag tag-link-segmentation"
+                                        title="see questions tagged 'segmentation'" rel="tag">segmentation</a>
+                                
+                                    <a href="/tags/mod_tile/" class="post-tag tag-link-mod_tile"
+                                        title="see questions tagged 'mod_tile'" rel="tag">mod_tile</a>
+                                
+                                    <a href="/tags/apache2/" class="post-tag tag-link-apache2"
+                                        title="see questions tagged 'apache2'" rel="tag">apache2</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Jan '13, 21:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b3ef7c0ff8d75d77bd61b27a24f3e446?s=32&amp;d=identicon&amp;r=g" alt="7bitbyte's gravatar image" />
+    <p><a href="/users/5373/7bitbyte">7bitbyte</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="7bitbyte has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/18988/">
+                edited
+                <strong>11 Jan '13, 22:45</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-18988">
+    
+        <a name="18989"></a>
+        <div class="comment not_top_scorer" id="comment-18989">
+            <div id="post-18989-score" class="comment-score"></div>
+            <div class="comment-text"><p>What version of Unbuntu is this with?</p></div>
+            <div class="comment-info" id="comment-18989-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '13, 21:51)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="18990"></a>
+        <div class="comment not_top_scorer" id="comment-18990">
+            <div id="post-18990-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ubuntu 12.10 quantal running on a 64bit machine</p></div>
+            <div class="comment-info" id="comment-18990-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '13, 22:05)</span>
+                <a class="comment-user userinfo" href="/users/5373/7bitbyte">7bitbyte</a>
+                
+            </div>
+        </div>
+    
+        <a name="18991"></a>
+        <div class="comment" id="comment-18991">
+            <div id="post-18991-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I was hitting this on 12.04, preformed the update to 12.10 and still hit so I started digging deeper.</p></div>
+            <div class="comment-info" id="comment-18991-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '13, 22:07)</span>
+                <a class="comment-user userinfo" href="/users/5373/7bitbyte">7bitbyte</a>
+                
+            </div>
+        </div>
+    
+        <a name="18992"></a>
+        <div class="comment" id="comment-18992">
+            <div id="post-18992-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Although I haven't tested the 12.10 version yet, so it is possible that there is a general bug, I rather suspect there is something in the config that upsets it (of cause that is also a bug, but perhaps easier to work around). Could you post the site config and the renderd config?</p></div>
+            <div class="comment-info" id="comment-18992-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '13, 22:27)</span>
+                <a class="comment-user userinfo" href="/users/65/apmon">apmon</a>
+                
+            </div>
+        </div>
+    
+        <a name="18993"></a>
+        <div class="comment not_top_scorer" id="comment-18993">
+            <div id="post-18993-score" class="comment-score"></div>
+            <div class="comment-text"><p>Good point, updated post to include links to config files</p></div>
+            <div class="comment-info" id="comment-18993-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '13, 22:46)</span>
+                <a class="comment-user userinfo" href="/users/5373/7bitbyte">7bitbyte</a>
+                
+            </div>
+        </div>
+    
+        <a name="18994"></a>
+        <div class="comment" id="comment-18994">
+            <div id="post-18994-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I can avoid the crash now by removing the ATTRIBUTION and DESCRIPTION tags from /etc/renderd.conf but there is definitely a bug in mod_tile</p></div>
+            <div class="comment-info" id="comment-18994-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '13, 23:02)</span>
+                <a class="comment-user userinfo" href="/users/5373/7bitbyte">7bitbyte</a>
+                
+            </div>
+        </div>
+    
+        <a name="18995"></a>
+        <div class="comment" id="comment-18995">
+            <div id="post-18995-score" class="comment-score">1</div>
+            <div class="comment-text"><p>hey, i have the same error.</p>
+
+<p>i didnt tested it yet, but have a look at the end of the method load_tile_config()</p>
+
+<p>if (description) free(description);</p>
+
+<p>if (attribution) free(description);</p>
+
+<p>if (hostnames) free(description);</p>
+
+<p>that looks wrong :)</p>
+
+<p>edit:
+that fixed it for me</p>
+
+<p>if (description) free(description);</p>
+
+<p>if (attribution) free(attribution);</p>
+
+<p>if (hostnames) free(hostnames);</p></div>
+            <div class="comment-info" id="comment-18995-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '13, 23:20)</span>
+                <a class="comment-user userinfo" href="/users/5375/fabianpr">fabianpr</a>
+                
+            </div>
+        </div>
+    
+        <a name="18996"></a>
+        <div class="comment not_top_scorer" id="comment-18996">
+            <div id="post-18996-score" class="comment-score"></div>
+            <div class="comment-text"><p>doh, yep that should be the issue.</p></div>
+            <div class="comment-info" id="comment-18996-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '13, 23:41)</span>
+                <a class="comment-user userinfo" href="/users/5373/7bitbyte">7bitbyte</a>
+                
+            </div>
+        </div>
+    
+        <a name="18997"></a>
+        <div class="comment" id="comment-18997">
+            <div id="post-18997-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Ah, yes, that is indeed wrong. I'll commit a fix for that soon. I wonder if I committed the wrong version, as I noticed that error before committing and thought I had already fixed it. Oh well... Thanks for the report.</p></div>
+            <div class="comment-info" id="comment-18997-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '13, 00:47)</span>
+                <a class="comment-user userinfo" href="/users/65/apmon">apmon</a>
+                
+            </div>
+        </div>
+    
+        <a name="19006"></a>
+        <div class="comment not_top_scorer" id="comment-19006">
+            <div id="post-19006-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I fixed those double frees in SVN revision 29190 now. Hopefully that will solve the issue. Could you please confirm this? I will also upload a fixed package soon.</p></div>
+            <div class="comment-info" id="comment-19006-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '13, 16:11)</span>
+                <a class="comment-user userinfo" href="/users/65/apmon">apmon</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18988" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18988-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/18988/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='VG6ZDC24d6g4IctiT2sOwzO7q0URuEiW' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18988/segmentation-fault-when-loading-mod_tileso?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18988/segmentation-fault-when-loading-mod_tileso?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mod_tile/"
+            class="tag-link-mod_tile"
+            title="see questions tagged'mod_tile'using tags"
+            rel="tag">mod_tile</a> <span class="tag-number">&#215;80</span><br/>
+        
+        <a href="/tags/segmentation/"
+            class="tag-link-segmentation"
+            title="see questions tagged'segmentation'using tags"
+            rel="tag">segmentation</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/apache2/"
+            class="tag-link-apache2"
+            title="see questions tagged'apache2'using tags"
+            rel="tag">apache2</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 11, 2013, 9:33 p.m.">11 Jan '13, 21:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,191 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 12, 2013, 4:11 p.m.">12 Jan '13, 16:11</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/65391/png-meta-hybrid-using-mod_tile-and-renderd">PNG / Meta hybrid using mod_tile and renderd</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12516/error-reading-blob-content-segmentation-fault">error reading blob content Segmentation fault</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17856/utfgrid-support-in-mod_tile">UTFGrid support in mod_tile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14700/error-compiling-mod_tile">Error compiling mod_tile</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14932/why-are-the-cache-duration-settings-configured-in-mod_tile-being-ignored">Why are the cache duration settings configured in mod_tile being ignored?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16334/error-in-mod_tile-compile-with-centos-63-gcc-446">Error in mod_tile compile with centos 6.3 gcc 4.4.6</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13689/problem-with-mod_tile-make">Problem with mod_tile make</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18237/map-not-updating-to-changes-made">map not updating to changes made</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20159/fail-to-connect-my-tiles-server">Fail to connect my tiles server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11774/why-wont-mapnik-render-any-tiles">Why won&#39;t Mapnik render any tiles?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

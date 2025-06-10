@@ -1,0 +1,882 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why should we use postal_code for streets and places instead of addr:postcode? - OSM Help</title>
+        <meta name="description" content="Why we have two different keys instead one? This make it a bit complicated. Are there any reasons for use postal_code instead addr:postcode?" />
+        <meta name="keywords" content="postalcode,postcode,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/47227/why-should-we-use-postal_code-for-streets-and-places-instead-of-addrpostcode" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/47227/why-should-we-use-postal_code-for-streets-and-places-instead-of-addrpostcode?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='LeC0mUlHRiKJYGZtScpAB3NF9i8rYuPq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/47227/why-should-we-use-postal_code-for-streets-and-places-instead-of-addrpostcode">Why should we use postal_code for streets and places instead of addr:postcode?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-47227-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47227/up/" rel="nofollow"> </a>
+<div id="post-47227-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-47227-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47227/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/47227/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Why we have two different keys instead one? This make it a bit complicated.</p>
+<p>Are there any reasons for use postal_code instead addr:postcode?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/postalcode/" class="post-tag tag-link-postalcode"
+                                        title="see questions tagged 'postalcode'" rel="tag">postalcode</a>
+                                
+                                    <a href="/tags/postcode/" class="post-tag tag-link-postcode"
+                                        title="see questions tagged 'postcode'" rel="tag">postcode</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Dec '15, 01:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66fa5e51fcd099fc9e30ed61b3e3e3c9?s=32&amp;d=identicon&amp;r=g" alt="eBin's gravatar image" />
+    <p><a href="/users/11779/ebin">eBin</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="eBin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-47227">
+    
+</div>
+<div id="comment-tools-47227" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47227-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/47227/why-should-we-use-postal_code-for-streets-and-places-instead-of-addrpostcode?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/47227/why-should-we-use-postal_code-for-streets-and-places-instead-of-addrpostcode?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/47227/why-should-we-use-postal_code-for-streets-and-places-instead-of-addrpostcode?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/47227/why-should-we-use-postal_code-for-streets-and-places-instead-of-addrpostcode?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="47229"></a>
+                    <div id="answer-container-47229" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47229-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47229/up/" rel="nofollow"> </a>
+<div id="post-47229-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-47229-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47229/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In my opinion you shouldn't use addr:postcode=<em> on a street because it is intended for tagging addresses, and the street has no "address" per se. postal_code=</em> has a slightly different meaning, which is "all addresses along this street share this postal code", the same applies to areas, see also the wiki: <a href="http://wiki.openstreetmap.org/wiki/Key:postal_code">http://wiki.openstreetmap.org/wiki/Key:postal_code</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47229/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Dec '15, 09:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b75c397321b010a8a70f44ab78e7bb44?s=32&amp;d=identicon&amp;r=g" alt="Alecs01's gravatar image" />
+    <p><a href="/users/7863/alecs01">Alecs01</a><br/>
+    <span class="score" title="1371 reputation points"><span class="">1.4k</span></span><span title="13 badges"><span class="silver">&#9679;</span><span class="badgecount">13</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Alecs01 has 6 accepted answers">25&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47229">
+    
+</div>
+<div id="comment-tools-47229" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47229-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="47230"></a>
+                    <div id="answer-container-47230" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47230-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47230/up/" rel="nofollow"> </a>
+<div id="post-47230-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-47230-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47230/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>All <code>addr:*</code> tags are for things that have an address, exclusively. Never use <code>addr:*</code> on a street or an administrative boundary. On the other hand, if you tag an area with <code>boundary=postal_code</code> then you need <code>postal_code=*</code> to go with that, and never <code>addr:postcode</code>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47230/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Dec '15, 09:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47230">
+    
+        <a name="47238"></a>
+        <div class="comment" id="comment-47238">
+            <div id="post-47238-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think this neglects the potential iterative nature of OSM. One can quite frequently easily discover the addr:postcode which applies to houses on a street without ever having to map the actual addresses. Storing such partial info in OSM is still useful. NOTE: hereabouts some local authorities actually put the post code (which in UK is always address, not area, based).</p></div>
+            <div class="comment-info" id="comment-47238-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '15, 14:38)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47244"></a>
+        <div class="comment" id="comment-47244">
+            <div id="post-47244-score" class="comment-score"></div>
+            <div class="comment-text"><p>Frederik's reply is perfectly valid for countries where the postal code forms a region, such as Germany and Belgium. It is probably not valid for the UK and USA, where ZIP-codes or postal codes are assigned in a different way.</p>
+
+<p>Furthermore, for Germany and Flanders (part of Belgium), it is not really needed to add postal code information to a single address. All postal code boundaries are mapped. Some people will still map this information on addresses and POIs though, as not all data consumers can handle the postal code boundaries.</p></div>
+            <div class="comment-info" id="comment-47244-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '15, 04:57)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="47245"></a>
+        <div class="comment" id="comment-47245">
+            <div id="post-47245-score" class="comment-score"></div>
+            <div class="comment-text"><p>it should be noted that nominatim will actually use addr:postcode that is tagged on a street in lieu of postal code boundaries or address nodes including the code. So the information is useful, but naturally it would be preferable to have the actual addresses mapped.</p></div>
+            <div class="comment-info" id="comment-47245-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '15, 08:53)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47246"></a>
+        <div class="comment" id="comment-47246">
+            <div id="post-47246-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't understand which bit of my message should be invalid for the UK or USA. Use addr:xx for everything that has an address; don't use addr:xx for things that don't have an address. (The fact that Nominatim might try to harvest all it can get and consume addr:xx even on non-addressable objects like streets should not lead mappers to mis-use addr:xx in that way.)</p></div>
+            <div class="comment-info" id="comment-47246-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '15, 09:02)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47248"></a>
+        <div class="comment" id="comment-47248">
+            <div id="post-47248-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/104/frederik-ramm">@Frederik</a> so I take it that you're against mapping addresses by an iterative process</p></div>
+            <div class="comment-info" id="comment-47248-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '15, 10:20)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47230" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47230-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="47228"></a>
+                    <div id="answer-container-47228" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47228-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47228/up/" rel="nofollow"> </a>
+<div id="post-47228-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-47228-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47228/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is no particular reason to use the postal_code key. It was invented before the addr:* tags and some of the old uses haven’t been rationalised. If you find it in an existing address bear in mind that it may not have been used the way we would now use addr:postcode (though maybe it was).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47228/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Dec '15, 09:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8d2104911958906e2105c27461780d2b?s=32&amp;d=identicon&amp;r=g" alt="Wynndale's gravatar image" />
+    <p><a href="/users/7440/wynndale">Wynndale</a><br/>
+    <span class="score" title="565 reputation points">565</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Wynndale has one accepted answer">7&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47228">
+    
+</div>
+<div id="comment-tools-47228" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47228-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/47227/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='LeC0mUlHRiKJYGZtScpAB3NF9i8rYuPq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47227/why-should-we-use-postal_code-for-streets-and-places-instead-of-addrpostcode?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47227/why-should-we-use-postal_code-for-streets-and-places-instead-of-addrpostcode?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/postcode/"
+            class="tag-link-postcode"
+            title="see questions tagged'postcode'using tags"
+            rel="tag">postcode</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/postalcode/"
+            class="tag-link-postalcode"
+            title="see questions tagged'postalcode'using tags"
+            rel="tag">postalcode</a> <span class="tag-number">&#215;18</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 19, 2015, 1:24 a.m.">19 Dec '15, 01:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,036 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 21, 2015, 10:20 a.m.">21 Dec '15, 10:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/22793/adding-postcodes-from-kml">Adding postcodes from KML</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2021/adding-postcode">Adding Postcode</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54627/how-to-correct-all-dutch-postal-codes">How to correct all dutch postal codes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77790/postal-code-clustering-from-osm-data">Postal Code &quot;Clustering&quot; from OSM Data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/153/how-do-you-tell-if-a-minor-service-road-is-accessprivate-destination-or-permissive">How do you tell if a minor service road is access=private, destination, or permissive?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/162/how-do-i-tag-ways-with-partial-access">How do I tag ways with partial access?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/125/how-do-i-stop-rivers-from-rendering-where-the-riverbanks-are-mapped">How do I stop rivers from rendering where the riverbanks are mapped?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/240/how-can-i-get-a-list-of-all-objects-with-a-certain-tag">How can I get a list of all objects with a certain tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/134/how-do-i-map-a-road-that-has-traffic-lights-only-in-one-direction">How do I map a road that has traffic lights only in one direction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/228/uk-road-was-detrunked-why-does-osm-still-have-it-tagged-highwaytrunk">[UK road] was detrunked; why does OSM still have it tagged highway=trunk?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

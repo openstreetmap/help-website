@@ -1,0 +1,92 @@
++++
+type = "question"
+title = "Ciudad Autonoma de Buenos Aires"
+description = '''Hola! En la ultima actualizacion de mapas en el Navigator - MapFactor me desaparecio la opcion de mi ciudad que es CaBa (Ciudad Autonoma de Buenos Aires). En los anteriores mapas figuraba algo como City Autonumus Of Buenos Aires. Ahora, buscando en cuidad, luego de pais, no aparece mas. Aparece Buen...'''
+date = "2018-01-03T16:10:00Z"
+lastmod = "2018-01-03T16:12:00Z"
+weight = 61463
+keywords = [ "ciudad", "de", "autonoma", "buenos", "aires" ]
+aliases = [ "/questions/61463" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Ciudad Autonoma de Buenos Aires](/questions/61463/ciudad-autonoma-de-buenos-aires)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-61463-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-61463-score" class="post-score" title="current number of votes">
+0
+</div>
+<span id="post-61463-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span> <span id="favorite-mark" class="ajax-command favorite-mark" rel="nofollow" title="mark/unmark this question as favorite (click again to cancel)"> </span>
+<div id="favorite-count" class="favorite-count">
+&#10;</div>
+</div></td>
+<td><div id="item-right">
+<div class="question-body">
+<p>Hola! En la ultima actualizacion de mapas en el Navigator - MapFactor me desaparecio la opcion de mi ciudad que es CaBa (Ciudad Autonoma de Buenos Aires). En los anteriores mapas figuraba algo como City Autonumus Of Buenos Aires. Ahora, buscando en cuidad, luego de pais, no aparece mas. Aparece Buenos Aires pero no es la ciudad.</p>
+<p>Me podrian ayudar a solucionarlo o encontrarlo?</p>
+<p>Gracias Nuria</p>
+</div>
+<div id="question-tags" class="tags-container tags">
+<span class="post-tag tag-link-ciudad" rel="tag" title="see questions tagged &#39;ciudad&#39;">ciudad</span> <span class="post-tag tag-link-de" rel="tag" title="see questions tagged &#39;de&#39;">de</span> <span class="post-tag tag-link-autonoma" rel="tag" title="see questions tagged &#39;autonoma&#39;">autonoma</span> <span class="post-tag tag-link-buenos" rel="tag" title="see questions tagged &#39;buenos&#39;">buenos</span> <span class="post-tag tag-link-aires" rel="tag" title="see questions tagged &#39;aires&#39;">aires</span>
+</div>
+<div id="question-controls" class="post-controls">
+<div class="community-wiki">
+This question is marked "community wiki".
+</div>
+</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>asked <strong>03 Jan '18, 16:10</strong></p>
+<img src="https://secure.gravatar.com/avatar/fd0487fc1acaf830c5be41cb0853f7f8?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Nuria&#39;s gravatar image" />
+<p><span>Nuria</span><br />
+<span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Nuria has no accepted answers">0%</span></p>
+</div>
+</div>
+<div id="comments-container-61463" class="comments-container">
+<span id="61464"></span>
+<div id="comment-61464" class="comment">
+<div id="post-61464-score" class="comment-score">
+&#10;</div>
+<div class="comment-text">
+<p>This is a Help forum for OpenStreetMap not for 3rd party products such as MapFactor's Navigator. You need to ask them directly.</p>
+</div>
+<div id="comment-61464-info" class="comment-info">
+<span class="comment-age">(03 Jan '18, 16:12)</span> <span class="comment-user userinfo">SK53 ♦</span>
+</div>
+</div>
+</div>
+<div id="comment-tools-61463" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-61463-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+

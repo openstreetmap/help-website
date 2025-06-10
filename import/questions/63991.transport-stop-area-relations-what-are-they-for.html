@@ -1,0 +1,886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Transport: Stop Area relations - What are they for? - OSM Help</title>
+        <meta name="description" content="Hi I&#39;ve been updating some UK railway stations, &amp;amp; was reading up on Stop Area What benefit is there in having what appears to be quite random items (bike parking, cafes etc) in a relation? I thought creating relations as a &#39;collection of things&#39; was discouraged. To me, all the relevant tags to i..." />
+        <meta name="keywords" content="public-transport,stop_area,relations" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/63991/transport-stop-area-relations-what-are-they-for" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/63991/transport-stop-area-relations-what-are-they-for?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='fN464Ygatuwk9o5k9CITOxoQRpslJO46' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/63991/transport-stop-area-relations-what-are-they-for">Transport: Stop Area relations - What are they for?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-63991-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63991/up/" rel="nofollow"> </a>
+<div id="post-63991-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-63991-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63991/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/63991/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi
+I've been updating some UK railway stations, &amp; was reading up on <a href="https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_area">Stop Area</a></p>
+<p>What benefit is there in having what appears to be quite random items (bike parking, cafes etc) in a <a href="https://www.openstreetmap.org/relation/4713070#map=17/51.26848/-1.08883">relation</a>? I thought creating relations as a 'collection of things' was discouraged.</p>
+<p>To me, all the relevant tags to indicate where a transport stop is are much easily accessible in a node on the highway/railway, or am I missing something?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/public-transport/" class="post-tag tag-link-public-transport"
+                                        title="see questions tagged 'public-transport'" rel="tag">public-transport</a>
+                                
+                                    <a href="/tags/stop_area/" class="post-tag tag-link-stop_area"
+                                        title="see questions tagged 'stop_area'" rel="tag">stop_area</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 Jun '18, 22:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c9c8b421ad22f51ddd62f23413717036?s=32&amp;d=identicon&amp;r=g" alt="DaveF's gravatar image" />
+    <p><a href="/users/1532/davef">DaveF</a><br/>
+    <span class="score" title="3264 reputation points"><span class="">3.3k</span></span><span title="84 badges"><span class="badge1">&#9679;</span><span class="badgecount">84</span></span><span title="98 badges"><span class="silver">&#9679;</span><span class="badgecount">98</span></span><span title="133 badges"><span class="bronze">&#9679;</span><span class="badgecount">133</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DaveF has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-63991">
+    
+        <a name="63992"></a>
+        <div class="comment" id="comment-63992">
+            <div id="post-63992-score" class="comment-score">4</div>
+            <div class="comment-text"><p>To be honest, the current public transport scheme seems very complicated to me: you need to make a route relation for each direction (gathering ways + stops + platforms), another mega-relation (type=route_master) for the whole, and here I'm seeing that for each stop area you need to gather elements in a relation too, right? That being said, editing relations is often frustrating and time taking.</p></div>
+            <div class="comment-info" id="comment-63992-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '18, 05:44)</span>
+                <a class="comment-user userinfo" href="/users/14163/privatemajory">Privatemajory</a>
+                
+            </div>
+        </div>
+    
+        <a name="64022"></a>
+        <div class="comment" id="comment-64022">
+            <div id="post-64022-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I concur it's very complicated, which is disappointing as it discourages contribution &amp; leads to more errors. Adding irrelevances such as telephones, just makes it worse.</p></div>
+            <div class="comment-info" id="comment-64022-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '18, 16:12)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-63991" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63991-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/63991/transport-stop-area-relations-what-are-they-for?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/63991/transport-stop-area-relations-what-are-they-for?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/63991/transport-stop-area-relations-what-are-they-for?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/63991/transport-stop-area-relations-what-are-they-for?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="64058"></a>
+                    <div id="answer-container-64058" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64058-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64058/up/" rel="nofollow"> </a>
+<div id="post-64058-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-64058-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64058/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm iffy on the idea of amenities as members of a <code>public_transport=stop_area</code> relation. If the cafe or bicycle parking is available to the general public even when they're not currently using the transport in question, it's an unhelpful confusion to map it as part of the transport relation.</p>
+<p>I see that the wiki (currently) disagrees and mentions in particular <code>taxi</code> and <code>bicycle_parking</code> as suggested relation members. Offhand I can't picture a station design where these amenities would be restricted to transport users. Maybe at a ferry or airport?</p>
+<p>Some metro stations do include a cafe or fast food or vending machine or atm... I can see the case for these being part of the transport relation -- <strong><em>if</em></strong> they're located in an area only accessible to those who've paid a fare. I think tagging these with <code>access=customers</code> would also be appropriate, or maybe invent something more explicit like <code>access=transport_customers</code>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64058/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jun '18, 16:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/977d95e2184a885d9a01fb3297225872?s=32&amp;d=identicon&amp;r=g" alt="jmapb's gravatar image" />
+    <p><a href="/users/14350/jmapb">jmapb</a><br/>
+    <span class="score" title="3387 reputation points"><span class="">3.4k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">&#9679;</span><span class="badgecount">33</span></span><span title="61 badges"><span class="bronze">&#9679;</span><span class="badgecount">61</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jmapb has 22 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64058">
+    
+        <a name="64061"></a>
+        <div class="comment" id="comment-64061">
+            <div id="post-64061-score" class="comment-score"></div>
+            <div class="comment-text"><p>Likewise I can't imagine transport users being unable to locate these facilities if they're not included. I think someone got a bit trigger-happy conceiving this scheme. I note on the transit forum there's a discussion about simplifying it.</p></div>
+            <div class="comment-info" id="comment-64061-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '18, 18:11)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+        <a name="64068"></a>
+        <div class="comment" id="comment-64068">
+            <div id="post-64068-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah I've been waiting for that to shake out. Until then I haven't been doing any public transport in my area, which is currently tagged up a dozen different ways and desperately needs some sanity.</p>
+
+<p>When the dust settles, then we can ponder about what scheme is best to indicate that certain amenities are for ticketed passengers only. In general, I feel that jamming them into transport relations is an awkward approach.</p></div>
+            <div class="comment-info" id="comment-64068-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '18, 23:57)</span>
+                <a class="comment-user userinfo" href="/users/14350/jmapb">jmapb</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64058" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64058-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="64049"></a>
+                    <div id="answer-container-64049" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64049-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64049/up/" rel="nofollow"> </a>
+<div id="post-64049-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-64049-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64049/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I have answered this and other of your questions on the Talk-transit mailing list, see <a href="https://lists.openstreetmap.org/pipermail/talk-transit/2018-June/001929.html">https://lists.openstreetmap.org/pipermail/talk-transit/2018-June/001929.html</a></p>
+<p>I would be nice if you ask your questions only at one location simultaneously. Thank you.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64049/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jun '18, 12:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a3b905e2632430b47dd9b8de3d8ba0?s=32&amp;d=identicon&amp;r=g" alt="Nakaner's gravatar image" />
+    <p><a href="/users/8569/nakaner">Nakaner</a><br/>
+    <span class="score" title="610 reputation points">610</span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Nakaner has 3 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/64049/">
+                edited
+                <strong>06 Jun '18, 13:42</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+            <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+            <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64049">
+    
+        <a name="64050"></a>
+        <div class="comment" id="comment-64050">
+            <div id="post-64050-score" class="comment-score">3</div>
+            <div class="comment-text"><p>They are separate forums. I'm not cross-posting. Many contributors here, don't subscribe to Talk-Transit. I've noticed specific OSM newsfeed/Github forums get very protectionist in their responses such as 'how dare you criticise' &amp; '...but that's how we've always done it'. To get as varied &amp; accurate responses as possible I will ask in as many forums as I wish. Thank you for your response on the other thread.</p></div>
+            <div class="comment-info" id="comment-64050-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '18, 13:14)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+        <a name="64051"></a>
+        <div class="comment" id="comment-64051">
+            <div id="post-64051-score" class="comment-score">4</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/8569/nakaner">@Nakaner</a>, meta responses about cross-posting as first line of an answer are not very helpful for users here. <a href="https://help.openstreetmap.org/users/4225/dave">@Dave</a> F is quite right in that many more people will see answers here than in talk-transit, therefore a complaint about cross-posting as the first response is not appropriate. Please use comments only to highlight cross-posting (which is useful as it can save someone the effort of writing a reply when the question has already been answered). I have therefore moved it to the end of your reply.</p></div>
+            <div class="comment-info" id="comment-64051-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '18, 13:42)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64059"></a>
+        <div class="comment" id="comment-64059">
+            <div id="post-64059-score" class="comment-score"></div>
+            <div class="comment-text"><p>Cross-posting is fine as long as you mention in each platform the other places where you've posted/emailed so the participants can see all of the responses of others. Otherwise, you get duplication of effort.</p></div>
+            <div class="comment-info" id="comment-64059-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '18, 17:27)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="64060"></a>
+        <div class="comment" id="comment-64060">
+            <div id="post-64060-score" class="comment-score">1</div>
+            <div class="comment-text"><p>This is <em>not</em> cross posting. That is where one <em>same</em> post is sent to multiple newsfeeds. This is not a newsfeed, it is a separate forum. My  posts were separate &amp; different. Participants should a able to determine if they already posted an answer to a similar query from the same user.</p></div>
+            <div class="comment-info" id="comment-64060-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '18, 18:04)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+        <a name="64062"></a>
+        <div class="comment" id="comment-64062">
+            <div id="post-64062-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, even if you don't want to semantically call it "cross-posting", you're still conducting parallel discussions about the same subject matter on different platforms where the participants in one aren't aware of the content of the other (until someone notices and mentions it). This wastes effort because different people may be unknowingly giving the same response when only one of those is necessary.</p></div>
+            <div class="comment-info" id="comment-64062-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '18, 18:15)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64049" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64049-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/63991/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='fN464Ygatuwk9o5k9CITOxoQRpslJO46' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63991/transport-stop-area-relations-what-are-they-for?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63991/transport-stop-area-relations-what-are-they-for?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/public-transport/"
+            class="tag-link-public-transport"
+            title="see questions tagged'public-transport'using tags"
+            rel="tag">public-transport</a> <span class="tag-number">&#215;62</span><br/>
+        
+        <a href="/tags/stop_area/"
+            class="tag-link-stop_area"
+            title="see questions tagged'stop_area'using tags"
+            rel="tag">stop_area</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 3, 2018, 10:36 p.m.">03 Jun '18, 22:36</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,141 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 6, 2018, 11:57 p.m.">06 Jun '18, 23:57</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/2545/tag-tram-tracks-with-name-ref-or-use-relationroute">Tag tram tracks with name=*, ref=* - or use Relation:route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9177/how-to-make-the-following-routes-compatible-with-the-public-transport-line-diagram">How to make the following routes &quot;compatible&quot; with the Public Transport Line Diagram?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60849/ptv2-neue-komplizierte-relation">PTv2 - neue, komplizierte Relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/372/is-there-a-limit-to-the-number-of-ways-containing-a-node">Is there a limit to the number of ways containing a node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/924/is-there-a-list-of-most-important-relations-in-the-world-like-longest-rivers-country-borders-etc">Is there a list of most important relations in the world? Like longest rivers, country borders etc...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1225/place-names-at-different-zoom-levels">Place names at different zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/923/how-do-i-realize-a-node-or-way-is-a-member-of-a-relation">How do I realize a node or way is a member of a relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1580/should-i-tag-name-for-the-way-or-for-the-relation">Should I tag &quot;name&quot; for the way or for the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2014/is-it-possible-to-merge-relations">Is it possible to merge relations?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1535/holes-in-scrub-relations-inner-outer">Holes in scrub (relations, inner &amp; outer)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

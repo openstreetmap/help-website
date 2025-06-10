@@ -1,0 +1,999 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>fixing overlapping roads/ways where there&#39;s several relations involved - OSM Help</title>
+        <meta name="description" content="I think I may have inadvertently inherited two streets that were overlapped but I fixed a broken turn restriction on...so I got left with the last edit. Unfortunately I have absolutely no idea how to fix this or where even to begin, so here&#39;s a request for help. The problem is here: https://www.open..." />
+        <meta name="keywords" content="ways,landuse,relation,overlap,fixup" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/69920/fixing-overlapping-roadsways-where-theres-several-relations-involved" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/69920/fixing-overlapping-roadsways-where-theres-several-relations-involved?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='45NK0GIf6FLcbfDXEFaevqi8QNof06jR' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/69920/fixing-overlapping-roadsways-where-theres-several-relations-involved">fixing overlapping roads/ways where there&#39;s several relations involved</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-69920-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69920/up/" rel="nofollow"> </a>
+<div id="post-69920-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-69920-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69920/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/69920/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I think I may have inadvertently inherited two streets that were overlapped but I fixed a broken turn restriction on...so I got left with the last edit.  Unfortunately I have absolutely no idea how to fix this or where even to begin, so here's a request for help.</p>
+<p>The problem is here:</p>
+<p><a href="https://www.openstreetmap.org/note/1834724#map=19/34.07372/-118.44531">https://www.openstreetmap.org/note/1834724#map=19/34.07372/-118.44531</a></p>
+<p>Unfortunately this is so bungled up with relations (turn restrictions and landuse) as well as shared nodes that I don't know where to start how to fix this.  I believe I may have had to split a way in order to properly add the turn restriction which may have worsened the situation, but don't believe I put two ways on top of each other as it's pretty tough to do so in iD.  Where can I start if I finally get enough tools and ideas to fix this without damaging the layout?</p>
+<p>From a really generalized point of view I wish I could just cut and paste the landuse and then fix the roads.  Then paste back the landuse.  But I have no idea how or if this methodology is possible...</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ways/" class="post-tag tag-link-ways"
+                                        title="see questions tagged 'ways'" rel="tag">ways</a>
+                                
+                                    <a href="/tags/landuse/" class="post-tag tag-link-landuse"
+                                        title="see questions tagged 'landuse'" rel="tag">landuse</a>
+                                
+                                    <a href="/tags/relation/" class="post-tag tag-link-relation"
+                                        title="see questions tagged 'relation'" rel="tag">relation</a>
+                                
+                                    <a href="/tags/overlap/" class="post-tag tag-link-overlap"
+                                        title="see questions tagged 'overlap'" rel="tag">overlap</a>
+                                
+                                    <a href="/tags/fixup/" class="post-tag tag-link-fixup"
+                                        title="see questions tagged 'fixup'" rel="tag">fixup</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Jul '19, 22:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c86f4c99960b2c3ffdeb1698ba833b52?s=32&amp;d=identicon&amp;r=g" alt="gpserror's gravatar image" />
+    <p><a href="/users/16890/gpserror">gpserror</a><br/>
+    <span class="score" title="171 reputation points">171</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="17 badges"><span class="bronze">&#9679;</span><span class="badgecount">17</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gpserror has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-69920">
+    
+</div>
+<div id="comment-tools-69920" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69920-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/69920/fixing-overlapping-roadsways-where-theres-several-relations-involved?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/69920/fixing-overlapping-roadsways-where-theres-several-relations-involved?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/69920/fixing-overlapping-roadsways-where-theres-several-relations-involved?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/69920/fixing-overlapping-roadsways-where-theres-several-relations-involved?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="69923"></a>
+                    <div id="answer-container-69923" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69923-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69923/up/" rel="nofollow"> </a>
+<div id="post-69923-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-69923-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69923/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi, 
+Yes areas of landuse extended over and joined to highway centerlines makes future editing more difficult. I think it's done for easiness, quickness and to make areas look prettier. But it's not correct!</p>
+<p>Anyway I've unjoined the landuse from the center line of the highway and relocated the nodes to the highway sides. The highway section you are concerned about is now clear of landuse. I've added an extra node to the duplicated section that it looks like you added as a duplication. If you delete this, (your new section,) the highway will be back as it was. I'm pretty sure you didn't make any amendment to the original highway. I hope this helps.</p>
+<p>If it is wished my changes can be reversed by reverting Changeset: 71999372 </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69923/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Jul '19, 07:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e3283a6b5f83e16214ec39a1478f64f0?s=32&amp;d=identicon&amp;r=g" alt="BCNorwich's gravatar image" />
+    <p><a href="/users/2925/bcnorwich">BCNorwich</a><br/>
+    <span class="score" title="6299 reputation points"><span class="">6.3k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="BCNorwich has 44 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69923">
+    
+        <a name="69933"></a>
+        <div class="comment" id="comment-69933">
+            <div id="post-69933-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, that helps.  If nobody complains that the map is no longer correct I think it should stand, though for consistency the rest of the highway needs to be separated from landuse, which would be the main reason for not separating the two -- if it were correct to do so.</p>
+
+<p>So how did you do that?  Which editor did you use?  I hope the solution wasn't to remove and redraw, there must be a better way of fixing something like this for future reference.</p>
+
+<p>Thanks again, now I need to figure out how to solve the next problem of two highways on top of each other and each having relations, hopefully not with each other...</p></div>
+            <div class="comment-info" id="comment-69933-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jul '19, 16:16)</span>
+                <a class="comment-user userinfo" href="/users/16890/gpserror">gpserror</a>
+                
+            </div>
+        </div>
+    
+        <a name="69938"></a>
+        <div class="comment" id="comment-69938">
+            <div id="post-69938-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, I unpicked each node with the JOSM editor and moved the node to the side. You can move several nodes at a time but if to many are moved it can get confusing, patience is helpful. I'll stress again in allmost all cases landuse does not extend to the highway center line, it is therefore wrong to map in this way. Even if someone complains it is still incorrect.</p>
+
+<p>You copied and added Way: West Sunset Boulevard (701258669) in duplication of the original/existing Way: West Sunset Boulevard (381210291). Just delete your Way: West Sunset Boulevard (701258669) and amend the way that is left. (I'm pretty sure before your amendment there was only one highway, no duplication.) Then make any amendment to the single original highway.</p>
+
+<p>You duplicated the route relation onto the duplicate highway. Removing Way: West Sunset Boulevard (701258669) will make no difference to the relations. </p>
+
+<p>I can remove the duplicate if you wish. Any further questions please just ask.</p></div>
+            <div class="comment-info" id="comment-69938-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jul '19, 18:07)</span>
+                <a class="comment-user userinfo" href="/users/2925/bcnorwich">BCNorwich</a>
+                
+            </div>
+        </div>
+    
+        <a name="69940"></a>
+        <div class="comment" id="comment-69940">
+            <div id="post-69940-score" class="comment-score"></div>
+            <div class="comment-text"><p>You have now removed/deleted one node from the center of that highway, you have not removed the duplicated section of highway.</p>
+
+<p>You can see below the changeset comment box, the node that's been deleted from West Sunset Boulevard (701258669, v3). The duplicate highway in now again exactly on top of the original way.</p>
+
+<p>Do you want me to remove the duplicate way?</p></div>
+            <div class="comment-info" id="comment-69940-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '19, 07:09)</span>
+                <a class="comment-user userinfo" href="/users/2925/bcnorwich">BCNorwich</a>
+                
+            </div>
+        </div>
+    
+        <a name="69941"></a>
+        <div class="comment" id="comment-69941">
+            <div id="post-69941-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hmm...still need to figure out how to do this.  If you view this as an emergency to fix, go ahead, else I'm trying to figure this thing out...  Thanks.</p></div>
+            <div class="comment-info" id="comment-69941-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '19, 08:15)</span>
+                <a class="comment-user userinfo" href="/users/16890/gpserror">gpserror</a>
+                
+            </div>
+        </div>
+    
+        <a name="69942"></a>
+        <div class="comment" id="comment-69942">
+            <div id="post-69942-score" class="comment-score"></div>
+            <div class="comment-text"><p>BTW, I downloaded JOSM ... and nice, able to easily select the overlapping way, unlike iD or Potlatch2 (or at least I couldn't the other two out yet).  Unfortunately I need to get to bed now so I can't work on this tonight.  The status still stands, if you feel it's an emergency to fix this bug, go ahead and fix it, though it'd be nice to figure this out for the next time I see something like this! (And any hints on how to use the tools are welcome!)</p></div>
+            <div class="comment-info" id="comment-69942-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '19, 08:38)</span>
+                <a class="comment-user userinfo" href="/users/16890/gpserror">gpserror</a>
+                
+            </div>
+        </div>
+    
+        <a name="69943"></a>
+        <div class="comment not_top_scorer" id="comment-69943">
+            <div id="post-69943-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, I can't see a way to separate duplicate ways in the iD editor. The iD editor will not allow you to delete a way which has routes or relations until you remove the way from the routes/relations. It gets complicated!</p>
+
+<p>It's an easy task with JOSM, (which IMHO is far superior to any other OSM editor). I think the duplication should be removed so I have removed the section you added. I hope that's OK, Changeset: 72042219 if you need to reverse my removal.</p>
+
+<p>Edit comment Sorry I posted before seeing your last comment.</p></div>
+            <div class="comment-info" id="comment-69943-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '19, 08:55)</span>
+                <a class="comment-user userinfo" href="/users/2925/bcnorwich">BCNorwich</a>
+                
+            </div>
+        </div>
+    
+        <a name="69949"></a>
+        <div class="comment not_top_scorer" id="comment-69949">
+            <div id="post-69949-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oh well, that's fine, no sense in reverting something that made the map better.  I wish I could have used this as a learning experience for fixing something I had never fixed before (just like fixing those turn relations that causes issues with routing software.)  Thanks though.</p></div>
+            <div class="comment-info" id="comment-69949-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '19, 18:34)</span>
+                <a class="comment-user userinfo" href="/users/16890/gpserror">gpserror</a>
+                
+            </div>
+        </div>
+    
+        <a name="69954"></a>
+        <div class="comment not_top_scorer" id="comment-69954">
+            <div id="post-69954-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can have a go at fixing some of the landuse overlaps at <a href="https://www.openstreetmap.org/way/305906891">https://www.openstreetmap.org/way/305906891</a> if you want - there a drain has been drawn in mostly the right place (see the OS OpenDataStreetView background) and farmland has been drawn along the screen but (see the Bing imagery) actually the farmland stops north of the drain and there's a hedge.</p></div>
+            <div class="comment-info" id="comment-69954-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '19, 19:29)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="69956"></a>
+        <div class="comment not_top_scorer" id="comment-69956">
+            <div id="post-69956-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, yeah I poked at it a bit with iD and this one seems fixable with iD, though I'm not 100% sure what the best representation of this anyway.  I also went ahead and separated a bit of the road and the landuse that was further west on the initial question point, but that too was done with iD.</p>
+
+<p>Just was trying to find something that I needed to use JOSM to fix as iD is much more convenient as HTML5 is readily available.  Again trying to avoid Potlatch due to Adobe-Flash.</p></div>
+            <div class="comment-info" id="comment-69956-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '19, 20:04)</span>
+                <a class="comment-user userinfo" href="/users/16890/gpserror">gpserror</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69923" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69923-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="69935"></a>
+                    <div id="answer-container-69935" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69935-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69935/up/" rel="nofollow"> </a>
+<div id="post-69935-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-69935-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69935/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Here's roughly what I'd do if I was editing the area in the editor I normally use (Potlatch 2):</p>
+<p>I'd notice that there were overlaid ways because each node is displayed differently to make that clear.</p>
+<p>Click on a node, click "/" to cycle around the joining ways there until you get to the offending landuse.</p>
+<p>"x" to split, and move both ends away from the middle of the road, and then rejoin both ends.</p>
+<p>Used "delete" to undo one side of the way from the middle of the road, then draw in where the edge actually is.  Repeat for the other side, and join the two ends.</p>
+<p>Repeat ^^ for the landuse polygon at the other side of the road.</p>
+<p>If there are still overlapping nodes, use "/" to see what they are.  These might be legitimate (e.g. townland boundaries in Ireland) or might not be - split, move or delete as required.</p>
+<p>Other OSM editors are available - perhaps someone can add an answer explaining the buttons to press in (e.g.) JOSM.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69935/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Jul '19, 16:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69935">
+    
+        <a name="69937"></a>
+        <div class="comment" id="comment-69937">
+            <div id="post-69937-score" class="comment-score"></div>
+            <div class="comment-text"><p>Aha.  Thanks for the Potlatch idea, yeah I think this may be a limitation of iD or at least I don't know how to deal with it in iD.  There were some other issues that I could solve by the "disconnect" feature in iD.  However, if I click on a node there and "disconnect" it would disconnect everything under that node -- which it would refuse to do because of the relations attached to that node -- even though I just wanted to disconnect the landuse from highway.</p>
+
+<p>I may have to look more into Potlatch, after getting used to iD the selection features seem really awkward.  I've been sort of apprehensive about Flash, which was my main holdback.</p></div>
+            <div class="comment-info" id="comment-69937-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jul '19, 17:52)</span>
+                <a class="comment-user userinfo" href="/users/16890/gpserror">gpserror</a>
+                
+            </div>
+        </div>
+    
+        <a name="69957"></a>
+        <div class="comment" id="comment-69957">
+            <div id="post-69957-score" class="comment-score"></div>
+            <div class="comment-text"><p>JOSM: Depending on the number of nodes that overlap between the way and the area, you might either ungroup node by node or the complete area.
+- node by node -&gt; select node, press "G"
+- the whole area, select area, press "G", make sure you validate at the end and fix overlapping nodes. This is a 1-click operation and might therefore be faster that ungrouping many individual nodes. The area will have overlapping nodes with areas on the other side than the highway
+- select the area and use the <a href="https://josm.openstreetmap.de/wiki/Help/Action/ImproveWayAccuracy">improve way accuracy (W)</a> to reposition the nodes that overlapped with the highway, in the process you can add or delete nodes
+With this approach you will not have to fix the relations, and you preserve as much history as possible.</p></div>
+            <div class="comment-info" id="comment-69957-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jul '19, 04:19)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="69958"></a>
+        <div class="comment" id="comment-69958">
+            <div id="post-69958-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not sure if already mentioned here but there is a handy shortcut using JOSM to select individual overlapping ways. <br>
+See 'Cycle in dense or overlapping objects with pop-up' on the following page... <br>
+<a href="https://josm.openstreetmap.de/wiki/Help/Action/Select">https://josm.openstreetmap.de/wiki/Help/Action/Select</a></p></div>
+            <div class="comment-info" id="comment-69958-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jul '19, 05:46)</span>
+                <a class="comment-user userinfo" href="/users/7380/nevw">nevw</a>
+                
+            </div>
+        </div>
+    
+        <a name="69960"></a>
+        <div class="comment" id="comment-69960">
+            <div id="post-69960-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks nevw, Wow there's always something new to learn. I had been using Alt+left click to cycle through multiple ways (two fingers). Never even thought to click the middle mouse wheel. For me it's now going to be click middle mouse wheel every time (single finger), should save hours.</p></div>
+            <div class="comment-info" id="comment-69960-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jul '19, 07:32)</span>
+                <a class="comment-user userinfo" href="/users/2925/bcnorwich">BCNorwich</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69935" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69935-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/69920/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='45NK0GIf6FLcbfDXEFaevqi8QNof06jR' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69920/fixing-overlapping-roadsways-where-theres-several-relations-involved?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69920/fixing-overlapping-roadsways-where-theres-several-relations-involved?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ways/"
+            class="tag-link-ways"
+            title="see questions tagged'ways'using tags"
+            rel="tag">ways</a> <span class="tag-number">&#215;167</span><br/>
+        
+        <a href="/tags/relation/"
+            class="tag-link-relation"
+            title="see questions tagged'relation'using tags"
+            rel="tag">relation</a> <span class="tag-number">&#215;128</span><br/>
+        
+        <a href="/tags/landuse/"
+            class="tag-link-landuse"
+            title="see questions tagged'landuse'using tags"
+            rel="tag">landuse</a> <span class="tag-number">&#215;103</span><br/>
+        
+        <a href="/tags/overlap/"
+            class="tag-link-overlap"
+            title="see questions tagged'overlap'using tags"
+            rel="tag">overlap</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/fixup/"
+            class="tag-link-fixup"
+            title="see questions tagged'fixup'using tags"
+            rel="tag">fixup</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 7, 2019, 10:39 p.m.">07 Jul '19, 22:39</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,567 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 10, 2019, 7:32 a.m.">10 Jul '19, 07:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/47618/exporting-multipolygon-as-ways">Exporting Multipolygon as ways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns">Mapping landuse residential and overlapping it by other landuse (on smaller areas in towns)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8197/re-ordering-sorting-ways-in-a-relation">Re-ordering / sorting ways in a relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32980/how-to-download-a-relation-with-the-tidy-elements">How to download a relation with the tidy elements?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68537/fixing-landuse-overlap">Fixing landuse overlap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15791/england-boundary-relation-58447-possible-major-problem">England boundary relation (58447) - possible major problem?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4434/overlapping-polygons-">overlapping polygons - ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/420/how-can-i-create-a-map-highlighting-a-relation-which-then-could-be-used-for-wikipedia-articles">How can I create a map highlighting a relation which then could be used for wikipedia articles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/372/is-there-a-limit-to-the-number-of-ways-containing-a-node">Is there a limit to the number of ways containing a node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/268/why-do-some-road-names-contain-semicolons">Why do some road names contain semicolons (;) ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

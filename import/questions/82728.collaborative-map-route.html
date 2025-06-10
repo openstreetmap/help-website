@@ -1,0 +1,777 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>collaborative map route - OSM Help</title>
+        <meta name="description" content="how can I do a map that allows user B to only continue the route of user A and give the option to calculate the route with the next point or make a straight line? update: Let&#39;s say a user accesses the OSM map via the web. The user only has options, establish a destination with a marker wherever he w..." />
+        <meta name="keywords" content="map,route,collaborative" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/82728/collaborative-map-route" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/82728/collaborative-map-route?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='1o3z63aRLkdX72aHL4qJLjFoC5BhQWmW' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/82728/collaborative-map-route">collaborative map route</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-82728-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82728/up/" rel="nofollow"> </a>
+<div id="post-82728-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-82728-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82728/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/82728/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>how can I do a map that allows user B to only continue the route of user A and give the option to calculate the route with the next point or make a straight line?</p>
+<p>update: Let's say a user accesses the OSM map via the web. The user only has options, establish a destination with a marker wherever he wants, but the start of the route is predefined by the previous user. The initial point or marker is set by me, not the user. I mean that a route can be built in chunks by different users. The pieces in the route can be in a straight line or be calculated by roads. All this in a custom private layer.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/collaborative/" class="post-tag tag-link-collaborative"
+                                        title="see questions tagged 'collaborative'" rel="tag">collaborative</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Dec '21, 21:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/691433c550db4b8c205904c1901ebbeb?s=32&amp;d=identicon&amp;r=g" alt="boyrok's gravatar image" />
+    <p><a href="/users/21117/boyrok">boyrok</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="boyrok has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/82728/">
+                edited
+                <strong>02 Dec '21, 19:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-82728">
+    
+        <a name="82738"></a>
+        <div class="comment" id="comment-82738">
+            <div id="post-82738-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello,
+I am wondering what is your question. What do you mean by "continue the route of user A" ? Is it a relation "route" started and not completed in OSM by A ? Or is it the result of a request to find how to go from one point to another one ?
+Do you want to calculate a length ? Or to display how to go to a new destination ?</p>
+
+<p>Thanks to give an example.
+greetings.</p></div>
+            <div class="comment-info" id="comment-82738-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Dec '21, 14:26)</span>
+                <a class="comment-user userinfo" href="/users/14264/zorglubu">zorglubu</a>
+                
+            </div>
+        </div>
+    
+        <a name="82739"></a>
+        <div class="comment" id="comment-82739">
+            <div id="post-82739-score" class="comment-score"></div>
+            <div class="comment-text"><p>Let's say a user accesses the OSM map via the web.  The user only has options, establish a destination with a marker wherever he wants, but the start of the route is predefined by the previous user.  The initial point or marker is set by me, not the user.  I mean that a route can be built in chunks by different users.  The pieces in the route can be in a straight line or be calculated by roads.</p></div>
+            <div class="comment-info" id="comment-82739-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Dec '21, 14:46)</span>
+                <a class="comment-user userinfo" href="/users/21117/boyrok">boyrok</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-82728" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82728-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/82728/collaborative-map-route?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/82728/collaborative-map-route?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/82728/collaborative-map-route?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/82728/collaborative-map-route?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="82740"></a>
+                    <div id="answer-container-82740" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-82740-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82740/up/" rel="nofollow"> </a>
+<div id="post-82740-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-82740-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82740/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I am not sure if it's ok with your need, but you could have a look at <a href="https://maps.openrouteservice.org">https://maps.openrouteservice.org</a></p>
+<p>You can fix the start location, and copy the URL with this start location. And don't forget to have a look at the buttons botton-right of the screen ;-)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/82740/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Dec '21, 15:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a588fbc312ece948db9faa4cc02b40de?s=32&amp;d=identicon&amp;r=g" alt="zorglubu's gravatar image" />
+    <p><a href="/users/14264/zorglubu">zorglubu</a><br/>
+    <span class="score" title="324 reputation points">324</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="zorglubu has 3 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-82740">
+    
+        <a name="82741"></a>
+        <div class="comment" id="comment-82741">
+            <div id="post-82741-score" class="comment-score"></div>
+            <div class="comment-text"><p>if it has some functions I want how to calculate the route between two addresses, but I am interested in calculating between coordinates and adding more addresses in the route.  I need something customizable for my own use.  I've been looking at leaflet it may have the functions I want.</p></div>
+            <div class="comment-info" id="comment-82741-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Dec '21, 15:22)</span>
+                <a class="comment-user userinfo" href="/users/21117/boyrok">boyrok</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-82740" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82740-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="82774"></a>
+                    <div id="answer-container-82774" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-82774-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82774/up/" rel="nofollow"> </a>
+<div id="post-82774-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-82774-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82774/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi.</p>
+<p><a href="http://facilmap.org/">Facilmap</a> is a not so known service based on OSM data, that has a lot of convenient functionalities. Shared maps is one, as well as easy routing, and export of route in said shared map.</p>
+<p>Maybe not so easy to customize as you would like, but much less work than building from scratch with leaflet (it would work, but might be a lot of work).</p>
+<p>Also it's open-source, so maybe you can host your own instance with the necessary customization...</p>
+<p>Regards.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/82774/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Dec '21, 11:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-82774">
+    
+</div>
+<div id="comment-tools-82774" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82774-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/82728/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='1o3z63aRLkdX72aHL4qJLjFoC5BhQWmW' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/82728/collaborative-map-route?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/82728/collaborative-map-route?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/collaborative/"
+            class="tag-link-collaborative"
+            title="see questions tagged'collaborative'using tags"
+            rel="tag">collaborative</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 1, 2021, 9:40 p.m.">01 Dec '21, 21:40</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,957 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 7, 2021, 11:09 a.m.">07 Dec '21, 11:09</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/48311/download-identical-map-extracts-with-and-without-route-shown">Download identical map extracts with and without route shown</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33372/video-sync-route-map">video sync route map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23784/can-we-create-a-personal-map-to-show-a-tour-route">can we create a personal map to show a tour route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36656/add-marker-to-a-routing-map">Add marker to a routing map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60192/plotting-route-as-an-overlay-on-a-map-image">Plotting route as an overlay on a map image</a>
+        </p>
+        
+        <p>
+            <a href="/questions/84310/best-practices-for-making-a-custom-marathon-route-map">Best practices for making a Custom Marathon route map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18033/bus-route-map-managua">bus route map managua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19149/how-can-i-compute-a-routepath-of-a-certain-length-between-two-places">How can I compute a route/path of a certain length between two places?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/773/map-for-railway-networks">Map for railway network(s)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/420/how-can-i-create-a-map-highlighting-a-relation-which-then-could-be-used-for-wikipedia-articles">How can I create a map highlighting a relation which then could be used for wikipedia articles?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,979 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>name= and Wikidata disprepancy - OSM Help</title>
+        <meta name="description" content="How come that the name cannot be set correctly if there is a wikidata link? I find numerous examples with names that cannot be set properly in the map. Almost all have an english language wikidata whereas the correct name is in in some other language. In such cases the english name / wikidata entry ..." />
+        <meta name="keywords" content="wikidata,name" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/81258/name-and-wikidata-disprepancy" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/81258/name-and-wikidata-disprepancy?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='LZ5nMQljPuuzc2su4ppIlmuzxPidtDc8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/81258/name-and-wikidata-disprepancy">name= and Wikidata disprepancy</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-81258-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/81258/up/" rel="nofollow"> </a>
+<div id="post-81258-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-81258-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/81258/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/81258/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How come that the name cannot be set correctly if there is a wikidata link? I find numerous examples with names that cannot be set properly in the map.</p>
+<p>Almost all have an english language wikidata whereas the correct name is in in some other language. In such cases the english name / wikidata entry always take preference. </p>
+<p>My examples are for place names in Greenland where the are two officially approved names, an inuit one and a danish. Nevertheless the unofficial english which occur in nwikidata take preference. </p>
+<p>Look here: <a href="https://www.openstreetmap.org/#map=11/60.0982/-43.6734">https://www.openstreetmap.org/#map=11/60.0982/-43.6734</a></p>
+<ul>
+<li>Prince Christian Sound: Real name is Ikerasassuaq</li>
+<li>Christian IV Island: Real name is Sammisoq</li>
+</ul>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/wikidata/" class="post-tag tag-link-wikidata"
+                                        title="see questions tagged 'wikidata'" rel="tag">wikidata</a>
+                                
+                                    <a href="/tags/name/" class="post-tag tag-link-name"
+                                        title="see questions tagged 'name'" rel="tag">name</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Aug '21, 19:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/210633c3e8ae52ed2bffdb7a36174f64?s=32&amp;d=identicon&amp;r=g" alt="andershl's gravatar image" />
+    <p><a href="/users/20129/andershl">andershl</a><br/>
+    <span class="score" title="84 reputation points">84</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andershl has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/81258/">
+                edited
+                <strong>10 Aug '21, 19:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-81258">
+    
+        <a name="81461"></a>
+        <div class="comment" id="comment-81461">
+            <div id="post-81461-score" class="comment-score"></div>
+            <div class="comment-text"><p>May be irrelevant: Note that the Wikidata item "name" is a label only, so it's not entirely correct to rely on that as the common name for <code>name=</code> in iD. The names should be properly recorded in properties P2561 (most well-known), P1448 (official), etc.</p></div>
+            <div class="comment-info" id="comment-81461-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '21, 05:32)</span>
+                <a class="comment-user userinfo" href="/users/16887/kovoschiz">Kovoschiz</a>
+                
+            </div>
+        </div>
+    
+        <a name="81465"></a>
+        <div class="comment" id="comment-81465">
+            <div id="post-81465-score" class="comment-score"></div>
+            <div class="comment-text"><p>I guess that P2561 and P1448 relate to wikidata. Is that to say I am right in assuming that wrong settings in wikidata will take precedence over corrections in OSM? And if so, how can it be corrected? I have tried in vain and unsuccessfully to edit in wikidata...</p></div>
+            <div class="comment-info" id="comment-81465-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '21, 08:03)</span>
+                <a class="comment-user userinfo" href="/users/20129/andershl">andershl</a>
+                
+            </div>
+        </div>
+    
+        <a name="81468"></a>
+        <div class="comment" id="comment-81468">
+            <div id="post-81468-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The standard layer in OSM does not refer to wikidata, so corrections to the OSM database will show up there. As mentioned in another comment, updates to low zoom levels may take some time (e.g. a month). But that is nothing to do with wikidata.</p></div>
+            <div class="comment-info" id="comment-81468-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '21, 08:30)</span>
+                <a class="comment-user userinfo" href="/users/14272/alan_gr">alan_gr</a>
+                
+            </div>
+        </div>
+    
+        <a name="81496"></a>
+        <div class="comment" id="comment-81496">
+            <div id="post-81496-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The OSM database containing all the geographical information we (the OSM contributors) collect is completely independent from Wikidata.  </p>
+
+<p>Some map creators choose to take information from Wikidata to label their maps. The standard layer on openstreetmap.org does not.  </p>
+
+<p>The iD editor locks editing the name if a Wikidata item is present. I don't know the exact rules when it does but in any case there is no linking or copying from Wikidata names to OSM names. And even with the lock in place you can still edit the OSM name as described in this thread and in the tooltip in iD itself.</p></div>
+            <div class="comment-info" id="comment-81496-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Aug '21, 09:18)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="81499"></a>
+        <div class="comment" id="comment-81499">
+            <div id="post-81499-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks. I realize that is has nothing to do with wikidata, but is simply a matter of (a lot of) patience. So far none of the geographical features that I have corrected for the last 3-4 weeks changed in default OSM. </p>
+
+<p>As to ID: Oh, I found that I can just skip the top part and go to the tags. There I can add, change, and delete anything directly. </p>
+
+<p>Shall just leave wikidata in future chagesets.</p>
+
+<p>Particularly about Greenland: Lots of places have 2-3 inuit names. Until one of them has been selected, the official one will most often be in danish. After assignment the danish will be old. They have a database for it. So far I have seen NO places with english names (strait/bay/glacier). Moreover no iniut names have a danish or english type after their proper name. There are no "XXX Island" or "XXX Ø". The name will be "XXX". old name or name:da may be "YYY" (in danish)whereas name:en may be "XXX Island" all right..</p></div>
+            <div class="comment-info" id="comment-81499-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Aug '21, 10:04)</span>
+                <a class="comment-user userinfo" href="/users/20129/andershl">andershl</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-81258" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-81258-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/81258/name-and-wikidata-disprepancy?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/81258/name-and-wikidata-disprepancy?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/81258/name-and-wikidata-disprepancy?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/81258/name-and-wikidata-disprepancy?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="81261"></a>
+                    <div id="answer-container-81261" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-81261-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/81261/up/" rel="nofollow"> </a>
+<div id="post-81261-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-81261-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/81261/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You should be able to edit the name if you scroll down to the Tags area on the left hand side of the screen, which does not enforce the constraint.</p>
+<p>Alternatively if wikidata tags are getting in the way of adding correct info to OSM then I would have no compunction in removing them, or renaming them so that the constraint no longer applies. In practice, I don't because I use the work-around above.</p>
+<p>In principle tying a name to a wikidata tag aims to promote stability &amp; discourage vandalism. Perhaps more importantly it helps newcomers avoid accidentally renaming significant features. One would hope that people adding wikidata tags do take care to check that the name tag is culturally appropriate when they do so.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/81261/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Aug '21, 21:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-81261">
+    
+        <a name="81273"></a>
+        <div class="comment" id="comment-81273">
+            <div id="post-81273-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Scrolling down in iD to the tags area is the way to do it. Removing (correct) wikidata link is vandalism in my view.</p>
+
+<p>Just to clarify. This name enforcement is only done in the iD editor. It is not part of the underlying data model.</p></div>
+            <div class="comment-info" id="comment-81273-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '21, 10:36)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="81275"></a>
+        <div class="comment" id="comment-81275">
+            <div id="post-81275-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Any feature which gets in the way of users correcting data is problematic. Wikidata tags aren't great because there are often 2 levels of indirection to check that they are actually correct. If a wikidata tag is assigned to an incorrectly named object, removing the tag if one does not have the time to investigate is hardly vandalism.</p></div>
+            <div class="comment-info" id="comment-81275-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '21, 11:52)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="81276"></a>
+        <div class="comment not_top_scorer" id="comment-81276">
+            <div id="post-81276-score" class="comment-score"></div>
+            <div class="comment-text"><p>The iD editor is getting in the way of users correcting data, not the wikidata tag. I'm rarely seeing wrong or ambigues wikidata tags. I'd assume most of them are correctly applied. Just removing them because one editor decided to value them more than the name tag is vandalism in my opinion.  There is a workaround you described yourself, so why sanction the deletion of the tags?</p></div>
+            <div class="comment-info" id="comment-81276-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '21, 12:48)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="81277"></a>
+        <div class="comment" id="comment-81277">
+            <div id="post-81277-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Just to throw another point of view, I'm definitely seeing ambiguous wikidata entries.  To take a specific example <a href="https://www.wikidata.org/wiki/Q7539634">https://www.wikidata.org/wiki/Q7539634</a> over at wikidata refers to both <a href="https://www.openstreetmap.org/relation/572742">https://www.openstreetmap.org/relation/572742</a> and <a href="https://www.openstreetmap.org/node/34169417">https://www.openstreetmap.org/node/34169417</a> in OSM.  OSM just has more detail than wikidata here.  </p>
+
+<p>In that example it looks like someone has set "council_name" for what should actually be the "name", perhaps because of this very issue.</p></div>
+            <div class="comment-info" id="comment-81277-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '21, 13:05)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="81301"></a>
+        <div class="comment" id="comment-81301">
+            <div id="post-81301-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> this is precisely the sort of issue I come across with Wikidata, where wikidata conflates several objects which have rather different semantic meaning on OSM (typically village, political division, administrative division, etc). Many wikidata tags were created from Wikipedia and therefore may reflect notability &amp; merging of articles which reflect wikipedias editorial policies.</p></div>
+            <div class="comment-info" id="comment-81301-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '21, 09:22)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="81338"></a>
+        <div class="comment not_top_scorer" id="comment-81338">
+            <div id="post-81338-score" class="comment-score"></div>
+            <div class="comment-text"><p>The comments are interesting, but the challenge is still there. For the two example objects no matter what I have tried the english versions still take precedence.</p>
+
+<p>Can anyone make the correct names take precedence and tell how it was done?</p>
+
+<p>And I am fully aware that precendence in displayed map may be dependent upon your nls setting. I am danish, so as for any other object I expect to see the contents of name or name:da.</p></div>
+            <div class="comment-info" id="comment-81338-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '21, 09:29)</span>
+                <a class="comment-user userinfo" href="/users/20129/andershl">andershl</a>
+                
+            </div>
+        </div>
+    
+        <a name="81340"></a>
+        <div class="comment not_top_scorer" id="comment-81340">
+            <div id="post-81340-score" class="comment-score">1</div>
+            <div class="comment-text"><p>So you have actually been able to update the names in the database as described above. You are now wondering why you don't see the changes in the standard map layer on openstreetmap.org.</p>
+
+<p>The names of these large objects are only displayed on lower zoom levels and map tiles of lower zoom levels are not updated on demand but only infrequently as it takes some time.</p>
+
+<p>So you have to be a bit patient.</p></div>
+            <div class="comment-info" id="comment-81340-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '21, 10:04)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="81341"></a>
+        <div class="comment" id="comment-81341">
+            <div id="post-81341-score" class="comment-score">2</div>
+            <div class="comment-text"><p>As to your last point. The standard map layer on openstreetmap.org uses static names, i.e. it always takes the value from the <code>name</code> key. Other maps may chose to use a different name tags or display names based on the language of the user.</p></div>
+            <div class="comment-info" id="comment-81341-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '21, 10:08)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="81349"></a>
+        <div class="comment not_top_scorer" id="comment-81349">
+            <div id="post-81349-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, I could easily change the name tag with ID, but apart from that nothing has happened so far.</p>
+
+<p>So I just need to have a LOT of patience to see it take effect = I should have waited some more weeks. Let's see...</p></div>
+            <div class="comment-info" id="comment-81349-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '21, 15:47)</span>
+                <a class="comment-user userinfo" href="/users/20129/andershl">andershl</a>
+                
+            </div>
+        </div>
+    
+        <a name="81446"></a>
+        <div class="comment not_top_scorer" id="comment-81446">
+            <div id="post-81446-score" class="comment-score"></div>
+            <div class="comment-text"><p>"A bit patient". What does that incur? Weeks, months or or??</p></div>
+            <div class="comment-info" id="comment-81446-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '21, 18:46)</span>
+                <a class="comment-user userinfo" href="/users/20129/andershl">andershl</a>
+                
+            </div>
+        </div>
+    
+        <a name="81448"></a>
+        <div class="comment not_top_scorer" id="comment-81448">
+            <div id="post-81448-score" class="comment-score">1</div>
+            <div class="comment-text"><p>For zoom 0-12 it gets updated about once a month to change on the standard layer at osm.org, zoom 13+ should be faster, e.g theroretically in seconds (depending on the caching layers plus rendering queue length).</p></div>
+            <div class="comment-info" id="comment-81448-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '21, 19:13)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="81494"></a>
+        <div class="comment not_top_scorer" id="comment-81494">
+            <div id="post-81494-score" class="comment-score"></div>
+            <div class="comment-text"><p>I note that some of the cycle maps are faster in reacting (or as I have seen it so far: They DO at least react)....</p></div>
+            <div class="comment-info" id="comment-81494-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Aug '21, 07:39)</span>
+                <a class="comment-user userinfo" href="/users/20129/andershl">andershl</a>
+                
+            </div>
+        </div>
+    
+        <a name="81498"></a>
+        <div class="comment not_top_scorer" id="comment-81498">
+            <div id="post-81498-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you are looking at the maps shown on the main website, CyclOSM updates very frequently. Humanitarian and transit-focused OPNVKarte too.</p></div>
+            <div class="comment-info" id="comment-81498-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Aug '21, 10:03)</span>
+                <a class="comment-user userinfo" href="/users/16887/kovoschiz">Kovoschiz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-81261" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 13
+        </span>
+        <a href="#" class="show-all-comments-link">show 8 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-81261-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/81258/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='LZ5nMQljPuuzc2su4ppIlmuzxPidtDc8' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/81258/name-and-wikidata-disprepancy?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/81258/name-and-wikidata-disprepancy?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/name/"
+            class="tag-link-name"
+            title="see questions tagged'name'using tags"
+            rel="tag">name</a> <span class="tag-number">&#215;219</span><br/>
+        
+        <a href="/tags/wikidata/"
+            class="tag-link-wikidata"
+            title="see questions tagged'wikidata'using tags"
+            rel="tag">wikidata</a> <span class="tag-number">&#215;19</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 10, 2021, 7:28 p.m.">10 Aug '21, 19:28</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,544 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 26, 2021, 10:04 a.m.">26 Aug '21, 10:04</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/589/how-to-tag-non-settlement-place-names">How to tag &#39;non-settlement&#39; place names?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/953/translating-place-names">Translating place names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1029/put-the-place-name-in-amenities">Put the place name in amenities ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1059/how-do-you-set-the-name-of-a-street">How do you set the name of a street?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1225/place-names-at-different-zoom-levels">Place names at different zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1226/names-for-valleys-mountains-etc">Names for Valleys, Mountains etc.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1286/determining-the-identity-of-features">Determining the identity of features?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1391/why-does-nominatim-not-pick-up-a-country-name">Why does Nominatim not pick up a country name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1434/what-means-the-tag-osmarenderrendernameno">What means the tag &quot;osmarender:renderName=no&quot; ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/313/how-do-i-find-the-name-of-a-motorway_junction">How do I find the name of a motorway_junction?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to filter only street names and city id in osmfilter? - OSM Help</title>
+        <meta name="description" content="Hello, I&#39;m newbie with the .osm files and I&#39;m trying to get All streets names from a Country with the ID of the city, filtering the file with osmfilter. Now I&#39;m trying to get them with: ./osmfilter ...o5m --keep=&quot;highway=cycleway highway=path highway=primary highway=residential highway=tertiary&quot; &amp;gt..." />
+        <meta name="keywords" content="city,streets,osmfilter,name" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='cb4eU5eY3IP5shPcASewTJ6j2tsdXEek' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter">How to filter only street names and city id in osmfilter?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-32163-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32163/up/" rel="nofollow"> </a>
+<div id="post-32163-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32163-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32163/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/32163/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, I'm newbie with the .osm files and I'm trying to get All streets names from a Country with the ID of the city, filtering the file with osmfilter. Now I'm trying to get them with:
+./osmfilter ...o5m --keep="highway=cycleway highway=path highway=primary highway=residential highway=tertiary" &gt; ....o5m
+But I'm getting nodes without bodies and I can't figure out which is the City ID.</p>
+<p>Regards</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/city/" class="post-tag tag-link-city"
+                                        title="see questions tagged 'city'" rel="tag">city</a>
+                                
+                                    <a href="/tags/streets/" class="post-tag tag-link-streets"
+                                        title="see questions tagged 'streets'" rel="tag">streets</a>
+                                
+                                    <a href="/tags/osmfilter/" class="post-tag tag-link-osmfilter"
+                                        title="see questions tagged 'osmfilter'" rel="tag">osmfilter</a>
+                                
+                                    <a href="/tags/name/" class="post-tag tag-link-name"
+                                        title="see questions tagged 'name'" rel="tag">name</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Apr '14, 17:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b1f1fd6379c69bc7e75b9eb7f90afdf6?s=32&amp;d=identicon&amp;r=g" alt="Petar81's gravatar image" />
+    <p><a href="/users/8560/petar81">Petar81</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Petar81 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/32163/">
+                edited
+                <strong>06 Apr '14, 18:42</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+            <p><a href="/users/158/scai">scai ♦</a><br/>
+            <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-32163">
+    
+        <a name="32203"></a>
+        <div class="comment not_top_scorer" id="comment-32203">
+            <div id="post-32203-score" class="comment-score"></div>
+            <div class="comment-text"><p>are you sure that you only get an osm file with only nodes and NO ways?</p>
+
+<p>And about the city where each way belongs to: Tell us where any filter program should know what belongs to a single city in the area you need. Are there good boundary relations or boundary ways for each city? or do you want to differentiate address data via the addr:city tag?</p></div>
+            <div class="comment-info" id="comment-32203-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Apr '14, 15:53)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+        <a name="32227"></a>
+        <div class="comment not_top_scorer" id="comment-32227">
+            <div id="post-32227-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello, I'm not familiar with osm files like I said, I don't know if I need to get ways or nodes, I read somewhere in the documentation that for each street there is ID of the City which it belongs to. I extracted the Cities successfuly and now I'm trying to get the streets. That's all. I want to put them in 2 MySQL Tables and list them Cities and Streets</p></div>
+            <div class="comment-info" id="comment-32227-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Apr '14, 16:18)</span>
+                <a class="comment-user userinfo" href="/users/8560/petar81">Petar81</a>
+                
+            </div>
+        </div>
+    
+        <a name="32229"></a>
+        <div class="comment" id="comment-32229">
+            <div id="post-32229-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Would it be possible to link to the "I read somewhere..." link?</p></div>
+            <div class="comment-info" id="comment-32229-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Apr '14, 16:59)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32239"></a>
+        <div class="comment" id="comment-32239">
+            <div id="post-32239-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Petar, if you want to use raw OSM data for your aims you should at least get familiar with the model of OSM elements ... see <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> as a starting point.</p>
+
+<p>You wrote: "I extracted the cities successfully" ... How did you do that in detail?? Tell us please so that we can lead you to a solution.</p>
+
+<p>Getting a list of all streets belonging to a certain city is definitively possible with OSM data.</p></div>
+            <div class="comment-info" id="comment-32239-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Apr '14, 19:33)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+        <a name="32290"></a>
+        <div class="comment not_top_scorer" id="comment-32290">
+            <div id="post-32290-score" class="comment-score"></div>
+            <div class="comment-text"><p>Like I said I used OSMFILTER for this:</p>
+
+<p>./osmfilter32 country.o5m --keep="place=city or place=town" --ignore-dependencies --keep-tags="all place= is_in:country= name:bg= name:en=" &gt; coutry-cities.o5m</p>
+
+<p>Simple as that. Now I'm trying to get ALL street. I'm now using "&lt;way&gt;" and to keep the "addr:tag" BUT it not all &lt;way&gt;s have addr:city..., THIS is my osmfilter details:
+./osmfilter32 coutry.o5m
+--keep-ways
+--drop-nodes
+--keep-tags="is_in:country= name:en= name= name:bg="
+--keep="highway=cycleway or highway=path or highway=primary or
+ highway=residential or highway=tertiary"</p>
+
+<blockquote>
+<p>country-streets.o5m</p>
+</blockquote></div>
+            <div class="comment-info" id="comment-32290-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '14, 11:36)</span>
+                <a class="comment-user userinfo" href="/users/8560/petar81">Petar81</a>
+                
+            </div>
+        </div>
+    
+        <a name="32294"></a>
+        <div class="comment" id="comment-32294">
+            <div id="post-32294-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Please be aware that having any addr: tag on any highway in the main OSM data you have downloaded is basically WRONG!</p>
+
+<p>Because addr: tags are to determine the position of addresses, and NOT any streets belonging to a city.</p>
+
+<p>So if you have cities or places with addr: tags in your area, that is "not so good tagging style" about the raw OSM data.</p></div>
+            <div class="comment-info" id="comment-32294-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '14, 12:26)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+        <a name="32296"></a>
+        <div class="comment not_top_scorer" id="comment-32296">
+            <div id="post-32296-score" class="comment-score"></div>
+            <div class="comment-text"><p>So that's just Wrong, ok. Then how to use the raw OSM data to get streets names with Cities without Polygon in MySQL?</p></div>
+            <div class="comment-info" id="comment-32296-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '14, 12:55)</span>
+                <a class="comment-user userinfo" href="/users/8560/petar81">Petar81</a>
+                
+            </div>
+        </div>
+    
+        <a name="32298"></a>
+        <div class="comment" id="comment-32298">
+            <div id="post-32298-score" class="comment-score">2</div>
+            <div class="comment-text"><p>You need polygons, or to be more exact in OSM language: you need boundary relations that display the boundary around a city or a place.</p>
+
+<p>It depends on the area what you are aiming at whethet these boundary relations are already in OSM database.</p>
+
+<p>Either tell us the area you are aiming at, or have a look on your own via <a href="http://openmapsurfer.uni-hd.de">http://openmapsurfer.uni-hd.de</a> -&gt; choose layer: OSM roads grayscale and overlay: OSM admin boundaries.</p></div>
+            <div class="comment-info" id="comment-32298-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '14, 14:14)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+        <a name="32300"></a>
+        <div class="comment not_top_scorer" id="comment-32300">
+            <div id="post-32300-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm aming at: user inputs City from database and that selects all streets from the City.
+Can you give me example how to extract all Cities and Streets from given Country and put them into MySQL? Thank you in advance =)</p></div>
+            <div class="comment-info" id="comment-32300-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '14, 14:42)</span>
+                <a class="comment-user userinfo" href="/users/8560/petar81">Petar81</a>
+                
+            </div>
+        </div>
+    
+        <a name="32301"></a>
+        <div class="comment not_top_scorer" id="comment-32301">
+            <div id="post-32301-score" class="comment-score"></div>
+            <div class="comment-text"><p>Re "... that selects all streets from the City" - what criteria should be used to determine that a particular street is within the city?</p></div>
+            <div class="comment-info" id="comment-32301-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '14, 14:45)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32302"></a>
+        <div class="comment not_top_scorer" id="comment-32302">
+            <div id="post-32302-score" class="comment-score"></div>
+            <div class="comment-text"><p>The criteria is if it is in the city(even if it continues to other city) or it's very small in size, to be shown as IN the city. And only show up 1 in the results(because I read that a street can be represented as multiple vectors).</p></div>
+            <div class="comment-info" id="comment-32302-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '14, 14:50)</span>
+                <a class="comment-user userinfo" href="/users/8560/petar81">Petar81</a>
+                
+            </div>
+        </div>
+    
+        <a name="32303"></a>
+        <div class="comment" id="comment-32303">
+            <div id="post-32303-score" class="comment-score">1</div>
+            <div class="comment-text"><p>OK, but how does the server that you're talking to know whether it's in a city or not?  A way in OSM will NOT have an attribute of what city it's in - it just has nodes, each of which has a latitude and longitude value (as previously mentioned, see <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> for more info).</p></div>
+            <div class="comment-info" id="comment-32303-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '14, 14:54)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32305"></a>
+        <div class="comment not_top_scorer" id="comment-32305">
+            <div id="post-32305-score" class="comment-score"></div>
+            <div class="comment-text"><p>I found this link:
+<a href="http://cdn.oreillystatic.com/en/assets/1/event/56/Openstreetmap%20-">http://cdn.oreillystatic.com/en/assets/1/event/56/Openstreetmap%20-</a><em>%20_PostGIS%7CMySQL%7CSpatiaLite</em>%20-<em>%20OpenLayers</em>%20From%20Map%20to%20Web%20Presentation.pdf</p>
+
+<p>The guy which has created it, have tables(if you see page 21):
+1) Planet_osm_polygon 2) Planet_osm_roads
+He's using Planet polygon for cities(not sure how) and he has separate table for all roads.</p>
+
+<p>But how to separate the Cities in the Planet_osm_polygon?</p>
+
+<p>I want to do it like here:
+<a href="http://services.gisgraphy.com/public/geocoding_worldwide.htm">http://services.gisgraphy.com/public/geocoding_worldwide.htm</a>
+Choose Country, choose City, list all Streets. How can it be done?</p></div>
+            <div class="comment-info" id="comment-32305-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '14, 15:24)</span>
+                <a class="comment-user userinfo" href="/users/8560/petar81">Petar81</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32163" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 13
+        </span>
+        <a href="#" class="show-all-comments-link">show 8 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32163-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="32308"></a>
+                    <div id="answer-container-32308" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32308-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32308/up/" rel="nofollow"> </a>
+<div id="post-32308-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32308-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32308/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>looking further at the website of gisgraphy.com they say that their framework is opensource, and they have installation instructions if you want to set up an own server.</p>
+<p>Have you tried that already?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32308/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Apr '14, 16:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32308">
+    
+        <a name="32313"></a>
+        <div class="comment" id="comment-32313">
+            <div id="post-32313-score" class="comment-score"></div>
+            <div class="comment-text"><p>There is one problem - This is JAVA application. I need it to be PHP. Secondly for the server part I will need 155 GB of space which is a lot for just Streetnames and cities...
+Is there an alternative way I can use for PHP?</p></div>
+            <div class="comment-info" id="comment-32313-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '14, 11:15)</span>
+                <a class="comment-user userinfo" href="/users/8560/petar81">Petar81</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32308" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32308-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/32163/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='cb4eU5eY3IP5shPcASewTJ6j2tsdXEek' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/name/"
+            class="tag-link-name"
+            title="see questions tagged'name'using tags"
+            rel="tag">name</a> <span class="tag-number">&#215;219</span><br/>
+        
+        <a href="/tags/city/"
+            class="tag-link-city"
+            title="see questions tagged'city'using tags"
+            rel="tag">city</a> <span class="tag-number">&#215;107</span><br/>
+        
+        <a href="/tags/osmfilter/"
+            class="tag-link-osmfilter"
+            title="see questions tagged'osmfilter'using tags"
+            rel="tag">osmfilter</a> <span class="tag-number">&#215;60</span><br/>
+        
+        <a href="/tags/streets/"
+            class="tag-link-streets"
+            title="see questions tagged'streets'using tags"
+            rel="tag">streets</a> <span class="tag-number">&#215;33</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 6, 2014, 5:58 p.m.">06 Apr '14, 17:58</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,913 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 12, 2014, 11:15 a.m.">12 Apr '14, 11:15</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/43789/city-name-correction-instructions">City name correction instructions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30583/ortsnamen-andern">Ortsnamen ändern</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26425/changing-of-city-and-country-name-tags-in-southeast-asia">Changing of city and country name tags in Southeast-Asia</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37824/city-names-in-cyrillic-in-kosovo">City names in Cyrillic in Kosovo</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53000/how-to-get-the-street-new-name-and-old-name-and-add-the-same-id-to-each">How to get the street new name and old name and add the same id to each</a>
+        </p>
+        
+        <p>
+            <a href="/questions/87180/english-city-name-in-overpass-turbo-request">english city name in overpass turbo request</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13197/how-do-i-determine-the-shortest-path-that-traverses-all-streets-within-a-city">How do I determine the shortest path that traverses all streets within a city?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22070/street-pattern-graph-in-matlab">Street pattern graph in Matlab</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1226/names-for-valleys-mountains-etc">Names for Valleys, Mountains etc.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1225/place-names-at-different-zoom-levels">Place names at different zoom levels</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

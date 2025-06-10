@@ -1,0 +1,791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Finding multipolygons with more than one &#39;outer&#39; way. Overpass? - OSM Help</title>
+        <meta name="description" content="I&#39;d like to find multipolygons that have more than one member with the role &#39;outer&#39;. Is there a way to do that with the Overpass API, or would I have to wait for https://github.com/drolbr/Overpass-API/issues/197 to get written? Would there be any other way to do this?" />
+        <meta name="keywords" content="overpass,relations,multipolygon" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/53447/finding-multipolygons-with-more-than-one-outer-way-overpass" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/53447/finding-multipolygons-with-more-than-one-outer-way-overpass?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='6RXW9bVOhfObNkqTYtE9FjVf3rcOtS2N' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/53447/finding-multipolygons-with-more-than-one-outer-way-overpass">Finding multipolygons with more than one &#39;outer&#39; way. Overpass?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-53447-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53447/up/" rel="nofollow"> </a>
+<div id="post-53447-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-53447-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53447/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/53447/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'd like to find multipolygons that have more than one member with the role 'outer'.</p>
+<p>Is there a way to do that with the Overpass API, or would I have to wait for <a href="https://github.com/drolbr/Overpass-API/issues/197">https://github.com/drolbr/Overpass-API/issues/197</a> to get written?</p>
+<p>Would there be any other way to do this?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                                    <a href="/tags/multipolygon/" class="post-tag tag-link-multipolygon"
+                                        title="see questions tagged 'multipolygon'" rel="tag">multipolygon</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Dec '16, 01:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/aace33beb0d1a608b0763ac8a2404049?s=32&amp;d=identicon&amp;r=g" alt="Stereo's gravatar image" />
+    <p><a href="/users/9786/stereo">Stereo</a><br/>
+    <span class="score" title="356 reputation points">356</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Stereo has one accepted answer">11&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-53447">
+    
+</div>
+<div id="comment-tools-53447" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53447-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/53447/finding-multipolygons-with-more-than-one-outer-way-overpass?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/53447/finding-multipolygons-with-more-than-one-outer-way-overpass?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/53447/finding-multipolygons-with-more-than-one-outer-way-overpass?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/53447/finding-multipolygons-with-more-than-one-outer-way-overpass?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="53453"></a>
+                    <div id="answer-container-53453" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53453-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53453/up/" rel="nofollow"> </a>
+<div id="post-53453-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-53453-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53453/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Stereo has selected this answer as the correct answer"
+        href="/accept_answer/53453/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you are willing to put up with a beta quality program I am working on, you can use <a href="https://github.com/osmcode/osmium-filter">osmium-filter</a>.
+It can do a query like that: osmium-filter-simple <code>INPUTFILE -e '@relation and (@members[@role=="outer"] &gt; 1)' -o OUTPUTFILE</code>. It doesn't support giving you all the ways and nodes needed for these relations yet, if you need that, you can use the <a href="http://osmcode.org/osmium-tool/">Osmium tool</a> (to be more exact, <a href="http://docs.osmcode.org/osmium/latest/osmium-getid.html"><code>osmium getid</code></a>). Other options include writing your own program using libosmium, PyOsmium, or node-osmium (see <a href="http://osmcode.org/).">http://osmcode.org/).</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53453/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Dec '16, 09:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2d4dfcdcde73aa5e2ffa4a9b3a7cb51d?s=32&amp;d=identicon&amp;r=g" alt="Jochen%20Topf's gravatar image" />
+    <p><a href="/users/112/jochen-topf">Jochen Topf</a><br/>
+    <span class="score" title="5244 reputation points"><span class="">5.2k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="50 badges"><span class="silver">&#9679;</span><span class="badgecount">50</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jochen Topf has 32 accepted answers">31&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/53453/">
+                edited
+                <strong>10 Dec '16, 09:34</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53453">
+    
+        <a name="53456"></a>
+        <div class="comment" id="comment-53456">
+            <div id="post-53456-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you Jochen, I'll give that a go!</p>
+
+<p>Would you also happen to have a way of <a href="https://www.openstreetmap.org/user/Stereo/diary/40037">finding old-style multipolygons</a> with it?</p></div>
+            <div class="comment-info" id="comment-53456-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Dec '16, 12:56)</span>
+                <a class="comment-user userinfo" href="/users/9786/stereo">Stereo</a>
+                
+            </div>
+        </div>
+    
+        <a name="53462"></a>
+        <div class="comment" id="comment-53462">
+            <div id="post-53462-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Have a look at <a href="https://github.com/osmcode/osm-area-tools">https://github.com/osmcode/osm-area-tools</a> . There are tools that can find old-style multipolygons. I use that to create the overlay on <a href="http://area.jochentopf.com/map/index.html">http://area.jochentopf.com/map/index.html</a> for instance. But you can also just download the old-style mps from <a href="http://area.jochentopf.com/">http://area.jochentopf.com/</a> updated daily.</p></div>
+            <div class="comment-info" id="comment-53462-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Dec '16, 14:36)</span>
+                <a class="comment-user userinfo" href="/users/112/jochen-topf">Jochen Topf</a>
+                
+            </div>
+        </div>
+    
+        <a name="53463"></a>
+        <div class="comment" id="comment-53463">
+            <div id="post-53463-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wow, osmium-filter is impressively fast! It's an exciting tool, and I hope that you'll find time to document it :).</p>
+
+<p>'@relation and "type"="multipolygon" and (@members[@role=="outer"] &gt; 1)' did the trick.</p></div>
+            <div class="comment-info" id="comment-53463-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Dec '16, 14:38)</span>
+                <a class="comment-user userinfo" href="/users/9786/stereo">Stereo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53453" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53453-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="80090"></a>
+                    <div id="answer-container-80090" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80090-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80090/up/" rel="nofollow"> </a>
+<div id="post-80090-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-80090-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80090/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I ended up doing it in overpass:</p>
+<pre><code>[out:xml][timeout:25];
+{{geocodeArea:Luxembourg}}-&gt;.searchArea;
+// gather results
+(
+  relation["type"="multipolygon"](if: count_by_role("outer") &gt; 1 )(area.searchArea);
+  relation["type"="multipolygon"](if: count_members() == 1 )(area.searchArea);
+
+);
+// print results
+out meta;
+&gt;;
+out meta qt;
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80090/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 May '21, 21:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/aace33beb0d1a608b0763ac8a2404049?s=32&amp;d=identicon&amp;r=g" alt="Stereo's gravatar image" />
+    <p><a href="/users/9786/stereo">Stereo</a><br/>
+    <span class="score" title="356 reputation points">356</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Stereo has one accepted answer">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80090">
+    
+</div>
+<div id="comment-tools-80090" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80090-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/53447/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='6RXW9bVOhfObNkqTYtE9FjVf3rcOtS2N' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53447/finding-multipolygons-with-more-than-one-outer-way-overpass?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53447/finding-multipolygons-with-more-than-one-outer-way-overpass?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/multipolygon/"
+            class="tag-link-multipolygon"
+            title="see questions tagged'multipolygon'using tags"
+            rel="tag">multipolygon</a> <span class="tag-number">&#215;132</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 10, 2016, 1:16 a.m.">10 Dec '16, 01:16</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,209 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 9, 2021, 9:44 p.m.">09 May '21, 21:44</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/55027/overpass-retrieve-ways-that-are-member-of-more-than-one-multipolygon">Overpass: Retrieve ways that are member of more than one multipolygon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62730/overpass-query-to-find-multipolygon-relations-with-just-one-member">Overpass query to find multipolygon relations with just one member</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35225/overpass-query-only-outer-ways-of-multipolygon">Overpass: query only outer ways of multipolygon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">How do I map an island in a lake using iD editor and the multipolygon tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28317/finding-empty-relations">Finding empty relations</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34051/name-of-multipolygon-not-showing-on-its-member-ways">Name of multipolygon not showing on its member ways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15074/polygons-not-rendering-after-removing-them-from-multipolygon">Polygons not rendering after removing them from multipolygon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10313/pbfosm-file-move-multipolygon-tags-from-members-to-relation">pbf/osm-file: move multipolygon tags from members to relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21377/help-me-understand-warning-messages-for-relation-id2871705">Help me understand warning messages for relation id=2871705</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19925/overpass-get-relation-and-node-in-one-query-for-city">Overpass: Get relation and node in one query for city?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

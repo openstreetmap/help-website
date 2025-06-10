@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Get the bounding box of a city thanks to its ID - OSM Help</title>
+        <meta name="description" content="Hello, I&#39;m using Overpass API and I&#39;m looking for a way to get everything which is in a city determined by the ID of its node.  For instance, If we&#39;re getting a closer look to London, it shows :   &amp;lt;node id=&quot;**107775**&quot; lat=&quot;51.5072759&quot; lon=&quot;-0.1276597&quot;&amp;gt;  &amp;lt;tag k=&quot;capital&quot; v=&quot;yes&quot;/&amp;gt;  &amp;lt;t..." />
+        <meta name="keywords" content="bounding,box,overpass,id,city" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/21402/get-the-bounding-box-of-a-city-thanks-to-its-id" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/21402/get-the-bounding-box-of-a-city-thanks-to-its-id?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='DK9yXRYyGlIQF6SwAGL4uUGkLBkGkyAR' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/21402/get-the-bounding-box-of-a-city-thanks-to-its-id">Get the bounding box of a city thanks to its ID</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-21402-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21402/up/" rel="nofollow"> </a>
+<div id="post-21402-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-21402-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21402/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/21402/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, I'm using Overpass API and I'm looking for a way to get everything which is in a city determined by the ID of its node. 
+For instance, If we're getting a closer look to London, it shows : </p>
+<pre><code> &lt;node id="**107775**" lat="51.5072759" lon="-0.1276597"&gt;
+    &lt;tag k="capital" v="yes"/&gt;
+    &lt;tag k="ele" v="15"/&gt;
+    &lt;tag k="is_in" v="England, United Kingdom, UK, Great Britain, Europe"/&gt;
+    &lt;tag k="is_in:continent" v="Europe"/&gt;
+    &lt;tag k="is_in:country" v="United Kingdom"/&gt;
+    &lt;tag k="media:commons" v="https://commons.wikimedia.org/wiki/Category:London"/&gt;
+    &lt;tag k="name" v="London"/&gt;
+    [...]
+    &lt;tag k="website" v="http://www.london.gov.uk/"/&gt;
+    &lt;tag k="wikipedia" v="en:London"/&gt;
+  &lt;/node&gt;
+</code></pre>
+<p>I'd like to get the bounding box of this city thanks to its node ID (here : 107775). I managed to do this thanks to the name of the city by the request : 
+(rel["name"='London'];&gt;;);out; 
+But as you can see, in case of multiple places with the same name, you get multiple bounding box. That's the reason why I'd like to get this bounding box thanks to the ID of the node associated to the city. </p>
+<p>So, to sum um, with this node : node(107775), is it possible to get the bounding box of the city ? </p>
+<p>Thanks </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bounding/" class="post-tag tag-link-bounding"
+                                        title="see questions tagged 'bounding'" rel="tag">bounding</a>
+                                
+                                    <a href="/tags/box/" class="post-tag tag-link-box"
+                                        title="see questions tagged 'box'" rel="tag">box</a>
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/id/" class="post-tag tag-link-id"
+                                        title="see questions tagged 'id'" rel="tag">id</a>
+                                
+                                    <a href="/tags/city/" class="post-tag tag-link-city"
+                                        title="see questions tagged 'city'" rel="tag">city</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Apr '13, 12:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1e01b7993253cd6f5b2a7313012f493b?s=32&amp;d=identicon&amp;r=g" alt="Kobz's gravatar image" />
+    <p><a href="/users/6113/kobz">Kobz</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kobz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/21402/">
+                edited
+                <strong>11 Apr '13, 12:22</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-21402">
+    
+        <a name="21494"></a>
+        <div class="comment" id="comment-21494">
+            <div id="post-21494-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am not really sure that I understand your question (a bounding box based on a node?!?) - however, maybe it helps that many cities have their boundaries mapped like this: <a href="http://www.openstreetmap.org/browse/relation/62400">http://www.openstreetmap.org/browse/relation/62400</a> Note that this does not applies to every city (remarkably small ones) as OSM's data quality varies.</p></div>
+            <div class="comment-info" id="comment-21494-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '13, 01:37)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-21402" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21402-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/21402/get-the-bounding-box-of-a-city-thanks-to-its-id?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/21402/get-the-bounding-box-of-a-city-thanks-to-its-id?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/21402/get-the-bounding-box-of-a-city-thanks-to-its-id?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/21402/get-the-bounding-box-of-a-city-thanks-to-its-id?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="21551"></a>
+                    <div id="answer-container-21551" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-21551-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21551/up/" rel="nofollow"> </a>
+<div id="post-21551-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-21551-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21551/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>First of all, it seems that you are not looking for exact bounding boxes of a certain city, but for its boundary relation.</p>
+<p>Main problem: the binding from a node to its boundary relation is not completley mapped in the OSM data.
+There are some countries where you have boundary relations with one node as a member with the role admin_centre ... thus you ca find all place nodes that are member of a boundary relation.</p>
+<p>But this binding is incomplete in the world, even in Germany this data model is not so widely spreaded.</p>
+<p>see <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">Relation:boundary</a> in the OSM wiki.</p>
+<p>Maybe also helpful: <a href="https://help.openstreetmap.org/questions/19925/overpass-get-relation-and-node-in-one-query-for-city">overpass-get-relation-and-node-in-one-query-for-city</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/21551/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Apr '13, 17:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-21551">
+    
+</div>
+<div id="comment-tools-21551" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21551-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/21402/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='DK9yXRYyGlIQF6SwAGL4uUGkLBkGkyAR' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/21402/get-the-bounding-box-of-a-city-thanks-to-its-id?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/21402/get-the-bounding-box-of-a-city-thanks-to-its-id?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/city/"
+            class="tag-link-city"
+            title="see questions tagged'city'using tags"
+            rel="tag">city</a> <span class="tag-number">&#215;107</span><br/>
+        
+        <a href="/tags/id/"
+            class="tag-link-id"
+            title="see questions tagged'id'using tags"
+            rel="tag">id</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/bounding/"
+            class="tag-link-bounding"
+            title="see questions tagged'bounding'using tags"
+            rel="tag">bounding</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/box/"
+            class="tag-link-box"
+            title="see questions tagged'box'using tags"
+            rel="tag">box</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 11, 2013, 12:20 p.m.">11 Apr '13, 12:20</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,706 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 15, 2013, 5:10 p.m.">15 Apr '13, 17:10</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/58335/show-bounding-box-in-android-app">show bounding box in android app</a>
+        </p>
+        
+        <p>
+            <a href="/questions/79197/get-id-of-the-city-a-point-is-in-overpassnominatim">Get id of the city a point is in (Overpass/Nominatim)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33429/getting-the-id-of-a-way-from-coordinates-and-inserting-into-another-query">Getting the Id of a Way from coordinates and inserting into another query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56383/howto-reference-an-area-by-areaid">howto reference an area by area:id</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64751/overpass-filtering-search-to-a-specific-washington">Overpass: Filtering search to a specific Washington</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70935/data-loading-based-on-bounding-box">data loading based on bounding Box</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18512/how-to-get-pois-inside-bbox-in-android">How to get poi&#39;s inside bbox in android</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19421/calculate-bbox-from-current-gps-position">Calculate bbox from current gps position</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46377/nodes-outside-requested-bounding-box-from-overpass">Nodes outside requested bounding box from Overpass</a>
+        </p>
+        
+        <p>
+            <a href="/questions/79328/how-to-find-a-certain-number-of-pois-for-each-city-with-more-than-a-certain-number-of-inhabitants">How to find a certain number of POIs for each city with more than a certain number of inhabitants?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

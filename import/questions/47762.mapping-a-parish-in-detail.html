@@ -1,0 +1,849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Mapping a parish in detail - OSM Help</title>
+        <meta name="description" content="I have never used openstreet. Before I start to learn how, is it the best system for my needs? I have spent 5 years researching the history of my parish and produced a few amateurish hand drawn maps to illustrate my work. I want to produce a sequence of professional looking maps, at differing scales..." />
+        <meta name="keywords" content="historic,custom" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/47762/mapping-a-parish-in-detail" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/47762/mapping-a-parish-in-detail?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sA6stu7G3Flzd4E9pgjavZHVRgTm6Izh' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/47762/mapping-a-parish-in-detail">Mapping a parish in detail</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-47762-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47762/up/" rel="nofollow"> </a>
+<div id="post-47762-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-47762-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47762/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/47762/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have never used openstreet. Before I start to learn how, is it the best system for my needs? I have spent 5 years researching the history of my parish and produced a few amateurish hand drawn maps to illustrate my work. I want to produce a sequence of professional looking maps, at differing scales, to show changes over time - land ownership, land use, field boundaries, farmsteads, businesses and dwellings (existing, new and lost/demolished), drainage (including changes), new and old street/road names etc. Will I run into any copyright issues e.g. I think I have to rely on OS for relief features (contours)and old field and hedge boundaries? Is it possible to "hand draw" this sort of information onto an openstreet map, using an OS map for guidance? Ideally I would like to build up layers to fit one over another to illustrate these changes over time. I'd be very grateful for comment and advice.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/historic/" class="post-tag tag-link-historic"
+                                        title="see questions tagged 'historic'" rel="tag">historic</a>
+                                
+                                    <a href="/tags/custom/" class="post-tag tag-link-custom"
+                                        title="see questions tagged 'custom'" rel="tag">custom</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>31 Jan '16, 15:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7664216999e1a5ea02447d4aec753252?s=32&amp;d=identicon&amp;r=g" alt="Dick%20Pike's gravatar image" />
+    <p><a href="/users/11929/dick-pike">Dick Pike</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Dick Pike has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47762/">
+                edited
+                <strong>01 Feb '16, 18:42</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-47762">
+    
+</div>
+<div id="comment-tools-47762" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47762-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/47762/mapping-a-parish-in-detail?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/47762/mapping-a-parish-in-detail?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/47762/mapping-a-parish-in-detail?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/47762/mapping-a-parish-in-detail?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="47763"></a>
+                    <div id="answer-container-47763" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47763-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47763/up/" rel="nofollow"> </a>
+<div id="post-47763-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-47763-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47763/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The easiest way to display things on the map would be to add them to the database (which is what OpenStreetMap is). However, OpenStreetMap is focused on what is currently existing and adding no longer existing items is not a good thing.</p>
+<p>You might want to investigate the Open Historical Map project <a href="http://www.openhistoricalmap.org/">http://www.openhistoricalmap.org/</a></p>
+<p>As I understand it, they are using the OpenStreetMap tool set and concepts but also adding tagging to indicate when a feature existed (start and end dates). If you enter your information in that project then you should be able to select a year of interest and have it show a map with the things that existed at that time.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47763/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Jan '16, 17:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f60af53a4eba0c21f25c22674fb4a8cc?s=32&amp;d=identicon&amp;r=g" alt="n76's gravatar image" />
+    <p><a href="/users/5918/n76">n76</a><br/>
+    <span class="score" title="10839 reputation points"><span class="">10.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="82 badges"><span class="silver">&#9679;</span><span class="badgecount">82</span></span><span title="172 badges"><span class="bronze">&#9679;</span><span class="badgecount">172</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="n76 has 48 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47763">
+    
+        <a name="47768"></a>
+        <div class="comment" id="comment-47768">
+            <div id="post-47768-score" class="comment-score">4</div>
+            <div class="comment-text"><p>a small addition regarding copyright issues: yes, be careful please. see section "1." at <a href="http://wiki.osmfoundation.org/wiki/License/Contributor_Terms">http://wiki.osmfoundation.org/wiki/License/Contributor_Terms</a> . Do not use any materials for your OSM contributions unless you know they are definitely allowed to be used. E.g. for "OS": If I understand <a href="https://wiki.openstreetmap.org/wiki/Ordnance_Survey">https://wiki.openstreetmap.org/wiki/Ordnance_Survey</a> correctly, we are not allowed to use it.</p></div>
+            <div class="comment-info" id="comment-47768-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jan '16, 20:44)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47769"></a>
+        <div class="comment" id="comment-47769">
+            <div id="post-47769-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Absolutely - we can only use out-of-copyright Ordnance Survey maps (i.e. those published before 1965).</p></div>
+            <div class="comment-info" id="comment-47769-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jan '16, 22:55)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47786"></a>
+        <div class="comment" id="comment-47786">
+            <div id="post-47786-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you. I'll look at Open Historical Map project. Didn't know OS maps out of copyright before 1965 - very useful as these would be the ones I'd use as base layer e.g. for old field boundaries.</p></div>
+            <div class="comment-info" id="comment-47786-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '16, 11:50)</span>
+                <a class="comment-user userinfo" href="/users/11929/dick-pike">Dick Pike</a>
+                
+            </div>
+        </div>
+    
+        <a name="47793"></a>
+        <div class="comment" id="comment-47793">
+            <div id="post-47793-score" class="comment-score">1</div>
+            <div class="comment-text"><p>For current field boundaries bing imagery is the way to go as you do need to specify if it is a hedge, or fence. OS maps only show field boundaries.
+Again you should only add current boundaries to the OSM database, but historic boundaries can be added to openhistoricalmap.</p>
+
+<p>I am a bit of a field boundary mapper myself, but more from a navigating PROWs basis. <a href="http://www.openstreetmap.org/#map=16/52.8637/-2.7215">http://www.openstreetmap.org/#map=16/52.8637/-2.7215</a></p></div>
+            <div class="comment-info" id="comment-47793-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '16, 12:54)</span>
+                <a class="comment-user userinfo" href="/users/2855/trigpoint">trigpoint</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47763" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47763-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="47803"></a>
+                    <div id="answer-container-47803" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47803-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47803/up/" rel="nofollow"> </a>
+<div id="post-47803-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-47803-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47803/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Another approach would be to get the map as up to date for your Parish on Openstreetmap.  This presumably would be your last map in the timeline.</p>
+<p>You could then use the JOSM editor and download this area and save it locally and work offline to modify it going back in time, saving a different file locally for each period you want a map for.  JOSM will give you access to the old OS maps as a layer to work against.  I would set JOSM so that you have to add a password to upload data to avoid doing this accidentally and modifying the current OSM database.  </p>
+<p>You could tag any additional offline (locally saved) features with a start date and end date (there are tag for this that exist in the wiki) and a historic tag or alternatively remove and add features for each map period as appropriate.</p>
+<p>You can use Mapertive to produce hardcopy or tiles for your own web based slippy map.  If you have start date and end date on features you could develop different rendering rulesets to account for this.  i.e. apply a different ruleset for each map period you want to produce.  Maperitive rulesets will allow you to render the map as you want.  If you want a slippy map displayed on the web you could generate tiles for each map and then user Leaflet to display these as different selectable maps.</p>
+<p>If Openhistoricmap does what you want it would probably be the easiest approach but the above would be alternative for a small Parish map.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47803/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Feb '16, 18:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2ecce75f34e449d0ced44bf7aa6d6e06?s=32&amp;d=identicon&amp;r=g" alt="dud1's gravatar image" />
+    <p><a href="/users/3973/dud1">dud1</a><br/>
+    <span class="score" title="401 reputation points">401</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dud1 has 3 accepted answers">30&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47803">
+    
+        <a name="47804"></a>
+        <div class="comment" id="comment-47804">
+            <div id="post-47804-score" class="comment-score">2</div>
+            <div class="comment-text"><p>If you edit the header of the local OSM files to add upload='false' then JOSM won't ask you to upload the data to OpenStreetMap. Simply change the line near the top from:</p>
+
+<p>&lt;osm version="0.6" generator="JOSM"&gt;</p>
+
+<p>To</p>
+
+<p>&lt;osm version="0.6" upload="false" generator="JOSM"&gt;</p></div>
+            <div class="comment-info" id="comment-47804-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '16, 18:55)</span>
+                <a class="comment-user userinfo" href="/users/5918/n76">n76</a>
+                
+            </div>
+        </div>
+    
+        <a name="47832"></a>
+        <div class="comment" id="comment-47832">
+            <div id="post-47832-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'd certainly support this idea. Using OSM to get a decent accurate map with lots of detail is easily the best way to start a base line. I've explored the process required here: <a href="http://sk53-osm.blogspot.co.uk/2014/12/city-stripping-building-historical-road.html.">http://sk53-osm.blogspot.co.uk/2014/12/city-stripping-building-historical-road.html.</a> The MESH project in Edinbugh, run by the Local History dept. at Edinburgh University is doing something similar on a much larger scale. At least initially, it worth building snapshots of data for a restricted number of dates: even with decent source material you'll be surprised how much additional research may be needed to resolve issues. The snapshots can be kept locally in OSM files and edited in JOSM, or you can add them to OHM.</p></div>
+            <div class="comment-info" id="comment-47832-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Feb '16, 21:46)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47833"></a>
+        <div class="comment" id="comment-47833">
+            <div id="post-47833-score" class="comment-score"></div>
+            <div class="comment-text"><p>There is plenty of adequate open data for contours, including stuff from the Ordnance Survey: no need to try &amp; copy them from OS maps.</p></div>
+            <div class="comment-info" id="comment-47833-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Feb '16, 21:48)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47803" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47803-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/47762/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sA6stu7G3Flzd4E9pgjavZHVRgTm6Izh' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47762/mapping-a-parish-in-detail?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47762/mapping-a-parish-in-detail?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/custom/"
+            class="tag-link-custom"
+            title="see questions tagged'custom'using tags"
+            rel="tag">custom</a> <span class="tag-number">&#215;39</span><br/>
+        
+        <a href="/tags/historic/"
+            class="tag-link-historic"
+            title="see questions tagged'historic'using tags"
+            rel="tag">historic</a> <span class="tag-number">&#215;37</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 31, 2016, 3:24 p.m.">31 Jan '16, 15:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,225 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 2, 2016, 9:48 p.m.">02 Feb '16, 21:48</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3097/can-built-over-hamlets-be-deleted-or-retagged">Can built over hamlets be deleted or retagged?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4313/create-a-simple-minimalist-black-and-white-map">create a simple, minimalist black and white map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4767/placed-points-do-not-appear">Placed points do not appear</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8462/can-i-make-a-private-osm-with-user-access-validation-and-custome-notations">Can i make a private osm, with user access validation and custome notations?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11212/how-to-tag-a-railway-boneyard">how to tag a railway boneyard</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13291/buildings-warped-with-mkgmap">Buildings Warped with MKGmap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13749/how-to-render-a-custom-map-in-android-project">how to render a custom map in android project?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13750/map-render-in-android-project">[closed] map render in android project</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14264/reframe-my-own-question-how-to-tag-historic-military-earthwalls">Reframe my own question How to tag historic military earthwalls</a>
+        </p>
+        
+        <p>
+            <a href="/questions/650/does-osm-use-any-historic-data-or-want-to">Does OSM use any historic data? or want to?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

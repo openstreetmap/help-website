@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>OSM in android fragment became blank tiles - OSM Help</title>
+        <meta name="description" content="Hi, I&#39;m using android studio for my android app with OSM just to see the map with a marker of my current location. My problem is I have 2 fragment (f1 and f2), I put the OSM(org.osmdroid:osmdroid-android:6.1.13) in f1 and it works perfectly, I can see the map and the marker of my current location, b..." />
+        <meta name="keywords" content="mobile,studio,android,osmdroid,java" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/84582/osm-in-android-fragment-became-blank-tiles" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/84582/osm-in-android-fragment-became-blank-tiles?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Rw5prRN6XwuuDPIqjzvFbSP1Cmttd5gF' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/84582/osm-in-android-fragment-became-blank-tiles">OSM in android fragment became blank tiles</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-84582-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/84582/up/" rel="nofollow"> </a>
+<div id="post-84582-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-84582-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/84582/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/84582/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, I'm using android studio for my android app with OSM just to see the map with a marker of my current location.</p>
+<p>My problem is I have 2 fragment (f1 and f2), I put the OSM(org.osmdroid:osmdroid-android:6.1.13) in f1 and it works perfectly, I can see the map and  the marker of my current location, but when I go to f2 and go back again in f1 the map became full of blank tiles and a marker of  my current location. How can I resolve this ?</p>
+<p>Scenario 1: it's working  fine
+<img alt="alt text" src="https://help.openstreetmap.org/upfiles/0-02-06-3f2ab6ee004b7f879d939efa01a75aa93d56a27c4a7a848a931d305183aad14f_39ee3942a6bd1cf9.jpg"></p>
+<p>Scenario 2: I swipe left and go to History
+Scenario 3: I swipe right to go back to Home and this is what happened
+<img alt="alt text" src="https://help.openstreetmap.org/upfiles/0-02-06-2c4d5843455f7e8a2d48212ab4566cedec01efde58ebabf81bc9b2f20d5eb78b_106da7d7dd1349d.jpg"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mobile/" class="post-tag tag-link-mobile"
+                                        title="see questions tagged 'mobile'" rel="tag">mobile</a>
+                                
+                                    <a href="/tags/studio/" class="post-tag tag-link-studio"
+                                        title="see questions tagged 'studio'" rel="tag">studio</a>
+                                
+                                    <a href="/tags/android/" class="post-tag tag-link-android"
+                                        title="see questions tagged 'android'" rel="tag">android</a>
+                                
+                                    <a href="/tags/osmdroid/" class="post-tag tag-link-osmdroid"
+                                        title="see questions tagged 'osmdroid'" rel="tag">osmdroid</a>
+                                
+                                    <a href="/tags/java/" class="post-tag tag-link-java"
+                                        title="see questions tagged 'java'" rel="tag">java</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 May '22, 04:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/97f0ed3da0cd8878bb4ec167fa722207?s=32&amp;d=identicon&amp;r=g" alt="Drewbox's gravatar image" />
+    <p><a href="/users/21817/drewbox">Drewbox</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Drewbox has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/84582/">
+                edited
+                <strong>31 May '22, 07:59</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+            <p><a href="/users/158/scai">scai ♦</a><br/>
+            <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-84582">
+    
+        <a name="84587"></a>
+        <div class="comment" id="comment-84587">
+            <div id="post-84587-score" class="comment-score">2</div>
+            <div class="comment-text"><p>This sounds more like an app development question than an OSM one. You might get better results in an Android development forum.</p></div>
+            <div class="comment-info" id="comment-84587-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '22, 16:46)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="84593"></a>
+        <div class="comment" id="comment-84593">
+            <div id="post-84593-score" class="comment-score"></div>
+            <div class="comment-text"><p>I edited the question and added a screenshots</p></div>
+            <div class="comment-info" id="comment-84593-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 May '22, 11:06)</span>
+                <a class="comment-user userinfo" href="/users/21817/drewbox">Drewbox</a>
+                
+            </div>
+        </div>
+    
+        <a name="84621"></a>
+        <div class="comment" id="comment-84621">
+            <div id="post-84621-score" class="comment-score"></div>
+            <div class="comment-text"><p>You still haven't mentioned the name of the library/framework you are using. Is it osmdroid by chance? Also, as already hinted, you might have more luck asking this question at <a href="https://stackoverflow.com/">https://stackoverflow.com/</a></p>
+
+<p>Update: I see you already did: <a href="https://stackoverflow.com/questions/72390137/osm-in-android-fragment-become-blank-tiles">https://stackoverflow.com/questions/72390137/osm-in-android-fragment-become-blank-tiles</a></p></div>
+            <div class="comment-info" id="comment-84621-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '22, 11:23)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="84631"></a>
+        <div class="comment" id="comment-84631">
+            <div id="post-84631-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm using org.osmdroid:osmdroid-android:6.1.13 (OSMdroid)</p></div>
+            <div class="comment-info" id="comment-84631-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '22, 04:18)</span>
+                <a class="comment-user userinfo" href="/users/21817/drewbox">Drewbox</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-84582" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-84582-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/84582/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Rw5prRN6XwuuDPIqjzvFbSP1Cmttd5gF' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/84582/osm-in-android-fragment-became-blank-tiles?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/84582/osm-in-android-fragment-became-blank-tiles?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/android/"
+            class="tag-link-android"
+            title="see questions tagged'android'using tags"
+            rel="tag">android</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/java/"
+            class="tag-link-java"
+            title="see questions tagged'java'using tags"
+            rel="tag">java</a> <span class="tag-number">&#215;76</span><br/>
+        
+        <a href="/tags/osmdroid/"
+            class="tag-link-osmdroid"
+            title="see questions tagged'osmdroid'using tags"
+            rel="tag">osmdroid</a> <span class="tag-number">&#215;47</span><br/>
+        
+        <a href="/tags/mobile/"
+            class="tag-link-mobile"
+            title="see questions tagged'mobile'using tags"
+            rel="tag">mobile</a> <span class="tag-number">&#215;42</span><br/>
+        
+        <a href="/tags/studio/"
+            class="tag-link-studio"
+            title="see questions tagged'studio'using tags"
+            rel="tag">studio</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 25, 2022, 4:16 a.m.">25 May '22, 04:16</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,837 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 31, 2022, 7:59 a.m.">31 May '22, 07:59</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/61537/how-to-create-a-custom-tile-in-java">How to create a custom tile in Java</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61543/how-can-visualize-a-grib-data-on-my-map-in-java">How can visualize a grib data on my map in Java?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61597/how-can-speed-up-loading-and-setting-tiles-osmdroid">How can speed up loading and setting tiles - OSMDROID</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31073/routing-is-not-working">Routing is not working</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20695/lib-for-java-obf-pbf-or-other-format">Lib for Java OBF PBF or other format</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21397/openstreet-maps-for-mobile-app-quick-questions">[closed] Openstreet maps for mobile app - quick questions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17263/misaligned-coordinates-android">misaligned coordinates android</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13545/custom-tiles-to-android">Custom tiles to Android?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15952/address-search-on-mobile-osm-web-site">Address search on mobile OSM web site?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12145/using-osmdroid">using osmdroid</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

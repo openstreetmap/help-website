@@ -1,0 +1,1014 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>JOSM as local editor? - OSM Help</title>
+        <meta name="description" content="Editing local .osm files using JOSM.  When I save the file and try to exit the program, it prompts that &quot;example.osm should be uploaded. Actions to take: Upload&quot;.  Is there any way to tell JOSM that I&#39;m not using a server, and that saving the .osm file is sufficient?  Setting the server name to blan..." />
+        <meta name="keywords" content="josm" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/24797/josm-as-local-editor" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/24797/josm-as-local-editor?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='psW6WsFBhIefAaEi95mFtaGQWQD39C54' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/24797/josm-as-local-editor">JOSM as local editor?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-24797-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24797/up/" rel="nofollow"> </a>
+<div id="post-24797-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-24797-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24797/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/24797/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Editing local .osm files using JOSM.<br>
+</p>
+<p>When I save the file and try to exit the program, it prompts that "example.osm should be uploaded. Actions to take: Upload". </p>
+<p>Is there any way to tell JOSM that I'm not using a server, and that saving the .osm file is sufficient?<br>
+</p>
+<p>Setting the server name to blank doesn't work (JOSM doesn't even save that setting if you untick "use the default OSM server" without providing an alternative).</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Aug '13, 14:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3e44debd67415e7aa7759c83b829be6a?s=32&amp;d=identicon&amp;r=g" alt="OJW's gravatar image" />
+    <p><a href="/users/370/ojw">OJW</a><br/>
+    <span class="score" title="151 reputation points">151</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="OJW has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-24797">
+    
+</div>
+<div id="comment-tools-24797" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24797-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/24797/josm-as-local-editor?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/24797/josm-as-local-editor?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/24797/josm-as-local-editor?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/24797/josm-as-local-editor?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="26357"></a>
+                    <div id="answer-container-26357" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-26357-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26357/up/" rel="nofollow"> </a>
+<div id="post-26357-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-26357-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26357/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you are working on a single file, edit it in any text editor, changing (or adding) <code>upload='false'</code> in the &lt;osm&gt; tag. This way JOSM won't ask you to upload the file, and instead will give a warning if you try to.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/26357/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Sep '13, 12:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5cbbf1cf884c2145026c237aaed80dde?s=32&amp;d=identicon&amp;r=g" alt="Zverik's gravatar image" />
+    <p><a href="/users/1134/zverik">Zverik</a><br/>
+    <span class="score" title="613 reputation points">613</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Zverik has one accepted answer">10&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-26357">
+    
+</div>
+<div id="comment-tools-26357" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26357-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24815"></a>
+                    <div id="answer-container-24815" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24815-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24815/up/" rel="nofollow"> </a>
+<div id="post-24815-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-24815-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24815/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I am using JOSM to edit a local .osm file for features on a map that should not be added to the Openstreetmap database.</p>
+<p>Pretty easy to open local files, edit them and save them using the "Open" and "Save" or "Save As" options under the file menu.</p>
+<p>However JOSM warns me every time I quit the program that I have unsaved changes (even though I've saved them) and its default action is to upload them. I just make sure I click on the "Exit Now" button.</p>
+<p>Then when using mapnik to render my customized map I simply specify the local .osm file as the data source for some of the layers. Works out pretty well for things like adding a UTM grid, local nicknames for locations, etc. to my map image.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24815/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Aug '13, 23:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f60af53a4eba0c21f25c22674fb4a8cc?s=32&amp;d=identicon&amp;r=g" alt="n76's gravatar image" />
+    <p><a href="/users/5918/n76">n76</a><br/>
+    <span class="score" title="10839 reputation points"><span class="">10.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="82 badges"><span class="silver">&#9679;</span><span class="badgecount">82</span></span><span title="172 badges"><span class="bronze">&#9679;</span><span class="badgecount">172</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="n76 has 48 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24815">
+    
+        <a name="25066"></a>
+        <div class="comment" id="comment-25066">
+            <div id="post-25066-score" class="comment-score"></div>
+            <div class="comment-text"><p>Agreed, that it's easy enough to press "Exit now"; however it just looks messy to ignore a warning dialog during routine use.</p></div>
+            <div class="comment-info" id="comment-25066-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '13, 10:52)</span>
+                <a class="comment-user userinfo" href="/users/370/ojw">OJW</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24815" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24815-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24910"></a>
+                    <div id="answer-container-24910" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24910-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24910/up/" rel="nofollow"> </a>
+<div id="post-24910-score" class="post-score"
+    title="current number of votes">
+    -2
+</div>
+<a id="post-24910-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24910/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>JOSM knows that you have saved your file locally. You have the choice on both: you can exit with only a save action. But it's true that we should be able to specify that tou are wroking on a local database of your choice, or that you should be able to submit the data to more databases (each one with ots own status)
+You could do that by using a dummy database API url, such as "local:" followed by nothing (JOSM would ignore completely the database API.), or "file:" followed by nothing (JOSM in that case would allow you to choose a file destination to save a new copy; ideally it should support "svn:" or "git:" to submit a new version in a local version repository).
+This would require developing an API adapter.
+Another possibility is simply to install you own local API server, and specify it as the URL.
+Note however that object ID's are only significant within a single database (you may use another API URL, but this only works because these APIs are connected to the same target database).</p>
+<p>We still lack the possibility to manage multiple ID's to perform synchronization between databases. The only mechanism avaliable is the use of "negative" ID's which means that we still don't know the remote ID as it does not exist remotely.</p>
+<p>Sync'ing different databases (with their own spaces for their own IDs) is something that JOSM still does not perform: this requires manual preparation and there's no automated tool to link objects from one database to another. and select those that we will correlate. All we can do is to have separate layer worksheets, each one connectd to a single database (with negative IDs for objects still missing in the  associated database).</p>
+<p>But the UI still does not allow selecting the target database API to associate with a layer worksheet. But ideally all objects loaded in JOSM should be able to store one ID per database, and each database adapter should specidy if it supports ID's from other databases (in OSM, you could associate a custom "ref:&lt;db&gt;=&lt;id&gt;" attribute to objects, and should be able to specify those to discard/ignore on output to the API. These foreign keys should not be retrieved by default, unless the user explicitly requests them. They should be stored in tables separated from other attributes (tag/value)</p>
+<p>The OSM API should also facilitate the retrieval of objects using their foreign IDs.
+In my opinion this should not even be standard attributes/tags but managed in a separate index table as "foreign keys". We could also have adatation profiles indicating how to convert tags from one database to tags for the other database with a set of mapping rules for each adaptation.</p>
+<p>The OSM database could store these adapter rules as new kind of objects.</p>
+<p>An example of use would be the creation of separzte stores for working collaboratively on some areas or on some kind of objects and occasionally syn them with another target database. This could allow things like perliminary QA checks, collaborative work to prepare merges before imports.</p>
+<p>May be someday the API will evolve into a system like Git, where each user has its own store for the data he is working with, and with othe people working in synchronizations (the synchronizations could then become bidirectional)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24910/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Aug '13, 08:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b0ac3d0a15ce4f96f0d6b29172fca72a?s=32&amp;d=identicon&amp;r=g" alt="Verdy_p's gravatar image" />
+    <p><a href="/users/1555/verdy_p">Verdy_p</a><br/>
+    <span class="score" title="141 reputation points">141</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Verdy_p has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24910">
+    
+        <a name="24974"></a>
+        <div class="comment" id="comment-24974">
+            <div id="post-24974-score" class="comment-score">2</div>
+            <div class="comment-text"><p>The question is quite basic and not about syncing different databases or the future of the OSM API. Please don't get that distracted in answers.</p></div>
+            <div class="comment-info" id="comment-24974-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Aug '13, 12:29)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24910" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24910-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24943"></a>
+                    <div id="answer-container-24943" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24943-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24943/up/" rel="nofollow"> </a>
+<div id="post-24943-score" class="post-score"
+    title="current number of votes">
+    -3
+</div>
+<a id="post-24943-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24943/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As far as I know to edit map you have to agree to the license which says that all edits you do, you have to share/upload. And osm and tools are not for making maps for your use only. I hope you're aware of it. Maybe I'm missing the point, I'm still new to all this. If I do, don't mind this post.<br>
+</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24943/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Aug '13, 22:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08f475a8bb3c347e3b9860776eacada8?s=32&amp;d=identicon&amp;r=g" alt="KoyotGamma's gravatar image" />
+    <p><a href="/users/7031/koyotgamma">KoyotGamma</a><br/>
+    <span class="score" title="193 reputation points">193</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="KoyotGamma has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24943">
+    
+        <a name="24946"></a>
+        <div class="comment" id="comment-24946">
+            <div id="post-24946-score" class="comment-score">3</div>
+            <div class="comment-text"><p>For info, the OSM Contributor Terms page is <a href="http://www.osmfoundation.org/wiki/License/Contributor_Terms">here</a>.  It does NOT say "if you use JOSM, you have to upload the results to OpenStreetMap".<br>
+</p>
+
+<p>Information about the licence itself is <a href="http://www.osmfoundation.org/wiki/License">here</a>, but if someone was editing files in an OSM data format that didn't contain data from OpenStreetMap, it wouldn't apply to them.</p></div>
+            <div class="comment-info" id="comment-24946-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '13, 23:53)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="24955"></a>
+        <div class="comment" id="comment-24955">
+            <div id="post-24955-score" class="comment-score"></div>
+            <div class="comment-text"><p>The licence (and the contributor terms you have to accept if you want to subbmit data) you see in OSM is definitely about the tools you use to create and submit data.
+The tools havre their own licences, and OSM does not require you to use any specific tool (approved or nor): JOSM, iD, or other online sites, or even proprietary software are equivaly valid and do not change any term about the content of the OSM database or your use of this database.</p></div>
+            <div class="comment-info" id="comment-24955-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Aug '13, 06:11)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="24956"></a>
+        <div class="comment" id="comment-24956">
+            <div id="post-24956-score" class="comment-score"></div>
+            <div class="comment-text"><p>So yes, JOSM is NOT required to upload data ONLY to the OSM database. You could use it to connect to any other database (even a proprietary one). The existing licence of JOSM does not apply to the data you load, create, modify or submit with it. And JOSM can still be extended to support new develoment to connectto multiple databases in the same work session, with multiple layers, and facilities to perform merges with licence tracking for merged data (but you, as a user, must still respect the licences applicable to each public database you'll connect to, if it is not yours.</p></div>
+            <div class="comment-info" id="comment-24956-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Aug '13, 06:12)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="24958"></a>
+        <div class="comment" id="comment-24958">
+            <div id="post-24958-score" class="comment-score"></div>
+            <div class="comment-text"><p>So the OSM database can be freely used with JOSM, or QGIS, or AutoCAD, or any other software you create yourself or buy, or pay to be developed specifically for your needs You won't find the term "JOSM" in the OSM licence or in the OSM contributor terms. They are fully independant.</p></div>
+            <div class="comment-info" id="comment-24958-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Aug '13, 06:15)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="25065"></a>
+        <div class="comment" id="comment-25065">
+            <div id="post-25065-score" class="comment-score"></div>
+            <div class="comment-text"><p>No database in use here - JOSM is editing a file.<br>
+</p>
+
+<p>And yes, OSM tools' licenses typically include 'Freedom 0' ("The freedom to run the program for any purpose").</p></div>
+            <div class="comment-info" id="comment-25065-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '13, 10:49)</span>
+                <a class="comment-user userinfo" href="/users/370/ojw">OJW</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24943" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24943-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/24797/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='psW6WsFBhIefAaEi95mFtaGQWQD39C54' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24797/josm-as-local-editor?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24797/josm-as-local-editor?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 1, 2013, 2:05 p.m.">01 Aug '13, 14:05</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,442 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 15, 2013, noon">15 Sep '13, 12:00</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/579/what-does-a-basic-dgps-set-cost-for-improving-accuracy-especially-next-to-tall-buildings">What does a basic DGPS set cost for improving accuracy, especially next to tall buildings?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/595/josm-how-to-set-a-hotkey-for-hiding-showing-the-wms-layer">JOSM: How to set a hotkey for hiding / showing the WMS layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/639/how-do-i-use-openstreetmap-tiles-as-a-wms-background-in-josm">How do I use OpenStreetMap tiles as a WMS background in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/864/how-to-add-node-with-exact-coordinates-in-josm">How to add node with exact coordinates in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/903/relations-in-josm">Relations in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/999/how-to-extract-elevation-information-from-tracks-in-josm">How to extract elevation information from tracks in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1087/can-i-download-only-a-subset-of-data-in-josm">Can I download only a subset of data in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1252/rotate-polygon-in-josm">Rotate polygon in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/248/how-to-see-roads-underneath-areas-in-josm">How to see roads underneath areas in JOSM ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

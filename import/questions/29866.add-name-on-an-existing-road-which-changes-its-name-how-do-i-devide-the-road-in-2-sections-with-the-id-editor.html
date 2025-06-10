@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>add name on an existing road which changes its name - how do i devide the road in 2 sections with the iD editor? - OSM Help</title>
+        <meta name="description" content="Hey - i a new member and  I would like to add a name to long existing road which changes name after a rightturn. how do I divide the road in 2 sections so I can add the other name. I am using the default (iD) editor. have a nice day Hasse Svensson" />
+        <meta name="keywords" content="ideditor,section,editing,split,roadname" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sA4NhTTMQIoix6woAnRpwaui1hb7Wd8x' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor">add name on an existing road which changes its name - how do i devide the road in 2 sections with the iD editor?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-29866-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29866/up/" rel="nofollow"> </a>
+<div id="post-29866-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-29866-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29866/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/29866/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hey - i a new member and </p>
+<p>I would like to add a name to long existing road which changes name after a rightturn. how do I divide the road in 2 sections so I can add the other name. I am using the default (iD) editor.</p>
+<p>have a nice day</p>
+<p>Hasse Svensson</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/section/" class="post-tag tag-link-section"
+                                        title="see questions tagged 'section'" rel="tag">section</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/split/" class="post-tag tag-link-split"
+                                        title="see questions tagged 'split'" rel="tag">split</a>
+                                
+                                    <a href="/tags/roadname/" class="post-tag tag-link-roadname"
+                                        title="see questions tagged 'roadname'" rel="tag">roadname</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>15 Jan '14, 19:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/be6926b0afd67bc394e95b6fe242ed40?s=32&amp;d=identicon&amp;r=g" alt="HSvensson's gravatar image" />
+    <p><a href="/users/8157/hsvensson">HSvensson</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="HSvensson has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/29866/">
+                edited
+                <strong>21 May '14, 00:31</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-29866">
+    
+        <a name="29867"></a>
+        <div class="comment" id="comment-29867">
+            <div id="post-29867-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hi it depends on the editor, what do you use ?</p></div>
+            <div class="comment-info" id="comment-29867-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jan '14, 20:24)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+        <a name="29874"></a>
+        <div class="comment" id="comment-29874">
+            <div id="post-29874-score" class="comment-score">2</div>
+            <div class="comment-text"><p>nearly a duplicate question of: <a href="//help.openstreetmap.org/questions/9944/">how-to-tag-a-only-section-of-a-road-as-oneway</a> (oneway instead of name) and <a href="/questions/9785/">changing-the-status-of-a-separate-section-of-a-road</a> (Potlatch2 instead of  – likely – iD).</p></div>
+            <div class="comment-info" id="comment-29874-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jan '14, 23:40)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29866" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29866-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="29869"></a>
+                    <div id="answer-container-29869" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29869-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29869/up/" rel="nofollow"> </a>
+<div id="post-29869-score" class="post-score"
+    title="current number of votes">
+    10
+</div>
+<a id="post-29869-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29869/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you're using "iD" (the default web editor on OpenStreetMap.org) click on the way (road), then click on the node in the way that you want to divide it at, and you should see a "scissors" icon in the radial menu:</p>
+<p><img alt="iD Scissors icon in radial menu" src="http://help.openstreetmap.org/upfiles/id_snip.png"></p>
+<p>Click that, and the road will be split in two.  You can then click on each section and give it the correct name.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29869/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Jan '14, 22:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29869">
+    
+        <a name="29885"></a>
+        <div class="comment" id="comment-29885">
+            <div id="post-29885-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks SomeoneElse your tip were vere helpfull </p></div>
+            <div class="comment-info" id="comment-29885-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jan '14, 12:05)</span>
+                <a class="comment-user userinfo" href="/users/8157/hsvensson">HSvensson</a>
+                
+            </div>
+        </div>
+    
+        <a name="29886"></a>
+        <div class="comment" id="comment-29886">
+            <div id="post-29886-score" class="comment-score">3</div>
+            <div class="comment-text"><p>This is not relevant here, however, some other users reading this question and answer might be interested: <em>If</em> there is <em>no node in the way</em>, where it changes its name you first need to insert one (e.g. by dragging the small phantom nodes a bit). After this: proceed as described above.</p></div>
+            <div class="comment-info" id="comment-29886-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jan '14, 12:14)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30261"></a>
+        <div class="comment" id="comment-30261">
+            <div id="post-30261-score" class="comment-score"></div>
+            <div class="comment-text"><p><em>If</em> the node in the way (where it changes its name) also belongs to another (crossing) way, then you, <em>in addition, should select the way</em> (hold down the shift key on your keyboard [mouse cursor gets a "+" icon then] while clicking the way) which you want to split at this node. If you do not select also a way then all ways get split at this node.</p></div>
+            <div class="comment-info" id="comment-30261-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jan '14, 16:26)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29869" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29869-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="29868"></a>
+                    <div id="answer-container-29868" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29868-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29868/up/" rel="nofollow"> </a>
+<div id="post-29868-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-29868-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29868/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hai, please read these pages concerning three editors for OSM, all with specific rules and possibilities, <a href="http://wiki.openstreetmap.org/wiki/Editing">http://wiki.openstreetmap.org/wiki/Editing</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29868/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Jan '14, 22:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/29868/">
+                edited
+                <strong>16 Jan '14, 11:44</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29868">
+    
+        <a name="29870"></a>
+        <div class="comment" id="comment-29870">
+            <div id="post-29870-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You need to remove the dot from that link for it to work.</p></div>
+            <div class="comment-info" id="comment-29870-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jan '14, 23:13)</span>
+                <a class="comment-user userinfo" href="/users/8159/poor-wayfaring-stranger">Poor Wayfari...</a>
+                
+            </div>
+        </div>
+    
+        <a name="29873"></a>
+        <div class="comment" id="comment-29873">
+            <div id="post-29873-score" class="comment-score">1</div>
+            <div class="comment-text"><p>(link fixed)</p></div>
+            <div class="comment-info" id="comment-29873-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jan '14, 23:30)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="29877"></a>
+        <div class="comment" id="comment-29877">
+            <div id="post-29877-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Meta: I'm not sure it's a great idea to confuse new users by responding "here are three different programs you can try!" to a simple "how do I do this very basic thing?".</p></div>
+            <div class="comment-info" id="comment-29877-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jan '14, 08:20)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="29878"></a>
+        <div class="comment" id="comment-29878">
+            <div id="post-29878-score" class="comment-score"></div>
+            <div class="comment-text"><p>But what if the user doesn’t react to a simple question about the used method ? Just hand the complete package ? And make your own choice.</p></div>
+            <div class="comment-info" id="comment-29878-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jan '14, 09:06)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+        <a name="29882"></a>
+        <div class="comment" id="comment-29882">
+            <div id="post-29882-score" class="comment-score"></div>
+            <div class="comment-text"><p>Why should a new user to OSM have to even know what "an editor" is? Chances are they're using the default one. Don't make editing any more difficult than it needs to be.</p></div>
+            <div class="comment-info" id="comment-29882-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jan '14, 11:32)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29868" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29868-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/29866/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sA4NhTTMQIoix6woAnRpwaui1hb7Wd8x' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/split/"
+            class="tag-link-split"
+            title="see questions tagged'split'using tags"
+            rel="tag">split</a> <span class="tag-number">&#215;34</span><br/>
+        
+        <a href="/tags/section/"
+            class="tag-link-section"
+            title="see questions tagged'section'using tags"
+            rel="tag">section</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/roadname/"
+            class="tag-link-roadname"
+            title="see questions tagged'roadname'using tags"
+            rel="tag">roadname</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 15, 2014, 7:31 p.m.">15 Jan '14, 19:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,945 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 21, 2014, 12:31 a.m.">21 May '14, 00:31</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/28409/id-how-do-i-divide-a-linear-row-of-residential-dwellings-to-single-buildings">iD: How do I divide a linear row of residential dwellings to single buildings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34441/add-a-part-of-a-path-to-relation-in-id">Add a part of a path to relation in iD</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23231/how-to-tag-a-section-of-road-which-is-not-a-through-street">How to tag a section of road which is not a through-street</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27741/feature-request-copy-nodes">Feature request / Copy nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32968/is-it-possible-to-change-lines-into-an-area-using-id">[closed] Is it possible to change lines into an area using iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33332/how-to-split-road-name-into-two-different-names">[closed] How to split road name into two different names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5730/split-one-polygon-into-two-in-potlatch-2">Split One Polygon into Two in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22184/cant-save-new-note-using-the-new-id-editor">Can&#39;t save new note using the new iD editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26594/how-can-i-extend-line-by-adding-a-new-node-in-id">How can I extend line by adding a new node in iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34482/ids-ui-not-allowing-editing-of-nodes">iD&#39;s UI not allowing editing of nodes</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

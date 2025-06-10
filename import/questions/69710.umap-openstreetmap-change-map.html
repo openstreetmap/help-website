@@ -1,0 +1,982 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Umap openstreetmap: Change Map - OSM Help</title>
+        <meta name="description" content="Hi, I produced some Maps for my sites (fi. http://umap.openstreetmap.fr/nl/search/?q=de+oude+dorpskern) but when I look in My Maps, there is nothing available. I have no idea how I can change some details of what I made earlier, don&#39;t know how to get in, change and save again. Is that not possible a..." />
+        <meta name="keywords" content="edit,umap,link,lost" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/69710/umap-openstreetmap-change-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ZKpSD5YvAebdvL6PlVKJHA2l0B94nrEZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/69710/umap-openstreetmap-change-map">Umap openstreetmap: Change Map</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-69710-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69710/up/" rel="nofollow"> </a>
+<div id="post-69710-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-69710-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69710/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/69710/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, I produced some Maps for my sites (fi. <a href="http://umap.openstreetmap.fr/nl/search/?q=de+oude+dorpskern)">http://umap.openstreetmap.fr/nl/search/?q=de+oude+dorpskern)</a> but when I look in My Maps, there is nothing available. I have no idea how I can change some details of what I made earlier, don't know how to get in, change and save again. Is that not possible afterwards or am I doing something wrong..?</p>
+<p>Please help...</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/edit/" class="post-tag tag-link-edit"
+                                        title="see questions tagged 'edit'" rel="tag">edit</a>
+                                
+                                    <a href="/tags/umap/" class="post-tag tag-link-umap"
+                                        title="see questions tagged 'umap'" rel="tag">umap</a>
+                                
+                                    <a href="/tags/link/" class="post-tag tag-link-link"
+                                        title="see questions tagged 'link'" rel="tag">link</a>
+                                
+                                    <a href="/tags/lost/" class="post-tag tag-link-lost"
+                                        title="see questions tagged 'lost'" rel="tag">lost</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Jun '19, 14:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7576af6aa4c2286d12d9aca4ad7a439c?s=32&amp;d=identicon&amp;r=g" alt="CGID's gravatar image" />
+    <p><a href="/users/16828/cgid">CGID</a><br/>
+    <span class="score" title="0 reputation points">0</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="CGID has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/69710/">
+                edited
+                <strong>24 Jun '19, 09:54</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+            <p><a href="/users/158/scai">scai ♦</a><br/>
+            <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-69710">
+    
+        <a name="69737"></a>
+        <div class="comment" id="comment-69737">
+            <div id="post-69737-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Scai, I see that I used the link on the page you were advising me, but that you closed that question as a double question. This was the only english link for a dutchman as I am. The other one is French and that is not my favorite language... ;-(</p></div>
+            <div class="comment-info" id="comment-69737-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '19, 08:45)</span>
+                <a class="comment-user userinfo" href="/users/16828/cgid">CGID</a>
+                
+            </div>
+        </div>
+    
+        <a name="69738"></a>
+        <div class="comment" id="comment-69738">
+            <div id="post-69738-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry, I don't quite understand what you are trying to tell me. <a href="https://help.openstreetmap.org/questions/69723/edit-map-impossible">Your other question</a> sounds very similar to this one so I closed it as a duplicate. Both are on help.openstreetmap.org so no need to ask the same question twice on the same platform.</p></div>
+            <div class="comment-info" id="comment-69738-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '19, 08:59)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="69741"></a>
+        <div class="comment" id="comment-69741">
+            <div id="post-69741-score" class="comment-score"></div>
+            <div class="comment-text"><p>I guess you followed the link 'Help forum (only for minor usage problems)' on the page scai linked to. This link directs back to this help forum, though. There are other ways to connect to umap. Unfortunately, from my own experience, feedback on github is scarce at best. I haven't tried the mailing list or IRC, though. Maybe try to post a question in English in the French forum. It appears to be the most frequented of the different channels.</p></div>
+            <div class="comment-info" id="comment-69741-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '19, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="69743"></a>
+        <div class="comment" id="comment-69743">
+            <div id="post-69743-score" class="comment-score"></div>
+            <div class="comment-text"><p>That is exactly the matter... I am a novice in this world, but very enthousiastic about the results I made with OpenStreetMap. But having a question does not make it easy to get an answer somewhere. I tried GitHub now and I also send an email to the french forum.openstreetmap.fr/in my best french...</p>
+
+<p>Anyway, I don't understand why my question is so hard to answer. I posted a map on the internet that anyone can see and I want to know how I can change the map I made. I will not be the first who has to deal with this matter I suppose..?</p>
+
+<p>Thanks TZorn for your understanding.. ;-)</p></div>
+            <div class="comment-info" id="comment-69743-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '19, 10:00)</span>
+                <a class="comment-user userinfo" href="/users/16828/cgid">CGID</a>
+                
+            </div>
+        </div>
+    
+        <a name="69744"></a>
+        <div class="comment" id="comment-69744">
+            <div id="post-69744-score" class="comment-score"></div>
+            <div class="comment-text"><p>We can't answer your question because we are not uMap. uMap is an independent project, that's why you have to contact the uMap operators.</p></div>
+            <div class="comment-info" id="comment-69744-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '19, 10:15)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="69745"></a>
+        <div class="comment not_top_scorer" id="comment-69745">
+            <div id="post-69745-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Scai, I understand that now. As a novice this is a very strange world. I have now been busy for almost 2 days to edit something I made a month ago and I still have no idea if anyone has an answer for me.. I made these Maps in Google etc. but I prefer OpenStreetMaps. But if I cannot change it later on, I have to stick to Google... ;-(</p></div>
+            <div class="comment-info" id="comment-69745-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '19, 10:39)</span>
+                <a class="comment-user userinfo" href="/users/16828/cgid">CGID</a>
+                
+            </div>
+        </div>
+    
+        <a name="69746"></a>
+        <div class="comment not_top_scorer" id="comment-69746">
+            <div id="post-69746-score" class="comment-score"></div>
+            <div class="comment-text"><p>I you read the beginners guide, or some of it, you could edit OSM directly.</p></div>
+            <div class="comment-info" id="comment-69746-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '19, 12:46)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="69747"></a>
+        <div class="comment not_top_scorer" id="comment-69747">
+            <div id="post-69747-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK. thanks for your help...</p></div>
+            <div class="comment-info" id="comment-69747-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '19, 13:06)</span>
+                <a class="comment-user userinfo" href="/users/16828/cgid">CGID</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69710" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69710-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/69710/umap-openstreetmap-change-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/69710/umap-openstreetmap-change-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/69710/umap-openstreetmap-change-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/69710/umap-openstreetmap-change-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="69714"></a>
+                    <div id="answer-container-69714" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69714-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69714/up/" rel="nofollow"> </a>
+<div id="post-69714-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-69714-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69714/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you were not logged in when you made the maps then they won't be saved to your username. The only way to edit them is with the original edit link which is different to the link to share them. </p>
+<p>If you didn't save these links somewhere then I would normally recommend you download the "Full Map Data" and re-upload to a new map to recreate them, but in the more complex of the maps you've linked to it seems the share menu has been disabled. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69714/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Jun '19, 18:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ec8a0cf213f9797ad1c1ae2c28c2332d?s=32&amp;d=identicon&amp;r=g" alt="InsertUser's gravatar image" />
+    <p><a href="/users/4426/insertuser">InsertUser</a><br/>
+    <span class="score" title="11005 reputation points"><span class="">11.0k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="69 badges"><span class="silver">&#9679;</span><span class="badgecount">69</span></span><span title="185 badges"><span class="bronze">&#9679;</span><span class="badgecount">185</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="InsertUser has 73 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/69714/">
+                edited
+                <strong>23 Jun '19, 18:27</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69714">
+    
+        <a name="69715"></a>
+        <div class="comment" id="comment-69715">
+            <div id="post-69715-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You may find more specific help in the places linked <a href="https://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help">here</a>.</p></div>
+            <div class="comment-info" id="comment-69715-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jun '19, 18:25)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+        <a name="69716"></a>
+        <div class="comment" id="comment-69716">
+            <div id="post-69716-score" class="comment-score"></div>
+            <div class="comment-text"><p>I thougjt I made them under my usernamen, but maybe not.
+What do you men with <code>the original edit link</code>? I cannot find anything to change it with. How does that look like?
+Also download the full map data means I have to get in the map to make that choise, isn´t it?</p>
+
+<p>So it means that these maps wil stay on the internet forever...?</p>
+
+<p>Thanks for your response...</p></div>
+            <div class="comment-info" id="comment-69716-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jun '19, 21:05)</span>
+                <a class="comment-user userinfo" href="/users/16828/cgid">CGID</a>
+                
+            </div>
+        </div>
+    
+        <a name="69719"></a>
+        <div class="comment" id="comment-69719">
+            <div id="post-69719-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you thought you were signed in before make sure you are still logged in when you go back. 
+If you create a map anonymously, then when you first save a message pops up saying "Your map has been created! If you want to edit this map from another computer, please use this link: ..."  The link is also in the panel that opens when you click the key icon of a map you're editing
+As to being around forever, you may be able to get in touch with the the people who run that particular site and see if they can help.</p></div>
+            <div class="comment-info" id="comment-69719-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jun '19, 23:17)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69714" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69714-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="69728"></a>
+                    <div id="answer-container-69728" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69728-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69728/up/" rel="nofollow"> </a>
+<div id="post-69728-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-69728-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69728/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>uMap is a third-party service and not maintained by the OpenStreetMap people.</p>
+<p>See <a href="http://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help">http://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help</a> for a list of contact channels. If you lost the link to edit your map then try contacting user <a href="https://github.com/yohanboniface">https://github.com/yohanboniface</a> .</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69728/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jun '19, 09:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/69728/">
+                edited
+                <strong>24 Jun '19, 09:59</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69728">
+    
+        <a name="69729"></a>
+        <div class="comment" id="comment-69729">
+            <div id="post-69729-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your answers, I had my account before I produced anything. And I never saw a link to save, so something must have gone wrong with UMAP. I have contacted them with this matter.</p>
+
+<p>Thanks..</p></div>
+            <div class="comment-info" id="comment-69729-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '19, 10:59)</span>
+                <a class="comment-user userinfo" href="/users/16828/cgid">CGID</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69728" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69728-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/69710/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ZKpSD5YvAebdvL6PlVKJHA2l0B94nrEZ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69710/umap-openstreetmap-change-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69710/umap-openstreetmap-change-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/umap/"
+            class="tag-link-umap"
+            title="see questions tagged'umap'using tags"
+            rel="tag">umap</a> <span class="tag-number">&#215;314</span><br/>
+        
+        <a href="/tags/edit/"
+            class="tag-link-edit"
+            title="see questions tagged'edit'using tags"
+            rel="tag">edit</a> <span class="tag-number">&#215;94</span><br/>
+        
+        <a href="/tags/link/"
+            class="tag-link-link"
+            title="see questions tagged'link'using tags"
+            rel="tag">link</a> <span class="tag-number">&#215;26</span><br/>
+        
+        <a href="/tags/lost/"
+            class="tag-link-lost"
+            title="see questions tagged'lost'using tags"
+            rel="tag">lost</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 23, 2019, 2:33 p.m.">23 Jun '19, 14:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,455 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 25, 2019, 1:06 p.m.">25 Jun '19, 13:06</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/80169/umap-secret-edit-link-lost">UMAP secret edit link lost</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66813/i-was-not-logged-in-as-i-had-created-a-map">[closed] I was not logged in as I had created a map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36231/umapopenstreetmapfr-anonymous-edit-link-does-not-work-any-more">umap.openstreetmap.fr - anonymous edit link does not work any more?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66814/i-have-lost-the-link-to-edit-my-umap-map">I have lost the link to edit my &quot;umap&quot; map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48728/umap-how-to-link-a-text-to-an-email-in-a-popup">[closed] [UMAP] How to link a text to an email in a popup?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65755/how-can-i-edit-my-umap">How can I edit my umap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47353/umap-unable-to-edit-any-features-layers-maps-in-umap">umap unable to edit any features, layers, maps in umap.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41726/umap-popup-image-src-a-href">uMap Popup Image src + a href</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45730/umap-how-to-make-hypertext-links-in-popup-table-text">umap: how to make hypertext links in popup table text</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45657/marker-verlinken-mit-targetself-im-umap">marker verlinken mit target=self im uMap</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,952 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why does the cycle map take so long to update? - OSM Help</title>
+        <meta name="description" content="The &quot;cycle map&quot; base layer never seems to update. Why is this?" />
+        <meta name="keywords" content="cycle" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/213/why-does-the-cycle-map-take-so-long-to-update" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/213/why-does-the-cycle-map-take-so-long-to-update?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hTsdhwi09PkXTVfPwIwowif0rR8kV0Sq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/213/why-does-the-cycle-map-take-so-long-to-update">Why does the cycle map take so long to update?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-213-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/213/up/" rel="nofollow"> </a>
+<div id="post-213-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-213-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/213/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/213/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>The "cycle map" base layer never seems to update. Why is this?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/cycle/" class="post-tag tag-link-cycle"
+                                        title="see questions tagged 'cycle'" rel="tag">cycle</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>15 Jul '10, 07:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0c334b9f230e39c1e73a2b0322a23fb3?s=32&amp;d=identicon&amp;r=g" alt="NE2's gravatar image" />
+    <p><a href="/users/103/ne2">NE2</a><br/>
+    <span class="score" title="1359 reputation points"><span class="">1.4k</span></span><span title="33 badges"><span class="badge1">&#9679;</span><span class="badgecount">33</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="54 badges"><span class="bronze">&#9679;</span><span class="badgecount">54</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="NE2 has one accepted answer">9&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-213">
+    
+        <a name="432"></a>
+        <div class="comment" id="comment-432">
+            <div id="post-432-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I do appreciate that the cycle map is created by generous individuals in their spare time. I think the frustration is the uncertainty. </p>
+
+<p>The CycleMap wiki says "The database is updated every Wednesday morning with data from the previous week (ending at midnight on Tuesday evening). After that, it takes a few days for all the tiles to refresh, so it might take until Thursday or Friday before they show up. " </p>
+
+<p>But I have edits submitted over three weeks ago which have yet to show up. </p>
+
+<p>Is there anywhere that the current update status gets posted? That would be helpful information.</p></div>
+            <div class="comment-info" id="comment-432-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '10, 13:09)</span>
+                <a class="comment-user userinfo" href="/users/147/monxton">monxton</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-213" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-213-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/213/why-does-the-cycle-map-take-so-long-to-update?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/213/why-does-the-cycle-map-take-so-long-to-update?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/213/why-does-the-cycle-map-take-so-long-to-update?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/213/why-does-the-cycle-map-take-so-long-to-update?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="215"></a>
+                    <div id="answer-container-215" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-215-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/215/up/" rel="nofollow"> </a>
+<div id="post-215-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-215-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/215/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="NE2 has selected this answer as the correct answer"
+        href="/accept_answer/215/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The <a href="http://www.openstreetmap.org/?layers=00B0FTF">cycle layer</a> is based on <a href="http://opencyclemap.org/"></a><a href="http://opencyclemap.org/"></a><a href="http://opencyclemap.org/">http://opencyclemap.org/</a> which is created by <a href="http://www.gravitystorm.co.uk/">Andy Allan</a> and Dave Stubbs in their spare time.</p>
+<p>While resources are donated by <a href="http://cloudmade.com">cloudmade</a>, it is exactly that: a spare time hobby project.
+Also, I believe updating is a very resource-intensive process with parsing all the height data and stuff, so it can't just rerender things every day.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/215/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Jul '10, 09:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/278e1af65e82993efd0ba7bbbacf6435?s=32&amp;d=identicon&amp;r=g" alt="spaetz's gravatar image" />
+    <p><a href="/users/11/spaetz">spaetz</a><br/>
+    <span class="score" title="853 reputation points">853</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="spaetz has 2 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/215/">
+                edited
+                <strong>15 Jul '10, 09:05</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-215">
+    
+        <a name="2959"></a>
+        <div class="comment" id="comment-2959">
+            <div id="post-2959-score" class="comment-score"></div>
+            <div class="comment-text"><p>I believe the height data is merely a background image from USGS DEM and other than pasting cyclemap data on top of it is not processed.</p></div>
+            <div class="comment-info" id="comment-2959-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '11, 19:10)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+        <a name="3970"></a>
+        <div class="comment" id="comment-3970">
+            <div id="post-3970-score" class="comment-score">4</div>
+            <div class="comment-text"><p>Paul, that's a completely inaccurate statement.  You might be confusing opencyclemap with TopOSM, that uses height data from USGS - I don't, and there's definitely a lot of processing of the height data.</p></div>
+            <div class="comment-info" id="comment-3970-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '11, 09:20)</span>
+                <a class="comment-user userinfo" href="/users/3/andy-allan">Andy Allan</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-215" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-215-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="725"></a>
+                    <div id="answer-container-725" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-725-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/725/up/" rel="nofollow"> </a>
+<div id="post-725-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-725-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/725/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The updates to the Cycle Map are now hourly, however there are times when it will take longer due to higher demand, particularly by scrapers trying to download large numbers of tiles that haven't been rendered yet (thus not in the cache) and getting priority over rendering tiles that need an update.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/725/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Sep '10, 00:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3f44a2a3f0cffbc9787ba28fe973e2a4?s=32&amp;d=identicon&amp;r=g" alt="smsm1's gravatar image" />
+    <p><a href="/users/20/smsm1">smsm1</a><br/>
+    <span class="score" title="166 reputation points">166</span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="smsm1 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-725">
+    
+        <a name="2960"></a>
+        <div class="comment" id="comment-2960">
+            <div id="post-2960-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm wondering if this is still the case, since it's taken about a week without update in Tulsa.</p></div>
+            <div class="comment-info" id="comment-2960-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '11, 19:10)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+        <a name="3968"></a>
+        <div class="comment" id="comment-3968">
+            <div id="post-3968-score" class="comment-score">2</div>
+            <div class="comment-text"><p>It's no longer quite the case - see <a href="http://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle">the wiki</a>.</p></div>
+            <div class="comment-info" id="comment-3968-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '11, 09:04)</span>
+                <a class="comment-user userinfo" href="/users/3/andy-allan">Andy Allan</a>
+                
+            </div>
+        </div>
+    
+        <a name="3987"></a>
+        <div class="comment" id="comment-3987">
+            <div id="post-3987-score" class="comment-score"></div>
+            <div class="comment-text"><p>Nope, it's still the case.  There's quite a few US-area edits that were made over two weeks ago and still haven't rendered on any zoom of the OSM.</p></div>
+            <div class="comment-info" id="comment-3987-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '11, 15:49)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+        <a name="3997"></a>
+        <div class="comment" id="comment-3997">
+            <div id="post-3997-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you have any specific example (map permalink)?</p></div>
+            <div class="comment-info" id="comment-3997-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '11, 00:00)</span>
+                <a class="comment-user userinfo" href="/users/20/smsm1">smsm1</a>
+                
+            </div>
+        </div>
+    
+        <a name="3998"></a>
+        <div class="comment" id="comment-3998">
+            <div id="post-3998-score" class="comment-score"></div>
+            <div class="comment-text"><p>Northern California and Oregon along USBR 99 (Pacific Coast Bike Route/Oregon Coast Bike Route), Tulsa metropolitan area, and Oklahoma 66 and USBR 66 in Tulsa and southeastern Kansas, respectively.</p></div>
+            <div class="comment-info" id="comment-3998-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '11, 00:06)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-725" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-725-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="16172"></a>
+                    <div id="answer-container-16172" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16172-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16172/up/" rel="nofollow"> </a>
+<div id="post-16172-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-16172-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16172/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi</p>
+<p>Noticed that the Cycle base map on OSM does not appear to made it to Australia, Tasmania after the redaction.  Any clues if it is bogged down working its way through the backlog or is no longer being updated?</p>
+<p>Cheers</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16172/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Sep '12, 13:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/eabc2e270bb5ede66d7ea7984cfb00c5?s=32&amp;d=identicon&amp;r=g" alt="Ent's gravatar image" />
+    <p><a href="/users/4337/ent">Ent</a><br/>
+    <span class="score" title="10 reputation points">10</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ent has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16172/">
+                edited
+                <strong>17 Sep '12, 13:53</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16172">
+    
+</div>
+<div id="comment-tools-16172" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16172-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/213/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hTsdhwi09PkXTVfPwIwowif0rR8kV0Sq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/213/why-does-the-cycle-map-take-so-long-to-update?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/213/why-does-the-cycle-map-take-so-long-to-update?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/cycle/"
+            class="tag-link-cycle"
+            title="see questions tagged'cycle'using tags"
+            rel="tag">cycle</a> <span class="tag-number">&#215;32</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 15, 2010, 7:22 a.m.">15 Jul '10, 07:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,666 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 20, 2012, 4:18 a.m.">20 Oct '12, 04:18</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/447/what-is-the-date-of-the-data-currently-displayed-on-opencyclemaporg">[closed] What is the date of the data currently displayed on opencyclemap.org?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/719/which-of-parallel-ways-should-be-tagged-as-cycle-route">Which of parallel ways should be tagged as cycle route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4329/cycle-map-key">cycle map key</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5174/can-you-download-maps-onto-a-garmin-gps-for-a-bike">Can you download maps onto a Garmin GPS for a bike.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5984/routing-problem">routing problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7648/roads-where-bicycles-are-allowed-but-dangerous-to-use">Roads where bicycles are allowed but dangerous to use</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12644/new-cycle-path-not-routing">New cycle path not routing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14079/edits-show-only-on-standard-map-not-cycle-map-etc">edits show only on standard map, not cycle map, etc.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17087/download-open-cycle-maps">download open cycle maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/306/is-there-a-relation-analyzer-that-will-allow-me-to-check-the-integrity-of-relations-that-use-forward-and-backward-roles">Is there a relation analyzer that will allow me to check the integrity of relations that use &#39;forward&#39; and &#39;backward&#39; roles?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

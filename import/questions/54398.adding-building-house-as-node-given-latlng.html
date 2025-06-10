@@ -1,0 +1,1178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Adding building (house) as node given lat/lng - OSM Help</title>
+        <meta name="description" content="When a GPS lat/lng (coordinates) of a POI for a small house is available, is a good way to add it by creating a node with tag building=house? Example: https://www.openstreetmap.org/changeset/45717917" />
+        <meta name="keywords" content="building,house,gps,node,poi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/54398/adding-building-house-as-node-given-latlng" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54398/adding-building-house-as-node-given-latlng?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hhEGpFfxwwUuHMitCX507mpWHvezgupZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54398/adding-building-house-as-node-given-latlng">Adding building (house) as node given lat/lng</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54398-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54398/up/" rel="nofollow"> </a>
+<div id="post-54398-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54398-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54398/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54398/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When a GPS lat/lng (coordinates) of a POI for a small house is available, is a good way to add it by creating a node with tag building=house?</p>
+<p>Example: <a href="https://www.openstreetmap.org/changeset/45717917">https://www.openstreetmap.org/changeset/45717917</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/building/" class="post-tag tag-link-building"
+                                        title="see questions tagged 'building'" rel="tag">building</a>
+                                
+                                    <a href="/tags/house/" class="post-tag tag-link-house"
+                                        title="see questions tagged 'house'" rel="tag">house</a>
+                                
+                                    <a href="/tags/gps/" class="post-tag tag-link-gps"
+                                        title="see questions tagged 'gps'" rel="tag">gps</a>
+                                
+                                    <a href="/tags/node/" class="post-tag tag-link-node"
+                                        title="see questions tagged 'node'" rel="tag">node</a>
+                                
+                                    <a href="/tags/poi/" class="post-tag tag-link-poi"
+                                        title="see questions tagged 'poi'" rel="tag">poi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Feb '17, 14:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c56855540554a6e0e91fe202e045c31a?s=32&amp;d=identicon&amp;r=g" alt="raphaelschaad's gravatar image" />
+    <p><a href="/users/13277/raphaelschaad">raphaelschaad</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="raphaelschaad has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54398/">
+                edited
+                <strong>23 Apr '17, 23:30</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54398">
+    
+</div>
+<div id="comment-tools-54398" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54398-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54398/adding-building-house-as-node-given-latlng?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54398/adding-building-house-as-node-given-latlng?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54398/adding-building-house-as-node-given-latlng?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54398/adding-building-house-as-node-given-latlng?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54401"></a>
+                    <div id="answer-container-54401" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54401-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54401/up/" rel="nofollow"> </a>
+<div id="post-54401-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-54401-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54401/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Area features are better for buildings, even for small buildings. Checking the background imagery, it looks clear enough there to derive a reasonable footprint for the building.</p>
+<p>Also take a look at <a href="http://wiki.openstreetmap.org/wiki/Tag:building%3Ddetached">building=detached</a> which is similar in meaning to building=house but more specific.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54401/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Feb '17, 16:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c860445e868ebb21da141635a4aa7b06?s=32&amp;d=identicon&amp;r=g" alt="maxerickson's gravatar image" />
+    <p><a href="/users/10973/maxerickson">maxerickson</a><br/>
+    <span class="score" title="12700 reputation points"><span class="">12.7k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="176 badges"><span class="bronze">&#9679;</span><span class="badgecount">176</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="maxerickson has 93 accepted answers">32&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54401">
+    
+        <a name="54403"></a>
+        <div class="comment" id="comment-54403">
+            <div id="post-54403-score" class="comment-score"></div>
+            <div class="comment-text"><p>Got it – what if a GPS lat/lng is available and it's not feasible to draw a footprint (e.g. because the aerial imagery is not up to date, or there are too many mapped POIs)?</p>
+
+<p>Detached indeed seems more specific.</p></div>
+            <div class="comment-info" id="comment-54403-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '17, 16:22)</span>
+                <a class="comment-user userinfo" href="/users/13277/raphaelschaad">raphaelschaad</a>
+                
+            </div>
+        </div>
+    
+        <a name="54405"></a>
+        <div class="comment" id="comment-54405">
+            <div id="post-54405-score" class="comment-score">5</div>
+            <div class="comment-text"><p>If you think someone would benefit from the nodes being in OSM I think it is fine to add them, I guess I wouldn't put a lot of time into it otherwise.</p>
+
+<p>If it is possible to also gather address data for the buildings, that makes the nodes more interesting.</p></div>
+            <div class="comment-info" id="comment-54405-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '17, 16:25)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="54408"></a>
+        <div class="comment" id="comment-54408">
+            <div id="post-54408-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/13277/raphaelschaad">@raphaelschaad</a>: Keep in mind that there's no such thing as "too many mapped POIs". The ideal end result of the OSM project would be the mapping of EVERY POI (or at least the ones that are suitable for OSM). Don't worry about clutter. Data consumers can decide which POIs they want to use and can ignore less-interesting ones if they want. Not mapping a POI means nobody can use it.</p></div>
+            <div class="comment-info" id="comment-54408-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '17, 16:54)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="54410"></a>
+        <div class="comment" id="comment-54410">
+            <div id="post-54410-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>: Got it – the example is a small home in a rural community. The data is useful for humanitarian purposes. There are no addresses.</p>
+
+<p><a href="http://help.openstreetmap.org/users/8189/alester">@alester</a>: That's great – I take away that my approach is valid.</p></div>
+            <div class="comment-info" id="comment-54410-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '17, 17:01)</span>
+                <a class="comment-user userinfo" href="/users/13277/raphaelschaad">raphaelschaad</a>
+                
+            </div>
+        </div>
+    
+        <a name="55795"></a>
+        <div class="comment" id="comment-55795">
+            <div id="post-55795-score" class="comment-score"></div>
+            <div class="comment-text"><p>The wiki page for <a href="http://wiki.openstreetmap.org/wiki/Key:building">Key:building</a> indicates a building can be a node or an area, but all the common tags recommend showing the building as an area rather than a node. The tag <a href="http://wiki.openstreetmap.org/wiki/Tag%3Abuilding%3Dhouse">building=house</a> is also recommended to be drawn as an area but has been shown as a node about 1% of the time. </p>
+
+<p>The big advantage with drawing a building as an area is that the building renders as a shaded polygon in OSM, but there is no icon for a building drawn as a node. Many other maps often show buildings as squares, even though they cannot be drawn to scale.</p></div>
+            <div class="comment-info" id="comment-55795-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 06:33)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54401" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54401-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="54402"></a>
+                    <div id="answer-container-54402" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54402-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54402/up/" rel="nofollow"> </a>
+<div id="post-54402-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-54402-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54402/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi, read this for a node, <a href="https://wiki.openstreetmap.org/wiki/Node">https://wiki.openstreetmap.org/wiki/Node</a> and these lines for a building,  <a href="https://wiki.openstreetmap.org/wiki/Buildings">https://wiki.openstreetmap.org/wiki/Buildings</a>
+And no don’t tag a building as a node, make a rough schets if you see it and add it to OSM or if you’re working out of a chair use a good aerial view. But going outside and have a look is the pleasant part of mapping. You could add a note to specify that it’s not the real outline.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54402/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Feb '17, 16:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54402">
+    
+        <a name="54404"></a>
+        <div class="comment" id="comment-54404">
+            <div id="post-54404-score" class="comment-score"></div>
+            <div class="comment-text"><p>schets = sketch?</p>
+
+<p>Got it – could you give an example of such a note?</p></div>
+            <div class="comment-info" id="comment-54404-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '17, 16:25)</span>
+                <a class="comment-user userinfo" href="/users/13277/raphaelschaad">raphaelschaad</a>
+                
+            </div>
+        </div>
+    
+        <a name="54407"></a>
+        <div class="comment" id="comment-54407">
+            <div id="post-54407-score" class="comment-score"></div>
+            <div class="comment-text"><p>note=building needs (local) survey, just like a path or a fence that gets note=unfinished if you cant make a local survey.</p></div>
+            <div class="comment-info" id="comment-54407-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '17, 16:47)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+        <a name="54411"></a>
+        <div class="comment" id="comment-54411">
+            <div id="post-54411-score" class="comment-score"></div>
+            <div class="comment-text"><p>Adding this note will be useful, thanks.</p>
+
+<p>If I'm in the field and able to make a local survey, how would this be done given it's a ~5x5m hut?</p></div>
+            <div class="comment-info" id="comment-54411-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '17, 17:02)</span>
+                <a class="comment-user userinfo" href="/users/13277/raphaelschaad">raphaelschaad</a>
+                
+            </div>
+        </div>
+    
+        <a name="54412"></a>
+        <div class="comment not_top_scorer" id="comment-54412">
+            <div id="post-54412-score" class="comment-score"></div>
+            <div class="comment-text"><p>It depends on the GPS your using, are you able to make a node ? If so make a node on each corner, clockwise and anti clockwise. By using this method you’re able to eliminate the variation your GPS has with a good result. But if youre working on a HOT project, just draw the building outlines as good as it gets, any building is more the no building at all.</p></div>
+            <div class="comment-info" id="comment-54412-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '17, 20:10)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+        <a name="54416"></a>
+        <div class="comment" id="comment-54416">
+            <div id="post-54416-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I add such nodes frequently. My goal is sometimes to show where houses exist in areas of wilderness or other remote areas in Alaska. Taking the trouble to add individual "buildings" by tracing them from aerial imagery is simply too time consuming in many of my areas of interest. I want to show that the homes exist but do not need that level of detail. If someone wants to later edit those nodes and add them as buildings, add addresses, fine.</p></div>
+            <div class="comment-info" id="comment-54416-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Feb '17, 00:28)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="55778"></a>
+        <div class="comment" id="comment-55778">
+            <div id="post-55778-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> The project is a HOT-style project. Local health workers acquired one lat/lng per rural home. The buildings are uniform, i.e. if an area feature is needed for me to add them to OSM, it feels appropriate to generate a 6x9m rectangle with the point marker at the center. Is it right that single-node-only features don't show up on the standard OSM map representations?</p>
+
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a> Your use case sounds similar to mine: it's more important to have a sense of where buildings are vs. what the exact physical outline of the structure is. How did you go about importing your data? Could you link to an example?</p></div>
+            <div class="comment-info" id="comment-55778-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '17, 22:44)</span>
+                <a class="comment-user userinfo" href="/users/13277/raphaelschaad">raphaelschaad</a>
+                
+            </div>
+        </div>
+    
+        <a name="55779"></a>
+        <div class="comment not_top_scorer" id="comment-55779">
+            <div id="post-55779-score" class="comment-score"></div>
+            <div class="comment-text"><p>Nothing is imported — I use Bing imagery to place those nodes. Below is a link to an area near Caribou Lake in Alaska that contains a bunch of remote homes. My intention is to merely show that the area is populated. IMO, there is no overwhelming need to trace every building. Other mappers may disagree but I have a lot of mapping to do in Alaska. I simply don't have the time to draw these tiny structures while so many of our rivers, lakes and glaciers have yet to be added to OSM.</p>
+
+<p>Note the light-grey residential area north of the lake where homes are arranged more like a normal town. Of course, OSM does not render the nodes as homes. In fact, it doesn't render them at all. You will have to download the area with an OSM editor to see them. This settlement is a few miles distant via ATV through treacherous swampland from the nearest county road.</p>
+
+<p><a href="http://www.openstreetmap.org/#map=14/59.9022/-151.0575">http://www.openstreetmap.org/#map=14/59.9022/-151.0575</a></p>
+
+<p>Cheers,</p>
+
+<p>Dave</p></div>
+            <div class="comment-info" id="comment-55779-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 00:13)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="55796"></a>
+        <div class="comment not_top_scorer" id="comment-55796">
+            <div id="post-55796-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you want to show an area is populated then landuse=residential should be sufficient. Why waste time adding individual nodes for buildings when they don't render? I would have thought it would be almost as easy to add 4 nodes and have the buildings render as squares, that would be far more informative and avoid the need to download the area with an OSM editor.</p></div>
+            <div class="comment-info" id="comment-55796-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 06:43)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54402" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54402-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55791"></a>
+                    <div id="answer-container-55791" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55791-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55791/up/" rel="nofollow"> </a>
+<div id="post-55791-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-55791-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55791/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi, In my opinion what you are doing is fine. You are putting the data on the map. While nodes are not really for buildings, area are more suitable for it, however, if you are mapping using your mobile device or taking the lat long from a GPS device, then you have limited options to draw the actual building and you can use a node instead. But it will be ideal, if you can later revisit the places you mapped and draw the buildings using satellite imagery.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55791/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '17, 05:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c482180b767d07897d150d7b426ca4e0?s=32&amp;d=identicon&amp;r=g" alt="mmahmud's gravatar image" />
+    <p><a href="/users/12689/mmahmud">mmahmud</a><br/>
+    <span class="score" title="638 reputation points">638</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="25 badges"><span class="bronze">&#9679;</span><span class="badgecount">25</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmahmud has one accepted answer">3&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55791">
+    
+        <a name="55794"></a>
+        <div class="comment" id="comment-55794">
+            <div id="post-55794-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks <a href="https://help.openstreetmap.org/users/12689/mmahmud">@mmahmud</a>. Is it right that single-node-only features don't show up on the standard OSM map representations though, or am I doing something wrong when browsing to the area using the web interface? (I have to check the box "show data" in order to see the example of OP)</p></div>
+            <div class="comment-info" id="comment-55794-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 06:31)</span>
+                <a class="comment-user userinfo" href="/users/13277/raphaelschaad">raphaelschaad</a>
+                
+            </div>
+        </div>
+    
+        <a name="55797"></a>
+        <div class="comment" id="comment-55797">
+            <div id="post-55797-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you are plotting the position of a building then walk around it and plot the positions of the 4 corners. This will give you 4 separate GPS samples that can be averaged and give you a more precise location for the building than a single GPS position/point. The 4 points can then be used to draw a square for the building so that it renders on the map.</p></div>
+            <div class="comment-info" id="comment-55797-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 06:52)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+        <a name="55798"></a>
+        <div class="comment" id="comment-55798">
+            <div id="post-55798-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/13277/raphaelschaad">@raphaelschaad</a> : Single node only features do show up on the standard OSM map IF they have amenity tag (amenity=bus_station, ATM etc.) or address (addr:housenumber etc.) on them. But if it is only building=yes, they do not show up.
+Again, if you are on the go and can only upload node, do that but once you are back into a computer, draw the outlines of the buildings if you can and merge the node details with the buildings. You can find your previous edits from "My Edits" in your OSM profile.</p></div>
+            <div class="comment-info" id="comment-55798-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 07:07)</span>
+                <a class="comment-user userinfo" href="/users/12689/mmahmud">mmahmud</a>
+                
+            </div>
+        </div>
+    
+        <a name="55804"></a>
+        <div class="comment" id="comment-55804">
+            <div id="post-55804-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/11060/huttite">@Huttite</a> That makes sense and I will do that myself going forward. In this case, local health workers acquired a single GPS fix per building.</p>
+
+<p><a href="https://help.openstreetmap.org/users/12689/mmahmud">@mmahmud</a> Ok, will do. Unfortunately, the Bing satellite imagery is often outdated and not clear enough to recognize smaller huts. Quick follow up on your comment regarding "if you are on the go and can only upload node" – what software do you use to "upload nodes"? I have the coordinates in GeoJSON or KML.</p></div>
+            <div class="comment-info" id="comment-55804-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 08:23)</span>
+                <a class="comment-user userinfo" href="/users/13277/raphaelschaad">raphaelschaad</a>
+                
+            </div>
+        </div>
+    
+        <a name="55805"></a>
+        <div class="comment" id="comment-55805">
+            <div id="post-55805-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/13277/raphaelschaad">@raphaelschaad</a> : While on the go, I use OSMAnd, OSMTracker but mostly I use Garmin GPS device and take points and later on my computer overlay GPX files on JOSM and add them on the map. You can also try Maps.me and Vespucci app on the go. 
+You can covert your GeoJSON to GPX with this : <a href="http://aaronpdennis.github.io/geojson-to-gpx/">http://aaronpdennis.github.io/geojson-to-gpx/</a>
+And for the imagery, you can try Mapbox or Digital Globe imagery. They are quite clear.</p></div>
+            <div class="comment-info" id="comment-55805-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 08:38)</span>
+                <a class="comment-user userinfo" href="/users/12689/mmahmud">mmahmud</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55791" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55791-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54398/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hhEGpFfxwwUuHMitCX507mpWHvezgupZ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54398/adding-building-house-as-node-given-latlng?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54398/adding-building-house-as-node-given-latlng?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/building/"
+            class="tag-link-building"
+            title="see questions tagged'building'using tags"
+            rel="tag">building</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/gps/"
+            class="tag-link-gps"
+            title="see questions tagged'gps'using tags"
+            rel="tag">gps</a> <span class="tag-number">&#215;235</span><br/>
+        
+        <a href="/tags/poi/"
+            class="tag-link-poi"
+            title="see questions tagged'poi'using tags"
+            rel="tag">poi</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/node/"
+            class="tag-link-node"
+            title="see questions tagged'node'using tags"
+            rel="tag">node</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/house/"
+            class="tag-link-house"
+            title="see questions tagged'house'using tags"
+            rel="tag">house</a> <span class="tag-number">&#215;39</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 1, 2017, 2:39 p.m.">01 Feb '17, 14:39</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,181 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 24, 2017, 8:38 a.m.">24 Apr '17, 08:38</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/30526/did-i-tag-buildings-wrong">did i tag buildings wrong?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45925/how-to-depict-a-high-rise-commercial-building-with-a-large-number-of-commercial-properties-pois">How to depict a high-rise commercial building with a large number of commercial properties (POIs)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22962/should-i-use-pois-or-areas-to-identify-shops">Should I use POIs or areas to identify shops?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29417/what-does-josms-unconnected-nodes-without-physical-tags-mean">What does JOSM&#39;s &quot;Unconnected nodes without physical tags&quot; mean?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37601/hotel-building-and-node">Hotel building AND node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45050/add-poi-tags-to-pre-existing-address-node-or-create-new-node">Add POI tags to pre-existing address node, or create new node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11287/house-in-the-forest">House in the forest</a>
+        </p>
+        
+        <p>
+            <a href="/questions/786/is-there-a-way-to-undelete-a-deleted-node-poi">Is there a way to undelete a deleted node (POI) ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25561/addresses-for-pois-spanning-multiple-buildings">Addresses for POIs spanning multiple buildings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50483/josm-move-poi-data-to-building-outlines">JOSM - move POI data to building outlines</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,833 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Exporting a relatively large map - OSM Help</title>
+        <meta name="description" content="Is it possible for someone who is NOT a programmer, to export a large map (such as the map of Orange County in California) in SVG format in order for it to be used in vector-based applications such as InkScape? Is OSM for programmers only? I can get around, however, I am not a web or C++ programmer." />
+        <meta name="keywords" content="svg,export" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/1792/exporting-a-relatively-large-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/1792/exporting-a-relatively-large-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='QcbQVOheiza48opKDwo5Tl0ZyZxM2TfD' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/1792/exporting-a-relatively-large-map">Exporting a relatively large map</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-1792-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1792/up/" rel="nofollow"> </a>
+<div id="post-1792-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-1792-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1792/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/1792/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is it possible for someone who is NOT a programmer, to export a large map (such as the map of Orange County in California) in SVG format in order for it to be used in vector-based applications such as InkScape? Is OSM for programmers only? I can get around, however, I am not a web or C++ programmer.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/svg/" class="post-tag tag-link-svg"
+                                        title="see questions tagged 'svg'" rel="tag">svg</a>
+                                
+                                    <a href="/tags/export/" class="post-tag tag-link-export"
+                                        title="see questions tagged 'export'" rel="tag">export</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Dec '10, 22:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e0b92c051cf1bd4648859efbf141acb3?s=32&amp;d=identicon&amp;r=g" alt="mattmos's gravatar image" />
+    <p><a href="/users/530/mattmos">mattmos</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mattmos has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/1792/">
+                retagged
+                <strong>13 Dec '10, 07:48</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/591340f954c00c8208d5ffe668f50a05?s=32&amp;d=identicon&amp;r=g" alt="Breki's gravatar image" />
+            <p><a href="/users/118/breki">Breki</a><br/>
+            <span class="score" title="2040 reputation points"><span class="">2.0k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="18 badges"><span class="silver">&#9679;</span><span class="badgecount">18</span></span><span title="43 badges"><span class="bronze">&#9679;</span><span class="badgecount">43</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-1792">
+    
+</div>
+<div id="comment-tools-1792" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1792-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/1792/exporting-a-relatively-large-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/1792/exporting-a-relatively-large-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/1792/exporting-a-relatively-large-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/1792/exporting-a-relatively-large-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="1796"></a>
+                    <div id="answer-container-1796" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1796-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1796/up/" rel="nofollow"> </a>
+<div id="post-1796-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-1796-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1796/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The export tab(*) on <a href="http://www.openstreetmap.org">the project's main page</a> can be used to export any area in SVG format. Exporting custom maps in SVG is a CPU intensive task; that's why the "normal" map consists of standardised, pre-rendered bitmap tiles which are easier to produce and, crucially, the same for every viewer. </p>
+<p>There are three limits to the free export service on the main page:</p>
+<ul>
+<li>It is not available during high-load times. Sometimes you will see a message that says, in effect, that you should try again later.</li>
+<li>You cannot request an arbitrary resolution; e.g. if you request a map the size of Orange County, you will not get a level of detail that shows individual houses. But you can get a more detailed map than the one you see on screen by entering a smaller scale number down to the allowed minimum.</li>
+<li>The resulting SVG is awful for post-processing (takes ages to load in Inkscape, lettering done as vectors, etc.)</li>
+</ul>
+<p>If you want more then you will have to install some rendering software on your own computer and run it. You could use e.g. <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, <a href="http://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a>, or a local <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> installation. Mapnik is the only one that will give you the same look as the main map, but is more difficult to set up and will also produce the same kind of SVG. Maperitive and Osmarender produce SVG that is better suited for post-processing but the maps will also look different. For Maperitive, also see <a href="http://help.openstreetmap.org/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape">this other answer</a>.</p>
+<p>If you lack the time or ability to do this, you can also <a href="http://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting">pay someone to do the work.</a></p>
+<p>OpenStreetMap is a community effort, not a service provider. OpenStreetMap is "for" whomever community members want it to be for! If you choose one of the above methods for your work, or if you end up doing something completely different, consider contributing to OpenStreetMap by documenting your work in our Wiki so that others who have the same background and the same demands as yourself will have it easier to find the answers they are looking for.</p>
+<p>(*) In August 2013 the export tab has been removed, and replaced by an "export" link on the left hand side that lets you export the raw data for an area, and a "share" button on the right hand side that lets you export images.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1796/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Dec '10, 08:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/1796/">
+                edited
+                <strong>24 Aug '13, 00:36</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1796">
+    
+</div>
+<div id="comment-tools-1796" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1796-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1795"></a>
+                    <div id="answer-container-1795" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1795-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1795/up/" rel="nofollow"> </a>
+<div id="post-1795-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-1795-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1795/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yes: use Maperitive. See my answer on <a href="http://help.openstreetmap.org/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape"></a><a href="http://help.openstreetmap.org/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape"></a><a href="http://help.openstreetmap.org/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape">http://help.openstreetmap.org/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1795/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Dec '10, 07:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/591340f954c00c8208d5ffe668f50a05?s=32&amp;d=identicon&amp;r=g" alt="Breki's gravatar image" />
+    <p><a href="/users/118/breki">Breki</a><br/>
+    <span class="score" title="2040 reputation points"><span class="">2.0k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="18 badges"><span class="silver">&#9679;</span><span class="badgecount">18</span></span><span title="43 badges"><span class="bronze">&#9679;</span><span class="badgecount">43</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Breki has 5 accepted answers">10&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1795">
+    
+</div>
+<div id="comment-tools-1795" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1795-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="2066"></a>
+                    <div id="answer-container-2066" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2066-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2066/up/" rel="nofollow"> </a>
+<div id="post-2066-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-2066-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2066/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="http://wiki.openstreetmap.org/wiki/Bigmap">http://wiki.openstreetmap.org/wiki/Bigmap</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2066/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jan '11, 14:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cb9e3487765b1e13e3fd6ebb00fdcac7?s=32&amp;d=identicon&amp;r=g" alt="Kartograefin's gravatar image" />
+    <p><a href="/users/646/kartograefin">Kartograefin</a><br/>
+    <span class="score" title="592 reputation points">592</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kartograefin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2066">
+    
+        <a name="27277"></a>
+        <div class="comment" id="comment-27277">
+            <div id="post-27277-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Bigmap creates rasterized (pixel) images. Not vector (SVG) graphics.</p></div>
+            <div class="comment-info" id="comment-27277-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Oct '13, 21:20)</span>
+                <a class="comment-user userinfo" href="/users/5517/erik">erik</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-2066" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2066-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/1792/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='QcbQVOheiza48opKDwo5Tl0ZyZxM2TfD' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1792/exporting-a-relatively-large-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1792/exporting-a-relatively-large-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/export/"
+            class="tag-link-export"
+            title="see questions tagged'export'using tags"
+            rel="tag">export</a> <span class="tag-number">&#215;315</span><br/>
+        
+        <a href="/tags/svg/"
+            class="tag-link-svg"
+            title="see questions tagged'svg'using tags"
+            rel="tag">svg</a> <span class="tag-number">&#215;47</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 12, 2010, 10:58 p.m.">12 Dec '10, 22:58</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>14,179 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 17, 2013, 9:20 p.m.">17 Oct '13, 21:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/22478/exporting-problem">[closed] Exporting problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30123/how-to-export-map-for-maperitive-humanitarian-layer">how to export map for maperitive humanitarian layer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17317/render-osm-xml-to-svg-with-custom-but-simple-rendering">Render OSM XML to SVG with custom but simple rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19451/error-bei-svg-export">Error bei SVG-Export</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26275/export-to-svg-file">export to svg file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28978/export-on-osmorg-offers-no-more-pdf-or-svg-file-export-in-the-new-webinterface-2013-12">[closed] export on osm.org offers no more pdf or svg file export in the new webinterface (2013-12)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14028/export-in-deutscher-stil">Export in &quot;Deutscher Stil&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16045/merkaartor-svg-export">Merkaartor SVG export</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18031/maperitive-problem-for-exporting-to-svg-access-denied">Maperitive - Problem for exporting to SVG (access denied)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33373/export-tab-options">[closed] Export tab options</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,872 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>MySQL: want to display all these points on openstreetmap - OSM Help</title>
+        <meta name="description" content="Hello, I have a database that contains coordinates (location_id, location, log, lat) and I want to display all these points on openstreetmap thank you for orienting me" />
+        <meta name="keywords" content="points,display,mysql" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/61773/mysql-want-to-display-all-these-points-on-openstreetmap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61773/mysql-want-to-display-all-these-points-on-openstreetmap?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FLjUXjm5mKrjDex0LmuT3geRJj5h62O2' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61773/mysql-want-to-display-all-these-points-on-openstreetmap">MySQL: want to display all these points on openstreetmap</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61773-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61773/up/" rel="nofollow"> </a>
+<div id="post-61773-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-61773-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61773/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61773/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I have a database that contains coordinates (location_id, location, log, lat) and I want to display all these points on openstreetmap</p>
+<p>thank you for orienting me</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/points/" class="post-tag tag-link-points"
+                                        title="see questions tagged 'points'" rel="tag">points</a>
+                                
+                                    <a href="/tags/display/" class="post-tag tag-link-display"
+                                        title="see questions tagged 'display'" rel="tag">display</a>
+                                
+                                    <a href="/tags/mysql/" class="post-tag tag-link-mysql"
+                                        title="see questions tagged 'mysql'" rel="tag">mysql</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Jan '18, 14:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/012a9ec37a055c5de9bd6d62ff57bf03?s=32&amp;d=identicon&amp;r=g" alt="didou90's gravatar image" />
+    <p><a href="/users/14671/didou90">didou90</a><br/>
+    <span class="score" title="10 reputation points">10</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="didou90 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61773/">
+                edited
+                <strong>24 Jan '18, 11:33</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61773">
+    
+        <a name="61780"></a>
+        <div class="comment" id="comment-61780">
+            <div id="post-61780-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Cross-posted here: <a href="https://forum.openstreetmap.org/viewtopic.php?id=61131">https://forum.openstreetmap.org/viewtopic.php?id=61131</a></p></div>
+            <div class="comment-info" id="comment-61780-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '18, 19:55)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="61783"></a>
+        <div class="comment" id="comment-61783">
+            <div id="post-61783-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello, </p>
+
+<p>Also, I would like to add some SQL queries and show the results on the map ( not only show data on the map) </p>
+
+<p>thanks in advance</p></div>
+            <div class="comment-info" id="comment-61783-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jan '18, 08:12)</span>
+                <a class="comment-user userinfo" href="/users/14671/didou90">didou90</a>
+                
+            </div>
+        </div>
+    
+        <a name="61784"></a>
+        <div class="comment" id="comment-61784">
+            <div id="post-61784-score" class="comment-score"></div>
+            <div class="comment-text"><p>Example :</p>
+
+<p><a href="http://map.datafrance.info/population">http://map.datafrance.info/population</a></p></div>
+            <div class="comment-info" id="comment-61784-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jan '18, 08:57)</span>
+                <a class="comment-user userinfo" href="/users/14671/didou90">didou90</a>
+                
+            </div>
+        </div>
+    
+        <a name="61789"></a>
+        <div class="comment not_top_scorer" id="comment-61789">
+            <div id="post-61789-score" class="comment-score"></div>
+            <div class="comment-text"><p>meta <a href="https://help.openstreetmap.org/users/14671/didou90"></a><a href="https://help.openstreetmap.org/users/14671/didou90">@didou90</a>: please could you clarify your question if you want to contribute new data to the main, public OSM database OR if you want to display your points on a map which is based on OSM privately?</p></div>
+            <div class="comment-info" id="comment-61789-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jan '18, 09:50)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61792"></a>
+        <div class="comment" id="comment-61792">
+            <div id="post-61792-score" class="comment-score">1</div>
+            <div class="comment-text"><p>hello,
+I have a database containing table named : places(id, name, long, lat) and I would like to : 
+- Show all this points on OSM
+- Excute Queries and see results on the map</p>
+
+<p>this a chronological execution example: 
+1- load the map and display all the places ( from the places table)
+2- Execute the query which return results of all places containing the word "Castle"
+3- display the places on the map containing the word "Castle"</p>
+
+<p>thanks in advance</p>
+
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>
+<a href="https://help.openstreetmap.org/users/3339/edvac"></a><a href="https://help.openstreetmap.org/users/3339/edvac">@edvac</a></p></div>
+            <div class="comment-info" id="comment-61792-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jan '18, 12:21)</span>
+                <a class="comment-user userinfo" href="/users/14671/didou90">didou90</a>
+                
+            </div>
+        </div>
+    
+        <a name="61794"></a>
+        <div class="comment" id="comment-61794">
+            <div id="post-61794-score" class="comment-score">1</div>
+            <div class="comment-text"><p>As has been demonstrated by the answers and comments, it's not clear what you mean by "on OSM" or "a map".  OSM is really just a big pile of data so you'll need to clarify what you mean.  When you say "a map" do you mean something at OSM.org, visible in web browsers?  Something in an application on a PC or a phone?  Something on paper?  Something on <a href="https://blog.openstreetmap.org/2011/08/29/image-of-the-week-osm-birthday-map-cake/">cake</a>?</p></div>
+            <div class="comment-info" id="comment-61794-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jan '18, 14:54)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61773" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61773-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61773/mysql-want-to-display-all-these-points-on-openstreetmap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61773/mysql-want-to-display-all-these-points-on-openstreetmap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61773/mysql-want-to-display-all-these-points-on-openstreetmap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61773/mysql-want-to-display-all-these-points-on-openstreetmap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61793"></a>
+                    <div id="answer-container-61793" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61793-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61793/up/" rel="nofollow"> </a>
+<div id="post-61793-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-61793-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61793/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This "using leaflet" <a href="https://switch2osm.org/using-tiles/getting-started-with-leaflet/">switch2osm example</a> demonstrates querying a database in order to show non-OSM points over the top of an OSM-based slippy map in a web browser.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61793/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jan '18, 14:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61793">
+    
+</div>
+<div id="comment-tools-61793" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61793-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="61775"></a>
+                    <div id="answer-container-61775" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61775-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61775/up/" rel="nofollow"> </a>
+<div id="post-61775-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-61775-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61775/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Assuming that the coordinates ar <a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a> and that <strong>the data is your own data (not a third party's!!)</strong>:
+First, I would download the data table as <a href="https://en.wikipedia.org/wiki/Comma-separated_values">csv file</a>, changing the heading of <em>log</em> and <em>lat</em> to <strong>longitude</strong> and <strong>latitude</strong>.
+Then, open the csv file in JOSM (you need to have the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData">opendata plugin</a> installed).
+In another layer, download the data of the area where you want to add the data.
+Merge carefully the data with the OSM data, tagging all objects acording to the <a href="https://wiki.openstreetmap.org/wiki/Map_Features">OSM wiki</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61775/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Jan '18, 16:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d45c161edd4b471fd947a7ec574274ca?s=32&amp;d=identicon&amp;r=g" alt="edvac's gravatar image" />
+    <p><a href="/users/3339/edvac">edvac</a><br/>
+    <span class="score" title="665 reputation points">665</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="edvac has 4 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61775">
+    
+        <a name="61776"></a>
+        <div class="comment" id="comment-61776">
+            <div id="post-61776-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Is didou90 trying to add the points to OSM (for which you've give a method) or simply wanting to display the points on top of a map rendered from OSM data (as I read the question).</p></div>
+            <div class="comment-info" id="comment-61776-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '18, 17:05)</span>
+                <a class="comment-user userinfo" href="/users/5918/n76">n76</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61775" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61775-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61773/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FLjUXjm5mKrjDex0LmuT3geRJj5h62O2' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61773/mysql-want-to-display-all-these-points-on-openstreetmap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61773/mysql-want-to-display-all-these-points-on-openstreetmap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/points/"
+            class="tag-link-points"
+            title="see questions tagged'points'using tags"
+            rel="tag">points</a> <span class="tag-number">&#215;67</span><br/>
+        
+        <a href="/tags/display/"
+            class="tag-link-display"
+            title="see questions tagged'display'using tags"
+            rel="tag">display</a> <span class="tag-number">&#215;59</span><br/>
+        
+        <a href="/tags/mysql/"
+            class="tag-link-mysql"
+            title="see questions tagged'mysql'using tags"
+            rel="tag">mysql</a> <span class="tag-number">&#215;21</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 23, 2018, 2:01 p.m.">23 Jan '18, 14:01</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>22,265 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 24, 2018, 2:54 p.m.">24 Jan '18, 14:54</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1118/electric-vehicle-charge-points">Electric Vehicle Charge Points</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1147/electric-vehicle-charge-points-reaching-out">Electric Vehicle Charge Points - Reaching Out</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1912/point-of-interest-type">Point of Interest Type</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2049/how-to-show-an-updated-list-of-wlan-hotspots-on-an-userdefined-map">How to show an updated list of WLAN-Hotspots on an userdefined map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2390/noticeable-way-points-or-landmarks">noticeable way points or landmarks</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2408/upload-gpx-trackno-display-on-profile-no-error-of-osm-server-no-mail">[closed] Upload GPX track...no display on profile, no error of OSM server, no mail</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2881/big-area-of-national-park-and-limit-of-2000-points">big area of national park and limit of 2000 points</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4044/how-to-display-a-specific-way-in-red-in-a-viewer">How to display a specific way in red in a viewer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4359/uploaded-track-from-gpx-file-is-not-displaying-on-map">Uploaded track from .gpx file is not displaying on map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/971/display-a-label-on-the-each-marker">Display a label on the each marker</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

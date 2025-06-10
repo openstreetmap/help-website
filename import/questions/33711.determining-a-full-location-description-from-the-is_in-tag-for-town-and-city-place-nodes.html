@@ -1,0 +1,1346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Determining a full location description from the is_in tag for town and city place nodes - OSM Help</title>
+        <meta name="description" content="Please note - sorry but I couldn&#39;t get the question editor to show my XML so I&#39;ve had to replace all the &#39;&amp;lt;&#39;s with &#39;[&#39; and all the &#39;&amp;gt;&#39;s with &#39;]&#39; in what follows. If someone knows how to fix this for me please let me know - thanks. I am building a simple application which, given a worldwide lat..." />
+        <meta name="keywords" content="mass_tagging,reversegeocoding,admin_boundary,tagging,is_in" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/33711/determining-a-full-location-description-from-the-is_in-tag-for-town-and-city-place-nodes" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/33711/determining-a-full-location-description-from-the-is_in-tag-for-town-and-city-place-nodes?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Tc3jjrLnfHfQo4pRjNpCCy2YU2qQg0YQ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/33711/determining-a-full-location-description-from-the-is_in-tag-for-town-and-city-place-nodes">Determining a full location description from the is_in tag for town and city place nodes</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-33711-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33711/up/" rel="nofollow"> </a>
+<div id="post-33711-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33711-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33711/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/33711/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p><em>Please note - sorry but I couldn't get the question editor to show my XML so I've had to replace all the '&lt;'s with '[' and all the '&gt;'s with ']' in what follows. If someone knows how to fix this for me please let me know - thanks.</em></p>
+<p>I am building a simple application which, given a worldwide lat/lon, requires details of the nearest city or town, based upon a simple as-the-crow-flies measurement. To achieve this I've chosen to use the OSM nodes which are tagged place='town' or place='city', calculating the spherical distance between my check point and each node's lat/lon. These nodes, according to <a href="http://wiki.openstreetmap.org/wiki/Key:place">http://wiki.openstreetmap.org/wiki/Key:place</a>, represent the approximate centre of each town and city and so are ideal for my requirement.</p>
+<p>Given my chosen approach, I extracted the data from the Overpass API, using the following requests:</p>
+<pre><code>curl <a href="http://www.overpass-api.de/api/xapi?node[place=city]">http://www.overpass-api.de/api/xapi?node[place=city]</a> -g -o worldcities.osm
+curl <a href="http://www.overpass-api.de/api/xapi?node[place=town][@timeout=360]">http://www.overpass-api.de/api/xapi?node[place=town][@timeout=360]</a> -g -o worldtowns.osm -g -o worldtowns.osm
+</code></pre>
+<p>This has given me 2 files of data, which I'm loading (using osm2pgsql), giving me a database which is able to support my distance searching. Each database search will give me back a nearest town/city node, which I then need to display to my application user in text (not on a map), and so I need a location name/description. I want to show more than just the town/city name and so started looking at the is_in tag.</p>
+<p>I'm seeing that some of the place nodes have is_in tags I can use directly, such as:</p>
+<pre><code>[node id="271344" lat="51.2569570" lon="-1.6233744"]
+[tag k="is_in" v="Wiltshire, England, UK"/]
+[tag k="name" v="Ludgershall"/]
+[tag k="place" v="town"/]
+[tag k="wikipedia" v="en:Ludgershall, Wiltshire"/]
+[/node]
+</code></pre>
+<p>I can use this to show 'Ludgershall, Wiltshire, England, UK' to my application user.</p>
+<p>Others do not have an is_in tag:</p>
+<pre><code>[node id="271099" lat="50.9196406" lon="-1.4894631"]
+[tag k="name" v="Totton"/]
+[tag k="place" v="town"/]
+[/node]
+</code></pre>
+<p>Some have an is_in but also have 'component' is_in tags, which contain additional details:</p>
+<pre><code>[node id="4085941" lat="52.1363806" lon="-0.4675041"]
+[tag k="is_in" v="Bedfordshire"/]
+[tag k="is_in:country" v="United Kingdom"/]
+[tag k="is_in:country_code" v="GB"/]
+[tag k="is_in:county" v="Bedfordshire"/]
+[tag k="name" v="Bedford"/]
+[tag k="name:lt" v="Bedfordas"/]
+[tag k="name:ru" v="Ð‘ÐµÐ´Ñ„Ð¾Ñ€Ð´"/]
+[tag k="place" v="town"/]
+[tag k="population" v="80000"/]
+[tag k="wikipedia" v="en:Bedford"/]
+[/node]
+</code></pre>
+<p>Some only have components and no overall is_in to refer to:</p>
+<pre><code>[node id="16664272" lat="52.1365867" lon="-0.9859244"]
+[tag k="is_in:continent" v="Europe"/]
+[tag k="is_in:country" v="United Kingdom"/]
+[tag k="is_in:country_code" v="GB"/]
+[tag k="is_in:county" v="Northamptonshire"/]
+[tag k="is_in:district" v="South Northamptonshire"/]
+[tag k="name" v="Towcester"/]
+[tag k="old_name" v="Lactodurum"/]
+[tag k="place" v="town"/]
+[tag k="wikipedia" v="en:Towcester"/]
+[/node]
+</code></pre>
+<p>Some are 'backwards' (it should be 'Surrey, England', not 'England, Surrey'):</p>
+<pre><code>[node id="14698916" lat="51.2321130" lon="-0.3247823"]
+[tag k="is_in" v="England, Surrey"/]
+[tag k="name" v="Dorking"/]
+[tag k="place" v="town"/]
+[tag k="wikipedia" v="en:Dorking"/]
+[/node]
+</code></pre>
+<p>Ideally I need a English name for each, but I'm seeing a mix of languages in some cases:</p>
+<pre><code>[node id="18481614" lat="51.8397184" lon="6.6161534"]
+[tag k="is_in" v="Kreis Borken,Regierungsbezirk Münster,Nordrhein-Westfalen,Bundesrepublik Deutschland,Europe"/]
+[tag k="is_in:continent" v="Europe"/]
+[tag k="is_in:country" v="Germany"/]
+[tag k="is_in:state" v="North Rhine-Westphalia"/]
+[tag k="name" v="Bocholt"/]
+[tag k="name:ru" v="Бохольт"/]
+[tag k="place" v="town"/]
+[tag k="population" v="73696"/]
+[tag k="website" v="http://www.bocholt.de"/]
+[tag k="wikipedia" v="de:Bocholt"/]
+[/node]
+</code></pre>
+<p>I've pretty much come to the conclusion that I can't depend on the data I'm seeing in the is_in tag as it currently stands, there is too much variation in the usage, so I've been working on an alternative solution.</p>
+<p>I'm using the area queries which the Overpass API makes available, so given a town node such as:</p>
+<pre><code>[node id="271099" lat="50.9196406" lon="-1.4894631"]
+[tag k="name" v="Totton"/]
+[tag k="place" v="town"/]
+[/node]
+</code></pre>
+<p>I can make a query against the API using this request:</p>
+<pre><code><a href="http://overpass-api.de/api/interpreter?data=[out:json];is_in(50.9196406,-1.4894631);out;">http://overpass-api.de/api/interpreter?data=[out:json];is_in(50.9196406,-1.4894631);out;</a>
+</code></pre>
+<p>Which gives me... (sorry that this is quite long...):</p>
+<pre><code>{
+  "version": 0.6,
+  "generator": "Overpass API",
+  "osm3s": {
+    "timestamp_osm_base": "2014-06-05T10:15:01Z",
+    "timestamp_areas_base": "2014-06-05T01:00:02Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "area",
+  "id": 2438387676,
+  "tags": {
+    "name": "Southampton",
+    "public_transport": "pay_scale_area",
+    "ref": "SOTON",
+    "source": "naptan_import"
+  }
+}
+,
+{
+  "type": "area",
+  "id": 3600058447,
+  "tags": {
+    "ISO3166-2": "GB-ENG",
+    "admin_level": "4",
+    "boundary": "administrative",
+    "name": "England",
+    "name:be": "ÐÐ½Ð³Ð»Ñ–Ñ",
+    "name:cy": "Lloegr",
+    "name:de": "England",
+    "name:el": "Î‘Î³Î³Î»Î¯Î±",
+    "name:en": "England",
+    "name:es": "Inglaterra",
+    "name:fr": "Angleterre",
+    "name:gd": "Sasainn",
+    "name:gv": "Sostyn",
+    "name:hsb": "JendÅºelska",
+    "name:hu": "Anglia",
+    "name:it": "Inghilterra",
+    "name:lt": "Anglija",
+    "name:nl": "Engeland",
+    "name:pl": "Anglia",
+    "name:pt": "Inglaterra",
+    "name:ru": "ÐÐ½Ð³Ð»Ð¸Ñ",
+    "name:sv": "England",
+    "name:uk": "ÐÐ½Ð³Ð»Ñ–Ñ",
+    "name:vi": "Anh",
+    "name:zh": "è‹±æ ¼è˜­",
+    "name:zh-classical": "è‹±æ ¼è˜­",
+    "name:zh-simplified": "è‹±æ ¼å…°",
+    "name:zh-traditional": "è‹±æ ¼è˜­",
+    "old_name:vi": "Anh Quá»‘c",
+    "type": "boundary",
+    "wikidata": "Q21",
+    "wikipedia": "en:England"
+  }
+}
+,
+{
+  "type": "area",
+  "id": 3600062149,
+  "tags": {
+    "ISO3166-1": "GB",
+    "ISO3166-1:alpha2": "GB",
+    "ISO3166-1:alpha3": "GBR",
+    "ISO3166-1:numeric": "826",
+    "admin_level": "2",
+    "boundary": "administrative",
+    "currency": "GBP",
+    "driving_side": "left",
+    "flag": "http://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg",
+    "int_name": "United Kingdom",
+    "name": "United Kingdom",
+    "name:ab": "Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ð° Ð”Ñƒ",
+    "name:af": "Verenigde Koninkryk",
+    "name:ak": "United Kingdom",
+    "name:als": "Vereinigtes KÃ¶nigreich",
+    "name:am": "á‹©áŠ“á‹­á‰µá‹µ áŠªáŠ•áŒá‹°áˆ",
+    "name:an": "Reino Unito",
+    "name:ang": "GeÄned CynerÄ«ce",
+    "name:ar": "Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ù…ØªØ­Ø¯Ø©",
+    "name:arc": "Ü¡Ü ÜŸÜ˜Ü¬Ü Ü¡ÜšÜÜ•Ü¬Ü",
+    "name:arz": "Ø§Ù„Ù…Ù…Ù„ÙƒÙ‡ Ø§Ù„Ù…ØªØ­Ø¯Ù‡",
+    "name:ast": "Reinu XunÃ­u",
+    "name:az": "BÃ¶yÃ¼k Britaniya",
+    "name:ba": "Ð‘Ó©Ð¹Ó©Ðº Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ",
+    "name:bar": "Vaeinigts Kinireich",
+    "name:bat-smg": "JongtÄ—nÄ— KaralÄ«stÄ—",
+    "name:bcl": "Reyno Unido",
+    "name:be": "Ð’ÑÐ»Ñ–ÐºÐ°Ð±Ñ€Ñ‹Ñ‚Ð°Ð½Ñ–Ñ",
+    "name:be-x-old": "Ð’ÑÐ»Ñ–ÐºÐ°Ð±Ñ€Ñ‹Ñ‚Ð°Ð½Ñ–Ñ",
+    "name:bg": "ÐžÐ±ÐµÐ´Ð¸Ð½ÐµÐ½Ð¾ ÐºÑ€Ð°Ð»ÑÑ‚Ð²Ð¾ Ð’ÐµÐ»Ð¸ÐºÐ¾Ð±Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ Ð¸ Ð¡ÐµÐ²ÐµÑ€Ð½Ð° Ð˜Ñ€Ð»Ð°Ð½Ð´Ð¸Ñ",
+    "name:bi": "Unaeted Kingdom",
+    "name:bjn": "Britania Raya",
+    "name:bn": "à¦¯à§à¦•à§à¦¤à¦°à¦¾à¦œà§à¦¯",
+    "name:bo": "à½‘à½–à¾±à½²à½“à¼‹à½‡à½²à¼‹à½˜à½‰à½˜à¼‹à½ à½–à¾²à½ºà½£à¼",
+    "name:bpy": "à¦¤à¦¿à¦²à¦ªà¦¾à¦°à¦¾à¦œà§à¦¯",
+    "name:br": "Rouantelezh-Unanet",
+    "name:bs": "Ujedinjeno Kraljevstvo Velike Britanije i Sjeverne Irske",
+    "name:bug": "United Kingdom",
+    "name:bxr": "ÐÑÐ³Ð´ÑÑÐ½ Ð’Ð°Ð½Ñ‚ Ð£Ð»Ñ",
+    "name:ca": "Regne Unit",
+    "name:cbk-zam": "Reinos Unidos de Gran Britania y Norte Irelandia",
+    "name:cdo": "Ä¬ng-guÃ³k",
+    "name:ce": "Ð™Ð¾ÐºÐºÑ…Ð° Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸",
+    "name:ceb": "Hiniusang Gingharian",
+    "name:chr": "áŽ¡áŽµááŽ¯",
+    "name:chy": "United Kingdom",
+    "name:ckb": "Ø´Ø§Ù†Ø´ÛŒÙ†ÛŒ ÛŒÛ•Ú©Ú¯Ø±ØªÙˆÙˆ",
+    "name:co": "Regnu Unitu",
+    "name:crh": "BÃ¼yÃ¼k Britaniya",
+    "name:cs": "SpojenÃ© krÃ¡lovstvÃ­",
+    "name:csb": "WiÃ´lgÃ´ BritanijÃ´",
+    "name:cu": "Ð’Ñ”Ð»Ð¸ÐºÐ° Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ñ—ê™—",
+    "name:cv": "ÐÑÐ»Äƒ Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸",
+    "name:cy": "Deyrnas Unedig",
+    "name:da": "Storbritannien",
+    "name:de": "Vereinigtes KÃ¶nigreich GroÃŸbritannien und Nordirland",
+    "name:diq": "Qraliya Yewbiyayiye",
+    "name:dsb": "Wjelika Britaniska",
+    "name:dv": "Þ”ÞªÞ‚Þ¦Þ‡Þ¨Þ“Þ¬Þ‘Þ° Þ†Þ¨Þ‚Þ°ÞŽÞ°Þ‘Þ¦Þ‰Þ°",
+    "name:dz": "à½¡à½´à¼‹à½“à½ à½²à¼‹à½Šà½ºà½Šà¼‹à½€à½²à½„à¼‹à½Œà½˜",
+    "name:ee": "United Kingdom",
+    "name:el": "Î—Î½Ï‰Î¼Î­Î½Î¿ Î’Î±ÏƒÎ¯Î»ÎµÎ¹Î¿",
+    "name:eml": "RÃ©gn UnÃ®",
+    "name:en": "United Kingdom",
+    "name:eo": "UnuiÄinta ReÄlando",
+    "name:es": "Reino Unido",
+    "name:et": "Suurbritannia",
+    "name:eu": "Erresuma Batua",
+    "name:ext": "RÃ©inu Uniu",
+    "name:fa": "Ø¨Ø±ÛŒØªØ§Ù†ÛŒØ§",
+    "name:fi": "Yhdistynyt kuningaskunta",
+    "name:fiu-vro": "Ãœtiskuningriik",
+    "name:fo": "StÃ³ra Bretland",
+    "name:fr": "Royaume-Uni",
+    "name:frp": "RoyÃ´mo-Uni",
+    "name:frr": "Feriind Kiningrik",
+    "name:fur": "Ream UnÃ®t",
+    "name:fy": "Grut-Brittanje",
+    "name:ga": "An RÃ­ocht Aontaithe",
+    "name:gag": "BÃ¼Ã¼k Britaniya",
+    "name:gan": "è‹±åœ‹",
+    "name:gd": "An RÃ¬oghachd Aonaichte",
+    "name:gl": "Reino Unido",
+    "name:gn": "TavetÃ£ Joaju",
+    "name:gu": "àª¯à«àª¨àª¾àª‡àªŸà«‡àª¡ àª•àª¿àª‚àª—àª¡àª®",
+    "name:gv": "Reeriaght Unnaneysit",
+    "name:ha": "Birtaniya",
+    "name:hak": "YÃ®n-koet",
+    "name:haw": "Aupuni MÅÊ»Ä« Hui PÅ« Ê»ia",
+    "name:he": "×”×ž×ž×œ×›×” ×”×ž××•×—×“×ª",
+    "name:hi": "à¤¯à¥‚à¤¨à¤¾à¤‡à¤Ÿà¥‡à¤¡ à¤•à¤¿à¤‚à¤—à¤¡à¤®",
+    "name:hif": "United Kingdom",
+    "name:hr": "Ujedinjeno Kraljevstvo Velike Britanije i Sjeverne Irske",
+    "name:hsb": "ZjednoÄ‡ene kralestwo",
+    "name:ht": "WayÃ²m Ini",
+    "name:hu": "EgyesÃ¼lt KirÃ¡lysÃ¡g",
+    "name:hy": "Õ„Õ«Õ¡ÖÕµÕ¡Õ¬ Ô¹Õ¡Õ£Õ¡Õ¾Õ¸Ö€Õ¸Ö‚Õ©ÕµÕ¸Ö‚Õ¶",
+    "name:ia": "Regno Unite",
+    "name:id": "Britania Raya",
+    "name:ie": "Reyatu Unit",
+    "name:ig": "ObodoÃ©zÃ¨ NÃ  OfÃº",
+    "name:ilo": "Nagkaykaysa a Pagarian",
+    "name:io": "Unionita Rejio",
+    "name:is": "Bretland",
+    "name:it": "Regno Unito",
+    "name:ja": "ã‚¤ã‚®ãƒªã‚¹",
+    "name:jbo": "gugdegubu",
+    "name:jv": "Britania Raya",
+    "name:ka": "áƒ’áƒáƒ”áƒ áƒ—áƒ˜áƒáƒœáƒ”áƒ‘áƒ£áƒšáƒ˜ áƒ¡áƒáƒ›áƒ”áƒ¤áƒ",
+    "name:kab": "Legliz",
+    "name:kbd": "Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸ÑÑˆÑ…ÑƒÑ",
+    "name:kg": "Royaume-Uni",
+    "name:kk": "Ò°Ð»Ñ‹Ð±Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ",
+    "name:kl": "Tuluit Nunaat",
+    "name:km": "ážšáž¶áž‡áž¶ážŽáž¶áž…áž€áŸ’ážšážšáž½áž˜",
+    "name:kn": "à²¯à³à²¨à³ˆà²Ÿà³†à²¡à³ à²•à²¿à²‚à²—à³â€Œà²¡à²‚",
+    "name:ko": "ì˜êµ­",
+    "name:koi": "Ð«Ð´Ð¶Ñ‹Ñ‚ Ð‘Ñ€Ð¸Ñ‚Ð¼Ñƒ",
+    "name:krc": "Ð£Ð»Ð»Ñƒ Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ",
+    "name:ksh": "JruÃŸbritannie",
+    "name:ku": "Keyaniya YekbÃ»yÃ®",
+    "name:kv": "Ð«Ð´Ð¶Ñ‹Ð´ Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ",
+    "name:kw": "Ruwvaneth Unys",
+    "name:ky": "Ð£Ð»ÑƒÑƒ Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ Ð¶Ð°Ð½Ð° Ð¢Ò¯Ð½Ð´Ò¯Ðº Ð˜Ñ€Ð»Ð°Ð½Ð´Ð¸Ñ",
+    "name:la": "Britanniarum Regnum",
+    "name:lad": "Reyno Unido",
+    "name:lb": "Groussbritannien an Nordirland",
+    "name:lez": "Ð§IÐµÑ…Ð¸Ð±Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ",
+    "name:li": "Vereineg Keuninkriek",
+    "name:lij": "Regno UnÃ¯o",
+    "name:lmo": "Regn ÃœnÃ¬",
+    "name:ln": "IngÉ›lÉ›ÌtÉ›lÉ›",
+    "name:lt": "JungtinÄ— KaralystÄ—",
+    "name:ltg": "Lelbrytaneja",
+    "name:lv": "ApvienotÄ Karaliste",
+    "name:mg": "Fanjakana Mitambatra",
+    "name:mhr": "Ð£ÑˆÑ‹Ð¼Ð¾ ÐšÐ¾Ñ€Ð¾Ð»ÐµÐ²ÑÑ‚Ð²Ðµ",
+    "name:mi": "KÄ«ngitanga Kotahi",
+    "name:mk": "ÐžÐ±ÐµÐ´Ð¸Ð½ÐµÑ‚Ð¾ ÐšÑ€Ð°Ð»ÑÑ‚Ð²Ð¾",
+    "name:ml": "à´¯àµà´£àµˆà´±àµà´±à´¡àµ à´•à´¿à´™àµà´¡à´‚",
+    "name:mn": "Ð˜Ñ… Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸",
+    "name:mr": "à¤¯à¥à¤¨à¤¾à¤¯à¤Ÿà¥‡à¤¡ à¤•à¤¿à¤‚à¤—à¥à¤¡à¤®",
+    "name:mrj": "ÐšÐ¾Ð³Ð¾ Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸",
+    "name:ms": "United Kingdom",
+    "name:mt": "Renju Unit",
+    "name:mwl": "Reino Ounido",
+    "name:my": "á€šá€°á€”á€­á€¯á€€á€ºá€á€€á€ºá€€á€„á€ºá€¸á€’á€™á€ºá€¸á€”á€­á€¯á€„á€ºá€„á€¶",
+    "name:mzn": "Ø¨Ø±ÛŒØªØ§Ù†ÛŒØ§",
+    "name:na": "Ingerand",
+    "name:nah": "TlacetilÄ«lli HuÄ“yitlahtohcÄyÅtl",
+    "name:nap": "Gran Vretagna",
+    "name:nds": "Vereenigt KÃ¶nigriek vun Grootbritannien un Noordirland",
+    "name:nds-nl": "Verienigd Keuninkriek",
+    "name:ne": "à¤¸à¤‚à¤¯à¥à¤•à¥à¤¤ à¤…à¤§à¤¿à¤°à¤¾à¤œà¥à¤¯",
+    "name:nl": "Verenigd Koninkrijk",
+    "name:nn": "Storbritannia",
+    "name:no": "Storbritannia",
+    "name:nov": "Unionati Regia",
+    "name:nrm": "Rouoyaume Unni",
+    "name:nv": "TÃ³taÊ¼ DinÃ©Ê¼iÊ¼ BikÃ©yah",
+    "name:oc": "Reialme Unit",
+    "name:or": "à¬¯à­à¬•à­à¬¤à¬°à¬¾à¬œà­à­Ÿ",
+    "name:os": "Ð¡Ñ‚Ñ‹Ñ€ Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸",
+    "name:pa": "à¨¸à©°à¨¯à©à¨•à¨¤ à¨¬à¨¾à¨¦à¨¸à¨¼à¨¾à¨¹à©€",
+    "name:pag": "Reino Unido",
+    "name:pam": "Pisanmetung a Ka-arian",
+    "name:pap": "Reino Uni",
+    "name:pcd": "RoÃ©yÃ´me-Uni",
+    "name:pih": "Yunitid Kingdum",
+    "name:pl": "Wielka Brytania",
+    "name:pms": "Regn UnÃ¬",
+    "name:pnb": "Ø¨Ø±Ø·Ø§Ù†ÛŒÛ",
+    "name:pnt": "Î—Î½Ï‰Î¼Î­Î½Î¿ Î’Î±ÏƒÎ¯Î»ÎµÎ¹Î¿",
+    "name:ps": "Ø¨Ø±ÙŠØªØ§Ù†ÙŠØ§",
+    "name:pt": "Reino Unido",
+    "name:qu": "Hukllachasqa Qhapaq Suyu",
+    "name:rm": "Reginavel UnÃ¬",
+    "name:rmy": "Phandlo Thagaripen la Bare Britaniyako thai le Nordutne Irlandesko",
+    "name:ro": "Regatul Unit al Marii Britanii È™i al Irlandei de Nord",
+    "name:roa-rup": "Britania Mari",
+    "name:roa-tara": "Regne AunÃ¬te",
+    "name:ru": "Ð’ÐµÐ»Ð¸ÐºÐ¾Ð±Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ",
+    "name:rue": "Ð’ÐµÐ»Ð¸ÐºÐ° Ð‘Ñ€Ñ–Ñ‚Ð°Ð½Ñ–Ñ",
+    "name:rw": "Ubwongereza",
+    "name:sa": "à¤¸à¤‚à¤¯à¥à¤•à¥à¤¤ à¤…à¤§à¤¿à¤°à¤¾à¤œà¥à¤¯",
+    "name:sah": "Ð¥Ð¾Ð»Ð±Ð¾hÑƒÐºÑ‚Ð°Ð°Ñ… Ð¥Ð¾Ñ€ÑƒÐ¾Ð»Ð»ÑƒÐº",
+    "name:sc": "Rennu Auniadu",
+    "name:scn": "Regnu Unitu",
+    "name:sco": "Unitit Kinrick",
+    "name:se": "Ovttastuvvan gonagasriika",
+    "name:sh": "Ujedinjeno Kraljevstvo",
+    "name:si": "à¶‘à¶šà·Šà·ƒà¶­à·Š à¶»à·à¶¢à¶°à·à¶±à·’à¶º",
+    "name:simple": "United Kingdom",
+    "name:sk": "SpojenÃ© krÃ¡Ä¾ovstvo",
+    "name:sl": "ZdruÅ¾eno kraljestvo Velike Britanije in Severne Irske",
+    "name:sn": "United Kingdom",
+    "name:so": "Midowga boqortooyada Britan",
+    "name:sq": "MbretÃ«ria e Bashkuar e BritanisÃ« dhe IrlandÃ«s sÃ« Veriut",
+    "name:sr": "Ð£Ñ˜ÐµÐ´Ð¸ÑšÐµÐ½Ð¾ ÐšÑ€Ð°Ñ™ÐµÐ²ÑÑ‚Ð²Ð¾",
+    "name:srn": "Ingriskondre",
+    "name:ss": "United Kingdom",
+    "name:stq": "Fereeniged KÃ¶Ã¶nichriek fon Groot-Britannien un Noudirlound",
+    "name:su": "Britania",
+    "name:sv": "Storbritannien",
+    "name:sw": "Ufalme wa Muungano",
+    "name:szl": "Wjelgo BrytaÅ„ijo",
+    "name:ta": "à®à®•à¯à®•à®¿à®¯ à®‡à®°à®¾à®šà¯à®šà®¿à®¯à®®à¯",
+    "name:te": "à°¯à±à°¨à±ˆà°Ÿà±†à°¡à± à°•à°¿à°‚à°—à±â€Œà°¡à°®à±",
+    "name:tet": "Reinu Naklibur",
+    "name:tg": "ÐŸÐ¾Ð´ÑˆÐ¾Ò³Ð¸Ð¸ ÐœÑƒÑ‚Ñ‚Ð°Ò³Ð¸Ð´Ð°",
+    "name:th": "à¸ªà¸«à¸£à¸²à¸Šà¸­à¸²à¸“à¸²à¸ˆà¸±à¸à¸£",
+    "name:tl": "Nagkakaisang Kaharian",
+    "name:tpi": "Yunaitet Kingdom",
+    "name:tr": "BirleÅŸik KrallÄ±k",
+    "name:tt": "Ð‘Ó©ÐµÐºÐ±Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ",
+    "name:tw": "United Kingdom",
+    "name:ty": "ParatÄne",
+    "name:udm": "Ð’ÐµÐ»Ð¸ÐºÐ¾Ð±Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ",
+    "name:ug": "Ø¨ÛˆÙŠÛˆÙƒ Ø¨ÛØ±Ù‰ØªØ§Ù†Ù‰ÙŠÛ•",
+    "name:uk": "Ð’ÐµÐ»Ð¸ÐºÐ° Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ñ–Ñ",
+    "name:ur": "Ø¨Ø±Ø·Ø§Ù†ÛŒÛ",
+    "name:uz": "Birlashgan Qirollik",
+    "name:vec": "Regno UnÃ¬o",
+    "name:vep": "Sur' Britanii",
+    "name:vi": "VÆ°Æ¡ng quá»‘c Anh",
+    "name:vls": "VerÃªnigd Keunienkryk",
+    "name:vo": "RegÃ¤n PebalÃ¶l",
+    "name:war": "Reino Unido",
+    "name:wo": "Nguur-Yu-Bennoo",
+    "name:wuu": "è‹±å›½",
+    "name:xal": "Ð˜Ðº Ð‘Ñ€Ð¸Ñ‚Ð¸ÑˆÐ¸Ð½ Ð±Ð¾Ð»Ð½ ÐÑ€ Ð“Ó™Ó™Ð»Ð³Ò¯Ð´Ð¸Ð½ ÐÐ¸Ð¸Ñ†Ó™Ñ‚Ó™ ÐÑƒÑ‚Ð³",
+    "name:xmf": "áƒ’áƒáƒáƒ áƒ—áƒáƒ˜áƒáƒœáƒáƒ¤áƒ˜áƒšáƒ˜ áƒáƒ›áƒáƒ¤áƒ”",
+    "name:yi": "×¤××¨××™×™× ×™×’×˜×¢ ×§×¢× ×™×’×¨×™×™×š",
+    "name:yo": "Iláº¹Ì€á»ba Aá¹£á»Ì€kan",
+    "name:za": "Yinghgoz",
+    "name:zea": "VereÃªnigd Konienkriek",
+    "name:zh": "è‹±å›½",
+    "name:zh-classical": "è‹±åœ‹",
+    "name:zh-min-nan": "LiÃ¢n-haÌp Ã”ng-kok",
+    "name:zh-simplified": "è‹±å›½",
+    "name:zh-traditional": "è‹±åœ‹",
+    "name:zh-yue": "è‹±åœ‹",
+    "name:zu": "Umbuso Ohlangeneyo",
+    "native_name": "United Kingdom of Great Britain and Northern Ireland",
+    "native_name:da": "Det Forenede Kongerige Storbritannien og Nordirland",
+    "native_name:es": "Reino Unido de Gran BretaÃ±a e Irlanda del Norte",
+    "native_name:vi": "VÆ°Æ¡ng quá»‘c LiÃªn hiá»‡p Anh vÃ  Báº¯c Ireland",
+    "official_name:en": "United Kingdom of Great Britain and Northern Ireland",
+    "official_name:it": "Regno Unito di Gran Bretagna e Irlanda del Nord",
+    "timezone": "Europe/London",
+    "type": "boundary",
+    "wikidata": "Q145",
+    "wikipedia": "en:United Kingdom"
+  }
+}
+,
+{
+  "type": "area",
+  "id": 3600129306,
+  "tags": {
+    "admin_level": "8",
+    "boundary": "administrative",
+    "designation": "non_metropolitan_district",
+    "name": "New Forest",
+    "population": "174309",
+    "ref:gss": "E07000091",
+    "ref:lau:1": "UKJ3308",
+    "source:ref:gss": "OS_OpenData_Boundary-Line",
+    "source:ref:lau": "ONS_OpenData",
+    "type": "boundary",
+    "website": "http://www.newforest.gov.uk/",
+    "wikipedia": "en:New Forest District"
+  }
+}
+,
+{
+  "type": "area",
+  "id": 3600151304,
+  "tags": {
+    "admin_level": "5",
+    "boundary": "administrative",
+    "name": "South East England",
+    "name:de": "SÃ¼dostengland",
+    "name:en": "South East England",
+    "ref:gss": "E12000008",
+    "ref:nuts:1": "UKJ",
+    "source:ref:gss": "ONS_OpenData",
+    "type": "boundary",
+    "wikipedia": "en:South East England"
+  }
+}
+,
+{
+  "type": "area",
+  "id": 3600172799,
+  "tags": {
+    "admin_level": "6",
+    "boundary": "administrative",
+    "designation": "non_metropolitan_county",
+    "name": "Hampshire",
+    "note": "Inner ring is to seperate Hampshire from Southampton which is a UA",
+    "population": "1304844",
+    "ref:gss": "E10000014",
+    "ref:nuts:3": "UKJ33",
+    "source:ref:gss": "OS_OpenData_Boundary-Line",
+    "source:ref:nuts": "ONS_OpenData",
+    "type": "boundary",
+    "website": "http://www.hampshire.gov.uk/",
+    "wikipedia": "en:Hampshire"
+  }
+}
+,
+{
+  "type": "area",
+  "id": 3602698314,
+  "tags": {
+    "boundary": "ceremonial",
+    "name": "Hampshire",
+    "note": "Ceremonial County, including Portsmouth and Southampton",
+    "type": "boundary"
+  }
+}
+,
+{
+  "type": "area",
+  "id": 3603746024,
+  "tags": {
+    "boundary": "statistical",
+    "name": "Hampshire and Isle of Wight",
+    "ref:nuts:2": "UKJ3",
+    "source": "ONS_OpenData",
+    "type": "boundary",
+    "wikipedia": "en:NUTS of the United Kingdom"
+  }
+}
+
+  ]
+}
+</code></pre>
+<p>And from this is I can use code to go through the boundary admin_levels, in descending sequence, to give me:</p>
+<p>New Forest, Hampshire, South East England, England, United Kingdom</p>
+<p>which are exactly the details I was hoping to get from the is_in tag. So, I've started a process of doing this for all of the towns and cities, effectively adding my own 'is_in' tag to my application's database.</p>
+<p>Here's some results from the process, with the node's is_in tag at the end (if it has one) to allows some comparison. The number at the beginning is the node's id for reference, e.g. <a href="http://www.openstreetmap.org/node/107775">http://www.openstreetmap.org/node/107775</a> for the first row.</p>
+<pre><code>107775 - London: Greater London, England, United Kingdom [is_in=England, United Kingdom, UK, Great Britain, Europe]
+204648 - Wellington: New Zealand [is_in=North Island, New Zealand]
+273316 - Itajaí: Santa Catarina, South Region, Brazil [is_in=Santa Catarina, Brazil]
+358309 - Leeds: Yorkshire and the Humber, England, United Kingdom [is_in=UK,United Kingdom, Yorkshire,West Yorkshire, Airedale]
+441183 - Athens: Central section of Athens, Attica Periphery, Greece [is_in=Athina municipality,Attiki,Greece,EU]
+671113 - Baltimore: Maryland, United States of America
+1947201 - Bath: Bath &amp; North East Somerset, South West England, United Kingdom [is_in=Somerset, England, UK]
+3216768 - St David's: Pembrokeshire, Wales, United Kingdom [is_in=Wales]
+6968827 - Ljubljana: Osrednjeslovenska, Western Slovenia [is_in=Slovenia, Europe]
+8087537 - Chester: Cheshire West and Chester, North West England, United Kingdom
+9002746 - Charleroi: Hainaut, Wallonia (French Community), Belgium [is_in=Hainaut; Wallonie; Belgique; Europe]
+9331795 - Limassol: Cyprus [is_in=Cyprus]
+10021976 - Leicester: East Midlands, England, United Kingdom [is_in=Leicestershire, England, UK]
+10671639 - Lincoln: Lincolnshire, East Midlands, England, United Kingdom
+11094836 - Nyköping: Södermanlands län, Svealand, Sweden [is_in=Nyköping, Södermanland, Sweden, EU]
+11127374 - Glasgow: Glasgow City, Scotland, United Kingdom [is_in=Scotland, UK]
+11235057 - Norwich: Norfolk, East of England, United Kingdom [is_in=England, Norfolk]
+12805909 - Oxford: Oxfordshire, South East England, United Kingdom [is_in=Oxfordshire, England, UK]
+13707878 - Copenhagen: Capital Region of Denmark [is_in=Hovedstaden, Denmark, EU]
+13766899 - Sydney: New South Wales, Australia
+14446670 - Quezon City: Metro Manila, Philippines [is_in=Metro Manila]
+14644309 - Iskenderun: Hatay, Mediterranean Region, Turkey [is_in=Turkey, Antakya]
+15412058 - Helsingborg: Skåne län, Götaland, Sweden [is_in=Helsingborgs kommun, Skåne, Skåne län, Sweden]
+16173235 - Mumbai: Maharashtra, India
+16173236 - New Delhi: Delhi, India [is_in=National Capital Region, NCR, India]
+16174445 - Pune: Maharashtra, India [is_in=India]
+16175031 - Islamabad: Islamabad Capital Territory, Pakistan [is_in=Pakistan, Asia]
+16175073 - Lahore: Punjab, Pakistan [is_in=Pakistan]
+17193023 - Erlangen: Middle Franconia, Free State of Bavaria, Germany [is_in=Mittelfranken,Bayern,Bundesrepublik Deutschland,Europe]
+17328659 - Vienna: Austria [is_in=Österreich,Europe]
+17550787 - Pécs: Baranya megye, Southern Transdanubia, Hungary [is_in=Pécsi kistérség; Baranya megye; Dél-Dunántúl; Magyarország]
+17721995 - Portsmouth: South East England, United Kingdom [is_in=Hampshire, England, UK]
+17807753 - Paris: Ile-de-France, Metropolitan France
+17857512 - Gloucester: Gloucestershire, South West England, United Kingdom [is_in=England, Gloucestershire]
+17859918 - Coventry: West Midlands, England, United Kingdom
+17861291 - Birmingham: West Midlands, England, United Kingdom [is_in=West Midlands, England, United Kingdom]
+17898859 - Edinburgh: City of Edinburgh, Scotland, United Kingdom [is_in=Scotland, United Kingdom, UK, Great Britain, Europe]
+17916174 - Canterbury: Kent, South East England, United Kingdom [is_in=Kent, England, UK]
+17951258 - Peterborough: East of England, United Kingdom
+17986274 - Plymouth: South West England, United Kingdom [is_in=Devon, England, UK]
+18009959 - Exeter: Devon, South West England, United Kingdom [is_in=Devon, England, UK]
+18063533 - Toronto: Ontario, Canada [is_in=Ontario, Canada]
+18318938 - Hildesheim: Landkreis Hildesheim, Lower Saxony, Germany [is_in=Hildesheim,Niedersachsen,Bundesrepublik Deutschland,Europe]
+18477455 - Bern: Verwaltungskreis Bern-Mittelland, Verwaltungsregion Bern-Mittelland, Switzerland [is_in=Bern-Mittelland,Schweiz,CH,Europe]
+18886011 - Ottawa: Ontario, Canada [is_in=Ontario, Canada]
+</code></pre>
+<p>So, my reason for posting this is that this raises some questions:</p>
+<ol>
+<li>Can my processing be improved? Should I look at Overpass areas other than the ones with a boundary and admin_level tag, perhaps? How would I determine the right sort sequence when I don't have an admin_level?</li>
+<li>Should I consider sharing the results of my processing? Should I even consider using this to update the OSM central database, setting each place node with the is_in tags I have determined? I would have used a more standardised is_in tag if it had been available and so wonder if the OSM community could benefit somehow?</li>
+<li>I'm really only considering English names, but am aware I'm working with Worldwide data. If this information is to be shared what additional processing should be added? I wonder if I can determine the language which is applicable to each node so I could use, for example, the name:es tags for a Spanish location rather than the name:en ones which I'm using currently?</li>
+</ol>
+<p>One thing nagging me is that I'm wondering why this approach hasn't been applied before. Map data is, by its very nature, a hierarchy of places within other places, so why is it necessary to have a free-form is_in tag to describe the hierarchy which already exists? I've read through <a href="http://wiki.openstreetmap.org/wiki/Key:is_in">http://wiki.openstreetmap.org/wiki/Key:is_in</a> and the discussion about boundary polygon making is_in redundant vs. is_in permitting 'simpler searching and easy disambiguation' and I strongly agree with the latter point; in my case having the is_in tag available would save a great deal of complex boundary processing by the Overpass API servers.</p>
+<p>Thanks for any help or guidance you can offer.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mass_tagging/" class="post-tag tag-link-mass_tagging"
+                                        title="see questions tagged 'mass_tagging'" rel="tag">mass_tagging</a>
+                                
+                                    <a href="/tags/reversegeocoding/" class="post-tag tag-link-reversegeocoding"
+                                        title="see questions tagged 'reversegeocoding'" rel="tag">reversegeocoding</a>
+                                
+                                    <a href="/tags/admin_boundary/" class="post-tag tag-link-admin_boundary"
+                                        title="see questions tagged 'admin_boundary'" rel="tag">admin_boundary</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                                    <a href="/tags/is_in/" class="post-tag tag-link-is_in"
+                                        title="see questions tagged 'is_in'" rel="tag">is_in</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jun '14, 13:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/68791600aba005984a3eddbd82f6c0ce?s=32&amp;d=identicon&amp;r=g" alt="Elliveny's gravatar image" />
+    <p><a href="/users/7931/elliveny">Elliveny</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Elliveny has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/33711/">
+                edited
+                <strong>05 Jun '14, 13:47</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-33711">
+    
+        <a name="33713"></a>
+        <div class="comment" id="comment-33713">
+            <div id="post-33713-score" class="comment-score"></div>
+            <div class="comment-text"><p>Please don't ask multiple questions at once. You already seem to have noted that the use of the is_in tag is discouraged. It might be easier to process, but it is difficult to keep all the is_in tags including their full hierarchy up-to-date. Boundary polygons provide much more exact borders and are easier to maintain in the long run.</p></div>
+            <div class="comment-info" id="comment-33713-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '14, 13:58)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33715"></a>
+        <div class="comment" id="comment-33715">
+            <div id="post-33715-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry, but it's difficult to avoid asking multiple questions when they relate to the same point.</p>
+
+<p>I'm suggesting that if the is_in tag was set from the boundary polygons, then you avoid the need to do all that boundary processing in cases such as the one discussed in my question. If I have a planet file and an extract of the nodes representing the towns and cities I need to display, how should I determine the location name hierarchy? I think Nominatim is overkill for what I need. To ask a single question: I've found a way to achieve my requirements, is there a better approach though?</p></div>
+            <div class="comment-info" id="comment-33715-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '14, 14:19)</span>
+                <a class="comment-user userinfo" href="/users/7931/elliveny">Elliveny</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33711" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33711-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/33711/determining-a-full-location-description-from-the-is_in-tag-for-town-and-city-place-nodes?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/33711/determining-a-full-location-description-from-the-is_in-tag-for-town-and-city-place-nodes?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/33711/determining-a-full-location-description-from-the-is_in-tag-for-town-and-city-place-nodes?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/33711/determining-a-full-location-description-from-the-is_in-tag-for-town-and-city-place-nodes?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="33712"></a>
+                    <div id="answer-container-33712" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33712-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33712/up/" rel="nofollow"> </a>
+<div id="post-33712-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-33712-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33712/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Investigate "reverse geocoding" such as is possible with <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup">Nominatim</a> or other services. The <a href="http://wiki.openstreetmap.org/wiki/Key:is_in"><code>is_in</code></a> tag is an old tag which is usually ignored or removed where boundary relations exist.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33712/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jun '14, 13:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f25a8392e12ed696b16554b3d08e4e2b?s=32&amp;d=identicon&amp;r=g" alt="EdLoach's gravatar image" />
+    <p><a href="/users/339/edloach">EdLoach ♦</a><br/>
+    <span class="score" title="19478 reputation points"><span class="">19.5k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="156 badges"><span class="silver">&#9679;</span><span class="badgecount">156</span></span><span title="280 badges"><span class="bronze">&#9679;</span><span class="badgecount">280</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="EdLoach has 93 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33712">
+    
+        <a name="33714"></a>
+        <div class="comment" id="comment-33714">
+            <div id="post-33714-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the suggestion. I have already worked with Nominatim and don't think it's suitable for this purpose. I'd need a local install of the whole planet file, which requires a heap of disk space and processing time. I could use an external Nominatim server, but my request volumes are likely to be too high. I could use an external Nominatim server against the city/town data and save the result, but I think this rather puts me back in the same place as I am with the Overpass API.</p></div>
+            <div class="comment-info" id="comment-33714-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '14, 14:03)</span>
+                <a class="comment-user userinfo" href="/users/7931/elliveny">Elliveny</a>
+                
+            </div>
+        </div>
+    
+        <a name="33717"></a>
+        <div class="comment" id="comment-33717">
+            <div id="post-33717-score" class="comment-score"></div>
+            <div class="comment-text"><p>Given your comment on the is_in tag being old and usually ignored, I think it is also notable that Nominatim actually uses it when assessing the location name. See <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview:">http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview:</a></p>
+
+<p>"All items by name listed in the is_in are searched for within the current country (in no particular order)." and "During the indexing process an address is also calculated using the first feature found for each level. Where an is_in value is provided it is used to filter the address."</p></div>
+            <div class="comment-info" id="comment-33717-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '14, 14:34)</span>
+                <a class="comment-user userinfo" href="/users/7931/elliveny">Elliveny</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33712" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33712-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="33743"></a>
+                    <div id="answer-container-33743" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33743-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33743/up/" rel="nofollow"> </a>
+<div id="post-33743-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33743-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33743/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Maybe some more hints about reverse geocoding can be found at <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33743/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jun '14, 23:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33743">
+    
+</div>
+<div id="comment-tools-33743" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33743-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/33711/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Tc3jjrLnfHfQo4pRjNpCCy2YU2qQg0YQ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33711/determining-a-full-location-description-from-the-is_in-tag-for-town-and-city-place-nodes?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33711/determining-a-full-location-description-from-the-is_in-tag-for-town-and-city-place-nodes?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/reversegeocoding/"
+            class="tag-link-reversegeocoding"
+            title="see questions tagged'reversegeocoding'using tags"
+            rel="tag">reversegeocoding</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/admin_boundary/"
+            class="tag-link-admin_boundary"
+            title="see questions tagged'admin_boundary'using tags"
+            rel="tag">admin_boundary</a> <span class="tag-number">&#215;63</span><br/>
+        
+        <a href="/tags/mass_tagging/"
+            class="tag-link-mass_tagging"
+            title="see questions tagged'mass_tagging'using tags"
+            rel="tag">mass_tagging</a> <span class="tag-number">&#215;12</span><br/>
+        
+        <a href="/tags/is_in/"
+            class="tag-link-is_in"
+            title="see questions tagged'is_in'using tags"
+            rel="tag">is_in</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 5, 2014, 1:35 p.m.">05 Jun '14, 13:35</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>57,913 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 5, 2014, 11:05 p.m.">05 Jun '14, 23:05</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/63563/how-do-i-find-elements-without-name-in-a-specific-language">How do I find elements without name in a specific language?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31109/question-about-use-of-is_in-tag">Question about use of &quot;is_in&quot; tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36501/how-to-mass-change-tag-value">How to mass-change tag value</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73930/changing-wikidata-and-wikipedia-tags">Changing Wikidata and Wikipedia tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35819/how-to-assign-a-tag-to-multiple-objects-at-once">How to assign a tag to multiple objects at once</a>
+        </p>
+        
+        <p>
+            <a href="/questions/162/how-do-i-tag-ways-with-partial-access">How do I tag ways with partial access?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/153/how-do-you-tell-if-a-minor-service-road-is-accessprivate-destination-or-permissive">How do you tell if a minor service road is access=private, destination, or permissive?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/125/how-do-i-stop-rivers-from-rendering-where-the-riverbanks-are-mapped">How do I stop rivers from rendering where the riverbanks are mapped?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/240/how-can-i-get-a-list-of-all-objects-with-a-certain-tag">How can I get a list of all objects with a certain tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/134/how-do-i-map-a-road-that-has-traffic-lights-only-in-one-direction">How do I map a road that has traffic lights only in one direction?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

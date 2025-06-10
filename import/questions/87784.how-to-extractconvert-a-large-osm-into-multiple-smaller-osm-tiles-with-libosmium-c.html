@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to extract/convert a large .osm into multiple smaller .osm tiles with libosmium C++? - OSM Help</title>
+        <meta name="description" content="Hello, what I&#39;m trying to achieve is that I&#39;d like to split a large OSM file into smaller OSM files which are going to be based on web mercator tiles at a particular zoom level, let&#39;s say 16. I&#39;m aware of osmium-tool CLI and I know I could use this command:  osmium extract --bbox 28.97369384765625,4..." />
+        <meta name="keywords" content="osmium,tiles,osm" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/87784/how-to-extractconvert-a-large-osm-into-multiple-smaller-osm-tiles-with-libosmium-c" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/87784/how-to-extractconvert-a-large-osm-into-multiple-smaller-osm-tiles-with-libosmium-c?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='SK7RIwkYeUVG1lfR1qY3LBVlNjeJTOWG' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/87784/how-to-extractconvert-a-large-osm-into-multiple-smaller-osm-tiles-with-libosmium-c">How to extract/convert a large .osm into multiple smaller .osm tiles with libosmium C++?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-87784-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/87784/up/" rel="nofollow"> </a>
+<div id="post-87784-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-87784-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/87784/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/87784/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, what I'm trying to achieve is that I'd like to split a large OSM file into smaller OSM files which are going to be based on web mercator tiles at a particular zoom level, let's say 16.</p>
+<p>I'm aware of osmium-tool CLI and I know I could use this command:</p>
+<blockquote>
+<p>osmium extract --bbox 28.97369384765625,41.025499378313754,28.9764404296875,41.027571415339786 --strategy complete_ways -o smaller_tile.osm -f xml large_file.osm.pbf --overwrite</p>
+</blockquote>
+<p>The issue is that I needed to run a python script that executes the command above with different bbox boundaries (using mercantile package) — and every individual <code>osmium extract ...</code> run is parsing the source <code>large_file.osm.pbf</code> again and again, which makes the whole process rather slow and taking more time than necessary.</p>
+<p>So, I'd like to code a C++ tool myself on top of libosmium directly and produce multiple osm files for tiles while handing the source OSM file.</p>
+<p>I think I can implement a <code>osmium::handler::Handler</code> and use <code>osmium::apply(reader, handler)</code> API. However, I don't really know how I need to handle node, way and relation entires coming through. Would it be enough to check entry's coordinate against a tile boundary and put it into a map keyed with tile xy and later somehow build and write OSM file while iterating over the main tile-entry map?</p>
+<p>A super small and simple example would be really useful for me to understand how I can implement a simpler and less sophisticated version of <code>osmium extract ...</code> by myself.</p>
+<p>I'm hoping to find a direction and potentially also shed light on this for other for future reference, thank you.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osmium/" class="post-tag tag-link-osmium"
+                                        title="see questions tagged 'osmium'" rel="tag">osmium</a>
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Sep '23, 02:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/88ef3e2d478b563d0b8b6c29e503e641?s=32&amp;d=identicon&amp;r=g" alt="mfatihmar's gravatar image" />
+    <p><a href="/users/23309/mfatihmar">mfatihmar</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mfatihmar has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-87784">
+    
+        <a name="87786"></a>
+        <div class="comment" id="comment-87786">
+            <div id="post-87786-score" class="comment-score"></div>
+            <div class="comment-text"><p>Why do you want to do this? There may be an existing tool for your end goal.</p></div>
+            <div class="comment-info" id="comment-87786-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Sep '23, 10:26)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+        <a name="87787"></a>
+        <div class="comment" id="comment-87787">
+            <div id="post-87787-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm trying to break a large OSM file of a city into smaller chunks in web mercator tiles at a particular zoom level, so that I then convert them into 3D OBJ files and stream over the internet (over a real-time network connection). It's a pretty custom workflow and instead of hosting a full-blown tile-server, all I need is static OSM and OBJ files built/baked let's say every month automatically. I have looked at OSM2World, osmosis, osmium etc. and I think I need to write some custom tools on top of lower-level libraries like libosmium. Thank you for asking though :)</p></div>
+            <div class="comment-info" id="comment-87787-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Sep '23, 13:37)</span>
+                <a class="comment-user userinfo" href="/users/23309/mfatihmar">mfatihmar</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-87784" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-87784-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/87784/how-to-extractconvert-a-large-osm-into-multiple-smaller-osm-tiles-with-libosmium-c?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/87784/how-to-extractconvert-a-large-osm-into-multiple-smaller-osm-tiles-with-libosmium-c?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/87784/how-to-extractconvert-a-large-osm-into-multiple-smaller-osm-tiles-with-libosmium-c?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/87784/how-to-extractconvert-a-large-osm-into-multiple-smaller-osm-tiles-with-libosmium-c?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="87785"></a>
+                    <div id="answer-container-87785" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-87785-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/87785/up/" rel="nofollow"> </a>
+<div id="post-87785-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-87785-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/87785/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is no "super small and simple example" because it is not a super small and simple problem you are trying to solve. You can look at the Osmium source code and find all the details in there.</p>
+<p>I suggest a different approach: <code>osmium extract</code> can read a list of extracts to generate from a config file instead of getting the bounding box from the ocmmand line. You can auto-generate that config file. Be aware that there is a limit how many extracts you can generate in one go, though. That's just a question of memory usage. Every extract needs memory, see the man page for details. So for a practical use case you probably want to split the input file into, lets say 100 pieces and then run <code>osmium extract</code> again for each of the pieces to split them further.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/87785/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Sep '23, 08:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2d4dfcdcde73aa5e2ffa4a9b3a7cb51d?s=32&amp;d=identicon&amp;r=g" alt="Jochen%20Topf's gravatar image" />
+    <p><a href="/users/112/jochen-topf">Jochen Topf</a><br/>
+    <span class="score" title="5244 reputation points"><span class="">5.2k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="50 badges"><span class="silver">&#9679;</span><span class="badgecount">50</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jochen Topf has 32 accepted answers">31&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-87785">
+    
+        <a name="87788"></a>
+        <div class="comment" id="comment-87788">
+            <div id="post-87788-score" class="comment-score"></div>
+            <div class="comment-text"><p>I had a look at osmium extract and considered --config something.json option but the limits are simply too low for me. On the C++ side, reading and processing a 50-100MB .osm.pbf file is not a big deal but osmium-tool set the memory and file limits simply too low for the pipeline I'm trying to build.</p>
+
+<p>I also had a look at these two places related:
+- <a href="https://github.com/osmcode/osmium-tool/issues/265">https://github.com/osmcode/osmium-tool/issues/265</a>
+- <a href="https://github.com/osmcode/osmium-tool/commit/353e9d565342af1ea703c56a15f41dc40732168a">https://github.com/osmcode/osmium-tool/commit/353e9d565342af1ea703c56a15f41dc40732168a</a></p>
+
+<p>Perhaps it's a bit complex than I initially anticipated but at least currently, I'm thinking of processing relations first, ways second and nodes the last to determine dependencies between them and create&amp;use <code>osmium::io::Writer</code>s to write those osmium objects/elements into files. (I hope this would work!)</p>
+
+<p>It is a little bit hard for me to read osmium-tool codebase (command-extract) and follow its logic. I will, however, use <code>osmium extract</code> outputs to compare it against my implementation's output to validate my work.</p>
+
+<p>I wanted to see if there are hints/tips/tricks for this but apparently no, I need to implement a proper tool on top of libosmium.</p></div>
+            <div class="comment-info" id="comment-87788-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Sep '23, 13:58)</span>
+                <a class="comment-user userinfo" href="/users/23309/mfatihmar">mfatihmar</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-87785" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-87785-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/87784/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='SK7RIwkYeUVG1lfR1qY3LBVlNjeJTOWG' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/87784/how-to-extractconvert-a-large-osm-into-multiple-smaller-osm-tiles-with-libosmium-c?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/87784/how-to-extractconvert-a-large-osm-into-multiple-smaller-osm-tiles-with-libosmium-c?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+        <a href="/tags/osmium/"
+            class="tag-link-osmium"
+            title="see questions tagged'osmium'using tags"
+            rel="tag">osmium</a> <span class="tag-number">&#215;38</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 2, 2023, 2:35 a.m.">02 Sep '23, 02:35</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,625 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 2, 2023, 1:58 p.m.">02 Sep '23, 13:58</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/33317/osm-tiles-png-generation">OSM Tiles (png) generation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57360/want-to-create-live-map">want to create live map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30621/can-i-install-nominatim-and-switch2osm-tile-server-on-same-machine">Can i install nominatim and switch2osm tile server on same machine ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31038/guide-me-how-to-getting-started-with-osm-offline-map">Guide me how to getting started with OSM Offline Map ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36484/osm-map-loaded-onto-etrex20-sd-card-does-not-work">OSM map loaded onto etrex20 sd card does not work</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50921/how-to-show-openstreet-map-in-ios-programmatically">how to show openstreet map in ios programmatically</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21801/tile-server-not-displaying-tiles">tile server not displaying tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26158/how-to-generate-list-of-tiles-from-bbox">How to generate list of tiles from bbox</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30698/switch2osm-tile-server-insert-more-countries">Switch2osm tile server insert more countries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66191/building-map-with-custom-roads-buildings-for-a-forest">Building map with custom roads &amp; buildings for a forest?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,797 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Wie Darstellung von Man-made Nodes auf der mapnik-Standardkarte auf osm.org ändern? - OSM Help</title>
+        <meta name="description" content="hallo, es gibt ja offenbar schon sehr, sehr viele &quot;man-made&quot; nodes. auf OSM werden die ja dann als punkte angezeigt - wenn man glück hat, extrem klein; wenn man pech hat, gar nicht zu erkennen... :/ ein paar wenige symbole für &quot;man_made&quot; objekte kann man ja bei potlatch2 schon auswählen. gibt es da ..." />
+        <meta name="keywords" content="node,darstellung,man_made,karte,lang-de" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/20004/wie-darstellung-von-man-made-nodes-auf-der-mapnik-standardkarte-auf-osmorg-andern" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/20004/wie-darstellung-von-man-made-nodes-auf-der-mapnik-standardkarte-auf-osmorg-andern?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='8Z1w8a0b2ueKcJouocCDflLsKbxlim3W' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/20004/wie-darstellung-von-man-made-nodes-auf-der-mapnik-standardkarte-auf-osmorg-andern">Wie Darstellung von Man-made Nodes auf der mapnik-Standardkarte auf osm.org ändern?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-20004-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20004/up/" rel="nofollow"> </a>
+<div id="post-20004-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-20004-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20004/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/20004/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>hallo,</p>
+<p>es gibt ja offenbar schon sehr, sehr viele "man-made" nodes. auf OSM werden die ja dann als punkte angezeigt - wenn man glück hat, extrem klein; wenn man pech hat, gar nicht zu erkennen... :/</p>
+<p>ein paar wenige symbole für "man_made" objekte kann man ja bei potlatch2 schon auswählen. gibt es da eine möglichkeit, diese auswahl zu erweitern oder gar selber dafür zu sorgen, dass der node, größer, besser erkennbar auf der karte wird?</p>
+<p>mir gehts insbesondere im moment gerade um das eintragen von überwachungskameras.</p>
+<p>pls help! :)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/node/" class="post-tag tag-link-node"
+                                        title="see questions tagged 'node'" rel="tag">node</a>
+                                
+                                    <a href="/tags/darstellung/" class="post-tag tag-link-darstellung"
+                                        title="see questions tagged 'darstellung'" rel="tag">darstellung</a>
+                                
+                                    <a href="/tags/man_made/" class="post-tag tag-link-man_made"
+                                        title="see questions tagged 'man_made'" rel="tag">man_made</a>
+                                
+                                    <a href="/tags/karte/" class="post-tag tag-link-karte"
+                                        title="see questions tagged 'karte'" rel="tag">karte</a>
+                                
+                                    <a href="/tags/lang-de/" class="post-tag tag-link-lang-de"
+                                        title="see questions tagged 'lang-de'" rel="tag">lang-de</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Feb '13, 16:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fee72c306e25d466d710e4990b0a7120?s=32&amp;d=identicon&amp;r=g" alt="anzed's gravatar image" />
+    <p><a href="/users/5635/anzed">anzed</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="anzed has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/20004/">
+                edited
+                <strong>27 Jul '13, 13:41</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-20004">
+    
+        <a name="20005"></a>
+        <div class="comment" id="comment-20005">
+            <div id="post-20005-score" class="comment-score"></div>
+            <div class="comment-text"><p>Geht es dir um die Anzeige in Potlatch2? oder auf der Standardkarte auf osm.org - das sind zwei verschiedene Dinge?</p></div>
+            <div class="comment-info" id="comment-20005-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Feb '13, 16:41)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="20006"></a>
+        <div class="comment" id="comment-20006">
+            <div id="post-20006-score" class="comment-score"></div>
+            <div class="comment-text"><p>mir gehts um eine sichtbare markierung auf der standardkarte von osm - da sieht man die nodes nämlich gar net - selbst bei max. zoom in :/</p></div>
+            <div class="comment-info" id="comment-20006-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Feb '13, 16:43)</span>
+                <a class="comment-user userinfo" href="/users/5635/anzed">anzed</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-20004" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20004-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/20004/wie-darstellung-von-man-made-nodes-auf-der-mapnik-standardkarte-auf-osmorg-andern?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/20004/wie-darstellung-von-man-made-nodes-auf-der-mapnik-standardkarte-auf-osmorg-andern?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/20004/wie-darstellung-von-man-made-nodes-auf-der-mapnik-standardkarte-auf-osmorg-andern?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/20004/wie-darstellung-von-man-made-nodes-auf-der-mapnik-standardkarte-auf-osmorg-andern?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="20007"></a>
+                    <div id="answer-container-20007" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-20007-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20007/up/" rel="nofollow"> </a>
+<div id="post-20007-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-20007-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20007/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Ich gehe mal davon aus, dass du Englisch kannst: <a href="//help.openstreetmap.org/search/?q=map+style">Suche nach map style</a>. Zum Beispiel die Antwort zur Frage  <a href="//help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map/104">i-have-made-edits-but-they-dont-show-up-on-the-map</a> klärt es.</p>
+<p>Kurz auf Deutsch: Die Standardkartendarstellung auf osm.org (oft nur kurz, aber mehrdeutig "<a href="//wiki.openstreetmap.org/wiki/Mapnik">mapnik</a>" genannt) ist nur eine von sehr vielen.  Dort im Wiki ist eine <a href="//wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">Übersicht der vielen Anwendungen für OSM-Daten</a>.<br>
+</p>
+<p>Für den genannten mapnik-Standard-Stil kannst du Änderungswünsche anbringen, wenn du es als für die Allgemeinheit sinnvolle Information ansiehst: <a href="https://github.com/gravitystorm/openstreetmap-carto/issues">carto issues at github</a>. Allerdings muss man sich dort bei einem externen Drittanbieter neu registrieren. OSM-intern könntest du die Probleme mit dem Kartenstil ("Map Style") bei <a href="https://trac.openstreetmap.org/">OSM.org's trac</a> melden (Anmeldung mit deinem normalen OSM.org-Passwort).</p>
+<p>Allerdings gilt auch: alles und jedes wird diese "Alles-in-einem"-Karte nie anzeigen können. Es gibt ja genug Spezialkarten - und wenn es keine gibt, die die gewünschten Dinge darstellt, kann man sich eine <a href="//wiki.openstreetmap.org/wiki/Rendering">Karte rendern</a> oder über eine bestehende Karte dynamisch einen <a href="//wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;search=overlay">Overlay mit den gewünschten Informationen</a> (z.B. auch ad hoc mit overpass API) legen. <a href="http://osmcamera.tk/index.php?lat=50.10912999&amp;lon=8.67001534&amp;zoom=16">Beipiel für eine Overlay-Karte der Überwachungskameras</a> (hat auch <a href="http://osmcamera.tk/index.php?lat=50.01729488&amp;lon=8.78861189&amp;zoom=17">direkte Bildanzeige</a>, wenn ein Bild öffentlich zugänglich ist).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/20007/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Feb '13, 17:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/20007/">
+                edited
+                <strong>02 Nov '13, 13:11</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-20007">
+    
+</div>
+<div id="comment-tools-20007" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20007-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="20040"></a>
+                    <div id="answer-container-20040" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-20040-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20040/up/" rel="nofollow"> </a>
+<div id="post-20040-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-20040-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20040/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Eine schnelle Lösung ist <a href="http://overpass-turbo.eu/?key=man_made&amp;template=key">overpass-turbo</a>, da kannst Du sogar jedes gefundene Objekt anklicken. Für Überwachungskameras gezielt: <a href="http://overpass-turbo.eu/?key=man_made&amp;value=surveillance&amp;template=key-value">man_made=surveillance</a>.</p>
+<p>/al</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/20040/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Feb '13, 16:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5501080a7333d6383d6c545f076eaeba?s=32&amp;d=identicon&amp;r=g" alt="_al's gravatar image" />
+    <p><a href="/users/507/_al">_al</a><br/>
+    <span class="score" title="860 reputation points">860</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="18 badges"><span class="bronze">&#9679;</span><span class="badgecount">18</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="_al has one accepted answer">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/20040/">
+                edited
+                <strong>19 Feb '13, 16:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-20040">
+    
+</div>
+<div id="comment-tools-20040" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20040-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/20004/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='8Z1w8a0b2ueKcJouocCDflLsKbxlim3W' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20004/wie-darstellung-von-man-made-nodes-auf-der-mapnik-standardkarte-auf-osmorg-andern?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20004/wie-darstellung-von-man-made-nodes-auf-der-mapnik-standardkarte-auf-osmorg-andern?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lang-de/"
+            class="tag-link-lang-de"
+            title="see questions tagged'lang-de'using tags"
+            rel="tag">lang-de</a> <span class="tag-number">&#215;286</span><br/>
+        
+        <a href="/tags/node/"
+            class="tag-link-node"
+            title="see questions tagged'node'using tags"
+            rel="tag">node</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/man_made/"
+            class="tag-link-man_made"
+            title="see questions tagged'man_made'using tags"
+            rel="tag">man_made</a> <span class="tag-number">&#215;14</span><br/>
+        
+        <a href="/tags/karte/"
+            class="tag-link-karte"
+            title="see questions tagged'karte'using tags"
+            rel="tag">karte</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/darstellung/"
+            class="tag-link-darstellung"
+            title="see questions tagged'darstellung'using tags"
+            rel="tag">darstellung</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 17, 2013, 4:30 p.m.">17 Feb '13, 16:30</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,213 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 2, 2013, 1:11 p.m.">02 Nov '13, 13:11</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/22880/wie-wird-meine-kartenanderung-sichtbar-und-wirksam-erst-revision-notig">[closed] Wie wird meine Kartenänderung sichtbar und wirksam? Erst Revision nötig?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26705/wie-ein-polygon-in-wgs84-koordinaten-auf-einer-karte-darstellenanzeigen">Wie ein Polygon in WGS84-Koordinaten auf einer Karte darstellen/anzeigen?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18987/karte-mit-suchfeld">Karte mit Suchfeld</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22418/osm-in-qgis-darstellung-strassenbeschriftungausgabe-andern-pdf-unlesbare-zu-kleine-strassennamen">OSM in QGIS: Darstellung Strassenbeschriftung/Ausgabe ändern? (-&gt;PDF: unlesbare, zu kleine Strassennamen)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23851/wie-ubertrage-ich-die-osm-radfahrkarte-auf-mein-garmin-edge-800-gps-gerat">Wie übertrage ich die OSM-Radfahrkarte auf mein Garmin Edge 800 GPS-Gerät?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24872/wie-mappe-ich-eine-tankstelle-es-werden-manche-objekte-name-nicht-angezeigt">Wie mappe ich eine Tankstelle? Es werden manche Objekte (Name) nicht angezeigt?!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8202/unterschiedliche-darstellung-abhangig-vom-zoomfaktor">Unterschiedliche Darstellung abhängig vom Zoomfaktor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16769/benotige-leere-karte">benötige leere Karte</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19996/bearbeitungen-versucht-neue-punkteknoten-zu-erstellen-erscheinen-nicht-in-der-liste-meiner-anderungen">Bearbeitungen (versucht neue Punkte/Knoten zu erstellen) erscheinen nicht in der Liste meiner Änderungen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28722/eigene-karte-mit-wirtschaftswegen-erstellen">Eigene Karte mit Wirtschaftswegen erstellen</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

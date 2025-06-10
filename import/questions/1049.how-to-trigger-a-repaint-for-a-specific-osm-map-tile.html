@@ -1,0 +1,878 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to trigger a repaint for a specific OSM map tile? - OSM Help</title>
+        <meta name="description" content="After a cycling tour through north-western Russia, I&#39;ve submitted a couple of changesets.  Mapnik map tiles on zoom levels &amp;gt;=12 (here&#39;s an example) almost instantly reflect the updated data. However, even one or two weeks after the uploads, map tiles on zoom levels &amp;lt; 12 (here&#39;s an example) are..." />
+        <meta name="keywords" content="tiles,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='E9FKCOwZZ784JshzkFFmc09HtzpWHXCi' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile">How to trigger a repaint for a specific OSM map tile?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-1049-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1049/up/" rel="nofollow"> </a>
+<div id="post-1049-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-1049-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1049/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/1049/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   3
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>After a cycling tour through north-western Russia, I've submitted a couple of changesets. </p>
+<p>Mapnik map tiles on zoom levels &gt;=12 (here's an <a>example</a>) almost instantly reflect the updated data. However, even one or two weeks after the uploads, map tiles on zoom levels &lt; 12 (here's an <a>example</a>) aren't updated yet.</p>
+<p><strong>Questions</strong></p>
+<p>How can I explicitly trigger a repaint for a specific mapnik tile?</p>
+<p>How can I explicitly trigger a repaint for all tiles on all zoom levels in a specific bounding box? </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Oct '10, 11:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c70c3e59f8809e5c2b1140ce4fd9bbfd?s=32&amp;d=identicon&amp;r=g" alt="guggis's gravatar image" />
+    <p><a href="/users/83/guggis">guggis</a><br/>
+    <span class="score" title="121 reputation points">121</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="guggis has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-1049">
+    
+</div>
+<div id="comment-tools-1049" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1049-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="1050"></a>
+                    <div id="answer-container-1050" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1050-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1050/up/" rel="nofollow"> </a>
+<div id="post-1050-score" class="post-score"
+    title="current number of votes">
+    9
+</div>
+<a id="post-1050-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1050/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Mapnik tryes not to rerender tiles unless needed. If the tiles has not rerendered in 2 weeks the changes is probably not enough to trigger a rerender.</p>
+<p>If you want to get more information on a tile you can append <strike>/info</strike> <code>/status</code> to the end of the url. You might also force a rerender by appending /dirty at the end of the url, but overuse might overload the tile server.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1050/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Oct '10, 13:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44a4438f0146dfd898e24c221fd28b58?s=32&amp;d=identicon&amp;r=g" alt="Gnonthgol's gravatar image" />
+    <p><a href="/users/131/gnonthgol">Gnonthgol ♦</a><br/>
+    <span class="score" title="13750 reputation points"><span class="">13.8k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="103 badges"><span class="silver">&#9679;</span><span class="badgecount">103</span></span><span title="198 badges"><span class="bronze">&#9679;</span><span class="badgecount">198</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gnonthgol has 57 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/1050/">
+                edited
+                <strong>18 Apr '11, 09:50</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6c2dd6a39d3f38f1bb47a8c1fe8325e2?s=32&amp;d=identicon&amp;r=g" alt="sleske's gravatar image" />
+            <p><a href="/users/666/sleske">sleske</a><br/>
+            <span class="score" title="4090 reputation points"><span class="">4.1k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="78 badges"><span class="bronze">&#9679;</span><span class="badgecount">78</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1050">
+    
+        <a name="4604"></a>
+        <div class="comment" id="comment-4604">
+            <div id="post-4604-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is there a difference between this method and hitting 'r' at z=12 in <a href="http://informationfreeway.org">informationfreeway.org</a>? I use the latter, and it works, but I am worried that it cause more tiles to be rerendered than I absolutely need.</p></div>
+            <div class="comment-info" id="comment-4604-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Apr '11, 19:02)</span>
+                <a class="comment-user userinfo" href="/users/831/ponzu">ponzu</a>
+                
+            </div>
+        </div>
+    
+        <a name="4674"></a>
+        <div class="comment" id="comment-4674">
+            <div id="post-4674-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hitting 'r' at <a href="http://informationfreeway.org">informationfreeway.org</a> causes Tiles@Home to rerender, not the mapnik map. It's an entirely different map.</p></div>
+            <div class="comment-info" id="comment-4674-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Apr '11, 21:37)</span>
+                <a class="comment-user userinfo" href="/users/1224/lennard">Lennard</a>
+                
+            </div>
+        </div>
+    
+        <a name="54015"></a>
+        <div class="comment" id="comment-54015">
+            <div id="post-54015-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've been reading through this, now old, question as I had the same question. One update for <a href="http://help.openstreetmap.org/users/1224/lennard">@Lennard</a>: informationfreeway.org now seems to use the mapnik map, and not the (now discontinued) Tiles@Home map.</p></div>
+            <div class="comment-info" id="comment-54015-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jan '17, 08:46)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1050" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1050-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="3080"></a>
+                    <div id="answer-container-3080" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3080-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3080/up/" rel="nofollow"> </a>
+<div id="post-3080-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-3080-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3080/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The answer is <a href="http://wiki.openstreetmap.org/wiki/Slippy_map#Mapnik_tile_rendering">here</a></p>
+<blockquote>
+<p>If you want to make a tile render before the seven day expiry then you can mark it as dirty by appending /dirty: 
+<a href="http://tile.openstreetmap.org/7/63/42.png/dirty">http://tile.openstreetmap.org/7/63/42.png/dirty</a></p>
+</blockquote>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3080/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Feb '11, 15:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2839f25c5f2da24f6ffd25de1641684?s=32&amp;d=identicon&amp;r=g" alt="NicolasDumoulin's gravatar image" />
+    <p><a href="/users/868/nicolasdumoulin">NicolasDumoulin</a><br/>
+    <span class="score" title="3327 reputation points"><span class="">3.3k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="NicolasDumoulin has 15 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3080">
+    
+</div>
+<div id="comment-tools-3080" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3080-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5494"></a>
+                    <div id="answer-container-5494" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5494-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5494/up/" rel="nofollow"> </a>
+<div id="post-5494-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-5494-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5494/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>And for those that are as ignorant as I seem to have been for a few weeks (pondering how to get the URL of a specific tile -- so I can append these /status /dirty additions to them):
+You can get the URL e.g. directly from your browser (and depending on your browser) with right-clicking a spot on the map and selecting "Open image in new tab" or "Copy image URL".</p>
+<p>If you get a c.* in the beginning of the URL that seems to imply to a cached(?) version of the tile and removing that c. from the beginning may show you an already re-rendered tile (my example from few minutes ago: <a href="http://c.tile.openstreetmap.org/17/39201/58652.png">http://c.tile.openstreetmap.org/17/39201/58652.png</a> ). I have no idea if that's browser or server cache -- or something else.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5494/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Jun '11, 15:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/280f61ca58a2e8c3d7bc877ed8a3def2?s=32&amp;d=identicon&amp;r=g" alt="jaakkoh's gravatar image" />
+    <p><a href="/users/952/jaakkoh">jaakkoh</a><br/>
+    <span class="score" title="548 reputation points">548</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jaakkoh has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5494">
+    
+        <a name="25173"></a>
+        <div class="comment" id="comment-25173">
+            <div id="post-25173-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Hi jaakkoh - the "c.tileserver" is not a cached version of the server, but should be an alias that points to the same tile server as plain old "tileserver" would. There are limits on simultaneous connections between a single browser and a single dns address which can limit the throughput of tiles. So... people get around this by setting up multiple dns names for the same server and enable more parallel http connections. I think.</p></div>
+            <div class="comment-info" id="comment-25173-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Aug '13, 18:22)</span>
+                <a class="comment-user userinfo" href="/users/3616/jeffmeyer">jeffmeyer</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5494" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5494-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/1049/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='E9FKCOwZZ784JshzkFFmc09HtzpWHXCi' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 7, 2010, 11:17 a.m.">07 Oct '10, 11:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>35,633 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 13, 2017, 8:46 a.m.">13 Jan '17, 08:46</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/11774/why-wont-mapnik-render-any-tiles">Why won&#39;t Mapnik render any tiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13250/what-is-the-correct-projection-i-should-use-with-mapnik">What is the correct projection I should use with Mapnik?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7916/mapnik-ubuntu">Mapnik, Ubuntu</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10417/how-to-render-tiles-for-india-map">How to render tiles for India Map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12750/what-is-the-average-size-of-all-tiles-for-a-us-state">What is the average size of all tiles for a US state?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13100/view-mapnik-tiles-in-potlatch2">View Mapnik tiles in potlatch2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3409/how-to-display-your-own-rendering-tiles-in-a-symbian-phone">How to display your own rendering tiles in a Symbian Phone?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7654/creating-png-tiles-for-all-zoom-levels">Creating PNG tiles for all zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8849/how-to-force-mapnik-render-only-not-empty-tiles">How to force mapnik render only not empty tiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18386/create-tiles-in-windows-with-mapnik">Create Tiles in Windows with Mapnik</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

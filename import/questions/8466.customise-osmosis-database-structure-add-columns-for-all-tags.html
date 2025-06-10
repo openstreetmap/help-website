@@ -1,0 +1,840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>customise osmosis database structure - add columns for ALL tags - OSM Help</title>
+        <meta name="description" content="My project is to build a series of map layers showing developments over an extended period, bronze age to 19th century with primary features of the present, covering the area of Cornwall, Devon, Dorset &amp;amp; Somerset. I am trying to import sections of OSM into a postgis database using osm2postgresql..." />
+        <meta name="keywords" content="postgis,osmosis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/8466/customise-osmosis-database-structure-add-columns-for-all-tags" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/8466/customise-osmosis-database-structure-add-columns-for-all-tags?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='um2y862MUflUPPmVOD8SWRaR7sgKAg3l' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/8466/customise-osmosis-database-structure-add-columns-for-all-tags">customise osmosis database structure - add columns for ALL tags</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-8466-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8466/up/" rel="nofollow"> </a>
+<div id="post-8466-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-8466-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8466/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/8466/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>My project is to build a series of map layers showing developments over an extended period, bronze age to 19th century with primary features of the present, covering the area of Cornwall, Devon, Dorset &amp; Somerset.</p>
+<p>I am trying to import sections of OSM into a postgis database using osm2postgresql-04.sh with osmosis but am finding a combination of the default schema and 'free spirited' tagging is resulting in the loss of significant information. (e.g. created_by, source, note, comment, etc. tags causing the tags field in the db to be truncated before relevant tags are reached).</p>
+<p>4 months of manually hacking at the data has failed to solve the problem and convinced my the solution is to be able to configure the db to have columns for EVERY tag in the data and the use sql queries to pick what I need. </p>
+<p>The problem is I have no knowledge of postgres and can just barely get by with mysql.</p>
+<p>my present procedure is using osm2postgresql-04.sh to load the data, Qgis to convert it to MapInfo files for editing.</p>
+<p>Can SKS point me to a primer or other help.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/postgis/" class="post-tag tag-link-postgis"
+                                        title="see questions tagged 'postgis'" rel="tag">postgis</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Oct '11, 06:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e34a746be3d2d692055b59c8d0c11848?s=32&amp;d=identicon&amp;r=g" alt="sparrowhawk's gravatar image" />
+    <p><a href="/users/2198/sparrowhawk">sparrowhawk</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sparrowhawk has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-8466">
+    
+</div>
+<div id="comment-tools-8466" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8466-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/8466/customise-osmosis-database-structure-add-columns-for-all-tags?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/8466/customise-osmosis-database-structure-add-columns-for-all-tags?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/8466/customise-osmosis-database-structure-add-columns-for-all-tags?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/8466/customise-osmosis-database-structure-add-columns-for-all-tags?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="8468"></a>
+                    <div id="answer-container-8468" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8468-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8468/up/" rel="nofollow"> </a>
+<div id="post-8468-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-8468-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8468/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You do not want columns for ALL tags as this would mean tens of thousands of columns.</p>
+<p>There are various ways of importing OSM data into a database and which one you choose depends largely on what you want to do with the database. What you describe above - having all tags in one text field - is something nobody does nowadays and I am intrigued that you should try that at all; you must have been following a 4 year old README or so.</p>
+<p>Basically, we have importers geared towards rendering the data - these will tend to drop everything not needed for map drawing, and will make sure to create "geometry" objects for quick access. Having a "geometry" object e.g. for a road in the database means that you can quickly access the road as a whole, and have the database answer questions like "does road A intersect with forest B" or so, without having to first read and process all the nodes making up the road. Examples of such importers are the widely-used osm2pgsql or the newer Imposm. With both you have considerable control over which tags get imported into their own columns, by way of a config file. osm2pgsql will always create exactly four database tables holding your geometries, whereas with Imposm this is configurable.</p>
+<p>The other kind of importers we have is geared towards further processing of the data and these will usually make an effort to presever <em>all</em> information about an OSM object, including all tags and meta data like who created it when, and can optionally also preserve history, i.e. they can keep older versions of the same object. Osmosis is the prime example of such importers. </p>
+<p>Both areas are not 100% distinct. osm2pgsql for example allows you, by way of extra commandline switches, to store all tags - not only those for which a separate column is created - in a so-called "hstore" column. This is a feature of PostgreSQL where you can have an unlimited number of key-value pairs in one database column. osm2pgsql also has a feature where you can request some metadata (user id, date of last modification) to be recorded in a separate column. On the other hand, Osmosis offers two distinct database schemas, one being the "API DB" schema where all tags and all metadata are stored (tags have their own database tables with one row per tag nowadays - not the old "all tags in one text field" scheme anymore!), and the other being the "Snapshot" schema which optionally includes built geometries.</p>
+<p>Additionally, there are specialist importers like osm2pgrouting that import data optimized for specialist purposes.</p>
+<p>If you plan to edit in Mapinfo, you could also use osm2shp or osmjs to convert OSM data to shape files and edit those, or you could use the OSM plugin for QGis to load OSM data directly into QGis.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8468/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Oct '11, 10:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8468">
+    
+        <a name="8473"></a>
+        <div class="comment" id="comment-8473">
+            <div id="post-8473-score" class="comment-score"></div>
+            <div class="comment-text"><p>In addition to Frederick's excelent pointers, I'd advise you to browse the postres docs (<a href="http://www.postgresql.org/docs/current/static/)">http://www.postgresql.org/docs/current/static/)</a> and postgis docs (<a href="http://www.postgis.org/docs/)">http://www.postgis.org/docs/)</a> they are very high quality and should help you understand what can be done with th db.</p></div>
+            <div class="comment-info" id="comment-8473-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Oct '11, 14:10)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8468" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8468-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="8477"></a>
+                    <div id="answer-container-8477" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8477-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8477/up/" rel="nofollow"> </a>
+<div id="post-8477-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-8477-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8477/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thanks for your response, you have given me a lot to digest. The process is going to be far more complex than I had thought</p>
+<blockquote>
+<p>You do not want columns for ALL tags
+as this would mean tens of thousands
+of columns.</p>
+</blockquote>
+<p>Not in the finished product but I need to simplify the extraction and sorting of significant objects.</p>
+<p>In a perfect world, there would be a clearly defined hiarachy of tags and no one would make typos but we are stuck in the real world, full of human fraility and creativity.</p>
+<p>The area I am working with contains 60,000 unique tag key = value sets covering about 300 tag keys that can be reduced to about 80-100 keys by merging various ways of saying the same thing.</p>
+<p>I have been using grep to find the key = value sets in the .osm file then using awk to delete the unwanted tags but this takes 3 days for the grep/awk and another 2 -3 days to manually cut/paste the unprocessed tags into separate columns just for a mapinfo table of highway = primary, trunk, secondary, &amp; tertiary</p>
+<blockquote>
+<p>What you describe above - having all
+tags in one text field - is something
+nobody does nowadays and I am
+intrigued that you should try that at
+all; you must have been following a 4
+year old README or so.</p>
+</blockquote>
+<p>This is done by both osm2postgresql-04.sh (which seems to be a fronted to osmosis-0.38) and the Qgis OSM importer. I did wonder why anyone would want to roll all tags into a single field.</p>
+<blockquote>
+<p>If you plan to edit in Mapinfo, you
+could also use osm2shp or osmjs to
+convert OSM data to shape files and
+edit those, or you could use the OSM
+plugin for QGis to load OSM data
+directly into QGis.</p>
+</blockquote>
+<p>I use MapInfo for editing as I find it the most comfortable to use, I find QGis painfully slow for editing when it lets me select edit mode, but mapinfo is plagued by the 254 character limitation for text fields and I can't get it to search containing quote or equals symbols.</p>
+<p>The final product for this phase of the process is to produce a db with tables for places, motor vehicle roads, borders, coastline &amp; waterways to anchor the present, buildings, archealogical sites, etc. to illustrate the past.</p>
+<p>I hope this clarifies things.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8477/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Oct '11, 04:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e34a746be3d2d692055b59c8d0c11848?s=32&amp;d=identicon&amp;r=g" alt="sparrowhawk's gravatar image" />
+    <p><a href="/users/2198/sparrowhawk">sparrowhawk</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sparrowhawk has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8477">
+    
+</div>
+<div id="comment-tools-8477" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8477-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="8479"></a>
+                    <div id="answer-container-8479" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8479-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8479/up/" rel="nofollow"> </a>
+<div id="post-8479-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-8479-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8479/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I see. osm2postgis uses Osmosis to import data into PostgreSQL, and Osmosis duly creates a "hstore" column that contains <em>all</em> tags, but then osm2postgresql-04.sh flattens that into a single text column. Unless you have a very good reason to use this program (i.e. unless you really need exactly the data structure it creates) - <em>do</em> <em>not</em> <em>use</em> <em>osm2postgresql-04.sh</em>. If you use Osmosis directly then you get a database with a "hstore" column and you could easily break that out into "proper" columns for the 80 or so tags you are interested in, with a few lines of SQL. Or else use osm2pgsql which already creates any number of columns for you, you just have to add them to the config file.</p>
+<p>It sounds as if you should really discuss your project in depth with someone more familiar with OSM and databases. Maybe there's a local pub meet or some other OSM event that you could go to?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8479/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Oct '11, 08:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8479">
+    
+</div>
+<div id="comment-tools-8479" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8479-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/8466/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='um2y862MUflUPPmVOD8SWRaR7sgKAg3l' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8466/customise-osmosis-database-structure-add-columns-for-all-tags?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8466/customise-osmosis-database-structure-add-columns-for-all-tags?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/postgis/"
+            class="tag-link-postgis"
+            title="see questions tagged'postgis'using tags"
+            rel="tag">postgis</a> <span class="tag-number">&#215;134</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 16, 2011, 6:30 a.m.">16 Oct '11, 06:30</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,474 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 17, 2011, 8:13 a.m.">17 Oct '11, 08:13</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/53986/best-programmatic-solution-to-push-changesets-from-local-postgis-osm-replicant">Best programmatic solution to push changesets from local PostGIS OSM replicant</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63095/how-does-osm2pgsql-append-flag-work-for-updates">How does OSM2PGSQL append flag work for updates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19919/postgis-db-to-osm-pbf-file">Postgis DB to osm pbf file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32012/how-do-i-import-edit-history-into-a-postgis-database">How do I Import edit history into a PostGIS database?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59542/filtering-osc-files-and-import-to-postgresql">Filtering osc files and import to PostgreSQL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59610/osmosis-postgresql-error">Osmosis PostgreSQL error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2/use-osmosis-postgis-schema-with-qgis">Use Osmosis PostGIS schema with QGIS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19904/merging-osm-files-with-osmosis-and-import-to-postgres-with-osm2pgsql">Merging OSM files with OSMOSIS and import to Postgres with OSM2PGSQL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24766/unable-to-write-osm-data-into-database">Unable to write osm data into database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64808/how-to-interpret-this-java-error">How to interpret this Java error?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

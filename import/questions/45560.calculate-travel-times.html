@@ -1,0 +1,789 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Calculate travel times - OSM Help</title>
+        <meta name="description" content="Is the software capable to point out for example all the points that surround a city where the travelling time is less than 10 minutes, or 15 minute, or so on, based on the speed limits that are inserted for each type of road?" />
+        <meta name="keywords" content="distance,time" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/45560/calculate-travel-times" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/45560/calculate-travel-times?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='NCLnxKHAPb7hkwcHu6pi8NCbfdABjlFt' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/45560/calculate-travel-times">Calculate travel times</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-45560-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45560/up/" rel="nofollow"> </a>
+<div id="post-45560-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-45560-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45560/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/45560/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is the software capable to point out for example all the points that surround a city where the travelling time is less than 10 minutes, or 15 minute, or so on, based on the speed limits that are inserted for each type of road?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/distance/" class="post-tag tag-link-distance"
+                                        title="see questions tagged 'distance'" rel="tag">distance</a>
+                                
+                                    <a href="/tags/time/" class="post-tag tag-link-time"
+                                        title="see questions tagged 'time'" rel="tag">time</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Sep '15, 13:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/91c15b6d4eb6beddc7a4f4cdd4379c69?s=32&amp;d=identicon&amp;r=g" alt="Adela-Ioana%20Moldovan's gravatar image" />
+    <p><a href="/users/11512/adela-ioana-moldovan">Adela-Ioana ...</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Adela-Ioana Moldovan has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-45560">
+    
+        <a name="45561"></a>
+        <div class="comment" id="comment-45561">
+            <div id="post-45561-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Are you asking about any particular software?  </p>
+
+<p>OpenStreetMap is essentially lots and lots of data which you can download and process yourself.  People write software (for example, the online routing tools that you see on "openstreetmap.org") using this data.</p>
+
+<p>If you could describe in a few more words what you're trying to do it would help.</p></div>
+            <div class="comment-info" id="comment-45561-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Sep '15, 13:40)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="45562"></a>
+        <div class="comment" id="comment-45562">
+            <div id="post-45562-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am reffering to OpenStreetMap and if it allows the users to built some kind of isochromes.</p></div>
+            <div class="comment-info" id="comment-45562-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Sep '15, 13:53)</span>
+                <a class="comment-user userinfo" href="/users/11512/adela-ioana-moldovan">Adela-Ioana ...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-45560" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45560-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/45560/calculate-travel-times?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/45560/calculate-travel-times?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/45560/calculate-travel-times?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/45560/calculate-travel-times?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="45563"></a>
+                    <div id="answer-container-45563" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-45563-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45563/up/" rel="nofollow"> </a>
+<div id="post-45563-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-45563-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45563/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="http://openrouteservice.org/">OpenRouteService.org</a> offers such an Accessibility Analysis service. I don't know exactly what OSM tags are taken into account for the analysis. Maybe you want to check their website for details.</p>
+<p><img src="http://help.openstreetmap.org/upfiles/24-09-2015_15-49-55.png" alt="alt text"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/45563/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Sep '15, 14:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/264d84ab05b942224b05960903eba7a7?s=32&amp;d=identicon&amp;r=g" alt="mmd's gravatar image" />
+    <p><a href="/users/8708/mmd">mmd</a><br/>
+    <span class="score" title="5682 reputation points"><span class="">5.7k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="53 badges"><span class="silver">&#9679;</span><span class="badgecount">53</span></span><span title="88 badges"><span class="bronze">&#9679;</span><span class="badgecount">88</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmd has 44 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-45563">
+    
+        <a name="45564"></a>
+        <div class="comment" id="comment-45564">
+            <div id="post-45564-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your response. I have previously tried to play with OpenRouteService. Do you know if I can insert here different points at the same time and calculate their isochromes? I am intersted in the areas where it will be time consuming to get access, no matter which will be the starting point.</p></div>
+            <div class="comment-info" id="comment-45564-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Sep '15, 15:02)</span>
+                <a class="comment-user userinfo" href="/users/11512/adela-ioana-moldovan">Adela-Ioana ...</a>
+                
+            </div>
+        </div>
+    
+        <a name="45566"></a>
+        <div class="comment" id="comment-45566">
+            <div id="post-45566-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I don't think it is possible to run the analysis for several points in one run. The web service returns some embedded <a href="https://en.wikipedia.org/wiki/Geography_Markup_Language">GML</a> for different areas. Maybe you can run several queries, extract the GML portions you're interested in and intersect the areas manually in QGis as an example.</p></div>
+            <div class="comment-info" id="comment-45566-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Sep '15, 15:24)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="45568"></a>
+        <div class="comment" id="comment-45568">
+            <div id="post-45568-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Please read their <a href="http://openrouteservice.org/contact.html#contact">contact page</a> carefully, as you are not supposed to run queries during extended periods.</p></div>
+            <div class="comment-info" id="comment-45568-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Sep '15, 16:58)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-45563" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45563-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="45565"></a>
+                    <div id="answer-container-45565" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-45565-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45565/up/" rel="nofollow"> </a>
+<div id="post-45565-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-45565-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45565/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is a whole page about <a href="https://wiki.openstreetmap.org/wiki/Isochrone">isochrones</a> in our wiki listing various examples and software solutions.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/45565/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Sep '15, 15:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-45565">
+    
+</div>
+<div id="comment-tools-45565" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45565-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/45560/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='NCLnxKHAPb7hkwcHu6pi8NCbfdABjlFt' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45560/calculate-travel-times?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45560/calculate-travel-times?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/distance/"
+            class="tag-link-distance"
+            title="see questions tagged'distance'using tags"
+            rel="tag">distance</a> <span class="tag-number">&#215;63</span><br/>
+        
+        <a href="/tags/time/"
+            class="tag-link-time"
+            title="see questions tagged'time'using tags"
+            rel="tag">time</a> <span class="tag-number">&#215;29</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 24, 2015, 1:26 p.m.">24 Sep '15, 13:26</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,615 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 24, 2015, 4:58 p.m.">24 Sep '15, 16:58</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/12946/calculate-time-and-distance-between-two-latlng-points-with-a-json-response">Calculate time and distance between two LatLng points with a JSON response</a>
+        </p>
+        
+        <p>
+            <a href="/questions/80488/get-turn-by-turn-navigation-information">Get turn by turn navigation information</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2130/gpx-file-no-time-tag">GPX file : no time tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3454/data-is-not-loaded-to-potlatch-14-right-now">data is not loaded to potlatch 1.4 right now</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11313/how-to-find-the-distance-values-in-osm-file">How to find the distance values in osm file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15264/what-time-precision-exactly-needs-osm">What time precision exactly needs OSM ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3193/measuring-distance">measuring distance</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17008/whats-the-best-practice-regarding-the-age-of-data-between-saves">[closed] What&#39;s the best practice regarding the age of data between saves?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17154/distance-matrix">Distance Matrix</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1129/how-to-improve-track-presentation-via-osm-together-with-distance">How to improve track presentation via OSM together with distance?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

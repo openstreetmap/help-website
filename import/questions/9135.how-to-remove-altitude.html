@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to remove altitude - OSM Help</title>
+        <meta name="description" content="I used symbian and sports tracker to trace the jogging path. Then export to kml and used free kml2svg.fr tool to convert it to svg. How ever, when I check this trace each time there is a elevation difference, the trace gets longer than real path on a map should be. Is there any tools to remove or cl..." />
+        <meta name="keywords" content="data,kml,elevation" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/9135/how-to-remove-altitude" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/9135/how-to-remove-altitude?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='35ybp4AUigHFOPmjdHCGbXVv2i1tTMmj' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/9135/how-to-remove-altitude">How to remove altitude</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-9135-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9135/up/" rel="nofollow"> </a>
+<div id="post-9135-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-9135-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9135/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/9135/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I used symbian and sports tracker to trace the jogging path. Then export to kml and used free <a href="http://kml2svg.fr">kml2svg.fr</a> tool to convert it to svg.</p>
+<p>How ever, when I check this trace each time there is a elevation difference, the trace gets longer than real path on a map should be.</p>
+<p>Is there any tools to remove or clamp the data to starting altitude or 0m meters ?
+Tried the sports tracker "clamp to ground" / "relative to ground" / "Absolute"
+but all of them gave exactly the same trace which was wrong.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/data/" class="post-tag tag-link-data"
+                                        title="see questions tagged 'data'" rel="tag">data</a>
+                                
+                                    <a href="/tags/kml/" class="post-tag tag-link-kml"
+                                        title="see questions tagged 'kml'" rel="tag">kml</a>
+                                
+                                    <a href="/tags/elevation/" class="post-tag tag-link-elevation"
+                                        title="see questions tagged 'elevation'" rel="tag">elevation</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Nov '11, 13:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/88017063eed6267bdabd96d2c4c06bfb?s=32&amp;d=identicon&amp;r=g" alt="testrai's gravatar image" />
+    <p><a href="/users/2389/testrai">testrai</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="testrai has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-9135">
+    
+        <a name="9156"></a>
+        <div class="comment" id="comment-9156">
+            <div id="post-9156-score" class="comment-score"></div>
+            <div class="comment-text"><p>Perhaps you could upload an example KML somewhere and then someone could suggest how to remove the altitude from it (if that's what you need; I'm not convinced I understand your problem though).</p>
+
+<p>A random KML file on my PC has something like:</p>
+
+<p>&lt;coordinates&gt;-1.1665988,54.1558052,0&lt;/coordinates&gt;</p>
+
+<p>in it, of which the ",0" at the end is the altitude.  I'd have thought that it might be possible to change the altitude to 0 using a half-decent text editor?</p></div>
+            <div class="comment-info" id="comment-9156-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '11, 14:39)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="9165"></a>
+        <div class="comment" id="comment-9165">
+            <div id="post-9165-score" class="comment-score"></div>
+            <div class="comment-text"><p>Your question is about "altitude", but from the context it is apparent that you mean "elevation".  The word "altitude" means height above ground.  "Elevation" means height above mean sea level.</p></div>
+            <div class="comment-info" id="comment-9165-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '11, 19:30)</span>
+                <a class="comment-user userinfo" href="/users/2397/user8192">user8192</a>
+                
+            </div>
+        </div>
+    
+        <a name="9190"></a>
+        <div class="comment" id="comment-9190">
+            <div id="post-9190-score" class="comment-score"></div>
+            <div class="comment-text"><p>You all have right topics - thank you</p>
+
+<p>This hasn't yet got nothing to do with osm, because the trace gathered with sportstr seems to be wrong.
+Of course if you are jogging uphill and downhill, want the real run length, and not the flattened(altitude removed)+not so long trace.</p>
+
+<p>Or am i stupid here - are maps drawn like that or on a flattened surface ?</p>
+
+<p>I'm happy if i can flatten the file either kml or in gpx format. But how ?</p></div>
+            <div class="comment-info" id="comment-9190-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Nov '11, 20:20)</span>
+                <a class="comment-user userinfo" href="/users/2389/testrai">testrai</a>
+                
+            </div>
+        </div>
+    
+        <a name="9191"></a>
+        <div class="comment" id="comment-9191">
+            <div id="post-9191-score" class="comment-score"></div>
+            <div class="comment-text"><p>ok, i made a picture to be more clear.
+is there a way to make the bottom result? (with nokia+sports tracker, or do i have to buy android)</p>
+
+<p><a href="http://bayimg.com/pAlihaaDA">http://bayimg.com/pAlihaaDA</a></p></div>
+            <div class="comment-info" id="comment-9191-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Nov '11, 20:40)</span>
+                <a class="comment-user userinfo" href="/users/2389/testrai">testrai</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9135" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9135-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/9135/how-to-remove-altitude?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/9135/how-to-remove-altitude?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/9135/how-to-remove-altitude?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/9135/how-to-remove-altitude?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="9138"></a>
+                    <div id="answer-container-9138" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-9138-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9138/up/" rel="nofollow"> </a>
+<div id="post-9138-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-9138-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9138/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Sports Tracker only uses OpenStreetMap map images as a backdrop to your trace. The altitude data you're seeing has been gathered from your GPS receiver, and has nothing to do with OpenStreetMap, which doesn't actually store any altitude data for any features.</p>
+<p>There are some <a href="http://wiki.openstreetmap.org/wiki/Recording_GPS_tracks">tips for improving GPS accuracy</a> on our wiki, but other than that you should contact either the manufacturer of your GPS receiver (or phone if you're using its built-in GPS), or Sports Tracking Technologies, the publishers of your App.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/9138/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Nov '11, 17:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9fe361843971cf8b23dc93517f00b996?s=32&amp;d=identicon&amp;r=g" alt="Jonathan%20Bennett's gravatar image" />
+    <p><a href="/users/6/jonathan-bennett">Jonathan Ben...</a><br/>
+    <span class="score" title="8261 reputation points"><span class="">8.3k</span></span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="85 badges"><span class="silver">&#9679;</span><span class="badgecount">85</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jonathan Bennett has 21 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/9138/">
+                edited
+                <strong>20 Nov '11, 17:17</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-9138">
+    
+        <a name="9150"></a>
+        <div class="comment" id="comment-9150">
+            <div id="post-9150-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I don't think you'll find a solution with the device itself. But there definitely are tools to modify a trace file after the fact, and zero-ing the altitude should be a easy and common operation.</p>
+
+<p>I don't know which tools those would be though. gdal is one, but that may be too programing-oriented for the OP. Some programs, like googleearth, have a "ignore altitude" option, but I think they only do the modification in memory, and do not update the trace file.</p></div>
+            <div class="comment-info" id="comment-9150-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '11, 09:27)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9138" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9138-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="9192"></a>
+                    <div id="answer-container-9192" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-9192-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9192/up/" rel="nofollow"> </a>
+<div id="post-9192-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-9192-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9192/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As SomeoneElse hinted, both KML and GPX files are just XML files. That means that you can open them with a simple text editor, see how they are structured, and make some edits. Check wikipedia for an xml primer if you need it.</p>
+<p>Opening one of my gpx file, and the same one converted to kml (using ogr2ogr), you quickly spot the &lt;ele&gt; tag (for gpx) and the &lt;SimpleData name="ele"&gt; tag (for kml). Check your own files in case they are structured differently. Deleting those should achieve what you want.</p>
+<p>There are many ways to delete those, it depends on what you're comfortable with. You can use your text editor to search+replace, if the search field accepts regexps. You can use 'sed' if you are using a unix-derived OS (including Linux or MacOSX) : "sed 's@&lt;ele&gt;[0-9.-]*&lt;/ele&gt;@<a href="/users/54/glennon">@g</a>' myfile.gpx &gt; newfile.gpx". There are some xml-specific editors out there too if they feel better for you.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/9192/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Nov '11, 22:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d20f86db9a6f03cb070e9fbaaf0b7228?s=32&amp;d=identicon&amp;r=g" alt="Vincent%20de%20Phily's gravatar image" />
+    <p><a href="/users/867/vincent-de-phily">Vincent de P... ♦</a><br/>
+    <span class="score" title="17304 reputation points"><span class="">17.3k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="152 badges"><span class="silver">&#9679;</span><span class="badgecount">152</span></span><span title="249 badges"><span class="bronze">&#9679;</span><span class="badgecount">249</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vincent de Phily has 64 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-9192">
+    
+        <a name="9202"></a>
+        <div class="comment" id="comment-9202">
+            <div id="post-9202-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you</p>
+
+<p>This must be that i'm stupid. Because i removed the last col from coords in the klm file - the altitude</p>
+
+<p>and after that using the <a href="http://kml2svg.fr">kml2svg.fr</a> tool and still got the same trace widht what was too long.</p>
+
+<p>So perhaps the sports tracker already makes some calculations into those coordinates and that's why they are wrong. </p></div>
+            <div class="comment-info" id="comment-9202-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Nov '11, 11:05)</span>
+                <a class="comment-user userinfo" href="/users/2389/testrai">testrai</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9192" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9192-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/9135/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='35ybp4AUigHFOPmjdHCGbXVv2i1tTMmj' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9135/how-to-remove-altitude?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9135/how-to-remove-altitude?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/data/"
+            class="tag-link-data"
+            title="see questions tagged'data'using tags"
+            rel="tag">data</a> <span class="tag-number">&#215;230</span><br/>
+        
+        <a href="/tags/kml/"
+            class="tag-link-kml"
+            title="see questions tagged'kml'using tags"
+            rel="tag">kml</a> <span class="tag-number">&#215;49</span><br/>
+        
+        <a href="/tags/elevation/"
+            class="tag-link-elevation"
+            title="see questions tagged'elevation'using tags"
+            rel="tag">elevation</a> <span class="tag-number">&#215;30</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 20, 2011, 1:02 p.m.">20 Nov '11, 13:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,672 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 24, 2011, 12:50 p.m.">24 Nov '11, 12:50</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/63535/why-not-displayed-the-elevation-data-in-the-osm-in-the-converted-map">Why not displayed the elevation data in the osm in the converted map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/191/how-does-the-creation-of-the-planet-dump-work">How does the creation of the Planet dump work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/469/where-can-i-see-the-length-of-a-certain-way-element-in-the-osm-data">Where can I see the length of a certain way element in the OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/217/how-to-deal-with-copyright-violations-in-our-osm-data">How to deal with copyright violations in our OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/231/how-can-i-edit-all-ways-with-certain-tag-in-an-area">How can I edit all ways with certain tag in an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/417/is-it-possible-to-get-a-list-of-objects-with-two-specific-tags">Is it possible to get a list of objects with two specific tags?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/216/what-should-i-do-about-vandalism">What should I do about vandalism?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps">Can Google Maps take OSM data and use it in their own maps ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/644/where-is-the-site-with-a-list-of-openstreetmap-errors">Where is the site with a list of OpenStreetMap errors?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/148/how-can-i-use-openstreetmap-data-in-my-gis-program">How can I use OpenStreetMap data in my GIS program?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

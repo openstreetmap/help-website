@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Rendering a map with Mapnik and PostGIS - OSM Help</title>
+        <meta name="description" content="I’m trying to render a map using Mapnik and PostGIS, I feel I’m close but it doesn’t work yet. Here is what I’ve done so far (it’s the first time I work with a database, so it’s likely that there are stupid mistakes due to the fact that I don’t know how databases work). I’m working in Arch Linux wit..." />
+        <meta name="keywords" content="rendering,postgis,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/24833/rendering-a-map-with-mapnik-and-postgis" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/24833/rendering-a-map-with-mapnik-and-postgis?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='cK2suxxKy0r3v9m9YKtpvw4JUFJvdwdc' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/24833/rendering-a-map-with-mapnik-and-postgis">Rendering a map with Mapnik and PostGIS</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-24833-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24833/up/" rel="nofollow"> </a>
+<div id="post-24833-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-24833-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24833/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/24833/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I’m trying to render a map using Mapnik and PostGIS, I feel I’m close but it doesn’t work yet. Here is what I’ve done so far (it’s the first time I work with a database, so it’s likely that there are stupid mistakes due to the fact that I don’t know how databases work).</p>
+<p>I’m working in Arch Linux with Mapnik 2.2.0, PostgreSQL 9.2.4, PostGIS 2.0.3 and osm2pgsql-git 20130512.</p>
+<p>I downloaded the montpellier.osm.pbf file from <a href="http://metro.teczno.com/#montpellier">http://metro.teczno.com/#montpellier</a> (I didn’t download any coastline file, for now I’m just trying to render some part in the middle of a city).
+I created a database with PostGIS enabled and imported the pbf file (using osm2pgsql), using various instructions on the Wiki. I don’t fully understand the various usernames needed for a PostgreSQL database, but I think the main PostgreSQL username is "postgres" and the other username (not sure what this one is for) is my Unix login ("fractal").
+Anyway, the import seems to have done something (it took something like an hour to complete) and I have the following:</p>
+<pre><code>$ psql --username=postgres --dbname=osm --command="\d+"
+                           List of relations
+ Schema |        Name        | Type  |  Owner   |  Size   | Description 
+--------+--------------------+-------+----------+---------+-------------
+ public | geography_columns  | view  | postgres | 0 bytes | 
+ public | geometry_columns   | view  | postgres | 0 bytes | 
+ public | planet_osm_line    | table | postgres | 32 kB   | 
+ public | planet_osm_nodes   | table | postgres | 104 kB  | 
+ public | planet_osm_point   | table | postgres | 24 kB   | 
+ public | planet_osm_polygon | table | postgres | 24 kB   | 
+ public | planet_osm_rels    | table | postgres | 2184 kB | 
+ public | planet_osm_roads   | table | postgres | 16 kB   | 
+ public | planet_osm_ways    | table | postgres | 141 MB  | 
+ public | spatial_ref_sys    | table | postgres | 3216 kB | 
+(10 rows)
+</code></pre>
+<p>So it seems that the database has been populated with stuff.</p>
+<p>Then I tried to adapt the tutorial at <a href="http://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly">http://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly</a>.
+I downloaded the style file there, made it compatible with Mapnik 2, changed various details, and tried to change the datasource from XML to PostGIS. What I have now is the following (in the file test.xml):</p>
+<p><a href="http://pastebin.archlinux.fr/467464">http://pastebin.archlinux.fr/467464</a></p>
+<p>(I looked at the OSM style files to see what kind of parameters are needed for postgis)</p>
+<p>Then I have the following Python script (adapted from the other tutorial):</p>
+<pre><code>!/usr/bin/env python2
+
+from mapnik import *
+
+mapfile = 'test.xml'
+map_output = 'mymap.png'
+
+m = Map(4*1024,4*1024)
+load_map(m, mapfile)
+bbox=(Envelope( 3.873,43.603,3.878,43.606 ))
+
+m.zoom_to_box(bbox)
+print "Scale = " , m.scale()
+render_to_file(m, map_output)
+</code></pre>
+<p>(the bounding box is supposed to be a place with several roads)</p>
+<p>When I run the script, there are no error and the mymap.png file is created, but it’s completely yellow (the background color in the style file) with no road.
+Maybe that’s because there is a problem with the connection to the database, but I don’t know how to fix it.
+I also tried with planet_osm_line instead of planet_osm_roads (I’m not sure where the highways are supposed to be) but it’s the same, and I tried with planet_osm_ways but it failed with the error:</p>
+<pre><code>RuntimeError: PostGIS: geometry name lookup failed for table 'planet_osm_ways'. Please manually provide the 'geometry_field' parameter or add an entry in the geometry_columns for 'planet_osm_ways'.
+</code></pre>
+<p>Thanks for your help!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/postgis/" class="post-tag tag-link-postgis"
+                                        title="see questions tagged 'postgis'" rel="tag">postgis</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Aug '13, 12:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/579b240041b084d221aaf999e0de2929?s=32&amp;d=identicon&amp;r=g" alt="Fractal's gravatar image" />
+    <p><a href="/users/6906/fractal">Fractal</a><br/>
+    <span class="score" title="76 reputation points">76</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Fractal has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-24833">
+    
+</div>
+<div id="comment-tools-24833" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24833-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/24833/rendering-a-map-with-mapnik-and-postgis?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/24833/rendering-a-map-with-mapnik-and-postgis?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/24833/rendering-a-map-with-mapnik-and-postgis?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/24833/rendering-a-map-with-mapnik-and-postgis?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="24849"></a>
+                    <div id="answer-container-24849" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24849-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24849/up/" rel="nofollow"> </a>
+<div id="post-24849-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-24849-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24849/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Don't try to use the approach described in <a href="http://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly">http://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly</a> . It reads the OSM XML file directly using a broken, unsupported and likely-to-be-removed input plugin for Mapnik. The first steps, where you use osm2pgsql to load the OSM data into postgresql, are the correct steps.</p>
+<p>When you have the data loaded in your database, there are two general approaches.</p>
+<p>1) Use command-line tools. <a href="http://code.google.com/p/mapnik-utils/wiki/Nik2Img">nik2img.py</a> is the swiss army knife of command-line mapnik image generation, and is basically a fully-working version of the script you'd start writing yourself. You need a stylesheet to go with it, and I'd suggest <a href="https://github.com/gravitystorm/openstreetmap-carto">openstreetmap-carto</a>.</p>
+<p>2) Use a graphical interface. Tilemill is the best approach. When you have that installed, you can either create your own stylesheet and add your layers from postgis, or use a pre-created stylesheet. I'd again suggest <a href="https://github.com/gravitystorm/openstreetmap-carto">openstreetmap-carto</a> or <a href="https://github.com/mapbox/osm-bright">osm-bright</a>, which are both Tilemill-compatible stylesheets for OSM data which has been loaded into postgis.</p>
+<p>But overall, avoid the osm input plugin and anything related to it - it's a dead-end!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24849/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Aug '13, 18:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3743b1b368f5e209eb8aad30164acc4?s=32&amp;d=identicon&amp;r=g" alt="Andy%20Allan's gravatar image" />
+    <p><a href="/users/3/andy-allan">Andy Allan</a><br/>
+    <span class="score" title="12456 reputation points"><span class="">12.5k</span></span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="128 badges"><span class="silver">&#9679;</span><span class="badgecount">128</span></span><span title="153 badges"><span class="bronze">&#9679;</span><span class="badgecount">153</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andy Allan has 46 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24849">
+    
+</div>
+<div id="comment-tools-24849" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24849-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24845"></a>
+                    <div id="answer-container-24845" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24845-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24845/up/" rel="nofollow"> </a>
+<div id="post-24845-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-24845-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24845/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>planet_osm_ways is a table without geometry so the error is not a surprise. planet_osm_line should work for your purpose. Your error is probably that your import has generated a database with projected coordinates, but in your script you're requesting an unprojected area. Compare your script to <a href="http://svn.openstreetmap.org/applications/rendering/mapnik/generate_image.py">http://svn.openstreetmap.org/applications/rendering/mapnik/generate_image.py</a> and make sure to reproject your coordinates before using m.zoom_to_box like it is done there.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24845/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Aug '13, 16:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24845">
+    
+</div>
+<div id="comment-tools-24845" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24845-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="38219"></a>
+                    <div id="answer-container-38219" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-38219-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/38219/up/" rel="nofollow"> </a>
+<div id="post-38219-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-38219-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/38219/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is a detailed description on <a href="http://sourceforge.net/projects/topomapcreator/">TopoMapCreator</a> about <a href="http://sourceforge.net/p/topomapcreator/wiki/TileMill">How to render OSM data with TileMill on Windows</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/38219/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Nov '14, 10:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6c696b469aba99282f03a4a1f33528b3?s=32&amp;d=identicon&amp;r=g" alt="kaki007's gravatar image" />
+    <p><a class="suspended-user" href="/users/9754/kaki007">kaki007</a><br/>
+    (suspended)<br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="kaki007 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-38219">
+    
+</div>
+<div id="comment-tools-38219" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-38219-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/24833/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='cK2suxxKy0r3v9m9YKtpvw4JUFJvdwdc' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24833/rendering-a-map-with-mapnik-and-postgis?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24833/rendering-a-map-with-mapnik-and-postgis?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/postgis/"
+            class="tag-link-postgis"
+            title="see questions tagged'postgis'using tags"
+            rel="tag">postgis</a> <span class="tag-number">&#215;134</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 2, 2013, 12:37 p.m.">02 Aug '13, 12:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>16,784 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 1, 2014, 10:09 a.m.">01 Nov '14, 10:09</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/11357/rendering-imagesmaps-from-postgresqlpostgis-database">Rendering images/maps from Postgresql/PostGIS Database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11562/column-int_tc_type-does-not-exist">column &quot;int_tc_type&quot; does not exist</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45759/render-all-roads-with-an-equal-width-in-mapnik">Render all roads with an equal width in Mapnik</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6676/how-to-render-shortened-street-names">How to render shortened street names?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6241/change-request-adding-a-feature-to-the-default-osm-map-style">Change request / adding a feature to the default OSM Map style</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6521/missing-amenity-name-in-mapnik-bug-or-feature">Missing amenity name in mapnik - bug or feature?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5509/if-ill-make-patch-for-rendering-keysurface-for-mapnik-will-someone-apply-it">[closed] If I&#39;ll make patch for rendering Key:surface for Mapnik will someone apply it?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2041/why-does-the-background-colour-change-in-mapnik-from-zoom-level-18-to-17">Why does the background colour change in Mapnik from zoom level 18 to 17?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5503/are-there-any-plans-to-implement-keysurface-rendering-ever">[closed] Are there any plans to implement Key:surface rendering ever?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1887/mapnik-does-not-render-my-new-ways-already-for-a-couple-of-day-now">Mapnik does not render my new ways already for a couple of day now</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

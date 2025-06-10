@@ -1,0 +1,1014 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Solutions for outdoor editing of the OSM map? - OSM Help</title>
+        <meta name="description" content="Hi, I would like to edit the OSM map when I am outdoors. The article on Editing gives some ideas, but I would like to know if anybody is actually having a working solution in use. This could range from a mobile phone with e.g. GpsMid to maybe a small tablet PC with JOSM and livegps JOSM plugin. Than..." />
+        <meta name="keywords" content="hardware,editing,mobile-editing,outdoor,software" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/17007/solutions-for-outdoor-editing-of-the-osm-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/17007/solutions-for-outdoor-editing-of-the-osm-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='7a3Vk9eOxteVU0NqML1Gp5g1DEfq13LM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/17007/solutions-for-outdoor-editing-of-the-osm-map">Solutions for outdoor editing of the OSM map?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-17007-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17007/up/" rel="nofollow"> </a>
+<div id="post-17007-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-17007-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17007/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/17007/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I would like to edit the OSM map when I am outdoors. The article on <a href="http://wiki.openstreetmap.org/wiki/Editing">Editing</a> gives some ideas, but I would like to know if anybody is actually having a working solution in use. This could range from a mobile phone with e.g. GpsMid to maybe a small tablet PC with JOSM and livegps JOSM plugin.</p>
+<p>Thanks!</p>
+<p>UPDATE:
+Ok, here are some of my requirements:</p>
+<p>1) GpsMip-like view:</p>
+<ul>
+<li>(offline generated) map is displayed</li>
+<li>my current position is shown</li>
+<li>ideally, I can see (and record) my track</li>
+<li>ideally, I can create waypoints that are added to the track, but do not become part of the map</li>
+</ul>
+<p>2) Potlatch-like editing of the OSM map (ideally offline as with JOSM)</p>
+<ul>
+<li>creating nodes</li>
+<li>creating ways</li>
+<li>moving/deleting existing nodes/ways</li>
+<li>splitting and joining ways</li>
+<li>add/modify/delete tags of nodes/ways (I am ok with text input, but having some presets that can be entered more easily would also be great).</li>
+</ul>
+<p>3) A device for outdoor use</p>
+<ul>
+<li>portable (with battery for about 2 hours of editing)</li>
+<li>GPS (integrated or in a separarte device that can be somehow connected)</li>
+<li>I am ok with using it at night, but other people may want a screen that can be read in sunny outdoor environment</li>
+<li>I/O which is sufficiently precices for editing the map (maybe a tablet pen?)</li>
+<li>easy to enter text (for tags)</li>
+<li>possibility to store changes to the map for later upload</li>
+<li>possibility to upload map changes via WLAN (or 3G or 4G network).</li>
+</ul>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/hardware/" class="post-tag tag-link-hardware"
+                                        title="see questions tagged 'hardware'" rel="tag">hardware</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/mobile-editing/" class="post-tag tag-link-mobile-editing"
+                                        title="see questions tagged 'mobile-editing'" rel="tag">mobile-editing</a>
+                                
+                                    <a href="/tags/outdoor/" class="post-tag tag-link-outdoor"
+                                        title="see questions tagged 'outdoor'" rel="tag">outdoor</a>
+                                
+                                    <a href="/tags/software/" class="post-tag tag-link-software"
+                                        title="see questions tagged 'software'" rel="tag">software</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Oct '12, 00:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c04967619664a53e23e4280ce7d7c1d4?s=32&amp;d=identicon&amp;r=g" alt="Nachtspazz's gravatar image" />
+    <p><a href="/users/3621/nachtspazz">Nachtspazz</a><br/>
+    <span class="score" title="185 reputation points">185</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="17 badges"><span class="bronze">&#9679;</span><span class="badgecount">17</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Nachtspazz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17007/">
+                edited
+                <strong>28 Sep '16, 14:42</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7d327873d48d28e563c9ad7259853c35?s=32&amp;d=identicon&amp;r=g" alt="Kozuch's gravatar image" />
+            <p><a href="/users/237/kozuch">Kozuch</a><br/>
+            <span class="score" title="1720 reputation points"><span class="">1.7k</span></span><span title="58 badges"><span class="badge1">&#9679;</span><span class="badgecount">58</span></span><span title="72 badges"><span class="silver">&#9679;</span><span class="badgecount">72</span></span><span title="85 badges"><span class="bronze">&#9679;</span><span class="badgecount">85</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-17007">
+    
+        <a name="17011"></a>
+        <div class="comment" id="comment-17011">
+            <div id="post-17011-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Could you specify what kind of editing you want to do. Adding a POI as a node has completely different requirements than e.g. adding shapes and tags for 3D buildings.</p></div>
+            <div class="comment-info" id="comment-17011-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Oct '12, 00:37)</span>
+                <a class="comment-user userinfo" href="/users/2933/cartinus">cartinus</a>
+                
+            </div>
+        </div>
+    
+        <a name="17037"></a>
+        <div class="comment" id="comment-17037">
+            <div id="post-17037-score" class="comment-score"></div>
+            <div class="comment-text"><p>I wonder e.g. if I should get a Nokia N800 from ebay and install Osm2go. Does anybody have some experience with that combination?</p></div>
+            <div class="comment-info" id="comment-17037-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Oct '12, 22:05)</span>
+                <a class="comment-user userinfo" href="/users/3621/nachtspazz">Nachtspazz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17007" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17007-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/17007/solutions-for-outdoor-editing-of-the-osm-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/17007/solutions-for-outdoor-editing-of-the-osm-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/17007/solutions-for-outdoor-editing-of-the-osm-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/17007/solutions-for-outdoor-editing-of-the-osm-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="17040"></a>
+                    <div id="answer-container-17040" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17040-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17040/up/" rel="nofollow"> </a>
+<div id="post-17040-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-17040-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17040/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Vespucci <a href="http://wiki.openstreetmap.org/wiki/Vespucci">http://wiki.openstreetmap.org/wiki/Vespucci</a> would seem to cover most of your requirements.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17040/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Oct '12, 23:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17040">
+    
+        <a name="17042"></a>
+        <div class="comment" id="comment-17042">
+            <div id="post-17042-score" class="comment-score"></div>
+            <div class="comment-text"><p>From the article on Editing, I also saw that Vespucci and OSM2Go might be good candiates for the software. But I would like to know, if people are really using it, how a complete solution could look like, and what experience people have with such solutions. Furthermore, I wonder why Vespucci is tagged as an "online editor". Does it mean that I have to be connected?</p>
+
+<p>(And I still wonder, if JOSM on a tablet with livegps plugin would be a good choice).</p></div>
+            <div class="comment-info" id="comment-17042-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Oct '12, 23:55)</span>
+                <a class="comment-user userinfo" href="/users/3621/nachtspazz">Nachtspazz</a>
+                
+            </div>
+        </div>
+    
+        <a name="17706"></a>
+        <div class="comment" id="comment-17706">
+            <div id="post-17706-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have just tested Vespucci a couple of times, so can't talk from real experience. My understanding is online mens that currently the save function in Vespucci is to upload the changes to OSM. Might be doable to leave the edit open, and (if battery allows) upload the change only when at a WLAN. But that might not work for multiple areas to edit. To use Vespucci in offline mode, I understand Vespucci would need to be modified to store multiple edits to local storage for later upload.</p></div>
+            <div class="comment-info" id="comment-17706-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '12, 08:59)</span>
+                <a class="comment-user userinfo" href="/users/4980/jkp">jkp</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17040" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17040-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="17655"></a>
+                    <div id="answer-container-17655" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17655-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17655/up/" rel="nofollow"> </a>
+<div id="post-17655-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-17655-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17655/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi,</p>
+<p>The current version of ShareNav (which uses the same code base as GpsMid, so has all the features in GpsMid) can connect to GPS on a laptop via gpsd. It (I think I added this already in the most recent version of GpsMid) can also launch potlatch with the appropriate coordinates for in-browser geometry editing. I've been thinking of adding support to launching Vespucci with the right coordinates, but that might require changes to Vespucci also. These apparently don't offer offline editing, though.</p>
+<p>As for devices - if you use Android, ShareNav can be gotten directly from Google Play store, <a href="https://play.google.com/store/apps/details?id=net.sharenav.sharenav.ui">https://play.google.com/store/apps/details?id=net.sharenav.sharenav.ui</a> , and for java SE / J2ME you can download from the SourceForge site at <a href="https://sourceforge.net/projects/sharenav/">https://sourceforge.net/projects/sharenav/</a></p>
+<p>Jyrki</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17655/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Nov '12, 11:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9997f994c3f2c71a37a00c741b1aa8a7?s=32&amp;d=identicon&amp;r=g" alt="jkp's gravatar image" />
+    <p><a href="/users/4980/jkp">jkp</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jkp has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17655/">
+                edited
+                <strong>14 Nov '12, 08:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17655">
+    
+        <a name="17673"></a>
+        <div class="comment" id="comment-17673">
+            <div id="post-17673-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks. Sounds interesting. I will have a look.</p></div>
+            <div class="comment-info" id="comment-17673-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Nov '12, 22:54)</span>
+                <a class="comment-user userinfo" href="/users/3621/nachtspazz">Nachtspazz</a>
+                
+            </div>
+        </div>
+    
+        <a name="17698"></a>
+        <div class="comment" id="comment-17698">
+            <div id="post-17698-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Jyrki,</p>
+
+<p>I am happy to see that GpsMid/ShareNav development is continued. However, for my specific purpose I would need a more powerful mobile offline editor which ShareNav obvioulsy is not.</p>
+
+<p>Thanks anyway,</p>
+
+<p>Nachtspazz</p></div>
+            <div class="comment-info" id="comment-17698-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '12, 21:30)</span>
+                <a class="comment-user userinfo" href="/users/3621/nachtspazz">Nachtspazz</a>
+                
+            </div>
+        </div>
+    
+        <a name="17705"></a>
+        <div class="comment" id="comment-17705">
+            <div id="post-17705-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,</p>
+
+<p>ShareNav doesn't have offline editing at the moment, but that would be doable with the architecture to postpone edit updates (http uploads) for later. For Android, the tag editing UI needs improvement.</p>
+
+<p>Would doing these two things (offline &amp; UI improvement) and perhaps adding some presets cover your needs, or do you require the more advanced things like way splitting &amp; joining &amp; geometry editing? If so, probably best is Vespucci, though It also does not seem to have an offline mode; not sure of delayed upload.</p>
+
+<p>As for devices, Samsung has some devices with a pen e.g. in the Note line.</p></div>
+            <div class="comment-info" id="comment-17705-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '12, 08:34)</span>
+                <a class="comment-user userinfo" href="/users/4980/jkp">jkp</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17655" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17655-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="17697"></a>
+                    <div id="answer-container-17697" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17697-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17697/up/" rel="nofollow"> </a>
+<div id="post-17697-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-17697-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17697/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi,</p>
+<p><strike>It seems that OSM2Go with a Nokia N800 or N900 is not an option anymore. The project is discontinued and I have indications that it would not interact with the OSM API anymore.</strike></p>
+<p>UPDATE: <a href="http://wiki.openstreetmap.org/wiki/Osm2go">OSM Wiki</a> provides a fix ("problems with IPv6 record for api.openstreetmap.org"). I got an N900 and installed OSM2go. And it works! It seems that this is exactly what I wanted to have. I will give it a try.</p>
+<p>Cheers!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17697/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Nov '12, 21:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c04967619664a53e23e4280ce7d7c1d4?s=32&amp;d=identicon&amp;r=g" alt="Nachtspazz's gravatar image" />
+    <p><a href="/users/3621/nachtspazz">Nachtspazz</a><br/>
+    <span class="score" title="185 reputation points">185</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="17 badges"><span class="bronze">&#9679;</span><span class="badgecount">17</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Nachtspazz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17697/">
+                edited
+                <strong>06 Dec '12, 18:55</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17697">
+    
+</div>
+<div id="comment-tools-17697" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17697-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/17007/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='7a3Vk9eOxteVU0NqML1Gp5g1DEfq13LM' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17007/solutions-for-outdoor-editing-of-the-osm-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17007/solutions-for-outdoor-editing-of-the-osm-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/software/"
+            class="tag-link-software"
+            title="see questions tagged'software'using tags"
+            rel="tag">software</a> <span class="tag-number">&#215;31</span><br/>
+        
+        <a href="/tags/hardware/"
+            class="tag-link-hardware"
+            title="see questions tagged'hardware'using tags"
+            rel="tag">hardware</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/mobile-editing/"
+            class="tag-link-mobile-editing"
+            title="see questions tagged'mobile-editing'using tags"
+            rel="tag">mobile-editing</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/outdoor/"
+            class="tag-link-outdoor"
+            title="see questions tagged'outdoor'using tags"
+            rel="tag">outdoor</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 19, 2012, 12:04 a.m.">19 Oct '12, 00:04</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,249 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 28, 2016, 2:42 p.m.">28 Sep '16, 14:42</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/6993/mac-or-pc-for-osm-editing-and-rendering">[closed] Mac or PC for OSM  editing and rendering?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13180/baffling-software">Baffling software</a>
+        </p>
+        
+        <p>
+            <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don&#39;t show up on the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/231/how-can-i-edit-all-ways-with-certain-tag-in-an-area">How can I edit all ways with certain tag in an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/497/how-can-i-edit-gpx-tracks-in-potlatch-2">How can I edit GPX tracks in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/954/how-do-i-set-my-home-location">How do I set my home location?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1012/fixing-a-subway-stop">Fixing a subway stop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/216/what-should-i-do-about-vandalism">What should I do about vandalism?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

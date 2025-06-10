@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Which overlaid relation renders preferentially in carto? - OSM Help</title>
+        <meta name="description" content="Different tack for wooded open space / park land. If a park / protected area has an administrative boundary, as either a way or a relation, and I create a new relation that includes it and possibly additional area outside it and is tagged as woodland, should the new relation take precedence and rend..." />
+        <meta name="keywords" content="wood,tags" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/85086/which-overlaid-relation-renders-preferentially-in-carto" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/85086/which-overlaid-relation-renders-preferentially-in-carto?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='OE5yFVskMYvOgjQMq6s2fFs0tY0lxOD8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/85086/which-overlaid-relation-renders-preferentially-in-carto">Which overlaid relation renders preferentially in carto?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-85086-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85086/up/" rel="nofollow"> </a>
+<div id="post-85086-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85086-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85086/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/85086/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Different tack for wooded open space / park land.  If a park / protected area has an administrative boundary, as either a way or a relation, and I create a <em>new</em> relation that includes it and possibly additional area outside it and is tagged as woodland, should the new relation take precedence and render the entire area as woods?  I don't think the original objects have tags that affect the renderer other than their original protected_area border.  Major non-wooded objects such as ponds, parking lots, etc should be able to then get carved out as "inners" in the meta-relationship.</p>
+<p>How deep can relationships nest??  Can "outer" and "inner" components be relationships <em>and</em> ways as needed?</p>
+<p>This is in the interest of tagging a la <a href="https://help.openstreetmap.org/questions/84812/">my prior question</a> to avoid messing with the underlying objects.  Part of the intent is for expansion, bringing more woodlands outside the boundary into the larger relation where appropriate.  So far, though, the approach doesn't seem to work, failing to render the woods at all in default Carto on the OSM site.  How do I accomplish what I need here?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/wood/" class="post-tag tag-link-wood"
+                                        title="see questions tagged 'wood'" rel="tag">wood</a>
+                                
+                                    <a href="/tags/tags/" class="post-tag tag-link-tags"
+                                        title="see questions tagged 'tags'" rel="tag">tags</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Jul '22, 06:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3031665c506b04f416a1af103cf8cf6e?s=32&amp;d=identicon&amp;r=g" alt="_Hobbit's gravatar image" />
+    <p><a href="/users/21890/_hobbit">_Hobbit</a><br/>
+    <span class="score" title="51 reputation points">51</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="_Hobbit has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-85086">
+    
+        <a name="85087"></a>
+        <div class="comment" id="comment-85087">
+            <div id="post-85087-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, Please be aware that the Lynn Woods area you referred to in the prior question as a park, the outline of which is used in two different relations, being Relation: Lynn Woods Reservation (1153480) and Relation: Lynn woods (14356649). Both of these multipolygon relations have an outer border that is not part of the overall border. One multipolygon includes the large area of Walden Pond the other does not. So it is no surprise that the area does not render as expected. I think your first move should be to correct the multipolygon relations and remove one of them.</p></div>
+            <div class="comment-info" id="comment-85087-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '22, 08:07)</span>
+                <a class="comment-user userinfo" href="/users/2925/bcnorwich">BCNorwich</a>
+                
+            </div>
+        </div>
+    
+        <a name="85091"></a>
+        <div class="comment" id="comment-85091">
+            <div id="post-85091-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm never sure whether to "answer" or "comment" in these things, that's confusing AF...</p>
+
+<p>There are two relations because one of them is the overlay one I'm trying to build.  I want to tag it as woods, in one or both of the hotly-debated methods landuse=forest and/or natural=wood, and then carve the ponds and other non-wooded features out of it as inners.</p>
+
+<p>Original "Lynn Woods" that I directly modified and then un-did because people objected:  <a href="https://www.openstreetmap.org/relation/1153480">https://www.openstreetmap.org/relation/1153480</a>  <em>as I found it</em></p>
+
+<p>New overlay where I'm trying to do the "right thing" and allow for further expansion of rendered woodland <em>that exists</em> outside the boundary:  <a href="https://www.openstreetmap.org/relation/14356649">https://www.openstreetmap.org/relation/14356649</a>  Note that "woods" is not capitalized in the name of this one for now.</p>
+
+<p>Mostly, since others built the original Lynn Woods as the protected_area with its funny border and never had a protected_class, I cannot take responsibility for that.</p></div>
+            <div class="comment-info" id="comment-85091-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '22, 12:19)</span>
+                <a class="comment-user userinfo" href="/users/21890/_hobbit">_Hobbit</a>
+                
+            </div>
+        </div>
+    
+        <a name="85093"></a>
+        <div class="comment" id="comment-85093">
+            <div id="post-85093-score" class="comment-score"></div>
+            <div class="comment-text"><p>I guess a related question is, can a <em>relation</em> be an "inner" of another relation and work correctly?  I cannot find <em>any</em> information about that specific thing in the Relation wiki documentation.  iD didn't object to it, so I assume it's fine.</p>
+
+<p>When I look directly at relation 143556649 right now, highlighted in orange, it doesn't even <em>show</em> the inners of the ponds and golf course.  Why?  They're completely contained, wtf.</p></div>
+            <div class="comment-info" id="comment-85093-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '22, 12:37)</span>
+                <a class="comment-user userinfo" href="/users/21890/_hobbit">_Hobbit</a>
+                
+            </div>
+        </div>
+    
+        <a name="85100"></a>
+        <div class="comment" id="comment-85100">
+            <div id="post-85100-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's not a good practice to upload test data to the live database as this just further confuses any original problems. It would be good to remove the test data, saving it offline for further testing.</p></div>
+            <div class="comment-info" id="comment-85100-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '22, 08:03)</span>
+                <a class="comment-user userinfo" href="/users/2925/bcnorwich">BCNorwich</a>
+                
+            </div>
+        </div>
+    
+        <a name="85108"></a>
+        <div class="comment" id="comment-85108">
+            <div id="post-85108-score" class="comment-score"></div>
+            <div class="comment-text"><p>"test data"?  What?</p></div>
+            <div class="comment-info" id="comment-85108-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '22, 13:43)</span>
+                <a class="comment-user userinfo" href="/users/21890/_hobbit">_Hobbit</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-85086" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85086-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/85086/which-overlaid-relation-renders-preferentially-in-carto?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/85086/which-overlaid-relation-renders-preferentially-in-carto?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/85086/which-overlaid-relation-renders-preferentially-in-carto?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/85086/which-overlaid-relation-renders-preferentially-in-carto?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="85088"></a>
+                    <div id="answer-container-85088" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85088-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85088/up/" rel="nofollow"> </a>
+<div id="post-85088-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85088-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85088/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If I'm understanding your question correctly, putting aside any other technical mistakes, this is caused by <code>landuse=forest</code> on the <code>=nature_reserve</code>. It has been considered as synonymous with <code>natural=wood</code> for tree areas due to disorganized use. Therefore it is usually rendered the same as <code>natural=wood</code> as tree areas. This tag should be removed. </p>
+<p>Secondarily, <code>boundary=protected_area</code> needs to be used on a <code>type=boundary</code>, meaning there is a conflict with <code>=nature_reserve</code> as a <code>type=multipolygon</code>. Since <code>=protected_area</code> itself has some problems, and you are not determining its <code>protected_class=</code> or <code>iucn_level=</code> yet, I suggest you remove it as well, keeping it as a <code>type=multipolygon</code> + <code>=nature_reserve</code>. (it is technically not correct to use <code>type=boundary</code> + <code>leisure=nature_reserve</code> although this is the most common representation, like how <code>place=city</code> is often redundantly added on the <code>boundary=administrative</code>)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85088/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Jul '22, 09:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/76ffbb56c811e8a8ccdd4c28f122399f?s=32&amp;d=identicon&amp;r=g" alt="Kovoschiz's gravatar image" />
+    <p><a href="/users/16887/kovoschiz">Kovoschiz</a><br/>
+    <span class="score" title="2434 reputation points"><span class="">2.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="47 badges"><span class="bronze">&#9679;</span><span class="badgecount">47</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kovoschiz has 22 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/85088/">
+                edited
+                <strong>16 Jul '22, 09:05</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85088">
+    
+        <a name="85092"></a>
+        <div class="comment" id="comment-85092">
+            <div id="post-85092-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's part of the point, simply adding natural=wood <em>OR</em> landuse=forest to the original relation is what people were objecting to, "woodland doesn't follow cadastral boundaries" and all that.  So I'm trying to lay down real, genuine woodlands in new relationships to avoid messing with the underlying objects.  Again, see previous comment, I did not put in the original Lynn Woods.  And in fact I'm trying to avoid stepping on the toes of its other editors.</p>
+
+<p>I realize you're trying to help, but I'm just confused by comments on other tags that I wouldn't expect to have any effect on <em>MY</em> new overlay.  Thus, the original question.  Why would the original Lynn Woods [relation ...3480] be affecting tile display of my Lynn <em>w</em>oods woodland [rel. ...6649] ??</p>
+
+<p>What's happening right now, and this may be because of tile caching, is that different renderings show up randomly at different zoom levels.  I've waited, I've tried to dirty some tiles, and it's still just behaving stupidly on the website.  I know a lot of this stuff is contentious and has been for years, and I'm trying to do minimal but reasonably "correct" things within that framework rather than stir up those old arguments.</p></div>
+            <div class="comment-info" id="comment-85092-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '22, 12:28)</span>
+                <a class="comment-user userinfo" href="/users/21890/_hobbit">_Hobbit</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-85088" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85088-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="85149"></a>
+                    <div id="answer-container-85149" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85149-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85149/up/" rel="nofollow"> </a>
+<div id="post-85149-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85149-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85149/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>"I guess a related question is, can a relation be an "inner" of another relation and work correctly?"</p>
+<p>I think this is the root of the issue. In the context of OSM-Carto (the Standard rendering), the answer to your question is no. The relations for the ponds and golf course that you've added as "inner" on the <code>natural=wood</code> relation will not be considered when rendering the trees. That's why you see trees rendered across the entire area.</p>
+<p>In order for this to work, you'll need to explicitly add the member ways of those ponds and golf course to the <code>natural=wood</code> relation, specified as inner or outer depending on whether they need to be cut out of the wood relation (the water, inner) or included (the islands, outer).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85149/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jul '22, 19:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/087bb38ba920baadf1df9dfc473208ec?s=32&amp;d=identicon&amp;r=g" alt="alester's gravatar image" />
+    <p><a href="/users/8189/alester">alester</a><br/>
+    <span class="score" title="6631 reputation points"><span class="">6.6k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="66 badges"><span class="silver">&#9679;</span><span class="badgecount">66</span></span><span title="100 badges"><span class="bronze">&#9679;</span><span class="badgecount">100</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="alester has 37 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85149">
+    
+        <a name="85151"></a>
+        <div class="comment" id="comment-85151">
+            <div id="post-85151-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, while thrashing around further I was becoming more afraid that was the truth of it.  It's odd that a well-enclosed relation can't serve the purpose, implicitly pointing at all the segments as a group.  Wouldn't that amount to less stored data overall?</p>
+
+<p><a href="https://wiki.openstreetmap.org/wiki/Multipolygon_Examples">https://wiki.openstreetmap.org/wiki/Multipolygon_Examples</a>  strongly implies that an "inner relation" is kosher, and iD doesn't object to arranging things that way, so it's easy to be confused.</p>
+
+<p>What happens if an "inner" object penetrates the path of the outer one, such as a pond that's half surrounded by woods and half by something else?  And what happens if an inner way component or two is missed, thus not correctly closing the inner loop?  Is the entire thing invalid?</p></div>
+            <div class="comment-info" id="comment-85151-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '22, 23:01)</span>
+                <a class="comment-user userinfo" href="/users/21890/_hobbit">_Hobbit</a>
+                
+            </div>
+        </div>
+    
+        <a name="85152"></a>
+        <div class="comment" id="comment-85152">
+            <div id="post-85152-score" class="comment-score"></div>
+            <div class="comment-text"><p>A well-enclosed relation can be a member of another relation. That's completely kosher and some renderers may fully support that. OSM-Carto unfortunately doesn't (at least at this time).</p>
+
+<p>If an inner crosses an outer, or an inner or outer ring are unclosed, that would generally be considered a broken multipolygon. If the woods only encompass half of a pond, you'd need to split ways at that point and "wrap" the woods around the one half of the pond's shore.</p></div>
+            <div class="comment-info" id="comment-85152-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '22, 00:00)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-85149" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85149-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/85086/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='OE5yFVskMYvOgjQMq6s2fFs0tY0lxOD8' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/85086/which-overlaid-relation-renders-preferentially-in-carto?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/85086/which-overlaid-relation-renders-preferentially-in-carto?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tags/"
+            class="tag-link-tags"
+            title="see questions tagged'tags'using tags"
+            rel="tag">tags</a> <span class="tag-number">&#215;191</span><br/>
+        
+        <a href="/tags/wood/"
+            class="tag-link-wood"
+            title="see questions tagged'wood'using tags"
+            rel="tag">wood</a> <span class="tag-number">&#215;15</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 16, 2022, 6:22 a.m.">16 Jul '22, 06:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,512 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 19, 2022, midnight">19 Jul '22, 00:00</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/526/how-to-tag-a-daytime-only-pedestrian-street">How to tag a daytime only pedestrian street?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/889/search-by-a-tag">Search by a tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/892/grouping-objects">Grouping objects</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1116/what-type-of-wood-should-i-use-and-why-doesnt-a-forest-show-up-in-mapnik">What type of wood should I use, and why doesn&#39;t a forest show up in mapnik</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1363/closed-roads-delete-tag">Closed Roads Delete? Tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1386/why-are-the-names-of-some-features-displayed-and-others-not">Why are the names of some features displayed and others not?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1861/about-coastlines">About Coastlines?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2226/how-to-tag-building-names-that-are-part-of-bigger-common-areas">How to tag building names that are part of bigger, common areas?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2227/tagging-retail-store-car-park-accessdestination">tagging retail store car park - access=destination?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/324/when-should-we-use-landuseforest-rather-than-naturalwood">When should we use landuse=forest rather than natural=wood?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

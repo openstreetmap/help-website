@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Get a list of nodes traversed by a list of coordinates - OSM Help</title>
+        <meta name="description" content="Hi, I am looking for a way to get a list of nodes that essentially captures a list of gps coordinates. I would assume this to be in the &#39;match&#39; service where when you pass a list of gps points, it will match them to a route and then also return a list of nodes that belongs to that route. You current..." />
+        <meta name="keywords" content="osrm,nodes,matching" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/82551/get-a-list-of-nodes-traversed-by-a-list-of-coordinates" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/82551/get-a-list-of-nodes-traversed-by-a-list-of-coordinates?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='nDU5LJb1JtdM4KQFqLX5HgaXsuVcT4iI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/82551/get-a-list-of-nodes-traversed-by-a-list-of-coordinates">Get a list of nodes traversed by a list of coordinates</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-82551-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82551/up/" rel="nofollow"> </a>
+<div id="post-82551-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-82551-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82551/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/82551/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+I am looking for a way to get a list of nodes that essentially captures a list of gps coordinates. I would assume this to be in the 'match' service where when you pass a list of gps points, it will match them to a route and then also return a list of nodes that belongs to that route. You currently can pass annotations=true and 'legs' in the annotation object can be used for this by basically combining all the nodes for each tracepoint and removing the duplicates but it sounds like a hack and not a proper method. Also, not sure if that is going to be accurate. Any help will be greatly appreciated. :)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osrm/" class="post-tag tag-link-osrm"
+                                        title="see questions tagged 'osrm'" rel="tag">osrm</a>
+                                
+                                    <a href="/tags/nodes/" class="post-tag tag-link-nodes"
+                                        title="see questions tagged 'nodes'" rel="tag">nodes</a>
+                                
+                                    <a href="/tags/matching/" class="post-tag tag-link-matching"
+                                        title="see questions tagged 'matching'" rel="tag">matching</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Nov '21, 09:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc43ae77e987854246ab4f6c496da9a2?s=32&amp;d=identicon&amp;r=g" alt="ayuz's gravatar image" />
+    <p><a href="/users/21024/ayuz">ayuz</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ayuz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/82551/">
+                edited
+                <strong>13 Nov '21, 09:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-82551">
+    
+</div>
+<div id="comment-tools-82551" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82551-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/82551/get-a-list-of-nodes-traversed-by-a-list-of-coordinates?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/82551/get-a-list-of-nodes-traversed-by-a-list-of-coordinates?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/82551/get-a-list-of-nodes-traversed-by-a-list-of-coordinates?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/82551/get-a-list-of-nodes-traversed-by-a-list-of-coordinates?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="82596"></a>
+                    <div id="answer-container-82596" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-82596-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82596/up/" rel="nofollow"> </a>
+<div id="post-82596-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-82596-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82596/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are number of services that provide map matching, for example <a href="https://www.graphhopper.com/blog/2016/08/08/releasing-the-map-matching-api/">https://www.graphhopper.com/blog/2016/08/08/releasing-the-map-matching-api/</a> or <a href="http://project-osrm.org/docs/v5.5.1/api/#match-service">http://project-osrm.org/docs/v5.5.1/api/#match-service</a></p>
+<p>You don't indicate what kind of volume of tracks you intend to process, so it isn't possible to determine if a public instance of such server will work for you, or if you need to use  a paid service or run your own instance.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/82596/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Nov '21, 08:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-82596">
+    
+        <a name="82611"></a>
+        <div class="comment" id="comment-82611">
+            <div id="post-82611-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the answer. I am aware of the map matching service provided by the osrm server. My exact question is if it is possible to get the OSM nodes along the path of the points that I pass. So, I need a service where I pass a list of gps coordinates and what I get back is a list of coordinates snapped to a route and also nodes that make up this route. Map match service from osrm server does return me the list of snapped coordinates but not the list of OSM nodes. Not sure if I am clear yet. :)</p></div>
+            <div class="comment-info" id="comment-82611-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Nov '21, 18:48)</span>
+                <a class="comment-user userinfo" href="/users/21024/ayuz">ayuz</a>
+                
+            </div>
+        </div>
+    
+        <a name="82613"></a>
+        <div class="comment" id="comment-82613">
+            <div id="post-82613-score" class="comment-score"></div>
+            <div class="comment-text"><p>I wouldn't expect this to be available out of the box as it would require the OSM ids for all the ways along the route to be retained.</p></div>
+            <div class="comment-info" id="comment-82613-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Nov '21, 07:58)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-82596" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82596-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/82551/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='nDU5LJb1JtdM4KQFqLX5HgaXsuVcT4iI' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/82551/get-a-list-of-nodes-traversed-by-a-list-of-coordinates?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/82551/get-a-list-of-nodes-traversed-by-a-list-of-coordinates?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nodes/"
+            class="tag-link-nodes"
+            title="see questions tagged'nodes'using tags"
+            rel="tag">nodes</a> <span class="tag-number">&#215;205</span><br/>
+        
+        <a href="/tags/osrm/"
+            class="tag-link-osrm"
+            title="see questions tagged'osrm'using tags"
+            rel="tag">osrm</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/matching/"
+            class="tag-link-matching"
+            title="see questions tagged'matching'using tags"
+            rel="tag">matching</a> <span class="tag-number">&#215;11</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 13, 2021, 9:41 a.m.">13 Nov '21, 09:41</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,162 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 18, 2021, 7:58 a.m.">18 Nov '21, 07:58</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/70624/map-matching-using-only-single-route-object">map matching using only single route object.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53029/map-matching-optimal-density-of-points">Map matching - optimal density of points</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62034/given-a-location-with-longitudes-and-lattitudes-how-can-i-get-the-nodeid-for-that-location">Given a location with longitudes and lattitudes, how can I get the nodeID for that location?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/78820/using-custom-road-network-in-osrm-map-matching-request">Using custom road network in OSRM map matching request</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62030/what-are-nodes-in-nearest-endpoint-results">what are nodes in nearest endpoint results</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1598/change-same-attribute-of-a-lot-of-nodes">Change same attribute of a lot of nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1208/why-do-some-nodes-appear-with-flashing-red-circles">Why do some nodes appear with flashing red circles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/495/what-tags-should-i-add-to-a-heliport">What tags should I add to a heliport?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2997/speed-limit-nodes-keep-or-delete">Speed limit nodes: keep or delete?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1103/should-i-tag-nodes-or-areas-for-amenity-and-tourism">Should I tag nodes or areas for amenity and tourism?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

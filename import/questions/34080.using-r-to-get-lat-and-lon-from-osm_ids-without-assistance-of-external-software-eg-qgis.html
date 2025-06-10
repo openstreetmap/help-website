@@ -1,0 +1,832 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Using R to get lat and lon from OSM_ids (without assistance of external software e.g. QGIS) - OSM Help</title>
+        <meta name="description" content="Hello,  I was wondering if there is an algortihm in R that will extract the lat and lons for OSM_ids. Ideally, it would give one lat and lon (as opposed to a Polygon). I have been using QGIS and post gis to extract them via the attribute table - copied and pasted to Libre Office/Excel. I have looked..." />
+        <meta name="keywords" content="latitude,r,longitude,osm_id" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Rhx3RvgQtuyI6QSlRKf44jsGA3yV4o3V' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis">Using R to get lat and lon from OSM_ids (without assistance of external software e.g. QGIS)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-34080-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34080/up/" rel="nofollow"> </a>
+<div id="post-34080-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-34080-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34080/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/34080/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, </p>
+<p>I was wondering if there is an algortihm in R that will extract the lat and lons for OSM_ids. Ideally, it would give one lat and lon (as opposed to a Polygon).</p>
+<p>I have been using QGIS and post gis to extract them via the attribute table - copied and pasted to Libre Office/Excel. I have looked at some of the methods for getting the lat and longs for nodes, ways, relations via the osm api or overpass api, but they don't seem to do OSM_ids (at least as far as I can determine). </p>
+<p>Ideally, I would like to try an algorthim that doesn't involve extracting the information from an external source, but rather one that extracts the lat and long tidily from the OSM_id, i.e. reverse engineering.</p>
+<p>I would any assistance you could offer. Many thanks. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/latitude/" class="post-tag tag-link-latitude"
+                                        title="see questions tagged 'latitude'" rel="tag">latitude</a>
+                                
+                                    <a href="/tags/r/" class="post-tag tag-link-r"
+                                        title="see questions tagged 'r'" rel="tag">r</a>
+                                
+                                    <a href="/tags/longitude/" class="post-tag tag-link-longitude"
+                                        title="see questions tagged 'longitude'" rel="tag">longitude</a>
+                                
+                                    <a href="/tags/osm_id/" class="post-tag tag-link-osm_id"
+                                        title="see questions tagged 'osm_id'" rel="tag">osm_id</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Jun '14, 10:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/599cf814d746d24710bc2550658779cb?s=32&amp;d=identicon&amp;r=g" alt="Student's gravatar image" />
+    <p><a href="/users/9050/student">Student</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Student has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-34080">
+    
+        <a name="34082"></a>
+        <div class="comment" id="comment-34082">
+            <div id="post-34082-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't quite understand what you mean by "I have looked at some of the methods for getting the lat and longs for nodes, ways, relations via the osm api or overpass api, but they don't seem to do OSM_ids". <br>
+</p>
+
+<p>Can you give an example of an "OSM_id" so that we can be sure we're talking about the same thing?  I'm not aware of a globally unique "OSM_id" though of course nodes, ways and relations have unique IDs - but (for example) there's both a node 133449728 and a way 133449728.</p></div>
+            <div class="comment-info" id="comment-34082-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '14, 11:12)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34083"></a>
+        <div class="comment" id="comment-34083">
+            <div id="post-34083-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes I will post an example of an OSM_id later. It would be very useful if node ids (or way ids or relation ids)  and OSM_ids were the same thing. Although I dont think so because i obtained node ids for the same dataset using osmconvert and they turned for to be different to the osm_id , in that the node ids were much longer. Anyhow, I will post you an example later (I dont have my laptop on me now). Thanks for the quick reply!</p></div>
+            <div class="comment-info" id="comment-34083-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '14, 11:35)</span>
+                <a class="comment-user userinfo" href="/users/9050/student">Student</a>
+                
+            </div>
+        </div>
+    
+        <a name="34117"></a>
+        <div class="comment not_top_scorer" id="comment-34117">
+            <div id="post-34117-score" class="comment-score"></div>
+            <div class="comment-text"><p>wkt_geom    gid osm_id
+POLYGON((-6.33255269999999992 53.28642250000000047,-6.33246350000000024 53.28647680000000264,-6.3323330999999996 53.28646859999999919,-6.33258360000000042 53.28635700000000242,-6.33255269999999992 53.28642250000000047)) 396 25857740
+POLYGON((-6.34702140000000004 53.40131290000000064,-6.34636050000000029 53.40164039999999801,-6.34611160000000041 53.40146130000000113,-6.34678970000000042 53.40113379999999665,-6.34702140000000004 53.40131290000000064))    256 23750977</p>
+
+<p>above is an example of the data I copy from the attribute table in QGIS. If you are interested it is from the OSM buildings shape file for Ireland. It gives the osm_id and the lats and longs. Which is what I need. But I would like to get the same thing, only, tidier in R, i.e. the osm_id and lat lon. </p>
+
+<p>I guess if somebody has done this type of work previously they will have some ideas :)</p></div>
+            <div class="comment-info" id="comment-34117-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '14, 19:49)</span>
+                <a class="comment-user userinfo" href="/users/9050/student">Student</a>
+                
+            </div>
+        </div>
+    
+        <a name="34121"></a>
+        <div class="comment not_top_scorer" id="comment-34121">
+            <div id="post-34121-score" class="comment-score"></div>
+            <div class="comment-text"><p>That last number looks suspiciously like the way ID for this building near Blanchardstown:</p>
+
+<p><a href="https://www.openstreetmap.org/way/23750977">https://www.openstreetmap.org/way/23750977</a></p>
+
+<p>The other one (25857740) is a building south of the Tallaght M50 junction, which would make sense if it's from the shapefile for Irish buildings.</p>
+
+<p>Of the data that you've quoted, which do you consider to be the "osm_id"?  I'd expect that QGIS will have an internal ID for the shapefile, which won't be in OSM.</p></div>
+            <div class="comment-info" id="comment-34121-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '14, 23:08)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34129"></a>
+        <div class="comment not_top_scorer" id="comment-34129">
+            <div id="post-34129-score" class="comment-score"></div>
+            <div class="comment-text"><p>osm_id would be 25857740 and 23750977 in this example. The osm_id covers nodes, ways, relations. Yes I think QGIS apply the osm_id and it is not a generic id. There are lots of questions online about coverting the osm_id to lat and lon but the answers suggest using overpass api or osm api. I was hoping that there is a method of obtaining the latitude and longitude from the osm_id in the same way the apis do but without a necessity to indicate if it is a node, way, relation. Any assistance would be greatly appreciated.</p></div>
+            <div class="comment-info" id="comment-34129-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 08:23)</span>
+                <a class="comment-user userinfo" href="/users/9050/student">Student</a>
+                
+            </div>
+        </div>
+    
+        <a name="34131"></a>
+        <div class="comment" id="comment-34131">
+            <div id="post-34131-score" class="comment-score">1</div>
+            <div class="comment-text"><p>This is not possible because the ID is only unique <em>within</em> the same <a href="https://wiki.openstreetmap.org/wiki/Elements">element</a> type. Or in other words: There can and will be different elements with the same ID (e.g. a <a href="http://www.openstreetmap.org/node/123">node</a>, a <a href="http://www.openstreetmap.org/way/123">way</a> and a (now deleted) <a href="http://www.openstreetmap.org/relation/123">relation</a> all having the ID <em>123</em>). Therefore you have to know the element type a specific ID belongs to.</p></div>
+            <div class="comment-info" id="comment-34131-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 08:32)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34132"></a>
+        <div class="comment not_top_scorer" id="comment-34132">
+            <div id="post-34132-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the fast response. OK, I guess an if else statement in code might do the trick. Do you, or does anyone else know if it is possible to extract lat and lon from osm_id - with knowledge of whether it's a node or way - but without using an api. I mean how do the apis do it ? Can that be reproduced in R ?</p></div>
+            <div class="comment-info" id="comment-34132-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 08:43)</span>
+                <a class="comment-user userinfo" href="/users/9050/student">Student</a>
+                
+            </div>
+        </div>
+    
+        <a name="34133"></a>
+        <div class="comment" id="comment-34133">
+            <div id="post-34133-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Are you aware that there is an OSM package for R? See <a href="http://osmar.r-forge.r-project.org/">http://osmar.r-forge.r-project.org/</a> and search for various blog posts about it.</p></div>
+            <div class="comment-info" id="comment-34133-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 08:59)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34134"></a>
+        <div class="comment" id="comment-34134">
+            <div id="post-34134-score" class="comment-score">1</div>
+            <div class="comment-text"><p>thanks for the reply, yes I used osmar, it basically involves using the api to get the information. Was hoping to see what the api does and apply it in R, rather than using the api via an R package. Anyhow, if that's all that's available, I may just have to work with it. Thanks to all who have contributed, its been useful discussing it.</p></div>
+            <div class="comment-info" id="comment-34134-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 10:08)</span>
+                <a class="comment-user userinfo" href="/users/9050/student">Student</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34080" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34080-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="35176"></a>
+                    <div id="answer-container-35176" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35176-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35176/up/" rel="nofollow"> </a>
+<div id="post-35176-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-35176-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35176/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I found a work-around to this question. It gives you the lat and lon coordinates for the shape file which you can then bind with the shape file columns to create a new data set. Thanks to the r-sig-Geo email list and <a href="http://www.inside-r.org/packages/cran/rgdal/docs/ogrInfo.">http://www.inside-r.org/packages/cran/rgdal/docs/ogrInfo.</a> </p>
+<pre><code>library(rgdal)
+shape&lt;-readOGR("location of shape file/folder",layer="buildings")
+names(shape)
+[[1] "osm_id" "name"   "type"
+
+lat &lt;- coordinates(shape)[,1]
+</code></pre>
+<p>lon &lt;- coordinates(shape)[,2]</p>
+<p>a&lt;-as.data.frame(shape$osm_id)</p>
+<p>b&lt;-as.data.frame(shape$name)</p>
+<p>c&lt;-as.data.frame(shape$type)</p>
+<p>data &lt;- cbind(lat,lon,a,b,c)</p>
+<p>you can then name the columns if you so wish. you now have lat &amp; lon coordinates for the osm_id </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35176/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Jul '14, 12:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/599cf814d746d24710bc2550658779cb?s=32&amp;d=identicon&amp;r=g" alt="Student's gravatar image" />
+    <p><a href="/users/9050/student">Student</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Student has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/35176/">
+                edited
+                <strong>25 Jul '14, 15:16</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35176">
+    
+</div>
+<div id="comment-tools-35176" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35176-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/34080/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Rhx3RvgQtuyI6QSlRKf44jsGA3yV4o3V' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/latitude/"
+            class="tag-link-latitude"
+            title="see questions tagged'latitude'using tags"
+            rel="tag">latitude</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/longitude/"
+            class="tag-link-longitude"
+            title="see questions tagged'longitude'using tags"
+            rel="tag">longitude</a> <span class="tag-number">&#215;45</span><br/>
+        
+        <a href="/tags/osm_id/"
+            class="tag-link-osm_id"
+            title="see questions tagged'osm_id'using tags"
+            rel="tag">osm_id</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/r/"
+            class="tag-link-r"
+            title="see questions tagged'r'using tags"
+            rel="tag">r</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 18, 2014, 10:56 a.m.">18 Jun '14, 10:56</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>14,691 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 25, 2014, 3:16 p.m.">25 Jul '14, 15:16</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/17701/retrieve-the-osm_id-from-postgres-db-if-i-have-latlon">Retrieve the osm_id (from Postgres DB) if I have LAT/LON</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1529/post-code-or-street-address-to-longlat">Post Code or street address to  Long/Lat?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12917/administrative-boundaries-latlong">Administrative Boundaries&#39; Lat/Long</a>
+        </p>
+        
+        <p>
+            <a href="/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile">Given a lat/lon, how do I find the precise position on the tile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2802/lat-long">[closed] lat - long</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11853/osmosis-lonlat-value-changes">Osmosis lon/lat value changes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2004/utm-or-latitude-longitude-coordinates-available-in-openstreetmap">UTM or Latitude-Longitude coordinates available in OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12946/calculate-time-and-distance-between-two-latlng-points-with-a-json-response">Calculate time and distance between two LatLng points with a JSON response</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13920/latitude-and-longitude-grid-lines">Latitude and Longitude Grid Lines.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17435/latitude-and-longitude-on-maps">Latitude and longitude on maps</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

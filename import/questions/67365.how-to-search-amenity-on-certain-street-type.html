@@ -1,0 +1,794 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to search amenity on certain street type ? - OSM Help</title>
+        <meta name="description" content="Hi, I am a volunteer in my small city for the security committee. We have a school near a &quot;main&quot; road and there is some security issue with the students and the traffic. A new planned development will increase dramatically the traffic in the next year. I would like to search other city in the area, ..." />
+        <meta name="keywords" content="school,nominatim,street,searching,amenity" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/67365/how-to-search-amenity-on-certain-street-type" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/67365/how-to-search-amenity-on-certain-street-type?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='VMrmn6GKUOG4GmHdtrRHr50wdHjHX9dz' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/67365/how-to-search-amenity-on-certain-street-type">How to search amenity on certain street type ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-67365-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/67365/up/" rel="nofollow"> </a>
+<div id="post-67365-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-67365-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/67365/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/67365/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I am a volunteer in my small city for the security committee.</p>
+<p>We have a school near a "main" road and there is some security issue with the students and the traffic.
+A new planned development will increase dramatically the traffic in the next year.</p>
+<p>I would like to search other city in the area, state, where a school is close to a main road (sometimes the postal address might be on a perpendicular street).</p>
+<p>I tried using nominatim, but I don't think I have the correct coding sentence.
+I can find school in cities or area, but not based on the street type.</p>
+<p>Any help ?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/school/" class="post-tag tag-link-school"
+                                        title="see questions tagged 'school'" rel="tag">school</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/street/" class="post-tag tag-link-street"
+                                        title="see questions tagged 'street'" rel="tag">street</a>
+                                
+                                    <a href="/tags/searching/" class="post-tag tag-link-searching"
+                                        title="see questions tagged 'searching'" rel="tag">searching</a>
+                                
+                                    <a href="/tags/amenity/" class="post-tag tag-link-amenity"
+                                        title="see questions tagged 'amenity'" rel="tag">amenity</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Dec '18, 15:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8e2e222ea9f8740f424e5e268e4c6c53?s=32&amp;d=identicon&amp;r=g" alt="Watever's gravatar image" />
+    <p><a href="/users/16094/watever">Watever</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Watever has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/67365/">
+                edited
+                <strong>27 Dec '18, 19:06</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+            <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+            <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-67365">
+    
+</div>
+<div id="comment-tools-67365" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-67365-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/67365/how-to-search-amenity-on-certain-street-type?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/67365/how-to-search-amenity-on-certain-street-type?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/67365/how-to-search-amenity-on-certain-street-type?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/67365/how-to-search-amenity-on-certain-street-type?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="67367"></a>
+                    <div id="answer-container-67367" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-67367-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/67367/up/" rel="nofollow"> </a>
+<div id="post-67367-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-67367-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/67367/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="SimonPoole has selected this answer as the correct answer"
+        href="/accept_answer/67367/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is likely difficult to do in a meaningful way, but you will get some hits with an adaption of <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Banks_far_away_from_police_stations">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Banks_far_away_from_police_stations</a></p>
+<p>See <a href="http://overpass-turbo.eu/s/ENe">http://overpass-turbo.eu/s/ENe</a></p>
+<pre><code>[out:json][timeout:25];
+// gather results
+(
+  node[amenity=school]({{bbox}});
+  way[amenity=school]({{bbox}});
+  rel[amenity=school]({{bbox}});
+)-&gt;.schools;
+(
+  way[highway=primary]({{bbox}});
+)-&gt;.primaries; //
+
+(
+  node.schools(around.primaries:200);
+  way.schools(around.primaries:200);
+  rel.schools(around.primaries:200);
+);
+// print results
+out body;
+&gt;;
+out skel qt;
+</code></pre>
+<p>This will give you all schools in the bounding box that are near (200m) to a primary road.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/67367/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Dec '18, 19:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/67367/">
+                edited
+                <strong>27 Dec '18, 19:19</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-67367">
+    
+        <a name="67447"></a>
+        <div class="comment" id="comment-67447">
+            <div id="post-67447-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you very much !</p></div>
+            <div class="comment-info" id="comment-67447-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jan '19, 02:51)</span>
+                <a class="comment-user userinfo" href="/users/16094/watever">Watever</a>
+                
+            </div>
+        </div>
+    
+        <a name="67448"></a>
+        <div class="comment" id="comment-67448">
+            <div id="post-67448-score" class="comment-score"></div>
+            <div class="comment-text"><p>This worked. I changed it to have it for 25 meters only. That way it limit the results and remove the school that are really close but not perpendicular.</p>
+
+<p>I have been playing for over 2-3 hours to get some of the data out.
+I couldn't find how to send to csv, it also seems most of the schools outside of the large cities don't have much tags.</p>
+
+<p>I was hopping to have address or coordinates, so the other members can see the location on google map and use google street view.</p>
+
+<p>I got results in json, then using <a href="http://geojson.io">http://geojson.io</a>, send it to CSV with all the coordinates. But theses do not work in google map. I am getting results in antarctica...
+Getting a little confuse now.</p></div>
+            <div class="comment-info" id="comment-67448-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jan '19, 02:57)</span>
+                <a class="comment-user userinfo" href="/users/16094/watever">Watever</a>
+                
+            </div>
+        </div>
+    
+        <a name="67449"></a>
+        <div class="comment" id="comment-67449">
+            <div id="post-67449-score" class="comment-score">1</div>
+            <div class="comment-text"><p>why don't you try <a href="http://umap.openstreetmap.fr">http://umap.openstreetmap.fr</a> instead of Google ?</p>
+
+<p>Are you sure that you did not switch lat/long, or that your workflow did not replace a decimal dot with a comma or another mistake in lat/long expectations of G-maps.</p></div>
+            <div class="comment-info" id="comment-67449-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jan '19, 04:16)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="67450"></a>
+        <div class="comment" id="comment-67450">
+            <div id="post-67450-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you mix lat and lon?</p>
+
+<p>For <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#CSV_output_mode">CSV output</a> use <code>[out:csv(...)]</code> in combination with <code>out center</code>. <a href="https://overpass-turbo.eu/s/EXu">Example</a>:</p>
+
+<pre><code>[out:csv(::id, ::type, ::lat, ::lon, amenity, name)][timeout:25];
+// gather results
+(
+  node[amenity=school]({{bbox}});
+  way[amenity=school]({{bbox}});
+  rel[amenity=school]({{bbox}});
+)-&gt;.schools;
+(
+  way[highway=primary]({{bbox}});
+)-&gt;.primaries; //
+
+(
+  node.schools(around.primaries:200);
+  way.schools(around.primaries:200);
+  rel.schools(around.primaries:200);
+);
+// print results
+out center;
+</code></pre></div>
+            <div class="comment-info" id="comment-67450-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jan '19, 07:54)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-67367" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-67367-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/67365/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='VMrmn6GKUOG4GmHdtrRHr50wdHjHX9dz' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/67365/how-to-search-amenity-on-certain-street-type?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/67365/how-to-search-amenity-on-certain-street-type?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/street/"
+            class="tag-link-street"
+            title="see questions tagged'street'using tags"
+            rel="tag">street</a> <span class="tag-number">&#215;142</span><br/>
+        
+        <a href="/tags/amenity/"
+            class="tag-link-amenity"
+            title="see questions tagged'amenity'using tags"
+            rel="tag">amenity</a> <span class="tag-number">&#215;94</span><br/>
+        
+        <a href="/tags/school/"
+            class="tag-link-school"
+            title="see questions tagged'school'using tags"
+            rel="tag">school</a> <span class="tag-number">&#215;30</span><br/>
+        
+        <a href="/tags/searching/"
+            class="tag-link-searching"
+            title="see questions tagged'searching'using tags"
+            rel="tag">searching</a> <span class="tag-number">&#215;16</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 27, 2018, 3:39 p.m.">27 Dec '18, 15:39</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,197 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 4, 2019, 7:57 a.m.">04 Jan '19, 07:57</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/23341/closed-no-results-on-nominatim-search">[closed] No results on Nominatim search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34005/nominatim-looking-up-a-street-address-by-house-number-and-postcode-in-the-netherlands">Nominatim: Looking up a street address by house number and postcode in the Netherlands</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5819/added-street-doesnt-show-up-on-search">Added street doesn&#39;t show up on search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19226/nominatim-search-fails-when-using-post-codes">nominatim search fails when using post codes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27046/cannot-find-place">Cannot find place</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29589/nominatim-streets-administrative-boundaries">Nominatim, streets &amp; administrative boundaries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">How do I list all the streets in a city with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4219/searching-for-car_sharing">Searching for car_sharing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19222/bicycle-rental-in-dublin-search-fails">Bicycle Rental in Dublin - Search fails</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40310/underscore-amenities-not-working">Underscore Amenities Not Working</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Mapping Cell Towers - OSM Help</title>
+        <meta name="description" content="Are there any useful apps for displaying Cell Towers (eg OpenCelliD) on a map with OSM data? Scenario: I&#39;m driving through the desert, and I suddenly have to join a video conference. I notice that I have no cellular data, and I&#39;m at a 4-way cross roads: each going North, South, East, and West. I&#39;m l..." />
+        <meta name="keywords" content="radio" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/84758/mapping-cell-towers" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/84758/mapping-cell-towers?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FXOcCds2BFm0lwm4PbcImDb7CaltitHl' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/84758/mapping-cell-towers">Mapping Cell Towers</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-84758-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/84758/up/" rel="nofollow"> </a>
+<div id="post-84758-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-84758-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/84758/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/84758/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Are there any useful apps for displaying Cell Towers (eg OpenCelliD) on a map with OSM data?</p>
+<p>Scenario: I'm driving through the desert, and I suddenly have to join a video conference. I notice that I have no cellular data, and I'm at a 4-way cross roads: each going North, South, East, and West.</p>
+<p>I'm looking for an app that has all this data offline and will show me [a] my location and [b] all the nearby cell towers. Ideally, it should tell me if the cell tower will work with my specific mobile provider's SIM card.</p>
+<p>I already use OpenStreetMaps for offline maps, so a plugin for OSM would be ideal.</p>
+<p>Is there a way to get an offline map of the cell towers near my current location, so I know where to go for the best possible signal and least possible packet loss?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/radio/" class="post-tag tag-link-radio"
+                                        title="see questions tagged 'radio'" rel="tag">radio</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Jun '22, 16:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0f7bbdc746034db6f838997f2a85a59c?s=32&amp;d=identicon&amp;r=g" alt="maltfield's gravatar image" />
+    <p><a href="/users/21873/maltfield">maltfield</a><br/>
+    <span class="score" title="55 reputation points">55</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="maltfield has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-84758">
+    
+        <a name="88258"></a>
+        <div class="comment" id="comment-88258">
+            <div id="post-88258-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Note: This question was migrated to the OSM Discourse here <a href="https://community.openstreetmap.org/t/mapping-cell-towers/109663">https://community.openstreetmap.org/t/mapping-cell-towers/109663</a></p></div>
+            <div class="comment-info" id="comment-88258-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '24, 16:26)</span>
+                <a class="comment-user userinfo" href="/users/21873/maltfield">maltfield</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-84758" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-84758-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/84758/mapping-cell-towers?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/84758/mapping-cell-towers?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/84758/mapping-cell-towers?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/84758/mapping-cell-towers?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="85109"></a>
+                    <div id="answer-container-85109" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85109-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85109/up/" rel="nofollow"> </a>
+<div id="post-85109-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-85109-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85109/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi.</p>
+<p>I don't know of any. You can explore the osm data, through the tag <a href="https://wiki.openstreetmap.org/wiki/Key:communication:mobile_phone">communication:mobile_phone</a>, via <a href="https://overpass-turbo.eu/?template=key&amp;key=communication%3Amobile_phone">overpass turbo</a>, for example, you can check out the mapped cell towers of a given region. Around my place (in France), mapping is pretty erratic, various tagging schemes, places left out, not so useful I'm afraid.</p>
+<p>Mainly there is not documented way of specifying the mobile provider. <a href="https://taginfo.openstreetmap.org/keys/communication:mobile_phone#combinations">Taginfo</a> says that quite a lot use the operator key, but not consistently. I guess the best data for automatic matching would be MCC and MNC, but it's only on 10.000 places, worldwide... And again, it is not a documented practice.</p>
+<p>Some king of matching between OpenCellID and OSM would be nice, and I guess have already been discussed, but it would be a lot of work, and nobody is on it AFAIK.</p>
+<p>As for access on a mobile phone, I assume you're talking about OsmAnd, as OpenStreetMap is not an app. In OsmAnd you can search for <a href="https://wiki.openstreetmap.org/wiki/Tag:tower:type%3Dcommunication">tower:type=communication</a> and display them on the map, which is a start, but not so useful in your case I'm afraid.</p>
+<p>As a kind of workaround, you can probably download OpenCellID data, convert it to gpx (or kml if you want coloring by provider for example), and import that into OsmAnd. Maybe filter only those for your provider and crop to the region you need, to keep OsmAnd running smoothly. Then you can display the points on your map, search for them...</p>
+<p>Best regards.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85109/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '22, 13:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85109">
+    
+        <a name="85110"></a>
+        <div class="comment" id="comment-85110">
+            <div id="post-85110-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I guess the best data for automatic matching would be MCC and MNC</p>
+</blockquote>
+
+<p>The challenge with MCC/MNC is that one tower (and one operator) will match lots of MCC/MNC combinations - both brands (including former brands) belonging to one carrier and MVNOs using that carrier.</p>
+
+<p>Also in the UK at least sharing towers between networks is a thing, and there are also third-party operators to further complicate matters.</p></div>
+            <div class="comment-info" id="comment-85110-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '22, 14:17)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="85130"></a>
+        <div class="comment" id="comment-85130">
+            <div id="post-85130-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think that it's possible to record the various codes used when the phone is connected to some network, and then search for them in the surrounding or distant towers.</p>
+
+<p>For the few nodes I've checked, MNC are usually semi-colon separated lists of codes, so it's not impossible to parse. MCC is always the same. Main trouble is the lack of data for now...</p>
+
+<p>operator value are more free style concatenation of operators names (only 4 in France, all the others are virtual, and usually attached to only one of the 4, but I don't think this applies elsewhere).</p></div>
+            <div class="comment-info" id="comment-85130-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '22, 18:22)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-85109" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85109-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/84758/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FXOcCds2BFm0lwm4PbcImDb7CaltitHl' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/84758/mapping-cell-towers?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/84758/mapping-cell-towers?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/radio/"
+            class="tag-link-radio"
+            title="see questions tagged'radio'using tags"
+            rel="tag">radio</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 12, 2022, 4:32 p.m.">12 Jun '22, 16:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,657 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 23, 2024, 4:26 p.m.">23 Feb '24, 16:26</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/15832/whys-is-the-pic-forr-a-man-made-tower-a-specific-radiotower-instead-of-neutral">Whys is the pic forr a man made tower a specific radiotower instead of neutral ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40059/are-radio-coverage-areas-as-polygons-of-interest-or-allowed-on-osm">Are Radio coverage areas as polygons of interest or allowed on OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46625/do-studios-not-show-on-standard-map-view">Do studios not show on standard map view?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49878/access-tag-radiono-without-a-railway-tag">Access tag radio=no without a railway tag ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/67368/marcar-un-radio-en-el-mapa-teniendo-solo-el-punto-de-inicio-lat-long">Marcar un radio en el mapa teniendo solo el punto de inicio (lat-long)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,998 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Oneway bus routes - OSM Help</title>
+        <meta name="description" content="I am trying to mark some bus routes which go only one way down two-way roads, but I can&#39;t see how to check whether I&#39;ve chosen the correct facing arrow. Unfortunately the Transport Map doesn&#39;t show any oneway arrows, so I can&#39;t check what I&#39;ve done. Can anyone suggest what to do, please?" />
+        <meta name="keywords" content="bus,route,arrow,oneway" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/22037/oneway-bus-routes" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/22037/oneway-bus-routes?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='nXxRtAEZWxdog0VmuGnRNzHBiOns21nY' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/22037/oneway-bus-routes">Oneway bus routes</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-22037-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22037/up/" rel="nofollow"> </a>
+<div id="post-22037-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-22037-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22037/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/22037/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am trying to mark some bus routes which go only one way down two-way roads, but I can't see how to check whether I've chosen the correct facing arrow. Unfortunately the Transport Map doesn't show any oneway arrows, so I can't check what I've done.  Can anyone suggest what to do, please?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bus/" class="post-tag tag-link-bus"
+                                        title="see questions tagged 'bus'" rel="tag">bus</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/arrow/" class="post-tag tag-link-arrow"
+                                        title="see questions tagged 'arrow'" rel="tag">arrow</a>
+                                
+                                    <a href="/tags/oneway/" class="post-tag tag-link-oneway"
+                                        title="see questions tagged 'oneway'" rel="tag">oneway</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 May '13, 14:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b96c53807761fec6103da2fc2f003b26?s=32&amp;d=identicon&amp;r=g" alt="Jonga's gravatar image" />
+    <p><a href="/users/6256/jonga">Jonga</a><br/>
+    <span class="score" title="101 reputation points">101</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jonga has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-22037">
+    
+</div>
+<div id="comment-tools-22037" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22037-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/22037/oneway-bus-routes?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/22037/oneway-bus-routes?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/22037/oneway-bus-routes?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/22037/oneway-bus-routes?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="22050"></a>
+                    <div id="answer-container-22050" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22050-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22050/up/" rel="nofollow"> </a>
+<div id="post-22050-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-22050-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22050/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The following assumes you are mapping your bus route with a route relation.</p>
+<p>On the sections of the route which are only travelled by the bus in one direction, add in the role either forward or backward depending whether the bus travels with or against the direction of the way. </p>
+<p>In Potlatch 2 the role is set using the 3 little arrow logos next to the route in the Simple View or the third field in the relations view in Advanced mode. You can see the direction of the way by the orientation of the arrow in the tool panel (usually lower-right corner), or you can choose the Enhanced view from the MapStyle drop down and this will draw arrows on a way when it is selected to make it's direction more obvious.</p>
+<p>In JOSM you choose for the direction of all ways to be shown by setting an option. JOSM also has more features for adding bus routes, but I suspect these might be overly complex for what you want to do right now.</p>
+<p>Here are example ways with this type of tagging on bus routes (you could open them in an editor to inspect how they appear: </p>
+<ul>
+<li><a href="http://osm.org/go/eu8Y~y39?layers=T">City Loop, Nottingham</a> (many buses do a one way loop around the city centre for instance on <a href="http://www.openstreetmap.org/browse/way/16202048">Middle Hill</a> ), </li>
+<li><a href="http://osm.org/go/eu8Sp2w9?layers=T">Inham Nook, Chilwell</a> (final part of route is a <a href="http://www.openstreetmap.org/browse/way/12355557">loop</a>), </li>
+<li><a href="http://osm.org/go/eus6a41Z--?layers=T">Maidenhead</a> (a number of buses go only one way on roads at the NW side of town, including <a href="http://www.openstreetmap.org/browse/way/4261323">Cranbrook Drive</a>). </li>
+</ul>
+<p>Here are links to each of these sites on OePNV Map another visualisation of public transport which does show one direction segments : <a href="http://www.öpnvkarte.de/?zoom=17&amp;lat=52.95081&amp;lon=-1.14637&amp;layers=TBTTT">Middle Hill</a>, <a href="http://www.öpnvkarte.de/?zoom=18&amp;lat=52.92275&amp;lon=-1.24838&amp;layers=TBTTT">Inham Nook</a>, <a href="http://www.öpnvkarte.de/?zoom=17&amp;lat=51.53396&amp;lon=-0.74806&amp;layers=TBTTT">Cranbrook Drive</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22050/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 May '13, 18:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/22050/">
+                edited
+                <strong>03 May '13, 14:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22050">
+    
+        <a name="22051"></a>
+        <div class="comment" id="comment-22051">
+            <div id="post-22051-score" class="comment-score"></div>
+            <div class="comment-text"><p>Multiple examples used in case any bus routes change (not unknown in Maidenhead)</p></div>
+            <div class="comment-info" id="comment-22051-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 May '13, 19:00)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="22057"></a>
+        <div class="comment" id="comment-22057">
+            <div id="post-22057-score" class="comment-score">1</div>
+            <div class="comment-text"><p>OK, thanks, that's answered it.</p></div>
+            <div class="comment-info" id="comment-22057-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 May '13, 21:28)</span>
+                <a class="comment-user userinfo" href="/users/6256/jonga">Jonga</a>
+                
+            </div>
+        </div>
+    
+        <a name="22061"></a>
+        <div class="comment" id="comment-22061">
+            <div id="post-22061-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You can accept the answer, then others can see that this helped</p></div>
+            <div class="comment-info" id="comment-22061-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 May '13, 23:27)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="22077"></a>
+        <div class="comment" id="comment-22077">
+            <div id="post-22077-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/647/sk53">@SK53</a> Your first and third link are broken.</p></div>
+            <div class="comment-info" id="comment-22077-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '13, 14:03)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="22081"></a>
+        <div class="comment" id="comment-22081">
+            <div id="post-22081-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can edit the answer too!</p></div>
+            <div class="comment-info" id="comment-22081-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '13, 14:33)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-22050" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22050-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="22042"></a>
+                    <div id="answer-container-22042" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22042-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22042/up/" rel="nofollow"> </a>
+<div id="post-22042-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-22042-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22042/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Bus routes are mapped using a relation to link together the ways that make up the route.
+It is usual to create a relation for each direction (and each variant) of the route. These can then be linked together using the Route Master relation.
+See <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Route">Public Transport Route</a> for more information.
+However the way Transport Map and other renderers display the route may be an issue.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22042/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 May '13, 15:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6edb4957e57770118c3b8022cfce68a8?s=32&amp;d=identicon&amp;r=g" alt="srbrook's gravatar image" />
+    <p><a href="/users/687/srbrook">srbrook</a><br/>
+    <span class="score" title="993 reputation points">993</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="25 badges"><span class="bronze">&#9679;</span><span class="badgecount">25</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="srbrook has 3 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/22042/">
+                edited
+                <strong>02 May '13, 18:35</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+            <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+            <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22042">
+    
+        <a name="22043"></a>
+        <div class="comment" id="comment-22043">
+            <div id="post-22043-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, but that doesn't seem to answer the specific point.  When I've added a route, there are three direction options on the drop down: &gt;&gt;, &lt;&lt;, &lt;&gt;.  The trouble is, I don't know which direction &gt;&gt; and &lt;&lt; are pointing along the road.  The road itself is two-way so the bus route could theoretically be in either direction, although where there are stops, these are placed on the correct side.</p></div>
+            <div class="comment-info" id="comment-22043-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 May '13, 15:11)</span>
+                <a class="comment-user userinfo" href="/users/6256/jonga">Jonga</a>
+                
+            </div>
+        </div>
+    
+        <a name="22074"></a>
+        <div class="comment" id="comment-22074">
+            <div id="post-22074-score" class="comment-score"></div>
+            <div class="comment-text"><p>left to right arrow sign (&gt;&gt;) means forward(node direction of the road).</p></div>
+            <div class="comment-info" id="comment-22074-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '13, 12:32)</span>
+                <a class="comment-user userinfo" href="/users/155/erkinalp">erkinalp</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-22042" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22042-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="39991"></a>
+                    <div id="answer-container-39991" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-39991-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39991/up/" rel="nofollow"> </a>
+<div id="post-39991-score" class="post-score"
+    title="current number of votes">
+    -3
+</div>
+<a id="post-39991-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39991/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Don't add roles to the ways of your route. Simply add all ways in the correct order.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/39991/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Jan '15, 00:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a7dfce5853b949d2c4d04076890b4899?s=32&amp;d=identicon&amp;r=g" alt="Polyglot's gravatar image" />
+    <p><a href="/users/6242/polyglot">Polyglot</a><br/>
+    <span class="score" title="38 reputation points">38</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Polyglot has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-39991">
+    
+        <a name="40576"></a>
+        <div class="comment" id="comment-40576">
+            <div id="post-40576-score" class="comment-score"></div>
+            <div class="comment-text"><p>Fun thing is this likes to break, and quite badly, on routes that backtrack or loop.  The 105 Peoria in north Tulsa and pretty much any route hitting Denver Avenue Station has this issue.</p></div>
+            <div class="comment-info" id="comment-40576-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jan '15, 09:28)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+        <a name="40852"></a>
+        <div class="comment" id="comment-40852">
+            <div id="post-40852-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's why I'm creating scripts to check whether those routes are still continuous and report the ones which aren't anymore.</p>
+
+<p>Hopefully, one day, iD will be rewritten in such a way that route and other relations aren't broken anymore.</p></div>
+            <div class="comment-info" id="comment-40852-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Feb '15, 10:05)</span>
+                <a class="comment-user userinfo" href="/users/6242/polyglot">Polyglot</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39991" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39991-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/22037/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='nXxRtAEZWxdog0VmuGnRNzHBiOns21nY' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22037/oneway-bus-routes?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22037/oneway-bus-routes?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/bus/"
+            class="tag-link-bus"
+            title="see questions tagged'bus'using tags"
+            rel="tag">bus</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/oneway/"
+            class="tag-link-oneway"
+            title="see questions tagged'oneway'using tags"
+            rel="tag">oneway</a> <span class="tag-number">&#215;49</span><br/>
+        
+        <a href="/tags/arrow/"
+            class="tag-link-arrow"
+            title="see questions tagged'arrow'using tags"
+            rel="tag">arrow</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 2, 2013, 2:18 p.m.">02 May '13, 14:18</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,669 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 8, 2015, 10:05 a.m.">08 Feb '15, 10:05</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/22187/changing-road-usage-how-to-tag-it">Changing road usage - how to tag it?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27213/bus-routes-that-travel-back-and-forth">Bus routes that travel back and forth</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12435/dolmus-route">Dolmuş route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20925/how-to-render-plain-bus-routes">How to render plain bus routes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26213/bus-route-passes-twice-through-a-way-is-it-correct-to-add-it-twice-to-the-relation">Bus route passes twice through a way. Is it correct to add it twice to the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27210/bus-routes-which-have-an-alternate-route-eg-as-a-school-bus-service">Bus routes which have an alternate route, e.g. as a school bus service?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9775/how-can-i-set-up-a-public-transport-route_master-in-potlatch-2">How can I set up a public transport route_master in Potlatch 2 ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or">Roundabouts as part of bus routes (or cycle routes, or…)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18033/bus-route-map-managua">bus route map managua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27214/bus-routes-that-occasionally-terminate-or-start-in-the-middle-of-the-standard-route">Bus routes that occasionally terminate or start in the middle of the standard route</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,720 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Areas broken on all overpass servers? - OSM Help</title>
+        <meta name="description" content="Ed Loach´s &quot;Admin Boundary Analysis&quot; service has not updated since 15 November. I contacted Ed about this and he says it´s being crippled at the moment by the &quot;area update&quot; issues in Overpass. According to the Platform Status page, all three overpass instances (France, Germany, Russia) seem to be ha..." />
+        <meta name="keywords" content="overpass" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/47080/areas-broken-on-all-overpass-servers" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/47080/areas-broken-on-all-overpass-servers?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gePOmbPegp3bv3zpmxLstfHrbbOdEnCR' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/47080/areas-broken-on-all-overpass-servers">Areas broken on all overpass servers?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-47080-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47080/up/" rel="nofollow"> </a>
+<div id="post-47080-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-47080-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47080/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/47080/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Ed Loach´s "Admin Boundary Analysis" service has not updated since 15 November. I contacted Ed about this and he says it´s being crippled at the moment by the "area update" issues in Overpass.</p>
+<p>According to the Platform Status page, all three overpass instances (France, Germany, Russia) seem to be having the same problem with updating areas.</p>
+<p>Does anyone know what is going on? Will this be fixed soon? Or will the change that caused the problem be backed out?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Dec '15, 18:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/81868786ff539d9a5b1f21ed57b6e13a?s=32&amp;d=identicon&amp;r=g" alt="csmale's gravatar image" />
+    <p><a href="/users/11526/csmale">csmale</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="csmale has one accepted answer">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47080/">
+                edited
+                <strong>10 Dec '15, 10:32</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+            <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+            <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-47080">
+    
+        <a name="47089"></a>
+        <div class="comment" id="comment-47089">
+            <div id="post-47089-score" class="comment-score">2</div>
+            <div class="comment-text"><p>As an aside, I used to download a geofabrik extract daily, then filter to just the boundary related stuff, but Overpass proved more efficient. I should perhaps switch to using a local database and processing the daily diff files, but haven't got around to it.</p></div>
+            <div class="comment-info" id="comment-47089-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Dec '15, 13:12)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47102"></a>
+        <div class="comment" id="comment-47102">
+            <div id="post-47102-score" class="comment-score"></div>
+            <div class="comment-text"><p>Platform status has been updated to suggest the German instance is OK now. I am still getting the same Gateway Timeout I've been getting since it last worked:
+wget -Ogreat_britain.osm "http://overpass-api.de/api/interpreter?data=[timeout:86400];(rel<a href="50.06419,-11.1621,59.04055,2.19727">"boundary"</a>;);( .<em>;way(r););out meta;"
+--2015-12-11 16:04:17--  <a href="http://overpass-api.de/api/interpreter?data=[timeout:86400];(rel">http://overpass-api.de/api/interpreter?data=[timeout:86400];(rel</a><a href="50.06419,-11.1621,59.04055,2.19727">boundary</a>;);(%20.</em>;way(r););out%20 meta;
+Resolving overpass-api.de... 46.4.41.83
+Connecting to overpass-api.de|46.4.41.83|:80... connected.
+HTTP request sent, awaiting response... 504 Gateway Timeout
+2015-12-11 16:04:33 ERROR 504: Gateway Timeout.</p></div>
+            <div class="comment-info" id="comment-47102-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '15, 16:10)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47080" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47080-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/47080/areas-broken-on-all-overpass-servers?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/47080/areas-broken-on-all-overpass-servers?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/47080/areas-broken-on-all-overpass-servers?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/47080/areas-broken-on-all-overpass-servers?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="47105"></a>
+                    <div id="answer-container-47105" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47105-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47105/up/" rel="nofollow"> </a>
+<div id="post-47105-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-47105-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47105/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The issue <a href="http://help.openstreetmap.org/users/339/edloach"><a href="http://help.openstreetmap.org/users/339/edloach">@EdLoach</a></a> is facing is pretty much unrelated to the <em>area update</em> issue. In fact his query doesn't even use the word <code>area</code> in there, so there's nothing to worry about. It would have worked all the time.</p>
+<p>Now, the reason for the 504 Gateway issue is the <em>way</em> too large timeout value. I'd suggest to reduce that at least down to 3600 seconds or even lower. 24hours timeout is deemed to be a resource killer by Overpass API and the query get immediately canceled.</p>
+<p>Here's my log for the same query with 3600 seconds timeout - results returned back in 1 minute 30 seconds. </p>
+<pre><code>wget "http://overpass-api.de/api/interpreter?data=[timeout:3600];(rel["boundary"](50.06419,-11.1621,59.04055,2.19727););( ._;way(r););out meta;" -O res.osm
+--2015-12-11 17:11:28--  <a href="http://overpass-api.de/api/interpreter?data=[timeout:3600];(rel[boundary](50.06419,-11.1621,59.04055,2.19727););(%20._;way(r););out%20meta;">http://overpass-api.de/api/interpreter?data=[timeout:3600];(rel[boundary](50.06419,-11.1621,59.04055,2.19727););(%20._;way(r););out%20meta;</a>
+Resolving overpass-api.de (overpass-api.de)... 2a01:4f8:131:6109::2, 46.4.41.83
+Connecting to overpass-api.de (overpass-api.de)|2a01:4f8:131:6109::2|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/osm3s+xml]
+Saving to: 'res.osm'
+
+    [                              &lt;=&gt;                                             ] 326,493,532 28.3MB/s   in 8.3s
+
+2015-12-11 17:12:52 (37.6 MB/s) - 'res.osm' saved [326493532]
+</code></pre>
+<p>NB: The issue on the French server was reported some time back but I don't have an up to date status from <a href="http://help.openstreetmap.org/users/3436/sly">@sly</a>. The Russian server is facing some hard disk issues now and then. The issue on the German server was reported back in November, but I also don't have a feedback from Roland, why the update job stopped. Nevertheless, the area creation job was scheduled again on overpass-api.de, so you should get up-to-date areas now. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47105/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Dec '15, 17:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/264d84ab05b942224b05960903eba7a7?s=32&amp;d=identicon&amp;r=g" alt="mmd's gravatar image" />
+    <p><a href="/users/8708/mmd">mmd</a><br/>
+    <span class="score" title="5682 reputation points"><span class="">5.7k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="53 badges"><span class="silver">&#9679;</span><span class="badgecount">53</span></span><span title="88 badges"><span class="bronze">&#9679;</span><span class="badgecount">88</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmd has 44 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47105/">
+                edited
+                <strong>11 Dec '15, 18:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47105">
+    
+        <a name="47117"></a>
+        <div class="comment" id="comment-47117">
+            <div id="post-47117-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you! Scheduled task updated and due to run in less than an hour from now. I presume I got 86400 from some example query somewhere and as noted above it was working...</p></div>
+            <div class="comment-info" id="comment-47117-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '15, 09:33)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47263"></a>
+        <div class="comment" id="comment-47263">
+            <div id="post-47263-score" class="comment-score"></div>
+            <div class="comment-text"><p>Area creation on overpass-api.de seems to have stopped again 4 days ago (see the yellow background in overpass turbo on the bottom right for queries involving areas).</p>
+
+<p>Unfortunately I don't have any more details. Roland is the only person having access to production, afaik.</p></div>
+            <div class="comment-info" id="comment-47263-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '15, 10:50)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47105" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47105-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/47080/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gePOmbPegp3bv3zpmxLstfHrbbOdEnCR' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47080/areas-broken-on-all-overpass-servers?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47080/areas-broken-on-all-overpass-servers?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 9, 2015, 6:56 p.m.">09 Dec '15, 18:56</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,939 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 22, 2015, 10:50 a.m.">22 Dec '15, 10:50</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13299/bad-changes-for-odessa-city-ukraine">[closed] Bad changes for Odessa city (Ukraine)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api">How to find list of cities in a state with overpass osm api?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13877/how-to-find-cities-and-states-using-osm-overpass-api">How to find cities and states using OSM overpass API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15101/overpassapi-query-with-two-specific-keys-and-any-value">OverpassAPI query with two specific keys and any value</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17336/overpass-api-query-question">Overpass API query question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17365/overpass-is-it-possible-to-use-it-as-an-alternative-to-the-api-relation-full-call">Overpass:  Is it possible to use it as an alternative to the API relation /full call?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18368/export-all-boundaries-in-an-area-via-overpass">Export all boundaries in an area via overpass</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18524/advanced-overpass-query">Advanced overpass query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program">I want to use Main/Overpass API for retrieving data in c++ program.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12543/i-cant-get-odessa-ukraine-node-with-overpass-api">I can&#39;t get Odessa (Ukraine) node with overpass API</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

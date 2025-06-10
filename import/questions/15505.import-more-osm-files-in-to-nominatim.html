@@ -1,0 +1,1174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Import more osm files in to Nominatim - OSM Help</title>
+        <meta name="description" content="Hi! I succeeded to import the OSM data for Netherlands (by the way, took 38 hours to finish) and now I want also to import (in the same database) the OSM data for Belgium and Luxembourg. Do you know how can be done? I have tried using ./utils/setup.php --osm-file belgium.pbf --import-data , but didn..." />
+        <meta name="keywords" content="files,import,nominatim,data" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/15505/import-more-osm-files-in-to-nominatim?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='IfLcYe5z8KPGtd4s9GCHWrHGYGHa6c7b' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/15505/import-more-osm-files-in-to-nominatim">Import more osm files in to Nominatim</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-15505-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15505/up/" rel="nofollow"> </a>
+<div id="post-15505-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15505-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15505/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/15505/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi!</p>
+<p>I succeeded to import the OSM data for Netherlands (by the way, took 38 hours to finish) and now I want also to import (in the same database) the OSM data for Belgium and Luxembourg.</p>
+<p>Do you know how can be done?
+I have tried using ./utils/setup.php --osm-file belgium.pbf --import-data , but didn’t work (stopped at some point: Setting up table: planet_osm_ways)
+Should I use ./utils/setup.php --osm-file belgium.pbf --load-data?</p>
+<p>Thank you!</p>
+<p>Best regards,
+Roxana</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/files/" class="post-tag tag-link-files"
+                                        title="see questions tagged 'files'" rel="tag">files</a>
+                                
+                                    <a href="/tags/import/" class="post-tag tag-link-import"
+                                        title="see questions tagged 'import'" rel="tag">import</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/data/" class="post-tag tag-link-data"
+                                        title="see questions tagged 'data'" rel="tag">data</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Aug '12, 09:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2f496486f3d04cfe5b6d1d8ce9b660af?s=32&amp;d=identicon&amp;r=g" alt="RoxanaO's gravatar image" />
+    <p><a href="/users/4362/roxanao">RoxanaO</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RoxanaO has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15505/">
+                edited
+                <strong>24 Jan '17, 22:15</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-15505">
+    
+        <a name="15542"></a>
+        <div class="comment" id="comment-15542">
+            <div id="post-15542-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/2921/lonvia"></a><a href="http://help.openstreetmap.org/users/2921/lonvia">@lonvia</a> Unfortunately didn't work!
+Here is the result:</p>
+
+<p>/var/www/public_html/Nominatim/osmosis-0.40.1/bin/osmosis --read-xml 'belgium.pbf' --read-empty --derive-change --write-xml-change /var/www/public_html/Nominatim/data/osmosischange.osc
+... org.openstreetmap.osmosis.core.pipeline.common.ActiveTaskManager waitForCompletion
+SEVERE: Thread for task 1-read-xml failed
+org.openstreetmap.osmosis.core.OsmosisRuntimeException: Unable to parse xml file belgium.pbf.  </p>
+
+<p><a href="http://help.openstreetmap.org/users/2933/cartinus"></a><a href="http://help.openstreetmap.org/users/2933/cartinus">@Cartinus</a> Thank you for the link! It will help me, but I wanted to know how to do if I want to import countries one by one.</p></div>
+            <div class="comment-info" id="comment-15542-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Aug '12, 09:15)</span>
+                <a class="comment-user userinfo" href="/users/4362/roxanao">RoxanaO</a>
+                
+            </div>
+        </div>
+    
+        <a name="40097"></a>
+        <div class="comment" id="comment-40097">
+            <div id="post-40097-score" class="comment-score"></div>
+            <div class="comment-text"><p>You are using the wrong Osmosis flag, use --read-pbf, not --read-xml, see <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PBF_Binary_Tasks">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PBF_Binary_Tasks</a> (I have removed superfluous parts of above error message).</p></div>
+            <div class="comment-info" id="comment-40097-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '15, 12:43)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53681"></a>
+        <div class="comment" id="comment-53681">
+            <div id="post-53681-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello, I have the same problem with you. And I use the following statement to import the first country data:</p>
+
+<p><code>./utils/setup.php --osm-file countryA.bz2</code></p>
+
+<p>However, it shows "countryA.bz2" not readable.</p>
+
+<p>Do you know Why such problems have appeared?</p></div>
+            <div class="comment-info" id="comment-53681-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Dec '16, 08:31)</span>
+                <a class="comment-user userinfo" href="/users/13112/passerbyamen">PasserbyAmen</a>
+                
+            </div>
+        </div>
+    
+        <a name="53686"></a>
+        <div class="comment" id="comment-53686">
+            <div id="post-53686-score" class="comment-score"></div>
+            <div class="comment-text"><p>Does the file <em>countryA.bz2</em> exist? Is it located in your current directory? Is it readable by your user?</p></div>
+            <div class="comment-info" id="comment-53686-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Dec '16, 18:04)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15505" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15505-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/15505/import-more-osm-files-in-to-nominatim?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/15505/import-more-osm-files-in-to-nominatim?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/15505/import-more-osm-files-in-to-nominatim?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/15505/import-more-osm-files-in-to-nominatim?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15506"></a>
+                    <div id="answer-container-15506" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15506-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15506/up/" rel="nofollow"> </a>
+<div id="post-15506-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-15506-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15506/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="RoxanaO has selected this answer as the correct answer"
+        href="/accept_answer/15506/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I assume you are talking about importing into a Nominatim DB.</p>
+<p>In theory, you could do that by using the update script:</p>
+<pre><code>./utils/update.php --import-file belgium.xml.bz2
+</code></pre>
+<p>(pbf files will not work here) and then reindex your data:</p>
+<pre><code>./utils/update.php --index
+</code></pre>
+<p>But that will be very, <em>very</em> slow.</p>
+<p>The import will go much faster if you first merge the three country excerpts and then import the result in one go.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15506/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Aug '12, 10:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d888b712d85dee0aa304297f2dc697c7?s=32&amp;d=identicon&amp;r=g" alt="lonvia's gravatar image" />
+    <p><a href="/users/2921/lonvia">lonvia</a><br/>
+    <span class="score" title="6213 reputation points"><span class="">6.2k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="lonvia has 43 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15506/">
+                edited
+                <strong>11 Oct '12, 08:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15506">
+    
+        <a name="15507"></a>
+        <div class="comment" id="comment-15507">
+            <div id="post-15507-score" class="comment-score">2</div>
+            <div class="comment-text"><p>In the case of these three countries, there is even an excerpt available that already contains all three of them: <a href="http://planet.openstreetmap.nl/benelux/?order=N">planet-benelux</a></p></div>
+            <div class="comment-info" id="comment-15507-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '12, 12:52)</span>
+                <a class="comment-user userinfo" href="/users/2933/cartinus">cartinus</a>
+                
+            </div>
+        </div>
+    
+        <a name="15578"></a>
+        <div class="comment" id="comment-15578">
+            <div id="post-15578-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried also to import the merged made with the country excerpts and got a fatal error and stopped:</p>
+
+<p><strong>COPY_END for COPY planet_osm_rels FROM STDIN;
+ failed: ERROR:  duplicate key value violates unique constraint "planet_osm_rels_pkey"</strong></p>
+
+<p>And tried again with <strong>./utils/update.php --import-file belgium.pbf</strong> but still have java errors from above.</p>
+
+<p>Any other ideas? 
+Sorry for bother and thank you!</p></div>
+            <div class="comment-info" id="comment-15578-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Aug '12, 13:09)</span>
+                <a class="comment-user userinfo" href="/users/4362/roxanao">RoxanaO</a>
+                
+            </div>
+        </div>
+    
+        <a name="15579"></a>
+        <div class="comment" id="comment-15579">
+            <div id="post-15579-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ages ago someone posted a <a href="http://www.mail-archive.com/dev@openstreetmap.org/msg10349.html">patch</a> for osm2pgsql to modify instead of create data.  If you really must merge data, you could try something like that - I'm sure that it'd be much slower than importing the data that <a href="http://help.openstreetmap.org/users/2933/cartinus">cartinus</a> <a href="http://planet.openstreetmap.nl/benelux/?order=N">linked to</a>, though.</p></div>
+            <div class="comment-info" id="comment-15579-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Aug '12, 13:21)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15592"></a>
+        <div class="comment" id="comment-15592">
+            <div id="post-15592-score" class="comment-score"></div>
+            <div class="comment-text"><p>Looks like it cannot read pdf format. Try with the belgium.xml.bz2 file.</p></div>
+            <div class="comment-info" id="comment-15592-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Aug '12, 19:37)</span>
+                <a class="comment-user userinfo" href="/users/2921/lonvia">lonvia</a>
+                
+            </div>
+        </div>
+    
+        <a name="15618"></a>
+        <div class="comment" id="comment-15618">
+            <div id="post-15618-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have tried with belgium.osm (extracted from belgium.osm.bz2) and worked, but when I want to search (on local website) Belgium as a text: No results found.
+If I search after coordinates, for example: [51.4494967087473,4.46587880577936] should get: Oude Baan, Schildershof, Essen, Antwerpen, Antwerp, Flanders, 2910, Belgium, but instead I get only: Oude Baan, Belgium.</p>
+
+<p>Do you know why is this happening?</p></div>
+            <div class="comment-info" id="comment-15618-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Aug '12, 07:18)</span>
+                <a class="comment-user userinfo" href="/users/4362/roxanao">RoxanaO</a>
+                
+            </div>
+        </div>
+    
+        <a name="15620"></a>
+        <div class="comment not_top_scorer" id="comment-15620">
+            <div id="post-15620-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, sorry, forgot to mention that you also have to reindex your data. I've added that step to my original answer.</p></div>
+            <div class="comment-info" id="comment-15620-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Aug '12, 07:30)</span>
+                <a class="comment-user userinfo" href="/users/2921/lonvia">lonvia</a>
+                
+            </div>
+        </div>
+    
+        <a name="18671"></a>
+        <div class="comment not_top_scorer" id="comment-18671">
+            <div id="post-18671-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you use osmosis to do the merge, it will merge the files correctly when there are duplicate objects in the same files.</p></div>
+            <div class="comment-info" id="comment-18671-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Dec '12, 00:04)</span>
+                <a class="comment-user userinfo" href="/users/20/smsm1">smsm1</a>
+                
+            </div>
+        </div>
+    
+        <a name="40089"></a>
+        <div class="comment not_top_scorer" id="comment-40089">
+            <div id="post-40089-score" class="comment-score"></div>
+            <div class="comment-text"><p>Solution works, but you can speed up the process by using osm2pgsql cahce like this(12G)
+    ./utils/update.php --import-file ../azerbaijan-latest.osm.bz2 --osm2pgsql-cache 12000
+And when indexing you can use threads aka index instances depending on your cpus count:
+    ./utils/update.php –index  --index-instances 4</p></div>
+            <div class="comment-info" id="comment-40089-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '15, 07:57)</span>
+                <a class="comment-user userinfo" href="/users/10284/ttrumm">ttrumm</a>
+                
+            </div>
+        </div>
+    
+        <a name="60245"></a>
+        <div class="comment not_top_scorer" id="comment-60245">
+            <div id="post-60245-score" class="comment-score"></div>
+            <div class="comment-text"><p>I approve that I had successfully imported the missing osm file into the existing nominatim database (europe+asia). I took an osm.bz2 file from geofabrik, unpacked it to an osm (to speed things up) and ran --import-file. It took me very reasonable 2 days on 4 core 5GB RAM VM. Next step will be indexing.</p></div>
+            <div class="comment-info" id="comment-60245-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Oct '17, 15:16)</span>
+                <a class="comment-user userinfo" href="/users/14194/sunsetjunks">sunsetjunks</a>
+                
+            </div>
+        </div>
+    
+        <a name="63033"></a>
+        <div class="comment not_top_scorer" id="comment-63033">
+            <div id="post-63033-score" class="comment-score"></div>
+            <div class="comment-text"><p>When i try to import a little <code>pbf</code> or <code>osm</code> file, this error appears:</p>
+
+<p><code>Osm2pgsql failed due to ERROR: Flatnode store cannot save negative IDs.</code></p></div>
+            <div class="comment-info" id="comment-63033-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Apr '18, 22:19)</span>
+                <a class="comment-user userinfo" href="/users/14886/cybercoder">cybercoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="63041"></a>
+        <div class="comment not_top_scorer" id="comment-63041">
+            <div id="post-63041-score" class="comment-score"></div>
+            <div class="comment-text"><p>Please ask a new question.</p></div>
+            <div class="comment-info" id="comment-63041-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Apr '18, 07:53)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="71982"></a>
+        <div class="comment not_top_scorer" id="comment-71982">
+            <div id="post-71982-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is command:
+</p>
+
+<blockquote>
+./utils/update.php --import-file belgium.xml.bz2
+</blockquote>
+
+<p>not working!
+Although the data fills, table "word" - updated!</p><p></p>
+<p>As well checked command :
+</p><blockquote>
+./utils/setup.php --import-data --osm-file belgium.osm.pbf 
+</blockquote><p></p>
+<p>It does not updated "placex" table, because of this not updated "search_word" table</p><p></p></div>
+            <div class="comment-info" id="comment-71982-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '19, 08:05)</span>
+                <a class="comment-user userinfo" href="/users/17538/uffik">Uffik</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15506" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15506-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="50621"></a>
+                    <div id="answer-container-50621" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50621-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50621/up/" rel="nofollow"> </a>
+<div id="post-50621-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-50621-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50621/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi, the easy way is to do the following:</p>
+<ol>
+<li>cd /yourNominatimFolder/build;</li>
+<li>mkdir data; cd data;</li>
+<li>Download your pbf files (<a href="http://download.geofabrik.de">http://download.geofabrik.de</a>)
+     wget <a href="http://download.geofabrik.de/south-america/peru-latest.osm.pbf">http://download.geofabrik.de/south-america/peru-latest.osm.pbf</a>
+     wget <a href="http://download.geofabrik.de/south-america/chile-latest.osm.pbf">http://download.geofabrik.de/south-america/chile-latest.osm.pbf</a>
+     wget <a href="http://download.geofabrik.de/south-america/colombia-latest.osm.pbf">http://download.geofabrik.de/south-america/colombia-latest.osm.pbf</a>
+     wget <a href="http://download.geofabrik.de/south-america/mexico-latest.osm.pbf">http://download.geofabrik.de/south-america/mexico-latest.osm.pbf</a></li>
+<li>apt-get install osmctools;</li>
+<li>Convert your PBF, so you can merge all of them in one file:
+     osmconvert peru-latest.osm.pbf -o=peru.o5m;
+     osmconvert colombia-latest.osm.pbf -o=colombia.o5m;
+     osmconvert chile-latest.osm.pbf -o=chile.o5m;
+     osmconvert peru.o5m colombia.o5m chile.o5m -o=allcountries.o5m;
+     osmconvert allcountries.o5m -o=allcountries.osm.pbf;</li>
+<li>cd /yourNominatimFolder/build;</li>
+<li>./utils/setup.php --osm-file data/allcountries.osm.pbf --all --osm2pgsql-cache 8000 2&gt;&amp;1 | tee setup.log</li>
+<li>Take a coffee. :)</li>
+</ol>
+<p>If you have questions or need support, you can contact me:  sistemas@aguilacontrol.com</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50621/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Jul '16, 22:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/68e2bb6560d2120152e8d951001aa4f0?s=32&amp;d=identicon&amp;r=g" alt="aguilacontrol's gravatar image" />
+    <p><a href="/users/12510/aguilacontrol">aguilacontrol</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aguilacontrol has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50621">
+    
+        <a name="50622"></a>
+        <div class="comment" id="comment-50622">
+            <div id="post-50622-score" class="comment-score"></div>
+            <div class="comment-text"><p>Step 3:</p>
+
+<ul>
+<li>wget <a href="http://download.geofabrik.de/south-america/peru-latest.osm.pbf">http://download.geofabrik.de/south-america/peru-latest.osm.pbf</a></li>
+<li>wget <a href="http://download.geofabrik.de/south-america/chile-latest.osm.pbf">http://download.geofabrik.de/south-america/chile-latest.osm.pbf</a></li>
+<li>wget <a href="http://download.geofabrik.de/south-america/colombia-latest.osm.pbf">http://download.geofabrik.de/south-america/colombia-latest.osm.pbf</a></li>
+<li>wget <a href="http://download.geofabrik.de/south-america/mexico-latest.osm.pbf">http://download.geofabrik.de/south-america/mexico-latest.osm.pbf</a></li>
+</ul>
+
+<p>Step 5: </p>
+
+<ul>
+<li>osmconvert peru-latest.osm.pbf-o=peru.o5m; </li>
+<li>osmconvert colombia-latest.osm.pbf -o=colombia.o5m; </li>
+<li>osmconvert chile-latest.osm.pbf -o=chile.o5m;</li>
+<li>osmconvert peru.o5m colombia.o5m chile.o5m -o=allcountries.o5m;</li>
+<li>osmconvert allcountries.o5m -o=allcountries.osm.pbf;</li>
+</ul></div>
+            <div class="comment-info" id="comment-50622-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jul '16, 22:19)</span>
+                <a class="comment-user userinfo" href="/users/12510/aguilacontrol">aguilacontrol</a>
+                
+            </div>
+        </div>
+    
+        <a name="53903"></a>
+        <div class="comment" id="comment-53903">
+            <div id="post-53903-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi aguilacontrol,
+thank you for the very clear instructions. I'm currently in the process of the last line of point 5. After point 5 succeeds and I want to update the Nominatim database, is your recommendation to do (from the wiki)</p>
+
+<p>rm settings/configuration.txt</p>
+
+<p>./utils/setup.php --osmosis-init</p>
+
+<p>./utils/setup.php --create-functions --enable-diff-updates</p>
+
+<p>./utils/update.php --import-osmosis-all --no-npi </p>
+
+<p>and then have coffee, or do something else?</p></div>
+            <div class="comment-info" id="comment-53903-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '17, 14:14)</span>
+                <a class="comment-user userinfo" href="/users/13167/ottoh">OttoH</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50621" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50621-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/15505/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='IfLcYe5z8KPGtd4s9GCHWrHGYGHa6c7b' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15505/import-more-osm-files-in-to-nominatim?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15505/import-more-osm-files-in-to-nominatim?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/data/"
+            class="tag-link-data"
+            title="see questions tagged'data'using tags"
+            rel="tag">data</a> <span class="tag-number">&#215;230</span><br/>
+        
+        <a href="/tags/import/"
+            class="tag-link-import"
+            title="see questions tagged'import'using tags"
+            rel="tag">import</a> <span class="tag-number">&#215;196</span><br/>
+        
+        <a href="/tags/files/"
+            class="tag-link-files"
+            title="see questions tagged'files'using tags"
+            rel="tag">files</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 25, 2012, 9:31 a.m.">25 Aug '12, 09:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>32,857 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 4, 2019, 8:05 a.m.">04 Dec '19, 08:05</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/16813/whats-the-right-way-to-add-a-second-osm-file-to-your-nominatim-instance">[closed] Whats the right way to add a second OSM file to your Nominatim instance?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24355/data-import-seems-stuck">Data import seems stuck</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15845/choose-regions-during-the-import-of-a-country-into-nominatim-database">Choose regions during the import of a country into nominatim database.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16781/osm-hang-when-adding-more-osm-files-to-nominatim">[closed] OSM hang when adding More OSM files to Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21380/error-importing-tiger-2011-data-into-nominatim">Error importing tiger 2011 data into nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21497/nominatim-update-sql-error-in-placex_update">Nominatim update sql error in placex_update</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2252/how-to-get-data-for-two-countries">How to get data for two countries ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13762/how-to-check-nominatim-planet-import-execution-is-running-in-background-or-terminated">How to check Nominatim planet import execution is running in background or terminated?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16493/how-to-import-big-data">how to import big data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27701/nominatim-error-import-out-of-memory-for-node-cache-dense-index">nominatim error import &quot;Out of memory for node cache dense index&quot;</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,902 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to isolate the 2 lists of ways for each driving direction in a Motorway relation ? - OSM Help</title>
+        <meta name="description" content="Hello, I&#39;m interested in the way &quot;Motorways&quot; are described in OSM. For instance that one : http://www.openstreetmap.org/browse/relation/107088 describes a motorway between 2 cities : Paris and Lille (North of France). However the members of the relation are for both driving directions : Paris -&amp;gt; ..." />
+        <meta name="keywords" content="motorway,relations,highway" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/3205/how-to-isolate-the-2-lists-of-ways-for-each-driving-direction-in-a-motorway-relation" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/3205/how-to-isolate-the-2-lists-of-ways-for-each-driving-direction-in-a-motorway-relation?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='71artK9ceULm94J5UjZ26xW1heD22DCP' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/3205/how-to-isolate-the-2-lists-of-ways-for-each-driving-direction-in-a-motorway-relation">How to isolate the 2 lists of ways for each driving direction in a Motorway relation ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-3205-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3205/up/" rel="nofollow"> </a>
+<div id="post-3205-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-3205-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3205/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/3205/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,<br>
+I'm interested in the way "Motorways" are described in OSM.<br>
+For instance that one :<br>
+<a href="http://www.openstreetmap.org/browse/relation/107088">http://www.openstreetmap.org/browse/relation/107088</a><br>
+describes a motorway between 2 cities : Paris and Lille (North of France).<br>
+However the members of the relation are for both driving directions : Paris -&gt; Lille <strong>AND</strong> Lille-&gt;Paris .<br>
+Is there an "easy" way to know which ways are part of the Paris-&gt;Lille driving direction and which ones are only relevant for the other driving direction (=split the relation in two parts, one for each driving direction) ?<br>
+Any hint or idea is welcome to extract such information from the relation !<br>
+Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/motorway/" class="post-tag tag-link-motorway"
+                                        title="see questions tagged 'motorway'" rel="tag">motorway</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                                    <a href="/tags/highway/" class="post-tag tag-link-highway"
+                                        title="see questions tagged 'highway'" rel="tag">highway</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Feb '11, 20:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d43d3db062e0ec88d26207ba81878941?s=32&amp;d=identicon&amp;r=g" alt="y0n3l's gravatar image" />
+    <p><a href="/users/857/y0n3l">y0n3l</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="y0n3l has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3205/">
+                edited
+                <strong>19 Feb '11, 20:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-3205">
+    
+</div>
+<div id="comment-tools-3205" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3205-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/3205/how-to-isolate-the-2-lists-of-ways-for-each-driving-direction-in-a-motorway-relation?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/3205/how-to-isolate-the-2-lists-of-ways-for-each-driving-direction-in-a-motorway-relation?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/3205/how-to-isolate-the-2-lists-of-ways-for-each-driving-direction-in-a-motorway-relation?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/3205/how-to-isolate-the-2-lists-of-ways-for-each-driving-direction-in-a-motorway-relation?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="3229"></a>
+                    <div id="answer-container-3229" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3229-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3229/up/" rel="nofollow"> </a>
+<div id="post-3229-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-3229-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3229/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The best solution would be to split the relation into two parts, one for each driving direction.  In the US, directional roles have been used: north/south/east/west, but this does not seem to be the convention in France.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3229/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Feb '11, 12:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1dd5f61a81b99dd54ec6f33d96aa38b2?s=32&amp;d=identicon&amp;r=g" alt="Mike%20N's gravatar image" />
+    <p><a href="/users/21/mike-n">Mike N</a><br/>
+    <span class="score" title="2926 reputation points"><span class="">2.9k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="54 badges"><span class="bronze">&#9679;</span><span class="badgecount">54</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Mike N has 16 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3229">
+    
+        <a name="3459"></a>
+        <div class="comment" id="comment-3459">
+            <div id="post-3459-score" class="comment-score"></div>
+            <div class="comment-text"><p>I would include the two new relations in a super relatin, too</p></div>
+            <div class="comment-info" id="comment-3459-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '11, 20:56)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3229" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3229-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="3257"></a>
+                    <div id="answer-container-3257" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3257-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3257/up/" rel="nofollow"> </a>
+<div id="post-3257-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-3257-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3257/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm not that an easy solution exists. Maybe you can code  (for example with python and DOM) an analyser on the data that, starting from a node, build the set of ways that are connected.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3257/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Feb '11, 09:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2839f25c5f2da24f6ffd25de1641684?s=32&amp;d=identicon&amp;r=g" alt="NicolasDumoulin's gravatar image" />
+    <p><a href="/users/868/nicolasdumoulin">NicolasDumoulin</a><br/>
+    <span class="score" title="3327 reputation points"><span class="">3.3k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="NicolasDumoulin has 15 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3257">
+    
+        <a name="3410"></a>
+        <div class="comment" id="comment-3410">
+            <div id="post-3410-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello Nicolas, Yes this is what I ended up with : I split the relation in x parts on my side by finding which ways have common nodes.</p></div>
+            <div class="comment-info" id="comment-3410-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '11, 14:20)</span>
+                <a class="comment-user userinfo" href="/users/857/y0n3l">y0n3l</a>
+                
+            </div>
+        </div>
+    
+        <a name="3438"></a>
+        <div class="comment" id="comment-3438">
+            <div id="post-3438-score" class="comment-score"></div>
+            <div class="comment-text"><p>Good. Maybe you can flag your question as answered :-) And it will be nice to post your script if it is possible.</p></div>
+            <div class="comment-info" id="comment-3438-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '11, 10:42)</span>
+                <a class="comment-user userinfo" href="/users/868/nicolasdumoulin">NicolasDumoulin</a>
+                
+            </div>
+        </div>
+    
+        <a name="3457"></a>
+        <div class="comment" id="comment-3457">
+            <div id="post-3457-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, I'll flag the question as answered, but I was waiting for a little while to see different answers (actually I think that Mike's answer is the right one, after a more in depth look , I saw that some french highways were using this tag, but only a few of them). For the scripts , humpf, it's written in ObjectiveC so unless you're in the Mac / iOS I think it's useless :/ Are you the guy from <a href="http://pld.dumoulin63.net">http://pld.dumoulin63.net</a> ? I'm also on open street map fr ;)</p></div>
+            <div class="comment-info" id="comment-3457-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '11, 20:31)</span>
+                <a class="comment-user userinfo" href="/users/857/y0n3l">y0n3l</a>
+                
+            </div>
+        </div>
+    
+        <a name="3464"></a>
+        <div class="comment" id="comment-3464">
+            <div id="post-3464-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, ObjectiveC will be useless for me.
+Yes, it's the same dumoulin ;-)</p></div>
+            <div class="comment-info" id="comment-3464-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '11, 08:43)</span>
+                <a class="comment-user userinfo" href="/users/868/nicolasdumoulin">NicolasDumoulin</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3257" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3257-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="3470"></a>
+                    <div id="answer-container-3470" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3470-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3470/up/" rel="nofollow"> </a>
+<div id="post-3470-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-3470-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3470/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You could try ignoring relations, and extracting "WayChains". A chain of ways that are connected end-to-end.</p>
+<p>My <a href="http://wiki.openstreetmap.org/wiki/Waychains_TIGER_fixup">WayChains TIGER fixup</a> analysis does this kind of thing (on motorways as it happens, although it would work for other kinds of end-to-end connected ways)</p>
+<p>The logic to join together ways into "waychains" can be found in <a href="http://harrywood.dev.openstreetmap.org/waychains/waychainsummary.rb">waychainsummary.rb</a>.</p>
+<p>I'm running it with a pre-processing step using my <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--simplify">osmosis simplify plugin</a>, which reduces ways down to just their start node and end node.</p>
+<p>Note however that I was deliberately designing this to help find problems in the U.S. motorways data. For extracting OpenStreetMap data for practical use, you may find this approach a little fragile. e.g. if a mapper tags an onramp with highway=motorway instead of highway=motorway_link, then it may not chain the ways correctly at that point. You'd have to fix it before trying again.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3470/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Mar '11, 11:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3470">
+    
+</div>
+<div id="comment-tools-3470" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3470-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/3205/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='71artK9ceULm94J5UjZ26xW1heD22DCP' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3205/how-to-isolate-the-2-lists-of-ways-for-each-driving-direction-in-a-motorway-relation?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3205/how-to-isolate-the-2-lists-of-ways-for-each-driving-direction-in-a-motorway-relation?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/highway/"
+            class="tag-link-highway"
+            title="see questions tagged'highway'using tags"
+            rel="tag">highway</a> <span class="tag-number">&#215;163</span><br/>
+        
+        <a href="/tags/motorway/"
+            class="tag-link-motorway"
+            title="see questions tagged'motorway'using tags"
+            rel="tag">motorway</a> <span class="tag-number">&#215;23</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 19, 2011, 8:35 p.m.">19 Feb '11, 20:35</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,989 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 1, 2011, 11:32 a.m.">01 Mar '11, 11:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/68458/relation-for-a-long-highway">Relation for a long highway</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8163/when-a-street-has-different-names-on-either-side-of-a-divided-highway-how-is-it-tagged-in-between">When a street has different names on either side of a divided highway, how is it tagged in between?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/69358/identify-transit-highways-in-germany">Identify &#39;transit highways&#39; in Germany</a>
+        </p>
+        
+        <p>
+            <a href="/questions/75816/highway-with-bicycles-allowed-un-mark-as-motorway">Highway with bicycles allowed, un-mark as motorway?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/923/how-do-i-realize-a-node-or-way-is-a-member-of-a-relation">How do I realize a node or way is a member of a relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/924/is-there-a-list-of-most-important-relations-in-the-world-like-longest-rivers-country-borders-etc">Is there a list of most important relations in the world? Like longest rivers, country borders etc...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/372/is-there-a-limit-to-the-number-of-ways-containing-a-node">Is there a limit to the number of ways containing a node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1271/highway-classification-for-side-road-from-roundabout-onto-primary-routes">Highway Classification for Side Road from Roundabout onto Primary Routes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/922/how-to-map-a-park-alley">How to map a park alley?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1225/place-names-at-different-zoom-levels">Place names at different zoom levels</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

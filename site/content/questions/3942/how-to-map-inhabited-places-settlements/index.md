@@ -1,0 +1,214 @@
++++
+type = "question"
+title = "How to map inhabited places (settlements)?"
+description = '''I wonder how I should map inhabited places like villages, towns and cities. The wiki description for place states: &quot;The place tag is used on a single node to mark the centre of a named settlement as well as on the whole area to mark its extent.&quot;  Sometimes I found a node and an area tagged with plac...'''
+date = "2011-03-21T14:48:00Z"
+lastmod = "2011-03-21T21:03:00Z"
+weight = 3942
+keywords = [ "node", "area", "settlement", "place", "population" ]
+aliases = [ "/questions/3942" ]
+osqa_answers = 2
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [How to map inhabited places (settlements)?](/questions/3942/how-to-map-inhabited-places-settlements)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-3942-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-3942-score" class="post-score" title="current number of votes">
+2
+</div>
+<span id="post-3942-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span> <span id="favorite-mark" class="ajax-command favorite-mark" rel="nofollow" title="mark/unmark this question as favorite (click again to cancel)"> </span>
+<div id="favorite-count" class="favorite-count">
+&#10;</div>
+</div></td>
+<td><div id="item-right">
+<div class="question-body">
+<p>I wonder how I should map inhabited places like villages, towns and cities. The wiki description for place states: "The place tag is used on a single node to mark the centre of a named settlement as well as on the whole area to mark its extent."</p>
+<p>Sometimes I found a node and an area tagged with place at the same time. Should I do both? Or if I should only do one of it, which method is to prefer?</p>
+<p>In case I did both: shall I also duplicate all additional tags like population, wikipedia, names in different languages, etc.?</p>
+</div>
+<div id="question-tags" class="tags-container tags">
+<span class="post-tag tag-link-node" rel="tag" title="see questions tagged &#39;node&#39;">node</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span> <span class="post-tag tag-link-settlement" rel="tag" title="see questions tagged &#39;settlement&#39;">settlement</span> <span class="post-tag tag-link-place" rel="tag" title="see questions tagged &#39;place&#39;">place</span> <span class="post-tag tag-link-population" rel="tag" title="see questions tagged &#39;population&#39;">population</span>
+</div>
+<div id="question-controls" class="post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>asked <strong>21 Mar '11, 14:48</strong></p>
+<img src="https://secure.gravatar.com/avatar/f09c0b7a655fed386e070e036e2da248?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="dieterdreist&#39;s gravatar image" />
+<p><span>dieterdreist</span><br />
+<span class="score" title="3677 reputation points"><span>3.7k</span></span><span title="11 badges"><span class="badge1">●</span><span class="badgecount">11</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="67 badges"><span class="bronze">●</span><span class="badgecount">67</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="dieterdreist has 4 accepted answers">3%</span></p>
+</div>
+</div>
+<div id="comments-container-3942" class="comments-container">
+&#10;</div>
+<div id="comment-tools-3942" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-3942-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="3943"></span>
+
+<div id="answer-container-3943" class="answer accepted-answer">
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-3943-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-3943-score" class="post-score" title="current number of votes">
+2
+</div>
+<span id="post-3943-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span> <span class="accept-answer on" rel="nofollow" title="dieterdreist has selected this answer as the correct answer"> </span>
+</div></td>
+<td><div class="item-right">
+<div class="answer-body">
+<p>Don't put the both. Generally, I prefer put only the node, because draw a polygon that defines precisely the area is difficult.</p>
+<p>Indeed, I think you can take a look at <a href="http://help.openstreetmap.org/questions/3824/should-amenities-eg-supermarkets-be-ways-or-nodes">this answer</a></p>
+</div>
+<div class="answer-controls post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>answered <strong>21 Mar '11, 15:15</strong></p>
+<img src="https://secure.gravatar.com/avatar/a2839f25c5f2da24f6ffd25de1641684?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="NicolasDumoulin&#39;s gravatar image" />
+<p><span>NicolasDumoulin</span><br />
+<span class="score" title="3327 reputation points"><span>3.3k</span></span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="22 badges"><span class="silver">●</span><span class="badgecount">22</span></span><span title="56 badges"><span class="bronze">●</span><span class="badgecount">56</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="NicolasDumoulin has 15 accepted answers">13%</span></p>
+</div>
+<div class="post-update-info post-update-info-edited">
+<p><span> edited <strong>21 Mar '11, 15:51</strong> </span></p>
+</div>
+</div>
+<div id="comments-container-3943" class="comments-container">
+<span id="3947"></span>
+<div id="comment-3947" class="comment">
+<div id="post-3947-score" class="comment-score">
+&#10;</div>
+<div class="comment-text">
+<p>thank you Nicolas. I am aware of the general alternative node/way but I wondered if place would be somehow different from other POIs like shops or buildings.</p>
+</div>
+<div id="comment-3947-info" class="comment-info">
+<span class="comment-age">(21 Mar '11, 20:07)</span> <span class="comment-user userinfo">dieterdreist</span>
+</div>
+</div>
+</div>
+<div id="comment-tools-3943" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-3943-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<span id="3948"></span>
+
+<div id="answer-container-3948" class="answer">
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-3948-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-3948-score" class="post-score" title="current number of votes">
+0
+</div>
+<span id="post-3948-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span>
+</div></td>
+<td><div class="item-right">
+<div class="answer-body">
+<p>Just do the best that you can in the time you have, but for the best I've seen look at Cambourne Cambridgeshire UK it is brilliant.</p>
+</div>
+<div class="answer-controls post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>answered <strong>21 Mar '11, 21:03</strong></p>
+<img src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="andy%20mackey&#39;s gravatar image" />
+<p><span>andy mackey</span><br />
+<span class="score" title="13238 reputation points"><span>13.2k</span></span><span title="87 badges"><span class="badge1">●</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">●</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">●</span><span class="badgecount">285</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="andy mackey has 37 accepted answers">4%</span></p>
+</div>
+<div class="post-update-info post-update-info-edited">
+<p><span> edited <strong>21 Mar '11, 23:26</strong> </span></p>
+</div>
+</div>
+<div id="comments-container-3948" class="comments-container">
+&#10;</div>
+<div id="comment-tools-3948" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-3948-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

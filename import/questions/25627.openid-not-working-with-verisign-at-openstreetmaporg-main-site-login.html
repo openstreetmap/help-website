@@ -1,0 +1,636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>OpenID not working with Verisign at openstreetmap.org main site login - OSM Help</title>
+        <meta name="description" content="I have a Versign OpenID of the form  &quot;&amp;lt;user&amp;gt;.pip.verisignlabs.com&quot; If I try to link that URL to my existing OSM login, I get the stupid validation message that I should enter an URL. Well, that is an URL! And it is working at other site logins. I can cheat the system by putting an &quot;http://&quot; in..." />
+        <meta name="keywords" content="openid,verisign" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/25627/openid-not-working-with-verisign-at-openstreetmaporg-main-site-login" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/25627/openid-not-working-with-verisign-at-openstreetmaporg-main-site-login?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='xZnZrRJWpciTlFI6IvG4No9lvvsp14Qt' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/25627/openid-not-working-with-verisign-at-openstreetmaporg-main-site-login">OpenID not working with Verisign at openstreetmap.org main site login</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-25627-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25627/up/" rel="nofollow"> </a>
+<div id="post-25627-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25627-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25627/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/25627/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a Versign OpenID of the form </p>
+<p>"&lt;user&gt;.pip.verisignlabs.com"</p>
+<p>If I try to link that URL to my existing OSM login, I get the stupid validation message that I should enter an URL. Well, that is an URL! And it is working at other site logins.</p>
+<p>I can cheat the system by putting an "http://" in front of the URL and then it's working - but who wants to fiddle around with try and error. </p>
+<p>My question: where can I leave a note to the administrators that they should fix the validation of the OpenID string at <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a>? I couldn't find a legal notice pointing me to the responsible address.</p>
+<p>Thanks for your hint.
+Georges</p>
+<p>PS
+Here at the OSM help section, the original OpenID URL in Verisign style worked out of the box!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openid/" class="post-tag tag-link-openid"
+                                        title="see questions tagged 'openid'" rel="tag">openid</a>
+                                
+                                    <a href="/tags/verisign/" class="post-tag tag-link-verisign"
+                                        title="see questions tagged 'verisign'" rel="tag">verisign</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Aug '13, 22:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/01f034fda5a86c909eb97506c7c4284b?s=32&amp;d=identicon&amp;r=g" alt="gjesch's gravatar image" />
+    <p><a href="/users/7175/gjesch">gjesch</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gjesch has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-25627">
+    
+</div>
+<div id="comment-tools-25627" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25627-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/25627/openid-not-working-with-verisign-at-openstreetmaporg-main-site-login?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/25627/openid-not-working-with-verisign-at-openstreetmaporg-main-site-login?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/25627/openid-not-working-with-verisign-at-openstreetmaporg-main-site-login?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/25627/openid-not-working-with-verisign-at-openstreetmaporg-main-site-login?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="25629"></a>
+                    <div id="answer-container-25629" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25629-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25629/up/" rel="nofollow"> </a>
+<div id="post-25629-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25629-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25629/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You are mistaken; "&lt;user&gt;.pip.verisignlabs.com" is <em>not</em> a URL; every URL must start with a scheme name, a colon, and two slashes. See <a href="http://en.wikipedia.org/wiki/URL">Wikipedia</a> for details.</p>
+<p>The best way to suggest a change to the OpenStreetMap web site code is through the <a href="https://github.com/openstreetmap/openstreetmap-website/issues">GitHub issue tracker.</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25629/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Aug '13, 23:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25629">
+    
+        <a name="25633"></a>
+        <div class="comment" id="comment-25633">
+            <div id="post-25633-score" class="comment-score">2</div>
+            <div class="comment-text"><p>The OpenID spec actually specifies that the end user may leave off the http part ( <a href="https://openid.net/specs/openid-authentication-1_1.html#anchor6">https://openid.net/specs/openid-authentication-1_1.html#anchor6</a> ). The problem is that the rails form requires contrary to the spec a valid full URL. I think this happened in one of the redesigns.</p>
+
+<p>However, there is an additional issue with verisign and http vs https. If you use http with your URL, login fails with "Sorry, could not log in with those details." It only works with https. I am not sure though if that is a bug with verisign or with the OpenID plugin of rails.</p></div>
+            <div class="comment-info" id="comment-25633-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '13, 03:14)</span>
+                <a class="comment-user userinfo" href="/users/65/apmon">apmon</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25629" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25629-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/25627/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='xZnZrRJWpciTlFI6IvG4No9lvvsp14Qt' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25627/openid-not-working-with-verisign-at-openstreetmaporg-main-site-login?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25627/openid-not-working-with-verisign-at-openstreetmaporg-main-site-login?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openid/"
+            class="tag-link-openid"
+            title="see questions tagged'openid'using tags"
+            rel="tag">openid</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/verisign/"
+            class="tag-link-verisign"
+            title="see questions tagged'verisign'using tags"
+            rel="tag">verisign</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 21, 2013, 10 p.m.">21 Aug '13, 22:00</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,112 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 22, 2013, 3:14 a.m.">22 Aug '13, 03:14</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8414/when-is-openid-for-osm-going-to-be-launched">When Is openid for OSM going to be launched?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9623/how-can-i-log-in-to-openstreetmaporg">How can I log in to openstreetmap.org?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10687/cant-log-in">can&#39;t log in</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12813/i-get-an-500-error-when-trying-to-save-my-settings-with-openid-identifier">I get an 500 error when trying to save &quot;My settings&quot; with openID identifier</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17970/openid-not-working-on-help-site-but-is-on-the-main-site">OpenID not working on help site, but is on the main site</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25335/how-to-use-open-id">How to use Open ID</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25536/how-to-associate-my-existing-openstreetmap-account-with-my-openid">How to associate my existing OpenStreetMap account with My OpenID?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51059/login-the-osm-users-via-google-openid">[closed] Login the OSM users via Google OpenID</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59681/openid-with-google-account-now-impossible-to-connect-properly">[closed] OpenID with Google account: now impossible to connect properly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65241/why-helposm-have-a-poor-openid-automation">why HELP.OSM have a poor OpenID automation?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

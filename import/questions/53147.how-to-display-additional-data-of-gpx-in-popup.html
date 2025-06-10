@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to display additional data of GPX in popup - OSM Help</title>
+        <meta name="description" content="Hi, I want to display additional data of gpx in popup like kml extended data. How can i do this using gpx?" />
+        <meta name="keywords" content="gpx,html,osm,javascript" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/53147/how-to-display-additional-data-of-gpx-in-popup" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/53147/how-to-display-additional-data-of-gpx-in-popup?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='uwduQNwVGHETQ1gcS3Tr0hAVoS4rq8T0' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/53147/how-to-display-additional-data-of-gpx-in-popup">How to display additional data of GPX in popup</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-53147-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53147/up/" rel="nofollow"> </a>
+<div id="post-53147-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53147-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53147/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/53147/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I want to display additional data of gpx in popup like kml extended data. How can i do this using gpx?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/gpx/" class="post-tag tag-link-gpx"
+                                        title="see questions tagged 'gpx'" rel="tag">gpx</a>
+                                
+                                    <a href="/tags/html/" class="post-tag tag-link-html"
+                                        title="see questions tagged 'html'" rel="tag">html</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/javascript/" class="post-tag tag-link-javascript"
+                                        title="see questions tagged 'javascript'" rel="tag">javascript</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Nov '16, 13:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8a1b4aa0dbad7954d95ea27780ecf841?s=32&amp;d=identicon&amp;r=g" alt="Amithanwate's gravatar image" />
+    <p><a href="/users/13028/amithanwate">Amithanwate</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Amithanwate has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-53147">
+    
+        <a name="53148"></a>
+        <div class="comment" id="comment-53148">
+            <div id="post-53148-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Could you explain what your question has to do with OpenStreetMap?</p></div>
+            <div class="comment-info" id="comment-53148-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '16, 13:55)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53149"></a>
+        <div class="comment" id="comment-53149">
+            <div id="post-53149-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Is this question about uMap?</p></div>
+            <div class="comment-info" id="comment-53149-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '16, 14:24)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53156"></a>
+        <div class="comment" id="comment-53156">
+            <div id="post-53156-score" class="comment-score"></div>
+            <div class="comment-text"><p>I want to plot route on OpenStreetMap using GPX. And when i click on plotted route at particular point pop-up will open and display location, speed  and time which is present in gpx file on that point.</p></div>
+            <div class="comment-info" id="comment-53156-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '16, 05:24)</span>
+                <a class="comment-user userinfo" href="/users/13028/amithanwate">Amithanwate</a>
+                
+            </div>
+        </div>
+    
+        <a name="53160"></a>
+        <div class="comment not_top_scorer" id="comment-53160">
+            <div id="post-53160-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't want to use any software. I want to use jsp and html and display on it. I had already plot path on OSM using gpx.But popup will not show proper information.</p></div>
+            <div class="comment-info" id="comment-53160-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '16, 06:23)</span>
+                <a class="comment-user userinfo" href="/users/13028/amithanwate">Amithanwate</a>
+                
+            </div>
+        </div>
+    
+        <a name="53179"></a>
+        <div class="comment" id="comment-53179">
+            <div id="post-53179-score" class="comment-score">1</div>
+            <div class="comment-text"><p>No software at all? How are you displaying your map? Do you use Leaflet or OpenLayers?</p></div>
+            <div class="comment-info" id="comment-53179-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '16, 11:39)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53180"></a>
+        <div class="comment" id="comment-53180">
+            <div id="post-53180-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/13028/amithanwate">@Amithanwate</a> Can you try and add a lot more detail to what you are asking above? We seem to be playing <a href="https://en.wikipedia.org/wiki/Twenty_Questions">"twenty questions"</a> here.</p></div>
+            <div class="comment-info" id="comment-53180-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '16, 13:02)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53147" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53147-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/53147/how-to-display-additional-data-of-gpx-in-popup?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/53147/how-to-display-additional-data-of-gpx-in-popup?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/53147/how-to-display-additional-data-of-gpx-in-popup?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/53147/how-to-display-additional-data-of-gpx-in-popup?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="53158"></a>
+                    <div id="answer-container-53158" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53158-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53158/up/" rel="nofollow"> </a>
+<div id="post-53158-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53158-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53158/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can accomplish the essence of what you want using <a href="http://wiki.openstreetmap.org/wiki/GpsPrune">GPSPrune</a> excepting the point info is at the top right box of screen. Selecting the earth icon displays the OSM.</p>
+<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2016-11-29_at_3.58.56_PM.png" alt="screenshot"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53158/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Nov '16, 06:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e5674dd96938593e0af5130dfffe0f90?s=32&amp;d=identicon&amp;r=g" alt="nevw's gravatar image" />
+    <p><a href="/users/7380/nevw">nevw</a><br/>
+    <span class="score" title="9843 reputation points"><span class="">9.8k</span></span><span title="26 badges"><span class="badge1">&#9679;</span><span class="badgecount">26</span></span><span title="90 badges"><span class="silver">&#9679;</span><span class="badgecount">90</span></span><span title="178 badges"><span class="bronze">&#9679;</span><span class="badgecount">178</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="nevw has 32 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/53158/">
+                edited
+                <strong>29 Nov '16, 06:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53158">
+    
+        <a name="53159"></a>
+        <div class="comment" id="comment-53159">
+            <div id="post-53159-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for reply. But i don't want to use any software. I want to use jsp and html and display on it. I had already plot path on OSM using gpx.But popup will not show proper information.</p></div>
+            <div class="comment-info" id="comment-53159-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '16, 06:17)</span>
+                <a class="comment-user userinfo" href="/users/13028/amithanwate">Amithanwate</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53158" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53158-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/53147/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='uwduQNwVGHETQ1gcS3Tr0hAVoS4rq8T0' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53147/how-to-display-additional-data-of-gpx-in-popup?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53147/how-to-display-additional-data-of-gpx-in-popup?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/gpx/"
+            class="tag-link-gpx"
+            title="see questions tagged'gpx'using tags"
+            rel="tag">gpx</a> <span class="tag-number">&#215;255</span><br/>
+        
+        <a href="/tags/javascript/"
+            class="tag-link-javascript"
+            title="see questions tagged'javascript'using tags"
+            rel="tag">javascript</a> <span class="tag-number">&#215;60</span><br/>
+        
+        <a href="/tags/html/"
+            class="tag-link-html"
+            title="see questions tagged'html'using tags"
+            rel="tag">html</a> <span class="tag-number">&#215;19</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 28, 2016, 1:04 p.m.">28 Nov '16, 13:04</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,164 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 30, 2016, 1:02 p.m.">30 Nov '16, 13:02</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/54642/how-to-retrieve-multiple-points-from-mongodb-and-plot-them-on-osm">how to retrieve multiple points from MongoDB and plot them on OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33500/convert-osm-files-to-a-gpx-file">Convert OSM files to a gpx file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18469/how-to-obtain-trace-meta-data-meta-details">How to obtain trace meta-data &amp; meta-details ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32899/get-all-points-of-a-street">Get all points of a street</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33195/get-distance-from-gpx-programmatic-ally-using-javascript">Get distance from gpx programmatic-ally using javascript</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35875/how-to-create-osm-file-from-gpx-kml-or-kmz-file">How to create osm file from gpx kml or kmz file.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8177/learning-site">learning site</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9124/am-i-doing-this-correctly">Am I doing this correctly?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20479/using-osm-data-with-javascript-via-api-in-my-code-display-data-as-text">Using OSM data with javascript via API (in my code, display data as text)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/67768/total-length-of-the-streets">total length of the streets</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

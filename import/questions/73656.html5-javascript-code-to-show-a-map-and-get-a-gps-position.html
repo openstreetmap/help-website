@@ -1,0 +1,719 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>HTML5 + JavaScript code to show a map and get a GPS position - OSM Help</title>
+        <meta name="description" content="Hello All, I am Basile Starynkevitch living near Paris in France. Professionally a 60 years old research engineer (with a PhD in AI) in a cybersecurity lab of CEA/LIST. Working there on bismon (a GPLv3 software, with web interface, funded by H2020 European research projects). So I do have developer ..." />
+        <meta name="keywords" content="ajax,http,html5" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/73656/html5-javascript-code-to-show-a-map-and-get-a-gps-position" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/73656/html5-javascript-code-to-show-a-map-and-get-a-gps-position?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='9dRJbphq2PCSmgekotjV5aDkTymc5LhO' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/73656/html5-javascript-code-to-show-a-map-and-get-a-gps-position">HTML5 + JavaScript code to show a map and get a GPS position</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-73656-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73656/up/" rel="nofollow"> </a>
+<div id="post-73656-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73656-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73656/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/73656/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello All,</p>
+<p>I am <a href="http://starynkevitch.net/Basile/">Basile Starynkevitch</a> living near Paris in France. Professionally a 60 years old research engineer (with a <a href="http://starynkevitch.net/Basile/cv-Basile-Starynkevitch.pdf">PhD in AI</a>) in a cybersecurity lab of <a href="http://www-list.cea.fr/">CEA/LIST</a>. Working there on <a href="https://github.com/bstarynk/bismon/">bismon</a> (a GPLv3 software, with web interface, funded by H2020 European research projects). So I do have developer skills related to web technologies (JavaScript, HTML5, AJAX).</p>
+<p>As all Frenchmen, I am confined at home because of the Covid19 virus. I probably have it already (little fever and cough). We are not allowed to go out except for good reasons (buying food or medicine, health reasons), so there is a curfew.</p>
+<p>I want to code quickly a GPLv3+ application (and deploy it under <a href="https://b-star-y.tech/">https://b-star-y.tech/</a> (right now it does not work) which shows some OpenStreet map address and translates that into a GPS position (longitude, latitude). The idea is to help neighbors to help other neighbors buying food and medicine.</p>
+<p>But that I don't know how to do.</p>
+<p>Could someone give me a short example of <a href="https://opensource.org/">open source</a> code to show a map and get the GPS location from it?</p>
+<p>Thanks. My email is <code>basile-freelance</code> @ <code>starynkevitch.net</code></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ajax/" class="post-tag tag-link-ajax"
+                                        title="see questions tagged 'ajax'" rel="tag">ajax</a>
+                                
+                                    <a href="/tags/http/" class="post-tag tag-link-http"
+                                        title="see questions tagged 'http'" rel="tag">http</a>
+                                
+                                    <a href="/tags/html5/" class="post-tag tag-link-html5"
+                                        title="see questions tagged 'html5'" rel="tag">html5</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Mar '20, 05:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ce0956ce0bb7ca57f1b69aa8a2c6c4ba?s=32&amp;d=identicon&amp;r=g" alt="Basile%20Starynkevitch's gravatar image" />
+    <p><a href="/users/18064/basile-starynkevitch">Basile Stary...</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Basile Starynkevitch has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/73656/">
+                edited
+                <strong>21 Mar '20, 05:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-73656">
+    
+        <a name="73664"></a>
+        <div class="comment" id="comment-73664">
+            <div id="post-73664-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are you looking to use OSM for geocoding or "just" as a background where users can drop pins?
+There are <a href="https://wiki.openstreetmap.org/wiki/Frameworks">many</a> frameworks that work with OSM, the best option will probably depend on exactly you want to do.</p></div>
+            <div class="comment-info" id="comment-73664-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Mar '20, 12:17)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+        <a name="73667"></a>
+        <div class="comment" id="comment-73667">
+            <div id="post-73667-score" class="comment-score"></div>
+            <div class="comment-text"><p>See my answer below.</p></div>
+            <div class="comment-info" id="comment-73667-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Mar '20, 13:28)</span>
+                <a class="comment-user userinfo" href="/users/18064/basile-starynkevitch">Basile Stary...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73656" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73656-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/73656/html5-javascript-code-to-show-a-map-and-get-a-gps-position?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/73656/html5-javascript-code-to-show-a-map-and-get-a-gps-position?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/73656/html5-javascript-code-to-show-a-map-and-get-a-gps-position?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/73656/html5-javascript-code-to-show-a-map-and-get-a-gps-position?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="73666"></a>
+                    <div id="answer-container-73666" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73666-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73666/up/" rel="nofollow"> </a>
+<div id="post-73666-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73666-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73666/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>We started coding the 
+<a href="https://github.com/bstarynk/helpcovid/">https://github.com/bstarynk/helpcovid</a> application (GPLv+3 licensed) and we now have its mailing list on  <a href="https://framalistes.org/sympa/info/helpcovid">https://framalistes.org/sympa/info/helpcovid</a></p>
+<p>We want the user to enter his location on OpenStreetMap and deduce a GPS location.</p>
+<p>We are also seeking for (concerning <a href="https://en.wikipedia.org/wiki/France">France</a>) an <a href="https://en.wikipedia.org/wiki/Open_data">open data</a> association between a <a href="https://en.wikipedia.org/wiki/Postal_code">postal code</a> (more exactly <a href="https://en.wikipedia.org/wiki/Postal_codes_in_France">a "code postal" in France</a>), the name of a city (more exactly a <a href="https://en.wikipedia.org/wiki/Communes_of_France">French "commune"</a>), and its GPS location.</p>
+<p>For my location, since I am living in 92340 <a href="https://en.wikipedia.org/wiki/Bourg-la-Reine">Bourg-La-Reine</a> (near Paris), it would mean for example a <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> table containing a row like</p>
+<blockquote>
+<p>92340,Bourg-la-Reine,8.7796_N,2.3151_E</p>
+</blockquote>
+<p>If I was a user of <code>helpcovid</code> I would like to enter my personal data in an HTML5 form similar to</p>
+<pre><code>&lt;form method='post' action='....'&gt;
+&lt;label for='city_inp'&gt;City&lt;/label&gt;&lt;input type='text' id='city_inp'/&gt; &lt;br/&gt;
+&lt;label for='firstname_inp'&gt;First Name:&lt;/label&gt;&lt;input type='text' id='firstname_inp'/&gt; &lt;br/&gt;
+&lt;label for='familyname_inp'&gt;Family Name:&lt;/label&gt;&lt;input type='text' id='firstname_inp'/&gt; &lt;br/&gt;
+&lt;label for='postalcode_inp'&gt;Postal Code:&lt;/label&gt;&lt;input type='text' id='postalcode_inp'/&gt; &lt;br/&gt;
+&lt;input type='submit' id='submit_inp' value='send'/&gt;
+&lt;/form&gt;
+</code></pre>
+<p>But I also want to enter my location using OpenStreetMap.</p>
+<p>Thanks for your help.</p>
+<p>In French, some Debian person told me about <a href="https://nouvelle-techno.fr/actualites/2018/05/11/pas-a-pas-inserer-une-carte-openstreetmap-sur-votre-site">https://nouvelle-techno.fr/actualites/2018/05/11/pas-a-pas-inserer-une-carte-openstreetmap-sur-votre-site</a></p>
+<p>And another one mentioned <a href="https://www.data.gouv.fr/fr/datasets/base-officielle-des-codes-postaux/">https://www.data.gouv.fr/fr/datasets/base-officielle-des-codes-postaux/</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73666/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Mar '20, 13:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ce0956ce0bb7ca57f1b69aa8a2c6c4ba?s=32&amp;d=identicon&amp;r=g" alt="Basile%20Starynkevitch's gravatar image" />
+    <p><a href="/users/18064/basile-starynkevitch">Basile Stary...</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Basile Starynkevitch has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/73666/">
+                edited
+                <strong>21 Mar '20, 13:50</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73666">
+    
+        <a name="73669"></a>
+        <div class="comment" id="comment-73669">
+            <div id="post-73669-score" class="comment-score"></div>
+            <div class="comment-text"><p>The <a href="https://wiki.openstreetmap.org/wiki/Potential_Datasources/France">Potential Datasources/France</a> page might have something useful for what you need, I don't know how compatible they will be with ODBL or if that will be an issue the way you plan on structuring your project.</p></div>
+            <div class="comment-info" id="comment-73669-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Mar '20, 15:01)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73666" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73666-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/73656/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='9dRJbphq2PCSmgekotjV5aDkTymc5LhO' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73656/html5-javascript-code-to-show-a-map-and-get-a-gps-position?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73656/html5-javascript-code-to-show-a-map-and-get-a-gps-position?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/http/"
+            class="tag-link-http"
+            title="see questions tagged'http'using tags"
+            rel="tag">http</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/ajax/"
+            class="tag-link-ajax"
+            title="see questions tagged'ajax'using tags"
+            rel="tag">ajax</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/html5/"
+            class="tag-link-html5"
+            title="see questions tagged'html5'using tags"
+            rel="tag">html5</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 21, 2020, 5:42 a.m.">21 Mar '20, 05:42</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,596 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 21, 2020, 3:01 p.m.">21 Mar '20, 15:01</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1301/ajax-issues-with-nominatim">[closed] Ajax issues with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1778/how-can-i-display-a-map-with-multiple-markers">How can I display a map with multiple markers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3285/http-get-request-times-out">HTTP GET Request Times Out</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5557/save-failed-http-request-error">Save failed: HTTP request error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7746/problem-saving-road-rerouting">Problem saving road rerouting</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15990/api-js-cross-domain-problem">API: JS cross-domain problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16268/usage-of-openstreetmap">[closed] Usage of OpenStreetMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21707/exporting-a-link-from-a-location">Exporting a link from a location</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37212/what-osm-uses-for-data-transfer">what osm uses for data transfer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73260/double-http-response">Double http response</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

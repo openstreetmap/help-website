@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Mapping tsunami hazard zones - OSM Help</title>
+        <meta name="description" content="How should Tsunami Hazard Zones be mapped? Are there any tags that should be used? Background On 14 November 2016 New Zealand experienced a magnitude 7.8 earthquake. Due to the strength and length of the shaking, many people in coastal areas self-evacuated to high ground, often travelling many kilom..." />
+        <meta name="keywords" content="tsunami,tag,safety,emergency,zone" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/53131/mapping-tsunami-hazard-zones" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/53131/mapping-tsunami-hazard-zones?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='7f33uDwUYI8sodJxLUNPtDDiKa8eh74c' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/53131/mapping-tsunami-hazard-zones">Mapping tsunami hazard zones</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-53131-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53131/up/" rel="nofollow"> </a>
+<div id="post-53131-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-53131-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53131/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/53131/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How should Tsunami Hazard Zones be mapped? Are there any tags that should be used?</p>
+<p>Background</p>
+<p>On 14 November 2016 New Zealand experienced a magnitude 7.8 earthquake. Due to the strength and length of the shaking, many people in coastal areas self-evacuated to high ground, often travelling many kilometres on earthquake damaged roads. While many local authorities had published maps for "Tsunami Hazard Zones" and evacuation areas these were mostly in PDF format and totally unsuitable for use on a mobile phone or gps unit. </p>
+<p>Some local authorities, for example, Wellington City Council, have painted road markings to indicate where the hazard zones are. After the earthquake Wellington people went out of those marked hazard zones where these were marked on the roads. But in the rest of the country there was a lot of confusion and panic because people could not access the mapping information. Fortunately, in most places the tsunami was more like a storm surge that was confined to the beaches, although one unoccupied house was destroyed by a 4 metre wave due to local conditions. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tsunami/" class="post-tag tag-link-tsunami"
+                                        title="see questions tagged 'tsunami'" rel="tag">tsunami</a>
+                                
+                                    <a href="/tags/tag/" class="post-tag tag-link-tag"
+                                        title="see questions tagged 'tag'" rel="tag">tag</a>
+                                
+                                    <a href="/tags/safety/" class="post-tag tag-link-safety"
+                                        title="see questions tagged 'safety'" rel="tag">safety</a>
+                                
+                                    <a href="/tags/emergency/" class="post-tag tag-link-emergency"
+                                        title="see questions tagged 'emergency'" rel="tag">emergency</a>
+                                
+                                    <a href="/tags/zone/" class="post-tag tag-link-zone"
+                                        title="see questions tagged 'zone'" rel="tag">zone</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>26 Nov '16, 22:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1a623cf4b5df74bee1b91d0c21736921?s=32&amp;d=identicon&amp;r=g" alt="Huttite's gravatar image" />
+    <p><a href="/users/11060/huttite">Huttite</a><br/>
+    <span class="score" title="560 reputation points">560</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Huttite has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-53131">
+    
+</div>
+<div id="comment-tools-53131" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53131-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/53131/mapping-tsunami-hazard-zones?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/53131/mapping-tsunami-hazard-zones?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/53131/mapping-tsunami-hazard-zones?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/53131/mapping-tsunami-hazard-zones?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="53132"></a>
+                    <div id="answer-container-53132" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53132-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53132/up/" rel="nofollow"> </a>
+<div id="post-53132-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-53132-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53132/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Huttite has selected this answer as the correct answer"
+        href="/accept_answer/53132/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I don't think that data from local authorities about hazard zones published in PDF form should be added to OSM just because that makes the data easier to consume on mobile phone or GPS units. My reasons include:
+ * the licensing is unclear
+ * the data is, with the exception of areas where hazard zones are denoted by road markings, not verifiable on the ground which means that wrong or outdated information will be difficult to spot
+ * being included in OSM wouldn't automatically make this map visible on mobile phone or GPS units</p>
+<p>This calls for a separate project where people get together, bring the data into a mobile app or a Garmin map file - perhaps using OSM as a base map if desired - and build an useful emergency map style, perhaps even including "hazard routing" that avoids marked roads and so on.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53132/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Nov '16, 23:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53132">
+    
+        <a name="53134"></a>
+        <div class="comment" id="comment-53134">
+            <div id="post-53134-score" class="comment-score"></div>
+            <div class="comment-text"><p>Setting aside the issue of the PDF maps, how should Tsunami Hazard Zones that have road markings be mapped?</p>
+
+<p>Note: The licencing of the PDF maps are probably going to be some form of CC-by-SA since that is the licencing standard New Zealand is moving to for government related mapping information as part of its Open Data policy.</p></div>
+            <div class="comment-info" id="comment-53134-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '16, 23:20)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53132" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53132-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="79359"></a>
+                    <div id="answer-container-79359" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79359-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79359/up/" rel="nofollow"> </a>
+<div id="post-79359-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-79359-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79359/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm a bit surprised about some of the comments: tsunami evacuation routes &amp; assembly zones have been actively mapped in Indonesia as part of the HOT / Inasafe activity for perhaps 10 years now. There must be considerable experience in what it is appropriate to map &amp; how to map it.</p>
+<p><a href="http://inasafe.org/home/index.html">Inasafe</a> itself is a FOSS plugin package for QGIS designed for planning around natural hazards, and includes an OSM download tool (reflecting tag usage in Indonesia).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79359/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Mar '21, 19:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79359">
+    
+</div>
+<div id="comment-tools-79359" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79359-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="53786"></a>
+                    <div id="answer-container-53786" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53786-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53786/up/" rel="nofollow"> </a>
+<div id="post-53786-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53786-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53786/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>From this and the lack of further comment I conclude that only features visible on the ground should be mapped. So if a <i>Tsunami Safe Assembly Zone</i> is signposted, it could be mapped. But as for mapping the hazard zones, if they only appear on a map, but do not appear on the ground, then these should not be added to OSM.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53786/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Jan '17, 01:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1a623cf4b5df74bee1b91d0c21736921?s=32&amp;d=identicon&amp;r=g" alt="Huttite's gravatar image" />
+    <p><a href="/users/11060/huttite">Huttite</a><br/>
+    <span class="score" title="560 reputation points">560</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Huttite has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53786">
+    
+</div>
+<div id="comment-tools-53786" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53786-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="79351"></a>
+                    <div id="answer-container-79351" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79351-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79351/up/" rel="nofollow"> </a>
+<div id="post-79351-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-79351-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79351/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><strong>🧟 Reviving a very old thread!</strong></p>
+<p>In Wellington the tsunami safe zones <em>are</em> increasingly being signalled on-site...
+There are roadmarkings indicating which direction and how far the safe zone is, more roadmarkings indicating the start of a safe zone, and sometimes signs as well.</p>
+<p><img src="https://i.imgur.com/OHCPPBA.jpg" alt="roadmarking indicating tsunami safe zone 230m up the hill"></p>
+<p>It's super important information for locals, how should we be mapping these?</p>
+<p><img src="https://i.imgur.com/57fZqdL.jpg" alt="sign indicating a tsunami safe zone"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79351/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Mar '21, 00:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2e800dc4da81f11aa33feea5d3d38586?s=32&amp;d=identicon&amp;r=g" alt="cameralibre's gravatar image" />
+    <p><a href="/users/19913/cameralibre">cameralibre</a><br/>
+    <span class="score" title="-1 reputation points">-1</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cameralibre has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79351">
+    
+</div>
+<div id="comment-tools-79351" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79351-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/53131/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='7f33uDwUYI8sodJxLUNPtDDiKa8eh74c' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53131/mapping-tsunami-hazard-zones?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53131/mapping-tsunami-hazard-zones?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tag/"
+            class="tag-link-tag"
+            title="see questions tagged'tag'using tags"
+            rel="tag">tag</a> <span class="tag-number">&#215;101</span><br/>
+        
+        <a href="/tags/emergency/"
+            class="tag-link-emergency"
+            title="see questions tagged'emergency'using tags"
+            rel="tag">emergency</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/safety/"
+            class="tag-link-safety"
+            title="see questions tagged'safety'using tags"
+            rel="tag">safety</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/zone/"
+            class="tag-link-zone"
+            title="see questions tagged'zone'using tags"
+            rel="tag">zone</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/tsunami/"
+            class="tag-link-tsunami"
+            title="see questions tagged'tsunami'using tags"
+            rel="tag">tsunami</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 26, 2016, 10:38 p.m.">26 Nov '16, 22:38</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,820 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 22, 2021, 7:37 p.m.">22 Mar '21, 19:37</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1188/how-do-i-tag-a-village">How do I tag a village?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1210/the-state-of-query-to-map">The state of Query-to-map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1404/usability-of-the-maps">Usability of the maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2725/tagging-a-school-playing-field">Tagging a school playing field?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2767/branching-roads">Branching Roads</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node">How To Correct Waterways Intersecting Roads Without A Junction Node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3294/emergency-rescue-meeting-points">Emergency Rescue / Meeting Points</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4133/tag-for-pyroclasticlahar-flows">Tag for pyroclastic/lahar flows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4725/what-tag-for-lifeline-or-lifebuoy-please">What tag for lifeline or lifebuoy please?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/589/how-to-tag-non-settlement-place-names">How to tag &#39;non-settlement&#39; place names?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

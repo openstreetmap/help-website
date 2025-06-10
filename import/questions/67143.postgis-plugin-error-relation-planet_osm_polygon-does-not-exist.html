@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Postgis Plugin: ERROR:  relation &quot;planet_osm_polygon&quot; does not exist - OSM Help</title>
+        <meta name="description" content="Hi, I am setting up mapserver on a local system following instructions at: https://switch2osm.org/manually-building-a-tile-server-18-04-lts. This went well and afterwords, I have tried to import entire planet (planet-latest.osm.pbf) using osm2pgsql the same way as mentioned in the post. After succes..." />
+        <meta name="keywords" content="rendering" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/67143/postgis-plugin-error-relation-planet_osm_polygon-does-not-exist" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/67143/postgis-plugin-error-relation-planet_osm_polygon-does-not-exist?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='rrZ77YUBNuoI9lKcrmo7SWCtAG4un67v' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/67143/postgis-plugin-error-relation-planet_osm_polygon-does-not-exist">Postgis Plugin: ERROR:  relation &quot;planet_osm_polygon&quot; does not exist</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-67143-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/67143/up/" rel="nofollow"> </a>
+<div id="post-67143-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-67143-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/67143/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/67143/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,<br>
+I am setting up mapserver on a local system following instructions at: <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts.">https://switch2osm.org/manually-building-a-tile-server-18-04-lts.</a> This went well and afterwords, I have tried to import entire planet (planet-latest.osm.pbf) using osm2pgsql the same way as mentioned in the post. After successful import, I have tried to pre-render tiles using render_list (render_list -m ajt -a -z $zoom_level -Z $zoom_level) and I did it from layer 0 to 14. During this time I observed an error in the log file saying that relation "planet_osm_polygon" does not exist and also map did not look at all like it had layer 14 pre-rendered (at zoom level 10 or so it was mostly blank). So, I stopped rendering and have tried to re-import a small island Saba (planet-saba-141121.osm.pbf) and I have tried to initiate rendering through zoom in/out on the map. This worked well for all layer. After that, I have tried to re-import South America and initiate rendering of some area again through zoom in/out, but rendering of certain areas resulted in the same error that I hit with render_list. Below is excerpt from the log file. I have checked postgres and table in question is there (see below). Could somebody please help me understand the problem and solve the issue? I am running this on a system that has 132GB memory and 16 Intel Xeon cpus <a href="https://help.openstreetmap.org/users/2422/25or6to4">@2</a>.1GHz. <br>
+Thanks a lot!</p>
+<pre><code>renderd[3347]: Rendering projected coordinates 18 82368 123296 -&gt;
+-7445578.051206|1187525.671439 -7444355.058754|1188748.663892 to a 8 x 8 tile renderd[3347]: ERROR: failed to render TILE ajt 18 82368-82375 123296-123303 renderd[3347]:    reason: Postgis Plugin: ERROR:  relation "planet_osm_polygon" does not exist LINE 28:     FROM planet_osm_polygon
+                  ^ in executeQuery Full sql was: 'SELECT ST_AsBinary("way") AS geom,"feature","name","religion","way_pixels" FROM (SELECT
+    way, name, religion, way_pixels,
+    COALESCE(aeroway, amenity, wetland, power, landuse, leisure, man_made, "natural", tourism, highway, railway) AS feature   FROM (SELECT
+      way, COALESCE(name, '') AS name,
+      ('aeroway_' || (CASE WHEN aeroway IN ('apron', 'aerodrome') THEN aeroway ELSE NULL END)) AS aeroway,
+      ('amenity_' || (CASE WHEN amenity IN ('parking', 'bicycle_parking', 'motorcycle_parking', 'university', 'college', 'school', 'taxi',
+                                            'hospital', 'kindergarten', 'grave_yard', 'prison', 'place_of_worship', 'clinic', 'ferry_terminal',
+                                            'marketplace', 'community_centre', 'social_facility', 'arts_centre', 'parking_space', 'bus_station',
+                                            'fire_station', 'police') THEN amenity ELSE NULL END)) AS amenity,
+      ('landuse_' || (CASE WHEN landuse IN ('quarry', 'vineyard', 'orchard', 'cemetery', 'residential', 'garages', 'meadow', 'grass',
+                                            'allotments', 'forest', 'farmyard', 'farmland', 'greenhouse_horticulture',
+                                            'recreation_ground', 'village_green', 'retail', 'industrial', 'railway', 'commercial',
+                                            'brownfield', 'landfill', 'construction', 'plant_nursery', 'religious') THEN landuse ELSE NULL END)) AS landuse,
+      ('leisure_' || (CASE WHEN leisure IN ('swimming_pool', 'playground', 'park', 'recreation_ground', 'common', 'garden',
+                                            'golf_course', 'miniature_golf', 'sports_centre', 'stadium', 'pitch',
+                                            'track', 'dog_park', 'fitness_station') THEN leisure ELSE NULL END)) AS leisure,
+      ('man_made_' || (CASE WHEN man_made IN ('works', 'wastewater_plant', 'water_works') THEN man_made ELSE NULL END)) AS man_made,
+      ('natural_' || (CASE WHEN "natural" IN ('beach', 'shoal', 'heath', 'grassland', 'wood', 'sand', 'scree', 'shingle', 'bare_rock', 'scrub') THEN "natural" ELSE NULL END)) AS "natural",
+      ('wetland_' || (CASE WHEN "natural" IN ('wetland', 'marsh', 'mud') THEN (CASE WHEN "natural" IN ('marsh', 'mud') THEN "natural" ELSE tags-&gt;'wetland' END) ELSE NULL END)) AS wetland,
+      ('power_' || (CASE WHEN power IN ('station', 'sub_station', 'substation', 'generator') THEN power ELSE NULL END)) AS power,
+      ('tourism_' || (CASE WHEN tourism IN ('camp_site', 'caravan_site', 'picnic_site') THEN tourism ELSE NULL END)) AS tourism,
+      ('highway_' || (CASE WHEN highway IN ('services', 'rest_area') THEN highway ELSE NULL END)) AS highway,
+      ('railway_' || (CASE WHEN railway = 'station' THEN railway ELSE NULL END)) AS railway,
+      CASE WHEN religion IN ('christian', 'jewish', 'muslim') THEN religion ELSE 'INT-generic'::text END AS religion,
+      way_area/NULLIF(0.597164::real*0.597164::real,0) AS way_pixels,
+      way_area
+    FROM planet_osm_polygon
+    WHERE (landuse IS NOT NULL
+      OR leisure IS NOT NULL
+      OR aeroway IN ('apron', 'aerodrome')
+      OR amenity IN ('parking', 'bicycle_parking', 'motorcycle_parking', 'taxi', 'university', 'college', 'school', 'hospital', 'kindergarten',
+                     'grave_yard', 'place_of_worship', 'prison', 'clinic', 'ferry_terminal', 'marketplace', 'community_centre', 'social_facility',
+                     'arts_centre', 'parking_space', 'bus_station', 'fire_station', 'police')
+      OR man_made IN ('works', 'wastewater_plant','water_works')
+      OR "natural" IN ('beach', 'shoal', 'heath', 'mud', 'marsh', 'wetland', 'grassland', 'wood', 'sand', 'scree', 'shingle', 'bare_rock', 'scrub')
+      OR power IN ('station', 'sub_station', 'substation', 'generator')
+      OR tourism IN ('camp_site', 'caravan_site', 'picnic_site')
+      OR highway IN ('services', 'rest_area')
+      OR railway = 'station')
+      AND way_area &gt; 1*0.597164::real*0.597164::real   ) AS landcover   ORDER BY way_area DESC, feature ) AS features WHERE "way" &amp;&amp; ST_SetSRID('BOX3D(-7445654.48823473
+1187449.234410851,-7444278.621725596 1188825.100919985)'::box3d, 3857)' renderd[3347]: DEBUG: DONE TILE ajt 18 82368-82375 123296-123303 in 0.027 seconds renderd[3347]: DEBUG: Sending render cmd(4 ajt 18/82368/123298) with protocol version 2 to fd 9
+
+postgres=# \c gis
+You are now connected to database "gis" as user "postgres".
+gis=# \dt;
+              List of relations
+ Schema |        Name        | Type  | Owner 
+--------+--------------------+-------+-------
+ public | planet_osm_line    | table | user
+ public | planet_osm_nodes   | table | user
+ public | planet_osm_point   | table | user
+ public | planet_osm_polygon | table | user
+ public | planet_osm_rels    | table | user
+ public | planet_osm_roads   | table | user
+ public | planet_osm_ways    | table | user
+ public | spatial_ref_sys    | table | user
+(8 rows)
+
+gis=# \dx;
+                                     List of installed extensions
+  Name   | Version |   Schema   |                             Description
+
+---------+---------+------------+---------------------------------------------------------------------
+ hstore  | 1.4     | public     | data type for storing sets of (key, value) pairs
+ plpgsql | 1.0     | pg_catalog | PL/pgSQL procedural language
+ postgis | 2.4.3   | public     | PostGIS geometry, geography, and raster spatial types and functions
+(3 rows)
+
+gis=#
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Dec '18, 14:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/04a62413b4cd3894e81352544e5c31a2?s=32&amp;d=identicon&amp;r=g" alt="brh2's gravatar image" />
+    <p><a href="/users/16034/brh2">brh2</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="brh2 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/67143/">
+                edited
+                <strong>12 Dec '18, 15:21</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-67143">
+    
+        <a name="67145"></a>
+        <div class="comment" id="comment-67145">
+            <div id="post-67145-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm guessing that perhaps you're trying to access something in postgres that you don't have access to?  Perhaps double-check the user you're doing things from?</p></div>
+            <div class="comment-info" id="comment-67145-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '18, 17:52)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-67143" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-67143-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/67143/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='rrZ77YUBNuoI9lKcrmo7SWCtAG4un67v' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/67143/postgis-plugin-error-relation-planet_osm_polygon-does-not-exist?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/67143/postgis-plugin-error-relation-planet_osm_polygon-does-not-exist?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 12, 2018, 2:57 p.m.">12 Dec '18, 14:57</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,205 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 12, 2018, 5:52 p.m.">12 Dec '18, 17:52</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/125/how-do-i-stop-rivers-from-rendering-where-the-riverbanks-are-mapped">How do I stop rivers from rendering where the riverbanks are mapped?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/139/how-can-i-design-some-simple-maps">How can I design some simple maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a>
+        </p>
+        
+        <p>
+            <a href="/questions/242/how-to-download-rendered-osm-maps">How to download rendered OSM maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/361/why-render-abandoned-railways">[closed] Why render abandoned railways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/460/is-there-any-way-to-group-the-rendering-of-changes-to-the-public-map">Is there any way to group the rendering of changes to the public map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/815/am-i-doing-ok">Am i doing ok ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/840/problem-with-map-scale-when-generating-maps-with-osmarender">Problem with map scale when generating maps with Osmarender</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1/how-do-you-make-the-osm2pgsql-diff-imports-run-faster-than-molasses-on-postgres-84">How do you make the osm2pgsql diff imports run faster than molasses on postgres 8.4?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

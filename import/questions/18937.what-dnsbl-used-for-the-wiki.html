@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>What DNSBL used for the wiki? - OSM Help</title>
+        <meta name="description" content="I got a report from a wiki-user with this error: &quot;Login error - Your IP address is listed as an open proxy in the DNSBL used by OpenStreetMap Wiki. You cannot create an account (84.114.59.XX)&quot;  Can anybody please tell me /which/ DNSBL is/are used? Would be nice to mention this in the error message....." />
+        <meta name="keywords" content="wiki,dnsbl" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/18937/what-dnsbl-used-for-the-wiki" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/18937/what-dnsbl-used-for-the-wiki?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='q3IWkmNPXwqggE4pzsTHKDFbMFQWQlKd' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/18937/what-dnsbl-used-for-the-wiki">What DNSBL used for the wiki?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-18937-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18937/up/" rel="nofollow"> </a>
+<div id="post-18937-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-18937-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18937/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/18937/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I got a report from a wiki-user with this error:</p>
+<pre><code>"Login error - Your IP address is listed
+as an open proxy in the DNSBL used by
+OpenStreetMap Wiki. You cannot create
+an account (84.114.59.XX)"
+</code></pre>
+<p>Can anybody please tell me /which/ DNSBL is/are used?</p>
+<p>Would be nice to mention this in the error message...</p>
+<p>tnx
+/al</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/wiki/" class="post-tag tag-link-wiki"
+                                        title="see questions tagged 'wiki'" rel="tag">wiki</a>
+                                
+                                    <a href="/tags/dnsbl/" class="post-tag tag-link-dnsbl"
+                                        title="see questions tagged 'dnsbl'" rel="tag">dnsbl</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Jan '13, 12:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5501080a7333d6383d6c545f076eaeba?s=32&amp;d=identicon&amp;r=g" alt="_al's gravatar image" />
+    <p><a href="/users/507/_al">_al</a><br/>
+    <span class="score" title="860 reputation points">860</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="18 badges"><span class="bronze">&#9679;</span><span class="badgecount">18</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="_al has one accepted answer">4&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-18937">
+    
+</div>
+<div id="comment-tools-18937" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18937-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/18937/what-dnsbl-used-for-the-wiki?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/18937/what-dnsbl-used-for-the-wiki?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/18937/what-dnsbl-used-for-the-wiki?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/18937/what-dnsbl-used-for-the-wiki?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="18938"></a>
+                    <div id="answer-container-18938" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18938-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18938/up/" rel="nofollow"> </a>
+<div id="post-18938-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-18938-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18938/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="_al has selected this answer as the correct answer"
+        href="/accept_answer/18938/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="http://www.sorbs.net/">http://www.sorbs.net/</a> and <a href="https://dnsbl.tornevall.org/">https://dnsbl.tornevall.org/</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18938/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jan '13, 13:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e79628d44a15e95c607f8c5007d0ccd2?s=32&amp;d=identicon&amp;r=g" alt="Firefishy's gravatar image" />
+    <p><a href="/users/48/firefishy">Firefishy ♦♦</a><br/>
+    <span class="score" title="1296 reputation points"><span class="">1.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="36 badges"><span class="silver">&#9679;</span><span class="badgecount">36</span></span><span title="52 badges"><span class="bronze">&#9679;</span><span class="badgecount">52</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Firefishy has 14 accepted answers">29&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18938">
+    
+        <a name="19111"></a>
+        <div class="comment" id="comment-19111">
+            <div id="post-19111-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you! Have you maybe considered <a href="https://www.projecthoneypot.org/">https://www.projecthoneypot.org/</a> ? It's rather up to date for comment spam sources.</p></div>
+            <div class="comment-info" id="comment-19111-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jan '13, 12:41)</span>
+                <a class="comment-user userinfo" href="/users/507/_al">_al</a>
+                
+            </div>
+        </div>
+    
+        <a name="65235"></a>
+        <div class="comment" id="comment-65235">
+            <div id="post-65235-score" class="comment-score"></div>
+            <div class="comment-text"><p>Any solution besides the difficult process of getting an ip removed from both of those lists?</p></div>
+            <div class="comment-info" id="comment-65235-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '18, 12:54)</span>
+                <a class="comment-user userinfo" href="/users/11553/blakegirardot">BlakeGirardot</a>
+                
+            </div>
+        </div>
+    
+        <a name="68765"></a>
+        <div class="comment" id="comment-68765">
+            <div id="post-68765-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Just to have the updated list (which I was trying to locate):</p>
+
+<p><a href="https://github.com/openstreetmap/chef/blob/master/cookbooks/mediawiki/templates/default/LocalSettings.php.erb#L217">https://github.com/openstreetmap/chef/blob/master/cookbooks/mediawiki/templates/default/LocalSettings.php.erb#L217</a></p>
+
+<p>Right now it's proxies.dnsbl.sorbs.net, opm.tornevall.org, xbl.spamhaus.org and dnsbl-3.uceprotect.net</p></div>
+            <div class="comment-info" id="comment-68765-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '19, 22:04)</span>
+                <a class="comment-user userinfo" href="/users/4861/naoliv">naoliv</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18938" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18938-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="81510"></a>
+                    <div id="answer-container-81510" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-81510-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/81510/up/" rel="nofollow"> </a>
+<div id="post-81510-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-81510-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/81510/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I got the same. Blocked as of today.
+The IP address they give is the dynmic address given by my provider.</p>
+<p>They suggest to give all of the information on the blocked ip-address in queries. 
+But: where can I query? who is responsible for this?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/81510/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Aug '21, 20:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ecf6e7e2720dbd40d4daa6e1670858cf?s=32&amp;d=identicon&amp;r=g" alt="akoerber's gravatar image" />
+    <p><a href="/users/20688/akoerber">akoerber</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="akoerber has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-81510">
+    
+</div>
+<div id="comment-tools-81510" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-81510-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/18937/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='q3IWkmNPXwqggE4pzsTHKDFbMFQWQlKd' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18937/what-dnsbl-used-for-the-wiki?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18937/what-dnsbl-used-for-the-wiki?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wiki/"
+            class="tag-link-wiki"
+            title="see questions tagged'wiki'using tags"
+            rel="tag">wiki</a> <span class="tag-number">&#215;71</span><br/>
+        
+        <a href="/tags/dnsbl/"
+            class="tag-link-dnsbl"
+            title="see questions tagged'dnsbl'using tags"
+            rel="tag">dnsbl</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 9, 2013, 12:50 p.m.">09 Jan '13, 12:50</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,662 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 26, 2021, 8:23 p.m.">26 Aug '21, 20:23</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/74/is-everybody-allowed-to-post-news-items-in-the-openstreetmap-wiki">Is everybody allowed to post news items in the OpenStreetMap wiki?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/444/how-to-delete-a-wiki-page">How to delete a wiki page</a>
+        </p>
+        
+        <p>
+            <a href="/questions/446/how-to-translate-wiki-templatecatmain">How to translate wiki Template:Catmain</a>
+        </p>
+        
+        <p>
+            <a href="/questions/602/how-do-i-change-the-edit-box-on-the-wiki-from-vector-to-monobook">[closed] How do I change the edit box on the wiki from Vector to Monobook?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/671/how-do-i-propose-an-official-tag">How do I propose an official tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/794/protocol-for-documenting-key-values-on-the-wiki">Protocol for documenting key values on the wiki?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1377/api-howto-please">API howto please</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3472/how-can-i-search-the-wiki">[closed] How can I search the Wiki?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3635/help-forum-wiki-talk-pages-irc-and-mailing-lists-how-do-i-know-where-to-take-my-question">Help, forum, wiki talk pages, IRC and mailing lists: how do I know where to take my question?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42/what-about-the-wiki-wikiopenstreetmaporg">What about the wiki &quot;wiki.openstreetmap.org&quot; ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

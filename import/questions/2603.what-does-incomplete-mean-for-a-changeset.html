@@ -1,0 +1,761 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>What does &quot;incomplete&quot; mean for a changeset? - OSM Help</title>
+        <meta name="description" content="When I select an object in JOSM it shows a changeset number associated with it. Next to that often it says &quot;incomplete&quot;. e.g. 7132958 has [incomplete] after it. If I look at all the changesets, another says &quot;closed&quot; although, for the map I am working on every other changeset reads &quot;incomplete&quot;. When..." />
+        <meta name="keywords" content="changeset,incomplete,josm" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/2603/what-does-incomplete-mean-for-a-changeset" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/2603/what-does-incomplete-mean-for-a-changeset?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='xSdT0QuRSkqoFi3ZeoVi7Og27ETZNaon' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/2603/what-does-incomplete-mean-for-a-changeset">What does &quot;incomplete&quot; mean for a changeset?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-2603-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2603/up/" rel="nofollow"> </a>
+<div id="post-2603-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-2603-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2603/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/2603/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When I select an object in JOSM it shows a changeset number associated with it. Next to that often it says "incomplete". e.g. 7132958 has [incomplete] after it.
+If I look at all the changesets, another says "closed" although, for the map I am working on every other changeset reads "incomplete".  When I look at 7132958, on OSM nothing seems to mention that it is incomplete. Just what is not complete about it?</p>
+<p>I think I have caused some problems by letting JOSM snap my nodes to existing unrelated nodes i.e. I share a node unnecessarily between a highway and a landuse multipolygon, affecting someone else's work. I intend to avoid that in future.</p>
+<p>I am an amateur and baffled.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/changeset/" class="post-tag tag-link-changeset"
+                                        title="see questions tagged 'changeset'" rel="tag">changeset</a>
+                                
+                                    <a href="/tags/incomplete/" class="post-tag tag-link-incomplete"
+                                        title="see questions tagged 'incomplete'" rel="tag">incomplete</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>31 Jan '11, 14:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/014348ec5fb64c8b7718ff7ae2e19bdc?s=32&amp;d=identicon&amp;r=g" alt="Electrotechie's gravatar image" />
+    <p><a href="/users/777/electrotechie">Electrotechie</a><br/>
+    <span class="score" title="121 reputation points">121</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Electrotechie has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-2603">
+    
+</div>
+<div id="comment-tools-2603" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2603-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/2603/what-does-incomplete-mean-for-a-changeset?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/2603/what-does-incomplete-mean-for-a-changeset?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/2603/what-does-incomplete-mean-for-a-changeset?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/2603/what-does-incomplete-mean-for-a-changeset?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15805"></a>
+                    <div id="answer-container-15805" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15805-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15805/up/" rel="nofollow"> </a>
+<div id="post-15805-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-15805-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15805/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In the Changeset List Dialog, <em>Incomplete</em> means JOSM has not downloaded all of the details for that changeset. So it is not able to show the changeset comment, or all of the objects affected by that changeset, or whether it is still open.</p>
+<p>You can select a particular changeset from the list, then click the icon underneath to download details for that changeset (or right click on the changeset number, and choose 'Download'). You can then see details of the user, the changeset comment, whether it is still open, and select all of the objects affected by that changeset.</p>
+<p>For more details, see the JOSM help: <a href="http://josm.openstreetmap.de/wiki/Help/Dialog/ChangesetListDialog">Changeset List Dialog</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15805/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Sep '12, 22:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/aa505c046b1c010e997a7849c6f3dbbe?s=32&amp;d=identicon&amp;r=g" alt="Vclaw's gravatar image" />
+    <p><a href="/users/62/vclaw">Vclaw</a><br/>
+    <span class="score" title="9217 reputation points"><span class="">9.2k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="95 badges"><span class="silver">&#9679;</span><span class="badgecount">95</span></span><span title="141 badges"><span class="bronze">&#9679;</span><span class="badgecount">141</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vclaw has 41 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15805">
+    
+</div>
+<div id="comment-tools-15805" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15805-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="2631"></a>
+                    <div id="answer-container-2631" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2631-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2631/up/" rel="nofollow"> </a>
+<div id="post-2631-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-2631-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2631/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>"Incomplete" means that the change set has not yet been closed (or closed automatically due to timing out).  Areas within that changeset may be subject to conflicting edits.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2631/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Feb '11, 02:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/666698a7b13e402aba7e1e0f6de7c1d3?s=32&amp;d=identicon&amp;r=g" alt="Baloo%20Uriza's gravatar image" />
+    <p><a href="/users/132/baloo-uriza">Baloo Uriza</a><br/>
+    <span class="score" title="3180 reputation points"><span class="">3.2k</span></span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="61 badges"><span class="bronze">&#9679;</span><span class="badgecount">61</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Baloo Uriza has 12 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2631">
+    
+        <a name="2643"></a>
+        <div class="comment" id="comment-2643">
+            <div id="post-2643-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, many thanks. I suspect timing out since many of them have a date in 2009.  In my case many of them are "administrative boundaries" which also have lots of validation errors. Taken from some database automatically I would suspect. If that is all it is then OK. I have started "purging" them from Josm every time I download to avoid having the problem.</p></div>
+            <div class="comment-info" id="comment-2643-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '11, 11:13)</span>
+                <a class="comment-user userinfo" href="/users/777/electrotechie">Electrotechie</a>
+                
+            </div>
+        </div>
+    
+        <a name="2909"></a>
+        <div class="comment" id="comment-2909">
+            <div id="post-2909-score" class="comment-score"></div>
+            <div class="comment-text"><p>What do you mean "purging?"</p></div>
+            <div class="comment-info" id="comment-2909-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Feb '11, 20:50)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+        <a name="15801"></a>
+        <div class="comment" id="comment-15801">
+            <div id="post-15801-score" class="comment-score"></div>
+            <div class="comment-text"><p>ooops, missed that question. I select them all and hit the "purge" button which does nothing to the database but means I don't inadvertently edit them. They are mainly boundaries from official documents.</p></div>
+            <div class="comment-info" id="comment-15801-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Sep '12, 20:42)</span>
+                <a class="comment-user userinfo" href="/users/777/electrotechie">Electrotechie</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-2631" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2631-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/2603/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='xSdT0QuRSkqoFi3ZeoVi7Og27ETZNaon' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/2603/what-does-incomplete-mean-for-a-changeset?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/2603/what-does-incomplete-mean-for-a-changeset?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/changeset/"
+            class="tag-link-changeset"
+            title="see questions tagged'changeset'using tags"
+            rel="tag">changeset</a> <span class="tag-number">&#215;127</span><br/>
+        
+        <a href="/tags/incomplete/"
+            class="tag-link-incomplete"
+            title="see questions tagged'incomplete'using tags"
+            rel="tag">incomplete</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 31, 2011, 2:51 p.m.">31 Jan '11, 14:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,854 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 4, 2012, 10:03 p.m.">04 Sep '12, 22:03</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/42765/a-single-changeset-is-not-rendering-but-subsequent-changes-are">A single changeset is not rendering but subsequent changes are.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62552/how-to-manually-close-changeset-in-josm">How to manually close changeset in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26429/how-do-i-download-a-changeset-in-josm">How do I download a changeset in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26469/revert-total-changeset-wanted">Revert total changeset wanted!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45021/multipolygon-in-changeset-not-rendering">multipolygon in changeset not rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52108/reverting-a-very-large-changeset">Reverting a very large changeset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17008/whats-the-best-practice-regarding-the-age-of-data-between-saves">[closed] What&#39;s the best practice regarding the age of data between saves?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19854/maproulette-changeset">Maproulette Changeset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26443/reject-change-set">reject change set</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65645/josm-uploading-data-for-layer-x-is-still-shown-even-after-changeset-was-automatically-closed">JOSM &quot;Uploading data for layer x&quot; is still shown even after changeset was automatically closed?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

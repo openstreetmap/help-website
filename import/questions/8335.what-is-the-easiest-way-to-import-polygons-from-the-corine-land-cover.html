@@ -1,0 +1,652 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>What is the easiest way to import polygons from the Corine Land Cover? - OSM Help</title>
+        <meta name="description" content="I would like to import some forest and farmland polygons from the Corine Land Cover. I have downloaded the Corine Land Cover shapefiles. I have also viewed them in QGIS and extracted the areas I want to work with to a smaller set. What is an easy way to import these polygons to OSM? Both for a small..." />
+        <meta name="keywords" content="import,shapefiles,corine-land-cover" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/8335/what-is-the-easiest-way-to-import-polygons-from-the-corine-land-cover" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/8335/what-is-the-easiest-way-to-import-polygons-from-the-corine-land-cover?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='9M80Phoz1qNV1xqjryjwNuJ4rmSkRL1D' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/8335/what-is-the-easiest-way-to-import-polygons-from-the-corine-land-cover">What is the easiest way to import polygons from the Corine Land Cover?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-8335-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8335/up/" rel="nofollow"> </a>
+<div id="post-8335-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-8335-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8335/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/8335/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I would like to import some forest and farmland polygons from the Corine Land Cover. I have downloaded the Corine Land Cover shapefiles. I have also viewed them in QGIS and extracted the areas I want to work with to a smaller set.</p>
+<p>What is an easy way to import these polygons to OSM? Both for a smaller set and also if I import a larger set of polygons? Is it possible to do so that the polygons get the correct tags, so I don't need to use another tool to edit them after upload to OSM?</p>
+<p>I have read <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Corine_Land_Cover/Corine_Data_Import">WikiProject Corine Land Cover/Corine Data Import</a> but that process seem to be complicated since it require a local PostGIS database, many tools and also download of OSM data.</p>
+<p><strong>UPDATE</strong>
+I have now tried with what Frederik Ramm suggested, by importing shapefiles in Potlatch. But I can't get it working. See <a href="http://help.openstreetmap.org/questions/8428/how-to-use-a-shapefile-in-potlatch">How to use a Shapefile in Potlatch?</a></p>
+<p>I have also tried to open the shapefile with polygons in QGIS, then transform the polygons to linestrings and export the linestrings to a GPX file. But when I import the GPX file to OpenStreetMap, it fails because the GPX files doesn't have a any timestamps.</p>
+<p>Is there any other way I can import a few polygons from Corine Land Cover shapefiles to OpenStreetMaps?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/import/" class="post-tag tag-link-import"
+                                        title="see questions tagged 'import'" rel="tag">import</a>
+                                
+                                    <a href="/tags/shapefiles/" class="post-tag tag-link-shapefiles"
+                                        title="see questions tagged 'shapefiles'" rel="tag">shapefiles</a>
+                                
+                                    <a href="/tags/corine-land-cover/" class="post-tag tag-link-corine-land-cover"
+                                        title="see questions tagged 'corine-land-cover'" rel="tag">corine-land-cover</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Oct '11, 10:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b1d217a3a6e04cf4654372068beef20d?s=32&amp;d=identicon&amp;r=g" alt="Jonas_'s gravatar image" />
+    <p><a href="/users/2094/jonas_">Jonas_</a><br/>
+    <span class="score" title="662 reputation points">662</span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="33 badges"><span class="bronze">&#9679;</span><span class="badgecount">33</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jonas_ has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8335/">
+                edited
+                <strong>20 Oct '11, 18:36</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-8335">
+    
+</div>
+<div id="comment-tools-8335" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8335-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/8335/what-is-the-easiest-way-to-import-polygons-from-the-corine-land-cover?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/8335/what-is-the-easiest-way-to-import-polygons-from-the-corine-land-cover?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/8335/what-is-the-easiest-way-to-import-polygons-from-the-corine-land-cover?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/8335/what-is-the-easiest-way-to-import-polygons-from-the-corine-land-cover?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="8336"></a>
+                    <div id="answer-container-8336" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8336-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8336/up/" rel="nofollow"> </a>
+<div id="post-8336-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-8336-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8336/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>When importing data, it is very important to discuss the issue with other local mappers before you do. Even if the data source is legally suitable, there might be many other reasons against an import. </p>
+<p>As the importer, you have the responsibility of doing things right - technically <em>and</em> socially. There might be people who dislike the import, especially if it interferes with data that already exists. There is a reason why the documented process is complex: It is easy to break things, or import them in a way that is technically wrong. For example, if you simply convert shape files to OSM then you will likely create duplicate nodes where two land cover areas meet - when the correct way would be at least re-using the nodes, but in some cases also using multipolygons and re-using the boundary line between the two.</p>
+<p>If you find that the documented process is too complicated. then I suggest that you do not import anything at all. It is easy to harm OSM with a badly executed import - the map might have more colours afterwards, but you could upset the community and create data that is hard to edit.</p>
+<p>Potlatch has a vector background layer where you can load a shape file and copy selected shapes from it, manually. Maybe that is an alternative for you. Adding data for areas you know personally is more rewarding, and more sustainable, than plastering the whole country with land cover data.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8336/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Oct '11, 11:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8336">
+    
+        <a name="8429"></a>
+        <div class="comment" id="comment-8429">
+            <div id="post-8429-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have now tried to use a shapefile in Potlatch, but I got an error: <a href="http://help.openstreetmap.org/questions/8428/how-to-use-a-shapefile-in-potlatch">http://help.openstreetmap.org/questions/8428/how-to-use-a-shapefile-in-potlatch</a></p></div>
+            <div class="comment-info" id="comment-8429-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Oct '11, 09:52)</span>
+                <a class="comment-user userinfo" href="/users/2094/jonas_">Jonas_</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8336" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8336-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/8335/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='9M80Phoz1qNV1xqjryjwNuJ4rmSkRL1D' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8335/what-is-the-easiest-way-to-import-polygons-from-the-corine-land-cover?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8335/what-is-the-easiest-way-to-import-polygons-from-the-corine-land-cover?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/import/"
+            class="tag-link-import"
+            title="see questions tagged'import'using tags"
+            rel="tag">import</a> <span class="tag-number">&#215;196</span><br/>
+        
+        <a href="/tags/shapefiles/"
+            class="tag-link-shapefiles"
+            title="see questions tagged'shapefiles'using tags"
+            rel="tag">shapefiles</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/corine-land-cover/"
+            class="tag-link-corine-land-cover"
+            title="see questions tagged'corine-land-cover'using tags"
+            rel="tag">corine-land-cover</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 7, 2011, 10:57 a.m.">07 Oct '11, 10:57</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,457 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 20, 2011, 6:36 p.m.">20 Oct '11, 18:36</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/498/uploading-a-small-bit-of-new-tiger-data-and-3-other-unrelated-questions">Uploading a small bit of new TIGER data (and 3 other unrelated questions)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap">How do I import map data from a .dwg file to OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/799/how-should-i-go-about-importing-a-city">How should I go about importing a city?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/828/uploading-a-gpx-from-ttgpslogger-doesnt-work">Uploading a GPX from TTGpsLogger doesn&#39;t work</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1194/what-osm-is-not">What OSM is not</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1608/map-update-volunteer">Map update volunteer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1677/importing-pdf-josm">Importing PDF JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1899/how-to-import-a-twl-file-to-osm">how to import a twl file to osm</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2017/how-can-i-import-data-to-osm-from-a-csv-file">How can I import data to OSM from a .csv file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13/importing-government-maps">Importing government maps</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

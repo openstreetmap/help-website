@@ -1,0 +1,1320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Is there a technique to record a very precise GPS point? - OSM Help</title>
+        <meta name="description" content="My understanding is that most GPS units (like the one built-in to my iPhone) can only resolve a point to a confidence of roughly 5 metres, even on the clearest of days. Can this be improved upon without splashing out on a pricey Differential GPS unit? I wondered if perhaps I/someone could write an a..." />
+        <meta name="keywords" content="aerial,gps" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/4846/is-there-a-technique-to-record-a-very-precise-gps-point" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/4846/is-there-a-technique-to-record-a-very-precise-gps-point?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qMohTBYOOJpP1tFLY9ocY4vrBtnmze7s' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/4846/is-there-a-technique-to-record-a-very-precise-gps-point">Is there a technique to record a very precise GPS point?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-4846-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4846/up/" rel="nofollow"> </a>
+<div id="post-4846-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-4846-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4846/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/4846/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   2
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>My understanding is that most GPS units (like the one built-in to my iPhone) can only resolve a point to a confidence of roughly 5 metres, even on the clearest of days.</p>
+<p>Can this be improved upon without splashing out on a pricey <a href="http://en.wikipedia.org/wiki/Differential_GPS">Differential GPS</a> unit?</p>
+<p>I wondered if perhaps I/someone could write an app that took multiple readings over a given time and then found the statistical mean. Assuming the errors are spread across a <a href="http://en.wikipedia.org/wiki/Normal_distribution">normal distribution</a> around the actual point then this should result in a more accurate position, or am I missing something?</p>
+<p>Having very accurately recorded locations for visible landmarks would then hopefully help with aerial image alignment and rectification.</p>
+<p>Also any suggestions for how such a point might be tagged?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/aerial/" class="post-tag tag-link-aerial"
+                                        title="see questions tagged 'aerial'" rel="tag">aerial</a>
+                                
+                                    <a href="/tags/gps/" class="post-tag tag-link-gps"
+                                        title="see questions tagged 'gps'" rel="tag">gps</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Apr '11, 11:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f61876d1f1d2de794259119cdd596316?s=32&amp;d=identicon&amp;r=g" alt="GrahamS's gravatar image" />
+    <p><a href="/users/98/grahams">GrahamS</a><br/>
+    <span class="score" title="3635 reputation points"><span class="">3.6k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="45 badges"><span class="silver">&#9679;</span><span class="badgecount">45</span></span><span title="54 badges"><span class="bronze">&#9679;</span><span class="badgecount">54</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="GrahamS has 7 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/4846/">
+                edited
+                <strong>27 Apr '11, 11:26</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-4846">
+    
+</div>
+<div id="comment-tools-4846" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4846-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    7 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/4846/is-there-a-technique-to-record-a-very-precise-gps-point?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/4846/is-there-a-technique-to-record-a-very-precise-gps-point?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/4846/is-there-a-technique-to-record-a-very-precise-gps-point?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/4846/is-there-a-technique-to-record-a-very-precise-gps-point?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="4851"></a>
+                    <div id="answer-container-4851" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4851-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4851/up/" rel="nofollow"> </a>
+<div id="post-4851-score" class="post-score"
+    title="current number of votes">
+    9
+</div>
+<a id="post-4851-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4851/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="GrahamS has selected this answer as the correct answer"
+        href="/accept_answer/4851/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can reduce the error by taking multiple readings. However to get an error radius of one meter or better you will need hundreds of meassurements taken over the course of days.</p>
+<p>DGPS will reduce the error of both a single reading and timeseries but it doesn't do magic.</p>
+<p>Survey grade receivers use the other frequencies of GPS (even if they can't decrypt them) and allow a precession in the range of centimeters but are expensive.</p>
+<p>In france thousands of survey points from a goverment import exist and are tagged with <code>man_made=survey_point</code>. For your gps reference points I'd suggest <code>man_made=reference_point</code> along with <code>source=gps</code> and a short <code>note</code> how you measured the position.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4851/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Apr '11, 13:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/465f344e31e8ba1be0e0401414815db0?s=32&amp;d=identicon&amp;r=g" alt="petschge's gravatar image" />
+    <p><a href="/users/8/petschge">petschge</a><br/>
+    <span class="score" title="8279 reputation points"><span class="">8.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="73 badges"><span class="silver">&#9679;</span><span class="badgecount">73</span></span><span title="98 badges"><span class="bronze">&#9679;</span><span class="badgecount">98</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="petschge has 29 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4851">
+    
+        <a name="4871"></a>
+        <div class="comment" id="comment-4871">
+            <div id="post-4871-score" class="comment-score">5</div>
+            <div class="comment-text"><p>It depends on the site conditions, I doubt hundreds of measurements will help if you don't have a clear view of sky. Even in cities tracks are sometimes distorted around tall buildings, so every measurement has significant error in one direction.</p></div>
+            <div class="comment-info" id="comment-4871-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '11, 06:41)</span>
+                <a class="comment-user userinfo" href="/users/191/ivanatora">ivanatora</a>
+                
+            </div>
+        </div>
+    
+        <a name="4873"></a>
+        <div class="comment" id="comment-4873">
+            <div id="post-4873-score" class="comment-score">5</div>
+            <div class="comment-text"><p>Agreed. You should have direct line of sight to at least five satellites and no signals via reflections. The multiple measurements and averaging are to get rid of the uncertainty that comes from the propagation effects up in the ionosphere, not from systematic distrosions due to urban canyon effect and so on.</p></div>
+            <div class="comment-info" id="comment-4873-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '11, 07:02)</span>
+                <a class="comment-user userinfo" href="/users/8/petschge">petschge</a>
+                
+            </div>
+        </div>
+    
+        <a name="4878"></a>
+        <div class="comment" id="comment-4878">
+            <div id="post-4878-score" class="comment-score">5</div>
+            <div class="comment-text"><p>As above, but you could also consider enabling WAAS/EGNOS if your GPS has it, and you are in an area where it improves the accuracy (probably only western Europe and continental USA). Many Garmin units have this, although iPhone does not.</p></div>
+            <div class="comment-info" id="comment-4878-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '11, 08:25)</span>
+                <a class="comment-user userinfo" href="/users/603/ebenezer">Ebenezer</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4851" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4851-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="4967"></a>
+                    <div id="answer-container-4967" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4967-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4967/up/" rel="nofollow"> </a>
+<div id="post-4967-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-4967-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4967/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can also improve your results if your device allows to store the raw measurements. You can then later download from the internet correctional data for the given time/date and apply postprocessing to your measurement data (to eliminate/reduce the ionosphere effects).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4967/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 May '11, 17:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f09c0b7a655fed386e070e036e2da248?s=32&amp;d=identicon&amp;r=g" alt="dieterdreist's gravatar image" />
+    <p><a href="/users/936/dieterdreist">dieterdreist</a><br/>
+    <span class="score" title="3677 reputation points"><span class="">3.7k</span></span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="67 badges"><span class="bronze">&#9679;</span><span class="badgecount">67</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dieterdreist has 4 accepted answers">3&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4967">
+    
+</div>
+<div id="comment-tools-4967" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4967-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="4987"></a>
+                    <div id="answer-container-4987" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4987-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4987/up/" rel="nofollow"> </a>
+<div id="post-4987-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-4987-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4987/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I just tried an experiment I thought should work. if i walked while sighting along a wall of a building I could align this trace on bing when editing i then turned 90 degrees when my position lined up with another building line. I then drew two straight ways in potlatch two along the mean of these ways to beyond the sides of the buildings observed. I then dragged the bing to agree with these alignments,ok so far but I found that after scrolling the map just 200 meters it was out of alignment.so no better then doing minor adjustments as mis-alignment show up. thought this may give others some ideas.here's the trace <a href="http://www.openstreetmap.org/user/andy%20mackey/traces/1430934">http://www.openstreetmap.org/user/andy%20mackey/traces/1430934</a> the buildings are east wall of catholic church and south wall of changing room building the co-ords of point are 0.17248 W 52.33163 N. this is to big for a comment so its posted in an answer box.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4987/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 May '11, 14:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/4987/">
+                edited
+                <strong>06 Apr '13, 20:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4987">
+    
+        <a name="5363"></a>
+        <div class="comment" id="comment-5363">
+            <div id="post-5363-score" class="comment-score"></div>
+            <div class="comment-text"><p>This all assumes that the Bing images have been correctly rectified, which is by no means certain. Never assume an aerial image is any more correct than any other source, especially where the images are mostly intended for consumer use.</p></div>
+            <div class="comment-info" id="comment-5363-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '11, 09:31)</span>
+                <a class="comment-user userinfo" href="/users/6/jonathan-bennett">Jonathan Ben...</a>
+                
+            </div>
+        </div>
+    
+        <a name="5366"></a>
+        <div class="comment" id="comment-5366">
+            <div id="post-5366-score" class="comment-score">1</div>
+            <div class="comment-text"><p>yes. some images are, I estimate are up to 30 degrees off vertical (at the edges) judging by the fact I can see the faces of vertical walls.this would suggest that errors could occur.I been helping another mapper by drawing in building foot prints and some adjacent buildings were photographed from opposite directions evidentially (end walls and shadows) but I couldn't see the join. Bing is very good though I think</p></div>
+            <div class="comment-info" id="comment-5366-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '11, 10:10)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4987" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4987-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5348"></a>
+                    <div id="answer-container-5348" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5348-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5348/up/" rel="nofollow"> </a>
+<div id="post-5348-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-5348-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5348/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Here is one idea for reducing the positioning error. It requires using using two (same type of) receivers that can record raw NMEA data simultaneously. One set on a fixed, known location and the other recording the actual track nearby. Later on, the error could be minimized by subtracting the error of the fixed location from the track data.</p>
+<p>This may be a somewhat nice idea, or then close to no help. I have not tested this yet, but I'm going to. The problems are obvious without testing. Firstly, the two receivers probably will not listen to the same set of satellites all the time, so the nominal accuracy will vary on both receivers. Post processing should identify the case and not try to correct, or then the error should be interpolated over the required period of time. This is why you need the raw data, as it contains information about the satellites, which helps evaluating the positioning quality.</p>
+<p>Downloading the correctional data, as dieterdreist suggested, could be better way. I just happen to have two bluetooth receivers of the same type, so I could test this out.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5348/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 May '11, 14:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/30bf221646491c37b65224fdeb59c283?s=32&amp;d=identicon&amp;r=g" alt="SomeE's gravatar image" />
+    <p><a href="/users/1434/somee">SomeE</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeE has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/5348/">
+                edited
+                <strong>24 May '11, 14:10</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5348">
+    
+        <a name="5349"></a>
+        <div class="comment" id="comment-5349">
+            <div id="post-5349-score" class="comment-score"></div>
+            <div class="comment-text"><p>Check out rtklib if you are playing with this.</p></div>
+            <div class="comment-info" id="comment-5349-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '11, 14:26)</span>
+                <a class="comment-user userinfo" href="/users/8/petschge">petschge</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5348" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5348-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="4963"></a>
+                    <div id="answer-container-4963" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4963-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4963/up/" rel="nofollow"> </a>
+<div id="post-4963-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-4963-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4963/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There's a proposed process (and proposed tagging) and the beginnings of some API implementation for tracking imagery offsets: "<a href="http://wiki.openstreetmap.org/wiki/True_Offset_Process">True Offset Process</a>".</p>
+<p>The tagging scheme though is for drawing an area around where an imagery offset applies. Did you want to tag an imagery offset at a particular point? or perhaps you just wanted to record the fact that you've accurately positioned a particular feature so maybe <code>source:location=multiple_gps_readings</code> ...or something (I just made that up, but you get the idea. Maybe someone else has a better suggestion for a good source tag)</p>
+<p>Also a <a href="http://wiki.openstreetmap.org/wiki/Talk:True_Offset_Process#Process_of_accurately_determining_offset">discussion on 'Process of accurately determining offset'</a>.  I've been doing some experiments with this myself recently, following the approach of "average a large number of tracks collected over several weeks" suggested there</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4963/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 May '11, 17:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4963">
+    
+</div>
+<div id="comment-tools-4963" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4963-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5350"></a>
+                    <div id="answer-container-5350" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5350-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5350/up/" rel="nofollow"> </a>
+<div id="post-5350-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-5350-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5350/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I read somewhere that the GPS satellites belong to the US military.  Military units are able to get much more detailed map data, down to approx 1 meter.  They do not want to release the codes for higher resolution to civilian use to prevent us from getting better detail.  It all has to do with the military's belief that civilians might use the higher definition GPS for "evil purposes."</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5350/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 May '11, 15:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/654e2be24ccbe7c088eea3d64d32bbe3?s=32&amp;d=identicon&amp;r=g" alt="DBlarer's gravatar image" />
+    <p><a href="/users/1436/dblarer">DBlarer</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DBlarer has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5350">
+    
+        <a name="5351"></a>
+        <div class="comment" id="comment-5351">
+            <div id="post-5351-score" class="comment-score"></div>
+            <div class="comment-text"><p>GPS was indeed originally developed for military applications and neither the Y nor the M code have been published. Nevertheless one can try to get the best possible precission out of the received signals.</p></div>
+            <div class="comment-info" id="comment-5351-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '11, 15:44)</span>
+                <a class="comment-user userinfo" href="/users/8/petschge">petschge</a>
+                
+            </div>
+        </div>
+    
+        <a name="5367"></a>
+        <div class="comment" id="comment-5367">
+            <div id="post-5367-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've been told by a surveyor that accuracy within inches is possible with there own ground based transmissions that are available to survey instruments.</p></div>
+            <div class="comment-info" id="comment-5367-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '11, 10:20)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5350" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5350-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="21268"></a>
+                    <div id="answer-container-21268" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-21268-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21268/up/" rel="nofollow"> </a>
+<div id="post-21268-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-21268-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21268/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>At the remote sensing conference I was at yesterday a few people mentioned renting a RTK unit for measurements more accurate than conventional GPS units could achieve. It's worth noting that the wikipedia page for RTK has some problems.</p>
+<p>My garmin (eTrex 20) can average measurements over multiple days for increased accuracy, and this accuracy is more than enough for OSM's purposes, provided you pick a site with a clear view of the sky and no signal reflections.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/21268/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Apr '13, 11:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5634c46072077e10f5b7c0da9b4bbb62?s=32&amp;d=identicon&amp;r=g" alt="pnorman's gravatar image" />
+    <p><a href="/users/290/pnorman">pnorman</a><br/>
+    <span class="score" title="2352 reputation points"><span class="">2.4k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="21 badges"><span class="silver">&#9679;</span><span class="badgecount">21</span></span><span title="40 badges"><span class="bronze">&#9679;</span><span class="badgecount">40</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="pnorman has 9 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-21268">
+    
+</div>
+<div id="comment-tools-21268" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21268-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/4846/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='qMohTBYOOJpP1tFLY9ocY4vrBtnmze7s' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4846/is-there-a-technique-to-record-a-very-precise-gps-point?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4846/is-there-a-technique-to-record-a-very-precise-gps-point?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/gps/"
+            class="tag-link-gps"
+            title="see questions tagged'gps'using tags"
+            rel="tag">gps</a> <span class="tag-number">&#215;235</span><br/>
+        
+        <a href="/tags/aerial/"
+            class="tag-link-aerial"
+            title="see questions tagged'aerial'using tags"
+            rel="tag">aerial</a> <span class="tag-number">&#215;38</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 27, 2011, 11:18 a.m.">27 Apr '11, 11:18</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,560 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 6, 2013, 8:30 p.m.">06 Apr '13, 20:30</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/18655/bing-osm-and-my-waypoints-all-misaligned-who-do-i-trust">Bing, OSM and my waypoints all misaligned. Who do I trust?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">Which is more reliable..? GPS traces or aerial imagery?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/85/how-to-store-all-the-data-collected-during-mapping">How to store all the data collected during mapping?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/579/what-does-a-basic-dgps-set-cost-for-improving-accuracy-especially-next-to-tall-buildings">What does a basic DGPS set cost for improving accuracy, especially next to tall buildings?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/802/can-we-get-more-updated-aerial-imagery-from-bing-or-mapquest-or-anything-but-yahoo">Can we get more updated aerial imagery from Bing or Mapquest or anything, but Yahoo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/871/yahoo-aerial-photos-do-not-display-on-high-zoom-levels">Yahoo aerial photos do not display on high zoom levels ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1171/using-garmin-in-real-time">Using garmin in real time?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/467/how-do-i-use-osm-maps-in-my-gps">How do I use OSM maps in my GPS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1496/data-cable-converter-9-pin-to-usb">Data Cable Converter : 9 pin to usb ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/83/should-i-upload-gps-traces-for-regions-where-there-already-are-plenty-of">Should I upload GPS traces for regions where there already are plenty of?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

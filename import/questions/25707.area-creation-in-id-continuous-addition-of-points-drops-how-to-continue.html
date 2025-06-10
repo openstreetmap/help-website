@@ -1,0 +1,1138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Area creation in iD: continuous addition of points drops, how to continue? - OSM Help</title>
+        <meta name="description" content="Hi there Im mapping some large lakes in far northers Quebec. (Using iD-in-browser editor) As I start adding points to the area its nice and fast, but by mistake often the line &quot;drops&quot; from my cursor and im stuck with having to double click and add a point and then drag it over to the trace Im making..." />
+        <meta name="keywords" content="ideditor,points,quebec,area" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='NmdK2TTYZ8mbkGYsUAWykMr6lOqfcVEW' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue">Area creation in iD: continuous addition of points drops, how to continue?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-25707-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25707/up/" rel="nofollow"> </a>
+<div id="post-25707-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-25707-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25707/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/25707/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi there Im mapping some large lakes in far northers Quebec. (Using iD-in-browser editor) As I start adding points to the area its nice and fast, but by mistake often the line "drops" from my cursor and im stuck with having to double click and add a point and then drag it over to the trace Im making point by point. (doubble click, add point, drag over) every time. </p>
+<p>How to I "pick up" the line of points again to continue "speed-adding" to finnish off the area? I dont know the proper terminology to describe this issue so I couldnt find any relevant data. Hopefully this is clear enough.</p>
+<p>Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/points/" class="post-tag tag-link-points"
+                                        title="see questions tagged 'points'" rel="tag">points</a>
+                                
+                                    <a href="/tags/quebec/" class="post-tag tag-link-quebec"
+                                        title="see questions tagged 'quebec'" rel="tag">quebec</a>
+                                
+                                    <a href="/tags/area/" class="post-tag tag-link-area"
+                                        title="see questions tagged 'area'" rel="tag">area</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Aug '13, 02:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66001846f0632f073fa821d84341d7cf?s=32&amp;d=identicon&amp;r=g" alt="Azzitizz's gravatar image" />
+    <p><a href="/users/3805/azzitizz">Azzitizz</a><br/>
+    <span class="score" title="445 reputation points">445</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="18 badges"><span class="bronze">&#9679;</span><span class="badgecount">18</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Azzitizz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/25707/">
+                retagged
+                <strong>26 Aug '13, 10:19</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0c12497903c6f3b2dd9f4d87deb127de?s=32&amp;d=identicon&amp;r=g" alt="MagicFab's gravatar image" />
+            <p><a href="/users/138/magicfab">MagicFab</a><br/>
+            <span class="score" title="935 reputation points">935</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-25707">
+    
+        <a name="28419"></a>
+        <div class="comment" id="comment-28419">
+            <div id="post-28419-score" class="comment-score">1</div>
+            <div class="comment-text"><p>For problems concerning iD, use <a href="http://github.com/systemed/iD/issues">github.com/systemed/iD/issues</a><br>
+To post there requires a githup-login...</p>
+
+<p>The developers might not be reading here.</p></div>
+            <div class="comment-info" id="comment-28419-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Nov '13, 19:51)</span>
+                <a class="comment-user userinfo" href="/users/7726/hajo">hajo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25707" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25707-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="28066"></a>
+                    <div id="answer-container-28066" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-28066-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28066/up/" rel="nofollow"> </a>
+<div id="post-28066-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-28066-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28066/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OK. I worked on that a bit and found the solution (iD only)</p>
+<p>The trouble arises from the distinction that iD (but not Potlatch) makes between lines and areas. While lines can be extended [A shortcut], areas don't.</p>
+<p>So the question turns to "How to turn a closed line into an area and viceversa".</p>
+<p>A) How to turn an area into a closed line:</p>
+<p>&lt; DEPRECATED &gt;</p>
+<p><em>Tricky. Just to keep with the example above, lets say you have an area defined by the nodes A,B,C,...,P,Q but you were interrupted from continuous addition.
+1- Choose the area.
+2- Choose the node Q. Cut [X]. Now the area has turned a "multipolygon relation" with 2 members: the line K,L,...,P,Q and the line Q,A,B,...,J,K (the fact it cuts at K or any other node is somewhat random)
+3- ALERT: NASTY DRAWBACK FOLLOWS. Remove both members and the multipolygon tag. At this point, every other tag is removed, which is undesirable if you are editing already stablished areas with  much info but is unimportant if you are just mapping new stuff and have a single "forest" or "farmland" tag or alike.
+Now you are left with 2 single lines. If you are happy with them, just join them [C]. But to solve your problem:
+4- Choose the node A. Cut [X].
+5- Choose the line A,Q. Remove [Ctrl-Backspace].
+6- Choose both the line A-K and the line K-Q [Shift-Click]. Join them [C].
+7- Choose the node Q. Continue adding points [A]. Up to Z and back to A.
+Now you have a closed line that goes from A back to A through B,C,...,J,K,L,..,P,Q,...,Z,A but iD does not offer you to tag it as an area element such as a lake or a farm. Only roads, fences and any linear stuff. But what follows is pretty easy.</em></p>
+<p>&lt; /DEPRECATED &gt;</p>
+<p>EDIT: Just set the tag area=no, cut the closed line by the node you want and continue adding points from there. Join back the segments into a single line and set back the tag area=yes or remove it if another tag implies it.</p>
+<p>B) How to turn a closed line into an area:</p>
+<p>Easy. Choose the line and edit its tags. Add area=yes. Now iD allows you to tag it again as any usual area.</p>
+<p>Since this question is actually old, I hope this helps future people reading this post. iD feels very comfortable but some situations like this one must be simplified to actually overcome Potlatch2.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/28066/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Nov '13, 21:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/edad931183a659459f4dcee3173b544a?s=32&amp;d=identicon&amp;r=g" alt="Barretina's gravatar image" />
+    <p><a href="/users/7802/barretina">Barretina</a><br/>
+    <span class="score" title="40 reputation points">40</span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Barretina has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/28066/">
+                edited
+                <strong>23 Nov '13, 23:50</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-28066">
+    
+        <a name="28410"></a>
+        <div class="comment" id="comment-28410">
+            <div id="post-28410-score" class="comment-score"></div>
+            <div class="comment-text"><p>area=yes seems not to solve the whole problem, as after removing the area=yes the building=yes remains but the thing is shown as a closed line but not as an area in iD (and also potlatch2)</p></div>
+            <div class="comment-info" id="comment-28410-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Nov '13, 21:33)</span>
+                <a class="comment-user userinfo" href="/users/3135/hfst">hfst</a>
+                
+            </div>
+        </div>
+    
+        <a name="28421"></a>
+        <div class="comment" id="comment-28421">
+            <div id="post-28421-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually you can turn an are into a line by adding an area=no tag without loosing info from other tags. Then cut [X], extend [A], join both segments again [C] and recover the area by setting area=yes. You can even remove the area tag if another tag exists that implies area=yes. It worked for me with iD for buildings and landuses.</p></div>
+            <div class="comment-info" id="comment-28421-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Nov '13, 23:43)</span>
+                <a class="comment-user userinfo" href="/users/7802/barretina">Barretina</a>
+                
+            </div>
+        </div>
+    
+        <a name="28917"></a>
+        <div class="comment" id="comment-28917">
+            <div id="post-28917-score" class="comment-score">4</div>
+            <div class="comment-text"><p>OMG, don't use the tag "area=yes/no" in order to help the editor to recognize a polygon or a line. Check this wiki page about "area" http://wiki.openstreetmap.org/wiki/Area</p></div>
+            <div class="comment-info" id="comment-28917-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Dec '13, 10:59)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-28066" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28066-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="25755"></a>
+                    <div id="answer-container-25755" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25755-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25755/up/" rel="nofollow"> </a>
+<div id="post-25755-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25755-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25755/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi: I am not sure if I understand it correctly. So let's say you start to trace a lake at point A, then you add additional points along the shoreline, e.g. B,C,D,E....P,Q and then by mistake you double click on Q and suddenly you have only a part of the lake drawn as an area (let's say roughly a semi-circle drawn, with strait lines between A and Q.) So then you pick existing intermediate nodes between A and Q and "stretch" them  to continue tracing the remaining part of the lake? If this is a case, I have a solution, but before I spent 5 minutes typing, let me know if this is your question, i.e. how to continue tracing the remaining part without a need to 'stretch' existing nodes or start from a scratch.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25755/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Aug '13, 02:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06b9779157ed5d9958611cdc3b6aa4a7?s=32&amp;d=identicon&amp;r=g" alt="slover98's gravatar image" />
+    <p><a href="/users/6453/slover98">slover98</a><br/>
+    <span class="score" title="567 reputation points">567</span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="32 badges"><span class="bronze">&#9679;</span><span class="badgecount">32</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="slover98 has one accepted answer">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25755">
+    
+        <a name="25756"></a>
+        <div class="comment" id="comment-25756">
+            <div id="post-25756-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes! you described it to a tee. Thats exactly what I'm wondering. Also at present I'm using the touch pad on a laptop so to be stretching nodes to continue an area or line, takes much much longer than simply clicking away as you say, A, B, C... or having to restart.</p></div>
+            <div class="comment-info" id="comment-25756-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '13, 02:55)</span>
+                <a class="comment-user userinfo" href="/users/3805/azzitizz">Azzitizz</a>
+                
+            </div>
+        </div>
+    
+        <a name="25757"></a>
+        <div class="comment" id="comment-25757">
+            <div id="post-25757-score" class="comment-score"></div>
+            <div class="comment-text"><p>Great! I will write up and post it shortly.</p></div>
+            <div class="comment-info" id="comment-25757-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '13, 02:58)</span>
+                <a class="comment-user userinfo" href="/users/6453/slover98">slover98</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25755" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25755-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="25758"></a>
+                    <div id="answer-container-25758" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25758-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25758/up/" rel="nofollow"> </a>
+<div id="post-25758-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25758-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25758/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>(I got an idea for this from an answer I received to one of my questions)
+Let’s continue with the example. You have drawn half of the lake as an area A,B,C….Q. In iD editor, tag this as “lake” or “water” whatever is appropriate.</p>
+<p>Then, still in iD, select “area” to draw a new area. Click on Q and continue tracing the second half of the lake. Because it is a new area, let’s say that the node Q is the starting point of the second half, and let’s name it 1. You continue tracing the second half by adding points 2,3,4,….27 until you come to point A, which will be your point 28 and then continue adding one more point, 29, which will be identical with Q thus creating another area (you need to double-click here to create an area).</p>
+<p>Tag this the same as the first half. So now you have drawn the lake which is comprised of two halves joined along the lines A-Q and 1-29. Although you see only one strait line in the middle, imagine that there are actually two lines joined.</p>
+<p>The idea is now to cut these two lines, delete them and then join the two shorelines halves into one.</p>
+<p>This sounds complicated but it is simple. However, you will now need to switch to Potlatch. Before you switch, save the changes. Potlatch is accessed via Edit menu. Once you are in Potlatch, notice a small toolbox in the lower right corner, which has scissors, a trash can etc.</p>
+<p>In essence we need to cut twice at each point. Carefully click on Q to select the node (you may need to click twice, by clicking once, you select the shape, by clicking again, you select the node). Then click on ‘scissors’ to make a cut at Q. Then select the node A by clicking and do the same. Now carefully click on the straight line to select it (it becomes yellow). Then click on the trash can to delete it.</p>
+<p>Repeat the same procedure, as we have now to cut at nodes 1 &amp; 29 (the second line). Click on 1, click on scissors, then the same with 29.</p>
+<p>Carefully click on the straight line to select it and then click on trash can. Both lines should now be gone if you did everything correctly.</p>
+<p>Nov you have the two halves of the lake but they are not connected because we severed the connections at these two nodes. Now you need to select both halves by holding Ctr and carefully clicking on one half and the second half. Once you have both halves selected, click on the chain in the tool box. The chain joins the two halves and now you have the entire lake as one. Just double-check the tag that it does say “lake” . And that’s it.</p>
+<p>I tested it several times, so it should work. May be you can try it on two simple shapes so you figure out how and how many times to click etc. It is much simpler than it sounds.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25758/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Aug '13, 03:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06b9779157ed5d9958611cdc3b6aa4a7?s=32&amp;d=identicon&amp;r=g" alt="slover98's gravatar image" />
+    <p><a href="/users/6453/slover98">slover98</a><br/>
+    <span class="score" title="567 reputation points">567</span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="32 badges"><span class="bronze">&#9679;</span><span class="badgecount">32</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="slover98 has one accepted answer">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25758">
+    
+</div>
+<div id="comment-tools-25758" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25758-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="28063"></a>
+                    <div id="answer-container-28063" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-28063-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28063/up/" rel="nofollow"> </a>
+<div id="post-28063-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-28063-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28063/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Short: use Potlatch :(</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/28063/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Nov '13, 20:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/edad931183a659459f4dcee3173b544a?s=32&amp;d=identicon&amp;r=g" alt="Barretina's gravatar image" />
+    <p><a href="/users/7802/barretina">Barretina</a><br/>
+    <span class="score" title="40 reputation points">40</span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Barretina has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-28063">
+    
+</div>
+<div id="comment-tools-28063" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28063-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="28922"></a>
+                    <div id="answer-container-28922" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-28922-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28922/up/" rel="nofollow"> </a>
+<div id="post-28922-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-28922-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28922/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>(Not 100% sure this is the situation described, but if so...)</p>
+<p>In Potlatch 2, you can select an area, then with it still selected, if you shift-click, it will add points to the way and change the outline to follow the new node. Caveat that sometimes it can give some odd results, depending on the arrangement of nodes, and where you click.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/28922/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Dec '13, 15:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cebf8499a8a3009705e261cfd224e8c0?s=32&amp;d=identicon&amp;r=g" alt="neuhausr's gravatar image" />
+    <p><a href="/users/595/neuhausr">neuhausr</a><br/>
+    <span class="score" title="7460 reputation points"><span class="">7.5k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="70 badges"><span class="silver">&#9679;</span><span class="badgecount">70</span></span><span title="121 badges"><span class="bronze">&#9679;</span><span class="badgecount">121</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="neuhausr has 36 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-28922">
+    
+</div>
+<div id="comment-tools-28922" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28922-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/25707/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='NmdK2TTYZ8mbkGYsUAWykMr6lOqfcVEW' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/area/"
+            class="tag-link-area"
+            title="see questions tagged'area'using tags"
+            rel="tag">area</a> <span class="tag-number">&#215;213</span><br/>
+        
+        <a href="/tags/points/"
+            class="tag-link-points"
+            title="see questions tagged'points'using tags"
+            rel="tag">points</a> <span class="tag-number">&#215;67</span><br/>
+        
+        <a href="/tags/quebec/"
+            class="tag-link-quebec"
+            title="see questions tagged'quebec'using tags"
+            rel="tag">quebec</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 24, 2013, 2:33 a.m.">24 Aug '13, 02:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>14,215 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 9, 2013, 3:32 p.m.">09 Dec '13, 15:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/32968/is-it-possible-to-change-lines-into-an-area-using-id">[closed] Is it possible to change lines into an area using iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45333/how-to-recover-the-tagging-options-for-an-area-after-splitting-that-area">How to recover the tagging options for an area after splitting that area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27594/can-you-change-a-closed-line-into-an-area">Can you change a closed line into an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31627/how-can-i-mark-an-area-as-a-school">How can I mark an area as a school</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33094/point-or-area-which-should-i-use-to-map-a-place">[closed] Point or Area – which should I use to map a place?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33887/when-to-use-points-vs-areas">When to use points vs. areas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2881/big-area-of-national-park-and-limit-of-2000-points">big area of national park and limit of 2000 points</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27591/how-to-combine-several-lines-to-an-area-with-editor-id">How to combine several lines to an area with editor id?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30364/how-do-i-disable-the-area-graphic-when-editing-with-id">How do I disable the &quot;area&quot; graphic when editing with iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47816/how-do-i-name-a-point-i-have-just-added">How do I name a point I have just added?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

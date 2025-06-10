@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Features disappear zooming out - OSM Help</title>
+        <meta name="description" content="Hey, I would like to complete forests in Switzerland with iD. The problem is that the features disappear on a certain zoom level, so I can only see what is not mapped yet when I zoom in, which is very annoying because most forests are already mapped. In order to see what is not mapped yet I need to ..." />
+        <meta name="keywords" content="map_features,zooming" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/72977/features-disappear-zooming-out" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/72977/features-disappear-zooming-out?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ibThHE5keBq7v03YLA8fpwaLVSP6hAq9' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/72977/features-disappear-zooming-out">Features disappear zooming out</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-72977-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/72977/up/" rel="nofollow"> </a>
+<div id="post-72977-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-72977-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/72977/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/72977/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hey,</p>
+<p>I would like to complete forests in Switzerland with iD. The problem is that the features disappear on a certain zoom level, so I can only see what is not mapped yet when I zoom in, which is very annoying because most forests are already mapped. In order to see what is not mapped yet I need to zoom out and look at the map from a wide angle, otherwise I have to scroll through very small regions, which is unfeasible. I tried out JOSM but it's not working... Is this a better app (if it worked)?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/map_features/" class="post-tag tag-link-map_features"
+                                        title="see questions tagged 'map_features'" rel="tag">map_features</a>
+                                
+                                    <a href="/tags/zooming/" class="post-tag tag-link-zooming"
+                                        title="see questions tagged 'zooming'" rel="tag">zooming</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Feb '20, 13:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/19f3c5fc68ae84672f7c625fb063bbc8?s=32&amp;d=identicon&amp;r=g" alt="Huldrich's gravatar image" />
+    <p><a href="/users/17885/huldrich">Huldrich</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Huldrich has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-72977">
+    
+        <a name="72979"></a>
+        <div class="comment" id="comment-72979">
+            <div id="post-72979-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Can you give example URLs where you see things and where you don't?</p>
+
+<p>Have you tried a different tile server?  There are four available directly from openstreetmap.org, and lots of others too.</p></div>
+            <div class="comment-info" id="comment-72979-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Feb '20, 13:23)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="72981"></a>
+        <div class="comment" id="comment-72981">
+            <div id="post-72981-score" class="comment-score">1</div>
+            <div class="comment-text"><p>"I tried out JOSM but it's not working..." are you sure? Can you explain what you did?</p></div>
+            <div class="comment-info" id="comment-72981-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Feb '20, 13:39)</span>
+                <a class="comment-user userinfo" href="/users/16887/kovoschiz">Kovoschiz</a>
+                
+            </div>
+        </div>
+    
+        <a name="72983"></a>
+        <div class="comment" id="comment-72983">
+            <div id="post-72983-score" class="comment-score"></div>
+            <div class="comment-text"><p>Maybe I did not explain myself accurately: I see the map on every zoom level (Bing), but I don't see the lines, for instance, around a forest from a certain zoom level: when the scale in the lower left corner says 100m, I see them, for &gt;400m, I don't see the lines.</p>
+
+<p>As for JOSM, it says: could not enable it or something like this. I have JAVA installed on my PC.</p></div>
+            <div class="comment-info" id="comment-72983-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Feb '20, 14:01)</span>
+                <a class="comment-user userinfo" href="/users/17885/huldrich">Huldrich</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-72977" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-72977-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/72977/features-disappear-zooming-out?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/72977/features-disappear-zooming-out?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/72977/features-disappear-zooming-out?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/72977/features-disappear-zooming-out?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="72994"></a>
+                    <div id="answer-container-72994" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-72994-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/72994/up/" rel="nofollow"> </a>
+<div id="post-72994-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-72994-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/72994/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The data is there whether it is displayed on the map or not. One way to view specific data is to use the  Overpass Turbo tool. <a href="https://overpass-turbo.eu/s/QBf">This query</a> will return features tagged "landuse=forest" for the bounding box of the screen, but you can modify that if you want different tags. Note that if you zoom out too far, it will return too much data. You can use the wizard to modify the query, for example to limit the query to particular geography, like a country, canton, district, etc.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/72994/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Feb '20, 18:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cebf8499a8a3009705e261cfd224e8c0?s=32&amp;d=identicon&amp;r=g" alt="neuhausr's gravatar image" />
+    <p><a href="/users/595/neuhausr">neuhausr</a><br/>
+    <span class="score" title="7460 reputation points"><span class="">7.5k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="70 badges"><span class="silver">&#9679;</span><span class="badgecount">70</span></span><span title="121 badges"><span class="bronze">&#9679;</span><span class="badgecount">121</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="neuhausr has 36 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-72994">
+    
+</div>
+<div id="comment-tools-72994" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-72994-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/72977/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ibThHE5keBq7v03YLA8fpwaLVSP6hAq9' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/72977/features-disappear-zooming-out?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/72977/features-disappear-zooming-out?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/map_features/"
+            class="tag-link-map_features"
+            title="see questions tagged'map_features'using tags"
+            rel="tag">map_features</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/zooming/"
+            class="tag-link-zooming"
+            title="see questions tagged'zooming'using tags"
+            rel="tag">zooming</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 10, 2020, 1:04 p.m.">10 Feb '20, 13:04</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,755 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 10, 2020, 6:15 p.m.">10 Feb '20, 18:15</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8780/potlatch-2-not-loading-map_featuresxml">Potlatch 2 - not loading map_features.xml ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18998/what-map-features-are-the-most-useful">[closed] What map features are the most useful?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21024/how-to-bind-an-icon-with-a-map-feature-in-potlatch-2">How to bind an icon with a map feature in potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34741/can-we-add-a-graphic-design-feature-type">Can we add a graphic design feature type?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37881/what-is-correct-to-do-in-rendering">What is correct to do in rendering?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38883/tags-discrepancy-map-features-vs-editor-vs-qa-tools-osm-inspector">tags discrepancy: map features vs. editor vs. QA tools (OSM Inspector)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47553/map-rendering-differently-at-different-zoom-levels">Map rendering differently at different zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54325/how-to-get-poi-by-gps-coordinateslatitude-and-longitude">How to get POI by GPS coordinates(latitude and longitude)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62268/zooming-rendering-question">[closed] Zooming (rendering) question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65796/querying-the-osm-data-for-peaks-or-other-features-which-are-nearby-a-gpx-track">Querying the OSM data for peaks (or other features) which are nearby a GPX track</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

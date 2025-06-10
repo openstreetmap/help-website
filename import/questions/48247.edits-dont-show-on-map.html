@@ -1,0 +1,742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Edits don&#39;t show on map - OSM Help</title>
+        <meta name="description" content="I am wondering why informations don&#39;t show up on the map. Have a look on https://www.openstreetmap.org/#map=19/30.12778/78.33031 than change into &quot;Edit with ID&quot; now, in the center, a rectangular area becomes visible, named &quot;ghat&quot;.  Why does this not shown in the normal map?" />
+        <meta name="keywords" content="not_shown,rendering,newbie" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/48247/edits-dont-show-on-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/48247/edits-dont-show-on-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='2UvDe2gybWCQpUupXckcb7pxK0g9zL2L' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/48247/edits-dont-show-on-map">Edits don&#39;t show on map</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-48247-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48247/up/" rel="nofollow"> </a>
+<div id="post-48247-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-48247-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48247/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/48247/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am wondering why informations don't show up on the map.</p>
+<p>Have a look on <a href="https://www.openstreetmap.org/#map=19/30.12778/78.33031">https://www.openstreetmap.org/#map=19/30.12778/78.33031</a>
+than change into "Edit with ID"
+now, in the center, a rectangular area becomes visible, named "ghat". </p>
+<p>Why does this not shown in the normal map?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/not_shown/" class="post-tag tag-link-not_shown"
+                                        title="see questions tagged 'not_shown'" rel="tag">not_shown</a>
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/newbie/" class="post-tag tag-link-newbie"
+                                        title="see questions tagged 'newbie'" rel="tag">newbie</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Feb '16, 22:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/11da1a034d8270914de8da1309cce99a?s=32&amp;d=identicon&amp;r=g" alt="nixwiehier's gravatar image" />
+    <p><a href="/users/12005/nixwiehier">nixwiehier</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="nixwiehier has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48247/">
+                edited
+                <strong>20 Feb '16, 22:38</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-48247">
+    
+</div>
+<div id="comment-tools-48247" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48247-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/48247/edits-dont-show-on-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/48247/edits-dont-show-on-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/48247/edits-dont-show-on-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/48247/edits-dont-show-on-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="48248"></a>
+                    <div id="answer-container-48248" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48248-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48248/up/" rel="nofollow"> </a>
+<div id="post-48248-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-48248-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48248/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It (<a href="https://www.openstreetmap.org/way/268605200">your object</a> "ghat") is not shown, because you did not attach <a href="https://wiki.openstreetmap.org/wiki/Tags">tags</a> to the object which are shown on the "normal map". Currently it is only tagged with:</p>
+<ul>
+<li><code>area = yes</code></li>
+<li><code>name = Ghat</code></li>
+</ul>
+<p>So the only facts about this object are that it is an area and that its name is Ghat. But it is not known what this object is. </p>
+<p>What is this object? Is it a building? Is it a market place? Is it... ? See <a href="https://wiki.openstreetmap.org/wiki/Features">Features</a> in our wiki for tag suggestions or just use the search, which is built-in in iD. </p>
+<p>Also see other questions about <a href="/tags/not_shown/?sort=mostvoted">not shown objects</a> and maybe about <a href="https://help.openstreetmap.org/tags/tagging/?sort=mostvoted">tagging</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48248/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Feb '16, 22:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48248/">
+                edited
+                <strong>20 Feb '16, 23:14</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48248">
+    
+        <a name="48249"></a>
+        <div class="comment" id="comment-48249">
+            <div id="post-48249-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, that is understandable. </p>
+
+<p>Now: This thing is a ghat. That means: It is man-made, out of concrete, a sort of giant staircase, made for pilgrims to be able to reach the river to take a holy bath there...</p>
+
+<p>Hmmm. What tag should I apply?</p>
+
+<p>Amenity / Place of worship ? But it's not a temple... People also wash clothes there</p>
+
+<p>Highway / steps ? But you cant walk through; it just leads you down to the banks.</p>
+
+<p>Sports /swimming ? But people don't go for a swim there. They just pray in the water.</p></div>
+            <div class="comment-info" id="comment-48249-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Feb '16, 22:57)</span>
+                <a class="comment-user userinfo" href="/users/12005/nixwiehier">nixwiehier</a>
+                
+            </div>
+        </div>
+    
+        <a name="48250"></a>
+        <div class="comment" id="comment-48250">
+            <div id="post-48250-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/12005/nixwiehier"></a><a href="http://help.openstreetmap.org/users/12005/nixwiehier">@nixwiehier</a>: Thanks! Just for reference: <a href="https://en.wikipedia.org/wiki/Ghat">Wikipedia about "Ghats"</a>.</p>
+
+<p>So, not its name is "Ghat", but it is rather a <a href="https://wiki.openstreetmap.org/wiki/Key:description">description</a> of the object, so first the name tag should be changed into <code>description=Ghat</code>.</p>
+
+<p>If it is a place of worship, <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dplace_of_worship">tag it as such</a>, yes. I think that would be the best thing to do. Also attach a tag for the religion.  I could not find specific tags for ghats. The description tag tells other mappers and end users what this object specifically is, and, hence, if somebody knows better tags they can add them.</p>
+
+<p>You could also add the tag <code>highway=steps</code>, but rather to a separate linear object which is connected to the next footway/street.</p></div>
+            <div class="comment-info" id="comment-48250-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Feb '16, 23:11)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="48252"></a>
+        <div class="comment" id="comment-48252">
+            <div id="post-48252-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks a lot! Tomorrow I'll see, if the changes show up...</p></div>
+            <div class="comment-info" id="comment-48252-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Feb '16, 23:19)</span>
+                <a class="comment-user userinfo" href="/users/12005/nixwiehier">nixwiehier</a>
+                
+            </div>
+        </div>
+    
+        <a name="48254"></a>
+        <div class="comment" id="comment-48254">
+            <div id="post-48254-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/12005/nixwiehier"></a><a href="http://help.openstreetmap.org/users/12005/nixwiehier">@nixwiehier</a>: Not all useful tags show up on our default map, but it is not the only one, there are many other map styles and uses of our data. However, as far as I know places of worship are rendered by our default map. And in fact it is (after your changes) already shown (press ctrl+F5 if not yet for you). Well done! :-)</p>
+
+<p>I would remove "<code>name = Ghat</code>" because it is <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">not its name</a> but only its description.</p>
+
+<p>Regarding <code>highway = steps</code>: I am not sure if it is a good idea to add this tag also to this area object, because – for example – the direction of the stairs is not known this way and because this tag is usually used on linear ways. I would suggest to use <code>area:highway = steps</code> (an <a href="https://www.openstreetmap.org/way/362293328">example</a> and <a href="http://taginfo.openstreetmap.org/tags/area%3Ahighway=steps">current usage</a>) instead.</p></div>
+            <div class="comment-info" id="comment-48254-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Feb '16, 23:45)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48248" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48248-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/48247/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='2UvDe2gybWCQpUupXckcb7pxK0g9zL2L' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48247/edits-dont-show-on-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48247/edits-dont-show-on-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/newbie/"
+            class="tag-link-newbie"
+            title="see questions tagged'newbie'using tags"
+            rel="tag">newbie</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/not_shown/"
+            class="tag-link-not_shown"
+            title="see questions tagged'not_shown'using tags"
+            rel="tag">not_shown</a> <span class="tag-number">&#215;75</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 20, 2016, 10:23 p.m.">20 Feb '16, 22:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,955 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 20, 2016, 11:49 p.m.">20 Feb '16, 23:49</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/19419/my-query-to-retrieve-nodes-and-ways-is-not-returning-all-the-nodes">My query to retrieve nodes and ways is not returning all the nodes...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43239/scale-at-which-an-object-renders">Scale at which an object renders</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5737/newbie-question-about-hiding-elements">Newbie question about hiding elements</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14921/why-are-there-buttons-and-fields-in-the-web-editor-for-a-lot-of-information-that-is-never-used-on-the-map">Why are there buttons and fields in the web editor for a lot of information that is never used on the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25489/why-does-my-cycle-route-not-show-on-the-cycle-map-layer-when-tagged-as-such">Why does my cycle route not show on the cycle map layer when tagged as such?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38994/what-are-the-downsides-of-using-nearly-unused-tags">What are the downsides of using nearly unused tags?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2275/generating-a-political-world-map-with-osm-data">Generating a political world map with osm data.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5440/why-arent-my-uploaded-gps-traces-shown-on-the-maps">Why aren&#39;t my uploaded GPS traces shown on the maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6815/why-isnt-the-poi-that-i-added-showing-up-on-the-map">Why isn&#39;t the POI that I added showing up on the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44956/borough-labels-dont-render">Borough labels don&#39;t render</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

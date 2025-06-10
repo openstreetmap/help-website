@@ -1,0 +1,791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>osm2pgsql import - disk space running out during index creation - OSM Help</title>
+        <meta name="description" content="When I am trying to import a Europe pbf file with osm2pgsql, my diskspace keeps running full during the index creation.  After the import of nodes, ways and relations the tablespace of the database has a size of 233 GB and there is still 244GB disk space available. But during index creation, these 2..." />
+        <meta name="keywords" content="import,index,osm2pgsql,disk_usage" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/52672/osm2pgsql-import-disk-space-running-out-during-index-creation" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52672/osm2pgsql-import-disk-space-running-out-during-index-creation?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='k07yR1xhGLfsWyHMAeU2BQ97FohckSpN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52672/osm2pgsql-import-disk-space-running-out-during-index-creation">osm2pgsql import - disk space running out during index creation</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52672-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52672/up/" rel="nofollow"> </a>
+<div id="post-52672-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52672-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52672/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52672/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When I am trying to import a Europe pbf file with osm2pgsql, my diskspace keeps running full during the index creation. </p>
+<p>After the import of nodes, ways and relations the tablespace of the database has a size of 233 GB and there is still 244GB disk space available. But during index creation, these 244GB are completely used up. When I imported a europe data set one year ago, the disk space was enough for the database + the prerendered tiles.</p>
+<p>Any suggestions as to why the index creation might use up so much disk space this time? Is this normal?</p>
+<p>I'm using the following <strong>import command</strong>:</p>
+<pre><code>nohup osm2pgsql ~/osm/europe-latest.osm.pbf --create --slim --database gis --number-processes=4 --cache=22000 --multi-geometry --flat-nodes ~/osm/flat-nodes.bin
+</code></pre>
+<p>And the following <strong>postgres config</strong>:</p>
+<pre><code>shared_buffers 8 MB
+work_mem 1 MB
+maintenance_work_mem 4096 MB
+fsync off
+autovacuum off
+checkpoint_segments 60
+</code></pre>
+<p>My Stack: Mod_tile, renderd, mapnik, osm2pgsql and a postgresql/postgis database.</p>
+<p>Maybe it's worth mentioning that the system has 4CPU and 16GB RAM, with another 16GB of SWAP space.</p>
+<p>This is the <strong>error message</strong> in the log file:</p>
+<pre><code>Creating geometry index on  planet_osm_polygon
+pthread_join() returned exception: Throw location unknown (consider using BOOST_THROW_EXCEPTION)
+Dynamic exception type: boost::exception_detail::clone_impl&lt;boost::exception_detail::current_exception_std_exception_wrapper&lt;std::runtime_error&gt; &gt;
+std::exception::what: CREATE INDEX planet_osm_polygon_index ON planet_osm_polygon USING GIST (way)   failed: ERROR:  could not extend file "base/16385/8687919.15": No space left on device
+HINT:  Check free disk space.
+St13runtime_error
+Error occurred, cleaning up
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/import/" class="post-tag tag-link-import"
+                                        title="see questions tagged 'import'" rel="tag">import</a>
+                                
+                                    <a href="/tags/index/" class="post-tag tag-link-index"
+                                        title="see questions tagged 'index'" rel="tag">index</a>
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                                    <a href="/tags/disk_usage/" class="post-tag tag-link-disk_usage"
+                                        title="see questions tagged 'disk_usage'" rel="tag">disk_usage</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Oct '16, 09:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0c518db7e694b9e6d2b7f092621a3d4d?s=32&amp;d=identicon&amp;r=g" alt="cosmo42's gravatar image" />
+    <p><a href="/users/12910/cosmo42">cosmo42</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cosmo42 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52672">
+    
+</div>
+<div id="comment-tools-52672" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52672-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52672/osm2pgsql-import-disk-space-running-out-during-index-creation?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52672/osm2pgsql-import-disk-space-running-out-during-index-creation?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52672/osm2pgsql-import-disk-space-running-out-during-index-creation?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52672/osm2pgsql-import-disk-space-running-out-during-index-creation?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52673"></a>
+                    <div id="answer-container-52673" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52673-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52673/up/" rel="nofollow"> </a>
+<div id="post-52673-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-52673-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52673/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The total disk space used by all indexes on an Europe import should be about 150 GB but I can't say how much space might be temporarily used in addition to that. If you don't need the capability to update your data with incremental updates, add the <code>--drop</code> flag to avoid building unnecessary indexes. </p>
+<p>You could also create your PostGIS tablespace on a compressed ZFS volume which will not only give you about twice the storage space but in all likelihood even speed up database operations. See <a href="http://www.paulnorman.ca/blog/2014/11/zfs-settings-for-osm2pgsql/">http://www.paulnorman.ca/blog/2014/11/zfs-settings-for-osm2pgsql/</a> for examples.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52673/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Oct '16, 11:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52673">
+    
+        <a name="52707"></a>
+        <div class="comment" id="comment-52707">
+            <div id="post-52707-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the hint. Unfortunately I need to run updates later. 
+Could it have an effect that autvacuum ist turned off?</p></div>
+            <div class="comment-info" id="comment-52707-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 08:11)</span>
+                <a class="comment-user userinfo" href="/users/12910/cosmo42">cosmo42</a>
+                
+            </div>
+        </div>
+    
+        <a name="52710"></a>
+        <div class="comment" id="comment-52710">
+            <div id="post-52710-score" class="comment-score"></div>
+            <div class="comment-text"><p>No, autovacuum turned off should only be a problem for updates to an existing database, not for the initial import.</p></div>
+            <div class="comment-info" id="comment-52710-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 08:28)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52673" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52673-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="52808"></a>
+                    <div id="answer-container-52808" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52808-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52808/up/" rel="nofollow"> </a>
+<div id="post-52808-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52808-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52808/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Turning on autovacuum did the trick for me.
+During index creation 204 GB were used (instead of completely using up the 244 GB of left disk space). The indexes now take up about 131 GB.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52808/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Nov '16, 09:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0c518db7e694b9e6d2b7f092621a3d4d?s=32&amp;d=identicon&amp;r=g" alt="cosmo42's gravatar image" />
+    <p><a href="/users/12910/cosmo42">cosmo42</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cosmo42 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52808">
+    
+        <a name="52809"></a>
+        <div class="comment" id="comment-52809">
+            <div id="post-52809-score" class="comment-score"></div>
+            <div class="comment-text"><p>Since most guides for tuning of OSM postgres configs state that autovacuum should be turned off, I think it is worth mentioning that autovacuum could be necessary if disk space is scarce. Also I found no drawbacks in speed with autovacuum turned on - actually the overall import time was a bit faster.</p></div>
+            <div class="comment-info" id="comment-52809-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Nov '16, 09:23)</span>
+                <a class="comment-user userinfo" href="/users/12910/cosmo42">cosmo42</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52808" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52808-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52672/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='k07yR1xhGLfsWyHMAeU2BQ97FohckSpN' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52672/osm2pgsql-import-disk-space-running-out-during-index-creation?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52672/osm2pgsql-import-disk-space-running-out-during-index-creation?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/import/"
+            class="tag-link-import"
+            title="see questions tagged'import'using tags"
+            rel="tag">import</a> <span class="tag-number">&#215;196</span><br/>
+        
+        <a href="/tags/index/"
+            class="tag-link-index"
+            title="see questions tagged'index'using tags"
+            rel="tag">index</a> <span class="tag-number">&#215;17</span><br/>
+        
+        <a href="/tags/disk_usage/"
+            class="tag-link-disk_usage"
+            title="see questions tagged'disk_usage'using tags"
+            rel="tag">disk_usage</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 25, 2016, 9:58 a.m.">25 Oct '16, 09:58</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,891 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 3, 2016, 9:23 a.m.">03 Nov '16, 09:23</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/72485/osm2pgsql-slim-drop-import-running-out-of-disk-space-1tb">osm2pgsql --slim --drop import running out of disk space ( 1TB)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48349/not-correct-content-of-nameen-column">Not correct content of &#39;name:en&#39; column</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8322/osm2pgsql-import-getting-killed-as-relations-are-processed">osm2pgsql import getting killed as relations are processed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39109/osm2pgsql-shows-committing-transaction-for-planet_osm_pointwaring-there-is-on-transaction-in-progress-then-the-progres-shut-down">[closed] osm2pgsql shows &quot;Committing transaction for planet_osm_point&quot;,&quot;WARING there is on transaction in progress&quot; then the progres shut down</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42186/restarting-osm2pqsql-full-planet-import-because-of-too-low-cache-setting-import-runs-for-6-days-already">Restarting osm2pqsql full planet import because of too low --cache setting? (import runs for 6 days already)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46544/osm2pgsql-import-getting-killed">osm2pgsql import getting killed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed">Why is my import of planet-latest.osm KILLED?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11687/osm2pgsql-performance-evaluation">osm2pgsql performance evaluation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24850/failed-to-allocate-space-for-node-cache-file">Failed to allocate space for node cache file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39111/how-much-ram-does-osm2pgsql-required-in-case-the-progress-wont-be-killed-full-planet-import">How much RAM does osm2pgsql required in case  the progress won&#39;t be killed?  (full planet import)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

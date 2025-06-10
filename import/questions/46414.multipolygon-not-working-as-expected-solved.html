@@ -1,0 +1,836 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>multipolygon not working as expected [solved] - OSM Help</title>
+        <meta name="description" content="Hi there, I have added some water elements in an area of meadows (grass-type vegetation). The larger area is marked with way 346287712. This way has a relation: multipolygon 5640835. The selected role is &#39;outer&#39;. The relation has the following two keys/values: landuse/meadow and type/multipolygon. T..." />
+        <meta name="keywords" content="water,multipolygon" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/46414/multipolygon-not-working-as-expected-solved" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/46414/multipolygon-not-working-as-expected-solved?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ZSgYpblpbLre1MG3wKFIWn1bHwdcO2ON' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/46414/multipolygon-not-working-as-expected-solved">multipolygon not working as expected [solved]</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-46414-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46414/up/" rel="nofollow"> </a>
+<div id="post-46414-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-46414-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46414/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/46414/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi there, I have added some water elements in an area of meadows (grass-type vegetation).</p>
+<p>The larger area is marked with way <a href="http://www.openstreetmap.org/way/346287712">346287712</a>. This way has a relation: multipolygon <a href="http://www.openstreetmap.org/relation/5640835">5640835</a>. The selected role is 'outer'. The relation has the following two keys/values: landuse/meadow and type/multipolygon. This part seems to work, as can be seen here:</p>
+<p><a href="http://www.openstreetmap.org/#map=16/52.2843/5.5249">link to the map</a></p>
+<p>Inside of the multipolygon I created a number of lakes. The lake that is most south ('Zuiderzee') has an island in it, so I had to create <a href="http://www.openstreetmap.org/relation/5640834">another relation</a> (multopolygon) for the lake. The island is rendered correctly. The water is also rendered, but it has the small tree icons through it, just like the surrounding land.</p>
+<p>So my question is: how do I make the water completely blue, without the small tree icons in it?</p>
+<p>I have already tried making the water without any relations, this can be seen in the third lake from the south called 't Aelmare. This brings up the same problem.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/water/" class="post-tag tag-link-water"
+                                        title="see questions tagged 'water'" rel="tag">water</a>
+                                
+                                    <a href="/tags/multipolygon/" class="post-tag tag-link-multipolygon"
+                                        title="see questions tagged 'multipolygon'" rel="tag">multipolygon</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Nov '15, 16:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f02efb083fed246097e8c87f5b92be99?s=32&amp;d=identicon&amp;r=g" alt="_Ari's gravatar image" />
+    <p><a href="/users/11658/_ari">_Ari</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="_Ari has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46414/">
+                edited
+                <strong>10 Oct '16, 17:11</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-46414">
+    
+        <a name="46416"></a>
+        <div class="comment" id="comment-46416">
+            <div id="post-46416-score" class="comment-score"></div>
+            <div class="comment-text"><p>Your edit is recent, it will take time for it to render, if time does not fix it maybe this is the answer---
+ <a href="http://wiki.openstreetmap.org/wiki/Multipolygon_Examples#Forest_with_two_lakes_and_an_island_.28Nested_multipolygons.29">http://wiki.openstreetmap.org/wiki/Multipolygon_Examples#Forest_with_two_lakes_and_an_island_.28Nested_multipolygons.29</a></p></div>
+            <div class="comment-info" id="comment-46416-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Nov '15, 19:58)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="46435"></a>
+        <div class="comment" id="comment-46435">
+            <div id="post-46435-score" class="comment-score"></div>
+            <div class="comment-text"><p>Relation 5640835 has no landuse value, I only see its type. That said, there are lots of trees everywhere, and I don't quite get where they're coming from. Probably, as andy said, time will fix it.</p></div>
+            <div class="comment-info" id="comment-46435-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Nov '15, 12:56)</span>
+                <a class="comment-user userinfo" href="/users/10142/joost-schouppe">joost schouppe</a>
+                
+            </div>
+        </div>
+    
+        <a name="46450"></a>
+        <div class="comment" id="comment-46450">
+            <div id="post-46450-score" class="comment-score"></div>
+            <div class="comment-text"><p>Time didn't fix it, there must still be something wrong with the multipolygon relations. The lakes still contain trees.</p></div>
+            <div class="comment-info" id="comment-46450-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '15, 19:14)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52423"></a>
+        <div class="comment" id="comment-52423">
+            <div id="post-52423-score" class="comment-score"></div>
+            <div class="comment-text"><p>This place is a mystery.
+Something is seriously wrong there with the mapnik-carto tiles, almost as if they were write-protected!? Since about a YEAR, despite changes in the meantime. Anyone can figure this out?  </p>
+
+<p><a href="http://mc.bbbike.org/mc/?lat=52.2871906&amp;lon=5.52683644&amp;zoom=15&amp;num=3&amp;mt0=mapnik&amp;mt1=osmfr&amp;mt2=osm-no-labels">http://mc.bbbike.org/mc/?lat=52.2871906&amp;lon=5.52683644&amp;zoom=15&amp;num=3&amp;mt0=mapnik&amp;mt1=osmfr&amp;mt2=osm-no-labels</a></p>
+
+<p>About a year ago the old forest area was completely restructured to install a new campsite, Scoutinglandgoed Zeewolde. Big parts of the forest cut down, new lakes created, tracks and paths are partly different, and OSM was updated accordingly. But mapnik won't show any of it, no matter what. </p>
+
+<p>Cannot find anything wrong with the areas there, and doubt there is. It's not only the areas, but even the tracks and paths are still cached old, for example a way going through the middle of a new lake. And other renderers do show the updates correctly, no prob.</p></div>
+            <div class="comment-info" id="comment-52423-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 15:18)</span>
+                <a class="comment-user userinfo" href="/users/12848/wycbtma">wycbtma</a>
+                
+            </div>
+        </div>
+    
+        <a name="52424"></a>
+        <div class="comment not_top_scorer" id="comment-52424">
+            <div id="post-52424-score" class="comment-score"></div>
+            <div class="comment-text"><p>The weirdest thing is: I did already get mapnik to update the tiles correctly, some weeks ago. After a major struggle, and when nothing helped ending up trying brute force (new fake stream all over the area, updated tiles, some minutes later deleted the fake stream again, updated tiles - all looked fine then). But today came across the area again and was shocked: it had actually RESTORED the OLD tiles again! Just for testing tried the fake-stream method again, but this time didn't help a thing anymore. The stream was shown, but the area behind it NOT updated any more. Have deleted all traces of my fixing attemps again. </p>
+
+<p>No idea if it would help to delete and then rebuild the new AREAs there again. But do not want to get involved any deeper there myself, having no local knowledge. Especially not as long as Bing still shows the old forest too.<br>
+But cannot imagine it has anything to do with the data anyway, must be some server prob.</p></div>
+            <div class="comment-info" id="comment-52424-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 15:18)</span>
+                <a class="comment-user userinfo" href="/users/12848/wycbtma">wycbtma</a>
+                
+            </div>
+        </div>
+    
+        <a name="52425"></a>
+        <div class="comment not_top_scorer" id="comment-52425">
+            <div id="post-52425-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is this the "way going through the middle of a new lake"? <a href="http://www.openstreetmap.org/?mlat=52.28860&amp;mlon=5.52322#map=17/52.28860/5.52322">http://www.openstreetmap.org/?mlat=52.28860&amp;mlon=5.52322#map=17/52.28860/5.52322</a></p>
+
+<p>I think that's a typical database bug. Something went wrong during the update or the diffs were broken. Now the way remains in the database until someone touches it again or until a complete re-import occurs. Here, touching the way means doing an undelete and then deleting it again. A re-import probably won't happen any time soon since it is very ressource-intensive.</p></div>
+            <div class="comment-info" id="comment-52425-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 15:34)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52427"></a>
+        <div class="comment not_top_scorer" id="comment-52427">
+            <div id="post-52427-score" class="comment-score"></div>
+            <div class="comment-text"><p>So... How long will it probably take for the bug to crawl out of the database if things keep going as usual?</p>
+
+<p>Or what options do we have to chase the bug ourselves? I don't mind doing something to get this sorted, if I need what to do.</p></div>
+            <div class="comment-info" id="comment-52427-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 20:29)</span>
+                <a class="comment-user userinfo" href="/users/11658/_ari">_Ari</a>
+                
+            </div>
+        </div>
+    
+        <a name="52429"></a>
+        <div class="comment not_top_scorer" id="comment-52429">
+            <div id="post-52429-score" class="comment-score"></div>
+            <div class="comment-text"><p>As explained in my previous comment it will stay in the database until the way gets modified again or a re-import occurs.</p>
+
+<p>The way in question seems to be this one: <a href="https://www.openstreetmap.org/way/314866940">https://www.openstreetmap.org/way/314866940</a> Maybe someone can revert and delete it again. I tried to do it a few times but I'm always getting timeouts.</p></div>
+            <div class="comment-info" id="comment-52429-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 21:33)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52444"></a>
+        <div class="comment" id="comment-52444">
+            <div id="post-52444-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I've undeleted and re-deleted way 314866940. Rendering seems to be fine now for this way, i.e. it disappeared. You may have to clear your browser cache first. Afterwards I did the same for the forest (way 188676289). Let's see if this is enough.</p></div>
+            <div class="comment-info" id="comment-52444-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '16, 16:20)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46414" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46414-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/46414/multipolygon-not-working-as-expected-solved?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/46414/multipolygon-not-working-as-expected-solved?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/46414/multipolygon-not-working-as-expected-solved?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/46414/multipolygon-not-working-as-expected-solved?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52446"></a>
+                    <div id="answer-container-52446" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52446-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52446/up/" rel="nofollow"> </a>
+<div id="post-52446-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52446-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52446/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The trees are gone, thank you scai! Nice to see that this problem is resolved.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52446/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Oct '16, 17:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f02efb083fed246097e8c87f5b92be99?s=32&amp;d=identicon&amp;r=g" alt="_Ari's gravatar image" />
+    <p><a href="/users/11658/_ari">_Ari</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="_Ari has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52446/">
+                edited
+                <strong>10 Oct '16, 17:10</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52446">
+    
+        <a name="52448"></a>
+        <div class="comment" id="comment-52448">
+            <div id="post-52448-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, but the new forest still doesn't get rendered compared to the other layers. Seems like the whole changeset needs to be reverted and re-applied.</p>
+
+<p>By the way, please use the "add new comment" button if you just want to add a comment instead of an answer (= a solution) to your question.</p></div>
+            <div class="comment-info" id="comment-52448-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '16, 17:18)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52446" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52446-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/46414/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ZSgYpblpbLre1MG3wKFIWn1bHwdcO2ON' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46414/multipolygon-not-working-as-expected-solved?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46414/multipolygon-not-working-as-expected-solved?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/multipolygon/"
+            class="tag-link-multipolygon"
+            title="see questions tagged'multipolygon'using tags"
+            rel="tag">multipolygon</a> <span class="tag-number">&#215;132</span><br/>
+        
+        <a href="/tags/water/"
+            class="tag-link-water"
+            title="see questions tagged'water'using tags"
+            rel="tag">water</a> <span class="tag-number">&#215;79</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 5, 2015, 4:19 p.m.">05 Nov '15, 16:19</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,968 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 10, 2016, 5:18 p.m.">10 Oct '16, 17:18</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/23080/creating-and-splitting-a-multipolygon">Creating and splitting a multipolygon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13023/waterland-and-multipolygons">water/land and multipolygons</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23033/how-do-you-properly-map-water-bodies">How do you properly map water bodies?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73245/cant-see-serpentine-lake-in-london-with-my-query">Can&#39;t see Serpentine Lake in London with my query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18764/doubtproblem-with-embankment-and-multipolygon">Doubt/problem with embankment and multipolygon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3462/multipolygon-innerouter">multipolygon inner/outer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2590/tagging-disused-quarries">Tagging disused quarries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1849/meer-blau-farben-garmin">Meer blau färben (Garmin)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4340/isolating-buildings-and-all-member-ways-using-the-filter-objects-tool">Isolating buildings (and all member ways) using the Filter objects tool</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2516/why-does-a-lake-does-not-show-as-such-in-the-view">Why does a lake does not show as such in the view?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

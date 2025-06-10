@@ -1,0 +1,825 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How can I edit OSM with my iPhone? - OSM Help</title>
+        <meta name="description" content="I would like to edit/contribute to OSM with my iPhone. How can I best do that?" />
+        <meta name="keywords" content="editing,iphone" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/9905/how-can-i-edit-osm-with-my-iphone" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/9905/how-can-i-edit-osm-with-my-iphone?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='4zruClmuo7B39vejrSDKgn1TH5CrmtD3' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/9905/how-can-i-edit-osm-with-my-iphone">How can I edit OSM with my iPhone?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-9905-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9905/up/" rel="nofollow"> </a>
+<div id="post-9905-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-9905-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9905/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/9905/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I would like to edit/contribute to OSM with my iPhone. How can I best do that?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/iphone/" class="post-tag tag-link-iphone"
+                                        title="see questions tagged 'iphone'" rel="tag">iphone</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Jan '12, 22:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d701574494c89da3d08a67bf986b3ebb?s=32&amp;d=identicon&amp;r=g" alt="Zameer%20Manji's gravatar image" />
+    <p><a href="/users/2642/zameer-manji">Zameer Manji</a><br/>
+    <span class="score" title="91 reputation points">91</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Zameer Manji has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-9905">
+    
+</div>
+<div id="comment-tools-9905" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9905-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/9905/how-can-i-edit-osm-with-my-iphone?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/9905/how-can-i-edit-osm-with-my-iphone?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/9905/how-can-i-edit-osm-with-my-iphone?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/9905/how-can-i-edit-osm-with-my-iphone?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="25039"></a>
+                    <div id="answer-container-25039" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25039-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25039/up/" rel="nofollow"> </a>
+<div id="post-25039-score" class="post-score"
+    title="current number of votes">
+    10
+</div>
+<a id="post-25039-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25039/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Zameer Manji has selected this answer as the correct answer"
+        href="/accept_answer/25039/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are various ways of using an iPhone in your mapping workflow. Rather than attempting to do full editing with it. Personally I often use my iPhone as a camera. With geo-tagging enabled, I capture data by taking lots of photos (<em>much</em> quicker than trying to type in tags on the move) and then back at home I use the <a href="http://wiki.openstreetmap.org/wiki/Photomapping_In_JOSM">JOSM photo mapping features</a>. You might also try to record a <a href="https://help.openstreetmap.org/questions/3675/gps-trace-on-iphone">GPS trace on an iPhone</a></p>
+<p>But if you're more interested in how to edit OpenStreetMap directly (the full mapping workflow) while on the move, there's couple of free iPhone/iPad apps which popped up over the past year, allowing you place new data or edit existing elements on a bing aerial imagery background:</p>
+<p><strong><a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=592990211&amp;mt=8">Go Map!!</a></strong> is a fully functional editor app, by which I mean you can edit geometry as well as node features. Geometry editing on a small touchscreen seems a bit nuts, but this app is surprisingly intuitive and usable . </p>
+<p><img alt="alt text" src="http://wiki.openstreetmap.org/w/images/thumb/2/21/Go_Map_Buildings_and_Selection.png/133px-Go_Map_Buildings_and_Selection.png"></p>
+<p><strong><a href="https://itunes.apple.com/us/app/pushpin-osm/id565850639?mt=8">PushpinOSM</a></strong> is limited to editing/adding points of interest data, although it does permit editing tags where a POI is represented as a way. This simplification makes things easier, and it's fine for adding in your local restaurant, and those kinds of simple changes.</p>
+<p><img alt="alt text" src="http://wiki.openstreetmap.org/w/images/thumb/7/74/Pushpin_OSM_screenshot.png/133px-Pushpin_OSM_screenshot.png"></p>
+<p>You should (in theory at least) be able to use the new <a href="http://wiki.openstreetmap.org/wiki/ID">iD editor</a>, just on the OpenStreetMap.org homepage in your mobile browser. Maybe this works better on an iPad, but on an iPhone it has some screen layout problems. Generally the above native apps work better. </p>
+<p>We have a <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">wiki list of Apple iOS apps</a> including a <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS#OpenStreetMap_editing_features">section on editing features.</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25039/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Aug '13, 16:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25039">
+    
+        <a name="25045"></a>
+        <div class="comment" id="comment-25045">
+            <div id="post-25045-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/107/harry-wood">@Harry Wood</a>: Thanks for the overview, I'll try them out when I get the chance. The PushpinOSM application seems to be perfect for quickly adding lots of POIs.</p></div>
+            <div class="comment-info" id="comment-25045-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Aug '13, 18:07)</span>
+                <a class="comment-user userinfo" href="/users/2642/zameer-manji">Zameer Manji</a>
+                
+            </div>
+        </div>
+    
+        <a name="54285"></a>
+        <div class="comment" id="comment-54285">
+            <div id="post-54285-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hi,</p>
+
+<p>I am trying to use Go Map!! to survey some neighborhood with my smartphone anyway I noticed that not all elements are available. There are cafes, bar, parks, etc. but not internet_cafe, coworking and other elements available in the standard in-browser editor in OSM. Can you confirm me this limit of the app? If yes, do you know other app where all OSM universe is available for uploading directly from smartphone?</p>
+
+<p>Thanks!
+Jacopo  </p></div>
+            <div class="comment-info" id="comment-54285-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '17, 16:09)</span>
+                <a class="comment-user userinfo" href="/users/13249/jprimav">jprimav</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25039" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25039-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="9909"></a>
+                    <div id="answer-container-9909" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-9909-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9909/up/" rel="nofollow"> </a>
+<div id="post-9909-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-9909-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9909/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Although I am not an iPhone user, the overall approach is similar.  You'll need applications that allow you capture tracks and waypoint data on the iPhone.  Use this page to get an overview of the tools that are out there.</p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">http://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
+<p>You may want to use tools like GPSVisualizer, GPSBabel to review and edit your data.</p>
+<p>Thereafter the primary tools for uploading and editing OSM are Potlach and JOSM, both well described in the above wiki.  This type of work is normally suited a desktop/PC/Mac activity, rather than a smart phone.</p>
+<p>Andy</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/9909/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Jan '12, 03:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/167b15c0b88e15fe2c5907f9c699dd9c?s=32&amp;d=identicon&amp;r=g" alt="Andy%20F's gravatar image" />
+    <p><a href="/users/2617/andy-f">Andy F</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andy F has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-9909">
+    
+        <a name="9917"></a>
+        <div class="comment" id="comment-9917">
+            <div id="post-9917-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are also smartphone apps that allow limited OSM editing (not just track recording), typically to add POIs. Mapzen is one example I know of, but the wiki link above lists 3 others.</p>
+
+<p>Same disclaimer here: I'm not mapping using a smartphone.</p></div>
+            <div class="comment-info" id="comment-9917-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '12, 10:28)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="9937"></a>
+        <div class="comment" id="comment-9937">
+            <div id="post-9937-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you know what software on the iPhone can be used to record tracks?</p></div>
+            <div class="comment-info" id="comment-9937-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jan '12, 14:22)</span>
+                <a class="comment-user userinfo" href="/users/2642/zameer-manji">Zameer Manji</a>
+                
+            </div>
+        </div>
+    
+        <a name="9938"></a>
+        <div class="comment" id="comment-9938">
+            <div id="post-9938-score" class="comment-score">1</div>
+            <div class="comment-text"><p>There's a list on <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">http://wiki.openstreetmap.org/wiki/Apple_iOS</a> - see the "make track" column,</p></div>
+            <div class="comment-info" id="comment-9938-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jan '12, 14:30)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25040"></a>
+        <div class="comment" id="comment-25040">
+            <div id="post-25040-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Nowadays there's also a couple pretty nice apps for doing editing directly while on the move. See my answer.  There's another question here about recording GPS traces on iphone <a href="https://help.openstreetmap.org/questions/3675/gps-trace-on-iphone">https://help.openstreetmap.org/questions/3675/gps-trace-on-iphone</a>  (The answer to which is still quite unsatisfactory at the moment actually)</p></div>
+            <div class="comment-info" id="comment-25040-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Aug '13, 16:03)</span>
+                <a class="comment-user userinfo" href="/users/107/harry-wood">Harry Wood</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9909" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9909-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/9905/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='4zruClmuo7B39vejrSDKgn1TH5CrmtD3' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9905/how-can-i-edit-osm-with-my-iphone?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9905/how-can-i-edit-osm-with-my-iphone?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/iphone/"
+            class="tag-link-iphone"
+            title="see questions tagged'iphone'using tags"
+            rel="tag">iphone</a> <span class="tag-number">&#215;29</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 11, 2012, 10:45 p.m.">11 Jan '12, 22:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>16,721 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 25, 2017, 8:43 p.m.">25 Jan '17, 20:43</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/60/what-is-the-difference-between-live-and-with-save-mode-in-map-edit-with-potlatch">What is the difference between live and with save mode in map edit (with Potlatch)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don&#39;t show up on the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/206/iphone-osm-apps-for-hikers">iPhone OSM apps for hikers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/216/what-should-i-do-about-vandalism">What should I do about vandalism?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/231/how-can-i-edit-all-ways-with-certain-tag-in-an-area">How can I edit all ways with certain tag in an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/497/how-can-i-edit-gpx-tracks-in-potlatch-2">How can I edit GPX tracks in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/954/how-do-i-set-my-home-location">How do I set my home location?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch">How do I ensure that ways are connected in Potlatch ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

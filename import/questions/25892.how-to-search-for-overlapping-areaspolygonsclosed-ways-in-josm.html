@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to search for overlapping areas/polygons/closed ways in JOSM? - OSM Help</title>
+        <meta name="description" content="Is it possible to search for overlapping areas/polygons/closed ways in JOSM? I just found that searching for way closed finds all the areas/polygons that are closed ways (e.g. buildings, landuse areas, roundabouts that are made of one way, etc.). But how to find only the ones, that overlap each othe..." />
+        <meta name="keywords" content="closed_way,josm,polygon,overlap,area" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/25892/how-to-search-for-overlapping-areaspolygonsclosed-ways-in-josm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/25892/how-to-search-for-overlapping-areaspolygonsclosed-ways-in-josm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='IgEIRUzrMlO5f5Go4r33AJg2htu538ow' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/25892/how-to-search-for-overlapping-areaspolygonsclosed-ways-in-josm">How to search for overlapping areas/polygons/closed ways in JOSM?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-25892-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25892/up/" rel="nofollow"> </a>
+<div id="post-25892-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-25892-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25892/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/25892/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is it possible to search for overlapping areas/polygons/closed ways in JOSM?</p>
+<p>I just found that searching for <code>way closed</code> finds all the areas/polygons that are closed ways (e.g. buildings, landuse areas, roundabouts that are made of one way, etc.). But how to find only the ones, that overlap each other?</p>
+<p>I want to use this, for searching overlapping landuse polygons.</p>
+<p>JOSM had a documentation for it’s search function: <a href="http://wiki.openstreetmap.org/wiki/JOSM/Search_function">http://wiki.openstreetmap.org/wiki/JOSM/Search_function</a>
+That was only two or three weeks ago. Now it is gone. :-(</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/closed_way/" class="post-tag tag-link-closed_way"
+                                        title="see questions tagged 'closed_way'" rel="tag">closed_way</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/polygon/" class="post-tag tag-link-polygon"
+                                        title="see questions tagged 'polygon'" rel="tag">polygon</a>
+                                
+                                    <a href="/tags/overlap/" class="post-tag tag-link-overlap"
+                                        title="see questions tagged 'overlap'" rel="tag">overlap</a>
+                                
+                                    <a href="/tags/area/" class="post-tag tag-link-area"
+                                        title="see questions tagged 'area'" rel="tag">area</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Aug '13, 12:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/793c9f0cfb9f3cc6001d73f127644c67?s=32&amp;d=identicon&amp;r=g" alt="erik's gravatar image" />
+    <p><a href="/users/5517/erik">erik</a><br/>
+    <span class="score" title="558 reputation points">558</span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="34 badges"><span class="bronze">&#9679;</span><span class="badgecount">34</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="erik has one accepted answer">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/25892/">
+                edited
+                <strong>29 Aug '13, 11:12</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0c12497903c6f3b2dd9f4d87deb127de?s=32&amp;d=identicon&amp;r=g" alt="MagicFab's gravatar image" />
+            <p><a href="/users/138/magicfab">MagicFab</a><br/>
+            <span class="score" title="935 reputation points">935</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-25892">
+    
+        <a name="25895"></a>
+        <div class="comment" id="comment-25895">
+            <div id="post-25895-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="//wiki.openstreetmap.org/wiki/JOSM/Search_function">JOSM/Search_function</a> is still there.</p></div>
+            <div class="comment-info" id="comment-25895-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Aug '13, 12:20)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25896"></a>
+        <div class="comment" id="comment-25896">
+            <div id="post-25896-score" class="comment-score"></div>
+            <div class="comment-text"><p>??? What? When I was trying it an hour ago, it did not work. Strange. The wiki seems broken some times. The wiki documentation does not mention how to search for overlapping polygons.</p></div>
+            <div class="comment-info" id="comment-25896-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Aug '13, 13:06)</span>
+                <a class="comment-user userinfo" href="/users/5517/erik">erik</a>
+                
+            </div>
+        </div>
+    
+        <a name="25915"></a>
+        <div class="comment" id="comment-25915">
+            <div id="post-25915-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not sure but JOSM validator should detect polygons overlaps, especially for buildings. Maybe try to run the validator ?</p></div>
+            <div class="comment-info" id="comment-25915-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Aug '13, 11:07)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25892" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25892-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/25892/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='IgEIRUzrMlO5f5Go4r33AJg2htu538ow' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25892/how-to-search-for-overlapping-areaspolygonsclosed-ways-in-josm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25892/how-to-search-for-overlapping-areaspolygonsclosed-ways-in-josm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/area/"
+            class="tag-link-area"
+            title="see questions tagged'area'using tags"
+            rel="tag">area</a> <span class="tag-number">&#215;213</span><br/>
+        
+        <a href="/tags/polygon/"
+            class="tag-link-polygon"
+            title="see questions tagged'polygon'using tags"
+            rel="tag">polygon</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/overlap/"
+            class="tag-link-overlap"
+            title="see questions tagged'overlap'using tags"
+            rel="tag">overlap</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/closed_way/"
+            class="tag-link-closed_way"
+            title="see questions tagged'closed_way'using tags"
+            rel="tag">closed_way</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 28, 2013, 12:07 p.m.">28 Aug '13, 12:07</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,738 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 29, 2013, 11:12 a.m.">29 Aug '13, 11:12</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/68537/fixing-landuse-overlap">Fixing landuse overlap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49183/area-measured-by-josm-measurement-plugin">Area measured by JOSM measurement plugin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/248/how-to-see-roads-underneath-areas-in-josm">How to see roads underneath areas in JOSM ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api">How to query all elements within an outline way from Overpass API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27348/residual-polygons">Residual Polygons</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38118/polygon-area">Polygon area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9988/get-planet_osm_rels-area-polygon">Get planet_osm_rels area polygon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1252/rotate-polygon-in-josm">Rotate polygon in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10723/how-to-deal-with-way-terminates-on-area-errors">How to deal with &#39;Way terminates on area&quot; errors?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20902/pitch-boules-on-pedestrian-area-not-showing">Pitch (Boules) on Pedestrian area not showing</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Linking a Geonames database, with OSM data locally - OSM Help</title>
+        <meta name="description" content="Till now, we used the free Geonames database as a location database to our project. But now, we want to implement area based search for our users, which isn&#39;t supported by Geonames, as each and every city, county, country etc. is marked geographically by a single latitude and longitude. Is it possib..." />
+        <meta name="keywords" content="overpass,nominatim,geonames" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/48293/linking-a-geonames-database-with-osm-data-locally" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/48293/linking-a-geonames-database-with-osm-data-locally?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Nq0jswX0GFgQJNi1nVxOeEsXfUs1tzgK' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/48293/linking-a-geonames-database-with-osm-data-locally">Linking a Geonames database, with OSM data locally</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-48293-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48293/up/" rel="nofollow"> </a>
+<div id="post-48293-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-48293-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48293/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/48293/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Till now, we used the free Geonames database as a location database to our project. But now, we want to implement area based search for our users, which isn't supported by Geonames, as each and every city, county, country etc. is marked geographically by a single latitude and longitude.</p>
+<p>Is it possible somehow, to link the data from Geonames, to ways and relations (where available) from OSM?</p>
+<p>We have a Nominatim server locally installed, and also have access locally to the Overpass api. I've searched for hours, but can't find anything that would help me in this matter:|</p>
+<p>Basically, what I would like to do is either one of the following two:</p>
+<ol>
+<li>Keep the Geonames data about cities, counties, countries, etc. and link an OSM way, or relation id to them which marks their boundary, where available</li>
+<li>Leave out Geonames all together from the equation, and build a hierarchical location database with cities, counties, countries etc. from the OSM data (this would mean, a way to start from countries, and somehow list every other place that is hierarchicaly under the respective country, and store it in a database)</li>
+</ol>
+<p>EDIT: I would prefer to go with the first option, if it is possible, but if it's not possible, I would be happy to get some guidance on how to achieve the second option, as the data is present hierarchicaly in the OSM data (it can be seen when searching with Nominatim), but I just can't find out how to obtain it easily.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/geonames/" class="post-tag tag-link-geonames"
+                                        title="see questions tagged 'geonames'" rel="tag">geonames</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Feb '16, 16:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8d611d043d7267073e41089a5283fbe1?s=32&amp;d=identicon&amp;r=g" alt="Adam%20Baranyai's gravatar image" />
+    <p><a href="/users/12004/adam-baranyai">Adam Baranyai</a><br/>
+    <span class="score" title="61 reputation points">61</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Adam Baranyai has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48293/">
+                edited
+                <strong>22 Feb '16, 20:03</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-48293">
+    
+        <a name="48295"></a>
+        <div class="comment" id="comment-48295">
+            <div id="post-48295-score" class="comment-score"></div>
+            <div class="comment-text"><p>As a clarification could you indicate what exactly you want to use from Geonames? Ancillary data, population etc?</p></div>
+            <div class="comment-info" id="comment-48295-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Feb '16, 22:25)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="48300"></a>
+        <div class="comment" id="comment-48300">
+            <div id="post-48300-score" class="comment-score"></div>
+            <div class="comment-text"><p>Only the names of populated locations and administrative regions, together with their hierarchy. So, basically everything which has an fcode like PPL% or ADM%.</p></div>
+            <div class="comment-info" id="comment-48300-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Feb '16, 23:43)</span>
+                <a class="comment-user userinfo" href="/users/12004/adam-baranyai">Adam Baranyai</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48293" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48293-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/48293/linking-a-geonames-database-with-osm-data-locally?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/48293/linking-a-geonames-database-with-osm-data-locally?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/48293/linking-a-geonames-database-with-osm-data-locally?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/48293/linking-a-geonames-database-with-osm-data-locally?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="48314"></a>
+                    <div id="answer-container-48314" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48314-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48314/up/" rel="nofollow"> </a>
+<div id="post-48314-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-48314-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48314/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Adam Baranyai has selected this answer as the correct answer"
+        href="/accept_answer/48314/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>From you comment I would be surprised if taking the 2nd route would not be superior given that you don't need any of the extra data GeoNames provides. Naturally the quality of OSM data varies by region, but in January I counted for GeoNames 8'712 vs. OSM 12'699 inhabited places in Switzerland .</p>
+<p>It might be possible to extract the hierarchies from Nominatim but we will need somebody with the specific knowledge to way in.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48314/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Feb '16, 21:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48314/">
+                edited
+                <strong>23 Feb '16, 21:58</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48314">
+    
+        <a name="48324"></a>
+        <div class="comment" id="comment-48324">
+            <div id="post-48324-score" class="comment-score"></div>
+            <div class="comment-text"><p>I was thinking about this problem, right now, I am experimenting with route 1, doing the following:</p>
+
+<p>Fetching the needed records from the GeoNames database, reverse geocoding them by their latitude, longitude, with an ever decreasing zoom(starting from 15) until either I find an exact match to their name in the results, a very simmilar match to their name in the results or I reach zoom level 2. (of course, I am not looking for only exact matches, sometimes I delete some special phrases from the name, or add it, because there are some locations which are marked as "Something CP" in OSM data, and only "Something" in GeoNames, or vice-versa.)</p>
+
+<p>As I've only installed Nominatim recently, I have only uploaded the data of Great Brittain, and I am experimenting with that. To process 100 such records from GeoNames in this way, it takes around 80 seconds(yes, it is rather slow, because to get the full information I need to reverse geocode, then geocode, then lookup the results, as I said, I am still experimenting, and trying to make this faster).</p></div>
+            <div class="comment-info" id="comment-48324-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '16, 09:26)</span>
+                <a class="comment-user userinfo" href="/users/12004/adam-baranyai">Adam Baranyai</a>
+                
+            </div>
+        </div>
+    
+        <a name="48325"></a>
+        <div class="comment" id="comment-48325">
+            <div id="post-48325-score" class="comment-score"></div>
+            <div class="comment-text"><p>As for the second route, I was thinking about something like the following:
+ - show me each entity with admin level 3 from specific country
+ - for each entity shown, show me each entity with admin level 4
+ - for each entity shown, show me each entity with admin level 5
+ - etc...</p>
+
+<p>But this would still be incomplete, if for example, in a country, there is something that is a direct descendant which is not admin level 3, but 4,5,6...</p></div>
+            <div class="comment-info" id="comment-48325-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '16, 09:28)</span>
+                <a class="comment-user userinfo" href="/users/12004/adam-baranyai">Adam Baranyai</a>
+                
+            </div>
+        </div>
+    
+        <a name="48329"></a>
+        <div class="comment" id="comment-48329">
+            <div id="post-48329-score" class="comment-score"></div>
+            <div class="comment-text"><p>Some update on this situation: Since then, I've managed to fasten the script, by using the two php classes Nominatim uses, and leaving out the web-api from the calculation. This way, I can process 1000 records from GeoNames in ~92 seconds(almost 10x faster then the original version), and I get the following results for 1000 random rows: approximatly 607 records can be matched to an osm entity(node, way, relation), approximatly 100 records are tagged with an incorrect country_id in the geonames database (for example: some cities are tagged to be in GB, but when reverse-geocoding their lat-lon coordinates, it seems that they are in CY, additionally they're name also suggest that they are greek locations), and there are no name matches for the rest 293 records. With additional naming tweeks, I may obtain an even better result, but as for the time being, this seems okay to me(at least for GB, we will see how it fares on other regions of the world).</p>
+
+<p>But if what you say is true, that OSM has better "coverage" regarding populated places around the world, it seems that the second route would be superior, and I should find a way to utilize that route.</p></div>
+            <div class="comment-info" id="comment-48329-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '16, 14:50)</span>
+                <a class="comment-user userinfo" href="/users/12004/adam-baranyai">Adam Baranyai</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48314" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48314-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/48293/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Nq0jswX0GFgQJNi1nVxOeEsXfUs1tzgK' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48293/linking-a-geonames-database-with-osm-data-locally?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48293/linking-a-geonames-database-with-osm-data-locally?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/geonames/"
+            class="tag-link-geonames"
+            title="see questions tagged'geonames'using tags"
+            rel="tag">geonames</a> <span class="tag-number">&#215;15</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 22, 2016, 4:31 p.m.">22 Feb '16, 16:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,441 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 24, 2016, 2:50 p.m.">24 Feb '16, 14:50</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/60523/maintaining-osm-related-servers">Maintaining OSM-related servers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/69944/how-to-find-node-which-belongs-to-multiple-ways">How to find node which belongs to multiple ways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42664/nominatim-not-returning-countystate">Nominatim not returning county/state</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53455/find-all-amenities-with-name-and-address-around-a-given-location">Find all amenities with name and address around a given location</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61023/overpass-get-ways-around-me-with-details">Overpass - Get ways around me with details</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61125/get-address-string-like-in-nominatim-using-overpass-api">get address string like in Nominatim using Overpass API</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api">How to find list of cities in a state with overpass osm api?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39242/how-can-i-get-the-streets-of-a-specific-postcode-using-openstreetmap">[closed] How can I Get The Streets of a specific postcode using OpenStreetMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52757/same-data-base-for-nominatim-and-overpass">Same data base for Nominatim and Overpass?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/79197/get-id-of-the-city-a-point-is-in-overpassnominatim">Get id of the city a point is in (Overpass/Nominatim)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

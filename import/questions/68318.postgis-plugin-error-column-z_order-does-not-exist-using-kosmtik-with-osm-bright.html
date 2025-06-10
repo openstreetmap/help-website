@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Postgis Plugin: ERROR:  column &quot;z_order&quot; does not exist - Using Kosmtik with OSM Bright - OSM Help</title>
+        <meta name="description" content="I am trying to create a customized map style with CartoCSS. Originally I was using Kosmtik with the default openstreetmap-carto style, following this tutorial. I was able to set it up and change some styles. I decided to switch to OSM Bright since it is much more lightweight than openstreetmap-carto..." />
+        <meta name="keywords" content="openstreetmap-carto,mapbox_osm-bright,osm,kosmtik,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/68318/postgis-plugin-error-column-z_order-does-not-exist-using-kosmtik-with-osm-bright" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/68318/postgis-plugin-error-column-z_order-does-not-exist-using-kosmtik-with-osm-bright?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='7vuG8My0VarYbrs9VO766x36J2kAxhOh' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/68318/postgis-plugin-error-column-z_order-does-not-exist-using-kosmtik-with-osm-bright">Postgis Plugin: ERROR:  column &quot;z_order&quot; does not exist - Using Kosmtik with OSM Bright</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-68318-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68318/up/" rel="nofollow"> </a>
+<div id="post-68318-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-68318-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68318/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/68318/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am trying to create a customized map style with CartoCSS.</p>
+<p>Originally I was using Kosmtik with the default openstreetmap-carto style, following <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">this tutorial</a>.  I was able to set it up and change some styles.  I decided to switch to OSM Bright since it is much more lightweight than openstreetmap-carto and a better starting point for creating a custom style.</p>
+<p>After setting up OSM Bright, when I launch kosmtik, I get the following error:</p>
+<pre><code>Trace
+    at ProjectServer.raise (/home/renderaccount/src/kosmtik/src/back/ProjectServer.js:267:13)
+    at /home/renderaccount/src/kosmtik/src/back/ProjectServer.js:81:30
+    at /home/renderaccount/src/kosmtik/node_modules/generic-pool/lib/generic-pool.js:283:11
+    at loaded (/home/renderaccount/src/kosmtik/node_modules/mapnik-pool/index.js:23:37)
+Postgis Plugin: ERROR:  column "z_order" does not exist
+LINE 1: SELECT * FROM ( SELECT way, place AS type, name, z_order, po...
+                                                         ^
+in executeQuery Full sql was: 'SELECT * FROM ( SELECT way, place AS type, name, z_order, population
+  FROM planet_osm_point
+  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')
+  ORDER BY population DESC NULLS LAST
+) AS data LIMIT 0'
+  encountered during parsing of layer 'place' in Layer
+</code></pre>
+<p>I'm not sure why <code>z_order</code> does not exist.  Again, I followed <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">this tutorial</a> by switch2osm to initially set up my tile server.</p>
+<p>What should I do to solve this problem?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap-carto/" class="post-tag tag-link-openstreetmap-carto"
+                                        title="see questions tagged 'openstreetmap-carto'" rel="tag">openstreetmap-carto</a>
+                                
+                                    <a href="/tags/mapbox_osm-bright/" class="post-tag tag-link-mapbox_osm-bright"
+                                        title="see questions tagged 'mapbox_osm-bright'" rel="tag">mapbox_osm-bright</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/kosmtik/" class="post-tag tag-link-kosmtik"
+                                        title="see questions tagged 'kosmtik'" rel="tag">kosmtik</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Mar '19, 15:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b1e3fbb6f31c5e0144e7b18fcd7d5d33?s=32&amp;d=identicon&amp;r=g" alt="valachio's gravatar image" />
+    <p><a href="/users/16323/valachio">valachio</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="valachio has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-68318">
+    
+</div>
+<div id="comment-tools-68318" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68318-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/68318/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='7vuG8My0VarYbrs9VO766x36J2kAxhOh' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68318/postgis-plugin-error-column-z_order-does-not-exist-using-kosmtik-with-osm-bright?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68318/postgis-plugin-error-column-z_order-does-not-exist-using-kosmtik-with-osm-bright?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/openstreetmap-carto/"
+            class="tag-link-openstreetmap-carto"
+            title="see questions tagged'openstreetmap-carto'using tags"
+            rel="tag">openstreetmap-carto</a> <span class="tag-number">&#215;22</span><br/>
+        
+        <a href="/tags/mapbox_osm-bright/"
+            class="tag-link-mapbox_osm-bright"
+            title="see questions tagged'mapbox_osm-bright'using tags"
+            rel="tag">mapbox_osm-bright</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/kosmtik/"
+            class="tag-link-kosmtik"
+            title="see questions tagged'kosmtik'using tags"
+            rel="tag">kosmtik</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 7, 2019, 3:01 p.m.">07 Mar '19, 15:01</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,738 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 7, 2019, 3:01 p.m.">07 Mar '19, 15:01</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/64602/how-to-specify-multiple-style-file-with-osm2pgsql-query">How to specify multiple style file with osm2pgsql query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31077/mapnik-styles-into-maperitive">[closed] Mapnik Styles into Maperitive</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8506/mapnik-image-generations-returns-error">mapnik image generations returns error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20925/how-to-render-plain-bus-routes">How to render plain bus routes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23088/how-to-correctly-import-aster-data-contours-into-a-postgis-database">How to correctly import ASTER data (contours) into a PostGIS database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26555/crop-or-shrink-osm-file-to-given-bbox">Crop  or shrink OSM file to given bbox</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17398/why-does-our-own-tile-server-sometimes-abort-rendering-tiles">Why does our own tile server sometimes abort rendering tiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16966/open-street-map-no-map-for-default">Open Street Map &quot;no map for: default&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18237/map-not-updating-to-changes-made">map not updating to changes made</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21978/mapnik-21x-osm-postgis-2-postgresql-92-python26-only-shorelines-and-no-features">Mapnik 2.1.x + OSM + Postgis 2 + PostgreSQL 9.2 + Python26 = Only shorelines and no features</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

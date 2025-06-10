@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Problem with nominatim own server - OSM Help</title>
+        <meta name="description" content="I&#39;ve downloaded the osm virtual machine here: http://wiki.openstreetmap.org/wiki/Virtual_machine_image ...and patched the local.php file (for the &quot;declaration allowed only at the start of the document&quot; error). It appears to be working fine, except for the following issue: I understand there are two ..." />
+        <meta name="keywords" content="private_server,results" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/28748/problem-with-nominatim-own-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/28748/problem-with-nominatim-own-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='TnVzpHogZnfBEwVip46SV0wwXjHTQU2j' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/28748/problem-with-nominatim-own-server">Problem with nominatim own server</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-28748-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28748/up/" rel="nofollow"> </a>
+<div id="post-28748-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-28748-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28748/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/28748/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I've downloaded the osm virtual machine here:</p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Virtual_machine_image">http://wiki.openstreetmap.org/wiki/Virtual_machine_image</a></p>
+<p>...and patched the local.php file (for the "declaration allowed only at the start of the document" error). It appears to be working fine, except for the following issue:</p>
+<p>I understand there are two ways to query for an address:</p>
+<pre><code> q=&lt;query&gt;
+   Query string to search for.  Alternatively can be entered as:
+</code></pre>
+<p>and</p>
+<pre><code> street=&lt;housenumber&gt; &lt;streetname&gt;
+ city=&lt;city&gt;
+ county=&lt;county&gt;
+ state=&lt;state&gt;
+ country=&lt;country&gt;
+ postalcode=&lt;postalcode&gt;
+   (experimental) Alternative query string format for structured requests. 
+   Structured requests are faster and require less server resources. 
+   DO NOT COMBINE WITH q=&lt;query&gt; PARAMETER.
+</code></pre>
+<p>However, the first way works, and the second one gets me no results. I thought it could be a problem with the address formatting but if I use the same query on the public nominatim server (instead of my own) I get results.</p>
+<p>Check the public server output:</p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;searchresults timestamp='Wed, 04 Dec 13 05:50:52 +0000' attribution='Data ?? OpenStreetMap contributors, ODbL 1.0. <a href="http://www.openstreetmap.org/copyright'">http://www.openstreetmap.org/copyright'</a> querystring='andes 1479, montevideo, montevideo, uruguay' polygon='false' exclude_place_ids='96424832,57980898,70445266' more_url='http://nominatim.openstreetmap.org/search?format=xml&amp;amp;exclude_place_ids=96424832,57980898,70445266&amp;amp;q=andes+1479%2C+montevideo%2C+montevideo%2C+uruguay'&gt;
+&lt;place place_id='96424832' osm_type='way' osm_id='179061638' place_rank='26' boundingbox="-34.9064064025879,-34.9008026123047,-56.1986999511719,-56.1981239318848" lat='-34.9035605' lon='-56.1984301' display_name='Andes, Ciudad Vieja, Montevideo, 11100, Uruguay' class='highway' type='residential' importance='0.9'/&gt;&lt;place place_id='57980898' osm_type='way' osm_id='78105349' place_rank='26' boundingbox="-34.9114799499512,-34.9064025878906,-56.198127746582,-56.1972122192383" lat='-34.9092104' lon='-56.1978327' display_name='Andes, Barrio Sur, Montevideo, 11100, Uruguay' class='highway' type='residential' importance='0.9'/&gt;&lt;place place_id='70445266' osm_type='way' osm_id='112698692' place_rank='26' boundingbox="-34.8365058898926,-34.8350563049316,-55.9612350463867,-55.9585113525391" lat='-34.8357171' lon='-55.9597648' display_name='Andes, Solymar, Ciudad de la Costa, Canelones, Uruguay' class='highway' type='residential' importance='0.7'/&gt;&lt;/searchresults&gt;
+</code></pre>
+<p>and my local server output:</p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;searchresults timestamp='Wed, 04 Dec 13 05:50:59 +0000' attribution='Data ?? OpenStreetMap contributors, ODbL 1.0. <a href="http://www.openstreetmap.org/copyright'">http://www.openstreetmap.org/copyright'</a> querystring='' polygon='false' more_url='http://localhost/nominatim/search?format=xml&amp;amp;exclude_place_ids=&amp;amp;accept-language=&amp;amp;q='&gt;
+&lt;/searchresults&gt;
+</code></pre>
+<p>In both cases, I'm using the same query:</p>
+<pre><code>http://&lt;public server or private server&gt;/search?format=xml&amp;street=andes+1479&amp;city=montevideo&amp;county=&amp;state=montevideo&amp;country=uruguay&amp;postalcode=
+</code></pre>
+<p>I don't know if it has something to do; but the virtual server need some minor "corrections" (?); one if to edit the local.php file (I did it) but the other one, downloading and replacing the get-coastlines.sh file, can't did it (can't overwrite existing file, and I don't have root password)</p>
+<p>I appreciate any help! Regards!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/private_server/" class="post-tag tag-link-private_server"
+                                        title="see questions tagged 'private_server'" rel="tag">private_server</a>
+                                
+                                    <a href="/tags/results/" class="post-tag tag-link-results"
+                                        title="see questions tagged 'results'" rel="tag">results</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Dec '13, 06:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3875f3961eb0b69618914bf29ab6ef45?s=32&amp;d=identicon&amp;r=g" alt="leos79's gravatar image" />
+    <p><a href="/users/7943/leos79">leos79</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="leos79 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-28748">
+    
+</div>
+<div id="comment-tools-28748" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28748-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/28748/problem-with-nominatim-own-server?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/28748/problem-with-nominatim-own-server?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/28748/problem-with-nominatim-own-server?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/28748/problem-with-nominatim-own-server?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="28750"></a>
+                    <div id="answer-container-28750" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-28750-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28750/up/" rel="nofollow"> </a>
+<div id="post-28750-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-28750-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28750/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="leos79 has selected this answer as the correct answer"
+        href="/accept_answer/28750/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This virtual image is from the end of 2012 and contains a Nominatim version that is neither capable of handling <a href="https://wiki.openstreetmap.org/wiki/64-bit_Identifiers">64-bit node IDs</a> nor supports the structured search that you're attempting. The <a href="http://wiki.openstreetmap.org/wiki/Virtual_machine_image">virtual image wiki page</a> also contains a big red warning message at the beginning which you seem to have missed somehow.</p>
+<p>This means that the current virtual image is of little use. Newer versions of Nominatim can handle 64-bit node IDs but this would require you to update the Nominatim version contained in the virtual image (and possible other software, too), the wiki also contains <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">Nominatim installation instructions</a>.</p>
+<p>And if you really need a root password (<code>sudo</code> should be enough for everything) then you can set/change it via <code>sudo passwd</code>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/28750/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Dec '13, 08:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/28750/">
+                edited
+                <strong>04 Dec '13, 08:58</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+            <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+            <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-28750">
+    
+        <a name="28780"></a>
+        <div class="comment" id="comment-28780">
+            <div id="post-28780-score" class="comment-score">1</div>
+            <div class="comment-text"><p>thanks scai for your answer! So, this one is the last virtual server available? I'll try to make one of my own. And the root thing would be for replacing a file; I got a mesagge saying I don't have permission to do thath and I thought it was due to user permissions. I'm not a linux guy, I'm a software developer for windows environment, the closes things I know to linux is DOS and googling-for-stuff-when-required.</p></div>
+            <div class="comment-info" id="comment-28780-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '13, 18:00)</span>
+                <a class="comment-user userinfo" href="/users/7943/leos79">leos79</a>
+                
+            </div>
+        </div>
+    
+        <a name="28781"></a>
+        <div class="comment" id="comment-28781">
+            <div id="post-28781-score" class="comment-score">1</div>
+            <div class="comment-text"><p>And about the red warning; I didn't missed it. I thought if the virtual server was still there that maybe it still worked; I've decided to download it and give it a try. I didn't know the OSM data's date and neither that structured search it's a 2013 improvement (maybe it's specified somewhere; that would be what I've missed). Thank you very much, again!</p></div>
+            <div class="comment-info" id="comment-28781-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '13, 18:02)</span>
+                <a class="comment-user userinfo" href="/users/7943/leos79">leos79</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-28750" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28750-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/28748/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='TnVzpHogZnfBEwVip46SV0wwXjHTQU2j' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28748/problem-with-nominatim-own-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28748/problem-with-nominatim-own-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/private_server/"
+            class="tag-link-private_server"
+            title="see questions tagged'private_server'using tags"
+            rel="tag">private_server</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/results/"
+            class="tag-link-results"
+            title="see questions tagged'results'using tags"
+            rel="tag">results</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 4, 2013, 6:04 a.m.">04 Dec '13, 06:04</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,172 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 4, 2013, 6:02 p.m.">04 Dec '13, 18:02</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3643/howto-setup-a-private-osm-for-public-planning-eg-at-charrettes">howto setup a private OSM for public planning, e.g., at charrettes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8053/install-private-api-server">Install private API-Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13736/how-can-i-get-the-osm-db-in-my-own-server-having-polygonic-data">How can I get the OSM DB in my own server having polygonic data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24679/openmapserver-all-in-own-location-installed-ubuntu-124">OpenMapServer - all in own location installed - Ubuntu 12.4</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28556/bar-near-moses-lake-washington-brings-0-results-in-search">&quot;bar near moses lake, washington&quot; brings 0 results in search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29620/license-obligations-under-the-following-scenarios">License obligations under the following scenarios</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36152/my-is-overpass-server-is-running-slowly-after-re-populating-the-database">My is Overpass server is running slowly after re-populating the database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36686/use-of-demo-server">Use of demo server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46941/nominatim-no-results">Nominatim, no results</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47165/local-nominatim-sometimes-returns-no-results">Local Nominatim sometimes returns no results</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,738 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to verify if a coordinate belongs to OSM file? - OSM Help</title>
+        <meta name="description" content="I have a OSM file (I&#39;m actually using OSRM), and I have a list of coordinates of the type (lat,lon). I need a way to test whether each coordinate is inside the boundaries of the OSM file (as the file can be of only a small region of the world, i.e., I&#39;m using Berlin for testing purposes). I tried se..." />
+        <meta name="keywords" content="osrm,search,osm,coordinates" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/65050/how-to-verify-if-a-coordinate-belongs-to-osm-file" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/65050/how-to-verify-if-a-coordinate-belongs-to-osm-file?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='OKwMho6eVz9MbkcJHDNDo7sfzFJsIsnd' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/65050/how-to-verify-if-a-coordinate-belongs-to-osm-file">How to verify if a coordinate belongs to OSM file?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-65050-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/65050/up/" rel="nofollow"> </a>
+<div id="post-65050-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-65050-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/65050/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/65050/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a OSM file (I'm actually using OSRM), and I have a list of coordinates of the type (lat,lon). I need a way to test whether each coordinate is inside the boundaries of the OSM file (as the file can be of only a small region of the world, i.e., I'm using Berlin for testing purposes).</p>
+<p>I tried searching for solutions, but none seemed clear enough to me. I've read some suggestions on using PostGIS, though I'm not particularly aware of how this would work, as I need to test the existence of a coordinate that not necessarily has a corresponding node in the OSM file to begin with (only a closest one).</p>
+<p>Note: I'm building an application in C++, to run solely as a local application. Speed on this test is not a particular issue, although I'll be using lists with a few thousands coordinates.</p>
+<p>Any hints on how to proceed?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osrm/" class="post-tag tag-link-osrm"
+                                        title="see questions tagged 'osrm'" rel="tag">osrm</a>
+                                
+                                    <a href="/tags/search/" class="post-tag tag-link-search"
+                                        title="see questions tagged 'search'" rel="tag">search</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/coordinates/" class="post-tag tag-link-coordinates"
+                                        title="see questions tagged 'coordinates'" rel="tag">coordinates</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Aug '18, 02:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/42da8adc3f056c970ce062f6e211d5df?s=32&amp;d=identicon&amp;r=g" alt="Lonatico's gravatar image" />
+    <p><a href="/users/15466/lonatico">Lonatico</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Lonatico has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/65050/">
+                edited
+                <strong>01 Aug '18, 12:18</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-65050">
+    
+        <a name="65052"></a>
+        <div class="comment" id="comment-65052">
+            <div id="post-65052-score" class="comment-score"></div>
+            <div class="comment-text"><p>What does "a valid coordinate in the OSM file" mean exactly? That the coordinate is inside the bounding box / polygon of your OSM file? Or that something (a POI, a street) exists at this coordinate?</p></div>
+            <div class="comment-info" id="comment-65052-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Aug '18, 07:38)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="65058"></a>
+        <div class="comment" id="comment-65058">
+            <div id="post-65058-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>, thanks for the comment. It would be the first option, that is, whether the coordinate is inside the boundaries of my OSM file. I don't really care what is in this coordinate, as long as I can know it is a coordinate inside the file limits. (edit: I have updated the question to better state this).</p></div>
+            <div class="comment-info" id="comment-65058-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Aug '18, 12:16)</span>
+                <a class="comment-user userinfo" href="/users/15466/lonatico">Lonatico</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-65050" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-65050-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/65050/how-to-verify-if-a-coordinate-belongs-to-osm-file?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/65050/how-to-verify-if-a-coordinate-belongs-to-osm-file?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/65050/how-to-verify-if-a-coordinate-belongs-to-osm-file?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/65050/how-to-verify-if-a-coordinate-belongs-to-osm-file?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="65063"></a>
+                    <div id="answer-container-65063" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-65063-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/65063/up/" rel="nofollow"> </a>
+<div id="post-65063-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-65063-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/65063/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>At least the XML format for OSM data will contain a "bounds" object with a bounding box, see <a href="https://wiki.openstreetmap.org/wiki/OSM_XML">https://wiki.openstreetmap.org/wiki/OSM_XML</a> That is however just a rough approximation of the area covered by the data, in particular if you extracted OSM data using a polygon it will be too large. If that is the case (that you extracted data using a polygon), I would suggest simply doing a point in/covered by polygon test to determine if the location is covered. While this is built into PostGIS, if you are not using it anyway you can simply use one of the many C++ libraries (depending a bit in what format you have the polygon).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/65063/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Aug '18, 16:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/65063/">
+                edited
+                <strong>02 Aug '18, 08:53</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-65063">
+    
+        <a name="65069"></a>
+        <div class="comment" id="comment-65069">
+            <div id="post-65069-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, but as you said it is a rough approximation (sadly too rough for my need). I think I didn't extract OSM data using a polygon (in fact I'm not sure what this means). </p>
+
+<p>I have managed to locate a polygon file in Geofabrik website, which appears to give me a set of coordinates that define the borders of the entire region/polygon. From that I could just use an algorithm for checking point-in-polygon, but the problem is that for wide areas (e.g., a continental country) I would have the problem of earth's curvature in the calculation. Do you have any suggestion on that?</p></div>
+            <div class="comment-info" id="comment-65069-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '18, 00:31)</span>
+                <a class="comment-user userinfo" href="/users/15466/lonatico">Lonatico</a>
+                
+            </div>
+        </div>
+    
+        <a name="65071"></a>
+        <div class="comment" id="comment-65071">
+            <div id="post-65071-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/15466/lonatico">@Lonatico</a> This is a question for <a href="http://gis.stackexchange.com/">http://gis.stackexchange.com/</a> since it isn't OSM-specific.</p></div>
+            <div class="comment-info" id="comment-65071-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '18, 07:39)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="65072"></a>
+        <div class="comment" id="comment-65072">
+            <div id="post-65072-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/15466/lonatico"></a><a href="https://help.openstreetmap.org/users/15466/lonatico">@Lonatico</a> you would be using the WGS84 coordinates (which are defined on the WGS84 geoid) as coordinates on a plane which is the <a href="https://en.wikipedia.org/wiki/Equirectangular_projection">plate carrée projection</a>. While the result is (naturally) distorted, simple topological relationships still hold (except over the -180°/180° boundary where if you limit the coordinate range to -180° - 180° you will need to split the boundary polygons).</p></div>
+            <div class="comment-info" id="comment-65072-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '18, 08:02)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-65063" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-65063-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/65050/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='OKwMho6eVz9MbkcJHDNDo7sfzFJsIsnd' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/65050/how-to-verify-if-a-coordinate-belongs-to-osm-file?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/65050/how-to-verify-if-a-coordinate-belongs-to-osm-file?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/search/"
+            class="tag-link-search"
+            title="see questions tagged'search'using tags"
+            rel="tag">search</a> <span class="tag-number">&#215;193</span><br/>
+        
+        <a href="/tags/coordinates/"
+            class="tag-link-coordinates"
+            title="see questions tagged'coordinates'using tags"
+            rel="tag">coordinates</a> <span class="tag-number">&#215;144</span><br/>
+        
+        <a href="/tags/osrm/"
+            class="tag-link-osrm"
+            title="see questions tagged'osrm'using tags"
+            rel="tag">osrm</a> <span class="tag-number">&#215;85</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 1, 2018, 2:09 a.m.">01 Aug '18, 02:09</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,054 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 2, 2018, 8:53 a.m.">02 Aug '18, 08:53</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/23715/how-to-use-osrm">How to use OSRM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35215/how-convert-a-name-city-or-address-in-a-coordinate">How convert a name city or address in a coordinate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18121/strange-coordinates-using-osm-map">strange coordinates using OSM map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20982/extract-road-network-data-from-niedersachsen-latestosmpbf">Extract road network data from niedersachsen-latest.osm.pbf</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28278/using-wikipedia-article-coordinates-for-searching">Using Wikipedia article-coordinates for searching</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33351/local-nominatim-server-gives-no-or-different-result-solved">[closed] Local Nominatim server gives No or Different result [Solved]</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9110/download-a-map-of-selected-coordinate">download a map of selected coordinate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16108/can-openstreetmap-be-used-for-creating-a-radius-search-feature-on-an-internal-web-based-app">Can OpenStreetMap be used for creating a &quot;radius search&quot; feature on an internal web-based app?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20720/converting-planet_osm_node-coordinates-to-4326">converting planet_osm_node coordinates to 4326</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43853/how-to-get-polygon_geojson-for-administrative">how to get polygon_geojson for administrative</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

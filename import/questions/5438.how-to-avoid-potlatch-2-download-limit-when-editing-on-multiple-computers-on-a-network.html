@@ -1,0 +1,1138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>how to avoid Potlatch 2 download limit when editing on multiple computers on a network? - OSM Help</title>
+        <meta name="description" content="Hi, I work as an OSM-community manager for the Danish Cyclist Federation. We&#39;re going all in with OSM for all our map needs and my job is to teach as many of our 17.000 members to edit. We&#39;re teaching Potlatch 2, but have problems with hitting the download limit almost instantly during sessions. We&#39;..." />
+        <meta name="keywords" content="potlatch2,download,lan,limit,proxy" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/5438/how-to-avoid-potlatch-2-download-limit-when-editing-on-multiple-computers-on-a-network" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/5438/how-to-avoid-potlatch-2-download-limit-when-editing-on-multiple-computers-on-a-network?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='1F3Yv09j66W8GuwjySqA1eHjqtBjwby8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/5438/how-to-avoid-potlatch-2-download-limit-when-editing-on-multiple-computers-on-a-network">how to avoid Potlatch 2 download limit when editing on multiple computers on a network?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-5438-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5438/up/" rel="nofollow"> </a>
+<div id="post-5438-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-5438-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5438/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/5438/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+I work as an OSM-community manager for the Danish Cyclist Federation. We're going all in with OSM for all our map needs and my job is to teach as many of our 17.000 members to edit. We're teaching Potlatch 2, but have problems with hitting the download limit almost instantly during sessions. We're guessing it's because our network uses a proxy with a single outgoing IP for all 10+ computers in use.</p>
+<p>This is bad news, not least because I have to go on road trips around the country and use unfamiliar network setups.</p>
+<p>1) What sort of network setup would be required to avoid hitting the download wall? I'm not much into this, but please feel free to shove tech-stuff at me. I'll pass it on to our resident buffs.</p>
+<p>2) I've read earlier posts saying there is no possibility of having an IP-address put on a whitelist. Is this still the case?</p>
+<p>Regards
+Andreas</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/potlatch2/" class="post-tag tag-link-potlatch2"
+                                        title="see questions tagged 'potlatch2'" rel="tag">potlatch2</a>
+                                
+                                    <a href="/tags/download/" class="post-tag tag-link-download"
+                                        title="see questions tagged 'download'" rel="tag">download</a>
+                                
+                                    <a href="/tags/lan/" class="post-tag tag-link-lan"
+                                        title="see questions tagged 'lan'" rel="tag">lan</a>
+                                
+                                    <a href="/tags/limit/" class="post-tag tag-link-limit"
+                                        title="see questions tagged 'limit'" rel="tag">limit</a>
+                                
+                                    <a href="/tags/proxy/" class="post-tag tag-link-proxy"
+                                        title="see questions tagged 'proxy'" rel="tag">proxy</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 May '11, 13:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/81e1bc8f59a4a03ed223ab5776f4a44f?s=32&amp;d=identicon&amp;r=g" alt="Hammershoej's gravatar image" />
+    <p><a href="/users/1465/hammershoej">Hammershoej</a><br/>
+    <span class="score" title="166 reputation points">166</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hammershoej has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-5438">
+    
+</div>
+<div id="comment-tools-5438" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5438-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/5438/how-to-avoid-potlatch-2-download-limit-when-editing-on-multiple-computers-on-a-network?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/5438/how-to-avoid-potlatch-2-download-limit-when-editing-on-multiple-computers-on-a-network?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/5438/how-to-avoid-potlatch-2-download-limit-when-editing-on-multiple-computers-on-a-network?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/5438/how-to-avoid-potlatch-2-download-limit-when-editing-on-multiple-computers-on-a-network?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="5528"></a>
+                    <div id="answer-container-5528" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5528-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5528/up/" rel="nofollow"> </a>
+<div id="post-5528-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-5528-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5528/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The map data downloads are capped per-IP, so any kind of proxied network (e.g. NAT) is going to have this problem. If you are using a network where the different computers have different public IP addresses, then you will have much less of a issue.</p>
+<p>There is currently no solution available for per-IP whitelisting, mainly because we don't have the manpower to deal with non-automated solutions like that. There have been discussions about taking into account signed-in users and even users-who-upload-changesets and raising the limits for these people, but again neither of those options are currently active.</p>
+<p>The best solution is to encourage people to zoom in as far as possible before editing, so that they download the minimum possible data for the area that they are editing.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5528/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Jun '11, 11:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3743b1b368f5e209eb8aad30164acc4?s=32&amp;d=identicon&amp;r=g" alt="Andy%20Allan's gravatar image" />
+    <p><a href="/users/3/andy-allan">Andy Allan</a><br/>
+    <span class="score" title="12456 reputation points"><span class="">12.5k</span></span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="128 badges"><span class="silver">&#9679;</span><span class="badgecount">128</span></span><span title="153 badges"><span class="bronze">&#9679;</span><span class="badgecount">153</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andy Allan has 46 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/5528/">
+                edited
+                <strong>22 Jun '11, 14:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5528">
+    
+        <a name="5532"></a>
+        <div class="comment" id="comment-5532">
+            <div id="post-5532-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hi,
+thanks for the answer.</p>
+
+<p>We're always very careful about having people zoom in, but it just isn't enough. Also, we can't change our network setup or bet on finding suitable networks as we go on OSM road trips. I think our best chance is to buy a small heap of USB-modems. They'll hopefully be fast enough and have their own IP's. </p>
+
+<p>It's an unfortunate problem, but I understand the reason for the limit. Hope you find a solution for networks, though.</p>
+
+<p>Thanks a lot for the great work you are doing:)</p>
+
+<p>/A</p></div>
+            <div class="comment-info" id="comment-5532-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '11, 12:50)</span>
+                <a class="comment-user userinfo" href="/users/1465/hammershoej">Hammershoej</a>
+                
+            </div>
+        </div>
+    
+        <a name="5545"></a>
+        <div class="comment" id="comment-5545">
+            <div id="post-5545-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks for the explanation Andy.</p>
+
+<p>This situation impacted a mapping party in Uganda:  <a href="https://twitter.com/#!/batje/status/76956988948496384">https://twitter.com/#!/batje/status/76956988948496384</a></p>
+
+<p>Is there any stats on how often this happens? And any idea on what the manual workload would be?</p>
+
+<p>What does it take to add in the tweaks to raise limits?</p></div>
+            <div class="comment-info" id="comment-5545-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '11, 16:10)</span>
+                <a class="comment-user userinfo" href="/users/1498/mikelmaron">mikelmaron</a>
+                
+            </div>
+        </div>
+    
+        <a name="5952"></a>
+        <div class="comment" id="comment-5952">
+            <div id="post-5952-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Andy.</p>
+
+<p>Thanks for the explanation.</p>
+
+<p>I was attending the course that Andreas describes. We did not use any kind of proxy server. So in that sense the HTTP requests did not come from the same machine (IP address). We were however sitting behind a NAT, so in some sense we were sharing the same GLOBAL IP address. Can you please elaborate on your comment "If you are using a network where the different computers have different IP addresses, then you will have much less of a issue."? Apparently this was our situation and we still had issues regarding this.</p>
+
+<p>Thanks in advance...</p>
+
+<p>Jarl</p></div>
+            <div class="comment-info" id="comment-5952-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '11, 13:38)</span>
+                <a class="comment-user userinfo" href="/users/1168/jarl">jarl</a>
+                
+            </div>
+        </div>
+    
+        <a name="5953"></a>
+        <div class="comment" id="comment-5953">
+            <div id="post-5953-score" class="comment-score"></div>
+            <div class="comment-text"><p>well, a NAT is a form of proxying in that the NAT machine intercepts the requests, alters the IP addresses and forwards them on. I've updated my answer to specifically state NAT and that it's the number of public IP addresses that is important.</p></div>
+            <div class="comment-info" id="comment-5953-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '11, 14:38)</span>
+                <a class="comment-user userinfo" href="/users/3/andy-allan">Andy Allan</a>
+                
+            </div>
+        </div>
+    
+        <a name="5965"></a>
+        <div class="comment" id="comment-5965">
+            <div id="post-5965-score" class="comment-score"></div>
+            <div class="comment-text"><p>Would proxying some of your requests via a 3rd party proxy server help in this case? (Or multiple different proxy servers.) I'm not suggesting you try to circumvent the protections on people flooding the API, but it sounds like you simply have multiple people trying to use it normally.</p></div>
+            <div class="comment-info" id="comment-5965-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jun '11, 00:35)</span>
+                <a class="comment-user userinfo" href="/users/603/ebenezer">Ebenezer</a>
+                
+            </div>
+        </div>
+    
+        <a name="6023"></a>
+        <div class="comment not_top_scorer" id="comment-6023">
+            <div id="post-6023-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Andy. Thank you for clearing out the heuristics for determine individual "users", I would like to suggest the heuristics to be improved to distinguish individual users even behind NAT, but I guess that must be somewhere else in a different forum, can you suggest any good starting points for such a discussion? I have plans to arrange some mapping parties but I hesitate as long as this problem exists.</p></div>
+            <div class="comment-info" id="comment-6023-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jun '11, 14:35)</span>
+                <a class="comment-user userinfo" href="/users/1168/jarl">jarl</a>
+                
+            </div>
+        </div>
+    
+        <a name="6024"></a>
+        <div class="comment not_top_scorer" id="comment-6024">
+            <div id="post-6024-score" class="comment-score"></div>
+            <div class="comment-text"><p>dev@<a href="http://openstreetmap.org">openstreetmap.org</a> is the best place for development discussions.</p></div>
+            <div class="comment-info" id="comment-6024-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jun '11, 15:40)</span>
+                <a class="comment-user userinfo" href="/users/3/andy-allan">Andy Allan</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5528" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5528-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5538"></a>
+                    <div id="answer-container-5538" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5538-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5538/up/" rel="nofollow"> </a>
+<div id="post-5538-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-5538-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5538/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you were to use <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> instead you'd be less likely to hit the limit, since it gives more control over what data gets downloaded when.</p>
+<p>That's probably not a very helpful suggestion because it's a whole new software to learn/teach but perhaps it's an option for you. JOSM is not as difficult for new users as people sometimes suggest.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5538/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Jun '11, 16:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5538">
+    
+        <a name="5968"></a>
+        <div class="comment" id="comment-5968">
+            <div id="post-5968-score" class="comment-score"></div>
+            <div class="comment-text"><p>In a group situation it would be easier to get a demo or ask questions on josm but you are asking about P2</p></div>
+            <div class="comment-info" id="comment-5968-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jun '11, 16:30)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5538" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5538-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5960"></a>
+                    <div id="answer-container-5960" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5960-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5960/up/" rel="nofollow"> </a>
+<div id="post-5960-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-5960-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5960/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm currently working on an improvement to Potlatch 2 that will typically result in it pulling down less data from the server when you pan. (Well, to be strictly accurate, I'm converting some clever code by Matt Amos to ActionScript for Potlatch 2. :) ) It won't be live for a few weeks but it should hopefully make a difference.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5960/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jun '11, 22:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5960">
+    
+</div>
+<div id="comment-tools-5960" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5960-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5975"></a>
+                    <div id="answer-container-5975" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5975-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5975/up/" rel="nofollow"> </a>
+<div id="post-5975-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-5975-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5975/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>One of our members, a keen open-source man, has offered to administer a P2 white-list for situations like mapping parties. He works for Denmark's largest dedicated IT-security company, Dubex ( <a href="http://www.dubex.dk/dubex/profile/">http://www.dubex.dk/dubex/profile/</a> + <a href="http://www.linkedin.com/company/40332">http://www.linkedin.com/company/40332</a> ) and I'm sure he would be more than qualified to take on the task.</p>
+<p>Would the P2 team be interested in this? If so I can set up contact.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5975/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jun '11, 08:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/81e1bc8f59a4a03ed223ab5776f4a44f?s=32&amp;d=identicon&amp;r=g" alt="Hammershoej's gravatar image" />
+    <p><a href="/users/1465/hammershoej">Hammershoej</a><br/>
+    <span class="score" title="166 reputation points">166</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hammershoej has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5975">
+    
+        <a name="5976"></a>
+        <div class="comment" id="comment-5976">
+            <div id="post-5976-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It's not a P2 issue - it's a server issue.</p></div>
+            <div class="comment-info" id="comment-5976-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '11, 08:39)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5977"></a>
+        <div class="comment" id="comment-5977">
+            <div id="post-5977-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, would the serverguys be interested then? And who are they?</p></div>
+            <div class="comment-info" id="comment-5977-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '11, 08:57)</span>
+                <a class="comment-user userinfo" href="/users/1465/hammershoej">Hammershoej</a>
+                
+            </div>
+        </div>
+    
+        <a name="5983"></a>
+        <div class="comment" id="comment-5983">
+            <div id="post-5983-score" class="comment-score"></div>
+            <div class="comment-text"><p>The server admin guys are listed at <a href="http://wiki.openstreetmap.org/wiki/Sysadmin">http://wiki.openstreetmap.org/wiki/Sysadmin</a></p></div>
+            <div class="comment-info" id="comment-5983-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '11, 19:21)</span>
+                <a class="comment-user userinfo" href="/users/65/apmon">apmon</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5975" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5975-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/5438/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='1F3Yv09j66W8GuwjySqA1eHjqtBjwby8' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5438/how-to-avoid-potlatch-2-download-limit-when-editing-on-multiple-computers-on-a-network?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5438/how-to-avoid-potlatch-2-download-limit-when-editing-on-multiple-computers-on-a-network?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/download/"
+            class="tag-link-download"
+            title="see questions tagged'download'using tags"
+            rel="tag">download</a> <span class="tag-number">&#215;275</span><br/>
+        
+        <a href="/tags/potlatch2/"
+            class="tag-link-potlatch2"
+            title="see questions tagged'potlatch2'using tags"
+            rel="tag">potlatch2</a> <span class="tag-number">&#215;210</span><br/>
+        
+        <a href="/tags/limit/"
+            class="tag-link-limit"
+            title="see questions tagged'limit'using tags"
+            rel="tag">limit</a> <span class="tag-number">&#215;23</span><br/>
+        
+        <a href="/tags/proxy/"
+            class="tag-link-proxy"
+            title="see questions tagged'proxy'using tags"
+            rel="tag">proxy</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/lan/"
+            class="tag-link-lan"
+            title="see questions tagged'lan'using tags"
+            rel="tag">lan</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 30, 2011, 1:55 p.m.">30 May '11, 13:55</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,616 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 27, 2011, 3:40 p.m.">27 Jun '11, 15:40</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/22/how-do-i-export-map-images-of-larger-areas">How do I export map images of larger areas?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/83/should-i-upload-gps-traces-for-regions-where-there-already-are-plenty-of">Should I upload GPS traces for regions where there already are plenty of?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/148/how-can-i-use-openstreetmap-data-in-my-gis-program">How can I use OpenStreetMap data in my GIS program?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/236/how-to-download-osm-maps">How to download OSM maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/242/how-to-download-rendered-osm-maps">How to download rendered OSM maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/417/is-it-possible-to-get-a-list-of-objects-with-two-specific-tags">Is it possible to get a list of objects with two specific tags?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/467/how-do-i-use-osm-maps-in-my-gps">How do I use OSM maps in my GPS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/713/how-to-extract-partial-data-for-large-regions">How to extract partial data for large regions ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1325/too-large-a-download-area">Too large a download area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17/where-can-i-download-a-dump-of-openstreetmap-data">Where can I download a dump of OpenStreetMap data?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

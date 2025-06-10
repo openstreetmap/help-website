@@ -1,0 +1,761 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Routing between 2 points on the same path not working - OSM Help</title>
+        <meta name="description" content="I could not find the issue in the data. Everything seems well connected. Can somebody with experince have a look? https://routino.arch.tu-dresden.de/routino/router.html?transport=foot;lon1=10.40772;lat1=51.63195;lon2=10.40811;lat2=51.63211;language=en" />
+        <meta name="keywords" content="routingerror" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/83928/routing-between-2-points-on-the-same-path-not-working" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/83928/routing-between-2-points-on-the-same-path-not-working?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zDV2RUncgJYnXAjcj7fcVgsf1HMNkOMd' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/83928/routing-between-2-points-on-the-same-path-not-working">Routing between 2 points on the same path not working</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-83928-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83928/up/" rel="nofollow"> </a>
+<div id="post-83928-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-83928-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83928/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/83928/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I could not find the issue in the data. Everything seems well connected. Can somebody with experince have a look?</p>
+<p><a href="https://routino.arch.tu-dresden.de/routino/router.html?transport=foot;lon1=10.40772;lat1=51.63195;lon2=10.40811;lat2=51.63211;language=en">https://routino.arch.tu-dresden.de/routino/router.html?transport=foot;lon1=10.40772;lat1=51.63195;lon2=10.40811;lat2=51.63211;language=en</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/routingerror/" class="post-tag tag-link-routingerror"
+                                        title="see questions tagged 'routingerror'" rel="tag">routingerror</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Mar '22, 20:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9a177b6d09d8fd7ef15c6e7cad17608d?s=32&amp;d=identicon&amp;r=g" alt="MatzeR's gravatar image" />
+    <p><a href="/users/21540/matzer">MatzeR</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="MatzeR has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-83928">
+    
+</div>
+<div id="comment-tools-83928" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83928-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/83928/routing-between-2-points-on-the-same-path-not-working?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/83928/routing-between-2-points-on-the-same-path-not-working?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/83928/routing-between-2-points-on-the-same-path-not-working?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/83928/routing-between-2-points-on-the-same-path-not-working?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="83929"></a>
+                    <div id="answer-container-83929" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83929-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83929/up/" rel="nofollow"> </a>
+<div id="post-83929-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-83929-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83929/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="MatzeR has selected this answer as the correct answer"
+        href="/accept_answer/83929/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Your link failed to display the map. But when I typed in the co-ords routing worked with graphopper but not OSRM
+I suspect the footpath tag should have foot=allowed  or in England foot=designated to indicate it is a legal footpath. I also notice there are some fixmes  where the path crosses the stream does it have a bridge or is it a ford?  this link will help others find it. <a href="https://www.openstreetmap.org/?mlat=51.63194&amp;mlon=10.40762#map=19/51.63194/10.40762">https://www.openstreetmap.org/?mlat=51.63194&amp;mlon=10.40762#map=19/51.63194/10.40762</a> 
+Looking again, the tag is access=forestry  would that mean forestry workers only?  That may be the problem.</p>
+<p><img alt="alt text" src="https://help.openstreetmap.org/upfiles/routing.jpg"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83929/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Mar '22, 22:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/83929/">
+                edited
+                <strong>19 Mar '22, 22:50</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83929">
+    
+        <a name="83930"></a>
+        <div class="comment" id="comment-83930">
+            <div id="post-83930-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes it looks like access=forestry on the track may be the problem, used on its own it implies all forms of non-forestry access are not allowed (including foot, bicycle, horse). Depending on what is in fact allowed, it might be fixed by making this tag narrower e.g. motor_vehicle=forestry, as suggested at <a href="https://wiki.openstreetmap.org/wiki/Tag:access=forestry?uselang=en-GB">https://wiki.openstreetmap.org/wiki/Tag:access=forestry?uselang=en-GB</a> . You could also add specific modes to override the main access tag, e.g. foot=yes. Ideally based on what is signed on the ground.</p>
+
+<p>(I couldn't get the original link to work either by the way).</p></div>
+            <div class="comment-info" id="comment-83930-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Mar '22, 09:35)</span>
+                <a class="comment-user userinfo" href="/users/14272/alan_gr">alan_gr</a>
+                
+            </div>
+        </div>
+    
+        <a name="83933"></a>
+        <div class="comment not_top_scorer" id="comment-83933">
+            <div id="post-83933-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks alan</p></div>
+            <div class="comment-info" id="comment-83933-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Mar '22, 23:05)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="83940"></a>
+        <div class="comment" id="comment-83940">
+            <div id="post-83940-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks Alan &amp; Andy. With foot=allowed routing works as expected.</p></div>
+            <div class="comment-info" id="comment-83940-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Mar '22, 07:02)</span>
+                <a class="comment-user userinfo" href="/users/21540/matzer">MatzeR</a>
+                
+            </div>
+        </div>
+    
+        <a name="83942"></a>
+        <div class="comment" id="comment-83942">
+            <div id="post-83942-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Please note that the correct tag is <code>foot=yes</code> and not <code>foot=allowed</code>.</p></div>
+            <div class="comment-info" id="comment-83942-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Mar '22, 07:13)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="83943"></a>
+        <div class="comment not_top_scorer" id="comment-83943">
+            <div id="post-83943-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks scai I have used a pre-set option available in Potlatch3 (foot =allowed ) perhaps that pre-set needs updating maybe?.. But I like Potlatch3</p></div>
+            <div class="comment-info" id="comment-83943-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Mar '22, 08:43)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="83946"></a>
+        <div class="comment" id="comment-83946">
+            <div id="post-83946-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Checking again. Clicking on foot=allowed does in fact insert foot=yes when viewed in advanced mode so I think we are all ok :-)</p></div>
+            <div class="comment-info" id="comment-83946-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Mar '22, 10:16)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="83950"></a>
+        <div class="comment" id="comment-83950">
+            <div id="post-83950-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Not directly related to the original question, but:</p>
+
+<blockquote>
+<p>I suspect the footpath tag should have foot=allowed or in England foot=designated to indicate it is a legal footpath</p>
+</blockquote>
+
+<p>is actually a bit confusing, and not just because "allowed" should be "yes" of course.</p>
+
+<p>The "foot" tag on something describes how it is legal to access it by that mode of transport.  Somewhat confusingly, "foot=designated" is also used with "highway=path" to indicate that the thing being discussed is actually designed as a footway not any other sort of path.  </p>
+
+<p>What I suspect Andy is alluding to here is the "designation=public_footpath" tag, which is used in England and Wales to indicate a special legal status, which also implies foot=yes (but I'd always add a foot=yes tag too, to avoid problems like <a href="https://help.openstreetmap.org/questions/83945/foot-routing-failing-bridleway-alone-doesnt-let-it-work-it-needs-footyes">this one</a>).</p></div>
+            <div class="comment-info" id="comment-83950-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Mar '22, 11:21)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83929" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83929-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/83928/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zDV2RUncgJYnXAjcj7fcVgsf1HMNkOMd' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83928/routing-between-2-points-on-the-same-path-not-working?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83928/routing-between-2-points-on-the-same-path-not-working?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/routingerror/"
+            class="tag-link-routingerror"
+            title="see questions tagged'routingerror'using tags"
+            rel="tag">routingerror</a> <span class="tag-number">&#215;22</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 19, 2022, 8:08 p.m.">19 Mar '22, 20:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,240 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 21, 2022, 11:22 a.m.">21 Mar '22, 11:22</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/24550/found-no-good-gpx-points-in-the-input-data">&quot;Found no good GPX points in the input data&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32354/openstreetmaporg-website-connectivity-problem">openstreetmap.org website connectivity problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40887/new-mapper-osmand-nav-error-looking-at-an-intersection-for-potential-error">New Mapper - OSMand nav error - looking at an intersection for potential error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42094/how-can-i-make-my-local-graphhopper-installation-obey-bicycleno">How can I make my local GraphHopper installation obey bicycle=no?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47316/qt-osm-plugin-doesnt-draw-route">qt osm plugin doesnt draw route</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48106/broken-uk-route-between-a20-to-dover-with-osrm">[closed] Broken UK route between A20 to Dover with OSRM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51770/should-footways-connect-to-highways">Should footways connect to highways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53185/trouble-with-divided-intersections">Trouble with Divided Intersections</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59951/incorrect-mapping">Incorrect mapping</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2974/routing-error">Routing Error ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

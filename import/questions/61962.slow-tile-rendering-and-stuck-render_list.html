@@ -1,0 +1,828 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Slow tile rendering and stuck render_list - OSM Help</title>
+        <meta name="description" content="Hi all, my first post here.  I installed a tile server following this https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/ and managed to get it work ... sort of. I installed leaflet on top of that, and something indeed happens - eventually. When I go to a new location on the map or a..." />
+        <meta name="keywords" content="tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/61962/slow-tile-rendering-and-stuck-render_list" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61962/slow-tile-rendering-and-stuck-render_list?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zjqBtwOrwsAIUwLDIlRY5n2whgfBbkxZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61962/slow-tile-rendering-and-stuck-render_list">Slow tile rendering and stuck render_list</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61962-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61962/up/" rel="nofollow"> </a>
+<div id="post-61962-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-61962-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61962/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61962/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all, my first post here. </p>
+<p>I installed a tile server following this <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> and managed to get it work ... sort of.  I installed leaflet on top of that, and something indeed happens - eventually. When I go to a new location on the map or a new zoom level, I get an empty screen and after 30 seconds (timeout set in apache conf) 404 errors (GET /hot/3/1/3.png HTTP/1.1" 404 503 "http://10.0.0.126/map.html")  and so on. (map of the whole world imported).</p>
+<p>When I do a refresh later or move elsewhere and come back, the tiles are there. I am not too familiar with any of this but my diagnosis is that rendering of tiles just takes "too long". This is unlikely to be a hardware issue as I commandeered an unused server from a server room rack for this. I have 40 cores, 192GB of memory and 6TB of solid state storage. This is a fresh 16.04 server install with nothing else running on it and everything up to date. </p>
+<p>Ok. Rendering of tiles may be slow, and I thought to speed it up by doing a lot of it beforehand as I do not particularly lack resources here. I tried</p>
+<pre><code>./render_list -m default -a -z 0 -Z 10 -n 10
+</code></pre>
+<p>but it just hangs. It does not appear to be doing anything. It does not consume any resources whatsoever and it does not cause anything visible in CPU, renderd or postgresql processes. In contrast, when I navigate with my browser to an unvisited area on the map, I can see 6-8 postgresql processes taking 100% of CPU for a while and renderd peaking occasionally as well. </p>
+<p>Apparently something is not right, but what exactly and how could I debug this?</p>
+<p>EDIT:</p>
+<p>This is my renderd.conf:</p>
+<pre><code>[renderd]
+num_threads=16
+tile_dir=/var/lib/mod_tile
+stats_file=/var/run/renderd/renderd.stats
+
+[mapnik]
+plugins_dir=/usr/lib/mapnik/3.0/input
+font_dir=/usr/share/fonts/truetype
+font_dir_recurse=1
+
+[ajt]
+URI=/hot/
+TILEDIR=/var/lib/mod_tile
+XML=/home/osm/src/openstreetmap-carto/mapnik.xml
+HOST=localhost
+TILESIZE=256
+MAXZOOM=20
+</code></pre>
+<p>From syslog I can see successful rendering but the lower the zoom level, the more time it takes. The higher zoom level speeds are completely acceptable, it is just zoom levels 3-5 that seem to take forever:</p>
+<pre><code>Feb  5 14:54:01 foo renderd[2544]: DEBUG: DONE TILE ajt 8 144-151 96-103 in 17.569 seconds
+Feb  5 14:56:30 foo renderd[2544]: DEBUG: DONE TILE ajt 4 8-15 8-15 in 154.711 seconds
+Feb  5 14:57:38 foo renderd[2544]: DEBUG: DONE TILE ajt 6 32-39 32-39 in 55.559 seconds
+Feb  5 14:57:40 foo renderd[2544]: DEBUG: DONE TILE ajt 5 16-23 16-23 in 64.475 seconds
+Feb  5 14:58:04 foo renderd[2544]: DEBUG: DONE TILE ajt 7 64-71 72-79 in 1.414 seconds
+Feb  5 14:58:08 foo renderd[2544]: DEBUG: DONE TILE ajt 8 136-143 144-151 in 2.584 seconds
+Feb  5 14:58:09 foo renderd[2544]: DEBUG: DONE TILE ajt 10 568-575 592-599 in 1.164 seconds
+</code></pre>
+<p>When I run render_list, I do get a connection reported like this (the only interesting line, no other RenderBulk requests appear):</p>
+<pre><code>renderd[2544]: DEBUG: Got command RenderBulk fd(8) xml(default), z(1), x(0), y(0), mime(image/png), options()
+</code></pre>
+<p>but then nothing else happens. No other log entries, and no CPU or disk activity whatsoever (I have waited for about an hour for something to happen). </p>
+<p>Restarting renderd does not produce any interesting log messages (debug messages about fonts mainly). The only "odd" part is this (no function name - not sure if it is ok or not).</p>
+<pre><code>Feb  5 15:54:54 foo renderd[22643]: Starting stats thread
+Feb  5 15:54:54 foo renderd[22643]: Loading parameterization function for
+Feb  5 15:54:54 foo renderd[22643]: message repeated 15 times: [ Loading parameterization function for]
+Feb  5 15:54:55 foo renderd[22643]: Updating max_connection parameter for mapnik layers to reflect thread count
+Feb  5 15:54:57 foo renderd[22643]: message repeated 15 times: [ Updating max_connection parameter for mapnik layers to reflect thread count]
+Feb  5 15:54:57 foo renderd[22643]: Using web mercator projection settings
+Feb  5 15:54:59 foo renderd[22643]: message repeated 15 times: [ Using web mercator projection settings]
+</code></pre>
+<p><strong>EDIT2</strong></p>
+<p>If I run render_list as </p>
+<pre><code>./render_list -m default -a -z 1 -Z 4 -n 10
+</code></pre>
+<p>I <em>sometimes</em> seem to be getting log messages:</p>
+<pre><code>Feb  5 16:00:20 foo renderd[22643]: DEBUG: Got command RenderBulk fd(12) xml(default), z(4), x(8), y(8), mime(image/png), options()
+Feb  5 16:00:20 foo renderd[22643]: No map for: default
+</code></pre>
+<p>But it does not seem to matter from functional perspective if these appear or not. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Feb '18, 14:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b02dba4479ba90129bd366dac7858959?s=32&amp;d=identicon&amp;r=g" alt="hv42's gravatar image" />
+    <p><a href="/users/14717/hv42">hv42</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hv42 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61962/">
+                edited
+                <strong>07 Feb '18, 21:43</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61962">
+    
+        <a name="61963"></a>
+        <div class="comment" id="comment-61963">
+            <div id="post-61963-score" class="comment-score"></div>
+            <div class="comment-text"><p>... and it seems to be only the "wide" zooms causing the problem making the above render_list really useful. If I zoom into an obscure location on the planet, those tiles are server quickly. So I guess my question is how can I find out why render_list does not do anything.</p></div>
+            <div class="comment-info" id="comment-61963-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Feb '18, 14:59)</span>
+                <a class="comment-user userinfo" href="/users/14717/hv42">hv42</a>
+                
+            </div>
+        </div>
+    
+        <a name="61964"></a>
+        <div class="comment" id="comment-61964">
+            <div id="post-61964-score" class="comment-score"></div>
+            <div class="comment-text"><p>What messages do you see in /var/log/syslog ?  When a request is made to render a tile such as <a href="http://yourserver.example.com/maps/default/0/0/0.png">http://yourserver.example.com/maps/default/0/0/0.png</a> you should see things including lines such as:</p>
+
+<pre><code>Feb  5 14:54:49 yourserver renderd[20130]: DEBUG: START TILE default 0 0-0 0-0, age 45.75 days
+Feb  5 14:57:09 yourserver renderd[20130]: DEBUG: DONE TILE default 0 0-0 0-0 in 140.203 seconds
+</code></pre>
+
+<p>"render_list" just sends a series of requests for tiles, so you should see a series of requests.</p>
+
+<p>What's in your "renderd.conf" file?  What happens in syslog in response to "sudo /etc/init.d/render restart"?</p></div>
+            <div class="comment-info" id="comment-61964-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Feb '18, 15:01)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61965"></a>
+        <div class="comment" id="comment-61965">
+            <div id="post-61965-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks for your reply. I have updated the question instead of posting answers here for the sake of readability.</p></div>
+            <div class="comment-info" id="comment-61965-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Feb '18, 15:57)</span>
+                <a class="comment-user userinfo" href="/users/14717/hv42">hv42</a>
+                
+            </div>
+        </div>
+    
+        <a name="62780"></a>
+        <div class="comment" id="comment-62780">
+            <div id="post-62780-score" class="comment-score"></div>
+            <div class="comment-text"><p>The same problem: render_list does not do anything! No tiles generating.</p></div>
+            <div class="comment-info" id="comment-62780-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '18, 14:50)</span>
+                <a class="comment-user userinfo" href="/users/14903/michael-holopov">Michael Holopov</a>
+                
+            </div>
+        </div>
+    
+        <a name="62782"></a>
+        <div class="comment" id="comment-62782">
+            <div id="post-62782-score" class="comment-score">1</div>
+            <div class="comment-text"><p>"the lower the zoom level, the more time it takes" - this is expected behavior. That's why low zoom levels on <a href="http://openstreetmap.org/">http://openstreetmap.org/</a> only get updated from time to time.</p></div>
+            <div class="comment-info" id="comment-62782-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '18, 15:05)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="62783"></a>
+        <div class="comment not_top_scorer" id="comment-62783">
+            <div id="post-62783-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/14903/michael-holopov">@Michael Holopov</a> - it shouldn't "not do anything"; you should see activity in syslog (see the snippets added to the question).  You might have to wait <em>minutes</em> or even longer to see tiles at low zoom level, but that's normal.</p></div>
+            <div class="comment-info" id="comment-62783-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '18, 15:43)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63418"></a>
+        <div class="comment not_top_scorer" id="comment-63418">
+            <div id="post-63418-score" class="comment-score"></div>
+            <div class="comment-text"><p>typically a posgres issue : you have enough memory but did you configured postges to use it ?</p></div>
+            <div class="comment-info" id="comment-63418-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 May '18, 03:48)</span>
+                <a class="comment-user userinfo" href="/users/15107/antac">AntaC</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61962" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61962-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61962/slow-tile-rendering-and-stuck-render_list?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61962/slow-tile-rendering-and-stuck-render_list?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61962/slow-tile-rendering-and-stuck-render_list?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61962/slow-tile-rendering-and-stuck-render_list?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="66985"></a>
+                    <div id="answer-container-66985" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-66985-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66985/up/" rel="nofollow"> </a>
+<div id="post-66985-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-66985-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66985/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>map is ajt -m ajt that works</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/66985/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Nov '18, 10:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5fc09cc7b1faf82827919ab62dedcb32?s=32&amp;d=identicon&amp;r=g" alt="andreaswoods's gravatar image" />
+    <p><a href="/users/15977/andreaswoods">andreaswoods</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andreaswoods has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-66985">
+    
+        <a name="66986"></a>
+        <div class="comment" id="comment-66986">
+            <div id="post-66986-score" class="comment-score"></div>
+            <div class="comment-text"><p>The original question was asking about slow tile rendering rather than not working at all - I wonder if the "default" in the original quoted render_list command was a typo, or if "default" actually works if there's only one style defined?</p></div>
+            <div class="comment-info" id="comment-66986-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '18, 11:13)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-66985" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66985-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61962/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zjqBtwOrwsAIUwLDIlRY5n2whgfBbkxZ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61962/slow-tile-rendering-and-stuck-render_list?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61962/slow-tile-rendering-and-stuck-render_list?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 5, 2018, 2:35 p.m.">05 Feb '18, 14:35</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,863 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 29, 2018, 11:13 a.m.">29 Nov '18, 11:13</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/16972/configure-linux-for-osm-tile-server">Configure Linux for OSM Tile Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17474/tirex-prefetching-of-next-zoom-level">Tirex: Prefetching of next zoom level</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19156/cannot-load-the-local-map-tiles-from-the-db-in-my-slippy-map-using-the-switch2osm-package">Cannot load the local map tiles from the DB in my slippy map – using the Switch2OSM package</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19638/ipv6-for-tileservers">IPv6 for Tileservers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20286/mod_tile-build-on-rhel5">mod_tile build on RHEL5</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20645/manually-installing-a-tileserver-setting-up-postgis-errors">Manually Installing a TileServer: Setting up PostGIS (errors)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20735/country-place-and-street-names-in-english-instead-of-local-language-for-my-own-mapserver">Country, place and street names in English instead of local language for  my own mapserver</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21512/amazon-ec2-tile-drawer-stuck-on-software-installing">Amazon ec2 Tile Drawer: Stuck on Software Installing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21909/increase-improve-speed-up-rendering-performance-of-my-own-tileserver">Increase / Improve / Speed Up Rendering Performance of my own tileserver</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16917/own-openstreetmap-tile-server-oneclick">Own OpenStreetMap Tile Server OneClick</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

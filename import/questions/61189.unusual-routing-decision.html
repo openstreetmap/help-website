@@ -1,0 +1,887 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Unusual routing decision - OSM Help</title>
+        <meta name="description" content="Can anyone explain this rather exotic routing decision? https://www.openstreetmap.org/#map=14/50.8579/-1.1657 I have checked for ways that are not correctly joined, but I cannot find any. The route that I am trying to create is from 50.8507, -1.1538, to 50.8515, -1.1882 by car. Eventually I will red..." />
+        <meta name="keywords" content="osrm,routingerror" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/61189/unusual-routing-decision" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61189/unusual-routing-decision?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='q5BdMk3SKKdnHpR4LWhyo6UxqbQvhEwv' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61189/unusual-routing-decision">Unusual routing decision</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61189-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61189/up/" rel="nofollow"> </a>
+<div id="post-61189-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-61189-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61189/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61189/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Can anyone explain this rather exotic routing decision?
+<a href="https://www.openstreetmap.org/#map=14/50.8579/-1.1657">https://www.openstreetmap.org/#map=14/50.8579/-1.1657</a>
+I have checked for ways that are not correctly joined, but I cannot find any.</p>
+<p>The route that I am trying to create is from 50.8507, -1.1538, to 50.8515, -1.1882 by car. Eventually I will rediscover how to attach an image to this question, and I will be able to show everyone what route the computer chose.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osrm/" class="post-tag tag-link-osrm"
+                                        title="see questions tagged 'osrm'" rel="tag">osrm</a>
+                                
+                                    <a href="/tags/routingerror/" class="post-tag tag-link-routingerror"
+                                        title="see questions tagged 'routingerror'" rel="tag">routingerror</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Dec '17, 18:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c81fd17cde8b2747629b78bdef81a202?s=32&amp;d=identicon&amp;r=g" alt="Madryn's gravatar image" />
+    <p><a href="/users/2591/madryn">Madryn</a><br/>
+    <span class="score" title="2241 reputation points"><span class="">2.2k</span></span><span title="36 badges"><span class="badge1">&#9679;</span><span class="badgecount">36</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Madryn has 5 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61189/">
+                edited
+                <strong>22 Dec '17, 08:57</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+            <p><a href="/users/158/scai">scai ♦</a><br/>
+            <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61189">
+    
+        <a name="61191"></a>
+        <div class="comment" id="comment-61191">
+            <div id="post-61191-score" class="comment-score">3</div>
+            <div class="comment-text"><p>... which I think is:</p>
+
+<p><a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=50.8507%2C-1.1535%3B50.8521%2C-1.1884#map=14/50.8579/-1.1506">https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=50.8507%2C-1.1535%3B50.8521%2C-1.1884#map=14/50.8579/-1.1506</a></p></div>
+            <div class="comment-info" id="comment-61191-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '17, 18:25)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61192"></a>
+        <div class="comment not_top_scorer" id="comment-61192">
+            <div id="post-61192-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thank you, Someone Else. That certainly illustrates the behaviour, although I had intended the journey to stop somewhere around the railway station.</p></div>
+            <div class="comment-info" id="comment-61192-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '17, 18:31)</span>
+                <a class="comment-user userinfo" href="/users/2591/madryn">Madryn</a>
+                
+            </div>
+        </div>
+    
+        <a name="61197"></a>
+        <div class="comment not_top_scorer" id="comment-61197">
+            <div id="post-61197-score" class="comment-score"></div>
+            <div class="comment-text"><p>Madryn it seems mapzen and graph hopper seem to work as you would expect. Only osrm takes the longer distance route, perhaps osrm's timings for the junctions cause the odd route. I assume from SomeoneElse's comment you now know that you can just cut and paste the url of the map with the route on it.
+<a href="https://www.openstreetmap.org/directions?engine=graphhopper_car&amp;route=50.8510%2C-1.1554%3B50.8520%2C-1.1910#map=14/50.8510/-1.1673">https://www.openstreetmap.org/directions?engine=graphhopper_car&amp;route=50.8510%2C-1.1554%3B50.8520%2C-1.1910#map=14/50.8510/-1.1673</a></p></div>
+            <div class="comment-info" id="comment-61197-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '17, 23:49)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="61198"></a>
+        <div class="comment" id="comment-61198">
+            <div id="post-61198-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Just an idea: To test an odd routing result i usually just push red and green flags along in short sections until it reveals the problem, it also gives the distance and the time, that may give a clue why osrm does what it does. no need to open an editor until the "error" has been located, maybe?</p></div>
+            <div class="comment-info" id="comment-61198-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '17, 23:57)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="61200"></a>
+        <div class="comment not_top_scorer" id="comment-61200">
+            <div id="post-61200-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the suggestion, andy mackey, but I tried that before I asked the question. The routing system behaved as though the Eastern Way sliproad leading south west from the Delme Roundabout was not connected to the main dual carriageway. However, when I looked, there seemed to be nothing wrong with that junction. It seems that the router really wants to avoid the roundabout, but will use it if left with no alternative.</p></div>
+            <div class="comment-info" id="comment-61200-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '17, 07:53)</span>
+                <a class="comment-user userinfo" href="/users/2591/madryn">Madryn</a>
+                
+            </div>
+        </div>
+    
+        <a name="61204"></a>
+        <div class="comment" id="comment-61204">
+            <div id="post-61204-score" class="comment-score">3</div>
+            <div class="comment-text"><p>At the risk of stating the obvious, it's perhaps worth mentioning that some routers use older data (sometimes quite a lot older).  A problem with one router doesn't mean a problem with OSM data.</p></div>
+            <div class="comment-info" id="comment-61204-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '17, 12:03)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61207"></a>
+        <div class="comment not_top_scorer" id="comment-61207">
+            <div id="post-61207-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you check the surface=* tag on the roads? Sometimes it might effect routing.</p></div>
+            <div class="comment-info" id="comment-61207-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '17, 17:52)</span>
+                <a class="comment-user userinfo" href="/users/14531/mxdanger">Mxdanger</a>
+                
+            </div>
+        </div>
+    
+        <a name="61208"></a>
+        <div class="comment" id="comment-61208">
+            <div id="post-61208-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, I checked the history of the Cams Hill, it's from 2013, one of the traffic signals causing the problem from 2014. I  think it's unlikely that data is the reason. I think it's a glitch in their algorithm.</p></div>
+            <div class="comment-info" id="comment-61208-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '17, 19:06)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="61322"></a>
+        <div class="comment" id="comment-61322">
+            <div id="post-61322-score" class="comment-score">2</div>
+            <div class="comment-text"><p>You can report potential OSRM bugs at <a href="https://github.com/Project-OSRM/osrm-backend/issues.">https://github.com/Project-OSRM/osrm-backend/issues.</a> I've created a report for you: <a href="https://github.com/Project-OSRM/osrm-backend/issues/4754">https://github.com/Project-OSRM/osrm-backend/issues/4754</a></p></div>
+            <div class="comment-info" id="comment-61322-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '17, 08:59)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61189" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61189-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61189/unusual-routing-decision?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61189/unusual-routing-decision?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61189/unusual-routing-decision?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61189/unusual-routing-decision?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61202"></a>
+                    <div id="answer-container-61202" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61202-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61202/up/" rel="nofollow"> </a>
+<div id="post-61202-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-61202-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61202/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Madryn has selected this answer as the correct answer"
+        href="/accept_answer/61202/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>when I move the start marker, I notice that for OSRM the problem is located at the traffic signal on Cams Hill (near the bus stop 'Delme Arms Ph') . Exclude that from the route, and it goes over the roundabout. Include it, and it makes a u-turn at the traffic  signal.
+After moving the end marker, it seems the OSRM does not "like' the 2 traffic signals: <a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=50.85216%2C-1.16498%3B50.85311%2C-1.16852#map=18/50.85266/-1.16673">https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=50.85216%2C-1.16498%3B50.85311%2C-1.16852#map=18/50.85266/-1.16673</a> include both and it goes wrong, include only 1 and the route is OK.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61202/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Dec '17, 11:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/813a136afe7d4c95fd5bccdd78705e0e?s=32&amp;d=identicon&amp;r=g" alt="escada's gravatar image" />
+    <p><a href="/users/5390/escada">escada</a><br/>
+    <span class="score" title="19043 reputation points"><span class="">19.0k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="166 badges"><span class="silver">&#9679;</span><span class="badgecount">166</span></span><span title="302 badges"><span class="bronze">&#9679;</span><span class="badgecount">302</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="escada has 97 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61202">
+    
+</div>
+<div id="comment-tools-61202" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61202-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="61448"></a>
+                    <div id="answer-container-61448" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61448-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61448/up/" rel="nofollow"> </a>
+<div id="post-61448-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-61448-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61448/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>According to <a href="https://github.com/Project-OSRM/osrm-backend/issues/4754">https://github.com/Project-OSRM/osrm-backend/issues/4754</a> this is an upstream bug caused by an invalidly applied U-Turn penalty. It will be fixed in the next OSRM release.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61448/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Jan '18, 08:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61448">
+    
+</div>
+<div id="comment-tools-61448" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61448-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61189/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='q5BdMk3SKKdnHpR4LWhyo6UxqbQvhEwv' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61189/unusual-routing-decision?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61189/unusual-routing-decision?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osrm/"
+            class="tag-link-osrm"
+            title="see questions tagged'osrm'using tags"
+            rel="tag">osrm</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/routingerror/"
+            class="tag-link-routingerror"
+            title="see questions tagged'routingerror'using tags"
+            rel="tag">routingerror</a> <span class="tag-number">&#215;22</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 14, 2017, 6:15 p.m.">14 Dec '17, 18:15</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,665 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 2, 2018, 8:22 a.m.">02 Jan '18, 08:22</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/48106/broken-uk-route-between-a20-to-dover-with-osrm">[closed] Broken UK route between A20 to Dover with OSRM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19695/how-to-use-osrm-on-offline">How to use OSRM on offline?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32354/openstreetmaporg-website-connectivity-problem">openstreetmap.org website connectivity problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24550/found-no-good-gpx-points-in-the-input-data">&quot;Found no good GPX points in the input data&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30272/how-the-routing-osrm-algorithm-works">how the routing OSRM algorithm works?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30536/problem-to-compile-extractorcpp-osrm">Problem to compile extractor.cpp OSRM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23715/how-to-use-osrm">How to use OSRM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32644/determining-speed-limits-for-given-route">Determining speed limits for given route</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36686/use-of-demo-server">Use of demo server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18354/copyright-of-images-httpmapproject-osrmorg">copyright of images http://map.project-osrm.org/</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

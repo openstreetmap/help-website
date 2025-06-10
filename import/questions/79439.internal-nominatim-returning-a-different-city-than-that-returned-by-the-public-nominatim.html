@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Internal Nominatim returning a different city than that returned by the public Nominatim - OSM Help</title>
+        <meta name="description" content="Hi, our team is hosting Nominatim(app version 3.6.0) internally with the latest North America OSM data downloaded from http://download.geofabrik.de/ and TIGER data set of 2019. We recently noticed that the reverse-geocoding result of a specific coordinate from our Nominatim is a bit different from t..." />
+        <meta name="keywords" content="tiger,city,reversegeocoding,nominatim" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/79439/internal-nominatim-returning-a-different-city-than-that-returned-by-the-public-nominatim" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/79439/internal-nominatim-returning-a-different-city-than-that-returned-by-the-public-nominatim?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zWzTaFsvPMNan8rWtRvGUQvzhHMEdkUy' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/79439/internal-nominatim-returning-a-different-city-than-that-returned-by-the-public-nominatim">Internal Nominatim returning a different city than that returned by the public Nominatim</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-79439-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79439/up/" rel="nofollow"> </a>
+<div id="post-79439-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-79439-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79439/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/79439/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, our team is hosting Nominatim(app version 3.6.0) internally with the latest North America OSM data downloaded from <a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a> and TIGER data set of 2019. We recently noticed that the reverse-geocoding result of a specific coordinate from our  Nominatim is a bit different from that of the public Nominatim. </p>
+<p><strong>Coordinate of interest:</strong> (lat: 33.88741050822116, lon:-118.26697164758119)</p>
+<p><strong>What public Nominatim returns:</strong></p>
+<p>URL: <a href="https://nominatim.openstreetmap.org/reverse?format=json&amp;lat=33.8874564&amp;lon=-118.2669698&amp;zoom=18&amp;addressdetails=1#">https://nominatim.openstreetmap.org/reverse?format=json&amp;lat=33.8874564&amp;lon=-118.2669698&amp;zoom=18&amp;addressdetails=1#
+</a></p>
+<pre><code>{
+   "place_id":264864471,
+   "licence":"Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+   "osm_type":"way",
+   "osm_id":466977226,
+   "lat":"33.88741050822116",
+   "lon":"-118.26697164758119",
+   "display_name":"546, East Airline Way, West Rancho Dominguez, Los Angeles County, California, 90248, United States",
+   "address":{
+      "house_number":"546",
+      "road":"East Airline Way",
+      "hamlet":"West Rancho Dominguez",
+      "county":"Los Angeles County",
+      "state":"California",
+      "postcode":"90248",
+      "country":"United States",
+      "country_code":"us"
+   },
+   "boundingbox":[
+      "33.887360508221",
+      "33.887460508221",
+      "-118.26702164758",
+      "-118.26692164758"
+   ]
+}
+</code></pre>
+<p><strong>What our internal Nominatim returns:</strong></p>
+<p>Command we ran:</p>
+<pre><code>curl 'http://localhost:8080/reverse?format=json&amp;lat=33.8874564&amp;lon=-118.2669698&amp;zoom=18&amp;addressdetails=1' -H 'pragma: no-cache'   -H 'cache-control: no-cache'   -H 'sec-ch-ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"'   -H 'sec-ch-ua-mobile: ?0'   -H 'upgrade-insecure-requests: 1'   -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'   -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'   -H 'sec-fetch-site: none'   -H 'sec-fetch-mode: navigate'   -H 'sec-fetch-user: ?1'   -H 'sec-fetch-dest: document'   -H 'accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7,es-MX;q=0.6,es;q=0.5'   --compressed
+
+ {
+   "place_id":68635125,
+   "licence":"Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+   "osm_type":"way",
+   "osm_id":466977226,
+   "lat":"33.88741050822116",
+   "lon":"-118.26697164758119",
+   "display_name":"546, East Airline Way, West Rancho Dominguez, El Monte, Los Angeles County, California, 90248, United States of America",
+   "address":{
+      "house_number":"546",
+      "road":"East Airline Way",
+      "hamlet":"West Rancho Dominguez",
+      "city":"El Monte",
+      "county":"Los Angeles County",
+      "state":"California",
+      "postcode":"90248",
+      "country":"United States of America",
+      "country_code":"us"
+   },
+   "boundingbox":[
+      "33.887360508221",
+      "33.887460508221",
+      "-118.26702164758",
+      "-118.26692164758"
+   ]
+}
+</code></pre>
+<p>The only difference is that our Nominatim returns <code>"city":"El Monte"</code> while the public one doesn't, however when visually checking this specific coordinate we found that it's actually pretty far from <code>El Monte city</code>, so in this case, the public Nominatim works correctly by not including <code>"city":"El Monte"</code> in the result. </p>
+<p>We are curious about what could cause such a difference between the results, since our internal Nominatim is using the latest released version(3.6.0) and the latest OSM data(the only difference I could think of is that we're using TIGER data set of 2019, I'm not sure if the public Nominatim is actually using TIGER data set), we'd like to get some help from the community:) Thanks in advance!  </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tiger/" class="post-tag tag-link-tiger"
+                                        title="see questions tagged 'tiger'" rel="tag">tiger</a>
+                                
+                                    <a href="/tags/city/" class="post-tag tag-link-city"
+                                        title="see questions tagged 'city'" rel="tag">city</a>
+                                
+                                    <a href="/tags/reversegeocoding/" class="post-tag tag-link-reversegeocoding"
+                                        title="see questions tagged 'reversegeocoding'" rel="tag">reversegeocoding</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Mar '21, 21:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/93297ac8f7966d189c78d26c1443d949?s=32&amp;d=identicon&amp;r=g" alt="tyzhang93's gravatar image" />
+    <p><a href="/users/19961/tyzhang93">tyzhang93</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tyzhang93 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-79439">
+    
+</div>
+<div id="comment-tools-79439" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79439-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/79439/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zWzTaFsvPMNan8rWtRvGUQvzhHMEdkUy' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79439/internal-nominatim-returning-a-different-city-than-that-returned-by-the-public-nominatim?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79439/internal-nominatim-returning-a-different-city-than-that-returned-by-the-public-nominatim?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/city/"
+            class="tag-link-city"
+            title="see questions tagged'city'using tags"
+            rel="tag">city</a> <span class="tag-number">&#215;107</span><br/>
+        
+        <a href="/tags/reversegeocoding/"
+            class="tag-link-reversegeocoding"
+            title="see questions tagged'reversegeocoding'using tags"
+            rel="tag">reversegeocoding</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/tiger/"
+            class="tag-link-tiger"
+            title="see questions tagged'tiger'using tags"
+            rel="tag">tiger</a> <span class="tag-number">&#215;30</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 29, 2021, 9:46 p.m.">29 Mar '21, 21:46</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,551 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 29, 2021, 9:46 p.m.">29 Mar '21, 21:46</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/68204/how-to-get-always-a-city-from-gps-coordinates">How to get ALWAYS a city from GPS coordinates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15474/the-search-shows-a-bavarian-city-as-being-in-thuringen">The search shows a Bavarian city as being in Thüringen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77325/nominatim-reverse-geocode-city-nearby">nominatim reverse geocode city nearby</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17207/wrong-city-names">Wrong city names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24532/tiger-2011-edges-data-imports-problem">[closed] Tiger 2011 edges data imports problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27475/tiger-house-numbers">Tiger House Numbers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28140/cities-is-a-placecity-node-always-needed">Cities - is a place=city node always needed?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17995/zip-code-may-be-prevent-locating-address">ZIP code may be prevent locating address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13870/different-result-of-nominatim-on-my-server-while-comparing-with-original">Different result of nominatim on my server while comparing with original</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9109/limit-nominatim-search-to-a-specific-city-or-even-a-zip-code">limit nominatim search to a specific city or even a zip code</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,748 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>osm2pgsql dosnt work with planet-latest.osm.bz2 getting error - OSM Help</title>
+        <meta name="description" content="While configuring osm2pgsql (OSM MAP) on ubuntu 9.10 all is done but when i am going to extract Planet in to database get some error. Executing command :  ./osm2pgsql -S default.style --slim -d gis2 -C 1024 --number-processes=1 --cache-strategy=dense /home/baban/Mapserver/planet-latest.osm.bz2  I GE..." />
+        <meta name="keywords" content="planet,error" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/9142/osm2pgsql-dosnt-work-with-planet-latestosmbz2-getting-error" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/9142/osm2pgsql-dosnt-work-with-planet-latestosmbz2-getting-error?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Z7bzUB4q3OEOOGrvEwOTYdR6JbOq1LQN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/9142/osm2pgsql-dosnt-work-with-planet-latestosmbz2-getting-error">osm2pgsql dosnt work with planet-latest.osm.bz2 getting error</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-9142-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9142/up/" rel="nofollow"> </a>
+<div id="post-9142-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-9142-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9142/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/9142/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>While configuring osm2pgsql (OSM MAP) on ubuntu 9.10 all is done but when i am going to extract Planet in to database get some error.
+Executing command :</p>
+<pre><code> ./osm2pgsql -S default.style --slim -d gis2 -C 1024 --number-processes=1 --cache-strategy=dense /home/baban/Mapserver/planet-latest.osm.bz2
+</code></pre>
+<p>I GET ERROR AS :</p>
+<pre><code>Unknown node type 8
+Processing: Node(109850k 36.9k/s) Way(0k 0.00k/s) Relation(0 0.00/s)WARNING: Found Out of order node 142301185 (33693398,1) - this will impact the cache efficiency
+Processing: Node(119970k 36.4k/s) Way(0k 0.00k/s) Relation(0 0.00/s)Entity: line 194701204: parser error : AttValue: ' expected
+ &lt;node id="153093405" lat="29.9738900" lon="-95.4713280" timestamp="2010-01-07T2
+                                                                               ^
+Entity: line 194701204: parser error : attributes construct error
+ &lt;node id="153093405" lat="29.9738900" lon="-95.4713280" timestamp="2010-01-07T2
+                                                                               ^
+Entity: line 194701204: parser error : Couldn't find end of Start Tag node
+ &lt;node id="153093405" lat="29.9738900" lon="-95.4713280" timestamp="2010-01-07T2
+                                                                               ^
+../../planet-latest.osm.bz2 : failed to parse
+Error occurred, cleaning up
+</code></pre>
+<p>Can anybody help to resolve this problem so that i can configure OSM successfully.  I have 1 GB RAM on my system </p>
+<p>Thanks </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/planet/" class="post-tag tag-link-planet"
+                                        title="see questions tagged 'planet'" rel="tag">planet</a>
+                                
+                                    <a href="/tags/error/" class="post-tag tag-link-error"
+                                        title="see questions tagged 'error'" rel="tag">error</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Nov '11, 06:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6415fd7bc63406c5ab1bc64cc29bb52a?s=32&amp;d=identicon&amp;r=g" alt="baban's gravatar image" />
+    <p><a href="/users/2376/baban">baban</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="baban has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/9142/">
+                edited
+                <strong>23 Nov '11, 16:22</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+            <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+            <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-9142">
+    
+</div>
+<div id="comment-tools-9142" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9142-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/9142/osm2pgsql-dosnt-work-with-planet-latestosmbz2-getting-error?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/9142/osm2pgsql-dosnt-work-with-planet-latestosmbz2-getting-error?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/9142/osm2pgsql-dosnt-work-with-planet-latestosmbz2-getting-error?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/9142/osm2pgsql-dosnt-work-with-planet-latestosmbz2-getting-error?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="9214"></a>
+                    <div id="answer-container-9214" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-9214-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9214/up/" rel="nofollow"> </a>
+<div id="post-9214-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-9214-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9214/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>To me this error suggests that your input XML file is damaged part way through, probably truncated.</p>
+<p>Check that you downloaded the full planet file. It should be about 18Gb.  You could also run a command :  <code>md5sum planet-latest.osm.bz2</code>   ....and check the resulting number matches with the md5 checksum shown on <a href="http://planet.openstreetmap.org"></a><a href="http://planet.openstreetmap.org">http://planet.openstreetmap.org</a>  (check that the file is exactly the same)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/9214/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Nov '11, 16:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-9214">
+    
+        <a name="9446"></a>
+        <div class="comment" id="comment-9446">
+            <div id="post-9446-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks Harry Sir,<br>
+         I checked md5 it shows differences then, I download some other planet.osm.bz2 file with checking md5 and it works !!! now I am generate_tiles</p></div>
+            <div class="comment-info" id="comment-9446-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '11, 06:40)</span>
+                <a class="comment-user userinfo" href="/users/2376/baban">baban</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9214" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9214-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="9254"></a>
+                    <div id="answer-container-9254" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-9254-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9254/up/" rel="nofollow"> </a>
+<div id="post-9254-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-9254-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9254/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Can you unzip the file and just try the same command with the .osm file ? I presume you've done that. If not, it's a formatting issue. Depending on the size of the file, open the file in a browser and check for formats. Hope this helps.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/9254/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Nov '11, 11:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/db4cbce4d254722e59037ede98ca51fd?s=32&amp;d=identicon&amp;r=g" alt="deepGem's gravatar image" />
+    <p><a href="/users/2428/deepgem">deepGem</a><br/>
+    <span class="score" title="0 reputation points">0</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="deepGem has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-9254">
+    
+</div>
+<div id="comment-tools-9254" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9254-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/9142/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Z7bzUB4q3OEOOGrvEwOTYdR6JbOq1LQN' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9142/osm2pgsql-dosnt-work-with-planet-latestosmbz2-getting-error?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9142/osm2pgsql-dosnt-work-with-planet-latestosmbz2-getting-error?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/error/"
+            class="tag-link-error"
+            title="see questions tagged'error'using tags"
+            rel="tag">error</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/planet/"
+            class="tag-link-planet"
+            title="see questions tagged'planet'using tags"
+            rel="tag">planet</a> <span class="tag-number">&#215;56</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 21, 2011, 6:40 a.m.">21 Nov '11, 06:40</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,969 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 9, 2013, 3:48 p.m.">09 Jan '13, 15:48</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/191/how-does-the-creation-of-the-planet-dump-work">How does the creation of the Planet dump work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/665/which-possibilities-do-i-have-to-check-relations-for-errors">Which possibilities do I have to check relations for errors?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/816/how-can-i-draw-attention-of-other-osm-users-to-unnamed-and-missing-streets-in-a-city">How can I draw attention of other OSM users to unnamed and missing streets in a city?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/972/get-administrative-boundaries-admin_level-4-of-the-planet">Get administrative boundaries (admin_level &lt;= 4) of the planet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1234/why-wont-zoom-11-update">[closed] Why won&#39;t zoom 11 update?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1301/ajax-issues-with-nominatim">[closed] Ajax issues with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2040/red-error-tiles-in-josm">Red error tiles in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2042/exporting-as-openstreetmap-xml-gives-page-not-found">Exporting as OpenStreetMap XML gives page not found?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2130/gpx-file-no-time-tag">GPX file : no time tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17/where-can-i-download-a-dump-of-openstreetmap-data">Where can I download a dump of OpenStreetMap data?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

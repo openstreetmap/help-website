@@ -1,0 +1,1215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Treatment of Co-aligned Trails? - OSM Help</title>
+        <meta name="description" content="What is the best way to handled co-aligned trails (i.e., when two trail systems share a common path). Is it to defined multiple Relationships for the path, one for each trail systems that are co-aligned over this path? So for example the trail segment (Path) with two co-aligned trail systems would h..." />
+        <meta name="keywords" content="trail,co-aligned" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/79842/treatment-of-co-aligned-trails" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/79842/treatment-of-co-aligned-trails?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='udQpt7hgcttZeuMpV9fkbbMykyh7w8Wu' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/79842/treatment-of-co-aligned-trails">Treatment of Co-aligned Trails?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-79842-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79842/up/" rel="nofollow"> </a>
+<div id="post-79842-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-79842-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79842/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/79842/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>What is the best way to handled co-aligned trails (i.e., when two trail systems share a common path). Is it to defined multiple Relationships for the path, one for each trail systems that are co-aligned over this path? So for example the trail segment (Path) with two co-aligned trail systems would have Reationship-1 "Hiking Path = Highlands Trail" and Reationship-2 "Hiking Path = Lake Hopatcong Trail".</p>
+<p>Thanks!
+--Rob</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/trail/" class="post-tag tag-link-trail"
+                                        title="see questions tagged 'trail'" rel="tag">trail</a>
+                                
+                                    <a href="/tags/co-aligned/" class="post-tag tag-link-co-aligned"
+                                        title="see questions tagged 'co-aligned'" rel="tag">co-aligned</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Apr '21, 16:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/63e6efaf5ae5774b948eb0e6bf40c84f?s=32&amp;d=identicon&amp;r=g" alt="Rob009's gravatar image" />
+    <p><a href="/users/20114/rob009">Rob009</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Rob009 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-79842">
+    
+        <a name="79893"></a>
+        <div class="comment" id="comment-79893">
+            <div id="post-79893-score" class="comment-score"></div>
+            <div class="comment-text"><p>For completeness, the relevant bit of the "Highlands Trail" appears to be <a href="https://www.openstreetmap.org/relation/6335422#map=13/40.9476/-74.6900">https://www.openstreetmap.org/relation/6335422#map=13/40.9476/-74.6900</a> (I suspect that the name isn't really "Highlands Trail (Teal Diamond)") and the relevant bit of "Lake Hopatcong Trail" is <a href="https://www.openstreetmap.org/relation/12621105#map=14/40.9433/-74.6783">https://www.openstreetmap.org/relation/12621105#map=14/40.9433/-74.6783</a> .  Both are visible at <a href="https://hiking.waymarkedtrails.org/#?map=14!40.9425!-74.681">https://hiking.waymarkedtrails.org/#?map=14!40.9425!-74.681</a> .   I suspect that the names on <a href="https://www.openstreetmap.org/way/613120946">https://www.openstreetmap.org/way/613120946</a> and <a href="https://www.openstreetmap.org/way/277931899">https://www.openstreetmap.org/way/277931899</a> shouldn't really be there.</p></div>
+            <div class="comment-info" id="comment-79893-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 12:54)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="79894"></a>
+        <div class="comment" id="comment-79894">
+            <div id="post-79894-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, the Hiking Route name is "Highlands Trail (Teal Diamond)". I just shorted it for the purpose of the example. Also, this particular Path was already on OSM identified as "Unnamed" (Name = "Null"). I named the path "Highlands Trail" (it already had relationships with the "Highlands Trail (Teal Diamond)" and the "NJ Long Trail" Hiking Routes).</p>
+
+<p>I added "Brooklyn Mt. Tr. - Lake Hopatcong Trail spur", which in fact another trail system (Route) that is in the area. Why do you say "it shouldn't really be there". This is a Spur of the Lake Hopatcong Trail system, not the Highlands Trail (I volunteer for both). The addition of the complete Lake Hopatcong trail system is pending (the spur you mention was already on OSM identified as "Unnamed" (Name = "Null")).</p></div>
+            <div class="comment-info" id="comment-79894-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 13:25)</span>
+                <a class="comment-user userinfo" href="/users/20114/rob009">Rob009</a>
+                
+            </div>
+        </div>
+    
+        <a name="79895"></a>
+        <div class="comment" id="comment-79895">
+            <div id="post-79895-score" class="comment-score"></div>
+            <div class="comment-text"><p>Currently, <a href="https://www.openstreetmap.org/way/613120946">https://www.openstreetmap.org/way/613120946</a> is one very long piece of trail.  I suspect that there are bridges yet to be be mapped, and changes of surface, and changes of width, etc.  Together, all of these form part of the "Highlands Trail", and that's mapped as <a href="https://www.openstreetmap.org/relation/6335422">https://www.openstreetmap.org/relation/6335422</a> .  Each individual way doesn't need that name as well - quite possibly they will have other, different names (a bridge might have a name "Foo bridge" for example, and <a href="https://www.openstreetmap.org/way/766379385">https://www.openstreetmap.org/way/766379385</a> already has another name "Pine Grove Road").</p></div>
+            <div class="comment-info" id="comment-79895-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 13:31)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="79897"></a>
+        <div class="comment" id="comment-79897">
+            <div id="post-79897-score" class="comment-score"></div>
+            <div class="comment-text"><p>"Each individual way doesn't need that name as well". Why do you assert this? Without naming the individual Paths that constitute the Route you end of with "Unnamed" trail appearing for these trail segments in applications like Gaia GPS, which use OSM for their base data. (in fact this is the very issue that led me to making OSM updates - unnamed trails and missing trail segments in Gaia GPS)</p></div>
+            <div class="comment-info" id="comment-79897-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 14:00)</span>
+                <a class="comment-user userinfo" href="/users/20114/rob009">Rob009</a>
+                
+            </div>
+        </div>
+    
+        <a name="79899"></a>
+        <div class="comment" id="comment-79899">
+            <div id="post-79899-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If applications like Gaia GPS cannot handle names of routes then they should change their way of data processing. There are so many applications out there using OSM data. We cannot possibly try mapping for all of them.</p>
+
+<p>There are many reasons why a trail name should not be mapped on an individual way. As you noted yourself often several trails with different names use the same path. How would you name that path then? Also often segments do have individual names that differ from the trail's name. As an extreme example take a sightseeing route in a city following the road network. Do you want to put "Great City Walk" on all the roads that are rightfully already called "Main Street", "Washington Avenue" and "Old City Square"? </p>
+
+<p>The whole idea of using a route relation is to do this abstraction between the physical way and the route following it.</p></div>
+            <div class="comment-info" id="comment-79899-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 14:38)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="79901"></a>
+        <div class="comment not_top_scorer" id="comment-79901">
+            <div id="post-79901-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, I take your point, but what exactly is that harm of populating the "Name" attribute of the Path? I sense this argument is an example of "the best is the enemy of the good". In other words, what harm is there of naming a trail segment to correspond to a common name of the trail in the area? Yes co-alignment complicates this but as long as there is agreement on the path naming syntax between the Hiking Route operators, do it really matter? </p>
+
+<p>BTW, I will reach out to Gaia GPS regarding the apparent lack of use the the Hiking Route relationship. -- Thanks!</p></div>
+            <div class="comment-info" id="comment-79901-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 15:09)</span>
+                <a class="comment-user userinfo" href="/users/20114/rob009">Rob009</a>
+                
+            </div>
+        </div>
+    
+        <a name="79903"></a>
+        <div class="comment not_top_scorer" id="comment-79903">
+            <div id="post-79903-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, it does matter.  The "name" of a way in OSM is the name of that individual way, not the name of any relations that it happens to be part of (and as you've said already, ways can be part of multiple relations).  If people put all sorts of random guff in the name field (which probably includes " (Teal Diamond)" too) then how will people know what the <em>actual</em> name is?</p></div>
+            <div class="comment-info" id="comment-79903-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 16:08)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="79906"></a>
+        <div class="comment not_top_scorer" id="comment-79906">
+            <div id="post-79906-score" class="comment-score"></div>
+            <div class="comment-text"><p>To be clear, I am not arguing against the use of the Hiking Route to define the trail system. What I am arguing against is your apparent dismissal of the Path name. Yes it is a freeform field and that means no standardization, but so what if this uncertainty is managed by the local Operators.</p>
+
+<p>I have asked Gaia GPS about there use (or lack there of) of the Hiking Route relationship of individual Paths</p></div>
+            <div class="comment-info" id="comment-79906-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 17:41)</span>
+                <a class="comment-user userinfo" href="/users/20114/rob009">Rob009</a>
+                
+            </div>
+        </div>
+    
+        <a name="79909"></a>
+        <div class="comment not_top_scorer" id="comment-79909">
+            <div id="post-79909-score" class="comment-score"></div>
+            <div class="comment-text"><p>I advise against generally applying route names to individual ways. Nevertheless, there may be occasions where paths are actually named like the route or at least referred to by that name by the locals. By my experience this is sometimes the case for short sections of trails passing through a village.  </p>
+
+<p>In that case it is ok to name the way directly. As so often in OSM it is a subjective judgment by the mapper what is appropriate.</p></div>
+            <div class="comment-info" id="comment-79909-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 18:00)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="79914"></a>
+        <div class="comment not_top_scorer" id="comment-79914">
+            <div id="post-79914-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, thanks I will take this as a "best practice" not to blindly name each way with the name of the Hiking Route (or derivative there of). As previously noted, I have escalated with Gaia GPS their apparent dependence on way naming.</p></div>
+            <div class="comment-info" id="comment-79914-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 21:09)</span>
+                <a class="comment-user userinfo" href="/users/20114/rob009">Rob009</a>
+                
+            </div>
+        </div>
+    
+        <a name="79916"></a>
+        <div class="comment not_top_scorer" id="comment-79916">
+            <div id="post-79916-score" class="comment-score"></div>
+            <div class="comment-text"><p>The relevant bit of the OSM wiki is <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only</a> .</p></div>
+            <div class="comment-info" id="comment-79916-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 23:00)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="79918"></a>
+        <div class="comment not_top_scorer" id="comment-79918">
+            <div id="post-79918-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the Wiki pointer. Ok, here is a very specific question. The trail system (Hiking Route = Lake Hopatcong Trail) was several shorter feeder trails called "spurs". These Lake Hopatcong Trail spurs all have unique names, like the "Leo Avenue Spur" (meaning it services hikers entering the trail system from the street Leo Avenue). What is the must appropriate approach to associate "Leo Avenue Spur" with its way (a way that has a relationship with Hiking Route = Lake Hopatcong Trail). Is it to use the Name tag in this case, as "Leo Avenue Spur" is specific to this item?</p></div>
+            <div class="comment-info" id="comment-79918-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '21, 00:02)</span>
+                <a class="comment-user userinfo" href="/users/20114/rob009">Rob009</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79842" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79842-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/79842/treatment-of-co-aligned-trails?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/79842/treatment-of-co-aligned-trails?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/79842/treatment-of-co-aligned-trails?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/79842/treatment-of-co-aligned-trails?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="79851"></a>
+                    <div id="answer-container-79851" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79851-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79851/up/" rel="nofollow"> </a>
+<div id="post-79851-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-79851-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79851/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yes, multiple relations are the way to go.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79851/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '21, 20:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79851">
+    
+</div>
+<div id="comment-tools-79851" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79851-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="79847"></a>
+                    <div id="answer-container-79847" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79847-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79847/up/" rel="nofollow"> </a>
+<div id="post-79847-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-79847-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79847/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The physical path you walk on should only be mapped once. This can be as a single <a href="https://wiki.openstreetmap.org/wiki/Way">way</a> or multiple ways drawn end to end. These ways should not overlap unless there is e.g. a bridge with a separate walkway that goes along underneath it. </p>
+<p>If multiple <a href="https://wiki.openstreetmap.org/wiki/Walking_Routes">routes</a> use that same path they can each be represented by separate route relations referencing the same osm ways where necessary. Route related tags should not normally be present on the ways that make up the route themselves.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79847/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '21, 19:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ec8a0cf213f9797ad1c1ae2c28c2332d?s=32&amp;d=identicon&amp;r=g" alt="InsertUser's gravatar image" />
+    <p><a href="/users/4426/insertuser">InsertUser</a><br/>
+    <span class="score" title="11005 reputation points"><span class="">11.0k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="69 badges"><span class="silver">&#9679;</span><span class="badgecount">69</span></span><span title="185 badges"><span class="bronze">&#9679;</span><span class="badgecount">185</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="InsertUser has 73 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79847">
+    
+        <a name="79857"></a>
+        <div class="comment" id="comment-79857">
+            <div id="post-79857-score" class="comment-score"></div>
+            <div class="comment-text"><p>"Route related tags should not normally be present on the ways that make up the route themselves."
+What a strange piece of advice, usually route related tags go on the route relation, not the ways.</p></div>
+            <div class="comment-info" id="comment-79857-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Apr '21, 09:14)</span>
+                <a class="comment-user userinfo" href="/users/5587/yvecai">yvecai</a>
+                
+            </div>
+        </div>
+    
+        <a name="79858"></a>
+        <div class="comment" id="comment-79858">
+            <div id="post-79858-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/5587/yvecai">@yvecai</a> It's written as a negative, but "Route related tags should not normally be present on the ways that make up the route themselves." and "route related tags go on the route relation, not the ways." mean the same thing?</p></div>
+            <div class="comment-info" id="comment-79858-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Apr '21, 11:11)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="79892"></a>
+        <div class="comment" id="comment-79892">
+            <div id="post-79892-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am really not clear on this comment relative to what I have proposed. I proposed defining multiple relationships of the Path (singular) with Hiking Routes (plural). Each co-aligned trail system belongs to a unique Hiking Route.</p></div>
+            <div class="comment-info" id="comment-79892-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 11:46)</span>
+                <a class="comment-user userinfo" href="/users/20114/rob009">Rob009</a>
+                
+            </div>
+        </div>
+    
+        <a name="79896"></a>
+        <div class="comment" id="comment-79896">
+            <div id="post-79896-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You can safely ignore that comment. It was off-topic.</p></div>
+            <div class="comment-info" id="comment-79896-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 13:47)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79847" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79847-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="79876"></a>
+                    <div id="answer-container-79876" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79876-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79876/up/" rel="nofollow"> </a>
+<div id="post-79876-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-79876-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79876/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Ah, sorry, I missed the negation even if I copy-paste the quote! [shame] </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79876/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Apr '21, 19:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3c7cffe544d6a1c46c97a25b2fdcdedc?s=32&amp;d=identicon&amp;r=g" alt="yvecai's gravatar image" />
+    <p><a href="/users/5587/yvecai">yvecai</a><br/>
+    <span class="score" title="1481 reputation points"><span class="">1.5k</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="26 badges"><span class="bronze">&#9679;</span><span class="badgecount">26</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="yvecai has 7 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/79876/">
+                edited
+                <strong>26 Apr '21, 19:10</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79876">
+    
+</div>
+<div id="comment-tools-79876" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79876-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="79891"></a>
+                    <div id="answer-container-79891" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79891-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79891/up/" rel="nofollow"> </a>
+<div id="post-79891-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-79891-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79891/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Other advice I received (outside of this thread) was to set the Role of the Hiking Route as "alternative" to indicate the secondary nature of the coincident paths. The through trail is assigned Role=Main and all others have a Role=Alternative. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79891/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Apr '21, 11:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/63e6efaf5ae5774b948eb0e6bf40c84f?s=32&amp;d=identicon&amp;r=g" alt="Rob009's gravatar image" />
+    <p><a href="/users/20114/rob009">Rob009</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Rob009 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/79891/">
+                edited
+                <strong>28 Apr '21, 11:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79891">
+    
+        <a name="79898"></a>
+        <div class="comment" id="comment-79898">
+            <div id="post-79898-score" class="comment-score"></div>
+            <div class="comment-text"><p>This could be correct depending on the how the trails are set up. To nitpick on wording though: roles apply to elements of a relation and exist within the relation definition, they do not apply to the whole relation.</p></div>
+            <div class="comment-info" id="comment-79898-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '21, 14:10)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79891" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79891-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/79842/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='udQpt7hgcttZeuMpV9fkbbMykyh7w8Wu' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79842/treatment-of-co-aligned-trails?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79842/treatment-of-co-aligned-trails?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/trail/"
+            class="tag-link-trail"
+            title="see questions tagged'trail'using tags"
+            rel="tag">trail</a> <span class="tag-number">&#215;44</span><br/>
+        
+        <a href="/tags/co-aligned/"
+            class="tag-link-co-aligned"
+            title="see questions tagged'co-aligned'using tags"
+            rel="tag">co-aligned</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 24, 2021, 4:01 p.m.">24 Apr '21, 16:01</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,293 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 29, 2021, 12:02 a.m.">29 Apr '21, 00:02</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/5430/municipality-trail-system-how-to-route-along-roads">Municipality Trail system, How to route along roads?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6492/how-do-i-get-my-dakota-to-route-me-on-a-bike-trail">How do I get my Dakota to route me on a bike trail?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6728/tagging-historicunsignedunmaintained-trails">Tagging historic/unsigned/unmaintained trails</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7538/path-versus-footway">Path versus footway</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15941/mio-cyclo-300-does-not-show-osm-cycle-paths-that-i-would-expect-to-see">Mio Cyclo 300 does not show OSM cycle paths that I would expect to see.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17666/what-should-i-do-when-a-trail-or-path-is-blocked-by-a-tree-after-a-natural-disaster">What should I do when a trail or path is blocked by a tree after a natural disaster?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18323/where-do-i-start">Where do I start?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21015/proper-pistetype-values-to-use">Proper piste:type values to use?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21541/trail-visibility">[closed] Trail Visibility</a>
+        </p>
+        
+        <p>
+            <a href="/questions/407/how-should-i-tag-hiking-trails">How should I tag hiking trails?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

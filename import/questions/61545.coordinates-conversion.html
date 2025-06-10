@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Coordinates conversion - OSM Help</title>
+        <meta name="description" content="A user opened up a note saying that a road starts here S57°18105&quot; E40.00&#39; How can I convert it into decimal degrees? it should be a pretty easy conversion but it looks like I&#39;m doing something wrong, as this node should be located west of Albany, NY, but my decimal degrees conversion values send me ..." />
+        <meta name="keywords" content="coordinates" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/61545/coordinates-conversion" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61545/coordinates-conversion?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='IunvPlF1EtEo8sgIY6XSEKExNOYUEEp8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61545/coordinates-conversion">Coordinates conversion</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61545-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61545/up/" rel="nofollow"> </a>
+<div id="post-61545-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61545-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61545/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61545/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>A user opened up a note saying that a road starts here S57°18105" E40.00'
+How can I convert it into decimal degrees? it should be a pretty easy conversion but it looks like I'm doing something wrong, as this node should be located west of Albany, NY, but my decimal degrees conversion values send me far from there.
+Thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/coordinates/" class="post-tag tag-link-coordinates"
+                                        title="see questions tagged 'coordinates'" rel="tag">coordinates</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Jan '18, 16:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/17282eebcd8a14e0cb4a02fe44769460?s=32&amp;d=identicon&amp;r=g" alt="Constable's gravatar image" />
+    <p><a href="/users/10875/constable">Constable</a><br/>
+    <span class="score" title="642 reputation points">642</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="18 badges"><span class="silver">&#9679;</span><span class="badgecount">18</span></span><span title="30 badges"><span class="bronze">&#9679;</span><span class="badgecount">30</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Constable has 3 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61545">
+    
+        <a name="61548"></a>
+        <div class="comment" id="comment-61548">
+            <div id="post-61548-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Those coordinates are non-sensical and therefore useless. "South fifty-seven degrees, eighteen thousand one hundred and five seconds, east forty decimal zero zero degrees" makes no sense. Whoever typed them made multiple mistakes, including two wrong hemispheres if it's supposed to point to North America.</p></div>
+            <div class="comment-info" id="comment-61548-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '18, 16:50)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="61549"></a>
+        <div class="comment" id="comment-61549">
+            <div id="post-61549-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If it is an OSM note, can you link to it?  It might be possible to work something out from the contect.</p></div>
+            <div class="comment-info" id="comment-61549-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '18, 17:03)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61550"></a>
+        <div class="comment" id="comment-61550">
+            <div id="post-61550-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a>, sorry for that, the 18105 was my fault, the coordinates he wrote me were S57°18'05" E40.00'</p>
+
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, yeah sure, note number 1256398
+After my second message he sent me a private message with the east minutes as well S57°18'05" E40.00'</p></div>
+            <div class="comment-info" id="comment-61550-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '18, 17:16)</span>
+                <a class="comment-user userinfo" href="/users/10875/constable">Constable</a>
+                
+            </div>
+        </div>
+    
+        <a name="61555"></a>
+        <div class="comment" id="comment-61555">
+            <div id="post-61555-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/10875/constable">@Constable</a> it's pretty unlikely that he really means S57°18'05" E40.00' , so maybe try and get the location some other way (e.g. "move the osm.org map to the location and copy the browser address bar").  That would at least tell us what hemisphere...</p></div>
+            <div class="comment-info" id="comment-61555-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '18, 21:25)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61563"></a>
+        <div class="comment not_top_scorer" id="comment-61563">
+            <div id="post-61563-score" class="comment-score"></div>
+            <div class="comment-text"><p>What about this document I found <a href="http://www.mediafire.com/convkey/e18e/r8kwci082d287v2zg.jpg">http://www.mediafire.com/convkey/e18e/r8kwci082d287v2zg.jpg</a> ? Look at the road crossing where Skyler Lane connects to Prospect Street, I do see the same coordinates.
+Thanks</p></div>
+            <div class="comment-info" id="comment-61563-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jan '18, 08:30)</span>
+                <a class="comment-user userinfo" href="/users/10875/constable">Constable</a>
+                
+            </div>
+        </div>
+    
+        <a name="61565"></a>
+        <div class="comment" id="comment-61565">
+            <div id="post-61565-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Those look like some sort of bearing and distance notation and refer to lines, not points. So it looks like it means that particular line runs at an angle of 57°18'05" east of due south for a distance of 40.00 feet from its starting point.</p></div>
+            <div class="comment-info" id="comment-61565-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jan '18, 09:46)</span>
+                <a class="comment-user userinfo" href="/users/4383/sdoerr">sdoerr</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61545" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61545-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61545/coordinates-conversion?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61545/coordinates-conversion?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61545/coordinates-conversion?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61545/coordinates-conversion?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61547"></a>
+                    <div id="answer-container-61547" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61547-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61547/up/" rel="nofollow"> </a>
+<div id="post-61547-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-61547-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61547/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Those coordinates are <a href="https://www.openstreetmap.org/#map=4/-56.99/39.95">somewhere in the ocean</a> between Africa and Antarctica, so they seem wrong. Albany NY is at approximately <a href="https://www.openstreetmap.org/#map=12/42.6501/-73.7500">42.65N, 73.75W</a>.</p>
+<p>For future reference, here is one online degree-minute-second to decimal degree converter: <a href="https://www.fcc.gov/media/radio/dms-decimal">https://www.fcc.gov/media/radio/dms-decimal</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61547/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jan '18, 16:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cebf8499a8a3009705e261cfd224e8c0?s=32&amp;d=identicon&amp;r=g" alt="neuhausr's gravatar image" />
+    <p><a href="/users/595/neuhausr">neuhausr</a><br/>
+    <span class="score" title="7460 reputation points"><span class="">7.5k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="70 badges"><span class="silver">&#9679;</span><span class="badgecount">70</span></span><span title="121 badges"><span class="bronze">&#9679;</span><span class="badgecount">121</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="neuhausr has 36 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61547">
+    
+</div>
+<div id="comment-tools-61547" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61547-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="61551"></a>
+                    <div id="answer-container-61551" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61551-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61551/up/" rel="nofollow"> </a>
+<div id="post-61551-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61551-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61551/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>A web search will show how to do it. But the calculations are fairly simple. There are 60' (minutes) in degree and 60" (seconds) in a minute.  S57°18'05" =  57 + 18/60 +5/(60*60) = 57+ 0.3+0.001388 = 57.301388
+and E 40.00. OSM also uses minus degrees for locations west of the Greenwich meridian and degrees south of the Equator. so -57.301388   (S)  and  + 40  (E).   This is a park near the where i live <a href="http://www.openstreetmap.org/#map=18/52.33182/-0.17130">http://www.openstreetmap.org/#map=18/52.33182/-0.17130</a>   if you copy that link and edit with the calculated figures it should work for you.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61551/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jan '18, 20:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61551/">
+                edited
+                <strong>09 Jan '18, 22:07</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61551">
+    
+        <a name="61552"></a>
+        <div class="comment" id="comment-61552">
+            <div id="post-61552-score" class="comment-score"></div>
+            <div class="comment-text"><p>so does this work? <a href="http://www.openstreetmap.org/#map=18/-57.301388/+40.00">http://www.openstreetmap.org/#map=18/-57.301388/+40.00</a></p></div>
+            <div class="comment-info" id="comment-61552-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '18, 20:32)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="61553"></a>
+        <div class="comment" id="comment-61553">
+            <div id="post-61553-score" class="comment-score"></div>
+            <div class="comment-text"><p>I guess you didn't view that link? not many roads... :)</p></div>
+            <div class="comment-info" id="comment-61553-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '18, 20:40)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+        <a name="61554"></a>
+        <div class="comment" id="comment-61554">
+            <div id="post-61554-score" class="comment-score"></div>
+            <div class="comment-text"><p>I did it is under the sea! Constable needs to check his sources.</p></div>
+            <div class="comment-info" id="comment-61554-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '18, 20:49)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61551" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61551-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61545/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='IunvPlF1EtEo8sgIY6XSEKExNOYUEEp8' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61545/coordinates-conversion?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61545/coordinates-conversion?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/coordinates/"
+            class="tag-link-coordinates"
+            title="see questions tagged'coordinates'using tags"
+            rel="tag">coordinates</a> <span class="tag-number">&#215;144</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 9, 2018, 4:17 p.m.">09 Jan '18, 16:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,956 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 10, 2018, 9:46 a.m.">10 Jan '18, 09:46</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/885/exact-coordinates-in-potlatch">Exact coordinates in Potlatch</a>
+        </p>
+        
+        <p>
+            <a href="/questions/999/how-to-extract-elevation-information-from-tracks-in-josm">How to extract elevation information from tracks in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1069/how-to-calculate-the-size-of-a-map-tile-on-the-ground">How to calculate the size of a map tile on the ground?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1643/osm-coordinates-issue-how-to-convert-latlon-to-pixel-coordinate">[closed] OSM Coordinates issue: How to convert Lat/Lon to pixel coordinate ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2004/utm-or-latitude-longitude-coordinates-available-in-openstreetmap">UTM or Latitude-Longitude coordinates available in OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4386/centering-maps-in-openstreet">Centering maps in openstreet?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7183/how-to-get-roadcountries-boundary-intersection-point-coordinates">How to get road/countries boundary intersection point coordinates ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7645/openlayersmapserver-wms-coordinate-problem">OpenLayers+MapServer (WMS) - coordinate-problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8133/plotting-gps-coordinates-on-a-map">Plotting GPS coordinates on a map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/864/how-to-add-node-with-exact-coordinates-in-josm">How to add node with exact coordinates in JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

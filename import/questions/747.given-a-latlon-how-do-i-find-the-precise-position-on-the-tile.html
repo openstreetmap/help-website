@@ -1,0 +1,1032 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Given a lat/lon, how do I find the precise position on the tile? - OSM Help</title>
+        <meta name="description" content="Given a latitude and longitude, I can find the correct tile number - but how do I find the correct position (in pixel) on the tile?" />
+        <meta name="keywords" content="tile,latitude,calulation,longitude,position" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Ckci4xni6EYq1jaEbEHxJcoF6WrncFXS' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile">Given a lat/lon, how do I find the precise position on the tile?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-747-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/747/up/" rel="nofollow"> </a>
+<div id="post-747-score" class="post-score"
+    title="current number of votes">
+    10
+</div>
+<a id="post-747-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/747/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/747/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   4
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Given a latitude and longitude, I can find the correct tile number - but how do I find the correct position (in pixel) on the tile?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tile/" class="post-tag tag-link-tile"
+                                        title="see questions tagged 'tile'" rel="tag">tile</a>
+                                
+                                    <a href="/tags/latitude/" class="post-tag tag-link-latitude"
+                                        title="see questions tagged 'latitude'" rel="tag">latitude</a>
+                                
+                                    <a href="/tags/calulation/" class="post-tag tag-link-calulation"
+                                        title="see questions tagged 'calulation'" rel="tag">calulation</a>
+                                
+                                    <a href="/tags/longitude/" class="post-tag tag-link-longitude"
+                                        title="see questions tagged 'longitude'" rel="tag">longitude</a>
+                                
+                                    <a href="/tags/position/" class="post-tag tag-link-position"
+                                        title="see questions tagged 'position'" rel="tag">position</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Sep '10, 08:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/465f344e31e8ba1be0e0401414815db0?s=32&amp;d=identicon&amp;r=g" alt="petschge's gravatar image" />
+    <p><a href="/users/8/petschge">petschge</a><br/>
+    <span class="score" title="8279 reputation points"><span class="">8.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="73 badges"><span class="silver">&#9679;</span><span class="badgecount">73</span></span><span title="98 badges"><span class="bronze">&#9679;</span><span class="badgecount">98</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="petschge has 29 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/747/">
+                closed
+                <strong>17 Feb '11, 14:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-747">
+    
+        <a name="3135"></a>
+        <div class="comment" id="comment-3135">
+            <div id="post-3135-score" class="comment-score">2</div>
+            <div class="comment-text"><p>related to  <a href="http://help.openstreetmap.org/questions/2687/coordinates-to-pixels-based-on-zoom">the question about coordinates to pixels</a></p></div>
+            <div class="comment-info" id="comment-3135-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Feb '11, 14:37)</span>
+                <a class="comment-user userinfo" href="/users/188/emj">emj</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-747" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-747-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="748"></a>
+                    <div id="answer-container-748" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-748-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/748/up/" rel="nofollow"> </a>
+<div id="post-748-score" class="post-score"
+    title="current number of votes">
+    12
+</div>
+<a id="post-748-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/748/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>When you calulate the tile number according to <a href="http://wiki.openstreetmap.org/wiki/Tilenames">the wiki</a> you will actually get a floating point number.</p>
+<p>The integer part indicates which tile you are (or should be) looking at.</p>
+<p>The fractional part indicates the position within the tile. As a tile is 256 pixel wide, multiplying the fractional part with 256 will give you the pixel position from the top left.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/748/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Sep '10, 08:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/465f344e31e8ba1be0e0401414815db0?s=32&amp;d=identicon&amp;r=g" alt="petschge's gravatar image" />
+    <p><a href="/users/8/petschge">petschge</a><br/>
+    <span class="score" title="8279 reputation points"><span class="">8.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="73 badges"><span class="silver">&#9679;</span><span class="badgecount">73</span></span><span title="98 badges"><span class="bronze">&#9679;</span><span class="badgecount">98</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="petschge has 29 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/748/">
+                edited
+                <strong>07 Sep '10, 10:19</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44a4438f0146dfd898e24c221fd28b58?s=32&amp;d=identicon&amp;r=g" alt="Gnonthgol's gravatar image" />
+            <p><a href="/users/131/gnonthgol">Gnonthgol ♦</a><br/>
+            <span class="score" title="13750 reputation points"><span class="">13.8k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="103 badges"><span class="silver">&#9679;</span><span class="badgecount">103</span></span><span title="198 badges"><span class="bronze">&#9679;</span><span class="badgecount">198</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-748">
+    
+        <a name="82162"></a>
+        <div class="comment" id="comment-82162">
+            <div id="post-82162-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you show a detailed example?
+for example we have
+lat : 36
+lon: 6
+we create square earth map with real scale in autocad
+how we can find the position x,y of the coordinates in the map?
+i don't see an example or a formula in the wiki</p></div>
+            <div class="comment-info" id="comment-82162-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '21, 06:27)</span>
+                <a class="comment-user userinfo" href="/users/20898/seghier">Seghier</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-748" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-748-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="749"></a>
+                    <div id="answer-container-749" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-749-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/749/up/" rel="nofollow"> </a>
+<div id="post-749-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-749-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/749/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you just want to see the position on the map, you can use <em>mlat</em> and <em>mlon</em> to get a <a href="http://www.openstreetmap.org/?mlat=48.03611&amp;mlon=10.55885&amp;zoom=16&amp;layers=M">marker</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/749/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Sep '10, 13:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-749">
+    
+        <a name="82163"></a>
+        <div class="comment" id="comment-82163">
+            <div id="post-82163-score" class="comment-score"></div>
+            <div class="comment-text"><p>what you mean by mlat and mlon?
+where is the formula?</p></div>
+            <div class="comment-info" id="comment-82163-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '21, 06:29)</span>
+                <a class="comment-user userinfo" href="/users/20898/seghier">Seghier</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-749" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-749-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="8971"></a>
+                    <div id="answer-container-8971" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8971-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8971/up/" rel="nofollow"> </a>
+<div id="post-8971-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-8971-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8971/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I've written the following conversion functions to convert from Lat/Long coordinates to OSM pixel x,y coordinates for a given zoom level.</p>
+<pre><code>Friend Sub LatLongToPixelXYOSM(ByVal latitude As Double, ByVal longitude As Double, ByVal zoomLevel As Integer, ByRef pixelX As Integer, ByRef pixelY As Integer)
+        Dim MinLatitude = -85.05112878
+        Dim MaxLatitude = 85.05112878
+        Dim MinLongitude = -180
+        Dim MaxLongitude = 180
+        Dim mapSize = Math.Pow(2, zoomLevel) * 256
+
+        latitude = Clip(latitude, MinLatitude, MaxLatitude)
+        longitude = Clip(longitude, MinLongitude, MaxLongitude)
+
+        Dim p As PointF = New Point()
+        p.X = CSng((longitude + 180.0) / 360.0 * (1 &lt;&lt; zoomLevel))
+        p.Y = CSng((1.0 - Math.Log(Math.Tan(latitude * Math.PI / 180.0) + 1.0 / Math.Cos(toRadians(latitude))) / Math.PI) / 2.0 * (1 &lt;&lt; zoomLevel))
+
+        Dim tilex As Integer = CInt(Math.Truncate(p.X))
+        Dim tiley As Integer = CInt(Math.Truncate(p.Y))
+        pixelX = ClipByRange((tilex * 256) + ((p.X - tilex) * 256), mapSize - 1)
+        pixelY = ClipByRange((tiley * 256) + ((p.Y - tiley) * 256), mapSize - 1)
+    End Sub
+
+Friend Sub PixelXYToLatLongOSM(ByVal pixelX As Integer, ByVal pixelY As Integer, ByVal zoomLevel As Integer, ByRef latitude As Double, ByRef longitude As Double)
+        Dim mapSize = Math.Pow(2, zoomLevel) * 256
+        Dim tileX As Integer = Math.Truncate(pixelX / 256)
+        Dim tileY As Integer = Math.Truncate(pixelY / 256)
+
+        Dim p As PointF = New Point()
+        Dim n As Double = Math.PI - ((2.0 * Math.PI * (ClipByRange(pixelY, mapSize - 1) / 256)) / Math.Pow(2.0, zoomLevel))
+
+        longitude = CSng(((ClipByRange(pixelX, mapSize - 1) / 256) / Math.Pow(2.0, zoomLevel) * 360.0) - 180.0)
+        latitude = CSng(180.0 / Math.PI * Math.Atan(Math.Sinh(n)))
+    End Sub
+
+Private Function ClipByRange(ByVal n As Double, ByVal range As Double)
+        Return n Mod range
+End Function
+
+Private Function Clip(ByVal n As Double, ByVal minValue As Double, ByVal maxValue As Double)
+      Return Math.Min(Math.Max(n, minValue), maxValue)
+End Function
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8971/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Nov '11, 10:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/388bd8953c15a6093aae795c7991145e?s=32&amp;d=identicon&amp;r=g" alt="johnmeilak's gravatar image" />
+    <p><a href="/users/2361/johnmeilak">johnmeilak</a><br/>
+    <span class="score" title="25 reputation points">25</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="johnmeilak has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8971">
+    
+</div>
+<div id="comment-tools-8971" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8971-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="86461"></a>
+                    <div id="answer-container-86461" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-86461-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86461/up/" rel="nofollow"> </a>
+<div id="post-86461-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-86461-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86461/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In the editor, press CTRL+SHIFT+L to display the Location Panel.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/86461/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jan '23, 11:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/63bf3553cfc4f167abe24eaad9deaad1?s=32&amp;d=identicon&amp;r=g" alt="joper34's gravatar image" />
+    <p><a href="/users/22606/joper34">joper34</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="joper34 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/86461/">
+                edited
+                <strong>09 Jan '23, 11:24</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-86461">
+    
+</div>
+<div id="comment-tools-86461" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86461-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/747/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Ckci4xni6EYq1jaEbEHxJcoF6WrncFXS' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tile/"
+            class="tag-link-tile"
+            title="see questions tagged'tile'using tags"
+            rel="tag">tile</a> <span class="tag-number">&#215;57</span><br/>
+        
+        <a href="/tags/latitude/"
+            class="tag-link-latitude"
+            title="see questions tagged'latitude'using tags"
+            rel="tag">latitude</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/longitude/"
+            class="tag-link-longitude"
+            title="see questions tagged'longitude'using tags"
+            rel="tag">longitude</a> <span class="tag-number">&#215;45</span><br/>
+        
+        <a href="/tags/position/"
+            class="tag-link-position"
+            title="see questions tagged'position'using tags"
+            rel="tag">position</a> <span class="tag-number">&#215;20</span><br/>
+        
+        <a href="/tags/calulation/"
+            class="tag-link-calulation"
+            title="see questions tagged'calulation'using tags"
+            rel="tag">calulation</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 7, 2010, 8:14 a.m.">07 Sep '10, 08:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>43,939 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 9, 2023, 11:24 a.m.">09 Jan '23, 11:24</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13920/latitude-and-longitude-grid-lines">Latitude and Longitude Grid Lines.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17466/map-lattitude-and-longitude-data">Map Lattitude and Longitude data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11853/osmosis-lonlat-value-changes">Osmosis lon/lat value changes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12946/calculate-time-and-distance-between-two-latlng-points-with-a-json-response">Calculate time and distance between two LatLng points with a JSON response</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2004/utm-or-latitude-longitude-coordinates-available-in-openstreetmap">UTM or Latitude-Longitude coordinates available in OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17435/latitude-and-longitude-on-maps">Latitude and longitude on maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2802/lat-long">[closed] lat - long</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1529/post-code-or-street-address-to-longlat">Post Code or street address to  Long/Lat?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12917/administrative-boundaries-latlong">Administrative Boundaries&#39; Lat/Long</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17701/retrieve-the-osm_id-from-postgres-db-if-i-have-latlon">Retrieve the osm_id (from Postgres DB) if I have LAT/LON</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

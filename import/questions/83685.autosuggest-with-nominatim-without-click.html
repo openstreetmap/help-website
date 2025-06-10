@@ -1,0 +1,1146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>autosuggest with nominatim without click - OSM Help</title>
+        <meta name="description" content="I use osrm , routing leaflet machine .The autosuggest with nominatim works with click .I want to change it to become autocomplete without click .How I can do it please ." />
+        <meta name="keywords" content="leaflet,osrm,nominatim,routing,geocoder" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/83685/autosuggest-with-nominatim-without-click" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/83685/autosuggest-with-nominatim-without-click?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='k1MTCjkYMCMotsELHP9tD9jWeJWKIxJ1' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/83685/autosuggest-with-nominatim-without-click">autosuggest with nominatim without click</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-83685-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83685/up/" rel="nofollow"> </a>
+<div id="post-83685-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-83685-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83685/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/83685/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I use osrm , routing leaflet machine .The autosuggest with nominatim works with click .I want to change it to become autocomplete without click .How I can do it please .</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/leaflet/" class="post-tag tag-link-leaflet"
+                                        title="see questions tagged 'leaflet'" rel="tag">leaflet</a>
+                                
+                                    <a href="/tags/osrm/" class="post-tag tag-link-osrm"
+                                        title="see questions tagged 'osrm'" rel="tag">osrm</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/routing/" class="post-tag tag-link-routing"
+                                        title="see questions tagged 'routing'" rel="tag">routing</a>
+                                
+                                    <a href="/tags/geocoder/" class="post-tag tag-link-geocoder"
+                                        title="see questions tagged 'geocoder'" rel="tag">geocoder</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Mar '22, 01:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5f244e94fc71794965555f2b9313df34?s=32&amp;d=identicon&amp;r=g" alt="aminali1991's gravatar image" />
+    <p><a href="/users/21482/aminali1991">aminali1991</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aminali1991 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-83685">
+    
+</div>
+<div id="comment-tools-83685" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83685-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/83685/autosuggest-with-nominatim-without-click?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/83685/autosuggest-with-nominatim-without-click?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/83685/autosuggest-with-nominatim-without-click?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/83685/autosuggest-with-nominatim-without-click?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="83689"></a>
+                    <div id="answer-container-83689" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83689-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83689/up/" rel="nofollow"> </a>
+<div id="post-83689-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-83689-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83689/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In your code when you initialize the Geocoder to be used for the leaflet-routing-machine, you should add a query parameter of limit=1, e.g.:</p>
+<pre><code>geocoder: L.Control.Geocoder.nominatim({serviceUrl:LRM.geocodeServiceUrl, geocodingQueryParams: {'limit':'1'}}),
+</code></pre>
+<p>By that, you won't get a list of suggestions, but instead the first result is used immediately. So if you type "London" and hit enter, it will choose "London, UK".</p>
+<p>Edit: but this won't be a autocomplete in the sense of extending/completing "Londo" to "London, Uk", as nominatim is not capable of doing autocomplete. So if you want a real autocomplete, you would have to switch to e.g. Photon or Pelias.</p>
+<p>E.g with Photon you would use:</p>
+<pre><code>geocoder: L.Control.Geocoder.photon(),
+</code></pre>
+<p>But please note: autocomplete sends a lot of requests against the Photon API (which in this case is sponsored by Komoot, see <a href="https://photon.komoot.io/">https://photon.komoot.io/</a> ), so please use with care. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83689/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Mar '22, 09:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e06ed329df6032df14b5639de4d64782?s=32&amp;d=identicon&amp;r=g" alt="Spiekerooger's gravatar image" />
+    <p><a href="/users/17439/spiekerooger">Spiekerooger</a><br/>
+    <span class="score" title="3148 reputation points"><span class="">3.1k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Spiekerooger has 18 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/83689/">
+                edited
+                <strong>06 Mar '22, 14:32</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83689">
+    
+        <a name="83696"></a>
+        <div class="comment" id="comment-83696">
+            <div id="post-83696-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your response. Any idea to change geocoder nominatim with pelias or photon and integrated with leaflet routing machine . I have trace route between two points , so I want to do same thing search autocomplete without click and trace route like my old example with niminatim . Thank you in advance.</p></div>
+            <div class="comment-info" id="comment-83696-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '22, 12:19)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83697"></a>
+        <div class="comment" id="comment-83697">
+            <div id="post-83697-score" class="comment-score"></div>
+            <div class="comment-text"><p>For autocomplete have a look at the example (and the code for map-2 at that example) at <a href="http://www.liedman.net/leaflet-routing-machine/tutorials/geocoders/">http://www.liedman.net/leaflet-routing-machine/tutorials/geocoders/</a> Section: autocomplete, which uses OpenRouteService geocoding API (you'll need an API key for that one).</p>
+
+<p>But I'm still not 100% sure if you want autocomplete or just predefined values for start and end point in your route. If it is the latter, it would be easier to set them via lat/lon and use nominatim for reverse geocoding.</p></div>
+            <div class="comment-info" id="comment-83697-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '22, 13:16)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="83699"></a>
+        <div class="comment" id="comment-83699">
+            <div id="post-83699-score" class="comment-score"></div>
+            <div class="comment-text"><p>For the moment I am using an example similar to the one in the document, it works well, I just wanted to change when typing the suggestions will appear without a click on enter . You tell me to use Photon or Pelias. I don't know how to use it with leaflet routing machine like nominatim .The autocomplete with geocoder is functional but with click enter and I can't change it without click like in privacy for api .</p></div>
+            <div class="comment-info" id="comment-83699-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '22, 14:20)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83700"></a>
+        <div class="comment" id="comment-83700">
+            <div id="post-83700-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, so you just want autocomplete while typing. I updated the answer above showing how to use the Photon geocoder in leaflet-routing-machine (the suggestions appear without hitting enter or clicking, but you'll still have to choose one of the suggestions from autocomplete with a click). If that example helps, please use the accept answer link above.</p></div>
+            <div class="comment-info" id="comment-83700-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '22, 14:34)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="83701"></a>
+        <div class="comment" id="comment-83701">
+            <div id="post-83701-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your response and guide .The  autocomplete without click , this what I need , but I want to save the same work like with nominatim  . search address start , address end then trace route on leaflet map .The language used by photon is java ?</p></div>
+            <div class="comment-info" id="comment-83701-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '22, 14:51)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83704"></a>
+        <div class="comment not_top_scorer" id="comment-83704">
+            <div id="post-83704-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm still not sure if I understand your problem correctly (would be nice if you could include a link to your project where it is easier to see where you are right now and what you want to achieve). So you have setup leaflet-routing-machine with nominatim and osrm but now - for autocomplete - want to use Photon.</p>
+
+<p>Then this would be a full basic code example:</p>
+
+<p>L.Routing.control({
+    routeWhileDragging: true,
+    geocoder: L.Control.Geocoder.photon()
+}).addTo(map);</p></div>
+            <div class="comment-info" id="comment-83704-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '22, 15:21)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="83705"></a>
+        <div class="comment not_top_scorer" id="comment-83705">
+            <div id="post-83705-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes exactly ,just modify autocomplete by photon .I use this instruction 
+L.Routing.control({ routeWhileDragging: true, geocoder: L.Control.Geocoder.photon() }).addTo(map);
+Igot error "Failed to load resource: net::ERR_NAME_NOT_RESOLVED" https://photon.komoot.de/api/?q=p</p></div>
+            <div class="comment-info" id="comment-83705-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '22, 15:31)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83706"></a>
+        <div class="comment not_top_scorer" id="comment-83706">
+            <div id="post-83706-score" class="comment-score"></div>
+            <div class="comment-text"><p>You are using an outdated version of leaflet-routing-machine/leaflet-geocoder.</p>
+
+<p>The API address of Photon has changed (to <a href="https://photon.komoot.io/?q=p">https://photon.komoot.io/?q=p</a> ), this is corrected in the newest versions of leaflet-routing-machine/leaflet-geocoder.</p></div>
+            <div class="comment-info" id="comment-83706-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '22, 15:35)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="83707"></a>
+        <div class="comment not_top_scorer" id="comment-83707">
+            <div id="post-83707-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks very much , it works , just I want to limit search by countrie for example in france only</p></div>
+            <div class="comment-info" id="comment-83707-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '22, 15:42)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83708"></a>
+        <div class="comment not_top_scorer" id="comment-83708">
+            <div id="post-83708-score" class="comment-score"></div>
+            <div class="comment-text"><p>You could then either use location bias (with zoom and a lon lat and location_bias_scale added as queryParams to photon() or with a bbox added as queryParams to photon(), e.g. for Paris area (roughly):</p>
+
+<p>geocoder: L.Control.Geocoder.photon({geocodingQueryParams: {'bbox': '2.076416,48.734455,2.658691,49.05947'}})</p>
+
+<p>With that, you would e.g. find a Rue Berlin in Paris while typing Berlin, but not Berlin in Germany.</p>
+
+<p>(adjust the bbox values accordingly to your needs, see <a href="https://github.com/komoot/photon">https://github.com/komoot/photon</a> for description of those params).</p></div>
+            <div class="comment-info" id="comment-83708-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '22, 16:00)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="83710"></a>
+        <div class="comment not_top_scorer" id="comment-83710">
+            <div id="post-83710-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you very much for your helpful  .I will try it.</p></div>
+            <div class="comment-info" id="comment-83710-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '22, 17:04)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83724"></a>
+        <div class="comment not_top_scorer" id="comment-83724">
+            <div id="post-83724-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi , I try different params in documentation photon , but the suggestions are not true . I write for example Berlin , differents address appear out of paris</p>
+
+<p>geocoder: L.Control.Geocoder.photon({
+      geocodingQueryParams: {
+        city: 'paris',
+        lang: 'fr'
+       }}),</p></div>
+            <div class="comment-info" id="comment-83724-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 10:44)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83725"></a>
+        <div class="comment not_top_scorer" id="comment-83725">
+            <div id="post-83725-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't see a "city" query param documented in <a href="https://github.com/komoot/photon">https://github.com/komoot/photon</a> , so I see no reason why your example should work as you want in using a unknown city parameter. Why don't you use a bbox if e.g. you want to limit results for the city of Paris? That at least will come close (that is having some suburbs included depending on your minLon,minLat,maxLon,maxLat values).</p></div>
+            <div class="comment-info" id="comment-83725-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 10:52)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="83727"></a>
+        <div class="comment not_top_scorer" id="comment-83727">
+            <div id="post-83727-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your response .I'm sorry it's the first time I've used it, that's why I ask a lot of questions</p></div>
+            <div class="comment-info" id="comment-83727-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 11:19)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83729"></a>
+        <div class="comment not_top_scorer" id="comment-83729">
+            <div id="post-83729-score" class="comment-score"></div>
+            <div class="comment-text"><p>I use this bbox values like in documentation bbox=9.5,51.5,11.5,53.5 , normally we get results of berlin . I write France , we display result of france .</p>
+
+<p>geocoder: L.Control.Geocoder.photon({
+      geocodingQueryParams: {
+        bbox: '9.5,51.5,11.5,53.5'
+      }}),</p>
+
+<p>for this param  "?q=berlin", Ican't change it ?</p></div>
+            <div class="comment-info" id="comment-83729-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 11:58)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83736"></a>
+        <div class="comment not_top_scorer" id="comment-83736">
+            <div id="post-83736-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm sorry to say this but if you have no experience in web development (javascript, using APIs, reading documentations etc.) and no gis experience (e.g. spinning up the right bbox for France) I dearly hope you are not trying to achieve this for a business project (or a research project for university in either CS or geography).
+If you do need this for a business/institutional project, you may think about using Pelias instead of Photon (as Pelias would have a boundary.country Parameter that could be used with a value of FRA for France, but you would need an API key by geocode.earth and spend at least 100$/month).</p>
+
+<p>If you do this just for fun and want to stick with Photon, than please use (as an example) e.g. a southwest and a northeast point (with values mLon &amp; mLat for southwest and maxLon &amp; maxLat for northeast) that will spin up a rectangle across (mainland) France.</p>
+
+<p>Now I just spun up a rough estimate for mainland France (including the island of Corse):</p>
+
+<p>geocoder: L.Control.Geocoder.photon({geocodingQueryParams: {'bbox': '-4.262695,41.376809,9.228516,51.672555'}})</p>
+
+<p>(continued in next comment ...)</p></div>
+            <div class="comment-info" id="comment-83736-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 15:11)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="83737"></a>
+        <div class="comment not_top_scorer" id="comment-83737">
+            <div id="post-83737-score" class="comment-score"></div>
+            <div class="comment-text"><p>(last comment continued)</p>
+
+<p>Now if you search Berlin (?q=Berlin), you'll still get some results outside of France (that are e.g. in Switzerland or Germany close to the border of France) but most will be in France and none in Berlin, Germany (as the city of Berlin is outside of that rectangle). And searching for "New York" will get you e.g. an fastfood restaurant in Metz, France but no city or state in the U.S.</p></div>
+            <div class="comment-info" id="comment-83737-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 15:11)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="83739"></a>
+        <div class="comment not_top_scorer" id="comment-83739">
+            <div id="post-83739-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you .I speak of experiences to use this api because even the documentation is not too much, but just to simulate things because with the "nominatim" api the search is very precise (except the click to see the suggestions) and with the api photon even the suggestions are not good: for example with "nominatim" always there is the name of the country at the end of the searched word (like google map), here name,the only word "paris" is displayed identically several times but clicking on such a "paris" brings you to a different place, it's good here but just to differentiate that's all, more readability.For example with "nominatim" : Paris, Île-de-France, France métropolitaine, France
+I applied what is on the document but the result remains far away, that is why I am asking for your help, not for fun.</p></div>
+            <div class="comment-info" id="comment-83739-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 15:33)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83740"></a>
+        <div class="comment not_top_scorer" id="comment-83740">
+            <div id="post-83740-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's why I wouldn't recommend an autocomplete API at all as Nominatim results are much better in my experience that any of those autocomplete solutions. But you are eager on using autocomplete so I'm trying to show you the (not perfect) solutions there are. But then as I said before: a link to your project or more information on what you need would be helpful. E.g. you want autocomplete results of only city names in France, then I would use:</p>
+
+<p>geocoder: L.Control.Geocoder.photon({geocodingQueryParams: {'bbox': '-4.262695,41.376809,9.228516,51.672555','osm_tag':'place:city','osm_tag':'place:town','osm_tag':'place:village'}})</p>
+
+<p>But this example may be of no help as I'm still left in the dark about which data you want to get out of those start and end point search boxes.</p></div>
+            <div class="comment-info" id="comment-83740-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 15:46)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="83743"></a>
+        <div class="comment not_top_scorer" id="comment-83743">
+            <div id="post-83743-score" class="comment-score"></div>
+            <div class="comment-text"><p>thank you for your patience and help . For example here <a href="https://www.liedman.net/leaflet-control-geocoder/">https://www.liedman.net/leaflet-control-geocoder/</a></p>
+
+<p>with option "photon" clicked , when enter "Lille" the result appear with name country at end , and more than word (Lille, Lille, Hauts-de-France, France...) In my case when enter "Lille" appear: Lille (in first line), Lille(in second line), Lille(third line) ... the same word without more indication
+The resuly here is goog : <a href="https://photon.komoot.io/">https://photon.komoot.io/</a>
+When compare result with this link , in my case , only text in bold appear</p>
+
+<p>How I can do search like in documentation link</p></div>
+            <div class="comment-info" id="comment-83743-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 16:17)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83744"></a>
+        <div class="comment not_top_scorer" id="comment-83744">
+            <div id="post-83744-score" class="comment-score"></div>
+            <div class="comment-text"><p>I does look as if you are not using the default options for Photon in Leaflet-Control-Geocoder. That's why it would be so great to see your code example, e.g. trough jsfiddle or a similar tool.</p>
+
+<p>Anyway, try this:</p>
+
+<p>geocoder: L.Control.Geocoder.photon({geocodingQueryParams: {'bbox': '-4.262695,41.376809,9.228516,51.672555','osm_tag':['place:city','place:town','place:village']},nameProperties:['name', 'street', 'suburb', 'hamlet', 'town', 'city', 'state', 'country']})</p></div>
+            <div class="comment-info" id="comment-83744-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 17:10)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="83746"></a>
+        <div class="comment not_top_scorer" id="comment-83746">
+            <div id="post-83746-score" class="comment-score"></div>
+            <div class="comment-text"><p>the link of example is : <a href="https://jsfiddle.net/Aminali/kLs34ef8/7/">https://jsfiddle.net/Aminali/kLs34ef8/7/</a></p></div>
+            <div class="comment-info" id="comment-83746-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 21:53)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+        <a name="83747"></a>
+        <div class="comment not_top_scorer" id="comment-83747">
+            <div id="post-83747-score" class="comment-score"></div>
+            <div class="comment-text"><p>You had an old version of leaflet-control-geocoder (v1.5.5 instead of 2.4.0) in there.</p>
+
+<p>Here is a basic example: <a href="https://jsfiddle.net/y0osacwh/1/">https://jsfiddle.net/y0osacwh/1/</a> (and you should include each external source via ssl, e.g. tiles as well. I changed that as well).</p></div>
+            <div class="comment-info" id="comment-83747-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '22, 22:37)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="83759"></a>
+        <div class="comment not_top_scorer" id="comment-83759">
+            <div id="post-83759-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your guide and help .I try it . It's working</p></div>
+            <div class="comment-info" id="comment-83759-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Mar '22, 09:30)</span>
+                <a class="comment-user userinfo" href="/users/21482/aminali1991">aminali1991</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83689" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 24
+        </span>
+        <a href="#" class="show-all-comments-link">show 19 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83689-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/83685/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='k1MTCjkYMCMotsELHP9tD9jWeJWKIxJ1' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83685/autosuggest-with-nominatim-without-click?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83685/autosuggest-with-nominatim-without-click?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/routing/"
+            class="tag-link-routing"
+            title="see questions tagged'routing'using tags"
+            rel="tag">routing</a> <span class="tag-number">&#215;305</span><br/>
+        
+        <a href="/tags/osrm/"
+            class="tag-link-osrm"
+            title="see questions tagged'osrm'using tags"
+            rel="tag">osrm</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/leaflet/"
+            class="tag-link-leaflet"
+            title="see questions tagged'leaflet'using tags"
+            rel="tag">leaflet</a> <span class="tag-number">&#215;74</span><br/>
+        
+        <a href="/tags/geocoder/"
+            class="tag-link-geocoder"
+            title="see questions tagged'geocoder'using tags"
+            rel="tag">geocoder</a> <span class="tag-number">&#215;19</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 6, 2022, 1:01 a.m.">06 Mar '22, 01:01</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,735 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 9, 2022, 9:30 a.m.">09 Mar '22, 09:30</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/84505/osrm-leaflet-routing-machine-with-geocoder-google-map">[closed] osrm leaflet routing machine with geocoder google map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42363/shortest-path-using-a-with-nodes-and-ways">[closed] Shortest path using A* with nodes and ways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19695/how-to-use-osrm-on-offline">How to use OSRM on offline?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32644/determining-speed-limits-for-given-route">Determining speed limits for given route</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36739/offline-multi-modal-routing-on-mobile">Offline multi-modal routing on mobile</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41407/how-to-work-with-osrm">How to work with osrm.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30272/how-the-routing-osrm-algorithm-works">how the routing OSRM algorithm works?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22787/adding-address-for-geocode-lookup-with-nominatim">Adding address for geocode lookup with Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30793/how-to-use-nominatim-offline">How to use nominatim offline</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35785/is-there-any-way-to-use-osm-geocoder-and-get-the-location-of-places-in-any-part-of-the-street-not-only-at-the-vertices">Is there any way to use OSM geocoder and get the location of places in any part of the street, not only at the vertices?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

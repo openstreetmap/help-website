@@ -1,0 +1,842 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Removing water boundaries from administrative boundaries from mapnik rendering - OSM Help</title>
+        <meta name="description" content="Hello Background knowledge I am totally new to the topics of GIS. I have just started looking into this so my knowledge on topics such as mapnik and postgis is not that high. Question I am trying to remove administrative boundaries for countries that currently extend into the sea/ocean. I am looking..." />
+        <meta name="keywords" content="boundaries,admin_boundary,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/61296/removing-water-boundaries-from-administrative-boundaries-from-mapnik-rendering" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61296/removing-water-boundaries-from-administrative-boundaries-from-mapnik-rendering?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='RNcM8RRYbFPTjaBPxcTi01lHiNxKPmAs' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61296/removing-water-boundaries-from-administrative-boundaries-from-mapnik-rendering">Removing water boundaries from administrative boundaries from mapnik rendering</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61296-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61296/up/" rel="nofollow"> </a>
+<div id="post-61296-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-61296-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61296/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61296/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello</p>
+<p><strong>Background knowledge</strong></p>
+<p>I am totally new to the topics of GIS. I have just started looking into this so my knowledge on topics such as mapnik and postgis is not that high.</p>
+<p><strong>Question</strong></p>
+<p>I am trying to remove administrative boundaries for countries that currently extend into the sea/ocean. I am looking to achieve country boundaries that look similar to openstreetmaps transport layer which show no water boundaries. </p>
+<p><strong>Setup</strong></p>
+<p>The way I am rendering the map tiles is using mapnik. I have followed this tutorial exactly: <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a></p>
+<p><strong>Attempted Solutions</strong></p>
+<p>I researched this question before asking and these were the possible solutions that I came across and the end result.</p>
+<p>(1) I have tried to change the query in mapnik.xml that controls the admin_boundaries and added a new parameter: boundary=administrative AND NOT boundary_type=maritime. This did not render any results for me in the boundaries. Data set was azerbaijan.osm.pbf from tutorial</p>
+<p>(2) <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/621">https://github.com/gravitystorm/openstreetmap-carto/issues/621</a> has a query that should remove water boundaries from the map written by nebulon42 but it leaves certain boundaries in water intact. Tested using myanmar.osm.pbf</p>
+<p>(3) <a href="https://help.openstreetmap.org/questions/34000/problem-hidding-a-maritime-border-with-mapnik">https://help.openstreetmap.org/questions/34000/problem-hidding-a-maritime-border-with-mapnik</a> suggests changing the ordering of the rendering but I do not know how to do that so I was unable to test this one.</p>
+<p><strong>Current Solution</strong></p>
+<p>I am removing the way tags from the osm file that correspond to the boundaries and replacing them with latitude and longitude acquired from <a href="https://wambachers-osm.website/boundaries/">https://wambachers-osm.website/boundaries/</a> and selecting land. In a small sample size it has worked but I am wondering if there is an easier way to do so from mapnik.xml either using a specific query or tag.</p>
+<p>Any help is appreciated and Thank you.  </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/boundaries/" class="post-tag tag-link-boundaries"
+                                        title="see questions tagged 'boundaries'" rel="tag">boundaries</a>
+                                
+                                    <a href="/tags/admin_boundary/" class="post-tag tag-link-admin_boundary"
+                                        title="see questions tagged 'admin_boundary'" rel="tag">admin_boundary</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Dec '17, 15:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/206bbb2d3464a897f0b828361911ef31?s=32&amp;d=identicon&amp;r=g" alt="Ujjawal's gravatar image" />
+    <p><a href="/users/14567/ujjawal">Ujjawal</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ujjawal has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61296/">
+                edited
+                <strong>03 Jan '18, 20:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61296">
+    
+        <a name="61466"></a>
+        <div class="comment" id="comment-61466">
+            <div id="post-61466-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Suggest that you make this edit an answer, and then an admin (e.g. me) can make this the accepted answer). I think it will be clearer.</p></div>
+            <div class="comment-info" id="comment-61466-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jan '18, 17:18)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61468"></a>
+        <div class="comment" id="comment-61468">
+            <div id="post-61468-score" class="comment-score"></div>
+            <div class="comment-text"><p>ok removed the edit for an answer</p></div>
+            <div class="comment-info" id="comment-61468-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jan '18, 20:34)</span>
+                <a class="comment-user userinfo" href="/users/14567/ujjawal">Ujjawal</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61296" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61296-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61296/removing-water-boundaries-from-administrative-boundaries-from-mapnik-rendering?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61296/removing-water-boundaries-from-administrative-boundaries-from-mapnik-rendering?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61296/removing-water-boundaries-from-administrative-boundaries-from-mapnik-rendering?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61296/removing-water-boundaries-from-administrative-boundaries-from-mapnik-rendering?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61302"></a>
+                    <div id="answer-container-61302" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61302-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61302/up/" rel="nofollow"> </a>
+<div id="post-61302-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-61302-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61302/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>How prevalent is the "<a href="https://overpass-turbo.eu/s/tVs">maritime=yes</a>" tag?  If that's in widespread use (and in the few places I've looked it does seem to be used properly) you can just remove an admin boundary tag in lua if maritime=yes is set.</p>
+<p><a href="https://github.com/SomeoneElseOSM/SomeoneElse-style/blob/90e0733593029ab5c4d4ab6d03cc4793853ea982/style.lua#L559">Here</a> is a bit of lua code that removes <em>all</em> boundaries.  You want something instead like:</p>
+<pre><code>if (( keyvalues["boundary"] == "administrative" )  and
+    ( keyvalues["maritime"] == "yes"            )) then
+   keyvalues["boundary"] = nil
+end
+</code></pre>
+<p>Whilst you could try and do things with mapnik z-ordering or external boundary info, that sounds very much like "doing it the hard way" to me!</p>
+<p>(edit)</p>
+<p>If you're wondering "what is a lua and why would I want one", it's a way of changing one tag to another before loading into a rendering database.  The OSM Carto style uses <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/openstreetmap-carto.lua">this</a> lua transformation, but it doesn't do much in the way of tag changes.  You can see some tile-server setup notes using a a style that does much more <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load">here</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61302/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Dec '17, 21:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61302/">
+                edited
+                <strong>20 Dec '17, 21:10</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61302">
+    
+        <a name="61313"></a>
+        <div class="comment" id="comment-61313">
+            <div id="post-61313-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried to replace the style.lua file provided by the tutorial with yours and it let me remove ALL boundaries but the modified keyvalues[maritime] did remove any boundaries. I checked the osm.xml file that I use to populate the postgres tables and it does have borders that have maritime tags as yes.</p></div>
+            <div class="comment-info" id="comment-61313-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '17, 16:28)</span>
+                <a class="comment-user userinfo" href="/users/14567/ujjawal">Ujjawal</a>
+                
+            </div>
+        </div>
+    
+        <a name="61317"></a>
+        <div class="comment" id="comment-61317">
+            <div id="post-61317-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am trying to remove the water boundaries now using osmfilter by trying to remove all ways with tags on maritime=yes and border_type=territorial based on the information written in <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dmaritime">http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dmaritime</a> but it still seems to keep water boundaries on provincial levels (admin_level &gt; 4). It produces the same result as nebulon42's query from attempted solution 2.</p></div>
+            <div class="comment-info" id="comment-61317-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '17, 20:55)</span>
+                <a class="comment-user userinfo" href="/users/14567/ujjawal">Ujjawal</a>
+                
+            </div>
+        </div>
+    
+        <a name="61333"></a>
+        <div class="comment" id="comment-61333">
+            <div id="post-61333-score" class="comment-score"></div>
+            <div class="comment-text"><p>Re the lua suggestion, you're correct that it doesn't work - and the reason is that there are 3 or more objects passed through for rendering for each bit of boundary.  There's the way (which has maritime=yes on it) and one or more relations (which don't).  These can be removed or retagged with lua but what isn't currently possible is to remove (or change) relation members from within the lua code.  There's something a bit like it (the old-style multipolygon handling) but what osm2pgsql actually does with that is a bit of a black art :)
+It would be possible to change tags on the whole relation based on the members' tags, but that wouldn't help.</p></div>
+            <div class="comment-info" id="comment-61333-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Dec '17, 13:12)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61302" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61302-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="61467"></a>
+                    <div id="answer-container-61467" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61467-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61467/up/" rel="nofollow"> </a>
+<div id="post-61467-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-61467-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61467/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>So in the end I managed to solve it by using the current solution. This is basically for anyone else who wants to use this method (Note: not the most efficient solution)</p>
+<p>(1) Download the country osm.xml file</p>
+<p>(2) remove all boundary=administrative tags (used osmfilter but use whichever tool that gets the job done).</p>
+<p>(3) download the country file from <a href="https://wambachers-osm.website/boundaries/">https://wambachers-osm.website/boundaries/</a> and choose the json format and land boundary.</p>
+<p>(4) Download a tool to convert geojson to osm.xml format (used geojsontoosm but note if you use this you will have to make a little changes to the code. Things to change are changing the relation id to start from a positive number and ++ increment as relations as negative dont display and add an extra tag that forces boundary = administrative in multipolygon method. And if you need lvl4(admin_level) data remove the part where it doesnt add way to relation if you have only one entry in multipolygon)</p>
+<p>(5) add the new osm.xml in the original country xml. (I just made a script for it as you would need to remove the osm tags from the new osm.xml and remove the ending osm tag from the bottom of country tag and for multiple countries it would be a hassle to do manually.)</p>
+<p>Hope it helps someone and Thanks to someoneElse for lua idea.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61467/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Jan '18, 20:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/206bbb2d3464a897f0b828361911ef31?s=32&amp;d=identicon&amp;r=g" alt="Ujjawal's gravatar image" />
+    <p><a href="/users/14567/ujjawal">Ujjawal</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ujjawal has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61467">
+    
+</div>
+<div id="comment-tools-61467" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61467-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61296/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='RNcM8RRYbFPTjaBPxcTi01lHiNxKPmAs' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61296/removing-water-boundaries-from-administrative-boundaries-from-mapnik-rendering?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61296/removing-water-boundaries-from-administrative-boundaries-from-mapnik-rendering?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/boundaries/"
+            class="tag-link-boundaries"
+            title="see questions tagged'boundaries'using tags"
+            rel="tag">boundaries</a> <span class="tag-number">&#215;129</span><br/>
+        
+        <a href="/tags/admin_boundary/"
+            class="tag-link-admin_boundary"
+            title="see questions tagged'admin_boundary'using tags"
+            rel="tag">admin_boundary</a> <span class="tag-number">&#215;63</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 20, 2017, 3:47 p.m.">20 Dec '17, 15:47</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,836 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 3, 2018, 8:34 p.m.">03 Jan '18, 20:34</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/21719/how-come-the-tag-hessen-is-missing">How come the tag &quot;Hessen&quot; is missing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49587/indias-administrative-boundary-issue">India&#39;s administrative boundary issue</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12917/administrative-boundaries-latlong">Administrative Boundaries&#39; Lat/Long</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16057/too-thick-and-confusing-administrative-border-lines">Too thick and confusing administrative border lines</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33022/find-all-higher-level-administrative-areas-that-contain-a-specified-node">Find all higher-level administrative areas that contain a specified node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48019/borders-census-designated-placees-and-postal-codes">Borders?  Census Designated Placees and Postal Codes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10311/adding-admin-boundaries-and-multipolygons-the-fast-way">adding admin boundaries and multipolygons the fast way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11050/exclusive-economic-zones">Exclusive Economic Zones</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15241/german-boundaries-deutsche-grenze">German Boundaries / Deutsche Grenze</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50330/how-to-update-carto-data">[closed] How to update carto data</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

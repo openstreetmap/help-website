@@ -1,0 +1,872 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Reverse geocoder nearest search issue - OSM Help</title>
+        <meta name="description" content="I&#39;m currently importing Europe maps because I need a reverse geocoder. While playing with the OSM website I encountered 2 issues:  1. When centering the map to:  http://www.openstreetmap.org/search?query=42.70988%2C23.29388 it displays the wrong address. It prefers the 173 Видин (173 Vidin) instead ..." />
+        <meta name="keywords" content="reversegeolocation,reversegeocoding,reverse,nominatim" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/31792/reverse-geocoder-nearest-search-issue" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/31792/reverse-geocoder-nearest-search-issue?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FttTaWpszjZL7uTDoS4GdLwqEJHssh7Q' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/31792/reverse-geocoder-nearest-search-issue">Reverse geocoder nearest search issue</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-31792-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31792/up/" rel="nofollow"> </a>
+<div id="post-31792-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31792-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31792/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/31792/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm currently importing Europe maps because I need a reverse geocoder. While playing with the OSM website I encountered 2 issues:
+ 1. When centering the map to:
+  <a href="http://www.openstreetmap.org/search?query=42.70988%2C23.29388">http://www.openstreetmap.org/search?query=42.70988%2C23.29388</a>
+it displays the wrong address. It prefers the 173 Видин (173 Vidin) instead бул.Сливница (boulevard Slivnica). Looking the source code it filters the nearest one while 173 Vidin is not (I tested with a lat, lon exactly on the Slivnica main street).
+ 2. When centering the map to:
+ <a href="http://www.openstreetmap.org/search?query=42.39311%2C23.63431">http://www.openstreetmap.org/search?query=42.39311%2C23.63431</a>
+it shows not the village Ново Село (Novo selo) but Ихтиман (Ihtiman) which is far away from that point. I understand that the reverse geocoder goes the hierarchy up while looking up the parents of the road found, but still this is not optimal. Google reverser somehow shows the nearest city/town/village.
+<a href="https://www.google.com/maps/place/42%C2%B023%2737.5%22N+23%C2%B038%2703.3%22E/@42.393736,23.634251,14z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0">https://www.google.com/maps/place/42%C2%B023%2737.5%22N+23%C2%B038%2703.3%22E/@42.393736,23.634251,14z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0</a></p>
+<p>Similar issues to be found when asking for reverse on a highway between two cities and when in the middle of the highway there is another town near or on the road.</p>
+<p>Is there a way to fix this?
+I believe this would be a nice feature to have.</p>
+<p>Or somehow as a mapper I may split the road into sub part and attach that part to the city of interest?</p>
+<p>I was unable to find the way how to define a residential area as a village or town or city and attach the roads to it. I saw that some smaller towns and villages have a residential polygon surrounding but it is not named, nor belongs to a relation. Nevertheless, nominatim somehow knows for their streets that they are in that town. Well, I'd like to be able to do something about that but I do not how. The mapping tutorials I read are not sufficient for fixing the above problems. Any help is highly appreciated.</p>
+<p>Regards
+Boris</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/reversegeolocation/" class="post-tag tag-link-reversegeolocation"
+                                        title="see questions tagged 'reversegeolocation'" rel="tag">reversegeolocation</a>
+                                
+                                    <a href="/tags/reversegeocoding/" class="post-tag tag-link-reversegeocoding"
+                                        title="see questions tagged 'reversegeocoding'" rel="tag">reversegeocoding</a>
+                                
+                                    <a href="/tags/reverse/" class="post-tag tag-link-reverse"
+                                        title="see questions tagged 'reverse'" rel="tag">reverse</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Mar '14, 14:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/397597c08da4d1cf3c1f25d9b62df5f6?s=32&amp;d=identicon&amp;r=g" alt="bkamenov's gravatar image" />
+    <p><a href="/users/8552/bkamenov">bkamenov</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="bkamenov has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31792/">
+                edited
+                <strong>23 Mar '14, 20:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-31792">
+    
+</div>
+<div id="comment-tools-31792" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31792-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/31792/reverse-geocoder-nearest-search-issue?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/31792/reverse-geocoder-nearest-search-issue?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/31792/reverse-geocoder-nearest-search-issue?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/31792/reverse-geocoder-nearest-search-issue?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="31855"></a>
+                    <div id="answer-container-31855" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31855-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31855/up/" rel="nofollow"> </a>
+<div id="post-31855-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31855-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31855/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Me again,</p>
+<p>I have investigated deeply through the source of the reverse geocoder. Unfortunately, it is wrong. I have rewritten the core code and now I get results even better than google does. But my code is almost 3 times as slower than the original one. If I could get faulty results in 36 ms for DB only Bulgaria map only (my Europe map import has failed, I'll try again later), now for 97 ms I get perfect results.</p>
+<p>I'll paste my changes if someone needs them later, but my algorithm works as follows:</p>
+<p>for the GPS point I find nearest city/town/village place, then a second query searches for the nearest road in range of 200 meters near my point. Finally, I search with a third query the nearest feature with rank &gt; 28 which are houses and buildings but the trick is to search for nearest one in range of 40 meters and the parent should be the road found in the previous query. In that way I resolve all issues I had.</p>
+<p>Would be nice if someone could optimize the queries a little. Here is my code (please note that I ignore the zoom level factor):</p>
+<p>In lib/ReverseGeocode.php I replaced the lookup() method body with:</p>
+<p>function lookup()
+        {
+            $sPointSQL = 'ST_SetSRID(ST_Point('.$this-&gt;fLon.','.$this-&gt;fLat.'),4326)';
+            $iMaxRank = $this-&gt;iMaxRank;</p>
+<pre><code>        // Find the nearest city/town/village
+        $fSearchDiam = 0.3;
+        $iPlaceID = null;
+        $fMaxAreaDistance = 1;
+        while(!$iPlaceID &amp;&amp; $fSearchDiam &lt; $fMaxAreaDistance)
+        {
+            $fSearchDiam = $fSearchDiam * 2;
+
+            $sSQL = 'select place_id from placex';
+            $sSQL .= ' WHERE ST_DWithin('.$sPointSQL.', geometry, '.$fSearchDiam.')';
+            $sSQL .= ' and rank_search &lt;= 22';
+            $sSQL .= ' and (name is not null)';
+            $sSQL .= ' and class = \'place\'';
+            $sSQL .= ' and indexed_status = 0 ';
+            $sSQL .= ' and (ST_GeometryType(geometry) not in (\'ST_Polygon\',\'ST_MultiPolygon\') ';
+            $sSQL .= ' OR ST_DWithin('.$sPointSQL.', centroid, '.$fSearchDiam.'))';
+            $sSQL .= ' ORDER BY ST_distance('.$sPointSQL.', geometry) ASC limit 1';
+
+            $aPlace = $this-&gt;oDB-&gt;getRow($sSQL);
+            if (PEAR::IsError($aPlace))
+            {
+                failInternalError("Could not determine closest city/town/village.", $sSQL, $aPlace);
+            }
+            $iPlaceID = $aPlace['place_id'];
+        }
+
+        $oPlaceLookup = new PlaceLookup($this-&gt;oDB);
+        $oPlaceLookup-&gt;setLanguagePreference($this-&gt;aLangPrefOrder);
+        $oPlaceLookup-&gt;setIncludeAddressDetails(true);
+        $oPlaceLookup-&gt;setPlaceId($iPlaceID);
+
+        $oAddressInfo = $oPlaceLookup-&gt;lookup();
+
+        //Find nearest house/street/road within 200 m
+        $fSearchDiam = 0.002;
+
+        $sSQL = 'select place_id,parent_place_id,rank_search from placex';
+        $sSQL .= ' WHERE ST_DWithin('.$sPointSQL.', geometry, '.$fSearchDiam.')';
+        $sSQL .= ' and rank_search != 28 and rank_search &gt;= 23';
+        $sSQL .= ' and (name is not null or housenumber is not null)';
+        $sSQL .= ' and class not in (\'waterway\',\'railway\',\'tunnel\',\'bridge\')';
+        $sSQL .= ' and indexed_status = 0 ';
+        $sSQL .= ' and (ST_GeometryType(geometry) not in (\'ST_Polygon\',\'ST_MultiPolygon\') ';
+        $sSQL .= ' OR ST_DWithin('.$sPointSQL.', centroid, '.$fSearchDiam.'))';
+        $sSQL .= ' ORDER BY ST_distance('.$sPointSQL.', geometry) ASC limit 1';
+
+        $aPlace = $this-&gt;oDB-&gt;getRow($sSQL);
+        if(PEAR::IsError($aPlace))
+        {
+            failInternalError("Could not determine closest place.", $sSQL, $aPlace);
+        }
+        $iPlaceID = $aPlace['place_id'];
+        $iParentPlaceID = $aPlace['parent_place_id'];
+
+        if($iPlaceID)
+        {
+            if($aPlace['rank_search'] &gt; 28)
+            {
+                if($iParentPlaceID)
+                    $iPlaceID = $iParentPlaceID;
+            }
+
+            //Find nearest house number within 40 meters or building which is child of the road found
+            $fSearchDiam = 0.0004;
+
+            $sSQL = 'select place_id, parent_place_id from placex';
+            $sSQL .= ' WHERE ST_DWithin('.$sPointSQL.', geometry, '.$fSearchDiam.')';
+            $sSQL .= ' and rank_search &gt; 28';
+            $sSQL .= ' and (name is not null or housenumber is not null)';
+            $sSQL .= ' and class not in (\'waterway\',\'railway\',\'tunnel\',\'bridge\')';
+            $sSQL .= ' and indexed_status = 0 ';
+            $sSQL .= ' and parent_place_id='.$iPlaceID;
+            $sSQL .= ' and (ST_GeometryType(geometry) not in (\'ST_Polygon\',\'ST_MultiPolygon\') ';
+            $sSQL .= ' OR ST_DWithin('.$sPointSQL.', centroid, '.$fSearchDiam.'))';
+            $sSQL .= ' ORDER BY ST_distance('.$sPointSQL.', geometry) ASC limit 1';
+
+            $aPlace = $this-&gt;oDB-&gt;getRow($sSQL);
+            if(PEAR::IsError($aPlace))
+            {
+                failInternalError("Could not determine closest place.", $sSQL, $aPlace);
+            }
+            if($aPlace['place_id'])
+                $iPlaceID = $aPlace['place_id'];
+
+            $oPlaceLookup-&gt;setPlaceId($iPlaceID);
+
+            $oStreetInfo = $oPlaceLookup-&gt;lookup();
+
+            if(!isset($oStreetInfo["error"]) &amp;&amp; isset($oStreetInfo["aAddress"]) &amp;&amp; isset($oStreetInfo["aAddress"]["road"]))
+            {
+                $oAddressInfo["aAddress"]["road"] = $oStreetInfo["aAddress"]["road"];
+
+                if(isset($oStreetInfo["aAddress"]["house_number"]))
+                    $oAddressInfo["aAddress"]["house_number"] = $oStreetInfo["aAddress"]["house_number"];
+                else if($oStreetInfo["aAddress"]["building"])
+                    $oAddressInfo["aAddress"]["house_number"] = $oStreetInfo["aAddress"]["building"];
+
+                if(isset($oStreetInfo["aAddress"]["suburb"]))
+                    $oAddressInfo["aAddress"]["suburb"] = $oStreetInfo["aAddress"]["suburb"];
+
+                if(isset($oStreetInfo["aAddress"]["postcode"]))
+                    $oAddressInfo["aAddress"]["postcode"] = $oStreetInfo["aAddress"]["postcode"];
+            }
+
+        }
+
+        return $oAddressInfo;
+    }
+</code></pre>
+<p>In my own reverse.php I use the reverse place to build an address as follows:</p>
+<p>$oReverseGeocode = new ReverseGeocode($oDB);
+$oReverseGeocode-&gt;setLanguagePreference($aLangPrefOrder);
+$oReverseGeocode-&gt;setIncludeAddressDetails(true);
+$oReverseGeocode-&gt;setLatLon($request[$i]['lat'], $request[$i]['lon']);
+$aPlace = $oReverseGeocode-&gt;lookup();</p>
+<pre><code>    $addr = "";
+    if(!isset($aPlace["error"]) &amp;&amp; isset($aPlace["aAddress"]) &amp;&amp; isset($aPlace["aAddress"]["country"]))
+    {
+        //Road
+        if(isset($aPlace["aAddress"]["road"]))
+        {
+            $addr .= $aPlace["aAddress"]["road"];
+
+            if(isset($aPlace["aAddress"]["house_number"])) //House number
+                $addr .= " " . $aPlace["aAddress"]["house_number"];
+            else if(isset($aPlace["aAddress"]["suburb"]))//Try providing a suburb
+                $addr .= ", " . $aPlace["aAddress"]["suburb"];
+
+            $addr .= ", ";
+
+        }
+
+        //Post code
+        if(isset($aPlace["aAddress"]["postcode"]))
+            $addr .= $aPlace["aAddress"]["postcode"] . ", ";
+
+        //Village, town or city
+        if(isset($aPlace["aAddress"]["vilage"]) || isset($aPlace["aAddress"]["town"]) || isset($aPlace["aAddress"]["city"]))
+        {
+            if(isset($aPlace["aAddress"]["vilage"]))
+                $addr .= $aPlace["aAddress"]["vilage"] . ", ";
+
+            if(isset($aPlace["aAddress"]["town"]))
+                $addr .= $aPlace["aAddress"]["town"] . ", ";
+
+            if(isset($aPlace["aAddress"]["city"]))
+                $addr .= $aPlace["aAddress"]["city"] . ", ";
+        }
+        else if(isset($aPlace["aAddress"]["county"])) //County
+            $addr .= $aPlace["aAddress"]["county"] . ", ";
+        else if(isset($aPlace["aAddress"]["state"])) //State
+            $addr .= $aPlace["aAddress"]["state"] . ", ";
+
+        //Country
+        $addr .= $aPlace["aAddress"]["country"];
+    }
+</code></pre>
+<p>} </p>
+<p>Now $addr will have your desired address.</p>
+<p>Hope someone could optimize that.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31855/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Mar '14, 19:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/397597c08da4d1cf3c1f25d9b62df5f6?s=32&amp;d=identicon&amp;r=g" alt="bkamenov's gravatar image" />
+    <p><a href="/users/8552/bkamenov">bkamenov</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="bkamenov has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31855/">
+                edited
+                <strong>24 Mar '14, 22:38</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31855">
+    
+        <a name="33673"></a>
+        <div class="comment" id="comment-33673">
+            <div id="post-33673-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm trying to use your code, but obtain the next one:</p>
+
+<p>&lt;reversegeocode timestamp="Wed, 04 Jun 14 14:50:24 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. &amp;lt;a href=" http:="" www.openstreetmap.org="" copyright""=""&gt;http://www.openstreetmap.org/copyright" querystring="format=xml&amp;lat=50.90921&amp;lon=4.46187"&gt;
+&lt;error&gt;Unable to geocode&lt;/error&gt;
+&lt;/reversegeocode&gt;</p>
+
+<p>Did you change anything in PlaceLookup.php? Did you make change only in ReverseGeocode.php and reverse.php?</p>
+
+<p>I imagine that I need to make a change in /lib/template/address.php , could you tell me what I'm doing wrong? </p>
+
+<p>Thanks in advance!</p></div>
+            <div class="comment-info" id="comment-33673-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 16:06)</span>
+                <a class="comment-user userinfo" href="/users/8976/soyeya">soyeya</a>
+                
+            </div>
+        </div>
+    
+        <a name="33675"></a>
+        <div class="comment" id="comment-33675">
+            <div id="post-33675-score" class="comment-score">2</div>
+            <div class="comment-text"><p>This is the wrong place for discussing code. Please use <a href="https://github.com/twain47/Nominatim/">https://github.com/twain47/Nominatim/</a> for asking question and suggesting changes.</p></div>
+            <div class="comment-info" id="comment-33675-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 16:19)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31855" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31855-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/31792/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FttTaWpszjZL7uTDoS4GdLwqEJHssh7Q' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31792/reverse-geocoder-nearest-search-issue?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31792/reverse-geocoder-nearest-search-issue?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/reversegeocoding/"
+            class="tag-link-reversegeocoding"
+            title="see questions tagged'reversegeocoding'using tags"
+            rel="tag">reversegeocoding</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/reverse/"
+            class="tag-link-reverse"
+            title="see questions tagged'reverse'using tags"
+            rel="tag">reverse</a> <span class="tag-number">&#215;36</span><br/>
+        
+        <a href="/tags/reversegeolocation/"
+            class="tag-link-reversegeolocation"
+            title="see questions tagged'reversegeolocation'using tags"
+            rel="tag">reversegeolocation</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 23, 2014, 2:01 p.m.">23 Mar '14, 14:01</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,811 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 4, 2014, 4:20 p.m.">04 Jun '14, 16:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/56507/how-to-get-only-streets-from-nominatim-reverse-geocoding">How to get only streets from Nominatim Reverse Geocoding?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65105/get-residential-street-closest-to-gps-coordinates">get residential street closest to gps coordinates</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31439/state-is-missing-in-reverse-geocoding">state is missing in reverse geocoding</a>
+        </p>
+        
+        <p>
+            <a href="/questions/79139/how-to-get-the-address-from-coordinates-with-open-street-maps-api">How to get the address from coordinates with Open Street Maps API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/88156/reverse-geocode-to-get-country">Reverse Geocode to Get Country</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44800/how-to-get-continent-of-geo-locationlatitude-and-longtitude">How to get continent of geo-location(latitude and longtitude)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28695/how-can-i-change-nominatims-reverse-geocoding-behaviour">How can I change Nominatim&#39;s reverse geocoding behaviour?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27544/sf-bay-area-city-names-in-nominatim">SF Bay Area city names in nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29606/extra-space-in-returned-xml-nominatimreverse">extra space in returned xml (nominatim/reverse)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17816/how-do-i-get-address-range-for-a-given-waystreet">How do I get address range for a given way/street</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

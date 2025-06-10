@@ -1,0 +1,745 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Problem with rendering water from Overpass data - OSM Help</title>
+        <meta name="description" content="EDIT:  The question is also posted here: http://forum.openstreetmap.org/viewtopic.php?id=55126 In the past, I thought thay it might be a problem with Maperitive, but apparently it is not: https://groups.google.com/forum/m/#!msg/maperitive/-aXn7-2_f-4/nrVaQJ18HgAJ Hello! I am trying to render a simpl..." />
+        <meta name="keywords" content="water,overpass,overpassapi,maperitive,query" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/50891/problem-with-rendering-water-from-overpass-data" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/50891/problem-with-rendering-water-from-overpass-data?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='wueeCYin3IO2YvthlVjO2Ihq9rgWe7jc' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/50891/problem-with-rendering-water-from-overpass-data">Problem with rendering water from Overpass data</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-50891-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50891/up/" rel="nofollow"> </a>
+<div id="post-50891-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-50891-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50891/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/50891/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>EDIT: 
+The question is also posted here: <a href="http://forum.openstreetmap.org/viewtopic.php?id=55126">http://forum.openstreetmap.org/viewtopic.php?id=55126</a></p>
+<p>In the past, I thought thay it might be a problem with Maperitive, but apparently it is not: <a href="https://groups.google.com/forum/m/#!msg/maperitive/-aXn7-2_f-4/nrVaQJ18HgAJ">https://groups.google.com/forum/m/#!msg/maperitive/-aXn7-2_f-4/nrVaQJ18HgAJ</a></p>
+<p>Hello! I am trying to render a simple but complete map of a 18x18km city area.</p>
+<p>I extract data from my own instance of OverpassAPI, using query given below, and then open extracted *.osm file in Maperitive and render a bitmap. </p>
+<p>My example query for NYC:</p>
+<pre><code>[timeout:3600];(node(40.64975,-74.09327,40.811447,-73.87989);rel(bn)-&gt;.x;way(bn);rel(bw););(._;way(r););(._;node(r)-&gt;.x;node(w););(._;rel(br);rel(br);rel(br);rel(br););out;
+</code></pre>
+<p>Example map - as you can clearly see, a huge part of water is not rendered at all:</p>
+<p><img src="http://help.openstreetmap.org/upfiles/NYC.jpg" alt="alt text"></p>
+<p>P.S. Someone has already advised me to download data from geofabrik, and extract a piece of it with osmconvert, using the 'keep ways and areas complete, even if they cross the border' option. It works just fine, but is 10x slower than downloading data from Overpass. I am pretty sure that it is possible to write a Overpass query which will fit my needs, but the query language is difficult. Help me please!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/water/" class="post-tag tag-link-water"
+                                        title="see questions tagged 'water'" rel="tag">water</a>
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/overpassapi/" class="post-tag tag-link-overpassapi"
+                                        title="see questions tagged 'overpassapi'" rel="tag">overpassapi</a>
+                                
+                                    <a href="/tags/maperitive/" class="post-tag tag-link-maperitive"
+                                        title="see questions tagged 'maperitive'" rel="tag">maperitive</a>
+                                
+                                    <a href="/tags/query/" class="post-tag tag-link-query"
+                                        title="see questions tagged 'query'" rel="tag">query</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Jul '16, 14:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/83574717ad22ec1c6ed654911a88ff9d?s=32&amp;d=identicon&amp;r=g" alt="Kervyn's gravatar image" />
+    <p><a href="/users/12545/kervyn">Kervyn</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kervyn has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/50891/">
+                edited
+                <strong>15 Jul '16, 10:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-50891">
+    
+        <a name="50894"></a>
+        <div class="comment" id="comment-50894">
+            <div id="post-50894-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Did you check your .osm file in JOSM already to see if it includes all relevant data?</p></div>
+            <div class="comment-info" id="comment-50894-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '16, 14:48)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="50900"></a>
+        <div class="comment" id="comment-50900">
+            <div id="post-50900-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Cross posted: <a href="http://forum.openstreetmap.org/viewtopic.php?pid=600156#p600156">http://forum.openstreetmap.org/viewtopic.php?pid=600156#p600156</a></p></div>
+            <div class="comment-info" id="comment-50900-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '16, 18:47)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50891" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50891-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/50891/problem-with-rendering-water-from-overpass-data?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/50891/problem-with-rendering-water-from-overpass-data?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/50891/problem-with-rendering-water-from-overpass-data?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/50891/problem-with-rendering-water-from-overpass-data?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="50901"></a>
+                    <div id="answer-container-50901" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50901-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50901/up/" rel="nofollow"> </a>
+<div id="post-50901-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-50901-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50901/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I don't know enough about coastline rendering to be positive, but if you have a look at <a href="http://www.openstreetmap.org/way/179057060">one of the ways where your water stops</a> you'll see that it's only part of one multipolygon. Hence your map is rendering the data correctly: there is actually nothing in the data that would imply this is water. That has something to do with this being the sea: in OpenStreetMap, coastlines are treated a bit special. A dataset defining the main bodies of water is kept a little separate from the general database, to define main landmasses and oceans. This is to avoid the constant flooding of continents you would see everytime someone makes a tiny mistake when editing coastlines.</p>
+<p>I guess you might solve it for your usecase by closing your landmasses along the border of your area, and defining everything not enclosed as sea.</p>
+<p>I'm sure others can give a more exact answer as to the rendering of coastlines.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50901/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Jul '16, 19:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1df835d513b1282e0edd7405d29cd8d9?s=32&amp;d=identicon&amp;r=g" alt="joost%20schouppe's gravatar image" />
+    <p><a href="/users/10142/joost-schouppe">joost schouppe</a><br/>
+    <span class="score" title="3427 reputation points"><span class="">3.4k</span></span><span title="24 badges"><span class="badge1">&#9679;</span><span class="badgecount">24</span></span><span title="50 badges"><span class="silver">&#9679;</span><span class="badgecount">50</span></span><span title="87 badges"><span class="bronze">&#9679;</span><span class="badgecount">87</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="joost schouppe has 9 accepted answers">12&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50901">
+    
+        <a name="50905"></a>
+        <div class="comment" id="comment-50905">
+            <div id="post-50905-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks joost! It would be quite difficult to write a tool automatically closing the landmasses as you suggest, though. 
+I hope that somebody will help me rewrite the query, or suggest other solution to download the data (including water) properly ;-)</p></div>
+            <div class="comment-info" id="comment-50905-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jul '16, 11:23)</span>
+                <a class="comment-user userinfo" href="/users/12545/kervyn">Kervyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="50965"></a>
+        <div class="comment" id="comment-50965">
+            <div id="post-50965-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, I'm not sure if there's a way to let overpass return you data that doesn't exist :) (i.e. continents aren't regular polygons in OSM)
+But you could refrase your question into "how to get closed landmasses with overpass" or something like that. Other than that, I would think the simplest way would be to manually create a polygon for the area you need.</p></div>
+            <div class="comment-info" id="comment-50965-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '16, 10:58)</span>
+                <a class="comment-user userinfo" href="/users/10142/joost-schouppe">joost schouppe</a>
+                
+            </div>
+        </div>
+    
+        <a name="50967"></a>
+        <div class="comment" id="comment-50967">
+            <div id="post-50967-score" class="comment-score">2</div>
+            <div class="comment-text"><p>This might help too: <a href="http://maperitive.net/docs/Rendering_Coastlines_And_Sea.html">http://maperitive.net/docs/Rendering_Coastlines_And_Sea.html</a></p></div>
+            <div class="comment-info" id="comment-50967-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '16, 12:42)</span>
+                <a class="comment-user userinfo" href="/users/10142/joost-schouppe">joost schouppe</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50901" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50901-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/50891/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='wueeCYin3IO2YvthlVjO2Ihq9rgWe7jc' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50891/problem-with-rendering-water-from-overpass-data?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50891/problem-with-rendering-water-from-overpass-data?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/query/"
+            class="tag-link-query"
+            title="see questions tagged'query'using tags"
+            rel="tag">query</a> <span class="tag-number">&#215;147</span><br/>
+        
+        <a href="/tags/overpassapi/"
+            class="tag-link-overpassapi"
+            title="see questions tagged'overpassapi'using tags"
+            rel="tag">overpassapi</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/water/"
+            class="tag-link-water"
+            title="see questions tagged'water'using tags"
+            rel="tag">water</a> <span class="tag-number">&#215;79</span><br/>
+        
+        <a href="/tags/maperitive/"
+            class="tag-link-maperitive"
+            title="see questions tagged'maperitive'using tags"
+            rel="tag">maperitive</a> <span class="tag-number">&#215;48</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 13, 2016, 2:12 p.m.">13 Jul '16, 14:12</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,198 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 18, 2016, 12:42 p.m.">18 Jul '16, 12:42</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/68256/how-to-get-unique-results-from-overpass-json">How to get unique results from Overpass JSON?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68749/i-am-trying-to-find-neighbouring-cities-of-a-citystate">I am trying to find neighbouring cities of a city/state.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26832/get-next-x-adjacent-ways-from-current-way">Get next X adjacent ways from current way</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20304/overpass-user-clause">[closed] Overpass: user clause</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api">How to query all elements within an outline way from Overpass API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25716/calculate-the-number-of-place_of_worship-in-a-specific-county-city">Calculate the number of place_of_worship in a specific county / city</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19419/my-query-to-retrieve-nodes-and-ways-is-not-returning-all-the-nodes">My query to retrieve nodes and ways is not returning all the nodes...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15101/overpassapi-query-with-two-specific-keys-and-any-value">OverpassAPI query with two specific keys and any value</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19914/overpass-polygon-query">Overpass: polygon query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19913/overpass-erase-bbox">Overpass: Erase Bbox</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

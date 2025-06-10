@@ -1,0 +1,826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I update JOSM for a Plug-in that requires a specific version to run on? [kendzi3d related problem] - OSM Help</title>
+        <meta name="description" content=" When I launch JOSM I get this error warning popup message for my plugin. I&#39;m using the latest version yet it requires a higher version, which is really confusing. I need some help to figure out how to fix it.  I&#39;m using these two Plugins with log4j and jogl. Edit: I got this version that it require..." />
+        <meta name="keywords" content="kendzi3d,josm,macos,java,plugin" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/61154/how-do-i-update-josm-for-a-plug-in-that-requires-a-specific-version-to-run-on-kendzi3d-related-problem" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61154/how-do-i-update-josm-for-a-plug-in-that-requires-a-specific-version-to-run-on-kendzi3d-related-problem?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='B8uIckYNxF6uXyNbBTy1WDmENZXaFrFF' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61154/how-do-i-update-josm-for-a-plug-in-that-requires-a-specific-version-to-run-on-kendzi3d-related-problem">How do I update JOSM for a Plug-in that requires a specific version to run on? [kendzi3d related problem]</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61154-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61154/up/" rel="nofollow"> </a>
+<div id="post-61154-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-61154-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61154/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61154/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-11_at_8.31.44_PM_mgmGJiF.png" alt="alt text"></p>
+<p>When I launch JOSM I get this error warning popup message for my plugin.</p>
+<p>I'm using the latest version yet it requires a higher version, which is really confusing.</p>
+<p>I need some help to figure out how to fix it.</p>
+<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-11_at_8.42.20_PM.png" alt="alt text"></p>
+<p>I'm using these two <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Kendzi3D">Plugins</a> with log4j and jogl.</p>
+<p>Edit:</p>
+<p>I got this version that it requires</p>
+<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-13_at_6.40.04_AM.png" alt="alt text"></p>
+<p>and I'm getting this when I load JOSM</p>
+<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-13_at_6.39.30_AM.png" alt="alt text"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/kendzi3d/" class="post-tag tag-link-kendzi3d"
+                                        title="see questions tagged 'kendzi3d'" rel="tag">kendzi3d</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/macos/" class="post-tag tag-link-macos"
+                                        title="see questions tagged 'macos'" rel="tag">macos</a>
+                                
+                                    <a href="/tags/java/" class="post-tag tag-link-java"
+                                        title="see questions tagged 'java'" rel="tag">java</a>
+                                
+                                    <a href="/tags/plugin/" class="post-tag tag-link-plugin"
+                                        title="see questions tagged 'plugin'" rel="tag">plugin</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Dec '17, 04:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44ea1eaf80bc2e913b1f9a64325d8d30?s=32&amp;d=identicon&amp;r=g" alt="Mxdanger's gravatar image" />
+    <p><a href="/users/14531/mxdanger">Mxdanger</a><br/>
+    <span class="score" title="194 reputation points">194</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Mxdanger has one accepted answer">25&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61154/">
+                edited
+                <strong>22 Dec '17, 21:27</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61154">
+    
+</div>
+<div id="comment-tools-61154" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61154-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61154/how-do-i-update-josm-for-a-plug-in-that-requires-a-specific-version-to-run-on-kendzi3d-related-problem?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61154/how-do-i-update-josm-for-a-plug-in-that-requires-a-specific-version-to-run-on-kendzi3d-related-problem?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61154/how-do-i-update-josm-for-a-plug-in-that-requires-a-specific-version-to-run-on-kendzi3d-related-problem?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61154/how-do-i-update-josm-for-a-plug-in-that-requires-a-specific-version-to-run-on-kendzi3d-related-problem?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61156"></a>
+                    <div id="answer-container-61156" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61156-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61156/up/" rel="nofollow"> </a>
+<div id="post-61156-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-61156-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61156/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You are using latest <em>tested</em> release, but there are also <em>testing</em> releases available on the JOSM website:</p>
+<p><a href="https://josm.openstreetmap.de/wiki/Download">https://josm.openstreetmap.de/wiki/Download</a></p>
+<p>Current "latest" version is 13199, which should satisfy kendzi3d requirements (&gt;=13174).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61156/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Dec '17, 05:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e228dd20b7da2a6c8f559e2118ce08d3?s=32&amp;d=identicon&amp;r=g" alt="kocio's gravatar image" />
+    <p><a href="/users/11332/kocio">kocio</a><br/>
+    <span class="score" title="2054 reputation points"><span class="">2.1k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="41 badges"><span class="bronze">&#9679;</span><span class="badgecount">41</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="kocio has 14 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61156/">
+                edited
+                <strong>12 Dec '17, 05:12</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61156">
+    
+        <a name="61161"></a>
+        <div class="comment" id="comment-61161">
+            <div id="post-61161-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, I can't believe I missed that link... Thanks!</p></div>
+            <div class="comment-info" id="comment-61161-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '17, 14:35)</span>
+                <a class="comment-user userinfo" href="/users/14531/mxdanger">Mxdanger</a>
+                
+            </div>
+        </div>
+    
+        <a name="61164"></a>
+        <div class="comment" id="comment-61164">
+            <div id="post-61164-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok I actually got the “developer version” and now it says the “plugin can’t run do you want to uninstall it.” So I can’t get it to run, how can I download an exact version of JOSM?</p></div>
+            <div class="comment-info" id="comment-61164-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '17, 21:08)</span>
+                <a class="comment-user userinfo" href="/users/14531/mxdanger">Mxdanger</a>
+                
+            </div>
+        </div>
+    
+        <a name="61166"></a>
+        <div class="comment" id="comment-61166">
+            <div id="post-61166-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oh... On the same page you have a link to "older" releases, which leads to this directory:</p>
+
+<p><a href="https://josm.openstreetmap.de/download/">https://josm.openstreetmap.de/download/</a></p></div>
+            <div class="comment-info" id="comment-61166-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '17, 00:29)</span>
+                <a class="comment-user userinfo" href="/users/11332/kocio">kocio</a>
+                
+            </div>
+        </div>
+    
+        <a name="61175"></a>
+        <div class="comment" id="comment-61175">
+            <div id="post-61175-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think my problem is greater than version incombability because that plugin is for the 3D edIting but I don’t know how to get it to run on macOS, as every single damn install guide is slightly different, more confusing, and only talks about a simple Windows install with nothing else. I’ve literally been researching for the past 3 hours and got nowhere… </p>
+
+<p>I’m going to be asking a new question more specifically in detail for the plugin. This answer would be the correct answer if it weren’t for this complicated plugin.</p></div>
+            <div class="comment-info" id="comment-61175-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '17, 06:23)</span>
+                <a class="comment-user userinfo" href="/users/14531/mxdanger">Mxdanger</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61156" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61156-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="61391"></a>
+                    <div id="answer-container-61391" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61391-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61391/up/" rel="nofollow"> </a>
+<div id="post-61391-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-61391-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61391/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Ok I finally found out how to fix it. The solution is in a issue I posted in <a href="https://github.com/kendzi/kendzi3d/issues/76">kendzi3d’s GitHub</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61391/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Dec '17, 03:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44ea1eaf80bc2e913b1f9a64325d8d30?s=32&amp;d=identicon&amp;r=g" alt="Mxdanger's gravatar image" />
+    <p><a href="/users/14531/mxdanger">Mxdanger</a><br/>
+    <span class="score" title="194 reputation points">194</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Mxdanger has one accepted answer">25&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61391">
+    
+</div>
+<div id="comment-tools-61391" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61391-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61154/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='B8uIckYNxF6uXyNbBTy1WDmENZXaFrFF' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61154/how-do-i-update-josm-for-a-plug-in-that-requires-a-specific-version-to-run-on-kendzi3d-related-problem?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61154/how-do-i-update-josm-for-a-plug-in-that-requires-a-specific-version-to-run-on-kendzi3d-related-problem?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/java/"
+            class="tag-link-java"
+            title="see questions tagged'java'using tags"
+            rel="tag">java</a> <span class="tag-number">&#215;76</span><br/>
+        
+        <a href="/tags/plugin/"
+            class="tag-link-plugin"
+            title="see questions tagged'plugin'using tags"
+            rel="tag">plugin</a> <span class="tag-number">&#215;29</span><br/>
+        
+        <a href="/tags/kendzi3d/"
+            class="tag-link-kendzi3d"
+            title="see questions tagged'kendzi3d'using tags"
+            rel="tag">kendzi3d</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/macos/"
+            class="tag-link-macos"
+            title="see questions tagged'macos'using tags"
+            rel="tag">macos</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 12, 2017, 4:54 a.m.">12 Dec '17, 04:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,975 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 28, 2017, 3:48 a.m.">28 Dec '17, 03:48</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/15822/is-there-a-way-to-render-tiles-from-pbf">Is there a way to render tiles from PBF</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20756/josm-on-ubuntu-java-issue">[closed] Josm on ubuntu - JAVA issue</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6496/josm-pdfimport">JOSM pdfimport</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10066/what-is-wrong-with-my-batch-file">What is wrong with my batch file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18218/josm-support-of-unicode">JOSM: Support of Unicode</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18329/how-to-install-josm-java">How to install JOSM &amp; JAVA</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1677/importing-pdf-josm">Importing PDF JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4240/transfer-tags-between-building-node-and-area">Transfer tags between building node and area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9153/import-image-into-josm">import image into JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22148/printing-fault-in-upgrade">Printing fault in upgrade</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

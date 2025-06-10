@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>how to query more than once every 2-3min to overpass.api? - OSM Help</title>
+        <meta name="description" content="I have an application with leaflet and overpass.api written in javascript. I use overpass-layer plugin to query to OSM data. My problem , when i query 2 times to overpass.api i get an Too Many request error. http://overpass-api.de/api/status  status shows me that there is a limitation. There is 1 av..." />
+        <meta name="keywords" content="leaflet,overpass,javascript,overpass-api" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/52333/how-to-query-more-than-once-every-2-3min-to-overpassapi" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52333/how-to-query-more-than-once-every-2-3min-to-overpassapi?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='OgBKCR5nkFpCM73RYCYmFRNZFzQSHXbI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52333/how-to-query-more-than-once-every-2-3min-to-overpassapi">how to query more than once every 2-3min to overpass.api?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52333-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52333/up/" rel="nofollow"> </a>
+<div id="post-52333-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-52333-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52333/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52333/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have an application with leaflet and overpass.api written in javascript. I use overpass-layer plugin to query to OSM data. My problem , when i query 2 times to overpass.api i get an Too Many request error.</p>
+<p><a href="http://overpass-api.de/api/status">http://overpass-api.de/api/status</a>
+ status shows me that there is a limitation. There is 1 available slot, and after i send a request my IP is blocked for a time period (30sec-3min). Why is my IP banned already after 1 query? And why for so long?.</p>
+<p>in <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">wiki</a> there stands <a href="http://overpass-api.de/api/">http://overpass-api.de/api/</a> :</p>
+<blockquote>
+<p>"Both servers have a total capacity of
+about 1.000.000 requests per day. You
+can safely assume that you don't
+disturb other users when you do less
+than 10.000 queries per day or
+download less than 5 GB data per day."</p>
+</blockquote>
+<p>Need to query more than just once in 3 min. How can i achieve that?</p>
+<p><a href="http://overpass-api.de/api/interpreter?data=[out:json];%20area[name=%22Mannheim%22]-%3E.a;(%20node(area.a)[%22man_made%22=%22works%22];way(area.a)[%22man_made%22=%22works%22];relation(area.a)[%22man_made%22=%22works%22];);out%20body;%3E;out%20skel%20qt;">this</a> is an example query i sent with my application.</p>
+<p>I just created the biggest query possible with my application slot is available after 5min when i use this query:</p>
+<pre><code>area[name="Berlin"]-&gt;.a;
+
+(node(area.a)["landuse"="industrial"]["name"];
+way(area.a)["landuse"="industrial"]["name"];
+relation(area.a)["landuse"="industrial"]["name"];
+
+node(area.a)["landuse"="industrial"]["phone"];
+way(area.a)["landuse"="industrial"]["phone"];
+relation(area.a)["landuse"="industrial"]["phone"];
+
+node(area.a)["landuse"="industrial"]["contact:phone"];
+way(area.a)["landuse"="industrial"]["contact:phone"];
+relation(area.a)["landuse"="industrial"]["contact:phone"];
+
+node(area.a)["landuse"="industrial"]["website"];
+way(area.a)["landuse"="industrial"]["website"];
+relation(area.a)["landuse"="industrial"]["website"];
+
+node(area.a)["building"="industrial"]["name"];
+way(area.a)["building"="industrial"]["name"];
+relation(area.a)["building"="industrial"]["name"];
+
+node(area.a)["building"="industrial"]["phone"];
+way(area.a)["building"="industrial"]["phone"];
+relation(area.a)["building"="industrial"]["phone"];
+
+node(area.a)["building"="industrial"]["contact:phone"];
+way(area.a)["building"="industrial"]["contact:phone"];
+relation(area.a)["building"="industrial"]["contact:phone"];
+
+node(area.a)["building"="industrial"]["website"];
+way(area.a)["building"="industrial"]["website"];
+relation(area.a)["building"="industrial"]["website"];
+);
+out body;
+&gt;;
+out skel qt;
+</code></pre>
+<p><strong>It gives me all tags with name, phone,contact:phone,website
+for landuse=industrial and building=industrial</strong></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/leaflet/" class="post-tag tag-link-leaflet"
+                                        title="see questions tagged 'leaflet'" rel="tag">leaflet</a>
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/javascript/" class="post-tag tag-link-javascript"
+                                        title="see questions tagged 'javascript'" rel="tag">javascript</a>
+                                
+                                    <a href="/tags/overpass-api/" class="post-tag tag-link-overpass-api"
+                                        title="see questions tagged 'overpass-api'" rel="tag">overpass-api</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Oct '16, 22:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fdd97ceec9f9544f1c9d7c57b1ee9707?s=32&amp;d=identicon&amp;r=g" alt="JsonKh's gravatar image" />
+    <p><a href="/users/12840/jsonkh">JsonKh</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JsonKh has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52333/">
+                edited
+                <strong>03 Oct '16, 12:39</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52333">
+    
+        <a name="52334"></a>
+        <div class="comment" id="comment-52334">
+            <div id="post-52334-score" class="comment-score"></div>
+            <div class="comment-text"><p>Your example appears to be data returned by the query not the query.</p></div>
+            <div class="comment-info" id="comment-52334-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Oct '16, 09:12)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52335"></a>
+        <div class="comment" id="comment-52335">
+            <div id="post-52335-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>: the query is in the link's URL</p></div>
+            <div class="comment-info" id="comment-52335-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Oct '16, 10:00)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52336"></a>
+        <div class="comment" id="comment-52336">
+            <div id="post-52336-score" class="comment-score"></div>
+            <div class="comment-text"><p>So it is, but that requires more effort on my part to cut paste &amp; format!</p></div>
+            <div class="comment-info" id="comment-52336-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Oct '16, 10:08)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52400"></a>
+        <div class="comment" id="comment-52400">
+            <div id="post-52400-score" class="comment-score">1</div>
+            <div class="comment-text"><p>This related question contains possibly usefull feedback: <a href="https://help.openstreetmap.org/questions/52384">https://help.openstreetmap.org/questions/52384</a></p></div>
+            <div class="comment-info" id="comment-52400-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Oct '16, 19:46)</span>
+                <a class="comment-user userinfo" href="/users/12850/alexvanderlinden">alexvanderli...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52333" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52333-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/52333/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='OgBKCR5nkFpCM73RYCYmFRNZFzQSHXbI' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52333/how-to-query-more-than-once-every-2-3min-to-overpassapi?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52333/how-to-query-more-than-once-every-2-3min-to-overpassapi?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/leaflet/"
+            class="tag-link-leaflet"
+            title="see questions tagged'leaflet'using tags"
+            rel="tag">leaflet</a> <span class="tag-number">&#215;74</span><br/>
+        
+        <a href="/tags/javascript/"
+            class="tag-link-javascript"
+            title="see questions tagged'javascript'using tags"
+            rel="tag">javascript</a> <span class="tag-number">&#215;60</span><br/>
+        
+        <a href="/tags/overpass-api/"
+            class="tag-link-overpass-api"
+            title="see questions tagged'overpass-api'using tags"
+            rel="tag">overpass-api</a> <span class="tag-number">&#215;54</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 2, 2016, 10:04 p.m.">02 Oct '16, 22:04</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,693 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 7, 2016, 7:47 p.m.">07 Oct '16, 19:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/47728/how-to-create-administrative-areas-alone">How to create administrative areas alone?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48174/openstreetmap-python-api-bounding-box-request-not-returned-as-python-dictionary">OpenStreetMap Python API Bounding Box Request not Returned as Python Dictionary</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45043/get-coordinates-from-osm-website-with-javascript">Get coordinates from OSM website with Javascript</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47726/how-to-get-list-of-areas-in-an-area">How to get list of areas, in an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47764/how-to-use-overpass-api-in-codeigniter">[closed] How to use overpass API in codeigniter?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48137/overpass-api-use-of-max_num_processes-field-in-source">[closed] [Overpass-api] use of max_num_processes field in source?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41893/how-to-optimize-requests-on-ways">How to optimize requests on ways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42363/shortest-path-using-a-with-nodes-and-ways">[closed] Shortest path using A* with nodes and ways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46272/all-cities-in-germany-with-boundaries-and-relation-to-its-county-as-csv">[closed] All Cities in Germany with boundaries and relation to its county as CSV</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49941/overpassapi-performance">OverPassAPI performance</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

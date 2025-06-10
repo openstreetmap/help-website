@@ -1,0 +1,1025 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>JOSM - Delete an object attached to other objects without raising conflicts? - OSM Help</title>
+        <meta name="description" content="Hi I want to delete a long linear way. I know it&#39;s id so I download just that object.  It&#39;s attached to other objects, so JOSM throws conflict errors &amp;amp; insists that the offending objects are also downloaded and then the user can decide if they want to keep them. Due to it being a long object, JO..." />
+        <meta name="keywords" content="conflicts,josm,shared_nodes,delete" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/83825/josm-delete-an-object-attached-to-other-objects-without-raising-conflicts" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/83825/josm-delete-an-object-attached-to-other-objects-without-raising-conflicts?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='HkpMli3Qdz02utDaWnnsuZeSCPiVyVpz' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/83825/josm-delete-an-object-attached-to-other-objects-without-raising-conflicts">JOSM - Delete an object attached to other objects without raising conflicts?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-83825-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83825/up/" rel="nofollow"> </a>
+<div id="post-83825-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-83825-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83825/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/83825/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi
+I want to delete a long linear way. I know it's id so I download just that object. </p>
+<p>It's attached to other objects, so JOSM throws conflict errors &amp; insists that the offending objects are also downloaded and then the user can decide if they want to keep them. Due to it being a long object, JOSM doesn't allow all the data to be d/l in one go. This is frustrating. Is there a way to tell JOSM to default to retaining all the nodes of the other objects?</p>
+<p>In Potlach there's never a problem, it deletes the linear object &amp; automatically keeps the previously shared nodes. </p>
+<p>I'm struggling to see a scenario when a node that's still in use by another object would want to be deleted. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/conflicts/" class="post-tag tag-link-conflicts"
+                                        title="see questions tagged 'conflicts'" rel="tag">conflicts</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/shared_nodes/" class="post-tag tag-link-shared_nodes"
+                                        title="see questions tagged 'shared_nodes'" rel="tag">shared_nodes</a>
+                                
+                                    <a href="/tags/delete/" class="post-tag tag-link-delete"
+                                        title="see questions tagged 'delete'" rel="tag">delete</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Mar '22, 23:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c9c8b421ad22f51ddd62f23413717036?s=32&amp;d=identicon&amp;r=g" alt="DaveF's gravatar image" />
+    <p><a href="/users/1532/davef">DaveF</a><br/>
+    <span class="score" title="3264 reputation points"><span class="">3.3k</span></span><span title="84 badges"><span class="badge1">&#9679;</span><span class="badgecount">84</span></span><span title="98 badges"><span class="silver">&#9679;</span><span class="badgecount">98</span></span><span title="133 badges"><span class="bronze">&#9679;</span><span class="badgecount">133</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DaveF has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-83825">
+    
+        <a name="83838"></a>
+        <div class="comment" id="comment-83838">
+            <div id="post-83838-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi </p>
+
+<blockquote>
+<p>I'm struggling to see a scenario when a node that's still in use by another object would want to be deleted.</p>
+</blockquote>
+
+<p>It depends on the types of objects I guess, but for example when two buildings were attached, and you delete one, if the common nodes were not the corners of the remaining one, I would delete them. Nodes along a straight way are useless, and sometimes even confusing IMHO.</p>
+
+<p>The same can happen with roads I think. A simple rule could, if removing the (untagged of course) node from the remaining object doesn't change its geometry, then let's delete it !</p>
+
+<p>My 2 cents.</p></div>
+            <div class="comment-info" id="comment-83838-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Mar '22, 17:41)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83825" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83825-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/83825/josm-delete-an-object-attached-to-other-objects-without-raising-conflicts?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/83825/josm-delete-an-object-attached-to-other-objects-without-raising-conflicts?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/83825/josm-delete-an-object-attached-to-other-objects-without-raising-conflicts?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/83825/josm-delete-an-object-attached-to-other-objects-without-raising-conflicts?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="83830"></a>
+                    <div id="answer-container-83830" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83830-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83830/up/" rel="nofollow"> </a>
+<div id="post-83830-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-83830-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83830/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There's a "download along" tool that will allow you to download all objects within a certain distance of an object. I can't remember whether this built in or a plugin. Once all of the nodes are withing download regions I think it should automatically retain shared nodes. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83830/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Mar '22, 12:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ec8a0cf213f9797ad1c1ae2c28c2332d?s=32&amp;d=identicon&amp;r=g" alt="InsertUser's gravatar image" />
+    <p><a href="/users/4426/insertuser">InsertUser</a><br/>
+    <span class="score" title="11005 reputation points"><span class="">11.0k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="69 badges"><span class="silver">&#9679;</span><span class="badgecount">69</span></span><span title="185 badges"><span class="bronze">&#9679;</span><span class="badgecount">185</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="InsertUser has 73 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83830">
+    
+        <a name="83839"></a>
+        <div class="comment" id="comment-83839">
+            <div id="post-83839-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's been part of the core for some time now. Here is the <a href="https://josm.openstreetmap.de/wiki/Help/Action/DownloadAlongWay">doc</a> about it. But it's only based on distance. Based on the question, it would be best to download only the connected objects. Because choosing the right distance might prove tricky.</p></div>
+            <div class="comment-info" id="comment-83839-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Mar '22, 17:45)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83830" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83830-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="83832"></a>
+                    <div id="answer-container-83832" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83832-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83832/up/" rel="nofollow"> </a>
+<div id="post-83832-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-83832-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83832/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think you can instruct JOSM to download all parent objects of what you have selected, which would get you the other objects referencing your way, and therefore - in a similar way as stated by InsertUser - not remove those nodes still required for those other ways.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83832/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Mar '22, 14:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83832">
+    
+        <a name="83840"></a>
+        <div class="comment" id="comment-83840">
+            <div id="post-83840-score" class="comment-score"></div>
+            <div class="comment-text"><p>If I understand the <a href="https://josm.openstreetmap.de/wiki/Help/Action/DownloadObject">doc</a> correctly, and you are indeed talking about this "Download object" with referrers functionnality, it is meant for ways and relations. You can't download ways that are connected via nodes with it.</p></div>
+            <div class="comment-info" id="comment-83840-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Mar '22, 17:48)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+        <a name="83841"></a>
+        <div class="comment" id="comment-83841">
+            <div id="post-83841-score" class="comment-score"></div>
+            <div class="comment-text"><p>My bad, reading that <a href="https://josm.openstreetmap.de/ticket/5293">bug report</a>, it seems if you download the nodes with this, you'll get all the referencing ways... But you would have to specify all the nodes, if it's a really long way, with lots of nodes, this can get cumbersome...</p></div>
+            <div class="comment-info" id="comment-83841-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Mar '22, 17:52)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+        <a name="83842"></a>
+        <div class="comment" id="comment-83842">
+            <div id="post-83842-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I think he means select all and use <a href="https://josm.openstreetmap.de/wiki/Help/Action/DownloadParentWaysAndRelation">Download Parent Ways And Relation</a>. Although I suspect JOSM would warn anyway.</p></div>
+            <div class="comment-info" id="comment-83842-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Mar '22, 17:53)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+        <a name="83844"></a>
+        <div class="comment" id="comment-83844">
+            <div id="post-83844-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/4426/insertuser">@InsertUser</a> well it makes sense, if you download the way, select all its nodes, hit Ctrl+Alt+D and then delete the way, it should be good, no ?</p>
+
+<p>There will be a warning about working in an undownloaded area, but there should be no conflict, I think.</p></div>
+            <div class="comment-info" id="comment-83844-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Mar '22, 18:33)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83832" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83832-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="83843"></a>
+                    <div id="answer-container-83843" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83843-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83843/up/" rel="nofollow"> </a>
+<div id="post-83843-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-83843-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83843/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi </p>
+<p>As the others, I can't answer your original question about an option to just let the nodes be.</p>
+<p>But here is an <a href="http://overpass-turbo.eu/?Q=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%0A%0Away(913690987)%3B%0A%0A%3E%3B%0A%3C%3B%0Aout%20body%3B%0A%3E%3B%0Aout%20skel%20qt%3B">overpass query</a>, that loads all intersecting ways, to a specified one. The result is quite big, because this ferry line intersect the Irish boundaries and coastline, but that's just an example ! ;-)</p>
+<p>You can refine this query to your need, even filtering by type of way (or maybe only ways and not relations), then you can use <a href="https://josm.openstreetmap.de/wiki/Help/Action/Download#DownloadfromOverpassAPI">JOSM download from overpass</a> functionality.</p>
+<p>Hope this helps.</p>
+<p>Best regards.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83843/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Mar '22, 18:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83843">
+    
+</div>
+<div id="comment-tools-83843" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83843-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="84878"></a>
+                    <div id="answer-container-84878" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-84878-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/84878/up/" rel="nofollow"> </a>
+<div id="post-84878-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-84878-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/84878/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If understand question correctly. Example: massive (BS object) landuse=farmland connected to roads forest etc. want shrink (delete) it and draw 50 proper farmland, grassland etc., but do not want to download whole area with 100k nodes just avoid deleting nodes connected to it. Safely unglue (G) it.</p>
+<p>Select way. Using plugin 'utilsplugin2' or can be done with search (Ctrl-F) and 'child selected'. Selection &gt; Select way nodes (Ctrl+Shif-N) Shift select way too in case. Edit &gt; Copy (Ctrl-C). File &gt; Download object... Object type: mixed | Object ID: should be there after Copy. Download objects.</p>
+<p>I don't know if it will help and only solution working in JOSM for me. Maybe exist simple "one-click" solution, I can't find any. Other suggestion/tools don't work, atleast for me.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/84878/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jun '22, 22:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5decb877d79dbcb50a7ee4770280359f?s=32&amp;d=identicon&amp;r=g" alt="mindedie's gravatar image" />
+    <p><a href="/users/21932/mindedie">mindedie</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mindedie has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/84878/">
+                edited
+                <strong>24 Jun '22, 22:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-84878">
+    
+</div>
+<div id="comment-tools-84878" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-84878-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/83825/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='HkpMli3Qdz02utDaWnnsuZeSCPiVyVpz' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83825/josm-delete-an-object-attached-to-other-objects-without-raising-conflicts?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83825/josm-delete-an-object-attached-to-other-objects-without-raising-conflicts?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/delete/"
+            class="tag-link-delete"
+            title="see questions tagged'delete'using tags"
+            rel="tag">delete</a> <span class="tag-number">&#215;102</span><br/>
+        
+        <a href="/tags/conflicts/"
+            class="tag-link-conflicts"
+            title="see questions tagged'conflicts'using tags"
+            rel="tag">conflicts</a> <span class="tag-number">&#215;27</span><br/>
+        
+        <a href="/tags/shared_nodes/"
+            class="tag-link-shared_nodes"
+            title="see questions tagged'shared_nodes'using tags"
+            rel="tag">shared_nodes</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 12, 2022, 11:45 p.m.">12 Mar '22, 23:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,842 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 24, 2022, 10:43 p.m.">24 Jun '22, 22:43</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/84291/josm-revert-changest-selection-only-still-loads-of-conflicts">JOSM Revert Changest - &#39;Selection Only&#39; - Still loads of Conflicts</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4357/resolving-conflicts-in-josm">Resolving Conflicts in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61768/i-just-lost-hours-of-work">I just lost hours of work.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77579/josm-conflict-window">JOSM Conflict window.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68481/how-to-make-the-mac-delete-button-work-in-josm">How to make the Mac &quot;delete&quot; button work in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53480/resolving-conflicts-in-josm-is-there-any-way-to-select-theirs-for-multiple-items">Resolving Conflicts in JOSM - is there any way to select &quot;theirs&quot; for multiple items?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/864/how-to-add-node-with-exact-coordinates-in-josm">How to add node with exact coordinates in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/579/what-does-a-basic-dgps-set-cost-for-improving-accuracy-especially-next-to-tall-buildings">What does a basic DGPS set cost for improving accuracy, especially next to tall buildings?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/999/how-to-extract-elevation-information-from-tracks-in-josm">How to extract elevation information from tracks in JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

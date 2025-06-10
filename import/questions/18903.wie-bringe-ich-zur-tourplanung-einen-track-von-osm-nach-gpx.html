@@ -1,0 +1,807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Wie bringe ich zur Tourplanung einen Track von OSM nach GPX? - OSM Help</title>
+        <meta name="description" content="Ich möchte eine Tour in OSM planen und dann diese Tour in mein GPS übertragen. Kann ich in OSM einen Track in der Karte einzeichnen und dann nach GPX exportieren?" />
+        <meta name="keywords" content="track,planning,export,drawing,lang-de" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/18903/wie-bringe-ich-zur-tourplanung-einen-track-von-osm-nach-gpx" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/18903/wie-bringe-ich-zur-tourplanung-einen-track-von-osm-nach-gpx?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='g1Ic23NxpT58CrrWrvlLaKVp1Aowa7Nm' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/18903/wie-bringe-ich-zur-tourplanung-einen-track-von-osm-nach-gpx">Wie bringe ich zur Tourplanung einen Track von OSM nach GPX?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-18903-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18903/up/" rel="nofollow"> </a>
+<div id="post-18903-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-18903-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18903/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/18903/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Ich möchte eine Tour in OSM planen und dann diese Tour in mein GPS übertragen. Kann ich in OSM einen Track in der Karte einzeichnen und dann nach GPX exportieren?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/track/" class="post-tag tag-link-track"
+                                        title="see questions tagged 'track'" rel="tag">track</a>
+                                
+                                    <a href="/tags/planning/" class="post-tag tag-link-planning"
+                                        title="see questions tagged 'planning'" rel="tag">planning</a>
+                                
+                                    <a href="/tags/export/" class="post-tag tag-link-export"
+                                        title="see questions tagged 'export'" rel="tag">export</a>
+                                
+                                    <a href="/tags/drawing/" class="post-tag tag-link-drawing"
+                                        title="see questions tagged 'drawing'" rel="tag">drawing</a>
+                                
+                                    <a href="/tags/lang-de/" class="post-tag tag-link-lang-de"
+                                        title="see questions tagged 'lang-de'" rel="tag">lang-de</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Jan '13, 22:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ed4ec46f0525debcd7a96c3af615af15?s=32&amp;d=identicon&amp;r=g" alt="schneibva's gravatar image" />
+    <p><a href="/users/5347/schneibva">schneibva</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="schneibva has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/18903/">
+                edited
+                <strong>10 Aug '13, 15:00</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-18903">
+    
+</div>
+<div id="comment-tools-18903" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18903-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/18903/wie-bringe-ich-zur-tourplanung-einen-track-von-osm-nach-gpx?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/18903/wie-bringe-ich-zur-tourplanung-einen-track-von-osm-nach-gpx?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/18903/wie-bringe-ich-zur-tourplanung-einen-track-von-osm-nach-gpx?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/18903/wie-bringe-ich-zur-tourplanung-einen-track-von-osm-nach-gpx?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="18904"></a>
+                    <div id="answer-container-18904" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18904-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18904/up/" rel="nofollow"> </a>
+<div id="post-18904-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-18904-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18904/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Jein. Nicht bei openstreetmap.org direkt (jene Seite ist hauptsächlich zum Mitmachen am gemeinsamen Datenbestand gedacht und nicht für private Tourenplanung).</p>
+<p>Es gibt aber diverse Dienste, bei denen du eine Tour basierend auf OSM zeichnen kannst und als gpx exportieren kannst. Eines von <em>vielen</em> Beispielen, welches ich öfters benutze: <a href="http://www.gpsies.com">http://www.gpsies.com</a> (Tab "Strecke erstellen"). Siehe auch in unserem Dokumentationswiki:</p>
+<ul>
+<li><a href="//wiki.openstreetmap.org/wiki/Track_drawing_websites">Track_drawing_websites</a>(!)</li>
+<li><a href="//wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List_of_OSM_based_Services</a></li>
+<li><a href="//wiki.openstreetmap.org/wiki/Related_Projects">Related_Projects</a></li>
+</ul>
+<p>Mit <a href="http://www.openrouteservice.org/">http://www.openrouteservice.org/</a> kannst du mit den OSM-Daten auch Routing machen und als gpx exportieren (bei gpsies geht das im Moment nur mit google-Routing, dafür bequemer zu editieren. Aber du kannst ja die gpx-Dateien auch kombinieren).</p>
+<p>Es gibt übrigens auch diverse Planungssoftware für deinen Computer, in der du OSM-Karten als Basis verwenden kannst.  Siehe z.B. hier für Garmin-Software: <a href="http://openmtbmap.org/de/tutorials/install-mapsource/">http://openmtbmap.org/de/tutorials/install-mapsource/</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18904/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jan '13, 23:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/18904/">
+                edited
+                <strong>10 Aug '13, 15:20</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18904">
+    
+        <a name="18907"></a>
+        <div class="comment" id="comment-18907">
+            <div id="post-18907-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Für Westeuropa kann man auch die <a href="http://www.wanderreitkarte.de/">Wanderreitkarte</a> nehmen.<br>
+Du kannst die Routenplanung auch mit den routingfähigen Webseiten von List_of_OSM_based_Services machen und das GPX exportieren.
+Oder (meine bevorzugte Variante für größere Reisen):<br>
+Du nimmst die Software QLandkarteGT, nutzt deren Suchfunktion zum Sammeln von POI, verbindest diese in der gewünschten Reihenfolge und exportierst die Route, den fertig berechneten oder handgemalten Track. Das sieht dann etwa <a href="http://malenki.ch/Touren/11/Galerie/Tag_01/slide_01.html">so</a> aus.</p></div>
+            <div class="comment-info" id="comment-18907-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '13, 03:47)</span>
+                <a class="comment-user userinfo" href="/users/583/malenki">malenki</a>
+                
+            </div>
+        </div>
+    
+        <a name="18908"></a>
+        <div class="comment" id="comment-18908">
+            <div id="post-18908-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Bei vielen der OSM-basierten <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">Online-Routern</a> kann man die Route als GPX exportieren. Damit kann man auch längere Routen recht schnell generieren und über das Setzen von Via-Punkten den eigenen Wünschen anpassen.</p></div>
+            <div class="comment-info" id="comment-18908-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '13, 07:35)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30525"></a>
+        <div class="comment" id="comment-30525">
+            <div id="post-30525-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sowas kann <a href="http://wiki.openstreetmap.org/wiki/DE:GpsPrune">http://wiki.openstreetmap.org/wiki/DE:GpsPrune</a> (auch mit z.B. Wanderreitkarte oder Opencyclemap). Dann kannst du entweder als gpx/kml speichern oder direkt via gpsbabel zum Gerät rüberschicken.</p></div>
+            <div class="comment-info" id="comment-30525-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Feb '14, 10:16)</span>
+                <a class="comment-user userinfo" href="/users/8290/slambamsam">SlamBamSam</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18904" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18904-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="18909"></a>
+                    <div id="answer-container-18909" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18909-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18909/up/" rel="nofollow"> </a>
+<div id="post-18909-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-18909-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18909/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Ich habe auch etwas gefunden, was genau meine Frage trifft: <a href="http://www.pifpafpuf.de/cycleroute.html">http://www.pifpafpuf.de/cycleroute.html</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18909/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jan '13, 07:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ed4ec46f0525debcd7a96c3af615af15?s=32&amp;d=identicon&amp;r=g" alt="schneibva's gravatar image" />
+    <p><a href="/users/5347/schneibva">schneibva</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="schneibva has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18909">
+    
+</div>
+<div id="comment-tools-18909" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18909-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/18903/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='g1Ic23NxpT58CrrWrvlLaKVp1Aowa7Nm' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18903/wie-bringe-ich-zur-tourplanung-einen-track-von-osm-nach-gpx?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18903/wie-bringe-ich-zur-tourplanung-einen-track-von-osm-nach-gpx?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/export/"
+            class="tag-link-export"
+            title="see questions tagged'export'using tags"
+            rel="tag">export</a> <span class="tag-number">&#215;315</span><br/>
+        
+        <a href="/tags/lang-de/"
+            class="tag-link-lang-de"
+            title="see questions tagged'lang-de'using tags"
+            rel="tag">lang-de</a> <span class="tag-number">&#215;286</span><br/>
+        
+        <a href="/tags/track/"
+            class="tag-link-track"
+            title="see questions tagged'track'using tags"
+            rel="tag">track</a> <span class="tag-number">&#215;112</span><br/>
+        
+        <a href="/tags/drawing/"
+            class="tag-link-drawing"
+            title="see questions tagged'drawing'using tags"
+            rel="tag">drawing</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/planning/"
+            class="tag-link-planning"
+            title="see questions tagged'planning'using tags"
+            rel="tag">planning</a> <span class="tag-number">&#215;12</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 6, 2013, 10:25 p.m.">06 Jan '13, 22:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>26,072 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 7, 2014, 10:16 a.m.">07 Feb '14, 10:16</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/26029/export-funktion-reiter-fehlt">Export-Funktion (Reiter) fehlt</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41941/create-a-route-and-sport-to-sigma-rox-100-via-sigma-data-center-406">Create a route and sport to sigma Rox 10.0 via sigma data center 4.0.6</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19451/error-bei-svg-export">Error bei SVG-Export</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25135/how-to-manually-create-a-gps-track-for-biking">How to manually create a GPS track for biking?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26083/seite-bleibt-bei-export-leer">Seite bleibt bei Export leer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27614/daten-werden-nicht-exportiert-weies-fenster-aber-kleine-ausschnitte-funktionieren">Daten werden nicht exportiert (weißes Fenster), aber kleine Ausschnitte funktionieren</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4163/drawing-a-track-manually-on-the-map">Drawing a track manually on the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4702/wanderkarte-erstellen-hochgeladenen-track-auf-hinterlegter-topo-anzeigen">Wanderkarte erstellen - hochgeladenen Track auf hinterlegter Topo anzeigen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx">application or web interface for freehand plotting tracks on OSM as saving as gpx?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53218/how-to-export-track-created-with-osmand-to-my-pc">How to export track created with OSMAND to my PC.</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

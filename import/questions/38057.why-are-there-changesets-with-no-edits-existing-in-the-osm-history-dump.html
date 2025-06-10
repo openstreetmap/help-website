@@ -1,0 +1,779 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>why are there changesets with no edits existing (in the OSM history dump)? - OSM Help</title>
+        <meta name="description" content="Hi, I am exploring the history of contributions using the OSM history dump (see wiki Planet.osm/full). Looking at the provided data, I found 24707 changesets in which there were no edits.  Someone has an idea about what happened with these datasets? " />
+        <meta name="keywords" content="changeset,edits,dump,history" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/38057/why-are-there-changesets-with-no-edits-existing-in-the-osm-history-dump" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/38057/why-are-there-changesets-with-no-edits-existing-in-the-osm-history-dump?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='uTpD3FwwoJ5E0LBsqFW9LH6K8U0QPPxK' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/38057/why-are-there-changesets-with-no-edits-existing-in-the-osm-history-dump">why are there changesets with no edits existing (in the OSM history dump)?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-38057-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/38057/up/" rel="nofollow"> </a>
+<div id="post-38057-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-38057-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/38057/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/38057/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, I am exploring the history of contributions using the OSM history dump (see wiki Planet.osm/full). Looking at the provided data, I found 24707 changesets in which there were no edits. </p>
+<p>Someone has an idea about what happened with these datasets? </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/changeset/" class="post-tag tag-link-changeset"
+                                        title="see questions tagged 'changeset'" rel="tag">changeset</a>
+                                
+                                    <a href="/tags/edits/" class="post-tag tag-link-edits"
+                                        title="see questions tagged 'edits'" rel="tag">edits</a>
+                                
+                                    <a href="/tags/dump/" class="post-tag tag-link-dump"
+                                        title="see questions tagged 'dump'" rel="tag">dump</a>
+                                
+                                    <a href="/tags/history/" class="post-tag tag-link-history"
+                                        title="see questions tagged 'history'" rel="tag">history</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Oct '14, 18:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a504353df13461ace2c733906a99ce16?s=32&amp;d=identicon&amp;r=g" alt="jfd553's gravatar image" />
+    <p><a href="/users/9697/jfd553">jfd553</a><br/>
+    <span class="score" title="389 reputation points">389</span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="32 badges"><span class="bronze">&#9679;</span><span class="badgecount">32</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jfd553 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/38057/">
+                edited
+                <strong>28 Oct '14, 23:33</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-38057">
+    
+</div>
+<div id="comment-tools-38057" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-38057-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/38057/why-are-there-changesets-with-no-edits-existing-in-the-osm-history-dump?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/38057/why-are-there-changesets-with-no-edits-existing-in-the-osm-history-dump?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/38057/why-are-there-changesets-with-no-edits-existing-in-the-osm-history-dump?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/38057/why-are-there-changesets-with-no-edits-existing-in-the-osm-history-dump?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="38060"></a>
+                    <div id="answer-container-38060" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-38060-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/38060/up/" rel="nofollow"> </a>
+<div id="post-38060-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-38060-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/38060/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="jfd553 has selected this answer as the correct answer"
+        href="/accept_answer/38060/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The API 0.6 method <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Create:_PUT_.2Fapi.2F0.6.2Fchangeset.2Fcreate">'create changeset'</a>  allows you to create a changeset without doing any subsequent additions to that changeset. Reason might be anything from broken uploads (e.g. network issues), editor bugs, etc..</p>
+<p>I even remember one case where a mapper created a huge number of such empty changesets to make hostile vandalism activities a bit more difficult to deal with. Yes, strange things happen some time, but all that got sorted out fairly quickly.</p>
+<p>Update: as Simon provided some editor specific insights, I thought I could add some statistics from by local DB. It's about half a year old, but you should get a rough impression, which editors created how many empty changesets (if they identify themselves by name). You could of course group the entries by editor type (ignoring different editor versions, languages) - this is left as an exercise to the reader.</p>
+<pre><code>                                  created_by                                   |   c   
+-------------------------------------------------------------------------------+-------
+                                                                               | 50761
+ Potlatch 0.11b                                                                | 46702
+ Potlatch 1.4 (live en)                                                        | 42190
+ Potlatch 1.0                                                                  | 39909
+ Potlatch 2                                                                    | 38173
+ Potlatch 0.11                                                                 | 35890
+ Potlatch 1.4 (live de)                                                        | 31094
+ Potlatch 1.2                                                                  | 24265
+ Go Map!! 1.1                                                                  | 22264
+ Potlatch 1.1a                                                                 | 16447
+ Potlatch 1.2a                                                                 | 15092
+ Potlatch 0.11a                                                                | 14166
+ Potlatch 1.2b                                                                 | 11621
+ ArcGIS Editor for OpenStreetMap (2.0)                                         | 11466
+ Potlatch 1.2c (live)                                                          |  9622
+ osmitter 0.1                                                                  |  9548
+ Potlatch 1.3e (live en)                                                       |  9079
+ JOSM                                                                          |  7920
+ Potlatch 1.4 (live ru)                                                        |  7848
+ Potlatch 1.4 (live fr)                                                        |  7273
+ iD 1.3.7                                                                      |  7147
+ iD 1.3.4                                                                      |  6990
+</code></pre>
+<p>Statement:</p>
+<pre><code>select created_by,count(*) c from changes where num_changes = 0 group by created_by order by c desc;
+</code></pre>
+<p>Tool used to populate the Postgres database was <a href="https://github.com/zhm/osmchanges-postgres">https://github.com/zhm/osmchanges-postgres</a>
+Give it a try, it's not terribly difficult to set up and run this query.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/38060/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Oct '14, 21:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/264d84ab05b942224b05960903eba7a7?s=32&amp;d=identicon&amp;r=g" alt="mmd's gravatar image" />
+    <p><a href="/users/8708/mmd">mmd</a><br/>
+    <span class="score" title="5682 reputation points"><span class="">5.7k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="53 badges"><span class="silver">&#9679;</span><span class="badgecount">53</span></span><span title="88 badges"><span class="bronze">&#9679;</span><span class="badgecount">88</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmd has 44 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/38060/">
+                edited
+                <strong>30 Oct '14, 18:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-38060">
+    
+        <a name="38100"></a>
+        <div class="comment" id="comment-38100">
+            <div id="post-38100-score" class="comment-score">1</div>
+            <div class="comment-text"><p>see <a href="https://www.openstreetmap.org/user/SimonPoole/diary/23352">https://www.openstreetmap.org/user/SimonPoole/diary/23352</a> note that the editor GoMap!, at least in the version available up to a short time ago, created an empty changeset as method of checking if the authentication worked.</p></div>
+            <div class="comment-info" id="comment-38100-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '14, 07:51)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="38107"></a>
+        <div class="comment" id="comment-38107">
+            <div id="post-38107-score" class="comment-score"></div>
+            <div class="comment-text"><p>In the case of "Go Map!" at credentials-checking changesets are identifiable as such:</p>
+
+<p><a href="http://www.openstreetmap.org/changeset/16640349">http://www.openstreetmap.org/changeset/16640349</a></p>
+
+<p>Though it can create others:</p>
+
+<p><a href="http://www.openstreetmap.org/changeset/21804635">http://www.openstreetmap.org/changeset/21804635</a></p>
+
+<p>I also see quite a lot of empty changesets from other editors:</p>
+
+<p><a href="http://www.openstreetmap.org/changeset/26183795">http://www.openstreetmap.org/changeset/26183795</a></p>
+
+<p><a href="http://www.openstreetmap.org/changeset/25568455">http://www.openstreetmap.org/changeset/25568455</a></p>
+
+<p><a href="http://www.openstreetmap.org/changeset/24536371">http://www.openstreetmap.org/changeset/24536371</a></p>
+
+<p>but not id?</p>
+
+<p>My apologies to the authors of all of the changesets above - you're not being singled out for any other reason than you happened to use a particular OSM editor!</p></div>
+            <div class="comment-info" id="comment-38107-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '14, 09:19)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="38110"></a>
+        <div class="comment" id="comment-38110">
+            <div id="post-38110-score" class="comment-score"></div>
+            <div class="comment-text"><p>Found an iD one too:</p>
+
+<p><a href="http://www.openstreetmap.org/changeset/26383946">http://www.openstreetmap.org/changeset/26383946</a></p></div>
+            <div class="comment-info" id="comment-38110-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '14, 11:52)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="38111"></a>
+        <div class="comment" id="comment-38111">
+            <div id="post-38111-score" class="comment-score">4</div>
+            <div class="comment-text"><p>I pointed it out in my blog post, it is probably helpful to think of a changeset as setting a "start* marker ..... uploading something ... setting a "stop" marker. If something goes wrong in the upload bit, for example a conflict or a crash or ... the changeset will autoclose after an hour and, hey presto, you have an empty changeset. </p>
+
+<p>Given that opening the changeset is a seperate API operation and there is no way to cancel or otherwise undo it once you have opened one, empty changesets are not completely avoidable.</p></div>
+            <div class="comment-info" id="comment-38111-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '14, 12:28)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-38060" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-38060-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/38057/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='uTpD3FwwoJ5E0LBsqFW9LH6K8U0QPPxK' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/38057/why-are-there-changesets-with-no-edits-existing-in-the-osm-history-dump?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/38057/why-are-there-changesets-with-no-edits-existing-in-the-osm-history-dump?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/changeset/"
+            class="tag-link-changeset"
+            title="see questions tagged'changeset'using tags"
+            rel="tag">changeset</a> <span class="tag-number">&#215;127</span><br/>
+        
+        <a href="/tags/history/"
+            class="tag-link-history"
+            title="see questions tagged'history'using tags"
+            rel="tag">history</a> <span class="tag-number">&#215;89</span><br/>
+        
+        <a href="/tags/edits/"
+            class="tag-link-edits"
+            title="see questions tagged'edits'using tags"
+            rel="tag">edits</a> <span class="tag-number">&#215;46</span><br/>
+        
+        <a href="/tags/dump/"
+            class="tag-link-dump"
+            title="see questions tagged'dump'using tags"
+            rel="tag">dump</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 28, 2014, 6:54 p.m.">28 Oct '14, 18:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,038 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 30, 2014, 6:35 p.m.">30 Oct '14, 18:35</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/31125/changesets-view-on-openstreetmaporg-is-showing-the-wrong-descriptions-off-by-one">[closed] Changesets view on openstreetmap.org is showing the wrong descriptions (off by one)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37776/how-to-find-history-of-a-specific-way">How to find history of a specific way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7986/why-are-there-so-many-messages-in-the-changeset-history-for-a-rarely-changed-area">Why are there so many messages in the changeset history for a rarely changed area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23376/osm-deep-diff">OSM deep diff</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33328/rss-feed-of-filtered-changeset">RSS feed of filtered changeset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1518/can-i-visualize-show-changeset-on-a-map-somehow">Can I visualize (show) changeset on a map somehow?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3983/how-do-you-display-only-local-edits-in-the-changelog">How do you display only local edits in the changelog?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7077/investigating-changesets">Investigating changesets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16832/how-do-i-find-out-who-deleted-a-relation">How do I find out who deleted a relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46644/keep-full-history-and-apply-changes">keep full history and apply changes</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

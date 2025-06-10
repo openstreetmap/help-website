@@ -1,0 +1,825 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>coastline at highwater vs lowwater - OSM Help</title>
+        <meta name="description" content="It has been a long-held practice in OSM (2008 or earlier) to map coastlines at the Mean High Water Spring as stated here:  http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline People have questioned the wisdom of this on the Discussion Page. http://wiki.openstreetmap.org/wiki/Talk:Tag:natural%..." />
+        <meta name="keywords" content="tidal,marine,coastline,sea" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/49790/coastline-at-highwater-vs-lowwater" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/49790/coastline-at-highwater-vs-lowwater?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='TOwTq8LfwJd9P2bhR107UDqzxQky6Bc4' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/49790/coastline-at-highwater-vs-lowwater">coastline at highwater vs lowwater</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-49790-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49790/up/" rel="nofollow"> </a>
+<div id="post-49790-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49790-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49790/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/49790/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>It has been a long-held practice in OSM (2008 or earlier) to map coastlines at the Mean High Water Spring as stated here: </p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline</a></p>
+<p>People have questioned the wisdom of this on the Discussion Page. <a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:natural%3Dcoastline">http://wiki.openstreetmap.org/wiki/Talk:Tag:natural%3Dcoastline</a></p>
+<p>There has been little discussion on the above page since 2009. </p>
+<p>Can somebody direct me to more up-to-date guidance?</p>
+<p>If there is no up-to-date guidance, how does one petition the OSM community to adopt standards for tidelands and other marine features such buoys, bathymetry, submerged hazard/rocks, etc?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tidal/" class="post-tag tag-link-tidal"
+                                        title="see questions tagged 'tidal'" rel="tag">tidal</a>
+                                
+                                    <a href="/tags/marine/" class="post-tag tag-link-marine"
+                                        title="see questions tagged 'marine'" rel="tag">marine</a>
+                                
+                                    <a href="/tags/coastline/" class="post-tag tag-link-coastline"
+                                        title="see questions tagged 'coastline'" rel="tag">coastline</a>
+                                
+                                    <a href="/tags/sea/" class="post-tag tag-link-sea"
+                                        title="see questions tagged 'sea'" rel="tag">sea</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 May '16, 15:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fb26a824cf424005e029fc893f4fb106?s=32&amp;d=identicon&amp;r=g" alt="flockfinder's gravatar image" />
+    <p><a href="/users/8521/flockfinder">flockfinder</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="flockfinder has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-49790">
+    
+        <a name="82834"></a>
+        <div class="comment" id="comment-82834">
+            <div id="post-82834-score" class="comment-score"></div>
+            <div class="comment-text"><p>Any more current responses would be welcome as I continue to struggle with the same requirement: MHWS and MLWS</p>
+
+<p>OS terrain 50 publish for free the UK (part of) high/Low tide lines and polygons showing the "foreshore". Annoyingly the two don't quite line up to each other and the lines are broken in many 10,000 places... likewise thew data set excludes northern Ireland, the IoM and the channel isles.</p>
+
+<p>Land based juristriction authority limits are defined to start from MLWS so sometimes these </p></div>
+            <div class="comment-info" id="comment-82834-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '21, 14:02)</span>
+                <a class="comment-user userinfo" href="/users/21109/tom-bean">Tom Bean</a>
+                
+            </div>
+        </div>
+    
+        <a name="82838"></a>
+        <div class="comment" id="comment-82838">
+            <div id="post-82838-score" class="comment-score"></div>
+            <div class="comment-text"><p>In the UK pretty much the aim is to use MHWS for coastline, usually be improving the line to match OS Streetview or OS Map Local or by direct replacement by the relevant linestring from an OS Open Data product (this will depend on the mapper). Many local authority boundaries will have been imported from OS Boundary Line and will thus represent MLWS at some point in time over the past 10 years.</p></div>
+            <div class="comment-info" id="comment-82838-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '21, 22:47)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49790" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49790-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/49790/coastline-at-highwater-vs-lowwater?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/49790/coastline-at-highwater-vs-lowwater?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/49790/coastline-at-highwater-vs-lowwater?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/49790/coastline-at-highwater-vs-lowwater?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="49792"></a>
+                    <div id="answer-container-49792" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-49792-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49792/up/" rel="nofollow"> </a>
+<div id="post-49792-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-49792-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49792/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Fundamentally the problem is that, with some limited exceptions, we have no good global source for any candidate data for coastlines (at least 4 of each of High &amp; Low Water marks). For some countries data are available for the nationally recognised convention (e.g., OSGB Open Data for Great Britain). National conventions will often depend on specific legal issues (for instance the foreshore in Britain belongs to the Queen, so it's historically been important to delineate property boundaries on the coast).</p>
+<p>I think its reasonably fair to say that the most widely used '''cartographic convention''' is to use one of the High Water Mark standards as the basis for defining '''land'''. Therefore in principle we are free in OSM to map any/all High &amp; Low Water marks. Ideally they should just be another set of taggable elements. Use of Low Water definitions produce far too many absurdities (not least of which is that they render places unrecognisable).</p>
+<p>However, coastlines are also anomalous in many ways from other OSM data: particular rules (directionality of ways), particular processing etc. </p>
+<p>In the ideal world we'd have better sources for different coastal water marks, and much better ways to deal with some aspects of coastlines (and remember Jochen Topf has already moved things a long way ahead of where they were a few years ago). </p>
+<p>As it is we have to be pragmatic. In most cases we only have aerial imagery at unpredictable points in the ebb &amp; flow of the tide. Where national data showing the locally conventional land/sea boundary exists we should follow this; elsewhere we just have to do as well as we can.</p>
+<p>In summary a hard-and-fast rule has no point at present because we have no way of sourcing such data.</p>
+<p>P.S. I would recommend <a href="https://www.charlesclosesociety.org/files/Issue90page4.pdf">this article</a> on technical aspects of coastline mapping in Britain by the Ordnance Survey. I think it demonstrates that any solution is non-trivial.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/49792/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 May '16, 23:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-49792">
+    
+</div>
+<div id="comment-tools-49792" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49792-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="49796"></a>
+                    <div id="answer-container-49796" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-49796-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49796/up/" rel="nofollow"> </a>
+<div id="post-49796-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49796-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49796/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>With accretion and erosion and subsidence and uplift and sea level rise at differing rates geographically, the Natural=Coastline will always be a moving target. Mouths of rivers regularly move hundreds of meters seasonally. The waves and the winds push the sands and gravels around. The best that we can do is present an approximation. </p>
+<p>In such a dynamic environment, I suggest that it is imperative that local knowledge trump any global or national mapping authority. I would hope that the OSM community would adopt some logical rendering scheme that would highlight vehicular and pedestrian access to sand and mudflats at low tides and show which navigational hazards (rocks, shoals, sunken wrecks etc) are exposed at low tides or more importantly close tot he surface at low tides. Furthermore, it is important from a mariner's standpoint, that bathymetric contours or spot mapping of depth be measured from a low water datum. For these reasons, I think it is important to decide on a tagging scheme and a logically and valuable rendering scheme sooner than later. I am uncertain how much progress OpenSeaMaps has made of late. But I didn't see much progress for a couple of years.</p>
+<p>Currently the ocean realm is a Terra Incognita in OpenStreetMaps and I hope that changes in the coming months. I have been mapping for 3 years and waiting somewhat patiently for progress in how potlatch renders the ocean realm.</p>
+<p>I am of the mind that a unified map might be more valuable. After all, the same GPS (thanks Lambertus!) moves with me from hiking off trail in the mountains, to navigating unknown cities, to plying my waters near to my home or far removed from it. I would say, rather than splinter the various projects. I wonder if OpenStreetMaps can just absorb the rendering of the marine environment.</p>
+<p>So I'll ask again: If there is no up-to-date guidance, how does one petition the OSM community to adopt rendering standards for tidelands and other marine features such buoys, bathymetry, submerged hazard/rocks, etc?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/49796/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 May '16, 01:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fb26a824cf424005e029fc893f4fb106?s=32&amp;d=identicon&amp;r=g" alt="flockfinder's gravatar image" />
+    <p><a href="/users/8521/flockfinder">flockfinder</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="flockfinder has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-49796">
+    
+        <a name="49797"></a>
+        <div class="comment" id="comment-49797">
+            <div id="post-49797-score" class="comment-score">2</div>
+            <div class="comment-text"><p>There is no way to petition the OSM community for rendering. Each rendering based on OSM data (the standard style, OpenSeaMap, Humanitarian, the garmin Style your refer to, OsmAnd, etc.) is developed by different groups. Each group has its own way to gather requests from "the public". But in the end, the developers decide what and how it will be rendered.</p>
+
+<p>So you can try to convince one of those groups, or start developing your own style.</p></div>
+            <div class="comment-info" id="comment-49797-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 May '16, 06:56)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="49798"></a>
+        <div class="comment" id="comment-49798">
+            <div id="post-49798-score" class="comment-score"></div>
+            <div class="comment-text"><p>I hesitate to answer further as this looks to be turning into a discussion rather than the Q&amp;A format which this site is for. I would dispute that OSM has ignored the ocean realm: look at OpenSeaMap. There is plenty of mapping of the littoral zone: I used OSM for navigation on a low-tide only route two weeks ago. I also have no idea what you mean by Potlatch rendering the ocean: it's an editor. As for most things OSM the mantra is "patches welcome".</p></div>
+            <div class="comment-info" id="comment-49798-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 May '16, 08:03)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="82835"></a>
+        <div class="comment" id="comment-82835">
+            <div id="post-82835-score" class="comment-score"></div>
+            <div class="comment-text"><p>OS Terrain 50 offer a free MHWS and MLWS line, together with polygons showing the theoretical difference. However, the lines are broken in many 10,000 places and dont line up with the polygons. Also the dataset excludes IoM, northern Ireland or the Channel isles. </p>
+
+<p>Authority limits for terrestrial jurisdiction are intended to extend to MLWS, but are frequently extended to encompass islands, same applies to NOAA.
+The Crown used to publish the extent of the foreshore that they owned but they haver switched it off.
+Interestingly OpenTopoMaps shows a coastal boundary of varying distance from the MHWS line (dappled shading)  but I cannot determine what it represents..... or where to download it, yours (lost at sea!)</p></div>
+            <div class="comment-info" id="comment-82835-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '21, 14:12)</span>
+                <a class="comment-user userinfo" href="/users/21109/tom-bean">Tom Bean</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49796" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49796-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/49790/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='TOwTq8LfwJd9P2bhR107UDqzxQky6Bc4' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49790/coastline-at-highwater-vs-lowwater?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49790/coastline-at-highwater-vs-lowwater?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/coastline/"
+            class="tag-link-coastline"
+            title="see questions tagged'coastline'using tags"
+            rel="tag">coastline</a> <span class="tag-number">&#215;67</span><br/>
+        
+        <a href="/tags/sea/"
+            class="tag-link-sea"
+            title="see questions tagged'sea'using tags"
+            rel="tag">sea</a> <span class="tag-number">&#215;17</span><br/>
+        
+        <a href="/tags/tidal/"
+            class="tag-link-tidal"
+            title="see questions tagged'tidal'using tags"
+            rel="tag">tidal</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/marine/"
+            class="tag-link-marine"
+            title="see questions tagged'marine'using tags"
+            rel="tag">marine</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 22, 2016, 3:22 p.m.">22 May '16, 15:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,557 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 14, 2021, 10:47 p.m.">14 Dec '21, 22:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/75662/rendering-error-of-land-reclamation-areas">Rendering error of land reclamation areas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/76838/how-to-measure-the-distance-from-a-pointlatlon-to-coastline">How to measure the distance from a point(lat,lon) to coastline</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1852/blue-seawater-at-madagascar-on-garmin">blue seawater at madagascar on garmin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2275/generating-a-political-world-map-with-osm-data">Generating a political world map with osm data.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2457/what-is-the-easiest-way-of-adding-lots-of-landuse-polygons">What is the easiest way of adding lots of landuse polygons</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4948/problem-with-water-on-land-in-garmin-map-of-sydney-north-australia">Problem with Water on land in Garmin map of Sydney (North), Australia</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6337/icon-for-beaches-or-access-to-the-water">Icon for beaches or access to the water</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6172/why-is-the-coastline-updated-only-once-a-month">[closed] Why is the coastline updated only once a month?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8316/combining-coastlines-for-rendering">Combining coastlines for rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1861/about-coastlines">About Coastlines?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

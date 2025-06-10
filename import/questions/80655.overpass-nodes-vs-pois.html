@@ -1,0 +1,975 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>overpass nodes vs pois - OSM Help</title>
+        <meta name="description" content="Hi, i have a question about overpass results. Im looking for pois with the following query amenity=marketplace OR bar OR biergarten OR cafe OR &quot;fast food&quot; OR &quot;food court&quot; OR pub OR restaurant OR shop=alcohol OR bakery OR butcher OR cheese OR chocolate OR coffee OR deli OR farm OR greengrocer OR orga..." />
+        <meta name="keywords" content="overpass,nodes,pois" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/80655/overpass-nodes-vs-pois" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/80655/overpass-nodes-vs-pois?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='drxEsVvvWZv7CAx945ZmiAhQU6fH2km6' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/80655/overpass-nodes-vs-pois">overpass nodes vs pois</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-80655-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80655/up/" rel="nofollow"> </a>
+<div id="post-80655-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-80655-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80655/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/80655/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+i have a question about overpass results. Im looking for pois with the following query</p>
+<p>amenity=marketplace OR bar OR biergarten OR cafe OR "fast food" OR "food court" OR pub OR restaurant OR shop=alcohol OR bakery OR butcher OR cheese OR chocolate OR coffee OR deli OR farm OR greengrocer OR organic OR pasta OR patisserie OR pizza OR tea OR supermarket OR pizza OR craft=brewery OR caterer OR winery OR distillery</p>
+<p>for Seattle i get these results
+<a href="https://monosnap.com/file/l5fDAzCZ7XBNXEPBABB6pr9cQmuIHx">https://monosnap.com/file/l5fDAzCZ7XBNXEPBABB6pr9cQmuIHx</a>
+for each city i try, the number of pois are more or less the half of the number of nodes, always.
+Also if i export as kml and convert it to csv i will have only the half of the locations (so, only pois).
+I scraped yelp, tripadvisor and gmaps for several cities (with other tools) and im sure the results are close to the number of nodes on overpass (not to the number of pois).
+Check this <a href="https://monosnap.com/file/El6H9xwIqHdcAbPrU27SYHjhamug3H">https://monosnap.com/file/El6H9xwIqHdcAbPrU27SYHjhamug3H</a>
+how can i extract all the nodes?
+thanks! </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/nodes/" class="post-tag tag-link-nodes"
+                                        title="see questions tagged 'nodes'" rel="tag">nodes</a>
+                                
+                                    <a href="/tags/pois/" class="post-tag tag-link-pois"
+                                        title="see questions tagged 'pois'" rel="tag">pois</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Jun '21, 11:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8bda60ea8e9b91cb7442f70e15d00944?s=32&amp;d=identicon&amp;r=g" alt="eldoland's gravatar image" />
+    <p><a href="/users/20354/eldoland">eldoland</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="eldoland has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/80655/">
+                edited
+                <strong>22 Jun '21, 18:08</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-80655">
+    
+        <a name="80660"></a>
+        <div class="comment" id="comment-80660">
+            <div id="post-80660-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Can't do much to help without the full routine. Post a link.</p></div>
+            <div class="comment-info" id="comment-80660-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '21, 14:14)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+        <a name="80665"></a>
+        <div class="comment" id="comment-80665">
+            <div id="post-80665-score" class="comment-score"></div>
+            <div class="comment-text"><p>oh ok!
+here we go
+<a href="https://overpass-turbo.eu/s/18Hu">https://overpass-turbo.eu/s/18Hu</a></p>
+
+<p>thanks!</p></div>
+            <div class="comment-info" id="comment-80665-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '21, 18:01)</span>
+                <a class="comment-user userinfo" href="/users/20354/eldoland">eldoland</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80655" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80655-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/80655/overpass-nodes-vs-pois?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/80655/overpass-nodes-vs-pois?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/80655/overpass-nodes-vs-pois?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/80655/overpass-nodes-vs-pois?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="80666"></a>
+                    <div id="answer-container-80666" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80666-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80666/up/" rel="nofollow"> </a>
+<div id="post-80666-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-80666-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80666/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For each POI type, your Overpass query is searching for nodes, ways, and relations. </p>
+<ul>
+<li>A POI mapped as node will return one node. </li>
+<li>A POI mapped as a four-sided way like a rectangle will return four nodes, one for each corner.</li>
+<li>A POI mapped as a more complex polygon, or as a relation, may return many nodes.</li>
+</ul>
+<p>So the node total that Overpass returns is the number of nodes used to draw all of these things on the map. If even one result is a way or relation, then the total number of nodes will be greater than the total number of POIs.</p>
+<p>If you search for only POIs mapped as nodes, the node total will be the same as the POI total. See this search (which is just your search with the ways and relations commented out): <a href="https://overpass-turbo.eu/s/18HA">https://overpass-turbo.eu/s/18HA</a></p>
+<p>See the OSM wiki for more detailed information about the data elements: <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80666/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jun '21, 18:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/977d95e2184a885d9a01fb3297225872?s=32&amp;d=identicon&amp;r=g" alt="jmapb's gravatar image" />
+    <p><a href="/users/14350/jmapb">jmapb</a><br/>
+    <span class="score" title="3387 reputation points"><span class="">3.4k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">&#9679;</span><span class="badgecount">33</span></span><span title="61 badges"><span class="bronze">&#9679;</span><span class="badgecount">61</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jmapb has 22 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/80666/">
+                edited
+                <strong>22 Jun '21, 18:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80666">
+    
+        <a name="80667"></a>
+        <div class="comment" id="comment-80667">
+            <div id="post-80667-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,
+thanks for clarifying!
+so that means that actually osm is missing many pois.
+I got many more results scraping other resources (yelp, tripadvisor and gmaps).
+Do you agree?
+thanks!</p></div>
+            <div class="comment-info" id="comment-80667-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '21, 18:53)</span>
+                <a class="comment-user userinfo" href="/users/20354/eldoland">eldoland</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80666" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80666-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="80668"></a>
+                    <div id="answer-container-80668" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80668-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80668/up/" rel="nofollow"> </a>
+<div id="post-80668-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-80668-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80668/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OK. Lots of variables here.  First off, don't assume OSM (or other databases) are 100% accurate.
+Wizard isn't really that detailed. It takes a few, wild guesses For instance your "chocolate" &amp; "coffee" returns vending machine &amp; farm returns beehive! It also searches for both pizza &amp; pasta using cuisine=italian. I /think/ you need to contain the or operators within brackets. It easier to learn to write your own routines IMO.
+Use the OSM wiki to find the more accurate tags to search for.
+<a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a></p>
+<p>This is the condensed routine: <a href="https://overpass-turbo.eu/s/18HF">https://overpass-turbo.eu/s/18HF</a></p>
+<pre><code>{{geocodeArea:Seattle}}-&gt;.Seattle;
+(
+    nwr[amenity~"^(marketplace|bar|biergarten|cafe|fast_food|food_court|pub|restaurant)$"](area.Seattle);
+    nwr[shop~"^(alcohol|bakery|butcher|dairy|deli|greengrocer|pastry|supermarket)$"](area.Seattle);
+  nwr[amenity=vending_machine][vending~"^(ice_cream|coffee)$"](area.Seattle);
+    nwr[man_made=beehive](area.Seattle);
+
+  nwr[amenity=recycling][recycling_type=container]["recycling:green_waste"=yes](area.Seattle);
+  nwr[amenity=restaurant][cuisine=italian](area.Seattle);
+
+  nwr[craft~"^(brewery|caterer]|winery|distillery)$"](area.Seattle);
+);
+out center;
+</code></pre>
+<p>Use <code>nwr</code> instead of node,way,relation</p>
+<p>Use | as a replacement for 'or'</p>
+<p>Use RegEx ~"^ and )$" to ensure only those individual words are searched for.</p>
+<p>Use <code>out center</code> to return all data as POIs</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80668/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jun '21, 19:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c9c8b421ad22f51ddd62f23413717036?s=32&amp;d=identicon&amp;r=g" alt="DaveF's gravatar image" />
+    <p><a href="/users/1532/davef">DaveF</a><br/>
+    <span class="score" title="3264 reputation points"><span class="">3.3k</span></span><span title="84 badges"><span class="badge1">&#9679;</span><span class="badgecount">84</span></span><span title="98 badges"><span class="silver">&#9679;</span><span class="badgecount">98</span></span><span title="133 badges"><span class="bronze">&#9679;</span><span class="badgecount">133</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DaveF has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80668">
+    
+        <a name="80675"></a>
+        <div class="comment" id="comment-80675">
+            <div id="post-80675-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi DaveF
+thanks again for your reply!
+yes totally agree there is no 100% accurate database, that's why i scrape different sources and then i merge them all together.
+Thanks for the code, will try it and play around with tags!</p></div>
+            <div class="comment-info" id="comment-80675-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jun '21, 12:59)</span>
+                <a class="comment-user userinfo" href="/users/20354/eldoland">eldoland</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80668" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80668-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="80663"></a>
+                    <div id="answer-container-80663" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80663-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80663/up/" rel="nofollow"> </a>
+<div id="post-80663-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-80663-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80663/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi Dave,
+thanks for your reply
+ok, try this query</p>
+<p>amenity=marketplace OR bar OR biergarten OR cafe OR "fast food" OR "food court" OR pub OR restaurant OR shop=alcohol OR bakery OR butcher OR cheese OR chocolate OR coffee OR deli OR farm OR greengrocer OR organic OR pasta OR patisserie OR pizza OR tea OR supermarket OR pizza OR craft=brewery OR caterer OR winery OR distillery in Seattle</p>
+<p>through the wizard
+i got this <a href="https://monosnap.com/file/l5fDAzCZ7XBNXEPBABB6pr9cQmuIHx">https://monosnap.com/file/l5fDAzCZ7XBNXEPBABB6pr9cQmuIHx</a>
+if you export the pois, you will get 2k something results
+but the nodes are twice as much as the pois</p>
+<p>I scraped Seattle on yelp and tripadvisor with webscraper.io and i got 5928 results.
+So i guess the number of nodes is more accurate than the number of pois.
+My question is, how can i get the nodes instead of pois?
+thanks!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80663/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jun '21, 17:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8bda60ea8e9b91cb7442f70e15d00944?s=32&amp;d=identicon&amp;r=g" alt="eldoland's gravatar image" />
+    <p><a href="/users/20354/eldoland">eldoland</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="eldoland has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/80663/">
+                edited
+                <strong>22 Jun '21, 17:34</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80663">
+    
+        <a name="80664"></a>
+        <div class="comment" id="comment-80664">
+            <div id="post-80664-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's much easier to help you if you post a link using the 'share' button on the Turbo webpage.</p></div>
+            <div class="comment-info" id="comment-80664-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '21, 17:59)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80663" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80663-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/80655/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='drxEsVvvWZv7CAx945ZmiAhQU6fH2km6' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80655/overpass-nodes-vs-pois?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80655/overpass-nodes-vs-pois?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/nodes/"
+            class="tag-link-nodes"
+            title="see questions tagged'nodes'using tags"
+            rel="tag">nodes</a> <span class="tag-number">&#215;205</span><br/>
+        
+        <a href="/tags/pois/"
+            class="tag-link-pois"
+            title="see questions tagged'pois'using tags"
+            rel="tag">pois</a> <span class="tag-number">&#215;13</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 22, 2021, 11:02 a.m.">22 Jun '21, 11:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,406 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 23, 2021, 12:59 p.m.">23 Jun '21, 12:59</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/69223/overpass-api-query-nodes-of-a-relation-changed-or-added-after-a-certain-timestamp">Overpass API: Query nodes of a relation changed or added after a certain timestamp</a>
+        </p>
+        
+        <p>
+            <a href="/questions/76237/how-to-restrict-ways-between-two-nodes-eg-rails-between-two-train-stations">How to restrict ways between two nodes? (e.g. rails between two train stations)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43943/overpass-api-find-something-else-than-points-node">Overpass API: Find something else than points (node)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68194/how-can-i-find-the-nearest-node-from-my-point-in-osm">How can I find the nearest node from my point in OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/69718/overpass-ql-find-nodes-that-are-not-near-other-nodes">Overpass QL find nodes that are not near other nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/75595/how-to-get-parent-ways-of-some-way">how to get parent ways of some way</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19925/overpass-get-relation-and-node-in-one-query-for-city">Overpass: Get relation and node in one query for city?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33803/api-overpass-api">API / Overpass API</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61739/draw-a-way-between-two-nodes">draw a way between two nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77045/how-to-retrieve-all-highway-by-certain-area-with-relevant-values">How To Retrieve All Highway By Certain Area With Relevant Values?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

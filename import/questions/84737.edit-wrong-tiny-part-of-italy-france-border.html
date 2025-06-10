@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>edit wrong tiny part of Italy France border - OSM Help</title>
+        <meta name="description" content="Hello there, I&#39;m an active member of openstreetmap since 2009. I noticed an error in a tiny part of Italy - France border near Bardonecchia (Italy). This is a screenshot with the wrong part inside a red rectangle: https://postlmg.cc/SjDJxrK7 This is the direct slippy map url: https://www.openstreetm..." />
+        <meta name="keywords" content="border,borders,italy,france" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/84737/edit-wrong-tiny-part-of-italy-france-border" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/84737/edit-wrong-tiny-part-of-italy-france-border?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='lcNg1AwkACLmhUgpm3EGAWntorhhOAxx' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/84737/edit-wrong-tiny-part-of-italy-france-border">edit wrong tiny part of Italy France border</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-84737-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/84737/up/" rel="nofollow"> </a>
+<div id="post-84737-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-84737-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/84737/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/84737/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello there, I'm an active member of openstreetmap since 2009.</p>
+<p>I noticed an error in a tiny part of Italy - France border near Bardonecchia (Italy).</p>
+<p>This is a screenshot with the wrong part inside a red rectangle:
+<a href="https://postlmg.cc/SjDJxrK7">https://postlmg.cc/SjDJxrK7</a></p>
+<p>This is the direct slippy map url:
+<a href="https://www.openstreetmap.org/#map=16/45.0421/6.6662">https://www.openstreetmap.org/#map=16/45.0421/6.6662</a></p>
+<p>According to the following sources, the international border is not by the river, instead is by the unsurfaced road.</p>
+<p>French national geoportal (IGN), vectorial:
+<a href="https://www.geoportail.gouv.fr/carte?c=6.670146509608229,45.04352149959723&amp;z=17&amp;l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&amp;l1=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&amp;permalink=yes">https://www.geoportail.gouv.fr/carte?c=6.670146509608229,45.04352149959723&amp;z=17&amp;l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&amp;l1=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&amp;permalink=yes</a></p>
+<p>screenshot 1: <a href="https://i.postimg.cc/fTq0Q9zN/Rio-Gorgia.jpg">https://i.postimg.cc/fTq0Q9zN/Rio-Gorgia.jpg</a>
+screenshot 2: <a href="https://i.postimg.cc/m2dv890v/Bardonecchia-Rio-della-Gorgia.jpg">https://i.postimg.cc/m2dv890v/Bardonecchia-Rio-della-Gorgia.jpg</a>
+screenshot 3: <a href="https://i.postimg.cc/3r1VxpJk/Bardonecchia-Rio-della-Gorgia2.jpg">https://i.postimg.cc/3r1VxpJk/Bardonecchia-Rio-della-Gorgia2.jpg</a></p>
+<p>Italy geoportal (IGM), image of low detail:
+<a href="https://www.igmi.org/it/geoprodotti/raster/1/ED50_ritagliato_ultima_prodotta/foglio-1515568453.61">https://www.igmi.org/it/geoprodotti/raster/1/ED50_ritagliato_ultima_prodotta/foglio-1515568453.61</a></p>
+<p>Extract of Italy geoportal (IGM), image of high detail:
+<a href="https://www.geamap.com/it/italia#zoom=15&amp;lat=45.04326&amp;lon=6.66876&amp;layer=17&amp;overlays=FFFFFFFFFFFFFFFFFFFFFFF">https://www.geamap.com/it/italia#zoom=15&amp;lat=45.04326&amp;lon=6.66876&amp;layer=17&amp;overlays=FFFFFFFFFFFFFFFFFFFFFFF</a></p>
+<p>screenshot: <a href="https://i.postimg.cc/yY9NydMk/Carta-IGM-Rio-Gorgia.jpg">https://i.postimg.cc/yY9NydMk/Carta-IGM-Rio-Gorgia.jpg</a></p>
+<p>Pic of boundary stone, taken directly in place:
+<a href="https://i.postimg.cc/057Yb8V0/Cippo-alla-base-del-greto-del-Rio-Gorgia.jpg">https://i.postimg.cc/057Yb8V0/Cippo-alla-base-del-greto-del-Rio-Gorgia.jpg</a></p>
+<p>I feel confident that I can simply edit the border, by moving directly the already current points involved, without creating new points. In this way, current relationships will not be broken?</p>
+<p>According to you is all ok? Can I edit the border, referencing all the sources in the comment section of edit?</p>
+<p>Thanks you</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/border/" class="post-tag tag-link-border"
+                                        title="see questions tagged 'border'" rel="tag">border</a>
+                                
+                                    <a href="/tags/borders/" class="post-tag tag-link-borders"
+                                        title="see questions tagged 'borders'" rel="tag">borders</a>
+                                
+                                    <a href="/tags/italy/" class="post-tag tag-link-italy"
+                                        title="see questions tagged 'italy'" rel="tag">italy</a>
+                                
+                                    <a href="/tags/france/" class="post-tag tag-link-france"
+                                        title="see questions tagged 'france'" rel="tag">france</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Jun '22, 16:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6f4e9e03fc319ee002186730f2654a88?s=32&amp;d=identicon&amp;r=g" alt="Pyknite's gravatar image" />
+    <p><a href="/users/21868/pyknite">Pyknite</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Pyknite has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-84737">
+    
+</div>
+<div id="comment-tools-84737" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-84737-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/84737/edit-wrong-tiny-part-of-italy-france-border?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/84737/edit-wrong-tiny-part-of-italy-france-border?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/84737/edit-wrong-tiny-part-of-italy-france-border?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/84737/edit-wrong-tiny-part-of-italy-france-border?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="85107"></a>
+                    <div id="answer-container-85107" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85107-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85107/up/" rel="nofollow"> </a>
+<div id="post-85107-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-85107-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85107/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi !</p>
+<p>I'm pretty sure that given the sources, you can go ahead and move this border.
+The best would be to find and interpret the treaty which set the frontier, but it's probably vague.</p>
+<p>With respect to the relations, you don't have to worry as long you don't split the way (<a href="https://www.openstreetmap.org/way/93780818">93780818</a>). Even if you add or remove nodes (not the first or the last, but that's a long way from the place), the relations won't be touched.</p>
+<p>Best regards.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85107/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '22, 12:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85107">
+    
+</div>
+<div id="comment-tools-85107" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85107-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/84737/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='lcNg1AwkACLmhUgpm3EGAWntorhhOAxx' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/84737/edit-wrong-tiny-part-of-italy-france-border?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/84737/edit-wrong-tiny-part-of-italy-france-border?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/borders/"
+            class="tag-link-borders"
+            title="see questions tagged'borders'using tags"
+            rel="tag">borders</a> <span class="tag-number">&#215;49</span><br/>
+        
+        <a href="/tags/border/"
+            class="tag-link-border"
+            title="see questions tagged'border'using tags"
+            rel="tag">border</a> <span class="tag-number">&#215;32</span><br/>
+        
+        <a href="/tags/france/"
+            class="tag-link-france"
+            title="see questions tagged'france'using tags"
+            rel="tag">france</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/italy/"
+            class="tag-link-italy"
+            title="see questions tagged'italy'using tags"
+            rel="tag">italy</a> <span class="tag-number">&#215;15</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 8, 2022, 4:01 p.m.">08 Jun '22, 16:01</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,565 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 17, 2022, 12:43 p.m.">17 Jul '22, 12:43</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/46130/list-all-closed-borders-between-two-countries">list all closed borders between two countries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18678/kosovo-central-serbia">[closed] Kosovo &amp; Central Serbia</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61759/osm-base-map-containing-a-mistake">OSM base map containing a mistake?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/74385/incorrect-border-map-between-sudan-and-egypt">[closed] Incorrect border map between Sudan and Egypt</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6458/is-it-possible-to-render-a-map-without-country-borders">Is it possible to render a map without country borders?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7346/border-between-south-ossetia-and-georgia-missing-again">Border between South Ossetia and Georgia missing (again)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4036/export-administrative-boundaries-of-a-country-for-use-with-an-external-application">Export administrative boundaries of a country for use with an external application</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8265/find-the-initial-creator-of-a-relation">Find the initial creator of a relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6222/south-sudan-the-worlds-newest-country">[closed] South Sudan, the world&#39;s newest Country.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7449/osmosis-sourecode-merge">Osmosis sourecode &quot;--merge&quot;</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

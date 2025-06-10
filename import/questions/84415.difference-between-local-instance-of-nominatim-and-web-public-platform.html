@@ -1,0 +1,1002 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Difference between local instance of Nominatim and web public platform - OSM Help</title>
+        <meta name="description" content="Hello,  We have installed a fresh instance of Nominatim using docker by following the installation steps from https://nominatim.org/release-docs/develop/admin/Installation/ . I doubled checked multiple times for everything to be up-to-date. TIGER data is also up to date. Unfortunately, we have obser..." />
+        <meta name="keywords" content="docker,nominatim,json,server" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/84415/difference-between-local-instance-of-nominatim-and-web-public-platform" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/84415/difference-between-local-instance-of-nominatim-and-web-public-platform?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='pRqiSMLOqPGiEBWT3vrtR4ZBxHLs6TAJ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/84415/difference-between-local-instance-of-nominatim-and-web-public-platform">Difference between local instance of Nominatim and web public platform</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-84415-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/84415/up/" rel="nofollow"> </a>
+<div id="post-84415-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-84415-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/84415/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/84415/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, </p>
+<p>We have installed a fresh instance of Nominatim using docker by following the installation steps from <a href="https://nominatim.org/release-docs/develop/admin/Installation/">https://nominatim.org/release-docs/develop/admin/Installation/</a> . I doubled checked multiple times for everything to be up-to-date. TIGER data is also up to date.</p>
+<p>Unfortunately, we have observed some differences between what our server returns and what the public Nominatim platform shows by using the same search parameters.</p>
+<p>Here are the search parameters: street=520+Madison+Avenue&amp;city=new+york&amp;state=ny&amp;postalcode=10022</p>
+<p>Local url:  <a href="http://142.132.128.187:8080/search.php?street=520+Madison+Avenue&amp;city=new+york&amp;state=ny&amp;postalcode=10022&amp;format=jsonv2">http://142.132.128.187:8080/search.php?street=520+Madison+Avenue&amp;city=new+york&amp;state=ny&amp;postalcode=10022&amp;format=jsonv2</a>
+Public url: <a href="https://nominatim.openstreetmap.org/search.php?street=520+Madison+Avenue&amp;city=new+york&amp;state=ny&amp;postalcode=10022&amp;format=jsonv2">https://nominatim.openstreetmap.org/search.php?street=520+Madison+Avenue&amp;city=new+york&amp;state=ny&amp;postalcode=10022&amp;format=jsonv2</a></p>
+<p>Our response:</p>
+<pre><code>[
+</code></pre>
+<p>{
+    "place_id": 136458099,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+    "osm_type": "way",
+    "osm_id": 266010397,
+    "boundingbox": [
+      "40.7599002",
+      "40.760584",
+      "-73.9748887",
+      "-73.9740315"
+    ],
+    "lat": "40.76022135",
+    "lon": "-73.97442525051773",
+    "display_name": "520 Madison Avenue, 520, Madison Avenue, Midtown East, Manhattan Community Board 5, Manhattan, New York County, New York, 10037, United States",
+    "place_rank": 30,
+    "category": "place",
+    "type": "house",
+    "importance": 0.511
+  }
+]</p>
+<p>Web response:</p>
+<p>[
+  {
+    "place_id": 294697572,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+    "osm_type": "way",
+    "osm_id": 420281339,
+    "boundingbox": [
+      "40.760019333333",
+      "40.760119333333",
+      "-73.974156111111",
+      "-73.974056111111"
+    ],
+    "lat": "40.76006933333333",
+    "lon": "-73.97410611111111",
+    "display_name": "520, Madison Avenue, Midtown East, Manhattan Community Board 5, New York County, New York, 10022, United States",
+    "place_rank": 30,
+    "category": "place",
+    "type": "house",
+    "importance": 0.621
+  },
+  {
+    "place_id": 303958173,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+    "osm_type": "way",
+    "osm_id": 669246310,
+    "boundingbox": [
+      "42.654086064516",
+      "42.654186064516",
+      "-73.770921322581",
+      "-73.770821322581"
+    ],
+    "lat": "42.65413606451613",
+    "lon": "-73.77087132258065",
+    "display_name": "520, Madison Avenue, Park South, Lark Street, City of Albany, Albany County, New York, 12208, United States",
+    "place_rank": 30,
+    "category": "place",
+    "type": "house",
+    "importance": 0.611
+  },
+  {
+    "place_id": 167244054,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+    "osm_type": "way",
+    "osm_id": 266010397,
+    "boundingbox": [
+      "40.7599002",
+      "40.760584",
+      "-73.9748887",
+      "-73.9740315"
+    ],
+    "lat": "40.76022135",
+    "lon": "-73.97442525051773",
+    "display_name": "520 Madison Avenue, 520, Madison Avenue, Midtown East, Manhattan Community Board 5, New York County, New York, 10037, United States",
+    "place_rank": 30,
+    "category": "building",
+    "type": "commercial",
+    "importance": 0.511
+  },
+  {
+    "place_id": 290349413,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+    "osm_type": "way",
+    "osm_id": 24137660,
+    "boundingbox": [
+      "40.751863186047",
+      "40.751963186047",
+      "-73.588143813953",
+      "-73.588043813953"
+    ],
+    "lat": "40.75191318604651",
+    "lon": "-73.58809381395349",
+    "display_name": "520, Madison Avenue, Westbury, Town of North Hempstead, Nassau County, New York, 11590, United States",
+    "place_rank": 30,
+    "category": "place",
+    "type": "house",
+    "importance": 0.511
+  },
+  {
+    "place_id": 314875463,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+    "osm_type": "way",
+    "osm_id": 13087865,
+    "boundingbox": [
+      "42.338065343744",
+      "42.338165343744",
+      "-77.67069690835",
+      "-77.67059690835"
+    ],
+    "lat": "42.33811534374404",
+    "lon": "-77.6706469083502",
+    "display_name": "520, Madison Avenue, Town of Hornellsville, Steuben County, New York, 14843, United States",
+    "place_rank": 30,
+    "category": "place",
+    "type": "house",
+    "importance": 0.511
+  },
+  {
+    "place_id": 290421264,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+    "osm_type": "way",
+    "osm_id": 24137656,
+    "boundingbox": [
+      "40.696777416667",
+      "40.696877416667",
+      "-73.657202972222",
+      "-73.657102972222"
+    ],
+    "lat": "40.69682741666667",
+    "lon": "-73.65715297222222",
+    "display_name": "520, Madison Avenue, West Hempstead, Franklin Square, Town of Hempstead, Nassau County, New York, 11552, United States",
+    "place_rank": 30,
+    "category": "place",
+    "type": "house",
+    "importance": 0.511
+  },
+  {
+    "place_id": 290418110,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+    "osm_type": "way",
+    "osm_id": 24137653,
+    "boundingbox": [
+      "40.674544554217",
+      "40.674644554217",
+      "-73.618284759036",
+      "-73.618184759036"
+    ],
+    "lat": "40.67459455421687",
+    "lon": "-73.61823475903616",
+    "display_name": "520, Madison Avenue, South Hempstead, Baldwin, Town of Hempstead, Nassau County, New York, 11510, United States",
+    "place_rank": 30,
+    "category": "place",
+    "type": "house",
+    "importance": 0.511
+  },
+  {
+    "place_id": 314323208,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+    "osm_type": "way",
+    "osm_id": 20255741,
+    "boundingbox": [
+      "41.103991788222",
+      "41.104091788222",
+      "-72.366563786757",
+      "-72.366463786757"
+    ],
+    "lat": "41.104041788222084",
+    "lon": "-72.36651378675711",
+    "display_name": "520, Madison Avenue, Greenport, Town of Southold, Suffolk County, New York, 11944, United States",
+    "place_rank": 30,
+    "category": "place",
+    "type": "house",
+    "importance": 0.511
+  },
+  {
+    "place_id": 306011336,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+    "osm_type": "way",
+    "osm_id": 12320838,
+    "boundingbox": [
+      "42.626001035714",
+      "42.626101035714",
+      "-79.071002642857",
+      "-79.070902642857"
+    ],
+    "lat": "42.62605103571429",
+    "lon": "-79.07095264285714",
+    "display_name": "520, Madison Avenue, Lake Erie Beach, Town of Evans, Erie County, New York, 14006, United States",
+    "place_rank": 30,
+    "category": "place",
+    "type": "house",
+    "importance": 0.511
+  },
+  {
+    "place_id": 314388006,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://osm.org/copyright">https://osm.org/copyright",</a>
+    "osm_type": "way",
+    "osm_id": 20255732,
+    "boundingbox": [
+      "40.804359755102",
+      "40.804459755102",
+      "-73.254504265306",
+      "-73.254404265306"
+    ],
+    "lat": "40.804409755102036",
+    "lon": "-73.25445426530612",
+    "display_name": "520, Madison Avenue, Brentwood, Suffolk County, New York, 11717, United States",
+    "place_rank": 30,
+    "category": "place",
+    "type": "house",
+    "importance": 0.511
+  }
+]</p>
+<p>Could you please help us identify what is the root cause of this behavior?</p>
+<p>Many thanks!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/docker/" class="post-tag tag-link-docker"
+                                        title="see questions tagged 'docker'" rel="tag">docker</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/json/" class="post-tag tag-link-json"
+                                        title="see questions tagged 'json'" rel="tag">json</a>
+                                
+                                    <a href="/tags/server/" class="post-tag tag-link-server"
+                                        title="see questions tagged 'server'" rel="tag">server</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 May '22, 08:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8473e49db1905d23d9381e55719356fd?s=32&amp;d=identicon&amp;r=g" alt="radu_ncht's gravatar image" />
+    <p><a href="/users/21741/radu_ncht">radu_ncht</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="radu_ncht has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-84415">
+    
+</div>
+<div id="comment-tools-84415" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-84415-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/84415/difference-between-local-instance-of-nominatim-and-web-public-platform?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/84415/difference-between-local-instance-of-nominatim-and-web-public-platform?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/84415/difference-between-local-instance-of-nominatim-and-web-public-platform?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/84415/difference-between-local-instance-of-nominatim-and-web-public-platform?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="84416"></a>
+                    <div id="answer-container-84416" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-84416-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/84416/up/" rel="nofollow"> </a>
+<div id="post-84416-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-84416-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/84416/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You are not running the same software version of Nominatim and you are using different data. Differences are to be expected.</p>
+<p>The public servers at <a href="https://nominatim.openstreetmap.org">https://nominatim.openstreetmap.org</a> are on a rolling release of the latest development version of Nominatim and are updated with minutely diffs. It is not possible to set up a local instance that is in exactly the same state.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/84416/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 May '22, 09:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d888b712d85dee0aa304297f2dc697c7?s=32&amp;d=identicon&amp;r=g" alt="lonvia's gravatar image" />
+    <p><a href="/users/2921/lonvia">lonvia</a><br/>
+    <span class="score" title="6213 reputation points"><span class="">6.2k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="lonvia has 43 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-84416">
+    
+        <a name="84424"></a>
+        <div class="comment" id="comment-84424">
+            <div id="post-84424-score" class="comment-score"></div>
+            <div class="comment-text"><p>We understand that may be a slight difference between a local environment and the public servers. The issue in hand is that the difference is way too obvious, given the large difference in the number of responses obtained using both versions.</p>
+
+<p>As we stated earlier we are running with the latest data and software version, here are some information on that:
+-  PBF_URL: <a href="https://ftp5.gwdg.de/pub/misc/openstreetmap/planet.openstreetmap.org/pbf/planet-latest.osm.pbf">https://ftp5.gwdg.de/pub/misc/openstreetmap/planet.openstreetmap.org/pbf/planet-latest.osm.pbf</a>
+- REPLICATION_URL: <a href="https://ftp5.gwdg.de/pub/misc/openstreetmap/planet.openstreetmap.org/replication/day/">https://ftp5.gwdg.de/pub/misc/openstreetmap/planet.openstreetmap.org/replication/day/</a>
+- PostgreSQL 12.9 (Ubuntu 12.9-0ubuntu0.20.04.1)
+- ENV NOMINATIM_VERSION 4.0.1</p>
+
+<p>We also went ahead and installed all the auxiliary data sources according to <a href="https://nominatim.org/release-docs/latest/develop/data-sources/">https://nominatim.org/release-docs/latest/develop/data-sources/</a> .</p>
+
+<p>Is there anything left to be installed/configured to be somewhat inline with the public servers ?</p></div>
+            <div class="comment-info" id="comment-84424-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '22, 09:54)</span>
+                <a class="comment-user userinfo" href="/users/21741/radu_ncht">radu_ncht</a>
+                
+            </div>
+        </div>
+    
+        <a name="84427"></a>
+        <div class="comment" id="comment-84427">
+            <div id="post-84427-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can try reimporting with <code>NOMINATIM_TOKENIZER=icu</code>. It may or may not help. Depends on what your exact issue with the search results is. As it stands, the result on your server seems to be the more correct one.</p></div>
+            <div class="comment-info" id="comment-84427-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '22, 10:50)</span>
+                <a class="comment-user userinfo" href="/users/2921/lonvia">lonvia</a>
+                
+            </div>
+        </div>
+    
+        <a name="84450"></a>
+        <div class="comment" id="comment-84450">
+            <div id="post-84450-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your answer Ionvia, we have already imported with "ICU" tokenizer.</p>
+
+<p>Is there any difference in the search logic between a local instance and the public servers ?</p></div>
+            <div class="comment-info" id="comment-84450-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 May '22, 09:02)</span>
+                <a class="comment-user userinfo" href="/users/21741/radu_ncht">radu_ncht</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-84416" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-84416-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="87004"></a>
+                    <div id="answer-container-87004" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-87004-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/87004/up/" rel="nofollow"> </a>
+<div id="post-87004-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-87004-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/87004/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hello,
+you can use debug mode of Nominatim search request.
+Just add debug=1 parameter to both of your queries and compare the explanation of their processing, even with SQL queries to the DB.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/87004/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Mar '23, 15:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8fd0f1dd50b1b8df50bfce3cde10c438?s=32&amp;d=identicon&amp;r=g" alt="Cepslart's gravatar image" />
+    <p><a href="/users/22872/cepslart">Cepslart</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Cepslart has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-87004">
+    
+</div>
+<div id="comment-tools-87004" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-87004-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/84415/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='pRqiSMLOqPGiEBWT3vrtR4ZBxHLs6TAJ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/84415/difference-between-local-instance-of-nominatim-and-web-public-platform?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/84415/difference-between-local-instance-of-nominatim-and-web-public-platform?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/server/"
+            class="tag-link-server"
+            title="see questions tagged'server'using tags"
+            rel="tag">server</a> <span class="tag-number">&#215;123</span><br/>
+        
+        <a href="/tags/json/"
+            class="tag-link-json"
+            title="see questions tagged'json'using tags"
+            rel="tag">json</a> <span class="tag-number">&#215;28</span><br/>
+        
+        <a href="/tags/docker/"
+            class="tag-link-docker"
+            title="see questions tagged'docker'using tags"
+            rel="tag">docker</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 9, 2022, 8:53 a.m.">09 May '22, 08:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,506 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 29, 2023, 3:44 p.m.">29 Mar '23, 15:44</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/84448/issue-with-selfhosted-nominatim-empty-reply-for-postcodes">Issue with selfhosted nominatim - empty reply for postcodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60523/maintaining-osm-related-servers">Maintaining OSM-related servers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17743/nominatin-server-ip-for-firewall-rules">Nominatin Server Ip for Firewall rules</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43586/nominatim-json-output-address-json-object-structure">Nominatim Json Output - Address Json Object Structure</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46425/how-to-use-javascript-to-display-marker-for-an-address">How to use javascript to display marker for an address?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53472/install-tile-server-and-nominatime-on-same-box">[closed] Install tile server and Nominatime on same box</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38732/basic-questions-about-nominatim-on-own-server">Basic questions about Nominatim on own server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19959/rendering-geocoding-and-routing-with-two-servers">Rendering, geocoding and routing with two servers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41407/how-to-work-with-osrm">How to work with osrm.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46064/nomintaim-is-returning-html-when-asking-for-json-in-php">Nomintaim is returning HTML when asking for JSON in PHP</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>User Id vs registration timestamps - OSM Help</title>
+        <meta name="description" content="I am looking at some users&#39; profiles using the API. From time to time I find what seem to me discrepancies between Ids and registration timestamps. For instance, if we look at the above records...  user id=&quot;2302718&quot; ... account_created=&quot;2014-08-31T21:44:43Z&quot; user id=&quot;2302719&quot; ... account_created=&quot;20..." />
+        <meta name="keywords" content="profile,timestamps,users,registration" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/54679/user-id-vs-registration-timestamps" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54679/user-id-vs-registration-timestamps?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='g7a0dUM5sSCIMsCF2wZ9pKFGXWahkT13' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54679/user-id-vs-registration-timestamps">User Id vs registration timestamps</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54679-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54679/up/" rel="nofollow"> </a>
+<div id="post-54679-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-54679-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54679/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54679/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am looking at some users' profiles using the API. From time to time I find what seem to me discrepancies between Ids and registration timestamps. For instance, if we look at the above records...</p>
+<ul>
+<li>user id="2302718" ... account_created="2014-08-31T21:44:43Z"</li>
+<li>user id="2302719" ... account_created="2014-08-31T21:44:01Z"</li>
+</ul>
+<p>the first user (2302718) has registered 42 seconds after the second one (2302719) while, according to the timestamps, I was expecting the first one to have registered prior to the second one. In some instances there are hours between them.</p>
+<p>Any explanation?</p>
+<p>PS - I have been told that users' ids are unique and auto-increment in sequence when users register to the project</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/profile/" class="post-tag tag-link-profile"
+                                        title="see questions tagged 'profile'" rel="tag">profile</a>
+                                
+                                    <a href="/tags/timestamps/" class="post-tag tag-link-timestamps"
+                                        title="see questions tagged 'timestamps'" rel="tag">timestamps</a>
+                                
+                                    <a href="/tags/users/" class="post-tag tag-link-users"
+                                        title="see questions tagged 'users'" rel="tag">users</a>
+                                
+                                    <a href="/tags/registration/" class="post-tag tag-link-registration"
+                                        title="see questions tagged 'registration'" rel="tag">registration</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Feb '17, 16:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a504353df13461ace2c733906a99ce16?s=32&amp;d=identicon&amp;r=g" alt="jfd553's gravatar image" />
+    <p><a href="/users/9697/jfd553">jfd553</a><br/>
+    <span class="score" title="389 reputation points">389</span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="32 badges"><span class="bronze">&#9679;</span><span class="badgecount">32</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jfd553 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54679/">
+                edited
+                <strong>16 Feb '17, 16:46</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54679">
+    
+</div>
+<div id="comment-tools-54679" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54679-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54679/user-id-vs-registration-timestamps?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54679/user-id-vs-registration-timestamps?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54679/user-id-vs-registration-timestamps?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54679/user-id-vs-registration-timestamps?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54684"></a>
+                    <div id="answer-container-54684" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54684-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54684/up/" rel="nofollow"> </a>
+<div id="post-54684-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-54684-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54684/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="jfd553 has selected this answer as the correct answer"
+        href="/accept_answer/54684/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I tested a bit with a local installation and am fairly sure (contrary to my original thoughts) that such inconsistencies are due to the rails frontends being out of sync time-wise which has historically happened now and then.</p>
+<p>If you are seeing such behaviour with newly created accounts, please report them to the operations working group.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54684/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Feb '17, 23:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54684">
+    
+        <a name="54690"></a>
+        <div class="comment" id="comment-54690">
+            <div id="post-54690-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yep, I understand the discrepancies may origin from multiple operations made either on the database and/or the rails frontends when someone register. Thank Simon.</p></div>
+            <div class="comment-info" id="comment-54690-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Feb '17, 09:43)</span>
+                <a class="comment-user userinfo" href="/users/9697/jfd553">jfd553</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54684" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54684-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="54687"></a>
+                    <div id="answer-container-54687" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54687-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54687/up/" rel="nofollow"> </a>
+<div id="post-54687-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-54687-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54687/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If the id and the creation date are not assigned in the same atomic operation, multiple threads can always create those "inconsistencies'. This could happen e.g. when the creation date is assigned by the software and the id by the database.</p>
+<p>Can you explain why you think this is a problem ?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54687/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Feb '17, 08:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/813a136afe7d4c95fd5bccdd78705e0e?s=32&amp;d=identicon&amp;r=g" alt="escada's gravatar image" />
+    <p><a href="/users/5390/escada">escada</a><br/>
+    <span class="score" title="19043 reputation points"><span class="">19.0k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="166 badges"><span class="silver">&#9679;</span><span class="badgecount">166</span></span><span title="302 badges"><span class="bronze">&#9679;</span><span class="badgecount">302</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="escada has 97 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54687">
+    
+        <a name="54691"></a>
+        <div class="comment" id="comment-54691">
+            <div id="post-54691-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Right, as now understand that the process results from multiple treads or operations which may result in such inconsistencies. BTW, I do not think these inconsistencies are a problem, I was just curious to understand where they come from :-)</p></div>
+            <div class="comment-info" id="comment-54691-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Feb '17, 09:49)</span>
+                <a class="comment-user userinfo" href="/users/9697/jfd553">jfd553</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54687" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54687-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54679/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='g7a0dUM5sSCIMsCF2wZ9pKFGXWahkT13' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54679/user-id-vs-registration-timestamps?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54679/user-id-vs-registration-timestamps?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/timestamps/"
+            class="tag-link-timestamps"
+            title="see questions tagged'timestamps'using tags"
+            rel="tag">timestamps</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/profile/"
+            class="tag-link-profile"
+            title="see questions tagged'profile'using tags"
+            rel="tag">profile</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/users/"
+            class="tag-link-users"
+            title="see questions tagged'users'using tags"
+            rel="tag">users</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/registration/"
+            class="tag-link-registration"
+            title="see questions tagged'registration'using tags"
+            rel="tag">registration</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 16, 2017, 4:45 p.m.">16 Feb '17, 16:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,819 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 17, 2017, 9:49 a.m.">17 Feb '17, 09:49</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/28682/how-to-sortfilter-nearby-users-on-my-profile">How to sort/filter &quot;nearby users&quot; on &quot;My profile&quot; ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1622/how-can-i-check-if-i-have-declared-my-edits-to-be-in-the-public-domain">How can I check if I have declared my edits to be in the public domain?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20499/how-to-access-the-timestamp-value-from-overpass-meta-requests-with-openlayersformatosm">How to access the timestamp value from Overpass meta requests with Openlayers.Format.OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10684/profile-picture-upload">[closed] Profile picture upload</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10808/change-e-mail">Change e-mail</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13308/profile-settings">Profile Settings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1917/inserting-timestamp-in-tracks-drawn-from-gpsmapedit">Inserting Timestamp in tracks drawn from GPSMapEdit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20658/how-to-authenticate-osm-users-against-osm-user-database">How to Authenticate OSM users against OSM user database?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23245/how-do-i-find-out-who-is-also-contributing-to-osm-and-communicate-with-them">How do I find out who is also contributing to OSM and communicate with them?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1260/how-to-create-fake-timestamps-with-gpsbabel">How to create fake timestamps with gpsbabel?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

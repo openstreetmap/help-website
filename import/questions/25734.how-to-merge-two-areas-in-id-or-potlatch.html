@@ -1,0 +1,998 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to merge two areas in iD or Potlatch? - OSM Help</title>
+        <meta name="description" content="I am tracing a building from Bing aerial image. The building is square but has some irregular projections. I first trace the square portion (as an area) so I can use the Q shortcut to make it square. Then I trace the irregular part (as an area). There is, however, always a line where these two shape..." />
+        <meta name="keywords" content="merge,editing,areas" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/25734/how-to-merge-two-areas-in-id-or-potlatch" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/25734/how-to-merge-two-areas-in-id-or-potlatch?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='SzdhSw2ZqZ5mCmuVCPhC4oNLq30D6xJG' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/25734/how-to-merge-two-areas-in-id-or-potlatch">How to merge two areas in iD or Potlatch?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-25734-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25734/up/" rel="nofollow"> </a>
+<div id="post-25734-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-25734-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25734/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/25734/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am tracing a building from Bing aerial image. The building is square but has some irregular projections. I first trace the square portion (as an area) so I can use the Q shortcut to make it square. Then I trace the irregular part (as an area). There is, however, always a line where these two shapes are joined. Is there a way to 'delete' the joining line? Thank you</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/merge/" class="post-tag tag-link-merge"
+                                        title="see questions tagged 'merge'" rel="tag">merge</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/areas/" class="post-tag tag-link-areas"
+                                        title="see questions tagged 'areas'" rel="tag">areas</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Aug '13, 16:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06b9779157ed5d9958611cdc3b6aa4a7?s=32&amp;d=identicon&amp;r=g" alt="slover98's gravatar image" />
+    <p><a href="/users/6453/slover98">slover98</a><br/>
+    <span class="score" title="567 reputation points">567</span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="32 badges"><span class="bronze">&#9679;</span><span class="badgecount">32</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="slover98 has one accepted answer">5&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/25734/">
+                edited
+                <strong>24 Aug '13, 20:19</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-25734">
+    
+</div>
+<div id="comment-tools-25734" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25734-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/25734/how-to-merge-two-areas-in-id-or-potlatch?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/25734/how-to-merge-two-areas-in-id-or-potlatch?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/25734/how-to-merge-two-areas-in-id-or-potlatch?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/25734/how-to-merge-two-areas-in-id-or-potlatch?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="25738"></a>
+                    <div id="answer-container-25738" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25738-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25738/up/" rel="nofollow"> </a>
+<div id="post-25738-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-25738-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25738/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi, in the editor Potlatch 2 just select a node and use scissor (disconnect) and both nodes and delete the way between them. Then read this one,
+<a href="/questions/2266/">can-two-ways-be-made-into-one-in-potlatch2</a>.
+And add the tag "building" to the building outline.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25738/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Aug '13, 20:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/25738/">
+                edited
+                <strong>24 Aug '13, 20:50</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25738">
+    
+        <a name="25743"></a>
+        <div class="comment" id="comment-25743">
+            <div id="post-25743-score" class="comment-score"></div>
+            <div class="comment-text"><p>I realized that the chain is a very good tool and Ill use it, so far I improvised, but with a multi polygon it’s handsome.</p></div>
+            <div class="comment-info" id="comment-25743-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '13, 22:10)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25738" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25738-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="25744"></a>
+                    <div id="answer-container-25744" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25744-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25744/up/" rel="nofollow"> </a>
+<div id="post-25744-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-25744-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25744/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I often draw building the same way in Potlatch2. However, I rarely use the cut and rejoin approach. InsteadI save a batch of such buildings and then work through them in JOSM which has a tool to automatically combine (union) two or more polygons.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25744/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Aug '13, 22:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25744">
+    
+        <a name="25747"></a>
+        <div class="comment" id="comment-25747">
+            <div id="post-25747-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for the idea. JOSM is a little bit beyond my capability, I just do simple edits, like adding building, roads (service, parking aisles) lakes, shops etc. That's why I only use iD or Potlatch.</p></div>
+            <div class="comment-info" id="comment-25747-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '13, 01:09)</span>
+                <a class="comment-user userinfo" href="/users/6453/slover98">slover98</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25744" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25744-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="25739"></a>
+                    <div id="answer-container-25739" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25739-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25739/up/" rel="nofollow"> </a>
+<div id="post-25739-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25739-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25739/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The square tool will give "L" or "C" or any shape square corners. So joining square bits may be unnecessary. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25739/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Aug '13, 20:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/25739/">
+                edited
+                <strong>24 Aug '13, 20:50</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25739">
+    
+        <a name="25740"></a>
+        <div class="comment" id="comment-25740">
+            <div id="post-25740-score" class="comment-score"></div>
+            <div class="comment-text"><p>I assume that the "irregular part" has no rectangular corners. And even if: drawing the base (square) building in a first step makes it really rectangular. This is not guaranteed if you draw it and make it rectangular in one step.</p></div>
+            <div class="comment-info" id="comment-25740-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '13, 20:52)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25741"></a>
+        <div class="comment" id="comment-25741">
+            <div id="post-25741-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hendrikklaas's answer is correct. but if the irregular bit does have square corners, as most buildings have, "joining MAY be unnecessary" and drawing the whole, then squaring it will save time over snipping and joining is S-L-O-W  as you will know. Drawing building outlines is very time consuming. Any help in speeding up is worth knowing. (potlatch2)</p></div>
+            <div class="comment-info" id="comment-25741-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '13, 21:26)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="25746"></a>
+        <div class="comment" id="comment-25746">
+            <div id="post-25746-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thank you all for the replies. The irregular part does not have square corners. It is a semi-circle or a partial ellipse.</p></div>
+            <div class="comment-info" id="comment-25746-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '13, 01:07)</span>
+                <a class="comment-user userinfo" href="/users/6453/slover98">slover98</a>
+                
+            </div>
+        </div>
+    
+        <a name="25748"></a>
+        <div class="comment" id="comment-25748">
+            <div id="post-25748-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here is one of the buildings I need help with:
+<a href="http://www.openstreetmap.org/#map=17/38.81607/-77.64559">http://www.openstreetmap.org/#map=17/38.81607/-77.64559</a></p></div>
+            <div class="comment-info" id="comment-25748-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '13, 01:14)</span>
+                <a class="comment-user userinfo" href="/users/6453/slover98">slover98</a>
+                
+            </div>
+        </div>
+    
+        <a name="25750"></a>
+        <div class="comment not_top_scorer" id="comment-25750">
+            <div id="post-25750-score" class="comment-score"></div>
+            <div class="comment-text"><p>I just tried to fix it with the scissors in Potlatch. Hopefully, I did it OK. The map view still shows the old situation.</p></div>
+            <div class="comment-info" id="comment-25750-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '13, 01:20)</span>
+                <a class="comment-user userinfo" href="/users/6453/slover98">slover98</a>
+                
+            </div>
+        </div>
+    
+        <a name="25751"></a>
+        <div class="comment" id="comment-25751">
+            <div id="post-25751-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It is fixed!! THANK YOU ALL.
+Martin</p></div>
+            <div class="comment-info" id="comment-25751-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '13, 01:21)</span>
+                <a class="comment-user userinfo" href="/users/6453/slover98">slover98</a>
+                
+            </div>
+        </div>
+    
+        <a name="25760"></a>
+        <div class="comment not_top_scorer" id="comment-25760">
+            <div id="post-25760-score" class="comment-score"></div>
+            <div class="comment-text"><p>If a building has non rectangular angles, act like a surveyor and take 2 nodes on the same line and trace the (help) line back to the building. Now the corner can be pinpointed or use even a second line to the same corner. This method works for every single edge of a building. Even consider to a take a spring rule for control purposes just a stretch and use JOSM. It has a simple scale in the left upper corner and several other handy tools for handling buildings.</p></div>
+            <div class="comment-info" id="comment-25760-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '13, 09:37)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25739" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25739-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/25734/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='SzdhSw2ZqZ5mCmuVCPhC4oNLq30D6xJG' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25734/how-to-merge-two-areas-in-id-or-potlatch?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25734/how-to-merge-two-areas-in-id-or-potlatch?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/merge/"
+            class="tag-link-merge"
+            title="see questions tagged'merge'using tags"
+            rel="tag">merge</a> <span class="tag-number">&#215;41</span><br/>
+        
+        <a href="/tags/areas/"
+            class="tag-link-areas"
+            title="see questions tagged'areas'using tags"
+            rel="tag">areas</a> <span class="tag-number">&#215;32</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 24, 2013, 4:23 p.m.">24 Aug '13, 16:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,141 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 25, 2013, 9:37 a.m.">25 Aug '13, 09:37</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/23318/how-do-i-correct-name-for-a-residential-area">How do I correct name for a residential area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62134/addresses-as-nodes-and-addresses-with-buildings">Addresses as nodes and addresses with buildings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/67084/pyosmium-editing-areas">PyOsmium: editing &quot;areas&quot; ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don&#39;t show up on the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/497/how-can-i-edit-gpx-tracks-in-potlatch-2">How can I edit GPX tracks in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/231/how-can-i-edit-all-ways-with-certain-tag-in-an-area">How can I edit all ways with certain tag in an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/954/how-do-i-set-my-home-location">How do I set my home location?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1012/fixing-a-subway-stop">Fixing a subway stop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

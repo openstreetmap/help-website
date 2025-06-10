@@ -1,0 +1,919 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Getting contour lines/shading in OSM maps - OSM Help</title>
+        <meta name="description" content="Hello fellas. I&#39;m the whole night looking for contour overlays or something to put contour lines over the OSM map, and after several tries, I gonna just give up and find some help here. :( So the question is that simple, where can I find overlay transparent maps with contour lines for the OSM map fo..." />
+        <meta name="keywords" content="map,hillshading,garmin,contourline" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/64499/getting-contour-linesshading-in-osm-maps" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/64499/getting-contour-linesshading-in-osm-maps?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='TMxKpIfBAaWeIT737ph0yC1sYSKtaKUE' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/64499/getting-contour-linesshading-in-osm-maps">Getting contour lines/shading in OSM maps</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-64499-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64499/up/" rel="nofollow"> </a>
+<div id="post-64499-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-64499-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64499/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/64499/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello fellas.</p>
+<p>I'm the whole night looking for contour overlays or something to put contour lines over the OSM map, and after several tries, I gonna just give up and find some help here. :(</p>
+<p>So the question is that simple, <strong>where can I find overlay transparent maps with contour lines for the OSM map for garmin devices</strong> (<a href="http://garmin.openstreetmap.nl/)">http://garmin.openstreetmap.nl/)</a> <strong>and how do I use it as a overlay of my current map</strong> if that is even possible.. </p>
+<p>I saw some people scripting it out to put contour lines in the same .img (phyghtmap) mixing maps but the links were dead like almost every post I saw about this.. people tend to just download the map with the contour lines preinstalled. :mad:</p>
+<hr>
+<p>*IF YOU DON'T KNOW HOW TO PUT CONTOUR LINES BUT TO SHADE THE ALTITUDE YOUR ANSWER WILL BE USEFULL TOO!</p>
+<hr>
+<p><strong>I also tried to use:</strong></p>
+<ol>
+<li><a href="https://wiki.openstreetmap.org/wiki/Srtm2Osm">https://wiki.openstreetmap.org/wiki/Srtm2Osm</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/SRTM">https://wiki.openstreetmap.org/wiki/SRTM</a></li>
+<li><a href="http://www.openfietsmap.nl/downloads/osm_combi">http://www.openfietsmap.nl/downloads/osm_combi</a></li>
+</ol>
+<p><strong>I saw this post which is asking almost the same as me but it have no answer (I hope this doesn't get unresolved too):</strong></p>
+<p><a href="https://forum.openstreetmap.org/viewtopic.php?id=59975">https://forum.openstreetmap.org/viewtopic.php?id=59975</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                                    <a href="/tags/hillshading/" class="post-tag tag-link-hillshading"
+                                        title="see questions tagged 'hillshading'" rel="tag">hillshading</a>
+                                
+                                    <a href="/tags/garmin/" class="post-tag tag-link-garmin"
+                                        title="see questions tagged 'garmin'" rel="tag">garmin</a>
+                                
+                                    <a href="/tags/contourline/" class="post-tag tag-link-contourline"
+                                        title="see questions tagged 'contourline'" rel="tag">contourline</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 Jul '18, 09:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3766630f8fe8d113bbc138f69cfede68?s=32&amp;d=identicon&amp;r=g" alt="SaFteiNZz's gravatar image" />
+    <p><a href="/users/15334/safteinzz">SaFteiNZz</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SaFteiNZz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-64499">
+    
+</div>
+<div id="comment-tools-64499" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64499-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/64499/getting-contour-linesshading-in-osm-maps?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/64499/getting-contour-linesshading-in-osm-maps?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/64499/getting-contour-linesshading-in-osm-maps?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/64499/getting-contour-linesshading-in-osm-maps?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="64500"></a>
+                    <div id="answer-container-64500" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64500-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64500/up/" rel="nofollow"> </a>
+<div id="post-64500-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-64500-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64500/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="https://wiki.openstreetmap.org/wiki/User:Ajoessen/Garminkarten_selber_bauen">https://wiki.openstreetmap.org/wiki/User:Ajoessen/Garminkarten_selber_bauen</a> includes a guide to topo on Garmin</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64500/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Jul '18, 10:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6edf3a421a450237beae62ba93582637?s=32&amp;d=identicon&amp;r=g" alt="Hjart's gravatar image" />
+    <p><a href="/users/3577/hjart">Hjart</a><br/>
+    <span class="score" title="2961 reputation points"><span class="">3.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="26 badges"><span class="silver">&#9679;</span><span class="badgecount">26</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hjart has 14 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64500">
+    
+</div>
+<div id="comment-tools-64500" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64500-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="64501"></a>
+                    <div id="answer-container-64501" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64501-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64501/up/" rel="nofollow"> </a>
+<div id="post-64501-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-64501-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64501/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Have seen this project
+<a href="https://opentopomap.org/#map=14/51.20758/-4.06125">https://opentopomap.org/#map=14/51.20758/-4.06125</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64501/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Jul '18, 10:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64501">
+    
+        <a name="64504"></a>
+        <div class="comment" id="comment-64504">
+            <div id="post-64504-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes I did, I used to use opentopomap but then I wanted to share my paths and roads so that's why I'm using OSM at the moment.</p></div>
+            <div class="comment-info" id="comment-64504-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jul '18, 12:27)</span>
+                <a class="comment-user userinfo" href="/users/15334/safteinzz">SaFteiNZz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64501" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64501-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="64512"></a>
+                    <div id="answer-container-64512" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64512-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64512/up/" rel="nofollow"> </a>
+<div id="post-64512-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-64512-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64512/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I found the answer following this guide:</p>
+<p><a href="http://www.kleineisel.de/ralf/gps/garmin/howto.html">http://www.kleineisel.de/ralf/gps/garmin/howto.html</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64512/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Jul '18, 19:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3766630f8fe8d113bbc138f69cfede68?s=32&amp;d=identicon&amp;r=g" alt="SaFteiNZz's gravatar image" />
+    <p><a href="/users/15334/safteinzz">SaFteiNZz</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SaFteiNZz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64512">
+    
+</div>
+<div id="comment-tools-64512" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64512-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="64527"></a>
+                    <div id="answer-container-64527" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64527-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64527/up/" rel="nofollow"> </a>
+<div id="post-64527-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-64527-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64527/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I got my contour lines from Freizeitkarte-osm.de, they are already prepared in OSM format.
+Use Mkgmap to add hill shading. See <a href="http://www.openfietsmap.nl/procedure">http://www.openfietsmap.nl/procedure</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64527/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Jul '18, 13:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0f5ffc3756c4662b9dfad80b7665ac6c?s=32&amp;d=identicon&amp;r=g" alt="ligfietser's gravatar image" />
+    <p><a href="/users/1077/ligfietser">ligfietser</a><br/>
+    <span class="score" title="2894 reputation points"><span class="">2.9k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="27 badges"><span class="silver">&#9679;</span><span class="badgecount">27</span></span><span title="57 badges"><span class="bronze">&#9679;</span><span class="badgecount">57</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ligfietser has 8 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64527">
+    
+</div>
+<div id="comment-tools-64527" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64527-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/64499/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='TMxKpIfBAaWeIT737ph0yC1sYSKtaKUE' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64499/getting-contour-linesshading-in-osm-maps?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64499/getting-contour-linesshading-in-osm-maps?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/garmin/"
+            class="tag-link-garmin"
+            title="see questions tagged'garmin'using tags"
+            rel="tag">garmin</a> <span class="tag-number">&#215;309</span><br/>
+        
+        <a href="/tags/hillshading/"
+            class="tag-link-hillshading"
+            title="see questions tagged'hillshading'using tags"
+            rel="tag">hillshading</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/contourline/"
+            class="tag-link-contourline"
+            title="see questions tagged'contourline'using tags"
+            rel="tag">contourline</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 3, 2018, 9:36 a.m.">03 Jul '18, 09:36</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>22,761 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 4, 2018, 1:20 p.m.">04 Jul '18, 13:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/20751/how-install-osm-map-in-garmin-system-not-in-micro-sd">How Install OSM map in Garmin System? (not in Micro SD)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23246/do-i-need-to-buy-garmin-maps-if-there-is-osm">Do I need to buy Garmin Maps if there is OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5174/can-you-download-maps-onto-a-garmin-gps-for-a-bike">Can you download maps onto a Garmin GPS for a bike.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13635/how-to-export-map-to-my-garmin-edge-800">[closed] How to export map to my Garmin Edge 800</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22065/added-map-not-listed-in-garmin-nuvi-2455lmt-mymap">Added map not listed in Garmin Nuvi 2455LMT &#39;myMap&#39;.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22707/how-to-change-the-appearance-ie-remove-the-cross-hatching-lines-of-the-map-on-basecamp">How to change the appearance (i.e. remove the cross hatching lines) of the map on BaseCamp</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1809/how-to-install-mkgmap">How to install MKGMAP?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4006/why-does-an-osm-map-on-my-garmin-look-different-to-the-web-site">Why does an OSM map on my Garmin look different to the web site?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8377/how-to-download-map-of-africa-for-garmin">How to download map of Africa for Garmin?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23283/usa-map-for-garmin-nuvi-255">USA map for Garmin Nuvi 255?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Änderungen speichern nicht möglich. Fehler: Version mismatch: Provided 4, server had: 6 … - OSM Help</title>
+        <meta name="description" content="Seit Tagen versuche ich gemachte Einträge zu speichern und es kommt immer diese Fehlermeldung: „Beim Speichern ist ein Fehler aufgetreten Version mismatch: Provided 4, server had: 6 of Way 320298294“  Ich finde nirgends eine Erklärung für diese Meldung." />
+        <meta name="keywords" content="conflicts,speichern,mismatch,konflikt,lang-de" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/40460/anderungen-speichern-nicht-moglich-fehler-version-mismatch-provided-4-server-had-6" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/40460/anderungen-speichern-nicht-moglich-fehler-version-mismatch-provided-4-server-had-6?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='5SBv4rlTR4UwLygZM5A7KqBHRcbkjzDG' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/40460/anderungen-speichern-nicht-moglich-fehler-version-mismatch-provided-4-server-had-6">Änderungen speichern nicht möglich. Fehler: Version mismatch: Provided 4, server had: 6 …</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-40460-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40460/up/" rel="nofollow"> </a>
+<div id="post-40460-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-40460-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40460/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/40460/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Seit Tagen versuche ich gemachte Einträge zu speichern und es kommt immer diese Fehlermeldung:</p>
+<pre><code>„Beim Speichern ist ein Fehler aufgetreten
+Version mismatch: Provided 4, server had: 6 of Way 320298294“
+</code></pre>
+<p>Ich finde nirgends eine Erklärung für diese Meldung.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/conflicts/" class="post-tag tag-link-conflicts"
+                                        title="see questions tagged 'conflicts'" rel="tag">conflicts</a>
+                                
+                                    <a href="/tags/speichern/" class="post-tag tag-link-speichern"
+                                        title="see questions tagged 'speichern'" rel="tag">speichern</a>
+                                
+                                    <a href="/tags/mismatch/" class="post-tag tag-link-mismatch"
+                                        title="see questions tagged 'mismatch'" rel="tag">mismatch</a>
+                                
+                                    <a href="/tags/konflikt/" class="post-tag tag-link-konflikt"
+                                        title="see questions tagged 'konflikt'" rel="tag">konflikt</a>
+                                
+                                    <a href="/tags/lang-de/" class="post-tag tag-link-lang-de"
+                                        title="see questions tagged 'lang-de'" rel="tag">lang-de</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Jan '15, 12:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/458ab44f2d7b351a92ed30aa4446c36d?s=32&amp;d=identicon&amp;r=g" alt="Sch%C3%B6nberger's gravatar image" />
+    <p><a href="/users/10350/schonberger">Schönberger</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Schönberger has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/40460/">
+                edited
+                <strong>18 Jan '15, 15:06</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-40460">
+    
+        <a name="40461"></a>
+        <div class="comment" id="comment-40461">
+            <div id="post-40461-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It's the same problem as <a href="https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit</a> but could really do with a decent answer written in native German.</p></div>
+            <div class="comment-info" id="comment-40461-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '15, 13:04)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40463"></a>
+        <div class="comment" id="comment-40463">
+            <div id="post-40463-score" class="comment-score"></div>
+            <div class="comment-text"><p>Man kann mir auch auf französisch, esperanto oder englisch antworten!</p></div>
+            <div class="comment-info" id="comment-40463-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '15, 13:37)</span>
+                <a class="comment-user userinfo" href="/users/10350/schonberger">Schönberger</a>
+                
+            </div>
+        </div>
+    
+        <a name="40464"></a>
+        <div class="comment" id="comment-40464">
+            <div id="post-40464-score" class="comment-score">2</div>
+            <div class="comment-text"><p>englische Antworten findest du bei älteren Fragen zum gleichen Thema: <a href="/tags/conflicts/?sort=mostvoted">"conflicts"</a> (z.B. jene, die SomeoneElse heraussuchte)</p></div>
+            <div class="comment-info" id="comment-40464-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '15, 14:35)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49496"></a>
+        <div class="comment" id="comment-49496">
+            <div id="post-49496-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've described a workaround here: <a href="http://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit/49473.">http://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit/49473.</a> You're welcome to translate it and post it as an answer here in case it may help someone in their own Muttersprache :)</p></div>
+            <div class="comment-info" id="comment-49496-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '16, 10:32)</span>
+                <a class="comment-user userinfo" href="/users/11143/carciofo">carciofo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40460" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40460-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/40460/anderungen-speichern-nicht-moglich-fehler-version-mismatch-provided-4-server-had-6?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/40460/anderungen-speichern-nicht-moglich-fehler-version-mismatch-provided-4-server-had-6?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/40460/anderungen-speichern-nicht-moglich-fehler-version-mismatch-provided-4-server-had-6?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/40460/anderungen-speichern-nicht-moglich-fehler-version-mismatch-provided-4-server-had-6?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="40466"></a>
+                    <div id="answer-container-40466" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40466-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40466/up/" rel="nofollow"> </a>
+<div id="post-40466-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-40466-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40466/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Dein Problem wird üblicherweise "Konflikt" genannt. Jemand (evtl. sogar du) hat, nachdem du die bestehenden OSM-Daten heruntergeladen hast (Version 4), eine Änderung an jenen Daten gemacht (Version 6), die du nun auch bearbeitet hast. Es betrifft laut der Fehlermeldung <a href="//www.openstreetmap.org/way/320298294">way 320298294</a> (<a href="http://osm.mapki.com/history/way.php?id=320298294">deep diff</a>, <a href="http://osmlab.github.io/osm-deep-history/#/way/320298294">deep history</a>). Wie du siehst, warst du das selbst.</p>
+<p>Um das Problem mit dem von dir verwendeten <a href="//wiki.openstreetmap.org/wiki/DE:Comparison_of_editors">Editor</a> iD zu umgehen: Du kannst nun solange Änderungen rückgängig machen ("undo"), und speichern der <em>verbleibenden</em> vorgenommenen Änderungen versuchen, bis es klappt. Es klappt nur dann, wenn an dem Weg 320298294 keine Änderungen mehr gemacht werden. Eine technisch <a href="/questions/34325/id-conflict-of-a-bigger-edit-not-resolvable-in-web-editor-because-of-changed-telephone-number/34340">komplizierte Variante</a> (englisch) gäbe es auch noch. <br>
+Würdest du den Editor JOSM verwenden, könntest du den <a href="https://josm.openstreetmap.de/wiki/Help/Concepts/Conflict">Konflikt</a> auch manuell <a href="https://josm.openstreetmap.de/wiki/Help/Dialog/Conflict">lösen</a>.</p>
+<p>Da du natürlich auch den Weg 320298294 bearbeiten willst: das geht, indem du dir neue Daten vom Server holst.  Es müsste klappen, wenn du den Editor komplett schließt und wieder neu öffnest (und, bei eventueller Nachfrage durch den Editor, die alte Bearbeitung nicht wiederherstellst).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40466/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jan '15, 14:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/40466/">
+                edited
+                <strong>19 Jan '15, 11:58</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40466">
+    
+        <a name="40478"></a>
+        <div class="comment" id="comment-40478">
+            <div id="post-40478-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Danke für die ausführliche Erklärung! Ich habe „seit Tagen“ immer wieder mal OSM aufgemacht um zu gucken ob es jetzt vielleicht weiter geht und dann natürlich immer wieder „wieder herstellen“ ausgewählt, ich wollte ja die gemachte Arbeit nicht verlieren. In die Tiefen der History eindringen kann ich nicht wirklich da ich Englisch nicht gut genug verstehe und dann Angst habe aus Missverständnissen heraus noch mehr kaputt zu machen. Letztlich habe ich jetzt eben meine Änderungen verworfen um weiterzukommen. Gelernt habe ich daraus einfach öfters zwischenzuspeichern.</p></div>
+            <div class="comment-info" id="comment-40478-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '15, 14:13)</span>
+                <a class="comment-user userinfo" href="/users/10350/schonberger">Schönberger</a>
+                
+            </div>
+        </div>
+    
+        <a name="40480"></a>
+        <div class="comment" id="comment-40480">
+            <div id="post-40480-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/10350/schonberger">@Schönberger</a>: Super, danke für deine Beschreibung, das ist gut zu wissen! Und, genau, in kleineren Einheiten zu speichern mildert dieses Problem.  Irgendetwas ist hier ja auch schiefgelaufen (denn der Konflikt trat ja mit dir selbst auf – was im Normalfall nicht passieren sollte), wieso weiß ich nicht genau: Möglicherweise hast du den Editor in zwei Browserfenstern/-tabs gleichzeitig geöffnet? Es kann natürlich auch ein (nun schlecht nachvollziehbarer) Programmierfehler im Editor sein.</p></div>
+            <div class="comment-info" id="comment-40480-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '15, 16:20)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40481"></a>
+        <div class="comment" id="comment-40481">
+            <div id="post-40481-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Ja, das wars wahrscheinlich, ich hatte mehrere Tabs gleichzeitig im Brauser offen.</p></div>
+            <div class="comment-info" id="comment-40481-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '15, 16:32)</span>
+                <a class="comment-user userinfo" href="/users/10350/schonberger">Schönberger</a>
+                
+            </div>
+        </div>
+    
+        <a name="40482"></a>
+        <div class="comment" id="comment-40482">
+            <div id="post-40482-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/10350/schonberger">@Schönberger</a>: das kannst du zwar prinzipiell machen, musst dann aber – wie gemerkt – darauf achten, dass du nicht das gleiche Objekt in mehr als einer Editorsitzung bearbeitest. Am besten vermeidest du es den Editor mehrmals zu öffnen.</p></div>
+            <div class="comment-info" id="comment-40482-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '15, 16:40)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40466" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40466-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/40460/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='5SBv4rlTR4UwLygZM5A7KqBHRcbkjzDG' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40460/anderungen-speichern-nicht-moglich-fehler-version-mismatch-provided-4-server-had-6?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40460/anderungen-speichern-nicht-moglich-fehler-version-mismatch-provided-4-server-had-6?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lang-de/"
+            class="tag-link-lang-de"
+            title="see questions tagged'lang-de'using tags"
+            rel="tag">lang-de</a> <span class="tag-number">&#215;286</span><br/>
+        
+        <a href="/tags/conflicts/"
+            class="tag-link-conflicts"
+            title="see questions tagged'conflicts'using tags"
+            rel="tag">conflicts</a> <span class="tag-number">&#215;27</span><br/>
+        
+        <a href="/tags/mismatch/"
+            class="tag-link-mismatch"
+            title="see questions tagged'mismatch'using tags"
+            rel="tag">mismatch</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/speichern/"
+            class="tag-link-speichern"
+            title="see questions tagged'speichern'using tags"
+            rel="tag">speichern</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/konflikt/"
+            class="tag-link-konflikt"
+            title="see questions tagged'konflikt'using tags"
+            rel="tag">konflikt</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 18, 2015, 12:52 p.m.">18 Jan '15, 12:52</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,697 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 29, 2016, 10:32 a.m.">29 Apr '16, 10:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/36044/error-saving-changes-version-mismatch">Error saving changes - Version mismatch</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22880/wie-wird-meine-kartenanderung-sichtbar-und-wirksam-erst-revision-notig">[closed] Wie wird meine Kartenänderung sichtbar und wirksam? Erst Revision nötig?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">How do I find a way by ID in iD to fix &quot;version mismatch&quot; and then save my edit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34325/id-conflict-of-a-bigger-edit-not-resolvable-in-web-editor-because-of-changed-telephone-number">ID conflict of a bigger edit not resolvable in web editor because of changed telephone number</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32830/error-saving-changes-what-does-version-mismatch-provided-1-server-had-2-of-way-250295839-mean">Error saving changes.  What does &quot;Version mismatch: Provided 1, server had: 2 of Way 250295839&quot; mean?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27099/speicherfehler">[closed] Speicherfehler?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3755/map-rendering-update-after-resolving-conflicts">Map rendering update after resolving conflicts</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3652/wie-bekomme-ich-openstreetmap-auf-mein-garmin-dakota-20">Wie bekomme ich OpenStreetMap auf mein Garmin Dakota 20?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2156/karte-mit-zum-beispiel-eingeblendetem-wanderweg-drucken">Karte mit zum Beispiel eingeblendetem Wanderweg drucken?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5245/schwarzplan-hauser-fur-ganz-deutschland">Schwarzplan Häuser für ganz Deutschland?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

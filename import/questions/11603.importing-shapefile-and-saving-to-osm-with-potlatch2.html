@@ -1,0 +1,789 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Importing shapefile and saving to OSM with Potlatch2 - OSM Help</title>
+        <meta name="description" content="Hi. I have created a shapefile (.shp) by myself in GIS software. Data is my and I didn&#39;t take it from anybody else. This file contains a few bildings in form of closed lines ( I can also make polygons from them ). Im importing this file into Potlatch, and I can see my buildings. Great. So Im catchin..." />
+        <meta name="keywords" content="shp,shapefile,gis,potlatch2,import" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hoyXiPgs3pi5DZdWPV2aPVZKS79Tqomt' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2">Importing shapefile and saving to OSM with Potlatch2</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-11603-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11603/up/" rel="nofollow"> </a>
+<div id="post-11603-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-11603-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11603/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/11603/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi.
+I have created a shapefile (.shp) by myself in GIS software. Data is my and I didn't take it from anybody else. This file contains a few bildings in form of closed lines ( I can also make polygons from them ). Im importing this file into Potlatch, and I can see my buildings. Great. So Im catching one of the buildings, giving the name to it, changing the building type and ... Save button is not clickable. OSM didn't acknowledged any changes. The building is not there. Ok. Im trying in different way. Catching the building, clicking Create parallel way button, and making a new shape around the building. I can see new building shape around my own. Im giving it a name, and .. nothing. This shape is not recorded as a change in OSM. After I restart my browser .. changes are disappearing. The only way to put the shapes of my buildings is to manually recreate the paths on them and then I can normally save.
+WTF? Is it some kind of protection against people who might irresponsibly import too much data? Or am i doing something wrong? Maybe I didt'n check some checkbox? Please help. I put a lot of effort to make digitize these building in GIS soft, and I dont want to create them again! It would be possible if the coursor will snap to my existing buiding shapes, but its not snapping:(</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/shp/" class="post-tag tag-link-shp"
+                                        title="see questions tagged 'shp'" rel="tag">shp</a>
+                                
+                                    <a href="/tags/shapefile/" class="post-tag tag-link-shapefile"
+                                        title="see questions tagged 'shapefile'" rel="tag">shapefile</a>
+                                
+                                    <a href="/tags/gis/" class="post-tag tag-link-gis"
+                                        title="see questions tagged 'gis'" rel="tag">gis</a>
+                                
+                                    <a href="/tags/potlatch2/" class="post-tag tag-link-potlatch2"
+                                        title="see questions tagged 'potlatch2'" rel="tag">potlatch2</a>
+                                
+                                    <a href="/tags/import/" class="post-tag tag-link-import"
+                                        title="see questions tagged 'import'" rel="tag">import</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Mar '12, 17:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3b86cd8dac1e509a6df310d28580fc25?s=32&amp;d=identicon&amp;r=g" alt="elmuSSo's gravatar image" />
+    <p><a href="/users/3204/elmusso">elmuSSo</a><br/>
+    <span class="score" title="36 reputation points">36</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="elmuSSo has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/11603/">
+                edited
+                <strong>30 Mar '12, 14:54</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f09c0b7a655fed386e070e036e2da248?s=32&amp;d=identicon&amp;r=g" alt="dieterdreist's gravatar image" />
+            <p><a href="/users/936/dieterdreist">dieterdreist</a><br/>
+            <span class="score" title="3677 reputation points"><span class="">3.7k</span></span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="67 badges"><span class="bronze">&#9679;</span><span class="badgecount">67</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-11603">
+    
+</div>
+<div id="comment-tools-11603" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11603-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="11656"></a>
+                    <div id="answer-container-11656" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11656-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11656/up/" rel="nofollow"> </a>
+<div id="post-11656-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-11656-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11656/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Shapefiles are loaded into a background layer. It sounds like you are editing the data while it's still in the background layer.</p>
+<p>You need to "pull through" the data from the background (shapefile) layer, to the main editable layer. To do this, simply alt-click the object. Once you've done that, you'll be able to save it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11656/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Mar '12, 13:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11656">
+    
+        <a name="11660"></a>
+        <div class="comment" id="comment-11660">
+            <div id="post-11660-score" class="comment-score"></div>
+            <div class="comment-text"><p>You are my hero. Cheers!</p></div>
+            <div class="comment-info" id="comment-11660-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Mar '12, 14:25)</span>
+                <a class="comment-user userinfo" href="/users/3204/elmusso">elmuSSo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11656" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11656-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="11646"></a>
+                    <div id="answer-container-11646" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11646-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11646/up/" rel="nofollow"> </a>
+<div id="post-11646-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-11646-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11646/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Potlatch isn't really meant for what you're trying to accomplish. The best approach is to convert the <a href="http://wiki.openstreetmap.org/wiki/Shapefile">Shapefile</a> to an <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">OSM</a> file using a tool like <a href="http://wiki.openstreetmap.org/wiki/Ogr2osm">ogr2osm</a>, conflate the results with buildings that already exist in the OSM database using <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>, then upload. Be sure and read the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a>, and if you have more than a handful of buildings first discuss it with the <a href="http://lists.openstreetmap.org/listinfo/imports">imports@ mailing list</a>. If you'd like help with this process, I'd be glad to assist as I've done this process several times and am aware of the pitfalls, best practices, etc. Try putting your Shapefile online using Dropbox or a similar tool, so then others like myself can take a look and help you out.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11646/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Mar '12, 15:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ba99ad3778972fee07700e1eb36cc822?s=32&amp;d=identicon&amp;r=g" alt="JoshD's gravatar image" />
+    <p><a href="/users/701/joshd">JoshD</a><br/>
+    <span class="score" title="300 reputation points">300</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JoshD has one accepted answer">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11646">
+    
+        <a name="11655"></a>
+        <div class="comment" id="comment-11655">
+            <div id="post-11655-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are 41 structures. I'm guessing you didn't use Bing imagery for this, since Bing isn't of sufficient resolution. Your structures are offset from Bing by about 7 meters; do you know if the imagery you used has better spatial accuracy then Bing? The existing roads are offset from Bing by 3-7 meters as well. Also from what I can tell there aren't really any attributes like height, building type, etc. Since the number isn't too great, once I understand the offset issue, I can add them for you easily.</p></div>
+            <div class="comment-info" id="comment-11655-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Mar '12, 12:15)</span>
+                <a class="comment-user userinfo" href="/users/701/joshd">JoshD</a>
+                
+            </div>
+        </div>
+    
+        <a name="11661"></a>
+        <div class="comment" id="comment-11661">
+            <div id="post-11661-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks, but now with Richard's help I can do that easily. And yes, BING maps are terrible in accuracy:)</p></div>
+            <div class="comment-info" id="comment-11661-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Mar '12, 14:29)</span>
+                <a class="comment-user userinfo" href="/users/3204/elmusso">elmuSSo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11646" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11646-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/11603/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hoyXiPgs3pi5DZdWPV2aPVZKS79Tqomt' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/potlatch2/"
+            class="tag-link-potlatch2"
+            title="see questions tagged'potlatch2'using tags"
+            rel="tag">potlatch2</a> <span class="tag-number">&#215;210</span><br/>
+        
+        <a href="/tags/import/"
+            class="tag-link-import"
+            title="see questions tagged'import'using tags"
+            rel="tag">import</a> <span class="tag-number">&#215;196</span><br/>
+        
+        <a href="/tags/shapefile/"
+            class="tag-link-shapefile"
+            title="see questions tagged'shapefile'using tags"
+            rel="tag">shapefile</a> <span class="tag-number">&#215;87</span><br/>
+        
+        <a href="/tags/gis/"
+            class="tag-link-gis"
+            title="see questions tagged'gis'using tags"
+            rel="tag">gis</a> <span class="tag-number">&#215;37</span><br/>
+        
+        <a href="/tags/shp/"
+            class="tag-link-shp"
+            title="see questions tagged'shp'using tags"
+            rel="tag">shp</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 29, 2012, 5:50 p.m.">29 Mar '12, 17:50</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,723 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 31, 2012, 2:29 p.m.">31 Mar '12, 14:29</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/18166/ogr2osm-imported-data-shifted-by-176m-222exported-from-arcgis">Ogr2Osm: Imported data shifted by 176m, 222°(exported from ArcGIS)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31868/how-do-i-convert-shp-files-to-gpx">How do I convert shp files to GPX</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21154/importing-only-items-with-certain-tags-into-qgis">Importing only items with certain Tags into QGIS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9622/numeros-de-portal-en-shp-como-los-subo-todos-de-una-en-addrhousenumber">números de portal en SHP como los subo todos de una en addr:housenumber</a>
+        </p>
+        
+        <p>
+            <a href="/questions/148/how-can-i-use-openstreetmap-data-in-my-gis-program">How can I use OpenStreetMap data in my GIS program?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19857/how-to-upload-the-map-of-a-place-made-with-gis">how to upload the map of a place made with GIS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6907/how-to-download-the-territorial-borders-violet-line-as-a-shapefile">how to download the territorial borders (violet line) as a shapefile</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5716/can-i-import-shape-files">Can I import shape files?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8444/is-there-any-possibility-to-download-data-into-shape-format-shp">Is there any possibility to download data into shape format? (.shp)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13287/create-local-new-osm-file-from-3rd-party-shapefile">Create local new .osm file from 3rd party shapefile</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

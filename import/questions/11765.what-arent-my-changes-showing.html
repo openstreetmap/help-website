@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>What aren&#39;t my changes showing? - OSM Help</title>
+        <meta name="description" content="Taking my chances of sounding like a vain noob (which I probably am ;-) ), I cannot help but wonder why some of my edits do not seem to show up in the map even months after the original edit? Here is an example: http://www.openstreetmap.org/browse/changeset/8383938 What am I doing wrong?" />
+        <meta name="keywords" content="changeset,missing" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/11765/what-arent-my-changes-showing" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/11765/what-arent-my-changes-showing?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='iRRlojGITETHxzNmGdLQYIGIvehc1GCY' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/11765/what-arent-my-changes-showing">What aren&#39;t my changes showing?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-11765-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11765/up/" rel="nofollow"> </a>
+<div id="post-11765-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-11765-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11765/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/11765/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Taking my chances of sounding like a vain noob (which I probably am ;-) ), I cannot help but wonder why some of my edits do not seem to show up in the map even months after the original edit?</p>
+<p>Here is an example:</p>
+<p><a href="http://www.openstreetmap.org/browse/changeset/8383938">http://www.openstreetmap.org/browse/changeset/8383938</a></p>
+<p>What am I doing wrong?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/changeset/" class="post-tag tag-link-changeset"
+                                        title="see questions tagged 'changeset'" rel="tag">changeset</a>
+                                
+                                    <a href="/tags/missing/" class="post-tag tag-link-missing"
+                                        title="see questions tagged 'missing'" rel="tag">missing</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Apr '12, 11:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/892a25e57a4163a40667f5388bbcaa31?s=32&amp;d=identicon&amp;r=g" alt="MarkTwain's gravatar image" />
+    <p><a href="/users/3265/marktwain">MarkTwain</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="MarkTwain has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-11765">
+    
+        <a name="11802"></a>
+        <div class="comment" id="comment-11802">
+            <div id="post-11802-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your feedback, Chris.</p>
+
+<p>The whole changeset <a href="http://www.openstreetmap.org/browse/changeset/10999571">http://www.openstreetmap.org/browse/changeset/10999571</a> looks like a mistake, probably just someone doodling around. Needless to say, I have not received any reply to my enquiry to "kirasternchen", the party involved. As my time is rather limited, <strong>how can I find/contact other mappers working on the same region?</strong> Maybe one of them is able to help? "Reverts" seem to be beyond my abilities for now (I just use Potlatch).</p></div>
+            <div class="comment-info" id="comment-11802-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '12, 23:54)</span>
+                <a class="comment-user userinfo" href="/users/3265/marktwain">MarkTwain</a>
+                
+            </div>
+        </div>
+    
+        <a name="11884"></a>
+        <div class="comment" id="comment-11884">
+            <div id="post-11884-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry, it's me again.</p>
+
+<p>"kirasternchen" has not replied to my messages and I am not able to revert the changes that person did (there does not seem to be such an option in Potlatch). On top of that I still have no clue how to find fellow OSM mappers around the region in question who might be able to help.</p>
+
+<p><strong>Thus, let me appeal to any of you with the ability to do reverts to please revert the changeset <a href="http://www.openstreetmap.org/browse/changeset/10999571">http://www.openstreetmap.org/browse/changeset/10999571</a></strong></p>
+
+<p>Thank you so much for your help.</p></div>
+            <div class="comment-info" id="comment-11884-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Apr '12, 21:58)</span>
+                <a class="comment-user userinfo" href="/users/3265/marktwain">MarkTwain</a>
+                
+            </div>
+        </div>
+    
+        <a name="11918"></a>
+        <div class="comment" id="comment-11918">
+            <div id="post-11918-score" class="comment-score"></div>
+            <div class="comment-text"><p>Maybe you should allow some more time for "Kirasternchen" to answer. Some of us don't log in to OSM that often, and sometimes it takes a couple of weeks for us to answer.</p>
+
+<p>Meanwhile, try JOSM to edit your maps. It's worth it.</p></div>
+            <div class="comment-info" id="comment-11918-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '12, 18:05)</span>
+                <a class="comment-user userinfo" href="/users/3259/samel">samel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11765" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11765-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/11765/what-arent-my-changes-showing?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/11765/what-arent-my-changes-showing?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/11765/what-arent-my-changes-showing?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/11765/what-arent-my-changes-showing?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="11768"></a>
+                    <div id="answer-container-11768" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11768-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11768/up/" rel="nofollow"> </a>
+<div id="post-11768-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-11768-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11768/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Checking each of the nodes in turn, a number of them have been deleted since then. Of those that remain, such as <a href="http://www.openstreetmap.org/browse/node/820874257">http://www.openstreetmap.org/browse/node/820874257</a> there are no tags on the node which will render in any of the renderings available at <a href="http://www.openstreetmap.org"></a><a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a> though they may render on renders done elsewhere.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11768/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Apr '12, 11:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f25a8392e12ed696b16554b3d08e4e2b?s=32&amp;d=identicon&amp;r=g" alt="EdLoach's gravatar image" />
+    <p><a href="/users/339/edloach">EdLoach ♦</a><br/>
+    <span class="score" title="19478 reputation points"><span class="">19.5k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="156 badges"><span class="silver">&#9679;</span><span class="badgecount">156</span></span><span title="280 badges"><span class="bronze">&#9679;</span><span class="badgecount">280</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="EdLoach has 93 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11768">
+    
+</div>
+<div id="comment-tools-11768" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11768-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="11767"></a>
+                    <div id="answer-container-11767" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11767-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11767/up/" rel="nofollow"> </a>
+<div id="post-11767-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-11767-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11767/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This help forum is not the ideal place to ask such questions, as they are of a transient nature. In this forum we attempt to collect questions and answers that form a body of documentation; the answer to this very concrete question is probably not useful to many people in the future. Placing the question on a mailing list or on IRC would have been more appropriate!</p>
+<p>In your specific case, most of your edits seem to have been deleted by user "kirasternchen" and therefore nothing appears on the map.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11767/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Apr '12, 11:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11767">
+    
+        <a name="11779"></a>
+        <div class="comment" id="comment-11779">
+            <div id="post-11779-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/104/frederik-ramm">@Frederik</a>: I apologize for my mistake, but I had suspected my inquiry to be about a more general problem than just another user deleting my nodes. Sorry, as mentioned before, I consider myself a noob.</p>
+
+<p><strong><a href="/users/400/alleskan">@all</a>:</strong> I cannot help but wonder what to do about this. After all, the nodes I added are all still valid (actually I had logged on to make changes to four classrooms that were relocated yesterday). Anyway, it is hard to follow the logic in removing a "public restroom" node, for instance. ;-)</p></div>
+            <div class="comment-info" id="comment-11779-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Apr '12, 18:10)</span>
+                <a class="comment-user userinfo" href="/users/3265/marktwain">MarkTwain</a>
+                
+            </div>
+        </div>
+    
+        <a name="11801"></a>
+        <div class="comment" id="comment-11801">
+            <div id="post-11801-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Ask the guy who deleted the data. Look at the changeset listed above, click on a node that has been deleted and you will see the user who deleted it. If you click on his link you can send him a message.</p>
+
+<p>If you think his removals are vandalism they can be reverted, but the sooner you act the better, reverting edits is much harder if the data has been subsequently edited. Try IRC or a mailing list for individual help. (see <a href="http://wiki.openstreetmap.org/wiki/IRC">http://wiki.openstreetmap.org/wiki/IRC</a> and <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a> )</p></div>
+            <div class="comment-info" id="comment-11801-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '12, 21:36)</span>
+                <a class="comment-user userinfo" href="/users/34/chrish">ChrisH</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11767" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11767-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/11765/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='iRRlojGITETHxzNmGdLQYIGIvehc1GCY' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11765/what-arent-my-changes-showing?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11765/what-arent-my-changes-showing?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/changeset/"
+            class="tag-link-changeset"
+            title="see questions tagged'changeset'using tags"
+            rel="tag">changeset</a> <span class="tag-number">&#215;127</span><br/>
+        
+        <a href="/tags/missing/"
+            class="tag-link-missing"
+            title="see questions tagged'missing'using tags"
+            rel="tag">missing</a> <span class="tag-number">&#215;88</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 6, 2012, 11:08 a.m.">06 Apr '12, 11:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,826 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 11, 2012, 6:11 p.m.">11 Apr '12, 18:11</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/64335/missing-icon-in-changeset-view-for-tourismwilderness_hut">Missing icon in changeset view for tourism=wilderness_hut</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1015/large-part-of-map-missing">Large part of map missing !</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3915/how-do-i-add-an-upload-comment-in-merkaartor">How do I add an upload comment in Merkaartor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1895/how-to-close-a-changeset-in-potlatch-2">How to close a changeset in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2017/how-can-i-import-data-to-osm-from-a-csv-file">How can I import data to OSM from a .csv file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2603/what-does-incomplete-mean-for-a-changeset">What does &quot;incomplete&quot; mean for a changeset?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1518/can-i-visualize-show-changeset-on-a-map-somehow">Can I visualize (show) changeset on a map somehow?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3983/how-do-you-display-only-local-edits-in-the-changelog">How do you display only local edits in the changelog?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4664/way-missing-nodes">Way missing nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/816/how-can-i-draw-attention-of-other-osm-users-to-unnamed-and-missing-streets-in-a-city">How can I draw attention of other OSM users to unnamed and missing streets in a city?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

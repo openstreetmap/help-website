@@ -1,0 +1,1141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to use waypoints which have been collected by GPS for mapping? - OSM Help</title>
+        <meta name="description" content="Hi all, It was my first time using a GPS for mapping last week. As we were hiking, me and my colleagues would take &#39;Marks&#39; with our two Garmin etrex Legend HCx. I was trying to upload our work to OSM earlier, but would always get them rejected because there were &#39;no good GPX points in the input data..." />
+        <meta name="keywords" content="waypoints,tracks,upload,markers,gps" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='py1fzIDsF7eDlyC3jAmqkIeacFDbB24D' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping">How to use waypoints which have been collected by GPS for mapping?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-24299-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24299/up/" rel="nofollow"> </a>
+<div id="post-24299-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-24299-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24299/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/24299/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all,</p>
+<p>It was my first time using a GPS for mapping last week.  As we were hiking, me and my colleagues would take 'Marks' with our two Garmin etrex Legend HCx.  I was trying to upload our work to OSM earlier, but would always get them rejected because there were 'no good GPX points in the input data'.  After some research it seems that OSM uses tracks, and that only tracks can be uploaded to the site and downloaded to JOSM.</p>
+<p>I have a couple questions:</p>
+<ol>
+<li>Is it correct that OSM only uses tracks?</li>
+<li>Also, is there any way to salvage the marks that we collected and turn them into usable data points?</li>
+<li>If so, how can I transfer this data to my PC and visualize the marks on a map?  I tried using MapSource, but upon loading there is no map image in the background.</li>
+</ol>
+<p>Thank you in advance.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/waypoints/" class="post-tag tag-link-waypoints"
+                                        title="see questions tagged 'waypoints'" rel="tag">waypoints</a>
+                                
+                                    <a href="/tags/tracks/" class="post-tag tag-link-tracks"
+                                        title="see questions tagged 'tracks'" rel="tag">tracks</a>
+                                
+                                    <a href="/tags/upload/" class="post-tag tag-link-upload"
+                                        title="see questions tagged 'upload'" rel="tag">upload</a>
+                                
+                                    <a href="/tags/markers/" class="post-tag tag-link-markers"
+                                        title="see questions tagged 'markers'" rel="tag">markers</a>
+                                
+                                    <a href="/tags/gps/" class="post-tag tag-link-gps"
+                                        title="see questions tagged 'gps'" rel="tag">gps</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Jul '13, 07:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6f095e0264522bb2e517a0974947ce77?s=32&amp;d=identicon&amp;r=g" alt="mmenez's gravatar image" />
+    <p><a href="/users/6880/mmenez">mmenez</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmenez has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/24299/">
+                edited
+                <strong>18 Jul '13, 23:30</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-24299">
+    
+</div>
+<div id="comment-tools-24299" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24299-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="24311"></a>
+                    <div id="answer-container-24311" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24311-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24311/up/" rel="nofollow"> </a>
+<div id="post-24311-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-24311-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24311/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can load gpx files with waypoints in nearly every OSM editor (that is JOSM, iD and Potlatch2) directly from your local PC (without first uploading to OSM.org). They then also show waypoints. For iD: just drag a gpx file onto the editor map; for Potlatch2: Menu "background" → "Vector file" → "Open".</p>
+<p>In addition uploading gpx files with waypoints to the osm.org server is possible - but they also need to contain tracks (one track point with a time stamp is enough). As far as I know the waypoints are not available publicly but for yourself – at least Potlatch2 (loading your own traces via the gps menu) then also shows the waypoints with labels. <a href="//wiki.openstreetmap.org/wiki/Upload_Waypoints">There is also this slightly outdated how-to</a> for waypoints with Potlatch2. <a href="//wiki.openstreetmap.org/wiki/Upload_GPS_tracks#Uploading_Waypoints">Upload_GPS_tracks#Uploading_Waypoints</a> links to there.</p>
+<p>To just view gpx files </p>
+<ul>
+<li>you could use JOSM, iD or Potlatch2 with a mapnik background (no vector/data objects – iD: Menu "background settings" → "background" → "OpenStreetMap (Standard)"; Potlatch2: Menu "background" → "Vector file" → don't show "main"). </li>
+<li>you could also upload your gpx file to a website (some offer simple temporary upload without registration) to view it: see <a href="//wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a> in our docu wiki</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24311/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '13, 15:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/24311/">
+                edited
+                <strong>26 Jul '16, 21:40</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24311">
+    
+</div>
+<div id="comment-tools-24311" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24311-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24300"></a>
+                    <div id="answer-container-24300" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24300-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24300/up/" rel="nofollow"> </a>
+<div id="post-24300-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-24300-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24300/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yes, I'm pretty sure the "upload gpx" feature on the main website only accepts gpx with tracks.</p>
+<p>The <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a> editor allows you to load gpx files containing both tracks and waypoints. Normally on the eTrex, there will be two different files: one for the waypoints and one for the tracks.</p>
+<p>There are many options to view your points :</p>
+<ul>
+<li>Mapsource can definitely show a basemap, but I dont know it well enough to explain how to do it.</li>
+<li>For most desktop map and gpx viewing, I recomend <a href="http://marble.kde.org/">marble</a> which is light, simple , and versatile. It comes with some default osm maps but it is easy to add any other slippymap.</li>
+<li>Altough it may be overkill, <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a> can be a great way to view gpx files.</li>
+<li>Lastly, if you're ok with a little bit of coding, using a slippymap such as <a href="http://leafletjs.com/">leaflet</a> or <a href="http://www.openlayers.org/">openlayers</a> (by creating a local html file) is another versatile way to display gpx data.</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24300/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '13, 10:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d20f86db9a6f03cb070e9fbaaf0b7228?s=32&amp;d=identicon&amp;r=g" alt="Vincent%20de%20Phily's gravatar image" />
+    <p><a href="/users/867/vincent-de-phily">Vincent de P... ♦</a><br/>
+    <span class="score" title="17304 reputation points"><span class="">17.3k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="152 badges"><span class="silver">&#9679;</span><span class="badgecount">152</span></span><span title="249 badges"><span class="bronze">&#9679;</span><span class="badgecount">249</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vincent de Phily has 64 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24300">
+    
+        <a name="24302"></a>
+        <div class="comment" id="comment-24302">
+            <div id="post-24302-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you very much Vincent.  Let me try marble first and see how that goes.</p>
+
+<p>I will definitely remember to turn on Tracks next time.</p></div>
+            <div class="comment-info" id="comment-24302-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '13, 10:46)</span>
+                <a class="comment-user userinfo" href="/users/6880/mmenez">mmenez</a>
+                
+            </div>
+        </div>
+    
+        <a name="24309"></a>
+        <div class="comment" id="comment-24309">
+            <div id="post-24309-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I typically will collect the tracks but also mark waypoints at significant items. You can load the waypoints into JOSM and then enter the data for the item (park bench, bus stop, etc.) using the standard editing tools placing the node/point on top of the displayed waypoint(s).</p></div>
+            <div class="comment-info" id="comment-24309-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '13, 14:31)</span>
+                <a class="comment-user userinfo" href="/users/5918/n76">n76</a>
+                
+            </div>
+        </div>
+    
+        <a name="24322"></a>
+        <div class="comment" id="comment-24322">
+            <div id="post-24322-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just to clarify one point - the statement "Normally on the eTrex, there will be two different files: one for the waypoints and one for the tracks." isn't true, if you're using something using the Garmin drivers (which Mapsource does and I believe that GPSBabel can) to fetch data.  You can of course choose to fetch only waypoints or only tracks, but that's a user choice.  In addition, if you just fetch the GPS tracklog from the Garmin SD card rather than using e.g. Mapsource, it'll only have trackpoints in it, by design.</p></div>
+            <div class="comment-info" id="comment-24322-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '13, 18:16)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="24362"></a>
+        <div class="comment" id="comment-24362">
+            <div id="post-24362-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/387/someoneelse">@SomeoneElse</a>: This isn't my experience. I connect the eTrex as a usb mass storage, and there are "Waypoints_$DATE.gpx" files under Garmin/GPX and "$DATE.gpx" files under Garmin/GPX/Archive.</p>
+
+<p>It may be presented differently if using mapsource, but that's how files are laid out on my device. YMMV I guess :/</p></div>
+            <div class="comment-info" id="comment-24362-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 18:08)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="51026"></a>
+        <div class="comment" id="comment-51026">
+            <div id="post-51026-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/4975/vincent">@vincent</a>-de-phily what you're describing is indeed the case for "new" (at the time of this question, but now quite old!) Garmin devices.</p></div>
+            <div class="comment-info" id="comment-51026-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jul '16, 12:54)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24300" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24300-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24321"></a>
+                    <div id="answer-container-24321" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24321-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24321/up/" rel="nofollow"> </a>
+<div id="post-24321-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-24321-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24321/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <pre><code>Is it correct that OSM only uses tracks?
+</code></pre>
+<p>No, as has already been mentioned, most OSM editors are capable of processing GPX files containing both GPS tracks and waypoints, but in order to upload a GPX file to OSM there must be at least a small GPS track in the file as well.  <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/1056198">This track</a> is an example that I edited manually ages ago to show that it can be done.</p>
+<pre><code>Also, is there any way to salvage the marks that we collected and turn them into usable data points?
+</code></pre>
+<p>Yes, if you fake a short section of GPS track in the file with waypoints in it.  If you download <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/1056198">the example that I mentioned above</a> and look at it in a text editor, you'll see what needs to be added.</p>
+<p>If you find yourself wanting to work with GPS traces a lot, you might find <a href="http://wiki.openstreetmap.org/wiki/Gpsbabel">GPSBabel</a> useful.</p>
+<pre><code>If so, how can I transfer this data to my PC and visualize the marks on a map? I tried using MapSource, but upon loading there is no map image in the background.
+</code></pre>
+<p>It is possible to load OSM data into Mapsource, just as you can into Garmin devices using the output from mkgmap.  If you're doing it for the first time, I'd suggest looking at <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> (there's an FAQ <a href="http://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Frequently_Asked_Questions">here</a>).<br>
+</p>
+<p>Finally - a couple of notes about uploaded Waypoint support in OSM editors.  If you're using JOSM, you might want to have a read of <a href="https://help.openstreetmap.org/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">this previous question</a> and also <a href="https://help.openstreetmap.org/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details">this one</a> and <a href="https://help.openstreetmap.org/questions/17739/how-do-i-see-gpx-waypoints-in-josm">this one</a>.  <a href="https://help.openstreetmap.org/questions/2355/waypoint-handling-in-potlatch-2">This one</a> asks about Potlatch 2.  Potlatch 1 contains an extra useful "waypoint" feature - you can move unlocked items around, which makes placement easier, although because it lacks support for e.g. Bing imagery it can be difficult to work in just that.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24321/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '13, 18:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24321">
+    
+</div>
+<div id="comment-tools-24321" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24321-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="32782"></a>
+                    <div id="answer-container-32782" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32782-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32782/up/" rel="nofollow"> </a>
+<div id="post-32782-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-32782-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32782/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In iD I can actually simply drag and drop either the tracks or the waypoints directly from my garmin etrex unit connected as a usb mass storage device.  However I cant get them both to appear at the same time. (if theres a simple way to do that it would be convenient).</p>
+<p>If I have the track showing and I drag and drop the waypoints of a particualr day or session, the track dissapears and shows only the waypoints. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32782/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 May '14, 04:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66001846f0632f073fa821d84341d7cf?s=32&amp;d=identicon&amp;r=g" alt="Azzitizz's gravatar image" />
+    <p><a href="/users/3805/azzitizz">Azzitizz</a><br/>
+    <span class="score" title="445 reputation points">445</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="18 badges"><span class="bronze">&#9679;</span><span class="badgecount">18</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Azzitizz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32782">
+    
+</div>
+<div id="comment-tools-32782" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32782-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24305"></a>
+                    <div id="answer-container-24305" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24305-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24305/up/" rel="nofollow"> </a>
+<div id="post-24305-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-24305-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24305/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I usually edit with potlatch2 and under the Options tab tic show mouse pointer lat and lon. It displays in degrees and decimal degrees. Most hiking Garmins, the etrex included, can also be set to this format so you could transfer them manually. You may get better accuracy with a trace, more readings so a better average. Some times if i want to mark a crossing or small feature I will walk up and down a few metrers or arouund it so it can be seen in the trace. ( for best results set to record once a second if you have a micro SD installed).   Some garmins can average a mark ( the Vista HCX does and I think yours can to) if yours does you could try that next time.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24305/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '13, 12:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/24305/">
+                edited
+                <strong>17 Jul '13, 13:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24305">
+    
+</div>
+<div id="comment-tools-24305" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24305-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/24299/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='py1fzIDsF7eDlyC3jAmqkIeacFDbB24D' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/gps/"
+            class="tag-link-gps"
+            title="see questions tagged'gps'using tags"
+            rel="tag">gps</a> <span class="tag-number">&#215;235</span><br/>
+        
+        <a href="/tags/upload/"
+            class="tag-link-upload"
+            title="see questions tagged'upload'using tags"
+            rel="tag">upload</a> <span class="tag-number">&#215;117</span><br/>
+        
+        <a href="/tags/tracks/"
+            class="tag-link-tracks"
+            title="see questions tagged'tracks'using tags"
+            rel="tag">tracks</a> <span class="tag-number">&#215;61</span><br/>
+        
+        <a href="/tags/markers/"
+            class="tag-link-markers"
+            title="see questions tagged'markers'using tags"
+            rel="tag">markers</a> <span class="tag-number">&#215;37</span><br/>
+        
+        <a href="/tags/waypoints/"
+            class="tag-link-waypoints"
+            title="see questions tagged'waypoints'using tags"
+            rel="tag">waypoints</a> <span class="tag-number">&#215;35</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 17, 2013, 7:57 a.m.">17 Jul '13, 07:57</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,199 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 26, 2016, 9:40 p.m.">26 Jul '16, 21:40</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/79982/android-gps-logging-and-auto-upload-to-map">Android GPS Logging and auto upload to map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5440/why-arent-my-uploaded-gps-traces-shown-on-the-maps">Why aren&#39;t my uploaded GPS traces shown on the maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/297/does-it-make-sense-to-upload-aviation-tracks-to-osm">Does it make sense to upload aviation tracks to osm?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3739/how-to-get-lap-points-displayed-from-a-forerunner-305">How to get lap points displayed from a forerunner 305</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5137/satellite-images-versus-gps-tracks">Satellite Images versus GPS-Tracks</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5165/downloading-gps-tracks-from-openstreetmap">Downloading GPS tracks from OpenStreetMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3056/power-user-android-app">Power-user Android app?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3006/searching-gps-tracks-by-tags">Searching GPS tracks by tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/83/should-i-upload-gps-traces-for-regions-where-there-already-are-plenty-of">Should I upload GPS traces for regions where there already are plenty of?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4040/hdop-in-gpx-which-device-can-do-it">HDOP in GPX: which device can do it?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

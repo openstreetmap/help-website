@@ -1,0 +1,938 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Overlaying Rights of Way Data on top of OpenStreetMap - OSM Help</title>
+        <meta name="description" content="I&#39;m looking to overlay some of this Derbyshire Rights of Way data on top of OpenStreetMap to provide an online accessibility service for a not-for-profit initiative.  I&#39;m experienced in web technologies but not mapping. Is this feasible or am I looking at the wrong solution? --Richard" />
+        <meta name="keywords" content="rightsofway,overlay" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/78559/overlaying-rights-of-way-data-on-top-of-openstreetmap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/78559/overlaying-rights-of-way-data-on-top-of-openstreetmap?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='VJWtufsVHVTG6GhuW1K85yM2txRSHNAD' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/78559/overlaying-rights-of-way-data-on-top-of-openstreetmap">Overlaying Rights of Way Data on top of OpenStreetMap</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-78559-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/78559/up/" rel="nofollow"> </a>
+<div id="post-78559-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-78559-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/78559/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/78559/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm looking to overlay some of this <a href="https://www.derbyshire.gov.uk/leisure/countryside/access/rights-of-way/downloads/public-rights-of-way-digital-data.aspx">Derbyshire Rights of Way</a> data on top of OpenStreetMap to provide an online accessibility service for a not-for-profit initiative. </p>
+<p>I'm experienced in web technologies but not mapping.</p>
+<p>Is this feasible or am I looking at the wrong solution?</p>
+<p>--Richard</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rightsofway/" class="post-tag tag-link-rightsofway"
+                                        title="see questions tagged 'rightsofway'" rel="tag">rightsofway</a>
+                                
+                                    <a href="/tags/overlay/" class="post-tag tag-link-overlay"
+                                        title="see questions tagged 'overlay'" rel="tag">overlay</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Jan '21, 06:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b4225d0fa17a0c8e1dd3716edf764750?s=32&amp;d=identicon&amp;r=g" alt="richardherbert's gravatar image" />
+    <p><a href="/users/19633/richardherbert">richardherbert</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="richardherbert has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-78559">
+    
+</div>
+<div id="comment-tools-78559" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-78559-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/78559/overlaying-rights-of-way-data-on-top-of-openstreetmap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/78559/overlaying-rights-of-way-data-on-top-of-openstreetmap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/78559/overlaying-rights-of-way-data-on-top-of-openstreetmap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/78559/overlaying-rights-of-way-data-on-top-of-openstreetmap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="78567"></a>
+                    <div id="answer-container-78567" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-78567-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/78567/up/" rel="nofollow"> </a>
+<div id="post-78567-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-78567-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/78567/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>While it's not exactly what you've asked for, most of Derbyshire is actually pretty well covered in OSM when it comes to rights of way - there's no need to overlay council data in most places.  <a href="https://map.atownsend.org.uk/maps/map/map.html#zoom=13&amp;lat=53.01&amp;lon=-1.7246">map.atownsend,org.uk</a> (disclaimer - I look after that site) renders what's in OSM.  </p>
+<p>If you do compare rights of way data in OSM with council data you will see some discrepancies - an example might be where the council data has a dog-leg in a path to go through a gate in a hedge that is no longer there, and there is no current signage to keep walkers to that "official" route.</p>
+<p>Unforntunately it's not really clear from "online accessibility service for a not-for-profit initiative" what you're really interested in - "accessibility" might mean "gates vs stiles", and if that's the case the council data probably isn't going to help much whereas OSM will, especially the national park and towards Derby and in particularlar.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/78567/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Jan '21, 15:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-78567">
+    
+        <a name="78581"></a>
+        <div class="comment" id="comment-78581">
+            <div id="post-78581-score" class="comment-score"></div>
+            <div class="comment-text"><p>Also worth pointing out we don't map Rights of Way across fords in the Derwent which washed out in the 19th century, see <a href="https://www.openstreetmap.org/note/1351866.">https://www.openstreetmap.org/note/1351866.</a></p></div>
+            <div class="comment-info" id="comment-78581-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jan '21, 19:19)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78596"></a>
+        <div class="comment" id="comment-78596">
+            <div id="post-78596-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Thanks for that. I'm not sure your site gives me what I need.</p>
+
+<p>I'm helping a group of volunteers record accessibility around their area and they've been collecting data which they want to attach to a map of the footpaths in the locality. </p>
+
+<p>I'll share more once there's more data to display.</p></div>
+            <div class="comment-info" id="comment-78596-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '21, 17:25)</span>
+                <a class="comment-user userinfo" href="/users/19633/richardherbert">richardherbert</a>
+                
+            </div>
+        </div>
+    
+        <a name="78597"></a>
+        <div class="comment" id="comment-78597">
+            <div id="post-78597-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/19633/richardherbert">@richardherbert</a> sorry if you realise already and I've misunderstood your needs but OSM is a database that can and does hold lots of accessibility related data that can be rendered and used for routing, even if that's not obvious from the 'standard' map on the homepage. Take a look at <a href="https://wiki.openstreetmap.org/wiki/Disabilities">https://wiki.openstreetmap.org/wiki/Disabilities</a> if you haven't already. We would also love more data to be added if that's what the volunteers want to do.</p></div>
+            <div class="comment-info" id="comment-78597-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '21, 22:39)</span>
+                <a class="comment-user userinfo" href="/users/18482/trekclimbing">TrekClimbing</a>
+                
+            </div>
+        </div>
+    
+        <a name="78600"></a>
+        <div class="comment" id="comment-78600">
+            <div id="post-78600-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/19633/richardherbert">@richardherbert</a> You dont say what accessibility information you are collecting. </p>
+
+<p>OSM in Derbyshire currently has nearly 10,000 stiles and kissing gates mapped on OSM (<a href="https://overpass-turbo.eu/s/12XB).">https://overpass-turbo.eu/s/12XB).</a> Stiles likely have information on type, material &amp; number of steps. We can tag radar-key accessible kissing gates, but I assume such info is currently very limited. Footpath surfaces are probably also missing, but is information which can be collected on OSM.</p></div>
+            <div class="comment-info" id="comment-78600-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jan '21, 10:21)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78626"></a>
+        <div class="comment not_top_scorer" id="comment-78626">
+            <div id="post-78626-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/18482/trekclimbing">@TrekClimbing</a> I'm happy to take any comments or advice, thank you -- I'm totally new to the topic and the services available. I'll certainly be investigating now the accessibility data that already exists to see if it's applicable. I'll also encourage those collecting data to contribute back to OSM</p>
+
+<p><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a> I believe the data being collected at this time is very basic, so it looks like they might be reinventing the wheel in ignorance of the good work that's already been done. Looking at that link of gates it's reporting a large dataset being returned. How would I restrict the data to only returned points within a district or parish?</p></div>
+            <div class="comment-info" id="comment-78626-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '21, 14:23)</span>
+                <a class="comment-user userinfo" href="/users/19633/richardherbert">richardherbert</a>
+                
+            </div>
+        </div>
+    
+        <a name="78627"></a>
+        <div class="comment" id="comment-78627">
+            <div id="post-78627-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Change the bit which says "Derbyshire" to the district name or parish name (which might need to be in form Castleton CP). Examples of each follow: <a href="https://overpass-turbo.eu/s/132J">https://overpass-turbo.eu/s/132J</a> (Derbyshire Dales) and Ashover <a href="https://overpass-turbo.eu/s/132L.">https://overpass-turbo.eu/s/132L.</a></p>
+
+<p>Note that I did not include gates because there are numerous gates not on rights of way, but these can be retrieved with a more complex query. I'm presuming that vast majority of stiles &amp; kissing gates are on a PRoW</p></div>
+            <div class="comment-info" id="comment-78627-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '21, 16:07)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78628"></a>
+        <div class="comment not_top_scorer" id="comment-78628">
+            <div id="post-78628-score" class="comment-score"></div>
+            <div class="comment-text"><p>Another example that might help - <a href="https://overpass-turbo.eu/s/132N">https://overpass-turbo.eu/s/132N</a> will search in whatever area you are currently looking at.  In there you can see a line for "stile" and a line for "kissing_gate"; if you want gates as well just add a line which has "gate" in it in the appropriate place.</p></div>
+            <div class="comment-info" id="comment-78628-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '21, 16:20)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-78567" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-78567-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="78561"></a>
+                    <div id="answer-container-78561" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-78561-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/78561/up/" rel="nofollow"> </a>
+<div id="post-78561-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-78561-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/78561/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are so many things to consider to answer this question. Firstly be aware of the <a href="https://operations.osmfoundation.org/policies/tiles/">Tile Usage Policy</a> requirements.</p>
+<p>For low usage you will probably be OK with using OSM as a background layer (with no guaranteed level of availability) and overlaying the rights of way as a separate layer. There are a number of ways of doing this but I'd probably use <a href="https://leafletjs.com/examples/geojson/">Leaflet</a> (<a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">other options</a> are available) and <a href="https://www.rowmaps.com/datasets/DY/">this website</a> has already converted the Derbyshire data to geojson (and other formats) in case that helps speed things up. I've previously used Leaflet with a plugin to overlay gpx format data.</p>
+<p>If you are going to be using a high level of usage or want a more guaranteed level of availability you could look at <a href="https://switch2osm.org">switch2osm</a> to generate your own or <a href="https://switch2osm.org/providers/">use a third party</a> who provides tiles.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/78561/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Jan '21, 08:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f25a8392e12ed696b16554b3d08e4e2b?s=32&amp;d=identicon&amp;r=g" alt="EdLoach's gravatar image" />
+    <p><a href="/users/339/edloach">EdLoach ♦</a><br/>
+    <span class="score" title="19478 reputation points"><span class="">19.5k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="156 badges"><span class="silver">&#9679;</span><span class="badgecount">156</span></span><span title="280 badges"><span class="bronze">&#9679;</span><span class="badgecount">280</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="EdLoach has 93 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-78561">
+    
+        <a name="78562"></a>
+        <div class="comment" id="comment-78562">
+            <div id="post-78562-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the insight Ed, I appreciate I have a lot to learn on this topic.</p>
+
+<p>I have found rowmaps and the Derbyshire example. I'm going to contact the owner to learn more about their solution. I'm only really interested in the area in and around a small town in the county. </p>
+
+<p>I'll also follow up on those other links you've supplied and come back if I have more questions.</p></div>
+            <div class="comment-info" id="comment-78562-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jan '21, 09:11)</span>
+                <a class="comment-user userinfo" href="/users/19633/richardherbert">richardherbert</a>
+                
+            </div>
+        </div>
+    
+        <a name="78564"></a>
+        <div class="comment" id="comment-78564">
+            <div id="post-78564-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I have used umap for smaller sets of rights-of-way, but I think the geojson for Derbyshire as a whole is probably just too large. If you look at Robert Whittakers' Prow site, he has chosen to only upload geojson at the parish level. In fact there are several umaps of Derbyshire Footpaths created by, I assume, Chesterfield &amp; North-east Derbyshire ramblers such as this one <a href="http://umap.openstreetmap.fr/en/map/derbyshire-prow_59635#6/51.000/2.000.">http://umap.openstreetmap.fr/en/map/derbyshire-prow_59635#6/51.000/2.000.</a> As I suspected it takes a long time to load. Perhaps splitting the data by District (use a tool like QGIS) would help. Alternatively, QGIS can be used to create a transparent tile layer (as mbtiles) which can be used with leaflet, but this is a raster format so not clickable.</p></div>
+            <div class="comment-info" id="comment-78564-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jan '21, 14:07)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78566"></a>
+        <div class="comment" id="comment-78566">
+            <div id="post-78566-score" class="comment-score">1</div>
+            <div class="comment-text"><p>This is Derbyshire Dales PRoW data (quite an old version from rowmaps) imported into a umap instance: <a href="https://umap.osm.ch/en/map/derbyshire-dales-prow_3276">https://umap.osm.ch/en/map/derbyshire-dales-prow_3276</a></p></div>
+            <div class="comment-info" id="comment-78566-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jan '21, 14:20)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78595"></a>
+        <div class="comment" id="comment-78595">
+            <div id="post-78595-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a> Thanks for the pointer to Robert Whittakers' Prow site. Parish level data is exactly what I need. </p>
+
+<p>I assume I can just take that data from his site and repurpose it for my needs, with attribution?</p></div>
+            <div class="comment-info" id="comment-78595-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '21, 17:18)</span>
+                <a class="comment-user userinfo" href="/users/19633/richardherbert">richardherbert</a>
+                
+            </div>
+        </div>
+    
+        <a name="78599"></a>
+        <div class="comment" id="comment-78599">
+            <div id="post-78599-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I would think his data is from rowmaps. Attribution is always a good idea, and in this case may help others with similar needs.</p></div>
+            <div class="comment-info" id="comment-78599-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jan '21, 10:17)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-78561" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-78561-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/78559/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='VJWtufsVHVTG6GhuW1K85yM2txRSHNAD' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/78559/overlaying-rights-of-way-data-on-top-of-openstreetmap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/78559/overlaying-rights-of-way-data-on-top-of-openstreetmap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overlay/"
+            class="tag-link-overlay"
+            title="see questions tagged'overlay'using tags"
+            rel="tag">overlay</a> <span class="tag-number">&#215;42</span><br/>
+        
+        <a href="/tags/rightsofway/"
+            class="tag-link-rightsofway"
+            title="see questions tagged'rightsofway'using tags"
+            rel="tag">rightsofway</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 28, 2021, 6:53 a.m.">28 Jan '21, 06:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,737 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 1, 2021, 4:20 p.m.">01 Feb '21, 16:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1406/how-can-i-pick-areas-in-the-data-overlay-that-are-hidden-by-other-areas">How can I pick areas in the data overlay that are hidden by other areas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1586/is-there-a-tileset-like-the-hybrid-label-overlay-in-google-maps">Is there a tileset like the hybrid label overlay in google maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2144/using-slippy-map-data-overlay-cant-select-items-in-forest-area">[closed] Using slippy-map data overlay, can&#39;t select items in forest area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2821/rights-of-way-and-definitive-map">Rights of Way and Definitive  Map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3210/creating-layers-on-offline-tiles">creating layers on offline tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6312/catchment-areas">Catchment areas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7903/how-to-mark-bottleneck-of-road-wrt-right-of-way">How to mark &quot;bottleneck&quot; of road wrt right of way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8681/problem-using-osm-data-with-google-maps-api-v3">Problem using OSM data with Google Maps API V3</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9292/map-does-not-overimpose-satellite-image-correctly">Map does not overimpose satellite image correctly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/773/map-for-railway-networks">Map for railway network(s)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

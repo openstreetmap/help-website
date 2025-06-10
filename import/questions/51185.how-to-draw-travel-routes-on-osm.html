@@ -1,0 +1,905 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to draw travel routes on OSM? - OSM Help</title>
+        <meta name="description" content="My question is related to, but not the same as, this one posted a couple of years ago by someone else: https://help.openstreetmap.org/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx. One of the answers pointed to a list of &quot;track drawing websites&quot;, but..." />
+        <meta name="keywords" content="track,travel,route,itinerary" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/51185/how-to-draw-travel-routes-on-osm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/51185/how-to-draw-travel-routes-on-osm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CNrfYusWZ8FOhQTNgi4DNrRAXanyxvYE' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/51185/how-to-draw-travel-routes-on-osm">How to draw travel routes on OSM?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-51185-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51185/up/" rel="nofollow"> </a>
+<div id="post-51185-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-51185-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51185/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/51185/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>My question is related to, but not the same as, this one posted a couple of years ago by someone else: <a href="https://help.openstreetmap.org/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx.">https://help.openstreetmap.org/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx.</a> One of the answers pointed to a list of "track drawing websites", but they all seem to relate to "sports activity" sites that allow one to upload a GPX track, not edit manually "on the map itself".</p>
+<p>I want to draw long travel routes, for completed as well as planned trips. At the moment I'm using Google My Maps, but it's not ideal. Here's an example of a trip to Andalucia in 2008: <a href="https://drive.google.com/open?id=155sh7BgtEABwG2nx73rnlGdQ_Qo&amp;usp=sharing.">https://drive.google.com/open?id=155sh7BgtEABwG2nx73rnlGdQ_Qo&amp;usp=sharing.</a></p>
+<p>If possible, I would like to differentiate (visually) between different legs of a journey. For example, sections travelled by train in one colour, sections travelled by boat in another, etc. I also want to add markers ("round blobs with labels") at specific locations, such as towns, landmarks, places of note. I also want to indicate direction of travel, such as by showing arrows on lines, either in the middle or at the end of some line segments.</p>
+<p>I can think of many other things I would like to be able to do but these are the essentials.</p>
+<p>Nice-to-have would be addition of links, to lines or place markers, to link back to diary entries on my site. For example, a line on the map between Bariloche and Salta, in Argentina, would link to this entry on my site: <a href="http://www.aaltenvoogd.com/index.php/trips/argentina-2001/35-sun-25-mar-2001-salta-to-bariloche.">http://www.aaltenvoogd.com/index.php/trips/argentina-2001/35-sun-25-mar-2001-salta-to-bariloche.</a></p>
+<p>Can anyone please help?</p>
+<p>Many thanks!</p>
+<p>Stefan</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/track/" class="post-tag tag-link-track"
+                                        title="see questions tagged 'track'" rel="tag">track</a>
+                                
+                                    <a href="/tags/travel/" class="post-tag tag-link-travel"
+                                        title="see questions tagged 'travel'" rel="tag">travel</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/itinerary/" class="post-tag tag-link-itinerary"
+                                        title="see questions tagged 'itinerary'" rel="tag">itinerary</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Aug '16, 09:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4f046a7360e17a98bbcf4c31c8ba8ac8?s=32&amp;d=identicon&amp;r=g" alt="Stefan%20Aalten-Voogd's gravatar image" />
+    <p><a href="/users/4516/stefan-aalten-voogd">Stefan Aalte...</a><br/>
+    <span class="score" title="40 reputation points">40</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Stefan Aalten-Voogd has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/51185/">
+                edited
+                <strong>01 Aug '16, 09:47</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-51185">
+    
+</div>
+<div id="comment-tools-51185" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51185-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/51185/how-to-draw-travel-routes-on-osm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/51185/how-to-draw-travel-routes-on-osm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/51185/how-to-draw-travel-routes-on-osm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/51185/how-to-draw-travel-routes-on-osm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="51256"></a>
+                    <div id="answer-container-51256" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51256-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51256/up/" rel="nofollow"> </a>
+<div id="post-51256-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-51256-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51256/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The answer Hendrik links to is more thorough, but I tried to simplify it a bit more. </p>
+<p>What you want to do sounds almost exactly as what <a href="http://umap.openstreetmap.fr">umap</a> offers.</p>
+<p>You can of course make rough outlines like you did, but you could also use a service like GraphHopper to make a gpx of the route you actually took. Here's <a href="https://graphhopper.com/maps/?point=36.686041%2C-6.122131&amp;point=37.38107%2C-5.990295&amp;point=37.872685%2C-4.777679&amp;locale=nl-NL&amp;vehicle=car&amp;weighting=fastest&amp;elevation=true&amp;layer=Omniscale">a simple example</a>. There's an export to GPX button, and those can be added to your umap. But you can also hand-draw lines within umap.</p>
+<p>Even better would be to use an app like <a href="http://osmand.net">Osmand</a> to navigate AND track your trip while you're on the road. <a href="http://umap.openstreetmap.fr/nl/map/italy-trip_57769#6/47.525/9.712">Here's an example</a> of what you can make in a couple of minutes if you do that.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51256/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Aug '16, 09:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1df835d513b1282e0edd7405d29cd8d9?s=32&amp;d=identicon&amp;r=g" alt="joost%20schouppe's gravatar image" />
+    <p><a href="/users/10142/joost-schouppe">joost schouppe</a><br/>
+    <span class="score" title="3427 reputation points"><span class="">3.4k</span></span><span title="24 badges"><span class="badge1">&#9679;</span><span class="badgecount">24</span></span><span title="50 badges"><span class="silver">&#9679;</span><span class="badgecount">50</span></span><span title="87 badges"><span class="bronze">&#9679;</span><span class="badgecount">87</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="joost schouppe has 9 accepted answers">12&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51256">
+    
+        <a name="51261"></a>
+        <div class="comment" id="comment-51261">
+            <div id="post-51261-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Hendrik, Joost - thank you both for the answers. uMap looks spot on! I also really like the Osmand example of your Italy trip Joost, showing a highly detailed track and I will definitely use it for future trips while "on the road".</p>
+
+<p>I still have questions though - I hope you can help?</p>
+
+<pre><code>How to add arrows to the the polylines. This will make it much easier to follow a detailed long itinerary as it meanders around. I think this is now my main question - maybe it's a request for the developers of uMap?
+
+How to differentiate (using line colour) between different sections of a trip? I guess the answer is to draw separate polylines for each section of a trip, for example overall trip from Edinburgh to Brussels by car (Edinburgh&gt;Newcastle), boat (Newcastle&gt;IJmuiden) and car (IJmuiden&gt;Brussels) would need three polylines? Or is it possible to change the properties of a individual "polyline segment"?
+</code></pre></div>
+            <div class="comment-info" id="comment-51261-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '16, 11:45)</span>
+                <a class="comment-user userinfo" href="/users/4516/stefan-aalten-voogd">Stefan Aalte...</a>
+                
+            </div>
+        </div>
+    
+        <a name="51262"></a>
+        <div class="comment" id="comment-51262">
+            <div id="post-51262-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can add custom markers to the map. You could make some with arrows and use those.</p>
+
+<p>To have different styles for different lines, you use Layers. Each one can be designed separately. So you could put trainrides in a certain layer and busrides in another. Or you could make a layer for each week of your trip.</p>
+
+<p>Also, if you record GPX tracks yourself, don't hesitate to upload them to the OSM GPS database, it can be really helpful.</p></div>
+            <div class="comment-info" id="comment-51262-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '16, 11:53)</span>
+                <a class="comment-user userinfo" href="/users/10142/joost-schouppe">joost schouppe</a>
+                
+            </div>
+        </div>
+    
+        <a name="51266"></a>
+        <div class="comment" id="comment-51266">
+            <div id="post-51266-score" class="comment-score"></div>
+            <div class="comment-text"><p>Dankjewel Joost! :-) I'm not convinced by the custom markers in the shape of arrows approach though. For example, to represent a flight between two places, Edinburgh to Brussels say, I would draw a polyline between these two places and additionally put a custom marker in the shape of an arrow on this line somewhere, over the North Sea in this example, but the line and the arrow custom marker would not be linked in any way. So, let's say I want to change it - perhaps I have made an error and what I actually wanted to show was a flight from Edinburgh to Oslo instead, then I would adjust the polyline and <em>separately</em> move the arrow custom marker. So, yes, it would work but it would not be an ideal solution. It would be much better if there was some way of controlling the properties of line segments.
+I'll definitely upload GPX tracks in future - just need to go somewhere first! :-)</p></div>
+            <div class="comment-info" id="comment-51266-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '16, 14:58)</span>
+                <a class="comment-user userinfo" href="/users/4516/stefan-aalten-voogd">Stefan Aalte...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51256" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51256-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="51187"></a>
+                    <div id="answer-container-51187" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51187-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51187/up/" rel="nofollow"> </a>
+<div id="post-51187-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-51187-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51187/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi Stefan, take a look at this old qestion and the answers <a href="https://help.openstreetmap.org/questions/27621/personalised-maps.">https://help.openstreetmap.org/questions/27621/personalised-maps.</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51187/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Aug '16, 12:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51187">
+    
+</div>
+<div id="comment-tools-51187" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51187-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="63096"></a>
+                    <div id="answer-container-63096" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-63096-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63096/up/" rel="nofollow"> </a>
+<div id="post-63096-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-63096-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63096/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi Stefan, </p>
+<p>I may have a solution for you for this issue as this sounds very similar to what we offer at <a href="http://alpaca.travel">Alpaca</a>. Anyone can sign up to our platform and create interactive maps and travel itineraries (for free!). Our platform supports multi-leg journeys, within which you can upload all your photos, stories, and nearby places of interest. </p>
+<p>We use OSM data, and also support a wide range of travel modes, from hiking, to mountain biking, to dog sledding!</p>
+<p>Once your map is complete, you can embed onto your blog or website, or share via a link. </p>
+<p>Hope this helps – let me know if you have any questions.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/63096/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Apr '18, 23:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bd405badc7584717b1e7c7173061f605?s=32&amp;d=identicon&amp;r=g" alt="chryssie's gravatar image" />
+    <p><a href="/users/15013/chryssie">chryssie</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="chryssie has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-63096">
+    
+        <a name="87829"></a>
+        <div class="comment" id="comment-87829">
+            <div id="post-87829-score" class="comment-score"></div>
+            <div class="comment-text"><p>Unfortunately, (despite all really rich track/itinerary creation abilities provided) I found Alpaca almost unusable for planning and drawing hiking tracks/waypoints. For one very simple but absolutely crucial reason - the extra pale rendering style. Colours on Alpaca map are so pale, that most elements on the map are almost invisible. Even small roads are rendered as white on light-light-light gray and are barely visible. Small paths, cliffs, border of forest/meadow/etc are invisible at all.</p></div>
+            <div class="comment-info" id="comment-87829-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '23, 12:16)</span>
+                <a class="comment-user userinfo" href="/users/23328/autumn-fox">Autumn Fox</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-63096" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63096-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/51185/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='CNrfYusWZ8FOhQTNgi4DNrRAXanyxvYE' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51185/how-to-draw-travel-routes-on-osm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51185/how-to-draw-travel-routes-on-osm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/track/"
+            class="tag-link-track"
+            title="see questions tagged'track'using tags"
+            rel="tag">track</a> <span class="tag-number">&#215;112</span><br/>
+        
+        <a href="/tags/travel/"
+            class="tag-link-travel"
+            title="see questions tagged'travel'using tags"
+            rel="tag">travel</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/itinerary/"
+            class="tag-link-itinerary"
+            title="see questions tagged'itinerary'using tags"
+            rel="tag">itinerary</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 1, 2016, 9:45 a.m.">01 Aug '16, 09:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>43,657 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 11, 2023, 12:16 p.m.">11 Sep '23, 12:16</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/38069/maxspeed-for-gpx-track">maxspeed for gpx track</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20137/magix-photostory-deluxe">[closed] Magix PhotoStory Deluxe</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16096/can-i-use-openstreetmap-to-create-travel-maps-for-my-web-site">Can I use OpenStreetMap to create travel maps for my web site?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25135/how-to-manually-create-a-gps-track-for-biking">How to manually create a GPS track for biking?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47200/edit-dates-in-gpx-files-to-reflect-when-i-was-in-a-place">Edit dates in GPX files to reflect when I was in a place</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51306/how-to-record-dates-for-markers-and-polylines-sections-of-polylines">How to record dates for markers and polylines (sections of polylines)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx">application or web interface for freehand plotting tracks on OSM as saving as gpx?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13355/using-route-relations-in-garmin-hcx">Using route relations in Garmin Hcx</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1477/identifying-individual-gpx-tracks-from-the-downloaded-gpx-tracks-in-josm">Identifying individual gpx tracks from the downloaded gpx tracks in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1372/how-to-tag-a-one-way-cycling-race-track">How to tag a one-way cycling race track?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,850 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to implement a Mapnik sandbox without installing anything? - OSM Help</title>
+        <meta name="description" content="Last couple of weeks I spent some time building fake counties, cities and suburbs in Nevada desert (where I figured it would not hurt anyone) just to see how they would render in Mapnik. (I am working on a problem of getting county, city and name rendered without having to drop a place=* node where ..." />
+        <meta name="keywords" content="qa,sandbox,testing,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/4605/how-to-implement-a-mapnik-sandbox-without-installing-anything" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/4605/how-to-implement-a-mapnik-sandbox-without-installing-anything?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='2dc6bjKpApzrXcCgXK2TyWrLAA725ILm' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/4605/how-to-implement-a-mapnik-sandbox-without-installing-anything">How to implement a Mapnik sandbox without installing anything?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-4605-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4605/up/" rel="nofollow"> </a>
+<div id="post-4605-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-4605-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4605/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/4605/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Last couple of weeks I spent some time building fake counties, cities and suburbs in Nevada desert (where I figured it would not hurt anyone) just to see how they would render in Mapnik. (I am working on a problem of getting county, city and name rendered without having to drop a place=* node where I want to see the label and I have not found the solution yet, but that's a separate question.)</p>
+<p>It occurred to me that I many not be going the best way about it:<br>
+ - I needlessly load the server with rerender requests<br>
+ - I have to wait a fairly long time for rerenders, so I am limited in how many tagging scenario I can try<br>
+ - even though I delete my objects afterwards, it is possible that Nominatim (or other indexers) will have time to pick them; and I don't think Nominatim is very good at deleting its objects in response to OSM deletions.</p>
+<p>Is there a safe way to play with OSM/Mapnik without installing any server components of my own? Is there an official Mapnik sandbox perhaps, and if not, how can I create one on the fly?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/qa/" class="post-tag tag-link-qa"
+                                        title="see questions tagged 'qa'" rel="tag">qa</a>
+                                
+                                    <a href="/tags/sandbox/" class="post-tag tag-link-sandbox"
+                                        title="see questions tagged 'sandbox'" rel="tag">sandbox</a>
+                                
+                                    <a href="/tags/testing/" class="post-tag tag-link-testing"
+                                        title="see questions tagged 'testing'" rel="tag">testing</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Apr '11, 19:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c23c2891306229bb036de7ce63bb8c9b?s=32&amp;d=identicon&amp;r=g" alt="ponzu's gravatar image" />
+    <p><a href="/users/831/ponzu">ponzu</a><br/>
+    <span class="score" title="2104 reputation points"><span class="">2.1k</span></span><span title="49 badges"><span class="badge1">&#9679;</span><span class="badgecount">49</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="83 badges"><span class="bronze">&#9679;</span><span class="badgecount">83</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ponzu has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/4605/">
+                edited
+                <strong>20 Nov '13, 21:33</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-4605">
+    
+        <a name="4685"></a>
+        <div class="comment" id="comment-4685">
+            <div id="post-4685-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is there nothing else online to try rendering test objects in the context of the real OSM data? So far, having a Nevada test site is the best I can do. My only concern is potential impact on Nominatim. I am not clear on how long I can leave my fake cities, counties and other objects in the desert without risk of having them become part of the index.</p></div>
+            <div class="comment-info" id="comment-4685-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Apr '11, 22:56)</span>
+                <a class="comment-user userinfo" href="/users/831/ponzu">ponzu</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4605" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4605-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/4605/how-to-implement-a-mapnik-sandbox-without-installing-anything?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/4605/how-to-implement-a-mapnik-sandbox-without-installing-anything?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/4605/how-to-implement-a-mapnik-sandbox-without-installing-anything?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/4605/how-to-implement-a-mapnik-sandbox-without-installing-anything?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="4610"></a>
+                    <div id="answer-container-4610" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4610-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4610/up/" rel="nofollow"> </a>
+<div id="post-4610-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-4610-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4610/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For producing your own tiles without installing big software frameworks have a look at </p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Maps_on_a_Stick">Maps_on_a_Stick</a> or <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box">OpenStreetMap-in-a-Box</a></p>
+<p>When you have detailed questions about one of this or other solutions, come over to the <a href="http://forum.osm.org">OSM forum</a> or the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">OSM mailinglists</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4610/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Apr '11, 20:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4610">
+    
+        <a name="4619"></a>
+        <div class="comment" id="comment-4619">
+            <div id="post-4619-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, looks like one or both can fit the bill, although Maps On a Stick have a 219 Mb download. As far as osminabox, would "how do I get started?" be considered a detailed question?</p></div>
+            <div class="comment-info" id="comment-4619-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Apr '11, 22:39)</span>
+                <a class="comment-user userinfo" href="/users/831/ponzu">ponzu</a>
+                
+            </div>
+        </div>
+    
+        <a name="4620"></a>
+        <div class="comment" id="comment-4620">
+            <div id="post-4620-score" class="comment-score"></div>
+            <div class="comment-text"><p>And the second question before I forget: the tiles I produce with these service would be Mapnik tiles, right? And if so, will they be using the master OSM stylesheet, a stylesheet that's specific to these services, or a stylesheet of my choosing?</p></div>
+            <div class="comment-info" id="comment-4620-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Apr '11, 22:40)</span>
+                <a class="comment-user userinfo" href="/users/831/ponzu">ponzu</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4610" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4610-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="4688"></a>
+                    <div id="answer-container-4688" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4688-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4688/up/" rel="nofollow"> </a>
+<div id="post-4688-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-4688-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4688/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Adding things to OSM which don't actually exist is vandalism. Please don't do it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4688/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Apr '11, 23:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/aa505c046b1c010e997a7849c6f3dbbe?s=32&amp;d=identicon&amp;r=g" alt="Vclaw's gravatar image" />
+    <p><a href="/users/62/vclaw">Vclaw</a><br/>
+    <span class="score" title="9217 reputation points"><span class="">9.2k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="95 badges"><span class="silver">&#9679;</span><span class="badgecount">95</span></span><span title="141 badges"><span class="bronze">&#9679;</span><span class="badgecount">141</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vclaw has 41 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/4688/">
+                edited
+                <strong>20 Apr '11, 23:11</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4688">
+    
+        <a name="4689"></a>
+        <div class="comment" id="comment-4689">
+            <div id="post-4689-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Understood. Do you have anything you can recommend as an officially approved rendering sandbox? I am a fairly technical guy (not that I understand how OSM or Mapnik works), but I could not figure out how get started with stephan's advice above.</p></div>
+            <div class="comment-info" id="comment-4689-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Apr '11, 23:15)</span>
+                <a class="comment-user userinfo" href="/users/831/ponzu">ponzu</a>
+                
+            </div>
+        </div>
+    
+        <a name="4690"></a>
+        <div class="comment" id="comment-4690">
+            <div id="post-4690-score" class="comment-score">1</div>
+            <div class="comment-text"><p>There is a dev API, which you can add things to without bothering anyone: <a href="http://api06.dev.openstreetmap.org">http://api06.dev.openstreetmap.org</a>
+Though I'm not sure if it will actually be rendered by anything.</p></div>
+            <div class="comment-info" id="comment-4690-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Apr '11, 23:22)</span>
+                <a class="comment-user userinfo" href="/users/62/vclaw">Vclaw</a>
+                
+            </div>
+        </div>
+    
+        <a name="4692"></a>
+        <div class="comment" id="comment-4692">
+            <div id="post-4692-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, it looks promising, but I need to figure out a way to get my changes rendered. Is that (easily) doable? After all, I was looking for a Mapnik sandbox, not OSM sandbox. (Although it's good to know where it is in case I need it one day.)</p></div>
+            <div class="comment-info" id="comment-4692-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Apr '11, 23:51)</span>
+                <a class="comment-user userinfo" href="/users/831/ponzu">ponzu</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4688" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4688-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/4605/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='2dc6bjKpApzrXcCgXK2TyWrLAA725ILm' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4605/how-to-implement-a-mapnik-sandbox-without-installing-anything?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4605/how-to-implement-a-mapnik-sandbox-without-installing-anything?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/qa/"
+            class="tag-link-qa"
+            title="see questions tagged'qa'using tags"
+            rel="tag">qa</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/sandbox/"
+            class="tag-link-sandbox"
+            title="see questions tagged'sandbox'using tags"
+            rel="tag">sandbox</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/testing/"
+            class="tag-link-testing"
+            title="see questions tagged'testing'using tags"
+            rel="tag">testing</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 18, 2011, 7:12 p.m.">18 Apr '11, 19:12</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,805 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 20, 2013, 9:33 p.m.">20 Nov '13, 21:33</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/498/uploading-a-small-bit-of-new-tiger-data-and-3-other-unrelated-questions">Uploading a small bit of new TIGER data (and 3 other unrelated questions)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1004/simple-legendkey">Simple legend/key?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile">How to trigger a repaint for a specific OSM map tile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">Can I influence what gets rendered in the main Mapnik layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1580/should-i-tag-name-for-the-way-or-for-the-relation">Should I tag &quot;name&quot; for the way or for the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1746/running-generate_image-gives-features-only-present-in-mapnik-version-071-error">Running generate_image gives &quot;features only present in Mapnik version 0.7.1&quot; error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1774/features-not-exported-in-svg-export">Features not exported in SVG export</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1885/hide-administrative-boundaries-in-default-mapnik-layer">[closed] Hide administrative boundaries in default mapnik layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1887/mapnik-does-not-render-my-new-ways-already-for-a-couple-of-day-now">Mapnik does not render my new ways already for a couple of day now</a>
+        </p>
+        
+        <p>
+            <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">Why do the changes I have made to coastline not appear on the map?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

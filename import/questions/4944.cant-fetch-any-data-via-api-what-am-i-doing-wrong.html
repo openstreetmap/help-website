@@ -1,0 +1,647 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can&#39;t fetch any data via API, what am I doing wrong? - OSM Help</title>
+        <meta name="description" content="Hello, Is there any particular reason the following request return nothing: http://api06.dev.openstreetmap.org/api/0.6/map?bbox=25.4649353,42.1389684,25.8892822,42.5075400? Actually it is not &quot;nothing&quot;, but this: &amp;lt;osm version=&#39;0.6&#39; generator=&#39;OpenStreetMap server&#39;&amp;gt;&amp;lt;/osm&amp;gt; I tried using XA..." />
+        <meta name="keywords" content="api,xapi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/4944/cant-fetch-any-data-via-api-what-am-i-doing-wrong" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/4944/cant-fetch-any-data-via-api-what-am-i-doing-wrong?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='iCj2huK5wIJOIEeR4djWpTjZNjXNPgut' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/4944/cant-fetch-any-data-via-api-what-am-i-doing-wrong">Can&#39;t fetch any data via API, what am I doing wrong?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-4944-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4944/up/" rel="nofollow"> </a>
+<div id="post-4944-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-4944-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4944/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/4944/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>Is there any particular reason the following request return nothing: <strong><a href="http://api06.dev.openstreetmap.org/api/0.6/map?bbox=25.4649353,42.1389684,25.8892822,42.5075400">http://api06.dev.openstreetmap.org/api/0.6/map?bbox=25.4649353,42.1389684,25.8892822,42.5075400</a></strong>? Actually it is not "nothing", but this:</p>
+<p><code>&lt;osm version='0.6' generator='OpenStreetMap server'&gt;&lt;/osm&gt;</code></p>
+<p>I tried using XAPI with this request: <strong><a href="http://xapi.openstreetmap.org/api/0.6/node[place=city][bbox=25.4649353,42.1389684,25.8892822,42.5075400]">http://xapi.openstreetmap.org/api/0.6/node[place=city][bbox=25.4649353,42.1389684,25.8892822,42.5075400]</a></strong> but this time I really got nothing. As I can see the XAPI servers are pretty overloaded. Is there any way to use it?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/api/" class="post-tag tag-link-api"
+                                        title="see questions tagged 'api'" rel="tag">api</a>
+                                
+                                    <a href="/tags/xapi/" class="post-tag tag-link-xapi"
+                                        title="see questions tagged 'xapi'" rel="tag">xapi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 May '11, 07:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ca446edd75e87c48db5dd850d9f394a9?s=32&amp;d=identicon&amp;r=g" alt="ivanatora's gravatar image" />
+    <p><a href="/users/191/ivanatora">ivanatora</a><br/>
+    <span class="score" title="2740 reputation points"><span class="">2.7k</span></span><span title="35 badges"><span class="badge1">&#9679;</span><span class="badgecount">35</span></span><span title="55 badges"><span class="silver">&#9679;</span><span class="badgecount">55</span></span><span title="68 badges"><span class="bronze">&#9679;</span><span class="badgecount">68</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ivanatora has one accepted answer">7&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-4944">
+    
+</div>
+<div id="comment-tools-4944" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4944-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/4944/cant-fetch-any-data-via-api-what-am-i-doing-wrong?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/4944/cant-fetch-any-data-via-api-what-am-i-doing-wrong?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/4944/cant-fetch-any-data-via-api-what-am-i-doing-wrong?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/4944/cant-fetch-any-data-via-api-what-am-i-doing-wrong?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="4946"></a>
+                    <div id="answer-container-4946" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4946-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4946/up/" rel="nofollow"> </a>
+<div id="post-4946-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-4946-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4946/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Your first request is being made to the "api06" testing server - it doesn't contain much map data so it's quite likely that there won't be data in that area. You can edit the testing server to add some test data for whichever area you're interested in.</p>
+<p>The XAPI link is to servers using the "live" data from <a href="http://www.osm.org">www.osm.org</a> - but they are often overloaded. You can try the <a href="http://wiki.openstreetmap.org/wiki/Xapi">alternative XAPI servers</a> listed on the wiki - try the ones running the Java version of XAPI.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4946/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 May '11, 09:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3743b1b368f5e209eb8aad30164acc4?s=32&amp;d=identicon&amp;r=g" alt="Andy%20Allan's gravatar image" />
+    <p><a href="/users/3/andy-allan">Andy Allan</a><br/>
+    <span class="score" title="12456 reputation points"><span class="">12.5k</span></span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="128 badges"><span class="silver">&#9679;</span><span class="badgecount">128</span></span><span title="153 badges"><span class="bronze">&#9679;</span><span class="badgecount">153</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andy Allan has 46 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4946">
+    
+        <a name="4976"></a>
+        <div class="comment" id="comment-4976">
+            <div id="post-4976-score" class="comment-score"></div>
+            <div class="comment-text"><p>What happens if I edit to the test server? How long will the data be kept? I suppose it is cleared at some intervals?</p></div>
+            <div class="comment-info" id="comment-4976-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '11, 06:39)</span>
+                <a class="comment-user userinfo" href="/users/191/ivanatora">ivanatora</a>
+                
+            </div>
+        </div>
+    
+        <a name="4977"></a>
+        <div class="comment" id="comment-4977">
+            <div id="post-4977-score" class="comment-score"></div>
+            <div class="comment-text"><p>For all I know the dev server isn't cleared regularily so the data will probably linger at least till development on the API 0.7 starts in a large scale way. Depending what you want to do (you don't really say) this might be plenty of time.</p></div>
+            <div class="comment-info" id="comment-4977-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '11, 07:31)</span>
+                <a class="comment-user userinfo" href="/users/8/petschge">petschge</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4946" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4946-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/4944/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='iCj2huK5wIJOIEeR4djWpTjZNjXNPgut' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4944/cant-fetch-any-data-via-api-what-am-i-doing-wrong?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4944/cant-fetch-any-data-via-api-what-am-i-doing-wrong?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/api/"
+            class="tag-link-api"
+            title="see questions tagged'api'using tags"
+            rel="tag">api</a> <span class="tag-number">&#215;290</span><br/>
+        
+        <a href="/tags/xapi/"
+            class="tag-link-xapi"
+            title="see questions tagged'xapi'using tags"
+            rel="tag">xapi</a> <span class="tag-number">&#215;32</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 3, 2011, 7:07 a.m.">03 May '11, 07:07</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,956 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 4, 2011, 7:31 a.m.">04 May '11, 07:31</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/48221/missing-tagselements-when-downloading-from-osm-xapi-and-osm-api">Missing tags/elements when downloading from OSM XAPI and OSM  API</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6778/trace-id-list-or-gpx-id-retrieved-from-a-bounding-box">Trace id list or (gpx id) retrieved from a bounding box</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12252/how-to-install-private-xapi-server">How to install private XAPI server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24397/a-algorithm-with-osm">A* algorithm with OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17365/overpass-is-it-possible-to-use-it-as-an-alternative-to-the-api-relation-full-call">Overpass:  Is it possible to use it as an alternative to the API relation /full call?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9927/orgopenstreetmaposmosiscoreosmosisruntimeexception">org.openstreetmap.osmosis.core.OsmosisRuntimeException</a>
+        </p>
+        
+        <p>
+            <a href="/questions/972/get-administrative-boundaries-admin_level-4-of-the-planet">Get administrative boundaries (admin_level &lt;= 4) of the planet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/889/search-by-a-tag">Search by a tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/372/is-there-a-limit-to-the-number-of-ways-containing-a-node">Is there a limit to the number of ways containing a node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1896/extract-nodes-from-way">Extract nodes from way</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

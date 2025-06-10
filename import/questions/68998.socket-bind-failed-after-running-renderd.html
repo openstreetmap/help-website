@@ -1,0 +1,1043 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>socket bind failed after running renderd - OSM Help</title>
+        <meta name="description" content="Hey, basically I was setting up an osm tileserver. Now I&#39;m at one point where I can&#39;t fix the problem by myself. So here&#39;s my problem: When I run renderd -f -c /usr/local/etc/renderd.conf I get the following output: renderd[28482]: Rendering daemon started renderd[28482]: Initiating reqyest_queue in..." />
+        <meta name="keywords" content="mysql,renderd,tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/68998/socket-bind-failed-after-running-renderd" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/68998/socket-bind-failed-after-running-renderd?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='NuChBmK7rBCqmrHPBjrnYAWYkeaZYNRt' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/68998/socket-bind-failed-after-running-renderd">socket bind failed after running renderd</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-68998-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68998/up/" rel="nofollow"> </a>
+<div id="post-68998-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-68998-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68998/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/68998/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hey,</p>
+<p>basically I was setting up an osm tileserver. Now I'm at one point where I can't fix the problem by myself. So here's my problem:</p>
+<p>When I run <code>renderd -f -c /usr/local/etc/renderd.conf</code> I get the following output:</p>
+<p><code>renderd[28482]: Rendering daemon started
+renderd[28482]: Initiating reqyest_queue
+iniparser: syntax error in /usr/local/etc/renderd.conf (7):
+-&gt; ;[renderd01]
+iniparser: syntax error in /usr/local/etc/renderd.conf (14):
+-&gt; ;[renderd02]
+iniparser: syntax error in /usr/local/etc/renderd.conf (33):
+-&gt; ;** config options used by mod_tile, but not renderd **
+iniparser: syntax error in /usr/local/etc/renderd.conf (45):
+-&gt; ;[style2]
+iniparser: syntax error in /usr/local/etc/renderd.conf (52):
+-&gt; ;** config options used by mod_tile, but not renderd **
+renderd[28482]: Parsing section renderd
+renderd[28482]: Parsing render section 0
+renderd[28482]: Parsing section mapnik
+renderd[28482]: Parsing section default
+renderd[28482]: config renderd: unix socketname=/var/run/renderd/renderd.sock
+renderd[28482]: config renderd: num_threads=4
+renderd[28482]: config renderd: num_slaves=0
+renderd[28482]: config renderd: tile_dir=/var/lib/mod_tile
+renderd[28482]: config renderd: stats_file=/var/run/renderd/renderd.stats
+renderd[28482]: config mapnik:  plugins_dir=/usr/lib/mapnik/input
+renderd[28482]: config mapnik:  font_dir=/usr/share/fonts/truetype
+renderd[28482]: config mapnik:  font_dir_recurse=1
+renderd[28482]: config renderd(0): Active
+renderd[28482]: config renderd(0): unix socketname=/var/run/renderd/renderd.sock
+renderd[28482]: config renderd(0): num_threads=4
+renderd[28482]: config renderd(0): tile_dir=/var/lib/mod_tile
+renderd[28482]: config renderd(0): stats_file=/var/run/renderd/renderd.stats
+renderd[28482]: config map 0:   name(default) file(/home/betrieb/src/openstreetmap-carto/mapnik.xml) uri(/hot/) htcp() host(tile.openstreetmap.org)
+renderd[28482]: Initialising unix server socket on /var/run/renderd/renderd.sock
+socket bind failed for: /var/run/renderd/renderd.sock</code></p>
+<p>I also tried the answers from <a href="https://stackoverflow.com/questions/16851034/i-get-an-error-saying-socket-bind-failed-for-var-run-renderd-renderd-sock-if-i">that post from stackoverflow</a> but it didn't help. 
+Anyone another idea that can make it work?</p>
+<p>Best regards,</p>
+<p>N3x</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mysql/" class="post-tag tag-link-mysql"
+                                        title="see questions tagged 'mysql'" rel="tag">mysql</a>
+                                
+                                    <a href="/tags/renderd/" class="post-tag tag-link-renderd"
+                                        title="see questions tagged 'renderd'" rel="tag">renderd</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Apr '19, 12:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cac02e7bc318c8ceefa4f9eb1cd7b379?s=32&amp;d=identicon&amp;r=g" alt="N3x's gravatar image" />
+    <p><a href="/users/16611/n3x">N3x</a><br/>
+    <span class="score" title="51 reputation points">51</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="N3x has one accepted answer">33&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/68998/">
+                edited
+                <strong>29 Apr '19, 12:59</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-68998">
+    
+        <a name="68999"></a>
+        <div class="comment" id="comment-68999">
+            <div id="post-68999-score" class="comment-score"></div>
+            <div class="comment-text"><p>Which Linux distribution are you running?</p></div>
+            <div class="comment-info" id="comment-68999-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '19, 13:04)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="69000"></a>
+        <div class="comment" id="comment-69000">
+            <div id="post-69000-score" class="comment-score"></div>
+            <div class="comment-text"><p>ubuntu 18.04 lts server</p></div>
+            <div class="comment-info" id="comment-69000-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '19, 13:08)</span>
+                <a class="comment-user userinfo" href="/users/16611/n3x">N3x</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68998" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68998-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/68998/socket-bind-failed-after-running-renderd?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/68998/socket-bind-failed-after-running-renderd?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/68998/socket-bind-failed-after-running-renderd?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/68998/socket-bind-failed-after-running-renderd?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="69010"></a>
+                    <div id="answer-container-69010" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69010-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69010/up/" rel="nofollow"> </a>
+<div id="post-69010-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-69010-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69010/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Do you have a /var/run/renderd directory?
+Otherwise :</p>
+<blockquote>
+<p>Blockquote</p>
+</blockquote>
+<pre><code>sudo mkdir /var/run/renderd
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69010/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Apr '19, 18:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3c7cffe544d6a1c46c97a25b2fdcdedc?s=32&amp;d=identicon&amp;r=g" alt="yvecai's gravatar image" />
+    <p><a href="/users/5587/yvecai">yvecai</a><br/>
+    <span class="score" title="1481 reputation points"><span class="">1.5k</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="26 badges"><span class="bronze">&#9679;</span><span class="badgecount">26</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="yvecai has 7 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69010">
+    
+        <a name="69012"></a>
+        <div class="comment" id="comment-69012">
+            <div id="post-69012-score" class="comment-score"></div>
+            <div class="comment-text"><p>I already created that folder before running it</p></div>
+            <div class="comment-info" id="comment-69012-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '19, 07:08)</span>
+                <a class="comment-user userinfo" href="/users/16611/n3x">N3x</a>
+                
+            </div>
+        </div>
+    
+        <a name="69017"></a>
+        <div class="comment" id="comment-69017">
+            <div id="post-69017-score" class="comment-score">1</div>
+            <div class="comment-text"><p>What are the access rights to that folder and as what user are you trying to create a socket in there?</p></div>
+            <div class="comment-info" id="comment-69017-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '19, 09:56)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="69018"></a>
+        <div class="comment" id="comment-69018">
+            <div id="post-69018-score" class="comment-score"></div>
+            <div class="comment-text"><p>Didn't thought about that. Created with root and not it belongs to the user I'm executing the command with. Getting this output now:
+<a href="https://pastebin.com/pBADCg0P">https://pastebin.com/pBADCg0P</a>
+And when I try to open it in my Brwoser I get another error which I can't seem to get right now</p></div>
+            <div class="comment-info" id="comment-69018-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '19, 10:54)</span>
+                <a class="comment-user userinfo" href="/users/16611/n3x">N3x</a>
+                
+            </div>
+        </div>
+    
+        <a name="69019"></a>
+        <div class="comment" id="comment-69019">
+            <div id="post-69019-score" class="comment-score">1</div>
+            <div class="comment-text"><p>"An error occurred while loading the map layer 'default': Could not create datasource for type: 'postgis' (no datasource plugin directories have been successfully registered)" suggests you haven't don't the postgis part of that postgres setup.  Maybe have a read of <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/manually-building-a-tile-server-18-04-lts/</a> and see what you might be missing?</p></div>
+            <div class="comment-info" id="comment-69019-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '19, 10:57)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="69020"></a>
+        <div class="comment not_top_scorer" id="comment-69020">
+            <div id="post-69020-score" class="comment-score"></div>
+            <div class="comment-text"><p>Funny thing is that I'm builing it using these instrustions. Just tried to do the postgres steps again but it seems like I already did everything right. I can only try to set up a new Server.</p></div>
+            <div class="comment-info" id="comment-69020-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '19, 12:16)</span>
+                <a class="comment-user userinfo" href="/users/16611/n3x">N3x</a>
+                
+            </div>
+        </div>
+    
+        <a name="69031"></a>
+        <div class="comment not_top_scorer" id="comment-69031">
+            <div id="post-69031-score" class="comment-score"></div>
+            <div class="comment-text"><p>You don't have multiple versions of postgres by any chance do you?  Perhaps one has postgis set up but one not.</p></div>
+            <div class="comment-info" id="comment-69031-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '19, 11:21)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="69043"></a>
+        <div class="comment not_top_scorer" id="comment-69043">
+            <div id="post-69043-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't.
+I tried to reinstall psql and correctly choose the owners but it still won't work. 
+Warnings + Errors: <a href="https://pastebin.com/VhcaXtPC">https://pastebin.com/VhcaXtPC</a>
+Got any other idea?</p></div>
+            <div class="comment-info" id="comment-69043-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 May '19, 12:53)</span>
+                <a class="comment-user userinfo" href="/users/16611/n3x">N3x</a>
+                
+            </div>
+        </div>
+    
+        <a name="69055"></a>
+        <div class="comment not_top_scorer" id="comment-69055">
+            <div id="post-69055-score" class="comment-score"></div>
+            <div class="comment-text"><p>I was checking that pastebin and went to the file written in the error. Here's what I got: <a href="https://pastebin.com/WwEYdyLn">https://pastebin.com/WwEYdyLn</a>
+Is there any problem with that line or the whole layer?</p></div>
+            <div class="comment-info" id="comment-69055-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '19, 07:57)</span>
+                <a class="comment-user userinfo" href="/users/16611/n3x">N3x</a>
+                
+            </div>
+        </div>
+    
+        <a name="69060"></a>
+        <div class="comment" id="comment-69060">
+            <div id="post-69060-score" class="comment-score">1</div>
+            <div class="comment-text"><p>That still says "Could not create datasource for type: 'postgis' (no datasource plugin directories have been successfully registered)".  You'll need to resolve that before you can proceed.  You say "I already did everything right" yet your computer disagrees with you.  </p>
+
+<p>Arguing with inanimate objects is rarely productive; and unfortunately only you know what you have <em>actually</em> done to get to where you are.  Trying everything again on a new server (a small virtual machine, perhaps) would be one way to investigate what went wrong.</p></div>
+            <div class="comment-info" id="comment-69060-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '19, 11:14)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="69120"></a>
+        <div class="comment not_top_scorer" id="comment-69120">
+            <div id="post-69120-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well...
+I set up a new VM and tried it again. Checked every step and set everything right. Still won't work. 
+2 VMs, same instructions, same result. Both won't work like they should.</p></div>
+            <div class="comment-info" id="comment-69120-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '19, 07:51)</span>
+                <a class="comment-user userinfo" href="/users/16611/n3x">N3x</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69010" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69010-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="69282"></a>
+                    <div id="answer-container-69282" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69282-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69282/up/" rel="nofollow"> </a>
+<div id="post-69282-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-69282-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69282/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><strong>Problem fixed - no answers needed anymore</strong></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69282/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 May '19, 15:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cac02e7bc318c8ceefa4f9eb1cd7b379?s=32&amp;d=identicon&amp;r=g" alt="N3x's gravatar image" />
+    <p><a href="/users/16611/n3x">N3x</a><br/>
+    <span class="score" title="51 reputation points">51</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="N3x has one accepted answer">33&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69282">
+    
+        <a name="69284"></a>
+        <div class="comment" id="comment-69284">
+            <div id="post-69284-score" class="comment-score"></div>
+            <div class="comment-text"><p>So what was it in the end?</p></div>
+            <div class="comment-info" id="comment-69284-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 May '19, 15:30)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="69286"></a>
+        <div class="comment" id="comment-69286">
+            <div id="post-69286-score" class="comment-score"></div>
+            <div class="comment-text"><p>"What are the access rights to that folder and as what user are you trying to create a socket in there?" that comment helped a lot. And the database error was because I had to change <code>plugins_dir=/usr/lib/mapnik/input</code> to <code>plugins_dir=/usr/lib/mapnik/3.0/input</code></p></div>
+            <div class="comment-info" id="comment-69286-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 May '19, 15:34)</span>
+                <a class="comment-user userinfo" href="/users/16611/n3x">N3x</a>
+                
+            </div>
+        </div>
+    
+        <a name="69913"></a>
+        <div class="comment" id="comment-69913">
+            <div id="post-69913-score" class="comment-score"></div>
+            <div class="comment-text"><p>Could you explain what you did to solve it?
+I'm having the same problem.
+My plugins_dir is ok, the access rights seems to be my problem.</p></div>
+            <div class="comment-info" id="comment-69913-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jul '19, 03:28)</span>
+                <a class="comment-user userinfo" href="/users/16880/carlosguedes">carlosguedes</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69282" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69282-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/68998/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='NuChBmK7rBCqmrHPBjrnYAWYkeaZYNRt' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68998/socket-bind-failed-after-running-renderd?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68998/socket-bind-failed-after-running-renderd?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/renderd/"
+            class="tag-link-renderd"
+            title="see questions tagged'renderd'using tags"
+            rel="tag">renderd</a> <span class="tag-number">&#215;105</span><br/>
+        
+        <a href="/tags/mysql/"
+            class="tag-link-mysql"
+            title="see questions tagged'mysql'using tags"
+            rel="tag">mysql</a> <span class="tag-number">&#215;21</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 29, 2019, 12:41 p.m.">29 Apr '19, 12:41</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,360 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 7, 2019, 3:29 a.m.">07 Jul '19, 03:29</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/51467/rendering-of-chinese-place-names-show-as-messy-code">Rendering of Chinese place names show as messy code</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57052/segmentation-fault-on-a-command-sudo-u-taras-renderd-f-c-usrlocaletcrenderdconf">Segmentation fault on a command &quot;sudo -u taras renderd -f -c /usr/local/etc/renderd.conf&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35317/local-tile-server-from-packages-404-when-displaying-tiles">Local Tile Server from Packages: 404 when displaying tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43816/switch2osm-tile-server-404ing">switch2osm tile server 404ing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52185/what-is-the-tile-server-the-id-editor-used-to-renderd">What is the tile server the iD editor used to renderd?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53854/the-renderd_expire-command-update-wrong-tiles">The renderd_expire command update wrong tiles.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22201/how-to-install-renderd-as-a-service">[closed] How to install renderd as a service</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24290/local-tile-server-extremely-slow-rendering">Local Tile Server - EXTREMELY slow rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37611/renderd-doesnt-update-tiles">Renderd doesn&#39;t update tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59488/running-renderd-for-the-first-time">Running renderd for the first time</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

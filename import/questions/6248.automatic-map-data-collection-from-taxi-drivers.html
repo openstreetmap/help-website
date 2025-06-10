@@ -1,0 +1,816 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Automatic map data collection from taxi drivers - OSM Help</title>
+        <meta name="description" content="I am looking for a good way to contribute map data to this project. I have created taxi dispatch system which is using GPS. For now we are using our Polish map provider but would like to switch to Open Street Map. One problem is that there are missing roads and addresses. In each city, where system ..." />
+        <meta name="keywords" content="housenumbers,poland,automated" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/6248/automatic-map-data-collection-from-taxi-drivers" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/6248/automatic-map-data-collection-from-taxi-drivers?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='2uLOKQU7i6W3uFPq0BZ3xZuvnY4xhTSQ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/6248/automatic-map-data-collection-from-taxi-drivers">Automatic map data collection from taxi drivers</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-6248-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6248/up/" rel="nofollow"> </a>
+<div id="post-6248-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-6248-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6248/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/6248/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   2
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am looking for a good way to contribute map data to this project.
+I have created taxi dispatch system which is using GPS. For now we are using our Polish map provider but would like to switch to Open Street Map. One problem is that there are missing roads and addresses. In each city, where system is working, we have in our disposal &gt;100 taxi drivers working. The question is how to modify our system so we can automatically contribute our drivers GPS traces to Open Street Map. Also we would like to create a way for a drivers terminal to aid adding address information. All collected data will be provided for Open Street Map to be integrated and we will use this integrated data for taxi dispatch.</p>
+<p>We are also looking for people willing to help in setting up Open Street Map on our own servers.</p>
+<p>Thank You, for every suggestion.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/housenumbers/" class="post-tag tag-link-housenumbers"
+                                        title="see questions tagged 'housenumbers'" rel="tag">housenumbers</a>
+                                
+                                    <a href="/tags/poland/" class="post-tag tag-link-poland"
+                                        title="see questions tagged 'poland'" rel="tag">poland</a>
+                                
+                                    <a href="/tags/automated/" class="post-tag tag-link-automated"
+                                        title="see questions tagged 'automated'" rel="tag">automated</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Jul '11, 15:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/afe9bae366b74d4a90c94a746dbedb2d?s=32&amp;d=identicon&amp;r=g" alt="dbapl's gravatar image" />
+    <p><a href="/users/1700/dbapl">dbapl</a><br/>
+    <span class="score" title="121 reputation points">121</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dbapl has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6248/">
+                edited
+                <strong>09 Jul '11, 16:39</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-6248">
+    
+        <a name="6304"></a>
+        <div class="comment" id="comment-6304">
+            <div id="post-6304-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for answers. I will ask about it on mailing lists.</p></div>
+            <div class="comment-info" id="comment-6304-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '11, 20:13)</span>
+                <a class="comment-user userinfo" href="/users/1700/dbapl">dbapl</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6248" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6248-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/6248/automatic-map-data-collection-from-taxi-drivers?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/6248/automatic-map-data-collection-from-taxi-drivers?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/6248/automatic-map-data-collection-from-taxi-drivers?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/6248/automatic-map-data-collection-from-taxi-drivers?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="6263"></a>
+                    <div id="answer-container-6263" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6263-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6263/up/" rel="nofollow"> </a>
+<div id="post-6263-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-6263-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6263/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="dbapl has selected this answer as the correct answer"
+        href="/accept_answer/6263/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For GPS traces to roads, this does indeed require some manual effort... however, once the road network is basically in place, and you're just needing to add tags, correct names, or mark the location of a previously unmarked address, business, etc., this is somewhat easier to design an editing interface for.</p>
+<p>There's an existing application working, and under further development for mobile phones (in Java) that would have quite a bit of overlap with the kind of thing you're wanting to do... look up "GpsMid", and the "editing" version of this in particular (I've used it for a kind-of small scale version of what you're thinking of - going along a street and marking the name and any additional details of the building I'm just outside). Again, this is likely to need at least a little "intelligent" post-processing to reposition the POI, house number, etc. closer to where the building is - or good software and a high quality GPS receiver.</p>
+<p>I'd suggest it could be worth getting "stuck in" a bit, doing it "the hard way" with a small group of keen taxi drivers or other mappers, to get a feel for how the systems work generally, so you'd better understand the requirements for the form that the data needs to be in for designing your full interface.</p>
+<p>Also worth asking on the mailing lists or forums, etc. as this Q&amp;A site is really more for questions that have a single "straight" answer, and primarily for being answered by other "normal mappers"...</p>
+<p>You can get the basic details of the requirements for the API for retrieving and submitting map data at <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">http://wiki.openstreetmap.org/wiki/API_v0.6</a> but again, experience of actually entering data would be invaluable before considering a partially automated data entry system such as you propose... and discussing on one of the appropriate mailing lists would help to keep up to speed with changes to the API and/or standard practice for handling it.</p>
+<p>I'd imagine that if the systems can be worked out right, a mechanism to have taxi drivers effectively double-check and be able to correct every address every time they pick up or drop off a passenger would be a great boost - particularly if this starts to be in a form where it can be adopted by other taxi companies across the planet..... :)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6263/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Jul '11, 01:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b95e1b5cb818be577b5561688a50368c?s=32&amp;d=identicon&amp;r=g" alt="banoffee's gravatar image" />
+    <p><a href="/users/1620/banoffee">banoffee</a><br/>
+    <span class="score" title="884 reputation points">884</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="21 badges"><span class="bronze">&#9679;</span><span class="badgecount">21</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="banoffee has 3 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6263">
+    
+</div>
+<div id="comment-tools-6263" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6263-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6250"></a>
+                    <div id="answer-container-6250" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6250-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6250/up/" rel="nofollow"> </a>
+<div id="post-6250-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-6250-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6250/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are a few things you can do.</p>
+<h2>Uploading GPX Tracks</h2>
+<p>First, if the GPS units in your cars can log, you can contribute those logs to OSM via the GPX track uploads. This can be useful for roads which may not be off in OSM, or inaccurate.</p>
+<p>You'll need to collect the GPSes and upload the tracks, but that won't take long.</p>
+<h2>Adding Collected Data into OSM</h2>
+<p>That's really all you can do "automatically". But what you can do is once you have the GPX tracks, you can <a href="http://wiki.openstreetmap.org/wiki/Upload">upload them</a> and compare them to OSM and see what streets are missing. You can then add the streets You can then ask a driver for the names of the streets which you're adding. If there's <a href="http://wiki.openstreetmap.org/wiki/Aerial_imagery">imagery</a> for your area (and I'd expect some with Bing), you can combine your data with the imagery and trace the roads.</p>
+<p>Of course the GPX tracks won't give you the names, and neither will the imagery. That, you'll have to figure out yourself. But if the map is somewhat complete, once you've added your GPX tracks, you may find that information is easy to figure out. And then it may be only one day to figure out what to fix.</p>
+<h2>Walking Papers</h2>
+<p>If your drivers are willing to help, but maybe not so technical, you could hand them <a href="http://walking-papers.org/">walking papers</a> and ask them to use a pen to write out the names of the streets that don't have names. You can then scan them in and people (or you, preferably) can add the information to the map.</p>
+<h2>Addresses</h2>
+<p>Addresses are a bit trickier. In some places the addresses are relatively uniform... </p>
+<p>12... 14... 16... 18  on one side, and then</p>
+<p>... 13... 15... 17... 19... on the other</p>
+<p>And in that case, you can use <a href="http://wiki.openstreetmap.org/wiki/Key:addr#Using_interpolation">address interpolation</a>, where you can mark off some of the addresses, and then the rest are figured out automatically. It's not perfect, of course. But it works. You can do this by marking a few houses (eg at the end of a block) or important buildings. You could ask the drivers using Walking Papers to do this, or put the waypoints in the GPS."</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6250/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '11, 16:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5f2082b86cc50d63c05f33f55166df2d?s=32&amp;d=identicon&amp;r=g" alt="emacsen's gravatar image" />
+    <p><a href="/users/540/emacsen">emacsen</a><br/>
+    <span class="score" title="1191 reputation points"><span class="">1.2k</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="emacsen has 4 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6250">
+    
+        <a name="6261"></a>
+        <div class="comment" id="comment-6261">
+            <div id="post-6261-score" class="comment-score">1</div>
+            <div class="comment-text"><p>So we should convert traces to map data ourself or find someone willing to do this? There is no other way? That is not encouraging :( </p>
+
+<p>In Poland address interpolation will not work, very very rarely buildings are evenly spaced and in right order. I am thinking about something like this to collect address data:
+- driver is send to specific address for client
+- when he/she is on the right spot (on the road/parking near client address) and confirms client is in the taxi we mark GPS coordinates to point to that address</p>
+
+<p>Will data generated like that be interesting to Open Street Map?</p></div>
+            <div class="comment-info" id="comment-6261-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '11, 23:56)</span>
+                <a class="comment-user userinfo" href="/users/1700/dbapl">dbapl</a>
+                
+            </div>
+        </div>
+    
+        <a name="6262"></a>
+        <div class="comment" id="comment-6262">
+            <div id="post-6262-score" class="comment-score">2</div>
+            <div class="comment-text"><p>My answer doesn't fit in this little box. The help forum is for very general, generic questions. I suggest you join one of the mailing lists at <a href="http://lists.openstreetmap.org/listinfo">http://lists.openstreetmap.org/listinfo</a> and ask your question there, where you can work more easily with the community.</p></div>
+            <div class="comment-info" id="comment-6262-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jul '11, 00:07)</span>
+                <a class="comment-user userinfo" href="/users/540/emacsen">emacsen</a>
+                
+            </div>
+        </div>
+    
+        <a name="6288"></a>
+        <div class="comment" id="comment-6288">
+            <div id="post-6288-score" class="comment-score"></div>
+            <div class="comment-text"><p>Bonus points for having GPX waypoints containing useful details uploaded as part of that.  IIRC, GPX waypoints are left in tact when uploaded to OSM.</p></div>
+            <div class="comment-info" id="comment-6288-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jul '11, 16:21)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6250" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6250-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/6248/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='2uLOKQU7i6W3uFPq0BZ3xZuvnY4xhTSQ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6248/automatic-map-data-collection-from-taxi-drivers?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6248/automatic-map-data-collection-from-taxi-drivers?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/housenumbers/"
+            class="tag-link-housenumbers"
+            title="see questions tagged'housenumbers'using tags"
+            rel="tag">housenumbers</a> <span class="tag-number">&#215;63</span><br/>
+        
+        <a href="/tags/automated/"
+            class="tag-link-automated"
+            title="see questions tagged'automated'using tags"
+            rel="tag">automated</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/poland/"
+            class="tag-link-poland"
+            title="see questions tagged'poland'using tags"
+            rel="tag">poland</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 9, 2011, 3:47 p.m.">09 Jul '11, 15:47</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>15,167 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 13, 2011, 8:13 p.m.">13 Jul '11, 20:13</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/583/is-there-an-easy-way-to-tag-nodes-with-consecutive-numbers">Is there an easy way to tag nodes with consecutive numbers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/642/issues-with-httpnominatimopenstreetmaporg">Issues with http://nominatim.openstreetmap.org/ ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1658/questions-about-tagging-housenumbers">Questions about tagging housenumbers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2329/addresses-with-two-house-numbers">Addresses with two house numbers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2494/how-can-i-add-a-list-of-pois-from-a-database">How can I add a list of POIs from a database?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2663/what-tools-exist-to-highlight-the-absense-of-housenumbers">What tools exist to highlight the absense of housenumbers ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5062/why-do-only-few-house-numbers-appear">Why do only few house numbers appear?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7335/how-to-add-a-house-number">How to add a house number?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7342/easy-way-to-map-house-numbers">easy way to map house numbers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/534/how-does-nominatim-have-data-that-is-not-in-openstreetmap">How does Nominatim have data that is not in OpenStreetMap?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

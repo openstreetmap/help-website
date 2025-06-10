@@ -1,0 +1,1402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>When Mapping Polygons surrounded by streets should they share nodes or be traced separately? - OSM Help</title>
+        <meta name="description" content="When Mapping Polygons surrounded by streets should they share nodes or be traced separately? I don&#39;t know what the best practice is for parks or other polygons that are surrounded by streets, should it be traced around on it&#39;s own or should it be traced on top of the street nodes. This question has ..." />
+        <meta name="keywords" content="tracing,nodes,park,polygon,shared" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='C08CkscnGZzx5JbyH3IDjf9d2m5bqPVv' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately">When Mapping Polygons surrounded by streets should they share nodes or be traced separately?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-17501-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17501/up/" rel="nofollow"> </a>
+<div id="post-17501-score" class="post-score"
+    title="current number of votes">
+    12
+</div>
+<a id="post-17501-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17501/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/17501/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   3
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When Mapping Polygons surrounded by streets should they share nodes or be traced separately?</p>
+<p>I don't know what the best practice is for parks or other polygons that are surrounded by streets, should it be traced around on it's own or should it be traced on top of the street nodes.  This question has been bugging me for some time.</p>
+<p><a href="http://www.openstreetmap.org/?lat=41.162901520729065&amp;lon=-73.21826845407486&amp;zoom=18">Example This way</a></p>
+<p><a href="http://www.openstreetmap.org/?lat=41.18011996150017&amp;lon=-73.22644114494324&amp;zoom=17">Or this way</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tracing/" class="post-tag tag-link-tracing"
+                                        title="see questions tagged 'tracing'" rel="tag">tracing</a>
+                                
+                                    <a href="/tags/nodes/" class="post-tag tag-link-nodes"
+                                        title="see questions tagged 'nodes'" rel="tag">nodes</a>
+                                
+                                    <a href="/tags/park/" class="post-tag tag-link-park"
+                                        title="see questions tagged 'park'" rel="tag">park</a>
+                                
+                                    <a href="/tags/polygon/" class="post-tag tag-link-polygon"
+                                        title="see questions tagged 'polygon'" rel="tag">polygon</a>
+                                
+                                    <a href="/tags/shared/" class="post-tag tag-link-shared"
+                                        title="see questions tagged 'shared'" rel="tag">shared</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Nov '12, 18:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/602a4908e9bea5a3f086bd91654717c4?s=32&amp;d=identicon&amp;r=g" alt="redsteakraw's gravatar image" />
+    <p><a href="/users/4901/redsteakraw">redsteakraw</a><br/>
+    <span class="score" title="1040 reputation points"><span class="">1.0k</span></span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="24 badges"><span class="silver">&#9679;</span><span class="badgecount">24</span></span><span title="37 badges"><span class="bronze">&#9679;</span><span class="badgecount">37</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="redsteakraw has 2 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17501/">
+                edited
+                <strong>01 Mar '13, 23:09</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-17501">
+    
+        <a name="30902"></a>
+        <div class="comment" id="comment-30902">
+            <div id="post-30902-score" class="comment-score"></div>
+            <div class="comment-text"><p>Nearly the same question: <a href="/questions/18495/">is-it-okay-if-landuse-borders-share-nodes-with-streets-rivers</a>.</p></div>
+            <div class="comment-info" id="comment-30902-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Feb '14, 00:43)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17501" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17501-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    6 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="17505"></a>
+                    <div id="answer-container-17505" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17505-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17505/up/" rel="nofollow"> </a>
+<div id="post-17505-score" class="post-score"
+    title="current number of votes">
+    27
+</div>
+<a id="post-17505-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17505/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Short answer: do not share nodes between a way and an area.</p>
+<p>Long answer:</p>
+<p>when representing a road (physical 2D object) using a way (logical 1D object), we've made a simplification. We know the road has a width in real life, but it doesn't have one in the db. On the other hand, when representing a park using a closed way, we haven't simplified anything. It is an exact (if approximate) representation.</p>
+<p>Linear objects and planar ones should be thought of as belonging to "separate universes". Sharing nodes between them leads to logical fallacies. For example, it'd mean that the park really does extend up to the middle of the road.</p>
+<p>Sharing nodes is tempting because it is less work at first (especially if you want to connect the park to the road network, for pedestrian routing purposes), But it is incorrect (as explained above), and it can make later editing more cumbersome.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17505/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Nov '12, 19:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d20f86db9a6f03cb070e9fbaaf0b7228?s=32&amp;d=identicon&amp;r=g" alt="Vincent%20de%20Phily's gravatar image" />
+    <p><a href="/users/867/vincent-de-phily">Vincent de P... ♦</a><br/>
+    <span class="score" title="17304 reputation points"><span class="">17.3k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="152 badges"><span class="silver">&#9679;</span><span class="badgecount">152</span></span><span title="249 badges"><span class="bronze">&#9679;</span><span class="badgecount">249</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vincent de Phily has 64 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17505/">
+                edited
+                <strong>05 Nov '12, 19:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17505">
+    
+        <a name="17508"></a>
+        <div class="comment" id="comment-17508">
+            <div id="post-17508-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It looks nicer to have two areas share points, but it's almost never worth it imho..</p></div>
+            <div class="comment-info" id="comment-17508-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Nov '12, 19:48)</span>
+                <a class="comment-user userinfo" href="/users/188/emj">emj</a>
+                
+            </div>
+        </div>
+    
+        <a name="18547"></a>
+        <div class="comment" id="comment-18547">
+            <div id="post-18547-score" class="comment-score"></div>
+            <div class="comment-text"><p>Now I am really confused. Take a look at:</p>
+
+<p><a href="http://wiki.openstreetmap.org/wiki/File:Multipolygon-example_forest-2water-scrub-boundary-highway.svg">http://wiki.openstreetmap.org/wiki/File:Multipolygon-example_forest-2water-scrub-boundary-highway.svg</a></p>
+
+<p>I have always considered it to be that areas and ways could share the same boundaries, but it seems that I am wrong! Please clarify.</p></div>
+            <div class="comment-info" id="comment-18547-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '12, 06:56)</span>
+                <a class="comment-user userinfo" href="/users/716/dcp">dcp</a>
+                
+            </div>
+        </div>
+    
+        <a name="23966"></a>
+        <div class="comment" id="comment-23966">
+            <div id="post-23966-score" class="comment-score">2</div>
+            <div class="comment-text"><p>It is common for highways and areas to share nodes in OSM (as it is common to make them NOT share nodes), but it shouldn't be done because it is less detailed and creates some problems (the areas get bigger than they are, objects on the street seem to belong to the area, it is harder to edit). If you want adjacent areas to share nodes with the street you should map the street as an area (additionally to the center line).</p></div>
+            <div class="comment-info" id="comment-23966-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jul '13, 11:22)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+        <a name="30901"></a>
+        <div class="comment" id="comment-30901">
+            <div id="post-30901-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You can share nodes, and nothing stops you from sharing nodes.  It's a valid, but not universally applicable or liked, mapping technique.</p></div>
+            <div class="comment-info" id="comment-30901-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Feb '14, 00:18)</span>
+                <a class="comment-user userinfo" href="/users/667/bryce-c-nesbitt">Bryce C Nesbitt</a>
+                
+            </div>
+        </div>
+    
+        <a name="30996"></a>
+        <div class="comment" id="comment-30996">
+            <div id="post-30996-score" class="comment-score"></div>
+            <div class="comment-text"><p>It is not "incorrect". It is simplified like the 1D road, as you said. And they are many places where the detached polygon is also approximate (especially when data source - the aerial imagery - is not so good)</p></div>
+            <div class="comment-info" id="comment-30996-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '14, 09:55)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17505" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17505-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="17503"></a>
+                    <div id="answer-container-17503" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17503-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17503/up/" rel="nofollow"> </a>
+<div id="post-17503-score" class="post-score"
+    title="current number of votes">
+    10
+</div>
+<a id="post-17503-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17503/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This depends on personal preference. You will find people within OSM that will tell you either method is the only right one. They will have a load of arguments for their point of view too. There is no clear majority for either method.</p>
+<p>My personal POV is that when mapping in an area where there is already a lot of detailed data (e.g. in a well mapped city centre), then you should do the same. In other words trace separately.</p>
+<p>If you're mapping in the middle of nowhere and want to map the forest on one side of the road and the farmland on the other side of the road, then I would share the nodes.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17503/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Nov '12, 19:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fed945e27bb98de054a867827550812e?s=32&amp;d=identicon&amp;r=g" alt="cartinus's gravatar image" />
+    <p><a href="/users/2933/cartinus">cartinus</a><br/>
+    <span class="score" title="7033 reputation points"><span class="">7.0k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="66 badges"><span class="silver">&#9679;</span><span class="badgecount">66</span></span><span title="105 badges"><span class="bronze">&#9679;</span><span class="badgecount">105</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cartinus has 35 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17503">
+    
+        <a name="17507"></a>
+        <div class="comment" id="comment-17507">
+            <div id="post-17507-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Ah yes, I should have mentioned that there isn't a full concensus on this subject, instead of simply stating my POV. But hey, my POV is by definition the best one, right ? :p</p>
+
+<p>Now that we have a "no" and a "it depends" answer, maybe we need to add a "yes" answer. So that I can counter the arguments in the comments :p</p></div>
+            <div class="comment-info" id="comment-17507-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Nov '12, 19:32)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23967"></a>
+        <div class="comment" id="comment-23967">
+            <div id="post-23967-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I agree, as I see you are interpreting sharing nodes of lines and polygons as an intermediate solution for less detailed areas (i.e. you do it like this because despite being less precise it is faster and you accept this compromise in order to get more mapping done). The conclusion on the other hand is that not sharing nodes is more precise and should be preferred when you have time.</p></div>
+            <div class="comment-info" id="comment-23967-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jul '13, 11:25)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17503" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17503-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24551"></a>
+                    <div id="answer-container-24551" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24551-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24551/up/" rel="nofollow"> </a>
+<div id="post-24551-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-24551-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24551/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm a new mapper, but I would still strongly advise against sharing nodes between ways and areas because editing becomes much more difficult later for whomever.  If some person later disconnects nodes on a way and one of those nodes is helping define an area, they may not realize that the area's node is also disconnected (it certainly is) and may well leave the area disconnected even if they re-connect the way since that may involve moving or recreating the node in question.  I can tell you it's happened to me and I just count myself lucky that I happened to think about it later on and discovered what I had done and fixed it.  It's more work making things parallel, but your polygons will be far less prone to accidental editing.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24551/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Jul '13, 05:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f644da470dd54a21e08f5cf7e888099a?s=32&amp;d=identicon&amp;r=g" alt="Evan%20Edwards's gravatar image" />
+    <p><a href="/users/6938/evan-edwards">Evan Edwards</a><br/>
+    <span class="score" title="145 reputation points">145</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Evan Edwards has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24551">
+    
+</div>
+<div id="comment-tools-24551" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24551-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="18560"></a>
+                    <div id="answer-container-18560" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18560-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18560/up/" rel="nofollow"> </a>
+<div id="post-18560-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-18560-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18560/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I have tried both. Shared can look neater but it is a real pain to edit later.But,If you use Potlatch2, there is a parallel line tool in the tool box which you could find usefull.  I haven't used it in this way yet but i will give it a go. The paralell tool as lots of less obvious uses, I have used it to make several identical buildings for example. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18560/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Dec '12, 12:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/18560/">
+                edited
+                <strong>18 Dec '12, 20:15</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18560">
+    
+        <a name="18609"></a>
+        <div class="comment" id="comment-18609">
+            <div id="post-18609-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It's also really handy if you're mapping areas like industrial sites with lots of storage tanks--you can roughly trace one, use the circle tool to make it a proper circle, then use the parallel tool to create more circles, even of different sizes.</p></div>
+            <div class="comment-info" id="comment-18609-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '12, 14:47)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18560" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18560-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="30900"></a>
+                    <div id="answer-container-30900" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30900-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30900/up/" rel="nofollow"> </a>
+<div id="post-30900-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-30900-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30900/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I find it much easier to maintain shared node boundaries, at least most of the time.  Adjusting to ever improving air photo data, for example, is a lot nicer with shared nodes.</p>
+<p>Shared nodes also tend to make for neater cleaner rendered maps, especially on specialty products (for example a bike map where bike route streets are rendered extra fat).<br>
+</p>
+<p>Node sharing is not right in every area.  But I think it's right in a lot of rural areas, and I think it reaches it's limits once you start to micro-map street furniture, traffic lights, trash cans, fences, or details down to that level.  The shared nodes are a simplified model of the world, which is fine for a huge fraction of the planet surface.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30900/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Feb '14, 00:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/372fabe5d3962d54b0c9474e35a05359?s=32&amp;d=identicon&amp;r=g" alt="Bryce%20C%20Nesbitt's gravatar image" />
+    <p><a href="/users/667/bryce-c-nesbitt">Bryce C Nesbitt</a><br/>
+    <span class="score" title="345 reputation points">345</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="17 badges"><span class="bronze">&#9679;</span><span class="badgecount">17</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bryce C Nesbitt has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30900">
+    
+        <a name="30904"></a>
+        <div class="comment" id="comment-30904">
+            <div id="post-30904-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think your first part contradicts your last part. Aerial imagery is improving, other positioning methods are also improving, so it gets likely that your last part becomes reality. If it does and nodes are shared they first have to be unshared/duplicated/triplicated and assigned to the right object.</p>
+
+<p>Yes, if aerial imagery would only be improving in offset but not in resolution (and no alignment with e.g. gps traces is done) then I understand your first part.</p></div>
+            <div class="comment-info" id="comment-30904-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Feb '14, 01:00)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30913"></a>
+        <div class="comment" id="comment-30913">
+            <div id="post-30913-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="/users/667/bryce-c-nesbitt">@Bryce C Nesbitt</a>: There's a problem with your approach of starting out with a simple method that stops being practical when we add more detail: Those who want to add more detail to a previously roughly mapped area have to work harder than if the areas were not glued onto the ways. This is one of the reasons why this topic is sometimes so hotly debated, and why some people switch into the "separation" camp once they start to upgrade areas to more detailled mapping.</p></div>
+            <div class="comment-info" id="comment-30913-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Feb '14, 14:44)</span>
+                <a class="comment-user userinfo" href="/users/14/tordanik">Tordanik</a>
+                
+            </div>
+        </div>
+    
+        <a name="30927"></a>
+        <div class="comment" id="comment-30927">
+            <div id="post-30927-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You answer is a bit off-topic, as the OP was asking about sharing nodes with a street, not a boundary. It's an important distinction, because a boundary is zero-width and doesn't cause logical fallacies when sharing nodes with an area.</p>
+
+<p>There are some physical objects, such as fences, which everybody considers to be zero-width (I have yet to see a fecns mapped as an area). They can happily share nodes too (a fence can even logically define the edge of a forest, for example). But it's too much of a stretch to consider roads to be zero-width.</p></div>
+            <div class="comment-info" id="comment-30927-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Feb '14, 21:36)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30932"></a>
+        <div class="comment" id="comment-30932">
+            <div id="post-30932-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/4975/vincent">@Vincent</a>, there's no true logical fallacy mapping an area next to a road. Take a forest road. The "forest" in fact runs to the "edge of the road". If the road is widened the "forest" still runs to the "edge of the road". The moment the road is modeled as an area, the forest polygons again should be connected to the edge of the area. Drawing a forest area with a road cutout is doing half the job: the road at that point should be an area.</p>
+
+<p><a href="/users/14/tordanik">@Tordanik</a> the people micro-mapping are typically well prepared for the editing operations needed to unglue the ways. And they only have to do it once.</p></div>
+            <div class="comment-info" id="comment-30932-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '14, 01:28)</span>
+                <a class="comment-user userinfo" href="/users/667/bryce-c-nesbitt">Bryce C Nesbitt</a>
+                
+            </div>
+        </div>
+    
+        <a name="30933"></a>
+        <div class="comment" id="comment-30933">
+            <div id="post-30933-score" class="comment-score"></div>
+            <div class="comment-text"><p>We draw sidewalks and paths connecting to road centerlines, and that's not strictly true either.  As less than 1% of the planet surface is micro-mapped, concern over the effect on micro-mapping seems overstated, especially given the skill level of most micro-mappers.</p></div>
+            <div class="comment-info" id="comment-30933-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '14, 01:35)</span>
+                <a class="comment-user userinfo" href="/users/667/bryce-c-nesbitt">Bryce C Nesbitt</a>
+                
+            </div>
+        </div>
+    
+        <a name="30966"></a>
+        <div class="comment not_top_scorer" id="comment-30966">
+            <div id="post-30966-score" class="comment-score"></div>
+            <div class="comment-text"><p>Call it a "geometrical error" if "logical fallacy" is off the mark. But if stopping short of mapping the road area is doing half the job (I tend to agree, even though road areas are still very rarely mapped), then mapping the park at the centerline of the road is doing a quarter of the job. A valid approximation, but not one that wistands scrutiny using high-res imagery.</p>
+
+<p>The "edge of the road" only makes sense if the road has an edge; which a 1D zero-width object cannot have (an edge is the limit between inside and outside, but a line has no inside).</p></div>
+            <div class="comment-info" id="comment-30966-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '14, 19:48)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-30900" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30900-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="30936"></a>
+                    <div id="answer-container-30936" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30936-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30936/up/" rel="nofollow"> </a>
+<div id="post-30936-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-30936-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30936/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It is the case for most mapping techniques that it is all up to the mapper. If you are mapping in an area with a number of contributions by another user, try and follow their standards for mapping. I like to follow the general rule that if I am creating an area that includes the grass buffer along the road , I go up to the road (ex: landuse=residential, landuse=commercial, leisure=park, other community-type things). If it does not include the grass buffer, I show it going up to its actual location (ex: landuse=farm, landuse=forest, natural=wetland, and other agricultural or natural areas).</p>
+<p>The only potential problem created by this for the mapper would be that you would then have to make sure that you reconnect nodes if you disconnect them. While I found this annoying at first, I quickly developed a habit of making sure that the nodes were connected again.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30936/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Feb '14, 05:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/64737535e14942bd57d0b3aa318d06ea?s=32&amp;d=identicon&amp;r=g" alt="ItalianMustache's gravatar image" />
+    <p><a href="/users/7953/italianmustache">ItalianMustache</a><br/>
+    <span class="score" title="201 reputation points">201</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="17 badges"><span class="bronze">&#9679;</span><span class="badgecount">17</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ItalianMustache has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30936">
+    
+</div>
+<div id="comment-tools-30936" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30936-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/17501/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='C08CkscnGZzx5JbyH3IDjf9d2m5bqPVv' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nodes/"
+            class="tag-link-nodes"
+            title="see questions tagged'nodes'using tags"
+            rel="tag">nodes</a> <span class="tag-number">&#215;205</span><br/>
+        
+        <a href="/tags/polygon/"
+            class="tag-link-polygon"
+            title="see questions tagged'polygon'using tags"
+            rel="tag">polygon</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/park/"
+            class="tag-link-park"
+            title="see questions tagged'park'using tags"
+            rel="tag">park</a> <span class="tag-number">&#215;43</span><br/>
+        
+        <a href="/tags/tracing/"
+            class="tag-link-tracing"
+            title="see questions tagged'tracing'using tags"
+            rel="tag">tracing</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/shared/"
+            class="tag-link-shared"
+            title="see questions tagged'shared'using tags"
+            rel="tag">shared</a> <span class="tag-number">&#215;15</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 5, 2012, 6:33 p.m.">05 Nov '12, 18:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,523 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 25, 2014, 9:55 a.m.">25 Feb '14, 09:55</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/68043/filter-polygon-nodes-but-ignore-those-that-form-angles-90-degs">Filter polygon nodes but ignore those that form angles ~90 degs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7465/how-do-i-best-edit-shared-nodes-in-potlatch-eg-between-two-polygons">How do I best edit &quot;shared nodes&quot; in Potlatch (e.g. between two polygons)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14853/separating-joined-ways-in-potlatch">Separating joined ways in Potlatch</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20413/are-ways-and-areas-allowed-to-have-mutual-linesnodes">[closed] Are ways and areas allowed to have mutual lines/nodes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/76941/finding-all-nodes-within-a-polygon">Finding all nodes within a polygon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18495/is-it-okay-if-landuse-borders-share-nodes-with-streets-rivers">Is it okay if landuse borders share nodes with streets / rivers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5352/should-the-edges-of-landuse-or-boundary-areas-share-points-with-streets-that-form-their-borders">Should the edges of landuse=* or boundary=* areas share points with streets that form their borders?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/790/can-osm-update-its-satellite-images-for-uganda">Can OSM update its satellite images for Uganda?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/706/can-i-drawtrace-osm-data-from-a-google-map-or-yahoo">Can I draw/trace OSM data from a google map? Or Yahoo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/475/what-options-are-available-for-using-a-geotiff-as-a-background-layer">What options are available for using a GeoTIFF as a background layer?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

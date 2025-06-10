@@ -1,0 +1,870 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Access Overpass Turbo with Google Apps Script? - OSM Help</title>
+        <meta name="description" content="I would like to use Google Apps Scripts to import data from an Overpass Turbo request into a Google sheet. The QL request is something like this: (  node  (user:&quot;greenmtdave&quot;)  (6.960464727056788,79.86112117767334,6.9797191061459305,79.88375902175903);  way  (user:&quot;greenmtdave&quot;)  (6.960464727056788,..." />
+        <meta name="keywords" content="google-apps-scripts,overpass-turbo" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/50052/access-overpass-turbo-with-google-apps-script" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/50052/access-overpass-turbo-with-google-apps-script?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='giUASyKy7m2zcVP25fqmCYuotFRaPhTq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/50052/access-overpass-turbo-with-google-apps-script">Access Overpass Turbo with Google Apps Script?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-50052-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50052/up/" rel="nofollow"> </a>
+<div id="post-50052-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-50052-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50052/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/50052/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I would like to use Google Apps Scripts to import data from an Overpass Turbo request into a Google sheet. The QL request is something like this:</p>
+<p>(
+  node
+    (user:"greenmtdave")
+    (6.960464727056788,79.86112117767334,6.9797191061459305,79.88375902175903);
+  way
+    (user:"greenmtdave")
+    (6.960464727056788,79.86112117767334,6.9797191061459305,79.88375902175903);
+  relation
+    (user:"greenmtdave")
+    (6.960464727056788,79.86112117767334,6.9797191061459305,79.88375902175903);
+  node._(changed:"2016-05-15T07:00:00Z","2016-06-6T07:01:00Z");
+);
+out count;</p>
+<p>Note the use of the "out count" option, which does not seem to work if using the QL request in HTTP, so I presume I need to use XML format, but I don't know if the Google Apps Scripts class URLFetchApp supports this. I'm not much of a coder, so I can't figure this out.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/google-apps-scripts/" class="post-tag tag-link-google-apps-scripts"
+                                        title="see questions tagged 'google-apps-scripts'" rel="tag">google-apps-scripts</a>
+                                
+                                    <a href="/tags/overpass-turbo/" class="post-tag tag-link-overpass-turbo"
+                                        title="see questions tagged 'overpass-turbo'" rel="tag">overpass-turbo</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Jun '16, 03:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7c9362a68bf0ea0b0ab37aa46489271a?s=32&amp;d=identicon&amp;r=g" alt="greenmtdave's gravatar image" />
+    <p><a href="/users/3227/greenmtdave">greenmtdave</a><br/>
+    <span class="score" title="181 reputation points">181</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="greenmtdave has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-50052">
+    
+        <a name="50061"></a>
+        <div class="comment" id="comment-50061">
+            <div id="post-50061-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I believe you should fix your query before trying to automate it. <code>node._(changed:"2016-05-15T07:00:00Z","2016-06-6T07:01:00Z");</code> does not seem right, as there are no nodes in the inputset <code>._</code>. Right now, this last statement has no effect.</p>
+
+<p>If you get a response in overpass turbo, you should also get the same response via any other tool using HTTP. Whether that tool is able to parse the XML respnse, is beyond the scope of overpass api.</p></div>
+            <div class="comment-info" id="comment-50061-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jun '16, 09:39)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="50090"></a>
+        <div class="comment" id="comment-50090">
+            <div id="post-50090-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your reply. I've studied the Overpass API/Overpass QL wiki page for many hours now, and I can't figure this out. I want to get a count of all of the objects that a user has contributed within a bounding box during a certain time period. I've tried placing the change filter in various positions in the code and none seem to work. The Wiki says the change filter doesn't take an input dataset? How can that be? and the example given "node._(changed:...)" seems to indicate that the default dataset is the input dataset? </p>
+
+<p>I am a newbie and I apologize for that. But the Wiki page only gives examples of single lines of code and only three complete examples of code, none of which show the usage of the change filter. A general Google search on this also comes up with nothing.</p></div>
+            <div class="comment-info" id="comment-50090-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jun '16, 20:14)</span>
+                <a class="comment-user userinfo" href="/users/3227/greenmtdave">greenmtdave</a>
+                
+            </div>
+        </div>
+    
+        <a name="50141"></a>
+        <div class="comment" id="comment-50141">
+            <div id="post-50141-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is the QL script that seems to work:</p>
+
+<p>node(user:"greenmtdave")(6.72325,79.66323,7.95451,81.11206);
+node.<em>(changed:"2016-05-22T00:00:00Z","2016-06-10T00:00:00Z");
+(.</em>; &lt;;);
+out count;</p>
+
+<p>Now have to figure out how to get Google Apps Script to run it.</p></div>
+            <div class="comment-info" id="comment-50141-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jun '16, 22:40)</span>
+                <a class="comment-user userinfo" href="/users/3227/greenmtdave">greenmtdave</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50052" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50052-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/50052/access-overpass-turbo-with-google-apps-script?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/50052/access-overpass-turbo-with-google-apps-script?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/50052/access-overpass-turbo-with-google-apps-script?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/50052/access-overpass-turbo-with-google-apps-script?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="50291"></a>
+                    <div id="answer-container-50291" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50291-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50291/up/" rel="nofollow"> </a>
+<div id="post-50291-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-50291-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50291/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Just to wrap this up, I finally did figure out how to write a Google Apps Script to bring data from OSM into a spreadsheet. Could use some expert help to clean it up, do error checking, and make it more user friendly, so feel free to contact me at dwlitke@comcast.net if you are interested.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50291/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jun '16, 21:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7c9362a68bf0ea0b0ab37aa46489271a?s=32&amp;d=identicon&amp;r=g" alt="greenmtdave's gravatar image" />
+    <p><a href="/users/3227/greenmtdave">greenmtdave</a><br/>
+    <span class="score" title="181 reputation points">181</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="greenmtdave has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50291">
+    
+        <a name="50292"></a>
+        <div class="comment" id="comment-50292">
+            <div id="post-50292-score" class="comment-score"></div>
+            <div class="comment-text"><p>Feel free to post it here. Or a link to GitHub or some other platform where you might host your script.</p></div>
+            <div class="comment-info" id="comment-50292-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '16, 21:29)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="50293"></a>
+        <div class="comment" id="comment-50293">
+            <div id="post-50293-score" class="comment-score"></div>
+            <div class="comment-text"><p>How do I post it here without exceeding the character count? I tried using the Code Sample button, but that did some strange things to the formatting.</p></div>
+            <div class="comment-info" id="comment-50293-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '16, 21:38)</span>
+                <a class="comment-user userinfo" href="/users/3227/greenmtdave">greenmtdave</a>
+                
+            </div>
+        </div>
+    
+        <a name="50294"></a>
+        <div class="comment" id="comment-50294">
+            <div id="post-50294-score" class="comment-score"></div>
+            <div class="comment-text"><p>just post in your answer text ("edit" link) and indent each code line by at least 4 spaces or 1 tab (a text editor helps). If you want to preview, use <a href="https://daringfireball.net/projects/markdown/dingus">https://daringfireball.net/projects/markdown/dingus</a> since our live preview here is insufficient. Or just past the code and someone else fill fix the formatting for you.</p></div>
+            <div class="comment-info" id="comment-50294-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '16, 00:12)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50291" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50291-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="50295"></a>
+                    <div id="answer-container-50295" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50295-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50295/up/" rel="nofollow"> </a>
+<div id="post-50295-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-50295-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50295/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <pre><code>function startHere(){
+  // input variables
+  var OSMUserNameCol = "A";
+  var totalObjectsCol = "B";
+  var startRow = 2; 
+  var lastRow = 3;
+
+  var sheet = SpreadsheetApp.getActiveSheet();
+
+  // Fetch the range of cells
+  var dataRange1 = sheet.getRange(OSMUserNameCol + startRow + ":" + OSMUserNameCol + lastRow);
+  var dataRange2 = sheet.getRange(totalObjectsCol + startRow + ":" + totalObjectsCol + lastRow);
+
+  // Fetch values for each row in the Range.
+  var data1 = dataRange1.getValues();
+  var data2 = dataRange2.getValues();
+
+  for (var i = 0; i &lt; data1.length; ++i) {
+    var row1 = data1[i];
+    var row2 = data2[i];
+
+    //Build API request parameters
+    var rawXML = '&lt;osm-script&gt;'
+       +'&lt;query into="_" type="node"&gt;&lt;user into="_" name="' + row1 + '" type="node" uid=""/&gt;'
+       +'&lt;bbox-query e="81.11206" into="_" n="7.95451" s="6.72325" w="79.66323"/&gt;&lt;/query&gt;'
+       +'&lt;query into="_" type="node"&gt;&lt;item set="_"/&gt;&lt;changed into="_" since="2016-05-23T00:00:00Z" until="2016-06-12T00:00:00Z"/&gt;'
+       +'&lt;/query&gt;&lt;union into="_"&gt;&lt;item set="_"/&gt;&lt;recurse from="_" into="_" type="up"/&gt;&lt;/union&gt;'
+       +'&lt;print e="" from="_" geometry="skeleton" limit="" mode="count" n="" order="id" s="" w=""/&gt;'
+       +'&lt;/osm-script&gt;';
+    var url = 'http://overpass-api.de/api/interpreter';
+    var options =
+     {
+       "method" : "post",
+       "payload" : rawXML
+     };
+
+   //Fetch count data
+   var countData = UrlFetchApp.fetch(url, options).getContentText();
+   var total = countData.substring(countData.indexOf("count total=") + 13, countData.indexOf("nodes") - 2);
+   sheet.getRange(totalObjectsCol + (startRow + i)).setValue(total);
+   SpreadsheetApp.flush();
+  }
+}
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50295/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jun '16, 00:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7c9362a68bf0ea0b0ab37aa46489271a?s=32&amp;d=identicon&amp;r=g" alt="greenmtdave's gravatar image" />
+    <p><a href="/users/3227/greenmtdave">greenmtdave</a><br/>
+    <span class="score" title="181 reputation points">181</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="greenmtdave has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50295">
+    
+</div>
+<div id="comment-tools-50295" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50295-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/50052/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='giUASyKy7m2zcVP25fqmCYuotFRaPhTq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50052/access-overpass-turbo-with-google-apps-script?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50052/access-overpass-turbo-with-google-apps-script?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass-turbo/"
+            class="tag-link-overpass-turbo"
+            title="see questions tagged'overpass-turbo'using tags"
+            rel="tag">overpass-turbo</a> <span class="tag-number">&#215;228</span><br/>
+        
+        <a href="/tags/google-apps-scripts/"
+            class="tag-link-google-apps-scripts"
+            title="see questions tagged'google-apps-scripts'using tags"
+            rel="tag">google-apps-scripts</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 7, 2016, 3:17 a.m.">07 Jun '16, 03:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,115 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 18, 2016, 12:26 a.m.">18 Jun '16, 00:26</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/35642/how-to-embed-external-icons-in-overpass-turbo-mapcss">How to embed external icons in Overpass-Turbo MapCSS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35676/overpass-api-length-of-a-way">Overpass API: Length of a way</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36071/overpass-turbo-loaded-and-displayed-difference">Overpass Turbo, loaded and displayed difference.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36917/getting-fancy-results-while-running-a-overpass-api-code-circles-on-the-map">getting fancy results while running a overpass-api code: circles on the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37379/how-to-simplify-script-from-overpass-turbo">how to simplify script from overpass turbo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40001/overpass-ql-how-to-get-nodes-that-are-member-of-certain-ways">Overpass QL: How to get nodes that are member of certain ways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40022/overpass-ql-how-to-get-nodes-that-are-connecting-two-ways-and-both-are-belonging-to-the-same-set-of-given-tags">Overpass QL: How to get nodes that are connecting two ways and both are belonging to the same set of given tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40274/overpass-command-line-how-to-view-the-results-on-a-map">Overpass (command line): how to view the results on a map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40932/a-umap-with-lots-of-data-through-overpass">a umap with lots of data through overpass</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34786/overpass-turbo-searching-in-multiple-countries">Overpass Turbo searching in multiple Countries</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

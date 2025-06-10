@@ -1,0 +1,892 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Roundabouts as part of bus routes (or cycle routes, or…) - OSM Help</title>
+        <meta name="description" content="When I&#39;m putting together a road route relation which goes via a roundabout but which traverses less than 360° of the roundabout, is it better A) to split the roundabout and add the appropriate fragment to the route in a similar way to what one would do for other, non-roundabout, road sections where..." />
+        <meta name="keywords" content="geometry,bus,route,roundabout,relations" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='GKf9bNY1Ai43S1h8sU8T9zFWeRIyucGn' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or">Roundabouts as part of bus routes (or cycle routes, or…)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-2751-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2751/up/" rel="nofollow"> </a>
+<div id="post-2751-score" class="post-score"
+    title="current number of votes">
+    15
+</div>
+<a id="post-2751-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2751/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/2751/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   2
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When I'm putting together a road route relation which goes via a roundabout but which traverses less than 360° of the roundabout, is it better A) to split the roundabout and add the appropriate fragment to the route in a similar way to what one would do for other, non-roundabout, road sections where the route diverges, or B) to add the roundabout as a single looped way to the relation?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/geometry/" class="post-tag tag-link-geometry"
+                                        title="see questions tagged 'geometry'" rel="tag">geometry</a>
+                                
+                                    <a href="/tags/bus/" class="post-tag tag-link-bus"
+                                        title="see questions tagged 'bus'" rel="tag">bus</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/roundabout/" class="post-tag tag-link-roundabout"
+                                        title="see questions tagged 'roundabout'" rel="tag">roundabout</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Feb '11, 12:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b4a99bb74962d3cedff3e6d591847852?s=32&amp;d=identicon&amp;r=g" alt="Andrew%20Chadwick's gravatar image" />
+    <p><a href="/users/146/andrew-chadwick">Andrew Chadwick</a><br/>
+    <span class="score" title="1129 reputation points"><span class="">1.1k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="20 badges"><span class="silver">&#9679;</span><span class="badgecount">20</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andrew Chadwick has 3 accepted answers">25&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-2751">
+    
+</div>
+<div id="comment-tools-2751" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2751-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="2762"></a>
+                    <div id="answer-container-2762" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2762-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2762/up/" rel="nofollow"> </a>
+<div id="post-2762-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-2762-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2762/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Andrew Chadwick has selected this answer as the correct answer"
+        href="/accept_answer/2762/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I don't think there is a hard rule, but I tend to <em>prefer</em> having the roundabout as a single looped way.</p>
+<p>I'd rather keep the roundabout whole if possible. It makes it easier to move it around or form it into a circle. It also seems less likely to confuse mapping/routing apps, which may treat multiple ways tagged roundabout as multiple roundabouts.</p>
+<p>I don't think it is a problem if a bus route is shown to go all the way around the roundabout rather than just between the entrance and exit, especially if it is a fairly small roundabout. And bear in mind that if the bus makes the return route in the opposite direction then it will use all of the roundabout anyway.</p>
+<p>Having said that, I wouldn't go and <em>fix</em> this if I saw other OSMers had mapped it as separate ways.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2762/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Feb '11, 17:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f61876d1f1d2de794259119cdd596316?s=32&amp;d=identicon&amp;r=g" alt="GrahamS's gravatar image" />
+    <p><a href="/users/98/grahams">GrahamS</a><br/>
+    <span class="score" title="3635 reputation points"><span class="">3.6k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="45 badges"><span class="silver">&#9679;</span><span class="badgecount">45</span></span><span title="54 badges"><span class="bronze">&#9679;</span><span class="badgecount">54</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="GrahamS has 7 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2762">
+    
+        <a name="2777"></a>
+        <div class="comment" id="comment-2777">
+            <div id="post-2777-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I think I'm the same. I think better to keep it as a single looped way, but I'm unlikely to go and change this if someone did it the other way.</p>
+
+<p>I did wonder if this question is related to the relation checker, as it thinks the route might have a break in it if it goes through a roundabout. Even so, for the same reasons as above, I'd tend to keep it as a single looped way.</p></div>
+            <div class="comment-info" id="comment-2777-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Feb '11, 01:57)</span>
+                <a class="comment-user userinfo" href="/users/603/ebenezer">Ebenezer</a>
+                
+            </div>
+        </div>
+    
+        <a name="2788"></a>
+        <div class="comment" id="comment-2788">
+            <div id="post-2788-score" class="comment-score">4</div>
+            <div class="comment-text"><p><a href="/users/603/ebenezer/">@Ebenezer</a> more of a general question really. I can see reasons for doing it both ways, but I'm tending to favour option B) right now despite having done A) in the past myself (not a reason to go back and "fix" of course).</p>
+
+<p>One of the important factors is maintainability. Relations are fairly tricky at the best of times, and a heavily split-up roundabout with diverging feeder oneways and crossing routes can be a pig to maintain if people are adding purely geometric splits and changes for other reasons. Making the data less fragile, or less liable to be broken by editors is a Good Thing™</p></div>
+            <div class="comment-info" id="comment-2788-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Feb '11, 12:38)</span>
+                <a class="comment-user userinfo" href="/users/146/andrew-chadwick">Andrew Chadwick</a>
+                
+            </div>
+        </div>
+    
+        <a name="10568"></a>
+        <div class="comment" id="comment-10568">
+            <div id="post-10568-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Software treating multiple ways tagged as roundabouts, as multiple roundabouts, is in error; roundabouts can be, for example, partially on a bridge=* - i.e. one main road passes under the roundabout. And lane counts can change within the roundabout. One way: good start - many ways: more detail.</p></div>
+            <div class="comment-info" id="comment-10568-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Feb '12, 11:37)</span>
+                <a class="comment-user userinfo" href="/users/359/alv">alv</a>
+                
+            </div>
+        </div>
+    
+        <a name="10573"></a>
+        <div class="comment" id="comment-10573">
+            <div id="post-10573-score" class="comment-score">1</div>
+            <div class="comment-text"><p>As <a href="/users/359/alv">@alv</a> pointed out, there are many more reasons to split the roundabout way. Any routing application should be able to use split roundabout added correctly to relation.<br>
+The bus does not always go the same road back and it obviously does not circle around, which makes it incorrect. Of course still better one way than nothing.</p></div>
+            <div class="comment-info" id="comment-10573-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Feb '12, 18:08)</span>
+                <a class="comment-user userinfo" href="/users/1619/lm_1">LM_1</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-2762" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2762-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="2837"></a>
+                    <div id="answer-container-2837" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2837-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2837/up/" rel="nofollow"> </a>
+<div id="post-2837-score" class="post-score"
+    title="current number of votes">
+    10
+</div>
+<a id="post-2837-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2837/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It is better to split the way of the roundabout to better reflect reality. Roundabouts are one way streets, and a bus route even goes on different streets depending on the direction.</p>
+<p>Sooner or later the roundabout will be split into parts anyways, because other attributes (lit, lanes, maxheight, enforcement, restrictions, etc.) are different, too.</p>
+<p>Do not map for other persons comfort. Map reality.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2837/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Feb '11, 12:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cb9e3487765b1e13e3fd6ebb00fdcac7?s=32&amp;d=identicon&amp;r=g" alt="Kartograefin's gravatar image" />
+    <p><a href="/users/646/kartograefin">Kartograefin</a><br/>
+    <span class="score" title="592 reputation points">592</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kartograefin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2837">
+    
+</div>
+<div id="comment-tools-2837" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2837-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="2760"></a>
+                    <div id="answer-container-2760" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2760-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2760/up/" rel="nofollow"> </a>
+<div id="post-2760-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-2760-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2760/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Of the two options, I would pick A.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2760/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Feb '11, 16:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4837c9b51f52c9a5accf528cd9729812?s=32&amp;d=identicon&amp;r=g" alt="Derick%20Rethans's gravatar image" />
+    <p><a href="/users/808/derick-rethans">Derick Rethans</a><br/>
+    <span class="score" title="247 reputation points">247</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Derick Rethans has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2760">
+    
+</div>
+<div id="comment-tools-2760" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2760-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/2751/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='GKf9bNY1Ai43S1h8sU8T9zFWeRIyucGn' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/bus/"
+            class="tag-link-bus"
+            title="see questions tagged'bus'using tags"
+            rel="tag">bus</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/roundabout/"
+            class="tag-link-roundabout"
+            title="see questions tagged'roundabout'using tags"
+            rel="tag">roundabout</a> <span class="tag-number">&#215;36</span><br/>
+        
+        <a href="/tags/geometry/"
+            class="tag-link-geometry"
+            title="see questions tagged'geometry'using tags"
+            rel="tag">geometry</a> <span class="tag-number">&#215;22</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 7, 2011, 12:31 p.m.">07 Feb '11, 12:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,280 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 13, 2012, 6:08 p.m.">13 Feb '12, 18:08</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/42928/how-do-i-add-bus-route-information-to-bus-stops">How do I add bus route information to bus stops?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27215/buses-that-have-alternate-routes">Buses that have alternate routes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27214/bus-routes-that-occasionally-terminate-or-start-in-the-middle-of-the-standard-route">Bus routes that occasionally terminate or start in the middle of the standard route</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27306/splitting-relations">Splitting relations?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43658/mapping-bus-route-with-different-terminals-depending-on-time">Mapping bus route with different terminals depending on time?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50752/how-do-i-get-route_master-and-its-children-via-overpass-ql-in-overpass-turbo">How do I get route_master (and its children) via Overpass QL in overpass-turbo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27210/bus-routes-which-have-an-alternate-route-eg-as-a-school-bus-service">Bus routes which have an alternate route, e.g. as a school bus service?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27213/bus-routes-that-travel-back-and-forth">Bus routes that travel back and forth</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22037/oneway-bus-routes">Oneway bus routes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20925/how-to-render-plain-bus-routes">How to render plain bus routes?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

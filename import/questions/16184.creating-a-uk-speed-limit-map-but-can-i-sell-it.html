@@ -1,0 +1,826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Creating a UK Speed Limit Map but can I sell it? - OSM Help</title>
+        <meta name="description" content="I have been playing around with some different sources of speed limit data in the UK and have created a map using OSM (of course). The lack of a complete UK map which can be accessed relatively cheaply is a real problem, the only &#39;accurate&#39; map I can find costs &amp;gt;£30k per annum to licence and that..." />
+        <meta name="keywords" content="speed,odbl,limit,uk,license" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/16184/creating-a-uk-speed-limit-map-but-can-i-sell-it" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/16184/creating-a-uk-speed-limit-map-but-can-i-sell-it?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ZMfbFhtOhuM9bQE0V0ua3wDp2T8zoIiA' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/16184/creating-a-uk-speed-limit-map-but-can-i-sell-it">Creating a UK Speed Limit Map but can I sell it?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-16184-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16184/up/" rel="nofollow"> </a>
+<div id="post-16184-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-16184-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16184/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/16184/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have been playing around with some different sources of speed limit data in the UK and have created a map using OSM (of course). The lack of a complete UK map which can be accessed relatively cheaply is a real problem, the only 'accurate' map I can find costs &gt;£30k per annum to licence and that doesn't have anywhere near 100% coverage.</p>
+<p>I think there could be a good opportunity here to build on the various sources I have found so far and get something a whole lot better. In fact, I may even be able to get some funding to do it but the project plan requires the final database to be sold to cover all of the costs.</p>
+<p>If my new database is based on the OSM layer then correct me if I'm wrong but I can't stop the customer redistributing it for free.  E.g. I could sell the new map for £500 with all of my hard-collected data and the user could simply give it away on a free download.</p>
+<p>I had planned to produce a free-to-view map for the public which would have been my way of 'sharing' the results but it's the raw data that holds value.</p>
+<p>Can someone put me out of my misery?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/speed/" class="post-tag tag-link-speed"
+                                        title="see questions tagged 'speed'" rel="tag">speed</a>
+                                
+                                    <a href="/tags/odbl/" class="post-tag tag-link-odbl"
+                                        title="see questions tagged 'odbl'" rel="tag">odbl</a>
+                                
+                                    <a href="/tags/limit/" class="post-tag tag-link-limit"
+                                        title="see questions tagged 'limit'" rel="tag">limit</a>
+                                
+                                    <a href="/tags/uk/" class="post-tag tag-link-uk"
+                                        title="see questions tagged 'uk'" rel="tag">uk</a>
+                                
+                                    <a href="/tags/license/" class="post-tag tag-link-license"
+                                        title="see questions tagged 'license'" rel="tag">license</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Sep '12, 21:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ed3e862c3b0bdd7459c5b6ae77fcb54b?s=32&amp;d=identicon&amp;r=g" alt="RichardOwen2000's gravatar image" />
+    <p><a href="/users/4532/richardowen2000">RichardOwen2000</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RichardOwen2000 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16184/">
+                edited
+                <strong>17 Sep '12, 21:15</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-16184">
+    
+        <a name="16187"></a>
+        <div class="comment" id="comment-16187">
+            <div id="post-16187-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Richard
+We are currently doing exactly the same can we work on this together.</p>
+
+<p>Mark</p></div>
+            <div class="comment-info" id="comment-16187-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Sep '12, 21:52)</span>
+                <a class="comment-user userinfo" href="/users/4533/progressive-platforms">Progressive ...</a>
+                
+            </div>
+        </div>
+    
+        <a name="16217"></a>
+        <div class="comment" id="comment-16217">
+            <div id="post-16217-score" class="comment-score">1</div>
+            <div class="comment-text"><p>OpenStreetMap speed limit data is also increasing as time passes, so if you do follow Richard's suggestion below, the timeframe for it making money might be only a couple of years. See for example <a href="http://www.itoworld.com/map/124">http://www.itoworld.com/map/124</a></p></div>
+            <div class="comment-info" id="comment-16217-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Sep '12, 13:07)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16625"></a>
+        <div class="comment" id="comment-16625">
+            <div id="post-16625-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have seen the ITOWorld visualisation before, it's very nice. </p>
+
+<p>My motive is less about making profit than actually getting the map right (and I mean 100% right, or at least 99.9%).  The map will always need updating though as limits change and relying on volunteers alone probably won't suffice.</p></div>
+            <div class="comment-info" id="comment-16625-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Oct '12, 09:46)</span>
+                <a class="comment-user userinfo" href="/users/4532/richardowen2000">RichardOwen2000</a>
+                
+            </div>
+        </div>
+    
+        <a name="18478"></a>
+        <div class="comment" id="comment-18478">
+            <div id="post-18478-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello Richard</p>
+
+<p>Interested in any progress you have made and current obstacles you are up against..</p>
+
+<p>Best</p>
+
+<p>Fred F.</p></div>
+            <div class="comment-info" id="comment-18478-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '12, 21:19)</span>
+                <a class="comment-user userinfo" href="/users/5198/fred-f">Fred F</a>
+                
+            </div>
+        </div>
+    
+        <a name="21589"></a>
+        <div class="comment" id="comment-21589">
+            <div id="post-21589-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have 3 students here in Thy who wants to try building a speed limit map of our local area - we are in Thy Jutland Denmark.
+I read this thread with interest - though we have no commercial aspect - and also we'd have to contact Danish official map authorities instead of the Ordonance Survey.
+So if we decided to go with OSM - what would be the technical approach?
+I saw the word "layer" - can we add a layer of speed limits to the OSM of our region?</p></div>
+            <div class="comment-info" id="comment-21589-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Apr '13, 12:51)</span>
+                <a class="comment-user userinfo" href="/users/6159/steenoluf">SteenOluf</a>
+                
+            </div>
+        </div>
+    
+        <a name="21598"></a>
+        <div class="comment not_top_scorer" id="comment-21598">
+            <div id="post-21598-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello SteenOluf,
+certain kinds of data are not added by layers to the OSM database, there is only one big database with all nodes, ways and relations, where in all cases the maxspeed information is added to each way as a feature, or how we say, a tag.</p>
+
+<p>Get familiar how OSM data model is working, with its elements, therefore read the OSM wiki and in special the wikipage about "maxspeed".</p></div>
+            <div class="comment-info" id="comment-21598-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Apr '13, 16:31)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16184" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16184-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/16184/creating-a-uk-speed-limit-map-but-can-i-sell-it?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/16184/creating-a-uk-speed-limit-map-but-can-i-sell-it?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/16184/creating-a-uk-speed-limit-map-but-can-i-sell-it?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/16184/creating-a-uk-speed-limit-map-but-can-i-sell-it?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="16212"></a>
+                    <div id="answer-container-16212" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16212-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16212/up/" rel="nofollow"> </a>
+<div id="post-16212-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-16212-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16212/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The ODbL does indeed require that, if you add to OpenStreetMap data, you have to make that data freely available under the same terms - that's the quid pro quo for getting access to such a huge amount of geodata. It's what's known as a "share-alike" licence. I'm afraid that 'free-to-view' generally doesn't have any special bearing under open source licences - you'll often hear people make this point with the phrase "free as in speech, not free as in beer".</p>
+<p>If you want to build on a UK map database but not share the results, you'd be better off looking at the Ordnance Survey OpenData datasets. These have no "share-alike" requirement, so you can do whatever you want as long as you retain a credit to the Ordnance Survey. Their main datasets are Meridian2 (low-resolution street data, probably the best for your purposes); VectorMap District (may be relevant, but unroutable, only partially attributed, and possibly too high-resolution); and StreetView (a raster product so less relevant).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16212/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Sep '12, 11:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16212/">
+                edited
+                <strong>18 Sep '12, 11:41</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16212">
+    
+        <a name="16624"></a>
+        <div class="comment" id="comment-16624">
+            <div id="post-16624-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the response Richard. I have looked at Meridian 2 and it's pretty poor compared to other networks I have used in the past.  It's OK for free but not a patch on OSM.</p>
+
+<p>I really want to share the data with the public but only charge commercial users a small fee to cover costs as I believe the lack of an accurate speed limit map is holding back road safety projects.</p></div>
+            <div class="comment-info" id="comment-16624-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Oct '12, 09:37)</span>
+                <a class="comment-user userinfo" href="/users/4532/richardowen2000">RichardOwen2000</a>
+                
+            </div>
+        </div>
+    
+        <a name="16628"></a>
+        <div class="comment" id="comment-16628">
+            <div id="post-16628-score" class="comment-score">3</div>
+            <div class="comment-text"><p>As far as our license is concerned, commercial users are part of "the public".</p>
+
+<p>This doesn't mean you cannot try to charge commercial users. You still have something to offer: They will always get the latest version of your dataset, not an outdated version that someone else bought and uploaded a year ago. They have a known, trustworthy data provider (you) that they can contact if they need help or additional services instead of a questionable download. You might even provide different data formats or different extracts on demand. It's your call if that's attractive for your intended audience.</p></div>
+            <div class="comment-info" id="comment-16628-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Oct '12, 10:34)</span>
+                <a class="comment-user userinfo" href="/users/14/tordanik">Tordanik</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16212" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16212-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/16184/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ZMfbFhtOhuM9bQE0V0ua3wDp2T8zoIiA' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16184/creating-a-uk-speed-limit-map-but-can-i-sell-it?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16184/creating-a-uk-speed-limit-map-but-can-i-sell-it?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/license/"
+            class="tag-link-license"
+            title="see questions tagged'license'using tags"
+            rel="tag">license</a> <span class="tag-number">&#215;155</span><br/>
+        
+        <a href="/tags/uk/"
+            class="tag-link-uk"
+            title="see questions tagged'uk'using tags"
+            rel="tag">uk</a> <span class="tag-number">&#215;35</span><br/>
+        
+        <a href="/tags/odbl/"
+            class="tag-link-odbl"
+            title="see questions tagged'odbl'using tags"
+            rel="tag">odbl</a> <span class="tag-number">&#215;31</span><br/>
+        
+        <a href="/tags/limit/"
+            class="tag-link-limit"
+            title="see questions tagged'limit'using tags"
+            rel="tag">limit</a> <span class="tag-number">&#215;23</span><br/>
+        
+        <a href="/tags/speed/"
+            class="tag-link-speed"
+            title="see questions tagged'speed'using tags"
+            rel="tag">speed</a> <span class="tag-number">&#215;23</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 17, 2012, 9:14 p.m.">17 Sep '12, 21:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,607 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 16, 2013, 4:31 p.m.">16 Apr '13, 16:31</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/7856/uk-road-speed-limit-completeness">UK road speed limit completeness?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17550/can-i-import-cc-by-sa-data-into-openstreetmap">Can I import CC-BY-SA data into OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9791/how-much-data-is-impacted-by-non-ct-edits">How much data is impacted by non-CT edits?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11169/is-it-possible-to-see-the-impact-of-the-license-change-on-the-map">Is it possible to see the impact of the license change on the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/624/can-i-use-or-trace-from-cc-by-data-under-the-new-contributor-terms">Can I use or trace from CC-BY data under the new Contributor Terms?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15121/when-will-openstreetmap-license-officially-change-to-odbl">When will OpenStreetMap license officially change to ODBL?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14449/license-question-odbl-use-case">License question: odbl use case</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7927/how-can-i-see-the-speed-limit-of-a-street">How can i see the speed limit of a street?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1330/speed-limits-map-correction">Speed Limits map correction</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17932/collective-produced-derivative-work">Collective / Produced / Derivative Work</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

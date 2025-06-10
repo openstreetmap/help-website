@@ -1,0 +1,1271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can you change a closed line into an area? - OSM Help</title>
+        <meta name="description" content="I was just wondering if there is a way to simply change an set of points that are actually closed (for example someone who traced the boundary of a lake) using a line and closing it as opposed to creating it as an area from the beginning. I find a number of lakes for instance that are not &quot;areas&quot; so..." />
+        <meta name="keywords" content="ideditor,converting,line,area" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/27594/can-you-change-a-closed-line-into-an-area" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/27594/can-you-change-a-closed-line-into-an-area?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zGSVKNkvtTNLEctge2jXBMwnNclx4p8K' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/27594/can-you-change-a-closed-line-into-an-area">Can you change a closed line into an area?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-27594-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27594/up/" rel="nofollow"> </a>
+<div id="post-27594-score" class="post-score"
+    title="current number of votes">
+    10
+</div>
+<a id="post-27594-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27594/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/27594/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I was just wondering if there is a way to simply change an set of points that are actually closed (for example someone who traced the boundary of a lake) using a line and closing it as opposed to creating it as an area from the beginning. I find a number of lakes for instance that are not "areas" so cannot be tagged as a lake. </p>
+<p>The only way around it that I can see is to delete the whole line and start again from scratch by tracing it again as an area then tagging it. </p>
+<p>Is there a way that exists to simply convert the closed line to an area. And if not, where can I make the suggestion?</p>
+<p>Thanks
+M</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/converting/" class="post-tag tag-link-converting"
+                                        title="see questions tagged 'converting'" rel="tag">converting</a>
+                                
+                                    <a href="/tags/line/" class="post-tag tag-link-line"
+                                        title="see questions tagged 'line'" rel="tag">line</a>
+                                
+                                    <a href="/tags/area/" class="post-tag tag-link-area"
+                                        title="see questions tagged 'area'" rel="tag">area</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Oct '13, 20:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66001846f0632f073fa821d84341d7cf?s=32&amp;d=identicon&amp;r=g" alt="Azzitizz's gravatar image" />
+    <p><a href="/users/3805/azzitizz">Azzitizz</a><br/>
+    <span class="score" title="445 reputation points">445</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="18 badges"><span class="bronze">&#9679;</span><span class="badgecount">18</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Azzitizz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27594/">
+                edited
+                <strong>29 Oct '13, 06:25</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+            <p><a href="/users/158/scai">scai ♦</a><br/>
+            <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-27594">
+    
+        <a name="27595"></a>
+        <div class="comment" id="comment-27595">
+            <div id="post-27595-score" class="comment-score"></div>
+            <div class="comment-text"><p>I asked a similar question in <a href="https://help.openstreetmap.org/questions/27591/how-to-combine-several-lines-to-an-area-with-editor-id">https://help.openstreetmap.org/questions/27591/how-to-combine-several-lines-to-an-area-with-editor-id</a></p></div>
+            <div class="comment-info" id="comment-27595-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Oct '13, 20:17)</span>
+                <a class="comment-user userinfo" href="/users/3135/hfst">hfst</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27594" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27594-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    6 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/27594/can-you-change-a-closed-line-into-an-area?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/27594/can-you-change-a-closed-line-into-an-area?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/27594/can-you-change-a-closed-line-into-an-area?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/27594/can-you-change-a-closed-line-into-an-area?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="27630"></a>
+                    <div id="answer-container-27630" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27630-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27630/up/" rel="nofollow"> </a>
+<div id="post-27630-score" class="post-score"
+    title="current number of votes">
+    13
+</div>
+<a id="post-27630-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27630/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>One additional point, if other tags imply that the closed way is a linear feature, you can add "area=yes" to specify that it is an area feature.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27630/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Oct '13, 14:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cebf8499a8a3009705e261cfd224e8c0?s=32&amp;d=identicon&amp;r=g" alt="neuhausr's gravatar image" />
+    <p><a href="/users/595/neuhausr">neuhausr</a><br/>
+    <span class="score" title="7460 reputation points"><span class="">7.5k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="70 badges"><span class="silver">&#9679;</span><span class="badgecount">70</span></span><span title="121 badges"><span class="bronze">&#9679;</span><span class="badgecount">121</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="neuhausr has 36 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27630">
+    
+        <a name="40733"></a>
+        <div class="comment" id="comment-40733">
+            <div id="post-40733-score" class="comment-score"></div>
+            <div class="comment-text"><p>What is a linear feature and how would other tags imply that?</p></div>
+            <div class="comment-info" id="comment-40733-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '15, 04:51)</span>
+                <a class="comment-user userinfo" href="/users/10128/mapgenius323">mapgenius323</a>
+                
+            </div>
+        </div>
+    
+        <a name="40740"></a>
+        <div class="comment" id="comment-40740">
+            <div id="post-40740-score" class="comment-score">2</div>
+            <div class="comment-text"><p>For example highway=pedestrian is by default a linear feature. If you add area=yes then it becomes an area feature.</p></div>
+            <div class="comment-info" id="comment-40740-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '15, 16:50)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="46305"></a>
+        <div class="comment" id="comment-46305">
+            <div id="post-46305-score" class="comment-score"></div>
+            <div class="comment-text"><p>this is my personal solution to this problem which worked fine especially if you click another area and then come back the menu is set for areas you can then pick the right tagging and id probably might get rid of some unessary area=yes taggs in the process. but most things if you left them there by ignorance when area implied by other tags like landuse for instance.</p></div>
+            <div class="comment-info" id="comment-46305-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Nov '15, 19:59)</span>
+                <a class="comment-user userinfo" href="/users/7473/govanus">Govanus</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27630" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27630-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="27611"></a>
+                    <div id="answer-container-27611" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27611-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27611/up/" rel="nofollow"> </a>
+<div id="post-27611-score" class="post-score"
+    title="current number of votes">
+    9
+</div>
+<a id="post-27611-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27611/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The "area" tool only provides a simplified means to create a closed shape. A "line" which has closed, beginning and end points are the same, is what produces an area, with the appropriate tags. Thus if you tag the lake as such, it will show up correctly as a lake.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27611/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Oct '13, 01:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7e77c05737bf455a5bf99c0f17ac19d8?s=32&amp;d=identicon&amp;r=g" alt="he_the_great's gravatar image" />
+    <p><a href="/users/4985/he_the_great">he_the_great</a><br/>
+    <span class="score" title="1175 reputation points"><span class="">1.2k</span></span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="he_the_great has 3 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27611/">
+                edited
+                <strong>29 Oct '13, 01:56</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27611">
+    
+        <a name="28411"></a>
+        <div class="comment" id="comment-28411">
+            <div id="post-28411-score" class="comment-score"></div>
+            <div class="comment-text"><p>I mapped a closed line as a building. Within iD (and also potlatch) such a "building" looks like a closed line but not like a building.</p></div>
+            <div class="comment-info" id="comment-28411-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Nov '13, 21:36)</span>
+                <a class="comment-user userinfo" href="/users/3135/hfst">hfst</a>
+                
+            </div>
+        </div>
+    
+        <a name="40734"></a>
+        <div class="comment" id="comment-40734">
+            <div id="post-40734-score" class="comment-score">1</div>
+            <div class="comment-text"><p>"... with the appropriate tags". Can you outline what are the "appropriate" tags please? Is it just <code>area=yes</code>? What other tags might be appropriate if any?</p></div>
+            <div class="comment-info" id="comment-40734-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '15, 04:53)</span>
+                <a class="comment-user userinfo" href="/users/10128/mapgenius323">mapgenius323</a>
+                
+            </div>
+        </div>
+    
+        <a name="40735"></a>
+        <div class="comment" id="comment-40735">
+            <div id="post-40735-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/10128/mapgenius323">@mapgenius323</a>, it depends on what you are tagging. Tags are defined by convention to be areas, you need to check the wiki to see if the tag is an area, line, or point.</p></div>
+            <div class="comment-info" id="comment-40735-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '15, 07:07)</span>
+                <a class="comment-user userinfo" href="/users/4985/he_the_great">he_the_great</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27611" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27611-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="60138"></a>
+                    <div id="answer-container-60138" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-60138-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60138/up/" rel="nofollow"> </a>
+<div id="post-60138-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-60138-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60138/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There isn't an easy way to do this in iD yet.  We are tracking this issue on <a href="https://github.com/openstreetmap/iD/issues/1828">https://github.com/openstreetmap/iD/issues/1828</a></p>
+<p>As other commenters have mentioned, the best way to do this currently is to just edit the tags.  Add an <code>area=yes</code> tag and you'll be offered all of the "area" types of feature presets.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/60138/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Oct '17, 17:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5372740989fdca18458f194a285fcb3e?s=32&amp;d=identicon&amp;r=g" alt="bhousel's gravatar image" />
+    <p><a href="/users/7499/bhousel">bhousel</a><br/>
+    <span class="score" title="2089 reputation points"><span class="">2.1k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="28 badges"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="bhousel has 13 accepted answers">38&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-60138">
+    
+</div>
+<div id="comment-tools-60138" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60138-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="40745"></a>
+                    <div id="answer-container-40745" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40745-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40745/up/" rel="nofollow"> </a>
+<div id="post-40745-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-40745-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40745/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Inside OSM, there is no proper "area" type. Areas are just represented by a closed line, like you have there. So if you tag it the same, then it will all be the same for rendering and working with it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40745/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Feb '15, 10:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/16e12e337f6edc3750681492656097ed?s=32&amp;d=identicon&amp;r=g" alt="rorym's gravatar image" />
+    <p><a href="/users/30/rorym">rorym</a><br/>
+    <span class="score" title="5358 reputation points"><span class="">5.4k</span></span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="49 badges"><span class="silver">&#9679;</span><span class="badgecount">49</span></span><span title="100 badges"><span class="bronze">&#9679;</span><span class="badgecount">100</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rorym has 18 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40745">
+    
+</div>
+<div id="comment-tools-40745" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40745-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="58926"></a>
+                    <div id="answer-container-58926" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58926-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58926/up/" rel="nofollow"> </a>
+<div id="post-58926-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-58926-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58926/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I use to switch between "area=yes" and "area=no" in the id editor (using the "show tags". It's the only way to fix things such as two buildings and a construction site rendered as one building.
+And no, changing the line to "building" does not work (unless you remove the "area=n8", of course.</p>
+<p>A way to make this simpler would be fantastic!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58926/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Sep '17, 12:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32f580002dae32baf27c9cbdb4b52212?s=32&amp;d=identicon&amp;r=g" alt="jos%C3%A9%20M's gravatar image" />
+    <p><a href="/users/14156/jose-m">josé M</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="josé M has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58926">
+    
+</div>
+<div id="comment-tools-58926" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58926-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="27612"></a>
+                    <div id="answer-container-27612" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27612-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27612/up/" rel="nofollow"> </a>
+<div id="post-27612-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-27612-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27612/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I sort of figured they cant be so different (closed line and an area) its simply connected nodes. However trying to make the tags in iD isnt as straightforward (at least for me) if its not appearing on the tag menu on the left.</p>
+<p>If I click to edit a "closed line" tag in iD, the option to tag or label it as a lake doesnt appear. The only options that appear are ones that are normally associated with lines, like roads, streams paths etc...</p>
+<p>Well it sounds like Ill just have to gte used to switching back and forth from Id and potlatch. It would be nice to stick to a single editor, but im sure as time goes on the software will become more and more adept. So much work it must be to create programs foe people to create maps... amazing work so far i must say.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27612/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Oct '13, 02:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66001846f0632f073fa821d84341d7cf?s=32&amp;d=identicon&amp;r=g" alt="Azzitizz's gravatar image" />
+    <p><a href="/users/3805/azzitizz">Azzitizz</a><br/>
+    <span class="score" title="445 reputation points">445</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="18 badges"><span class="bronze">&#9679;</span><span class="badgecount">18</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Azzitizz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27612">
+    
+        <a name="27613"></a>
+        <div class="comment" id="comment-27613">
+            <div id="post-27613-score" class="comment-score"></div>
+            <div class="comment-text"><p>hmm, yeah iD is probably keying off the tags already on the way to decide it is an area. iD does allow you to do raw editing of the tags, but that isn't an excuse.</p></div>
+            <div class="comment-info" id="comment-27613-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '13, 05:22)</span>
+                <a class="comment-user userinfo" href="/users/4985/he_the_great">he_the_great</a>
+                
+            </div>
+        </div>
+    
+        <a name="27666"></a>
+        <div class="comment" id="comment-27666">
+            <div id="post-27666-score" class="comment-score">1</div>
+            <div class="comment-text"><p>But how does iD know which tags to show? I think it is because a closed line is stored in a different way than an area. With this the question remains how to change a closed line to an area.</p></div>
+            <div class="comment-info" id="comment-27666-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '13, 18:08)</span>
+                <a class="comment-user userinfo" href="/users/3135/hfst">hfst</a>
+                
+            </div>
+        </div>
+    
+        <a name="28084"></a>
+        <div class="comment" id="comment-28084">
+            <div id="post-28084-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If you have a closed line, simply give it the tag you'd like - for example building = yes (or whatever), it will be rendered as a building area. If you just want an area, just add the tag area=yes.</p></div>
+            <div class="comment-info" id="comment-28084-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '13, 09:20)</span>
+                <a class="comment-user userinfo" href="/users/6636/greenwavesurfer">GreenWaveSurfer</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27612" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27612-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/27594/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zGSVKNkvtTNLEctge2jXBMwnNclx4p8K' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27594/can-you-change-a-closed-line-into-an-area?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27594/can-you-change-a-closed-line-into-an-area?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/area/"
+            class="tag-link-area"
+            title="see questions tagged'area'using tags"
+            rel="tag">area</a> <span class="tag-number">&#215;213</span><br/>
+        
+        <a href="/tags/line/"
+            class="tag-link-line"
+            title="see questions tagged'line'using tags"
+            rel="tag">line</a> <span class="tag-number">&#215;31</span><br/>
+        
+        <a href="/tags/converting/"
+            class="tag-link-converting"
+            title="see questions tagged'converting'using tags"
+            rel="tag">converting</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 28, 2013, 8:16 p.m.">28 Oct '13, 20:16</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>19,354 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 15, 2017, 5:10 p.m.">15 Oct '17, 17:10</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/32968/is-it-possible-to-change-lines-into-an-area-using-id">[closed] Is it possible to change lines into an area using iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/67024/convert-areas-to-lines-with-relations-id">Convert areas to lines with relations (iD)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue">Area creation in iD: continuous addition of points drops, how to continue?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31627/how-can-i-mark-an-area-as-a-school">How can I mark an area as a school</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45333/how-to-recover-the-tagging-options-for-an-area-after-splitting-that-area">How to recover the tagging options for an area after splitting that area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52975/add-a-new-node-to-an-existing-area-in-id-editor">Add a new node to an existing area in iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28644/add-a-node-to-an-existing-line-to-make-it-curve-smoother-along-its-real-trace">Add a node to an existing line to make it curve smoother along its real trace</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27591/how-to-combine-several-lines-to-an-area-with-editor-id">How to combine several lines to an area with editor id?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30364/how-do-i-disable-the-area-graphic-when-editing-with-id">How do I disable the &quot;area&quot; graphic when editing with iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/87897/streets-behind-polygon">Streets behind polygon</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

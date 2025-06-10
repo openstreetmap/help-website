@@ -1,0 +1,846 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to see roads underneath areas in JOSM ? - OSM Help</title>
+        <meta name="description" content="There seem to be groups of people who continue amenities&#39; boundaries right up to the street centre-line, so that they share nodes and ways. I can sort of see the point of this with landuse=* stuff, if the intention is to partition every aspect of the Earth&#39;s surface to being one sort of landuse or o..." />
+        <meta name="keywords" content="ways,josm,hide,area" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/248/how-to-see-roads-underneath-areas-in-josm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/248/how-to-see-roads-underneath-areas-in-josm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='bzF0GMZXAsVmSICwDWLhWJA6J7P5lTSZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/248/how-to-see-roads-underneath-areas-in-josm">How to see roads underneath areas in JOSM ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-248-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/248/up/" rel="nofollow"> </a>
+<div id="post-248-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-248-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/248/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/248/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>There seem to be groups of people who continue amenities' boundaries right up to the street centre-line, so that they share nodes and ways.</p>
+<p>I can sort of see the point of this with landuse=* stuff, if the intention is to partition every aspect of the Earth's surface to being one sort of landuse or other.</p>
+<p>But, where's the point in forcing parks, buildings, rivers etc all so that they reach the centre-line of the road, thus making that area appear bigger, especially when there's quite obviously a pavement between the area and the road's kerb (let alone the centre-line) ? Where are items of street furniture supposed to go ? There's nowhere between the road and the area to put them !</p>
+<p>If this sort of thing is legitimate, how does one get JOSM to show the roads on top, so people can actually edit them (or at least see what their names are) ? I have used filtering to hide landuse=*, but in my current editing endeavors, I have to hide amenity=college, amenity=police, leisure=garden, and a whole lot more depending on where I'm moving to. In any case, I don't necessarily want to hide them, just to have them treated as layer=some_very_large_negative_number.</p>
+<p>Ruchard</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ways/" class="post-tag tag-link-ways"
+                                        title="see questions tagged 'ways'" rel="tag">ways</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/hide/" class="post-tag tag-link-hide"
+                                        title="see questions tagged 'hide'" rel="tag">hide</a>
+                                
+                                    <a href="/tags/area/" class="post-tag tag-link-area"
+                                        title="see questions tagged 'area'" rel="tag">area</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Jul '10, 08:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/07aa747ba76bf3f90fa4043d9a9614ed?s=32&amp;d=identicon&amp;r=g" alt="rmw's gravatar image" />
+    <p><a href="/users/127/rmw">rmw</a><br/>
+    <span class="score" title="182 reputation points">182</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rmw has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-248">
+    
+        <a name="250"></a>
+        <div class="comment" id="comment-250">
+            <div id="post-250-score" class="comment-score">2</div>
+            <div class="comment-text"><p>There are at least two separate issues here at once. One is about the sharing of nodes and ways for different uses. The other about handling such cases in JOSM. Can you split up those questions?</p></div>
+            <div class="comment-info" id="comment-250-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '10, 09:28)</span>
+                <a class="comment-user userinfo" href="/users/112/jochen-topf">Jochen Topf</a>
+                
+            </div>
+        </div>
+    
+        <a name="258"></a>
+        <div class="comment" id="comment-258">
+            <div id="post-258-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's a good question, and one I'd love to be able to answer better. Perhaps at the end of your question it should just point out the difficulty of editing in JOSM (and even more so in Potlatch) rather than asking further specific questions about how to do it.</p></div>
+            <div class="comment-info" id="comment-258-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '10, 12:04)</span>
+                <a class="comment-user userinfo" href="/users/107/harry-wood">Harry Wood</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-248" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-248-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/248/how-to-see-roads-underneath-areas-in-josm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/248/how-to-see-roads-underneath-areas-in-josm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/248/how-to-see-roads-underneath-areas-in-josm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/248/how-to-see-roads-underneath-areas-in-josm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="257"></a>
+                    <div id="answer-container-257" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-257-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/257/up/" rel="nofollow"> </a>
+<div id="post-257-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-257-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/257/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In JOSM in this situation you may need to select one or the other of the overlapping ways. There are various ways of doing this:</p>
+<ul>
+<li>A middle-click reveals a context menu showing the different tags of all the elements under the mouse.</li>
+<li>Holding down Ctrl will allow you to click the menu to change the selection.</li>
+<li>Alternatively repeated middle clicking will cycle the selection.</li>
+<li>If you do not have a middle mouse button, hold down the 'Alt' key on the right side of your keyboard and do a repeated left-click to cycle the selection </li>
+</ul>
+<p>(This is as I wrote <a href="http://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing#Unglueing_and_untangling">in the JOSM Guide</a>) </p>
+<p>Earlier you are asking whether this kind of data is a good idea in general. ...good question.</p>
+<p>It certainly makes it a little harder to work with the data (and I can understand you asking both questions at once, to make this point) I used to <em>always</em> avoid overlapping way-segments, but these days I'm using them quite a lot for building outlines. In my opinion you should not take the polygon of a park right up to share the way-segments of a road centreline, unless maybe there is no pavement or anything separating the area of park from the road. But this is certainly something people take varying approaches to, and it might be good to try to agree on some clearer guidelines. No clear answers at this stage I'm afraid.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/257/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Jul '10, 12:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-257">
+    
+</div>
+<div id="comment-tools-257" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-257-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="256"></a>
+                    <div id="answer-container-256" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-256-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/256/up/" rel="nofollow"> </a>
+<div id="post-256-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-256-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/256/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Middle click in JOSM will allow you to choose from all the objects underneath the cursor.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/256/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Jul '10, 11:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d59cb9321a7a2a3ea5e5790345279ac2?s=32&amp;d=identicon&amp;r=g" alt="Matt%20Williams's gravatar image" />
+    <p><a href="/users/82/matt-williams">Matt Williams</a><br/>
+    <span class="score" title="379 reputation points">379</span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Matt Williams has one accepted answer">10&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-256">
+    
+</div>
+<div id="comment-tools-256" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-256-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="253"></a>
+                    <div id="answer-container-253" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-253-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/253/up/" rel="nofollow"> </a>
+<div id="post-253-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-253-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/253/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I certainly agree about areas (and the road right-of-way should be a long rectangle with landuse=highway, comprising the paved area, sidewalks, and grass). But as long as people join them to roads, you're probably best off using the filter feature. I use it for boundaries, and would use it for areas too if I did a lot of JOSM editing in downtowns. It's simple enough to toggle on the left side if you need to edit one of the hidden objects.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/253/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Jul '10, 10:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0c334b9f230e39c1e73a2b0322a23fb3?s=32&amp;d=identicon&amp;r=g" alt="NE2's gravatar image" />
+    <p><a href="/users/103/ne2">NE2</a><br/>
+    <span class="score" title="1359 reputation points"><span class="">1.4k</span></span><span title="33 badges"><span class="badge1">&#9679;</span><span class="badgecount">33</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="54 badges"><span class="bronze">&#9679;</span><span class="badgecount">54</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="NE2 has one accepted answer">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-253">
+    
+</div>
+<div id="comment-tools-253" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-253-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/248/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='bzF0GMZXAsVmSICwDWLhWJA6J7P5lTSZ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/248/how-to-see-roads-underneath-areas-in-josm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/248/how-to-see-roads-underneath-areas-in-josm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/area/"
+            class="tag-link-area"
+            title="see questions tagged'area'using tags"
+            rel="tag">area</a> <span class="tag-number">&#215;213</span><br/>
+        
+        <a href="/tags/ways/"
+            class="tag-link-ways"
+            title="see questions tagged'ways'using tags"
+            rel="tag">ways</a> <span class="tag-number">&#215;167</span><br/>
+        
+        <a href="/tags/hide/"
+            class="tag-link-hide"
+            title="see questions tagged'hide'using tags"
+            rel="tag">hide</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 16, 2010, 8:47 a.m.">16 Jul '10, 08:47</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,030 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 16, 2010, 12:04 p.m.">16 Jul '10, 12:04</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/20603/increase-the-width-of-the-ways-in-the-map-display-style-in-josm">[closed] Increase the width of the ways in the map display (style) in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27838/how-to-easily-automatically-merge-multiple-connected-lines-with-the-same-tags">How to easily, automatically merge multiple, connected lines with the same tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10723/how-to-deal-with-way-terminates-on-area-errors">How to deal with &#39;Way terminates on area&quot; errors?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17773/new-road-not-visible-in-the-map">[closed] New road not visible in the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25892/how-to-search-for-overlapping-areaspolygonsclosed-ways-in-josm">How to search for overlapping areas/polygons/closed ways in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26517/how-do-i-get-a-copy-of-a-way-id-in-josm">How do I get a copy of a Way ID in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8196/adding-ways-to-relation-without-visual-editor">Adding ways to relation without visual editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8197/re-ordering-sorting-ways-in-a-relation">Re-ordering / sorting ways in a relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12117/meadowbuildings-accuracy">meadow/buildings accuracy</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29987/is-there-a-shortcut-to-select-a-whole-split-way-in-josm">Is there a shortcut to select a whole (split) way in JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

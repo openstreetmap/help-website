@@ -1,0 +1,704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to find motorways untagged with toll=* using Overpass? - OSM Help</title>
+        <meta name="description" content="There&#39;s a set of motorways surrounding a city. All motorways for the country are either paid (default), or toll-free (where explicitly marked). Therefore, it makes sense to mark the toll-free motorways as toll=no, as no tagging implies toll=yes in the general area. Now, I can query Overpass API (fro..." />
+        <meta name="keywords" content="overpass,tagging,overpass-api,toll" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/56032/how-to-find-motorways-untagged-with-toll-using-overpass" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/56032/how-to-find-motorways-untagged-with-toll-using-overpass?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='81GL2yAVss9ODvAtGh9keuhWc3WB4iWu' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/56032/how-to-find-motorways-untagged-with-toll-using-overpass">How to find motorways untagged with toll=* using Overpass?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-56032-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56032/up/" rel="nofollow"> </a>
+<div id="post-56032-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-56032-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56032/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/56032/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>There's a set of motorways surrounding a city. All motorways for the country are either paid (default), or toll-free (where explicitly marked).</p>
+<p>Therefore, it makes sense to mark the toll-free motorways as <code>toll=no</code>, as no tagging implies <code>toll=yes</code> in the general area.</p>
+<p>Now, I can query Overpass API (from JOSM) - filtering <code>way["highway"="motorway"]</code> gives me all motorways; filtering <code>way["highway"="motorway"]["toll"=*]</code> gives me motorways with explicit toll info. I'm interested in the opposite: in motorways which are <em>not</em> tagged with <code>toll</code>. I haven't found that anywhere in the examples, here, or on the Internet at large.</p>
+<p>Is there a way do find "ways that have <em>this tag</em> but <em>not that tag</em>"?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                                    <a href="/tags/overpass-api/" class="post-tag tag-link-overpass-api"
+                                        title="see questions tagged 'overpass-api'" rel="tag">overpass-api</a>
+                                
+                                    <a href="/tags/toll/" class="post-tag tag-link-toll"
+                                        title="see questions tagged 'toll'" rel="tag">toll</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 May '17, 16:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8200fa5c0cc8feb096558c5972a6191c?s=32&amp;d=identicon&amp;r=g" alt="Piskvor's gravatar image" />
+    <p><a href="/users/9641/piskvor">Piskvor</a><br/>
+    <span class="score" title="1266 reputation points"><span class="">1.3k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="35 badges"><span class="bronze">&#9679;</span><span class="badgecount">35</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Piskvor has 9 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-56032">
+    
+</div>
+<div id="comment-tools-56032" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56032-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/56032/how-to-find-motorways-untagged-with-toll-using-overpass?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/56032/how-to-find-motorways-untagged-with-toll-using-overpass?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/56032/how-to-find-motorways-untagged-with-toll-using-overpass?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/56032/how-to-find-motorways-untagged-with-toll-using-overpass?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="56033"></a>
+                    <div id="answer-container-56033" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56033-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56033/up/" rel="nofollow"> </a>
+<div id="post-56033-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-56033-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56033/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Piskvor has selected this answer as the correct answer"
+        href="/accept_answer/56033/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is possible by using regular expressions and querying for <code>["highway"="motorway"]["toll"!~".*"]</code>.</p>
+<p>However it sounds like you are about to perform an <a href="https://wiki.openstreetmap.org/wiki/Automated_edits">automated edit</a>. Can you be really sure that all highways without a toll tag require a fee? I guess there is still a chance that some motorways are missing a toll=yes tag.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56033/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 May '17, 16:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56033">
+    
+        <a name="56034"></a>
+        <div class="comment" id="comment-56034">
+            <div id="post-56034-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's what I am looking for, thank you. And on second look, my wording does sound suspicious :) Do not worry, I am not about to mass-edit: I am looking for a tool to check for missing spots. I have recently driven one part of the city's ring road, so now I'm comparing my notes with the DB to see if all the places around the city that are enumerated in a city bylaw and <em>physically</em> marked as "toll not required" are marked as such in OSM. Have been using two JOSM layers, one for toll=yes, other for toll=no, and checking for gaps visually; wondered if there was an easier way.</p></div>
+            <div class="comment-info" id="comment-56034-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '17, 16:57)</span>
+                <a class="comment-user userinfo" href="/users/9641/piskvor">Piskvor</a>
+                
+            </div>
+        </div>
+    
+        <a name="56036"></a>
+        <div class="comment" id="comment-56036">
+            <div id="post-56036-score" class="comment-score">3</div>
+            <div class="comment-text"><p>A recent update added a nicer syntax for missing tags, <code>["highway"="motorway"][!toll]</code>.</p></div>
+            <div class="comment-info" id="comment-56036-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '17, 20:19)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="56046"></a>
+        <div class="comment" id="comment-56046">
+            <div id="post-56046-score" class="comment-score"></div>
+            <div class="comment-text"><p>(btw yes, all motorways without a specific physical tag are toll roads here, by law. What I'm checking is that OSM tagging matches the physical tagging)</p></div>
+            <div class="comment-info" id="comment-56046-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '17, 10:48)</span>
+                <a class="comment-user userinfo" href="/users/9641/piskvor">Piskvor</a>
+                
+            </div>
+        </div>
+    
+        <a name="56053"></a>
+        <div class="comment" id="comment-56053">
+            <div id="post-56053-score" class="comment-score"></div>
+            <div class="comment-text"><p>And it seems that, in the area I visited, <em>all</em> toll roads have already been correctly tagged as toll=yes; there were some parts left untagged where toll=no was the OTG situation.</p></div>
+            <div class="comment-info" id="comment-56053-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '17, 13:31)</span>
+                <a class="comment-user userinfo" href="/users/9641/piskvor">Piskvor</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56033" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56033-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/56032/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='81GL2yAVss9ODvAtGh9keuhWc3WB4iWu' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56032/how-to-find-motorways-untagged-with-toll-using-overpass?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56032/how-to-find-motorways-untagged-with-toll-using-overpass?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/overpass-api/"
+            class="tag-link-overpass-api"
+            title="see questions tagged'overpass-api'using tags"
+            rel="tag">overpass-api</a> <span class="tag-number">&#215;54</span><br/>
+        
+        <a href="/tags/toll/"
+            class="tag-link-toll"
+            title="see questions tagged'toll'using tags"
+            rel="tag">toll</a> <span class="tag-number">&#215;12</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 4, 2017, 4:04 p.m.">04 May '17, 16:04</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,071 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 5, 2017, 1:31 p.m.">05 May '17, 13:31</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/46272/all-cities-in-germany-with-boundaries-and-relation-to-its-county-as-csv">[closed] All Cities in Germany with boundaries and relation to its county as CSV</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47764/how-to-use-overpass-api-in-codeigniter">[closed] How to use overpass API in codeigniter?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34214/osmconvert-gives-back-no-adress-city-street-and-housenumber-not-in-15000-result-records">osmconvert gives back no adress: city, street and housenumber - not in 15000 result-records</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44437/is-it-necessary-to-add-toll-tags-to-ways-rather-than-a-single-node">Is it necessary to add toll tags to ways rather than a single node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47726/how-to-get-list-of-areas-in-an-area">How to get list of areas, in an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47728/how-to-create-administrative-areas-alone">How to create administrative areas alone?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7038/tagging-roads-with-traffic-type-dependent-access-restrictions">Tagging roads with traffic type dependent access restrictions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26808/how-to-tag-bridge-carrying-the-sensor-of-free-flow-electronic-toll-collection-systems">How to tag bridge carrying the sensor of free flow electronic toll collection systems</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41893/how-to-optimize-requests-on-ways">How to optimize requests on ways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48137/overpass-api-use-of-max_num_processes-field-in-source">[closed] [Overpass-api] use of max_num_processes field in source?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

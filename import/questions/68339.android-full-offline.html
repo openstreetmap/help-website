@@ -1,0 +1,904 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>android full-offline - OSM Help</title>
+        <meta name="description" content="Hey guys... I want to develop a full offline app, where the map data is included in the apk, for android (java). First I started using the mapbox sdk but unfortunately I noticed that they have a tile limitation of 6k Tiles and I couldn&#39;t figure out how to load OpenStreetMap data... Now I used the os..." />
+        <meta name="keywords" content="map,android,osmand,offlinemaps" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/68339/android-full-offline" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/68339/android-full-offline?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='z9vnxXZEhBw0mznfLwpMOVpk3iHgGv8q' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/68339/android-full-offline">android full-offline</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-68339-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68339/up/" rel="nofollow"> </a>
+<div id="post-68339-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-68339-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68339/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/68339/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hey guys...</p>
+<p>I want to develop a full offline app, where the map data is included in the apk, for android (java). First I started using the mapbox sdk but unfortunately I noticed that they have a tile limitation of 6k Tiles and I couldn't figure out how to load OpenStreetMap data...</p>
+<p>Now I used the osmand sdk to make the map show up with the markers and stuff... I didn't find a clear solution for my <strong>problem</strong>:</p>
+<p>Say I have downloaded the data from <a href="https://openmaptiles.com/downloads/planet/">https://openmaptiles.com/downloads/planet/</a> in .mbtiles how can I load the data from the asset folder to my device and show the map, so that someone can install the .apk and will have a full offline Map.</p>
+<p>Or is there any "how to" tutorial for building a full offline map-app...</p>
+<p>I also checked mapsforge but how I figured out, they focus more on rendering than on pre-loaded data or do I miss something there?</p>
+<p>SO: 
+ 1. Tutorial to include .mbtiles 
+ or 2. Any Tutorial / tips to build full offline map...</p>
+<p>Thanks a lot. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                                    <a href="/tags/android/" class="post-tag tag-link-android"
+                                        title="see questions tagged 'android'" rel="tag">android</a>
+                                
+                                    <a href="/tags/osmand/" class="post-tag tag-link-osmand"
+                                        title="see questions tagged 'osmand'" rel="tag">osmand</a>
+                                
+                                    <a href="/tags/offlinemaps/" class="post-tag tag-link-offlinemaps"
+                                        title="see questions tagged 'offlinemaps'" rel="tag">offlinemaps</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Mar '19, 15:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d8a8bd0f93cd544c77b9192ec5d759e8?s=32&amp;d=identicon&amp;r=g" alt="mathmike's gravatar image" />
+    <p><a href="/users/16385/mathmike">mathmike</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mathmike has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/68339/">
+                edited
+                <strong>09 Mar '19, 21:09</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+            <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+            <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-68339">
+    
+</div>
+<div id="comment-tools-68339" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68339-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/68339/android-full-offline?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/68339/android-full-offline?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/68339/android-full-offline?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/68339/android-full-offline?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="68344"></a>
+                    <div id="answer-container-68344" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-68344-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68344/up/" rel="nofollow"> </a>
+<div id="post-68344-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-68344-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68344/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="mathmike has selected this answer as the correct answer"
+        href="/accept_answer/68344/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The correct answer really depends on what functionality you want to provide (which in turn tends to impact the offline data format).</p>
+<p>For simply providing an offline map, <a href="https://github.com/mapsforge/mapsforge">mapsforge</a> is a tried solution.</p>
+<p>For completeness sake, <a href="https://wiki.openstreetmap.org/wiki/Frameworks#Displaying_interactive_maps">https://wiki.openstreetmap.org/wiki/Frameworks#Displaying_interactive_maps</a> is a list of relevant frameworks.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/68344/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Mar '19, 19:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/68344/">
+                edited
+                <strong>09 Mar '19, 21:08</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-68344">
+    
+        <a name="68348"></a>
+        <div class="comment" id="comment-68348">
+            <div id="post-68348-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, so I definitely will work on mapsforge in that case.</p>
+
+<p>Right now the needed functions are: -providing offlinemap -adding markers and user location (and some marker.OnClickListener) -reverse geocoding -would be nice to provide a full street directory</p>
+
+<p>Is this possible with mapsforge?</p></div>
+            <div class="comment-info" id="comment-68348-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Mar '19, 20:41)</span>
+                <a class="comment-user userinfo" href="/users/16385/mathmike">mathmike</a>
+                
+            </div>
+        </div>
+    
+        <a name="68349"></a>
+        <div class="comment" id="comment-68349">
+            <div id="post-68349-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I don't know how well it works but here is an example <a href="https://github.com/mapsforge/mapsforge/blob/c8294c7ae27b2ce4a6af56516216af8c6d7cb0b3/mapsforge-samples-android/src/main/java/org/mapsforge/samples/android/ReverseGeocodeViewer.java">https://github.com/mapsforge/mapsforge/blob/c8294c7ae27b2ce4a6af56516216af8c6d7cb0b3/mapsforge-samples-android/src/main/java/org/mapsforge/samples/android/ReverseGeocodeViewer.java</a></p></div>
+            <div class="comment-info" id="comment-68349-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Mar '19, 21:06)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68344" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68344-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="68342"></a>
+                    <div id="answer-container-68342" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-68342-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68342/up/" rel="nofollow"> </a>
+<div id="post-68342-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-68342-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68342/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>My knowledge here is as a user of OsmAnd not as a developer, but with that caveat in mind:</p>
+<p>While OsmAnd can show tiles it primarily stores map data as *.obf files (it's own format) and renders the map from these files. If there is no file for the area you are interested in you can create one yourself with <a href="https://wiki.openstreetmap.org/wiki/OsmAndMapCreator">OsmAndMapCreator</a>. There are then different styles within the application for how these should be displayed, for custom styles see links in <a href="https://wiki.openstreetmap.org/wiki/OsmAnd#Custom_rendering_style">this section</a> of the OsmAnd wiki page. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/68342/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Mar '19, 16:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ec8a0cf213f9797ad1c1ae2c28c2332d?s=32&amp;d=identicon&amp;r=g" alt="InsertUser's gravatar image" />
+    <p><a href="/users/4426/insertuser">InsertUser</a><br/>
+    <span class="score" title="11005 reputation points"><span class="">11.0k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="69 badges"><span class="silver">&#9679;</span><span class="badgecount">69</span></span><span title="185 badges"><span class="bronze">&#9679;</span><span class="badgecount">185</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="InsertUser has 73 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-68342">
+    
+</div>
+<div id="comment-tools-68342" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68342-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="84191"></a>
+                    <div id="answer-container-84191" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-84191-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/84191/up/" rel="nofollow"> </a>
+<div id="post-84191-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-84191-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/84191/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I wrote about this very problem last year. You can read about the whole solution here</p>
+<p><a href="https://medium.com/@ty2/how-to-display-offline-maps-using-maplibre-mapbox-39ad0f3c7543">https://medium.com/@ty2/how-to-display-offline-maps-using-maplibre-mapbox-39ad0f3c7543</a></p>
+<p>and the code for the same is here</p>
+<p><a href="https://github.com/kuwapa/OfflineMapExample/tree/83c7e81391a5f0946ab1fcb3155966c4997d44d3">https://github.com/kuwapa/OfflineMapExample/tree/83c7e81391a5f0946ab1fcb3155966c4997d44d3</a></p>
+<p>Essentially, solution is  </p>
+<ol>
+<li>Use MapLibre SDK</li>
+<li>Generate MBTILES using tilemaker or downloaded tiles from Maptiler (the important thing here is that the vector tiles in the MBTILES file are built using the openmaptiles styles)</li>
+<li>Load MBTILES file in the assets folder on the Android app</li>
+<li>Create a local style file json for vector tiles with a placeholder for a local MBTILES file.</li>
+<li>In app code, load local style file, replaced placeholder with MBTILES file uri and add "mbtiles://" before the uri</li>
+<li>Save new style file in some location</li>
+<li>Open map, load the new style</li>
+<li>View MBTILES file locally</li>
+<li>For future for loading multiple MBTILES files together, create a local server and point the style file to local server and using local server, serve vector files to the map. </li>
+</ol>
+<p>I hope this helps. Please comment any questions you might have. Happy to help. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/84191/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Apr '22, 09:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/79e65eed0a4d543a7229550d59f0e309?s=32&amp;d=identicon&amp;r=g" alt="protos29's gravatar image" />
+    <p><a href="/users/20659/protos29">protos29</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="protos29 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/84191/">
+                edited
+                <strong>16 Apr '22, 09:18</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-84191">
+    
+</div>
+<div id="comment-tools-84191" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-84191-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/68339/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='z9vnxXZEhBw0mznfLwpMOVpk3iHgGv8q' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68339/android-full-offline?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68339/android-full-offline?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/android/"
+            class="tag-link-android"
+            title="see questions tagged'android'using tags"
+            rel="tag">android</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/osmand/"
+            class="tag-link-osmand"
+            title="see questions tagged'osmand'using tags"
+            rel="tag">osmand</a> <span class="tag-number">&#215;100</span><br/>
+        
+        <a href="/tags/offlinemaps/"
+            class="tag-link-offlinemaps"
+            title="see questions tagged'offlinemaps'using tags"
+            rel="tag">offlinemaps</a> <span class="tag-number">&#215;38</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 9, 2019, 3:42 p.m.">09 Mar '19, 15:42</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,376 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 16, 2022, 9:18 a.m.">16 Apr '22, 09:18</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/19789/how-to-build-osm-to-run-offline-on-android">How to build OSM to run offline on android</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24649/zu-wenig-platz-auf-gerat-beim-herunterladen-von-karten-in-osmand-obwohl-groe-sd-karte-ziel-ist">Zu wenig Platz auf Gerät beim Herunterladen von Karten in OsmAnd, obwohl große SD-Karte Ziel ist</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17265/need-help-with-disaster-management-app">Need help with disaster management app</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18512/how-to-get-pois-inside-bbox-in-android">How to get poi&#39;s inside bbox in android</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22615/how-to-enter-a-numerical-address">How to enter a numerical address?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23860/does-mapswithme-pro-support-downloading-user-defined-locations">Does MapsWithMe Pro support downloading user-defined locations?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12145/using-osmdroid">using osmdroid</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14923/generate-map-and-use-it-in-android-and-desktop-application">Generate Map and use it in android and desktop application</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17920/light-weight-maps">Light weight maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33363/karten-vom-geratespeicher-auf-die-sd-karte-ubertragen-osmand">Karten vom Gerätespeicher auf die SD Karte übertragen (OSMand+)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

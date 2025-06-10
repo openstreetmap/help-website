@@ -1,0 +1,1025 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Best way to serve tiles in multiple languages - OSM Help</title>
+        <meta name="description" content="Hi, I&#39;ve successfully installed an OSM tileserver following the switch2osm tutorial and using the OSM-Bright style. All the labels are in the country original language, but I need my server to be able to serve tiles in differents languages, depending of the current user locale, falling back to Engli..." />
+        <meta name="keywords" content="internationalization,language,tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/64655/best-way-to-serve-tiles-in-multiple-languages" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/64655/best-way-to-serve-tiles-in-multiple-languages?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='JrAWZc2aT2bq008ndxEcg24Bn1oqT1TR' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/64655/best-way-to-serve-tiles-in-multiple-languages">Best way to serve tiles in multiple languages</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-64655-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64655/up/" rel="nofollow"> </a>
+<div id="post-64655-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-64655-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64655/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/64655/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I've successfully installed an OSM tileserver following the <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">switch2osm</a> tutorial and using the OSM-Bright style.
+All the labels are in the country original language, but I need my server to be able to serve tiles in differents languages, depending of the current user locale, falling back to English or country language if the name is not found in his locale.</p>
+<p>How do I do that? I've seen some posts relative to internationalization, talking about a "name:en" column in the planet_osm_point table, but I don't have it in my db (although I used the --hstore option with osm2pgsql). Is that normal?</p>
+<p>Thanks!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/internationalization/" class="post-tag tag-link-internationalization"
+                                        title="see questions tagged 'internationalization'" rel="tag">internationalization</a>
+                                
+                                    <a href="/tags/language/" class="post-tag tag-link-language"
+                                        title="see questions tagged 'language'" rel="tag">language</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Jul '18, 14:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32a7da9bf999cc0ea4f6befea00edd8d?s=32&amp;d=identicon&amp;r=g" alt="voharunado's gravatar image" />
+    <p><a href="/users/15375/voharunado">voharunado</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="voharunado has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-64655">
+    
+        <a name="70257"></a>
+        <div class="comment" id="comment-70257">
+            <div id="post-70257-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have successfully installed an OSM tile server using ubuntu Image. but I would like to render tiles in three languages. any pointers will be helpful.</p></div>
+            <div class="comment-info" id="comment-70257-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jul '19, 17:14)</span>
+                <a class="comment-user userinfo" href="/users/16981/singhy">singhy</a>
+                
+            </div>
+        </div>
+    
+        <a name="70262"></a>
+        <div class="comment" id="comment-70262">
+            <div id="post-70262-score" class="comment-score"></div>
+            <div class="comment-text"><p>@singhi: I've converted your question into a comment since it is not an answer to the original question. </p>
+
+<p>It would probably best if you started a new question and explained where you still need help after reading all the hints on this page and the linked ones. I mean all the answers and comments here talk about setting up rendering of tiles for multiple languages and you still ask for pointers.</p></div>
+            <div class="comment-info" id="comment-70262-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jul '19, 21:39)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="70276"></a>
+        <div class="comment" id="comment-70276">
+            <div id="post-70276-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi TZorn, I have also setup a tile server for a default language. I am looking for a similar solution as voharunado however I would like to have language name in the URL so user can select the language of choice. and the application render the language specific tiles.</p></div>
+            <div class="comment-info" id="comment-70276-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Aug '19, 08:37)</span>
+                <a class="comment-user userinfo" href="/users/16981/singhy">singhy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64655" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64655-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/64655/best-way-to-serve-tiles-in-multiple-languages?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/64655/best-way-to-serve-tiles-in-multiple-languages?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/64655/best-way-to-serve-tiles-in-multiple-languages?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/64655/best-way-to-serve-tiles-in-multiple-languages?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="64656"></a>
+                    <div id="answer-container-64656" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64656-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64656/up/" rel="nofollow"> </a>
+<div id="post-64656-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-64656-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64656/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="voharunado has selected this answer as the correct answer"
+        href="/accept_answer/64656/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You have the names in your <code>tags</code> column if you used the <code>--hstore</code> option.</p>
+<p>It is therefore possible to change your SELECT statements from something like e.g.</p>
+<pre><code>SELECT name, highway, way FROM planet_osm_line
+</code></pre>
+<p>to</p>
+<pre><code>SELECT COALESCE(tags-&gt;'name:fi', tags-&gt;'name:en', tags-&gt;'int_name', name) as name, highway, ...
+</code></pre>
+<p>which would then, in this example, prefer a Finnish name if set, then the English name, then the international name, an then the local name.</p>
+<p>You have to make separate copies of your style for every language you wish to support, and set up separate URLs. Since you are producing raster tiles where labels are inseparatable from other content, you will need separate tile caches for each style, and you will want to pre-render each style on low zoom levels too.</p>
+<p>This is only practicable if you are supporting a small number of languages.</p>
+<p>If you want to be able to support "any language", you will have to change your approach altogether and use a vector tile based solution.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64656/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Jul '18, 15:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64656">
+    
+        <a name="64658"></a>
+        <div class="comment" id="comment-64658">
+            <div id="post-64658-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Frederik.
+It works, I was trying to access it with the column name "name:fr"... I didn't understand this thing at all.</p>
+
+<p>I need to support 6 languages (including english) but it could increase in the future.
+ If vector tiles is not a lot more complicated, I'll probably go for that if it allows me to have a more evolutive server.
+But is the osm-bright style compatible with vector tiles? And do you have a link to a tutorial like switch2osm to learn how to use vector tiles please?</p></div>
+            <div class="comment-info" id="comment-64658-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jul '18, 17:03)</span>
+                <a class="comment-user userinfo" href="/users/15375/voharunado">voharunado</a>
+                
+            </div>
+        </div>
+    
+        <a name="64660"></a>
+        <div class="comment" id="comment-64660">
+            <div id="post-64660-score" class="comment-score">1</div>
+            <div class="comment-text"><p>A vector tiles setup is decidedly more complicated. The OSM Bright you have is not a vector tile style, but free vector tile styles exist that look similar. Most toolchains that produce vector tiles use an awful lot of Javascript-based components. Check out openmaptiles.org. You also need to decide whether you will serve vector tiles to the client and have them rendered there (requires even more Javascript on the client side) or whether you want to convert to raster tiles on the fly server-side. There's no tutorial I know of, but the makers of switch2osm would surely welcome a write-up once you've conquered the topic ;)</p></div>
+            <div class="comment-info" id="comment-64660-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jul '18, 18:16)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64671"></a>
+        <div class="comment" id="comment-64671">
+            <div id="post-64671-score" class="comment-score"></div>
+            <div class="comment-text"><p>We've considered openmaptiles.org but we are looking for a less expensive solution, that's why we're making our own server.
+I'm not sure I'll be able to write any tutorial about the subject, it looks really more complicated to setup and I'll probably don't have the time to do this :)
+If 6 languages is ok to serve with raster tiles, I think it's better if we stay with that.</p>
+
+<p>Thanks again!</p></div>
+            <div class="comment-info" id="comment-64671-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jul '18, 09:54)</span>
+                <a class="comment-user userinfo" href="/users/15375/voharunado">voharunado</a>
+                
+            </div>
+        </div>
+    
+        <a name="64672"></a>
+        <div class="comment" id="comment-64672">
+            <div id="post-64672-score" class="comment-score"></div>
+            <div class="comment-text"><p>The whole openmaptiles.org stack is available as Open Source and you can install it yourselves like the raster tile stack.</p></div>
+            <div class="comment-info" id="comment-64672-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jul '18, 09:57)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64673"></a>
+        <div class="comment" id="comment-64673">
+            <div id="post-64673-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oh yes, what I've tried is the very easy setup docker image available on openmaptiles.org, which required a subscription to get fresh data.
+So if I don't want to use this service, I need to setup my own tileserver-gl with a way to generate vector tiles?
+You just said it was more complicated and you didn't know any tutorial, but there is tutorials on openmaptiles.org and it seems very easy... So I think there is obviously something I don't understand...</p></div>
+            <div class="comment-info" id="comment-64673-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jul '18, 10:35)</span>
+                <a class="comment-user userinfo" href="/users/15375/voharunado">voharunado</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64656" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64656-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="64674"></a>
+                    <div id="answer-container-64674" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64674-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64674/up/" rel="nofollow"> </a>
+<div id="post-64674-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-64674-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64674/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Using COALESCE give me some strange results : I'm requesting some Paris tiles in french, so for that I'm doing <code>COALESCE(tags-&gt;'name:fr', tags-&gt;'name:en', tags-&gt;'int_name', name)</code>.
+But as you can see on the picture below, it sometimes shows both english and french names (like "Paris 18e Arrondissement" is the french name, and "18th Arrondissement" the english name).</p>
+<p><img src="https://help.openstreetmap.org/upfiles/paris_fr.png" alt="alt text"></p>
+<p>Why? I suppose it is because there is two differents labels for the same thing, but one with no french name...
+How do I prevent that? Is there a way to use directly the "name" attribute if the requested language is the language of the place we are looking at? (seems a bit tricky when writing this...)</p>
+<p>Thanks!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64674/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Jul '18, 11:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32a7da9bf999cc0ea4f6befea00edd8d?s=32&amp;d=identicon&amp;r=g" alt="voharunado's gravatar image" />
+    <p><a href="/users/15375/voharunado">voharunado</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="voharunado has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64674">
+    
+        <a name="64675"></a>
+        <div class="comment" id="comment-64675">
+            <div id="post-64675-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Most likely you have a <code>place=suburb</code> node with a French name and <code>boundary=adminsitrative</code> polygon without, or vice versa. The doubling of place names can be a problem even when you're not playing with languages. It is possible to analyse the situation in SQL and decide not to render a label in certain cases, but not easy and makes rendering slower. Yes it is possible to have different rendering rules depending on where in the world you are but this, also, slows down rendering a bit. See e.g. this SELECT statement in the old MapQuest style: <a href="https://github.com/MapQuest/MapQuest-Mapnik-Style/blob/updates2/mapquest_inc/layer-streetnames-eu.xml.inc#L569-L587">https://github.com/MapQuest/MapQuest-Mapnik-Style/blob/updates2/mapquest_inc/layer-streetnames-eu.xml.inc#L569-L587</a> - combine this with an SQL  CASE statement and you could do something that prefers name over name:en in France, but name:en over name in China.</p></div>
+            <div class="comment-info" id="comment-64675-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jul '18, 12:35)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64677"></a>
+        <div class="comment" id="comment-64677">
+            <div id="post-64677-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks again Frederik!
+I don't really need that much info on my map, so I will disable the display of one of them and see what happens, it will probably be faster</p></div>
+            <div class="comment-info" id="comment-64677-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jul '18, 13:23)</span>
+                <a class="comment-user userinfo" href="/users/15375/voharunado">voharunado</a>
+                
+            </div>
+        </div>
+    
+        <a name="64681"></a>
+        <div class="comment" id="comment-64681">
+            <div id="post-64681-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually the problem is bigger than expected, some of the Paris suburbs have a name:fr, some other have not. So even if I keep only these ones, I still have a problem because the names aren't always in the same language.</p>
+
+<p>I've looked at the link you gave me, but I don't understand what this statement does. I don't have a "country_polygon_detail" table so I don't understand what I need to do to get the current country code...</p></div>
+            <div class="comment-info" id="comment-64681-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jul '18, 15:24)</span>
+                <a class="comment-user userinfo" href="/users/15375/voharunado">voharunado</a>
+                
+            </div>
+        </div>
+    
+        <a name="64682"></a>
+        <div class="comment" id="comment-64682">
+            <div id="post-64682-score" class="comment-score">2</div>
+            <div class="comment-text"><p>The link was meant as an illustration of how you have to do it <em>basically</em>, not something you can just copy and it works. Basically you need a table that contains the outlines of areas for which you want to have special casing, and then you need to join the OSM feature table with that table on geometry to find out which of your areas of interest the feature is in. You could generate that area-of-interest table from your existing planet_osm_polygon by picking out the requisite admin_level=2 boundaries but you should definitely apply simplification to keep perfomance acceptable.</p></div>
+            <div class="comment-info" id="comment-64682-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jul '18, 15:33)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64683"></a>
+        <div class="comment not_top_scorer" id="comment-64683">
+            <div id="post-64683-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually all area are of interest for us, we need to display the best name possible for all of our clients, depending on their language.
+It definitely looks a bit tricky so I'll probably look for another way to get over this issue.
+Thanks for your help!</p></div>
+            <div class="comment-info" id="comment-64683-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jul '18, 15:50)</span>
+                <a class="comment-user userinfo" href="/users/15375/voharunado">voharunado</a>
+                
+            </div>
+        </div>
+    
+        <a name="64684"></a>
+        <div class="comment" id="comment-64684">
+            <div id="post-64684-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>Actually the problem is bigger than expected, some of the Paris suburbs have a name:fr, some other have not.</p>
+</blockquote>
+
+<p>You can always pre-process the data so that (for example) within the area of France "name:fr" is always populated with something (from "name "if "name:fr" was blank).</p>
+
+<p>As an example, <a href="https://github.com/SomeoneElseOSM/SomeoneElse-style/blob/master/update_render.sh">this script</a> is part of the process to create the maps behind <a href="https://map.atownsend.org.uk/maps/map/map.html">this map</a>, and on there "name:cy", "name:en" or "name:gd" will be used as "name" depending on location.  You may actually want to do the reverse of that (set "name" to "name:fr" in a defined area) but the principle is the same.</p></div>
+            <div class="comment-info" id="comment-64684-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jul '18, 17:38)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64694"></a>
+        <div class="comment not_top_scorer" id="comment-64694">
+            <div id="post-64694-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks SomeoneElse it looks great, I'll try that!</p></div>
+            <div class="comment-info" id="comment-64694-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '18, 09:07)</span>
+                <a class="comment-user userinfo" href="/users/15375/voharunado">voharunado</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64674" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64674-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/64655/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='JrAWZc2aT2bq008ndxEcg24Bn1oqT1TR' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64655/best-way-to-serve-tiles-in-multiple-languages?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64655/best-way-to-serve-tiles-in-multiple-languages?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/language/"
+            class="tag-link-language"
+            title="see questions tagged'language'using tags"
+            rel="tag">language</a> <span class="tag-number">&#215;72</span><br/>
+        
+        <a href="/tags/internationalization/"
+            class="tag-link-internationalization"
+            title="see questions tagged'internationalization'using tags"
+            rel="tag">internationalization</a> <span class="tag-number">&#215;16</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 11, 2018, 2:31 p.m.">11 Jul '18, 14:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,178 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 1, 2019, 8:37 a.m.">01 Aug '19, 08:37</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/20735/country-place-and-street-names-in-english-instead-of-local-language-for-my-own-mapserver">Country, place and street names in English instead of local language for  my own mapserver</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56/what-languages-can-i-use-on-this-site">What languages can I use on this site?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10330/why-words-do-not-show-up-in-order-when-a-name-is-added-in-arabic">why words do not show up in order when a name is added in arabic?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62982/how-much-internationalization-data-exists-in-osm-maps">How much internationalization data exists in OSM maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8160/gpsmid-changing-language-of-israel-map">GPSMid, changing language of Israel map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1966/how-to-select-language-for-main-map-page">How to select language for main map page?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1873/how-can-i-create-a-map-without-any-names-on-it">How can I create a map without any names on it?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/717/how-can-i-help-translate-openstreetmap-into-my-langugage">How can I help translate OpenStreetMap into my langugage</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3403/easiest-way-to-render-maps-with-custom-language">Easiest way to render maps with custom language?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1828/how-do-i-change-language-of-a-map">How do I change language of a map?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

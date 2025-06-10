@@ -1,0 +1,771 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Overpass Installation fails: broken pipe - OSM Help</title>
+        <meta name="description" content="Hello, I would like to setup a small private OSM Server in the cloud for testing an application. To achieve this, I&#39;ve launched an AWS EC2 t2.micro instance and followed the installation steps from the Official OSM Install Guide. In general the installation worked fine, at least for very small count..." />
+        <meta name="keywords" content="overpass,fails,aws,installation,broken-pipe" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/60612/overpass-installation-fails-broken-pipe" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/60612/overpass-installation-fails-broken-pipe?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='lf4efojEkGfwuEOmW8zcuvapRvUNfxy2' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/60612/overpass-installation-fails-broken-pipe">Overpass Installation fails: broken pipe</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-60612-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60612/up/" rel="nofollow"> </a>
+<div id="post-60612-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60612-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60612/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/60612/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I would like to setup a small private OSM Server in the cloud for testing an application.
+To achieve this, I've launched an AWS EC2 t2.micro instance and followed the installation steps from the  <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Installation">Official OSM Install Guide</a>.</p>
+<p>In general the installation worked fine, at least for very small countries.
+I've successfully installed Andorra (<a href="http://download.geofabrik.de/europe/andorra-latest.osm.bz2">Geofabrik-Link</a>) and Faroe Islands (<a href="http://download.geofabrik.de/europe/faroe-islands-latest.osm.bz2">Geofabrik-Link</a>) and was able to run queries on the instance.</p>
+<p>When trying to do same with a little bit larger country, in this case Austria (<a href="http://download.geofabrik.de/europe/austria-latest.osm.bz2">Geofabrik-Link</a>), i receive a "<strong>broken pipe</strong>" error:</p>
+<blockquote>
+<p>Reading XML file ...terminate called
+after throwing an instance of
+'std::bad_alloc' what(): 
+std::bad_alloc
+src/bin/init_osm3s.sh: line 44: 29086
+Broken pipe             bunzip2 &lt;
+$PLANET_FILE
+ 29087 Aborted                 (core
+dumped) |
+$EXEC_DIR/bin/update_database
+--db-dir=$DB_DIR/ $META $COMPRESSION</p>
+</blockquote>
+<p>Can someone help me to get this fixed?</p>
+<p>The resources of my EC2 instance currently are the following:
+- Ubuntu Server 16.04 LTS (HVM)
+ - 1 GB RAM
+ - ~25-30GB of free disk space (using AWS EBS)</p>
+<p>My simple guess is that the resources are too low, especially the Memory of 1GB.
+Before I upgrade to more resources (I want to avoid costs as much as possible) and test again, I would like to how likely this would fix my problem?
+Also, can anybody tell me how much RAM and Disk Space I approximately need for a ~900MB OSM-file like Austria?</p>
+<p><strong>Update 1:</strong> 
+In the meantime I've upgraded my machine and now have the following resources:</p>
+<ul>
+<li>Ubuntu 16.04 LTS</li>
+<li>2vCPUs</li>
+<li>7.5 GB RAM</li>
+<li>~50 GB of free SSD disk space</li>
+</ul>
+<p>I tried to run the Austria Import again. Unfortunately it failed again (shortly after starting the import) with a slightly different error:</p>
+<blockquote>
+<p>Reading XML file ... elapsed node
+1559520430. ./exec/bin/init_osm3s.sh: line 44: 18530 Broken pipe          $
+     18531 Killed                  | $EXEC_DIR/bin/update_database
+--db-dir=$DB_DIR/ $META $COMPRESSION</p>
+</blockquote>
+<p>Again, I was able to import the very small country export Faroe-Island.
+I also tried importing a "medium" large country in terms of file size: Belgium.
+Running the import with Belgium showed no errors. (I manually canceled the import after around 5-10mins).</p>
+<p>Is 7.5GB RAM still not enough? Or can it be another problem?</p>
+<p><strong>Update 2:</strong> 
+Now I also tested importing a larger country, Czech Republic with a file size of ~1.1GB.
+Interestingly, the import again seemed to run without problems and I saw the import progress without any errors (i.e. many lines with "Reading XM L file...elapsed node xxxx. Flushing to databse ... done.)
+I cancelled after around 10min.</p>
+<p>To summarize my import approaches:</p>
+<ul>
+<li>country    |   filesize    |    status</li>
+<li>austria     |   ~900MB  |   failed (both on 1GB RAM and 7.5GB RAM)</li>
+<li>faroe       |   ~3MB  |   worked (both)</li>
+<li>belgium   |   ~500MB  |   worked (on 7.5GB RAM)</li>
+<li>czechrep |   ~1.1GB  |   worked (on 7.5GB RAM)</li>
+</ul>
+<p>I can only guess, but since importing all countries (even larger one's) except for Austria seemed to work, I suspect there might be something wrong with the export hosted at Geofabrik? 
+Anyone had similar problems before? Someone knows another server that hosts country files, or is there a way how I can find out if the file is "OK"?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/fails/" class="post-tag tag-link-fails"
+                                        title="see questions tagged 'fails'" rel="tag">fails</a>
+                                
+                                    <a href="/tags/aws/" class="post-tag tag-link-aws"
+                                        title="see questions tagged 'aws'" rel="tag">aws</a>
+                                
+                                    <a href="/tags/installation/" class="post-tag tag-link-installation"
+                                        title="see questions tagged 'installation'" rel="tag">installation</a>
+                                
+                                    <a href="/tags/broken-pipe/" class="post-tag tag-link-broken-pipe"
+                                        title="see questions tagged 'broken-pipe'" rel="tag">broken-pipe</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Nov '17, 13:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b2429b48885174828e926ec537ce8f41?s=32&amp;d=identicon&amp;r=g" alt="hiasel's gravatar image" />
+    <p><a href="/users/14429/hiasel">hiasel</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hiasel has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/60612/">
+                edited
+                <strong>15 Nov '17, 10:21</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-60612">
+    
+        <a name="60613"></a>
+        <div class="comment" id="comment-60613">
+            <div id="post-60613-score" class="comment-score"></div>
+            <div class="comment-text"><p>1 GB RAM sounds pretty low. Check <code>dmesg</code> for out of memory (OOM) messages.</p></div>
+            <div class="comment-info" id="comment-60613-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '17, 13:18)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60614"></a>
+        <div class="comment" id="comment-60614">
+            <div id="post-60614-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for quick response. Could you help me how exactly i shall use the dmesg command?
+I've just executed it and simply searched for "OOM", but can't find anything.
+Or shall I run this command (in parallel) while I do the database import?</p></div>
+            <div class="comment-info" id="comment-60614-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '17, 13:24)</span>
+                <a class="comment-user userinfo" href="/users/14429/hiasel">hiasel</a>
+                
+            </div>
+        </div>
+    
+        <a name="60615"></a>
+        <div class="comment not_top_scorer" id="comment-60615">
+            <div id="post-60615-score" class="comment-score"></div>
+            <div class="comment-text"><p>Run it afterwards: <code>dmesg | grep -i "out of memory"</code>. If there is no output then too few memory is not your issue.</p></div>
+            <div class="comment-info" id="comment-60615-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '17, 13:43)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60617"></a>
+        <div class="comment not_top_scorer" id="comment-60617">
+            <div id="post-60617-score" class="comment-score"></div>
+            <div class="comment-text"><p>hm. just executed dmesg | grep -i "out of memory" right after calling init_osm3s.sh and there is indeed no output.
+The error remains.
+The full error message btw. starts with "Reading XML file ...terminate called after throwing an instance of 'std::bad_alloc' what():  std::bad_alloc" (i've updated that in the question).</p></div>
+            <div class="comment-info" id="comment-60617-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '17, 14:31)</span>
+                <a class="comment-user userinfo" href="/users/14429/hiasel">hiasel</a>
+                
+            </div>
+        </div>
+    
+        <a name="60618"></a>
+        <div class="comment" id="comment-60618">
+            <div id="post-60618-score" class="comment-score">1</div>
+            <div class="comment-text"><p><code>std::bad_alloc</code> definitely sounds like having too few memory. The program doesn't get killed by the kernel but terminates itself since it can't allocate enough memory. Get more RAM or try a smaller map extract.</p></div>
+            <div class="comment-info" id="comment-60618-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '17, 15:32)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60619"></a>
+        <div class="comment not_top_scorer" id="comment-60619">
+            <div id="post-60619-score" class="comment-score"></div>
+            <div class="comment-text"><p>allright, then I will upgrade my machine and post the result as soon as I got it running.
+Thanks a lot already for your help :)</p></div>
+            <div class="comment-info" id="comment-60619-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '17, 15:36)</span>
+                <a class="comment-user userinfo" href="/users/14429/hiasel">hiasel</a>
+                
+            </div>
+        </div>
+    
+        <a name="60628"></a>
+        <div class="comment not_top_scorer" id="comment-60628">
+            <div id="post-60628-score" class="comment-score"></div>
+            <div class="comment-text"><p>I just tried running the import again with an upgrade machine (See my updated question). Still no success. 
+I wonder if 7.5GB is still not enough? 
+According to the Install Guide "1 GB of RAM and sufficient swap space for a small extract or a development system." To me, austria still seems like a "small" extract compared to others, so I thought with ~8GB i'm on the safe side.
+Is it possible that there is something wrong with the file-extract of austria at geofabrik? (I've downloaded a fresh copy each time i tried running the import, so it shouldnt be my fault)</p></div>
+            <div class="comment-info" id="comment-60628-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Nov '17, 09:39)</span>
+                <a class="comment-user userinfo" href="/users/14429/hiasel">hiasel</a>
+                
+            </div>
+        </div>
+    
+        <a name="60629"></a>
+        <div class="comment" id="comment-60629">
+            <div id="post-60629-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You could try one of the <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">other extracts</a>.</p></div>
+            <div class="comment-info" id="comment-60629-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Nov '17, 10:29)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60642"></a>
+        <div class="comment" id="comment-60642">
+            <div id="post-60642-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks for pointing me to the list of extracts. In the end I used a custom extract from: <a href="http://extract.bbbike.org/.">http://extract.bbbike.org/.</a> For my project I only need a part of Austria, i.e. my custom extract file size now is only ~150MB. Importing this custom extract worked without problems and I can perform queries on my cloud instance :)</p></div>
+            <div class="comment-info" id="comment-60642-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Nov '17, 10:04)</span>
+                <a class="comment-user userinfo" href="/users/14429/hiasel">hiasel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60612" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60612-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/60612/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='lf4efojEkGfwuEOmW8zcuvapRvUNfxy2' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60612/overpass-installation-fails-broken-pipe?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60612/overpass-installation-fails-broken-pipe?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/installation/"
+            class="tag-link-installation"
+            title="see questions tagged'installation'using tags"
+            rel="tag">installation</a> <span class="tag-number">&#215;61</span><br/>
+        
+        <a href="/tags/aws/"
+            class="tag-link-aws"
+            title="see questions tagged'aws'using tags"
+            rel="tag">aws</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/fails/"
+            class="tag-link-fails"
+            title="see questions tagged'fails'using tags"
+            rel="tag">fails</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/broken-pipe/"
+            class="tag-link-broken-pipe"
+            title="see questions tagged'broken-pipe'using tags"
+            rel="tag">broken-pipe</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 14, 2017, 1:13 p.m.">14 Nov '17, 13:13</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,738 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 16, 2017, 10:04 a.m.">16 Nov '17, 10:04</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/35889/overpass-api-installation-out-of-memory">Overpass API installation &#39;Out of memory&#39;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47917/overpass-api-how-much-hardware-is-enough">[closed] Overpass API how much hardware is enough?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/79335/overpass-transactionslog-time-stamp">Overpass transactions.log time stamp</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6684/how-to-install-openstreetmap-for-working-offline">How to install OpenStreetMap for working offline</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11943/errors-in-osmium-installation">Errors in osmium installation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12373/import-error-with-nominatim-installation-no-data-and-db-error-insufficient-permissions">Import error with Nominatim installation: No Data and DB Error: insufficient permissions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10955/nominatim-planet_osm_rels-does-not-exist">Nominatim: planet_osm_rels does not exist</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12958/set-up-nominatim">Set up Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13299/bad-changes-for-odessa-city-ukraine">[closed] Bad changes for Odessa city (Ukraine)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12543/i-cant-get-odessa-ukraine-node-with-overpass-api">I can&#39;t get Odessa (Ukraine) node with overpass API</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

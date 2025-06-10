@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How Can I use OSM API to find the street intersection coordinates in android development? - OSM Help</title>
+        <meta name="description" content="I want to create an android project about street intersections! Like I choose a street name, starting point and the radius. Then the program gives me an array of the The streets that cross that one in that radius as a list of street names in another list activity. When I choose one of the streets I ..." />
+        <meta name="keywords" content="intersection,points" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/45098/how-can-i-use-osm-api-to-find-the-street-intersection-coordinates-in-android-development" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/45098/how-can-i-use-osm-api-to-find-the-street-intersection-coordinates-in-android-development?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='QSqFiUyAtj3qDrruL4uuWyNCTW1nEMyp' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/45098/how-can-i-use-osm-api-to-find-the-street-intersection-coordinates-in-android-development">How Can I use OSM API to find the street intersection coordinates in android development?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-45098-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45098/up/" rel="nofollow"> </a>
+<div id="post-45098-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-45098-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45098/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/45098/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I want to create an android project about street intersections! Like I choose a street name, starting point and the radius. Then the program gives me an array of the The streets that cross that one in that radius as a list of street names in another list activity. When I choose one of the streets I want to be redirected to the map at their intersection point. 
+  So how can I use a openStreetMap API.To create this? Any suggestions are pleased.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/intersection/" class="post-tag tag-link-intersection"
+                                        title="see questions tagged 'intersection'" rel="tag">intersection</a>
+                                
+                                    <a href="/tags/points/" class="post-tag tag-link-points"
+                                        title="see questions tagged 'points'" rel="tag">points</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Sep '15, 11:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e59db41fb4c0996e512149db6cfbb7d4?s=32&amp;d=identicon&amp;r=g" alt="AzaWiza's gravatar image" />
+    <p><a href="/users/11446/azawiza">AzaWiza</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AzaWiza has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-45098">
+    
+</div>
+<div id="comment-tools-45098" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45098-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/45098/how-can-i-use-osm-api-to-find-the-street-intersection-coordinates-in-android-development?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/45098/how-can-i-use-osm-api-to-find-the-street-intersection-coordinates-in-android-development?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/45098/how-can-i-use-osm-api-to-find-the-street-intersection-coordinates-in-android-development?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/45098/how-can-i-use-osm-api-to-find-the-street-intersection-coordinates-in-android-development?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="45112"></a>
+                    <div id="answer-container-45112" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-45112-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45112/up/" rel="nofollow"> </a>
+<div id="post-45112-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-45112-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45112/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Except in a very loose way, the answer is no. The OSM API is primarly for editing OSM data and doesn't do very much outside of providing you with the data for a specific region.</p>
+<p>The <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> provides more in the way of advanced queries, but I suspect your requirements will require loading OSM data in to a geo-aware database (for example Postgres with the PostGIS extension) and performing the corresponding spatial queries yourself. Before you do that you should read up on the OSM data model and the various possible database schemas.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/45112/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Sep '15, 08:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-45112">
+    
+        <a name="45151"></a>
+        <div class="comment" id="comment-45151">
+            <div id="post-45151-score" class="comment-score"></div>
+            <div class="comment-text"><p>That is exactly what I was Looking for! Thank you! Are there any way to send a query to overpass turbo from an android device? Like Now I have OSM map on my android devidce. by choosing a specia area there, Can I write a query in getText field like this one <br>"[bbox:{{bbox}}]; <br>way[highway][name="Юнусалиева Болота проспект"];node(w)-&gt;.n1;<br> way[highway][name="Скрябина улица"];<br>node(w)-&gt;.n2; node.n1.n2; <br>out meta; "<br><br>ANd get the result of the query in txt format.
+like this <br><br>[bbox:42.84342093245924,74.60618019104004,42.85234094569768,74.63012695312499];<br>
+way[highway][name="Юнусалиева Болота проспект"];node(w)-&gt;.n1;<br>
+way[highway][name="Скрябина улица"];node(w)-&gt;.n2;<br>
+node.n1.n2;<br>
+out meta;</p></div>
+            <div class="comment-info" id="comment-45151-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '15, 03:21)</span>
+                <a class="comment-user userinfo" href="/users/11446/azawiza">AzaWiza</a>
+                
+            </div>
+        </div>
+    
+        <a name="45154"></a>
+        <div class="comment" id="comment-45154">
+            <div id="post-45154-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Sure, this is possible. Just send a corresponding HTTP request and parse the response. See the various examples in the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">Overpass API language guide</a>.</p></div>
+            <div class="comment-info" id="comment-45154-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '15, 07:43)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="45206"></a>
+        <div class="comment" id="comment-45206">
+            <div id="post-45206-score" class="comment-score"></div>
+            <div class="comment-text"><p>You should mind your terminology though. Overpass Turbo is a website build around Overpass API which just makes it easier to write queries. A bit like an IDE build around a compiler. Overpass API is one of the public instances that you can call via HTTP requests. However, Overpass API may also refer to the open-source software used to power the public instances.</p></div>
+            <div class="comment-info" id="comment-45206-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Sep '15, 11:48)</span>
+                <a class="comment-user userinfo" href="/users/280/sanderd17">Sanderd17</a>
+                
+            </div>
+        </div>
+    
+        <a name="45207"></a>
+        <div class="comment" id="comment-45207">
+            <div id="post-45207-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/280/sanderd17"></a><a href="http://help.openstreetmap.org/users/280/sanderd17">@Sanderd17</a>:</p>
+
+<blockquote>
+<p>Overpass API is one of the public instances that you can call via HTTP requests.</p>
+</blockquote>
+
+<p>Did you perhaps mean: <a href="http://overpass-api.de/">overpass-api.de</a> is one of the public Overpass API instances (in fact it's the <em>main instance</em>) that you can call via HTTP requests? Some of the other public instances are listed <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Introduction">here</a>.</p></div>
+            <div class="comment-info" id="comment-45207-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Sep '15, 13:54)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-45112" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45112-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/45098/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='QSqFiUyAtj3qDrruL4uuWyNCTW1nEMyp' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45098/how-can-i-use-osm-api-to-find-the-street-intersection-coordinates-in-android-development?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45098/how-can-i-use-osm-api-to-find-the-street-intersection-coordinates-in-android-development?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/points/"
+            class="tag-link-points"
+            title="see questions tagged'points'using tags"
+            rel="tag">points</a> <span class="tag-number">&#215;67</span><br/>
+        
+        <a href="/tags/intersection/"
+            class="tag-link-intersection"
+            title="see questions tagged'intersection'using tags"
+            rel="tag">intersection</a> <span class="tag-number">&#215;49</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 7, 2015, 11:52 a.m.">07 Sep '15, 11:52</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,551 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 12, 2015, 2:06 p.m.">12 Sep '15, 14:06</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1118/electric-vehicle-charge-points">Electric Vehicle Charge Points</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1147/electric-vehicle-charge-points-reaching-out">Electric Vehicle Charge Points - Reaching Out</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1912/point-of-interest-type">Point of Interest Type</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2049/how-to-show-an-updated-list-of-wlan-hotspots-on-an-userdefined-map">How to show an updated list of WLAN-Hotspots on an userdefined map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2390/noticeable-way-points-or-landmarks">noticeable way points or landmarks</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2881/big-area-of-national-park-and-limit-of-2000-points">big area of national park and limit of 2000 points</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node">How To Correct Waterways Intersecting Roads Without A Junction Node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3194/intersecting-divided-roads-braids-or-four-corners">Intersecting divided roads: braids or four corners?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5445/how-can-i-detach-a-road-from-a-junction">How can I detach a road from a junction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66/dividednon-divided-intersection">Divided/Non-Divided Intersection</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

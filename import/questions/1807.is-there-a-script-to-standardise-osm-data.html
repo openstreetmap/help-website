@@ -1,0 +1,925 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Is there a script to standardise OSM data? - OSM Help</title>
+        <meta name="description" content="Hi, I want to know if there is a script to standardise OSM data. Some examples:  address tags can be given to closed ways (with a building tag), nodes and ways with an addr:interpolation tag. The street can be given as an addr:street tag, as an associatedstreet relation, or just the closest street a..." />
+        <meta name="keywords" content="tool,standardise,data" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/1807/is-there-a-script-to-standardise-osm-data" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/1807/is-there-a-script-to-standardise-osm-data?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Kqp9N7JasGW5SVaG8YFR8FnmfIhfvbLb' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/1807/is-there-a-script-to-standardise-osm-data">Is there a script to standardise OSM data?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-1807-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1807/up/" rel="nofollow"> </a>
+<div id="post-1807-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-1807-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1807/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/1807/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I want to know if there is a script to standardise OSM data. Some examples:</p>
+<ul>
+<li>address tags can be given to closed ways (with a building tag), nodes and ways with an addr:interpolation tag. The street can be given as an addr:street tag, as an associatedstreet relation, or just the closest street availiable. Is there any tool to transform this into only nodes with an addr:housenumber, addr:street, addr:city ... tag?</li>
+<li>Sometimes, when boundaries aren't availiable, <code>is_in</code> tags are used. Since we can't draw boundaries from is_in tags, can we put is_in tags on streets if we have the boundaries? Or if we don't have boundaries nor is_in tags, use the nominatim approach and choose the closest city/village.</li>
+<li>...</li>
+</ul>
+<p>This would result in an OSM file that isn't suited for editing anymore, but can more easily be used by other tools.</p>
+<p>This should be possible, since it's only a fraction of the work that nominatim does, but I wonder if there is also a separate tool or script to do it.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tool/" class="post-tag tag-link-tool"
+                                        title="see questions tagged 'tool'" rel="tag">tool</a>
+                                
+                                    <a href="/tags/standardise/" class="post-tag tag-link-standardise"
+                                        title="see questions tagged 'standardise'" rel="tag">standardise</a>
+                                
+                                    <a href="/tags/data/" class="post-tag tag-link-data"
+                                        title="see questions tagged 'data'" rel="tag">data</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Dec '10, 13:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1fe9a0c696a5000fb304ababea9f83af?s=32&amp;d=identicon&amp;r=g" alt="Sanderd17's gravatar image" />
+    <p><a href="/users/280/sanderd17">Sanderd17</a><br/>
+    <span class="score" title="1111 reputation points"><span class="">1.1k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="37 badges"><span class="bronze">&#9679;</span><span class="badgecount">37</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Sanderd17 has 15 accepted answers">31&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-1807">
+    
+        <a name="1819"></a>
+        <div class="comment" id="comment-1819">
+            <div id="post-1819-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not entirely sure what you're asking in this question. When you say "OSM data"- what specific kind of data do you mean? Addresses? Something else?</p></div>
+            <div class="comment-info" id="comment-1819-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '10, 12:15)</span>
+                <a class="comment-user userinfo" href="/users/540/emacsen">emacsen</a>
+                
+            </div>
+        </div>
+    
+        <a name="1827"></a>
+        <div class="comment" id="comment-1827">
+            <div id="post-1827-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, </p>
+
+<p>I would love to have a general script: where all data is kept, as long as it's documented and in one format. </p>
+
+<p>But if you could give me an example that does the things I mentionned, I think I would be able to also adapt it to other generalisations.</p>
+
+<p>what I would want the most is:</p>
+
+<ul>
+<li>
+<p>apply a tag to all objects in a closed way or a closed relation</p>
+</li>
+<li>
+<p>place a node on the centre of a closed way or relation with tags that come from that way/relation</p>
+</li>
+</ul>
+
+<p>Off cource in script form, so that it can be automised.</p>
+
+<p>Thanks</p></div>
+            <div class="comment-info" id="comment-1827-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '10, 18:43)</span>
+                <a class="comment-user userinfo" href="/users/280/sanderd17">Sanderd17</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1807" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1807-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/1807/is-there-a-script-to-standardise-osm-data?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/1807/is-there-a-script-to-standardise-osm-data?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/1807/is-there-a-script-to-standardise-osm-data?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/1807/is-there-a-script-to-standardise-osm-data?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="1838"></a>
+                    <div id="answer-container-1838" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1838-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1838/up/" rel="nofollow"> </a>
+<div id="post-1838-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-1838-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1838/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In general, there is no current tool available to do what you want. What you are looking for is a script that, for everything in the world that can be represented in OpenStreetMap in two or more different ways, pick one of the representations and convert all the others.</p>
+<p>If you are just interested in sorting out tagging, then I would recommend the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/TagTransform">TagTransform plugin for Osmosis</a>. I use this plugin daily in my rendering toolchain, for example to take the multiple different was of tagging a <a href="http://wiki.openstreetmap.org/wiki/Crossing">Zebra Crossing</a> and consolidate them into one tag. This makes the stylesheets easier to deal with.</p>
+<p>More advanced geometry manipulation is done in a variety of tools, most noticeably during import by <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> / <a href="http://wiki.openstreetmap.org/wiki/Nominatim">nomintim</a>, but these are specific-purposed transformations into a specific data format rather than general-purpose routines that output openstreetmap data.</p>
+<p>There is nothing stopping such a utility being created, it simply hasn't been done yet. The ultimate tool would let you pick between the representations depending on your needs - for example some people want <code>is_in</code> generated from polygons, but others prefer polygons generated from <code>is_in</code> tags.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1838/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Dec '10, 13:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3743b1b368f5e209eb8aad30164acc4?s=32&amp;d=identicon&amp;r=g" alt="Andy%20Allan's gravatar image" />
+    <p><a href="/users/3/andy-allan">Andy Allan</a><br/>
+    <span class="score" title="12456 reputation points"><span class="">12.5k</span></span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="128 badges"><span class="silver">&#9679;</span><span class="badgecount">128</span></span><span title="153 badges"><span class="bronze">&#9679;</span><span class="badgecount">153</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andy Allan has 46 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1838">
+    
+        <a name="1840"></a>
+        <div class="comment" id="comment-1840">
+            <div id="post-1840-score" class="comment-score"></div>
+            <div class="comment-text"><p>The tagtransform plugin comes close. The only disadvantage is that it can't change between relations, ways and nodes. It can only edit the tags.</p>
+
+<p>for osm2pgsql, I've read that it loses the info if two ways are connected. And I would not want to lose that data.</p>
+
+<p>I agree on your vision about what the ultimate tool would be.</p></div>
+            <div class="comment-info" id="comment-1840-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Dec '10, 13:58)</span>
+                <a class="comment-user userinfo" href="/users/280/sanderd17">Sanderd17</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1838" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1838-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1830"></a>
+                    <div id="answer-container-1830" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1830-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1830/up/" rel="nofollow"> </a>
+<div id="post-1830-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-1830-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1830/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You could probably do this sort of thing with PostGIS. You can use Osmosis or osm2pgsql to read from an .osm file, and output to a PostGreSQL database.</p>
+<p>Then you can use PostGIS queries to find if an object is within a boundary polygon, or near a place, and add tags as appropriate. You can also collapse areas into points (e.g. make a POI out of a building or so).</p>
+<p>Such queries could be scripted and automated if you want. Though I don't know of any ready made scripts to do the processing/standardisation that you describe. As you say, Nominatim does some of this processing, and its source code is available, which might be helpful.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1830/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Dec '10, 04:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/aa505c046b1c010e997a7849c6f3dbbe?s=32&amp;d=identicon&amp;r=g" alt="Vclaw's gravatar image" />
+    <p><a href="/users/62/vclaw">Vclaw</a><br/>
+    <span class="score" title="9217 reputation points"><span class="">9.2k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="95 badges"><span class="silver">&#9679;</span><span class="badgecount">95</span></span><span title="141 badges"><span class="bronze">&#9679;</span><span class="badgecount">141</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vclaw has 41 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/1830/">
+                edited
+                <strong>16 Dec '10, 15:17</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+            <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+            <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1830">
+    
+</div>
+<div id="comment-tools-1830" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1830-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1829"></a>
+                    <div id="answer-container-1829" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1829-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1829/up/" rel="nofollow"> </a>
+<div id="post-1829-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-1829-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1829/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm afraid I think the reason no one's answered this question is that, like me, they don't understand it.</p>
+<p>I don't know what a script where all data is kept means. I thought you wanted address data, but now I'm just too confused, and I'm afraid others here are as well.</p>
+<p>I'm going to take a stab at answering what I think your question is:</p>
+<p>The first part seems to be "How can I programatically access OSM data?"</p>
+<p>If so, the answer is several fold.</p>
+<p>OSM is a database of geographic information and we provide several mechanisms of storing that data. The most popular consumable format of OSM data is the OSM XML file format. Usually when you see a .osm file, that file is in the OSM XML format, which is described in detail at <a href="http://wiki.openstreetmap.org/wiki/.osm"></a><a href="http://wiki.openstreetmap.org/wiki/.osm"></a><a href="http://wiki.openstreetmap.org/wiki/.osm">http://wiki.openstreetmap.org/wiki/.osm</a></p>
+<p>The second part seems to be about programatically modifying OSM features to (using your terminology) "standardise them".</p>
+<p>The short answer is that we don't provide a mechanism to do this, and you shouldn't consider modifying OSM data in an automated way without having a deep understanding of the data you're modifying (and often not even then).</p>
+<p>Let's take your example of modifying addresses, using the is_in to add street or town data.</p>
+<p>Speaking just about the US, I know this wouldn't work. There are places where the city/town you might think corresponds to an address doesn't. There's a long and complex story around this having to do with the names used for towns historically being the name of the post office and not the city, but the bottom line is you don't know.</p>
+<p>Similarly, you might assume that a building in proximity to a street is addressed to that street, but you can't know that.</p>
+<p>And if you make an assumption like that, modifying the data, then you make it more difficult to find the error and correct in the future.</p>
+<p>Of course if you know the information for an area, you should modify it yourself, but this is not the same as carrying out an automated edit (ie running a bot). Bots are generally frowned upon because of their negative history with the project. More information on bots can be found here: <a href="http://wiki.openstreetmap.org/wiki/Bot"></a><a href="http://wiki.openstreetmap.org/wiki/Bot"></a><a href="http://wiki.openstreetmap.org/wiki/Bot">http://wiki.openstreetmap.org/wiki/Bot</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1829/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Dec '10, 01:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5f2082b86cc50d63c05f33f55166df2d?s=32&amp;d=identicon&amp;r=g" alt="emacsen's gravatar image" />
+    <p><a href="/users/540/emacsen">emacsen</a><br/>
+    <span class="score" title="1191 reputation points"><span class="">1.2k</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="emacsen has 4 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1829">
+    
+        <a name="1834"></a>
+        <div class="comment" id="comment-1834">
+            <div id="post-1834-score" class="comment-score"></div>
+            <div class="comment-text"><p>The file shoudn't be used on OSM back again. It's just that, if there is less info availiable, the script guesses what it is and places it in the file. That way, a tool which uses the file doesn't have to guess again. But more important: if the data is availiable, it is sometimes as a node, a way or a relation. I would like to simplify it to nodes if possible.</p>
+
+<p>I don't want te reupload the file, I know this would do bad things to the OSM database since the database is made for editing, not for usage by tools.</p></div>
+            <div class="comment-info" id="comment-1834-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Dec '10, 09:49)</span>
+                <a class="comment-user userinfo" href="/users/280/sanderd17">Sanderd17</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1829" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1829-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/1807/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Kqp9N7JasGW5SVaG8YFR8FnmfIhfvbLb' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1807/is-there-a-script-to-standardise-osm-data?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1807/is-there-a-script-to-standardise-osm-data?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/data/"
+            class="tag-link-data"
+            title="see questions tagged'data'using tags"
+            rel="tag">data</a> <span class="tag-number">&#215;230</span><br/>
+        
+        <a href="/tags/tool/"
+            class="tag-link-tool"
+            title="see questions tagged'tool'using tags"
+            rel="tag">tool</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/standardise/"
+            class="tag-link-standardise"
+            title="see questions tagged'standardise'using tags"
+            rel="tag">standardise</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 14, 2010, 1:50 p.m.">14 Dec '10, 13:50</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,528 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 16, 2010, 3:17 p.m.">16 Dec '10, 15:17</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/148/how-can-i-use-openstreetmap-data-in-my-gis-program">How can I use OpenStreetMap data in my GIS program?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/191/how-does-the-creation-of-the-planet-dump-work">How does the creation of the Planet dump work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/216/what-should-i-do-about-vandalism">What should I do about vandalism?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/217/how-to-deal-with-copyright-violations-in-our-osm-data">How to deal with copyright violations in our OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/231/how-can-i-edit-all-ways-with-certain-tag-in-an-area">How can I edit all ways with certain tag in an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/417/is-it-possible-to-get-a-list-of-objects-with-two-specific-tags">Is it possible to get a list of objects with two specific tags?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/469/where-can-i-see-the-length-of-a-certain-way-element-in-the-osm-data">Where can I see the length of a certain way element in the OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps">Can Google Maps take OSM data and use it in their own maps ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/644/where-is-the-site-with-a-list-of-openstreetmap-errors">Where is the site with a list of OpenStreetMap errors?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15/getting-point-of-interest-data-from-openstreetmap">Getting point of interest data from OpenStreetMap</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,830 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bicycle Directions not using recently entered bike path - OSM Help</title>
+        <meta name="description" content="I recently added a portion of a bike trail in Florissant, MO to OpenStreetMap. When I query for bicycle directions it does not utilize the bike path. What might I have done wrong? directions API query:  http://open.mapquestapi.com/directions/v1/route?outFormat=json&amp;amp;shapeFormat=raw&amp;amp;generalize..." />
+        <meta name="keywords" content="directions,path,api,bicycle,mapquest" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/20515/bicycle-directions-not-using-recently-entered-bike-path" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/20515/bicycle-directions-not-using-recently-entered-bike-path?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='UREHucNl3LkUDVkjefQVUHhpbITqmQYX' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/20515/bicycle-directions-not-using-recently-entered-bike-path">Bicycle Directions not using recently entered bike path</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-20515-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20515/up/" rel="nofollow"> </a>
+<div id="post-20515-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-20515-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20515/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/20515/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I recently added a portion of a bike trail in Florissant, MO to OpenStreetMap.  When I query for bicycle directions it does not utilize the bike path.  What might I have done wrong?</p>
+<p>directions API query: 
+<a href="http://open.mapquestapi.com/directions/v1/route?outFormat=json&amp;shapeFormat=raw&amp;generalize=10&amp;from=38.820426%2C-90.336433&amp;unit=m&amp;locale=en_US&amp;enhancedNarrative=false&amp;to=38.790915%2C-90.321824&amp;routeType=bicycle">http://open.mapquestapi.com/directions/v1/route?outFormat=json&amp;shapeFormat=raw&amp;generalize=10&amp;from=38.820426%2C-90.336433&amp;unit=m&amp;locale=en_US&amp;enhancedNarrative=false&amp;to=38.790915%2C-90.321824&amp;routeType=bicycle</a></p>
+<p>I would expect the directions to use the sunset trail as seen on the map here:
+<a href="http://www.openstreetmap.org/?box=yes&amp;bbox=-90.36306%2C38.78717%2C-90.31781%2C38.83089">http://www.openstreetmap.org/?box=yes&amp;bbox=-90.36306%2C38.78717%2C-90.31781%2C38.83089</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/directions/" class="post-tag tag-link-directions"
+                                        title="see questions tagged 'directions'" rel="tag">directions</a>
+                                
+                                    <a href="/tags/path/" class="post-tag tag-link-path"
+                                        title="see questions tagged 'path'" rel="tag">path</a>
+                                
+                                    <a href="/tags/api/" class="post-tag tag-link-api"
+                                        title="see questions tagged 'api'" rel="tag">api</a>
+                                
+                                    <a href="/tags/bicycle/" class="post-tag tag-link-bicycle"
+                                        title="see questions tagged 'bicycle'" rel="tag">bicycle</a>
+                                
+                                    <a href="/tags/mapquest/" class="post-tag tag-link-mapquest"
+                                        title="see questions tagged 'mapquest'" rel="tag">mapquest</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Mar '13, 02:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fbebd9f68528fcbc38107226b2b81bc8?s=32&amp;d=identicon&amp;r=g" alt="JARinteractive's gravatar image" />
+    <p><a href="/users/5754/jarinteractive">JARinteractive</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JARinteractive has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/20515/">
+                edited
+                <strong>06 Mar '13, 11:00</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/806d5a652505590a9eba797ad5bea8db?s=32&amp;d=identicon&amp;r=g" alt="gormo's gravatar image" />
+            <p><a href="/users/4653/gormo">gormo</a><br/>
+            <span class="score" title="2928 reputation points"><span class="">2.9k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="26 badges"><span class="silver">&#9679;</span><span class="badgecount">26</span></span><span title="60 badges"><span class="bronze">&#9679;</span><span class="badgecount">60</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-20515">
+    
+        <a name="20523"></a>
+        <div class="comment" id="comment-20523">
+            <div id="post-20523-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I can get mapquest to use the sunset trail, see <a href="http://mapq.st/YcfYma">http://mapq.st/YcfYma</a> .</p>
+
+<p>Maybe you also have to set advanced routing options for bicycles, as seen on their website ("Favour routes usings trails&amp;paths").</p>
+
+<p>Don't know if they are exposed thru the API, though.</p></div>
+            <div class="comment-info" id="comment-20523-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '13, 10:59)</span>
+                <a class="comment-user userinfo" href="/users/4653/gormo">gormo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-20515" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20515-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/20515/bicycle-directions-not-using-recently-entered-bike-path?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/20515/bicycle-directions-not-using-recently-entered-bike-path?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/20515/bicycle-directions-not-using-recently-entered-bike-path?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/20515/bicycle-directions-not-using-recently-entered-bike-path?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="20516"></a>
+                    <div id="answer-container-20516" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-20516-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20516/up/" rel="nofollow"> </a>
+<div id="post-20516-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-20516-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20516/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I dont know the mapquest routing but I would guess that the routing routines are not so clever that they always choose the cycleway. Most bicycle routers will not choose that trail because it is twisting and turning and all other roads are straighter and shorter and not forbidden to cycle on (at least that is the way it is <a href="http://mijndev.openstreetmap.nl/~ligfietser/fiets/?map=cycleways&amp;zoom=14&amp;lat=38.80868&amp;lon=-90.33169&amp;layers=B00000TFFFFFFFFFFFFFFFT">mapped</a> there), they will always choose the fastest or shortest route to your destination. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/20516/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Mar '13, 08:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0f5ffc3756c4662b9dfad80b7665ac6c?s=32&amp;d=identicon&amp;r=g" alt="ligfietser's gravatar image" />
+    <p><a href="/users/1077/ligfietser">ligfietser</a><br/>
+    <span class="score" title="2894 reputation points"><span class="">2.9k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="27 badges"><span class="silver">&#9679;</span><span class="badgecount">27</span></span><span title="57 badges"><span class="bronze">&#9679;</span><span class="badgecount">57</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ligfietser has 8 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-20516">
+    
+        <a name="20543"></a>
+        <div class="comment" id="comment-20543">
+            <div id="post-20543-score" class="comment-score"></div>
+            <div class="comment-text"><p>routeType=bicycle is supposed to prefer bike paths.  I also tried adjusting the cyclingRoadFactor parameter and still could not get the API to return a path using the bike route.  It seems like there must be something wrong with how I plotted the route.</p></div>
+            <div class="comment-info" id="comment-20543-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '13, 01:26)</span>
+                <a class="comment-user userinfo" href="/users/5754/jarinteractive">JARinteractive</a>
+                
+            </div>
+        </div>
+    
+        <a name="20548"></a>
+        <div class="comment" id="comment-20548">
+            <div id="post-20548-score" class="comment-score">1</div>
+            <div class="comment-text"><p>No, the route is fine, as far as i can see (see <a href="http://mapq.st/YcfYma">http://mapq.st/YcfYma</a> ). Probably mapquest does not expose all the routing options through the free api.</p></div>
+            <div class="comment-info" id="comment-20548-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '13, 08:06)</span>
+                <a class="comment-user userinfo" href="/users/4653/gormo">gormo</a>
+                
+            </div>
+        </div>
+    
+        <a name="20565"></a>
+        <div class="comment" id="comment-20565">
+            <div id="post-20565-score" class="comment-score"></div>
+            <div class="comment-text"><p>MapQuest doesn't even show any of the path that I entered at this point.  There was a small portion of the trail already in OSM, which is what is seen in your MapQuest link.</p></div>
+            <div class="comment-info" id="comment-20565-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '13, 14:00)</span>
+                <a class="comment-user userinfo" href="/users/5754/jarinteractive">JARinteractive</a>
+                
+            </div>
+        </div>
+    
+        <a name="20566"></a>
+        <div class="comment" id="comment-20566">
+            <div id="post-20566-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Maybe you should have pointed us to the actual way IDs you are talking about.</p></div>
+            <div class="comment-info" id="comment-20566-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '13, 14:57)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-20516" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20516-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="20567"></a>
+                    <div id="answer-container-20567" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-20567-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20567/up/" rel="nofollow"> </a>
+<div id="post-20567-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-20567-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20567/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If MapQuest Open only routes along the earlier added Sunset Trail part but not along the recently added one than maybe their routing data still hasn't been updated. I can't find any information about the date of their routing data so I suggest to wait a few more weeks or try to contact them directly. MapQuest is a commercial company and we don't know very much about their internals.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/20567/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Mar '13, 15:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-20567">
+    
+</div>
+<div id="comment-tools-20567" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20567-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/20515/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='UREHucNl3LkUDVkjefQVUHhpbITqmQYX' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20515/bicycle-directions-not-using-recently-entered-bike-path?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20515/bicycle-directions-not-using-recently-entered-bike-path?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/api/"
+            class="tag-link-api"
+            title="see questions tagged'api'using tags"
+            rel="tag">api</a> <span class="tag-number">&#215;290</span><br/>
+        
+        <a href="/tags/path/"
+            class="tag-link-path"
+            title="see questions tagged'path'using tags"
+            rel="tag">path</a> <span class="tag-number">&#215;95</span><br/>
+        
+        <a href="/tags/bicycle/"
+            class="tag-link-bicycle"
+            title="see questions tagged'bicycle'using tags"
+            rel="tag">bicycle</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/directions/"
+            class="tag-link-directions"
+            title="see questions tagged'directions'using tags"
+            rel="tag">directions</a> <span class="tag-number">&#215;41</span><br/>
+        
+        <a href="/tags/mapquest/"
+            class="tag-link-mapquest"
+            title="see questions tagged'mapquest'using tags"
+            rel="tag">mapquest</a> <span class="tag-number">&#215;28</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 6, 2013, 2:50 a.m.">06 Mar '13, 02:50</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,182 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 7, 2013, 3:36 p.m.">07 Mar '13, 15:36</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/73255/cyclewaytrack-versus-separately-mapping">Cycleway=track versus separately mapping</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21997/tags-footdesignated-bikeyes">tags foot=designated  bike=yes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31976/changing-the-wording-of-mapquest-directions">[closed] Changing the wording of Mapquest directions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56592/issue-with-deploying-graphhopper-web-service">Issue with deploying GraphHopper Web Service</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44223/cycle-map-shows-paths-with-bicyclesprohibited">Cycle Map shows Paths with Bicycles:Prohibited</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26586/how-i-should-mark-path-with-separate-lanes-for-pedestrians-and-bicycles">How I should mark path with separate lanes for pedestrians and bicycles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/911/tagging-wood-logged-paths">Tagging wood-logged paths</a>
+        </p>
+        
+        <p>
+            <a href="/questions/752/how-do-i-get-the-id-of-the-newest-gpx-file-uploaded-to-openstreetmap">How do I get the ID of the newest GPX file uploaded to OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/407/how-should-i-tag-hiking-trails">How should I tag hiking trails?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1804/is-it-easy-to-extract-the-shape-of-country-across-api">Is it easy to extract the shape of country across API?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

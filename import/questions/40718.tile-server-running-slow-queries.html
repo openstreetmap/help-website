@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tile server running slow queries - OSM Help</title>
+        <meta name="description" content="Hi all, i recently installed my own OSM Tileserver on a very capable machine, expecting the performance to be quite good. Unlucky for me, most tiles even at high zoom levels take much too long for a smooth user interaction. I will append information about the system and used software below. I found ..." />
+        <meta name="keywords" content="performance,slow,postgresql,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/40718/tile-server-running-slow-queries" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/40718/tile-server-running-slow-queries?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='z0RC5Q0VTzPRwhIStTlfkBjC0uXYItij' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/40718/tile-server-running-slow-queries">Tile server running slow queries</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-40718-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40718/up/" rel="nofollow"> </a>
+<div id="post-40718-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-40718-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40718/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/40718/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all,</p>
+<p>i recently installed my own OSM Tileserver on a very capable machine, expecting the performance to be quite good. Unlucky for me, most tiles even at high zoom levels take much too long for a smooth user interaction.
+I will append information about the system and used software below.</p>
+<p>I found the actual slow part to be the Database, particulary some queries involving postgis functions on larger geometries. An example is the following query:</p>
+<pre><code>SELECT ST_AsBinary("way") AS geom,"area","name","type" FROM
+(
+    SELECT COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type,
+    name, way_area AS area,   ST_PointOnSurface(way) AS way
+    FROM planet_osm_polygon
+    WHERE name IS NOT NULL
+    AND way &amp;&amp; ST_SetSRID('BOX3D(1335354.884142745 6090349.539709539,1338106.617161014 6093101.272727807)'::box3d, 900913)
+    AND ST_IsValid(way)
+
+    UNION ALL
+
+    SELECT 'building' AS type, name, way_area AS area, ST_PointOnSurface(way) AS way
+    FROM planet_osm_polygon
+    WHERE name IS NOT NULL
+    AND building NOT IN ('', 'no', '0', 'false')
+    AND way &amp;&amp; ST_SetSRID('BOX3D(1335354.884142745 6090349.539709539,1338106.617161014 6093101.272727807)'::box3d, 900913)
+    AND ST_IsValid(way)
+    ORDER BY area DESC
+) AS data
+;
+</code></pre>
+<p>The actual slow part seems to be, much to my surprise, the ST_IsValid and ST_PointOnSurface function, which take ~400ms each on a geometry that contains
+134283 points.
+The question now is, can i - and how - reduce the time spent for those queries? 400ms for ST_IsValid seems unreasonable to me.
+Any help is much appreciated.</p>
+<hr>
+<p><strong>Stats and diagnostics</strong></p>
+<p>I used the very nice tutorial at: <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">http://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/</a></p>
+<p>Server specs:</p>
+<pre><code>Intel(R) Xeon(R) CPU E5-1650 v2 @ 3.50GHz
+6 Cores, Hyperthreading
+128 GiB RAM
+2x 480GB SSD in Hardware RAID1
+</code></pre>
+<p>Software used:</p>
+<pre><code>Debian wheezy
+Linux kernel 3.2.0
+postgreSQL 9.4
+postGIS 2.1
+mapnik 2.2
+mod_tile master from git@github.com:openstreetmap/mod_tile.git
+</code></pre>
+<p>Mapnik style:</p>
+<pre><code>OSM Bright from <a href="https://github.com/mapbox/osm-bright/archive/master.zip">https://github.com/mapbox/osm-bright/archive/master.zip</a>
+</code></pre>
+<p>PostgreSQL configuration:</p>
+<pre><code>shared_buffers = 24576MB
+temp_buffers = 8MB
+work_mem = 256MB
+maintenance_work_mem = 32768MB
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/performance/" class="post-tag tag-link-performance"
+                                        title="see questions tagged 'performance'" rel="tag">performance</a>
+                                
+                                    <a href="/tags/slow/" class="post-tag tag-link-slow"
+                                        title="see questions tagged 'slow'" rel="tag">slow</a>
+                                
+                                    <a href="/tags/postgresql/" class="post-tag tag-link-postgresql"
+                                        title="see questions tagged 'postgresql'" rel="tag">postgresql</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Jan '15, 17:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ed73ebf04854610a34d47e2bd9068a94?s=32&amp;d=identicon&amp;r=g" alt="markusd's gravatar image" />
+    <p><a href="/users/10408/markusd">markusd</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="markusd has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-40718">
+    
+</div>
+<div id="comment-tools-40718" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40718-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/40718/tile-server-running-slow-queries?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/40718/tile-server-running-slow-queries?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/40718/tile-server-running-slow-queries?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/40718/tile-server-running-slow-queries?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="50076"></a>
+                    <div id="answer-container-50076" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50076-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50076/up/" rel="nofollow"> </a>
+<div id="post-50076-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-50076-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50076/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I've noticed the same problem with our tile server.  Queries which use ST_PointOnSurface and ST_IsValid -- even in combination with a bounding box -- take several seconds to run, which kills our rendering performance.  I found an <a href="http://workshops.boundlessgeo.com/postgis-intro/geometry_returning.html">intro to PostGIS</a> on Boundless which states, "ST_PointOnSurface(geometry) returns a point that is guaranteed to be inside the input argument. It is substantially more computationally expensive than the centroid operation."  In my testing, I found that replacing ST_PointOnSurface with ST_Centroid and removing ST_IsValid from the query can result in about a 10-fold performance gain (396 ms vs 4533 ms for my test query, which is similar to the one in the question above). </p>
+<p>The problem with changing to ST_Centroid is that the centroid of a polygon may not fall within its bounds.  I ran a couple of queries to see how many OSM polygons with labels have a centroid outside of their bounds:</p>
+<pre><code>SELECT count(*) FROM planet_osm_polygon WHERE name IS NOT NULL AND ST_Contains(way, ST_Centroid(way));
+  count
+---------
+ 6392511
+(1 row)
+
+select count(*) from planet_osm_polygon where name is not null;
+  count  
+---------
+ 6624842
+(1 row)
+</code></pre>
+<p>It appears that roughly 4% of the labeled polygons do not contain their centroid.</p>
+<h3>Alternate queries</h3>
+<p>If speed is the most important consideration in rendering, you can rework your query to output the centroid of the geometry as follows:</p>
+<pre><code>SELECT COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type,
+    name, way_area AS area,
+    ST_Centroid(way) AS way
+  FROM planet_osm_polygon
+  WHERE name IS NOT NULL
+    AND way &amp;&amp; !bbox!
+
+  UNION ALL
+
+  SELECT 'building' AS type, name, way_area AS area,
+    ST_Centroid(way) AS way
+  FROM planet_osm_polygon
+  WHERE name IS NOT NULL
+    AND building NOT IN ('', 'no', '0', 'false')
+    AND way &amp;&amp; !bbox!
+  ORDER BY area DESC
+</code></pre>
+<p>The following form of the query uses the centroid when it is inside the polygon and ST_PointOnSurface when it is outside.  It will always return a point within the polygon, at the cost of a little extra processing time:</p>
+<pre><code>SELECT COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type,
+    name, way_area AS area,
+    CASE WHEN ST_Contains(way, ST_Centroid(way)) THEN ST_Centroid(way) WHEN ST_IsValid(way) THEN ST_PointOnSurface(way) ELSE null END AS way
+  FROM planet_osm_polygon
+  WHERE name IS NOT NULL
+    AND way &amp;&amp; !bbox!
+
+  UNION ALL
+
+  SELECT 'building' AS type, name, way_area AS area,
+    CASE WHEN ST_Contains(way, ST_Centroid(way)) THEN ST_Centroid(way) WHEN ST_IsValid(way) THEN ST_PointOnSurface(way) ELSE null END AS way
+  FROM planet_osm_polygon
+  WHERE name IS NOT NULL
+    AND building NOT IN ('', 'no', '0', 'false')
+    AND way &amp;&amp; !bbox!
+  ORDER BY area DESC
+</code></pre>
+<p>In my measurements, the first query is about 10x as fast as the original, and the second about 5x as fast.  We are planning to try the faster query on our tile servers.  If the label placement looks strange, we will probably switch to the second version to see if there is any improvement.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50076/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jun '16, 18:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a62c619b246ce5027efe473b5613bc01?s=32&amp;d=identicon&amp;r=g" alt="pegli's gravatar image" />
+    <p><a href="/users/12397/pegli">pegli</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="pegli has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50076">
+    
+</div>
+<div id="comment-tools-50076" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50076-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/40718/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='z0RC5Q0VTzPRwhIStTlfkBjC0uXYItij' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40718/tile-server-running-slow-queries?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40718/tile-server-running-slow-queries?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/postgresql/"
+            class="tag-link-postgresql"
+            title="see questions tagged'postgresql'using tags"
+            rel="tag">postgresql</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/slow/"
+            class="tag-link-slow"
+            title="see questions tagged'slow'using tags"
+            rel="tag">slow</a> <span class="tag-number">&#215;33</span><br/>
+        
+        <a href="/tags/performance/"
+            class="tag-link-performance"
+            title="see questions tagged'performance'using tags"
+            rel="tag">performance</a> <span class="tag-number">&#215;28</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 30, 2015, 5:45 p.m.">30 Jan '15, 17:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,845 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 7, 2016, 6:09 p.m.">07 Jun '16, 18:09</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/21909/increase-improve-speed-up-rendering-performance-of-my-own-tileserver">Increase / Improve / Speed Up Rendering Performance of my own tileserver</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34274/bad-rendering-performance-tirex">Bad Rendering Performance (Tirex)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11357/rendering-imagesmaps-from-postgresqlpostgis-database">Rendering images/maps from Postgresql/PostGIS Database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12388/best-way-to-get-all-cities-of-a-specific-area">Best way to get all cities of a specific area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23949/is-it-possible-to-draw-tiles-directly-from-an-api-database-without-postgis">[closed] Is it possible to draw tiles directly from an API database (without PostGIS)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24290/local-tile-server-extremely-slow-rendering">Local Tile Server - EXTREMELY slow rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10671/osm-postgis-mapnik-problem">OSM – PostGIS – Mapnik problem!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10677/setting-postgis-as-a-datasource">Setting PostGIS as a datasource</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12346/speeding-up-osmosis">Speeding up Osmosis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34936/optimising-mapnik-postgis-queries">Optimising Mapnik PostGIS queries</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

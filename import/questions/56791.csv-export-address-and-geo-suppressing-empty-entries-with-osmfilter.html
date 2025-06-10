@@ -1,0 +1,718 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>CSV Export: address and geo / suppressing empty entries with osmfilter? - OSM Help</title>
+        <meta name="description" content="Hi all, I&#39;m currently struggling with the export of address data, checked already a bunch of discussions about here, but still found no solution... Use case: I need a bunch/huge set of addresses per country with lat, lon, country, city, street and optionally housenumber. Important is, that lat/lon i..." />
+        <meta name="keywords" content="dataquality,osmfilter,csv,export,addresses" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/56791/csv-export-address-and-geo-suppressing-empty-entries-with-osmfilter" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/56791/csv-export-address-and-geo-suppressing-empty-entries-with-osmfilter?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='BlXDk1g364DsZTxWypcbMOt9QGSK1NP4' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/56791/csv-export-address-and-geo-suppressing-empty-entries-with-osmfilter">CSV Export: address and geo / suppressing empty entries with osmfilter?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-56791-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56791/up/" rel="nofollow"> </a>
+<div id="post-56791-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-56791-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56791/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/56791/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all,</p>
+<p>I'm currently struggling with the export of address data, checked already a bunch of discussions about here, but still found no solution...</p>
+<p>Use case: I need a bunch/huge set of addresses per country with lat, lon, country, city, street and optionally housenumber. Important is, that lat/lon is nearly matching to the address/street  for geo selection demo content.</p>
+<p>So I tried with a small test pbf (Liechtenstein) osmconvert:</p>
+<p>osmconvert %1.clean.o5m --all-to-nodes --csv="<a href="https://help.openstreetmap.org/users/260/idoneus">@id</a> <a href="https://help.openstreetmap.org/users/5110/latroc">@lat</a> <a href="https://help.openstreetmap.org/users/1350/longestaugust">@lon</a> addr:country addr:postcode addr:city addr:street addr:housenumber amenity" --csv-headline --csv-separator=";" -o=%1.csv</p>
+<p>Fine. After filtering in excel (sufficient in this case) the blank/incomplete entries it's what I'm looking for.</p>
+<p>Next I've tried osmfilter with goal to remove exactly the same incomplete entries (of course, before I run osmconvert):
+osmfilter %1.o5m --keep="addr:country= and addr:city= and addr:street=" --ignore-dependencies --drop-relations --drop-ways -o=%1.clean.o5m</p>
+<p>Afterwards I compared the results:</p>
+<ul>
+<li>osmconvert and manual filtering with excel: 91 records</li>
+<li>osmfilter and osmconvert: 26 records</li>
+</ul>
+<p>But...</p>
+<ul>
+<li>Why are the results different? What does osmfilter suppress additionally? Can I use it just to suppress the empty/incomplete entries?</li>
+<li>91 complete addresses is looking litte bit less for me for Liechtenstein. How can I get as much as possible valid geocode + address information like described above? </li>
+<li>Is an alternative public address data set with lon, lat, country, city..., cleaned-up and best in csv format, already available?</li>
+</ul>
+<p>Thanks for support,</p>
+<p>Regards,</p>
+<p>Joerg</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/dataquality/" class="post-tag tag-link-dataquality"
+                                        title="see questions tagged 'dataquality'" rel="tag">dataquality</a>
+                                
+                                    <a href="/tags/osmfilter/" class="post-tag tag-link-osmfilter"
+                                        title="see questions tagged 'osmfilter'" rel="tag">osmfilter</a>
+                                
+                                    <a href="/tags/csv/" class="post-tag tag-link-csv"
+                                        title="see questions tagged 'csv'" rel="tag">csv</a>
+                                
+                                    <a href="/tags/export/" class="post-tag tag-link-export"
+                                        title="see questions tagged 'export'" rel="tag">export</a>
+                                
+                                    <a href="/tags/addresses/" class="post-tag tag-link-addresses"
+                                        title="see questions tagged 'addresses'" rel="tag">addresses</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Jun '17, 13:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/967bb24c2963171b902d9cfc29f7e72b?s=32&amp;d=identicon&amp;r=g" alt="joho68's gravatar image" />
+    <p><a href="/users/13871/joho68">joho68</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="joho68 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/56791/">
+                edited
+                <strong>28 Jun '17, 14:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-56791">
+    
+        <a name="56793"></a>
+        <div class="comment" id="comment-56793">
+            <div id="post-56793-score" class="comment-score"></div>
+            <div class="comment-text"><p>I only find 75 with Overpass Turbo <a href="http://overpass-turbo.eu/s/q3g.">http://overpass-turbo.eu/s/q3g.</a> I suspect demanding addr:country (and even addr:city) are likely to reduce the data returned significantly. Both can often be deduced from location.</p></div>
+            <div class="comment-info" id="comment-56793-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '17, 14:36)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56791" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56791-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/56791/csv-export-address-and-geo-suppressing-empty-entries-with-osmfilter?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/56791/csv-export-address-and-geo-suppressing-empty-entries-with-osmfilter?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/56791/csv-export-address-and-geo-suppressing-empty-entries-with-osmfilter?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/56791/csv-export-address-and-geo-suppressing-empty-entries-with-osmfilter?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="56798"></a>
+                    <div id="answer-container-56798" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56798-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56798/up/" rel="nofollow"> </a>
+<div id="post-56798-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-56798-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56798/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="joho68 has selected this answer as the correct answer"
+        href="/accept_answer/56798/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are two issues you are running in to</p>
+<ul>
+<li>addr:country is typically not added in "modern" OSM as we have country level admin boundaries for every country</li>
+<li>90 odd addresses for LI sounds about right, neither buildings nor addresses have been mapped there in detail, see <a href="http://qa.poole.ch/?zoom=14&amp;lat=47.15743&amp;lon=9.5144&amp;layers=FTTFB0">http://qa.poole.ch/?zoom=14&amp;lat=47.15743&amp;lon=9.5144&amp;layers=FTTFB0</a></li>
+</ul>
+<p>Additional data on the later point: we currently have roughly half of all addresses mapped in CH, and very high coverage in AT (mostly imports there). LI simply suffers from being small and slightly away from the larger centers.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56798/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Jun '17, 23:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/56798/">
+                edited
+                <strong>29 Jun '17, 18:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56798">
+    
+        <a name="56915"></a>
+        <div class="comment" id="comment-56915">
+            <div id="post-56915-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your reply! Tested it in meanwhile with Germany, w/o country code filtering --&gt; address quality and quantity is sufficient after clean-up, used extraction w/o osmfilter.</p></div>
+            <div class="comment-info" id="comment-56915-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '17, 11:59)</span>
+                <a class="comment-user userinfo" href="/users/13871/joho68">joho68</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56798" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56798-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/56791/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='BlXDk1g364DsZTxWypcbMOt9QGSK1NP4' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56791/csv-export-address-and-geo-suppressing-empty-entries-with-osmfilter?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56791/csv-export-address-and-geo-suppressing-empty-entries-with-osmfilter?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/export/"
+            class="tag-link-export"
+            title="see questions tagged'export'using tags"
+            rel="tag">export</a> <span class="tag-number">&#215;315</span><br/>
+        
+        <a href="/tags/osmfilter/"
+            class="tag-link-osmfilter"
+            title="see questions tagged'osmfilter'using tags"
+            rel="tag">osmfilter</a> <span class="tag-number">&#215;60</span><br/>
+        
+        <a href="/tags/csv/"
+            class="tag-link-csv"
+            title="see questions tagged'csv'using tags"
+            rel="tag">csv</a> <span class="tag-number">&#215;42</span><br/>
+        
+        <a href="/tags/addresses/"
+            class="tag-link-addresses"
+            title="see questions tagged'addresses'using tags"
+            rel="tag">addresses</a> <span class="tag-number">&#215;22</span><br/>
+        
+        <a href="/tags/dataquality/"
+            class="tag-link-dataquality"
+            title="see questions tagged'dataquality'using tags"
+            rel="tag">dataquality</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 28, 2017, 1:48 p.m.">28 Jun '17, 13:48</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,457 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 6, 2017, 11:59 a.m.">06 Jul '17, 11:59</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/67260/how-to-easy-export-osm-data-in-csv">How to easy export osm data in csv</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73732/query-for-locations-and-additionally-retrieving-their-landuse">query for locations and additionally retrieving their landuse</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25816/how-to-export-a-list-of-townscities">How to export a list of towns/cities?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45914/extract-highway-with-name">extract highway with name</a>
+        </p>
+        
+        <p>
+            <a href="/questions/69756/feature-request-export-measure-information">Feature Request: Export &quot;Measure&quot; information</a>
+        </p>
+        
+        <p>
+            <a href="/questions/71660/query-locations-by-type-export">Query locations by type, export?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6167/rearranging-xml-to-excel-data-have-a-column-show-up-twice">Rearranging XML to Excel data - have a column show up twice</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16102/using-osmconvert-to-csv-file-only-returns-id-lat-and-lon">Using osmconvert to .csv file only returns id, lat, and lon.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33900/exporting-zipcode-and-latitude-and-longitude-into-csv-file">Exporting zipcode and latitude and longitude into .csv file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/76704/extracted-csv-only-contains-3-streets">Extracted csv only contains 3 streets</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

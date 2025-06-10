@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How can I get the OSM DB in my own server having polygonic data? - OSM Help</title>
+        <meta name="description" content="I want OSM DB as I need to use some map polygon (GEO cordinates) data of nodes as read only purpose in my current application. As I can see Nominatim is little bit tough and too large to install. SO please suggest me another way so I can just mirror the existing mysql / postgresql DB.  I have alread..." />
+        <meta name="keywords" content="private_server,own,osm,polygon,nominatim" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/13736/how-can-i-get-the-osm-db-in-my-own-server-having-polygonic-data" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/13736/how-can-i-get-the-osm-db-in-my-own-server-having-polygonic-data?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='G8Kscavp0PQmoBF96ATIJaX9hHfgDnYc' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/13736/how-can-i-get-the-osm-db-in-my-own-server-having-polygonic-data">How can I get the OSM DB in my own server having polygonic data?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-13736-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13736/up/" rel="nofollow"> </a>
+<div id="post-13736-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-13736-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13736/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/13736/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I want OSM DB as I need to use some map polygon (GEO cordinates) data of nodes as read only purpose in my current application. As I can see Nominatim is little bit tough and too large to install. SO please suggest me another way so I can just mirror the existing mysql / postgresql DB. </p>
+<p>I have already tried the way as defined below as I could read from the openstreetmap book:
+-&gt; Ruby and rails installation with the basic gems 
+-&gt; Installation of required gems for the OSM db migration
+-&gt; rake db:migrate</p>
+<p>And I could see few tables and could run the osm search website on my 3000 port. But I can not see the polygon data in that DB and I found that it is fetching the polygon data from the Nominatim API at the run time.</p>
+<p>If anyone has already done this installation and he has already this OSM DB with polygonic data in his server then please let me know so I can mirror it on my server.</p>
+<p>Or let me know the easier way to get the data in my server.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/private_server/" class="post-tag tag-link-private_server"
+                                        title="see questions tagged 'private_server'" rel="tag">private_server</a>
+                                
+                                    <a href="/tags/own/" class="post-tag tag-link-own"
+                                        title="see questions tagged 'own'" rel="tag">own</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/polygon/" class="post-tag tag-link-polygon"
+                                        title="see questions tagged 'polygon'" rel="tag">polygon</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Jun '12, 07:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b3013a84207a32bed7ddfad7004100f7?s=32&amp;d=identicon&amp;r=g" alt="Ravi%20Kotwani's gravatar image" />
+    <p><a href="/users/3908/ravi-kotwani">Ravi Kotwani</a><br/>
+    <span class="score" title="136 reputation points">136</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ravi Kotwani has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-13736">
+    
+</div>
+<div id="comment-tools-13736" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13736-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/13736/how-can-i-get-the-osm-db-in-my-own-server-having-polygonic-data?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/13736/how-can-i-get-the-osm-db-in-my-own-server-having-polygonic-data?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/13736/how-can-i-get-the-osm-db-in-my-own-server-having-polygonic-data?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/13736/how-can-i-get-the-osm-db-in-my-own-server-having-polygonic-data?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="13739"></a>
+                    <div id="answer-container-13739" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13739-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13739/up/" rel="nofollow"> </a>
+<div id="post-13739-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-13739-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13739/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Ravi Kotwani has selected this answer as the correct answer"
+        href="/accept_answer/13739/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can use <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> to get data into database. You can then modify stylefile default.style to get only the polygons you want into database. </p>
+<p>You can find all necessary steps on <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server/">switch to osm page</a>. As you do not need the rendering part just read the parts that describe db setup and data import. In case you need to keep this db up to date also take a look at <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13739/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Jun '12, 11:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f7f8127223bd00c9e8f569ce2e9ddf22?s=32&amp;d=identicon&amp;r=g" alt="RM87's gravatar image" />
+    <p><a href="/users/268/rm87">RM87</a><br/>
+    <span class="score" title="3346 reputation points"><span class="">3.3k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="37 badges"><span class="silver">&#9679;</span><span class="badgecount">37</span></span><span title="53 badges"><span class="bronze">&#9679;</span><span class="badgecount">53</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RM87 has 20 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/13739/">
+                edited
+                <strong>23 Jun '12, 11:59</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13739">
+    
+        <a name="13754"></a>
+        <div class="comment" id="comment-13754">
+            <div id="post-13754-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have already tried all these steps, but getting 2 much errors while importing planet file. So now I don't want to do all this as I need the DB for read only purpose. So I would request you to give me export of your complete DB if you have this DB on your server. I am ready to pay for this also. Please give me your contact details so I can contact you personally.</p></div>
+            <div class="comment-info" id="comment-13754-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '12, 08:16)</span>
+                <a class="comment-user userinfo" href="/users/3908/ravi-kotwani">Ravi Kotwani</a>
+                
+            </div>
+        </div>
+    
+        <a name="13757"></a>
+        <div class="comment" id="comment-13757">
+            <div id="post-13757-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Unfortunately the only export format provided for osm in the planet.osm file.  DB dumps are not provided.</p>
+
+<p>There are various companies that provide OSM services who may be able to assist on a commercial basis - you can find a list here: <a href="http://switch2osm.org/providers/">http://switch2osm.org/providers/</a></p></div>
+            <div class="comment-info" id="comment-13757-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '12, 10:06)</span>
+                <a class="comment-user userinfo" href="/users/4/twain">twain</a>
+                
+            </div>
+        </div>
+    
+        <a name="13773"></a>
+        <div class="comment" id="comment-13773">
+            <div id="post-13773-score" class="comment-score"></div>
+            <div class="comment-text"><p>You may begin with some smaller extracts from <a href="http://download.geofabrik.de/osm/">geofabrik</a>, so reaching those errors and retrying won't take long (some minutes for extra tiny area compared to some days for full planet). If everything goes well with small extract then everything should also go well with planet file.</p>
+
+<p>If you reach an error you could not figure out (even after refreshing break) then post it here, to the <a href="http://forum.openstreetmap.org/">forum</a> (better place for discussions) or ask on the <a href="http://wiki.openstreetmap.org/wiki/IRC">irc</a>.</p></div>
+            <div class="comment-info" id="comment-13773-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '12, 19:43)</span>
+                <a class="comment-user userinfo" href="/users/268/rm87">RM87</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13739" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13739-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/13736/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='G8Kscavp0PQmoBF96ATIJaX9hHfgDnYc' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13736/how-can-i-get-the-osm-db-in-my-own-server-having-polygonic-data?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13736/how-can-i-get-the-osm-db-in-my-own-server-having-polygonic-data?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/polygon/"
+            class="tag-link-polygon"
+            title="see questions tagged'polygon'using tags"
+            rel="tag">polygon</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/private_server/"
+            class="tag-link-private_server"
+            title="see questions tagged'private_server'using tags"
+            rel="tag">private_server</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/own/"
+            class="tag-link-own"
+            title="see questions tagged'own'using tags"
+            rel="tag">own</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 23, 2012, 7:37 a.m.">23 Jun '12, 07:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,373 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 25, 2012, 7:43 p.m.">25 Jun '12, 19:43</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13870/different-result-of-nominatim-on-my-server-while-comparing-with-original">Different result of nominatim on my server while comparing with original</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19226/nominatim-search-fails-when-using-post-codes">nominatim search fails when using post codes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13183/to-find-nearest-places-using-mapquest-open-js-sdk">To find nearest places using mapquest open js sdk</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13825/permission-issue-of-so-file-in-nominatim-osm-postgres-db">Permission issue of .so file in Nominatim osm postgres DB</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15948/problem-importing-planet-file-into-nominatim">Problem importing Planet file into Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17315/how-do-i-find-the-nearest-cities-to-a-point-using-latitude-and-longitude-in-nominatim">How do I find the nearest cities to a point using latitude and longitude in nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8117/getting-city-border-from-osm-data">Getting city border from osm data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12671/getting-error-when-importing-data-using-nominatim-index_placex-update-failed-error-upper-bound-of-for-loop-cannot-be-null">Getting error when importing data using Nominatim : index_placex: UPDATE failed: ERROR:  upper bound of FOR loop cannot be null</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13762/how-to-check-nominatim-planet-import-execution-is-running-in-background-or-terminated">How to check Nominatim planet import execution is running in background or terminated?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19383/error-db-error-insufficient-permissions">Error: DB error: insufficient permissions</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

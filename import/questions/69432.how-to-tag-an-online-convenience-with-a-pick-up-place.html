@@ -1,0 +1,918 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to tag an online convenience with a pick-up place - OSM Help</title>
+        <meta name="description" content="Hi, I would like to tag a shop that sells its products online, prepares the orders and lets the customers pick up their orders at the store. The store doesn&#39;t sell products directly inside the building. It&#39;s just a place to pick up already prepared orders. There&#39;s a tag drive_through used to indicat..." />
+        <meta name="keywords" content="shop,pick-up,drive,online" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/69432/how-to-tag-an-online-convenience-with-a-pick-up-place" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/69432/how-to-tag-an-online-convenience-with-a-pick-up-place?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='q7zfIPni1JbtIVhIAdw2fTpAb9QhXzoq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/69432/how-to-tag-an-online-convenience-with-a-pick-up-place">How to tag an online convenience with a pick-up place</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-69432-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69432/up/" rel="nofollow"> </a>
+<div id="post-69432-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-69432-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69432/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/69432/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I would like to tag a shop that sells its products online, prepares the orders and lets the customers pick up their orders at the store. The store doesn't sell products directly inside the building. It's just a place to pick up already prepared orders.</p>
+<p>There's a tag <a href="https://wiki.openstreetmap.org/wiki/Key:drive_through">drive_through</a> used to indicate shops and amenities offering a service that you can order from your car. But here it's not the case. You can't order or pick-up from your car. You have to park, then go at the store by feet.</p>
+<p>Do you know a tag that could be used for this purpose? Like <code>online_order</code> with value <code>no</code> / <code>yes</code> / <code>only</code>, or <code>delivery_place</code> ...</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/shop/" class="post-tag tag-link-shop"
+                                        title="see questions tagged 'shop'" rel="tag">shop</a>
+                                
+                                    <a href="/tags/pick-up/" class="post-tag tag-link-pick-up"
+                                        title="see questions tagged 'pick-up'" rel="tag">pick-up</a>
+                                
+                                    <a href="/tags/drive/" class="post-tag tag-link-drive"
+                                        title="see questions tagged 'drive'" rel="tag">drive</a>
+                                
+                                    <a href="/tags/online/" class="post-tag tag-link-online"
+                                        title="see questions tagged 'online'" rel="tag">online</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 Jun '19, 21:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0f846affa75119fac6eedb752f56af56?s=32&amp;d=identicon&amp;r=g" alt="AJojo44's gravatar image" />
+    <p><a href="/users/14738/ajojo44">AJojo44</a><br/>
+    <span class="score" title="126 reputation points">126</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AJojo44 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-69432">
+    
+        <a name="69441"></a>
+        <div class="comment" id="comment-69441">
+            <div id="post-69441-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you have to pre-order I don't think this meets the criteria for a convenience shop.</p></div>
+            <div class="comment-info" id="comment-69441-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '19, 10:25)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69432" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69432-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/69432/how-to-tag-an-online-convenience-with-a-pick-up-place?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/69432/how-to-tag-an-online-convenience-with-a-pick-up-place?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/69432/how-to-tag-an-online-convenience-with-a-pick-up-place?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/69432/how-to-tag-an-online-convenience-with-a-pick-up-place?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="69443"></a>
+                    <div id="answer-container-69443" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69443-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69443/up/" rel="nofollow"> </a>
+<div id="post-69443-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-69443-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69443/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The physical object you like to map does not appear to be a shop. The shop is virtual and what you find at the given address is rather a warehouse. I would map the building as building=warehouse. You can still supply operator (the shop's name), phone number and web address there.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69443/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Jun '19, 13:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69443">
+    
+        <a name="69448"></a>
+        <div class="comment" id="comment-69448">
+            <div id="post-69448-score" class="comment-score">1</div>
+            <div class="comment-text"><p>That's a start, but it only describes the "a warehouse" part of "a warehouse where you can pick up your online orders". As I read the question, it's really more about the second part.</p></div>
+            <div class="comment-info" id="comment-69448-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '19, 19:22)</span>
+                <a class="comment-user userinfo" href="/users/14/tordanik">Tordanik</a>
+                
+            </div>
+        </div>
+    
+        <a name="69463"></a>
+        <div class="comment" id="comment-69463">
+            <div id="post-69463-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not sure my solution is so far off. A warehouse is a place to store and issue goods and many have a counter for pick-up. Granted, in this case there is probably more B2C than B2B business. But otherwise?</p>
+
+<p>What is the use case behind mapping? Specifically searching for pick-up counters of online stores in your city is probably not what most people would do. Rather you have found your store online and now want to search for its pick-up counter. You can perfectly well do that if it is mapped as warehouse and with the store's name (as operator I suggest).</p>
+
+<p>But apart from that I suggest to follow SomeoneElse's suggestion to continue this on a different channel if further discussion is needed.</p></div>
+            <div class="comment-info" id="comment-69463-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '19, 08:24)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69443" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69443-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="69445"></a>
+                    <div id="answer-container-69445" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69445-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69445/up/" rel="nofollow"> </a>
+<div id="post-69445-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-69445-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69445/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Possibly not in your case, but often this sort of collection point is an unmanned cabinet.  These often get tagged as <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity=vending%20machine?uselang=en-GB"><code>amenity-vending_machine</code></a>; <a href="https://wiki.openstreetmap.org/wiki/Tag:vending=parcel%20pickup?uselang=en-GB"><code>vending=parcel_pickup</code></a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69445/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Jun '19, 13:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69445">
+    
+        <a name="69452"></a>
+        <div class="comment" id="comment-69452">
+            <div id="post-69452-score" class="comment-score"></div>
+            <div class="comment-text"><p><code>vending=parcel_pickup</code> is close to the shop I'd like to tag but <code>vending</code> is only for automatic machines, often accessible 24/7, and not for a place to pick-up products delivered by humans at certain hours. :/</p></div>
+            <div class="comment-info" id="comment-69452-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '19, 20:44)</span>
+                <a class="comment-user userinfo" href="/users/14738/ajojo44">AJojo44</a>
+                
+            </div>
+        </div>
+    
+        <a name="69453"></a>
+        <div class="comment" id="comment-69453">
+            <div id="post-69453-score" class="comment-score"></div>
+            <div class="comment-text"><p>To be honest I'd ask this question on the "tagging" list.  The help site's good for "how do I do X" when there's a good answer "Y".  It's not so good for answers that being "it depends...".</p>
+
+<p>There is clearly a continuum between a fully-stocked catalogue shop and a parcel pickup vending machine - in the UK some newer "Argos" stores are counters in supermarkets with much less stock, but still "look like shops"; others may have even less stock and not really be shops at all because you never "buy" anything there.</p></div>
+            <div class="comment-info" id="comment-69453-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '19, 21:04)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69445" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69445-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="76269"></a>
+                    <div id="answer-container-76269" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76269-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76269/up/" rel="nofollow"> </a>
+<div id="post-76269-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-76269-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76269/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I understand this is an older post, but it's the first one that came up in my search for answers to this question. I believe the correct answer, as of now, is <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Doutpost">shop=outpost</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76269/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Aug '20, 19:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/48ad99ecda7df5e70a7473e0ef339667?s=32&amp;d=identicon&amp;r=g" alt="randoogle's gravatar image" />
+    <p><a href="/users/18873/randoogle">randoogle</a><br/>
+    <span class="score" title="10 reputation points">10</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="randoogle has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76269">
+    
+        <a name="76317"></a>
+        <div class="comment" id="comment-76317">
+            <div id="post-76317-score" class="comment-score"></div>
+            <div class="comment-text"><p>That would be a no from me, because as it's mentioned aswell in the <a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:shop%3Doutpost">talk page</a> and based on <a href="https://dictionary.cambridge.org/dictionary/english/outpost">Cambridge dictionary</a> "outpost" means:
+- a place, especially a small group of buildings or a town, that represents the authority or business interests of a government or company that is far away
+- a rare example of something that is disappearing</p>
+
+<p>In other words, what the Wiki article says is misleading to the actual meaning of the word, except if there's an actual typical usage of that term in commercial context.</p></div>
+            <div class="comment-info" id="comment-76317-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Aug '20, 02:47)</span>
+                <a class="comment-user userinfo" href="/users/18891/jimkats">jimkats</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-76269" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76269-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/69432/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='q7zfIPni1JbtIVhIAdw2fTpAb9QhXzoq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69432/how-to-tag-an-online-convenience-with-a-pick-up-place?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69432/how-to-tag-an-online-convenience-with-a-pick-up-place?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/shop/"
+            class="tag-link-shop"
+            title="see questions tagged'shop'using tags"
+            rel="tag">shop</a> <span class="tag-number">&#215;71</span><br/>
+        
+        <a href="/tags/online/"
+            class="tag-link-online"
+            title="see questions tagged'online'using tags"
+            rel="tag">online</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/drive/"
+            class="tag-link-drive"
+            title="see questions tagged'drive'using tags"
+            rel="tag">drive</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/pick-up/"
+            class="tag-link-pick-up"
+            title="see questions tagged'pick-up'using tags"
+            rel="tag">pick-up</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 3, 2019, 9:18 p.m.">03 Jun '19, 21:18</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,114 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 27, 2020, 2:47 a.m.">27 Aug '20, 02:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3017/how-should-i-tag-a-dog-grooming-parlour">How should I tag a dog grooming parlour?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4790/several-shops-in-one-building">Several shops in one building</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5344/how-do-you-tag-a-tobacconist">How do you tag a tobacconist?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5464/how-do-you-tag-a-furniture-shop">How do you tag a furniture shop ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5546/how-do-i-tag-an-electrical-shop-eg-currys">How do I tag an electrical shop (e.g. Currys)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8019/tag-a-shop-that-sells-local-pottery-or-other-handicraft-goods">Tag a shop, that sells local pottery or other handicraft goods</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8251/how-can-i-add-an-icon-to-the-map">How can I add an icon to the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9744/which-tag-i-have-to-use-when-creating-accessories-shop">Which tag I have to use, when creating accessories shop?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10279/how-to-add-details-to-amenitymarketplace">how to add details to amenity=marketplace</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2214/how-do-you-tag-a-wholesale-shop">How do you tag a wholesale shop?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

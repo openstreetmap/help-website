@@ -1,0 +1,652 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>[closed] optimizing map tile trees - OSM Help</title>
+        <meta name="description" content="I am building my own map tiles using the OSM data, with PostGIS and Mapnik (as explained, for instance, here). I am going to be serving these tiles from my own server, so I have a lot of flexibility in how I process a request for a tile. I have a few closely related questions: (1) When I&#39;m running t..." />
+        <meta name="keywords" content="generate_tiles,tiles,optimization" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/7209/optimizing-map-tile-trees" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/7209/optimizing-map-tile-trees?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='6YzggSFFrBKN5dDrMhYzziU77oSy6B3M' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/7209/optimizing-map-tile-trees">[closed] optimizing map tile trees</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-7209-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7209/up/" rel="nofollow"> </a>
+<div id="post-7209-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-7209-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7209/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/7209/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am building my own map tiles using the OSM data, with PostGIS and Mapnik (as explained, for instance, <a href="http://www.bostongis.com/PrinterFriendly.aspx?content_name=generating_osm_tiles">here</a>).</p>
+<p>I am going to be serving these tiles from my own server, so I have a lot of flexibility in how I process a request for a tile.</p>
+<p>I have a few closely related questions:</p>
+<p>(1) When I'm running the script to generate the tiles (<code><a href="http://generate_tiles_multiprocess.py">generate_tiles_multiprocess.py</a></code>, in my case), for a huge percentage of the output tiles it writes "Empty Tile" to the script output line. My understanding is that "Empty Tile" actually means "a tile of just one color". So it might be all blue in a water area, or all green in a park area, or all gray in some other area. My question is whether there is a deeper meaning to "Empty Tile", specifically whether it means that all sub-tiles generated at higher levels will also be empty? For instance, if I generate a level 16 tile that is a gray "Empty Tile", does it mean when I generate level 17, and I am generating the four level 17 tiles that correspond to that one level 16 tile, that those four tiles will also be gray "Empty Tile", and the same for the 16 sub-tiles at level 18? Or, in contrast, is it possible for features that weren't visible in the level 16 tile to "appear" in that area at level 17 or level 18? Another way of saying it: Does "Empty Tile" mean that the tile is "empty all the way down"?</p>
+<p>(2) Regardless of the answer to question to (1) above, suppose I have generated a full tree of tiles for a given area, all the way to level 18. Suppose there is a tile on level 15 that is all gray, and it turns that the four corresponding tiles on level 16, the 16 corresponding tiles on level 17, and the 64 corresponding tiles on level 18, are also all gray. A natural optimization of the tree is just to delete those level 16, 17, and 18 tiles (84 total tiles) from the tree altogether. Then, when the server goes to serve a tile and it's not present in the tree, it knows to "look up" to the parent levels of the tree as far as necessary until it finds a tile, and it knows that that tile (the all gray tile in this case) is good to use for the originally requested tile. My questions are: what is that optimization called? Is it commonly used? Is it discussed somewhere?</p>
+<p>(3) Finally, I notice that many of the output tiles are very simple. First of all there is the huge number of one-color tiles. But there are also many two-color tiles with a very simple shape, such as a single line dividing a blue area from a gray area. I see that the one-color tiles are 103 byte .png files. The simple two-color tiles are typically anywhere from 1.0k to 1.5k. So it seems like a natural compression technique for these would be to use just three bytes ( R, G, B ) for the one-color files, and a simple run-length encoding scheme for the two-color files. Of course, to make this really save space on the disk it would be necessary to combine lots of these small files into some kind of multi-file that would be cached in memory on the server. But anyway for both storage and transmittal (as well as helping reduce cache missing when actually serving the data) it seems like there are many optimizations like this that could be employed. Can you tell me if these optimizations make sense, and where I can find documentation of how others have implemented stuff like this?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/generate_tiles/" class="post-tag tag-link-generate_tiles"
+                                        title="see questions tagged 'generate_tiles'" rel="tag">generate_tiles</a>
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                                    <a href="/tags/optimization/" class="post-tag tag-link-optimization"
+                                        title="see questions tagged 'optimization'" rel="tag">optimization</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Aug '11, 00:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8c7b62703cf744bb00d8064af6f73d04?s=32&amp;d=identicon&amp;r=g" alt="Michael%20Katz's gravatar image" />
+    <p><a href="/users/1948/michael-katz">Michael Katz</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Michael Katz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/7209/">
+                closed
+                <strong>20 Aug '11, 01:05</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+            <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+            <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-7209">
+    
+</div>
+<div id="comment-tools-7209" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7209-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="question-status" style="margin-bottom:15px">
+            <h3>
+                The question has been closed for the following reason "Unsuitable for help.osm" by
+                <a href="/users/104/frederik-ramm">Frederik Ramm</a>
+                 20 Aug '11, 01:05
+            </h3>
+            </div>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/7209/optimizing-map-tile-trees?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/7209/optimizing-map-tile-trees?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/7209/optimizing-map-tile-trees?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/7209/optimizing-map-tile-trees?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="7210"></a>
+                    <div id="answer-container-7210" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-7210-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7210/up/" rel="nofollow"> </a>
+<div id="post-7210-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-7210-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7210/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Michael Katz has selected this answer as the correct answer"
+        href="/accept_answer/7210/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This series of questions is not really suitable for a help system like this as it is very unlikely that there's one "good" answer for it. The <a href="http://lists.openstreetmap.org/listinfo/dev">dev mailing list</a> is a good place to discuss such complex issues. I have taken the liberty of moving your question there.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/7210/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Aug '11, 01:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-7210">
+    
+        <a name="7211"></a>
+        <div class="comment" id="comment-7211">
+            <div id="post-7211-score" class="comment-score"></div>
+            <div class="comment-text"><p>ok, thanks</p></div>
+            <div class="comment-info" id="comment-7211-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Aug '11, 01:17)</span>
+                <a class="comment-user userinfo" href="/users/1948/michael-katz">Michael Katz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-7210" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7210-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/7209/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='6YzggSFFrBKN5dDrMhYzziU77oSy6B3M' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7209/optimizing-map-tile-trees?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7209/optimizing-map-tile-trees?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+        <a href="/tags/generate_tiles/"
+            class="tag-link-generate_tiles"
+            title="see questions tagged'generate_tiles'using tags"
+            rel="tag">generate_tiles</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/optimization/"
+            class="tag-link-optimization"
+            title="see questions tagged'optimization'using tags"
+            rel="tag">optimization</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 20, 2011, 12:53 a.m.">20 Aug '11, 00:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,268 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 20, 2011, 1:17 a.m.">20 Aug '11, 01:17</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/70627/using-png-files-as-tile-for-map">Using PNG files as tile for map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/82628/is-there-a-simple-way-to-turn-osm-file-to-tilepng">Is there a simple way to turn .osm file to tile.png ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34175/how-to-get-tile-images-from-tiff-image">How to get tile images from tiff image</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70014/generating-osm-png-tiles-for-offline-use">Generating OSM png tiles for offline use</a>
+        </p>
+        
+        <p>
+            <a href="/questions/75676/tile-server-image-generation-speed">tile server image generation speed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/79199/use-different-tile-style-with-openstreetmap-tile-server">Use different tile style with openstreetmap-tile-server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26249/tiles-for-hires-device">Tiles for hires device</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29724/tile-resources">Tile Resources</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66877/how-to-hide-buildings-from-the-tile-layer">How to hide buildings from the tile layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/84596/how-to-download-free-xyz-maptiles-bmp-or-jpg-image">How to Download Free XYZ MapTiles BMP OR JPG Image</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

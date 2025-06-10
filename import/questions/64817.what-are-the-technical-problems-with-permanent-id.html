@@ -1,0 +1,720 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>What are the technical problems with permanent ID? - OSM Help</title>
+        <meta name="description" content="There are a lot of requests for persistence in the OSM-IDs, and a good discussion/proposal... But to enhance a proposal we need to know the details of the technical (or contractual) problem about &quot;eternal&quot; persistence of the IDs.  We can compare problems and solutions using the Wikipedia/Wikidata mo..." />
+        <meta name="keywords" content="identifier" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/64817/what-are-the-technical-problems-with-permanent-id" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/64817/what-are-the-technical-problems-with-permanent-id?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gBmNe98YcYrmZdOipc31xtNBjsKccKqX' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/64817/what-are-the-technical-problems-with-permanent-id">What are the technical problems with permanent ID?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-64817-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64817/up/" rel="nofollow"> </a>
+<div id="post-64817-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-64817-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64817/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/64817/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   2
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>There are a lot of requests for <a href="https://wiki.openstreetmap.org/wiki/Persistent_Place_Identifier">persistence</a> in the OSM-IDs, and a <a href="https://wiki.openstreetmap.org/wiki/Permanent_ID">good discussion/proposal</a>... But to enhance a proposal we need to know the details of the technical (or contractual)  problem about "eternal" persistence of the IDs. </p>
+<p>We can compare problems and solutions using the Wikipedia/Wikidata model where concepts and working-objects (WOs) are in different namespaces: we can change, merge, etc. a WO preserving its semantic ID... Or  specialize/generalize the semantic ID changing the WO association.</p>
+<p>PS: perhaps there are many subtopics as map stability, backup/restore procedures, notability of a POI, spam control, persistence cost, etc.</p>
+<h2>Neutral discussion at Wiki</h2>
+<p>To not mix "generic question" with "question suitable for this platform", there are a Wiki page with all subsidies, and answers to the non-technical comments. </p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Persistent_Place_Identifier">https://wiki.openstreetmap.org/wiki/Persistent_Place_Identifier</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/identifier/" class="post-tag tag-link-identifier"
+                                        title="see questions tagged 'identifier'" rel="tag">identifier</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Jul '18, 14:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6963015ca2c3146e2a2a348b7fcb793b?s=32&amp;d=identicon&amp;r=g" alt="ppKrauss's gravatar image" />
+    <p><a href="/users/14889/ppkrauss">ppKrauss</a><br/>
+    <span class="score" title="95 reputation points">95</span><span title="19 badges"><span class="badge1">&#9679;</span><span class="badgecount">19</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="25 badges"><span class="bronze">&#9679;</span><span class="badgecount">25</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ppKrauss has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/64817/">
+                edited
+                <strong>21 Jul '18, 16:25</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-64817">
+    
+        <a name="64822"></a>
+        <div class="comment" id="comment-64822">
+            <div id="post-64822-score" class="comment-score">3</div>
+            <div class="comment-text"><p>This isn't really a question suitable for this platform. This site is more of a "how do I do this?" or "why is this happening?" platform, not "what do you think of this?". The forums or a mailing list would probably be more suitable.</p></div>
+            <div class="comment-info" id="comment-64822-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '18, 16:57)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="64826"></a>
+        <div class="comment" id="comment-64826">
+            <div id="post-64826-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi <a href="https://help.openstreetmap.org/users/8189/alester">@alester</a>, perhaps I can change, but will be very technical, and any clue is welcome (!)... Change the title to  <em>"Where I find the technical specifications of OSM to answer this kind of question?"</em>, is better? ...In a broader sense I can say <em>"how do I do $this?"</em> with $this="to use the same link to OSM map today and tomorow"; or <em>"why is $this happening?"</em> with $this="OSM is losting IDs, they are not persistent?".</p></div>
+            <div class="comment-info" id="comment-64826-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '18, 18:41)</span>
+                <a class="comment-user userinfo" href="/users/14889/ppkrauss">ppKrauss</a>
+                
+            </div>
+        </div>
+    
+        <a name="64832"></a>
+        <div class="comment" id="comment-64832">
+            <div id="post-64832-score" class="comment-score">2</div>
+            <div class="comment-text"><p>BTW, If you look at Wikidata, they do not have 100% protection to keep permanent IDs. Take any Wikidata item and change its content so it represents something else. The UI will not stop you from changing the item of the Eifel Tower into the Statue of Liberty and vice-versa. So anyone keeping a list of  important tourist sites in France and US will now have an incorrect list.</p></div>
+            <div class="comment-info" id="comment-64832-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jul '18, 06:20)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="64846"></a>
+        <div class="comment" id="comment-64846">
+            <div id="post-64846-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks <a href="https://help.openstreetmap.org/users/5390/escada"></a><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>. About <em>"100% protection to keep permanent IDs"</em> there are solutions, the main one is the stable version of the map as a simple backup (or perhaps a controled backup with a quality-tool like OSMCha). This backup strategy is used by the SimonPoole's good clue, the OSMLR project. The "experiment" Wikidata-wikipedia relation also is stable when ignoring vandalisms.... I edited  highlighting a link to Wiki-Openstreetmap where you can see answers to your other comments.</p></div>
+            <div class="comment-info" id="comment-64846-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jul '18, 16:35)</span>
+                <a class="comment-user userinfo" href="/users/14889/ppkrauss">ppKrauss</a>
+                
+            </div>
+        </div>
+    
+        <a name="64850"></a>
+        <div class="comment" id="comment-64850">
+            <div id="post-64850-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I don't understand the "simple backup" situation. Data needs to be changed.</p>
+
+<p>Permanent IDs not only have technical challenges, but also give a lot of problems for mappers. SimonPoole mentioned already one. Think about independent DYI stores that become part of a chain, restaurants that change owner (and/or cuisine), shops that have to be moved, but were already mapped in the new spot by another mapper, etc. etc. For every real-world action we will have to define whether the ID should remain the same or change. We need ways to merge and split IDs. You are going to have to the model the history of companies into your permanent IDs.</p></div>
+            <div class="comment-info" id="comment-64850-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '18, 07:14)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="64858"></a>
+        <div class="comment not_top_scorer" id="comment-64858">
+            <div id="post-64858-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi <a href="https://help.openstreetmap.org/users/5390/escada"></a><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>, well, all people are voting to <em>"isn't really a question"</em>, better to DELETE this question?  ... About your questions, is  difficult to discuss with "one phrase's" a complex context... I will build a FAQ at the WikiOpenstreetmap :-)</p></div>
+            <div class="comment-info" id="comment-64858-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '18, 13:09)</span>
+                <a class="comment-user userinfo" href="/users/14889/ppkrauss">ppKrauss</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64817" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64817-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/64817/what-are-the-technical-problems-with-permanent-id?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/64817/what-are-the-technical-problems-with-permanent-id?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/64817/what-are-the-technical-problems-with-permanent-id?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/64817/what-are-the-technical-problems-with-permanent-id?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="64831"></a>
+                    <div id="answer-container-64831" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64831-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64831/up/" rel="nofollow"> </a>
+<div id="post-64831-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-64831-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64831/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>alester has already pointed out that this is not a general purpose discussion forum.</p>
+<p>In any case, there are, solutions for permanent ids both for POI-like features (see <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Permanent_ID">https://wiki.openstreetmap.org/wiki/Overpass_API/Permanent_ID</a> ) and for "way" segments (for matching traffic information and the like to OSM objects) (see <a href="https://github.com/opentraffic/osmlr">https://github.com/opentraffic/osmlr</a> and other projects carrying on that work). </p>
+<p>BUT completely independent of OSM the former use case is tricky:
+ - is a restaurant that has moved a block still the same object?
+ - is the whatever-restaurant around the corner still the same object after it's changed its name?
+and so on.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64831/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Jul '18, 22:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64831">
+    
+        <a name="64845"></a>
+        <div class="comment" id="comment-64845">
+            <div id="post-64845-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks to the OSMLR link, is a good reference for a technically complete solution... Can you help at Wiki to enhance subsidies to this discussion/solution? See <a href="https://wiki.openstreetmap.org/wiki/Persistent_Place_Identifier">https://wiki.openstreetmap.org/wiki/Persistent_Place_Identifier</a></p></div>
+            <div class="comment-info" id="comment-64845-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jul '18, 16:19)</span>
+                <a class="comment-user userinfo" href="/users/14889/ppkrauss">ppKrauss</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64831" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64831-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/64817/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gBmNe98YcYrmZdOipc31xtNBjsKccKqX' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64817/what-are-the-technical-problems-with-permanent-id?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64817/what-are-the-technical-problems-with-permanent-id?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/identifier/"
+            class="tag-link-identifier"
+            title="see questions tagged'identifier'using tags"
+            rel="tag">identifier</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 20, 2018, 2:22 p.m.">20 Jul '18, 14:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,186 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 22, 2018, 1:10 p.m.">22 Jul '18, 13:10</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/56620/how-id-of-nodes-ways-and-relations-forms">How id of nodes, ways and relations forms?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70936/element-id-generation-and-details">Element ID generation and details</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

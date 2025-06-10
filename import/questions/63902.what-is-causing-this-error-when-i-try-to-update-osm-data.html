@@ -1,0 +1,833 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>What is causing this error when I try to update OSM data - OSM Help</title>
+        <meta name="description" content="I&#39;m still trying to get openstreetmap-tiles-update-expire to run correctly. I have managed to figure out that I needed the python3 versions of the psycopg2, shapely and lxml for the current trim_osc.py, but now I&#39;ve run into this error. My initial Google search didn&#39;t provide anything helpful, and I..." />
+        <meta name="keywords" content="openstreetmap,update" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/63902/what-is-causing-this-error-when-i-try-to-update-osm-data" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/63902/what-is-causing-this-error-when-i-try-to-update-osm-data?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='OQZSHGLVEiE1NoyhuB2DzwzI7MVEoJWQ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/63902/what-is-causing-this-error-when-i-try-to-update-osm-data">What is causing this error when I try to update OSM data</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-63902-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63902/up/" rel="nofollow"> </a>
+<div id="post-63902-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-63902-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63902/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/63902/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm still trying to get openstreetmap-tiles-update-expire to run correctly. I have managed to figure out that I needed the python3 versions of the psycopg2, shapely and lxml for the current trim_osc.py, but now I've run into this error. My initial Google search didn't provide anything helpful, and I'm just not sure where to start with this. </p>
+<p>I'm running Ubuntu 18.04 server with all updates applied, and I completed the steps shown in <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">switch2osm for 18.04</a>. I am using the <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load#Updating_your_database_as_people_edit_OpenStreetMap">steps outlined here</a>, as modified above to account of Python3.</p>
+<p>I should also add that I had java-related errors running Osmosis. The basic error showed as "the trustAnchors parameter must be non-empty." Researched, and was able to apply the <a href="https://stackoverflow.com/a/50103533/3079062">solution described here</a>.</p>
+<p>Any help understanding what is going on is appreciated.</p>
+<p>-Tim</p>
+<pre><code>[2018-05-31 05:25:21] 32203 filtering diff
+Traceback (most recent call last):
+  File "/home/&lt;user&gt;/src/regional/trim_osc.py", line 103, in &lt;module&gt;
+    tree = etree.parse(options.osc if not options.gzip else gzip.GzipFile(fileobj=options.osc))
+  File "src/lxml/etree.pyx", line 3426, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1860, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1880, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1775, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1186, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 600, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 706, in lxml.etree._handleParseResult
+  File "src/lxml/etree.pyx", line 316, in lxml.etree._ExceptionContext._raise_if_stored
+  File "src/lxml/parser.pxi", line 370, in lxml.etree._FileReaderContext.copyToBuffer
+  File "/usr/lib/python3.6/gzip.py", line 276, in read
+    return self._buffer.read(size)
+  File "/usr/lib/python3.6/_compression.py", line 68, in readinto
+    data = self.read(len(byte_view))
+  File "/usr/lib/python3.6/gzip.py", line 463, in read
+    if not self._read_gzip_header():
+  File "/usr/lib/python3.6/gzip.py", line 406, in _read_gzip_header
+    magic = self._fp.read(2)
+  File "/usr/lib/python3.6/gzip.py", line 91, in read
+    self.file.read(size-self._length+read)
+  File "/usr/lib/python3.6/codecs.py", line 321, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte
+[2018-05-31 05:25:22] 32203 [error] Trim_osc error
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                                    <a href="/tags/update/" class="post-tag tag-link-update"
+                                        title="see questions tagged 'update'" rel="tag">update</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>31 May '18, 06:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9d2fa479c7f7984fd8fd435b2badbc4d?s=32&amp;d=identicon&amp;r=g" alt="tim_rohrer's gravatar image" />
+    <p><a href="/users/15159/tim_rohrer">tim_rohrer</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tim_rohrer has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/63902/">
+                edited
+                <strong>31 May '18, 16:18</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-63902">
+    
+        <a name="63905"></a>
+        <div class="comment" id="comment-63905">
+            <div id="post-63905-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Just for completeness - what versions of things do you have installed?  I'm guessing Ubuntu 18.04 + the stuff you get by installing <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/manually-building-a-tile-server-18-04-lts/</a> plus  the stuff from <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1804_tileserver_load#Updating_your_database_as_people_edit_OpenStreetMap">https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1804_tileserver_load#Updating_your_database_as_people_edit_OpenStreetMap</a> ?  If so that <em>should</em> all work together (though I haven't installed a server from scratch like that in a month or so).</p></div>
+            <div class="comment-info" id="comment-63905-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '18, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63915"></a>
+        <div class="comment" id="comment-63915">
+            <div id="post-63915-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you. You're absolutely right that I should have included that.</p></div>
+            <div class="comment-info" id="comment-63915-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '18, 16:19)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-63902" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63902-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/63902/what-is-causing-this-error-when-i-try-to-update-osm-data?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/63902/what-is-causing-this-error-when-i-try-to-update-osm-data?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/63902/what-is-causing-this-error-when-i-try-to-update-osm-data?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/63902/what-is-causing-this-error-when-i-try-to-update-osm-data?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="63904"></a>
+                    <div id="answer-container-63904" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-63904-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63904/up/" rel="nofollow"> </a>
+<div id="post-63904-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-63904-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63904/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="tim_rohrer has selected this answer as the correct answer"
+        href="/accept_answer/63904/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is about 75% guesswork so I could be way off, but:</p>
+<p>It looks like something is trying to read gzip data from a file which was not opened in binary mode. It also looks like the file was opened by the argparse module, controlled by this line:</p>
+<pre><code>parser.add_argument('osc', type=argparse.FileType('r'), help='input osc file, "-" for stdin')
+</code></pre>
+<p>Try changing 'r' to 'rb' and see whether that makes any difference. This should probably be done conditionally on the '-z' flag, but I have no idea how to do that with argparse...</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/63904/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 May '18, 08:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/80abc4597de5aeb507c5a7ccd4ccee7a?s=32&amp;d=identicon&amp;r=g" alt="turepalsson's gravatar image" />
+    <p><a href="/users/3893/turepalsson">turepalsson</a><br/>
+    <span class="score" title="836 reputation points">836</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="25 badges"><span class="bronze">&#9679;</span><span class="badgecount">25</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="turepalsson has 3 accepted answers">25&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-63904">
+    
+        <a name="63916"></a>
+        <div class="comment" id="comment-63916">
+            <div id="post-63916-score" class="comment-score"></div>
+            <div class="comment-text"><p>That bought me about 15 lines :-) </p>
+
+<p>[2018-05-31 15:26:19] 23082 start import from seq-nr 2990717, replag is 2 day(s) and 19 hour(s)
+[2018-05-31 15:26:19] 23082 downloading diff
+[2018-05-31 15:26:47] 23082 filtering diff
+Traceback (most recent call last):
+  File "/home/tileserver/src/regional/trim_osc.py", line 118, in &lt;module&gt;
+    nodesM.append(long(node.get('id')))
+NameError: name 'long' is not defined
+[2018-05-31 15:26:48] 23082 [error] Trim_osc error
+[2018-05-31 15:26:48] 23082 resetting state</p>
+
+<p>Pastebin of the output: <a href="https://pastebin.com/nyiGgwyV">https://pastebin.com/nyiGgwyV</a></p>
+
+<p>openstreetmap-tiles-update-expire complains "rm: cannot remove '/var/lib/mod_tile/dirty_tiles.23082': No such file or directory"</p>
+
+<p>When should dirty_tiles be created?</p></div>
+            <div class="comment-info" id="comment-63916-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '18, 16:35)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+        <a name="63920"></a>
+        <div class="comment" id="comment-63920">
+            <div id="post-63920-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The long() thing looks like something is trying to run python2 code with a python3 interpreter.</p></div>
+            <div class="comment-info" id="comment-63920-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '18, 17:15)</span>
+                <a class="comment-user userinfo" href="/users/3893/turepalsson">turepalsson</a>
+                
+            </div>
+        </div>
+    
+        <a name="63922"></a>
+        <div class="comment" id="comment-63922">
+            <div id="post-63922-score" class="comment-score"></div>
+            <div class="comment-text"><p>It is running now. Not sure how long the import diff should take? The original data file was from the 28th, and I'm only covering the US state of California?</p></div>
+            <div class="comment-info" id="comment-63922-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '18, 18:18)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+        <a name="63923"></a>
+        <div class="comment" id="comment-63923">
+            <div id="post-63923-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's a bit "how long is a piece of string" :)</p>
+
+<p>On hardware that imports the British Isles in 4 or so hours it normally takes another 3 to catch up from 30 hours behind. You might be able to work something out from that...</p></div>
+            <div class="comment-info" id="comment-63923-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '18, 18:38)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63924"></a>
+        <div class="comment" id="comment-63924">
+            <div id="post-63924-score" class="comment-score"></div>
+            <div class="comment-text"><p>That does help, I think. My import of California only took a few minutes; unfortunately, I failed to capture an exact time, but it wasn't long. </p>
+
+<p>This has been running for close to an hour now. Four <code>postgres</code> processes running up high in <code>top</code>. So, I'll let it continue. It seems to be taking a lot longer than the original import.</p></div>
+            <div class="comment-info" id="comment-63924-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '18, 18:47)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+        <a name="63926"></a>
+        <div class="comment not_top_scorer" id="comment-63926">
+            <div id="post-63926-score" class="comment-score"></div>
+            <div class="comment-text"><p>Cool. It looks like the entire thing ran for about an hour and a half. I finally got "Done with import" in the log. </p>
+
+<p>Weirdly, my other terminal session froze; second time that has happened. But, that is an different problem :-)</p>
+
+<p>Thanks!</p>
+
+<p>p.s. I opened an issue with <a href="https://github.com/Zverik/regional/issues">https://github.com/Zverik/regional/issues</a> regarding the binary read and the <code>long</code>. I'd like to hear some validation of these issues, and then I'd be willing to write up something for the wiki.</p></div>
+            <div class="comment-info" id="comment-63926-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '18, 19:33)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-63904" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63904-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/63902/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='OQZSHGLVEiE1NoyhuB2DzwzI7MVEoJWQ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63902/what-is-causing-this-error-when-i-try-to-update-osm-data?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63902/what-is-causing-this-error-when-i-try-to-update-osm-data?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+        <a href="/tags/update/"
+            class="tag-link-update"
+            title="see questions tagged'update'using tags"
+            rel="tag">update</a> <span class="tag-number">&#215;199</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 31, 2018, 6:46 a.m.">31 May '18, 06:46</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,778 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 31, 2018, 7:35 p.m.">31 May '18, 19:35</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/77293/my-edits-doesnt-show-on-my-tesla-gps">My edits doesn&#39;t show on my Tesla GPS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/639/how-do-i-use-openstreetmap-tiles-as-a-wms-background-in-josm">How do I use OpenStreetMap tiles as a WMS background in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1234/why-wont-zoom-11-update">[closed] Why won&#39;t zoom 11 update?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/802/can-we-get-more-updated-aerial-imagery-from-bing-or-mapquest-or-anything-but-yahoo">Can we get more updated aerial imagery from Bing or Mapquest or anything, but Yahoo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/811/upload-current-street-data">Upload current street data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1081/clackmannanshire">Clackmannanshire</a>
+        </p>
+        
+        <p>
+            <a href="/questions/768/how-can-i-keep-a-osm-file-of-a-specific-area-country-always-up-to-date">How can I keep a .osm file of a specific area (country) always up-to-date?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1574/is-it-openstreetmap-or-open-street-maps">Is it OpenStreetMap or Open Street Maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1737/problem-with-some-name-tags-in-bulgarian-map">Problem with some name tags in Bulgarian map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/534/how-does-nominatim-have-data-that-is-not-in-openstreetmap">How does Nominatim have data that is not in OpenStreetMap?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

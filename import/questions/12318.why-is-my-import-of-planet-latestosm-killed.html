@@ -1,0 +1,897 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why is my import of planet-latest.osm KILLED? - OSM Help</title>
+        <meta name="description" content="Hey Guys! When trying to import the planet-latest.osm via osm2pgsql into PostGIS I receive the following problem. http://dpaste.org/ftsj8/ Can anybody guess, how to solve it? Greetings, Matze" />
+        <meta name="keywords" content="planet,import,postgresql,osm2pgsql,postgis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/12318/why-is-my-import-of-planet-latestosm-killed" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/12318/why-is-my-import-of-planet-latestosm-killed?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zKUa5I3PoI2rAeC02BepJ0MKmTdDh1kf' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed">Why is my import of planet-latest.osm KILLED?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-12318-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12318/up/" rel="nofollow"> </a>
+<div id="post-12318-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-12318-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12318/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/12318/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hey Guys!</p>
+<p>When trying to import the planet-latest.osm via osm2pgsql into PostGIS I receive the following problem.</p>
+<p><a href="http://dpaste.org/ftsj8/">http://dpaste.org/ftsj8/</a></p>
+<p>Can anybody guess, how to solve it?</p>
+<p>Greetings,
+Matze</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/planet/" class="post-tag tag-link-planet"
+                                        title="see questions tagged 'planet'" rel="tag">planet</a>
+                                
+                                    <a href="/tags/import/" class="post-tag tag-link-import"
+                                        title="see questions tagged 'import'" rel="tag">import</a>
+                                
+                                    <a href="/tags/postgresql/" class="post-tag tag-link-postgresql"
+                                        title="see questions tagged 'postgresql'" rel="tag">postgresql</a>
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                                    <a href="/tags/postgis/" class="post-tag tag-link-postgis"
+                                        title="see questions tagged 'postgis'" rel="tag">postgis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Apr '12, 11:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cc0198a02af3c41ad04b61e028c3b126?s=32&amp;d=identicon&amp;r=g" alt="MHein's gravatar image" />
+    <p><a href="/users/3139/mhein">MHein</a><br/>
+    <span class="score" title="141 reputation points">141</span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="MHein has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12318/">
+                edited
+                <strong>29 Aug '13, 11:40</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0c12497903c6f3b2dd9f4d87deb127de?s=32&amp;d=identicon&amp;r=g" alt="MagicFab's gravatar image" />
+            <p><a href="/users/138/magicfab">MagicFab</a><br/>
+            <span class="score" title="935 reputation points">935</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-12318">
+    
+        <a name="12328"></a>
+        <div class="comment" id="comment-12328">
+            <div id="post-12328-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not an answer but a question - just checking that you really do want to import the whole planet, i.e. you want to render a map of the world, not a small part of it?</p></div>
+            <div class="comment-info" id="comment-12328-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '12, 13:14)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12318" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12318-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="12332"></a>
+                    <div id="answer-container-12332" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12332-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12332/up/" rel="nofollow"> </a>
+<div id="post-12332-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-12332-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12332/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="MHein has selected this answer as the correct answer"
+        href="/accept_answer/12332/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Please take <a href="http://switch2osm.org/serving-tiles/">http://switch2osm.org/serving-tiles/</a> "System Requirements" seriously.</p>
+<p>Importing a full planet doesn't need an awful lot of resources in the grand scheme of things, but you will not be able to avoid allocating enough disk space (at least 300GB for the rendering database), and multiple GBs (as in more than 8) of memory.</p>
+<p>Trying to skimp on this is a waste of your and other peoples time.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12332/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '12, 13:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12332/">
+                edited
+                <strong>24 Apr '12, 14:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12332">
+    
+        <a name="12350"></a>
+        <div class="comment" id="comment-12350">
+            <div id="post-12350-score" class="comment-score"></div>
+            <div class="comment-text"><p>does anyone have more than 8GB of RAM in an normal PC?</p>
+
+<p>IFAIK WinXP isn't able to cope with more than 2GB of RAM, is it?</p>
+
+<p>Does this mean, that I won't be able to set up a Postgresql/PostGIS - database of the whole planet-file on my computer?
+Or is there a way to osm2pgsql it? A way that maybe takes much more time and maybe more disk space but doesn't need more RAM?</p></div>
+            <div class="comment-info" id="comment-12350-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Apr '12, 09:59)</span>
+                <a class="comment-user userinfo" href="/users/3139/mhein">MHein</a>
+                
+            </div>
+        </div>
+    
+        <a name="12352"></a>
+        <div class="comment" id="comment-12352">
+            <div id="post-12352-score" class="comment-score">3</div>
+            <div class="comment-text"><p>The setup that you're using** (Windows XP VM host with 2Gb of RAM hosting a Linux VM with ~1Gb RAM and ~20Gb disk) is woefully inadequate for a full planet import.</p>
+
+<p>However, it will allow you to become familiar with the tools involved - working out what you need to do to manage the database, using osm2pgsql to append rather than recreate (there are some list discussions on that that you can find with a web search).</p>
+
+<p>** from the IRC discussion</p></div>
+            <div class="comment-info" id="comment-12352-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Apr '12, 10:57)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12332" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12332-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="12321"></a>
+                    <div id="answer-container-12321" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12321-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12321/up/" rel="nofollow"> </a>
+<div id="post-12321-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-12321-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12321/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>osm2pgsql was likely killed due to being out of memory. Reduce the -C 12000 to a significantly lower number and try again.</p>
+<p>dmesg will likely show if the process was killed by the OutOfMemory (OOM) killer.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12321/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '12, 12:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e79628d44a15e95c607f8c5007d0ccd2?s=32&amp;d=identicon&amp;r=g" alt="Firefishy's gravatar image" />
+    <p><a href="/users/48/firefishy">Firefishy ♦♦</a><br/>
+    <span class="score" title="1296 reputation points"><span class="">1.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="36 badges"><span class="silver">&#9679;</span><span class="badgecount">36</span></span><span title="52 badges"><span class="bronze">&#9679;</span><span class="badgecount">52</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Firefishy has 14 accepted answers">29&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12321/">
+                edited
+                <strong>24 Apr '12, 13:40</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+            <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+            <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12321">
+    
+        <a name="12322"></a>
+        <div class="comment" id="comment-12322">
+            <div id="post-12322-score" class="comment-score"></div>
+            <div class="comment-text"><p>In <a href="http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/">http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/</a> it says:</p>
+
+<p>Depending on the size of the extract you are importing and the performance of the computer, this can take anywhere from a few minutes for small extracts up to several days for the full planet on slower hardware! If you are importing the full planet, it is strongly recommended to set -C 12000 (may increase as the OSM database grows). </p>
+
+<p>Did I missunderstand it?</p></div>
+            <div class="comment-info" id="comment-12322-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '12, 12:16)</span>
+                <a class="comment-user userinfo" href="/users/3139/mhein">MHein</a>
+                
+            </div>
+        </div>
+    
+        <a name="12324"></a>
+        <div class="comment" id="comment-12324">
+            <div id="post-12324-score" class="comment-score">2</div>
+            <div class="comment-text"><p>No, you didn't misunderstand, but you still need enough memory or/and swap to cater for the 12 GB of node cache. If necessary add a swap file of appropriate size.</p></div>
+            <div class="comment-info" id="comment-12324-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '12, 12:22)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12327"></a>
+        <div class="comment" id="comment-12327">
+            <div id="post-12327-score" class="comment-score"></div>
+            <div class="comment-text"><p>how can I add a swapfile of appropriate size?</p>
+
+<p>How much memory on disk do I need for the Postgresql Database including the planet.osm-file?</p>
+
+<p>And how is "dmesg" used?</p></div>
+            <div class="comment-info" id="comment-12327-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '12, 12:46)</span>
+                <a class="comment-user userinfo" href="/users/3139/mhein">MHein</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12321" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12321-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/12318/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zKUa5I3PoI2rAeC02BepJ0MKmTdDh1kf' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12318/why-is-my-import-of-planet-latestosm-killed?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12318/why-is-my-import-of-planet-latestosm-killed?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/import/"
+            class="tag-link-import"
+            title="see questions tagged'import'using tags"
+            rel="tag">import</a> <span class="tag-number">&#215;196</span><br/>
+        
+        <a href="/tags/postgresql/"
+            class="tag-link-postgresql"
+            title="see questions tagged'postgresql'using tags"
+            rel="tag">postgresql</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/postgis/"
+            class="tag-link-postgis"
+            title="see questions tagged'postgis'using tags"
+            rel="tag">postgis</a> <span class="tag-number">&#215;134</span><br/>
+        
+        <a href="/tags/planet/"
+            class="tag-link-planet"
+            title="see questions tagged'planet'using tags"
+            rel="tag">planet</a> <span class="tag-number">&#215;56</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 24, 2012, 11:06 a.m.">24 Apr '12, 11:06</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>14,180 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 29, 2013, 11:40 a.m.">29 Aug '13, 11:40</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/42186/restarting-osm2pqsql-full-planet-import-because-of-too-low-cache-setting-import-runs-for-6-days-already">Restarting osm2pqsql full planet import because of too low --cache setting? (import runs for 6 days already)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/72485/osm2pgsql-slim-drop-import-running-out-of-disk-space-1tb">osm2pgsql --slim --drop import running out of disk space ( 1TB)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49575/issue-importing-planetosm-file-with-osm2pgsql">Issue importing planet.osm file with osm2pgsql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39109/osm2pgsql-shows-committing-transaction-for-planet_osm_pointwaring-there-is-on-transaction-in-progress-then-the-progres-shut-down">[closed] osm2pgsql shows &quot;Committing transaction for planet_osm_point&quot;,&quot;WARING there is on transaction in progress&quot; then the progres shut down</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10677/setting-postgis-as-a-datasource">Setting PostGIS as a datasource</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11687/osm2pgsql-performance-evaluation">osm2pgsql performance evaluation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16695/osm2pgsql-doesnt-work-with-hstore-flag-if-hstore-extension-is-not-loaded">osm2pgsql doesn&#39;t work with --hstore flag if hstore extension is not loaded</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13124/how-to-find-the-polygon">How to find the polygon?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21687/import-points-only-with-osm2pgsql">Import Points only with osm2pgsql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39111/how-much-ram-does-osm2pgsql-required-in-case-the-progress-wont-be-killed-full-planet-import">How much RAM does osm2pgsql required in case  the progress won&#39;t be killed?  (full planet import)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

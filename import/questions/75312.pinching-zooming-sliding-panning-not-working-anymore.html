@@ -1,0 +1,752 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Pinching / Zooming,  sliding / panning not working anymore. - OSM Help</title>
+        <meta name="description" content="The pinching / zooming and sliding finger / panning features do not work anymore on the openstreetmap.org web site. As a town patroller, my colleagues introduced me to that wonderful site. We could locate quickly a street, civic address… This made the job much easier and literally made the differenc..." />
+        <meta name="keywords" content="zooming,panning,scaling,pinching,touch" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/75312/pinching-zooming-sliding-panning-not-working-anymore" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/75312/pinching-zooming-sliding-panning-not-working-anymore?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qmDlWX7HhyMrlIgPhcRaJpyIpyJWfSqH' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/75312/pinching-zooming-sliding-panning-not-working-anymore">Pinching / Zooming,  sliding / panning not working anymore.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-75312-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/75312/up/" rel="nofollow"> </a>
+<div id="post-75312-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-75312-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/75312/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/75312/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>The pinching / zooming and sliding finger / panning features do not work anymore on the openstreetmap.org web site.</p>
+<p>As a town patroller, my colleagues introduced me to that wonderful site. We could locate quickly a street, civic address… This made the job much easier and literally made the difference between life and death situations.</p>
+<p>We would typically use the GPS locator and then pinch / zoom, slide finger / pan as needed.</p>
+<p>Unfortunately, for the last 3 months, yes, during the pandemic, we were unable to use this tool. These features are broken. Pinching will scale the whole browser instead of the map. Moreover, sliding the finger does nothing or freezes the map.</p>
+<p>Gestures are simply broken now.</p>
+<p>We can`t use the site anymore on patrol car tablets, nor on the main dispatching station tv touch screen.</p>
+<p>It still seems to work with some, but not all cell phones, but the maps are then way too small and it is inconvenient while driving.</p>
+<p>We are now using Google Maps instead. Not as cool, detailed or accurate, but at least it gets the job done. </p>
+<p>I wish programmers would look at what bug was introduced on this wonderful site that rendered it basically useless, I’m sure, for millions of users.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/zooming/" class="post-tag tag-link-zooming"
+                                        title="see questions tagged 'zooming'" rel="tag">zooming</a>
+                                
+                                    <a href="/tags/panning/" class="post-tag tag-link-panning"
+                                        title="see questions tagged 'panning'" rel="tag">panning</a>
+                                
+                                    <a href="/tags/scaling/" class="post-tag tag-link-scaling"
+                                        title="see questions tagged 'scaling'" rel="tag">scaling</a>
+                                
+                                    <a href="/tags/pinching/" class="post-tag tag-link-pinching"
+                                        title="see questions tagged 'pinching'" rel="tag">pinching</a>
+                                
+                                    <a href="/tags/touch/" class="post-tag tag-link-touch"
+                                        title="see questions tagged 'touch'" rel="tag">touch</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Jun '20, 15:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/257767b13c4afc07fe1fd10d85473982?s=32&amp;d=identicon&amp;r=g" alt="serenite's gravatar image" />
+    <p><a href="/users/18546/serenite">serenite</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="serenite has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-75312">
+    
+</div>
+<div id="comment-tools-75312" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-75312-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/75312/pinching-zooming-sliding-panning-not-working-anymore?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/75312/pinching-zooming-sliding-panning-not-working-anymore?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/75312/pinching-zooming-sliding-panning-not-working-anymore?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/75312/pinching-zooming-sliding-panning-not-working-anymore?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="75316"></a>
+                    <div id="answer-container-75316" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-75316-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/75316/up/" rel="nofollow"> </a>
+<div id="post-75316-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-75316-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/75316/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This behaviour you describe cannot be reproduced here. It does sound as if some libraries used by Leaflet or other JavaScript libraries used by the website are not loaded properly on your device.</p>
+<p>Can you tell us the device, operation system and browser (including version) you are using? Does you network applies any firewall settings or proxy systems?</p>
+<p>Can you check if it (that is: panning, zooming, etc.)  does work at <a href="https://nominatim.openstreetmap.org">https://nominatim.openstreetmap.org</a> or at <a href="https://osmap.us">https://osmap.us</a> ?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/75316/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Jun '20, 00:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e06ed329df6032df14b5639de4d64782?s=32&amp;d=identicon&amp;r=g" alt="Spiekerooger's gravatar image" />
+    <p><a href="/users/17439/spiekerooger">Spiekerooger</a><br/>
+    <span class="score" title="3148 reputation points"><span class="">3.1k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Spiekerooger has 18 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/75316/">
+                edited
+                <strong>14 Jun '20, 01:02</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-75316">
+    
+        <a name="75408"></a>
+        <div class="comment" id="comment-75408">
+            <div id="post-75408-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your response.</p>
+
+<p>1) Devices: tablets, phones and tv monitors of different brands (probably not device related).
+2) Tablets configuration:
+   Windows 10 professional, build 18363.900, installation 2019-11-19.
+   Chrome 83.0.4103.106 official build 32 bits.
+   Does not work when tried on MS Edge either.
+3) Not working: 
+        <a href="https://nominatim.openstreetmap.org">https://nominatim.openstreetmap.org</a> (pinch/slide not working, using + and - buttons does zoom. Gestures broken.</p>
+
+<p>WORKING!!!:
+        <a href="https://osmap.us">https://osmap.us</a> (pinch/slide perfectly working, like openstreetmap.org used to work in the past).
+4) Don't know about firewall settings or proxys, it is configured by I.T.s</p></div>
+            <div class="comment-info" id="comment-75408-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '20, 22:36)</span>
+                <a class="comment-user userinfo" href="/users/18546/serenite">serenite</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-75316" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-75316-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="76285"></a>
+                    <div id="answer-container-76285" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76285-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76285/up/" rel="nofollow"> </a>
+<div id="post-76285-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-76285-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76285/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It doesnt work for me either, under Windows 10, not on Chrome (v 84.0.4147.135 (Official Build) (64-bit)) nor Nominatum, but it does osmap.us. Nor on Microsoft Edge</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76285/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Aug '20, 10:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ea0d30bf0372efa7a15af50b55f5b5b0?s=32&amp;d=identicon&amp;r=g" alt="Daveq's gravatar image" />
+    <p><a href="/users/18882/daveq">Daveq</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Daveq has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76285">
+    
+</div>
+<div id="comment-tools-76285" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76285-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/75312/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='qmDlWX7HhyMrlIgPhcRaJpyIpyJWfSqH' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/75312/pinching-zooming-sliding-panning-not-working-anymore?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/75312/pinching-zooming-sliding-panning-not-working-anymore?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/zooming/"
+            class="tag-link-zooming"
+            title="see questions tagged'zooming'using tags"
+            rel="tag">zooming</a> <span class="tag-number">&#215;6</span><br/>
+        
+        <a href="/tags/scaling/"
+            class="tag-link-scaling"
+            title="see questions tagged'scaling'using tags"
+            rel="tag">scaling</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/panning/"
+            class="tag-link-panning"
+            title="see questions tagged'panning'using tags"
+            rel="tag">panning</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/pinching/"
+            class="tag-link-pinching"
+            title="see questions tagged'pinching'using tags"
+            rel="tag">pinching</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/touch/"
+            class="tag-link-touch"
+            title="see questions tagged'touch'using tags"
+            rel="tag">touch</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 13, 2020, 3:43 p.m.">13 Jun '20, 15:43</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,804 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 25, 2020, 10:14 a.m.">25 Aug '20, 10:14</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/22143/how-to-change-the-scale-of-a-map">How to change the scale of a map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37881/what-is-correct-to-do-in-rendering">What is correct to do in rendering?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47553/map-rendering-differently-at-different-zoom-levels">Map rendering differently at different zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62268/zooming-rendering-question">[closed] Zooming (rendering) question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/72977/features-disappear-zooming-out">Features disappear zooming out</a>
+        </p>
+        
+        <p>
+            <a href="/questions/74239/why-the-paths-disappear-depending-on-zoom">Why the paths disappear depending on zoom?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

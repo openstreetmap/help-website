@@ -1,0 +1,939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Disappearing data: who/why/undelete? - OSM Help</title>
+        <meta name="description" content="I noticed recently that much valid data keeps disappearing from OSM. Is this some kind of cleanup or just vandalism? How can I check who has deleted a particular object? Is the deleted data stored somewhere i.e. is there &quot;undelete&quot;? Is there any protection policy in OSM?" />
+        <meta name="keywords" content="undelete,restrictions,vandalism" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/15492/disappearing-data-whowhyundelete" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/15492/disappearing-data-whowhyundelete?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='MsBjYZlBxOrZyKyJDsvu3JzWu3FXvMpn' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/15492/disappearing-data-whowhyundelete">Disappearing data: who/why/undelete?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-15492-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15492/up/" rel="nofollow"> </a>
+<div id="post-15492-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15492-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15492/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/15492/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I noticed recently that much valid data keeps disappearing from OSM. Is this some kind of cleanup or just vandalism? How can I check who has deleted a particular object? Is the deleted data stored somewhere i.e. is there "undelete"? Is there any protection policy in OSM?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/undelete/" class="post-tag tag-link-undelete"
+                                        title="see questions tagged 'undelete'" rel="tag">undelete</a>
+                                
+                                    <a href="/tags/restrictions/" class="post-tag tag-link-restrictions"
+                                        title="see questions tagged 'restrictions'" rel="tag">restrictions</a>
+                                
+                                    <a href="/tags/vandalism/" class="post-tag tag-link-vandalism"
+                                        title="see questions tagged 'vandalism'" rel="tag">vandalism</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Aug '12, 22:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/961457bc769068768b2e2a20a37c40d2?s=32&amp;d=identicon&amp;r=g" alt="haael's gravatar image" />
+    <p><a href="/users/1229/haael">haael</a><br/>
+    <span class="score" title="152 reputation points">152</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="haael has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15492/">
+                edited
+                <strong>27 Aug '12, 13:32</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fed945e27bb98de054a867827550812e?s=32&amp;d=identicon&amp;r=g" alt="cartinus's gravatar image" />
+            <p><a href="/users/2933/cartinus">cartinus</a><br/>
+            <span class="score" title="7033 reputation points"><span class="">7.0k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="66 badges"><span class="silver">&#9679;</span><span class="badgecount">66</span></span><span title="105 badges"><span class="bronze">&#9679;</span><span class="badgecount">105</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-15492">
+    
+</div>
+<div id="comment-tools-15492" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15492-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/15492/disappearing-data-whowhyundelete?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/15492/disappearing-data-whowhyundelete?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/15492/disappearing-data-whowhyundelete?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/15492/disappearing-data-whowhyundelete?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15493"></a>
+                    <div id="answer-container-15493" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15493-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15493/up/" rel="nofollow"> </a>
+<div id="post-15493-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-15493-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15493/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="haael has selected this answer as the correct answer"
+        href="/accept_answer/15493/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi,
+You've covered a few bits with your questions, but I'll do my best;</p>
+<ol>
+<li>If you can view the particular object - such as from when you created or edited it, you should be able to see it's history.</li>
+<li>If there is an area you regularly 'look after' it's worth getting a login with ITO - <a href="http://www.itoworld.com/">http://www.itoworld.com/</a>  &amp; using one of their tools for OSM mappers. You can select a particular area, and the software will send you a message in a feed when there are any edits or updates for that area.</li>
+<li>If someone has deleted data, by accident or otherwise, it is possible to get the changeset reversed - I know of it, but have never used it.</li>
+<li>Vandalism can be dealt with in various ways, you just need to highlight the need.</li>
+<li>It can be worth signing up for one of the e-mail circulation lists - I've learnt a lot from reading the messages in TalkGB, for instance.</li>
+</ol>
+<p>Hope my somewhat wordy answer is some help to you.
+Regards
+Tallguy</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15493/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Aug '12, 00:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5c1291c3e71c45b6c423613714d3eec4?s=32&amp;d=identicon&amp;r=g" alt="Tallguy's gravatar image" />
+    <p><a href="/users/3491/tallguy">Tallguy</a><br/>
+    <span class="score" title="96 reputation points">96</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tallguy has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15493">
+    
+        <a name="15532"></a>
+        <div class="comment" id="comment-15532">
+            <div id="post-15532-score" class="comment-score">2</div>
+            <div class="comment-text"><p>We really need to implement a proper "download deleted objects in this area" api call, and support in editors. This is a FAQ, but we still have no convenient answer.</p></div>
+            <div class="comment-info" id="comment-15532-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Aug '12, 22:39)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15493" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15493-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="15494"></a>
+                    <div id="answer-container-15494" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15494-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15494/up/" rel="nofollow"> </a>
+<div id="post-15494-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-15494-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15494/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Most likely you are referring to the effects of the license change, see e.g. this previous question:</p>
+<p><a href="http://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted">http://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted</a></p>
+<p>If you are not, ignore this answer.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15494/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Aug '12, 00:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0626be5f46f32fce501353e8a5ec399c?s=32&amp;d=identicon&amp;r=g" alt="Tordanik's gravatar image" />
+    <p><a href="/users/14/tordanik">Tordanik</a><br/>
+    <span class="score" title="11998 reputation points"><span class="">12.0k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="106 badges"><span class="silver">&#9679;</span><span class="badgecount">106</span></span><span title="147 badges"><span class="bronze">&#9679;</span><span class="badgecount">147</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tordanik has 58 accepted answers">35&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15494">
+    
+</div>
+<div id="comment-tools-15494" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15494-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="15497"></a>
+                    <div id="answer-container-15497" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15497-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15497/up/" rel="nofollow"> </a>
+<div id="post-15497-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-15497-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15497/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>When you ask about data disappearing it is always helpful to give a link to the specific object(s) or the place where the object(s) used to be. A generic question as above can only be answered generic if anyhow.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15497/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Aug '12, 07:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a18e2b8eb41515c09bb66159941584bf?s=32&amp;d=identicon&amp;r=g" alt="malenki's gravatar image" />
+    <p><a href="/users/583/malenki">malenki</a><br/>
+    <span class="score" title="4713 reputation points"><span class="">4.7k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="46 badges"><span class="silver">&#9679;</span><span class="badgecount">46</span></span><span title="83 badges"><span class="bronze">&#9679;</span><span class="badgecount">83</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="malenki has 10 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15497/">
+                edited
+                <strong>25 Aug '12, 13:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15497">
+    
+</div>
+<div id="comment-tools-15497" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15497-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="15543"></a>
+                    <div id="answer-container-15543" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15543-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15543/up/" rel="nofollow"> </a>
+<div id="post-15543-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15543-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15543/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You should really improve your question by specifying if you are speaking about the "license change effect" or "data deleted by someone else". </p>
+<p>Because the answer will be different : </p>
+<p>For the first, the license transition withdrawn many objects because they did not comply with the new ODbl license. Those data cannot be retrieved and need a new survey (check <a href="http://wiki.openstreetmap.org/wiki/Remapping">the "remapping" task on the wiki</a>).</p>
+<p>For the second, it is possible to restore the deleted objects; see the hints provided by other answers on this page.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15543/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Aug '12, 09:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0e92f2d89853fd4e04c4b40a921e519b?s=32&amp;d=identicon&amp;r=g" alt="Pieren's gravatar image" />
+    <p><a href="/users/87/pieren">Pieren</a><br/>
+    <span class="score" title="9847 reputation points"><span class="">9.8k</span></span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="157 badges"><span class="bronze">&#9679;</span><span class="badgecount">157</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Pieren has 34 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15543">
+    
+</div>
+<div id="comment-tools-15543" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15543-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/15492/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='MsBjYZlBxOrZyKyJDsvu3JzWu3FXvMpn' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15492/disappearing-data-whowhyundelete?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15492/disappearing-data-whowhyundelete?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/vandalism/"
+            class="tag-link-vandalism"
+            title="see questions tagged'vandalism'using tags"
+            rel="tag">vandalism</a> <span class="tag-number">&#215;38</span><br/>
+        
+        <a href="/tags/undelete/"
+            class="tag-link-undelete"
+            title="see questions tagged'undelete'using tags"
+            rel="tag">undelete</a> <span class="tag-number">&#215;27</span><br/>
+        
+        <a href="/tags/restrictions/"
+            class="tag-link-restrictions"
+            title="see questions tagged'restrictions'using tags"
+            rel="tag">restrictions</a> <span class="tag-number">&#215;23</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 24, 2012, 10:25 p.m.">24 Aug '12, 22:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,485 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 27, 2012, 1:32 p.m.">27 Aug '12, 13:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/62652/how-to-find-the-edit-that-deleted-something">How to find the edit that deleted something?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/786/is-there-a-way-to-undelete-a-deleted-node-poi">Is there a way to undelete a deleted node (POI) ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3530/what-is-the-proper-way-to-add-no-u-turn-restrictions-when-the-road-is-divided">What is the proper way to add &quot;No U Turn&quot; restrictions when the road is divided?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1517/how-to-handle-spam">How to handle SPAM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1559/is-it-ok-to-use-a-gps-device-in-brunei">Is it OK to use a GPS device in Brunei?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3341/is-a-mass-revert-possible">Is a mass revert possible?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1090/how-do-i-undelete-a-way">How do I undelete a way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4925/why-does-undelete-not-work">Why does undelete not work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7142/possible-vandalism-or-work-in-progress">possible vandalism or work in progress?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/216/what-should-i-do-about-vandalism">What should I do about vandalism?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

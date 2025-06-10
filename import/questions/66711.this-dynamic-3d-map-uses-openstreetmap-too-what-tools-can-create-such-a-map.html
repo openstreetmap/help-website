@@ -1,0 +1,969 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>This dynamic 3D-map uses openstreetmap, too. What  tools can create such a map ? - OSM Help</title>
+        <meta name="description" content="Look at this: https://www.bergwelten.com/map/3d/t/w/22579 ..... wow! Created by https://www.procedural.eu Found in the source of the first URL: https://foundation.zurb.com/ Which tools do I need to create such a map myself ? Do you know how to ? Thx in advance for your reply. " />
+        <meta name="keywords" content="map,3d" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/66711/this-dynamic-3d-map-uses-openstreetmap-too-what-tools-can-create-such-a-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/66711/this-dynamic-3d-map-uses-openstreetmap-too-what-tools-can-create-such-a-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CrXp8ECpxwzfcR45AcvCM3buQfe0RP2Z' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/66711/this-dynamic-3d-map-uses-openstreetmap-too-what-tools-can-create-such-a-map">This dynamic 3D-map uses openstreetmap, too. What  tools can create such a map ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-66711-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66711/up/" rel="nofollow"> </a>
+<div id="post-66711-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-66711-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66711/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/66711/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Look at this:
+<a href="https://www.bergwelten.com/map/3d/t/w/22579">https://www.bergwelten.com/map/3d/t/w/22579</a> ..... wow!</p>
+<p>Created by <a href="https://www.procedural.eu">https://www.procedural.eu</a></p>
+<p>Found in the source of the first URL: <a href="https://foundation.zurb.com/">https://foundation.zurb.com/</a></p>
+<p>Which tools do I need to create such a map myself ?
+Do you know how to ?  Thx in advance for your reply. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                                    <a href="/tags/3d/" class="post-tag tag-link-3d"
+                                        title="see questions tagged '3d'" rel="tag">3d</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Nov '18, 11:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6c2debca31647b990786d74131d560dd?s=32&amp;d=identicon&amp;r=g" alt="osmwichtel's gravatar image" />
+    <p><a href="/users/12675/osmwichtel">osmwichtel</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="osmwichtel has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/66711/">
+                edited
+                <strong>07 Nov '18, 11:40</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-66711">
+    
+        <a name="66742"></a>
+        <div class="comment" id="comment-66742">
+            <div id="post-66742-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Zurb Foundation is a HTML/CSS UI framework and is not about maps.</p></div>
+            <div class="comment-info" id="comment-66742-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '18, 11:59)</span>
+                <a class="comment-user userinfo" href="/users/2012/ikonor">ikonor</a>
+                
+            </div>
+        </div>
+    
+        <a name="66773"></a>
+        <div class="comment" id="comment-66773">
+            <div id="post-66773-score" class="comment-score"></div>
+            <div class="comment-text"><p>ikonor and mboeringa,
+thx for your useful informations.
+Josef (osmwichtel)</p></div>
+            <div class="comment-info" id="comment-66773-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '18, 22:41)</span>
+                <a class="comment-user userinfo" href="/users/12675/osmwichtel">osmwichtel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-66711" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66711-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/66711/this-dynamic-3d-map-uses-openstreetmap-too-what-tools-can-create-such-a-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/66711/this-dynamic-3d-map-uses-openstreetmap-too-what-tools-can-create-such-a-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/66711/this-dynamic-3d-map-uses-openstreetmap-too-what-tools-can-create-such-a-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/66711/this-dynamic-3d-map-uses-openstreetmap-too-what-tools-can-create-such-a-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="66740"></a>
+                    <div id="answer-container-66740" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-66740-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66740/up/" rel="nofollow"> </a>
+<div id="post-66740-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-66740-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66740/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It seems this is a proprietary product by Procedural, built on top of <a href="https://threejs.org/">three.js</a>, and not freely available. It was first introduced as <a href="https://www.piste.io/">piste.io</a> (has errors) a few years ago, e.g. see <a href="http://felixpalmer.github.io/piste.io-talk/">slides</a>.</p>
+<p>I think what makes it look special is that everything is actually rendered in 3D, especially procedurally generated terrain surface like snow and rock, that looks nice and sharp (but might not match reality). I'm not aware of any other web mapping library that does this.</p>
+<p>Usually raster tiles made for 2D (like aerial imagery) are overlaid over terrain and therefore look blurry and distorted on mountains because they are stretched on steep slopes.</p>
+<p>One 3D alternative might be <a href="https://cesiumjs.org/">CesiumJS</a>, using aerial imagery. It can overlay tracks and render 3D building and tree objects (Swiss Topo example, see also mboeringa's answer), but I have not seen examples with more rendered map features like streets and water yet.</p>
+<p>Comparison of the same view:</p>
+<ul>
+<li><a href="https://www.bergwelten.com/map/3d/t/w/9477">Bergwelten example map linked on procedural.eu</a></li>
+<li><a href="https://map.geo.admin.ch/?topic=ech&amp;lang=de&amp;bgLayer=ch.swisstopo.pixelkarte-farbe&amp;layers=ch.swisstopo.zeitreihen,ch.bfs.gebaeude_wohnungs_register,ch.bav.haltestellen-oev,ch.swisstopo.swisstlm3d-wanderwege,ch.swisstopo.swissnames3d&amp;lon=9.10423&amp;lat=46.85876&amp;elevation=4530&amp;heading=204.153&amp;pitch=-22.142&amp;layers_visibility=false,false,false,false,true&amp;layers_timestamp=18641231,,,,">Swiss Topo 3D (with CesiumJS)</a></li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/66740/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Nov '18, 11:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f92748c8fa508a936bcf2169b30cabf6?s=32&amp;d=identicon&amp;r=g" alt="ikonor's gravatar image" />
+    <p><a href="/users/2012/ikonor">ikonor</a><br/>
+    <span class="score" title="1286 reputation points"><span class="">1.3k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ikonor has 4 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-66740">
+    
+</div>
+<div id="comment-tools-66740" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66740-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="66718"></a>
+                    <div id="answer-container-66718" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-66718-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66718/up/" rel="nofollow"> </a>
+<div id="post-66718-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-66718-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66718/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If your main interest is just to explore the world in 3D, overlay the OpenStreetMap webservice on a 3D globe, and to be able to add your own datasets (e.g. KML, shapefile and some other data sources), then ArcGIS Earth should get you a long way:</p>
+<p><a href="https://www.esri.com/en-us/arcgis/products/arcgis-earth">https://www.esri.com/en-us/arcgis/products/arcgis-earth</a></p>
+<p><a href="https://www.esri.com/arcgis-blog/products/arcgis-earth/3d-gis/introducing-arcgis-earth-v1-8-powerful-interactive-3d-analysis-for-everyone/">https://www.esri.com/arcgis-blog/products/arcgis-earth/3d-gis/introducing-arcgis-earth-v1-8-powerful-interactive-3d-analysis-for-everyone/</a></p>
+<p>This is a desktop solution though, so you can't create webservices. It is also Windows only. But it does a lot more than Google Earth ever did, especially in terms of the ease of adding custom data and a wealth of ArcGIS Online available data (e.g. scientific and statistical layers) provided by the GIS communities, although for some of these layers, you will need an ArcGIS Online account with ESRI to access them, while others seem accessible as is.</p>
+<p>The download button is a bit inconspicuous at the entire bottom of the first mentioned page.</p>
+<p><img src="https://help.openstreetmap.org/upfiles/ArcGIS_Earth_OSM.jpg" alt="alt text"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/66718/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Nov '18, 22:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc8a1ef54d3e25744ee52d1ad1459a81?s=32&amp;d=identicon&amp;r=g" alt="mboeringa's gravatar image" />
+    <p><a href="/users/9580/mboeringa">mboeringa</a><br/>
+    <span class="score" title="1542 reputation points"><span class="">1.5k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mboeringa has 4 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-66718">
+    
+</div>
+<div id="comment-tools-66718" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66718-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="66719"></a>
+                    <div id="answer-container-66719" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-66719-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66719/up/" rel="nofollow"> </a>
+<div id="post-66719-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-66719-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66719/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>By the way, there is also the very nice 3D rendering of Swiss Topo, live from their website, that you may already know:</p>
+<p><a href="https://map.geo.admin.ch">https://map.geo.admin.ch</a></p>
+<p><img src="https://help.openstreetmap.org/upfiles/Swiss_Topo_3D_xEB4eTd.jpg" alt="alt text"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/66719/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Nov '18, 22:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc8a1ef54d3e25744ee52d1ad1459a81?s=32&amp;d=identicon&amp;r=g" alt="mboeringa's gravatar image" />
+    <p><a href="/users/9580/mboeringa">mboeringa</a><br/>
+    <span class="score" title="1542 reputation points"><span class="">1.5k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mboeringa has 4 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/66719/">
+                edited
+                <strong>07 Nov '18, 22:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-66719">
+    
+        <a name="66741"></a>
+        <div class="comment" id="comment-66741">
+            <div id="post-66741-score" class="comment-score">2</div>
+            <div class="comment-text"><p>The Swiss Topo 3D view is made with CesiumJS, see <a href="https://cesiumjs.org/demos/Swisstopo/">https://cesiumjs.org/demos/Swisstopo/</a></p></div>
+            <div class="comment-info" id="comment-66741-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '18, 11:58)</span>
+                <a class="comment-user userinfo" href="/users/2012/ikonor">ikonor</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-66719" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66719-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="67721"></a>
+                    <div id="answer-container-67721" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-67721-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/67721/up/" rel="nofollow"> </a>
+<div id="post-67721-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-67721-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/67721/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hello ikonor and mboeringa,</p>
+<p>thank you very much for your help.
+After a long time, I am busy with maps again.
+I decided to try Cesium. A result is here:
+<a href="https://2016-09-15-obere-firstalm.glitch.me/">https://2016-09-15-obere-firstalm.glitch.me/</a>
+Move the blue "time pointer" at the bottom. In one of the symbols in the corner r/h top, you can select OSM.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/67721/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jan '19, 16:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6c2debca31647b990786d74131d560dd?s=32&amp;d=identicon&amp;r=g" alt="osmwichtel's gravatar image" />
+    <p><a href="/users/12675/osmwichtel">osmwichtel</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="osmwichtel has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-67721">
+    
+</div>
+<div id="comment-tools-67721" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-67721-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/66711/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='CrXp8ECpxwzfcR45AcvCM3buQfe0RP2Z' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/66711/this-dynamic-3d-map-uses-openstreetmap-too-what-tools-can-create-such-a-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/66711/this-dynamic-3d-map-uses-openstreetmap-too-what-tools-can-create-such-a-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/3d/"
+            class="tag-link-3d"
+            title="see questions tagged'3d'using tags"
+            rel="tag">3d</a> <span class="tag-number">&#215;37</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 7, 2018, 11:37 a.m.">07 Nov '18, 11:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,086 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 24, 2019, 4:38 p.m.">24 Jan '19, 16:38</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/41731/3d-indoor-mapping-system-on-a-webpage">[closed] 3d Indoor mapping system on a webpage</a>
+        </p>
+        
+        <p>
+            <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/799/how-should-i-go-about-importing-a-city">How should I go about importing a city?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a>
+        </p>
+        
+        <p>
+            <a href="/questions/420/how-can-i-create-a-map-highlighting-a-relation-which-then-could-be-used-for-wikipedia-articles">How can I create a map highlighting a relation which then could be used for wikipedia articles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/773/map-for-railway-networks">Map for railway network(s)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/139/how-can-i-design-some-simple-maps">How can I design some simple maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/902/road-placement-versus-the-map">Road placement versus the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1081/clackmannanshire">Clackmannanshire</a>
+        </p>
+        
+        <p>
+            <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don&#39;t show up on the map</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

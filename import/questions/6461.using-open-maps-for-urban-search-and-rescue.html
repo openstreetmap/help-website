@@ -1,0 +1,875 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Using open maps for urban search and rescue. - OSM Help</title>
+        <meta name="description" content="I am involved in a very active search and rescue organization, and most of our missions include searches for elderly Alzheimer adults in a urban type environment. I am looking for the ability to input an address and range, and to somehow generate search grids. Can someone please point me in the dire..." />
+        <meta name="keywords" content="and,search,rescue" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/6461/using-open-maps-for-urban-search-and-rescue" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/6461/using-open-maps-for-urban-search-and-rescue?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hw9G5QFuAZPQbhdyEQyNXLnb3PMtPDqx' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/6461/using-open-maps-for-urban-search-and-rescue">Using open maps for urban search and rescue.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-6461-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6461/up/" rel="nofollow"> </a>
+<div id="post-6461-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-6461-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6461/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/6461/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am involved in a very active search and rescue organization, and most of our missions include searches for elderly Alzheimer adults in a urban type environment.  I am looking for the ability to input an address and range, and to somehow generate search grids.
+Can someone please point me in the direction I should be taking to make this happen.
+Thanks in advance.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/and/" class="post-tag tag-link-and"
+                                        title="see questions tagged 'and'" rel="tag">and</a>
+                                
+                                    <a href="/tags/search/" class="post-tag tag-link-search"
+                                        title="see questions tagged 'search'" rel="tag">search</a>
+                                
+                                    <a href="/tags/rescue/" class="post-tag tag-link-rescue"
+                                        title="see questions tagged 'rescue'" rel="tag">rescue</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Jul '11, 19:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f23ac5c3394d518cba04c93099bda7af?s=32&amp;d=identicon&amp;r=g" alt="vbnyc's gravatar image" />
+    <p><a href="/users/1763/vbnyc">vbnyc</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="vbnyc has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6461/">
+                edited
+                <strong>20 Jul '11, 19:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-6461">
+    
+</div>
+<div id="comment-tools-6461" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6461-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/6461/using-open-maps-for-urban-search-and-rescue?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/6461/using-open-maps-for-urban-search-and-rescue?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/6461/using-open-maps-for-urban-search-and-rescue?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/6461/using-open-maps-for-urban-search-and-rescue?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="6475"></a>
+                    <div id="answer-container-6475" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6475-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6475/up/" rel="nofollow"> </a>
+<div id="post-6475-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-6475-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6475/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If I understand right you would need a map and when you click a place it should draw all the possible places a person could have walked to, in a limited time.</p>
+<p>I think nothing like that exists, but could be done.</p>
+<p><a href="http://www.mapnificent.net/auckland/#/?lat0=-36.85616640884299&amp;lng0=174.75604364013668&amp;t0=20">This is a similar idea</a> but with public transport. You move the slider in the bottom, and see how far you can get with public transport in a given time. It doesn't work with all cities. It uses OSM data of public transport.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6475/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Jul '11, 14:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0ae71d66eba9ad7437196ee1d689295f?s=32&amp;d=identicon&amp;r=g" alt="Janjko's gravatar image" />
+    <p><a href="/users/1761/janjko">Janjko</a><br/>
+    <span class="score" title="323 reputation points">323</span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Janjko has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6475/">
+                edited
+                <strong>21 Jul '11, 14:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6475">
+    
+        <a name="6482"></a>
+        <div class="comment" id="comment-6482">
+            <div id="post-6482-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your response, but no that is not what I am looking for.
+In search and rescue missions, after a search area is determined, for example a one mile radius, it is then further divided into grids.  I am looking for a method to create those grids easily.</p></div>
+            <div class="comment-info" id="comment-6482-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jul '11, 17:31)</span>
+                <a class="comment-user userinfo" href="/users/1763/vbnyc">vbnyc</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6475" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6475-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6483"></a>
+                    <div id="answer-container-6483" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6483-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6483/up/" rel="nofollow"> </a>
+<div id="post-6483-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-6483-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6483/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is a number of ways you can do this. There is an in-built grid division in the way map <a href="http://wiki.openstreetmap.org/wiki/Tiles">tiles</a> are served up. I think it's rather elegant and simple to make use of this. For example a tile with coordinates 130994,87124 can be opened in the browser at this URL: <a href="http://tile.openstreetmap.org/18/130994/87124.png">http://tile.openstreetmap.org/18/130994/87124.png</a><br>
+</p>
+<p>The '18' in this URL is the zoom level.</p>
+<p>CloudMade do a diddy <a href="http://tile.cloudmade.com/fd093e52f0965d46bb1c6c6281022199/1/64/18/130994/87124.png">64x64px version of tiles following the same coordinate scheme</a>.</p>
+<p>You should take a look at the <a href="http://wiki.openstreetmap.org/wiki/QualityStreetMap">QualityStreetMap</a> tool, which uses tile coordinates, and has a selecting interface. In fact it has an open tagging scheme which you could perhaps just use directly for tracking your searches. Job done!  However you'd probably want to look at installing it on your own server.</p>
+<p>Another tool which does interesting grid things is <a href="http://wiki.openstreetmap.org/wiki/MapOSMatic">MapOSMatic</a>. Grid lines drawn on the PDF output maps.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6483/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Jul '11, 18:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6483">
+    
+</div>
+<div id="comment-tools-6483" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6483-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6500"></a>
+                    <div id="answer-container-6500" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6500-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6500/up/" rel="nofollow"> </a>
+<div id="post-6500-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-6500-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6500/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yet another option is to look at the FOSS <a href="http://viking.sourceforge.net">Viking</a> package.  I know it runs on Linux &amp; Windows.</p>
+<p>While ostensibly designed for view GPS tracks, it works really well for simply looking at maps and creating your own routes.  The default installation allows maps from several different OSM tile servers (the things that take the data and make pictures out of it), along with some other sources including areal photography.</p>
+<p>Viking also allows you to overlay additional information on the maps, including creating grids.  The grids are just drawn as lines (no reference numbers).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6500/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jul '11, 20:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1ffdc5279fd70540799b762c14e66665?s=32&amp;d=identicon&amp;r=g" alt="jwernerny's gravatar image" />
+    <p><a href="/users/1636/jwernerny">jwernerny</a><br/>
+    <span class="score" title="401 reputation points">401</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jwernerny has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6500">
+    
+        <a name="6526"></a>
+        <div class="comment" id="comment-6526">
+            <div id="post-6526-score" class="comment-score"></div>
+            <div class="comment-text"><p>would it be ok for the patients to have gps trackers or even phones that yielded gps positions to your organisation,if legal and if you could get them to wear or take them, and if cost effective.</p></div>
+            <div class="comment-info" id="comment-6526-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '11, 14:03)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="6527"></a>
+        <div class="comment" id="comment-6527">
+            <div id="post-6527-score" class="comment-score"></div>
+            <div class="comment-text"><p>does your town have security cameras that your team could get access to?</p></div>
+            <div class="comment-info" id="comment-6527-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '11, 14:08)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6500" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6500-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/6461/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hw9G5QFuAZPQbhdyEQyNXLnb3PMtPDqx' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6461/using-open-maps-for-urban-search-and-rescue?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6461/using-open-maps-for-urban-search-and-rescue?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/search/"
+            class="tag-link-search"
+            title="see questions tagged'search'using tags"
+            rel="tag">search</a> <span class="tag-number">&#215;193</span><br/>
+        
+        <a href="/tags/and/"
+            class="tag-link-and"
+            title="see questions tagged'and'using tags"
+            rel="tag">and</a> <span class="tag-number">&#215;20</span><br/>
+        
+        <a href="/tags/rescue/"
+            class="tag-link-rescue"
+            title="see questions tagged'rescue'using tags"
+            rel="tag">rescue</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 20, 2011, 7:25 p.m.">20 Jul '11, 19:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,917 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 24, 2011, 2:08 p.m.">24 Jul '11, 14:08</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3294/emergency-rescue-meeting-points">Emergency Rescue / Meeting Points</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1210/the-state-of-query-to-map">The state of Query-to-map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2903/how-would-i-go-about-finding-all-objects-with-the-fixme-key-within-an-area">How would I go about finding all objects with the &#39;fixme&#39; key within an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1441/how-can-i-use-search-on-osm-in-my-program">How can i use search on OSM in my program?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1934/why-cant-i-find-that-street">Why can&#39;t I find that street?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2846/shp-files-for-mexico-and-russia">shp files for Mexico and Russia</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1281/cell-phone-sending-in-lats-and-longs-is-this-legal">Cell phone sending in lats and longs, is this legal?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2904/in-the-search-box-is-it-possible-to-search-for-any-key-name-and-value-not-just-the-value-of-the-name-key-should-it-be">In the Search box, is it possible to search for any key name and value, not just the value of the &quot;Name&quot; key? Should it be?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3006/searching-gps-tracks-by-tags">Searching GPS tracks by tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1089/how-do-i-remove-search-marker-in-the-map">How do I remove Search-Marker in the map?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

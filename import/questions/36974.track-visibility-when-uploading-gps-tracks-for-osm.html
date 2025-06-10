@@ -1,0 +1,1096 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Track visibility when uploading GPS tracks for OSM - OSM Help</title>
+        <meta name="description" content="I am recording a lot of tracks using OSMtracker. But I am still a beginner in OSMapping as such. A serious question I am facing now is what visibility to set for my uploaded tracks. I&#39;ve read the corresponding wiki-page, but I am quite confused and have additional questions.    Public is listed as a..." />
+        <meta name="keywords" content="traces,visibility,gps" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/36974/track-visibility-when-uploading-gps-tracks-for-osm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/36974/track-visibility-when-uploading-gps-tracks-for-osm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='5NnKFcJAGgS05x4SPYE8CXcqHybrG1oI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/36974/track-visibility-when-uploading-gps-tracks-for-osm">Track visibility when uploading GPS tracks for OSM</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-36974-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36974/up/" rel="nofollow"> </a>
+<div id="post-36974-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-36974-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36974/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/36974/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am recording a lot of tracks using OSMtracker. But I am still a beginner in OSMapping as such. A serious question I am facing now is what visibility to set for my uploaded tracks. I've read the corresponding <a href="http://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">wiki-page</a>, but I am quite confused and have additional questions. </p>
+<ul>
+<li>
+<p>Public is listed as a "historical" option. (Wouldn't it be a good idea to remove it all together?) So I am not using it.</p>
+</li>
+<li>
+<p>Identifiable is a recommended option. However I feel really uneasy about someone knowing my name and when exactly and where I've been. I am pretty certain one could easily automate extraction of this information and, if I GPS a lot, re-build my whole life including my driving habits, whether I do jogging and even how often I visit a toilet while on city trips! :) </p>
+</li>
+<li>
+<p>Private is not preferred and I am not certain what useful information they contain. Can I see examples of private tracks somewhere?</p>
+</li>
+<li>
+<p>Trackable is the remaining option, and that's what I am using now. But I do not understand <em>exactly</em> what information they provide, so I would appreciate some more clarification. Again, can I get a list of trackable traces somewhere? <a href="http://www.openstreetmap.org/traces">http://www.openstreetmap.org/traces</a> only lists public traces.</p>
+</li>
+</ul>
+<p>I would think that the main useful information is the ordered list of track-points plus the POIs. This is what the wiki page states too. It is also useful to know when the track was recorded (how long ago as well as the time of the year/day). I also see the point in knowing <em>who</em> was in a particular area, to get in touch with questions. But it would be nice to be able to disconnect this information from specific tracks and time. <strong>Update:</strong> I actually wonder how often the ability to connect to the trace author is used in real world. Is it the only advantage of the identifiable trace in comparison to the trackable one?</p>
+<p>The wiki page says something about getting the data via API. Obviously, it's too far for me yet. I just want to see all my and other users' tracks while editing the map (I am using iD and <a href="http://wiki.openstreetmap.org/wiki/Vespucci">Vespucci</a> mainly). But are there maybe some online tools that implement the API and provide access to all the tracks?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/traces/" class="post-tag tag-link-traces"
+                                        title="see questions tagged 'traces'" rel="tag">traces</a>
+                                
+                                    <a href="/tags/visibility/" class="post-tag tag-link-visibility"
+                                        title="see questions tagged 'visibility'" rel="tag">visibility</a>
+                                
+                                    <a href="/tags/gps/" class="post-tag tag-link-gps"
+                                        title="see questions tagged 'gps'" rel="tag">gps</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Sep '14, 16:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7f75b476d4984deb5e4c83d276b9c22b?s=32&amp;d=identicon&amp;r=g" alt="Kotya's gravatar image" />
+    <p><a href="/users/7063/kotya">Kotya</a><br/>
+    <span class="score" title="631 reputation points">631</span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="36 badges"><span class="bronze">&#9679;</span><span class="badgecount">36</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kotya has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/36974/">
+                edited
+                <strong>23 Sep '14, 08:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-36974">
+    
+        <a name="37004"></a>
+        <div class="comment" id="comment-37004">
+            <div id="post-37004-score" class="comment-score">3</div>
+            <div class="comment-text"><p>The "historical" and "recommended" commentary is just someone's opinion. You don't have to agree with it. Personally I don't bother filtering out my home location as it's trivially discoverable through a bunch of public records anyway.</p></div>
+            <div class="comment-info" id="comment-37004-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '14, 11:31)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36974" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36974-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/36974/track-visibility-when-uploading-gps-tracks-for-osm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/36974/track-visibility-when-uploading-gps-tracks-for-osm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/36974/track-visibility-when-uploading-gps-tracks-for-osm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/36974/track-visibility-when-uploading-gps-tracks-for-osm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="36996"></a>
+                    <div id="answer-container-36996" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36996-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36996/up/" rel="nofollow"> </a>
+<div id="post-36996-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-36996-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36996/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I upload my traces using the identifiable tag, but only after i have cut out the following:-  ends that lead home, roads that already have a million traces, inside where signal get disrupted, any where i shouldn't have been, and birds nests( they are the tangle of traces record while stationary). To sum up  I like to see several traces for mapping a way  as it will indicate any off line traces especially in places where the route is narrow like a bridge or stile. Even a trusted gps will create a trace thats offset sometimes. So please let us all see your traces unless there are plenty there already. I use a paid for piece of software to edit my traces from Memory Map but you may find some free help at <a href="http://wiki.openstreetmap.org/wiki/Edit_GPS_trac">http://wiki.openstreetmap.org/wiki/Edit_GPS_trac</a>   I have just installed GPSPrune which only took a couple of minutes, i already had JAVA installed, Prune dispayed the trace and with a another click OSM map layer. see <a href="http://activityworkshop.net/software/gpsprune/download.html">http://activityworkshop.net/software/gpsprune/download.html</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36996/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Sep '14, 08:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/36996/">
+                edited
+                <strong>08 Oct '14, 11:10</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36996">
+    
+        <a name="36997"></a>
+        <div class="comment" id="comment-36997">
+            <div id="post-36997-score" class="comment-score"></div>
+            <div class="comment-text"><p>What is the tool you are using to edit the traces? It sounds like a rather complex activity what you're doing in comparison to pressing "upload" in OSMTracker :) I am concerned that the necessity to do all this might prevent me (and probably many others) from tracking at all. Please see also my update on identifiable visibility in the question.</p></div>
+            <div class="comment-info" id="comment-36997-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '14, 08:40)</span>
+                <a class="comment-user userinfo" href="/users/7063/kotya">Kotya</a>
+                
+            </div>
+        </div>
+    
+        <a name="37001"></a>
+        <div class="comment" id="comment-37001">
+            <div id="post-37001-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I use Memory Map which is a paid for piece of software to inspect and edit my traces. I am not too worried that others know where I HAVE  been but would be more concerned if I were live tracked, but I don't use a GPS with a phone connection so i can't be.</p></div>
+            <div class="comment-info" id="comment-37001-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '14, 10:44)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36996" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36996-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="36982"></a>
+                    <div id="answer-container-36982" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36982-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36982/up/" rel="nofollow"> </a>
+<div id="post-36982-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-36982-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36982/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Easiest way to access all uploaded GPS traces, is via the "OpenStreetMap GPS traces" option in iD. You can find this under the layer action. See <a href="https://www.mapbox.com/blog/openstreetmap-gps-layer/">https://www.mapbox.com/blog/openstreetmap-gps-layer/</a> for some details.
+The same layer is available in JOSM.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36982/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Sep '14, 19:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/813a136afe7d4c95fd5bccdd78705e0e?s=32&amp;d=identicon&amp;r=g" alt="escada's gravatar image" />
+    <p><a href="/users/5390/escada">escada</a><br/>
+    <span class="score" title="19043 reputation points"><span class="">19.0k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="166 badges"><span class="silver">&#9679;</span><span class="badgecount">166</span></span><span title="302 badges"><span class="bronze">&#9679;</span><span class="badgecount">302</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="escada has 97 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36982">
+    
+        <a name="36989"></a>
+        <div class="comment" id="comment-36989">
+            <div id="post-36989-score" class="comment-score">1</div>
+            <div class="comment-text"><p>There are some differences between the traces that iD shows and the ones that Potlatch 2 and JOSM show.  Both P2 and JOSM show all traces, including anonymous ones.  iD shows only those traces that were uploaded as public (if you change it to public later, it won't count).</p>
+
+<p><a href="http://www.openstreetmap.org/edit?editor=remote#map=18/53.14252/-1.34369">Here</a>, for example, is an area where there are a large number of non-public traces.  Try editing the area in iD - you won't see them.</p></div>
+            <div class="comment-info" id="comment-36989-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Sep '14, 20:58)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36993"></a>
+        <div class="comment" id="comment-36993">
+            <div id="post-36993-score" class="comment-score"></div>
+            <div class="comment-text"><p>Indeed, iD doesn't show my "trackable" traces. Potlatch 2 does, but without text notes added via OSMTracker.</p></div>
+            <div class="comment-info" id="comment-36993-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Sep '14, 22:55)</span>
+                <a class="comment-user userinfo" href="/users/7063/kotya">Kotya</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36982" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36982-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="37405"></a>
+                    <div id="answer-container-37405" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-37405-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37405/up/" rel="nofollow"> </a>
+<div id="post-37405-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-37405-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37405/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The closest to what I wanted to hear is the answer of @andy_mackey. He uploads <code>identifiable</code> tracks <em>after</em> manually removing all sensitive information from them. Which is quite a bit of work in my opinion. This helped me conclude that identifiable tracks as such are indeed a not so nice solution, unless you don't care at all or you track so occasionally that no patterns can be derived from your tracks. </p>
+<p>In view of that, I will stick with the <code>trackable</code> mode until a better option appears. These tracks contain all the information needed to extract extra data (speed, exact time of year/day, text notes) but do not disclose the author's personality.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/37405/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Oct '14, 08:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7f75b476d4984deb5e4c83d276b9c22b?s=32&amp;d=identicon&amp;r=g" alt="Kotya's gravatar image" />
+    <p><a href="/users/7063/kotya">Kotya</a><br/>
+    <span class="score" title="631 reputation points">631</span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="36 badges"><span class="bronze">&#9679;</span><span class="badgecount">36</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kotya has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-37405">
+    
+        <a name="37412"></a>
+        <div class="comment" id="comment-37412">
+            <div id="post-37412-score" class="comment-score"></div>
+            <div class="comment-text"><p>Could you just turn off, or exit OSMtracker when you don't need the trace recording?</p></div>
+            <div class="comment-info" id="comment-37412-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Oct '14, 10:27)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="44703"></a>
+        <div class="comment" id="comment-44703">
+            <div id="post-44703-score" class="comment-score">2</div>
+            <div class="comment-text"><p>You can use this program to prune your traces, it will also display your trace on an OSM map so that you can see what need to trim off and see if you have surveyed somewhere unmapped. Just select a track point you wish to remove and keep pressing delete key to remove successive ones. <a href="http://activityworkshop.net/software/gpsprune/">http://activityworkshop.net/software/gpsprune/</a></p></div>
+            <div class="comment-info" id="comment-44703-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Aug '15, 14:51)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="68261"></a>
+        <div class="comment" id="comment-68261">
+            <div id="post-68261-score" class="comment-score"></div>
+            <div class="comment-text"><p>Kotya: GPSPrune and MemoryMap only need a few clicks to to delete points or sections of traces.  Prune as the advantage  as it will display the current state of Openstreetmapas a background which means you can then decide if your new traces will be useful in editing and are worth uploading. GPSPrune is a tiny, fast, and free program as well.</p></div>
+            <div class="comment-info" id="comment-68261-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '19, 20:19)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37405" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37405-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="68258"></a>
+                    <div id="answer-container-68258" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-68258-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68258/up/" rel="nofollow"> </a>
+<div id="post-68258-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-68258-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68258/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I have a quesiton regarding the visibilty of tracks i did draw according of them to fill up the gaps mainly of trails around my area. How long it takes until they are implemented on the chart? I deleted the tracks after i did draw the missing trails. But i uploaded them again as i do not know if they are necessary to verify the data. Thanks for an input</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/68258/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Mar '19, 18:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/16a5bad074a3dcd831f5caf2b255d737?s=32&amp;d=identicon&amp;r=g" alt="luckymaaa's gravatar image" />
+    <p><a href="/users/16362/luckymaaa">luckymaaa</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="luckymaaa has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-68258">
+    
+        <a name="68259"></a>
+        <div class="comment" id="comment-68259">
+            <div id="post-68259-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If you have edited the osm map show us where and we can then check it. New additions now seem to take longer to be displayed ( on the map page ) than they did. If you revisit the area in the editor again and you cannot see your additions you probably didn't save them. Deleting uploaded traces will not delete any map data.</p></div>
+            <div class="comment-info" id="comment-68259-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '19, 20:03)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="68260"></a>
+        <div class="comment" id="comment-68260">
+            <div id="post-68260-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Note you should have asked a separate question or just added a comment otherwise others may not know which answer is related to which question.</p></div>
+            <div class="comment-info" id="comment-68260-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '19, 20:08)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68258" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68258-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/36974/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='5NnKFcJAGgS05x4SPYE8CXcqHybrG1oI' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/36974/track-visibility-when-uploading-gps-tracks-for-osm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/36974/track-visibility-when-uploading-gps-tracks-for-osm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/gps/"
+            class="tag-link-gps"
+            title="see questions tagged'gps'using tags"
+            rel="tag">gps</a> <span class="tag-number">&#215;235</span><br/>
+        
+        <a href="/tags/traces/"
+            class="tag-link-traces"
+            title="see questions tagged'traces'using tags"
+            rel="tag">traces</a> <span class="tag-number">&#215;68</span><br/>
+        
+        <a href="/tags/visibility/"
+            class="tag-link-visibility"
+            title="see questions tagged'visibility'using tags"
+            rel="tag">visibility</a> <span class="tag-number">&#215;32</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 22, 2014, 4:52 p.m.">22 Sep '14, 16:52</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,529 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 4, 2019, 8:34 p.m.">04 Mar '19, 20:34</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/5137/satellite-images-versus-gps-tracks">Satellite Images versus GPS-Tracks</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10982/download-all-osm-gps-traces">Download all OSM GPS traces</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1931/how-do-i-see-past-gps-traces-in-a-specific-area">How do I see past GPS Traces in a specific area ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4040/hdop-in-gpx-which-device-can-do-it">HDOP in GPX: which device can do it?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11/how-do-i-delete-a-gps-trace">How do I delete a GPS trace?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">Which is more reliable..? GPS traces or aerial imagery?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/83/should-i-upload-gps-traces-for-regions-where-there-already-are-plenty-of">Should I upload GPS traces for regions where there already are plenty of?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1705/live-gps-trace">live GPS Trace</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3280/how-many-gps-traces-are-in-osm">How many GPS traces are in OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11872/android-apps-for-mapping-that-dont-use-gps">Android apps for mapping that don&#39;t use GPS?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

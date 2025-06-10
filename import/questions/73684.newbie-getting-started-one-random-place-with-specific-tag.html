@@ -1,0 +1,746 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Newbie- getting started, one random place with specific tag - OSM Help</title>
+        <meta name="description" content="Hi, I want to create a web app that has a form to search amenities/places by tags, and after entering a tag it would show on map one random place with that tag. I was told I could use for that leaflet.js and OpenStreetMap API, but as I am completely new to that, I have no idea where I should start. ..." />
+        <meta name="keywords" content="random,newbie,tags" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/73684/newbie-getting-started-one-random-place-with-specific-tag" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/73684/newbie-getting-started-one-random-place-with-specific-tag?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='G9GLXkhkqa4jGGsGpATcN8Z3XDxG1K0Q' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/73684/newbie-getting-started-one-random-place-with-specific-tag">Newbie- getting started, one random place with specific tag</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-73684-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73684/up/" rel="nofollow"> </a>
+<div id="post-73684-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73684-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73684/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/73684/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+I want to create a web app that has a form to search amenities/places by tags, and after entering a tag it would show on map one random place with that tag. I was told I could use for that leaflet.js and OpenStreetMap API, but as I am completely new to that, I have no idea where I should start. I've searched for tutorials but I couldn't find anything, except overpass seems to have the tags I am looking for. I have successfully added a leaflet map to my page and now I have no idea what to do next. Can anyone please point me to some tutorials or documents that would help me with getting started?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/random/" class="post-tag tag-link-random"
+                                        title="see questions tagged 'random'" rel="tag">random</a>
+                                
+                                    <a href="/tags/newbie/" class="post-tag tag-link-newbie"
+                                        title="see questions tagged 'newbie'" rel="tag">newbie</a>
+                                
+                                    <a href="/tags/tags/" class="post-tag tag-link-tags"
+                                        title="see questions tagged 'tags'" rel="tag">tags</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Mar '20, 19:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/86ca9330c13ba50e8ea187c3dd76386a?s=32&amp;d=identicon&amp;r=g" alt="Monilus98's gravatar image" />
+    <p><a href="/users/18072/monilus98">Monilus98</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Monilus98 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/73684/">
+                edited
+                <strong>22 Mar '20, 20:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-73684">
+    
+</div>
+<div id="comment-tools-73684" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73684-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/73684/newbie-getting-started-one-random-place-with-specific-tag?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/73684/newbie-getting-started-one-random-place-with-specific-tag?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/73684/newbie-getting-started-one-random-place-with-specific-tag?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/73684/newbie-getting-started-one-random-place-with-specific-tag?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="73686"></a>
+                    <div id="answer-container-73686" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73686-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73686/up/" rel="nofollow"> </a>
+<div id="post-73686-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-73686-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73686/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi</p>
+<p>Firstly, your project is much more complicated that it looks like, there is a lot of data to process. And I don't really see the point, but anyway.</p>
+<p>To get the list of tags to choose from, I would ask Taginfo. Either through the <a href="https://wiki.openstreetmap.org/wiki/Taginfo/API">API</a>, or through <a href="https://taginfo.openstreetmap.org/download">downloads</a>. Read carefully the limits of the API. If you limit yourself the amenity and place keys, you can do requests like these to find the associated values (<a href="https://taginfo.openstreetmap.org/taginfo/apidoc#api_4_key_values">doc</a>) :</p>
+<p><a href="https://taginfo.openstreetmap.org/api/4/key/values?key=place&amp;page=1&amp;rp=10&amp;sortname=count_ways&amp;sortorder=desc">https://taginfo.openstreetmap.org/api/4/key/values?key=place&amp;page=1&amp;rp=10&amp;sortname=count_ways&amp;sortorder=desc</a></p>
+<p>Please handle the pagination, there is already 1417 results for this request (about place) and amenity is worse !</p>
+<p>Once you have a specific tag selected comes the biggest problem, finding one random object with this tag. With Overpass you can limit the results set to 1, but only after having fully computed it. If you try to search for common tags in the whole world, you'll get timeouts.</p>
+<p>One solution could be to compute random (not too big) bounding boxes, and then use this kind of <a href="https://overpass-turbo.eu/s/RP8">request</a>. nwr means looks for node or ways or relations. You'll need to replace {{bbox}} by your computed bounding box (try not to look in the water). "out center" means to output a node, even if the result was a way or a relation. And 1 limits to the first result. You might want to get the full results, and randomize there.</p>
+<p>Be gentle with the overpass server, if you want to retry another bounding box when no results, wait a little between requests, or you'll get blocked.</p>
+<p>To display the results of your overpass query, have a look at this <a href="https://github.com/GuillaumeAmat/leaflet-overpass-layer">leaflet plugin</a> (not tested myself).</p>
+<p>Hope this helps, good luck with your project.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73686/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Mar '20, 00:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73686">
+    
+        <a name="73709"></a>
+        <div class="comment" id="comment-73709">
+            <div id="post-73709-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you so much for your answer, I'll definitely look into this stuff :) After I've started to look into how to do that I had a feeling it would be really complicated but I can't really back out now, so I'm stuck with this project... But I have been thinking about how to make it a bit easier without changing the concept too much, so I've been wondering- would limiting the number of searchable tags and the area to just one town be possible and if yes would it make the task easier or just even more complicated? Thanks again :)</p></div>
+            <div class="comment-info" id="comment-73709-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '20, 15:24)</span>
+                <a class="comment-user userinfo" href="/users/18072/monilus98">Monilus98</a>
+                
+            </div>
+        </div>
+    
+        <a name="73713"></a>
+        <div class="comment" id="comment-73713">
+            <div id="post-73713-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sure, a hand-curated list of tags (from the <a href="https://wiki.openstreetmap.org/wiki/Map_Features">wiki</a> for example, or from the top list of <a href="https://taginfo.openstreetmap.org/tags">taginfo</a>) will be easier to manage than 10000+ results, with some tags used only once in the whole world ! ;-)</p>
+
+<p>And if you limit your Overpass queries to a town, it should be okay for the server. See this <a href="https://overpass-turbo.eu/s/RQF">request</a> for the query in one town (Berlin). As before, you can limit the resulting set to 1, but it seems it will always be the same one, probably not what you want.</p>
+
+<p>I think that with the mentioned leaflet plugin, you can use the onSuccess callback to randomize and filter the results before display.</p>
+
+<p>I see that by default this plugin use the bbox to limit the query, you could use that instead of limiting to a town. For example you limit the minimum zoom of your map, so the displayed area will never be too big, and you run your request on the visible area. Thus users can change area themselves. </p>
+
+<p>Remember that sometimes there will be no results, you should not fail silently IMHO.</p>
+
+<p>I'd be curious to see the result of your work, if possible ! ;-)</p>
+
+<p>Regards.</p></div>
+            <div class="comment-info" id="comment-73713-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '20, 18:18)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+        <a name="73734"></a>
+        <div class="comment" id="comment-73734">
+            <div id="post-73734-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks again! If I'll be able to finish it I'll show you as soon as it's done :)</p></div>
+            <div class="comment-info" id="comment-73734-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Mar '20, 19:29)</span>
+                <a class="comment-user userinfo" href="/users/18072/monilus98">Monilus98</a>
+                
+            </div>
+        </div>
+    
+        <a name="73753"></a>
+        <div class="comment" id="comment-73753">
+            <div id="post-73753-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi again, this is a bit embarrassing after all this time, but as much as I understand the logic behind what I have to do, I actually have no idea how to use the overpass api. I get that I can run queries and get results in overpass turbo, but how do I do that on my own website? Do I install it on my server or somehow call in in the javascript file? I really am a total newbie to this so I'm sorry for this kind of silly question, but for some reason I can't find any tutorial that shows how to do it...</p></div>
+            <div class="comment-info" id="comment-73753-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '20, 19:56)</span>
+                <a class="comment-user userinfo" href="/users/18072/monilus98">Monilus98</a>
+                
+            </div>
+        </div>
+    
+        <a name="73755"></a>
+        <div class="comment" id="comment-73755">
+            <div id="post-73755-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Well, running an overpass query is just loading a specific URL. Overpass Turbo provides a web interfaces to test your queries and see the results. Once your query does what you want, you don't need it anymore. Just use the "Export -&gt; Query -&gt; compact" menu to get the corresponding URL.</p>
+
+<p>You said you used leaflet to display a map. 
+As said before, you can use this <a href="https://github.com/GuillaumeAmat/leaflet-overpass-layer">plugin</a> to load an Overpass query's result and display it on top of your map. Have a look at the <a href="https://github.com/GuillaumeAmat/leaflet-overpass-layer/blob/721930b5b63e78ac687a656ef6f65a873e1139ff/src/OverPassLayer.js#L22">onSuccess callback code</a>, to rewrite it for your needs, namely selecting a random result.</p>
+
+<p>The doc says to use complicated thing like bower or npm to install the plugin, but I think that you just need to load the js and css for the dist folder on your page !</p>
+
+<p>Digging into the <a href="https://leafletjs.com/reference-1.6.0.html">leaflet doc</a>, to understand how layers and plugins work, should prove useful.</p>
+
+<p>Good luck.</p></div>
+            <div class="comment-info" id="comment-73755-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '20, 20:33)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73686" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73686-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/73684/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='G9GLXkhkqa4jGGsGpATcN8Z3XDxG1K0Q' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73684/newbie-getting-started-one-random-place-with-specific-tag?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73684/newbie-getting-started-one-random-place-with-specific-tag?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/newbie/"
+            class="tag-link-newbie"
+            title="see questions tagged'newbie'using tags"
+            rel="tag">newbie</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/tags/"
+            class="tag-link-tags"
+            title="see questions tagged'tags'using tags"
+            rel="tag">tags</a> <span class="tag-number">&#215;191</span><br/>
+        
+        <a href="/tags/random/"
+            class="tag-link-random"
+            title="see questions tagged'random'using tags"
+            rel="tag">random</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 22, 2020, 7:51 p.m.">22 Mar '20, 19:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,654 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 25, 2020, 8:33 p.m.">25 Mar '20, 20:33</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/45983/osm-interface">OSM Interface</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4531/im-new-and-confused-about-tags-and-keys">I&#39;m new, and confused about tags and keys</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42778/new-mapper-feature-vs-point">New mapper - feature vs point</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49295/get-all-tags-overpass-api-to-display-in-a-html-file">Get all tags overpass api to display in a html file.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30517/how-do-i-modify-the-key-for-many-elements-around-a-university-campus">How do I modify the key for many elements around a university campus?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/892/grouping-objects">Grouping objects</a>
+        </p>
+        
+        <p>
+            <a href="/questions/889/search-by-a-tag">Search by a tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24/how-does-tilesathome-th-work">How does tilesAtHome (t@h) work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1295/problems-with-a-boundary">Problems with a boundary</a>
+        </p>
+        
+        <p>
+            <a href="/questions/816/how-can-i-draw-attention-of-other-osm-users-to-unnamed-and-missing-streets-in-a-city">How can I draw attention of other OSM users to unnamed and missing streets in a city?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

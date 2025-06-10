@@ -1,0 +1,721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to map part of a lake - OSM Help</title>
+        <meta name="description" content="I&#39;ve been on a trip this summer where not many people go. I&#39;ve added a couple of campsite access roads. And now I realized that one of the campsites was on a lake that doesn&#39;t show up on OSM at all. It&#39;s here: https://www.openstreetmap.org/#map=15/52.5851/-77.3209 How does one go about mapping a lak..." />
+        <meta name="keywords" content="water,editing,newbie,mapping" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/48378/how-to-map-part-of-a-lake" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/48378/how-to-map-part-of-a-lake?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='vUoC9eRTV6R14TNp4h7rpyI1QLuMgmp6' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/48378/how-to-map-part-of-a-lake">How to map part of a lake</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-48378-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48378/up/" rel="nofollow"> </a>
+<div id="post-48378-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-48378-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48378/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/48378/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I've been on a trip this summer where not many people go. I've added a couple of campsite access roads. And now I realized that one of the campsites was on a lake that doesn't show up on OSM at all.</p>
+<p>It's here: <a href="https://www.openstreetmap.org/#map=15/52.5851/-77.3209">https://www.openstreetmap.org/#map=15/52.5851/-77.3209</a></p>
+<p>How does one go about mapping a lake? It's a large one, or collection of ones, or maybe a river, I don't even know really. I don't think I have the time for the entire thing. Is there a reasonable way to map a part of a lake without the entire thing looking like a mistake?</p>
+<p>Are the waters in OSM entirely croud-sourced? So people making small updates like me? Is there a guide specifically for water mapping?</p>
+<p>Thanks in advance.</p>
+<p>Edit:</p>
+<p>I started adding points to the lake I mentioned but the process is significantly slower than I thought it would be.</p>
+<p>Would it be useful to make a rough outline and let someone else fix it later, or should I wait for better data to come from somewhere? </p>
+<p>For example most of the part already mapped - was that someone tracing or some kind of automation? I can't figure out how to read history in the iD editor.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/water/" class="post-tag tag-link-water"
+                                        title="see questions tagged 'water'" rel="tag">water</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/newbie/" class="post-tag tag-link-newbie"
+                                        title="see questions tagged 'newbie'" rel="tag">newbie</a>
+                                
+                                    <a href="/tags/mapping/" class="post-tag tag-link-mapping"
+                                        title="see questions tagged 'mapping'" rel="tag">mapping</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Feb '16, 06:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/374c2764da8d777b757cbbfff299e2c5?s=32&amp;d=identicon&amp;r=g" alt="Mig21's gravatar image" />
+    <p><a href="/users/11739/mig21">Mig21</a><br/>
+    <span class="score" title="101 reputation points">101</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Mig21 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48378/">
+                edited
+                <strong>13 Mar '16, 15:17</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-48378">
+    
+        <a name="48639"></a>
+        <div class="comment" id="comment-48639">
+            <div id="post-48639-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I would leave it and do other mapping you would rather do. Others can do this in the JOSM editor using the scanarial plugin on the satellite imagery. Is is still a bit of work as the imagery of the water (on Bing at least) is not uniform, but doing a few scans on different parts and splitting and joining the pieces does not take as long as wandering around the edge with a mouse. There may be other imagery that makes it easier but I am not familiar with the your country. </p>
+
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Scanaerial">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Scanaerial</a></p></div>
+            <div class="comment-info" id="comment-48639-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Mar '16, 09:47)</span>
+                <a class="comment-user userinfo" href="/users/7380/nevw">nevw</a>
+                
+            </div>
+        </div>
+    
+        <a name="48640"></a>
+        <div class="comment" id="comment-48640">
+            <div id="post-48640-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks newv. I'm new to OSM. Would you suggest learning JOSM is a good next step if I want to be a long-term contributor? Or is there another step between iD and JOSM?</p></div>
+            <div class="comment-info" id="comment-48640-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Mar '16, 14:49)</span>
+                <a class="comment-user userinfo" href="/users/11739/mig21">Mig21</a>
+                
+            </div>
+        </div>
+    
+        <a name="48641"></a>
+        <div class="comment" id="comment-48641">
+            <div id="post-48641-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/11739/mig21"></a><a href="http://help.openstreetmap.org/users/11739/mig21">@Mig21</a>: please see <a href="/questions/35272/when-to-graduate-from-id">that older question</a> for your JOSM question. And <a href="/faq">please</a> ask a new "question" (new entry) for your history question if you cannot find an older question about the same thing.   Oh, and, welcome to OSM, thanks for helping! :-)</p></div>
+            <div class="comment-info" id="comment-48641-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Mar '16, 15:00)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48378" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48378-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/48378/how-to-map-part-of-a-lake?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/48378/how-to-map-part-of-a-lake?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/48378/how-to-map-part-of-a-lake?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/48378/how-to-map-part-of-a-lake?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="48379"></a>
+                    <div id="answer-container-48379" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48379-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48379/up/" rel="nofollow"> </a>
+<div id="post-48379-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-48379-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48379/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Just map what you can or want to when you can. Plenty of information on the how and why of water mapping available by simple searching. </p>
+<p>There's a start made for you around your camp site. Drawn from Bing and Canvec. Anyone can now extend this section, or add detail to the tagging. When you get up to 5000 nodes simply start another area section, (look around for similar circumstances if you're not sure). </p>
+<p>Regards</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48379/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Feb '16, 07:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e3283a6b5f83e16214ec39a1478f64f0?s=32&amp;d=identicon&amp;r=g" alt="BCNorwich's gravatar image" />
+    <p><a href="/users/2925/bcnorwich">BCNorwich</a><br/>
+    <span class="score" title="6299 reputation points"><span class="">6.3k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="BCNorwich has 44 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48379">
+    
+        <a name="48380"></a>
+        <div class="comment" id="comment-48380">
+            <div id="post-48380-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Up to 5000 nodes won't work since a way can only have a maximum of 2000 nodes. For larger / more detailed areas a multipolygon relation will be required.</p></div>
+            <div class="comment-info" id="comment-48380-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '16, 08:17)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48379" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48379-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/48378/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='vUoC9eRTV6R14TNp4h7rpyI1QLuMgmp6' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48378/how-to-map-part-of-a-lake?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48378/how-to-map-part-of-a-lake?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/newbie/"
+            class="tag-link-newbie"
+            title="see questions tagged'newbie'using tags"
+            rel="tag">newbie</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/mapping/"
+            class="tag-link-mapping"
+            title="see questions tagged'mapping'using tags"
+            rel="tag">mapping</a> <span class="tag-number">&#215;193</span><br/>
+        
+        <a href="/tags/water/"
+            class="tag-link-water"
+            title="see questions tagged'water'using tags"
+            rel="tag">water</a> <span class="tag-number">&#215;79</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 27, 2016, 6:54 a.m.">27 Feb '16, 06:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,976 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 13, 2016, 3:17 p.m.">13 Mar '16, 15:17</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/46149/what-you-want-a-newbie-to-do-next">what you want a newbie to do next?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14328/how-to-add-a-roundabout-to-a-pre-existing-junction">How to add a roundabout to a pre-existing junction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7012/how-to-map-counter-flood-measures">How to map counter-flood measures</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8821/problem-with-a-roundabout">Problem with a roundabout</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11296/how-does-editing-in-potlatch-work">How does editing in Potlatch work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">What are the most common mapping mistakes that other users make?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1012/fixing-a-subway-stop">Fixing a subway stop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4531/im-new-and-confused-about-tags-and-keys">I&#39;m new, and confused about tags and keys</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8293/can-i-use-osm-to-produce-maps-tracing-the-history-of-my-village">Can I use OSM to produce maps tracing the history of my village?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

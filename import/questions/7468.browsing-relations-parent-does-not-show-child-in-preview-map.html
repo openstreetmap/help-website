@@ -1,0 +1,803 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Browsing relations - parent does not show child in preview map - OSM Help</title>
+        <meta name="description" content="What are the current rules for showing a preview map on relations &quot;browse&quot; pages? Preview map for this relation does not show at all. How do I make it appear and make it show the contents of child relations with a blue line as usual for relations containing ways only? PS. I know relations are deprec..." />
+        <meta name="keywords" content="rendering,relations" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/7468/browsing-relations-parent-does-not-show-child-in-preview-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/7468/browsing-relations-parent-does-not-show-child-in-preview-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hI8zeiiwUPwIyKcvcLKIlEZNUR4D1BKy' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/7468/browsing-relations-parent-does-not-show-child-in-preview-map">Browsing relations - parent does not show child in preview map</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-7468-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7468/up/" rel="nofollow"> </a>
+<div id="post-7468-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-7468-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7468/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/7468/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>What are the current rules for showing a preview map on relations "browse" pages? Preview map for <a href="http://www.openstreetmap.org/browse/relation/1717720">this relation</a> does not show at all. How do I make it appear and make it show the contents of child relations with a blue line as usual for relations containing ways only?</p>
+<p>PS. I know relations are deprecated by power-users here, but since there is no reasonable service for plotting tag searches into a map, I think relatins still have their meaning at least untill such service is created. Also, relations save resources since no tag search needs to be done for showing content.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>31 Aug '11, 11:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7d327873d48d28e563c9ad7259853c35?s=32&amp;d=identicon&amp;r=g" alt="Kozuch's gravatar image" />
+    <p><a href="/users/237/kozuch">Kozuch</a><br/>
+    <span class="score" title="1720 reputation points"><span class="">1.7k</span></span><span title="58 badges"><span class="badge1">&#9679;</span><span class="badgecount">58</span></span><span title="72 badges"><span class="silver">&#9679;</span><span class="badgecount">72</span></span><span title="85 badges"><span class="bronze">&#9679;</span><span class="badgecount">85</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kozuch has one accepted answer">8&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/7468/">
+                edited
+                <strong>01 Sep '11, 21:22</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-7468">
+    
+</div>
+<div id="comment-tools-7468" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7468-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/7468/browsing-relations-parent-does-not-show-child-in-preview-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/7468/browsing-relations-parent-does-not-show-child-in-preview-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/7468/browsing-relations-parent-does-not-show-child-in-preview-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/7468/browsing-relations-parent-does-not-show-child-in-preview-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="7520"></a>
+                    <div id="answer-container-7520" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-7520-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7520/up/" rel="nofollow"> </a>
+<div id="post-7520-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-7520-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7520/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The browse page simply uses the API call /api/0.6/relation/(id)/full.</p>
+<p>As you'll see from the <a href="http://wiki.openstreetmap.org/wiki/API_0.6#Full:_GET_.2Fapi.2F0.6.2F.5Bway.7Crelation.5D.2F.23id.2Ffull">API documentation</a>, this does not recurse down all levels of nested relations. It merely returns the 'top level' of relation members, and that's it.</p>
+<p>This is clearly necessary to prevent overuse of the call boggling our servers. It's already been the case that people overusing the /full call has almost brought the API to its knees at times (notably when people started creating massive relations to contain the bounding boxes for Bing imagery in each country).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/7520/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Sep '11, 21:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-7520">
+    
+</div>
+<div id="comment-tools-7520" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7520-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="7535"></a>
+                    <div id="answer-container-7535" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-7535-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7535/up/" rel="nofollow"> </a>
+<div id="post-7535-score" class="post-score"
+    title="current number of votes">
+    -2
+</div>
+<a id="post-7535-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7535/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>"Relations deprecated by power users" ???</p>
+<p>Huh... I had the exact inverse feeling that relations was the way to go, in order to better structure the data as soon as it becomes very rich and very difficult to find the related items (for example adminsitrative areas, that can be hierarchically structured, or not, and that have various levels of scalings, and impossible to edit reliably at low zoom levels.</p>
+<p>Without relations, you end up creating many data duplicates, that become even harder to unify. Relations are a very powerful tool that certainly helps finding items in the database. With the "roles" that they support, you can associate items with different types, according to a convenient schema which becomes possible to create. with those relations, you can infer various selective layers of data, to show or hide local details.</p>
+<p>Without relations, the OSM data will become a tricky bags full of knots that rapidly become impossible to structure in something that an be rendered correctly on a map (depending on the zoom level or what users want to see on a map, according to their preferences or what they are looking for).</p>
+<p>Relations also allow checking the integrity of the map data, to avoid contradictions. It simplifies the corrections needed (in case of errors, or because the actual world has effectively changed due to humane work, accidents, or natural events, or must change in a near future, where planning of works for the changes we want to add as metadata requires some organization and searches of various items on the map, or because we need to add other metadata for mapping in progress or requiring more investigation due to missing data).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/7535/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Sep '11, 01:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b0ac3d0a15ce4f96f0d6b29172fca72a?s=32&amp;d=identicon&amp;r=g" alt="Verdy_p's gravatar image" />
+    <p><a href="/users/1555/verdy_p">Verdy_p</a><br/>
+    <span class="score" title="141 reputation points">141</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Verdy_p has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-7535">
+    
+        <a name="7765"></a>
+        <div class="comment" id="comment-7765">
+            <div id="post-7765-score" class="comment-score"></div>
+            <div class="comment-text"><p>Who voted negatively to my comment above ? Plese add arguments instead of just this unexplained "thumb down". Because I gave arguments which outweight largely the small inconvenient (only superficially evoked above) about the performance of recursive queries on relations (which I think is a false problem: you don't need to recurse a relation, most of the time to use, i.e. search or render, what is defined by a relation).</p></div>
+            <div class="comment-info" id="comment-7765-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '11, 04:12)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="7766"></a>
+        <div class="comment" id="comment-7766">
+            <div id="post-7766-score" class="comment-score"></div>
+            <div class="comment-text"><p>Relations have clear advantages, notably for structuring the dataset and allowing powerful searches, as well as for maintaining a consistency, and hopefully completeness (at least down to some level, even if some detailed levels are missing) of the database. Relations allow faster convergence of the dataset to a stable state, where only the smallest edits at the thinnest zoom level will be needed, without breaking the upper levels that remain unchanged (even if the number of their members may locally change).</p></div>
+            <div class="comment-info" id="comment-7766-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '11, 04:12)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="7767"></a>
+        <div class="comment" id="comment-7767">
+            <div id="post-7767-score" class="comment-score"></div>
+            <div class="comment-text"><p>And anyway the "power users" evoked above are only those that are imported data coming from other databases, which are already structured with relations and layers. If we don't have relations, those bots importing data will have lots of difficulties to find how to update a zone that has been updated in the source: they will frequently generate duplicates, because there's no reliable key to make the link between what is in the OSM dataset (which may have been modified by others or by concurrent bots importing their own datasets) and what is now in the updated data source.</p></div>
+            <div class="comment-info" id="comment-7767-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '11, 04:15)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="7770"></a>
+        <div class="comment" id="comment-7770">
+            <div id="post-7770-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If you were required to say what was wrong, you would be prompted with an input field to do so. There is absolutely no compulsion to give an explanation for a thumbs-down.</p>
+
+<p>Also, there's a limit on this comment field for a reason. Circumventing it by making three posts defeats the point of the help system. If you want to have a debate, mailing lists are the right place, not <a href="http://help.osm.org">help.osm.org</a>.</p></div>
+            <div class="comment-info" id="comment-7770-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '11, 07:55)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="7774"></a>
+        <div class="comment" id="comment-7774">
+            <div id="post-7774-score" class="comment-score"></div>
+            <div class="comment-text"><p>Three comments was only due to limitations of length for the reply. All of them are a single reply. They use distinct, clearly separated arguments. I clearly have different opinions than you, but you don't need to expose your "opinion" as a "fact".</p></div>
+            <div class="comment-info" id="comment-7774-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '11, 20:03)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-7535" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7535-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/7468/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hI8zeiiwUPwIyKcvcLKIlEZNUR4D1BKy' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7468/browsing-relations-parent-does-not-show-child-in-preview-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7468/browsing-relations-parent-does-not-show-child-in-preview-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 31, 2011, 11:02 a.m.">31 Aug '11, 11:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,454 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 12, 2013, 11:06 a.m.">12 Apr '13, 11:06</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/65303/could-someone-check-this-multipolygon-outerinnerouter-relation">Could someone check this multipolygon outer/inner/outer relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41767/if-rendering-all-relation-tags-are-then-all-way-tag-covered-or-are-the-way-tags-are-to-be-checked-if-they-need-rendering-on-their-own">If rendering all relation-tags, are then all way-tag covered, or are the way-tags are to be checked if they need rendering on their own?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36871/why-does-the-name-of-a-relation-appear-on-top-of-complex-buildings">Why does the name of a relation appear on top of complex buildings?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62843/glitches-on-standard-osm-tiles-where-to-report">Glitches on &quot;standard&quot; OSM tiles - where to report?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66159/inner-members-of-some-multipolygon-relation-object-are-not-rendered-by-some-renderers">Inner members of some multipolygon relation object are not rendered by some renderers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77000/forest-disappearing-problem-with-the-relation">Forest disappearing, problem with the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1225/place-names-at-different-zoom-levels">Place names at different zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34051/name-of-multipolygon-not-showing-on-its-member-ways">Name of multipolygon not showing on its member ways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/306/is-there-a-relation-analyzer-that-will-allow-me-to-check-the-integrity-of-relations-that-use-forward-and-backward-roles">Is there a relation analyzer that will allow me to check the integrity of relations that use &#39;forward&#39; and &#39;backward&#39; roles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/242/how-to-download-rendered-osm-maps">How to download rendered OSM maps?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

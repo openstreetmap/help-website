@@ -1,0 +1,1134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>getting route information osm [Arcmap] - OSM Help</title>
+        <meta name="description" content="I&#39;m working on a project with Arcmap. I downloaded an OSM file of Munich from openstreetmap.org then I imported this file into Arcmap using OpenStreetMap Toolbox . I have the list of points , lines and polygones . My questions are :  How can I get informations from osm, i.e.,how it is translated to ..." />
+        <meta name="keywords" content="information,route,arcmap,arcgis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/55199/getting-route-information-osm-arcmap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55199/getting-route-information-osm-arcmap?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='G9reLKK01lS9DFx4dFjXbksPdbf1U9ow' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55199/getting-route-information-osm-arcmap">getting route information osm [Arcmap]</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55199-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55199/up/" rel="nofollow"> </a>
+<div id="post-55199-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55199-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55199/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55199/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm working on a project with Arcmap. I downloaded an OSM file of Munich from openstreetmap.org then I imported this file into Arcmap using OpenStreetMap Toolbox . I have the list of points , lines and polygones . My questions are :</p>
+<ol>
+<li>How can I get informations from osm, i.e.,how it is translated to arcgis format</li>
+<li>How is route information(number, type (bus/tram), direction, stops) stored? e.g., in attribute table route column is empty</li>
+</ol>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/information/" class="post-tag tag-link-information"
+                                        title="see questions tagged 'information'" rel="tag">information</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/arcmap/" class="post-tag tag-link-arcmap"
+                                        title="see questions tagged 'arcmap'" rel="tag">arcmap</a>
+                                
+                                    <a href="/tags/arcgis/" class="post-tag tag-link-arcgis"
+                                        title="see questions tagged 'arcgis'" rel="tag">arcgis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Mar '17, 17:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e2d58529009b1e7d4a7dd36ad4a9b5a?s=32&amp;d=identicon&amp;r=g" alt="tygaf's gravatar image" />
+    <p><a href="/users/13491/tygaf">tygaf</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tygaf has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55199/">
+                edited
+                <strong>25 Mar '17, 09:28</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55199">
+    
+        <a name="55204"></a>
+        <div class="comment" id="comment-55204">
+            <div id="post-55204-score" class="comment-score">2</div>
+            <div class="comment-text"><p>crossposted: <a href="https://gis.stackexchange.com/questions/232823/getting-route-information-osm">https://gis.stackexchange.com/questions/232823/getting-route-information-osm</a></p></div>
+            <div class="comment-info" id="comment-55204-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Mar '17, 09:01)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55649"></a>
+        <div class="comment" id="comment-55649">
+            <div id="post-55649-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Please do not and further questions as answers, wither edit your original question of add comments.</p>
+
+<p>The obvious people to ask are ESRI btw.</p></div>
+            <div class="comment-info" id="comment-55649-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Apr '17, 10:27)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55199" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55199-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55199/getting-route-information-osm-arcmap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55199/getting-route-information-osm-arcmap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55199/getting-route-information-osm-arcmap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55199/getting-route-information-osm-arcmap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55655"></a>
+                    <div id="answer-container-55655" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55655-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55655/up/" rel="nofollow"> </a>
+<div id="post-55655-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-55655-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55655/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi tygaf,
+the Osm data you downloaded only contain points, lines, and polylines. Busroutes are in Osm as Relations. These are lists of Ways ("Lines" in your software). Train/Tram routes are also there as Relations. The popular node type bicycle routes are also there in Relations.</p>
+<p>In <a href="https://josm.openstreetmap.de/">JOSM</a> you could download a small part of Munich which contains a little bit of a Route you want in Arcmap. If you activate that way you will see the Relation on the right side. If you open the Relation Editor from that panel you can download the rest of that relation. Copy that Relation to a new layer and export from Josm.</p>
+<p>The native format in Osm is a (compressed) type of markup language : XML. Long text with with markers symilar to HTML. Your Geo software wants it in the form of a Database: a table with Columns. That is the reason most Colums are empty. Most of your Polylines don't have a value for the tag "amenety"</p>
+<p>The conversion from Osm XML to a Database can also be done with <a href="https://github.com/openstreetmap/osm2pgsql">Osm2Pgsql</a>. You will have to choose what type of tag-value pairs you want in your PostgreSQL Database. Unfortunately this only works in Linux for me and the <a href="http://learnosm.org/en/osm-data/osm2pgsql/">learning curve</a> for Osm2Pgsql is steeper than the one for JOSM.</p>
+<p>hth
+ --
+Gys</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55655/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Apr '17, 12:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5c3b258ebdc5943f1ab6008f146e7f7c?s=32&amp;d=identicon&amp;r=g" alt="Gys%20de%20Jongh's gravatar image" />
+    <p><a href="/users/8791/gys-de-jongh">Gys de Jongh</a><br/>
+    <span class="score" title="713 reputation points">713</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gys de Jongh has 5 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55655">
+    
+        <a name="55684"></a>
+        <div class="comment" id="comment-55684">
+            <div id="post-55684-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can we import the needed info separately , with python toolbox ?</p></div>
+            <div class="comment-info" id="comment-55684-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Apr '17, 18:08)</span>
+                <a class="comment-user userinfo" href="/users/13491/tygaf">tygaf</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55655" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55655-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55200"></a>
+                    <div id="answer-container-55200" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55200-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55200/up/" rel="nofollow"> </a>
+<div id="post-55200-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55200-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55200/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi tygaf,
+you say you downloaded an OSM file of Munich from openstreetmap.org. If this file only contained lists of points , lines and polygones I guess that you somehow got a raw <em>.pdf file that was already processed (by osm2pgsql ?) Maybe you downloaded it from <a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a> ? The </em>.shp files from that site typically contain only the list of points , lines and polygones and no other information that is present in the *.pbf file.</p>
+<p>What you actually need is the original raw data file of Munich. The <em>.pbf file and than process that file yourself with Osm2pgsql to extract the data you want in one or more </em>.shp files.</p>
+<p>In Qgis the process is a bit more straight forward. You can actually download the Munich area which is then presented as a large number of <em>.shp files (thus not only three) from which you can retain the </em>.shp files you need. Route information will be in relations which are not in the standard GeoFabrik extracts.</p>
+<p>I don't know if the same can be done in Arcmap. If not you could try Qgis which is opensource and free.</p>
+<p>hope this help a bit
+Gys</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55200/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Mar '17, 21:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5c3b258ebdc5943f1ab6008f146e7f7c?s=32&amp;d=identicon&amp;r=g" alt="Gys%20de%20Jongh's gravatar image" />
+    <p><a href="/users/8791/gys-de-jongh">Gys de Jongh</a><br/>
+    <span class="score" title="713 reputation points">713</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gys de Jongh has 5 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55200">
+    
+        <a name="55523"></a>
+        <div class="comment" id="comment-55523">
+            <div id="post-55523-score" class="comment-score"></div>
+            <div class="comment-text"><p>I downloaded an OSM file of Munich from openstreetmap.org and when I loaded it in ArcMap I get this <img alt="alt text" src="https://help.openstreetmap.org/upfiles/nodes,lines,ways_bV48dRJ.PNG"></p>
+
+<p><img alt="alt text" src="https://help.openstreetmap.org/upfiles/attribute_table.PNG"></p>
+
+<p>I don't get why all column in attribute table are empty</p></div>
+            <div class="comment-info" id="comment-55523-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '17, 15:02)</span>
+                <a class="comment-user userinfo" href="/users/13491/tygaf">tygaf</a>
+                
+            </div>
+        </div>
+    
+        <a name="55524"></a>
+        <div class="comment" id="comment-55524">
+            <div id="post-55524-score" class="comment-score">2</div>
+            <div class="comment-text"><p>They aren't all empty. The objects visible in your second screenshot are all highway=* and that attribute is present. That type of object (a road or trail of some kind) wouldn't normally have the other tags like building=*, natural=*, railway=*, etc., so it's expected that those other columns would be empty. If you scroll to the right, do you see a "name" column populated with values?</p></div>
+            <div class="comment-info" id="comment-55524-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '17, 16:48)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55200" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55200-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="56527"></a>
+                    <div id="answer-container-56527" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56527-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56527/up/" rel="nofollow"> </a>
+<div id="post-56527-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56527-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56527/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You said in JOSM I can download a small part of Munich which contains a little bit of a Route I want in Arcmap. If I activate that way I will see the Relation on the right side which I did but I don't know how to download the rest of that relation, copy that Relation to a new layer and export from Josm.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56527/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Jun '17, 11:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e2d58529009b1e7d4a7dd36ad4a9b5a?s=32&amp;d=identicon&amp;r=g" alt="tygaf's gravatar image" />
+    <p><a href="/users/13491/tygaf">tygaf</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tygaf has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56527">
+    
+</div>
+<div id="comment-tools-56527" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56527-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="56540"></a>
+                    <div id="answer-container-56540" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56540-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56540/up/" rel="nofollow"> </a>
+<div id="post-56540-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56540-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56540/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi tygaf
+Open Josm
+File =&gt; Download from Osm...
+goto Tab Slippy map
+Browse the slippy map to Munich
+I downloaded a small region around Petersplatz</p>
+<p>File=&gt;New Layer this is Data Layer 2</p>
+<p>In the Layer panel on the right Select Data Layer 1 (again) make it visible by clicking on the little eye on the left side of it and activate Data Layer 1 by clicking the layer icon at the bottom of this panel</p>
+<p>In the relations panel on the right side scroll down to find all the relations you want and please note that some are incomplete (outside the area you downloaded) For your purpose you must first make the relations you want complete. There are two ways to get them complete. 1) via the relation itself, 2) Via it's parent relation.</p>
+<p>Example for 1) :
+select route("Bus 132:Forstenrieder Park =&gt; Marienplatz", 196 members, incomplete)</p>
+<p>Call the relation editor for selected relation by clicking on the icon at the bottom of the relation panel</p>
+<p>In the Edit relation #3,657,886 in layer 'Data Layer1' panel goto the Tags and Members Tab.</p>
+<p>In the Refers to column you see a lot of incomplete members</p>
+<p>Look carefully at the far left side. There is an icon of a harddisk with a little green arrow on top of it. Click on it to download the incomplete members.</p>
+<p>Continue with Example for 2)
+In the the Edit relation #3,657,886 in layer 'Data Layer1' panel goto the parent Relations Tab</p>
+<p>There is the parent relation : route_master("Bus132",2members)
+Select this parent relation</p>
+<p>Click Edit at the bottom of this panel
+A new relation editor panel will now open : Edit relation #3,657,914 in 'Data Layer1'</p>
+<p>goto the Child Relations Tab to see the two child relations of which only one is still incomplete, but there might be a lot more which you could then to all in one go</p>
+<p>Click dowload All Children at the bottom of that panel. Now both children are complete : Bus 132 Forstenrieder Park =&gt; Marienplatz and Bus 132 Marienplatz =&gt; Forstenrieder Park</p>
+<p>Close both Relation Editor Panels</p>
+<p>In the Reelations Panel on the right select both relations (Hold &lt;cntrl&gt; or &lt;shift&gt; in the usual way to select more than 1 item) It is of course possible to select all relations you want. Which is only usefull if they are all complete (downloaded)</p>
+<p>On the bottom of the relations panel click the icon with the sharp arrow : set the current selection to the list of selected relations</p>
+<p>In the main window these will now be purple</p>
+<p>On the Toolbar Edit=&gt;Copy</p>
+<p>In the layer panel on the right :
+Select Data Layer 2
+Make this layer the active Layer by clicking on the layer icon at the bottom of the layer panel
+Make this layer visible by clicking on the little eye on it's left side
+Make Data Layer 1 unvisible by clicking on the little eye on it's left side</p>
+<p>On the Tool Bar Edit=&gt;Paste</p>
+<p>You should see now a black background with only the two bus relations in purple (because they are still selected) If you click some where in the black background the get their color back.</p>
+<p>If you zoom and select you will see the details of the bus relation. Like the name of the streets this bus takes but also the surface=asphalt in the Drygalski-Allee</p>
+<p>On the Tool Bar : File=&gt;Save as and choose the name and type of the file</p>
+<p>hth
+Gys</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56540/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Jun '17, 23:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5c3b258ebdc5943f1ab6008f146e7f7c?s=32&amp;d=identicon&amp;r=g" alt="Gys%20de%20Jongh's gravatar image" />
+    <p><a href="/users/8791/gys-de-jongh">Gys de Jongh</a><br/>
+    <span class="score" title="713 reputation points">713</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gys de Jongh has 5 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/56540/">
+                edited
+                <strong>09 Jun '17, 00:01</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56540">
+    
+        <a name="56632"></a>
+        <div class="comment" id="comment-56632">
+            <div id="post-56632-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Gys , I followed your step but when I load the osm file into arcmap a lot of information are still missing in the attribute table. I really don't get the problem</p></div>
+            <div class="comment-info" id="comment-56632-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '17, 17:29)</span>
+                <a class="comment-user userinfo" href="/users/13491/tygaf">tygaf</a>
+                
+            </div>
+        </div>
+    
+        <a name="56634"></a>
+        <div class="comment" id="comment-56634">
+            <div id="post-56634-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi tygaf,
+you should have all information about the bus routes, relations.</p>
+
+<p>What do you think is missing ?</p></div>
+            <div class="comment-info" id="comment-56634-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '17, 19:05)</span>
+                <a class="comment-user userinfo" href="/users/8791/gys-de-jongh">Gys de Jongh</a>
+                
+            </div>
+        </div>
+    
+        <a name="56660"></a>
+        <div class="comment" id="comment-56660">
+            <div id="post-56660-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't know I tried everything. Attribute table is always missing information</p></div>
+            <div class="comment-info" id="comment-56660-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '17, 13:11)</span>
+                <a class="comment-user userinfo" href="/users/13491/tygaf">tygaf</a>
+                
+            </div>
+        </div>
+    
+        <a name="56681"></a>
+        <div class="comment" id="comment-56681">
+            <div id="post-56681-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are you still expecting the attribute table to be completely filled for every object? As I explained above back in April, no single object will have all of the attributes at the same time. Most of the attributes will be blank for most objects.</p></div>
+            <div class="comment-info" id="comment-56681-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '17, 22:10)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56540" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56540-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55199/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='G9reLKK01lS9DFx4dFjXbksPdbf1U9ow' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55199/getting-route-information-osm-arcmap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55199/getting-route-information-osm-arcmap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/arcgis/"
+            class="tag-link-arcgis"
+            title="see questions tagged'arcgis'using tags"
+            rel="tag">arcgis</a> <span class="tag-number">&#215;35</span><br/>
+        
+        <a href="/tags/information/"
+            class="tag-link-information"
+            title="see questions tagged'information'using tags"
+            rel="tag">information</a> <span class="tag-number">&#215;26</span><br/>
+        
+        <a href="/tags/arcmap/"
+            class="tag-link-arcmap"
+            title="see questions tagged'arcmap'using tags"
+            rel="tag">arcmap</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 20, 2017, 5:07 p.m.">20 Mar '17, 17:07</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,168 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 19, 2017, 10:10 p.m.">19 Jun '17, 22:10</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/29817/why-does-openstreetmap-for-arcgis-add-vertex-points-to-my-bezier-curves">Why does OpenStreetMap for ArcGIS add vertex points to my bezier curves?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28030/import-gpx-from-osm-tracker-in-arcmap-with-the-pictures-and-the-tracks">Import GPX from OSM Tracker in ArcMap with the pictures and the tracks</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42894/i-need-all-ways-information-within-the-route">I need all ways information within the route</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55662/unable-to-upload-to-osm-from-arcmap">Unable to upload to OSM from ArcMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3347/route-and-distance-cache">route and distance cache</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4210/where-to-tag-tourism-information">Where to tag tourism information</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1612/wrong-coordinates">[closed] Wrong coordinates</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5843/sign-out-of-openstreetmap">sign out of openstreetmap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or">Roundabouts as part of bus routes (or cycle routes, or…)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5210/how-to-make-a-route">How to make a route?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

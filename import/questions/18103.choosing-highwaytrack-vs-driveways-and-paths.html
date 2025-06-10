@@ -1,0 +1,835 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Choosing highway=track vs driveways and paths? - OSM Help</title>
+        <meta name="description" content="I&#39;m working to clean up some basically still-raw TIGER data in central Virginia (USA), and so there are a lot of dense-for-rural but sparse-for-a-suburb areas that have a jumble of TIGER crap in them. The wiki is mostly pretty helpful for discerning what tag to put on each kind of way, but I&#39;m still..." />
+        <meta name="keywords" content="track,driveway,highway,unpaved" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/18103/choosing-highwaytrack-vs-driveways-and-paths" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/18103/choosing-highwaytrack-vs-driveways-and-paths?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='6JwQaMUyevkzn0vPkbNajc983mVk1vmp' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/18103/choosing-highwaytrack-vs-driveways-and-paths">Choosing highway=track vs driveways and paths?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-18103-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18103/up/" rel="nofollow"> </a>
+<div id="post-18103-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-18103-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18103/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/18103/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm working to clean up some basically still-raw TIGER data in central Virginia (USA), and so there are a lot of dense-for-rural but sparse-for-a-suburb areas that have a jumble of TIGER crap in them.  The wiki is mostly pretty helpful for discerning what tag to put on each kind of way, but I'm still a bit dicey on what exactly makes something a highway=track.  In this area, most of the ways that the TIGER import has marked as highway=track are relatively short, connected to the rest of the road system only at one end, and often an extension of a house's or business's paved driveway into an undeveloped part of the property.</p>
+<p>Based on my prior, non-OSM sense of what a "track" would be, and the fact that the TIGER import seems to have called them tracks, that seems like it would be a reasonable tag.</p>
+<p>However, based on how the renderers treat them and how they're referred to on the wiki, I get the sense that a highway=track is something bigger and/or more important than these.  Among other things, these tracks are definitely of less importance than, say, driveways, but Mapnik draws the tracks more boldly than driveways and keeps them visible at lower zoom levels than driveways.  The wiki page refers to them as "roads" and I infer that this concept of a "track" would involve more than one person using it.</p>
+<p>But then, if it's not a highway=track, I'm not really sure it's a highway=path either, which seems like the only other plausible tag.  Maybe a highway=service with surface=dirt?  (Or surface=unpaved?)  Or maybe they really are highway=track?</p>
+<p>A few typical examples with varying levels of residentiality and driveway-ness: <a href="http://www.openstreetmap.org/browse/way/20399335">20399335</a> <a href="http://www.openstreetmap.org/browse/way/20408971">20408971</a> <a href="http://www.openstreetmap.org/browse/way/20410210">20410210</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/track/" class="post-tag tag-link-track"
+                                        title="see questions tagged 'track'" rel="tag">track</a>
+                                
+                                    <a href="/tags/driveway/" class="post-tag tag-link-driveway"
+                                        title="see questions tagged 'driveway'" rel="tag">driveway</a>
+                                
+                                    <a href="/tags/highway/" class="post-tag tag-link-highway"
+                                        title="see questions tagged 'highway'" rel="tag">highway</a>
+                                
+                                    <a href="/tags/unpaved/" class="post-tag tag-link-unpaved"
+                                        title="see questions tagged 'unpaved'" rel="tag">unpaved</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Nov '12, 22:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4a4c8a91603aa21e05f5a441d5c13f26?s=32&amp;d=identicon&amp;r=g" alt="blahedo's gravatar image" />
+    <p><a href="/users/4851/blahedo">blahedo</a><br/>
+    <span class="score" title="736 reputation points">736</span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="19 badges"><span class="silver">&#9679;</span><span class="badgecount">19</span></span><span title="28 badges"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="blahedo has 2 accepted answers">50&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/18103/">
+                edited
+                <strong>29 Nov '12, 22:53</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-18103">
+    
+</div>
+<div id="comment-tools-18103" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18103-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/18103/choosing-highwaytrack-vs-driveways-and-paths?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/18103/choosing-highwaytrack-vs-driveways-and-paths?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/18103/choosing-highwaytrack-vs-driveways-and-paths?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/18103/choosing-highwaytrack-vs-driveways-and-paths?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="18107"></a>
+                    <div id="answer-container-18107" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18107-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18107/up/" rel="nofollow"> </a>
+<div id="post-18107-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-18107-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18107/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="blahedo has selected this answer as the correct answer"
+        href="/accept_answer/18107/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The road classifications of the TIGER import seem to be very odd sometimes. Don't hesitate to correct them if the way history tells you that there hasn't been any or only a few changes since the import.</p>
+<p>A <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrack">highway=track</a> is a way mostly used for agricultural/forestry use. They are wide enough for a four-wheeled vehicle, otherwise it is most probably a <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a>. You almost never find such tracks in bigger towns but often in and near woods and farmland. Tracks are mostly unpaved, but they can also have an asphalt surface which doesn't change their classification in any way!</p>
+<p>In contrast a driveway (<a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dservice">highway=service</a>, <a href="http://wiki.openstreetmap.org/wiki/Tag:service%3Ddriveway">service=driveway</a>) is a way leading to a property. They are usually rather short and can be paved or unpaved.</p>
+<p>And a path, as already stated, is often too small for vehicles and usually forbids them. Paths are mostly for walking, bicycling and sometimes can be used by horses, too. In OSM they are used <a href="https://help.openstreetmap.org/questions/7015/tagging-public-footpaths-for-routing">very similar to footways</a> with only small differences.</p>
+<p>You may also want to look at the <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions#Default">default access restrictions</a>.</p>
+<p>The ways you linked are clearly tracks to me. Although the latter one could be a driveway on its first half but that's a matter of opinion I guess.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18107/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Nov '12, 06:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/18107/">
+                edited
+                <strong>02 Dec '12, 09:40</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18107">
+    
+        <a name="18125"></a>
+        <div class="comment" id="comment-18125">
+            <div id="post-18125-score" class="comment-score"></div>
+            <div class="comment-text"><p>You could add that "driveway" is for urban area (residential) and "track", as you said, is more in countryside area (rural).</p></div>
+            <div class="comment-info" id="comment-18125-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '12, 16:03)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+        <a name="18127"></a>
+        <div class="comment" id="comment-18127">
+            <div id="post-18127-score" class="comment-score">7</div>
+            <div class="comment-text"><p>There is nothing urban about driveways. Any house (or property) can have a driveway. There are just more of them in an urban setting, because there are more houses.</p></div>
+            <div class="comment-info" id="comment-18127-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '12, 17:52)</span>
+                <a class="comment-user userinfo" href="/users/2933/cartinus">cartinus</a>
+                
+            </div>
+        </div>
+    
+        <a name="18135"></a>
+        <div class="comment" id="comment-18135">
+            <div id="post-18135-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'd say as a 'rule of thumb' a track goes from some where to some where else (e.g. might have intersections with other tracks / paths ) whereas a driveway is more likely to only lead to a single destination.
+In that sense driveways are generally private to the owner of that destination, whereas tracks maybe available for general use.</p></div>
+            <div class="comment-info" id="comment-18135-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Dec '12, 10:11)</span>
+                <a class="comment-user userinfo" href="/users/3300/robbieonsea">robbieonsea</a>
+                
+            </div>
+        </div>
+    
+        <a name="18140"></a>
+        <div class="comment" id="comment-18140">
+            <div id="post-18140-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Path is not necessarily "too small" for vehicles; the width only works in the direction "too narrow can not be a track".</p></div>
+            <div class="comment-info" id="comment-18140-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Dec '12, 20:26)</span>
+                <a class="comment-user userinfo" href="/users/359/alv">alv</a>
+                
+            </div>
+        </div>
+    
+        <a name="18145"></a>
+        <div class="comment" id="comment-18145">
+            <div id="post-18145-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks alv, I updated my answer.</p></div>
+            <div class="comment-info" id="comment-18145-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Dec '12, 09:41)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18107" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18107-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="18205"></a>
+                    <div id="answer-container-18205" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18205-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18205/up/" rel="nofollow"> </a>
+<div id="post-18205-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-18205-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18205/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I cleaned up a lot of Tiger Data in my area, and decided after reading various definitions that almost invariably agricultural access to fields should be highway=track. I also changed the access' to houses in either rural or urban settings to highway=service, service=driveway. Unless there is an obvious right of way issue, I am also of the opinion that driveways do not needs an access=private tag.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18205/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Dec '12, 12:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5085ea3bf927efbe9f98b1ac9a0d6b3f?s=32&amp;d=identicon&amp;r=g" alt="RJCorazza's gravatar image" />
+    <p><a href="/users/4997/rjcorazza">RJCorazza</a><br/>
+    <span class="score" title="101 reputation points">101</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RJCorazza has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18205">
+    
+</div>
+<div id="comment-tools-18205" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18205-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/18103/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='6JwQaMUyevkzn0vPkbNajc983mVk1vmp' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18103/choosing-highwaytrack-vs-driveways-and-paths?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18103/choosing-highwaytrack-vs-driveways-and-paths?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/highway/"
+            class="tag-link-highway"
+            title="see questions tagged'highway'using tags"
+            rel="tag">highway</a> <span class="tag-number">&#215;163</span><br/>
+        
+        <a href="/tags/track/"
+            class="tag-link-track"
+            title="see questions tagged'track'using tags"
+            rel="tag">track</a> <span class="tag-number">&#215;112</span><br/>
+        
+        <a href="/tags/driveway/"
+            class="tag-link-driveway"
+            title="see questions tagged'driveway'using tags"
+            rel="tag">driveway</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/unpaved/"
+            class="tag-link-unpaved"
+            title="see questions tagged'unpaved'using tags"
+            rel="tag">unpaved</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 29, 2012, 10:21 p.m.">29 Nov '12, 22:21</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,688 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 5, 2012, 12:37 p.m.">05 Dec '12, 12:37</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/60779/how-to-map-tracks-with-reinforced-grass">How to map tracks with reinforced grass?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5509/if-ill-make-patch-for-rendering-keysurface-for-mapnik-will-someone-apply-it">[closed] If I&#39;ll make patch for rendering Key:surface for Mapnik will someone apply it?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6289/public-footpaths-on-farm-tracks">Public footpaths on farm tracks</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38676/can-tracks-be-in-a-citypopulated-area">Can tracks be in a city/populated area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/81115/how-should-these-minor-road-be-classified">How should these minor road be classified?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10223/unpaved-minor-secondary-road-or-track">Unpaved minor secondary road or track?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5503/are-there-any-plans-to-implement-keysurface-rendering-ever">[closed] Are there any plans to implement Key:surface rendering ever?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1271/highway-classification-for-side-road-from-roundabout-onto-primary-routes">Highway Classification for Side Road from Roundabout onto Primary Routes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1129/how-to-improve-track-presentation-via-osm-together-with-distance">How to improve track presentation via OSM together with distance?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/922/how-to-map-a-park-alley">How to map a park alley?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

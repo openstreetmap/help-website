@@ -1,0 +1,918 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Draw between 2 points along the road - OSM Help</title>
+        <meta name="description" content="Hi there! I have collected bus GPS data and I want to draw a route of that bus according to that GPS data on a map. I tried to use available services that provide Directions API. But there I can either choose car, bicycle or pedestrian as a travel mode, and those services try to avoid some places, w..." />
+        <meta name="keywords" content="directions,route,road" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/68688/draw-between-2-points-along-the-road" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/68688/draw-between-2-points-along-the-road?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mhjktoyuSGXB1MGJl7LhJTFoXjAPDte4' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/68688/draw-between-2-points-along-the-road">Draw between 2 points along the road</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-68688-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68688/up/" rel="nofollow"> </a>
+<div id="post-68688-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-68688-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68688/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/68688/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi there!</p>
+<p>I have collected bus GPS data and I want to draw a route of that bus according to that GPS data on a map. I tried to use available services that provide Directions API. But there I can either choose car, bicycle or pedestrian as a travel mode, and those services try to avoid some places, where the bus definitely goes, but it is either not allowed to driver there by car or the route under construction. Pedestrian type doesn't work for me because the services draw a route next to the road, but not over it. What I basically want is to draw a line on the road between multiple GPS points, but I don't want any "smart" functions that such services provide. </p>
+<p>Don't you have any suggestions how it can be done? E.g. get a pice of road where GPS coordinate point to.</p>
+<p>UPD:</p>
+<p>Here is the example how direction services draw a route and how it should be. Blue line is how the mapbox draws the route. Red line is where the actual route is located.</p>
+<p><img src="https://help.openstreetmap.org/upfiles/screenshot_XxVHH0q.png" alt="alt text"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/directions/" class="post-tag tag-link-directions"
+                                        title="see questions tagged 'directions'" rel="tag">directions</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/road/" class="post-tag tag-link-road"
+                                        title="see questions tagged 'road'" rel="tag">road</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Apr '19, 17:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/77c6e568f61b2067b0fe11ab760cac9f?s=32&amp;d=identicon&amp;r=g" alt="RokrVPV's gravatar image" />
+    <p><a href="/users/16506/rokrvpv">RokrVPV</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RokrVPV has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/68688/">
+                edited
+                <strong>07 Apr '19, 19:53</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-68688">
+    
+        <a name="68689"></a>
+        <div class="comment" id="comment-68689">
+            <div id="post-68689-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Sorry, it's not immediately clear what your end goal is here and how it involves OpenStreetMap.</p>
+
+<p>Are you trying to add a bus route to OSM and then create a map from that data that shows the route?</p>
+
+<p>Are you trying to find a router that will get you from A to B using public transport data?  That's unlikely to be OSM-based as although bus routes may be in OSM actual timetables won't be.</p></div>
+            <div class="comment-info" id="comment-68689-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '19, 17:27)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="68692"></a>
+        <div class="comment" id="comment-68692">
+            <div id="post-68692-score" class="comment-score"></div>
+            <div class="comment-text"><p>"Are you trying to add a bus route to OSM and then create a map from that data that shows the route?" - yes. </p>
+
+<p>What I have is GPS coordinates of a bus that traveled along its route. Now I want to use these coordinates to draw a bus route. Finally, I would like to have an encoded polyline of the route so that later I could use this polyline to show the route on a map. </p>
+
+<p>To achieve this, I tried several Directions API services like mapbox or graphhopper, but they don't always draw a route correctly, because some roads are not accessible by car. Instead, they try to navigate around such roads. I will upload picture to the post to show what I want.</p>
+
+<p>I believe that OSM has stored roads as a data. So what I am thinking about now is e.g. try to get a polyline of a part of the road by GPS coordinate and then glue these polylines together to get the whole route. Or maybe there is a way to force such Directions services to draw what I want. I also know that OSM has bus routes, but they contain partially old or wrong data so I can't use it.</p></div>
+            <div class="comment-info" id="comment-68692-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '19, 19:47)</span>
+                <a class="comment-user userinfo" href="/users/16506/rokrvpv">RokrVPV</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68688" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68688-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/68688/draw-between-2-points-along-the-road?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/68688/draw-between-2-points-along-the-road?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/68688/draw-between-2-points-along-the-road?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/68688/draw-between-2-points-along-the-road?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="68696"></a>
+                    <div id="answer-container-68696" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-68696-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68696/up/" rel="nofollow"> </a>
+<div id="post-68696-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-68696-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68696/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="RokrVPV has selected this answer as the correct answer"
+        href="/accept_answer/68696/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You have two options:</p>
+<ol>
+<li>Simply draw your GPX track onto a map. This can be done with standalone programs like those mentioned by Gys de Jongh or with QGIS, and alternatively with online services like UMap. The advantage is that this shows exactly the path you have recorded. The disadvantage is that it does not take the road network into account at all, so if you have some recording errors or missing points, your track will not follow the road nicely.</li>
+<li>Use a "track matching" software that finds the most likely route travelled by a vehicle when you have a GPS track as input. Popular routing engines like GraphHopper an OSRM offer this feature, but as you have already seen, when you use the standard routing profiles they will refuse to route over roads that are not allowed for cars. But if you install the software yourself then you have full control over the routing profile, and you could for example take the car profile and remove all the rules about "do not use a road that is only for buses" and so on. For example, in OSRM the code in <a href="https://github.com/Project-OSRM/osrm-backend/blob/master/profiles/car.lua#L82">https://github.com/Project-OSRM/osrm-backend/blob/master/profiles/car.lua#L82</a> means that everything with access=psv will not be considered; if you drop that line, the router will consider such roads as well. (You might need to make a few more changes than this to achive the desired result but it's a start). </li>
+</ol>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/68696/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Apr '19, 23:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-68696">
+    
+        <a name="68736"></a>
+        <div class="comment" id="comment-68736">
+            <div id="post-68736-score" class="comment-score"></div>
+            <div class="comment-text"><p>That is an option, thanks! I'll need to dig into it.</p></div>
+            <div class="comment-info" id="comment-68736-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Apr '19, 20:02)</span>
+                <a class="comment-user userinfo" href="/users/16506/rokrvpv">RokrVPV</a>
+                
+            </div>
+        </div>
+    
+        <a name="69036"></a>
+        <div class="comment" id="comment-69036">
+            <div id="post-69036-score" class="comment-score"></div>
+            <div class="comment-text"><p>Marking the answer as a correct. I was able to do that was suggested by <a href="https://help.openstreetmap.org/users/104/frederik-ramm"></a><a href="https://help.openstreetmap.org/users/104/frederik-ramm">@Frederik</a> in the 2nd point. The only problem I see now is that when I set overview=full for route service, the points are a bit shifted from their correct location and don't point to roads, but next to it. But I am able to construct a route if use geometry from each step by setting steps=true in the request.</p></div>
+            <div class="comment-info" id="comment-69036-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '19, 21:17)</span>
+                <a class="comment-user userinfo" href="/users/16506/rokrvpv">RokrVPV</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68696" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68696-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="68694"></a>
+                    <div id="answer-container-68694" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-68694-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68694/up/" rel="nofollow"> </a>
+<div id="post-68694-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-68694-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68694/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>(answering the points in the comment "What I have is GPS coordinates...")</p>
+<p>Once you've added a bus route to OSM you'll be able to create a map that shows that bus route on it.  The route will get added to OSM as a relation, and whatever you use to create a map will need to display that.  See for example <a href="https://www.openstreetmap.org/relation/332069">this example</a> on the OSM website.</p>
+<p>It doesn't make sense to expect a router (foot, car, or bicycle) to follow a bus route.</p>
+<p>Depending on what sort of "map" you're creating you'll need to do something different to display relation data.  I wrote <a href="https://www.openstreetmap.org/user/SomeoneElse/diary/38988">this diary entry</a> ages ago about doing it in a style similar to OSM's OSM Carto style.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/68694/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Apr '19, 21:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-68694">
+    
+</div>
+<div id="comment-tools-68694" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68694-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="68691"></a>
+                    <div id="answer-container-68691" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-68691-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68691/up/" rel="nofollow"> </a>
+<div id="post-68691-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-68691-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68691/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi RokrVPV,
+you can do that in BaseCamp <a href="https://www8.garmin.com/support/download_details.jsp?id=4435">https://www8.garmin.com/support/download_details.jsp?id=4435</a> or in QMapShack <a href="https://bitbucket.org/maproom/qmapshack/wiki/Home">https://bitbucket.org/maproom/qmapshack/wiki/Home</a> There you can draw whatever you want, or even just import your Gpx trace, and print your map. What you want is not possible in Openstreet map. Here buroutes must follow established roads and not Gpx traces. You can use your Gpx trace only as a guide to edit the bus route. If the roads are not present yet, you have to draw those first from an opensource. Bus routes are not for the faint of heart though : <a href="https://wiki.openstreetmap.org/wiki/Buses">https://wiki.openstreetmap.org/wiki/Buses</a></p>
+<p>Gys</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/68691/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Apr '19, 19:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5c3b258ebdc5943f1ab6008f146e7f7c?s=32&amp;d=identicon&amp;r=g" alt="Gys%20de%20Jongh's gravatar image" />
+    <p><a href="/users/8791/gys-de-jongh">Gys de Jongh</a><br/>
+    <span class="score" title="713 reputation points">713</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gys de Jongh has 5 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-68691">
+    
+        <a name="68735"></a>
+        <div class="comment" id="comment-68735">
+            <div id="post-68735-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks! I'll have a look at these tools.</p></div>
+            <div class="comment-info" id="comment-68735-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Apr '19, 19:59)</span>
+                <a class="comment-user userinfo" href="/users/16506/rokrvpv">RokrVPV</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68691" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68691-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/68688/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mhjktoyuSGXB1MGJl7LhJTFoXjAPDte4' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68688/draw-between-2-points-along-the-road?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68688/draw-between-2-points-along-the-road?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/road/"
+            class="tag-link-road"
+            title="see questions tagged'road'using tags"
+            rel="tag">road</a> <span class="tag-number">&#215;223</span><br/>
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/directions/"
+            class="tag-link-directions"
+            title="see questions tagged'directions'using tags"
+            rel="tag">directions</a> <span class="tag-number">&#215;41</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 7, 2019, 5:16 p.m.">07 Apr '19, 17:16</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,544 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 1, 2019, 9:18 p.m.">01 May '19, 21:18</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/86835/directions-route-error">Directions route error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66921/read-osm-file-to-access-direction-distance-and-landmarks">read osm file to access direction, distance and landmarks</a>
+        </p>
+        
+        <p>
+            <a href="/questions/71086/incorrect-route-walking-directions-send-me-long-way-round">Incorrect route: Walking directions send me long way round</a>
+        </p>
+        
+        <p>
+            <a href="/questions/78701/link-to-determinated-directions-routes">Link to determinated directions / routes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1083/tagging-seasonal-use-roads-questions-road-type-blockout-months-4x4">Tagging &quot;seasonal use roads&quot; (questions: road type, blockout months, 4x4)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/71148/unable-to-modify-road-direction-despite-successful-save">Unable to modify road direction despite successful save.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8821/problem-with-a-roundabout">Problem with a roundabout</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2365/how-to-mark-bad-road-condition">How to mark bad road condition?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2031/industrial-areas-road-tag">Industrial Areas - Road Tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2767/branching-roads">Branching Roads</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

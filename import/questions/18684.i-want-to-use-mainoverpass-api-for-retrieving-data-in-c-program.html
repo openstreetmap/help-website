@@ -1,0 +1,908 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>I want to use Main/Overpass API for retrieving data in c++ program. - OSM Help</title>
+        <meta name="description" content="I want my program to have the street&#39;s and building&#39;s data in xml format. But I have no idea how to start this project. I am new to using api&#39;s and reading about the api does not tell me how do I actually write api call in my c++ code and retrieve the data. What sources should I refer to write a sim..." />
+        <meta name="keywords" content="overpass,c++,newbie,tutorial,osm" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='EAdnkoGn0hOhK1jyV2eUgBSCTe8xubDy' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program">I want to use Main/Overpass API for retrieving data in c++ program.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-18684-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18684/up/" rel="nofollow"> </a>
+<div id="post-18684-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-18684-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18684/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/18684/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I want my program to have the street's and building's data in xml format.</p>
+<p>But I have no idea how to start this project. I am new to using api's and reading about the api does not tell me how do I <strong>actually write api call in my c++ code and retrieve the data.</strong>
+What sources should I refer to write a simple program to say :</p>
+<pre><code>                              "retrieve bounding box xml file in osm map"
+</code></pre>
+<p>All queries are on wiki page, but where to write this queries and required setup for starting with this api usage is evasive.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/c%252B%252B/" class="post-tag tag-link-c++"
+                                        title="see questions tagged 'c++'" rel="tag">c++</a>
+                                
+                                    <a href="/tags/newbie/" class="post-tag tag-link-newbie"
+                                        title="see questions tagged 'newbie'" rel="tag">newbie</a>
+                                
+                                    <a href="/tags/tutorial/" class="post-tag tag-link-tutorial"
+                                        title="see questions tagged 'tutorial'" rel="tag">tutorial</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Dec '12, 06:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bd411afe7563961a31610b5f4d40dfd3?s=32&amp;d=identicon&amp;r=g" alt="Anubha's gravatar image" />
+    <p><a href="/users/5247/anubha">Anubha</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Anubha has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/18684/">
+                edited
+                <strong>24 Dec '12, 06:27</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-18684">
+    
+        <a name="18691"></a>
+        <div class="comment" id="comment-18691">
+            <div id="post-18691-score" class="comment-score"></div>
+            <div class="comment-text"><p>Implementing the API call in your project is <em>very</em> programming/scripting language-specific and hasn't much to do with OSM.</p></div>
+            <div class="comment-info" id="comment-18691-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Dec '12, 11:57)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18684" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18684-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="18690"></a>
+                    <div id="answer-container-18690" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18690-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18690/up/" rel="nofollow"> </a>
+<div id="post-18690-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-18690-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18690/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Anubha has selected this answer as the correct answer"
+        href="/accept_answer/18690/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is a minimal working example in plain C/C++ with only minimal error checking and no response processing:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;cstdio&gt;
+#include &lt;arpa/inet.h&gt;
+#include &lt;sys/socket.h&gt;
+
+const std::string host  = "81.19.81.199"; // IP of overpass.osm.rambler.ru
+const int port          = 80;
+const std::string query = "GET /cgi/interpreter?data=node%5Bname%3DGielgen%5D%3Bout%3B HTTP/1.1\r\n"
+                          "Host: overpass.osm.rambler.ru\r\n"
+                          "User-Agent: SteveC\r\n"
+                          "Accept: */*\r\n"
+                          "Connection: close\r\n"
+                          "\r\n";
+
+int main(int argc, char* argv[]) {
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock == -1) {
+        perror("error opening socket"); return -1;
+    }
+
+    struct sockaddr_in sin;
+    sin.sin_port = htons(port);
+    sin.sin_addr.s_addr = inet_addr(host.c_str());
+    sin.sin_family = AF_INET;
+
+    if (connect(sock, (struct sockaddr *)&amp;sin, sizeof(sin)) == -1) {
+        perror("error connecting to host"); return -1;
+    }
+
+    const int query_len = query.length() + 1; // trailing '\0'
+    if (send(sock, query.c_str(), query_len, 0) != query_len) {
+        perror("error sending query"); return -1;
+    }
+
+    const int buf_size = 1024 * 1024;
+    while (true) {
+        std::vector&lt;char&gt; buf(buf_size, '\0');
+        const int recv_len = recv(sock, &amp;buf[0], buf_size - 1, 0);
+
+        if (recv_len == -1) {
+            perror("error receiving response"); return -1;
+        } else if (recv_len == 0) {
+            std::cout &lt;&lt; std::endl; break;
+        } else {
+            std::cout &lt;&lt; &amp;buf[0];
+        }
+    }
+
+    return 0;
+}
+</code></pre>
+<p>Example output:</p>
+<pre><code>HTTP/1.1 200 OK
+Server: nginx/1.0.9
+Date: Mon, 24 Dec 2012 11:45:34 GMT
+Content-Type: application/osm3s+xml
+Connection: close
+Content-Length: 1893
+Access-Control-Allow-Origin: *
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;osm version="0.6" generator="Overpass API"&gt;
+&lt;note&gt;The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.&lt;/note&gt;
+&lt;meta osm_base="2012-12-24T11:44:01Z"/&gt;
+
+  &lt;node id="371597317" lat="50.7412721" lon="7.1927120"&gt;
+    &lt;tag k="is_in" v="Bonn,Regierungsbezirk Köln,Nordrhein-Westfalen,Bundesrepublik Deutschland,Europe"/&gt;
+    &lt;tag k="name" v="Gielgen"/&gt;
+    &lt;tag k="place" v="suburb"/&gt;
+  &lt;/node&gt;
+
+[cropped]
+
+&lt;/osm&gt;
+</code></pre>
+<p>I strongly suggest using a third-party library for the network/HTTP code and you will probably also want to use a third-party library for parsing the XML/JSON/whatever response.</p>
+<p>A much simpler option is to use a scripting language like Python, Ruby, or - if you like camels - Perl.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18690/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Dec '12, 11:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18690">
+    
+        <a name="18692"></a>
+        <div class="comment" id="comment-18692">
+            <div id="post-18692-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thank you again (again as you replied in stackOverflow),
+I ran the code, and it worked, its first time I connected to an internet server. Will make project in which user will be able to ride a car in any part of world he/she wishes, buildings will be mostly random.</p></div>
+            <div class="comment-info" id="comment-18692-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Dec '12, 12:35)</span>
+                <a class="comment-user userinfo" href="/users/5247/anubha">Anubha</a>
+                
+            </div>
+        </div>
+    
+        <a name="18693"></a>
+        <div class="comment" id="comment-18693">
+            <div id="post-18693-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ah, I didn't remember your username :)</p></div>
+            <div class="comment-info" id="comment-18693-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Dec '12, 13:40)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18690" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18690-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="18685"></a>
+                    <div id="answer-container-18685" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18685-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18685/up/" rel="nofollow"> </a>
+<div id="post-18685-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-18685-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18685/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>An API call is done via HTTP, so your program needs to open a network connection. Libraries for C++ that do so are discussed for example <a href="http://stackoverflow.com/questions/1011339/how-do-you-make-a-http-request-with-c">here</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18685/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Dec '12, 07:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fcfdb0825826fd13d2ff0d83d58819c6?s=32&amp;d=identicon&amp;r=g" alt="Roland%20Olbricht's gravatar image" />
+    <p><a href="/users/3480/roland-olbricht">Roland Olbricht</a><br/>
+    <span class="score" title="6666 reputation points"><span class="">6.7k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Roland Olbricht has 40 accepted answers">36&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18685">
+    
+        <a name="18686"></a>
+        <div class="comment" id="comment-18686">
+            <div id="post-18686-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Also checkout <a href="http://wiki.openstreetmap.org/wiki/Osmium/Architecture#OSM_Files">file handling in Osmium</a>.</p></div>
+            <div class="comment-info" id="comment-18686-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Dec '12, 07:20)</span>
+                <a class="comment-user userinfo" href="/users/2933/cartinus">cartinus</a>
+                
+            </div>
+        </div>
+    
+        <a name="18687"></a>
+        <div class="comment" id="comment-18687">
+            <div id="post-18687-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks, any code samples with simple osm api calls would be really helpful.</p></div>
+            <div class="comment-info" id="comment-18687-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Dec '12, 08:14)</span>
+                <a class="comment-user userinfo" href="/users/5247/anubha">Anubha</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18685" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18685-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/18684/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='EAdnkoGn0hOhK1jyV2eUgBSCTe8xubDy' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/newbie/"
+            class="tag-link-newbie"
+            title="see questions tagged'newbie'using tags"
+            rel="tag">newbie</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/tutorial/"
+            class="tag-link-tutorial"
+            title="see questions tagged'tutorial'using tags"
+            rel="tag">tutorial</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/c%252B%252B/"
+            class="tag-link-c++"
+            title="see questions tagged'c++'using tags"
+            rel="tag">c++</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 24, 2012, 6:25 a.m.">24 Dec '12, 06:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,403 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 24, 2012, 1:40 p.m.">24 Dec '12, 13:40</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/25181/how-to-edit-the-map-with-android-for-beginnersnewbies">How to edit the map with android (for beginners/newbies)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34206/gathering-the-information-of-schools-with-overpass-api">gathering the information of schools - with overpass-api</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19336/get-city-borders-for-finland">Get city borders for Finland</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22996/how-can-i-get-overpass-api-to-just-display-my-objects-with-just-one-tag">How can I get Overpass-API to just display my objects with just one tag ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28251/interactive-tutorial-to-getting-started-editing-osm">Interactive tutorial to getting started editing OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34040/osmconvert-filter-gives-back-a-pure-non-sense-result">osmconvert -filter gives back a pure non-sense result</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7170/videos-for-new-contributors">Videos for new contributors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12893/dynamic-poi-using-openstreet-map">Dynamic POI using openstreet map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19419/my-query-to-retrieve-nodes-and-ways-is-not-returning-all-the-nodes">My query to retrieve nodes and ways is not returning all the nodes...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34214/osmconvert-gives-back-no-adress-city-street-and-housenumber-not-in-15000-result-records">osmconvert gives back no adress: city, street and housenumber - not in 15000 result-records</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

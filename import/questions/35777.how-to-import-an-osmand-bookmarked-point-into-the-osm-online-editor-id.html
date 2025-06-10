@@ -1,0 +1,840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to import an OsmAnd bookmarked point into the OSM online editor iD? - OSM Help</title>
+        <meta name="description" content="I travel and gather POIs using OsmAnd. What is the best way to transfer a point from OsmAnd to the OSM online editor? Extract from OsmAnd&#39;s favourites.gpx: &amp;lt;wpt lat=&quot;34.9948124&quot; lon=&quot;135.7850504&quot;&amp;gt; &amp;lt;name&amp;gt;Shimizu Temple&amp;lt;/name&amp;gt; &amp;lt;category&amp;gt;Others&amp;lt;/category&amp;gt; &amp;lt;/wpt&amp;gt;  Not..." />
+        <meta name="keywords" content="ideditor,potlatch2,editing,osmand,poi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/35777/how-to-import-an-osmand-bookmarked-point-into-the-osm-online-editor-id" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/35777/how-to-import-an-osmand-bookmarked-point-into-the-osm-online-editor-id?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='nRVf2oL610C2lwhDlBvYin2afdn34WbG' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/35777/how-to-import-an-osmand-bookmarked-point-into-the-osm-online-editor-id">How to import an OsmAnd bookmarked point into the OSM online editor iD?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-35777-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35777/up/" rel="nofollow"> </a>
+<div id="post-35777-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-35777-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35777/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/35777/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I travel and gather POIs using OsmAnd.</p>
+<p>What is the best way to transfer a point from OsmAnd to the <a href="http://www.openstreetmap.org/edit">OSM online editor</a>?</p>
+<p>Extract from OsmAnd's <code>favourites.gpx</code>:</p>
+<pre><code>&lt;wpt lat="34.9948124" lon="135.7850504"&gt;
+&lt;name&gt;Shimizu Temple&lt;/name&gt;
+&lt;category&gt;Others&lt;/category&gt;
+&lt;/wpt&gt;
+</code></pre>
+<p>Notes:</p>
+<ul>
+<li>I don't want to use OSM Tracker because switching apps is slow, and I like how OsmAnd keeps showing the map in the background even when I enter a description for the point.</li>
+<li>This question is similar to <a href="https://help.openstreetmap.org/questions/15799/how-to-reliably-pin-point-osmand-favourite-in-osm-editor">How to reliably pin point OsmAnd favourite in OSM editor?</a> but I don't want to use OSM Tracker, which is the accepted answer (and the only answer) there.</li>
+<li>I can't upload OsmAnd's <code>favourites.gpx</code> to <a href="http://www.openstreetmap.org/traces">GPS Traces</a> because the data is not a track, it is a point, which GPS Traces can't import.</li>
+</ul>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/potlatch2/" class="post-tag tag-link-potlatch2"
+                                        title="see questions tagged 'potlatch2'" rel="tag">potlatch2</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/osmand/" class="post-tag tag-link-osmand"
+                                        title="see questions tagged 'osmand'" rel="tag">osmand</a>
+                                
+                                    <a href="/tags/poi/" class="post-tag tag-link-poi"
+                                        title="see questions tagged 'poi'" rel="tag">poi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Aug '14, 08:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3af87f6b1d4d247d01ce3b73d918fc7?s=32&amp;d=identicon&amp;r=g" alt="Nicolas%20Raoul's gravatar image" />
+    <p><a href="/users/7970/nicolas-raoul">Nicolas Raoul</a><br/>
+    <span class="score" title="645 reputation points">645</span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="33 badges"><span class="bronze">&#9679;</span><span class="badgecount">33</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Nicolas Raoul has one accepted answer">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/35777/">
+                edited
+                <strong>15 Aug '14, 02:20</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-35777">
+    
+        <a name="35779"></a>
+        <div class="comment" id="comment-35779">
+            <div id="post-35779-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you already try to open the favorites.gpx in JOSM?</p></div>
+            <div class="comment-info" id="comment-35779-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Aug '14, 08:38)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="35782"></a>
+        <div class="comment" id="comment-35782">
+            <div id="post-35782-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/158/scai">@scai</a> I'm not sure how JOSM is relevant here?  It's a bit like saying to someone who says "I don't know how to do X on a Mac" "buy a PC" :-) .</p></div>
+            <div class="comment-info" id="comment-35782-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Aug '14, 11:05)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="35783"></a>
+        <div class="comment" id="comment-35783">
+            <div id="post-35783-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/387/someoneelse"></a><a href="/users/387/someoneelse">@SomeoneElse</a> I assumed he wanted to add the POIs to the OSM database. But I didn't see the <em>online</em> editor requirement.</p></div>
+            <div class="comment-info" id="comment-35783-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Aug '14, 12:00)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35777" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35777-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/35777/how-to-import-an-osmand-bookmarked-point-into-the-osm-online-editor-id?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/35777/how-to-import-an-osmand-bookmarked-point-into-the-osm-online-editor-id?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/35777/how-to-import-an-osmand-bookmarked-point-into-the-osm-online-editor-id?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/35777/how-to-import-an-osmand-bookmarked-point-into-the-osm-online-editor-id?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="35784"></a>
+                    <div id="answer-container-35784" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35784-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35784/up/" rel="nofollow"> </a>
+<div id="post-35784-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-35784-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35784/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Nicolas Raoul has selected this answer as the correct answer"
+        href="/accept_answer/35784/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Although you could upload the waypoint gpx file (with potentially some manual editing – see <a href="#35781">SomeoneElse's answer</a>),<br>
+you could <em>open the gpx file locally</em> (without uploading) from your device/computer inside your "OSM online editor" (both online editors, <a href="//wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Importing_.28GPS.2C_shapefiles.2C_etc..29">Potlatch 2</a> and <a href="/upfiles/load_gpx_in_iD.png">iD</a>, support loading waypoints from local gpx files, see the links). Of course the "offline" editor JOSM supports this too.</p>
+<p>A non-OSM-related prerequisite: Of course, before you can open the gpx file you need to transfer it from your device on which OsmAnd was running to the computer which you want to use for editing (via USB, Bluetooth, WLAN, adding a track to the gpx file and upload and download to/from the OSM traces server, …). If you use the device on which OsmAnd was running for editing too, then you need place the gpx file in some storage (e.g. SD card) which is accessible to all apps (OsmAnd and browser).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35784/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Aug '14, 14:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/35784/">
+                edited
+                <strong>14 Aug '14, 14:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35784">
+    
+</div>
+<div id="comment-tools-35784" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35784-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="35781"></a>
+                    <div id="answer-container-35781" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35781-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35781/up/" rel="nofollow"> </a>
+<div id="post-35781-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-35781-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35781/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can upload tracks containing waypoints to OSM, as long as they have one (fake) track point in them.  See the wiki <a href="https://wiki.openstreetmap.org/wiki/Upload_Waypoints">here</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35781/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Aug '14, 11:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/35781/">
+                edited
+                <strong>13 Aug '14, 12:34</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35781">
+    
+        <a name="35829"></a>
+        <div class="comment" id="comment-35829">
+            <div id="post-35829-score" class="comment-score"></div>
+            <div class="comment-text"><p>it just comes to my mind: does iD (the "online editor") support loading waypoints from such uploaded gpx files? As far as I know: no.</p></div>
+            <div class="comment-info" id="comment-35829-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '14, 13:56)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35781" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35781-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/35777/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='nRVf2oL610C2lwhDlBvYin2afdn34WbG' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/35777/how-to-import-an-osmand-bookmarked-point-into-the-osm-online-editor-id?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/35777/how-to-import-an-osmand-bookmarked-point-into-the-osm-online-editor-id?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/potlatch2/"
+            class="tag-link-potlatch2"
+            title="see questions tagged'potlatch2'using tags"
+            rel="tag">potlatch2</a> <span class="tag-number">&#215;210</span><br/>
+        
+        <a href="/tags/poi/"
+            class="tag-link-poi"
+            title="see questions tagged'poi'using tags"
+            rel="tag">poi</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/osmand/"
+            class="tag-link-osmand"
+            title="see questions tagged'osmand'using tags"
+            rel="tag">osmand</a> <span class="tag-number">&#215;100</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 13, 2014, 8:07 a.m.">13 Aug '14, 08:07</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,418 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 15, 2014, 2:20 a.m.">15 Aug '14, 02:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/39038/how-to-add-tags-in-id-and-potlatch-2-confused-by-not-recognized">How to add tags in iD and Potlatch 2? Confused by &quot;not recognized&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39904/how-can-i-import-a-osc-file-into-the-online-editor-id-to-edit-those">How can I import a OSC.-file  into the online editor ID to edit those?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5730/split-one-polygon-into-two-in-potlatch-2">Split One Polygon into Two in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3549/how-to-merge-nodes-in-potlatch-2">How to merge nodes in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4319/do-i-add-address-tags-to-the-poi-node-or-create-a-separate-node">Do I add address tags to the POI node or create a separate node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4609/can-i-delete-a-relation-in-potlatch2">Can I delete a relation in Potlatch2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2391/starting-potlatch2-from-the-gpx-traces-list">Starting Potlatch2 from the GPX traces list</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2221/is-there-a-way-to-resolve-conflicts-in-potlatch-2">Is there a way to resolve conflicts in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2933/is-there-a-good-workflow-to-change-a-bunch-of-street-ends-to-turning-circles-in-potlatch-12">Is there a good workflow to change a bunch of street ends to turning circles in Potlatch 1/2?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

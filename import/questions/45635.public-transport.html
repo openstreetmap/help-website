@@ -1,0 +1,872 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Public transport - OSM Help</title>
+        <meta name="description" content="I&#39;m starting to use OSM since few time ago, and I still don&#39;t know it well nor how to manage well apps that use OSM maps, like Osmand and Maps.me. So, I haven&#39;t found how to calculate routes by public transport (metro, bus, train...). I can calculate them by car, foot, or even bike; but not simply u..." />
+        <meta name="keywords" content="metro,train,public,transport,bus" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/45635/public-transport" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/45635/public-transport?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='8EQJKlNyAs2nI7atDzZZ86wNSI2vJ8eB' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/45635/public-transport">Public transport</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-45635-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45635/up/" rel="nofollow"> </a>
+<div id="post-45635-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-45635-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45635/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/45635/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm starting to use OSM since few time ago, and I still don't know it well nor how to manage well apps that use OSM maps, like Osmand and Maps.me. So, I haven't found how to calculate routes by public transport (metro, bus, train...). I can calculate them by car, foot, or even bike; but not simply using the most used medium of transport in developed cities arount the world: the metro.
+Since in Google Maps and Nokia Here public transport route and schedule calculation is perfectly visible I'm starting to suspect that perhaps in OSM is just impossible to do this searches. Am I right? and if yes, why? Public transport routes and schedules are public information, how can Google and Nokia integrate it in their maps but OSM can't? Is there any reason, perhaps technical, perhaps legal, I don't know, that impedes OSM to be a real alternative to Gmaps?</p>
+<p>Best regards.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/metro/" class="post-tag tag-link-metro"
+                                        title="see questions tagged 'metro'" rel="tag">metro</a>
+                                
+                                    <a href="/tags/train/" class="post-tag tag-link-train"
+                                        title="see questions tagged 'train'" rel="tag">train</a>
+                                
+                                    <a href="/tags/public/" class="post-tag tag-link-public"
+                                        title="see questions tagged 'public'" rel="tag">public</a>
+                                
+                                    <a href="/tags/transport/" class="post-tag tag-link-transport"
+                                        title="see questions tagged 'transport'" rel="tag">transport</a>
+                                
+                                    <a href="/tags/bus/" class="post-tag tag-link-bus"
+                                        title="see questions tagged 'bus'" rel="tag">bus</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Sep '15, 16:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/07d71cd2d0b83cff2ae000844d7377e9?s=32&amp;d=identicon&amp;r=g" alt="Cova's gravatar image" />
+    <p><a href="/users/11527/cova">Cova</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Cova has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-45635">
+    
+        <a name="45651"></a>
+        <div class="comment" id="comment-45651">
+            <div id="post-45651-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Please remember that this is not a discussion forum but a Q&amp;A site. Discussions about why something is the way it is and whether the world would be a better place if it were different are better suited to our mailing lists, see lists.openstreetmap.org.</p></div>
+            <div class="comment-info" id="comment-45651-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Sep '15, 08:19)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="71098"></a>
+        <div class="comment" id="comment-71098">
+            <div id="post-71098-score" class="comment-score"></div>
+            <div class="comment-text"><p>OsmAnd now supports public transport. See <a href="https://osmand.net/blog/guideline-pt">https://osmand.net/blog/guideline-pt</a> Please change your post to use the "public-transport" category instead of "public" and "transport".</p></div>
+            <div class="comment-info" id="comment-71098-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '19, 22:46)</span>
+                <a class="comment-user userinfo" href="/users/11404/ysangkok">ysangkok</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-45635" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45635-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/45635/public-transport?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/45635/public-transport?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/45635/public-transport?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/45635/public-transport?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="45636"></a>
+                    <div id="answer-container-45636" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-45636-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45636/up/" rel="nofollow"> </a>
+<div id="post-45636-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-45636-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45636/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Public transport planning requires timetable (schedule) information. </p>
+<p>OpenStreetMap does not collect such information, nor does it seek to. Such information is often protected by copyright or database rights, so we can't simply copy it from other sites (even if we wanted to) and then redistribute it under our open licence.</p>
+<p>Nor is it particularly practical to avoid the copyright restrictions by surveying it by hand - for example, the entire UK railway timetable changes significantly every year, with several other changes throughout the year. We prefer to map things that are reasonably permanent!</p>
+<p>In the case of Google, HERE etc., they come to agreements with the train/bus operators to use their data. Since Google doesn't seek to redistribute the raw data, it doesn't matter to them that it's not available under an open licence.</p>
+<p>However, there is, of course, nothing stopping people building apps/websites that use OSM data and also negotiate permission for train/bus schedules. Citymapper, for example, uses OSM data for some aspects of the app, but also offers timetable-based planning. Remember that openstreetmap<strong>.org</strong> is not meant to be "a real alternative to Gmaps" - rather, OpenStreetMap's data seeks to fuel an ecosystem of a thousand apps and websites which, combined, are much better than Google could ever be.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/45636/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Sep '15, 16:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/45636/">
+                edited
+                <strong>28 Sep '15, 16:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-45636">
+    
+        <a name="45638"></a>
+        <div class="comment" id="comment-45638">
+            <div id="post-45638-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks for your quick and detailed answer.</p>
+
+<p>I didn't know all those data were copyrighted; we, the taxpayers have paid them; those data are ours, or should be. Ok, letting apart how things should be and coming back to real world, and in order to be more usable by average users, who don't know a word about those independent apps/sites that could negotiate permissions, could OSM, if obtained said permission, use those data but, like Google, Here..., not redistribute them, or it would be incompatible with OSM rules and that's why third party apps/sites do that task? If it were possible I'd like to contact my city's public transport consortium and ask for said permission for a community driven project like OSM instead "working for free" for a private company and a closed source app like Citymapper.</p></div>
+            <div class="comment-info" id="comment-45638-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Sep '15, 17:10)</span>
+                <a class="comment-user userinfo" href="/users/11527/cova">Cova</a>
+                
+            </div>
+        </div>
+    
+        <a name="45640"></a>
+        <div class="comment" id="comment-45640">
+            <div id="post-45640-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Ultimately OSM <em>could</em> - if you really wanted to, you could come up with some way of storing it in the OSM data model. But I don't believe there's any appetite to do so among contributors. It might be better to start a parallel project - indeed, the founder of OSM, Steve Coast, once tried it (called 'Transiki').</p>
+
+<p>Don't be too downbeat about the likelihood of "average users" finding "independent apps/sites". Many of those independent apps are better known than OSM itself - e.g. those from companies like Mapquest, Foursquare, Apple... :)</p></div>
+            <div class="comment-info" id="comment-45640-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Sep '15, 18:05)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="45644"></a>
+        <div class="comment" id="comment-45644">
+            <div id="post-45644-score" class="comment-score"></div>
+            <div class="comment-text"><p>You could also take a look at <a href="http://blog.opencagedata.com/post/103405760558/open-geo-interview-series-mark-lester,">http://blog.opencagedata.com/post/103405760558/open-geo-interview-series-mark-lester,</a> which is an interview with someone who wants to bring the time tables as open data  (focus is on Asia).
+In The Netherlands, <a href="https://ndovloket.nl/">NDOV Loket</a> provides this type of information to everyone. So it might depend on the country you are living in whether this information is available for app-development or not.</p></div>
+            <div class="comment-info" id="comment-45644-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Sep '15, 19:52)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-45636" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45636-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="45650"></a>
+                    <div id="answer-container-45650" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-45650-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45650/up/" rel="nofollow"> </a>
+<div id="post-45650-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-45650-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45650/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OpenStreetMap does not include schedule information with the data, so it is not possible to plan public transport using only OpenStreetMap data.    It is not feasible to try to merge such a large amount of indirect temporal data into the geo data that OpenStreetMap is focused on.</p>
+<p>The closest alternate solution is <a href="http://www.opentripplanner.org/">OpenTripPlanner</a>, which combines OpenStreetMap data with GTFS public travel definitions if the locality has published on the <a href="http://www.gtfs-data-exchange.com/">GTFS Data Exchange</a>.   However it requires a large server and a bit of study to set up an OpenTripPlanner server.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/45650/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Sep '15, 00:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1dd5f61a81b99dd54ec6f33d96aa38b2?s=32&amp;d=identicon&amp;r=g" alt="Mike%20N's gravatar image" />
+    <p><a href="/users/21/mike-n">Mike N</a><br/>
+    <span class="score" title="2926 reputation points"><span class="">2.9k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="54 badges"><span class="bronze">&#9679;</span><span class="badgecount">54</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Mike N has 16 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-45650">
+    
+        <a name="66103"></a>
+        <div class="comment" id="comment-66103">
+            <div id="post-66103-score" class="comment-score"></div>
+            <div class="comment-text"><p>Google Maps does it quite nicely, but of course they have a huge different kind of resources to do it. Just was wondering the same couple of days ago, and found this conversation about it:
+<a href="https://github.com/osmandapp/Osmand/issues/4171">https://github.com/osmandapp/Osmand/issues/4171</a></p>
+
+<p>What would be also very useful, just able to collect all public transportation (PT) buss/tram/metro-lines in some settable radius of stops (eg 200 m) of place POI-A, then save them for comparing. Then search the same list of buss/tran/metro-lines from POI-B. Then see a list of matches and store them to memory as a favorite. Then do the same to between POI-B and POI-C. 
+(about the radius: <a href="https://help.openstreetmap.org/questions/59993/search-for-public-transit-points-transit-lines-around-a-given-set-of-co-ordinates">https://help.openstreetmap.org/questions/59993/search-for-public-transit-points-transit-lines-around-a-given-set-of-co-ordinates</a>)</p>
+
+<p>Manually routing in a city would be more easily then although still one would need to seek time scheduler information elsewhere.</p></div>
+            <div class="comment-info" id="comment-66103-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Sep '18, 12:38)</span>
+                <a class="comment-user userinfo" href="/users/15730/zimon">zimon</a>
+                
+            </div>
+        </div>
+    
+        <a name="71099"></a>
+        <div class="comment" id="comment-71099">
+            <div id="post-71099-score" class="comment-score"></div>
+            <div class="comment-text"><p>Public transport planning in OsmAnd has shipped.</p></div>
+            <div class="comment-info" id="comment-71099-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '19, 22:46)</span>
+                <a class="comment-user userinfo" href="/users/11404/ysangkok">ysangkok</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-45650" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45650-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/45635/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='8EQJKlNyAs2nI7atDzZZ86wNSI2vJ8eB' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45635/public-transport?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45635/public-transport?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/bus/"
+            class="tag-link-bus"
+            title="see questions tagged'bus'using tags"
+            rel="tag">bus</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/public/"
+            class="tag-link-public"
+            title="see questions tagged'public'using tags"
+            rel="tag">public</a> <span class="tag-number">&#215;17</span><br/>
+        
+        <a href="/tags/transport/"
+            class="tag-link-transport"
+            title="see questions tagged'transport'using tags"
+            rel="tag">transport</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/metro/"
+            class="tag-link-metro"
+            title="see questions tagged'metro'using tags"
+            rel="tag">metro</a> <span class="tag-number">&#215;12</span><br/>
+        
+        <a href="/tags/train/"
+            class="tag-link-train"
+            title="see questions tagged'train'using tags"
+            rel="tag">train</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 28, 2015, 4 p.m.">28 Sep '15, 16:00</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,862 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 10, 2019, 10:47 p.m.">10 Oct '19, 22:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/6007/how-to-map-bus-routes">How to map bus routes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43729/transport-layer-not-showing-lettered-bus-numbers">Transport Layer - not showing lettered bus numbers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65794/how-to-add-public-transports-data-and-test-them-before-submit">How to add public transports data and test them before submit?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7015/tagging-public-footpaths-for-routing">Tagging public footpaths for routing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6861/can-i-use-openstreetmap-to-make-a-town-transit-map">Can I use OpenStreetMap to make a town transit map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8598/how-to-tag-public-baths">How to tag public baths?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9685/how-can-i-set-the-color-tags-of-all-sections-of-a-bus-route">How can I set the color tags of all sections of a bus route ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9625/how-long-does-it-take-to-see-bus-routes-in-osm-public-transport">How long does it take to see bus routes in OSM Public Transport ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9775/how-can-i-set-up-a-public-transport-route_master-in-potlatch-2">How can I set up a public transport route_master in Potlatch 2 ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6289/public-footpaths-on-farm-tracks">Public footpaths on farm tracks</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

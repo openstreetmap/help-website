@@ -1,0 +1,857 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Jagged geometry after OSM update with Osmosis and Osm2pgsql - OSM Help</title>
+        <meta name="description" content="In my previous question https://help.openstreetmap.org/questions/66092, I asked for help concerning why edited features were missing after applying a daily changefile to my OSM postgis dataset. It was determined that I used the flat nodes option upon initial planet.pbf import to postgres (--flat-nod..." />
+        <meta name="keywords" content="changeset,postgresql,osm2pgsql,osmosis,postgis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/66194/jagged-geometry-after-osm-update-with-osmosis-and-osm2pgsql" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/66194/jagged-geometry-after-osm-update-with-osmosis-and-osm2pgsql?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='5lYsPxf8dNRoEw6Xh3bAWSDzvMTDvZz9' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/66194/jagged-geometry-after-osm-update-with-osmosis-and-osm2pgsql">Jagged geometry after OSM update with Osmosis and Osm2pgsql</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-66194-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66194/up/" rel="nofollow"> </a>
+<div id="post-66194-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-66194-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66194/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/66194/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>In my previous question <a href="https://help.openstreetmap.org/questions/66092,">https://help.openstreetmap.org/questions/66092,</a> I asked for help concerning why edited features were missing after applying a daily changefile to my OSM postgis dataset. It was determined that I used the flat nodes option upon initial planet.pbf import to postgres (--flat-nodes D:\nodes.cache), and this option was also required in the osm2pgsql --append command.</p>
+<p>I was able to successfully append a daily changefile to my database using the flat nodes option in the append command. However, after viewing the data through a localhost Geoserver service, all of the database geometry is corrupted. Specifically, what were once smooth curves in the osm_line layer are now jagged and blocky. Polygons are incorrectly shaped as well. Rectangular building footprints are now often triangular. It looks like some sort of generalization process is happening to the nodes.</p>
+<p>Graphical examples:</p>
+<p>Lines - <a href="https://imgur.com/YJeDrMg">https://imgur.com/YJeDrMg</a><br>
+Red is the original linework (before the append command). Thin purple is what the osm_line layer looks like after the append command.</p>
+<p>Polygons - <a href="https://imgur.com/fXtftjk">https://imgur.com/fXtftjk</a><br>
+Blue is the original linework (before append). Thin blue is what osm_polygon looks like after the append command.</p>
+<p>Here are my commands used:</p>
+<p>1) Initial planet import<br>
+osm2pgsql -c -d planet -U postgres -W -H localhost -S default.style c:\osm\planet.pbf -E 4326 -C 8000 -s --flat-nodes D:\osm_updates\nodes.cache --number-processes 6</p>
+<p>2) Osmosis pull changefile based on local db state id  <br>
+osmosis --read-replication-interval workingDirectory=d:\osm_updates --simplify-change --write-xml-change d:\osm_updates\changes.osc.gz</p>
+<p>3) Osm2pgql append changefile to local postgres db<br>
+osm2pgsql --append d:\osm_updates\changes.osc.gz -d planet -U postgres -S default.style -E 4326 -C 8000 --slim --flat-nodes d:\osm_updates\nodes.cache --number-processes 6</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/changeset/" class="post-tag tag-link-changeset"
+                                        title="see questions tagged 'changeset'" rel="tag">changeset</a>
+                                
+                                    <a href="/tags/postgresql/" class="post-tag tag-link-postgresql"
+                                        title="see questions tagged 'postgresql'" rel="tag">postgresql</a>
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                                    <a href="/tags/postgis/" class="post-tag tag-link-postgis"
+                                        title="see questions tagged 'postgis'" rel="tag">postgis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Oct '18, 18:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bbd0e184c8bbe03544aefb4e57ac5ccd?s=32&amp;d=identicon&amp;r=g" alt="mykol404's gravatar image" />
+    <p><a href="/users/15726/mykol404">mykol404</a><br/>
+    <span class="score" title="36 reputation points">36</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mykol404 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-66194">
+    
+        <a name="66195"></a>
+        <div class="comment" id="comment-66195">
+            <div id="post-66195-score" class="comment-score"></div>
+            <div class="comment-text"><p>This looks interesting. Can you tell us which version of osm2pgsql and which versions of PostgreSQL/PostGIS you are using? I am not sure if it is going to be relevant but someone who wants to debug this would likely want to use the same versions. Also, are you sure that between the original import and the update, you have not updated osm2pgsql, postgres, postgis, or the GEOS library on your system? Again, this would not necessarily be a problem but it could be.</p></div>
+            <div class="comment-info" id="comment-66195-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Oct '18, 21:38)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="66196"></a>
+        <div class="comment" id="comment-66196">
+            <div id="post-66196-score" class="comment-score"></div>
+            <div class="comment-text"><p>What if you look at the actual coordinates of an affected feature through a database IDE like DBeaver? Does it indeed show simplication for e.g. for a building now displayed as triangle. In DBeaver you can easily view this information by opening the table and looking at the "way" column. You can even copy the contents to some text editor to view the full coordinate info.</p></div>
+            <div class="comment-info" id="comment-66196-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Oct '18, 21:57)</span>
+                <a class="comment-user userinfo" href="/users/9580/mboeringa">mboeringa</a>
+                
+            </div>
+        </div>
+    
+        <a name="66197"></a>
+        <div class="comment" id="comment-66197">
+            <div id="post-66197-score" class="comment-score"></div>
+            <div class="comment-text"><p>I had a suspicion that there might be a flatnode precision issue with <code>-E 4326</code> which is not widely used, but I ran an import followed by an update using the same setup as you (albeit for a small area) and I saw no problems. This was using the latest osm2pgsql from github. My theory would also not explain how in your setup <em>all</em> nodes seem to be affected by an update, not only those whose coordinates have actually changed.</p></div>
+            <div class="comment-info" id="comment-66197-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Oct '18, 22:14)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="66224"></a>
+        <div class="comment" id="comment-66224">
+            <div id="post-66224-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am running the latest version of osm2pgsql (0.96.0).<br>
+PostgreSQL version 10.4, and PostGIS 2.4.4
+Not sure what the GEOS library is.</p></div>
+            <div class="comment-info" id="comment-66224-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Oct '18, 18:39)</span>
+                <a class="comment-user userinfo" href="/users/15726/mykol404">mykol404</a>
+                
+            </div>
+        </div>
+    
+        <a name="66225"></a>
+        <div class="comment" id="comment-66225">
+            <div id="post-66225-score" class="comment-score"></div>
+            <div class="comment-text"><p>Have you looked at the actual coordinates of affected features at the database level as I suggested? This is crucial. E.g. if the buildings now having become triangular in display, turn out to be unaffected in the database, than the problem is not with osm2pgsql, osmosis or your append workflow, but can solely be in the Geoserver service.</p></div>
+            <div class="comment-info" id="comment-66225-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Oct '18, 19:00)</span>
+                <a class="comment-user userinfo" href="/users/9580/mboeringa">mboeringa</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-66194" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66194-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/66194/jagged-geometry-after-osm-update-with-osmosis-and-osm2pgsql?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/66194/jagged-geometry-after-osm-update-with-osmosis-and-osm2pgsql?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/66194/jagged-geometry-after-osm-update-with-osmosis-and-osm2pgsql?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/66194/jagged-geometry-after-osm-update-with-osmosis-and-osm2pgsql?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="66327"></a>
+                    <div id="answer-container-66327" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-66327-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66327/up/" rel="nofollow"> </a>
+<div id="post-66327-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-66327-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66327/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="mykol404 has selected this answer as the correct answer"
+        href="/accept_answer/66327/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Good you managed to solve your issues. </p>
+<p>As to DBeaver: yes, it takes a little bit of time to get used to, however, once you have used it a bit longer, there is much to like about the application. I have also found the developer very responsive and pro-active regarding bug reports and enhancement suggestions. At least it is a much better application than pgAdmin3. I haven't yet looked at pgAdmin4, so can't compare them yet.</p>
+<p>As to coordinate read-out in DBeaver, simply switch to Data view and select the way column and a record, then choose "Copy" from the right-click context menu. You can subsequently paste in Notepad, as I did in this screenshot.</p>
+<p><img src="https://help.openstreetmap.org/upfiles/DBeaver.jpg" alt="alt text"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/66327/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Oct '18, 14:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc8a1ef54d3e25744ee52d1ad1459a81?s=32&amp;d=identicon&amp;r=g" alt="mboeringa's gravatar image" />
+    <p><a href="/users/9580/mboeringa">mboeringa</a><br/>
+    <span class="score" title="1542 reputation points"><span class="">1.5k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mboeringa has 4 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/66327/">
+                edited
+                <strong>13 Oct '18, 14:47</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-66327">
+    
+</div>
+<div id="comment-tools-66327" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66327-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="66321"></a>
+                    <div id="answer-container-66321" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-66321-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66321/up/" rel="nofollow"> </a>
+<div id="post-66321-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-66321-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66321/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thanks for the help everyone.  It ended up being duplicate Java environment variables in Windows causing conflict for Geoserver to serve out the data.  I guess it was jumping the math around when calling upon Geoserver to feed the data?  Who knows.</p>
+<p>I tried DBeaver, as suggested by a member.  I was able to query a feature but couldn't figure out how to view it or export the coords in this utility. </p>
+<p>I then came across a release note for PostgreSQL's pgAdmin4 database management console.  They came out with a new version in September that allows you to directly view geometric features through the PostGIS extension, displaying the queried feature in a map window (overlaid on OSM, too!).  </p>
+<p>I jumped to a given jagged road or triangular building and they were fine!  </p>
+<p><img src="https://help.openstreetmap.org/upfiles/image_(1).png" alt="alt text"></p>
+<p>This is when we learned that Geoserver was likely the culprit.  Looks like it was two conflicting Java path variables (not sure how that happened, but other people share the machine).  </p>
+<p>Thanks for everyone's help!  Cheers</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/66321/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Oct '18, 20:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bbd0e184c8bbe03544aefb4e57ac5ccd?s=32&amp;d=identicon&amp;r=g" alt="mykol404's gravatar image" />
+    <p><a href="/users/15726/mykol404">mykol404</a><br/>
+    <span class="score" title="36 reputation points">36</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mykol404 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/66321/">
+                edited
+                <strong>12 Oct '18, 20:21</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-66321">
+    
+</div>
+<div id="comment-tools-66321" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66321-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/66194/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='5lYsPxf8dNRoEw6Xh3bAWSDzvMTDvZz9' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/66194/jagged-geometry-after-osm-update-with-osmosis-and-osm2pgsql?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/66194/jagged-geometry-after-osm-update-with-osmosis-and-osm2pgsql?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/postgresql/"
+            class="tag-link-postgresql"
+            title="see questions tagged'postgresql'using tags"
+            rel="tag">postgresql</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/postgis/"
+            class="tag-link-postgis"
+            title="see questions tagged'postgis'using tags"
+            rel="tag">postgis</a> <span class="tag-number">&#215;134</span><br/>
+        
+        <a href="/tags/changeset/"
+            class="tag-link-changeset"
+            title="see questions tagged'changeset'using tags"
+            rel="tag">changeset</a> <span class="tag-number">&#215;127</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 6, 2018, 6:54 p.m.">06 Oct '18, 18:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,917 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 13, 2018, 2:47 p.m.">13 Oct '18, 14:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/63095/how-does-osm2pgsql-append-flag-work-for-updates">How does OSM2PGSQL append flag work for updates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66092/osm-updates-with-osmosis-osm2pgsql-resulting-in-missing-features">OSM updates with Osmosis -&gt; Osm2Pgsql resulting in missing features</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29549/which-schematools-to-use">which schema/tools to use</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19904/merging-osm-files-with-osmosis-and-import-to-postgres-with-osm2pgsql">Merging OSM files with OSMOSIS and import to Postgres with OSM2PGSQL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21687/import-points-only-with-osm2pgsql">Import Points only with osm2pgsql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24766/unable-to-write-osm-data-into-database">Unable to write osm data into database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed">Why is my import of planet-latest.osm KILLED?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10677/setting-postgis-as-a-datasource">Setting PostGIS as a datasource</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16695/osm2pgsql-doesnt-work-with-hstore-flag-if-hstore-extension-is-not-loaded">osm2pgsql doesn&#39;t work with --hstore flag if hstore extension is not loaded</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13124/how-to-find-the-polygon">How to find the polygon?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

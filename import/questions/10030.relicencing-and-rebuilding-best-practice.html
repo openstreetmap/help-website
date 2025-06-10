@@ -1,0 +1,927 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>relicencing and rebuilding : best practice? - OSM Help</title>
+        <meta name="description" content="OK, so tools like BadMap show me a heap of data which will be affected/deleted in my area when the new licence takes effect in a couple of months. What do I do about it? These are streets I know and ride my bike down regularly I don&#39;t feel like I have to go and &#39;survey&#39; them with a GPS, I know they ..." />
+        <meta name="keywords" content="licence-change,licence,license" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/10030/relicencing-and-rebuilding-best-practice" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/10030/relicencing-and-rebuilding-best-practice?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gxESTygOKBPpKhBKyEGhD2EcNEVbB1Sa' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/10030/relicencing-and-rebuilding-best-practice">relicencing and rebuilding : best practice?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-10030-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10030/up/" rel="nofollow"> </a>
+<div id="post-10030-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-10030-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10030/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/10030/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>OK, so tools like BadMap show me a heap of data which will be affected/deleted in my area when the new licence takes effect in a couple of months. What do I do about it?</p>
+<p>These are streets I know and ride my bike down regularly I don't feel like I have to go and 'survey' them with a GPS, I know they exist, I know their names. Do I simply delete the existing 'bad' ways and draw in my own 'good' ways?</p>
+<p>What about a way that was created by a decliner, but since edited by accepters, am I able to copy the information provided by accepters to my new way?</p>
+<p>I'd really appreciate a bit of a step-by-step guide to the best/most efficient ways of tackling the repair job post April 12.</p>
+<p>--edit--</p>
+<p>Actually, I've just learned about the <a href="http://fosm.org">fosm.org</a> fork (slow, I know!), where current data will still be viewable.
+So, if it's CC-A-SA, and I go and get information from it, and I attribute the source in my changeset, is that not OK?
+What if I only copy data added by 'accepters' and ignore that made by 'decliners'? Data that should be preserved, but would be 'lost' because it built on the work of a 'decliner'?</p>
+<p>I struggle to understand the intricacies, I can't be the only one. Someone needs to provide some clear direction here.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/licence-change/" class="post-tag tag-link-licence-change"
+                                        title="see questions tagged 'licence-change'" rel="tag">licence-change</a>
+                                
+                                    <a href="/tags/licence/" class="post-tag tag-link-licence"
+                                        title="see questions tagged 'licence'" rel="tag">licence</a>
+                                
+                                    <a href="/tags/license/" class="post-tag tag-link-license"
+                                        title="see questions tagged 'license'" rel="tag">license</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Jan '12, 23:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e995b919df1004dfbfaf4b7e944e9fcf?s=32&amp;d=identicon&amp;r=g" alt="woowoowoo's gravatar image" />
+    <p><a href="/users/2313/woowoowoo">woowoowoo</a><br/>
+    <span class="score" title="190 reputation points">190</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="woowoowoo has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/10030/">
+                edited
+                <strong>18 Jan '12, 04:42</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-10030">
+    
+</div>
+<div id="comment-tools-10030" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10030-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/10030/relicencing-and-rebuilding-best-practice?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/10030/relicencing-and-rebuilding-best-practice?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/10030/relicencing-and-rebuilding-best-practice?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/10030/relicencing-and-rebuilding-best-practice?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="10042"></a>
+                    <div id="answer-container-10042" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-10042-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10042/up/" rel="nofollow"> </a>
+<div id="post-10042-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-10042-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10042/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>First of all, you have to understand that the administrators will remove data from Odbl/Contributor Terms decliners and you cannot re-introduce them afterwards yourself. Second, there is a wiki page about remapping the data here : <a href="http://wiki.openstreetmap.org/wiki/Remapping">http://wiki.openstreetmap.org/wiki/Remapping</a></p>
+<p>&gt; Do I simply delete the existing 'bad' ways and draw in my own 'good' ways?<br>
+If you know them and use an appropriate source (like Bing imagery) for the position, then yes. But you cannot reuse the previous shapes, positions or information coming from decliners.</p>
+<p>&gt; am I able to copy the information provided by accepters to my new way ?<br>
+yes</p>
+<p>&gt; FOSM : I go and get information from it, and I attribute the source in my changeset, is that not OK?<br>
+No. See the first point above.</p>
+<p>&gt; FOSM : What if I only copy data added by 'accepters' and ignore that made by 'decliners'?<br>
+I don't know the details about FOSM excepted that it is a fork project going ahead with the previous license cc-by-sa. At the moment, OSM contributions are done under both licenses Odbl and cc-by-sa. That's why OSM updates are mirrored in FOSM but this should end-up after the deadline of April. Also the FOSM contributors do not have to "accept" or "decline" Odbl/CT's, so we cannot copy data from FOSM back to OSM.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/10042/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jan '12, 09:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0e92f2d89853fd4e04c4b40a921e519b?s=32&amp;d=identicon&amp;r=g" alt="Pieren's gravatar image" />
+    <p><a href="/users/87/pieren">Pieren</a><br/>
+    <span class="score" title="9847 reputation points"><span class="">9.8k</span></span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="157 badges"><span class="bronze">&#9679;</span><span class="badgecount">157</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Pieren has 34 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-10042">
+    
+        <a name="10044"></a>
+        <div class="comment" id="comment-10044">
+            <div id="post-10044-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, thanks - very helpful - exactly what I was looking for. Strange that my searching didn't turn it up!</p></div>
+            <div class="comment-info" id="comment-10044-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '12, 10:34)</span>
+                <a class="comment-user userinfo" href="/users/2313/woowoowoo">woowoowoo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-10042" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10042-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="10045"></a>
+                    <div id="answer-container-10045" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-10045-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10045/up/" rel="nofollow"> </a>
+<div id="post-10045-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-10045-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10045/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>From what I know the main reason to remove data contributed by users who did not agree to odbl/ct is not the licence, but the CT.<br>
+CT generally say that the contributor gives osmf licence to use the data and publish it under any free licence osfm sees fit. 
+ODBL is a licence that specifies how the data can be used. It can be changed (to another free licence) without the need for all CT users specifically agreeing - vote of 2/3 majority required. </p>
+<p>Whether you can or cannot use the old (CC-BY-SA licenced) OSM data is a different, more general question - Can you use any CC-BY-SA data as a source? </p>
+<p>CC-BY-SA does not protect the database itself (that is the reason for ODBL). What is protected by it is the graphical representation. The BY part of the licence is easily fulfilled by attributing the source,  SA excludes some use cases ad therefore makes CC-BY-SA incompatible as a source. That means you cannot directly use the graphical representation (copyrightable, licenced under CC-BY-SA). </p>
+<p>Yet another question is, whether or not you can use the data ("a road goes prom place A to place B, let's transfer that information"). That depends on the jurisdiction and would require more complex analysis...</p>
+<p><strong>Short summary:</strong> What prevents you from using that data is mostly likely not copyright or any other law, but OSM's super careful policy regarding data use.<br>
+The important thing about any licence is that it allows something, not restricts it. If there was no licence, no one could use that data (with current IP law in force)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/10045/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jan '12, 11:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/15c1efc9ebb466f69907a3e85693e739?s=32&amp;d=identicon&amp;r=g" alt="LM_1's gravatar image" />
+    <p><a href="/users/1619/lm_1">LM_1</a><br/>
+    <span class="score" title="3287 reputation points"><span class="">3.3k</span></span><span title="33 badges"><span class="badge1">&#9679;</span><span class="badgecount">33</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="88 badges"><span class="bronze">&#9679;</span><span class="badgecount">88</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="LM_1 has 7 accepted answers">10&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/10045/">
+                edited
+                <strong>18 Jan '12, 13:38</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-10045">
+    
+        <a name="10047"></a>
+        <div class="comment" id="comment-10047">
+            <div id="post-10047-score" class="comment-score"></div>
+            <div class="comment-text"><p>"without the need for CT users specifically agreeing." This is not true. Any odbl/ct license change requires an agreement of the OSM foundation and 2/3 majority vote of the active contributors (section 3 of CT's). The main difference with the current situation is that if the change is accepted, all data is migrated to the new license even for those contributors who refused the change.</p></div>
+            <div class="comment-info" id="comment-10047-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '12, 12:16)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+        <a name="10048"></a>
+        <div class="comment" id="comment-10048">
+            <div id="post-10048-score" class="comment-score"></div>
+            <div class="comment-text"><p>That is what I meant. If 2/3 active mappers agree then all contributions (non-active, 1/3 of active) will be re-licensed.  Agreement of any specific user is not required (unlike now).</p></div>
+            <div class="comment-info" id="comment-10048-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '12, 13:31)</span>
+                <a class="comment-user userinfo" href="/users/1619/lm_1">LM_1</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-10045" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10045-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="10095"></a>
+                    <div id="answer-container-10095" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-10095-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10095/up/" rel="nofollow"> </a>
+<div id="post-10095-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-10095-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10095/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Sorry for highjacking this question with an "answer", which is merely a follow-up question.</p>
+<p>I am a little shocked, that the fact, that much info might be deleted in several months, is not very well made clear on the main page. In fact, I heard about that for the first time now. </p>
+<p>Will there be a central effort to contact "decliners"? Or should the local community do that?
+What if there is no local community? I am mapping in Georgia, and we are first of all only a small bunch, and second, prefer to add new map features instead of putting much effort into re-mapping big parts of the country.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/10095/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Jan '12, 10:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/139902838ec4406143a7d9f286419a52?s=32&amp;d=identicon&amp;r=g" alt="moszkva%20ter's gravatar image" />
+    <p><a href="/users/1933/moszkva-ter">moszkva ter</a><br/>
+    <span class="score" title="2125 reputation points"><span class="">2.1k</span></span><span title="22 badges"><span class="badge1">&#9679;</span><span class="badgecount">22</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="60 badges"><span class="bronze">&#9679;</span><span class="badgecount">60</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="moszkva ter has 8 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-10095">
+    
+        <a name="10101"></a>
+        <div class="comment" id="comment-10101">
+            <div id="post-10101-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think the effort to contact decliners and an action plan is provided on the remapping page: <a href="http://wiki.openstreetmap.org/wiki/Remapping">http://wiki.openstreetmap.org/wiki/Remapping</a> however, it could be more streamlined.</p></div>
+            <div class="comment-info" id="comment-10101-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jan '12, 10:58)</span>
+                <a class="comment-user userinfo" href="/users/2313/woowoowoo">woowoowoo</a>
+                
+            </div>
+        </div>
+    
+        <a name="10103"></a>
+        <div class="comment" id="comment-10103">
+            <div id="post-10103-score" class="comment-score"></div>
+            <div class="comment-text"><p>Re who/what/when/how, most of the answers to that are on the <a href="http://wiki.openstreetmap.org/wiki/Remapping">http://wiki.openstreetmap.org/wiki/Remapping</a> page.  Mappers who have not yet accepted the CTs will have had emails sent to the address that they have registered at OSM, but that may not still be valid of course.  Other people have tried to track them down via other means, such as social media.</p>
+
+<p>I'd be tempted to start by contacting the rest of the local community and using the tools on the Remapping page to see who the priority mappers to contact are and see what may be lost.</p></div>
+            <div class="comment-info" id="comment-10103-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jan '12, 11:12)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-10095" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10095-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/10030/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gxESTygOKBPpKhBKyEGhD2EcNEVbB1Sa' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/10030/relicencing-and-rebuilding-best-practice?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/10030/relicencing-and-rebuilding-best-practice?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/license/"
+            class="tag-link-license"
+            title="see questions tagged'license'using tags"
+            rel="tag">license</a> <span class="tag-number">&#215;155</span><br/>
+        
+        <a href="/tags/licence/"
+            class="tag-link-licence"
+            title="see questions tagged'licence'using tags"
+            rel="tag">licence</a> <span class="tag-number">&#215;33</span><br/>
+        
+        <a href="/tags/licence-change/"
+            class="tag-link-licence-change"
+            title="see questions tagged'licence-change'using tags"
+            rel="tag">licence-change</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 17, 2012, 11:48 p.m.">17 Jan '12, 23:48</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,112 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 20, 2012, 11:52 a.m.">20 Jan '12, 11:52</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/26246/licensing-issues-on-creating-hypothetical-roads">Licensing issues on creating hypothetical roads</a>
+        </p>
+        
+        <p>
+            <a href="/questions/663/what-effects-will-the-license-change-have">What effects will the license change have?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1149/can-i-contribute-the-same-data-to-non-osm-mapping-projects">Can I contribute the same data to non-OSM mapping projects?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59890/is-the-open-government-licence-vancouver-compatible-with-osm">Is the &quot;Open Government Licence – Vancouver&quot; compatible with OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/223/who-do-i-ask-for-permission-to-use-osm-maps">Who do I ask for permission to use OSM maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/700/publishing-an-openstreetmap">Publishing an OpenStreetMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/624/can-i-use-or-trace-from-cc-by-data-under-the-new-contributor-terms">Can I use or trace from CC-BY data under the new Contributor Terms?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1102/why-can-i-not-contribute-under-odbl-licence-only-today">Why can I not contribute under ODbL licence only today?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1073/commercial-use-in-an-application-licenceable">[closed] Commercial use in an application - licenceable?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/618/how-do-i-agree-to-the-contributor-terms">How do I agree to the Contributor Terms?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Overpass: restrict query to a manually-specified polygon - OSM Help</title>
+        <meta name="description" content="I have a simple Overpass XML query, and I&#39;d like to restrict it to search in a manually-specified polygon (NOT to an existing area in OSM). The documentation mentions how to select region by polygon but it doesn&#39;t tell me what to use instead of bbox-query to actually use that polygon. (My use-case: ..." />
+        <meta name="keywords" content="overpass,polygon" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/33478/overpass-restrict-query-to-a-manually-specified-polygon" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/33478/overpass-restrict-query-to-a-manually-specified-polygon?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='v2wi0XesCGbOorabiYzo4DSbwLZvFCvq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/33478/overpass-restrict-query-to-a-manually-specified-polygon">Overpass: restrict query to a manually-specified polygon</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-33478-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33478/up/" rel="nofollow"> </a>
+<div id="post-33478-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-33478-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33478/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/33478/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a simple Overpass XML query, and I'd like to restrict it to search in a manually-specified polygon (NOT to an existing area in OSM). The documentation mentions how to <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_region_by_polygon">select region by polygon</a> but it doesn't tell me what to use instead of <code>bbox-query</code> to actually <em>use</em> that polygon.</p>
+<p>(My use-case: selecting e.g. all the lighthouses in mainland Britain. There are few enough lighthouses that it's OK to query such a big area, but the coast of Britain is far too complex to try and load into the Overpass interpreter so I drew a simplified outline.)</p>
+<p>Here is my bbox query, which easily gets all the lighthouses in mainland Britain, but with a couple of extras from Ireland and France:</p>
+<pre><code>
+ {{key=man_made}}
+ {{value=lighthouse}}
+ &lt;osm-script output="json"&gt;
+   &lt;union&gt;
+     &lt;query type="node"&gt;
+       &lt;has-kv k="{{key}}" v="{{value}}"/&gt;
+       &lt;bbox-query w="-5.95459" s="49.95122" e="1.82373" n="58.66551"/&gt;
+     &lt;/query&gt;
+   &lt;/union&gt;
+   &lt;print mode="body"/&gt;
+   &lt;recurse type="down"/&gt;
+   &lt;print mode="skeleton"/&gt;
+ &lt;/osm-script&gt;
+</code></pre>
+
+<p>and here are my simplified coordinates, just manually drawn:</p>
+<pre><code> "50.0180967424 -5.7508254114  49.8977876566 -5.1328981537  50.9082889044 1.3228155649  51.2810475111 1.664301681  52.7126227103 1.9570040662  56.1970031699 -2.3893465301  57.6095221438 -1.5614591643  58.6835117066 -2.929773005  58.7133813218 -5.2524570036  57.7202251635 -6.0343506269  57.7570511223 -6.4712911811  57.3685045845 -6.9082317353  56.9193570841 -5.9883568844  56.8188049116 -5.9653600131  56.7573982738 -6.2873162109  56.686249528 -6.253314109  56.664139806 -6.0750883566  56.5375494332 -5.9256086933  56.4296138149 -5.6036524955  56.3118053314 -5.712887634  56.1199894834 -5.6381478024  55.907881817 -5.7818782478  55.7496536432 -5.6783923271  55.2809219893 -5.8681165151  55.3136533443 -5.4829189213  55.7043273009 -5.4024298718  55.7852302943 -5.2299533373  55.5029632207 -4.7872635653  54.8893427316 -5.3161916046  54.5806438387 -4.9194955751  54.6405756493 -4.0858589914  53.7730926517 -3.2407239721  53.4764508768 -3.528184863  53.5003957724 -4.7815143475  51.8269681676 -5.5979032777  51.4093186674 -4.9712385355  51.1215308565 -4.4078151893  50.1847866289 -5.8106243369  50.0180967424 -5.7508254114"
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/polygon/" class="post-tag tag-link-polygon"
+                                        title="see questions tagged 'polygon'" rel="tag">polygon</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>26 May '14, 14:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cb99b2abaa73502ace0175863ca12b92?s=32&amp;d=identicon&amp;r=g" alt="mcld's gravatar image" />
+    <p><a href="/users/5965/mcld">mcld</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mcld has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-33478">
+    
+        <a name="35229"></a>
+        <div class="comment" id="comment-35229">
+            <div id="post-35229-score" class="comment-score"></div>
+            <div class="comment-text"><p>Why can't you use an existing area - or - combine several existing areas to the one you're looking for? Manually specifying coordinates looks a bit cumbersome to me.</p></div>
+            <div class="comment-info" id="comment-35229-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Jul '14, 22:46)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="35233"></a>
+        <div class="comment" id="comment-35233">
+            <div id="post-35233-score" class="comment-score"></div>
+            <div class="comment-text"><p>This works better for me. I could use an existing area, but the geometry for the UK has so much detail that the Overpass query takes a long time to run.</p></div>
+            <div class="comment-info" id="comment-35233-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jul '14, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/5965/mcld">mcld</a>
+                
+            </div>
+        </div>
+    
+        <a name="35234"></a>
+        <div class="comment" id="comment-35234">
+            <div id="post-35234-score" class="comment-score"></div>
+            <div class="comment-text"><p>This query for United Kingdom based on areas takes just 20s. That's why I thought it's not really worth the effort:
+<a href="http://overpass-turbo.eu/s/4m3">http://overpass-turbo.eu/s/4m3</a></p></div>
+            <div class="comment-info" id="comment-35234-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jul '14, 09:41)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="35235"></a>
+        <div class="comment" id="comment-35235">
+            <div id="post-35235-score" class="comment-score"></div>
+            <div class="comment-text"><p>That query does not do what I need. Thanks though.</p></div>
+            <div class="comment-info" id="comment-35235-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jul '14, 09:47)</span>
+                <a class="comment-user userinfo" href="/users/5965/mcld">mcld</a>
+                
+            </div>
+        </div>
+    
+        <a name="35236"></a>
+        <div class="comment" id="comment-35236">
+            <div id="post-35236-score" class="comment-score"></div>
+            <div class="comment-text"><p>Right. I didn't spend much time trying to find a matching relation, so the result includes more data than just mainland Britain. But that's absolutely expected behaviour (sorry for being a bit lazy on a Sunday morning :)</p>
+
+<p>My point was: performance wise there's really no heavy penalty in using even a complex geometry originating from existing areas.</p></div>
+            <div class="comment-info" id="comment-35236-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jul '14, 09:56)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33478" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33478-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/33478/overpass-restrict-query-to-a-manually-specified-polygon?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/33478/overpass-restrict-query-to-a-manually-specified-polygon?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/33478/overpass-restrict-query-to-a-manually-specified-polygon?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/33478/overpass-restrict-query-to-a-manually-specified-polygon?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="33479"></a>
+                    <div id="answer-container-33479" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33479-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33479/up/" rel="nofollow"> </a>
+<div id="post-33479-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-33479-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33479/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="mcld has selected this answer as the correct answer"
+        href="/accept_answer/33479/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It <em>does</em> tell you what to use, but not as you seem to expect. Overpass has two different <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#The_languages">query language formats</a>: <em>XML</em> and its own language <em>QL</em>. The <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_region_by_polygon">select region by polygon example query</a> is written in QL but you seem to prefer the XML version. In that case just paste the code into the <a href="http://overpass-api.de/convert_form.html">Overpass API convert form</a> where you can convert between different formats. Converting the example query to XML will result in:</p>
+<pre><code>&lt;osm-script&gt;
+  &lt;union into="_"&gt;
+    &lt;polygon-query bounds="50.7 7.1 50.7 7.12 50.71 7.11" into="_"/&gt;
+    &lt;recurse from="_" into="_" type="up"/&gt;
+  &lt;/union&gt;
+  &lt;print from="_" limit="" mode="meta" order="id"/&gt;
+&lt;/osm-script&gt;
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33479/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 May '14, 15:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33479">
+    
+</div>
+<div id="comment-tools-33479" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33479-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="33480"></a>
+                    <div id="answer-container-33480" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33480-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33480/up/" rel="nofollow"> </a>
+<div id="post-33480-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-33480-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33480/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Just to spell it out after <a href="/users/158/scai"><a href="/users/158/scai">@scai</a></a> answered, here is exactly the Overpass XML that carries out my desired query:</p>
+<pre><code>
+{{key=man_made}}
+{{value=lighthouse}}
+&lt;osm-script output="json"&gt;
+  &lt;union&gt;
+    &lt;query type="node"&gt;
+      &lt;has-kv k="{{key}}" v="{{value}}"/&gt;
+      &lt;polygon-query bounds="50.0180967424 -5.7508254114  49.8977876566 -5.1328981537  50.9082889044 1.3228155649  51.2810475111 1.664301681  52.7126227103 1.9570040662  56.1970031699 -2.3893465301  57.6095221438 -1.5614591643  58.6835117066 -2.929773005  58.7133813218 -5.2524570036  57.7202251635 -6.0343506269  57.7570511223 -6.4712911811  57.3685045845 -6.9082317353  56.9193570841 -5.9883568844  56.8188049116 -5.9653600131  56.7573982738 -6.2873162109  56.686249528 -6.253314109  56.664139806 -6.0750883566  56.5375494332 -5.9256086933  56.4296138149 -5.6036524955  56.3118053314 -5.712887634  56.1199894834 -5.6381478024  55.907881817 -5.7818782478  55.7496536432 -5.6783923271  55.2809219893 -5.8681165151  55.3136533443 -5.4829189213  55.7043273009 -5.4024298718  55.7852302943 -5.2299533373  55.5029632207 -4.7872635653  54.8893427316 -5.3161916046  54.5806438387 -4.9194955751  54.6405756493 -4.0858589914  53.7730926517 -3.2407239721  53.4764508768 -3.528184863  53.5003957724 -4.7815143475  51.8269681676 -5.5979032777  51.4093186674 -4.9712385355  51.1215308565 -4.4078151893  50.1847866289 -5.8106243369  50.0180967424 -5.7508254114"/&gt;
+    &lt;/query&gt;
+  &lt;/union&gt;
+  &lt;print mode="body"/&gt;
+  &lt;recurse type="down"/&gt;
+  &lt;print mode="skeleton"/&gt;
+&lt;/osm-script&gt;
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33480/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 May '14, 15:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cb99b2abaa73502ace0175863ca12b92?s=32&amp;d=identicon&amp;r=g" alt="mcld's gravatar image" />
+    <p><a href="/users/5965/mcld">mcld</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mcld has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/33480/">
+                edited
+                <strong>26 May '14, 15:20</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33480">
+    
+</div>
+<div id="comment-tools-33480" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33480-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/33478/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='v2wi0XesCGbOorabiYzo4DSbwLZvFCvq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33478/overpass-restrict-query-to-a-manually-specified-polygon?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33478/overpass-restrict-query-to-a-manually-specified-polygon?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/polygon/"
+            class="tag-link-polygon"
+            title="see questions tagged'polygon'using tags"
+            rel="tag">polygon</a> <span class="tag-number">&#215;92</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 26, 2014, 2:54 p.m.">26 May '14, 14:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,949 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 27, 2014, 10:15 a.m.">27 Jul '14, 10:15</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/78613/overpass-get-a-geometry-of-a-location-by-name">Overpass: Get a geometry of a location by name</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54709/conversion-of-linestring-to-polygon">Conversion of LineString to Polygon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55924/how-write-overpass-query-to-find-duplicate-closed-ways">How write overpass query to find duplicate closed ways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70189/how-to-export-all-polygons-in-a-chosen-area">how to export all polygons in a chosen area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/84723/use-polygon-for-an-overpass-turbo-query">use polygon for an overpass turbo query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66988/polygon-as-global-area-for-overpass-query">polygon as global area for overpass query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19914/overpass-polygon-query">Overpass: polygon query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8117/getting-city-border-from-osm-data">Getting city border from osm data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8010/is-there-a-good-tool-to-see-why-a-polygon-is-not-rendered">Is there a good tool to see why a polygon is not rendered?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5143/river-to-riverbank">river to riverbank</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

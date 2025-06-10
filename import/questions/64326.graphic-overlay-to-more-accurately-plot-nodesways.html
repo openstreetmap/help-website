@@ -1,0 +1,762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Graphic Overlay to more accurately plot nodes/ways - OSM Help</title>
+        <meta name="description" content="Is it possible to overlay a scaled image on the map for more accurate plotting of nodes/streets? I work for a Residential Developer and am trying to find a way to upload address points, streets, and other features within the newly constructed neighborhoods (with more accuracy than guessing if nodes ..." />
+        <meta name="keywords" content="import,overlay" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/64326/graphic-overlay-to-more-accurately-plot-nodesways" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/64326/graphic-overlay-to-more-accurately-plot-nodesways?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sjUVADzXXPh2m786RBsqzbOYdXr0ulNg' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/64326/graphic-overlay-to-more-accurately-plot-nodesways">Graphic Overlay to more accurately plot nodes/ways</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-64326-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64326/up/" rel="nofollow"> </a>
+<div id="post-64326-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-64326-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64326/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/64326/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is it possible to overlay a scaled image on the map for more accurate plotting of nodes/streets?  I work for a Residential Developer and am trying to find a way to upload address points, streets, and other features within the newly constructed neighborhoods (with more accuracy than guessing if nodes are spaced appropriately).  Any thoughts/suggestions??    </p>
+<p>Also, does anyone know if other maps (bing/google/apple) pull this inputted information?  I have attempted to reach out to Google and Apple about updating address points (and our willingness to provide any/all relevant development info Plat Maps/CAD Files/City provided addresses/etc. to assist with onboarding) but have never received any response or feedback..  Submitted feedback of incorrect address points for whole subdivisions, yet no updates ever take place.    I would greatly appreciate any help you can provide!  Thanks!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/import/" class="post-tag tag-link-import"
+                                        title="see questions tagged 'import'" rel="tag">import</a>
+                                
+                                    <a href="/tags/overlay/" class="post-tag tag-link-overlay"
+                                        title="see questions tagged 'overlay'" rel="tag">overlay</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Jun '18, 16:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/233e20a01703a73c3db7da1f5c1851d6?s=32&amp;d=identicon&amp;r=g" alt="Crosbydem's gravatar image" />
+    <p><a href="/users/15286/crosbydem">Crosbydem</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Crosbydem has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-64326">
+    
+        <a name="64338"></a>
+        <div class="comment" id="comment-64338">
+            <div id="post-64338-score" class="comment-score">1</div>
+            <div class="comment-text"><p>A good alternative of course could be to pull out your gps-receiver and go drive back and forth those roads a couple times recording: <a href="https://wiki.openstreetmap.org/wiki/Recording_GPS_tracks.">https://wiki.openstreetmap.org/wiki/Recording_GPS_tracks.</a> That should help you create a fairly accurate map, unencumbered by any licenses.</p></div>
+            <div class="comment-info" id="comment-64338-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jun '18, 22:17)</span>
+                <a class="comment-user userinfo" href="/users/3577/hjart">Hjart</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64326" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64326-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/64326/graphic-overlay-to-more-accurately-plot-nodesways?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/64326/graphic-overlay-to-more-accurately-plot-nodesways?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/64326/graphic-overlay-to-more-accurately-plot-nodesways?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/64326/graphic-overlay-to-more-accurately-plot-nodesways?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="64327"></a>
+                    <div id="answer-container-64327" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64327-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64327/up/" rel="nofollow"> </a>
+<div id="post-64327-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-64327-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64327/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The JOSM <a href="https://josm.openstreetmap.de/wiki/Help/Plugin/PicLayer">PicLayer plugin</a> can load and scale images. I've used it on 1 occasioń myself.
+<a href="https://wiki.openstreetmap.org/wiki/MapWarper">Mapwarper</a> might also prove usefull.</p>
+<p>I can't imagine Google copying OSM data, since they would have accept our licence in order to do that.
+Not sure to which degree Apple would pull our data, but they do have a small team editing OSM.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64327/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jun '18, 22:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6edf3a421a450237beae62ba93582637?s=32&amp;d=identicon&amp;r=g" alt="Hjart's gravatar image" />
+    <p><a href="/users/3577/hjart">Hjart</a><br/>
+    <span class="score" title="2961 reputation points"><span class="">3.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="26 badges"><span class="silver">&#9679;</span><span class="badgecount">26</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hjart has 14 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64327">
+    
+</div>
+<div id="comment-tools-64327" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64327-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="64336"></a>
+                    <div id="answer-container-64336" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64336-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64336/up/" rel="nofollow"> </a>
+<div id="post-64336-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-64336-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64336/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It is possible to use building site plans, i have converted one or two into Garmin Custom Maps for surveying with a Garmin GPS and Basecamp. BUT often site plans will have been  based on a copyrighted map, usually Ordnance Survey in the the UK, I doubt you should copy from that plan even if you think you have permission from the Builders to use it. Probably best to use it as a basis for survey, Copying street names could be ok assuming they were agreed and sourced from Builders and local Government. I like to map construction sites even roughley or estimated. Employees, delivery drivers and buyers all struggle to find new sites, even people living in the area won't know where they are especially if they have been given a new name without ant historical link. I also add site offices, delivery points and sales offices as soon as possible. OSM is very good for this new and transient information. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64336/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Jun '18, 21:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/64336/">
+                edited
+                <strong>24 Jun '18, 07:36</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64336">
+    
+        <a name="64361"></a>
+        <div class="comment" id="comment-64361">
+            <div id="post-64361-score" class="comment-score"></div>
+            <div class="comment-text"><p>The documents I would be using for overlays are the City Approved Final Plats that we drafted with our local engineers.  If I knew more of the technical side, I could take our engineers CAD files with actual GPS/elevation points..  What I was looking to do was take the PDF (or accepted file type) and overlay it on the OSM interface so I could place address/street points with more accuracy.  These documents and addresses are what were approved and provided from the City and County officials..  I wouldn't expect them to change or deviate once they are approved and recorded with the county.   With all of this being said, how would I convert the file to use in OSM?  I tried to import in layering, but did not see an area to import an image (only various preselected maps).  I am very new to this so my apologies if I don't fully understand all of the technical info.  Thanks!</p></div>
+            <div class="comment-info" id="comment-64361-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '18, 15:45)</span>
+                <a class="comment-user userinfo" href="/users/15286/crosbydem">Crosbydem</a>
+                
+            </div>
+        </div>
+    
+        <a name="64417"></a>
+        <div class="comment" id="comment-64417">
+            <div id="post-64417-score" class="comment-score"></div>
+            <div class="comment-text"><p>I haven't tried overlays in JOSM so i can't help you with them. Is it possible to get Lat Lon coordinates from these plans? if so you could plot some location in most editors as a guide for roads and junctions. Even looking at a plan on paper with an aerial as background in one of the editors should be a good help in roughley drawing the construction site, it will still be useful to anyone interested. It won't be super accurate but when it is possible to go on the ground, you, or someone else can then improve it.</p></div>
+            <div class="comment-info" id="comment-64417-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jun '18, 20:29)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64336" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64336-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/64326/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sjUVADzXXPh2m786RBsqzbOYdXr0ulNg' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64326/graphic-overlay-to-more-accurately-plot-nodesways?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64326/graphic-overlay-to-more-accurately-plot-nodesways?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/import/"
+            class="tag-link-import"
+            title="see questions tagged'import'using tags"
+            rel="tag">import</a> <span class="tag-number">&#215;196</span><br/>
+        
+        <a href="/tags/overlay/"
+            class="tag-link-overlay"
+            title="see questions tagged'overlay'using tags"
+            rel="tag">overlay</a> <span class="tag-number">&#215;42</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 22, 2018, 4:49 p.m.">22 Jun '18, 16:49</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,044 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 27, 2018, 8:29 p.m.">27 Jun '18, 20:29</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/50250/how-can-i-use-a-plan-generated-from-a-cad-package-as-an-overlay">How can I use a plan generated from a CAD package as an overlay?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap">How do I import map data from a .dwg file to OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1406/how-can-i-pick-areas-in-the-data-overlay-that-are-hidden-by-other-areas">How can I pick areas in the data overlay that are hidden by other areas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/799/how-should-i-go-about-importing-a-city">How should I go about importing a city?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/828/uploading-a-gpx-from-ttgpslogger-doesnt-work">Uploading a GPX from TTGpsLogger doesn&#39;t work</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1194/what-osm-is-not">What OSM is not</a>
+        </p>
+        
+        <p>
+            <a href="/questions/773/map-for-railway-networks">Map for railway network(s)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1586/is-there-a-tileset-like-the-hybrid-label-overlay-in-google-maps">Is there a tileset like the hybrid label overlay in google maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1677/importing-pdf-josm">Importing PDF JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/498/uploading-a-small-bit-of-new-tiger-data-and-3-other-unrelated-questions">Uploading a small bit of new TIGER data (and 3 other unrelated questions)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

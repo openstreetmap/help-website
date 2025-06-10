@@ -1,0 +1,791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Extract road network data from niedersachsen-latest.osm.pbf - OSM Help</title>
+        <meta name="description" content="Hello, I want to extract the road network data (coodinates of street and street name) from niedersachsen-latest.osm.pbf. I first tried to convert the file into .sm format using Osmosis. I installed Osmosis on windows xp. I tried to convert niedersachsen-latest.osm.pbf to niedersachsen.osm usingthe c..." />
+        <meta name="keywords" content="routes,extract,osm,coordinates,osmosis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/20982/extract-road-network-data-from-niedersachsen-latestosmpbf" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/20982/extract-road-network-data-from-niedersachsen-latestosmpbf?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sLVcaY1hP1D6DKQg825qoQhrWhk20Qgu' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/20982/extract-road-network-data-from-niedersachsen-latestosmpbf">Extract road network data from niedersachsen-latest.osm.pbf</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-20982-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20982/up/" rel="nofollow"> </a>
+<div id="post-20982-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-20982-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20982/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/20982/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,
+I want to extract the road network data (coodinates of street and street name) from niedersachsen-latest.osm.pbf.</p>
+<p>I first tried to convert the file into .sm format using Osmosis.
+I installed Osmosis on windows xp. I tried to convert niedersachsen-latest.osm.pbf to niedersachsen.osm usingthe command:
+osmosis --read-xml file=niedersachsen-latest.osm.pbf --write-xml file=niedersachsen.osm
+But I am getting error:</p>
+<p>C:\Programme\osmosis-latest\bin&gt;osmosis --read-xml file=niedersachsen-latest.osm
+.pbf --write-xml file=niedersachsen.osm
+26.03.2013 12:07:22 org.openstreetmap.osmosis.core.Osmosis run
+INFO: Osmosis Version 0.42
+26.03.2013 12:07:22 org.java.plugin.registry.xml.ManifestParser &lt;init&gt;
+INFO: got SAX parser factory - org.apache.xerces.jaxp.SAXParserFactoryImpl@1a8c4
+e7
+26.03.2013 12:07:22 org.java.plugin.registry.xml.PluginRegistryImpl configure
+INFO: configured, stopOnError=false, isValidating=true
+26.03.2013 12:07:22 org.java.plugin.registry.xml.PluginRegistryImpl register
+INFO: plug-in and fragment descriptors registered - 1
+26.03.2013 12:07:22 org.java.plugin.standard.StandardPluginManager activatePlugi
+n
+INFO: plug-in started - org.openstreetmap.osmosis.core.plugin.Core@0.42.0
+26.03.2013 12:07:22 org.openstreetmap.osmosis.core.Osmosis run
+INFO: Preparing pipeline.
+26.03.2013 12:07:22 org.openstreetmap.osmosis.core.Osmosis run
+INFO: Launching pipeline execution.
+26.03.2013 12:07:22 org.openstreetmap.osmosis.core.Osmosis run
+INFO: Pipeline executing, waiting for completion.
+26.03.2013 12:07:22 org.openstreetmap.osmosis.core.pipeline.common.ActiveTaskMan
+ager waitForCompletion
+SCHWERWIEGEND: Thread for task 1-read-xml failed
+org.openstreetmap.osmosis.core.OsmosisRuntimeException: Unable to parse xml file
+ niedersachsen-latest.osm.pbf.  publicId=(null), systemId=(null), lineNumber=1,
+columnNumber=1.
+        at org.openstreetmap.osmosis.xml.v0_6.XmlReader.run(XmlReader.java:116)
+        at java.lang.Thread.run(Unknown Source)
+Caused by: org.xml.sax.SAXParseException: Content is not allowed in prolog.
+        at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Un
+known Source)
+        at org.apache.xerces.util.ErrorHandlerWrapper.fatalError(Unknown Source)</p>
+<pre><code>    at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+    at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+    at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+    at org.apache.xerces.impl.XMLScanner.reportFatalError(Unknown Source)
+    at org.apache.xerces.impl.XMLDocumentScannerImpl$PrologDispatcher.dispat
+</code></pre>
+<p>ch(Unknown Source)
+        at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Un
+known Source)
+        at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+        at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+        at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+        at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+        at org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Sour
+ce)
+        at org.apache.xerces.jaxp.SAXParserImpl.parse(Unknown Source)
+        at javax.xml.parsers.SAXParser.parse(Unknown Source)
+        at org.openstreetmap.osmosis.xml.v0_6.XmlReader.run(XmlReader.java:111)
+        ... 1 more
+26.03.2013 12:07:22 org.openstreetmap.osmosis.core.Osmosis main
+SCHWERWIEGEND: Execution aborted.
+org.openstreetmap.osmosis.core.OsmosisRuntimeException: One or more tasks failed
+.
+        at org.openstreetmap.osmosis.core.pipeline.common.Pipeline.waitForComple
+tion(Pipeline.java:146)
+        at org.openstreetmap.osmosis.core.Osmosis.run(Osmosis.java:92)
+        at org.openstreetmap.osmosis.core.Osmosis.main(Osmosis.java:37)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.launchStandard(Laun
+cher.java:329)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.jav
+a:239)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(La
+uncher.java:409)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:
+352)
+        at org.codehaus.classworlds.Launcher.main(Launcher.java:47)</p>
+<p>After converting it into .osm file I want to extract the road network data from it.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/routes/" class="post-tag tag-link-routes"
+                                        title="see questions tagged 'routes'" rel="tag">routes</a>
+                                
+                                    <a href="/tags/extract/" class="post-tag tag-link-extract"
+                                        title="see questions tagged 'extract'" rel="tag">extract</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/coordinates/" class="post-tag tag-link-coordinates"
+                                        title="see questions tagged 'coordinates'" rel="tag">coordinates</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>26 Mar '13, 11:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f5d31b13d0fced1a8297e7d9e9385a53?s=32&amp;d=identicon&amp;r=g" alt="tfarooqi's gravatar image" />
+    <p><a href="/users/5892/tfarooqi">tfarooqi</a><br/>
+    <span class="score" title="30 reputation points">30</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tfarooqi has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-20982">
+    
+</div>
+<div id="comment-tools-20982" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20982-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/20982/extract-road-network-data-from-niedersachsen-latestosmpbf?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/20982/extract-road-network-data-from-niedersachsen-latestosmpbf?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/20982/extract-road-network-data-from-niedersachsen-latestosmpbf?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/20982/extract-road-network-data-from-niedersachsen-latestosmpbf?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="20984"></a>
+                    <div id="answer-container-20984" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-20984-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20984/up/" rel="nofollow"> </a>
+<div id="post-20984-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-20984-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20984/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="tfarooqi has selected this answer as the correct answer"
+        href="/accept_answer/20984/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think that you will need to use "read-pbf" to read a PBF file.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/20984/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Mar '13, 11:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-20984">
+    
+        <a name="20987"></a>
+        <div class="comment" id="comment-20987">
+            <div id="post-20987-score" class="comment-score"></div>
+            <div class="comment-text"><p>Its working, thanks a lot.
+Can you suggest the command to extract the start and end coordinates of a link/Street alon with street's name?</p></div>
+            <div class="comment-info" id="comment-20987-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '13, 11:44)</span>
+                <a class="comment-user userinfo" href="/users/5892/tfarooqi">tfarooqi</a>
+                
+            </div>
+        </div>
+    
+        <a name="20988"></a>
+        <div class="comment" id="comment-20988">
+            <div id="post-20988-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You're probably better off asking a separate question with a few more details of what you're trying to do.  The answer to <a href="https://help.openstreetmap.org/questions/19213/osm-xml-into-graph">this question</a> my help (although that's essentially doing the reverse of what you're attempting).</p></div>
+            <div class="comment-info" id="comment-20988-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '13, 11:53)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="20989"></a>
+        <div class="comment" id="comment-20989">
+            <div id="post-20989-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am using this querry to extract road network used by cars:
+osmosis --read-xml niedersachsen.osm  --tf accept-ways highway=* --tf reject-ways highway=pedestrian,footway,steps,cycleway,bridleway --tf reject-relations --used-node --write-xml niedersachsen_roadnetwork.osm</p>
+
+<p>But still I need to find the start and end coordinates of the street and street name, Any suggestions?</p></div>
+            <div class="comment-info" id="comment-20989-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '13, 11:58)</span>
+                <a class="comment-user userinfo" href="/users/5892/tfarooqi">tfarooqi</a>
+                
+            </div>
+        </div>
+    
+        <a name="20992"></a>
+        <div class="comment" id="comment-20992">
+            <div id="post-20992-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have raised it as a seperate question: 
+<a href="https://help.openstreetmap.org/questions/20990/to-find-the-start-and-end-coordinates-of-the-street-and-street-name-using-osmosis">https://help.openstreetmap.org/questions/20990/to-find-the-start-and-end-coordinates-of-the-street-and-street-name-using-osmosis</a></p></div>
+            <div class="comment-info" id="comment-20992-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '13, 12:23)</span>
+                <a class="comment-user userinfo" href="/users/5892/tfarooqi">tfarooqi</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-20984" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20984-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/20982/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sLVcaY1hP1D6DKQg825qoQhrWhk20Qgu' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20982/extract-road-network-data-from-niedersachsen-latestosmpbf?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20982/extract-road-network-data-from-niedersachsen-latestosmpbf?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/coordinates/"
+            class="tag-link-coordinates"
+            title="see questions tagged'coordinates'using tags"
+            rel="tag">coordinates</a> <span class="tag-number">&#215;144</span><br/>
+        
+        <a href="/tags/extract/"
+            class="tag-link-extract"
+            title="see questions tagged'extract'using tags"
+            rel="tag">extract</a> <span class="tag-number">&#215;83</span><br/>
+        
+        <a href="/tags/routes/"
+            class="tag-link-routes"
+            title="see questions tagged'routes'using tags"
+            rel="tag">routes</a> <span class="tag-number">&#215;43</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 26, 2013, 11:11 a.m.">26 Mar '13, 11:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,332 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 26, 2013, 12:23 p.m.">26 Mar '13, 12:23</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/41915/extract-osm-data-for-zoom-1-4">Extract osm data for zoom 1-4</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8117/getting-city-border-from-osm-data">Getting city border from osm data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11322/how-can-download-map-in-osmdroid">How can download map in osmdroid?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7711/bounding-box-polygon-for-osmosis">bounding-box polygon for osmosis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9816/the-best-way-to-extract-street-list">The best way to extract street list</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10570/add-a-new-provider-to-routeme-library">Add a new provider to RouteMe library</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4994/how-long-does-it-take-to-extract-a-city-from-the-osm-globe">How long does it take to extract a city from the OSM globe?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2905/osmosis-not-running">Osmosis not running</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7449/osmosis-sourecode-merge">Osmosis sourecode &quot;--merge&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9110/download-a-map-of-selected-coordinate">download a map of selected coordinate</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,937 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to display distance of routes - OSM Help</title>
+        <meta name="description" content="I have drawn some routes in a map and want to display the distances but don&#39;t know how. I tried {distance} but it&#39;s not working. Can you help?" />
+        <meta name="keywords" content="umap,route,distance" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/52459/how-to-display-distance-of-routes" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52459/how-to-display-distance-of-routes?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='c58m4px01buR5np747GtL72V8ZsRSJkx' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52459/how-to-display-distance-of-routes">How to display distance of routes</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52459-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52459/up/" rel="nofollow"> </a>
+<div id="post-52459-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52459-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52459/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52459/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have drawn some routes in a map and want to display the distances but don't know how. I tried {distance} but it's not working.
+Can you help?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/umap/" class="post-tag tag-link-umap"
+                                        title="see questions tagged 'umap'" rel="tag">umap</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/distance/" class="post-tag tag-link-distance"
+                                        title="see questions tagged 'distance'" rel="tag">distance</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Oct '16, 23:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ca3695a4be4b550609f8930cf3c510f1?s=32&amp;d=identicon&amp;r=g" alt="Ziggie71's gravatar image" />
+    <p><a href="/users/12298/ziggie71">Ziggie71</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ziggie71 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52459/">
+                edited
+                <strong>29 Nov '16, 23:01</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52459">
+    
+        <a name="52496"></a>
+        <div class="comment" id="comment-52496">
+            <div id="post-52496-score" class="comment-score"></div>
+            <div class="comment-text"><p>What software/website are you using? Could you explain in more detail what you did?</p></div>
+            <div class="comment-info" id="comment-52496-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '16, 12:13)</span>
+                <a class="comment-user userinfo" href="/users/5070/lightsider">Lightsider</a>
+                
+            </div>
+        </div>
+    
+        <a name="52497"></a>
+        <div class="comment" id="comment-52497">
+            <div id="post-52497-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You can see my map here... 
+ <a href="http://umap.openstreetmap.fr/de/map/inlineskating-streckennetz-main-taunus-rhein-main_84217#11/50.0360/8.6133">http://umap.openstreetmap.fr/de/map/inlineskating-streckennetz-main-taunus-rhein-main_84217#11/50.0360/8.6133</a></p></div>
+            <div class="comment-info" id="comment-52497-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '16, 12:22)</span>
+                <a class="comment-user userinfo" href="/users/12298/ziggie71">Ziggie71</a>
+                
+            </div>
+        </div>
+    
+        <a name="52498"></a>
+        <div class="comment" id="comment-52498">
+            <div id="post-52498-score" class="comment-score"></div>
+            <div class="comment-text"><p>I noticed on the left hand side that if you select the 'Mehr Schaltflachen' button, then select the 'Entfernungen messen' button, you can then measure the individual routes quite well.</p></div>
+            <div class="comment-info" id="comment-52498-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '16, 12:44)</span>
+                <a class="comment-user userinfo" href="/users/7380/nevw">nevw</a>
+                
+            </div>
+        </div>
+    
+        <a name="52499"></a>
+        <div class="comment not_top_scorer" id="comment-52499">
+            <div id="post-52499-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, but I want to display the distances automatically. I know in former versions of umap I got the information.</p></div>
+            <div class="comment-info" id="comment-52499-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '16, 12:47)</span>
+                <a class="comment-user userinfo" href="/users/12298/ziggie71">Ziggie71</a>
+                
+            </div>
+        </div>
+    
+        <a name="53169"></a>
+        <div class="comment not_top_scorer" id="comment-53169">
+            <div id="post-53169-score" class="comment-score"></div>
+            <div class="comment-text"><p>Still no idea???</p></div>
+            <div class="comment-info" id="comment-53169-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '16, 11:46)</span>
+                <a class="comment-user userinfo" href="/users/12298/ziggie71">Ziggie71</a>
+                
+            </div>
+        </div>
+    
+        <a name="53174"></a>
+        <div class="comment not_top_scorer" id="comment-53174">
+            <div id="post-53174-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/12298/ziggie71">@Ziggie71</a>: although I do not know the answer, maybe a bit more information could help: until when did you see the distances? Did you see them on the same map? Did you change the map since then? Which distance did you show - one from self-drawn routes or from OSM routes?</p></div>
+            <div class="comment-info" id="comment-53174-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '16, 23:03)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53175"></a>
+        <div class="comment" id="comment-53175">
+            <div id="post-53175-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Maybe the <a href="https://lists.openstreetmap.org/listinfo/umap">umap mailing</a> list is a better place to ask this question ? The developer of the website is the best person to ask</p></div>
+            <div class="comment-info" id="comment-53175-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '16, 04:23)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="53229"></a>
+        <div class="comment not_top_scorer" id="comment-53229">
+            <div id="post-53229-score" class="comment-score"></div>
+            <div class="comment-text"><p>I found  <a href="https://github.com/umap-project/umap/issues/230">https://github.com/umap-project/umap/issues/230</a> but could not find the described controls to display the distances as shown in the screenshot. I have asked the developer Yohan.</p></div>
+            <div class="comment-info" id="comment-53229-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Dec '16, 14:04)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55439"></a>
+        <div class="comment not_top_scorer" id="comment-55439">
+            <div id="post-55439-score" class="comment-score"></div>
+            <div class="comment-text"><p><small>moved to here from a new question entry (now deleted) by Ziggie71:</small></p>
+
+<p>Without displaying the distances of the particular routes, Umap doesn't make sense anymore to me. Once it did work, then this feature vanished without any reason.</p>
+
+<p>No support, no answers, no interest. I will have to look for an alternative, which is really hard to find.</p></div>
+            <div class="comment-info" id="comment-55439-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '17, 13:46)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55445"></a>
+        <div class="comment not_top_scorer" id="comment-55445">
+            <div id="post-55445-score" class="comment-score"></div>
+            <div class="comment-text"><p>Umap is that powerful. But the most essential information is missing. Why simply do not grap from the metadata and display it. It's like running a marathon without doing the last step into the goal. Please implement it and I think the developers make lots of people happy. </p></div>
+            <div class="comment-info" id="comment-55445-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '17, 14:56)</span>
+                <a class="comment-user userinfo" href="/users/12298/ziggie71">Ziggie71</a>
+                
+            </div>
+        </div>
+    
+        <a name="55454"></a>
+        <div class="comment" id="comment-55454">
+            <div id="post-55454-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/12298/ziggie71">@Ziggie71</a>, this help forum is not the best place to write feature requests for software. Please use the <a href="https://github.com/umap-project/umap">Github repository</a> for that. Keep in mind to keep a friendly tone, this is free software, probably developed by people in their spare time.</p></div>
+            <div class="comment-info" id="comment-55454-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '17, 17:41)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52459" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 11
+        </span>
+        <a href="#" class="show-all-comments-link">show 6 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52459-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52459/how-to-display-distance-of-routes?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52459/how-to-display-distance-of-routes?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52459/how-to-display-distance-of-routes?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52459/how-to-display-distance-of-routes?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="68068"></a>
+                    <div id="answer-container-68068" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-68068-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68068/up/" rel="nofollow"> </a>
+<div id="post-68068-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-68068-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68068/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It's simple and I wonder why nobody could answer!</p>
+<p>Just use <strong>{measure}</strong> if you want to display the distances in the popup.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/68068/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Feb '19, 12:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ca3695a4be4b550609f8930cf3c510f1?s=32&amp;d=identicon&amp;r=g" alt="Ziggie71's gravatar image" />
+    <p><a href="/users/12298/ziggie71">Ziggie71</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ziggie71 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/68068/">
+                edited
+                <strong>20 Feb '19, 12:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-68068">
+    
+</div>
+<div id="comment-tools-68068" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68068-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="63102"></a>
+                    <div id="answer-container-63102" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-63102-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63102/up/" rel="nofollow"> </a>
+<div id="post-63102-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-63102-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63102/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>in Umap, you should use the tool to measure distance.</p>
+<p>Go to parameters of your map and set Display the measure control. After that just pick-up tool and set points linked each-others and you have the distance</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/63102/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '18, 12:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3191f000bb276b0bb0e3d6984674fb1f?s=32&amp;d=identicon&amp;r=g" alt="panoplie's gravatar image" />
+    <p><a href="/users/15016/panoplie">panoplie</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="panoplie has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-63102">
+    
+</div>
+<div id="comment-tools-63102" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63102-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52459/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='c58m4px01buR5np747GtL72V8ZsRSJkx' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52459/how-to-display-distance-of-routes?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52459/how-to-display-distance-of-routes?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/umap/"
+            class="tag-link-umap"
+            title="see questions tagged'umap'using tags"
+            rel="tag">umap</a> <span class="tag-number">&#215;314</span><br/>
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/distance/"
+            class="tag-link-distance"
+            title="see questions tagged'distance'using tags"
+            rel="tag">distance</a> <span class="tag-number">&#215;63</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 10, 2016, 11:45 p.m.">10 Oct '16, 23:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,168 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 20, 2019, 12:09 p.m.">20 Feb '19, 12:09</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/47294/automatically-calculate-distance-using-polylines-umap">Automatically calculate distance using polylines (umap)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">I want to add a new long distance hiking route to the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55062/offline-route-distance-measurement">offline route distance measurement</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66921/read-osm-file-to-access-direction-distance-and-landmarks">read osm file to access direction, distance and landmarks</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or">Roundabouts as part of bus routes (or cycle routes, or…)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3193/measuring-distance">measuring distance</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1083/tagging-seasonal-use-roads-questions-road-type-blockout-months-4x4">Tagging &quot;seasonal use roads&quot; (questions: road type, blockout months, 4x4)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6418/parsing-an-osm-xml-file-for-navigation-purposes">Parsing an OSM xml file for navigation purposes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2545/tag-tram-tracks-with-name-ref-or-use-relationroute">Tag tram tracks with name=*, ref=* - or use Relation:route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5210/how-to-make-a-route">How to make a route?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

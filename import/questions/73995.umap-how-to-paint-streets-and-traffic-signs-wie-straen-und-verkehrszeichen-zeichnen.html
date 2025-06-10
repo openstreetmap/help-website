@@ -1,0 +1,706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>umap : how to paint streets and traffic-signs? Wie Straßen und Verkehrszeichen zeichnen? - OSM Help</title>
+        <meta name="description" content="Deutsch siehe weiter unten. German see below. In earlier times osm.org showed highway=proposed. I was once in an open council, where the plan of a new trunk was presented to the citizens. A man in the auditorium asked, whether it was possible to see the planning in something like Google Maps. Appare..." />
+        <meta name="keywords" content="umap,highway,proposed,lang-de" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/73995/umap-how-to-paint-streets-and-traffic-signs-wie-straen-und-verkehrszeichen-zeichnen" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/73995/umap-how-to-paint-streets-and-traffic-signs-wie-straen-und-verkehrszeichen-zeichnen?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ZuUlxzWZBhFQrCDjCLkR1k04Zc74VGXu' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/73995/umap-how-to-paint-streets-and-traffic-signs-wie-straen-und-verkehrszeichen-zeichnen">umap : how to paint streets and traffic-signs? Wie Straßen und Verkehrszeichen zeichnen?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-73995-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73995/up/" rel="nofollow"> </a>
+<div id="post-73995-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73995-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73995/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/73995/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Deutsch siehe weiter unten. German see below.</p>
+<p>In earlier times osm.org showed highway=proposed. I was once in an open council, where the plan of a new trunk was presented to the citizens. A man in the auditorium asked, whether it was possible to see the planning in something like Google Maps. Apparently he wanted a zoomable map. And the presenters on the podium denied. I raised my hand and told them about osm.org. And all the people in the auditorium and on the podium as well were exited about this possibility. :-)</p>
+<p>That has sadly been given up. OpenStreetMap was the only possibility to see proposed streets in a zoomable map. Now this is no longer possible in any  worldwide map. This was helpful for affected and interested people, planners, campaigner for and against new streets. Now OSM has missed and gambled the chance to be the first and only one in the world to make this available.</p>
+<p>Now I am looking for a possibility to make this available for non coding people. It should be as easy as to paint a highway=proposed into OSM. Is it possible to paint dashed lines into umap, that look like primary streets as well as motorways (double dashed highway-line) in OSM? </p>
+<p>Further I'm looking for a umap for urban administrationa to illustrate closed roads and detours. This requires traffic signs in umap. Is it possible to place pictures of traffic-signs from Wikipedia/Wikiocommons into umap?</p>
+<p>German/Deutsch:
+Ehemals zeigte osm.org geplante Straßen (highway=proposed). Ich habe vor einiger Zeit eine Bürgerversammlung besucht, in der die Planung für eine neue autobahnähnliche Straße präsentiert wurde. Aus dem Auditorium kam die Frage, ob man die Planung nicht auf etwas ähnlichem wie Google Maps sehen könne, womit offenbar eine zoombare Karte gemeint war. Das wurde vom Podium  verneint. Ich meldete mich und berichtete über osm.org. Und die Leute waren begeistert über diese Möglichkeit, sogar auf dem Podium. :-)</p>
+<p>Das wurde leider aufgegeben. OpenStreetMap war die einzige Möglichkeit, geplante Straßen in einer zoombaren Landkarte zu zeigen. Jetztz gibt es weltweit keine Karte mehr, die das leistet. Diese war hilfreich für Betroffene und Interessierte, Planer sowie für Befürworter und Ablehner beim Bau neuer Straßen. OSM hat die Chance verspielt, der einzige und erste in der Welt zu sein, der dies möglich macht.</p>
+<p>Jetzt suche ich nach einer Ersatzlösung, die auch für Nicht-Programmierer funktioniert und ähnlich einfach wie das Einzeichnen eines highway=proposed in OSM ist. Hierzu müsste es möglich sein, in umap gestrichelte Linien einzuzeichnen, die wie primary Straßen als auch wie Autobahnen (doppelte gestrichelte Straßen-Linie) aussehen. Ist das möglich?</p>
+<p>Zudem suche ich nach einer Möglichkeit für umap, die man in Stadt- und Gemeindeverwaltungen vorstellen kann, wenn man dort um einen Gefallen bittet. Hier möchte man häufiger Straßensperrungen und Umleitungen illustrieren. Hierzu wäre es hilfreich, Bilder von Verkehrszeichen z.B. aus Wikipedia/Wikicommons in umap zu platzieren. Gibt es da eine Möglichkeit?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/umap/" class="post-tag tag-link-umap"
+                                        title="see questions tagged 'umap'" rel="tag">umap</a>
+                                
+                                    <a href="/tags/highway/" class="post-tag tag-link-highway"
+                                        title="see questions tagged 'highway'" rel="tag">highway</a>
+                                
+                                    <a href="/tags/proposed/" class="post-tag tag-link-proposed"
+                                        title="see questions tagged 'proposed'" rel="tag">proposed</a>
+                                
+                                    <a href="/tags/lang-de/" class="post-tag tag-link-lang-de"
+                                        title="see questions tagged 'lang-de'" rel="tag">lang-de</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 Apr '20, 18:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f29cdd2ce977c0424342666f27a538f0?s=32&amp;d=identicon&amp;r=g" alt="Tirkon's gravatar image" />
+    <p><a href="/users/18142/tirkon">Tirkon</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tirkon has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/73995/">
+                edited
+                <strong>07 Apr '20, 06:31</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+            <p><a href="/users/158/scai">scai ♦</a><br/>
+            <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-73995">
+    
+        <a name="73998"></a>
+        <div class="comment" id="comment-73998">
+            <div id="post-73998-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Der deutsche Fork von Openstreetmap-carto zeigt die proposed und construction m.W. an, z.B. hier den geplanten Abschnitt der A 281: <a href="https://www.openstreetmap.de/karte.html?zoom=14&amp;lat=53.10807&amp;lon=8.70877&amp;layers=B000TT">https://www.openstreetmap.de/karte.html?zoom=14&amp;lat=53.10807&amp;lon=8.70877&amp;layers=B000TT</a> (dort die roten Striche (ohne gelbe Farbbahnfläche), die Bremen Seehausen und Bremen Burg-Grambke verbinden).</p></div>
+            <div class="comment-info" id="comment-73998-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Apr '20, 20:47)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="74008"></a>
+        <div class="comment" id="comment-74008">
+            <div id="post-74008-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hallo Spiekerooger, Dein Kommentar zeigt, dass die oben beschriebene Motivation für meine ursprüngliche Frage nicht ausreicht und ich sie noch deutlicher machen muss, was aber eines weiten Ausholens bedarf: </p>
+
+<p>Geplante Straßen sind als nicht "on the ground" in der OSM Datenbank nicht gern gesehen. Ich vermute, dass dies die Intention für das Verbannen aus osm.org war. Hier ist nicht der Ort, zu diskutieren, dass man dies für andere wichtige Daten wie z.B. Grenzen zulässt und rendert. Fakt ist aber das hier schwebende Damoklesschwert, dass selbst bei Vorhandensein der geplanten Straßen in der Datenbank auch andere Renderer nachziehen (wie schon geschehen) und diese zukünftig nicht mehr anzeigen.</p>
+
+<p>Es gibt schon jetzt das Problem in Wikipedia, dass in Artikeln zu Straßenplanungen ersprünglich illustrierende Links zu osm.org seit der Verbannung diese nicht mehr illustrieren. Das Umlinken auf andere Darstellungen wie .DE steht also ebenfalls auf wackligen Füßen. Von daher wäre die hier gestellte Frage, ob man das in umap bewerkstelligen kann, die leider für die meisten User unbekannte als auch umständlichere Variante, die aber aus Sicht der Wikipedia Funktionalität die zuverlässige ist.</p></div>
+            <div class="comment-info" id="comment-74008-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Apr '20, 22:42)</span>
+                <a class="comment-user userinfo" href="/users/18142/tirkon">Tirkon</a>
+                
+            </div>
+        </div>
+    
+        <a name="74035"></a>
+        <div class="comment" id="comment-74035">
+            <div id="post-74035-score" class="comment-score"></div>
+            <div class="comment-text"><p>In uMap lassen sich GPX-Spuren darstellen, ob diese gestrichelt dargestellt werden können weiß ich allerdings nicht. Eine Alternative wäre Leaflet oder OpenLayers mit einer OSM-Basiskarte und GPX-Spuren. Dort könnte man auch problemlos Bilder hinterlegen/verlinken.</p></div>
+            <div class="comment-info" id="comment-74035-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '20, 06:34)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73995" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73995-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/73995/umap-how-to-paint-streets-and-traffic-signs-wie-straen-und-verkehrszeichen-zeichnen?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/73995/umap-how-to-paint-streets-and-traffic-signs-wie-straen-und-verkehrszeichen-zeichnen?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/73995/umap-how-to-paint-streets-and-traffic-signs-wie-straen-und-verkehrszeichen-zeichnen?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/73995/umap-how-to-paint-streets-and-traffic-signs-wie-straen-und-verkehrszeichen-zeichnen?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="74039"></a>
+                    <div id="answer-container-74039" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74039-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74039/up/" rel="nofollow"> </a>
+<div id="post-74039-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-74039-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74039/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can create something in uMap but don't expect too much freedom in the design. Dashed lines and pictograms of road signs are possible.</p>
+<p>I created a quick example: <a href="http://u.osmfr.org/m/441960/">uMap road admin example</a>.</p>
+<p>More design options are possible with Leaflet for example. Specifically you can also group elements there when you zoom out.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74039/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Apr '20, 15:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74039">
+    
+</div>
+<div id="comment-tools-74039" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74039-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/73995/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ZuUlxzWZBhFQrCDjCLkR1k04Zc74VGXu' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73995/umap-how-to-paint-streets-and-traffic-signs-wie-straen-und-verkehrszeichen-zeichnen?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73995/umap-how-to-paint-streets-and-traffic-signs-wie-straen-und-verkehrszeichen-zeichnen?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/umap/"
+            class="tag-link-umap"
+            title="see questions tagged'umap'using tags"
+            rel="tag">umap</a> <span class="tag-number">&#215;314</span><br/>
+        
+        <a href="/tags/lang-de/"
+            class="tag-link-lang-de"
+            title="see questions tagged'lang-de'using tags"
+            rel="tag">lang-de</a> <span class="tag-number">&#215;286</span><br/>
+        
+        <a href="/tags/highway/"
+            class="tag-link-highway"
+            title="see questions tagged'highway'using tags"
+            rel="tag">highway</a> <span class="tag-number">&#215;163</span><br/>
+        
+        <a href="/tags/proposed/"
+            class="tag-link-proposed"
+            title="see questions tagged'proposed'using tags"
+            rel="tag">proposed</a> <span class="tag-number">&#215;11</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 3, 2020, 6:22 p.m.">03 Apr '20, 18:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,093 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 7, 2020, 3:31 p.m.">07 Apr '20, 15:31</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/38611/highwayproposed-com-proposedresidential">highway=proposed com proposed=residential</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45657/marker-verlinken-mit-targetself-im-umap">marker verlinken mit target=self im uMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32983/wie-kann-ich-meine-umap-karte-als-bild-zb-jpeg-runterladen">Wie kann ich meine uMap-Karte als Bild (z.B. JPEG) runterladen?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36146/geheimer-bearbeitungslink-von-umap-funktioniert-nicht">Geheimer Bearbeitungslink von uMap funktioniert nicht</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40659/umap-anzahl-der-verschwundenen-marker-bei-marker-anzeigen-clustering-gruppierung">umap: Anzahl der verschwundenen Marker bei Marker anzeigen (Clustering / Gruppierung)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44824/eigene-karte-erstellen">eigene Karte erstellen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24628/zufahrtswege-highwayservice-mit-oder-ohne-addrstreet">Zufahrtswege (highway=service) - mit oder ohne addr:street?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25558/lanes2-bei-bundes-landstraen-mit-jeweils-einer-fahrspur-pro-fahrtrichtung">lanes=2 bei Bundes-/Landstraßen mit jeweils einer Fahrspur pro Fahrtrichtung ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32995/wie-kann-ich-karten-die-ich-in-umap-erstellt-habe-auf-openstreetmap-offnen">[closed] Wie kann ich Karten, die ich in uMap erstellt habe auf OpenstreetMap öffnen?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48103/schrift-innerhalb-der-flache-popup-einstellung">Schrift innerhalb der fläche &amp; popup-einstellung</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

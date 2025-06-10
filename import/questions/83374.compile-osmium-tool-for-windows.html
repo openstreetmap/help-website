@@ -1,0 +1,1050 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Compile osmium tool for Windows - OSM Help</title>
+        <meta name="description" content="Hi I&#39;ve been trying to compile Osmium Tool for Windows using Visual Studio and I can&#39;t get past this error and am not sure how to resolve it. Any help would be appreciated (unfortunately I don&#39;t know much about C++) but am trying my best! I see it was successful here but the artifacts are gone now. ..." />
+        <meta name="keywords" content="osmium" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/83374/compile-osmium-tool-for-windows" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/83374/compile-osmium-tool-for-windows?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='7uXjqI7Di9RB3jSbH0h3wOyh6VmOwwkc' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/83374/compile-osmium-tool-for-windows">Compile osmium tool for Windows</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-83374-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83374/up/" rel="nofollow"> </a>
+<div id="post-83374-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-83374-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83374/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/83374/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi I've been trying to compile Osmium Tool for Windows using Visual Studio and I can't get past this error and am not sure how to resolve it. Any help would be appreciated (unfortunately I don't know much about C++) but am trying my best! I see it was successful here but the artifacts are gone now. <a href="https://ci.appveyor.com/project/Mapbox/osmium-tool/build/1.0.281/job/va8388o8synhjii8">https://ci.appveyor.com/project/Mapbox/osmium-tool/build/1.0.281/job/va8388o8synhjii8</a></p>
+<pre><code><a href="https://github.com/osmcode/osmium-tool">https://github.com/osmcode/osmium-tool</a>
+
+Used repo tag 1.13.2
+
+Reviewed appveyor.yml
+
+VS2019
+
+    Installed Visual Studio 2019 (16.11.9)
+    - installed desktop development with c++
+    - installed MSVC v140 - VS 2015 C++ build tools (v14.00)
+
+    Reviewed build-appveyor.bat
+    - Updated vcvarsall.bat location for VS2019 install location (VC\Auxiliary\Build\vcvarsall.bat)
+    - Changed cmake_cmd "Visual Studio 14 Win64" to "Visual Studio 16"
+    - Changed toolsversion from 14.0 to Current
+
+VS2015 community edition
+
+    Reviewed build-appveyor.bat
+    - Updated vcvarsall.bat location for VS2019 install location (VC\vcvarsall.bat)
+
+    Downloaded lastest cmake, added to path C:\Program Files\CMake\bin
+
+In C:\projects
+    git clone --depth 1 <a href="https://github.com/osmcode/libosmium">https://github.com/osmcode/libosmium</a>
+    git clone --depth 1 <a href="https://github.com/mapbox/protozero">https://github.com/mapbox/protozero</a>
+
+Download latest nuget.exe and placed in path
+
+Downloaded boost 1.63 to C:/Libraries/boost_1_63_0
+- ran bootstrap.bat
+- ran b2.exe
+
+Ran build-local.bat
+
+ERRORS:
+
+libboost_program_options-vc140-mt-1_63.lib(options_description.obj) : fatal error LNK1112: module machine type 'X86' conflicts with target machine type 'x64' [C:\projects\osmium-tool\build\test\unit_tests.vcxproj]
+Done Building Project "C:\projects\osmium-tool\build\test\unit_tests.vcxproj" (default targets) -- FAILED.
+Done Building Project "C:\projects\osmium-tool\build\test\unit_tests.vcxproj.metaproj" (default targets) -- FAILED.
+Done Building Project "C:\projects\osmium-tool\build\ALL_BUILD.vcxproj.metaproj" (default targets) -- FAILED.
+Done Building Project "C:\projects\osmium-tool\build\osmium.sln" (default targets) -- FAILED.
+
+Build FAILED.
+
+"C:\projects\osmium-tool\build\osmium.sln" (default target) (1) -&gt;
+"C:\projects\osmium-tool\build\ALL_BUILD.vcxproj.metaproj" (default target) (2) -&gt;
+"C:\projects\osmium-tool\build\test\unit_tests.vcxproj.metaproj" (default target) (6) -&gt;
+"C:\projects\osmium-tool\build\test\unit_tests.vcxproj" (default target) (7) -&gt;
+(ClCompile target) -&gt; 
+  c:\projects\osmium-tool\test\include\catch.hpp(1648): warning C4800: 'osmium::io::overwrite': forcing value to bool 'true' or 'false' (performance warning) [C:\projects\osmium-tool\build\test\unit_tests.vcxproj]
+
+
+"C:\projects\osmium-tool\build\osmium.sln" (default target) (1) -&gt;
+"C:\projects\osmium-tool\build\ALL_BUILD.vcxproj.metaproj" (default target) (2) -&gt;
+"C:\projects\osmium-tool\build\src\osmium.vcxproj.metaproj" (default target) (4) -&gt;
+"C:\projects\osmium-tool\build\src\osmium.vcxproj" (default target) (5) -&gt;
+(Link target) -&gt; 
+  libboost_program_options-vc140-mt-1_63.lib(options_description.obj) : fatal error LNK1112: module machine type 'X86' conflicts with target machine type 'x64' [C:\projects\osmium-tool\build\src\osmium.vcxproj]
+
+
+"C:\projects\osmium-tool\build\osmium.sln" (default target) (1) -&gt;
+"C:\projects\osmium-tool\build\ALL_BUILD.vcxproj.metaproj" (default target) (2) -&gt;
+"C:\projects\osmium-tool\build\test\unit_tests.vcxproj.metaproj" (default target) (6) -&gt;
+"C:\projects\osmium-tool\build\test\unit_tests.vcxproj" (default target) (7) -&gt;
+  libboost_program_options-vc140-mt-1_63.lib(options_description.obj) : fatal error LNK1112: module machine type 'X86' conflicts with target machine type 'x64' [C:\projects\osmium-tool\build\test\unit_tests.vcxproj]
+
+    1 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:08:06.76
+~~~~~~ ERROR C:\projects\osmium-tool\build-appveyor.bat ~~~~~~
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osmium/" class="post-tag tag-link-osmium"
+                                        title="see questions tagged 'osmium'" rel="tag">osmium</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Feb '22, 19:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dd57ba63729e44a014376d152f9dcf67?s=32&amp;d=identicon&amp;r=g" alt="aarismendi's gravatar image" />
+    <p><a href="/users/21382/aarismendi">aarismendi</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aarismendi has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/83374/">
+                edited
+                <strong>05 Feb '22, 19:23</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-83374">
+    
+</div>
+<div id="comment-tools-83374" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83374-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/83374/compile-osmium-tool-for-windows?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/83374/compile-osmium-tool-for-windows?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/83374/compile-osmium-tool-for-windows?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/83374/compile-osmium-tool-for-windows?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="83375"></a>
+                    <div id="answer-container-83375" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83375-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83375/up/" rel="nofollow"> </a>
+<div id="post-83375-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-83375-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83375/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Got it working, instead of building boost I used a pre-built binary -</p>
+<p><a href="https://sourceforge.net/projects/boost/">https://sourceforge.net/projects/boost/</a></p>
+<p><a href="https://iweb.dl.sourceforge.net/project/boost/boost-binaries/1.63.0/boost_1_63_0-msvc-14.0-64.exe">https://iweb.dl.sourceforge.net/project/boost/boost-binaries/1.63.0/boost_1_63_0-msvc-14.0-64.exe</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83375/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Feb '22, 01:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dd57ba63729e44a014376d152f9dcf67?s=32&amp;d=identicon&amp;r=g" alt="aarismendi's gravatar image" />
+    <p><a href="/users/21382/aarismendi">aarismendi</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aarismendi has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83375">
+    
+</div>
+<div id="comment-tools-83375" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83375-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="86873"></a>
+                    <div id="answer-container-86873" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-86873-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86873/up/" rel="nofollow"> </a>
+<div id="post-86873-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-86873-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86873/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I have no problem opening, building and debugging in Visual Studio on Windows.<br>
+You need to make sure that all required c++ components are installed, incl cmake and vcpkg.</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/cpp/build/vscpp-step-0-installation?view=msvc-170">Install C++ in VS</a>  </li>
+<li><a href="https://learn.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170#installation">CMake Installation</a>  </li>
+<li><a href="https://vcpkg.io/en/getting-started.html">Install vcpkg</a></li>
+<li><a href="https://learn.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170#vcpkg-integration">Vcpkg integration</a>  </li>
+<li><a href="https://learn.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170#ide-integration">Open CMake project in VS</a></li>
+</ul>
+<p>Tested on latest Visual Studio 2022 Community version, Windows 11.<br>
+My build artefacts: <a href="https://drive.google.com/drive/folders/15ImH-DCtIPyoFrzQnFyhUBm3YsmUZtRa">google drive</a>.</p>
+<p>Easy local build script using <a href="https://github.com/microsoft/vcpkg">vcpkg</a>, like github actions <a href="https://github.com/osmcode/osmium-tool/blob/583db02ac9193dfb5217f93c823a4975405338ac/.github/actions/cmake-windows/action.yml">cmake</a> and <a href="https://github.com/osmcode/osmium-tool/blob/583db02ac9193dfb5217f93c823a4975405338ac/.github/actions/build-windows/action.yml">build</a>:</p>
+<ol>
+<li>Install <code>vcpkg</code>
+<a href="https://github.com/microsoft/vcpkg#quick-start-windows">https://github.com/microsoft/vcpkg#quick-start-windows</a></li>
+<li>Install <code>cmake</code> (set PATH environment)
+<a href="https://cmake.org/download/">https://cmake.org/download/</a></li>
+<li>Cd work dir, clone <code>osmium-tool</code>, <code>libosmium</code>, <code>protozero</code> </li>
+<li>Copy <code>build-local-vcpkg.bat</code> (see google drive) to <code>osmium-tool</code> dir and launch</li>
+<li>The binaries dir: <code>work-dir\osmium-tool\build\src\Release\</code></li>
+</ol>
+<p>Should work without Visual Studio.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/86873/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Mar '23, 10:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a4d0974f0b47ec75fe84cf6740b562d3?s=32&amp;d=identicon&amp;r=g" alt="Ildar's gravatar image" />
+    <p><a href="/users/22785/ildar">Ildar</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ildar has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/86873/">
+                edited
+                <strong>03 Oct '23, 18:26</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-86873">
+    
+        <a name="86874"></a>
+        <div class="comment" id="comment-86874">
+            <div id="post-86874-score" class="comment-score"></div>
+            <div class="comment-text"><p>For completeness, which Visual Studio version you were using?</p></div>
+            <div class="comment-info" id="comment-86874-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '23, 10:46)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="86876"></a>
+        <div class="comment" id="comment-86876">
+            <div id="post-86876-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> VS 2022, answer updated.</p></div>
+            <div class="comment-info" id="comment-86876-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '23, 14:00)</span>
+                <a class="comment-user userinfo" href="/users/22785/ildar">Ildar</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-86873" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86873-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="84392"></a>
+                    <div id="answer-container-84392" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-84392-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/84392/up/" rel="nofollow"> </a>
+<div id="post-84392-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-84392-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/84392/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi aarismendi, I also look for osmium.exe for windows. But I am not able to compile it by myself. Can you share the osmium.exe for windows ? If yes, please contact me thomas(at)img2ms.de</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/84392/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 May '22, 21:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9fbaa9a481c1ff01706ba5ab66868a0f?s=32&amp;d=identicon&amp;r=g" alt="morgen1's gravatar image" />
+    <p><a href="/users/21732/morgen1">morgen1</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="morgen1 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-84392">
+    
+        <a name="84393"></a>
+        <div class="comment" id="comment-84393">
+            <div id="post-84393-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Just a thought - would Windows Subsystem for Linux be an option for you?  That way you wouldn't have to be a small Windows dog on the floor waiting for he crumbs to fall off the Linux table :)</p></div>
+            <div class="comment-info" id="comment-84393-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 May '22, 21:35)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="84398"></a>
+        <div class="comment" id="comment-84398">
+            <div id="post-84398-score" class="comment-score"></div>
+            <div class="comment-text"><p>I will try to install the linux subsystem... maybee it is the solution..</p></div>
+            <div class="comment-info" id="comment-84398-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '22, 07:11)</span>
+                <a class="comment-user userinfo" href="/users/21732/morgen1">morgen1</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-84392" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-84392-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="86875"></a>
+                    <div id="answer-container-86875" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-86875-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86875/up/" rel="nofollow"> </a>
+<div id="post-86875-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-86875-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86875/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is no need to compile it for windows by yourself. There are ready to use compiled builds available at internet: My way : install anacaonda, it includes all binaries and the osmium.exe. After installing Anacanda, I get a directory \Anaconda3\Library\bin. Then i copied boost_program_options.dll; libbz2.dll;libexpat.dll;liblz4.dll;zlib.dll and osmium.exe to a other PC and can work with osmium.exe.</p>
+<p>morgen1</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/86875/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Mar '23, 13:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9fbaa9a481c1ff01706ba5ab66868a0f?s=32&amp;d=identicon&amp;r=g" alt="morgen1's gravatar image" />
+    <p><a href="/users/21732/morgen1">morgen1</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="morgen1 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-86875">
+    
+</div>
+<div id="comment-tools-86875" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86875-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/83374/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='7uXjqI7Di9RB3jSbH0h3wOyh6VmOwwkc' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83374/compile-osmium-tool-for-windows?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83374/compile-osmium-tool-for-windows?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osmium/"
+            class="tag-link-osmium"
+            title="see questions tagged'osmium'using tags"
+            rel="tag">osmium</a> <span class="tag-number">&#215;38</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 5, 2022, 7:20 p.m.">05 Feb '22, 19:20</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,907 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 3, 2023, 6:26 p.m.">03 Oct '23, 18:26</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/11943/errors-in-osmium-installation">Errors in osmium installation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18877/errors-when-compiling-osmium-example">Errors when compiling Osmium example</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18917/error-when-execute-osmjs-osmium">Error when execute osmjs -  osmium</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45175/osmium-filter-by-bounding-box">Osmium - filter by bounding box</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50350/extract-all-polygons-for-postal-codes-in-germany-to-view-in-qgis">Extract all polygons for postal codes in Germany to view in QGIS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55861/how-do-i-get-the-class-and-type-of-an-osm-object-returned-from-osmium-parser">How do I get the class and type of an osm-object returned from osmium parser ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56045/using-osmium-for-planet-update">Using osmium for planet update</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56246/how-to-install-osmium-on-ubuntu-1604">How to install osmium on ubuntu 16.04?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56393/find-coordinates-with-tags-in-osmium">find coordinates with tags in osmium</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7782/compiling-osmium-on-ubuntu">Compiling osmium on Ubuntu</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

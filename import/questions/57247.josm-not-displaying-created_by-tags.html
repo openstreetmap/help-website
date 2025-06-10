@@ -1,0 +1,803 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>JOSM not displaying &#39;created_by&#39; tags? - OSM Help</title>
+        <meta name="description" content="Hi Using JOSM&#39;s Download from overpass option I downloaded entities which have the created_by tag, but it appears that it doesn&#39;t display &#39;created_by&#39; tags. I&#39;ve check the filters option &amp;amp; it&#39;s empty.  Is this by design? If so, are there any other hidden tags &amp;amp; how to I delete them from enti..." />
+        <meta name="keywords" content="josm,hidden,created_by,tags" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/57247/josm-not-displaying-created_by-tags" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/57247/josm-not-displaying-created_by-tags?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='flQoPQe6qmrP46pIURi6hqNFskgcQ0K8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/57247/josm-not-displaying-created_by-tags">JOSM not displaying &#39;created_by&#39; tags?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-57247-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57247/up/" rel="nofollow"> </a>
+<div id="post-57247-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-57247-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57247/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/57247/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi</p>
+<p>Using JOSM's Download from overpass option I downloaded entities which have the created_by tag, but it appears that it doesn't display 'created_by' tags. I've check the filters option &amp; it's empty. </p>
+<p>Is this by design? If so, are there any other hidden tags &amp; how to I delete them from entities?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/hidden/" class="post-tag tag-link-hidden"
+                                        title="see questions tagged 'hidden'" rel="tag">hidden</a>
+                                
+                                    <a href="/tags/created_by/" class="post-tag tag-link-created_by"
+                                        title="see questions tagged 'created_by'" rel="tag">created_by</a>
+                                
+                                    <a href="/tags/tags/" class="post-tag tag-link-tags"
+                                        title="see questions tagged 'tags'" rel="tag">tags</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Jul '17, 13:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c9c8b421ad22f51ddd62f23413717036?s=32&amp;d=identicon&amp;r=g" alt="DaveF's gravatar image" />
+    <p><a href="/users/1532/davef">DaveF</a><br/>
+    <span class="score" title="3264 reputation points"><span class="">3.3k</span></span><span title="84 badges"><span class="badge1">&#9679;</span><span class="badgecount">84</span></span><span title="98 badges"><span class="silver">&#9679;</span><span class="badgecount">98</span></span><span title="133 badges"><span class="bronze">&#9679;</span><span class="badgecount">133</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DaveF has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-57247">
+    
+</div>
+<div id="comment-tools-57247" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57247-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/57247/josm-not-displaying-created_by-tags?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/57247/josm-not-displaying-created_by-tags?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/57247/josm-not-displaying-created_by-tags?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/57247/josm-not-displaying-created_by-tags?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="57249"></a>
+                    <div id="answer-container-57249" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57249-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57249/up/" rel="nofollow"> </a>
+<div id="post-57249-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-57249-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57249/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is by design. The created_by tag is deprecated.</p>
+<p>JOSM removes this tag automatically on objects that have been edited by you. You should <em>not</em> remove it yourself since this is just not necessary. See <a href="https://wiki.openstreetmap.org/wiki/Key:created_by#Guidance">created_by#Guidance</a> for more information.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57249/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jul '17, 15:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/57249/">
+                edited
+                <strong>24 Jul '17, 15:17</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57249">
+    
+        <a name="57252"></a>
+        <div class="comment" id="comment-57252">
+            <div id="post-57252-score" class="comment-score"></div>
+            <div class="comment-text"><p>The logic of this is a bit twisted. I understand the concept of deleting certain tags on upload, but it's ridiculous to hide tags which need removing. It's logical to hide data which is essential, not the other way around.</p></div>
+            <div class="comment-info" id="comment-57252-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '17, 17:25)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+        <a name="57254"></a>
+        <div class="comment" id="comment-57254">
+            <div id="post-57254-score" class="comment-score">1</div>
+            <div class="comment-text"><p>This tag doesn't "need removing", it just doesn't serve any purpose. Otherwise there would simply be an automatic edit to remove it once and for all. However hiding this tag will prevent people from editing and misreading it.</p></div>
+            <div class="comment-info" id="comment-57254-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '17, 18:56)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57256"></a>
+        <div class="comment" id="comment-57256">
+            <div id="post-57256-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/1532/davef">@DaveF</a> please do not answer questions with a non-answer, comments are for that.</p></div>
+            <div class="comment-info" id="comment-57256-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '17, 19:54)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57258"></a>
+        <div class="comment" id="comment-57258">
+            <div id="post-57258-score" class="comment-score"></div>
+            <div class="comment-text"><p>I agree with the above comments the tag has no practical meaning (which editor you used is a changeset property right now <a href="http://wiki.openstreetmap.org/wiki/Changeset#Tags_on_changesets)">http://wiki.openstreetmap.org/wiki/Changeset#Tags_on_changesets)</a> and you should simply ignore it. There is btw in my opinion at least some useful information left in this tag (and a reason not to just delete all of them at once): a POI tagged created_by is probably worth a survey, it is a long time since it was last touched by someone.</p></div>
+            <div class="comment-info" id="comment-57258-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '17, 20:04)</span>
+                <a class="comment-user userinfo" href="/users/7863/alecs01">Alecs01</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57249" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57249-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="57250"></a>
+                    <div id="answer-container-57250" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57250-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57250/up/" rel="nofollow"> </a>
+<div id="post-57250-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-57250-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57250/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>JOSM automatically removes the created_by tag whenever an element with such a tag is edited. So you don't need to delete these tags by hand. Instead, they automatically disappear from the database as part of other edits.</p>
+<p>Going out of your way to remove these tags is discouraged by the <a href="https://wiki.openstreetmap.org/wiki/Key:created_by">created_by wiki page</a>: </p>
+<blockquote>
+<p>You should not remove the created_by
+tag on objects you are not otherwise
+modifying. If we wanted to remove them
+in bulk we'd do it some other way.</p>
+</blockquote>
+<p>The concept of tags being automatically removed by editors is known as <a href="https://wiki.openstreetmap.org/wiki/Discardable_tags">"discardable tags"</a>. That page also links JOSM's list of discardable keys. For the most part, it contains superfluous tags from major imports.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57250/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jul '17, 15:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0626be5f46f32fce501353e8a5ec399c?s=32&amp;d=identicon&amp;r=g" alt="Tordanik's gravatar image" />
+    <p><a href="/users/14/tordanik">Tordanik</a><br/>
+    <span class="score" title="11998 reputation points"><span class="">12.0k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="106 badges"><span class="silver">&#9679;</span><span class="badgecount">106</span></span><span title="147 badges"><span class="bronze">&#9679;</span><span class="badgecount">147</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tordanik has 58 accepted answers">35&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57250">
+    
+</div>
+<div id="comment-tools-57250" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57250-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/57247/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='flQoPQe6qmrP46pIURi6hqNFskgcQ0K8' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57247/josm-not-displaying-created_by-tags?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57247/josm-not-displaying-created_by-tags?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/tags/"
+            class="tag-link-tags"
+            title="see questions tagged'tags'using tags"
+            rel="tag">tags</a> <span class="tag-number">&#215;191</span><br/>
+        
+        <a href="/tags/hidden/"
+            class="tag-link-hidden"
+            title="see questions tagged'hidden'using tags"
+            rel="tag">hidden</a> <span class="tag-number">&#215;6</span><br/>
+        
+        <a href="/tags/created_by/"
+            class="tag-link-created_by"
+            title="see questions tagged'created_by'using tags"
+            rel="tag">created_by</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 24, 2017, 1:25 p.m.">24 Jul '17, 13:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,840 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 24, 2017, 8:04 p.m.">24 Jul '17, 20:04</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/64224/josm-filter-out-nodes-in-closed-ways-which-have-tags">josm filter out nodes in closed ways which have tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/69979/convert-a-polygon-close-way-to-a-node-with-its-tags">Convert a Polygon ( Close way ) to a node with its tags.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26603/josm-how-i-can-copy-tags-from-one-object-to-another">JOSM - how I can copy tags from one object to another?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54651/setting-up-a-shared-map-for-everyone-to-tag-something">setting up a shared map for everyone to tag something</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66522/how-do-i-copy-the-tags-from-a-node-to-a-relation-in-josm">How do I copy the tags from a node to a relation in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68628/josms-shapefile-enabling-plugin-opendata-seems-to-leave-tags-blank">JOSM&#39;s shapefile-enabling plugin (opendata) seems to leave tags blank</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4363/how-do-i-tag-elevated-highways-and-roads">How do I tag Elevated Highways and Roads?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17536/why-are-fewer-tags-shown-in-potlatch-2-than-in-josm">Why are fewer tags shown in Potlatch 2 than in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50467/how-to-copy-tags-from-outer-way-to-multi-polygon-relation">How to copy tags from outer way to multi-polygon relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/76585/is-there-a-way-to-copy-the-tags-from-a-relation">Is there a way to copy the tags from a relation?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

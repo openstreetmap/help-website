@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I name a point I have just added? - OSM Help</title>
+        <meta name="description" content="When I drop a point on the map instead of being prompted to name it, I am only given a search box. How can i name the point I have made?" />
+        <meta name="keywords" content="ideditor,points,newbie,name" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/47816/how-do-i-name-a-point-i-have-just-added" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/47816/how-do-i-name-a-point-i-have-just-added?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='n3LGq0utJ429OgBm5I4IW3xeXzvO8f02' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/47816/how-do-i-name-a-point-i-have-just-added">How do I name a point I have just added?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-47816-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47816/up/" rel="nofollow"> </a>
+<div id="post-47816-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-47816-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47816/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/47816/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When I drop a point on the map instead of being prompted to name it, I am only given a search box. How can i name the point I have made?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/points/" class="post-tag tag-link-points"
+                                        title="see questions tagged 'points'" rel="tag">points</a>
+                                
+                                    <a href="/tags/newbie/" class="post-tag tag-link-newbie"
+                                        title="see questions tagged 'newbie'" rel="tag">newbie</a>
+                                
+                                    <a href="/tags/name/" class="post-tag tag-link-name"
+                                        title="see questions tagged 'name'" rel="tag">name</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Feb '16, 16:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b8dca92b1b640aaa04ab4ab3cfd73e93?s=32&amp;d=identicon&amp;r=g" alt="Stuart%20T's gravatar image" />
+    <p><a href="/users/11938/stuart-t">Stuart T</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Stuart T has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47816/">
+                edited
+                <strong>03 Feb '16, 12:51</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-47816">
+    
+        <a name="47819"></a>
+        <div class="comment" id="comment-47819">
+            <div id="post-47819-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You might want to try <a href="http://irc.openstreetmap.org/">http://irc.openstreetmap.org/</a> for quicker assistance getting started with the editor. It can take a minute, but someone will usually have an answer for this sort of question.</p></div>
+            <div class="comment-info" id="comment-47819-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Feb '16, 17:05)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="47820"></a>
+        <div class="comment" id="comment-47820">
+            <div id="post-47820-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks maxericson, but I clicked that link and got a page of gobbledegook! I have no idea what to do with that, I'm afraid. Surely there must be a simple way of just adding a point to a map and naming it? That must be the most basic use case of them all, surely? I just want to add a point of interest on a street and say what it is.</p></div>
+            <div class="comment-info" id="comment-47820-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Feb '16, 19:13)</span>
+                <a class="comment-user userinfo" href="/users/11938/stuart-t">Stuart T</a>
+                
+            </div>
+        </div>
+    
+        <a name="47821"></a>
+        <div class="comment" id="comment-47821">
+            <div id="post-47821-score" class="comment-score">1</div>
+            <div class="comment-text"><p>For info, that link allows you to connect to an IRC server that allows you to communicate with people "in real time".  If you click it, change the "Nickname" to something other than CGIxyz and then click "login", you'll be taken to a web page with the cursor sat in a field at the bottom of the screen.  If you type in something like "Hello!  I just a question on the OSM help site asking 'How do I name a point I have just added?' and was suggested to come here" someone will probably reply.</p></div>
+            <div class="comment-info" id="comment-47821-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Feb '16, 19:19)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47825"></a>
+        <div class="comment" id="comment-47825">
+            <div id="post-47825-score" class="comment-score"></div>
+            <div class="comment-text"><p>great! I'll give that a try. thanks</p></div>
+            <div class="comment-info" id="comment-47825-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Feb '16, 20:36)</span>
+                <a class="comment-user userinfo" href="/users/11938/stuart-t">Stuart T</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47816" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47816-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/47816/how-do-i-name-a-point-i-have-just-added?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/47816/how-do-i-name-a-point-i-have-just-added?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/47816/how-do-i-name-a-point-i-have-just-added?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/47816/how-do-i-name-a-point-i-have-just-added?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="47827"></a>
+                    <div id="answer-container-47827" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47827-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47827/up/" rel="nofollow"> </a>
+<div id="post-47827-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-47827-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47827/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I guess you are talking of <a href="https://wiki.openstreetmap.org/wiki/ID">iD</a> our default editor on <a href="https://www.openstreetmap.org">https://www.openstreetmap.org</a> .</p>
+<p>You should see <a href="/upfiles/Screenshot_20160202_215011.png">this</a> selection on the left. If you do not want to first select one of the shown presets or use the search box to find a preset you can click the bottom entry "point" to skop this preset selection. Afterwards you can add a name and your own accompanying <a href="https://wiki.openstreetmap.org/wiki/Tags">tags</a>. Be sure to not only set a name. Every OSM object should have more than a name tag. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47827/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Feb '16, 20:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47827/">
+                edited
+                <strong>02 Feb '16, 20:53</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47827">
+    
+        <a name="47855"></a>
+        <div class="comment" id="comment-47855">
+            <div id="post-47855-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks aseerel4c - I added a name point, but now it asks me for a "changeset comment" (whatever that is!). What do you mean by "Be sure to not only set a name"? What elese do I need to set? I saved my point and it says it had saved it, but it's not showing up on the map</p></div>
+            <div class="comment-info" id="comment-47855-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '16, 11:22)</span>
+                <a class="comment-user userinfo" href="/users/11938/stuart-t">Stuart T</a>
+                
+            </div>
+        </div>
+    
+        <a name="47856"></a>
+        <div class="comment" id="comment-47856">
+            <div id="post-47856-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/11938/stuart-t"></a><a href="http://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>: see <a href="https://wiki.openstreetmap.org/wiki/Good_changeset_comments">there for changeset comments</a>. </p>
+
+<p>"Not only a name": you need to set what the object should represent. E.g. a school or a restaurant, or a park bench, or a ...   That's also the reason why it does <a href="/tags/not_shown/?sort=mostvoted">not show up on the map</a>. I guess you mean <a href="https://www.openstreetmap.org/node/3985898141">this node</a>. So, what is "Jack the Ripper murder site"? Is there some real-world object or is it just a site which where some action took place in the past?</p></div>
+            <div class="comment-info" id="comment-47856-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '16, 11:27)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47858"></a>
+        <div class="comment" id="comment-47858">
+            <div id="post-47858-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ah! You found it. Excellent. yes, I am simply trying to drop a pin to mark the precise location of where one of the Jack the Ripper murders took place. It was in 1888. So what kind of tag do I need to add to make it show up? I am guessing I have to click on the + in the grey box below "name"? (thanks SO much for your help).</p></div>
+            <div class="comment-info" id="comment-47858-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '16, 11:32)</span>
+                <a class="comment-user userinfo" href="/users/11938/stuart-t">Stuart T</a>
+                
+            </div>
+        </div>
+    
+        <a name="47862"></a>
+        <div class="comment" id="comment-47862">
+            <div id="post-47862-score" class="comment-score"></div>
+            <div class="comment-text"><p>AT LAST! It worked! My point is showing up! Thanks everyone for your help!</p></div>
+            <div class="comment-info" id="comment-47862-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '16, 12:01)</span>
+                <a class="comment-user userinfo" href="/users/11938/stuart-t">Stuart T</a>
+                
+            </div>
+        </div>
+    
+        <a name="47865"></a>
+        <div class="comment" id="comment-47865">
+            <div id="post-47865-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/11938/stuart-t"></a><a href="http://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>: fine. However, if it is just a more or less historic place with no current real-world emanation, then there should not be a point at all (according to OSM's goals). If there is e.g. a information plate for tourists, you could add <a href="https://wiki.openstreetmap.org/wiki/Tag:information%3Dboard">such tags</a> to the object.</p>
+
+<p>Digging through <a href="https://www.openstreetmap.org/user/Stuart T/history">your changesets</a> I guess I have found the orignal object: <a href="https://www.openstreetmap.org/node/2497824565/history">https://www.openstreetmap.org/node/2497824565/history</a> . This one? Please comment, I will undelete (an advanced action) the old object, then you can try to move it again.   ...okay, since you seem to accidentally <a href="http://osmhv.openstreetmap.de/changeset.jsp?id=36975562">moved a node</a> which belongs to some streets/pedestrian area I will revert all of that - <a href="https://www.openstreetmap.org/changeset/36976930">done</a>. You can try to move the node again now.   By the way:  the location is quite different from the old one, was the object moved in the real world or do you think it was just placed at the wrong location by your fellow mappers before?</p></div>
+            <div class="comment-info" id="comment-47865-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '16, 12:48)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47870"></a>
+        <div class="comment not_top_scorer" id="comment-47870">
+            <div id="post-47870-score" class="comment-score"></div>
+            <div class="comment-text"><p>Since this is quite off-topic now, it may be good to continue the discussion in IRC chat or <a href="https://www.openstreetmap.org/message/new/aseerel4c26">send me a mail</a>.</p></div>
+            <div class="comment-info" id="comment-47870-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '16, 13:49)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47871"></a>
+        <div class="comment not_top_scorer" id="comment-47871">
+            <div id="post-47871-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi. Thanks for clearing this up and sorry to put you to this trouble. So the original site of the murder (13 Miller Court) no longer exists as an address; it is basically under what is now the London Fruit Exchange. The orignal contributor mistakenly placed the market in Brune St (presumably thinking that was where Miller Court was). I can prove my location is the correct one, if needed, but I take your point about the OSM rules and will obviously comply with them. I guess all I wanted to do is let curious people know where the site is (even though the actual address no longer exists). This contributor has marked the other Ripper locations and they appear to be correct, so I guess he just made a mistake.</p></div>
+            <div class="comment-info" id="comment-47871-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '16, 14:04)</span>
+                <a class="comment-user userinfo" href="/users/11938/stuart-t">Stuart T</a>
+                
+            </div>
+        </div>
+    
+        <a name="47872"></a>
+        <div class="comment not_top_scorer" id="comment-47872">
+            <div id="post-47872-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks for the info, Stuart. I will reply by mail.</p></div>
+            <div class="comment-info" id="comment-47872-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '16, 14:33)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47827" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47827-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/47816/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='n3LGq0utJ429OgBm5I4IW3xeXzvO8f02' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47816/how-do-i-name-a-point-i-have-just-added?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47816/how-do-i-name-a-point-i-have-just-added?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/name/"
+            class="tag-link-name"
+            title="see questions tagged'name'using tags"
+            rel="tag">name</a> <span class="tag-number">&#215;219</span><br/>
+        
+        <a href="/tags/newbie/"
+            class="tag-link-newbie"
+            title="see questions tagged'newbie'using tags"
+            rel="tag">newbie</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/points/"
+            class="tag-link-points"
+            title="see questions tagged'points'using tags"
+            rel="tag">points</a> <span class="tag-number">&#215;67</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 2, 2016, 4:33 p.m.">02 Feb '16, 16:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,145 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 3, 2016, 2:33 p.m.">03 Feb '16, 14:33</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/47817/how-can-i-move-someone-elses-point">How can I move someone else&#39;s point?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47004/name-display-in-josm-vs-potlach-vs-id">Name display in Josm vs Potlach vs iD</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2756/how-do-i-change-a-street-name">How do I change a street name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27844/put-in-an-unwanted-way-what-have-i-done">Put in an unwanted way - what have I done?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35272/when-to-graduate-from-id">When to Graduate From iD</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38951/in-id-names-entered-in-farsi-appear-backwards">In iD, names entered in Farsi appear backwards</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24861/newbie-how-to-correct-a-map-that-has-a-gap-in-a-road">Newbie-how to correct a map that has a gap in a road</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4531/im-new-and-confused-about-tags-and-keys">I&#39;m new, and confused about tags and keys</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue">Area creation in iD: continuous addition of points drops, how to continue?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm">What are the main things that I&#39;m missing out by using the iD editor instead of JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

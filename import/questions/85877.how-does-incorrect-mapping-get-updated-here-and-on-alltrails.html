@@ -1,0 +1,698 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How does incorrect mapping get updated here and on AllTrails? - OSM Help</title>
+        <meta name="description" content="Hi I&#39;m an avid AllTrails user and recently went on a hike. I discovered that the app uses OpenStreetMap for a source of information. When I went on my Pennsylvania hike in Michaux State Forest from Pine Grove Furnace State Park, called Sunset Rocks Trail, I thought I&#39;d like to explore Camp Michaux a..." />
+        <meta name="keywords" content="campmichaux,alltrails,incorrectmapping" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/85877/how-does-incorrect-mapping-get-updated-here-and-on-alltrails" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/85877/how-does-incorrect-mapping-get-updated-here-and-on-alltrails?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='B4YHUxwjy6sVQCSvqqQ3nyBS3ajO45zx' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/85877/how-does-incorrect-mapping-get-updated-here-and-on-alltrails">How does incorrect mapping get updated here and on AllTrails?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-85877-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85877/up/" rel="nofollow"> </a>
+<div id="post-85877-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85877-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85877/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/85877/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi I'm an avid AllTrails user and recently went on a hike. I discovered that the app uses OpenStreetMap for a source of information. When I went on my Pennsylvania hike in Michaux State Forest from Pine Grove Furnace State Park, called Sunset Rocks Trail, I thought I'd like to explore Camp Michaux as well. I did a little bit of investigating before heading out, but ultimately relied on AllTrails for planning this excursion. According to their map, I would hike right past the entrance to Camp Michaux. I took a left up the hill which was supposed to be the Upper Yellow Gate. I ended up hiking on some random trail that led me all through the woods but i never found remnants of Camp Michaux. I thankfully made my way back to the main road and continued on the rest of the Sunset Rocks Trail. Quite disappointing and really frustrating. Not to mention, a little bit dangerous. After returning home, I did some further research and discovered that the location AllTrails showed on the map was inaccurate. Comparing their map to one I found on the Cumberland Historical Society website, the location of Camp Michaux is actually further North on Michaux Road. When I type the location in on Apple Maps, it corresponds with the info from the Historical Society and with GPS coordinates I've since found. Actually, the whole map of the area is all wrong on AllTrails. Toms Run is really south of the Camp and Bunker Hill Road is also in the wrong place. It all made sense when I found this new information. Had I of known, AllTrails had it wrong, all I would have needed to do was walk a little bit further up the road and I would have found the signage, entrance and historical area I had been searching for for hours in the wrong woods. Again, I might add, that this was dangerous and luckily, I am a seasoned hiker with some common sense and a bit of sense of direction, otherwise I could foresee someone very easily getting hopelessly lost because of this misinformation. How can this location be corrected? And once it is, will AllTrails be updated as well??? </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/campmichaux/" class="post-tag tag-link-campmichaux"
+                                        title="see questions tagged 'campmichaux'" rel="tag">campmichaux</a>
+                                
+                                    <a href="/tags/alltrails/" class="post-tag tag-link-alltrails"
+                                        title="see questions tagged 'alltrails'" rel="tag">alltrails</a>
+                                
+                                    <a href="/tags/incorrectmapping/" class="post-tag tag-link-incorrectmapping"
+                                        title="see questions tagged 'incorrectmapping'" rel="tag">incorrectmapping</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Oct '22, 14:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a3b810fd15b65559b6536562bd4daeda?s=32&amp;d=identicon&amp;r=g" alt="etphonehome75's gravatar image" />
+    <p><a href="/users/22322/etphonehome75">etphonehome75</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="etphonehome75 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-85877">
+    
+        <a name="85879"></a>
+        <div class="comment" id="comment-85879">
+            <div id="post-85879-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Paragraphs please.</p></div>
+            <div class="comment-info" id="comment-85879-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '22, 15:48)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-85877" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85877-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/85877/how-does-incorrect-mapping-get-updated-here-and-on-alltrails?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/85877/how-does-incorrect-mapping-get-updated-here-and-on-alltrails?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/85877/how-does-incorrect-mapping-get-updated-here-and-on-alltrails?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/85877/how-does-incorrect-mapping-get-updated-here-and-on-alltrails?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="85885"></a>
+                    <div id="answer-container-85885" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85885-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85885/up/" rel="nofollow"> </a>
+<div id="post-85885-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-85885-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85885/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>How can this location be corrected?</p>
+</blockquote>
+<p>By you becoming an OpenStreetMap editor.</p>
+<p>OSM is made by people like you. There are no magic map fairies who know everything about every corner of the world and somehow transmit that information into OSM. Rather, it's a big map database which collects the local knowledge of its millions of contributors.</p>
+<p>You can be one too. Go to openstreetmap.org and find the place with information that you think is incomplete or wrong. Click "Edit". Follow the tutorial. Make the changes you think are necessary. Click "Save".</p>
+<p>There you go - you've done it. AllTrails will pick that change up in a matter of weeks or whenever.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85885/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Oct '22, 00:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85885">
+    
+        <a name="85886"></a>
+        <div class="comment" id="comment-85886">
+            <div id="post-85886-score" class="comment-score">3</div>
+            <div class="comment-text"><p>When you add the main trails you want and correct the routes, don't be tempted to delete those that you might consider to be the less important trails that you followed. All the walking tracks that are evident on the ground should be mapped and these are helpful as waypoints along the way and also help to locate where stray hikers might be. If they are exist on the ground and are marked as no entry by authorities then tag as informal and access=no. There are many useful tags to describe the condition of remote paths. The main trails could be mapped as routes to further highlight the usual destinations for hikers.</p></div>
+            <div class="comment-info" id="comment-85886-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '22, 00:29)</span>
+                <a class="comment-user userinfo" href="/users/7380/nevw">nevw</a>
+                
+            </div>
+        </div>
+    
+        <a name="85889"></a>
+        <div class="comment" id="comment-85889">
+            <div id="post-85889-score" class="comment-score"></div>
+            <div class="comment-text"><p>If adding "less important trails" that are not official you might be adding to a land manager's nightmare. Do map "what is on the ground" but also map it to show what it is which might be unofficial with implicit access=no. In the United States there is an effort to have a consistent trail tagging scheme that allows apps like All Trails and Gaia to properly emphasize official trails, etc. See: <a href="https://wiki.openstreetmap.org/wiki/United_States/Trail_Access_Project">https://wiki.openstreetmap.org/wiki/United_States/Trail_Access_Project</a></p></div>
+            <div class="comment-info" id="comment-85889-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '22, 16:19)</span>
+                <a class="comment-user userinfo" href="/users/5918/n76">n76</a>
+                
+            </div>
+        </div>
+    
+        <a name="85892"></a>
+        <div class="comment" id="comment-85892">
+            <div id="post-85892-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks! But I can most definitely do without the total SARCASM. I had no idea how this worked, which is why I was asking the question in the first place. I assumed apps like AllTrails used reliable and accurate GPS sourcing for their maps. When I found this particular discrepancy, I just wanted to learn how to correct it so that others didn't have the negative experience that I did. AllTrails help directed me to this site. I am not a "mapper"! I am just interested in the location being corrected accordingly. Next time I'm out hiking, I'll try to remember a fairy didn't wave her magic wand to create the DCNR paper map.  </p></div>
+            <div class="comment-info" id="comment-85892-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '22, 18:29)</span>
+                <a class="comment-user userinfo" href="/users/22322/etphonehome75">etphonehome75</a>
+                
+            </div>
+        </div>
+    
+        <a name="85893"></a>
+        <div class="comment" id="comment-85893">
+            <div id="post-85893-score" class="comment-score">3</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/22322/etphonehome75">@etphonehome75</a> I think that people were trying to be helpful rather than sarcastic, actually.  :)</p>
+
+<p>Unfortunately, all maps are wrong, for some sort of "wrong".  Perhaps they're out of date (a map that reflects "official" data might not reflect that a particular trail has not been maintained, for example), or perhaps they're incomplete (which seems to be the case in your example).  Many map providers, include AllTrails, use OpenStreetMap data because it is less wrong than the alternatives (and also because the data is free to use).</p></div>
+            <div class="comment-info" id="comment-85893-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '22, 19:00)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="85900"></a>
+        <div class="comment" id="comment-85900">
+            <div id="post-85900-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/22322/etphonehome75">@etphonehome75</a> No sarcasm intended.</p></div>
+            <div class="comment-info" id="comment-85900-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Oct '22, 21:36)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-85885" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85885-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/85877/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='B4YHUxwjy6sVQCSvqqQ3nyBS3ajO45zx' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/85877/how-does-incorrect-mapping-get-updated-here-and-on-alltrails?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/85877/how-does-incorrect-mapping-get-updated-here-and-on-alltrails?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/alltrails/"
+            class="tag-link-alltrails"
+            title="see questions tagged'alltrails'using tags"
+            rel="tag">alltrails</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/campmichaux/"
+            class="tag-link-campmichaux"
+            title="see questions tagged'campmichaux'using tags"
+            rel="tag">campmichaux</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/incorrectmapping/"
+            class="tag-link-incorrectmapping"
+            title="see questions tagged'incorrectmapping'using tags"
+            rel="tag">incorrectmapping</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 14, 2022, 2:55 p.m.">14 Oct '22, 14:55</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,423 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 16, 2022, 9:36 p.m.">16 Oct '22, 21:36</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/76731/how-does-hikingprojectalltrails-work">How does HikingProject/AllTrails work?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

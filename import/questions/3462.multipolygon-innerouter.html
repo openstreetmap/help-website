@@ -1,0 +1,751 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>multipolygon inner/outer - OSM Help</title>
+        <meta name="description" content="Can a multipolygon outer share part of a way with an inner of the same multipolygon?" />
+        <meta name="keywords" content="outer,inner,multipolygon" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/3462/multipolygon-innerouter" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/3462/multipolygon-innerouter?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='pGkn68b00COkX3lYfPREbDGJbMgoF72k' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/3462/multipolygon-innerouter">multipolygon inner/outer</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-3462-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3462/up/" rel="nofollow"> </a>
+<div id="post-3462-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-3462-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3462/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/3462/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Can a multipolygon outer share part of a way with an inner of the same multipolygon?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/outer/" class="post-tag tag-link-outer"
+                                        title="see questions tagged 'outer'" rel="tag">outer</a>
+                                
+                                    <a href="/tags/inner/" class="post-tag tag-link-inner"
+                                        title="see questions tagged 'inner'" rel="tag">inner</a>
+                                
+                                    <a href="/tags/multipolygon/" class="post-tag tag-link-multipolygon"
+                                        title="see questions tagged 'multipolygon'" rel="tag">multipolygon</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Mar '11, 02:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a6cb4a88637b00f42389b7550700b70c?s=32&amp;d=identicon&amp;r=g" alt="upstream's gravatar image" />
+    <p><a href="/users/947/upstream">upstream</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="upstream has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-3462">
+    
+        <a name="82776"></a>
+        <div class="comment" id="comment-82776">
+            <div id="post-82776-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm seeing a lot of people putting "simple" concave multipolygons (multipolygon relations that have no holes and folds into itself without crossing) with the concave parts as "inner" - am I missing something, or despite being concave, should it not still be outer?</p>
+
+<p>Since I'm seeing this a lot, just need to make sure and there's no clear examples anywhere though I can see why someone might call it "inner" ... incorrectly I assume.</p>
+
+<p>Example: think of a "PacMan" figure, and imagine a way that traces the edges.  This way that traces the edges no matter how it's split up into a multipolygon relation, all of the ways should be "outer" including the concave "mouth" portion, and the eye, if drawn, would be the only part that could be "inner"?</p>
+
+<p>Example: if tracing a multipolygon that looks like ⛻ there should be zero "inner" ways.</p>
+
+<p>Another example: think of a spiral shaped hedge.  All ways should be "outer" including the center of the spiral.</p>
+
+<p>All three of these examples could be drawn without a multipolygon but ignore that for now... (except if PacMan had an eye...)</p></div>
+            <div class="comment-info" id="comment-82776-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Dec '21, 11:15)</span>
+                <a class="comment-user userinfo" href="/users/16890/gpserror">gpserror</a>
+                
+            </div>
+        </div>
+    
+        <a name="82787"></a>
+        <div class="comment" id="comment-82787">
+            <div id="post-82787-score" class="comment-score"></div>
+            <div class="comment-text"><p>Tagging those ways as inner would almost certainly be considered an error. Can you give an example of one of these?</p></div>
+            <div class="comment-info" id="comment-82787-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Dec '21, 16:54)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="82788"></a>
+        <div class="comment" id="comment-82788">
+            <div id="post-82788-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've been correcting them as my gut feel was that it was indeed an error.  Here's one I haven't touched yet though it wasn't as egregious as others I've seen: </p>
+
+<p><a href="https://www.openstreetmap.org/relation/11117214">https://www.openstreetmap.org/relation/11117214</a></p>
+
+<p>specifically at this member: <a href="https://www.openstreetmap.org/way/805895181">https://www.openstreetmap.org/way/805895181</a></p>
+
+<p>This member should be marked as "outer" despite being "inside" as far as I know about how topology works.</p></div>
+            <div class="comment-info" id="comment-82788-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Dec '21, 17:20)</span>
+                <a class="comment-user userinfo" href="/users/16890/gpserror">gpserror</a>
+                
+            </div>
+        </div>
+    
+        <a name="82789"></a>
+        <div class="comment" id="comment-82789">
+            <div id="post-82789-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, that way should be an outer. The JOSM validator throws an error that the multipolygon isn't closed, which is true because there isn't a continuous ring of outer ways due to that one mis-roled way.</p></div>
+            <div class="comment-info" id="comment-82789-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Dec '21, 17:46)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3462" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3462-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/3462/multipolygon-innerouter?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/3462/multipolygon-innerouter?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/3462/multipolygon-innerouter?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/3462/multipolygon-innerouter?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="3463"></a>
+                    <div id="answer-container-3463" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3463-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3463/up/" rel="nofollow"> </a>
+<div id="post-3463-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-3463-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3463/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>No.  The outer and inner of a multipolygon relation must not touch or cross.  No sharing of points either.<br>
+</p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">http://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3463/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Mar '11, 02:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d90ea04df82d77f534659f08894dd889?s=32&amp;d=identicon&amp;r=g" alt="Richard%20Weait's gravatar image" />
+    <p><a href="/users/66/richard-weait">Richard Weait</a><br/>
+    <span class="score" title="3044 reputation points"><span class="">3.0k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="34 badges"><span class="silver">&#9679;</span><span class="badgecount">34</span></span><span title="52 badges"><span class="bronze">&#9679;</span><span class="badgecount">52</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard Weait has 8 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3463/">
+                edited
+                <strong>01 Mar '11, 02:39</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3463">
+    
+        <a name="3465"></a>
+        <div class="comment" id="comment-3465">
+            <div id="post-3465-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The reason being because if the 'inner' touches the 'outer', then it is no longer 'inner' - the 'outer' way can just divert around what was the 'inner' to exclude the inner area.</p></div>
+            <div class="comment-info" id="comment-3465-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '11, 09:30)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="3474"></a>
+        <div class="comment" id="comment-3474">
+            <div id="post-3474-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Interestingly in OSM we allow inner rings to touch. This is not conform to standard OGC Simple Features but allows for simpler modeling in OSM when you have multiple different adjacent features inside the outer way which you want to exclude from the polygon.</p></div>
+            <div class="comment-info" id="comment-3474-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '11, 11:59)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3463" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3463-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/3462/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='pGkn68b00COkX3lYfPREbDGJbMgoF72k' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3462/multipolygon-innerouter?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3462/multipolygon-innerouter?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/multipolygon/"
+            class="tag-link-multipolygon"
+            title="see questions tagged'multipolygon'using tags"
+            rel="tag">multipolygon</a> <span class="tag-number">&#215;132</span><br/>
+        
+        <a href="/tags/inner/"
+            class="tag-link-inner"
+            title="see questions tagged'inner'using tags"
+            rel="tag">inner</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/outer/"
+            class="tag-link-outer"
+            title="see questions tagged'outer'using tags"
+            rel="tag">outer</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 1, 2011, 2:28 a.m.">01 Mar '11, 02:28</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,916 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 7, 2021, 5:46 p.m.">07 Dec '21, 17:46</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/76202/differentiating-ql-results-from-innerouter-boundaries-of-same-name">Differentiating QL results from inner/outer boundaries of same name</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12002/is-there-an-instruction-on-what-not-to-put-in-a-multipolygon-relation">Is there an instruction on what not to put in a multipolygon relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40704/problems-with-relation">Problems with relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66819/the-inner-border-of-a-mp-bilongs-to-the-area-or-not">The &quot;inner&quot; border of a MP bilongs to the area or not?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51149/best-practice-on-inner-and-outer">Best practice on inner and outer.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29104/multipolygon-of-fence-building-fence-building-car-parking">Multipolygon of fence, building, fence, building, car parking</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7465/how-do-i-best-edit-shared-nodes-in-potlatch-eg-between-two-polygons">How do I best edit &quot;shared nodes&quot; in Potlatch (e.g. between two polygons)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5642/disappearing-golf-course">Disappearing golf course</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4105/opencyclemap-potlach2-multipolygon-howto">Opencyclemap Potlach2 multipolygon howto?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10313/pbfosm-file-move-multipolygon-tags-from-members-to-relation">pbf/osm-file: move multipolygon tags from members to relation</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

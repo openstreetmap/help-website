@@ -1,0 +1,899 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How can I easily convert OSM to MBtiles with default styles? - OSM Help</title>
+        <meta name="description" content="I want to do a really simple thing:  download city data from http://metro.teczno.com/ do some magic (where I don&#39;t have to write bazillion stylesheets by hand) to convert it to MBTiles run it on a mobile app offline  The problem is that I can&#39;t find a way to sensibly convert the data. I&#39;ve tried Til..." />
+        <meta name="keywords" content=".osm,tilemill,convert,mbtiles" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='eCVSPXX6YzFoOtD3y1novOtE9TWjVrml' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles">How can I easily convert OSM to MBtiles with default styles?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-24828-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24828/up/" rel="nofollow"> </a>
+<div id="post-24828-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-24828-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24828/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/24828/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I want to do a really simple thing:</p>
+<ol>
+<li>download city data from <a href="http://metro.teczno.com/">http://metro.teczno.com/</a></li>
+<li><strong>do some magic (where I don't have to write bazillion stylesheets by hand) to convert it to MBTiles</strong></li>
+<li>run it on a mobile app offline</li>
+</ol>
+<p>The problem is that I can't find a way to sensibly convert the data. I've tried Tilemill (trust me I really tried), but it just doesn't do what I expect. It doesn't really care if I add layers, most of the time it just errors or does nothing for 20 minutes, and even when I get it working the best I could do is this</p>
+<p><img src="http://i.imgur.com/xFs0HHj.png" alt=""></p>
+<p>I don't want anything custom, I don't want to create my own layer thingies with custom graphics, or customize how the map works. <strong>All I want is to take the default look of OSM, slice a region and stick it into a MBTiles format.</strong> I also tried <a href="http://www.mapbox.com/tilemill/docs/guides/osm-bright-mac-quickstart/">osm2pgsql according to Tilemill guide</a>, but Tilemill crashed saying that there is some invalid data.</p>
+<p>I've read tons of documentation but everything just refers to one more complicated tool than another and 1000 ways to customize things. I tried mapnik and mb-util (which tells me <code>file is encrypted or is not a database</code> for every single file format I've tried), but I couldn't find a simple way to do this.</p>
+<p><strong>Could someone please point me to a resource or explain a simple way to take <code>.osm</code> and shove it into a <code>.MBTiles</code>?</strong></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/.osm/" class="post-tag tag-link-.osm"
+                                        title="see questions tagged '.osm'" rel="tag">.osm</a>
+                                
+                                    <a href="/tags/tilemill/" class="post-tag tag-link-tilemill"
+                                        title="see questions tagged 'tilemill'" rel="tag">tilemill</a>
+                                
+                                    <a href="/tags/convert/" class="post-tag tag-link-convert"
+                                        title="see questions tagged 'convert'" rel="tag">convert</a>
+                                
+                                    <a href="/tags/mbtiles/" class="post-tag tag-link-mbtiles"
+                                        title="see questions tagged 'mbtiles'" rel="tag">mbtiles</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Aug '13, 11:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/16a5eec5eca4550033c0e19dba3b32b8?s=32&amp;d=identicon&amp;r=g" alt="darthdeus's gravatar image" />
+    <p><a href="/users/7009/darthdeus">darthdeus</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="darthdeus has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/24828/">
+                edited
+                <strong>09 Jan '16, 14:46</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-24828">
+    
+        <a name="24844"></a>
+        <div class="comment" id="comment-24844">
+            <div id="post-24844-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you take a look at the various <a href="http://github.com/mapbox/mbtiles-spec/wiki/Implementations">implementations</a>?</p></div>
+            <div class="comment-info" id="comment-24844-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '13, 15:58)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24828" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24828-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="24829"></a>
+                    <div id="answer-container-24829" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24829-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24829/up/" rel="nofollow"> </a>
+<div id="post-24829-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-24829-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24829/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is no simple way, except "simply" paying someone to do the complicated stuff for you and send you the MBTiles file you're after. Most of the things that one would usually say in response to your question (osm2pgsql, tilemill etc) you seem to have tried already and failed. It seems to work for other people; maybe you should go to a TileMill support forum and post the exact error messages you received there.</p>
+<p>If you are on Windows or Linux - and not on iOS - then another relatively simple option is <a href="www.maperitive.net">Maperitive</a> where you can load an OSM file and export to tiles with a few commands; after that you'd still have to run some utility (e.g. mbutil) to convert the raw tiles to MBTiles format.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24829/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Aug '13, 12:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24829">
+    
+        <a name="24832"></a>
+        <div class="comment" id="comment-24832">
+            <div id="post-24832-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't understand why this should be something complicated. I'm not asking to customize anything, I just need to convert one file format to another, no changes, no nothing, just a simple export.</p></div>
+            <div class="comment-info" id="comment-24832-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '13, 12:30)</span>
+                <a class="comment-user userinfo" href="/users/7009/darthdeus">darthdeus</a>
+                
+            </div>
+        </div>
+    
+        <a name="24843"></a>
+        <div class="comment" id="comment-24843">
+            <div id="post-24843-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Conversions between file formats are rarely simple.</p></div>
+            <div class="comment-info" id="comment-24843-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '13, 15:56)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40202"></a>
+        <div class="comment" id="comment-40202">
+            <div id="post-40202-score" class="comment-score"></div>
+            <div class="comment-text"><p>Look at this as an initial-days stage in a multi-year technology development process. At one time it was incredibly complicated to digitize sound and convert it. I also need to render osm data and after getting lost with MBTiles, bit the bullet and am doing it the png tiles way using Maperitive.</p></div>
+            <div class="comment-info" id="comment-40202-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '15, 04:16)</span>
+                <a class="comment-user userinfo" href="/users/10306/nikhilvj">nikhilvj</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24829" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24829-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="44065"></a>
+                    <div id="answer-container-44065" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-44065-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44065/up/" rel="nofollow"> </a>
+<div id="post-44065-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-44065-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44065/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Maperitive will go from OSM data to Mbtiles directly. Using the default rules files from Maperitive, the output is identical (almost) to OSM rendering. I export to mbtiles for a 5 mile radius area (zooms 10-19) every few months without issue on a windows PC. Takes about 6 hours.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/44065/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '15, 12:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5085ea3bf927efbe9f98b1ac9a0d6b3f?s=32&amp;d=identicon&amp;r=g" alt="RJCorazza's gravatar image" />
+    <p><a href="/users/4997/rjcorazza">RJCorazza</a><br/>
+    <span class="score" title="101 reputation points">101</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RJCorazza has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-44065">
+    
+</div>
+<div id="comment-tools-44065" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44065-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24848"></a>
+                    <div id="answer-container-24848" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24848-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24848/up/" rel="nofollow"> </a>
+<div id="post-24848-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-24848-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24848/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are two general approaches to making mbtiles archives.</p>
+<p>1) Generate the tiles yourself, and put them in the mbtiles archive. </p>
+<p>For this you'll need a working copy of <a href="http://www.mapbox.com/tilemill/">Tilemill</a>, <a href="https://github.com/openstreetmap/osm2pgsql">osm2pgsql</a> and <a href="https://github.com/gravitystorm/openstreetmap-carto">openstreetmap-carto</a>. Load your extract into the database with osm2pgsql, use the openstreetmap-carto stylesheets (which work fine as a Tilemill project) to apply the normal style rules to your data, and use the Tilemill as a nice user interface to pick the area that you want, and export your mbtiles archive.</p>
+<p>2) Bulk-download someone else's map tile images, and put them into an mbtiles archive directly.</p>
+<p>Note that very few people do this, and so I'm not sure there's even some scripts available for you to run that will do the whole thing, and it's against the T&amp;Cs of most tileserver providers to run bulk downloads anyway.</p>
+<p>You ask for "a simple way to take .osm and shove it into a .MBTiles" but there's nothing fundamentally simple about it. At some point the raw OSM data needs styling and converting into tiles, either by you or by someone else.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24848/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Aug '13, 17:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3743b1b368f5e209eb8aad30164acc4?s=32&amp;d=identicon&amp;r=g" alt="Andy%20Allan's gravatar image" />
+    <p><a href="/users/3/andy-allan">Andy Allan</a><br/>
+    <span class="score" title="12456 reputation points"><span class="">12.5k</span></span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="128 badges"><span class="silver">&#9679;</span><span class="badgecount">128</span></span><span title="153 badges"><span class="bronze">&#9679;</span><span class="badgecount">153</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andy Allan has 46 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24848">
+    
+</div>
+<div id="comment-tools-24848" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24848-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/24828/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='eCVSPXX6YzFoOtD3y1novOtE9TWjVrml' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/.osm/"
+            class="tag-link-.osm"
+            title="see questions tagged'.osm'using tags"
+            rel="tag">.osm</a> <span class="tag-number">&#215;68</span><br/>
+        
+        <a href="/tags/tilemill/"
+            class="tag-link-tilemill"
+            title="see questions tagged'tilemill'using tags"
+            rel="tag">tilemill</a> <span class="tag-number">&#215;36</span><br/>
+        
+        <a href="/tags/convert/"
+            class="tag-link-convert"
+            title="see questions tagged'convert'using tags"
+            rel="tag">convert</a> <span class="tag-number">&#215;35</span><br/>
+        
+        <a href="/tags/mbtiles/"
+            class="tag-link-mbtiles"
+            title="see questions tagged'mbtiles'using tags"
+            rel="tag">mbtiles</a> <span class="tag-number">&#215;18</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 2, 2013, 11:51 a.m.">02 Aug '13, 11:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>26,288 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 9, 2016, 2:46 p.m.">09 Jan '16, 14:46</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/44529/how-to-convert-osmpbf-or-osmbz2-to-geo-tiff-via-command-line">[closed] How to Convert .OSM.PBF or .OSM.BZ2 to Geo .Tiff via Command Line</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11624/librarytool-for-generating-an-mbtiles-file-from-online-osm-data">library/tool for generating an MBTiles file from online osm data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10503/simple-convert-osm-to-kml">simple convert OSM to KML</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44528/how-do-i-convert-osmpbf-or-osmbz2-to-mbtiles-via-command-line">How do I convert .osm.pbf or .osm.bz2 to .mbtiles via command line</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53661/visualize-3d-building-for-very-big-areas-and-convert-to-google-earth">Visualize 3D building for very big areas and convert to google earth</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42374/how-to-convert-data-from-osm-to-mbtiles-and-add-a-good-style">How to convert data from osm to mbtiles and add a good style ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29562/converting-to-osm">[closed] converting to .osm</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8273/how-do-i-extract-the-polygon-of-an-administrative-boundary">How do I extract the polygon of an administrative boundary?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6412/how-can-i-export-mbtiles-iphone">how can i export mbtiles (iphone)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2042/exporting-as-openstreetmap-xml-gives-page-not-found">Exporting as OpenStreetMap XML gives page not found?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

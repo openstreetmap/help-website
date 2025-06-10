@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Slow pre-rendering with generate_tiles_multiprocess.py - OSM Help</title>
+        <meta name="description" content="I have successfully imported europe-latest.osm.pbf in postgresql 10. Now I am using generate_tiles_multiprocess.py (NUM_THREADS=10) to prerender tiles. I have prerendered europe zoom 0-7. That went fine (but that are not that many tiles). Now I am trying to prerender individual countries (zoom 8-17)..." />
+        <meta name="keywords" content="generate_tiles,postgresql,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/70763/slow-pre-rendering-with-generate_tiles_multiprocesspy" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/70763/slow-pre-rendering-with-generate_tiles_multiprocesspy?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CjiN1MPW5tUaLscYWjTbty5Z7GBGE6Xb' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/70763/slow-pre-rendering-with-generate_tiles_multiprocesspy">Slow pre-rendering with generate_tiles_multiprocess.py</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-70763-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70763/up/" rel="nofollow"> </a>
+<div id="post-70763-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-70763-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70763/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/70763/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have successfully imported europe-latest.osm.pbf in postgresql 10.</p>
+<p>Now I am using generate_tiles_multiprocess.py (NUM_THREADS=10) to prerender tiles.
+I have prerendered europe zoom 0-7. That went fine (but that are not that many tiles).</p>
+<p>Now I am trying to prerender individual countries (zoom 8-17) (Netherlands for example) but even such a small country takes very long. I have it running now for 6 hours and it has generated 6000 tiles which comes down to 3 seconds per tile (30s per tile per core). At this rate Netherlands will take weeks to finish.</p>
+<p>The specs of my machine are:</p>
+<p>i9-7900X CPU @ 3.30GHz 3.31 GHz (10 cores)</p>
+<p>64 GB RAM</p>
+<p>2 TB SSD</p>
+<p>I have previously rendered a single province of the Netherlands on my 8 year old laptop (with that province being the only data in my postgresql db)(NUM_THREADS=4) and that went fine (effective 1 tile per 0.25s - 1s per tile per core). This leaves me to believe that postgresql is my bottleneck as my current machine is much faster but it has a lot more data to query.</p>
+<p>I found a lot of information about how to tune postgresql when importing osm data, but little to nothing about best settings for rendering. Are there any settings that make a world of difference?</p>
+<p>I have the following postgresql settings:</p>
+<ul>
+<li>work_mem 16MB</li>
+<li>shared_buffers 128MB</li>
+<li>effective_cache_size 4GB</li>
+<li>maintenance_work_mem 265MB</li>
+<li>autovacuum on</li>
+</ul>
+<p>What other settings are relevant?
+Which of these should I alter?</p>
+<p>I also found some information about tuning the stylesheet queries but I am using the commonly used style openstreetmap-carto and was hoping that a greater mind than me had already optimized it.</p>
+<p>Or are there any specific db indexes that I should create for this particular stylesheet that would speed things up?</p>
+<p>When I look at top I see 16 postgres processes (not 10) that use between 45% en 65% cpu and use between 0,1% and 0,3% mem. It looks like it is not using much memory:</p>
+<p>free -m:</p>
+<pre><code>     total        used        free      shared  buff/cache   available
+</code></pre>
+<p>Mem:          49739     6821        1836         528       41082       41791</p>
+<p>Swap:             0           0           0</p>
+<p>Does anyone know what my bottleneck is?</p>
+<p>Last and I hope it is not too relevant. I am running Docker containers in VirtualBox (gave it 50GB RAM).</p>
+<p>p.s. I read <a href="https://help.openstreetmap.org/questions/65115/solved-slow-pre-rendering-with-generate_tiles_multiprocesspy">https://help.openstreetmap.org/questions/65115/solved-slow-pre-rendering-with-generate_tiles_multiprocesspy</a> but I already imported without the -l option.</p>
+<p>p.p.s. Here someone also prerenders europe: <a href="https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe">https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe</a> and he claims to generate half a million tiles over a night. That is 100 times faster than what I am seeing. This leaves me to believe that with better tuning I can gain a lot.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/generate_tiles/" class="post-tag tag-link-generate_tiles"
+                                        title="see questions tagged 'generate_tiles'" rel="tag">generate_tiles</a>
+                                
+                                    <a href="/tags/postgresql/" class="post-tag tag-link-postgresql"
+                                        title="see questions tagged 'postgresql'" rel="tag">postgresql</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Sep '19, 16:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/31cbcef9e1dd2923f15c35ab8cf690b8?s=32&amp;d=identicon&amp;r=g" alt="mg218's gravatar image" />
+    <p><a href="/users/17182/mg218">mg218</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mg218 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/70763/">
+                edited
+                <strong>15 Sep '19, 10:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-70763">
+    
+</div>
+<div id="comment-tools-70763" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70763-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/70763/slow-pre-rendering-with-generate_tiles_multiprocesspy?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/70763/slow-pre-rendering-with-generate_tiles_multiprocesspy?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/70763/slow-pre-rendering-with-generate_tiles_multiprocesspy?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/70763/slow-pre-rendering-with-generate_tiles_multiprocesspy?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="70764"></a>
+                    <div id="answer-container-70764" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-70764-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70764/up/" rel="nofollow"> </a>
+<div id="post-70764-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-70764-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70764/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>3 seconds a tile for zooms 8-12 sound roughly what I'd expect. These involve huge numbers of not very selective SQL queries and therefore take a long time to run. Tiles for lower tiles should be a little faster as the queries will be more selective, but they produce more data. For these reasons most sites only pre-render low-zoom tiles periodically and the higher zoom tiles (metatiles) are only rendered on demand.</p>
+<p>The latter case is because: a) doing them all takes a lot of time; b) it's a lot of tiles; and c) most of them will never be looked at.</p>
+<p>If you log SQL queries on your postgres instance you may be able to see exactly how many queries are run per tile (or do a single tile render as per switch2osm). You can also grab the SQL and see if the actual query plan is not what you'd expect, but consider that individual queries are retrieving the highway network, railway network, water features, natural &amp; landuse, airports, place names, boundaries, some POIs etc. For low zoom metatiles covering much of NL this may mean table scans are used rather than indexes.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/70764/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Sep '19, 17:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-70764">
+    
+        <a name="70765"></a>
+        <div class="comment" id="comment-70765">
+            <div id="post-70765-score" class="comment-score"></div>
+            <div class="comment-text"><p>Effectively 1 tile is generated per 3 seconds, but it also means that 10 cores are busy and each takes 30s to generate 1 tile. Then it doesn't sound so fast anymore. Maybe that is a better way to look at it?</p></div>
+            <div class="comment-info" id="comment-70765-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Sep '19, 17:28)</span>
+                <a class="comment-user userinfo" href="/users/17182/mg218">mg218</a>
+                
+            </div>
+        </div>
+    
+        <a name="70787"></a>
+        <div class="comment" id="comment-70787">
+            <div id="post-70787-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here someone also prerenders europe: <a href="https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe">https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe</a> and he claims to generate half a million tiles over a night. That is 100 times faster than what I am seeing. This leaves me to believe that with better tuning I can gain a lot.</p></div>
+            <div class="comment-info" id="comment-70787-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Sep '19, 10:09)</span>
+                <a class="comment-user userinfo" href="/users/17182/mg218">mg218</a>
+                
+            </div>
+        </div>
+    
+        <a name="70790"></a>
+        <div class="comment" id="comment-70790">
+            <div id="post-70790-score" class="comment-score"></div>
+            <div class="comment-text"><p>I cant do your PostgreSQL DB optimisation for you. You need to do some standard DBA work. Get some query plans, see how much memory is allocated to each process (default is 4MB IIRC), look at other things like checkpoint interval etc.</p></div>
+            <div class="comment-info" id="comment-70790-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Sep '19, 15:31)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="70808"></a>
+        <div class="comment" id="comment-70808">
+            <div id="post-70808-score" class="comment-score"></div>
+            <div class="comment-text"><p>I changed the 4 MB work_mem to 64 MB (did not see an improvement). I was hoping that as more people are tiling europe with the same openstreetmap-carto stylesheet, with data imported with osm2pgsql and a CPU with 10+ cores (all more or less standard) that good settings for postgresql would be well known and hopefully documented. But I find tons of info about good settings for importing but not so for tiling. And yes, I have very little know-how about database tuning so I fear that I don't know what I would be looking at. Until now I had never heard about checkpoint intervals to give you an idea how little I know about this aspect of IT.</p></div>
+            <div class="comment-info" id="comment-70808-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Sep '19, 21:58)</span>
+                <a class="comment-user userinfo" href="/users/17182/mg218">mg218</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-70764" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70764-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/70763/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='CjiN1MPW5tUaLscYWjTbty5Z7GBGE6Xb' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70763/slow-pre-rendering-with-generate_tiles_multiprocesspy?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70763/slow-pre-rendering-with-generate_tiles_multiprocesspy?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/postgresql/"
+            class="tag-link-postgresql"
+            title="see questions tagged'postgresql'using tags"
+            rel="tag">postgresql</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/generate_tiles/"
+            class="tag-link-generate_tiles"
+            title="see questions tagged'generate_tiles'using tags"
+            rel="tag">generate_tiles</a> <span class="tag-number">&#215;24</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 13, 2019, 4:55 p.m.">13 Sep '19, 16:55</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,635 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 16, 2019, 10:01 p.m.">16 Sep '19, 22:01</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/18610/modify-generate_tilespy-to-create-512-x-512-tiles">modify generate_tiles.py to create 512 x 512 tiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26249/tiles-for-hires-device">Tiles for hires device</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10677/setting-postgis-as-a-datasource">Setting PostGIS as a datasource</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12388/best-way-to-get-all-cities-of-a-specific-area">Best way to get all cities of a specific area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23949/is-it-possible-to-draw-tiles-directly-from-an-api-database-without-postgis">[closed] Is it possible to draw tiles directly from an API database (without PostGIS)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24290/local-tile-server-extremely-slow-rendering">Local Tile Server - EXTREMELY slow rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7920/mapnik-street-name-generation">Mapnik Street Name Generation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10671/osm-postgis-mapnik-problem">OSM – PostGIS – Mapnik problem!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11357/rendering-imagesmaps-from-postgresqlpostgis-database">Rendering images/maps from Postgresql/PostGIS Database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34358/runtimeerror-could-not-load-map-file-file-does-not-exist-of-rootsvnopenstreetmaporgapplicationsrenderingmapnikosm-localxml">RuntimeError: Could not load map file: File does not exist of &#39;/root/svn.openstreetmap.org/applications/rendering/mapnik/osm-local.xml&#39;</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

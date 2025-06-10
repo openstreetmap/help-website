@@ -1,0 +1,746 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>mediensyndikat map generator with markers does not work anymore - OSM Help</title>
+        <meta name="description" content="Hello, there is a map generator where you can create an interactive map with markers and geo positions. It worked all right the last months: http://www.mediensyndikat.de/generator/ Now lately every time I generate a new map an want to download the map, it indicates that the file has &quot;0&quot; kb. When dow..." />
+        <meta name="keywords" content="marker,map,mediensyndikat,generator,error" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/49388/mediensyndikat-map-generator-with-markers-does-not-work-anymore" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/49388/mediensyndikat-map-generator-with-markers-does-not-work-anymore?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='4XidAKyMv7M8fTpCzRGc5byr0wHpQwlF' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/49388/mediensyndikat-map-generator-with-markers-does-not-work-anymore">mediensyndikat map generator with markers does not work anymore</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-49388-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49388/up/" rel="nofollow"> </a>
+<div id="post-49388-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49388-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49388/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/49388/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, there is a map generator where you can create an interactive map with markers and geo positions. It worked all right the last months:
+<a href="http://www.mediensyndikat.de/generator/">http://www.mediensyndikat.de/generator/</a></p>
+<p>Now lately every time I generate a new map an want to download the map, it indicates that the file has "0" kb. When downloaded the file is completely empty. What seems to be the problem? Is there any solution? The data that is inserted seems to be located within the web browser. Is there a way to extract it? Is there any other generator which I might use that works well? We have a very huge map that is updated on a daily basis and is visited very often by lots of people (many thousands every day), we need a solution.</p>
+<p>thank you</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/marker/" class="post-tag tag-link-marker"
+                                        title="see questions tagged 'marker'" rel="tag">marker</a>
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                                    <a href="/tags/mediensyndikat/" class="post-tag tag-link-mediensyndikat"
+                                        title="see questions tagged 'mediensyndikat'" rel="tag">mediensyndikat</a>
+                                
+                                    <a href="/tags/generator/" class="post-tag tag-link-generator"
+                                        title="see questions tagged 'generator'" rel="tag">generator</a>
+                                
+                                    <a href="/tags/error/" class="post-tag tag-link-error"
+                                        title="see questions tagged 'error'" rel="tag">error</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Apr '16, 10:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d120506a00c4a932dd5b3c8a6da22bcb?s=32&amp;d=identicon&amp;r=g" alt="Freifrank85's gravatar image" />
+    <p><a href="/users/12225/freifrank85">Freifrank85</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Freifrank85 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/49388/">
+                edited
+                <strong>24 Apr '16, 11:32</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-49388">
+    
+</div>
+<div id="comment-tools-49388" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49388-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/49388/mediensyndikat-map-generator-with-markers-does-not-work-anymore?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/49388/mediensyndikat-map-generator-with-markers-does-not-work-anymore?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/49388/mediensyndikat-map-generator-with-markers-does-not-work-anymore?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/49388/mediensyndikat-map-generator-with-markers-does-not-work-anymore?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="49389"></a>
+                    <div id="answer-container-49389" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-49389-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49389/up/" rel="nofollow"> </a>
+<div id="post-49389-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-49389-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49389/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Best ask the operators (mediensyndikat) what's wrong with the service. If I make a map there and click on the download button, then I only see a white page.</p>
+<p>If you want to make a online map with markers, you might like <a href="//wiki.openstreetmap.org/wiki/UMap">umap</a>. </p>
+<p>Or look at <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services</a> or other questions on this help site and search for "marker".</p>
+<p>A general note, unless you host your own tile (base map) server: you need to obey the terms of use of the used tile services. If you have muuuch traffic, then e.g. <a href="//wiki.openstreetmap.org/wiki/Tile_usage_policy">osm.org's tiles</a> should not be used by you.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/49389/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '16, 11:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/49389/">
+                edited
+                <strong>24 Apr '16, 11:32</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-49389">
+    
+        <a name="49390"></a>
+        <div class="comment" id="comment-49390">
+            <div id="post-49390-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello,
+there is no support service at that site. 
+Another site: <a href="http://osmtools.de/easymap/?lang=de&amp;page=editor">http://osmtools.de/easymap/?lang=de&amp;page=editor</a> does not work either.
+Is there any other solution to my problem?</p>
+
+<p>If I used umap, what happens to the hundreds of markers of my map that I have already created?</p>
+
+<p>What do you mean by much traffic? I host the .html map on my server, or is that service provided by another person? All the icons and stuff?</p></div>
+            <div class="comment-info" id="comment-49390-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '16, 11:43)</span>
+                <a class="comment-user userinfo" href="/users/12225/freifrank85">Freifrank85</a>
+                
+            </div>
+        </div>
+    
+        <a name="49391"></a>
+        <div class="comment" id="comment-49391">
+            <div id="post-49391-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/12225/freifrank85">@Freifrank</a>: Support service: see the page's footer: <a href="http://www.mediafant.de/">http://www.mediafant.de/</a> . Very likely you (also) get paid-for service there, which might be interesting <em>if</em> you are representing a company just wanting to have a solution. If you need more help, there are other <a href="//wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">commercial service providers around OSM</a>. We are just freaky volunteers here.</p>
+
+<p>I guess your html file  just contains the markers and links to libraries hosted somewhere else and loads the map also from somewhere else (likely tile.openstreetmap.org).  It would be helpful, if you could mention a link to your map.</p>
+
+<p>For umap you would need to recreate the markers, unless you can import your old ones somehow.</p>
+
+<p>What is too "much" traffic for the tile servers is a bit undefined - see the tile usage policy. "Many thousands" sounds like it is too much (also depends a bit on what your visitors do with the map - do they just view one area or do they move around and zoom).</p></div>
+            <div class="comment-info" id="comment-49391-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '16, 13:49)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49392"></a>
+        <div class="comment" id="comment-49392">
+            <div id="post-49392-score" class="comment-score">2</div>
+            <div class="comment-text"><p>One of the inventers helpfully got in touch. He is helping to solve this. I will keep you updated and report the progress, thank you so far</p></div>
+            <div class="comment-info" id="comment-49392-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '16, 17:03)</span>
+                <a class="comment-user userinfo" href="/users/12225/freifrank85">Freifrank85</a>
+                
+            </div>
+        </div>
+    
+        <a name="49393"></a>
+        <div class="comment" id="comment-49393">
+            <div id="post-49393-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/12225/freifrank85">@Freifrank85</a>: thank you for the updates!</p></div>
+            <div class="comment-info" id="comment-49393-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '16, 18:32)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49389" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49389-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/49388/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='4XidAKyMv7M8fTpCzRGc5byr0wHpQwlF' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49388/mediensyndikat-map-generator-with-markers-does-not-work-anymore?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49388/mediensyndikat-map-generator-with-markers-does-not-work-anymore?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/error/"
+            class="tag-link-error"
+            title="see questions tagged'error'using tags"
+            rel="tag">error</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/marker/"
+            class="tag-link-marker"
+            title="see questions tagged'marker'using tags"
+            rel="tag">marker</a> <span class="tag-number">&#215;98</span><br/>
+        
+        <a href="/tags/generator/"
+            class="tag-link-generator"
+            title="see questions tagged'generator'using tags"
+            rel="tag">generator</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/mediensyndikat/"
+            class="tag-link-mediensyndikat"
+            title="see questions tagged'mediensyndikat'using tags"
+            rel="tag">mediensyndikat</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 24, 2016, 10:16 a.m.">24 Apr '16, 10:16</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,094 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 24, 2016, 6:32 p.m.">24 Apr '16, 18:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/36656/add-marker-to-a-routing-map">Add marker to a routing map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41890/how-to-move-pin-and-save-new-longlat-in-my-phpjavascript-slippy-map">How to move &quot;pin&quot; and save new Long/Lat in my php/javascript slippy map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11451/map-will-not-display">map will not display</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31832/paris-city-centre">Paris city centre</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39703/problem-requesting-my-map-at-garminopenstreetmapnl-requested-map-version-does-not-exist">Problem requesting my map at garmin.openstreetmap.nl (Requested map version does not exist)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41734/discrepancy-between-website-map-and-osmand-map">Discrepancy between website map and OSMAND+ map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1234/why-wont-zoom-11-update">[closed] Why won&#39;t zoom 11 update?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7746/problem-saving-road-rerouting">Problem saving road rerouting</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26293/error-on-image-stream-using-ojwdevopenstreetmaporg">Error on image stream using ojw.dev.openstreetmap.org</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44007/random-patches-in-map-can-anyone-explain-why-this-issue">Random patches in Map- Can anyone explain why this issue?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

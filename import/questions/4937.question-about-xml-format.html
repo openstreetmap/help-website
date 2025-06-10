@@ -1,0 +1,716 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Question About XML Format - OSM Help</title>
+        <meta name="description" content="Hi everyone,  I was looking at some XML data, trying to see if I could parse out a list of all the streets in Indiana and I saw this record. If you look at it, it&#39;s got two name tags, &quot;Mahogany Dr&quot; and &quot;Augusta Ln.&quot; How can there be two names? Thanks mj &amp;lt;way id=&quot;17369196&quot; version=&quot;1&quot; timestamp=&quot;2..." />
+        <meta name="keywords" content="xml,cloudmade" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/4937/question-about-xml-format" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/4937/question-about-xml-format?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='tXS2ey7HtoeRVAiqBQ92LESATBAw4t9z' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/4937/question-about-xml-format">Question About XML Format</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-4937-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4937/up/" rel="nofollow"> </a>
+<div id="post-4937-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-4937-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4937/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/4937/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi everyone, </p>
+<p>I was looking at some XML data, trying to see if I could parse out a list of all the streets in Indiana and I saw this record.</p>
+<p>If you look at it, it's got two name tags, "Mahogany Dr" and "Augusta Ln." How can there be two names?</p>
+<p>Thanks</p>
+<p>mj<br>
+<code>&lt;way id="17369196" version="1" timestamp="2007-12-20T12:22:13Z" uid="7168" use
+r="DaveHansenTiger" changeset="369054"&gt;
+    &lt;nd ref="179868313"/&gt;
+    &lt;nd ref="179868315"/&gt;
+    &lt;nd ref="179868317"/&gt;
+    &lt;nd ref="179868319"/&gt;
+    &lt;nd ref="179751152"/&gt;
+    &lt;nd ref="179799630"/&gt;
+    &lt;tag k="highway" v="residential"/&gt;
+    &lt;tag k="name" v="Augusta Ln"/&gt;
+    &lt;tag k="name" v="Mahogany Dr"/&gt;
+    &lt;tag k="tiger:cfcc" v="A41"/&gt;
+    &lt;tag k="tiger:county" v="Johnson, IN"/&gt;
+    &lt;tag k="tiger:name_base" v="Mahogany"/&gt;
+    &lt;tag k="tiger:name_type" v="Dr"/&gt;
+    &lt;tag k="tiger:reviewed" v="no"/&gt;
+    &lt;tag k="tiger:separated" v="no"/&gt;
+    &lt;tag k="tiger:source" v="tiger_import_dch_v0.6_20070810"/&gt;
+    &lt;tag k="tiger:tlid" v="114652027:114652028"/&gt;
+    &lt;tag k="tiger:upload_uuid" v="bulk_upload.pl-425ebe1d-919e-418d-a667-eaf6168
+b1c43"/&gt;
+    &lt;tag k="tiger:zip_left" v="46143"/&gt;
+    &lt;tag k="tiger:zip_right" v="46143"/&gt;
+  &lt;/way&gt;</code></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/xml/" class="post-tag tag-link-xml"
+                                        title="see questions tagged 'xml'" rel="tag">xml</a>
+                                
+                                    <a href="/tags/cloudmade/" class="post-tag tag-link-cloudmade"
+                                        title="see questions tagged 'cloudmade'" rel="tag">cloudmade</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 May '11, 01:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/91b665b7261ccd0c73a987911c96d95f?s=32&amp;d=identicon&amp;r=g" alt="jaskiemr's gravatar image" />
+    <p><a href="/users/1302/jaskiemr">jaskiemr</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jaskiemr has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/4937/">
+                retagged
+                <strong>29 Dec '17, 06:41</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/100f8ccde5e9799707a5056f94fe183f?s=32&amp;d=identicon&amp;r=g" alt="Wetitpig0's gravatar image" />
+            <p><a href="/users/13060/wetitpig0">Wetitpig0</a><br/>
+            <span class="score" title="307 reputation points">307</span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="19 badges"><span class="silver">&#9679;</span><span class="badgecount">19</span></span><span title="28 badges"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-4937">
+    
+        <a name="4939"></a>
+        <div class="comment" id="comment-4939">
+            <div id="post-4939-score" class="comment-score">4</div>
+            <div class="comment-text"><p>Where did that XML come from? I'm asking because the API returns only one name tag for that way as you can see by visiting <a href="http://www.openstreetmap.org/browse/way/17369196">http://www.openstreetmap.org/browse/way/17369196</a></p></div>
+            <div class="comment-info" id="comment-4939-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '11, 05:29)</span>
+                <a class="comment-user userinfo" href="/users/8/petschge">petschge</a>
+                
+            </div>
+        </div>
+    
+        <a name="4947"></a>
+        <div class="comment" id="comment-4947">
+            <div id="post-4947-score" class="comment-score">2</div>
+            <div class="comment-text"><p>It looks to be corrupt XML. The latter bit is from <a href="http://www.openstreetmap.org/browse/way/17395105">http://www.openstreetmap.org/browse/way/17395105</a></p></div>
+            <div class="comment-info" id="comment-4947-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '11, 11:12)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="4950"></a>
+        <div class="comment not_top_scorer" id="comment-4950">
+            <div id="post-4950-score" class="comment-score"></div>
+            <div class="comment-text"><p>I downloaded the indiana.osm file. That's where I got it from.</p></div>
+            <div class="comment-info" id="comment-4950-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '11, 14:20)</span>
+                <a class="comment-user userinfo" href="/users/1302/jaskiemr">jaskiemr</a>
+                
+            </div>
+        </div>
+    
+        <a name="4951"></a>
+        <div class="comment" id="comment-4951">
+            <div id="post-4951-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/1302/jaskiemr">@jaskiemr</a>: Well, <em>where</em> did you download the file? Can't you just give us the URL?</p></div>
+            <div class="comment-info" id="comment-4951-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '11, 14:30)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="4952"></a>
+        <div class="comment" id="comment-4952">
+            <div id="post-4952-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="/users/666/sleske">@sleske</a> a quick guess would be Cloudmade</p></div>
+            <div class="comment-info" id="comment-4952-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '11, 14:42)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="4960"></a>
+        <div class="comment not_top_scorer" id="comment-4960">
+            <div id="post-4960-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://downloads.cloudmade.com/americas/northern_america/united_states/indiana#downloads_breadcrumbs">http://downloads.cloudmade.com/americas/northern_america/united_states/indiana#downloads_breadcrumbs</a></p>
+
+<p>Indiana.osm.bz2 is what I downloaded</p></div>
+            <div class="comment-info" id="comment-4960-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '11, 16:47)</span>
+                <a class="comment-user userinfo" href="/users/1302/jaskiemr">jaskiemr</a>
+                
+            </div>
+        </div>
+    
+        <a name="4961"></a>
+        <div class="comment not_top_scorer" id="comment-4961">
+            <div id="post-4961-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://downloads.cloudmade.com/americas/northern_america/united_states/indiana#downloads_breadcrumbs">http://downloads.cloudmade.com/americas/northern_america/united_states/indiana#downloads_breadcrumbs</a></p>
+
+<p>I downloaded the indiana.osm.bz2 file.</p></div>
+            <div class="comment-info" id="comment-4961-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '11, 16:47)</span>
+                <a class="comment-user userinfo" href="/users/1302/jaskiemr">jaskiemr</a>
+                
+            </div>
+        </div>
+    
+        <a name="4962"></a>
+        <div class="comment" id="comment-4962">
+            <div id="post-4962-score" class="comment-score">3</div>
+            <div class="comment-text"><p>You should contact cloudmade, on first glimpse it looks as if they have a problem creating the extracts</p></div>
+            <div class="comment-info" id="comment-4962-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '11, 16:58)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+        <a name="4966"></a>
+        <div class="comment not_top_scorer" id="comment-4966">
+            <div id="post-4966-score" class="comment-score"></div>
+            <div class="comment-text"><p>Which mirror would you use in order to download Indiana roads then?</p></div>
+            <div class="comment-info" id="comment-4966-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '11, 17:33)</span>
+                <a class="comment-user userinfo" href="/users/1302/jaskiemr">jaskiemr</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4937" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4937-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/4937/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='tXS2ey7HtoeRVAiqBQ92LESATBAw4t9z' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4937/question-about-xml-format?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4937/question-about-xml-format?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/xml/"
+            class="tag-link-xml"
+            title="see questions tagged'xml'using tags"
+            rel="tag">xml</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/cloudmade/"
+            class="tag-link-cloudmade"
+            title="see questions tagged'cloudmade'using tags"
+            rel="tag">cloudmade</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 3, 2011, 1:32 a.m.">03 May '11, 01:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,775 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 29, 2017, 6:41 a.m.">29 Dec '17, 06:41</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3622/how-to-map-a-no-u-turn-restriction-on-an-undivided-road-crossing-a-divided-road">How to map a no U turn restriction on an undivided road crossing a divided road?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3857/can-we-affect-how-cloudmadeskobbler-voices-merging-directions">[closed] Can we affect how CloudMade/skobbler voices merging directions?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3962/how-to-show-a-xml-format-map-on-my-own-website">[closed] How to show a XML format map on my own website?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5066/error-while-following-osmosis-import-to-database-examples">Error while following osmosis import to database examples</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6167/rearranging-xml-to-excel-data-have-a-column-show-up-twice">Rearranging XML to Excel data - have a column show up twice</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7430/creating-graphnodes-edges-from-osm-xml-data">Creating Graph(Nodes-Edges) from OSM XML Data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8236/transforming-xml-output-from-xapi-search">Transforming XML output from XAPI search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8365/osm-files-not-loading">[closed] OSM files not loading</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8682/xml-schema-for-nominatim-responses">XML Schema for Nominatim Responses</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2505/i-see-some-nodes-on-the-map-but-i-cant-find-them-in-planetosm-why">I see some nodes on the map, but I can&#39;t find them in Planet.osm. Why?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

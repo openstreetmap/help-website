@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>No space left on device with setup.php in Nominatim - OSM Help</title>
+        <meta name="description" content="I&#39;m trying to use the north-america-latest.osm.pbf file, around 40GB. I expect a total disk usage of 400(ish) GB. ./utils/setup.php --osm-file /3TB/nominatim/north-america-latest.osm.pbf --all --osm2pgsql-cache 24000 --threads 8 2&amp;gt;&amp;amp;1 | tee setup.log When running the setup, I get ./utils/setup..." />
+        <meta name="keywords" content="setup.php,nominatim" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/62705/no-space-left-on-device-with-setupphp-in-nominatim" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/62705/no-space-left-on-device-with-setupphp-in-nominatim?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CVcW2qDCrmJDTrRsGUXdOH9CkVNSsn8r' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/62705/no-space-left-on-device-with-setupphp-in-nominatim">No space left on device with setup.php in Nominatim</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-62705-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/62705/up/" rel="nofollow"> </a>
+<div id="post-62705-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-62705-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/62705/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/62705/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm trying to use the <code>north-america-latest.osm.pbf</code> file, around 40GB. I expect a total disk usage of 400(ish) GB.</p>
+<p><code>./utils/setup.php   --osm-file /3TB/nominatim/north-america-latest.osm.pbf   --all --osm2pgsql-cache 24000 --threads 8 2&gt;&amp;1   | tee setup.log</code></p>
+<p>When running the setup, I get</p>
+<pre><code>./utils/setup.php   --osm-file /3TB/nominatim/north-america-latest.osm.pbf   --all --osm2pgsql-cache 24000 --threads 8 2&gt;&amp;1   | tee setup.log
+2018-03-16 20:35:16 == Create DB
+2018-03-16 20:35:17 == Setup DB
+Postgres version found: 9.6
+Postgis version found: 2.3
+2018-03-16 20:35:19 == WARNING: external UK postcode table not found.
+2018-03-16 20:35:20 == Import data
+osm2pgsql version 0.93.0-dev (64 bit id space)
+
+Using projection SRS 4326 (Latlong)
+NOTICE:  table "place" does not exist, skipping
+Allocating memory for dense node cache
+Allocating dense node cache in one big chunk
+Allocating memory for sparse node cache
+Sharing dense sparse
+Node-cache: cache=24000MB, maxblocks=384000*65536, allocation method=11
+Mid: pgsql, cache=24000
+Setting up table: planet_osm_nodes
+Setting up table: planet_osm_ways
+Setting up table: planet_osm_rels
+
+Reading in file: /3TB/nominatim/north-america-latest.osm.pbf
+Using PBF parser.
+Processing: Node(966941k 786.8k/s) Way(72862k 84.72k/s) Relation(0 0.00/s)COPY_END for COPY planet_osm_ways FROM STDIN;
+ failed: ERROR:  could not extend file "base/292375/295704.6": No space left on device
+HINT:  Check free disk space.
+CONTEXT:  COPY planet_osm_ways, line 15312860
+
+Error occurred, cleaning up
+ERROR: Error executing external command: /srv/nominatim/Nominatim-3.1.0/build/osm2pgsql/osm2pgsql -lsc -O gazetteer --hstore --number-processes 1 -C 24000 -P 5432 -d nominatim /3TB/nominatim/north-america-latest.osm.pbf
+Error executing external command: /srv/nominatim/Nominatim-3.1.0/build/osm2pgsql/osm2pgsql -lsc -O gazetteer --hstore --number-processes 1 -C 24000 -P 5432 -d nominatim /3TB/nominatim/north-america-latest.osm.pbf
+</code></pre>
+<p>I've already created a default tablesplace on the 3TB drive for PostGre, but somehow my (tiny) root partitions gets filled after 30ish minutes. How can I change this apparent tmp path?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/setup.php/" class="post-tag tag-link-setup.php"
+                                        title="see questions tagged 'setup.php'" rel="tag">setup.php</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Mar '18, 21:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5a3b2450568b2e986fe909dcb0f51f63?s=32&amp;d=identicon&amp;r=g" alt="otter-in-a-suit's gravatar image" />
+    <p><a href="/users/14876/otter-in-a-suit">otter-in-a-suit</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="otter-in-a-suit has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-62705">
+    
+</div>
+<div id="comment-tools-62705" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-62705-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/62705/no-space-left-on-device-with-setupphp-in-nominatim?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/62705/no-space-left-on-device-with-setupphp-in-nominatim?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/62705/no-space-left-on-device-with-setupphp-in-nominatim?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/62705/no-space-left-on-device-with-setupphp-in-nominatim?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="62707"></a>
+                    <div id="answer-container-62707" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-62707-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/62707/up/" rel="nofollow"> </a>
+<div id="post-62707-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-62707-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/62707/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="otter-in-a-suit has selected this answer as the correct answer"
+        href="/accept_answer/62707/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It looks like your default tablespace setting was ignored. You can tell Nominatim to explicitly move part or all of the database into a different tablespace through its configuration. To move all data, add something like that to your <code>settings/local/php</code>:</p>
+<p><code>@define('CONST_Tablespace_Osm2pgsql_Data', 'bigTS');
+  @define('CONST_Tablespace_Osm2pgsql_Index', 'bigTS');
+  @define('CONST_Tablespace_Place_Data', 'bigTS');
+  @define('CONST_Tablespace_Place_Index', 'bigTS');
+  @define('CONST_Tablespace_Address_Data', 'bigTS');
+  @define('CONST_Tablespace_Address_Index', 'bigTS');
+  @define('CONST_Tablespace_Search_Data', 'bigTS');
+  @define('CONST_Tablespace_Search_Index', 'bigTS');
+  @define('CONST_Tablespace_Aux_Data', 'bigTS');
+  @define('CONST_Tablespace_Aux_Index', 'bigTS');</code></p>
+<p>where <code>bigTS</code> should be replaced by the name of your tablespace. See <code>settings/defaults.php</code> for more information on these settings.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/62707/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Mar '18, 22:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d888b712d85dee0aa304297f2dc697c7?s=32&amp;d=identicon&amp;r=g" alt="lonvia's gravatar image" />
+    <p><a href="/users/2921/lonvia">lonvia</a><br/>
+    <span class="score" title="6213 reputation points"><span class="">6.2k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="lonvia has 43 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-62707">
+    
+        <a name="62886"></a>
+        <div class="comment" id="comment-62886">
+            <div id="post-62886-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, </p>
+
+<p>I'm running into the same problem. Did @Ionvia solution fix the issue? Thanks.</p></div>
+            <div class="comment-info" id="comment-62886-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '18, 13:47)</span>
+                <a class="comment-user userinfo" href="/users/14937/vipyoung">vipyoung</a>
+                
+            </div>
+        </div>
+    
+        <a name="62981"></a>
+        <div class="comment" id="comment-62981">
+            <div id="post-62981-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes, this solved it. Thank you.</p></div>
+            <div class="comment-info" id="comment-62981-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '18, 23:08)</span>
+                <a class="comment-user userinfo" href="/users/14876/otter-in-a-suit">otter-in-a-suit</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-62707" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-62707-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/62705/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='CVcW2qDCrmJDTrRsGUXdOH9CkVNSsn8r' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/62705/no-space-left-on-device-with-setupphp-in-nominatim?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/62705/no-space-left-on-device-with-setupphp-in-nominatim?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/setup.php/"
+            class="tag-link-setup.php"
+            title="see questions tagged'setup.php'using tags"
+            rel="tag">setup.php</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 16, 2018, 9:34 p.m.">16 Mar '18, 21:34</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,579 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 11, 2018, 11:08 p.m.">11 Apr '18, 23:08</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/62251/nominatim-setupphp-error-scripts-must-be-run-from-build-directory">Nominatim Setup.php : ERROR: Scripts must be run from build directory</a>
+        </p>
+        
+        <p>
+            <a href="/questions/76543/nominatim-pgsql-returned-with-error-code-3">Nominatim - pgsql returned with error code (3)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer">Why does Nominatim return an error for queries from Internet Explorer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1391/why-does-nominatim-not-pick-up-a-country-name">Why does Nominatim not pick up a country name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1447/nominatim-search">nominatim search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1841/confused-about-nominatim-and-county-boundaries">[closed] Confused about Nominatim and County Boundaries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2572/i-added-some-road-name-and-are-not-found-on-nominatim">I added some road name and are not found on nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2478/added-austria-when-will-i-see-the-change">Added austria. When will I see the change ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2680/can-i-produce-a-database-of-addresses-from-osm-data">Can I produce a database of addresses from OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1301/ajax-issues-with-nominatim">[closed] Ajax issues with nominatim?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

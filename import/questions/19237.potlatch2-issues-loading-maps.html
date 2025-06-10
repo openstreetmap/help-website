@@ -1,0 +1,653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>[closed] Potlatch2 issues loading maps - OSM Help</title>
+        <meta name="description" content="I joined openstreetmaps last week and made a few edits using potlatch2. I worked well and I want to make a few more edits on bike trials in my area. For the last few days however I have been unable to do anything, i get this error when it try to load a map in edit mode. &quot;There was a problem loading ..." />
+        <meta name="keywords" content="potlatch2,out_of_bounds,api,leaflet,longitude" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/19237/potlatch2-issues-loading-maps" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/19237/potlatch2-issues-loading-maps?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='OjCQO2u0qGbyJYN9jaGNZjuYKqMx7ZD9' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/19237/potlatch2-issues-loading-maps">[closed] Potlatch2 issues loading maps</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-19237-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/19237/up/" rel="nofollow"> </a>
+<div id="post-19237-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-19237-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/19237/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/19237/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I joined openstreetmaps last week and made a few edits using potlatch2. I worked well and I want to make a few more edits on bike trials in my area. For the last few days however I have been unable to do anything, i get this error when it try to load a map in edit mode. "There was a problem loading the map data. Please check your internet connection, or try zooming in." It happens on every zoom level and I have also tried a few different computers and browsers. any ideas what the issue may be?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/potlatch2/" class="post-tag tag-link-potlatch2"
+                                        title="see questions tagged 'potlatch2'" rel="tag">potlatch2</a>
+                                
+                                    <a href="/tags/out_of_bounds/" class="post-tag tag-link-out_of_bounds"
+                                        title="see questions tagged 'out_of_bounds'" rel="tag">out_of_bounds</a>
+                                
+                                    <a href="/tags/api/" class="post-tag tag-link-api"
+                                        title="see questions tagged 'api'" rel="tag">api</a>
+                                
+                                    <a href="/tags/leaflet/" class="post-tag tag-link-leaflet"
+                                        title="see questions tagged 'leaflet'" rel="tag">leaflet</a>
+                                
+                                    <a href="/tags/longitude/" class="post-tag tag-link-longitude"
+                                        title="see questions tagged 'longitude'" rel="tag">longitude</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Jan '13, 17:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6557a9095cb223b60ed23cd293c4ddb8?s=32&amp;d=identicon&amp;r=g" alt="choyado's gravatar image" />
+    <p><a href="/users/5444/choyado">choyado</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="choyado has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/19237/">
+                closed
+                <strong>21 Jan '13, 22:06</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-19237">
+    
+        <a name="19241"></a>
+        <div class="comment" id="comment-19241">
+            <div id="post-19241-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Can you paste the URL where you're having problems?</p></div>
+            <div class="comment-info" id="comment-19241-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jan '13, 19:52)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="19243"></a>
+        <div class="comment" id="comment-19243">
+            <div id="post-19243-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Sure, this is the url that loads when i try to edit the map in a given area. I realized by looking at the longitude in the url that it is erroneous. If I fix the longitude in the url it works and I can pan around and edit the map. Weird....</p>
+
+<p><a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=33.83378&amp;lon=-477.55268&amp;zoom=15">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=33.83378&amp;lon=-477.55268&amp;zoom=15</a></p></div>
+            <div class="comment-info" id="comment-19243-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jan '13, 19:59)</span>
+                <a class="comment-user userinfo" href="/users/5444/choyado">choyado</a>
+                
+            </div>
+        </div>
+    
+        <a name="19245"></a>
+        <div class="comment" id="comment-19245">
+            <div id="post-19245-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/5444/choyado"></a><a href="/users/5444/choyado">@choyado</a>: It indeed should be lon=-117.5532 (360 degrees less). I confirm the error. The error arises from an API0.6 error (URL shown in error by potlatch: <a href="http://www.openstreetmap.org/api/0.6/map?bbox=-477.5672669255066,33.8187604481031,-477.5380930744934,33.848797371129365).">http://www.openstreetmap.org/api/0.6/map?bbox=-477.5672669255066,33.8187604481031,-477.5380930744934,33.848797371129365).</a> If called directly this error text is shown: "The latitudes must be between -90 and 90, longitudes between -180 and 180 and the minima must be less than the maxima."  If the API does not accept higher-than-needed coordinates so I think Potlatch also should not. The only question is: how/where did you get this wrong URL.</p></div>
+            <div class="comment-info" id="comment-19245-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jan '13, 20:32)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="19246"></a>
+        <div class="comment" id="comment-19246">
+            <div id="post-19246-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Ha!  Good one.  To reproduce, click the map on osm.org.  Zoom out.  Using the mouse, pan right a few times (going "around the world").  Click "permalink" and you get e.g.:</p>
+
+<p><a href="http://www.openstreetmap.org/?lat=28&amp;lon=963&amp;zoom=2&amp;layers=M">http://www.openstreetmap.org/?lat=28&amp;lon=963&amp;zoom=2&amp;layers=M</a></p></div>
+            <div class="comment-info" id="comment-19246-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jan '13, 20:38)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="19247"></a>
+        <div class="comment" id="comment-19247">
+            <div id="post-19247-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I've logged it as ticket <a href="https://trac.openstreetmap.org/ticket/4752">4752</a>.  Arguably it may need to be logged against something "higher up" (e.g. Leaflet) but at least it's now reported.</p></div>
+            <div class="comment-info" id="comment-19247-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jan '13, 20:45)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="19249"></a>
+        <div class="comment not_top_scorer" id="comment-19249">
+            <div id="post-19249-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/387/someoneelse">@SomeoneElse</a>: ah, nice. I spun the world and got lat=53&amp;lon=1172 as permalink. :) Thanks for reporting. I think this question can be closed then (will do so).</p></div>
+            <div class="comment-info" id="comment-19249-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jan '13, 22:01)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-19237" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-19237-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="question-status" style="margin-bottom:15px">
+            <h3>
+                The question has been closed for the following reason "Problem was spotted and reported in bug tracker" by
+                <a href="/users/5179/aseerel4c26">aseerel4c26</a>
+                 21 Jan '13, 22:06
+            </h3>
+            </div>
+            
+            
+        <form id="fmanswer" action="/questions/19237/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='OjCQO2u0qGbyJYN9jaGNZjuYKqMx7ZD9' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/19237/potlatch2-issues-loading-maps?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/19237/potlatch2-issues-loading-maps?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/api/"
+            class="tag-link-api"
+            title="see questions tagged'api'using tags"
+            rel="tag">api</a> <span class="tag-number">&#215;290</span><br/>
+        
+        <a href="/tags/potlatch2/"
+            class="tag-link-potlatch2"
+            title="see questions tagged'potlatch2'using tags"
+            rel="tag">potlatch2</a> <span class="tag-number">&#215;210</span><br/>
+        
+        <a href="/tags/leaflet/"
+            class="tag-link-leaflet"
+            title="see questions tagged'leaflet'using tags"
+            rel="tag">leaflet</a> <span class="tag-number">&#215;74</span><br/>
+        
+        <a href="/tags/longitude/"
+            class="tag-link-longitude"
+            title="see questions tagged'longitude'using tags"
+            rel="tag">longitude</a> <span class="tag-number">&#215;45</span><br/>
+        
+        <a href="/tags/out_of_bounds/"
+            class="tag-link-out_of_bounds"
+            title="see questions tagged'out_of_bounds'using tags"
+            rel="tag">out_of_bounds</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 21, 2013, 5:53 p.m.">21 Jan '13, 17:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,576 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 21, 2013, 10:06 p.m.">21 Jan '13, 22:06</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/88023/osm-maps-with-leaflet-for-commercial">OSM Maps with Leaflet for commercial</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13645/could-anyone-explain-this-to-me-leaflet">could anyone explain this to me ... Leaflet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36945/which-api-should-i-use">Which Api should I use</a>
+        </p>
+        
+        <p>
+            <a href="/questions/76262/latitude-longitude-to-address">latitude longitude to address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38601/how-can-i-check-easily-if-a-point-is-in-a-street-or-not">How can I check easily if a point is in a street or not.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28230/show-mouse-latitudelongitude-of-potlatch2-shows-only-longitude">[closed] &quot;show mouse latitude/longitude&quot; of Potlatch2 shows only longitude</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1529/post-code-or-street-address-to-longlat">Post Code or street address to  Long/Lat?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1377/api-howto-please">API howto please</a>
+        </p>
+        
+        <p>
+            <a href="/questions/713/how-to-extract-partial-data-for-large-regions">How to extract partial data for large regions ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1695/potlatch-2-error-on-upload">Potlatch 2 Error on upload</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

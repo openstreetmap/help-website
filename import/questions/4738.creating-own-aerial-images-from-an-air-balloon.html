@@ -1,0 +1,752 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Creating own aerial images from an air balloon - OSM Help</title>
+        <meta name="description" content="I have an opportunity to go up in a hot air balloon to 300 ft over the area that I would like to map and to which I don&#39;t have access on the ground: this one. Is there a way I can use the photos I take during the ride in JOSM to map out the visible features? Are there any tips for producing best usa..." />
+        <meta name="keywords" content="photos,photomapping,imagery,aerial,balloon" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/4738/creating-own-aerial-images-from-an-air-balloon" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/4738/creating-own-aerial-images-from-an-air-balloon?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='EZdQWGln3CLOd5rC1rTl8xC4VfmOMMgr' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/4738/creating-own-aerial-images-from-an-air-balloon">Creating own aerial images from an air balloon</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-4738-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4738/up/" rel="nofollow"> </a>
+<div id="post-4738-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-4738-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4738/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/4738/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   2
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have an opportunity to go up in a hot air balloon to 300 ft over the area that I would like to map and to which I don't have access on the ground: <a href="http://www.openstreetmap.org/?lat=33.67241&amp;lon=-117.74297&amp;zoom=16&amp;layers=M">this one</a>. Is there a way I can use the photos I take during the ride in JOSM to map out the visible features? Are there any tips for producing best usable photos (as far as angling the camera, wide angle vs. telephoto, etc.)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/photos/" class="post-tag tag-link-photos"
+                                        title="see questions tagged 'photos'" rel="tag">photos</a>
+                                
+                                    <a href="/tags/photomapping/" class="post-tag tag-link-photomapping"
+                                        title="see questions tagged 'photomapping'" rel="tag">photomapping</a>
+                                
+                                    <a href="/tags/imagery/" class="post-tag tag-link-imagery"
+                                        title="see questions tagged 'imagery'" rel="tag">imagery</a>
+                                
+                                    <a href="/tags/aerial/" class="post-tag tag-link-aerial"
+                                        title="see questions tagged 'aerial'" rel="tag">aerial</a>
+                                
+                                    <a href="/tags/balloon/" class="post-tag tag-link-balloon"
+                                        title="see questions tagged 'balloon'" rel="tag">balloon</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Apr '11, 18:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c23c2891306229bb036de7ce63bb8c9b?s=32&amp;d=identicon&amp;r=g" alt="ponzu's gravatar image" />
+    <p><a href="/users/831/ponzu">ponzu</a><br/>
+    <span class="score" title="2104 reputation points"><span class="">2.1k</span></span><span title="49 badges"><span class="badge1">&#9679;</span><span class="badgecount">49</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="83 badges"><span class="bronze">&#9679;</span><span class="badgecount">83</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ponzu has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-4738">
+    
+        <a name="35430"></a>
+        <div class="comment" id="comment-35430">
+            <div id="post-35430-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I Googled "cheap flying camera" and there are quite a few. but how safe and how legal it is to overfly somewhere is something you will have to consider.</p></div>
+            <div class="comment-info" id="comment-35430-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '14, 08:01)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4738" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4738-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/4738/creating-own-aerial-images-from-an-air-balloon?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/4738/creating-own-aerial-images-from-an-air-balloon?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/4738/creating-own-aerial-images-from-an-air-balloon?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/4738/creating-own-aerial-images-from-an-air-balloon?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="4753"></a>
+                    <div id="answer-container-4753" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4753-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4753/up/" rel="nofollow"> </a>
+<div id="post-4753-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-4753-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4753/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>there is a mapper in the wiki (he's in central europe if I remember correctly,but the post was in english) that I've read about that's been using kites or model planes to hoist his camera.he will have some experience, if I can find it again I'll post a link, found it <a href="http://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">http://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4753/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Apr '11, 18:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/4753/">
+                edited
+                <strong>24 Apr '11, 12:08</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4753">
+    
+</div>
+<div id="comment-tools-4753" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4753-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="4945"></a>
+                    <div id="answer-container-4945" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4945-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4945/up/" rel="nofollow"> </a>
+<div id="post-4945-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-4945-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4945/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>We did a similar project in <a href="http://wiki.openstreetmap.org/wiki/Stratford-upon-Avon/Imagery">Stratford-upon-Avon in 2009</a>, using a light aircraft. From that project my tips would be:</p>
+<ol>
+<li>Don't worry about getting precise vertical photos, but anything less than 70° to the horizontal isn't useful enough</li>
+<li>The longer the focal length of the lens the better (i.e. use telephotos). From the height you are flying you won't get much ground cover on each photo though.</li>
+<li>You need a few ground control points on each photo, so you'll probably need some physical feature with corresponding GPX tracks (e.g. a road with a few corners) in each photo.</li>
+</ol>
+<p>When you have the photos, you can use the processes described in the link above to warp them and get them geo-referenced, and then import them into JOSM for tracing.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4945/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 May '11, 09:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3743b1b368f5e209eb8aad30164acc4?s=32&amp;d=identicon&amp;r=g" alt="Andy%20Allan's gravatar image" />
+    <p><a href="/users/3/andy-allan">Andy Allan</a><br/>
+    <span class="score" title="12456 reputation points"><span class="">12.5k</span></span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="128 badges"><span class="silver">&#9679;</span><span class="badgecount">128</span></span><span title="153 badges"><span class="bronze">&#9679;</span><span class="badgecount">153</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andy Allan has 46 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4945">
+    
+</div>
+<div id="comment-tools-4945" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4945-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/4738/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='EZdQWGln3CLOd5rC1rTl8xC4VfmOMMgr' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4738/creating-own-aerial-images-from-an-air-balloon?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4738/creating-own-aerial-images-from-an-air-balloon?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/imagery/"
+            class="tag-link-imagery"
+            title="see questions tagged'imagery'using tags"
+            rel="tag">imagery</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/aerial/"
+            class="tag-link-aerial"
+            title="see questions tagged'aerial'using tags"
+            rel="tag">aerial</a> <span class="tag-number">&#215;38</span><br/>
+        
+        <a href="/tags/photos/"
+            class="tag-link-photos"
+            title="see questions tagged'photos'using tags"
+            rel="tag">photos</a> <span class="tag-number">&#215;27</span><br/>
+        
+        <a href="/tags/photomapping/"
+            class="tag-link-photomapping"
+            title="see questions tagged'photomapping'using tags"
+            rel="tag">photomapping</a> <span class="tag-number">&#215;17</span><br/>
+        
+        <a href="/tags/balloon/"
+            class="tag-link-balloon"
+            title="see questions tagged'balloon'using tags"
+            rel="tag">balloon</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 22, 2011, 6:23 p.m.">22 Apr '11, 18:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,694 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 2, 2014, 8:01 a.m.">02 Aug '14, 08:01</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/14616/waterways-from-imagery">Waterways from Imagery</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37026/aerial-imagery-in-nominatim">Aerial imagery in Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2861/does-the-load-photos-button-in-potlatch-1-work-is-there-one-in-potlatch-2">Does the Load photos button in Potlatch 1 work? Is there one in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3992/looking-for-buying-hi-res-satelite-or-aerial-photos-in-order-to-hand-design-street-with-osm">Looking for buying Hi-Res. Satelite (or Aerial) photos in order to hand design street with OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21214/bing-map-had-changed-position">Bing Map had changed position</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28835/lots-of-missing-aerial-imagery-tiles-in-belize">Lots of missing aerial imagery tiles in Belize</a>
+        </p>
+        
+        <p>
+            <a href="/questions/802/can-we-get-more-updated-aerial-imagery-from-bing-or-mapquest-or-anything-but-yahoo">Can we get more updated aerial imagery from Bing or Mapquest or anything, but Yahoo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1702/how-old-are-the-bing-images">How old are the Bing images?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">Which is more reliable..? GPS traces or aerial imagery?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45674/mapping-places-not-existing-on-the-satellite-imagery">Mapping places not existing on the Satellite Imagery</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,996 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I tag the last node of incomplete ways, that need finishing? - OSM Help</title>
+        <meta name="description" content="When adding ways either from a GPS plot or Bing, I often think it useful to plot the first kilometre of adjoining or intersecting ways. Naturally, these need to be completed later on, but for various reasons, will not happen in the current changeset. What&#39;s the most popular way of showing that a way..." />
+        <meta name="keywords" content="continuation,fixme,way,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/6983/how-do-i-tag-the-last-node-of-incomplete-ways-that-need-finishing" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/6983/how-do-i-tag-the-last-node-of-incomplete-ways-that-need-finishing?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='DKOrvStdcwQ9ASGoSQE9MR39Xaoo7lTB' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/6983/how-do-i-tag-the-last-node-of-incomplete-ways-that-need-finishing">How do I tag the last node of incomplete ways, that need finishing?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-6983-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6983/up/" rel="nofollow"> </a>
+<div id="post-6983-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-6983-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6983/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/6983/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When adding ways either from a GPS plot or Bing, I often think it useful to plot the first kilometre of adjoining or intersecting ways. Naturally, these need to be completed later on, but for various reasons, will not happen in the current changeset.</p>
+<p>What's the most popular way of showing that a way clearly needs continuation from the last node, and ideally one that shows a symbol that appears on the rendered image? I see some mappers use the tags <code>fixme=*</code> or <code>note=*</code>, but these aren't rendered on the map. Others add two small ways to form an arrow head. </p>
+<p>Has there been any agreed convention on this, or what's the most used method ?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/continuation/" class="post-tag tag-link-continuation"
+                                        title="see questions tagged 'continuation'" rel="tag">continuation</a>
+                                
+                                    <a href="/tags/fixme/" class="post-tag tag-link-fixme"
+                                        title="see questions tagged 'fixme'" rel="tag">fixme</a>
+                                
+                                    <a href="/tags/way/" class="post-tag tag-link-way"
+                                        title="see questions tagged 'way'" rel="tag">way</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Aug '11, 09:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b4b348d2837800765b296f2c9fd7273e?s=32&amp;d=identicon&amp;r=g" alt="Russ%20McD's gravatar image" />
+    <p><a href="/users/217/russ-mcd">Russ McD</a><br/>
+    <span class="score" title="306 reputation points">306</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Russ McD has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6983/">
+                edited
+                <strong>10 Aug '11, 10:02</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9fe361843971cf8b23dc93517f00b996?s=32&amp;d=identicon&amp;r=g" alt="Jonathan%20Bennett's gravatar image" />
+            <p><a href="/users/6/jonathan-bennett">Jonathan Ben...</a><br/>
+            <span class="score" title="8261 reputation points"><span class="">8.3k</span></span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="85 badges"><span class="silver">&#9679;</span><span class="badgecount">85</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-6983">
+    
+        <a name="23483"></a>
+        <div class="comment" id="comment-23483">
+            <div id="post-23483-score" class="comment-score"></div>
+            <div class="comment-text"><p>(newer) duplicate question: <a href="/questions/23398">how-to-mark-things-that-are-still-to-do</a></p></div>
+            <div class="comment-info" id="comment-23483-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '13, 13:34)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6983" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6983-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/6983/how-do-i-tag-the-last-node-of-incomplete-ways-that-need-finishing?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/6983/how-do-i-tag-the-last-node-of-incomplete-ways-that-need-finishing?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/6983/how-do-i-tag-the-last-node-of-incomplete-ways-that-need-finishing?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/6983/how-do-i-tag-the-last-node-of-incomplete-ways-that-need-finishing?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="7006"></a>
+                    <div id="answer-container-7006" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-7006-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7006/up/" rel="nofollow"> </a>
+<div id="post-7006-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-7006-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7006/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For a simple incomplete way, <a href="http://taginfo.openstreetmap.org/tags/fixme=continue">fixme=continue</a> on the end node seems the simplest, most concise way of tagging, and is quite commonly used. Also used on ways, although <a href="http://taginfo.openstreetmap.org/tags/fixme=incomplete">fixme=incomplete</a> or <a href="http://taginfo.openstreetmap.org/tags/FIXME=incomplete">FIXME=incomplete</a> seem the more common choice for those who choose to tag the way rather than the end node.</p>
+<p>Nodes tagged as fixme=continue are rendered in Osmarender at high zoom levels (a green oblique line through the node at a seemingly random angle).</p>
+<p>The <a href="http://wiki.openstreetmap.org/wiki/Key:fixme">wiki page</a> currently suggests combining fixme=continue with noexit=no, but that seems redundant as it doesn't provide any more information than the fixme tag and takes extra time to add and remove (noexit=yes, however, does seem useful in other contexts, as it can indicate "I didn't forget to add a fixme=continue")</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/7006/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Aug '11, 15:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b95e1b5cb818be577b5561688a50368c?s=32&amp;d=identicon&amp;r=g" alt="banoffee's gravatar image" />
+    <p><a href="/users/1620/banoffee">banoffee</a><br/>
+    <span class="score" title="884 reputation points">884</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="21 badges"><span class="bronze">&#9679;</span><span class="badgecount">21</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="banoffee has 3 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/7006/">
+                edited
+                <strong>10 Aug '11, 15:20</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-7006">
+    
+</div>
+<div id="comment-tools-7006" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7006-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6984"></a>
+                    <div id="answer-container-6984" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6984-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6984/up/" rel="nofollow"> </a>
+<div id="post-6984-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-6984-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6984/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>By far the most common way to do this is to add a <code>fixme=*</code> tag to the last node which will show up in editors and on certain Garmin maps aimed at mappers. </p>
+<p>Other ways to do this include three untagged nodes (forming an ellipsis, like "...") at the end of the way, or the arrow method that you described. </p>
+<p>Neither of these methods are visible on the standard Mapnik map but that's intentional. If one wanted to render a "todo map" then one could do that easily (e.g. look at the "fixme" layer in <a href="http://tools.geofabrik.de/osmi/?view=tagging&amp;lon=0.95975&amp;lat=49.30292&amp;zoom=10&amp;overlays=fixmes_on_nodes,fixmes_on_ways">OSM Inspector</a>. Don't tag these hints just to make them show up in the standard Mapnik render.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6984/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Aug '11, 09:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6984/">
+                edited
+                <strong>10 Aug '11, 10:26</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9fe361843971cf8b23dc93517f00b996?s=32&amp;d=identicon&amp;r=g" alt="Jonathan%20Bennett's gravatar image" />
+            <p><a href="/users/6/jonathan-bennett">Jonathan Ben...</a><br/>
+            <span class="score" title="8261 reputation points"><span class="">8.3k</span></span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="85 badges"><span class="silver">&#9679;</span><span class="badgecount">85</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6984">
+    
+        <a name="7002"></a>
+        <div class="comment" id="comment-7002">
+            <div id="post-7002-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Never seen the "elipsis" or "arrow" techniques in use but they sound wrong to me: firstly only a human is likely to see them and you cannot search for them. Secondly I feel like adding a node or a way needs to correspond to a real-world feature (even if the feature is immaterial, like a region boundary).</p></div>
+            <div class="comment-info" id="comment-7002-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Aug '11, 13:12)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="7003"></a>
+        <div class="comment" id="comment-7003">
+            <div id="post-7003-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sometimes I tag the whole way with a fixme (meaning I didn't survey any of it, only marked the crossroad in my GPS) as opposed to tagging a node at the end of the way (meaning I surveyed only part of the way). Example: <a href="http://osm.org/go/etDvzlii--">http://osm.org/go/etDvzlii--</a></p></div>
+            <div class="comment-info" id="comment-7003-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Aug '11, 13:18)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23489"></a>
+        <div class="comment" id="comment-23489">
+            <div id="post-23489-score" class="comment-score">2</div>
+            <div class="comment-text"><p>OpenStreetMap now has a Notes feature, allowing mappers to record metadata like this without having to add features to the map, so you should probably use that instead.</p></div>
+            <div class="comment-info" id="comment-23489-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '13, 14:34)</span>
+                <a class="comment-user userinfo" href="/users/6/jonathan-bennett">Jonathan Ben...</a>
+                
+            </div>
+        </div>
+    
+        <a name="23495"></a>
+        <div class="comment" id="comment-23495">
+            <div id="post-23495-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://tools.geofabrik.de/osmi/?view=tagging&amp;lon=-0.81136&amp;lat=52.18350&amp;zoom=15">http://tools.geofabrik.de/osmi/?view=tagging&amp;lon=-0.81136&amp;lat=52.18350&amp;zoom=15</a>
+Here are some of the arrow heads, they are flagged as ways without tags. In my opinion not the correct thing to do.</p></div>
+            <div class="comment-info" id="comment-23495-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '13, 19:00)</span>
+                <a class="comment-user userinfo" href="/users/2925/bcnorwich">BCNorwich</a>
+                
+            </div>
+        </div>
+    
+        <a name="23507"></a>
+        <div class="comment" id="comment-23507">
+            <div id="post-23507-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/6/jonathan-bennett"></a><a href="/users/6/jonathan-bennett">@Jonathan Bennett</a>: this metadata belongs to the objects (like note and source tags), is visible in every editor, very fast to use available to many tools (since it is just a tag). Notes are fixed to a position, if an object is moved a note, which was made at the object's prev. position, does not move! No, sorry, I think those are striking reasons not to use "notes" (stupid name, btw) in/during mapping. Fine for newbies/outsiders, too draw much attention to an object though.</p></div>
+            <div class="comment-info" id="comment-23507-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '13, 02:18)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6984" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6984-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6995"></a>
+                    <div id="answer-container-6995" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6995-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6995/up/" rel="nofollow"> </a>
+<div id="post-6995-score" class="post-score"
+    title="current number of votes">
+    -2
+</div>
+<a id="post-6995-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6995/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Often when walking a path I will cross a farmers track for his use only (I guess) and might not ever get fully drawn as it is maybe private access, I will draw a bit from bing which gives a reference position for walkers with a paper map so that they do not mistake it for the path and follow that instead. example  <a href="http://www.openstreetmap.org/?lat=52.34459&amp;lon=-0.29838&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=52.34459&amp;lon=-0.29838&amp;zoom=16&amp;layers=M</a>   what do you think? Its important that they are rendered along with ponds, woods, hedges, pylons and other landmarks which aid locating your position on a paper map, I don't think fix-me or TBC always apply. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6995/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Aug '11, 12:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6995/">
+                edited
+                <strong>10 Aug '11, 13:14</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6995">
+    
+        <a name="6996"></a>
+        <div class="comment" id="comment-6996">
+            <div id="post-6996-score" class="comment-score">2</div>
+            <div class="comment-text"><p>In the area you posted you mapped overlapping ways without a junction node according to <a href="http://keepright.ipax.at/report_map.php?lat=52.34352&amp;lon=-0.29833&amp;zoom=16">keepright</a>, you should fix them or routers won't have a chance to use them right. Also the question was about a tag for unfinished ways.</p></div>
+            <div class="comment-info" id="comment-6996-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Aug '11, 12:36)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23482"></a>
+        <div class="comment" id="comment-23482">
+            <div id="post-23482-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks I understand that now.</p></div>
+            <div class="comment-info" id="comment-23482-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '13, 12:50)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6995" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6995-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/6983/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='DKOrvStdcwQ9ASGoSQE9MR39Xaoo7lTB' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6983/how-do-i-tag-the-last-node-of-incomplete-ways-that-need-finishing?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6983/how-do-i-tag-the-last-node-of-incomplete-ways-that-need-finishing?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/way/"
+            class="tag-link-way"
+            title="see questions tagged'way'using tags"
+            rel="tag">way</a> <span class="tag-number">&#215;91</span><br/>
+        
+        <a href="/tags/fixme/"
+            class="tag-link-fixme"
+            title="see questions tagged'fixme'using tags"
+            rel="tag">fixme</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/continuation/"
+            class="tag-link-continuation"
+            title="see questions tagged'continuation'using tags"
+            rel="tag">continuation</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 10, 2011, 9:52 a.m.">10 Aug '11, 09:52</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>76,391 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 20, 2013, 2:10 a.m.">20 Jun '13, 02:10</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/36443/multiple-tags-with-the-same-key">Multiple tags with the same key</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56603/destination-along-the-whole-road-or-only-after-a-junction">`destination`: along the whole road or only after a junction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/86649/tagging-dual-use-ways-depending-on-season">Tagging dual use ways depending on season</a>
+        </p>
+        
+        <p>
+            <a href="/questions/125/how-do-i-stop-rivers-from-rendering-where-the-riverbanks-are-mapped">How do I stop rivers from rendering where the riverbanks are mapped?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/153/how-do-you-tell-if-a-minor-service-road-is-accessprivate-destination-or-permissive">How do you tell if a minor service road is access=private, destination, or permissive?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/162/how-do-i-tag-ways-with-partial-access">How do I tag ways with partial access?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/134/how-do-i-map-a-road-that-has-traffic-lights-only-in-one-direction">How do I map a road that has traffic lights only in one direction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/228/uk-road-was-detrunked-why-does-osm-still-have-it-tagged-highwaytrunk">[UK road] was detrunked; why does OSM still have it tagged highway=trunk?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/240/how-can-i-get-a-list-of-all-objects-with-a-certain-tag">How can I get a list of all objects with a certain tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/170/does-the-legal-status-of-a-road-public-or-private-ownership-always-matter-when-dealing-with-access-tags">Does the legal status of a road (public or private ownership) always matter when dealing with access tags?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1049 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Render Tiles in Windows - How?!?!?! ( I am Getting Desperated ) - OSM Help</title>
+        <meta name="description" content="Hello Guys, since i Remeber, i want an own Tileserver. I tried in Ubuntu, i Failed cause of my small Skills in Linux. Now i am Trying it in Windows. So far so good, but i didnt reached my destination. What i&#39;ve done:  Postgre SQL DB Postgis  osm2pgsql used   Result: There is Data in the Database.  B..." />
+        <meta name="keywords" content="windows,render,tiles,tilemil,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/18545/render-tiles-in-windows-how-i-am-getting-desperated" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/18545/render-tiles-in-windows-how-i-am-getting-desperated?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sjlaO5xekG9yyKbDz5EGlmfBDD5lWGIq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/18545/render-tiles-in-windows-how-i-am-getting-desperated">Render Tiles in Windows - How?!?!?! ( I am Getting Desperated )</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-18545-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18545/up/" rel="nofollow"> </a>
+<div id="post-18545-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-18545-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18545/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/18545/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello Guys,</p>
+<p>since i Remeber, i want an own Tileserver.</p>
+<p>I tried in Ubuntu, i Failed cause of my small Skills in Linux.</p>
+<p>Now i am Trying it in Windows. So far so good, but i didnt reached my destination.</p>
+<p>What i've done:</p>
+<ul>
+<li>Postgre SQL DB</li>
+<li>Postgis </li>
+<li>osm2pgsql used</li>
+</ul>
+<hr>
+<p>Result: There is Data in the Database. </p>
+<p>But how can i render my Tiles?!</p>
+<p>There are 2 Opinions:</p>
+<p>Use Mapnik (Fine, there are 100 Manuals, but only to Create a Demo. I want not a demo, i want to render the data from my Database!)</p>
+<p>Install Tilemill (So far so good, but what i do next? I Dont know where there is a use that this Program can connect to my Database)</p>
+<hr>
+<p>Long Story Short Question:</p>
+<p>How can i Render Tiles from my Database (Postgre SQL).
+Please with Real Examples and not only manuals where i can Create Demos.</p>
+<p>Thank you very much!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/windows/" class="post-tag tag-link-windows"
+                                        title="see questions tagged 'windows'" rel="tag">windows</a>
+                                
+                                    <a href="/tags/render/" class="post-tag tag-link-render"
+                                        title="see questions tagged 'render'" rel="tag">render</a>
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                                    <a href="/tags/tilemil/" class="post-tag tag-link-tilemil"
+                                        title="see questions tagged 'tilemil'" rel="tag">tilemil</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Dec '12, 01:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8fd83011d6e87db1c8974cae52e89899?s=32&amp;d=identicon&amp;r=g" alt="asmardemir's gravatar image" />
+    <p><a href="/users/4760/asmardemir">asmardemir</a><br/>
+    <span class="score" title="76 reputation points">76</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="asmardemir has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-18545">
+    
+        <a name="18550"></a>
+        <div class="comment" id="comment-18550">
+            <div id="post-18550-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Could you perhaps indicate which kind of technology you intend to use (Java Swing, dotNet, HTML, ...) (or are familiar with) ?</p>
+
+<p>Regards,
+Alain</p></div>
+            <div class="comment-info" id="comment-18550-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '12, 09:13)</span>
+                <a class="comment-user userinfo" href="/users/5216/koalabe">koalabe</a>
+                
+            </div>
+        </div>
+    
+        <a name="18584"></a>
+        <div class="comment" id="comment-18584">
+            <div id="post-18584-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just html.</p>
+
+<p>I Want the Tiles. (${z}/${x}/${y}.png)</p>
+
+<p>Just the PNG's. And publish it with an simple apache server.</p>
+
+<p>Nothing else...</p></div>
+            <div class="comment-info" id="comment-18584-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '12, 01:39)</span>
+                <a class="comment-user userinfo" href="/users/4760/asmardemir">asmardemir</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18545" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18545-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/18545/render-tiles-in-windows-how-i-am-getting-desperated?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/18545/render-tiles-in-windows-how-i-am-getting-desperated?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/18545/render-tiles-in-windows-how-i-am-getting-desperated?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/18545/render-tiles-in-windows-how-i-am-getting-desperated?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="18573"></a>
+                    <div id="answer-container-18573" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18573-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18573/up/" rel="nofollow"> </a>
+<div id="post-18573-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-18573-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18573/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>All information you need should be listed at <a href="http://mapbox.com/tilemill/docs/win-install/">http://mapbox.com/tilemill/docs/win-install/</a> </p>
+<p>Did you really read all instructions and howtos?</p>
+<p>Please tell us in detail where you get stuck with your database.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18573/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Dec '12, 17:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18573">
+    
+        <a name="18583"></a>
+        <div class="comment" id="comment-18583">
+            <div id="post-18583-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello.</p>
+
+<p>I didnt stuck in my Database.</p>
+
+<p>My Problem is, like i said, how can i Render / Create Tiles?</p>
+
+<p>The Database is full with Data (osm2pgsql).</p>
+
+<p>But how can i Render them?</p>
+
+<p>And yes, i read the Manual. Details of designing Roads, Trees, ....
+I am not interested in this :(
+I just want to know how i can render / Create my Tiles from my Database :(</p></div>
+            <div class="comment-info" id="comment-18583-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '12, 01:34)</span>
+                <a class="comment-user userinfo" href="/users/4760/asmardemir">asmardemir</a>
+                
+            </div>
+        </div>
+    
+        <a name="18629"></a>
+        <div class="comment" id="comment-18629">
+            <div id="post-18629-score" class="comment-score"></div>
+            <div class="comment-text"><p>... and you already asked here:
+<a href="https://help.openstreetmap.org/questions/18386/create-tiles-in-windows-with-mapnik">https://help.openstreetmap.org/questions/18386/create-tiles-in-windows-with-mapnik</a></p></div>
+            <div class="comment-info" id="comment-18629-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '12, 16:58)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18573" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18573-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="18553"></a>
+                    <div id="answer-container-18553" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18553-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18553/up/" rel="nofollow"> </a>
+<div id="post-18553-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-18553-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18553/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This help site is not the main entry to contact the OSM developers community. Use the osm dev mailing list instead:</p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p><a href="http://lists.openstreetmap.org/listinfo/dev">http://lists.openstreetmap.org/listinfo/dev</a></p>
+<p>But I don't understand really your problem. Tilemill uses Mapnik too. It's just a tool editing rendering styles where "Mapnik tutorials" itself is just using the OSM standard style. So, If you plan to use the standard Mapnik style for OSM, then one of the "hundreds" tutorials is good enough for you. When it runs for a demo db, then you can easily replace the demo by your full database, no ? Or if you are not able to change a db name in a configuration file ? Or your plan is to use Tilemill for a new map style, and you have to connect your till server with Tilemill. In which case, you should contact the dev list. Btw, what is your tile server ? mod_tile, renderd, tirex ?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18553/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Dec '12, 10:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0e92f2d89853fd4e04c4b40a921e519b?s=32&amp;d=identicon&amp;r=g" alt="Pieren's gravatar image" />
+    <p><a href="/users/87/pieren">Pieren</a><br/>
+    <span class="score" title="9847 reputation points"><span class="">9.8k</span></span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="157 badges"><span class="bronze">&#9679;</span><span class="badgecount">157</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Pieren has 34 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/18553/">
+                edited
+                <strong>18 Dec '12, 17:27</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18553">
+    
+        <a name="18585"></a>
+        <div class="comment" id="comment-18585">
+            <div id="post-18585-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello.</p>
+
+<p>How can i Say to Tilemil: Hey, use this Database and Create some Tiles.</p>
+
+<p>I didnt find in the application any Setting.</p>
+
+<p>In the Manual i find only things about how to create streets, and so on. Nothing about Rendering Tiles.</p>
+
+<p>I am not interested in creating my own Design.
+I just want the PNG's and Publish them (Format: ${z}/${x}/${y}.png)</p></div>
+            <div class="comment-info" id="comment-18585-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '12, 01:41)</span>
+                <a class="comment-user userinfo" href="/users/4760/asmardemir">asmardemir</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18553" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18553-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="18592"></a>
+                    <div id="answer-container-18592" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18592-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18592/up/" rel="nofollow"> </a>
+<div id="post-18592-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-18592-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18592/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Tilemill is developed by Mapbox, a company where the business model is around hosting map tiles for you. It's free to use and open source but the aim is finally that your tiles are hosted by them and you pay some fee for that. If you want to host your tiles yourself, you can use their apps but then you will have to dig into the source code and find the hints and tricks yourself for your needs. Otherwise,  use another toolchain like <a href="http://wiki.openstreetmap.org/wiki/Tirex">Tirex</a> or <a href="http://wiki.openstreetmap.org/wiki/Mod_tile">Mod tile and renderd</a> or check those wiki pages about tile rendering scripts and services <a href="http://wiki.openstreetmap.org/wiki/Mapnik">here (Mapnik)</a> and <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map">there (Slippy map)</a>. Again, you can use Mapnik directly but still use TileMill to edit the Mapnik map styles (check <a href="http://wiki.openstreetmap.org/wiki/Carto">CartoCSS export to Mapnik</a>). You can check also this <a href="http://switch2osm.org/serving-tiles/">switch2osm page about serving tiles</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18592/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Dec '12, 09:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0e92f2d89853fd4e04c4b40a921e519b?s=32&amp;d=identicon&amp;r=g" alt="Pieren's gravatar image" />
+    <p><a href="/users/87/pieren">Pieren</a><br/>
+    <span class="score" title="9847 reputation points"><span class="">9.8k</span></span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="157 badges"><span class="bronze">&#9679;</span><span class="badgecount">157</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Pieren has 34 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18592">
+    
+</div>
+<div id="comment-tools-18592" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18592-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="38216"></a>
+                    <div id="answer-container-38216" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-38216-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/38216/up/" rel="nofollow"> </a>
+<div id="post-38216-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-38216-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/38216/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is a detailed description on <a href="http://sourceforge.net/projects/topomapcreator/">TopoMapCreator</a> about <a href="http://sourceforge.net/p/topomapcreator/wiki/TileMill">How to render OSM data with TileMill on Windows</a>.</p>
+<p>TileMill can be used easily without relying on the services of Mapbox!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/38216/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Nov '14, 10:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6c696b469aba99282f03a4a1f33528b3?s=32&amp;d=identicon&amp;r=g" alt="kaki007's gravatar image" />
+    <p><a class="suspended-user" href="/users/9754/kaki007">kaki007</a><br/>
+    (suspended)<br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="kaki007 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-38216">
+    
+</div>
+<div id="comment-tools-38216" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-38216-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/18545/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sjlaO5xekG9yyKbDz5EGlmfBDD5lWGIq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18545/render-tiles-in-windows-how-i-am-getting-desperated?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/18545/render-tiles-in-windows-how-i-am-getting-desperated?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+        <a href="/tags/windows/"
+            class="tag-link-windows"
+            title="see questions tagged'windows'using tags"
+            rel="tag">windows</a> <span class="tag-number">&#215;48</span><br/>
+        
+        <a href="/tags/render/"
+            class="tag-link-render"
+            title="see questions tagged'render'using tags"
+            rel="tag">render</a> <span class="tag-number">&#215;33</span><br/>
+        
+        <a href="/tags/tilemil/"
+            class="tag-link-tilemil"
+            title="see questions tagged'tilemil'using tags"
+            rel="tag">tilemil</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 18, 2012, 1:24 a.m.">18 Dec '12, 01:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,334 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 1, 2014, 10:05 a.m.">01 Nov '14, 10:05</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/12750/what-is-the-average-size-of-all-tiles-for-a-us-state">What is the average size of all tiles for a US state?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18386/create-tiles-in-windows-with-mapnik">Create Tiles in Windows with Mapnik</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65238/is-it-possible-to-make-sure-mapnik-22-allways-render-complete-tiles">Is it possible to make sure Mapnik (2.2) allways render complete tiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10861/name-rendered-even-though-feature-is-invisible">name=* rendered, even though feature is invisible</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8849/how-to-force-mapnik-render-only-not-empty-tiles">How to force mapnik render only not empty tiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10417/how-to-render-tiles-for-india-map">How to render tiles for India Map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7654/creating-png-tiles-for-all-zoom-levels">Creating PNG tiles for all zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1999/newbie-3rd-zoom-level-rendering-issue-after-edit">Newbie: 3rd zoom level rendering issue after edit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3409/how-to-display-your-own-rendering-tiles-in-a-symbian-phone">How to display your own rendering tiles in a Symbian Phone?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile">How to trigger a repaint for a specific OSM map tile?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

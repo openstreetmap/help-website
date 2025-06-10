@@ -1,0 +1,1037 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Keep in sync local database with OSM latest changes to region - OSM Help</title>
+        <meta name="description" content="Hi Guys,  I have successfully build a tile server following below article :  https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/ Successfully imported the data for Switzerland into the database and now i would like to keep the latest changes for this map into sync on dail..." />
+        <meta name="keywords" content="local,osm,sync" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/78817/keep-in-sync-local-database-with-osm-latest-changes-to-region" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/78817/keep-in-sync-local-database-with-osm-latest-changes-to-region?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='bXo2fozqA7JnmfX4ax9bMOWYmPfTTQEQ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/78817/keep-in-sync-local-database-with-osm-latest-changes-to-region">Keep in sync local database with OSM latest changes to region</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-78817-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/78817/up/" rel="nofollow"> </a>
+<div id="post-78817-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-78817-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/78817/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/78817/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi Guys, </p>
+<p>I have successfully build a tile server following below article : </p>
+<p><a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/</a></p>
+<p>Successfully imported the data for Switzerland into the database and now i would like to keep the latest changes for this map into sync on daily level <a href="http://download.geofabrik.de/europe/switzerland-updates/">http://download.geofabrik.de/europe/switzerland-updates/</a></p>
+<p>How i can achieve this is there anywhere step by step guide , or scripts that i can use. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/local/" class="post-tag tag-link-local"
+                                        title="see questions tagged 'local'" rel="tag">local</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/sync/" class="post-tag tag-link-sync"
+                                        title="see questions tagged 'sync'" rel="tag">sync</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Feb '21, 13:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b4c6f7d35e4fd1b4561578e5e376ca06?s=32&amp;d=identicon&amp;r=g" alt="DavorB0's gravatar image" />
+    <p><a href="/users/19676/davorb0">DavorB0</a><br/>
+    <span class="score" title="22 reputation points">22</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DavorB0 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-78817">
+    
+</div>
+<div id="comment-tools-78817" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-78817-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/78817/keep-in-sync-local-database-with-osm-latest-changes-to-region?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/78817/keep-in-sync-local-database-with-osm-latest-changes-to-region?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/78817/keep-in-sync-local-database-with-osm-latest-changes-to-region?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/78817/keep-in-sync-local-database-with-osm-latest-changes-to-region?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="78822"></a>
+                    <div id="answer-container-78822" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-78822-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/78822/up/" rel="nofollow"> </a>
+<div id="post-78822-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-78822-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/78822/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="DavorB0 has selected this answer as the correct answer"
+        href="/accept_answer/78822/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>See the <a href="https://osm2pgsql.org/doc/manual.html#updating-an-existing-database">osm2pgsql manual</a> for recommended ways of doing this.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/78822/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Feb '21, 15:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2d4dfcdcde73aa5e2ffa4a9b3a7cb51d?s=32&amp;d=identicon&amp;r=g" alt="Jochen%20Topf's gravatar image" />
+    <p><a href="/users/112/jochen-topf">Jochen Topf</a><br/>
+    <span class="score" title="5244 reputation points"><span class="">5.2k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="50 badges"><span class="silver">&#9679;</span><span class="badgecount">50</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jochen Topf has 32 accepted answers">31&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-78822">
+    
+</div>
+<div id="comment-tools-78822" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-78822-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="78819"></a>
+                    <div id="answer-container-78819" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-78819-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/78819/up/" rel="nofollow"> </a>
+<div id="post-78819-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-78819-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/78819/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="https://switch2osm.org/serving-tiles/updating-as-people-edit/">https://switch2osm.org/serving-tiles/updating-as-people-edit/</a></p>
+<p>(it's relatively new there)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/78819/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Feb '21, 14:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-78819">
+    
+        <a name="78821"></a>
+        <div class="comment" id="comment-78821">
+            <div id="post-78821-score" class="comment-score"></div>
+            <div class="comment-text"><p>That description uses zveriks trim_osc which isn't a good solution in this case. Geofabrik offers local change files already so that is not needed at all.</p></div>
+            <div class="comment-info" id="comment-78821-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '21, 15:43)</span>
+                <a class="comment-user userinfo" href="/users/112/jochen-topf">Jochen Topf</a>
+                
+            </div>
+        </div>
+    
+        <a name="78826"></a>
+        <div class="comment" id="comment-78826">
+            <div id="post-78826-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's going to depend how up to date you want to be.  If you're happy with daily updates (and OP here has said they are) then yes you can consume Geofabrik daily diffs direct and not bother trying to trim them down.</p>
+
+<p>By all means add an extra sentence to <a href="https://github.com/switch2osm/switch2osm.github.io/blob/master/serving-tiles/updating-as-people-edit.md">https://github.com/switch2osm/switch2osm.github.io/blob/master/serving-tiles/updating-as-people-edit.md</a> to say that.</p></div>
+            <div class="comment-info" id="comment-78826-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '21, 19:00)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78828"></a>
+        <div class="comment" id="comment-78828">
+            <div id="post-78828-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks guys for the input and the feedback, much appreciated. Yes we're happy if we can achieve to sync the database on daily level, i followed the instructions provided , however when running the script </p>
+
+<p>sudo -u renderaccount /home/renderaccount/src/mod_tile/openstreetmap-tiles-update-expire</p>
+
+<p>It popup some strange error :</p>
+
+<p>rm: cannot remove '/var/lib/mod_tile/dirty_tiles.6877': No such file or directory</p>
+
+<p>Command in the script is the below one :</p>
+
+<pre><code>if ! $OSM2PGSQL_BIN -a --slim -e $EXPIRY_MINZOOM-$EXPIRY_MAXZOOM $OSM2PGSQL_OPTIONS -o "$EXPIRY_FILE.$$" $CHANGE_FILE 1&gt;&amp;2 2&gt; "$PGSQLLOG"; then
+    m_error "osm2pgsql error"
+fi
+</code></pre>
+
+<p>Below are the variables used :</p>
+
+<p>OSM2PGSQL_BIN=osm2pgsql
+EXPIRY_MINZOOM=13
+EXPIRY_MAXZOOM=20
+OSM2PGSQL_OPTIONS="-d $DBNAME --tag-transform-script /home/renderaccount/src/openstreetmap-carto/openstreetmap-carto.lua"
+BASE_DIR=/var/lib/mod_tile
+EXPIRY_FILE=$BASE_DIR/dirty_tiles
+CHANGE_FILE=$BASE_DIR/changes.osc.gz</p>
+
+<p>Cant figure it out why it's throwing this error , does the script suppose to download this files from somewhere or simply creates them ?</p></div>
+            <div class="comment-info" id="comment-78828-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Feb '21, 08:27)</span>
+                <a class="comment-user userinfo" href="/users/19676/davorb0">DavorB0</a>
+                
+            </div>
+        </div>
+    
+        <a name="78831"></a>
+        <div class="comment not_top_scorer" id="comment-78831">
+            <div id="post-78831-score" class="comment-score"></div>
+            <div class="comment-text"><p>For completeness, the source of the original script is <a href="https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/openstreetmap-tiles-update-expire">https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/openstreetmap-tiles-update-expire</a> .</p>
+
+<p>By default, when you run that script with a date to initialise it, it'll write a configuration to files in /var/lib/mod_tile/.osmosis/ .  In there you'll see "configuration.txt".  By default obtains minutely diffs <a href="https://planet.openstreetmap.org/replication/minute">https://planet.openstreetmap.org/replication/minute</a> .</p>
+
+<p>"rm: cannot remove '/var/lib/mod_tile/dirty_tiles.6877':" just means that something went so far wrong that it didn't produce a list of dirty tiles.</p>
+
+<p>Details of the actual osm2pgsql error error are written to a logfile, and where that is is defined at the top of the file at <a href="https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/openstreetmap-tiles-update-expire#L37">https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/openstreetmap-tiles-update-expire#L37</a> and <a href="https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/openstreetmap-tiles-update-expire#L46">https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/openstreetmap-tiles-update-expire#L46</a> .</p>
+
+<p>If you look in /var/log/tiles/osm2pgsql.log you should see the actual error.</p></div>
+            <div class="comment-info" id="comment-78831-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Feb '21, 12:20)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78832"></a>
+        <div class="comment not_top_scorer" id="comment-78832">
+            <div id="post-78832-score" class="comment-score"></div>
+            <div class="comment-text"><p>That said, as Jochen has noted, if you want to consume daily diffs from Geofabrik, you'll need to make changes to the script or configuration files in /var/lib/mod_tile/.osmosis/ to say where you're getting files from and how much you want to update at once, or as he suggests, do something different.</p></div>
+            <div class="comment-info" id="comment-78832-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Feb '21, 12:21)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78833"></a>
+        <div class="comment" id="comment-78833">
+            <div id="post-78833-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes indeed if i check the log into the mention file , it show's completely different error : </p>
+
+<p>ERROR: DB copy thread failed: Database error: ERROR: column "addr:interpolation" of relation "planet_osm_point" does not exist</p>
+
+<p>Guess i will need to figure out a different way so i can manage to apply the daily updates from Geofabrik. </p>
+
+<p>I already try to execute with below commands , unfortunately this doesn't work as well.</p>
+
+<p>osmosis --read-replication-interval workingDirectory=/home/renderaccount/data --simplify-change --write-xml-change /home/renderaccount/data/changes.osc.gz</p>
+
+<p>osm2pgsql --append -d gis -S ~/src/openstreetmap-carto/openstreetmap-carto.style -C 10500 --slim --number-processes 6 /home/renderaccount/data/changes.osc.gz</p>
+
+<p>Previously i created the state and configuration file.</p>
+
+<p>$ pwd ; ls -l 
+/home/renderaccount/data
+configuration.txt
+download.lock
+state.txt
+cat configuration.txt
+-e baseUrl=<a href="http://download.geofabrik.de/europe/switzerland-updates">http://download.geofabrik.de/europe/switzerland-updates</a>
+maxInterval=3600
+cat state.txt</p>
+
+<h1>original OSM minutely replication sequence number 4407283</h1>
+
+<p>timestamp=2021-02-08T21\:42\:02Z
+sequenceNumber=2876</p></div>
+            <div class="comment-info" id="comment-78833-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Feb '21, 13:17)</span>
+                <a class="comment-user userinfo" href="/users/19676/davorb0">DavorB0</a>
+                
+            </div>
+        </div>
+    
+        <a name="78834"></a>
+        <div class="comment not_top_scorer" id="comment-78834">
+            <div id="post-78834-score" class="comment-score"></div>
+            <div class="comment-text"><p>Missing database columns is something that will likely cause a problem however you update the database, and that particular one isn't one I've seen before.  Have you perhaps changed or updated the style and not made some needed changes to the database structure?  Maybe you need to make sure that "OSM2PGSQL_OPTIONS" matches your database?</p></div>
+            <div class="comment-info" id="comment-78834-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Feb '21, 13:27)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78835"></a>
+        <div class="comment not_top_scorer" id="comment-78835">
+            <div id="post-78835-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes the variable OSM2PGSQL_OPTIONS matches the database. This is how it is in the script :</p>
+
+<p>DBNAME=gis
+OSM2PGSQL_OPTIONS="-d $DBNAME"</p>
+
+<p>I didn't perform any updates on the database or the style. If the database structure somehow it's not good , should i maybe re-deploy new system completely , following the same guide ? and then to try again with the same script to synchronize the changes</p></div>
+            <div class="comment-info" id="comment-78835-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Feb '21, 13:43)</span>
+                <a class="comment-user userinfo" href="/users/19676/davorb0">DavorB0</a>
+                
+            </div>
+        </div>
+    
+        <a name="78847"></a>
+        <div class="comment not_top_scorer" id="comment-78847">
+            <div id="post-78847-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>If the database structure somehow it's not good , should i maybe re-deploy new system completely</p>
+</blockquote>
+
+<p>How you update data depends on how you loaded it in the first place.  As an example, the options that I need to use when updating a different map style (which has a different database format) can be seen at <a href="https://github.com/SomeoneElseOSM/mod_tile/blob/zoom/openstreetmap-tiles-update-expire#L25">https://github.com/SomeoneElseOSM/mod_tile/blob/zoom/openstreetmap-tiles-update-expire#L25</a> .  I don't know what columns were originally in your database, so can't really comment on that.</p></div>
+            <div class="comment-info" id="comment-78847-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Feb '21, 15:40)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78848"></a>
+        <div class="comment not_top_scorer" id="comment-78848">
+            <div id="post-78848-score" class="comment-score"></div>
+            <div class="comment-text"><p>In order to install and create a tile server i did follow below guide : </p>
+
+<p><a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/</a></p>
+
+<p>Which everything went fine. </p>
+
+<p>The load of the data into the Gis database that i used is below one (same one from the guide , only the country is changed ) :</p>
+
+<p>osm2pgsql -d gis --create --slim  -G --hstore --tag-transform-script ~/src/openstreetmap-carto/openstreetmap-carto.lua -C 10500 --number-processes 4 -S ~/src/openstreetmap-carto/openstreetmap-carto.style ~/data/switzerland-latest.osm.pbf</p>
+
+<p>I did not include the '--tag-transform-script' part into the variable OSM2PGSQL_OPTIONS. Suppose this is the reason why the database structure it's changed and now its no good. I will build a new server and will include this parameter before i execute the script once again.</p>
+
+<p>Since all of this is new technology for me and i jump from one article to another to understand everything (mod_tile, render, mapnik etc) and reading documentation. Is there an easy way what/where its needed to be changed in the script 'openstreetmap-tiles-update-expire' in order daily updates from Geofabrik for Switzerland to be applied.</p>
+
+<p>Thanks for the help.</p></div>
+            <div class="comment-info" id="comment-78848-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Feb '21, 18:41)</span>
+                <a class="comment-user userinfo" href="/users/19676/davorb0">DavorB0</a>
+                
+            </div>
+        </div>
+    
+        <a name="78866"></a>
+        <div class="comment" id="comment-78866">
+            <div id="post-78866-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Below article helped me to update the database on daily level :</p>
+
+<p><a href="https://wiki.openstreetmap.org/wiki/HowTo_minutely_hstore">https://wiki.openstreetmap.org/wiki/HowTo_minutely_hstore</a></p>
+
+<p>Unfortunately i am using the whole planet , but the goal to have the changes for Swiss are included as well in the replication file.</p>
+
+<p>With the approach from <a href="https://switch2osm.org/serving-tiles/updating-as-people-edit/">https://switch2osm.org/serving-tiles/updating-as-people-edit/</a> to update from Geofabrik didn't work for me.</p></div>
+            <div class="comment-info" id="comment-78866-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Feb '21, 18:13)</span>
+                <a class="comment-user userinfo" href="/users/19676/davorb0">DavorB0</a>
+                
+            </div>
+        </div>
+    
+        <a name="82425"></a>
+        <div class="comment not_top_scorer" id="comment-82425">
+            <div id="post-82425-score" class="comment-score"></div>
+            <div class="comment-text"><p>For completeness, this error:</p>
+
+<pre><code>ERROR: DB copy thread failed: Database error: ERROR: column "addr:interpolation" of relation "planet_osm_point" does not exist
+</code></pre>
+
+<p>can be caused by the database format not matching the default osm2pgsql style file.  This didn't use to be a problem, but it appears that following changes at the "OSM Carto" side (actually bugfixes in terms of what database contents are actually needed) it now is one.</p>
+
+<p>To resolve it, specify the style file in the OSM2PGSQL_OPTIONS, something like:</p>
+
+<pre><code>OSM2PGSQL_OPTIONS="-d $DBNAME --tag-transform-script /path/to/openstreetmap-carto.lua -S /path/to/openstreetmap-carto.style"
+</code></pre></div>
+            <div class="comment-info" id="comment-82425-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Oct '21, 02:44)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-78819" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-78819-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/78817/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='bXo2fozqA7JnmfX4ax9bMOWYmPfTTQEQ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/78817/keep-in-sync-local-database-with-osm-latest-changes-to-region?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/78817/keep-in-sync-local-database-with-osm-latest-changes-to-region?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/local/"
+            class="tag-link-local"
+            title="see questions tagged'local'using tags"
+            rel="tag">local</a> <span class="tag-number">&#215;39</span><br/>
+        
+        <a href="/tags/sync/"
+            class="tag-link-sync"
+            title="see questions tagged'sync'using tags"
+            rel="tag">sync</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 12, 2021, 1:23 p.m.">12 Feb '21, 13:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,003 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 31, 2021, 2:44 a.m.">31 Oct '21, 02:44</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/47104/local-osm-editing">Local OSM editing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/74926/cant-find-any-link-or-tutorial-to-setup-osm-local-database-on-windows">Cant find any link or tutorial to setup OSM local database on Windows.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3782/what-is-the-best-way-to-insert-a-movable-slippy-map-with-marker-to-an-osm-wiki-page">what is the best way to insert a (movable) slippy map with marker to an OSM-wiki page?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4193/placing-a-non-commecial-restriction-on-osm-derived-products">Placing a non-commecial restriction on OSM-derived products</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4286/can-i-create-an-android-application-that-uses-osm-data">Can I create an Android application that uses OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4422/rails-port-and-osm-server">Rails Port and OSM Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5299/downloading-osm-data-for-offline-geocoding">Downloading OSM Data for Offline geocoding</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4756/garman-etrex-vista-c-how-does-one-start-off-getting-osm">Garman Etrex Vista C  How does one start off getting OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6027/osm-maps-on-blackberry">[closed] OSM maps on Blackberry?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3983/how-do-you-display-only-local-edits-in-the-changelog">How do you display only local edits in the changelog?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

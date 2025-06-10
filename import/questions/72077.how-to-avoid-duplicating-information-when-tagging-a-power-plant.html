@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to avoid duplicating information when tagging a power plant - OSM Help</title>
+        <meta name="description" content="The Forney Energy Center west of Dallas has an outer perimeter with the following tags: &quot;landuse&quot;: &quot;industrial&quot;,  &quot;name&quot;: &quot;Forney Energy Center&quot;,  &quot;plant:output:electricity&quot;: &quot;1824 MW&quot;,  &quot;power&quot;: &quot;plant&quot; And several inner perimeters with demarcating the turbine hall, cooling fans, etc. I noticed tha..." />
+        <meta name="keywords" content="infrastructure,power,industrial_plant" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/72077/how-to-avoid-duplicating-information-when-tagging-a-power-plant" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/72077/how-to-avoid-duplicating-information-when-tagging-a-power-plant?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='2BcFZZvu5sCRNoAVf6fYgzjpPNnBomL6' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/72077/how-to-avoid-duplicating-information-when-tagging-a-power-plant">How to avoid duplicating information when tagging a power plant</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-72077-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/72077/up/" rel="nofollow"> </a>
+<div id="post-72077-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-72077-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/72077/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/72077/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>The <a href="https://www.openstreetmap.org/#map=17/32.75663/-96.48942">Forney Energy Center west of Dallas</a> has an outer perimeter with the following tags:</p>
+<p><code>"landuse": "industrial",
+    "name": "Forney Energy Center",
+    "plant:output:electricity": "1824 MW",
+    "power": "plant"</code></p>
+<p>And several inner perimeters with demarcating the turbine hall, cooling fans, etc.  I noticed that on the turbine hall it had the tag of <code>"source": "gas"</code>.  Most other power plants I've looked at have this tagged at the top level.  Are there conventions to follow?  Note that I have (now I think erroneously) added operator and start date to the turbine hall but these <em>I think</em> these should be added to the polygon describing the perimeter of the plant.  Thoughts on what to do / how to avoid duplicating info / link to suggested best practice(s ;) ) please.</p>
+<p>Perhaps additionally the <a href="https://www.openstreetmap.org/way/39952924">turbine hall #39952924</a> should be tagged as a relation or subnode/ child of <a href="https://www.openstreetmap.org/way/39952915">the perimeter 39952915</a>?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/infrastructure/" class="post-tag tag-link-infrastructure"
+                                        title="see questions tagged 'infrastructure'" rel="tag">infrastructure</a>
+                                
+                                    <a href="/tags/power/" class="post-tag tag-link-power"
+                                        title="see questions tagged 'power'" rel="tag">power</a>
+                                
+                                    <a href="/tags/industrial_plant/" class="post-tag tag-link-industrial_plant"
+                                        title="see questions tagged 'industrial_plant'" rel="tag">industrial_plant</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Dec '19, 23:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/688a8eb05930e8c8cd2606aa27ff8888?s=32&amp;d=identicon&amp;r=g" alt="TFJamMan's gravatar image" />
+    <p><a href="/users/17524/tfjamman">TFJamMan</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TFJamMan has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/72077/">
+                edited
+                <strong>12 Dec '19, 00:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-72077">
+    
+</div>
+<div id="comment-tools-72077" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-72077-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/72077/how-to-avoid-duplicating-information-when-tagging-a-power-plant?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/72077/how-to-avoid-duplicating-information-when-tagging-a-power-plant?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/72077/how-to-avoid-duplicating-information-when-tagging-a-power-plant?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/72077/how-to-avoid-duplicating-information-when-tagging-a-power-plant?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="72081"></a>
+                    <div id="answer-container-72081" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-72081-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/72081/up/" rel="nofollow"> </a>
+<div id="post-72081-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-72081-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/72081/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="TFJamMan has selected this answer as the correct answer"
+        href="/accept_answer/72081/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Don't avoid. Tagging both the plant and generator is the best practice. </p>
+<ol>
+<li>
+<p>There could be generators of other sources not for power transmission, eg: emergency, start-up, facility use. <code>plant:source=</code> needs to be consistent with <code>generator:source=</code> for power output, same with <code>plant:output</code> == <code>generator:output</code></p>
+</li>
+<li>
+<p>A power plant can have multiple power sources, value colon-separated in <code>plant:sourc=e</code>.  <code>generator:source=</code> absolutely must be tagged explicitly for these. In time, there could be changes, renovations, and expansion in the plant in the future; or that there may be edits going on in OSM, like yours. Redundancy allows for easy reference, without questions needing to be asked every time. </p>
+</li>
+<li>
+<p>Finally, tagging <code>generator:source</code> completes the info of the generator itself. This data would be direct and simple to use. No need to further query and infer from the enclosing area, for info as basic and inherent as this. </p>
+</li>
+</ol>
+<p>Same for <code>opening_date=</code>. A generator could similarly have a different value.  If you have the knowledge, certainly fill out as much as possible. </p>
+<p>The area vs relation issue is long-standing. You are free to map so; surely welcomed and thanked if there's such an incomplete tagging of objects that, perhaps you aren't sure or are unable to totally sort it out yet. Usually this is done for more complicated cases, so I probably won't here.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/72081/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Dec '19, 13:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/76ffbb56c811e8a8ccdd4c28f122399f?s=32&amp;d=identicon&amp;r=g" alt="Kovoschiz's gravatar image" />
+    <p><a href="/users/16887/kovoschiz">Kovoschiz</a><br/>
+    <span class="score" title="2434 reputation points"><span class="">2.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="47 badges"><span class="bronze">&#9679;</span><span class="badgecount">47</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kovoschiz has 22 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/72081/">
+                edited
+                <strong>12 Dec '19, 13:45</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-72081">
+    
+</div>
+<div id="comment-tools-72081" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-72081-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/72077/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='2BcFZZvu5sCRNoAVf6fYgzjpPNnBomL6' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/72077/how-to-avoid-duplicating-information-when-tagging-a-power-plant?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/72077/how-to-avoid-duplicating-information-when-tagging-a-power-plant?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/power/"
+            class="tag-link-power"
+            title="see questions tagged'power'using tags"
+            rel="tag">power</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/infrastructure/"
+            class="tag-link-infrastructure"
+            title="see questions tagged'infrastructure'using tags"
+            rel="tag">infrastructure</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/industrial_plant/"
+            class="tag-link-industrial_plant"
+            title="see questions tagged'industrial_plant'using tags"
+            rel="tag">industrial_plant</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 11, 2019, 11:44 p.m.">11 Dec '19, 23:44</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,318 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 12, 2019, 1:45 p.m.">12 Dec '19, 13:45</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1793/how-do-you-tag-a-refinery">How do you tag a refinery?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7831/finding-voltage-information-for-power-lines">Finding Voltage information for Power Lines</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8385/placing-windmills-and-power-generators-with-potlatch2">Placing windmills and power generators with Potlatch2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9867/what-is-annual-cost-of-running-osm">What is annual cost of running OSM ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12713/where-is-the-information-on-power-lines-in-the-geofabrik-download">where is the information on power lines in the geofabrik download</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12747/garmin-800-sd-file-structure">Garmin 800 SD File structure</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14964/whats-the-key-for-an-industrial-metallic-bridge-over-a-river">What&#39;s the key for an industrial metallic bridge over a river ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15364/should-i-extract-the-data-from-relations-or-from-ways">Should I extract the data from relations or from ways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22547/data-disappearing-in-osmosis-tag-filter-powerline">Data disappearing in Osmosis Tag Filter (power=line)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/489/what-do-i-do-when-two-separate-power-lines-temporarily-share-poles">What do I do when two separate power lines temporarily share poles?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

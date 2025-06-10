@@ -1,0 +1,837 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>[closed] Is osmconvert really written in C - OSM Help</title>
+        <meta name="description" content="Hi! I found the source code of osmconvert in the following page: http://m.m.i24.cc/osmconvert.c However, there seems to be something special about this script. Normally, C is written in separate files while linked with headers. It is very difficult to find a C script with over 10000 lines. What is m..." />
+        <meta name="keywords" content="python,osmconvert,c,visibility,conversion" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/55064/is-osmconvert-really-written-in-c" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55064/is-osmconvert-really-written-in-c?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='58k1m025VmbbUANqDBZMSsvMcnc2RNP6' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55064/is-osmconvert-really-written-in-c">[closed] Is osmconvert really written in C</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55064-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55064/up/" rel="nofollow"> </a>
+<div id="post-55064-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55064-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55064/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55064/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi! I found the source code of osmconvert in the following page:
+<a href="http://m.m.i24.cc/osmconvert.c">http://m.m.i24.cc/osmconvert.c</a></p>
+<p>However, there seems to be something special about this script.
+Normally, C is written in separate files while linked with headers.
+It is very difficult to find a C script with over 10000 lines.</p>
+<p>What is more peculiar is that the term 'module' is used, which is a Python concept. There is nothing called 'module' in C.
+Therefore, I am suggesting that it is originally written in Python, and then translated to C.
+If that is the case, can the developer please open the Python source code and the way to translate Python to C? Thanks.</p>
+<p>P.S. The new version of osmconvert does not write object visibility. Is that a bug?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/python/" class="post-tag tag-link-python"
+                                        title="see questions tagged 'python'" rel="tag">python</a>
+                                
+                                    <a href="/tags/osmconvert/" class="post-tag tag-link-osmconvert"
+                                        title="see questions tagged 'osmconvert'" rel="tag">osmconvert</a>
+                                
+                                    <a href="/tags/c/" class="post-tag tag-link-c"
+                                        title="see questions tagged 'c'" rel="tag">c</a>
+                                
+                                    <a href="/tags/visibility/" class="post-tag tag-link-visibility"
+                                        title="see questions tagged 'visibility'" rel="tag">visibility</a>
+                                
+                                    <a href="/tags/conversion/" class="post-tag tag-link-conversion"
+                                        title="see questions tagged 'conversion'" rel="tag">conversion</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Mar '17, 15:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/100f8ccde5e9799707a5056f94fe183f?s=32&amp;d=identicon&amp;r=g" alt="Wetitpig0's gravatar image" />
+    <p><a href="/users/13060/wetitpig0">Wetitpig0</a><br/>
+    <span class="score" title="307 reputation points">307</span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="19 badges"><span class="silver">&#9679;</span><span class="badgecount">19</span></span><span title="28 badges"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Wetitpig0 has 2 accepted answers">10&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55064/">
+                closed
+                <strong>29 Dec '17, 04:29</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55064">
+    
+        <a name="55076"></a>
+        <div class="comment" id="comment-55076">
+            <div id="post-55076-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have written a mail to <a href="https://www.openstreetmap.org/user/Marqqs">https://www.openstreetmap.org/user/Marqqs</a></p></div>
+            <div class="comment-info" id="comment-55076-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Mar '17, 20:32)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55094"></a>
+        <div class="comment" id="comment-55094">
+            <div id="post-55094-score" class="comment-score"></div>
+            <div class="comment-text"><p>How to contribute to osmconvert?</p></div>
+            <div class="comment-info" id="comment-55094-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '17, 05:00)</span>
+                <a class="comment-user userinfo" href="/users/13060/wetitpig0">Wetitpig0</a>
+                
+            </div>
+        </div>
+    
+        <a name="55098"></a>
+        <div class="comment" id="comment-55098">
+            <div id="post-55098-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/13060/wetitpig0">@Wetitpig0</a>: I just found e.g. <a href="https://wiki.openstreetmap.org/wiki/User_talk:Marqqs#Small_error_in_Osmconvert">https://wiki.openstreetmap.org/wiki/User_talk:Marqqs#Small_error_in_Osmconvert</a> :-)</p></div>
+            <div class="comment-info" id="comment-55098-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '17, 07:24)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55107"></a>
+        <div class="comment" id="comment-55107">
+            <div id="post-55107-score" class="comment-score">2</div>
+            <div class="comment-text"><p>@Wetipig0 I guess clone <a href="https://gitlab.com/osm-c-tools/osmctools">https://gitlab.com/osm-c-tools/osmctools</a> and send a merge request ? Given the look of the code, I'm not surprised that it's basically a one-man-show: <a href="https://gitlab.com/osm-c-tools/osmctools/graphs/master">https://gitlab.com/osm-c-tools/osmctools/graphs/master</a> :/</p></div>
+            <div class="comment-info" id="comment-55107-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '17, 10:51)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55113"></a>
+        <div class="comment" id="comment-55113">
+            <div id="post-55113-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="https://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent de</a> P: oh, I missed that one on the wiki page of osmconvert. It <em>was</em> quite well hidden under "downloads".</p></div>
+            <div class="comment-info" id="comment-55113-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '17, 18:35)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55115"></a>
+        <div class="comment not_top_scorer" id="comment-55115">
+            <div id="post-55115-score" class="comment-score"></div>
+            <div class="comment-text"><p>meta <a href="https://help.openstreetmap.org/users/13060/wetitpig0">@Wetitpig0</a>: please could you ask your second (side)question in a new question entry (and delete that part here)? Thanks!</p></div>
+            <div class="comment-info" id="comment-55115-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '17, 21:23)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55064" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55064-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="question-status" style="margin-bottom:15px">
+            <h3>
+                The question has been closed for the following reason "The question is answered, right answer was accepted" by
+                <a href="/users/13060/wetitpig0">Wetitpig0</a>
+                 29 Dec '17, 04:29
+            </h3>
+            </div>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55064/is-osmconvert-really-written-in-c?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55064/is-osmconvert-really-written-in-c?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55064/is-osmconvert-really-written-in-c?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55064/is-osmconvert-really-written-in-c?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55092"></a>
+                    <div id="answer-container-55092" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55092-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55092/up/" rel="nofollow"> </a>
+<div id="post-55092-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-55092-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55092/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Wetitpig0 has selected this answer as the correct answer"
+        href="/accept_answer/55092/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yes, this is pure C and definitely not something translated from Python. Like pretty much any programming language from the last 50 years, C supports modularization, it just doesn't have a keyword called "module". Being the huge monolithic source that it is, osmconvert (or rather its author) doesn't seem to be all that fond of this module concept which makes it hard to understand and change indeed. By modularizing it and using the standard library plus some external XML library, it culd probably be cut down by a large amount.</p>
+<p>I'm afraid I have no idea about the visibility issue, it looks like that's simply not yet supported.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55092/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Mar '17, 04:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d62eaa0c9cab6317d2887bfe6bd2163b?s=32&amp;d=identicon&amp;r=g" alt="mbethke's gravatar image" />
+    <p><a href="/users/12949/mbethke">mbethke</a><br/>
+    <span class="score" title="381 reputation points">381</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mbethke has 2 accepted answers">50&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55092">
+    
+        <a name="55114"></a>
+        <div class="comment" id="comment-55114">
+            <div id="post-55114-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Thanks to mbethke! I'd like to confirm that the program is written in plain C. You can split the source file into pieces, of course, I just failed to see the advantage in having the modules moved to separate files. The modules will stay modules, no matter if they are in the same file or not.</p></div>
+            <div class="comment-info" id="comment-55114-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '17, 19:52)</span>
+                <a class="comment-user userinfo" href="/users/4540/marqqs">Marqqs</a>
+                
+            </div>
+        </div>
+    
+        <a name="55117"></a>
+        <div class="comment" id="comment-55117">
+            <div id="post-55117-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Actually, generally, it is a good idea to break a C (or C++) program in "modules." Actually, this is true of any language that creates linkable object files. (Even, Assembler, COBOL and FORTRAN (A half century in the field and having used all five of the mentioned languages.).)</p>
+
+<p>A good reason is to keep private values and routines private by not declaring them public or external. </p></div>
+            <div class="comment-info" id="comment-55117-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '17, 23:37)</span>
+                <a class="comment-user userinfo" href="/users/13472/overthere">OverThere</a>
+                
+            </div>
+        </div>
+    
+        <a name="55121"></a>
+        <div class="comment" id="comment-55121">
+            <div id="post-55121-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Also agreed. That is why osmconvert in fact uses modules with private variables, private functions, etc. The only specialty here is that these modules have been placed into a single source file – like C++ classes, for example.</p></div>
+            <div class="comment-info" id="comment-55121-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Mar '17, 09:45)</span>
+                <a class="comment-user userinfo" href="/users/4540/marqqs">Marqqs</a>
+                
+            </div>
+        </div>
+    
+        <a name="61433"></a>
+        <div class="comment" id="comment-61433">
+            <div id="post-61433-score" class="comment-score"></div>
+            <div class="comment-text"><p>Btw, Marqqs can u include a directory listing for m.m.i24.cc so that we can  look for the programs more easily?</p></div>
+            <div class="comment-info" id="comment-61433-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Dec '17, 16:33)</span>
+                <a class="comment-user userinfo" href="/users/13060/wetitpig0">Wetitpig0</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55092" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55092-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55064/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='58k1m025VmbbUANqDBZMSsvMcnc2RNP6' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55064/is-osmconvert-really-written-in-c?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55064/is-osmconvert-really-written-in-c?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/python/"
+            class="tag-link-python"
+            title="see questions tagged'python'using tags"
+            rel="tag">python</a> <span class="tag-number">&#215;78</span><br/>
+        
+        <a href="/tags/osmconvert/"
+            class="tag-link-osmconvert"
+            title="see questions tagged'osmconvert'using tags"
+            rel="tag">osmconvert</a> <span class="tag-number">&#215;47</span><br/>
+        
+        <a href="/tags/visibility/"
+            class="tag-link-visibility"
+            title="see questions tagged'visibility'using tags"
+            rel="tag">visibility</a> <span class="tag-number">&#215;32</span><br/>
+        
+        <a href="/tags/conversion/"
+            class="tag-link-conversion"
+            title="see questions tagged'conversion'using tags"
+            rel="tag">conversion</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/c/"
+            class="tag-link-c"
+            title="see questions tagged'c'using tags"
+            rel="tag">c</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 14, 2017, 3:22 p.m.">14 Mar '17, 15:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,607 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 31, 2017, 4:33 p.m.">31 Dec '17, 16:33</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/849/how-to-convert-osm-to-kml-format">How to convert .osm to KML format?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1284/problems-with-ways-from-gpx">Problems with ways from gpx</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1457/exporting-osm-map-to-use-in-mapinfo">Exporting OSM map to use in MapInfo</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4260/how-can-i-copy-all-metadata-from-a-poi-into-an-area-in-potlatch-2">How can I copy all metadata from a POI into an area in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5062/why-do-only-few-house-numbers-appear">Why do only few house numbers appear?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6422/invisible-buildings">Invisible buildings?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9123/converting-shp-files-to-osm-files">Converting shp files to osm files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10776/why-is-this-lane-invisible">Why is this lane invisible?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11346/calling-osmosis-using-python-on-windows">Calling osmosis using Python on Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap">How do I import map data from a .dwg file to OpenStreetMap?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

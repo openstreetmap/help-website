@@ -1,0 +1,1719 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>What are the main things that I&#39;m missing out by using the iD editor instead of JOSM? - OSM Help</title>
+        <meta name="description" content="I often prefer more &quot;power user&quot; type of software, but the brief amount of time I&#39;ve spent looking at JOSM, I&#39;ve found confusing. iD seems very intuitive, and has little or no learning curve. Am I doing myself a disservice in the long term by not learning JOSM? What are the main things that I&#39;m miss..." />
+        <meta name="keywords" content="ideditor,josm,newbie,editor" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='9nFm1nkDbcl8TQhzSxZRR0BIsegUD2Y8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm">What are the main things that I&#39;m missing out by using the iD editor instead of JOSM?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-34749-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34749/up/" rel="nofollow"> </a>
+<div id="post-34749-score" class="post-score"
+    title="current number of votes">
+    15
+</div>
+<a id="post-34749-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34749/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/34749/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   2
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I often prefer more "power user" type of software, but the brief amount of time I've spent looking at JOSM, I've found confusing.  iD seems very intuitive, and has little or no learning curve.</p>
+<p>Am I doing myself a disservice in the long term by not learning JOSM?  What are the main things that I'm missing out on by using iD?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/newbie/" class="post-tag tag-link-newbie"
+                                        title="see questions tagged 'newbie'" rel="tag">newbie</a>
+                                
+                                    <a href="/tags/editor/" class="post-tag tag-link-editor"
+                                        title="see questions tagged 'editor'" rel="tag">editor</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Jul '14, 03:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f88a467aa884aeb760041004f62448ee?s=32&amp;d=identicon&amp;r=g" alt="keithonearth's gravatar image" />
+    <p><a href="/users/9027/keithonearth">keithonearth</a><br/>
+    <span class="score" title="2939 reputation points"><span class="">2.9k</span></span><span title="56 badges"><span class="badge1">&#9679;</span><span class="badgecount">56</span></span><span title="76 badges"><span class="silver">&#9679;</span><span class="badgecount">76</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="keithonearth has 3 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34749/">
+                edited
+                <strong>09 Nov '14, 11:19</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-34749">
+    
+        <a name="34777"></a>
+        <div class="comment" id="comment-34777">
+            <div id="post-34777-score" class="comment-score">3</div>
+            <div class="comment-text"><p>The iD developers would be happy to hear you find it intuitive! :)</p></div>
+            <div class="comment-info" id="comment-34777-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 16:00)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+        <a name="39257"></a>
+        <div class="comment" id="comment-39257">
+            <div id="post-39257-score" class="comment-score">1</div>
+            <div class="comment-text"><p>This is, in the end, nearly the same question as <a href="/questions/5584/">Should I use Potlatch or JOSM?</a>. Something like: what are the advantages of JOSM over typical "newbie" or reduced function editors?</p></div>
+            <div class="comment-info" id="comment-39257-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '14, 14:14)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34749" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34749-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    9 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="34762"></a>
+                    <div id="answer-container-34762" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34762-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34762/up/" rel="nofollow"> </a>
+<div id="post-34762-score" class="post-score"
+    title="current number of votes">
+    15
+</div>
+<a id="post-34762-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34762/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="keithonearth has selected this answer as the correct answer"
+        href="/accept_answer/34762/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The benefits of working with JOSM include:</p>
+<ul>
+<li><strong>Efficiency</strong>: edit faster with a powerful search function, filters to hide data you don't want to edit, and the largest available selection of editing tools of all editors</li>
+<li><strong>Offline editing</strong>: save your partially completed work locally, work with your private GPS tracks or <a href="http://wiki.openstreetmap.org/wiki/Photo_Mapping">photographs</a> without having to upload them</li>
+<li><strong>Customization</strong>: customize keyboard shortcuts, pick from high-quality <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins">plugins</a> for specialized tasks, enable UI dialogs for experimental features, change how the editor's <a href="http://wiki.openstreetmap.org/wiki/File:ExampleColouredStreets.png">map rendering</a> looks</li>
+<li><strong>Cutting-edge mapping</strong>: get tool support for emerging mapping topics like <a href="http://wiki.openstreetmap.org/wiki/Josm/styles/lane_features">lane mapping</a>, <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Kendzi3D">3D mapping</a> or indoor mapping</li>
+</ul>
+<p>For an useful overview, check the wiki's <a href="http://wiki.openstreetmap.org/wiki/Comparison_of_editors">comparison of editors</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34762/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '14, 11:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0626be5f46f32fce501353e8a5ec399c?s=32&amp;d=identicon&amp;r=g" alt="Tordanik's gravatar image" />
+    <p><a href="/users/14/tordanik">Tordanik</a><br/>
+    <span class="score" title="11998 reputation points"><span class="">12.0k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="106 badges"><span class="silver">&#9679;</span><span class="badgecount">106</span></span><span title="147 badges"><span class="bronze">&#9679;</span><span class="badgecount">147</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tordanik has 58 accepted answers">35&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34762/">
+                edited
+                <strong>05 Jan '20, 09:50</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34762">
+    
+        <a name="34784"></a>
+        <div class="comment" id="comment-34784">
+            <div id="post-34784-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Thanks!  Enough of those reasons sound really useful to me, and I really should take the time to learn a more advanced editor.  Thanks too for the link to the wiki, I was looking for something just like that but didn't find it.  I'll add a link to it in the <em>see also</em> section of the iD page on the wiki.</p></div>
+            <div class="comment-info" id="comment-34784-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 23:38)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+        <a name="71848"></a>
+        <div class="comment" id="comment-71848">
+            <div id="post-71848-score" class="comment-score"></div>
+            <div class="comment-text"><p>Note: iD now (Nov 2018) now has in-built validation, filtering and plenty of keyboard shortcuts. It also backs up edits in a cache so that editing can be returned to, or restored in case of a browser crash.</p></div>
+            <div class="comment-info" id="comment-71848-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '19, 17:43)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34762" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34762-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="34761"></a>
+                    <div id="answer-container-34761" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34761-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34761/up/" rel="nofollow"> </a>
+<div id="post-34761-score" class="post-score"
+    title="current number of votes">
+    12
+</div>
+<a id="post-34761-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34761/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="http://wiki.openstreetmap.org/wiki/Comparison_of_editors">http://wiki.openstreetmap.org/wiki/Comparison_of_editors</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34761/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '14, 11:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d20f86db9a6f03cb070e9fbaaf0b7228?s=32&amp;d=identicon&amp;r=g" alt="Vincent%20de%20Phily's gravatar image" />
+    <p><a href="/users/867/vincent-de-phily">Vincent de P... ♦</a><br/>
+    <span class="score" title="17304 reputation points"><span class="">17.3k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="152 badges"><span class="silver">&#9679;</span><span class="badgecount">152</span></span><span title="249 badges"><span class="bronze">&#9679;</span><span class="badgecount">249</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vincent de Phily has 64 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34761">
+    
+</div>
+<div id="comment-tools-34761" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34761-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="40212"></a>
+                    <div id="answer-container-40212" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40212-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40212/up/" rel="nofollow"> </a>
+<div id="post-40212-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-40212-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40212/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I hope I'm not too late to add my two-penneth but speaking from the view of a complete beginner, iD is great for doing simple changes - and much more complicated ones too - but once you go beyond a certain "sophistication level" it can get a bit awkward and certain edits - such as creating nicely squared-off buildings - can become a bit of a chore.</p>
+<p>If you know you'll be mapping a lot of buildings then learning the JOSM basics will save you so much time. The extrude, duplicate, and align functions are worth their weight in gold when creating lots of 90-degree-angled shapes - as you would when mapping a housing estate for instance. And that's without going into the various building plug-ins.</p>
+<p>My recommendation would be to take a few hours to play around with JOSM, making shapes on a part of the map that's empty, then messing around with the tools to see what they do (not forgetting to see what happens when using Ctrl/Alt/Shift too). When you're finished, <strong>exit without uploading</strong> to clear your "scribblings". Once you figure out how it works you'll wonder how you coped without it.</p>
+<p>You can always jump back to iD for the stuff you're more comfortable with there if you need to. You're never stuck with one or the other so use either depending on your confidence level in each.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40212/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Jan '15, 13:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d04adfc55023e23c6976336d3208239f?s=32&amp;d=identicon&amp;r=g" alt="Garry%20Patchett's gravatar image" />
+    <p><a href="/users/10266/garry-patchett">Garry Patchett</a><br/>
+    <span class="score" title="311 reputation points">311</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Garry Patchett has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40212">
+    
+        <a name="41371"></a>
+        <div class="comment" id="comment-41371">
+            <div id="post-41371-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not too late at all.  It was good encouragement and has got me using JOSM, at least for a small (but growing) list of tasks.  I still feel like its UI is a mess, but its extensive features is definitely a time saver.</p>
+
+<p>Thanks for your comment.</p></div>
+            <div class="comment-info" id="comment-41371-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '15, 00:40)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40212" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40212-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="34751"></a>
+                    <div id="answer-container-34751" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34751-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34751/up/" rel="nofollow"> </a>
+<div id="post-34751-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-34751-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34751/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>JOSM is more customizable:</p>
+<ul>
+<li>you can develop your own "plugin's" for display styles (<a href="http://josm.openstreetmap.de/wiki/Styles)">http://josm.openstreetmap.de/wiki/Styles)</a></li>
+<li>your own presets (<a href="http://josm.openstreetmap.de/wiki/Presets)">http://josm.openstreetmap.de/wiki/Presets)</a></li>
+<li>define your own keyboard shortcuts</li>
+<li>develop more powerful plugins in Java (e.g. revert changesets)</li>
+<li>you can write scripts that deal with the data (python, Javascript)</li>
+<li>you can work offline</li>
+<li>there are filters to hide data you do not want to work on, or you can only download specific data (<a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Edit_filtered_data">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Edit_filtered_data</a> )</li>
+<li>you can import data from different types of sources (kml, csv, etc.) -- (be aware that this often has to follow the OSM import guidelines). But it's ok when you could generate such files from data you gathered through surveys.</li>
+<li>import procedures sometimes only work with JOSM (e.g. Dutch BAG import)</li>
+</ul>
+<p>and probably more</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34751/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '14, 06:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/813a136afe7d4c95fd5bccdd78705e0e?s=32&amp;d=identicon&amp;r=g" alt="escada's gravatar image" />
+    <p><a href="/users/5390/escada">escada</a><br/>
+    <span class="score" title="19043 reputation points"><span class="">19.0k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="166 badges"><span class="silver">&#9679;</span><span class="badgecount">166</span></span><span title="302 badges"><span class="bronze">&#9679;</span><span class="badgecount">302</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="escada has 97 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34751/">
+                edited
+                <strong>09 Jul '14, 06:50</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34751">
+    
+</div>
+<div id="comment-tools-34751" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34751-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="40106"></a>
+                    <div id="answer-container-40106" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40106-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40106/up/" rel="nofollow"> </a>
+<div id="post-40106-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-40106-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40106/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Please do not let anyone make you think that using iD is a waste. At HOT Mapathons we start all our new mappers on iD to get them started and understanding what they are doing. There is nothing wrong with iD as a beginner editor and as you progress and begin to better understand the tagging of nodes, lines and areas. While JOSM is a far more sophisticated editor with a lot more functions and tools you will only need some of those once you get into some serious mapping. Not wanting to scare you but have a look at the tagging available at <a href="http://wiki.openstreetmap.org/wiki/Map_Features.">http://wiki.openstreetmap.org/wiki/Map_Features.</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40106/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jan '15, 21:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1b0a91fd893151f1db331d46e49ba8e9?s=32&amp;d=identicon&amp;r=g" alt="RAytoun's gravatar image" />
+    <p><a href="/users/10287/raytoun">RAytoun</a><br/>
+    <span class="score" title="160 reputation points">160</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RAytoun has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40106">
+    
+</div>
+<div id="comment-tools-40106" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40106-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="38384"></a>
+                    <div id="answer-container-38384" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-38384-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/38384/up/" rel="nofollow"> </a>
+<div id="post-38384-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-38384-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/38384/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you're adding simple features, you won't really need JOSM. Some of the disadvantages of JOSM:</p>
+<ul>
+<li>Needs that bloated system, Java; over 100 MB download on my system</li>
+<li>Overly-busy UX straight out of the early 1990s, with too many tiny information panes which quickly fill up with scrollbars</li>
+<li>Doesn't work on mobile (iD does/did, mostly, for simple adds/edits — until it got really good at browser detection ☹)</li>
+<li>Barely works on Mac; needs a multi-button mouse</li>
+<li>Ugly screen rendering of maps</li>
+<li>Bewildering for new users</li>
+<li>Heavily modal, and — like vi — you're <em>always</em> in the wrong mode</li>
+<li>Slow to start, especially in the recommended JNLP version, which checks and downloads updates as it finds them.</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/38384/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Nov '14, 03:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d8731f49a2e6864ba0675c4639ef08be?s=32&amp;d=identicon&amp;r=g" alt="scruss's gravatar image" />
+    <p><a href="/users/475/scruss">scruss</a><br/>
+    <span class="score" title="202 reputation points">202</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scruss has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/38384/">
+                edited
+                <strong>09 Nov '14, 22:11</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-38384">
+    
+        <a name="38395"></a>
+        <div class="comment" id="comment-38395">
+            <div id="post-38395-score" class="comment-score">3</div>
+            <div class="comment-text"><p>One bit is likely really wrong: "Needs that bloated security-liability of a system, Java". It seems that you confuse the Java platform with Java browser plugins? You do not need a Java browser plugin (and are <a href="//wiki.openstreetmap.org/wiki/JOSM/Installation#Requirements">advised</a> to not install it/turn it off)! Running Java software is not less secure than running C software (possibly even more secure).</p>
+
+<p>And, really, on which system setup and in which usecase do you feel that JOSM is "slow"er compared to iD?</p>
+
+<p>What is bad on getting automatic plugin updates? Maybe you should activate less.</p></div>
+            <div class="comment-info" id="comment-38395-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '14, 11:23)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="38396"></a>
+        <div class="comment" id="comment-38396">
+            <div id="post-38396-score" class="comment-score">6</div>
+            <div class="comment-text"><p>Amen to scruss's answer. Long-term contributors often attempt to influence newcomers into using their preferred editor, often without any awareness of the strengths of other editors. In reality, no editor is right for everyone, and each has their pros and cons depending on the type of mapping you do, the area you map in, your computer system and many other factors.</p>
+
+<p>The simple answer is: use whatever you feel most comfortable in.</p></div>
+            <div class="comment-info" id="comment-38396-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '14, 11:58)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="38405"></a>
+        <div class="comment" id="comment-38405">
+            <div id="post-38405-score" class="comment-score">1</div>
+            <div class="comment-text"><p>aseerel4c26: If Java were secure, why does it pop up a warning for me on starting JOSM if I'm not running the very latest version? JOSM takes at least a minute to start (8 core, 12 GB, Ubuntu 64-bit) for me, while iD is open for edits (including WMS imagery!) within 5 seconds. So yeah, <em>slow</em>.</p></div>
+            <div class="comment-info" id="comment-38405-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '14, 16:11)</span>
+                <a class="comment-user userinfo" href="/users/475/scruss">scruss</a>
+                
+            </div>
+        </div>
+    
+        <a name="38413"></a>
+        <div class="comment not_top_scorer" id="comment-38413">
+            <div id="post-38413-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/475/scruss"></a><a href="http://help.openstreetmap.org/users/475/scruss">@scruss</a>: thanks. A warning? And what does the warning tell you? I am no mentalist.  And what do you mean by "secure" here? <br>
+Ah, you were referring to the startup time (and not e.g. editing or map panning). It may be good to clarify this. However, one minute is strange to me. There is something wrong with your setup. JOSM needs barely 5 seconds for me (by the way: nicely multithreading to all 4 cores - 2 physical with OpenJDK+Linux, also 64 bit and less RAM, although this does not really matter). iD seems to be a bit faster for me, too (but not if I add the browser startup time to that ;-) ).</p></div>
+            <div class="comment-info" id="comment-38413-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '14, 19:58)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="38414"></a>
+        <div class="comment" id="comment-38414">
+            <div id="post-38414-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5/richard">@Richard</a>, very true. Exaggerated, imprecise claims about our editors do not help other (new) users. But others may be unfortunately scared away from JOSM, if they would like to use/try JOSM provided that they know neutral and more precise facts about JOSM. Indeed, Scruss should apparently better use another editor, and that's fine.</p></div>
+            <div class="comment-info" id="comment-38414-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '14, 20:13)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="38415"></a>
+        <div class="comment" id="comment-38415">
+            <div id="post-38415-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/475/scruss"></a><a href="http://help.openstreetmap.org/users/475/scruss">@scruss</a> That's just a general hint about an update. Not all updates are security related and not all security bugs will affect JOSM. Likewise, browsers have security bugs, too, which could affect in-browser editors in theory. So that's really not an advantage or disadvantage of a specific editor and doesn't really belong here.</p></div>
+            <div class="comment-info" id="comment-38415-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '14, 20:13)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="38418"></a>
+        <div class="comment not_top_scorer" id="comment-38418">
+            <div id="post-38418-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I wasn't talking about the "You should update" message in JOSM, I was talking about the "You are not running the current version of Java, this may be a security risk" popup. I was running the 'recommended version' via JNLP, and running from a local version is a little quicker. So I'll revise.</p></div>
+            <div class="comment-info" id="comment-38418-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '14, 22:06)</span>
+                <a class="comment-user userinfo" href="/users/475/scruss">scruss</a>
+                
+            </div>
+        </div>
+    
+        <a name="38419"></a>
+        <div class="comment not_top_scorer" id="comment-38419">
+            <div id="post-38419-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The 'keep your software up to date' warning is probably from java, not josm. That's a warning valid for any software, including your browser. I'm sure you could apply to java the same update policy as you have for your browser. And on the subject of your browser (and therefore iD), you should know that it is a more "bloated platform" than java by a wide margin.</p></div>
+            <div class="comment-info" id="comment-38419-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '14, 22:48)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-38384" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-38384-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="34765"></a>
+                    <div id="answer-container-34765" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34765-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34765/up/" rel="nofollow"> </a>
+<div id="post-34765-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-34765-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34765/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Non mentioned usefull items; 
+Copy and paste of ways, tags and other objects.
+Mirror objects if you’re working with a row of objects. Shft M
+Turning adjusting of a way or object. Ctrl Shft with mouse
+And above the use of the scale in the left upper corner.
+Starting the program by selecting a GPS file without logging and adding codes or anything, just push a button and select the area.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34765/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '14, 12:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34765">
+    
+</div>
+<div id="comment-tools-34765" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34765-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="38387"></a>
+                    <div id="answer-container-38387" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-38387-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/38387/up/" rel="nofollow"> </a>
+<div id="post-38387-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-38387-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/38387/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>One reason crucial to HOT contributors: input <strong>square-angled buildings</strong> with only two clicks by using the <strong>buildings_tools plugin</strong>.</p>
+<p>You really feel the difference after tagging several hundred houses...</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/38387/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Nov '14, 08:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/eccc05325241479b385a595774d08714?s=32&amp;d=identicon&amp;r=g" alt="rwst's gravatar image" />
+    <p><a href="/users/8987/rwst">rwst</a><br/>
+    <span class="score" title="160 reputation points">160</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rwst has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/38387/">
+                edited
+                <strong>09 Nov '14, 08:49</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-38387">
+    
+        <a name="38388"></a>
+        <div class="comment" id="comment-38388">
+            <div id="post-38388-score" class="comment-score">2</div>
+            <div class="comment-text"><p>But not every HOT task requires adding buildings.</p></div>
+            <div class="comment-info" id="comment-38388-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '14, 09:04)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="71849"></a>
+        <div class="comment" id="comment-71849">
+            <div id="post-71849-score" class="comment-score"></div>
+            <div class="comment-text"><p>iD squares buildings too &amp; has done it for a long time, it even uses the same short-cut as in Josm &amp; Potlatch2 (Q). Josm for arcane reasons squares buildings with a different algorithm (based on geography) so it may report buildings from other editors as non-orthogonal.</p></div>
+            <div class="comment-info" id="comment-71849-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '19, 17:46)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-38387" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-38387-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="38429"></a>
+                    <div id="answer-container-38429" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-38429-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/38429/up/" rel="nofollow"> </a>
+<div id="post-38429-score" class="post-score"
+    title="current number of votes">
+    -6
+</div>
+<a id="post-38429-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/38429/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>With ID you're stuck with Bing satellite image but, for example, I just used Landsat data in JOSM to pinpoint villages in Africa where Bing showed only clouds.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/38429/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Nov '14, 17:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/eccc05325241479b385a595774d08714?s=32&amp;d=identicon&amp;r=g" alt="rwst's gravatar image" />
+    <p><a href="/users/8987/rwst">rwst</a><br/>
+    <span class="score" title="160 reputation points">160</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rwst has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-38429">
+    
+        <a name="38430"></a>
+        <div class="comment" id="comment-38430">
+            <div id="post-38430-score" class="comment-score">7</div>
+            <div class="comment-text"><p>You're not at all stuck with Bing. iD can use any tiled imagery source and, by default, supports the editor-imagery-index repository which lists dozens of sources from around the world.</p></div>
+            <div class="comment-info" id="comment-38430-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '14, 17:35)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-38429" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-38429-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/34749/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='9nFm1nkDbcl8TQhzSxZRR0BIsegUD2Y8' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/newbie/"
+            class="tag-link-newbie"
+            title="see questions tagged'newbie'using tags"
+            rel="tag">newbie</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/editor/"
+            class="tag-link-editor"
+            title="see questions tagged'editor'using tags"
+            rel="tag">editor</a> <span class="tag-number">&#215;48</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 9, 2014, 3:05 a.m.">09 Jul '14, 03:05</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>19,805 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 5, 2020, 9:50 a.m.">05 Jan '20, 09:50</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/35272/when-to-graduate-from-id">When to Graduate From iD</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5584/should-i-use-potlatch-or-josm">Should I use Potlatch or JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39095/josm-uploading-objects-to-modify-that-were-downloaded-from-hot-project-limits">JOSM uploading &quot;objects to modify&quot;  that were downloaded from HOT Project limits</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27844/put-in-an-unwanted-way-what-have-i-done">Put in an unwanted way - what have I done?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26050/how-to-open-a-osm-file-with-the-josm-editor">How to open a .osm file with the JOSM editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35324/why-is-there-a-difference-of-resolution-of-bing-satellite-images-between-id-and-josm">Why is there a difference of resolution of Bing satellite images between iD and JOSM ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29435/lost-in-confusion-in-josm">Lost in Confusion in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24861/newbie-how-to-correct-a-map-that-has-a-gap-in-a-road">Newbie-how to correct a map that has a gap in a road</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26864/new-browser-based-editor-disappearing-features-search-bounding-box-show-object-ids">New browser-based editor - disappearing features? (search bounding box, show object ids)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39837/see-who-uploaded-gps-track-in-id-or-josm">See who uploaded GPS track in iD or JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

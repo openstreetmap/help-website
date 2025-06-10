@@ -1,0 +1,721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>intersection creation and conventions - OSM Help</title>
+        <meta name="description" content="if this is a duplicate please link to answers or documentation when closing. 39.862359, -86.122204 is a dual carriage way intersection. I want to make this intersection searchable as a destination, i.e. type in &quot;kessler and keystone&quot; and have it show up as an option. I think this level of convenienc..." />
+        <meta name="keywords" content="intersection,junction" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/68558/intersection-creation-and-conventions" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/68558/intersection-creation-and-conventions?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='KDFN8vlbeDgLFk9v4MwEk12A9syPkZxX' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/68558/intersection-creation-and-conventions">intersection creation and conventions</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-68558-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68558/up/" rel="nofollow"> </a>
+<div id="post-68558-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-68558-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68558/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/68558/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>if this is a duplicate please link to answers or documentation when closing.</p>
+<p>39.862359, -86.122204 is a dual carriage way intersection.</p>
+<p>I want to make this intersection searchable as a destination, i.e. type in "kessler and keystone" and have it show up as an option. I think this level of convenience is a necessity for open street maps. I assume the way to achieve this is to create some open street map "point". This is how I did it, and I am making this post to ask if I did it correctly because I am still unsure after looking at documentation. I did not want to name a street light node, because I dont like that solution and its not nice and symmetric.</p>
+<ul>
+<li>I created a point in the center of the intersection.</li>
+<li>junction = yes</li>
+<li>address::city</li>
+<li>address::postcode</li>
+<li>name = kessler boulevard and keystone avenue</li>
+</ul>
+<p><a href="https://nominatim.openstreetmap.org/details.php?osmtype=N&amp;osmid=6371398592&amp;class=junction">https://nominatim.openstreetmap.org/details.php?osmtype=N&amp;osmid=6371398592&amp;class=junction</a> </p>
+<p>One issue: After entering all this I am satisfied, except, if I type in "Kessler and Keystone" it shows up fine, however if i enter "Kessler and Keystone, Indianapolis" the search results do not list it. Any advice on where I can work to resolve this?</p>
+<p>Thank you for your time, 
+Rick</p>
+<p>relevant documentation:</p>
+<ol>
+<li><a href="https://wiki.openstreetmap.org/wiki/Named_spots_instead_of_street_names">https://wiki.openstreetmap.org/wiki/Named_spots_instead_of_street_names</a></li>
+<li><a href="https://help.openstreetmap.org/questions/50982/how-to-name-intersections">https://help.openstreetmap.org/questions/50982/how-to-name-intersections</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Junctions">https://wiki.openstreetmap.org/wiki/Junctions</a></li>
+</ol>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/intersection/" class="post-tag tag-link-intersection"
+                                        title="see questions tagged 'intersection'" rel="tag">intersection</a>
+                                
+                                    <a href="/tags/junction/" class="post-tag tag-link-junction"
+                                        title="see questions tagged 'junction'" rel="tag">junction</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Mar '19, 22:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f18844202962b4d8003d464e71f4ae6a?s=32&amp;d=identicon&amp;r=g" alt="OpenMapsRH's gravatar image" />
+    <p><a href="/users/16438/openmapsrh">OpenMapsRH</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="OpenMapsRH has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/68558/">
+                edited
+                <strong>31 Mar '19, 02:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-68558">
+    
+        <a name="68567"></a>
+        <div class="comment" id="comment-68567">
+            <div id="post-68567-score" class="comment-score"></div>
+            <div class="comment-text"><p>It seems that Nominatim (the geocode / search engine) does not know that the junction is in Indianapolis: <a href="https://nominatim.openstreetmap.org/details.php?place_id=257785410">https://nominatim.openstreetmap.org/details.php?place_id=257785410</a> 
+The address tag is probably ignored, and it lists the junction in Dawnbury, Marion County</p>
+
+<p>Some questions that have to be answered, are the admin boundaries correct in that area? Is the nearest street (from which the city is taken) passing through Dawnbury?</p></div>
+            <div class="comment-info" id="comment-68567-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Apr '19, 04:47)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68558" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68558-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/68558/intersection-creation-and-conventions?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/68558/intersection-creation-and-conventions?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/68558/intersection-creation-and-conventions?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/68558/intersection-creation-and-conventions?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="68588"></a>
+                    <div id="answer-container-68588" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-68588-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68588/up/" rel="nofollow"> </a>
+<div id="post-68588-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-68588-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68588/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi Rick,</p>
+<p>I can totally understand your desire to find a junction by stating the two intersecting road names. But it should be up to the search engine to support that.</p>
+<p>I find it a terribly bad idea to name junctions like this. If a junction had a proper name different from the street names this would be a different case (like in the first link you gave). But in your case you are merely duplicating the information that already exists: the two roads are in fact intersecting (here is a junction) plus the two names (on the intersecting ways) are already there.</p>
+<p>So what happens if we started mapping all intersections with an additional (or existing tagged) node with the "x and y" naming scheme? </p>
+<ol>
+<li>it will clutter the editor with countless new nodes.</li>
+<li>these nodes will have to be maintained: if a street name changes (granted, does not happen that often) one needs to make sure to also change the junction node.</li>
+<li>proper junction names (i.e. different from road names) are indistinguishable from "x and y" names.</li>
+<li>maps that want to display proper junction names now have to somehow exclude the "x and y" names they find in the data to not render the map unreadable.</li>
+</ol>
+<p>I would argue that "Kessler and Keystone" is not even a name. When you say "let's meet at the pub at Kessler and Keystone", this is merely an abbreviation for saying "let's meet at the pub at the intersection of Kessler and Keystone".</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/68588/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Apr '19, 17:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-68588">
+    
+        <a name="68589"></a>
+        <div class="comment" id="comment-68589">
+            <div id="post-68589-score" class="comment-score"></div>
+            <div class="comment-text"><p>There's a long-standing issue to support this in Nominatim, OSM's default geocoder (search), but as yet no-one has stepped up to the plate to implement it: <a href="https://github.com/openstreetmap/Nominatim/issues/123">https://github.com/openstreetmap/Nominatim/issues/123</a> (and dupe <a href="https://github.com/openstreetmap/Nominatim/issues/1224)">https://github.com/openstreetmap/Nominatim/issues/1224)</a></p></div>
+            <div class="comment-info" id="comment-68589-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Apr '19, 18:13)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="68672"></a>
+        <div class="comment" id="comment-68672">
+            <div id="post-68672-score" class="comment-score">1</div>
+            <div class="comment-text"><p>TZorn I agree with everything in your post. Richard, I am excited to see if I can help resolve the issue you linked to. This is something I have wanted to help implement for a while. Thank both of you for taking the time to read and respond.</p></div>
+            <div class="comment-info" id="comment-68672-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Apr '19, 01:20)</span>
+                <a class="comment-user userinfo" href="/users/16438/openmapsrh">OpenMapsRH</a>
+                
+            </div>
+        </div>
+    
+        <a name="68767"></a>
+        <div class="comment" id="comment-68767">
+            <div id="post-68767-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/16438/openmapsrh">@OpenMapsRH</a>: thanks for getting involved in the Nominatim issue resolution.</p></div>
+            <div class="comment-info" id="comment-68767-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '19, 09:50)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68588" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68588-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/68558/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='KDFN8vlbeDgLFk9v4MwEk12A9syPkZxX' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68558/intersection-creation-and-conventions?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68558/intersection-creation-and-conventions?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/intersection/"
+            class="tag-link-intersection"
+            title="see questions tagged'intersection'using tags"
+            rel="tag">intersection</a> <span class="tag-number">&#215;49</span><br/>
+        
+        <a href="/tags/junction/"
+            class="tag-link-junction"
+            title="see questions tagged'junction'using tags"
+            rel="tag">junction</a> <span class="tag-number">&#215;29</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 30, 2019, 10:19 p.m.">30 Mar '19, 22:19</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,048 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 12, 2019, 9:50 a.m.">12 Apr '19, 09:50</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/32863/how-to-properly-map-three-way-junctions">How to properly map three-way junctions?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66/dividednon-divided-intersection">Divided/Non-Divided Intersection</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18858/naming-junctions">Naming junctions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52417/intersection-mapping-guidelines">Intersection Mapping Guidelines</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5445/how-can-i-detach-a-road-from-a-junction">How can I detach a road from a junction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18153/storing-nodes-roads-and-intersections">Storing nodes, roads and intersections</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7183/how-to-get-roadcountries-boundary-intersection-point-coordinates">How to get road/countries boundary intersection point coordinates ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node">How To Correct Waterways Intersecting Roads Without A Junction Node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9344/how-to-detect-intersection-of-ways">How to detect intersection of ways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5410/what-is-best-practice-for-mapping-signal-controlled-pedestrian-crossings-at-road-junctions">What is best practice for mapping signal controlled pedestrian crossings at road junctions</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

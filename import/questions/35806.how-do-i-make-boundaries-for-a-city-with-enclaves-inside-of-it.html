@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I make boundaries for a city (with enclaves inside of it)? - OSM Help</title>
+        <meta name="description" content="I would like to make a map area for Indianapolis, Indiana, United States. I have two problems: one is that when I zoom out sufficiently far, the ID in-browser editor will no longer let me edit. Do I have to zoom in and then meticulously draw very small lines to connect the dots to make the area of t..." />
+        <meta name="keywords" content="zoomlevel,edit,boundaries,area" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sXmgU5BP9ARUJJ7ixNbtdGHcP56958kT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it">How do I make boundaries for a city (with enclaves inside of it)?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-35806-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35806/up/" rel="nofollow"> </a>
+<div id="post-35806-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-35806-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35806/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/35806/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I would like to make a map area for Indianapolis, Indiana, United States. I have two problems: one is that when I zoom out sufficiently far, the ID in-browser editor will no longer let me edit. Do I have to zoom in and then meticulously draw very small lines to connect the dots to make the area of this city?</p>
+<p>Secondly, if you view another map of the city (e.g. <a href="http://wikimapia.org/#lang=en&amp;lat=39.795348&amp;lon=-86.155472&amp;z=11&amp;m=b" title="WikiMapia's map of Indianapolis">WikiMapia's</a>), you will see that Indianapolis mostly shares boundaries with Marion County and those are mostly straight lines, but not quite: to the northeast is Lawrence and the east is Cumberland, furthermore in the southeast is Beech Grove, Southport to the south, and Speedway to the west. These last three are all enclaves <em>within</em> Indianapolis. How do I exclude them?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/zoomlevel/" class="post-tag tag-link-zoomlevel"
+                                        title="see questions tagged 'zoomlevel'" rel="tag">zoomlevel</a>
+                                
+                                    <a href="/tags/edit/" class="post-tag tag-link-edit"
+                                        title="see questions tagged 'edit'" rel="tag">edit</a>
+                                
+                                    <a href="/tags/boundaries/" class="post-tag tag-link-boundaries"
+                                        title="see questions tagged 'boundaries'" rel="tag">boundaries</a>
+                                
+                                    <a href="/tags/area/" class="post-tag tag-link-area"
+                                        title="see questions tagged 'area'" rel="tag">area</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Aug '14, 07:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f936a6af8335f7f14b9ea53ff536b921?s=32&amp;d=identicon&amp;r=g" alt="Justin_-koavf-'s gravatar image" />
+    <p><a href="/users/9453/justin_-koavf-">Justin_-koavf-</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Justin_-koavf- has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/35806/">
+                edited
+                <strong>15 Aug '14, 14:08</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+            <p><a href="/users/99/stephan75">stephan75</a><br/>
+            <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-35806">
+    
+</div>
+<div id="comment-tools-35806" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35806-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="35862"></a>
+                    <div id="answer-container-35862" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35862-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35862/up/" rel="nofollow"> </a>
+<div id="post-35862-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-35862-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35862/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>First of all, I really recommend to use the offline editor <strong>JOSM</strong> when you want to edit long boundary lines and the boundary relations that describe an administrative boundary via one or more single boundary ways.</p>
+<p>And secondly it seems that we do not have a boundary that spans all around the city of Indianapolis like I am used from cities in europe, see <a href="http://openmapsurfer.uni-hd.de/?zoom=9&amp;lat=39.8222&amp;lon=-86.18249&amp;layers=0B0000FTFF">openmapsurfer</a>.</p>
+<p>Or are these giant squares the real administrative boundary for each county including the city of Indianapolis??</p>
+<p>If those boundaries are complete inside OSM, then try <a href="https://wambachers-osm.website/boundaries/">https://wambachers-osm.website/boundaries/</a>
+and choose the wanted boundary from the tree menu on the left screen side.</p>
+<p>If there some enclaves are missing, tell us in detail, and we will try to include those in OSM data.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35862/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Aug '14, 14:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/35862/">
+                edited
+                <strong>05 Jul '17, 08:13</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+            <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+            <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35862">
+    
+        <a name="35863"></a>
+        <div class="comment" id="comment-35863">
+            <div id="post-35863-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not sure that I understand your question.</p>
+
+<p>The U.S. has 50 states and those are each divided into counties (parishes in Louisiana, census districts in Alaska). Indiana has 92. Marion County and Indianapolis merged in 1969 but there were some bits left out of that merger, which I mention above. The county is not identical to the city but many of the borders of the county are the same as the borders of the city. Cumberland and Lawrence are not enclaves but Beech Grove, Southport, and Speedway are. (Clermont--which is listed on the link you show--is not independent but an included city).</p></div>
+            <div class="comment-info" id="comment-35863-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '14, 16:51)</span>
+                <a class="comment-user userinfo" href="/users/9453/justin_-koavf-">Justin_-koavf-</a>
+                
+            </div>
+        </div>
+    
+        <a name="35864"></a>
+        <div class="comment" id="comment-35864">
+            <div id="post-35864-score" class="comment-score"></div>
+            <div class="comment-text"><p>(By the way, I found <a href="http://wiki.openstreetmap.org/wiki/Indiana/Counties">Indiana/Counties</a> in the OSM wiki ... outdated and uncomplete?)</p>
+
+<p>Ok, then we have the "bigger" boundary of <a href="http://www.openstreetmap.org/relation/1812962">Marion county, Indiana</a></p>
+
+<p>and then <a href="http://www.openstreetmap.org/relation/127433">Beech Grove</a>, <a href="http://www.openstreetmap.org/relation/127435">Speedway</a> and <a href="http://www.openstreetmap.org/relation/127223">Southport</a> as areas that should be excluded.</p>
+
+<p>Then have a look at <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">Relation:boundary</a> in the OSM wiki how these three areas should be excluded from Marion County.
+But If you are not familiar with editing boundary relations in the relation editor of JOSM editor (not so easy), then I recommend that another mapper from US should verify and complete this task.</p></div>
+            <div class="comment-info" id="comment-35864-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '14, 17:37)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+        <a name="35866"></a>
+        <div class="comment" id="comment-35866">
+            <div id="post-35866-score" class="comment-score"></div>
+            <div class="comment-text"><p>Beech Grove, Speedway, and Southport <em>are</em> part of Marion County. They are <em>not</em> part of Indianapolis. (The same is true for Lawrence but that is easier, as its eastern boundary is the same as the county's boundary.) Additionally, Cumberland is not a part of Indianapolis <em>but</em> Cumberland also overlaps two separate counties.</p></div>
+            <div class="comment-info" id="comment-35866-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '14, 17:46)</span>
+                <a class="comment-user userinfo" href="/users/9453/justin_-koavf-">Justin_-koavf-</a>
+                
+            </div>
+        </div>
+    
+        <a name="35867"></a>
+        <div class="comment" id="comment-35867">
+            <div id="post-35867-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://www.flickr.com/photos/koavf/14927651395/" title="Map on Flickr">This is what I mean</a>. Does that help?</p></div>
+            <div class="comment-info" id="comment-35867-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '14, 18:06)</span>
+                <a class="comment-user userinfo" href="/users/9453/justin_-koavf-">Justin_-koavf-</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35862" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35862-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="35865"></a>
+                    <div id="answer-container-35865" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35865-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35865/up/" rel="nofollow"> </a>
+<div id="post-35865-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-35865-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35865/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>That's as clear as mud to me :)
+From what I do understand, I think you may need to use multi-polygons in the relation to describe the boundaries, where a few of the inner polygons are not included in the larger boundary. There is a good help page on  <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multi-polygons</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35865/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Aug '14, 17:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e5674dd96938593e0af5130dfffe0f90?s=32&amp;d=identicon&amp;r=g" alt="nevw's gravatar image" />
+    <p><a href="/users/7380/nevw">nevw</a><br/>
+    <span class="score" title="9843 reputation points"><span class="">9.8k</span></span><span title="26 badges"><span class="badge1">&#9679;</span><span class="badgecount">26</span></span><span title="90 badges"><span class="silver">&#9679;</span><span class="badgecount">90</span></span><span title="178 badges"><span class="bronze">&#9679;</span><span class="badgecount">178</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="nevw has 32 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/35865/">
+                edited
+                <strong>15 Aug '14, 17:51</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35865">
+    
+        <a name="35868"></a>
+        <div class="comment" id="comment-35868">
+            <div id="post-35868-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://www.flickr.com/photos/koavf/14927651395/" title="Map on Flickr">This is what I mean</a>. Does that help?</p></div>
+            <div class="comment-info" id="comment-35868-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '14, 18:06)</span>
+                <a class="comment-user userinfo" href="/users/9453/justin_-koavf-">Justin_-koavf-</a>
+                
+            </div>
+        </div>
+    
+        <a name="35869"></a>
+        <div class="comment" id="comment-35869">
+            <div id="post-35869-score" class="comment-score"></div>
+            <div class="comment-text"><p>relations have inner and outer borders for this purpose. See the link of stephan75
+Just like him, I recommend that you use JOSM to edit the boundary.</p></div>
+            <div class="comment-info" id="comment-35869-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '14, 18:37)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35865" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35865-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/35806/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sXmgU5BP9ARUJJ7ixNbtdGHcP56958kT' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/area/"
+            class="tag-link-area"
+            title="see questions tagged'area'using tags"
+            rel="tag">area</a> <span class="tag-number">&#215;213</span><br/>
+        
+        <a href="/tags/boundaries/"
+            class="tag-link-boundaries"
+            title="see questions tagged'boundaries'using tags"
+            rel="tag">boundaries</a> <span class="tag-number">&#215;129</span><br/>
+        
+        <a href="/tags/zoomlevel/"
+            class="tag-link-zoomlevel"
+            title="see questions tagged'zoomlevel'using tags"
+            rel="tag">zoomlevel</a> <span class="tag-number">&#215;99</span><br/>
+        
+        <a href="/tags/edit/"
+            class="tag-link-edit"
+            title="see questions tagged'edit'using tags"
+            rel="tag">edit</a> <span class="tag-number">&#215;94</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 14, 2014, 7:11 a.m.">14 Aug '14, 07:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,859 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 5, 2017, 8:13 a.m.">05 Jul '17, 08:13</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/75701/feature-cannot-be-deleted-because-not-enough-of-it-is-currently-visible">feature cannot be deleted because not enough of it is currently visible</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53330/parallel-area">Parallel Area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38079/latest-fashions-in-area-highways-and-the-plan-for-wash-common-coming-soon">[closed] Latest fashions in area highways? {and the plan for wash common coming soon}</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59825/how-can-we-get-the-area-cordinates">How can we get the area cordinates.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/79478/how-to-see-zipcode-borders">How to see zipcode borders</a>
+        </p>
+        
+        <p>
+            <a href="/questions/80373/extract-relations-with-all-members-in-an-area">Extract relations with all members in an area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5292/boundary-data-and-postcodes-for-areas-and-towns-in-uk">[closed] Boundary data and postcodes for areas and towns in UK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15857/joining-edges-of-adjacent-areas">Joining Edges of Adjacent Areas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1325/too-large-a-download-area">Too large a download area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1295/problems-with-a-boundary">Problems with a boundary</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

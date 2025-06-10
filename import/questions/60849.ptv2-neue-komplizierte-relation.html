@@ -1,0 +1,719 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>PTv2 - neue, komplizierte Relation - OSM Help</title>
+        <meta name="description" content="Hallo, Ich bin in Bezug OSM noch ein &quot;bisschen grün hinter den Ohren&quot;, dennoch fasziniert mich das Ganze sehr. Deshalb möchte ich eine kleine Herausforderung annehmen - habe aber Angst dass ich dabei mehr kaputt mache als Nutzen bringe - nämlich mit folgenden Problem: Ich möchte den öffentlichen Ver..." />
+        <meta name="keywords" content="public-transport,relations,lang-de" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/60849/ptv2-neue-komplizierte-relation" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/60849/ptv2-neue-komplizierte-relation?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='e2rhQiEy8tpLHarEqtdu3JZgSzBTH24v' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/60849/ptv2-neue-komplizierte-relation">PTv2 - neue, komplizierte Relation</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-60849-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60849/up/" rel="nofollow"> </a>
+<div id="post-60849-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60849-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60849/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/60849/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hallo,</p>
+<p>Ich bin in Bezug OSM noch ein "bisschen grün hinter den Ohren", dennoch fasziniert mich das Ganze sehr. Deshalb möchte ich eine kleine Herausforderung annehmen - habe aber Angst dass ich dabei mehr kaputt mache als Nutzen bringe - nämlich mit folgenden Problem:</p>
+<p>Ich möchte den öffentlichen Verkehr bei mir Zuhause PTv2-tauglich machen. Dort gibt es die Bus-Linie 4421 (<a href="https://www.openstreetmap.org/relation/5967412#map=12/46.7869/12.5836">Relation 5967412</a>). Die besteht nicht aus einer klassischen Route (hin und retour), sondern setzt sich aus mehren "Teil-Linien" zusammen, welche dann auch noch unterschiedliche Routen wählen - schwer zu beschreiben, siehe den Fahrplan:</p>
+<p><a href="https://www.vvt.at/page.cfm?sessionID=0&amp;requestID=&amp;language=de&amp;selectAssignedStops=0&amp;command=&amp;mode=line&amp;net=&amp;opBranch=&amp;execInst=normal&amp;itdLPxx_showHelp=&amp;vpath=timetables/mehr-auskunft/line_timetables&amp;withoutTrains=0&amp;lsShowTrainsExplicit=1&amp;lineName=4421">Fahrplan VVT Linie 4421</a></p>
+<p>In der derzeit existierenden Relation sind sämtliche Haltestellen und Strecken aufgenommen. Wie man sieht kann man hier nicht so einfach sagen wie die Hin- und die Rückfahrt aussieht. Laut meinem Verständnis muss für PTv2 aber die Haltestellen geordnet und pro Richtung eine eigene Relation erstellt werden. Dann kommt hinzu, dass zu unterschiedlichen Zeiten die Busse unterschiedliche Stopps auslassen und unterschiedliche Strecken verwenden - wie gesagt: höchst kompliziert;</p>
+<p>Folgende Lösungsmöglichkeiten habe ich mir als Amateur durchgedacht:</p>
+<ol>
+<li>Ich versehe die bestehende Relation mit den tags die daraus eben PTv2 machen - wird bestimmt nicht funktionieren, es gibt ja nicht einmal eine logische Reihenfolge der Bushaltestellen....;</li>
+<li>Ich "erarbeite" mir sämtliche Routenkonstellationen heraus - schaff ich nicht, ist mir derzeit noch zu komplex;</li>
+<li>Ich rühre die bestehende Relation nicht an, sondern erstelle neue Relationen, wobei ich dabei auch nur "einzelne Busstrecken" generiere, die gesamte Linie 4421 schaffe ich aber nicht - diese Option schließe ich aber kategorisch aus: ich will keine halben Sachen machen, entweder ganz oder gar nicht;</li>
+<li>Ich lass es überhaupt sein - nochmals: ich will nichts kaputt mach oder Fehler verursachen;</li>
+</ol>
+<p>Vielleicht kann mir jemand behilflich sein, Tipps geben, etc. Ich bin aber auch nicht beleidigt wenn Erfahrene sagen, dass ich die Finger davon lassen soll.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/public-transport/" class="post-tag tag-link-public-transport"
+                                        title="see questions tagged 'public-transport'" rel="tag">public-transport</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                                    <a href="/tags/lang-de/" class="post-tag tag-link-lang-de"
+                                        title="see questions tagged 'lang-de'" rel="tag">lang-de</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Nov '17, 03:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/188d306df4597e4102384a3a18bedeec?s=32&amp;d=identicon&amp;r=g" alt="-ckb-'s gravatar image" />
+    <p><a href="/users/14267/-ckb-">-ckb-</a><br/>
+    <span class="score" title="36 reputation points">36</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="-ckb- has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/60849/">
+                edited
+                <strong>29 Nov '17, 03:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-60849">
+    
+        <a name="60881"></a>
+        <div class="comment" id="comment-60881">
+            <div id="post-60881-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ich kenne mich mit PTv2 nicht genügend aus, aber abgesehen davon ist es überhaupt kein Problem in OSM "halbe Sachen" zu machen solange sie korrekt sind. OSM besteht quasi aus halben Sachen, ansonsten wäre die Karte am ersten Tag leer und am zweiten Tag vollendet gewesen ;) Von daher kannst du dich ruhig an die neuen Relationen wagen, solange es hinterher nicht schlechter als vorher ist.</p></div>
+            <div class="comment-info" id="comment-60881-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '17, 08:03)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60849" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60849-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/60849/ptv2-neue-komplizierte-relation?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/60849/ptv2-neue-komplizierte-relation?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/60849/ptv2-neue-komplizierte-relation?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/60849/ptv2-neue-komplizierte-relation?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="60886"></a>
+                    <div id="answer-container-60886" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-60886-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60886/up/" rel="nofollow"> </a>
+<div id="post-60886-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-60886-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60886/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="-ckb- has selected this answer as the correct answer"
+        href="/accept_answer/60886/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hallo -ckb-,</p>
+<p>bei Buslinien im ländlichen Raum muss man irgendwo eine Grenze ziehen. Je mehr Relationen man anlegt, desto mehr Relationen müssen gepflegt werden. Im Fernverkehrsnetz der Deutschen Bahn, das zwar einen Taktfahrplan hat, aber dennoch morgens und abends zusätzliche Halte und Umwege hat, werden i.d.R. nur eine oder zwei Varianten pro Richtung erfasst.</p>
+<p>Wo man die Grenze zieht muss jeder Mapper für sich festlegen. Ich persönlich würde mich auf die Fahrtvarianten beschränken, die mehrmals täglich bedient werden. Kurse, die zur Bedienung von Schulen an Schultagen Umwege fahren, sind weniger wichtig. Varianten, die verkürzte Formen anderer Varianten sind, kann man in meinen Augen auch weglassen. Wenn eine verkürzte Variante sich am Ende ihres Weges unterscheidet, weil sie in die Wendeschleife einfährt, die lange Variante jedoch auf der Hauptstraße bleibt, ist das in meinen Augen keine separate Routenrelation wert.</p>
+<p>Für die Fahrten Richtung Lienz würde ich folgende Varianten in folgender Reihenfolge erfassen (absteigend nach Wichtigkeit geordnet):</p>
+<ol>
+<li>Arnsbach Staatsgrenze—Silian Marktplatz–Panzendorf–Abfaltersbach–Mittelwald–Thal Bhf.–Leisach-Gries–Lienz Bhf.–Lienz Schillerstr.–Lienz-Peggetz Fa. Liebherr. Arnsbach Staatsgrenze–Lienz Bhf. wird viermal täglich in dieser Form bedient. Hinzu kommen mindestens drei Kurse, die erst in Silian Marktplatz beginnnen und von denen einen morgens weiter bis zum Werkstor der Firma Liebherr fährt. Noch ein weiterer beginnt erst in Panzendorf.</li>
+<li>Abfaltersbach Gemeindeamt–Anras Asch–Anras Abzw St. Justina</li>
+<li>wie 1., aber mit der Schleife über Lienz Klösterle und ohne den Abschnitt Arnsbach Staatsgrenze–Silian Marktplatz.</li>
+<li>Variante aus Nr. 2 verlängern zu Abfaltersbach Gemeindeamt–…–Mittewald–Leisach-Gries–Lienz Bhf. </li>
+<li>Assling Oberassling–Thal Bhf.–Leisach-Gries–Lienz Bhf.–Lienz Klösterle–Lienz Bhf.–Lienz Schillerstr.–Lienz-Peggetz Fa. Liebherr (vier Kurse an Schultagen, einer nur bis Thal Bhf., zwei nur bis Lienz Bhf.)</li>
+<li>Anras Asch–Anras Abzw St. Justina–Assling Oberassling–Assling Bannberg–Leisach-Gries–Lienz Bhf. (an Schultagen zweimal, in den Ferien einmal)</li>
+<li>Leisach-Gries–Lienz Bhf.–Gaimberg Zettersfeldbahn</li>
+</ol>
+<p>Das sind die Varianten für die Fahrtrichtung Arnsbach–Lienz. Für die Gegenrichtung musst du auch solche Typen aus dem Fahrplan ableiten. Die von mir vorgeschlagene Mappingreihenfolge wäre dann 1. Punkt der obigen Liste, 1. Punkte der Gegenrichtung, 2. Punkt der obigen Liste, 2. Punkt der Gegenrichtung usw.</p>
+<p>Man kann sich eine solche Prioritätenliste aufstellen, indem man den Buchfahrplan, den du verlinkt hast, zur Hand nimmt und jeden Kurs einer Variante zu ordnet. Lass dich nicht von den in der Tabelle abgedruckten Fahrten der Linie 960X Innsbruck–Lienz verwirren.</p>
+<p>Zu deinen Fragen im Speziellen:</p>
+<p>-ckb- schrieb:</p>
+<blockquote>
+<p>Ich versehe die bestehende Relation mit den tags die daraus eben PTv2 machen - wird bestimmt nicht funktionieren, es gibt ja nicht einmal eine logische Reihenfolge der Bushaltestellen....;</p>
+</blockquote>
+<p>Eine reine Änderung der Tags genügt nicht. Der Aufbau der Relationen bedarf tiefgreifender Veränderungen.</p>
+<p>-ckb- schrieb:</p>
+<blockquote>
+<p>Ich rühre die bestehende Relation nicht an, sondern erstelle neue Relationen, wobei ich dabei auch nur "einzelne Busstrecken" generiere, die gesamte Linie 4421 schaffe ich aber nicht - diese Option schließe ich aber kategorisch aus: ich will keine halben Sachen machen, entweder ganz oder gar nicht;</p>
+</blockquote>
+<p>In meinen Augen ist es gerechtfertigt, die alte Relationen durch Sortieren der Mitgliederliste (inkl. Ausmisten) und Ändern der Tags in die Relation für Punkt 1 zu überführen, wenn du gleichzeitig noch die Gegenrichtung anlegst.</p>
+<p>-ckb- schrieb:</p>
+<blockquote>
+<p>Vielleicht kann mir jemand behilflich sein, Tipps geben, etc. Ich bin aber auch nicht beleidigt wenn Erfahrene sagen, dass ich die Finger davon lassen soll.</p>
+</blockquote>
+<p>Jeder hat mal klein angefangen und ohne etwas Mut kommt man im Leben nicht weiter. Es ist am Anfang ein forderndes Thema, bis du den Punkt erreicht hast, an dem du es verstanden hast.</p>
+<p>Im <a href="https://forum.openstreetmap.org/viewforum.php?id=14">deutschen OSM-Forum</a> (nicht im österreichischen Forum – das ist ein forenartiger Privatblog) tummeln sich einige ÖPNV-Mapper, die dir gerne helfen. Dort kannst du dich mit deinen OSM-Zugangsdaten einloggen.</p>
+<p>Viele Grüße</p>
+<p>Michael</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/60886/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Nov '17, 10:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a3b905e2632430b47dd9b8de3d8ba0?s=32&amp;d=identicon&amp;r=g" alt="Nakaner's gravatar image" />
+    <p><a href="/users/8569/nakaner">Nakaner</a><br/>
+    <span class="score" title="610 reputation points">610</span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Nakaner has 3 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-60886">
+    
+        <a name="60920"></a>
+        <div class="comment" id="comment-60920">
+            <div id="post-60920-score" class="comment-score"></div>
+            <div class="comment-text"><p>Danke für die ausführliche Hilfe.</p>
+
+<p>Ich werde deinen Rat befolgen, ich sehe das nun auch so. Die wichtigste Verbindung ist Arnbach-Lienz, da werde ich die alte Relation in die neue Überführen.</p>
+
+<p>Wenn ich nun alle 7 Einzelrouten (hin und retour) erstellt habe, reicht es dann wenn ich sie in einer einzelnen "route_master" zusammenfasse? Oder muss ich pro Route eine route_master erstellen und folglich die 7 route_master als eigene Relation wieder zusammenfüge? ...ich werde einmal im Forum schmökern...</p>
+
+<p>Jedenfalls super die ausführliche Erklärung, ich finde es echt toll solche Unterstützung zu bekommen.</p>
+
+<p>DANKE nochmals :)</p></div>
+            <div class="comment-info" id="comment-60920-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Dec '17, 14:25)</span>
+                <a class="comment-user userinfo" href="/users/14267/-ckb-">-ckb-</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60886" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60886-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/60849/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='e2rhQiEy8tpLHarEqtdu3JZgSzBTH24v' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60849/ptv2-neue-komplizierte-relation?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60849/ptv2-neue-komplizierte-relation?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lang-de/"
+            class="tag-link-lang-de"
+            title="see questions tagged'lang-de'using tags"
+            rel="tag">lang-de</a> <span class="tag-number">&#215;286</span><br/>
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/public-transport/"
+            class="tag-link-public-transport"
+            title="see questions tagged'public-transport'using tags"
+            rel="tag">public-transport</a> <span class="tag-number">&#215;62</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 29, 2017, 3:24 a.m.">29 Nov '17, 03:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,228 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 1, 2017, 2:25 p.m.">01 Dec '17, 14:25</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/9177/how-to-make-the-following-routes-compatible-with-the-public-transport-line-diagram">How to make the following routes &quot;compatible&quot; with the Public Transport Line Diagram?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2545/tag-tram-tracks-with-name-ref-or-use-relationroute">Tag tram tracks with name=*, ref=* - or use Relation:route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63991/transport-stop-area-relations-what-are-they-for">Transport: Stop Area relations - What are they for?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/72380/bahn-und-buslinien-einzeichnen">Bahn- und Buslinien einzeichnen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/923/how-do-i-realize-a-node-or-way-is-a-member-of-a-relation">How do I realize a node or way is a member of a relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/924/is-there-a-list-of-most-important-relations-in-the-world-like-longest-rivers-country-borders-etc">Is there a list of most important relations in the world? Like longest rivers, country borders etc...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/365/is-there-a-limit-on-the-number-of-nodes-in-a-way">Is there a limit on the number of nodes in a way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1580/should-i-tag-name-for-the-way-or-for-the-relation">Should I tag &quot;name&quot; for the way or for the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/903/relations-in-josm">Relations in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1535/holes-in-scrub-relations-inner-outer">Holes in scrub (relations, inner &amp; outer)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

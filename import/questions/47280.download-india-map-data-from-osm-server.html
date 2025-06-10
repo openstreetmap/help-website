@@ -1,0 +1,965 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Download India Map data from OSM Server - OSM Help</title>
+        <meta name="description" content="Hi, I have set up my own local OSM server. I want to download OSM data for India and few other countries from OSM server. I do not want to use third party provider&#39;s data like Geofabrik or BBike.  How can I do it?" />
+        <meta name="keywords" content="download,data" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/47280/download-india-map-data-from-osm-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/47280/download-india-map-data-from-osm-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='O8XIra4V1OT2opBARlewwdA51i5AUyI5' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/47280/download-india-map-data-from-osm-server">Download India Map data from OSM Server</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-47280-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47280/up/" rel="nofollow"> </a>
+<div id="post-47280-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-47280-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47280/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/47280/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I have set up my own local OSM server. I want to download OSM data for India and few other countries from OSM server.</p>
+<p>I do not want to use third party provider's data like Geofabrik or BBike. </p>
+<p>How can I do it?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/download/" class="post-tag tag-link-download"
+                                        title="see questions tagged 'download'" rel="tag">download</a>
+                                
+                                    <a href="/tags/data/" class="post-tag tag-link-data"
+                                        title="see questions tagged 'data'" rel="tag">data</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Dec '15, 11:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1a9eea008bc0c9a26985aa042d9b8ac2?s=32&amp;d=identicon&amp;r=g" alt="Reshma%20Maner's gravatar image" />
+    <p><a href="/users/2196/reshma-maner">Reshma Maner</a><br/>
+    <span class="score" title="235 reputation points">235</span><span title="30 badges"><span class="badge1">&#9679;</span><span class="badgecount">30</span></span><span title="31 badges"><span class="silver">&#9679;</span><span class="badgecount">31</span></span><span title="36 badges"><span class="bronze">&#9679;</span><span class="badgecount">36</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Reshma Maner has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47280/">
+                edited
+                <strong>09 Jan '16, 14:42</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-47280">
+    
+        <a name="47390"></a>
+        <div class="comment" id="comment-47390">
+            <div id="post-47390-score" class="comment-score"></div>
+            <div class="comment-text"><p>Reshma,</p>
+
+<p>Can you please provide the India dataset download url/ link?
+I intend to download pan-India OSM, and can't figure out how.</p>
+
+<p>Thanks</p></div>
+            <div class="comment-info" id="comment-47390-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '16, 11:22)</span>
+                <a class="comment-user userinfo" href="/users/11833/svenky1980">svenky1980</a>
+                
+            </div>
+        </div>
+    
+        <a name="47397"></a>
+        <div class="comment" id="comment-47397">
+            <div id="post-47397-score" class="comment-score">1</div>
+            <div class="comment-text"><p>There are plenty links with which you should have solved the problem yourself. Since I am in the mood I duplicate the link from  above:
+<a href="http://download.geofabrik.de/asia.html">http://download.geofabrik.de/asia.html</a> – there click on <a href="http://download.geofabrik.de/asia/india-latest.osm.bz2">http://download.geofabrik.de/asia/india-latest.osm.bz2</a></p></div>
+            <div class="comment-info" id="comment-47397-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '16, 17:31)</span>
+                <a class="comment-user userinfo" href="/users/583/malenki">malenki</a>
+                
+            </div>
+        </div>
+    
+        <a name="54395"></a>
+        <div class="comment" id="comment-54395">
+            <div id="post-54395-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you are interested in osm map for a country only then <a href="https://github.com/gagan-bansal/osm-for-my-country">osm-for-my-country</a> may be helpful for you. It downloads and update data on daily basis. You can generate offline map tiles also with this. Its basically a stack of many osm related packages.</p></div>
+            <div class="comment-info" id="comment-54395-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '17, 10:12)</span>
+                <a class="comment-user userinfo" href="/users/12655/gagan">Gagan</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47280" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47280-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/47280/download-india-map-data-from-osm-server?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/47280/download-india-map-data-from-osm-server?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/47280/download-india-map-data-from-osm-server?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/47280/download-india-map-data-from-osm-server?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="47285"></a>
+                    <div id="answer-container-47285" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47285-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47285/up/" rel="nofollow"> </a>
+<div id="post-47285-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-47285-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47285/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>After downloading a full planet file, ideally in PBF format, from planet.openstreetmap.org or one of its mirrors, you would have to use one of the established tools like osmosis, osm-history-splitter, or osmconvert to cut out your area of interest from the world-wide data set. </p>
+<p>Note that downloading e.g. the <a href="http://download.geofabrik.de/asia.html">Geofabrik Asia extract</a> and then cutting out your area of interest from that will usually mean that you waste less bandwidth and get a more current file (Geofabrik files are updated daily while OSM planet files are only updated weekly).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47285/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Dec '15, 22:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47285">
+    
+        <a name="47287"></a>
+        <div class="comment" id="comment-47287">
+            <div id="post-47287-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thank you.
+I have already downloaded india-latest.osm.pbf few months back and extracted on my OSM server. At that time size of this file was 175Mb.</p>
+
+<p>Now the latest India pbf file on Geofabrik website is of 300Mb. If I want to download this latest file and process it on my server, how can I do it?</p>
+
+<p>Will it overwrite current India data? Which command should I use?</p></div>
+            <div class="comment-info" id="comment-47287-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Dec '15, 06:08)</span>
+                <a class="comment-user userinfo" href="/users/2196/reshma-maner">Reshma Maner</a>
+                
+            </div>
+        </div>
+    
+        <a name="47290"></a>
+        <div class="comment" id="comment-47290">
+            <div id="post-47290-score" class="comment-score">1</div>
+            <div class="comment-text"><p>In order to give a meaningful answer to your question of how to process a new file and whether that will overwrite your current data, we need to know what you have done with the india-latest.osm.pbf that you downloaded last time. Did you import it into a database with osm2pgsql?</p></div>
+            <div class="comment-info" id="comment-47290-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Dec '15, 10:24)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47309"></a>
+        <div class="comment" id="comment-47309">
+            <div id="post-47309-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes. I imported it into a database using osm2pgsql. Following command was used:</p>
+
+<p>sudo -u www-data osm2pgsql -C 2048 --slim --number-processes 4 india-latest.osm.pbf --cache-strategy sparse</p>
+
+<p>Now I want to update this data with latest downloaded file for India. How can i do this?</p></div>
+            <div class="comment-info" id="comment-47309-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Dec '15, 12:32)</span>
+                <a class="comment-user userinfo" href="/users/2196/reshma-maner">Reshma Maner</a>
+                
+            </div>
+        </div>
+    
+        <a name="47311"></a>
+        <div class="comment" id="comment-47311">
+            <div id="post-47311-score" class="comment-score">2</div>
+            <div class="comment-text"><p>If your import is very recent - less than 10 days ago or so - then you could download the India updates from the Geofabrik server and apply them to your database. However I assume your import will be much older than 10 days, and in that case it is advisable to simply download the current data file and run your above import command again, which will delete the old database and import and import everything anew.</p></div>
+            <div class="comment-info" id="comment-47311-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Dec '15, 13:03)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47360"></a>
+        <div class="comment not_top_scorer" id="comment-47360">
+            <div id="post-47360-score" class="comment-score"></div>
+            <div class="comment-text"><p>I run import command using new India map file. It did not give any error.
+But I can not see any changes in map. My mod tile directory is at a different location. path is mentioned in renderer.conf. Still updates map is not visible.
+What should I do?</p></div>
+            <div class="comment-info" id="comment-47360-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jan '16, 11:16)</span>
+                <a class="comment-user userinfo" href="/users/2196/reshma-maner">Reshma Maner</a>
+                
+            </div>
+        </div>
+    
+        <a name="47361"></a>
+        <div class="comment" id="comment-47361">
+            <div id="post-47361-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Your database is now current but your tiles are not. Your options are 1. run the same steps that you ran initially to create your tiles (most likely you used render_list to pre-render a batch of tiles?), or 2. simply delete your tile directory and then renderd will re-create the tiles when you try to view them (slow for zoom levels &lt; 12), or 3. touch a planet-import-complete file in the tile directory which will cause mod_tile/renderd to <em>try</em> and re-create a tile on the fly and the old tile will be served only if this takes too long. Read mod_tile documentation on RequestTimeout and MissingRequestTimeout.</p></div>
+            <div class="comment-info" id="comment-47361-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jan '16, 11:23)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47407"></a>
+        <div class="comment not_top_scorer" id="comment-47407">
+            <div id="post-47407-score" class="comment-score"></div>
+            <div class="comment-text"><p>My tile directory is at /var/lib/mod_tile. I deleted mod_tile directory from /var/lib. But renderd is not creating new directory as per your option number 2 suggested in above comment</p></div>
+            <div class="comment-info" id="comment-47407-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '16, 09:13)</span>
+                <a class="comment-user userinfo" href="/users/2196/reshma-maner">Reshma Maner</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47285" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47285-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="47282"></a>
+                    <div id="answer-container-47282" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47282-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47282/up/" rel="nofollow"> </a>
+<div id="post-47282-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-47282-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47282/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>While it is (strongly!) recommend to <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">use a mirror</a>, esp. if you consider to download a whole subcontinent, you can still download from the source: <a href="http://planet.openstreetmap.org">http://planet.openstreetmap.org</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47282/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Dec '15, 12:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/49a7d0e0408e9cf2f698faac0f4d837a?s=32&amp;d=identicon&amp;r=g" alt="iii's gravatar image" />
+    <p><a href="/users/4984/iii">iii</a><br/>
+    <span class="score" title="4892 reputation points"><span class="">4.9k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="40 badges"><span class="silver">&#9679;</span><span class="badgecount">40</span></span><span title="82 badges"><span class="bronze">&#9679;</span><span class="badgecount">82</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="iii has 16 accepted answers">10&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47282/">
+                edited
+                <strong>06 Jan '16, 12:17</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+            <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+            <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47282">
+    
+        <a name="47283"></a>
+        <div class="comment" id="comment-47283">
+            <div id="post-47283-score" class="comment-score">2</div>
+            <div class="comment-text"><p>When data gets copied it is still the same even if a copy exists in two places afterwards.<br>
+There not a single sane reason to use extracts which were explicitly created to lessen the load on OSM's main server and to lessen the data users labour in the regard that he hasn't to process a full planet.</p></div>
+            <div class="comment-info" id="comment-47283-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Dec '15, 16:28)</span>
+                <a class="comment-user userinfo" href="/users/583/malenki">malenki</a>
+                
+            </div>
+        </div>
+    
+        <a name="47284"></a>
+        <div class="comment" id="comment-47284">
+            <div id="post-47284-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Maybe you did you want to link the "use a mirror" to <a href="https://wiki.openstreetmap.org/wiki/Api.openstreetmap.org/Usage_policy#Alternative_OpenStreetMap_Data_Providers">https://wiki.openstreetmap.org/wiki/Api.openstreetmap.org/Usage_policy#Alternative_OpenStreetMap_Data_Providers</a> ?</p></div>
+            <div class="comment-info" id="comment-47284-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Dec '15, 16:30)</span>
+                <a class="comment-user userinfo" href="/users/583/malenki">malenki</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47282" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47282-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/47280/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='O8XIra4V1OT2opBARlewwdA51i5AUyI5' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47280/download-india-map-data-from-osm-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47280/download-india-map-data-from-osm-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/download/"
+            class="tag-link-download"
+            title="see questions tagged'download'using tags"
+            rel="tag">download</a> <span class="tag-number">&#215;275</span><br/>
+        
+        <a href="/tags/data/"
+            class="tag-link-data"
+            title="see questions tagged'data'using tags"
+            rel="tag">data</a> <span class="tag-number">&#215;230</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 25, 2015, 11:22 a.m.">25 Dec '15, 11:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,730 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 1, 2017, 10:12 a.m.">01 Feb '17, 10:12</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/37704/counting-edits-over-time-for-a-specific-location">Counting edits over time for a specific location</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52060/downloading-your-contributions-from-openstreetmap">Downloading your contributions from OpenStreetmap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29208/osm-data-download">OSM data download</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34553/downloaded-osm-data-contains-only-50-of-visible-data-in-openstreetmaporg-bounding-box">Downloaded osm data contains only 50% of visible data in openstreetmap.org bounding box</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46595/map-data-download">[closed] map data download</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47585/download-osm-data-with-no-unifiying-tags">Download OSM data with no unifiying tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/148/how-can-i-use-openstreetmap-data-in-my-gis-program">How can I use OpenStreetMap data in my GIS program?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/417/is-it-possible-to-get-a-list-of-objects-with-two-specific-tags">Is it possible to get a list of objects with two specific tags?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33920/how-to-download-transport-data">How to download transport data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53270/real-time-download-whole-osm-database">Real-Time Download whole OSM database</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

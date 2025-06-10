@@ -1,0 +1,773 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>I added a node a couple of days ago and it does not show up in an Overpass search - OSM Help</title>
+        <meta name="description" content="(split off from why-havent-my-changes-appeared-on-the-map) There is definitely more to this than the rendering. I added a node a couple of days ago and it does not show up in an Overpass search, either by postcode or by another tag that is present (payment:bitcoin=yes). Other, older nodes with the s..." />
+        <meta name="keywords" content="not_shown,overpass,update" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/42554/i-added-a-node-a-couple-of-days-ago-and-it-does-not-show-up-in-an-overpass-search" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/42554/i-added-a-node-a-couple-of-days-ago-and-it-does-not-show-up-in-an-overpass-search?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='fNM2TZwnYPIUvozIzP5YGsGWycf9ayA9' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/42554/i-added-a-node-a-couple-of-days-ago-and-it-does-not-show-up-in-an-overpass-search">I added a node a couple of days ago and it does not show up in an Overpass search</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-42554-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42554/up/" rel="nofollow"> </a>
+<div id="post-42554-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-42554-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42554/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/42554/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p><small>(split off from <a href="/questions/4705/">why-havent-my-changes-appeared-on-the-map</a>)</small></p>
+<p>There is definitely more to this than the rendering. I added a node a couple of days ago and it does not show up in an Overpass search, either by postcode or by another tag that is present (payment:bitcoin=yes). Other, older nodes with the same tags are showing up no problem, just not the one I added. If I go back into edit mode (on several computers), the node is still there and the tags check out.</p>
+<p>Not complaining and there is by no means any kind of rush on this, just a data point and wondering when I will be likely to see it turn up.</p>
+<p><em>Update:</em></p>
+<p>Wouldn't fit in comment:</p>
+<p>OK. I tried it with an ID from the list I retrieved of existing nodes and with the ID as obtained by nevw. Here is what I see:</p>
+<p>Guys, this site is breaking on the xml tags. I had to run it through an escaper. The formatting is not very nice now but I hope readable.</p>
+<hr>
+<p>~/osm$ curl <a href='http://overpass.osm.rambler.ru/cgi/interpreter?data=node("3463722799")%3Bout%3B'>http://overpass.osm.rambler.ru/cgi/interpreter?data=node("3463722799")%3Bout%3B</a>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
+<p>&lt;osm version="0.6" generator="Overpass API"&gt;</p>
+<p>&lt;note&gt;The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.&lt;/note&gt;</p>
+<p>&lt;meta osm_base="2015-04-19T13:13:02Z"/&gt;</p>
+<p>&lt;node id="3463722799" lat="41.0380108" lon="-73.7020693"&gt;</p>
+<p>&lt;tag k="addr:city" v="Purchase"/&gt;</p>
+<p>&lt;tag k="addr:housenumber" v="630"/&gt;</p>
+<p>&lt;tag k="addr:postcode" v="10577"/&gt;</p>
+<p>&lt;tag k="addr:state" v="ny"/&gt;</p>
+<p>&lt;tag k="addr:street" v="Anderson Hill Road"/&gt;</p>
+<p>&lt;tag k="name" v="Purchase Country Market"/&gt;</p>
+<p>&lt;tag k="note" v="We accept bitcoin!"/&gt;</p>
+<p>&lt;tag k="opening_hours" v="5 - 8 Mon - Sat // 8 - 8 Sundays"/&gt;</p>
+<p>&lt;tag k="payment:bitcoin" v="yes"/&gt;</p>
+<p>&lt;tag k="phone" v="+1 914 481 4422"/&gt;</p>
+<p>&lt;tag k="shop" v="deli"/&gt;</p>
+<p>&lt;tag k="website" v="<a href="http://www.purchasecountrymarket.com">http://www.purchasecountrymarket.com</a>"/&gt;</p>
+<p>&lt;/node&gt;</p>
+<p>&lt;/osm&gt;</p>
+<hr>
+<p>~/osm$ curl <a href='http://overpass.osm.rambler.ru/cgi/interpreter?data=node("3469985161")%3Bout%3B'>http://overpass.osm.rambler.ru/cgi/interpreter?data=node("3469985161")%3Bout%3B</a></p>
+<p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
+<p>&lt;osm version="0.6" generator="Overpass API"&gt;</p>
+<p>&lt;note&gt;The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.&lt;/note&gt;</p>
+<p>&lt;meta osm_base="2015-04-19T13:13:02Z"/&gt;</p>
+<p>&lt;/osm&gt;</p>
+<hr>
+<p>Note that I'm having a lot of trouble with logging in to these forums but I'll take that elsewhere. I'm using the temporary token for now.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/not_shown/" class="post-tag tag-link-not_shown"
+                                        title="see questions tagged 'not_shown'" rel="tag">not_shown</a>
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/update/" class="post-tag tag-link-update"
+                                        title="see questions tagged 'update'" rel="tag">update</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Apr '15, 04:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e414d90b60f19d3eb918190f1b6f13dd?s=32&amp;d=identicon&amp;r=g" alt="Richhhhhh's gravatar image" />
+    <p><a href="/users/10883/richhhhhh">Richhhhhh</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richhhhhh has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/42554/">
+                edited
+                <strong>24 Apr '15, 01:51</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-42554">
+    
+        <a name="42555"></a>
+        <div class="comment" id="comment-42555">
+            <div id="post-42555-score" class="comment-score"></div>
+            <div class="comment-text"><p>At <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a> zoom to the location, select the layers tab on the right side, then check 'Map Data', select the node, and then paste the url that you see in the address bar of the browser into your query above by editing it. We will be see too and maybe able to explain any irregularities.</p></div>
+            <div class="comment-info" id="comment-42555-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '15, 06:42)</span>
+                <a class="comment-user userinfo" href="/users/7380/nevw">nevw</a>
+                
+            </div>
+        </div>
+    
+        <a name="42556"></a>
+        <div class="comment" id="comment-42556">
+            <div id="post-42556-score" class="comment-score"></div>
+            <div class="comment-text"><p>The database of the Overpass API instance must have been synched to the main OSM database. Depending on which instance you are querying this may not have happened. However, as nevw said, please mention a link to such a node (or a location of one).</p></div>
+            <div class="comment-info" id="comment-42556-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '15, 08:03)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42562"></a>
+        <div class="comment" id="comment-42562">
+            <div id="post-42562-score" class="comment-score"></div>
+            <div class="comment-text"><p>okay, thanks for the <a href="//www.openstreetmap.org/node/3463722799">example node</a>. but … what is your problem with it? <a href="http://overpass-turbo.eu/s/8Y7">A Overpass search</a>.  Ahh, now I saw that you have posted two queries... I will format this a bit better...  Okay, <a href="//www.openstreetmap.org/node/3469985161">your second example node</a>.</p></div>
+            <div class="comment-info" id="comment-42562-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '15, 01:22)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42563"></a>
+        <div class="comment" id="comment-42563">
+            <div id="post-42563-score" class="comment-score"></div>
+            <div class="comment-text"><p>meta: regarding the markdown problems: see <a href="//daringfireball.net/projects/markdown/syntax#precode">markdown/syntax</a> and use <a href="//daringfireball.net/projects/markdown/dingus">dingus</a> for preview (the live preview here is not showing the real result). XML should work, but it really may not due to whatever problems. Another option: use a pastebin service (if possible a permanent one).</p></div>
+            <div class="comment-info" id="comment-42563-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '15, 01:48)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-42554" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42554-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/42554/i-added-a-node-a-couple-of-days-ago-and-it-does-not-show-up-in-an-overpass-search?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/42554/i-added-a-node-a-couple-of-days-ago-and-it-does-not-show-up-in-an-overpass-search?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/42554/i-added-a-node-a-couple-of-days-ago-and-it-does-not-show-up-in-an-overpass-search?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/42554/i-added-a-node-a-couple-of-days-ago-and-it-does-not-show-up-in-an-overpass-search?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="42566"></a>
+                    <div id="answer-container-42566" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-42566-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42566/up/" rel="nofollow"> </a>
+<div id="post-42566-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-42566-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42566/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <ul>
+<li><a href="//www.openstreetmap.org/node/3463722799">example first node</a> is older. The data you see in your paste is from 2015-04-18. The big note text from 2015-04-19 20:44:41 is not yet visible via this Overpass instance.</li>
+<li><a href="//www.openstreetmap.org/node/3469985161">your second example node</a> is existing since 2015-04-21.</li>
+</ul>
+<p>the <a href="http://overpass.osm.rambler.ru">http://overpass.osm.rambler.ru</a> response says <code>osm_base="2015-04-19T13:13:02Z"</code>.</p>
+<p>Apparently, as said in my comment before, the service you are using just has not yet updated its database. "down for mainainance" is <a href="//wiki.openstreetmap.org/w/index.php?title=Overpass_API&amp;diff=1155055&amp;oldid=1149271">currently listed</a> for this service at <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Introduction">https://wiki.openstreetmap.org/wiki/Overpass_API#Introduction</a></p>
+<p>So, try that other Overpass service instance <a href="http://overpass-api.de/api/interpreter?data=node(3469985161)%3Bout%3B">http://overpass-api.de/api/interpreter?data=node(3469985161)%3Bout%3B</a> (second example node) – I get a expected, apparently up to date response there</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/42566/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Apr '15, 02:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/42566/">
+                edited
+                <strong>24 Apr '15, 02:07</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-42566">
+    
+        <a name="42567"></a>
+        <div class="comment" id="comment-42567">
+            <div id="post-42567-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks. That certainly answers my issue. The node has also appeared on coinmaps.org so it appears that they were probably using the good server but probably a bit slow in updating their own results. I appreciate the time you spent on this.</p>
+
+<p>I've actually ended up using JSON anyway. It was the preview that was giving me issues.</p></div>
+            <div class="comment-info" id="comment-42567-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '15, 05:33)</span>
+                <a class="comment-user userinfo" href="/users/10883/richhhhhh">Richhhhhh</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-42566" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42566-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/42554/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='fNM2TZwnYPIUvozIzP5YGsGWycf9ayA9' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/42554/i-added-a-node-a-couple-of-days-ago-and-it-does-not-show-up-in-an-overpass-search?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/42554/i-added-a-node-a-couple-of-days-ago-and-it-does-not-show-up-in-an-overpass-search?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/update/"
+            class="tag-link-update"
+            title="see questions tagged'update'using tags"
+            rel="tag">update</a> <span class="tag-number">&#215;199</span><br/>
+        
+        <a href="/tags/not_shown/"
+            class="tag-link-not_shown"
+            title="see questions tagged'not_shown'using tags"
+            rel="tag">not_shown</a> <span class="tag-number">&#215;75</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 23, 2015, 4:41 a.m.">23 Apr '15, 04:41</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,507 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 24, 2015, 5:34 a.m.">24 Apr '15, 05:34</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/42237/edits-not-shown-on-the-map-although-they-have-been-succesfully-added-to-the-db-commit-message-related">Edits not shown on the map although they have been succesfully added to the DB; commit message-related?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47646/my-edits-doesnt-show-up-in-the-map">[closed] my edits doesn&#39;t show up in the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25489/why-does-my-cycle-route-not-show-on-the-cycle-map-layer-when-tagged-as-such">Why does my cycle route not show on the cycle map layer when tagged as such?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41721/pourquoi-mes-modifications-napparaissent-pas-depuis-plus-de-20-jours">Pourquoi mes modifications n&#39;apparaissent  pas depuis plus de 20 jours</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45490/why-are-my-changes-visible-only-on-some-but-not-on-all-layers">Why are my changes visible only on some but not on all layers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47050/cant-see-the-edit-on-strava-maps">can&#39;t see the edit on Strava maps.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4705/why-havent-my-changes-appeared-on-the-map">Why haven&#39;t my changes appeared on the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20499/how-to-access-the-timestamp-value-from-overpass-meta-requests-with-openlayersformatosm">How to access the timestamp value from Overpass meta requests with Openlayers.Format.OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38076/why-are-my-buildings-not-showing-up-on-renderer">Why are my buildings not showing up on renderer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48005/pois-not-shown-in-standardnon-edit-view">POIs not shown in standard/non-edit view</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

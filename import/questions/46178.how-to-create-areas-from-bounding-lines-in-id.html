@@ -1,0 +1,1152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to create areas from bounding lines in iD? - OSM Help</title>
+        <meta name="description" content="So I have a number of fields in an area I&#39;m working on that are bounded by different boundaries - hedges, fences, ditches etc. It seems to make sense to draw all the boundaries in for a number of fields at once. For example, several fields may be bounded at some point by a single hedge that runs for..." />
+        <meta name="keywords" content="boundaries,fields,ideditor,areas" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/46178/how-to-create-areas-from-bounding-lines-in-id" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/46178/how-to-create-areas-from-bounding-lines-in-id?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='pjUWqx9a3rQwHkGfDWTiq7fwAoDMXipl' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/46178/how-to-create-areas-from-bounding-lines-in-id">How to create areas from bounding lines in iD?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-46178-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46178/up/" rel="nofollow"> </a>
+<div id="post-46178-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-46178-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46178/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/46178/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>So I have a number of fields in an area I'm working on that are bounded by different boundaries - hedges, fences, ditches etc.</p>
+<p>It seems to make sense to draw all the boundaries in for a number of fields at once. For example, several fields may be bounded at some point by a single hedge that runs for some distance.</p>
+<p>So I can add and tag lines representing all the boundaries. But how can I then select multiple lines in iD and create an area within them?</p>
+<p><a href="http://www.openstreetmap.org/edit#map=16/50.2383/-3.8148">Example:</a>
+If I drew on all the boundaries in this area, how could I then create individual areas for the fields within those boundaries, without adding the areas manually?</p>
+<p>Thanks in advance. David</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/boundaries/" class="post-tag tag-link-boundaries"
+                                        title="see questions tagged 'boundaries'" rel="tag">boundaries</a>
+                                
+                                    <a href="/tags/fields/" class="post-tag tag-link-fields"
+                                        title="see questions tagged 'fields'" rel="tag">fields</a>
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/areas/" class="post-tag tag-link-areas"
+                                        title="see questions tagged 'areas'" rel="tag">areas</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Oct '15, 14:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/76659c40e70586672ac3c1dd625fec94?s=32&amp;d=identicon&amp;r=g" alt="David%20R%20French's gravatar image" />
+    <p><a href="/users/11555/david-r-french">David R French</a><br/>
+    <span class="score" title="61 reputation points">61</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="David R French has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46178/">
+                edited
+                <strong>28 Oct '15, 19:11</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-46178">
+    
+        <a name="46202"></a>
+        <div class="comment" id="comment-46202">
+            <div id="post-46202-score" class="comment-score">2</div>
+            <div class="comment-text"><p>you might be interested in this question too: <a href="/questions/18495/">is-it-okay-if-landuse-borders-share-nodes-with-streets-rivers</a> (and the others linked there). However, let's focus on the technical part of your question (as the title suggests) here.</p></div>
+            <div class="comment-info" id="comment-46202-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 06:18)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="46210"></a>
+        <div class="comment" id="comment-46210">
+            <div id="post-46210-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks, lots of useful information there. I think in this case one could argue that fields do extend to the centreline of their boundary as conceptual entities, although not as functional objects. I'll deal with it case-by-case.</p></div>
+            <div class="comment-info" id="comment-46210-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 10:10)</span>
+                <a class="comment-user userinfo" href="/users/11555/david-r-french">David R French</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46178" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46178-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/46178/how-to-create-areas-from-bounding-lines-in-id?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/46178/how-to-create-areas-from-bounding-lines-in-id?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/46178/how-to-create-areas-from-bounding-lines-in-id?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/46178/how-to-create-areas-from-bounding-lines-in-id?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="46223"></a>
+                    <div id="answer-container-46223" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-46223-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46223/up/" rel="nofollow"> </a>
+<div id="post-46223-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-46223-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46223/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="David R French has selected this answer as the correct answer"
+        href="/accept_answer/46223/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As already mentioned, one option is to add all the boundaries (hedges, gates, walls, etc.) and then use those linear features to create multipolygons. Unfortunately, if taken to the extreme, this will result in data that is essentially unmaintainable.  An example of the problem can be seen <a href="http://www.openstreetmap.org/relation/5389986#map=15/53.2127/-1.4555">here</a>.</p>
+<p>At that location, "Walton Wood" is composed of a series of other patches of woodland, with different tree types, such as <a href="http://www.openstreetmap.org/relation/5397331">this one</a>.  It was originally mapped exactly like this, with the individual patches of woodland as constituent parts of one named multipolygon relation "Walton Wood".  Unfortunately, an armchair mapper edited it and the result is as you see now - there's no relation between the individual logical parts of the wood and the whole.  Try editing it and you'll see the problem straight away - in order to map anything else here, I'll have to revert the problem changeset, separately resolve any other problems that it tried to resolve (as the same issue may be present there too), and then continue mapping.</p>
+<p>There are lots of places (islands in lakes is an obvious example) where multipolygons make perfect sense, and the geometry of the multipolygon matches the real world.  However, in cases where you're using unrelated items to create a multipolygon I'd argue that the result probably doesn't match the real world, will be difficult to maintain going forward and therefore isn't a good idea.  Instead, create an area (using the same nodes as fences etc. if appropriate) for farmland, so that it's clear to all future mappers what it is and how to maintain it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/46223/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Oct '15, 14:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-46223">
+    
+</div>
+<div id="comment-tools-46223" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46223-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="46234"></a>
+                    <div id="answer-container-46234" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-46234-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46234/up/" rel="nofollow"> </a>
+<div id="post-46234-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-46234-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46234/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: what I was doing was with areas; I've not tried with multipolygons.</p>
+<p>In iD I was creating an area, tagging it by landuse, then using the Split feature at different points on the area to break down the single boundary line into several lines; then tagging each line by boundary type.</p>
+<p>Note that this contradicts the concept raised here about leaving areas and boundaries as separate mapped entities.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/46234/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Oct '15, 21:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/76659c40e70586672ac3c1dd625fec94?s=32&amp;d=identicon&amp;r=g" alt="David%20R%20French's gravatar image" />
+    <p><a href="/users/11555/david-r-french">David R French</a><br/>
+    <span class="score" title="61 reputation points">61</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="David R French has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-46234">
+    
+        <a name="46238"></a>
+        <div class="comment" id="comment-46238">
+            <div id="post-46238-score" class="comment-score"></div>
+            <div class="comment-text"><p>iD automatically creates a multipolygon relation if you split an <a href="https://wiki.openstreetmap.org/wiki/SemanticElements">area</a> previously consisting of a single closed way. You can see it in the left side planel (although not very easily).</p></div>
+            <div class="comment-info" id="comment-46238-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '15, 06:21)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="46239"></a>
+        <div class="comment" id="comment-46239">
+            <div id="post-46239-score" class="comment-score"></div>
+            <div class="comment-text"><p>(semi-offtopic continued) regarding the contradiction: not to me that much (compared to sharing nodes with areas mapped as closed way), since the multipolygon refers to linear objects as borders instead of points. The width of those linear objects may be implicitly (e.g. hedges are about 1 metre wide) or explicitly (e.g. <code>width=1.5</code>) known and can be subtracted from the area size.</p></div>
+            <div class="comment-info" id="comment-46239-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '15, 06:30)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46234" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46234-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="46197"></a>
+                    <div id="answer-container-46197" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-46197-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46197/up/" rel="nofollow"> </a>
+<div id="post-46197-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-46197-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46197/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>sounds like you are searching to create a <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon</a> relation with the boundaries as "outer" (<a href="https://wiki.openstreetmap.org/wiki/Relation">role</a>) ways. Like <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Multiple_ways_forming_a_ring">this</a> example but without the inner hole. Select all the outer ways and add them to a relation with the role "outer". The outer ways need to share a node (at the corners), otherwise the outer ring would not be closed.</p>
+<p>How you can in iD? I do not know (and could find out while giving it a short try). iD seems to support <a href="/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">areas with holes</a> as multipolygons, though.</p>
+<p>I suggest to use <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch 2</a> or, better, <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> (at least for such advanced editing).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/46197/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Oct '15, 20:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46197/">
+                edited
+                <strong>29 Oct '15, 05:57</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-46197">
+    
+        <a name="46198"></a>
+        <div class="comment" id="comment-46198">
+            <div id="post-46198-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks. I did try in JOSM but when I selected Create Multipolygon I got "Each node must connect exactly two ways", which suggests I'm not using it properly. My understanding of a multipolygon was that it was a construction of several areas, not an area constructed of several ways, so I'm not clear on how to use it in this context.</p></div>
+            <div class="comment-info" id="comment-46198-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Oct '15, 20:29)</span>
+                <a class="comment-user userinfo" href="/users/11555/david-r-french">David R French</a>
+                
+            </div>
+        </div>
+    
+        <a name="46201"></a>
+        <div class="comment" id="comment-46201">
+            <div id="post-46201-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/11555/david-r-french"></a><a href="http://help.openstreetmap.org/users/11555/david-r-french">@David R French</a>: I have extended my answer. </p>
+
+<p>Yes, you can use the "create multipolygon" shortcut for this. It automatically sets the multipolygon tag to the relation object and sets the roles. As an alternative you can create a new relation and add the boundary ways manually to it.</p>
+
+<p>The error message suggests that you did not had a complete ring of ways in your selection. See my example image and try again. First try with just two or three test ways which form a ring (don't save them, of course).</p></div>
+            <div class="comment-info" id="comment-46201-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 06:00)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="46204"></a>
+        <div class="comment" id="comment-46204">
+            <div id="post-46204-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If I understand it question correctly, David has a number of non-closed ways that he wants to turn into a area. I don't know whether this is possible with the Create Multipolygon functionality of JOSM.
+AFAIK you have to draw the area as a separate object.</p></div>
+            <div class="comment-info" id="comment-46204-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 06:42)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="46213"></a>
+        <div class="comment" id="comment-46213">
+            <div id="post-46213-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Having had a further play in iD, it seems I should probably look at this from the other angle. I can create areas corresponding to fields, then split the area into lines and tag each line as a different barrier type (hedge, ditch, fence etc). This is slightly more long-winded but will give the desired outcome. Now I need to decide whether to dedicate many hours to do this in my area; I don't want to end up with a patchwork map, but some other local areas already have this :)</p>
+
+<p>By the way, the reason I'm looking at mapping individual fields rather than tagging the whole area as farmland is that I have individual field names in many cases. Like everything I'm attempting in OSM, going down one course of action tends to throw up ten times as many questions as it solves.</p></div>
+            <div class="comment-info" id="comment-46213-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 10:19)</span>
+                <a class="comment-user userinfo" href="/users/11555/david-r-french">David R French</a>
+                
+            </div>
+        </div>
+    
+        <a name="46222"></a>
+        <div class="comment" id="comment-46222">
+            <div id="post-46222-score" class="comment-score">5</div>
+            <div class="comment-text"><p>IMHO, you should map the field as an area, and draw a separate way for the hedges and fences. Do not reuse the lines for both things. Suppose the hedge is removed one day, then the area representing the field will be missing a part when you delete the line for the hedge. It's much easier to remove the way (aka line) representing the way in that case.</p></div>
+            <div class="comment-info" id="comment-46222-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 14:51)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="46230"></a>
+        <div class="comment not_top_scorer" id="comment-46230">
+            <div id="post-46230-score" class="comment-score"></div>
+            <div class="comment-text"><p>meta: <a href="http://help.openstreetmap.org/users/11555/david-r-french">@David R French</a>: please, could you add your "long-winded" approach how to create such a multipolygon as an "answer" here? Great that you found out how it works!</p></div>
+            <div class="comment-info" id="comment-46230-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 19:10)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="46231"></a>
+        <div class="comment not_top_scorer" id="comment-46231">
+            <div id="post-46231-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a>: yes, turning a number of non-closed ways into an area works automatically with "create multipolygon" in JOSM - but the ways together need to really enclose an area, each of the ways (hedge) needs to be connected (shared node) with the next way (next hedge).</p></div>
+            <div class="comment-info" id="comment-46231-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 19:12)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="46232"></a>
+        <div class="comment not_top_scorer" id="comment-46232">
+            <div id="post-46232-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: thanks, I didn't know that</p></div>
+            <div class="comment-info" id="comment-46232-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 19:13)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46197" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46197-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="79519"></a>
+                    <div id="answer-container-79519" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79519-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79519/up/" rel="nofollow"> </a>
+<div id="post-79519-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-79519-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79519/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Years late to the party, but only now managed to wrap my head around the discussed issue in the last few days and frankly love it, while practically, I came only to research the subject because of 'duplicate edge' issues amongst highway areas, e.g. a bordering square and pedestrian area and a highway drawn across the edge of a pedestrian area, boom 'duplicate edge' pops up (and a few telling me to just thoroughly ignore it, an Osmose or other system analytical and/or render problem)... Complex 20/30/40 node long lines and drawn only once and shared amongst several adjacent multipolygon areas is great which brings me to the hedge comment above. If the hedge is removed, only remove the hedge related tag(s) from the line and it leaves the area(s) undisturbed. More precise ID editor 2020 wont even allow you to delete the line without first removing the M.poly relations, an excellent safeguard against damaging areas. It get's interesting if a plot's borders are changed, i.e. a vineyard was split in part vineyard, part orchard, integrated in other adjacent areas of same cover... it's a little work, and if setup right far from undecipherable. And how often does that happen? </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79519/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Apr '21, 11:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ed39ace8cbefe3b5c45da98f60f5e34c?s=32&amp;d=identicon&amp;r=g" alt="SekeRob's gravatar image" />
+    <p><a href="/users/8468/sekerob">SekeRob</a><br/>
+    <span class="score" title="211 reputation points">211</span><span title="19 badges"><span class="badge1">&#9679;</span><span class="badgecount">19</span></span><span title="20 badges"><span class="silver">&#9679;</span><span class="badgecount">20</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SekeRob has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79519">
+    
+</div>
+<div id="comment-tools-79519" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79519-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/46178/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='pjUWqx9a3rQwHkGfDWTiq7fwAoDMXipl' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46178/how-to-create-areas-from-bounding-lines-in-id?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46178/how-to-create-areas-from-bounding-lines-in-id?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/boundaries/"
+            class="tag-link-boundaries"
+            title="see questions tagged'boundaries'using tags"
+            rel="tag">boundaries</a> <span class="tag-number">&#215;129</span><br/>
+        
+        <a href="/tags/areas/"
+            class="tag-link-areas"
+            title="see questions tagged'areas'using tags"
+            rel="tag">areas</a> <span class="tag-number">&#215;32</span><br/>
+        
+        <a href="/tags/fields/"
+            class="tag-link-fields"
+            title="see questions tagged'fields'using tags"
+            rel="tag">fields</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 28, 2015, 2:05 p.m.">28 Oct '15, 14:05</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,060 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 3, 2021, 11:20 a.m.">03 Apr '21, 11:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/29309/area-added-with-ideditor-is-rendered-as-different-size-and-position">Area added with IDeditor is rendered as different size and position</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56159/extract-city-boundaries-for-certain-locations">Extract city boundaries for certain locations</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58691/id-editor-changing-points-into-lines-or-areas">id editor: changing points into lines or areas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1053/how-do-i-fix-inconsistent-boundaries">How do I fix inconsistent boundaries?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1841/confused-about-nominatim-and-county-boundaries">[closed] Confused about Nominatim and County Boundaries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2275/generating-a-political-world-map-with-osm-data">Generating a political world map with osm data.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1295/problems-with-a-boundary">Problems with a boundary</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2986/how-to-use-natural-boundaries-like-meandering-streams-for-parallel-areas-in-potlatch2">How to use natural boundaries like meandering streams for parallel areas in Potlatch2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3919/how-can-i-find-and-modify-a-boundary">How can I find and modify a boundary?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2527/what-to-do-with-administrative-boundaries-mess">What to do with administrative boundaries mess?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

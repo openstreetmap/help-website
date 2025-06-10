@@ -1,0 +1,646 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Get useless results querying aerodrome - OSM Help</title>
+        <meta name="description" content="Hello, I have been trying to find airports using the two R-packages osmdata and osmar. In the example below I am searching for an airport in a place called wahnheide, knowing, that there is an airport Flughafen Köln/Bonn. First, I am creating a bounding box with the function center_bbox and then que..." />
+        <meta name="keywords" content="r,aerodrome" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/78629/get-useless-results-querying-aerodrome" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/78629/get-useless-results-querying-aerodrome?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='8B9A8t7QnuJkkvxeNmHVKg32Wms6krZQ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/78629/get-useless-results-querying-aerodrome">Get useless results querying aerodrome</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-78629-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/78629/up/" rel="nofollow"> </a>
+<div id="post-78629-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-78629-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/78629/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/78629/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, I have been trying to find airports using the two R-packages osmdata and osmar. In the example below I am searching for an airport in a place called wahnheide, knowing, that there is an airport Flughafen Köln/Bonn. First, I am creating a bounding box with the function center_bbox and then querying the tag aeroway:aerodrome. </p>
+<pre><code>library(osmdata)
+library(osmar)
+
+wahnheide &lt;- c(7.107108659486173, 50.8700493119623)
+central_point &lt;- wahnheide
+bb &lt;- center_bbox(central_point[1], central_point[2], 5000, 5000)
+
+# aerodrome
+
+q &lt;- bb %&gt;% opq (timeout = 25*100) %&gt;% add_osm_feature(key = "aeroway", value = "aerodrome")
+
+aerodrome &lt;- sapply(osmdata_sf(q)$osm_points, function(x) iconv(x, from = "UTF-8", to = "UTF-8"))
+</code></pre>
+<p>The result I get is a table with four columns: osm_id, barrier, source and geometry, like attached below.</p>
+<p>What I expect is something usable, like the name of the place, address, etc. Is it possitble to get this information modifying the query? or using the osm_ids?</p>
+<pre><code>aerodrome  &lt;- structure(c("53398845", "53398860", "53398865", "53403325", "53403328", 
+               "90727693", "90727719", "90727721", "90727725", "90727726", "90727729", 
+               "90727733", "90727745", "90727747", "90727749", "90727754", "90727758", 
+               "90727760", "90727763", "90727765", "90727771", "90727773", "90727776", 
+               "90727780", "303381016", "303381017", "303381018", "303381020", 
+               "305577320", "338493431", "338493432", "388619605", "444984453", 
+               "503256114", "503256131", "693414125", "975856241", "982585071", 
+               "982585074", "982585099", "982585300", "982585318", "1256789186", 
+               "1256789190", "1256789191", "1256789198", "1278005777", "1278005778", 
+               "1278005779", "1513076932", "1513076933", "1513076934", "1513076935", 
+               "1513076936", "1513076937", "1513076938", "1513076939", "1513076943", 
+               "1513076947", "1513076949", "1513076952", "1513076954", "1513076955", 
+               "1513076961", "1513076967", "1513076969", "1513076970", "1513076971", 
+               "1513076980", "1513076999", "1513077000", "1513077001", "1513077003", 
+               "1513077008", "1513077012", "1513077013", "1513077014", "1513077038", 
+               "1513077054", "1513077062", "1513077073", "1513077074", "1513077075", 
+               "1513077076", "1513077077", "1513077080", "1514349799", "1603899023", 
+               "1603899025", "1603899027", "1611111803", "1737314262", "1737314270", 
+               "1737314271", "1737314272", "1737314273", "1737314274", "1737314275", 
+               "1737314282", "1737314283", "1737314284", "1737314286", "1737314288", 
+               "1737314290", "1737314291", "1737314294", "1737314304", "1737314306", 
+               "1737314308", "1737314310", "1737314311", "1737314313", "1737314315", 
+               "1737314319", "1737314322", "1737314325", "1868389062", "1868389090", 
+               "1868389092", "1868389095", "1868389098", "1868389101", "1868389105", 
+               "1868389106", "1942418794", "1991402715", "1991402721", "2149996723", 
+               "2149996730", "2149996743", "2149996746", "2149996755", "2149996770", 
+               "2149996787", "2150455272", "2150455329", "2301210581", "2355175960", 
+               "2399040138", "2687584301", "2687584303", "3239092981", "3263357122", 
+               "3263357127", "3825207782", "3825207783", "4103701261", "4103701262", 
+               "4103701263", "4103701266", "4103701267", "4103701268", "4103701269", 
+               "4103701270", "4103701271", "4103701272", "4103701274", "4103701275", 
+               "4103701276", "4103701277", "4103701278", "4103701279", "4103701280", 
+               "5046878828", "5046878830", "5200880764", "7275520072", "7275597689", 
+               "7275597690", "7275597691", "7275597743", "7275597744", "7275597745", 
+               "7275597746", "7275597749", "7275597751", "7275597764", "7275597765", 
+               "7275597766", "7275597767", "7275597768", "7275597769", "7275597770", 
+               "7275597771", "7275597772", "7275597773", "7275597774", "7275597775", 
+               "7275597776", "7275597777", "8200300056", NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, "gate", NA, NA, NA, NA, "gate", 
+               NA, NA, NA, NA, NA, "gate", NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, "gate", NA, NA, NA, NA, NA, "gate", NA, "gate", 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, "gate", NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "seen", NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 
+               NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "c(7.1596728, 50.8675326)", 
+               "c(7.1594811, 50.8732307)", "c(7.1588775, 50.8736457)", "c(7.1709033, 50.8563279)", 
+               "c(7.1684331, 50.8580434)", "c(7.1215113, 50.8846538)", "c(7.1577605, 50.8740119)", 
+               "c(7.1582833, 50.8738986)", "c(7.1593787, 50.8670762)", "c(7.1579936, 50.8652953)", 
+               "c(7.1579382, 50.8651661)", "c(7.1637246, 50.8612768)", "c(7.1744018, 50.8485948)", 
+               "c(7.1685356, 50.8495791)", "c(7.1645922, 50.850256)", "c(7.1583425, 50.853538)", 
+               "c(7.152706, 50.8562489)", "c(7.1451792, 50.8546241)", "c(7.1180104, 50.8579515)", 
+               "c(7.1184121, 50.8588979)", "c(7.1178592, 50.8679345)", "c(7.1173157, 50.8690389)", 
+               "c(7.1149798, 50.8721996)", "c(7.1109705, 50.8730305)", "c(7.1187524, 50.8606415)", 
+               "c(7.1190139, 50.8620776)", "c(7.1185084, 50.8633001)", "c(7.1168392, 50.8667116)", 
+               "c(7.1187245, 50.8578149)", "c(7.1594448, 50.8672126)", "c(7.1593147, 50.8662857)", 
+               "c(7.1192087, 50.8862498)", "c(7.1274656, 50.8560652)", "c(7.1200316, 50.8571792)", 
+               "c(7.1375415, 50.8539322)", "c(7.1607277, 50.8684893)", "c(7.1094338, 50.8756193)", 
+               "c(7.1318781, 50.8546793)", "c(7.1334321, 50.854118)", "c(7.122546, 50.856602)", 
+               "c(7.1161954, 50.8704297)", "c(7.1189396, 50.8623565)", "c(7.1788073, 50.8518339)", 
+               "c(7.1754817, 50.8498641)", "c(7.1756599, 50.849335)", "c(7.1744335, 50.8538987)", 
+               "c(7.1121063, 50.8835169)", "c(7.1111398, 50.8835777)", "c(7.1107519, 50.8835921)", 
+               "c(7.1611519, 50.8526031)", "c(7.1595574, 50.8527078)", "c(7.1750686, 50.8538773)", 
+               "c(7.1383822, 50.853999)", "c(7.1390607, 50.8541726)", "c(7.1400722, 50.854275)", 
+               "c(7.1416068, 50.8543694)", "c(7.1444638, 50.8545775)", "c(7.1582625, 50.854622)", 
+               "c(7.148056, 50.855367)", "c(7.1291405, 50.8559914)", "c(7.1490328, 50.8556219)", 
+               "c(7.1505143, 50.8557426)", "c(7.1549338, 50.8569102)", "c(7.1654299, 50.86011)", 
+               "c(7.1600634, 50.8637924)", "c(7.159879, 50.8639859)", "c(7.1592812, 50.8645083)", 
+               "c(7.1580069, 50.8650761)", "c(7.1602408, 50.8680314)", "c(7.1487208, 50.8725832)", 
+               "c(7.1462354, 50.8727484)", "c(7.1514029, 50.8728809)", "c(7.1530627, 50.8731089)", 
+               "c(7.155243, 50.8736174)", "c(7.1570646, 50.8740068)", "c(7.143621, 50.8744925)", 
+               "c(7.1435235, 50.8750864)", "c(7.1413533, 50.876645)", "c(7.1392444, 50.8781201)", 
+               "c(7.1357114, 50.880533)", "c(7.130943, 50.8838309)", "c(7.1294039, 50.8849008)", 
+               "c(7.1237363, 50.8850928)", "c(7.1278527, 50.885909)", "c(7.1222151, 50.886153)", 
+               "c(7.1207726, 50.8871502)", "c(7.143246, 50.8753309)", "c(7.1166652, 50.8670108)", 
+               "c(7.1165737, 50.8672025)", "c(7.1166426, 50.8672302)", "c(7.1145735, 50.87147)", 
+               "c(7.1312116, 50.8554401)", "c(7.1308343, 50.8558053)", "c(7.1254629, 50.8559264)", 
+               "c(7.1266752, 50.8559774)", "c(7.1304234, 50.8559932)", "c(7.1185501, 50.8594183)", 
+               "c(7.1189222, 50.859728)", "c(7.1155802, 50.8708666)", "c(7.1163261, 50.8713979)", 
+               "c(7.1095918, 50.8725286)", "c(7.1102637, 50.8730573)", "c(7.1090923, 50.8800228)", 
+               "c(7.1072915, 50.8802163)", "c(7.1065359, 50.8803151)", "c(7.1082283, 50.882398)", 
+               "c(7.1086125, 50.8827628)", "c(7.1082363, 50.8829883)", "c(7.1077811, 50.8831816)", 
+               "c(7.1076365, 50.8832918)", "c(7.1052847, 50.8833852)", "c(7.1075706, 50.8835207)", 
+               "c(7.1094057, 50.8836983)", "c(7.1075655, 50.8839013)", "c(7.1075276, 50.8840923)", 
+               "c(7.1073947, 50.8842792)", "c(7.1092781, 50.8778496)", "c(7.1093589, 50.8802181)", 
+               "c(7.1085314, 50.8802345)", "c(7.1086788, 50.8802715)", "c(7.1092265, 50.8803148)", 
+               "c(7.1090858, 50.8803856)", "c(7.1088111, 50.8804417)", "c(7.109075, 50.8804459)", 
+               "c(7.1177331, 50.8676678)", "c(7.1100975, 50.8725404)", "c(7.1107719, 50.8730983)", 
+               "c(7.1142993, 50.8715419)", "c(7.115582, 50.8717896)", "c(7.1119801, 50.871955)", 
+               "c(7.1124218, 50.8719669)", "c(7.1118905, 50.8720537)", "c(7.1118081, 50.8722463)", 
+               "c(7.111641, 50.8724831)", "c(7.1149582, 50.8833278)", "c(7.1201726, 50.8843959)", 
+               "c(7.1593171, 50.8663043)", "c(7.118445, 50.859766)", "c(7.1194211, 50.857447)", 
+               "c(7.1500275, 50.8727031)", "c(7.1526174, 50.8730609)", "c(7.1189395, 50.8613577)", 
+               "c(7.1593273, 50.8663837)", "c(7.1593185, 50.8667754)", "c(7.1436339, 50.8745573)", 
+               "c(7.1436404, 50.8745903)", "c(7.1611741, 50.8689405)", "c(7.1613083, 50.8690611)", 
+               "c(7.1614478, 50.869211)", "c(7.1616027, 50.8694204)", "c(7.1616643, 50.8695406)", 
+               "c(7.1617032, 50.8696618)", "c(7.1617288, 50.8697871)", "c(7.1617413, 50.8698967)", 
+               "c(7.1617464, 50.8699928)", "c(7.1617196, 50.8701947)", "c(7.1616774, 50.8703124)", 
+               "c(7.1616162, 50.8704459)", "c(7.1614907, 50.8706298)", "c(7.1613351, 50.8708402)", 
+               "c(7.1612432, 50.8709595)", "c(7.16104, 50.8712324)", "c(7.160784, 50.8715545)", 
+               "c(7.1476107, 50.8725826)", "c(7.1467738, 50.8725822)", "c(7.1601743, 50.872335)", 
+               "c(7.1485387, 50.8725831)", "c(7.1527403, 50.8730706)", "c(7.1521925, 50.8729995)", 
+               "c(7.1507954, 50.8727878)", "c(7.1615326, 50.8693127)", "c(7.1617406, 50.8700858)", 
+               "c(7.1524845, 50.8730428)", "c(7.1529269, 50.8730885)", "c(7.1542061, 50.8733772)", 
+               "c(7.1559625, 50.8737844)", "c(7.1568231, 50.8739759)", "c(7.1566424, 50.8739383)", 
+               "c(7.1572663, 50.8740187)", "c(7.1574735, 50.8740215)", "c(7.1579433, 50.8739838)", 
+               "c(7.1581309, 50.8739495)", "c(7.1584374, 50.8738404)", "c(7.1585793, 50.8737825)", 
+               "c(7.1590852, 50.8735495)", "c(7.1594221, 50.8733138)", "c(7.1593438, 50.8733907)", 
+               "c(7.159221, 50.8734731)", "c(7.1596607, 50.873005)", "c(7.1598357, 50.8727748)", 
+               "c(7.1185362, 50.8593659)"), .Dim = c(191L, 4L), .Dimnames = list(
+                   NULL, c("osm_id", "barrier", "source", "geometry")))
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/r/" class="post-tag tag-link-r"
+                                        title="see questions tagged 'r'" rel="tag">r</a>
+                                
+                                    <a href="/tags/aerodrome/" class="post-tag tag-link-aerodrome"
+                                        title="see questions tagged 'aerodrome'" rel="tag">aerodrome</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Feb '21, 18:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3a980c677d8f8b63d40c2471a838899b?s=32&amp;d=identicon&amp;r=g" alt="anzor_sardalov's gravatar image" />
+    <p><a href="/users/19662/anzor_sardalov">anzor_sardalov</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="anzor_sardalov has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-78629">
+    
+</div>
+<div id="comment-tools-78629" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-78629-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/78629/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='8B9A8t7QnuJkkvxeNmHVKg32Wms6krZQ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/78629/get-useless-results-querying-aerodrome?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/78629/get-useless-results-querying-aerodrome?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/r/"
+            class="tag-link-r"
+            title="see questions tagged'r'using tags"
+            rel="tag">r</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/aerodrome/"
+            class="tag-link-aerodrome"
+            title="see questions tagged'aerodrome'using tags"
+            rel="tag">aerodrome</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 1, 2021, 6:26 p.m.">01 Feb '21, 18:26</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>783 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 1, 2021, 6:26 p.m.">01 Feb '21, 18:26</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/2220/aerowayaerodrome-also-for-small-airfields">aeroway=aerodrome also for small airfields?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis">Using R to get lat and lon from OSM_ids (without assistance of external software e.g. QGIS)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41673/get-open-street-map-in-r">get open street map in R</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48729/r-osmar-osmosis-not-reading-osmpbf">R-osmar: osmosis not reading osm.pbf</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50007/get_map-map-grabbing-failed">get_map map grabbing failed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53975/get-osm-map-in-r">Get OSM map in R</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57219/issues-with-osm-encoding-in-r">Issues with OSM encoding in r</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59916/local-nominatim-and-r">local Nominatim and R</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61080/why-does-a-filter-for-shops-result-in-points-not-being-tagged-as-shops">Why does a filter for shops result in points not being tagged as shops?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/72335/closed-airstrip">Closed airstrip</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

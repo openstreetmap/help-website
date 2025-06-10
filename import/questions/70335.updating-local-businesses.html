@@ -1,0 +1,741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>updating local businesses - OSM Help</title>
+        <meta name="description" content="I would like to update many businesses in my neighborhood as it appears most of the town hasn&#39;t been updated for a while.  In looking up best practices, I saw that a good suggestion was to move businesses that had moved to their new location (from: https://help.openstreetmap.org/questions/29089/how-..." />
+        <meta name="keywords" content="moving,businesses,bestpractice,business,old_name" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/70335/updating-local-businesses" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/70335/updating-local-businesses?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='1TxZaythfpfG645UlLc8PGItulcWbuwH' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/70335/updating-local-businesses">updating local businesses</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-70335-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70335/up/" rel="nofollow"> </a>
+<div id="post-70335-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-70335-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70335/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/70335/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I would like to update many businesses in my neighborhood as it appears most of the town hasn't been updated for a while.  </p>
+<p>In looking up best practices, I saw that a good suggestion was to move businesses that had moved to their new location (from: <a href="https://help.openstreetmap.org/questions/29089/how-to-indicate-that-restaurant-moved">https://help.openstreetmap.org/questions/29089/how-to-indicate-that-restaurant-moved</a>).  At this point, I have perhaps 50-100+ (maybe far more) deprecated shops and amenities that show up on OSM.  I don't know where most of them went. </p>
+<p>My plan is to change the information to the new businesses and use 'old_name=*' tag to show the shop/amenity that used to be there.</p>
+<p>Does it make sense to do it this way?  I found it quite difficult to individually look up where the old businesses had gone or whether they had simply closed their doors for good.</p>
+<p>any and all tips would be helpful.  I am simply trying to keep my home updated in OSM.</p>
+<p>As an aside, I am planning on using a combination of JOSM, ID, and Vespucci to accomplish this with Outside personal surveying.  Does anyone have any suggestions on the best way to accomplish this?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/moving/" class="post-tag tag-link-moving"
+                                        title="see questions tagged 'moving'" rel="tag">moving</a>
+                                
+                                    <a href="/tags/businesses/" class="post-tag tag-link-businesses"
+                                        title="see questions tagged 'businesses'" rel="tag">businesses</a>
+                                
+                                    <a href="/tags/bestpractice/" class="post-tag tag-link-bestpractice"
+                                        title="see questions tagged 'bestpractice'" rel="tag">bestpractice</a>
+                                
+                                    <a href="/tags/business/" class="post-tag tag-link-business"
+                                        title="see questions tagged 'business'" rel="tag">business</a>
+                                
+                                    <a href="/tags/old_name/" class="post-tag tag-link-old_name"
+                                        title="see questions tagged 'old_name'" rel="tag">old_name</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Aug '19, 17:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0b69645766408b3d054bc586362170d7?s=32&amp;d=identicon&amp;r=g" alt="OSMWeekly's gravatar image" />
+    <p><a href="/users/17014/osmweekly">OSMWeekly</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="OSMWeekly has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-70335">
+    
+</div>
+<div id="comment-tools-70335" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70335-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/70335/updating-local-businesses?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/70335/updating-local-businesses?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/70335/updating-local-businesses?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/70335/updating-local-businesses?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="70356"></a>
+                    <div id="answer-container-70356" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-70356-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70356/up/" rel="nofollow"> </a>
+<div id="post-70356-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-70356-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70356/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="OSMWeekly has selected this answer as the correct answer"
+        href="/accept_answer/70356/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>When a business mapped as a node (aka point) moves, there are two schools of thought:</p>
+<ol>
+<li>The node represents the business itself. If the business has moved, move the node to the new location. </li>
+<li>The node represents the premises. Keep the node in place and remove the tags specific for that business. If the old location now houses a new business, reuse the node for that -- otherwise use the <code>"disused:"</code> <a href="https://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts#Lifecycle_prefix_.28.3Cstatus.3E:.3Ckey.3E_.3D_.3Cvalue.3E.29">lifecycle prefix</a>. If you know where the old business has moved, map it as a new node in the new location.</li>
+</ol>
+<p>Both have their advantages. The main advantage of #1 is that an old URL link to the business in question will still work, and will show the updated location. The main advantage of #2 is that the history of a particular location is preserved, so you can easily look back through the changes and see the various businesses that have occupied that spot. ("<a href="https://wiki.openstreetmap.org/wiki/Keep_the_history">Keep the History</a>" is also considered good practice.)</p>
+<p>Usually I end up going with option #2, because there are several situations where #1 won't work well:</p>
+<ul>
+<li>You don't know where the new location is, or if there even is one (sounds like this is your situation.)</li>
+<li>The business was mapped as tags directly on a building (generally only done when it occupies the entire building.) Moving nodes makes sense but moving buildings usually doesn't. (Of course buildings do physically move sometimes!) A variation on this is when the <em>new</em> location occupies an entire building and might be better mapped directly on the building.</li>
+<li>The business is located in a building with multiple addresses, and is tagged with an address. Moving the node elsewhere would remove that address from the building. (Though you could still do option #1 by removing the incorrect address tags from the old node and adding a new address node with the old address in the old location.)</li>
+</ul>
+<p>Frederik suggests simply deleting the nodes, which is also fine (as long as they're not the only thing tagged with that address in a multi-address building!) but doesn't have the advantages of #1 or #2. It does have the advantage of simplicity though. Personally I don't tend to delete them unless it's an unusual situation. For example, if two neighboring shops mapped as nodes were combined into a single shop with a single address, I'd probably reuse one node and delete the other one.</p>
+<p>I definitely agree that using "<code>old_name</code>" probably isn't necessary or helpful. It's meant for situations where people still refer to something by its previous name, so unless you have evidence of this, leave it off. As long as you don't delete the node, the previous name will be there in its history.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/70356/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Aug '19, 15:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/977d95e2184a885d9a01fb3297225872?s=32&amp;d=identicon&amp;r=g" alt="jmapb's gravatar image" />
+    <p><a href="/users/14350/jmapb">jmapb</a><br/>
+    <span class="score" title="3387 reputation points"><span class="">3.4k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">&#9679;</span><span class="badgecount">33</span></span><span title="61 badges"><span class="bronze">&#9679;</span><span class="badgecount">61</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jmapb has 22 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-70356">
+    
+</div>
+<div id="comment-tools-70356" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70356-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="70337"></a>
+                    <div id="answer-container-70337" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-70337-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70337/up/" rel="nofollow"> </a>
+<div id="post-70337-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-70337-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70337/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>My recommendation would be to, if the shop isn't there anymore and you don't know where it went, delete it. I would reserve <code>old_name</code> for situations where the shop exists, but has been renamed, and people occasionally still use the old name - not to document that a certain shop was once here but is now gone. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/70337/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Aug '19, 17:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-70337">
+    
+</div>
+<div id="comment-tools-70337" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70337-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/70335/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='1TxZaythfpfG645UlLc8PGItulcWbuwH' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70335/updating-local-businesses?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70335/updating-local-businesses?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/bestpractice/"
+            class="tag-link-bestpractice"
+            title="see questions tagged'bestpractice'using tags"
+            rel="tag">bestpractice</a> <span class="tag-number">&#215;38</span><br/>
+        
+        <a href="/tags/business/"
+            class="tag-link-business"
+            title="see questions tagged'business'using tags"
+            rel="tag">business</a> <span class="tag-number">&#215;35</span><br/>
+        
+        <a href="/tags/businesses/"
+            class="tag-link-businesses"
+            title="see questions tagged'businesses'using tags"
+            rel="tag">businesses</a> <span class="tag-number">&#215;6</span><br/>
+        
+        <a href="/tags/moving/"
+            class="tag-link-moving"
+            title="see questions tagged'moving'using tags"
+            rel="tag">moving</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/old_name/"
+            class="tag-link-old_name"
+            title="see questions tagged'old_name'using tags"
+            rel="tag">old_name</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 7, 2019, 5:01 p.m.">07 Aug '19, 17:01</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,445 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 9, 2019, 3:56 p.m.">09 Aug '19, 15:56</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/45894/industrial-businesses">Industrial businesses</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2226/how-to-tag-building-names-that-are-part-of-bigger-common-areas">How to tag building names that are part of bigger, common areas?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5020/can-i-mark-the-location-of-my-business-on-the-maps">Can I mark the location of my business on the maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3824/should-amenities-eg-supermarkets-be-ways-or-nodes">Should amenities (e.g. supermarkets) be ways or nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4737/best-practices-for-applying-accessprivate">Best practices for applying access=private?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4740/are-there-areas-in-the-us-that-can-be-looked-at-for-reference">Are there areas in the US that can be looked at for reference?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3310/copyright-question-business">Copyright question (business)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6894/exceptionally-well-mapped-areas-examples">Exceptionally well mapped areas - examples</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6938/map-without-labels-and-businesses">Map without labels and businesses</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1194/what-osm-is-not">What OSM is not</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

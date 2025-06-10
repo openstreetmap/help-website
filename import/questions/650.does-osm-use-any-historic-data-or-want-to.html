@@ -1,0 +1,1091 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Does OSM use any historic data? or want to? - OSM Help</title>
+        <meta name="description" content="I researched the old historic route of vicinal railways in Belgium. Examples are http://maps.google.com/maps/ms?ie=UTF&amp;amp;msa=0&amp;amp;msid=113926885661481583715.00048564b3ccbd82e378e, http://commons.wikimedia.org/wiki/File:Brussels_SNCV.png, http://commons.wikimedia.org/wiki/File:Verviers_Tram.png. I..." />
+        <meta name="keywords" content="policy,historic,question,historical,general" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/650/does-osm-use-any-historic-data-or-want-to" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/650/does-osm-use-any-historic-data-or-want-to?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='1gFfceqaC8hJFDnBXnDAb4xudrR5RoVa' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/650/does-osm-use-any-historic-data-or-want-to">Does OSM use any historic data? or want to?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-650-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/650/up/" rel="nofollow"> </a>
+<div id="post-650-score" class="post-score"
+    title="current number of votes">
+    17
+</div>
+<a id="post-650-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/650/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/650/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   3
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I researched the old historic route of vicinal railways in Belgium. Examples are <a href="http://maps.google.com/maps/ms?ie=UTF&amp;msa=0&amp;msid=113926885661481583715.00048564b3ccbd82e378e">http://maps.google.com/maps/ms?ie=UTF&amp;msa=0&amp;msid=113926885661481583715.00048564b3ccbd82e378e</a>, <a href="http://commons.wikimedia.org/wiki/File:Brussels_SNCV.png">http://commons.wikimedia.org/wiki/File:Brussels_SNCV.png</a>, <a href="http://commons.wikimedia.org/wiki/File:Verviers_Tram.png">http://commons.wikimedia.org/wiki/File:Verviers_Tram.png</a>.
+Is such data usefull for OSM, or does OSM only work for the present? Other examples are the front lines in the first world war, or the old roman road network.  What is the policy in OSM for the fourth dimension? Time</p>
+<p>If it is wanted I can learn how to upload historic data, but I dont want to go to all the trouble if it is refused.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/policy/" class="post-tag tag-link-policy"
+                                        title="see questions tagged 'policy'" rel="tag">policy</a>
+                                
+                                    <a href="/tags/historic/" class="post-tag tag-link-historic"
+                                        title="see questions tagged 'historic'" rel="tag">historic</a>
+                                
+                                    <a href="/tags/question/" class="post-tag tag-link-question"
+                                        title="see questions tagged 'question'" rel="tag">question</a>
+                                
+                                    <a href="/tags/historical/" class="post-tag tag-link-historical"
+                                        title="see questions tagged 'historical'" rel="tag">historical</a>
+                                
+                                    <a href="/tags/general/" class="post-tag tag-link-general"
+                                        title="see questions tagged 'general'" rel="tag">general</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Aug '10, 19:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/57b9510f15842b95b07a0c5c596423cc?s=32&amp;d=identicon&amp;r=g" alt="smiley%20toerist's gravatar image" />
+    <p><a href="/users/159/smiley-toerist">smiley toerist</a><br/>
+    <span class="score" title="104 reputation points">104</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="smiley toerist has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/650/">
+                edited
+                <strong>07 Jun '11, 11:52</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b4a99bb74962d3cedff3e6d591847852?s=32&amp;d=identicon&amp;r=g" alt="Andrew%20Chadwick's gravatar image" />
+            <p><a href="/users/146/andrew-chadwick">Andrew Chadwick</a><br/>
+            <span class="score" title="1129 reputation points"><span class="">1.1k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="20 badges"><span class="silver">&#9679;</span><span class="badgecount">20</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-650">
+    
+</div>
+<div id="comment-tools-650" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-650-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/650/does-osm-use-any-historic-data-or-want-to?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/650/does-osm-use-any-historic-data-or-want-to?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/650/does-osm-use-any-historic-data-or-want-to?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/650/does-osm-use-any-historic-data-or-want-to?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="654"></a>
+                    <div id="answer-container-654" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-654-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/654/up/" rel="nofollow"> </a>
+<div id="post-654-score" class="post-score"
+    title="current number of votes">
+    16
+</div>
+<a id="post-654-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/654/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OSM is about tagging what <strong>is</strong>, not so much about what was. But some features that was is still.</p>
+<p>Old abandoned railways can still have the sleepers and the tracks laying in disrepair. This can be tagged with <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Ddisused"><em>railway=disused</em></a>, or if the sleepers and track has been removed it can be tagged as <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dabandoned"><em>railway=abandoned</em></a> and an appropriate <em>highway=</em>* tag if it is used as such.</p>
+<p>As to WWI front lines and old roman roads they can and should be mapped as they are now. For example many forts and ditches are still present from WWI. And some old roman ways still exists today.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/654/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Aug '10, 21:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44a4438f0146dfd898e24c221fd28b58?s=32&amp;d=identicon&amp;r=g" alt="Gnonthgol's gravatar image" />
+    <p><a href="/users/131/gnonthgol">Gnonthgol ♦</a><br/>
+    <span class="score" title="13750 reputation points"><span class="">13.8k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="103 badges"><span class="silver">&#9679;</span><span class="badgecount">103</span></span><span title="198 badges"><span class="bronze">&#9679;</span><span class="badgecount">198</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gnonthgol has 57 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/654/">
+                edited
+                <strong>05 Oct '11, 09:38</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-654">
+    
+</div>
+<div id="comment-tools-654" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-654-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="2105"></a>
+                    <div id="answer-container-2105" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2105-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2105/up/" rel="nofollow"> </a>
+<div id="post-2105-score" class="post-score"
+    title="current number of votes">
+    9
+</div>
+<a id="post-2105-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2105/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>We do not do historic information very consistently or thoroughly. It's not really OSM's central focus - describing reality as it is at present. Mass data imports which haven't been checked against objective reality aren't really encouraged.</p>
+<p>However, <em>if and only if</em> you know a physical trace remains in the landscape, you can use <strong>railway=abandoned</strong> or <strong>railway=disused</strong>, as <a href="http://wiki.openstreetmap.org/wiki/Railway#Explanation_of_railway.3Dabandoned">explained</a> on the page for railway tagging, to tag track routes.</p>
+<p>For everything else? Well, you could use the "historic" key as well for track-side infrastructure of some former importance that's still standing (station level, perhaps). Additionally, for buildings abandoned or disused (and still visible), the "building" key makes a good start. A third option is "man_made" for visible metalwork and signalling remnants. I strongly recommend using values different from anything anybody might want to use for infrastructure which still exists and is in use.</p>
+<p>A very important caveat: if you invent tagging, please make sure that it's backwards-compatible - in other words, if no visible trace remains of something, don't tag it using combinations that would result in it being represented or interpreted as an object currently in use. You can use <a href="http://taginfo.openstreetmap.de/">taginfo</a> (when it's working...) to search for existing tags and how widespread they are.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2105/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jan '11, 16:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b4a99bb74962d3cedff3e6d591847852?s=32&amp;d=identicon&amp;r=g" alt="Andrew%20Chadwick's gravatar image" />
+    <p><a href="/users/146/andrew-chadwick">Andrew Chadwick</a><br/>
+    <span class="score" title="1129 reputation points"><span class="">1.1k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="20 badges"><span class="silver">&#9679;</span><span class="badgecount">20</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andrew Chadwick has 3 accepted answers">25&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2105">
+    
+</div>
+<div id="comment-tools-2105" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2105-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="2088"></a>
+                    <div id="answer-container-2088" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2088-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2088/up/" rel="nofollow"> </a>
+<div id="post-2088-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-2088-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2088/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yes, like this:
+<a href="http://wiki.openstreetmap.org/wiki/Key:historic">http://wiki.openstreetmap.org/wiki/Key:historic</a></p>
+<p>No, not like this:
+<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/4th_Dimension">http://wiki.openstreetmap.org/wiki/Proposed_features/4th_Dimension</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2088/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jan '11, 15:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cb9e3487765b1e13e3fd6ebb00fdcac7?s=32&amp;d=identicon&amp;r=g" alt="Kartograefin's gravatar image" />
+    <p><a href="/users/646/kartograefin">Kartograefin</a><br/>
+    <span class="score" title="592 reputation points">592</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kartograefin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2088">
+    
+        <a name="30147"></a>
+        <div class="comment" id="comment-30147">
+            <div id="post-30147-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think your right but I also see enough room for a another OSM related project which could focus on the "4th dimension" or historical maps.</p></div>
+            <div class="comment-info" id="comment-30147-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '14, 12:00)</span>
+                <a class="comment-user userinfo" href="/users/6268/ogmios">Ogmios</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-2088" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2088-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="30148"></a>
+                    <div id="answer-container-30148" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30148-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30148/up/" rel="nofollow"> </a>
+<div id="post-30148-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-30148-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30148/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This would be ideal for the OpenHistoricalMap, see <a href="http://wiki.openstreetmap.org/wiki/OpenHistoricalMap">http://wiki.openstreetmap.org/wiki/OpenHistoricalMap</a> (website OpenHistoricalMap.org down atm)</p>
+<p>If you want to push OHM, help would be appreciated!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30148/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Jan '14, 12:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/201d9aec5c8f557b09151bc63a8714a1?s=32&amp;d=identicon&amp;r=g" alt="species's gravatar image" />
+    <p><a href="/users/8213/species">species</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="species has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30148">
+    
+</div>
+<div id="comment-tools-30148" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30148-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="651"></a>
+                    <div id="answer-container-651" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-651-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/651/up/" rel="nofollow"> </a>
+<div id="post-651-score" class="post-score"
+    title="current number of votes">
+    -9
+</div>
+<a id="post-651-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/651/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yes: railway=abandoned includes railways for which no trace remains, as well as those that are now trails or otherwise visible. One could similarly use highway=abandoned.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/651/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Aug '10, 20:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0c334b9f230e39c1e73a2b0322a23fb3?s=32&amp;d=identicon&amp;r=g" alt="NE2's gravatar image" />
+    <p><a href="/users/103/ne2">NE2</a><br/>
+    <span class="score" title="1359 reputation points"><span class="">1.4k</span></span><span title="33 badges"><span class="badge1">&#9679;</span><span class="badgecount">33</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="54 badges"><span class="bronze">&#9679;</span><span class="badgecount">54</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="NE2 has one accepted answer">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-651">
+    
+        <a name="661"></a>
+        <div class="comment" id="comment-661">
+            <div id="post-661-score" class="comment-score">7</div>
+            <div class="comment-text"><p>railway=abandoned does not signify that is WAS a railway, it signifies that it IS an abandoned railway. IE, it could be a good place to go for a walk etc.</p></div>
+            <div class="comment-info" id="comment-661-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Aug '10, 22:27)</span>
+                <a class="comment-user userinfo" href="/users/168/thingomy">Thingomy</a>
+                
+            </div>
+        </div>
+    
+        <a name="662"></a>
+        <div class="comment" id="comment-662">
+            <div id="post-662-score" class="comment-score"></div>
+            <div class="comment-text"><p>Nope. highway=track signifies that it could be a good place fo go for a walk. railway=abandoned on its own means nothing about the current status; in most cases it will be private property.</p></div>
+            <div class="comment-info" id="comment-662-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Aug '10, 22:58)</span>
+                <a class="comment-user userinfo" href="/users/103/ne2">NE2</a>
+                
+            </div>
+        </div>
+    
+        <a name="2444"></a>
+        <div class="comment" id="comment-2444">
+            <div id="post-2444-score" class="comment-score">5</div>
+            <div class="comment-text"><p>I wouldn't use "railway=abandoned" for railways where no trace remains; only where you can still see the route clearly in the landscape.  Personally I'd use "railway=dismantled" (not supported by renderers and nor should it be) when retagging old railways that have been added (e.g. from historic maps) of which there's no sign on the ground.</p>
+
+<p>Also, there's no reason why something can't be both "railway=abandoned" and "highway=track".</p></div>
+            <div class="comment-info" id="comment-2444-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '11, 15:37)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-651" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-651-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/650/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='1gFfceqaC8hJFDnBXnDAb4xudrR5RoVa' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/650/does-osm-use-any-historic-data-or-want-to?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/650/does-osm-use-any-historic-data-or-want-to?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/historic/"
+            class="tag-link-historic"
+            title="see questions tagged'historic'using tags"
+            rel="tag">historic</a> <span class="tag-number">&#215;37</span><br/>
+        
+        <a href="/tags/question/"
+            class="tag-link-question"
+            title="see questions tagged'question'using tags"
+            rel="tag">question</a> <span class="tag-number">&#215;23</span><br/>
+        
+        <a href="/tags/historical/"
+            class="tag-link-historical"
+            title="see questions tagged'historical'using tags"
+            rel="tag">historical</a> <span class="tag-number">&#215;19</span><br/>
+        
+        <a href="/tags/policy/"
+            class="tag-link-policy"
+            title="see questions tagged'policy'using tags"
+            rel="tag">policy</a> <span class="tag-number">&#215;15</span><br/>
+        
+        <a href="/tags/general/"
+            class="tag-link-general"
+            title="see questions tagged'general'using tags"
+            rel="tag">general</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 12, 2010, 7:54 p.m.">12 Aug '10, 19:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>14,453 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 23, 2014, 12:04 p.m.">23 Jan '14, 12:04</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/36504/creating-a-local-history-map">Creating a local history map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56695/buildings-which-have-historically-interesting-usage-which-is-now-altered">Buildings which have historically interesting usage which is now altered</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4767/placed-points-do-not-appear">Placed points do not appear</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5506/historical-points-of-interest">Historical points of interest</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6599/how-to-add-direction-arrowstraffic-for-a-street">[closed] How to add direction arrows(traffic) for a street?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8289/api-allows-duplicate-ways-within-a-relation">API allows duplicate ways within a relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12070/usage-policy">Usage Policy</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11212/how-to-tag-a-railway-boneyard">how to tag a railway boneyard</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12987/historical-claims-vs-abusivedestroying-edits">[closed] historical claims vs. abusive&amp;destroying edits</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4849/military-objects">Military objects</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

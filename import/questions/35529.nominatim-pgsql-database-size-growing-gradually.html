@@ -1,0 +1,946 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Nominatim PgSQL database size growing gradually - OSM Help</title>
+        <meta name="description" content="Hi, We have installed Nominatim 2.2.0 on centos We have uploaded\imported Netherlands Map. and initiated daily Auto updates using command  &quot;/utils/update.php --import-osmosis-all --no-npi&quot;  Now, every day Postgres database size growing rapidly , even though only imported NL maps.  How can I decrease..." />
+        <meta name="keywords" content="database,nominatim,size" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/35529/nominatim-pgsql-database-size-growing-gradually" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/35529/nominatim-pgsql-database-size-growing-gradually?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='6EiXqSS5RSLbbatzOew2Sw7beVepQhes' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/35529/nominatim-pgsql-database-size-growing-gradually">Nominatim PgSQL database size growing gradually</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-35529-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35529/up/" rel="nofollow"> </a>
+<div id="post-35529-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-35529-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35529/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/35529/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>We have installed Nominatim 2.2.0 on centos</p>
+<p>We have uploaded\imported Netherlands Map.</p>
+<p>and initiated daily Auto updates using command </p>
+<pre><code>"/utils/update.php --import-osmosis-all --no-npi"
+</code></pre>
+<p>Now, every day Postgres database size growing rapidly , even though only imported NL maps. </p>
+<p>How can I decrease or limit the size of Nominatim database to not growing gradually.</p>
+<p>Thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/database/" class="post-tag tag-link-database"
+                                        title="see questions tagged 'database'" rel="tag">database</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/size/" class="post-tag tag-link-size"
+                                        title="see questions tagged 'size'" rel="tag">size</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Aug '14, 14:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/374a88555372b3ec6b7e5accef89b9f3?s=32&amp;d=identicon&amp;r=g" alt="PrakashThakor's gravatar image" />
+    <p><a href="/users/8618/prakashthakor">PrakashThakor</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="PrakashThakor has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/35529/">
+                edited
+                <strong>05 Aug '14, 14:45</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-35529">
+    
+        <a name="35544"></a>
+        <div class="comment" id="comment-35544">
+            <div id="post-35544-score" class="comment-score"></div>
+            <div class="comment-text"><p>What version of PG is this ? Did you leave the autovacuum settings at their default ? Does <a href="http://bucardo.org/wiki/Check_postgres">check_postgres.pl</a> --action=bloat --db=nominatim show a lot of bloat ?</p></div>
+            <div class="comment-info" id="comment-35544-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '14, 17:39)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="35656"></a>
+        <div class="comment" id="comment-35656">
+            <div id="post-35656-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Vincent,</p>
+
+<ol>
+<li>I have PGSQL 9.3</li>
+<li>Yes , I did not change in autovaccum settings and its default.</li>
+<li>"check_postgres.pl --action=bloat --db=nominatim" shown following result</li>
+</ol>
+
+<h2>[root@nominatim-ams check_postgres-2.21.0]# ./check_postgres.pl --action=bloat -db=nominatim POSTGRES_BLOAT CRITICAL: DB "nominatim" (db nominatim) index planet_osm_ways_nodes rows:? pages:1737024 shouldbe:502394 (3.5X) wasted bytes:10114088960 (9 GB) | planet_osm_ways_nodes=10114088960B public.place_addressline=1059995648B idx_search_name_nameaddress_vector=1001832448B idx_placex_pendingsector=114614272B public.search_name=110084096B public.location_area_large_117=45719552B public.placex=7045120B idx_location_area_large_117_geometry=1089536B idx_location_area_large_117_place_id=0B idx_place_addressline_address_place_id=0B idx_place_addressline_place_id=0B idx_search_name_centroid=0B idx_search_name_name_vector=0B idx_search_name_place_id=0B public.planet_osm_ways=0B</h2></div>
+            <div class="comment-info" id="comment-35656-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '14, 11:07)</span>
+                <a class="comment-user userinfo" href="/users/8618/prakashthakor">PrakashThakor</a>
+                
+            </div>
+        </div>
+    
+        <a name="51167"></a>
+        <div class="comment" id="comment-51167">
+            <div id="post-51167-score" class="comment-score"></div>
+            <div class="comment-text"><p>I was able to reduce the bloating by reindexing the affected tables, first I ran above check_postgres script to find out which tables/indexes exactly where affected:</p>
+
+<ul>
+<li>POSTGRES_BLOAT CRITICAL: DB "nominatim" (db nominatim) index idx_search_name_nameaddress_vector rows:? pages:5571228 shouldbe:1788574 (3.1X) wasted bytes:30987501568 (28 GB) * (db nominatim) table public.place_addressline rows:299672640 pages:3052511 shouldbe:2200240 (1.4X) wasted size:6981804032 (6 GB) | [...]</li>
+</ul>
+
+<p>and then ran the following commands:</p>
+
+<ul>
+<li>psql nominatim -c "reindex index idx_search_name_nameaddress_vector;"</li>
+<li>psql nominatim -c "reindex table public.place_addressline;"</li>
+</ul>
+
+<p>Freed up a lot of space</p></div>
+            <div class="comment-info" id="comment-51167-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jul '16, 12:34)</span>
+                <a class="comment-user userinfo" href="/users/294/jot">jot</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35529" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35529-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/35529/nominatim-pgsql-database-size-growing-gradually?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/35529/nominatim-pgsql-database-size-growing-gradually?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/35529/nominatim-pgsql-database-size-growing-gradually?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/35529/nominatim-pgsql-database-size-growing-gradually?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="35657"></a>
+                    <div id="answer-container-35657" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35657-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35657/up/" rel="nofollow"> </a>
+<div id="post-35657-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-35657-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35657/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Are you updating from the global minutely diffs? If yes, while I don't know the exact workings of nominatim, this will cause additional objects to be added outside of the area of your original extract.</p>
+<p>There are numerous ways around this problem, one is to consume diffs that are specific to your region as, for example, provided by GeoFabrik <a href="http://download.geofabrik.de/europe/netherlands-updates/">http://download.geofabrik.de/europe/netherlands-updates/</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35657/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Aug '14, 12:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/35657/">
+                edited
+                <strong>09 Aug '14, 12:31</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35657">
+    
+        <a name="35660"></a>
+        <div class="comment" id="comment-35660">
+            <div id="post-35660-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi SimonPools,</p>
+
+<p>Mostly  I kept default setting of Nominatim , should I change replication URL to <a href="http://download.geofabrik.de/europe/netherlands-updates/">http://download.geofabrik.de/europe/netherlands-updates/</a></p>
+
+<p>//Replication settings</p>
+
+<p>@define('CONST_Replication_Url', 'http://planet.openstreetmap.org/replication/minute');</p>
+
+<pre><code>    @define('CONST_Replication_MaxInterval', '40000');
+
+    @define('CONST_Replication_Update_Interval', '172800');  // How often upstream publishes diffs
+
+    @define('CONST_Replication_Recheck_Interval', '900'); // How long to sleep if no update found yet
+</code></pre></div>
+            <div class="comment-info" id="comment-35660-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '14, 12:52)</span>
+                <a class="comment-user userinfo" href="/users/8618/prakashthakor">PrakashThakor</a>
+                
+            </div>
+        </div>
+    
+        <a name="35661"></a>
+        <div class="comment" id="comment-35661">
+            <div id="post-35661-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes, you should change the URL. You might also want to redo your import from scratch to get rid of the unwanted world data.</p></div>
+            <div class="comment-info" id="comment-35661-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '14, 14:31)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="35662"></a>
+        <div class="comment" id="comment-35662">
+            <div id="post-35662-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Vincent,</p>
+
+<p>But I did initial import of only Netherland maps using netherlands-latest.osm.pbf and not the entire planet maps , AS we only required Netherlands Maps.</p>
+
+<p>Do I need to still import from scratch.</p></div>
+            <div class="comment-info" id="comment-35662-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '14, 14:38)</span>
+                <a class="comment-user userinfo" href="/users/8618/prakashthakor">PrakashThakor</a>
+                
+            </div>
+        </div>
+    
+        <a name="35664"></a>
+        <div class="comment" id="comment-35664">
+            <div id="post-35664-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Consuming worldwide diffs adds worldwide data to your db, regardless of what region the initial db contained. That's certainly what causes the rapid db growth.</p>
+
+<p>You don't <em>have</em> to remove that data, but it's probably a good idea.</p></div>
+            <div class="comment-info" id="comment-35664-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '14, 14:49)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35657" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35657-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="35663"></a>
+                    <div id="answer-container-35663" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35663-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35663/up/" rel="nofollow"> </a>
+<div id="post-35663-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-35663-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35663/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As SimonPoole says, making sure you get only the local diffs is the most important step. That said, it's strange that you got all the way to a 9G/3.5x bloat. Check that <a href="http://www.postgresql.org/docs/current/static/routine-vacuuming.html">autovacuum</a> is working as expected :</p>
+<pre><code>psql nominatim -c "select relname,last_autovacuum from pg_stat_user_tables;"
+</code></pre>
+<p>You should see recent-ish dates for your updated tables. Check your logs for errors if not.</p>
+<p>It's often a good idea to set your vacuuming more aggressively in postgresql.conf:</p>
+<pre><code>autovacuum_vacuum_threshold = 5000
+autovacuum_analyze_threshold = 5000
+autovacuum_vacuum_scale_factor = 0.02
+autovacuum_analyze_scale_factor = 0.01
+autovacuum_vacuum_cost_delay = 10ms
+</code></pre>
+<p>Also, at any time you can issue a manual full vacuum to regain space (note that some % of bloat is normal, and that doing a "full" vacuum will block other db queries) :</p>
+<pre><code>vacuumdb -fz nominatim
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35663/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Aug '14, 14:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d20f86db9a6f03cb070e9fbaaf0b7228?s=32&amp;d=identicon&amp;r=g" alt="Vincent%20de%20Phily's gravatar image" />
+    <p><a href="/users/867/vincent-de-phily">Vincent de P... ♦</a><br/>
+    <span class="score" title="17304 reputation points"><span class="">17.3k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="152 badges"><span class="silver">&#9679;</span><span class="badgecount">152</span></span><span title="249 badges"><span class="bronze">&#9679;</span><span class="badgecount">249</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vincent de Phily has 64 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35663">
+    
+        <a name="35665"></a>
+        <div class="comment" id="comment-35665">
+            <div id="post-35665-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Vincent I just ran query to find most space consuming tables on Nominatim db.</p>
+
+<p>and found tables consumes most of the space in Indexing </p>
+
+<p>for example plane_osm_ways occupies 14 GB of index</p>
+
+<p></p><hr>
+<p>Table Name ; Table_size ; Indexs_size, Total Size</p>
+<hr>
+<p>""public"."planet_osm_ways"";"4914 MB";"14 GB";"19 GB"</p>
+<p>""public"."planet_osm_nodes"";"10 GB";"5773 MB";"16 GB"</p>
+<p>""public"."placex"";"5609 MB";"10 GB";"16 GB"</p>
+<p>""public"."place"";"5416 MB";"2152 MB";"7568 MB"</p>
+<p>""public"."place_addressline"";"3687 MB";"3512 MB";"7200 MB"</p>
+<p>""public"."new_query_log"";"6537 MB";"341 MB";"6879 MB"</p><p></p></div>
+            <div class="comment-info" id="comment-35665-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '14, 15:03)</span>
+                <a class="comment-user userinfo" href="/users/8618/prakashthakor">PrakashThakor</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35663" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35663-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/35529/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='6EiXqSS5RSLbbatzOew2Sw7beVepQhes' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/35529/nominatim-pgsql-database-size-growing-gradually?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/35529/nominatim-pgsql-database-size-growing-gradually?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/database/"
+            class="tag-link-database"
+            title="see questions tagged'database'using tags"
+            rel="tag">database</a> <span class="tag-number">&#215;118</span><br/>
+        
+        <a href="/tags/size/"
+            class="tag-link-size"
+            title="see questions tagged'size'using tags"
+            rel="tag">size</a> <span class="tag-number">&#215;30</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 5, 2014, 2:29 p.m.">05 Aug '14, 14:29</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,044 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 29, 2016, 12:36 p.m.">29 Jul '16, 12:36</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/75932/possible-to-drop-regions-from-my-nominatim-instance">Possible to drop regions from my Nominatim instance?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52634/how-big-is-the-main-sql-database-where-edits-are-saved-to">How big is the main SQL database where edits are saved to?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12286/how-can-i-get-the-zone-administrive-of-a-city-from-postgis-nominatim-import">How can I get the zone administrive of a city from postgis (nominatim import)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15970/comparison-between-nominatimosm-site-and-my-local-site">Comparison between nominatim.osm site and my local site</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23965/overpass-api-database-size">Overpass API database size</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46540/missing-dbphp">[closed] Missing DB.php</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12561/was-does-the-leading-space-mean-in-wordword_token">Was does the leading space mean in word.word_token?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12388/best-way-to-get-all-cities-of-a-specific-area">Best way to get all cities of a specific area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2680/can-i-produce-a-database-of-addresses-from-osm-data">Can I produce a database of addresses from OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22889/lossy-and-lossless-methods-getting-osm-data">Lossy and Lossless Methods Getting OSM Data</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

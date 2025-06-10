@@ -1,0 +1,849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Some ways not imported by osm2pgsql - OSM Help</title>
+        <meta name="description" content="SOLVED Following a comment below saying the script works for another user, I created a greatly simplified Overpass query to pull the missing data and it works fine. This tells me that the nodes are missing from the source query results so there&#39;s actually nothing wrong with my LUA script. Thanks for..." />
+        <meta name="keywords" content="osm2pgsql" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/85473/some-ways-not-imported-by-osm2pgsql" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/85473/some-ways-not-imported-by-osm2pgsql?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='kZLDPid8a712roKJqSTkTazhRLxnwMrf' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/85473/some-ways-not-imported-by-osm2pgsql">Some ways not imported by osm2pgsql</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-85473-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85473/up/" rel="nofollow"> </a>
+<div id="post-85473-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85473-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85473/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/85473/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <h1>SOLVED</h1>
+<p>Following a comment below saying the script works for another user, I created a greatly simplified Overpass query to pull the missing data and it works fine. This tells me that the nodes are missing from the source query results so there's actually nothing wrong with my LUA script.</p>
+<p>Thanks for the replies, if I can't work out the issue with the overpass query I'll open another question. Hopefully I won't have to :)</p>
+<hr>
+<p>I've been working on a LUA import script for osm2pgsql and once I had it all working I checked the database in qgis and found that some ways are missing.</p>
+<p>I can see them in the source XML file (from overpass), with all their node references but osm2pgsql does not import them.</p>
+<p>I've created a small test script to try and visualise what is happening</p>
+<pre><code>inspect = require('inspect')
+
+local tables = {}
+
+tables.way_test = osm2pgsql.define_table({
+    name = 'way_test',
+    ids = { type = 'way', id_column = "id"},
+    columns = {
+        { column = 'name', type = 'text' },
+        { column = 'geom', type = 'geometry' },
+    }
+})
+
+function osm2pgsql.process_way(object)
+    if object.id == 987525760 then
+        print(inspect(object))
+        print("line", object.as_linestring())
+        print("poly", object.as_polygon())
+        print("mline", object.as_multilinestring())
+        print("mpoly", object.as_multipolygon())
+    end
+
+    tables.way_test:add_row({
+        name = object.tags.name,
+        geom = { create = 'line' },
+    })
+end
+</code></pre>
+<p>The above script is run with the following CLI arguments to version <strong>1.7.0</strong> which I compiled myself:</p>
+<pre><code>osm2pgsql --host=localhost --user=user --database=db --cache=40050 --flat-nodes=nodes.tmp -sWG --output=flex --style=test.lua data.pbf
+</code></pre>
+<p>This script does not add the missing lines to the test table but does tell me at all four of the <code>as_</code> functions return NULL.</p>
+<p>I've also imported the same data using the default style and the way does not appear in the lines table.</p>
+<pre><code>osm2pgsql --host=localhost --user=user --database=db --cache=40050 --flat-nodes=nodes.tmp -sWG --output=pgsql data.pbf
+</code></pre>
+<p>All this suggests dodgy data but the way exists and does have a geometry in OSM itself <a href="https://www.openstreetmap.org/way/987525760">https://www.openstreetmap.org/way/987525760</a></p>
+<p>While this is one specific way, there are a few I've spotted due to familiarity with the area. Some, like this one are missing while a few others seem to be a straight line from the first to last node without other nodes in between. Can anyone explain why this way is not being imported?</p>
+<p>Versions:</p>
+<pre><code>osm2pgsql version 1.7.0 (1.7.0)
+Build: RelWithDebInfo
+Compiled using the following library versions:
+Libosmium 2.17.3
+Proj [API 6] 8.2.1
+Lua 5.3.6
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Aug '22, 14:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0d0a44946fe28018053741f5a225e569?s=32&amp;d=identicon&amp;r=g" alt="DarkSnow's gravatar image" />
+    <p><a href="/users/22161/darksnow">DarkSnow</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DarkSnow has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/85473/">
+                edited
+                <strong>31 Aug '22, 11:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-85473">
+    
+        <a name="85480"></a>
+        <div class="comment" id="comment-85480">
+            <div id="post-85480-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/openstreetmap-carto.lua">https://github.com/gravitystorm/openstreetmap-carto/blob/master/openstreetmap-carto.lua</a> is a fairly minimal implementation for the normal backend - maybe start from there and amend the functions you want to change as required?</p></div>
+            <div class="comment-info" id="comment-85480-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Aug '22, 20:04)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="85485"></a>
+        <div class="comment" id="comment-85485">
+            <div id="post-85485-score" class="comment-score">1</div>
+            <div class="comment-text"><p>As other mentioned before, you should at least post the complete command line you have been using as well as the version number of osm2pgsql. Otherwise we are stumbling in the dark. When I try your script, osm2pgsql fails with an error message, so I would expect this not to put any data in the database. When I remove the offending lines (those with <code>as_multilinestring()</code> and <code>as_multipolygon()</code>) the script runs through add adds that way to the database.</p></div>
+            <div class="comment-info" id="comment-85485-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '22, 08:20)</span>
+                <a class="comment-user userinfo" href="/users/112/jochen-topf">Jochen Topf</a>
+                
+            </div>
+        </div>
+    
+        <a name="85490"></a>
+        <div class="comment" id="comment-85490">
+            <div id="post-85490-score" class="comment-score"></div>
+            <div class="comment-text"><p>Jochen, it's very interesting that the script is working for you. The print lines are for testing, but work fine for me on version 1.7.0, so can be safely removed.</p>
+
+<p>If the way is being imported for you, how are you getting the source data?</p>
+
+<p>I'm using the following query to get data from overpass:</p>
+
+<pre><code>[timeout:1800];
+// Gather results from the UK
+area["name"="United Kingdom"]-&gt;.boundaryarea;
+(
+  wr["piste:type"](area.boundaryarea);
+  rel["site"="piste"](area.boundaryarea);
+  &gt;&gt;;
+  wr[~"^([A-Za-z]+:)?landuse$"~"^winter_sports$"](area.boundaryarea);
+  (._; &gt;;);
+  way(r)["railway"](area.boundaryarea)-&gt;.siterailways;
+  way["railway"="funicular"](area.boundaryarea)-&gt;.funiculars;
+  way[~"^([A-Za-z]+:)?aerialway$"~"^.*$"](area.boundaryarea)-&gt;.aerialways;
+  ((.aerialways; .siterailways; .funiculars;); &gt;;);
+  rel[site=piste](area.boundaryarea)-&gt;.sites;
+  (way(r.sites)[!"piste:type"][!"aerialway"][!"railway"](area.boundaryarea);
+  node(r.sites);)-&gt;.pois;
+  (.pois; .pois&gt;;);
+);
+// print results
+out body geom;
+</code></pre></div>
+            <div class="comment-info" id="comment-85490-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '22, 12:12)</span>
+                <a class="comment-user userinfo" href="/users/22161/darksnow">DarkSnow</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-85473" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85473-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/85473/some-ways-not-imported-by-osm2pgsql?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/85473/some-ways-not-imported-by-osm2pgsql?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/85473/some-ways-not-imported-by-osm2pgsql?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/85473/some-ways-not-imported-by-osm2pgsql?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="85483"></a>
+                    <div id="answer-container-85483" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85483-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85483/up/" rel="nofollow"> </a>
+<div id="post-85483-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-85483-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85483/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is a whole lot of information missing in your question, the most important one: are you using 'pgsql' or 'flex' output?</p>
+<p>You can't mix both. If you create a LUA file designed for flex, you need to use the flex output parameters on the command line to have it properly function. The same for pgsql. Don't mix them up.</p>
+<p>Read the osm2pgsql manual carefully:</p>
+<p><a href="https://osm2pgsql.org/doc/manual.html">https://osm2pgsql.org/doc/manual.html</a></p>
+<p>and realize chapters 6 (for flex) and 7 (pgsql) there should be treated as wholly separate information: either you need to read 6, or 7, depending on the choice of output. If you choose one, then forget about the information in the other chapter, as it won't be relevant.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85483/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Aug '22, 07:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc8a1ef54d3e25744ee52d1ad1459a81?s=32&amp;d=identicon&amp;r=g" alt="mboeringa's gravatar image" />
+    <p><a href="/users/9580/mboeringa">mboeringa</a><br/>
+    <span class="score" title="1542 reputation points"><span class="">1.5k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mboeringa has 4 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85483">
+    
+        <a name="85487"></a>
+        <div class="comment" id="comment-85487">
+            <div id="post-85487-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for that response. It's a lua script so I'm using flex, but I also tried pgsql with the default style and the way wasn't imported. I thought I was clear but I'll update the question to clarify and add the command line options.</p></div>
+            <div class="comment-info" id="comment-85487-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '22, 10:50)</span>
+                <a class="comment-user userinfo" href="/users/22161/darksnow">DarkSnow</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-85483" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85483-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="85479"></a>
+                    <div id="answer-container-85479" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85479-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85479/up/" rel="nofollow"> </a>
+<div id="post-85479-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85479-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85479/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm not familiar with rendering, but looking at the tags, I'd say it's because there's no rendered tags on this way. Probably there are filters to keep only known tags.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85479/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Aug '22, 19:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85479">
+    
+</div>
+<div id="comment-tools-85479" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85479-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/85473/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='kZLDPid8a712roKJqSTkTazhRLxnwMrf' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/85473/some-ways-not-imported-by-osm2pgsql?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/85473/some-ways-not-imported-by-osm2pgsql?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 29, 2022, 2:57 p.m.">29 Aug '22, 14:57</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,027 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 31, 2022, 11:48 a.m.">31 Aug '22, 11:48</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2259/is-there-a-reason-why-osm2pgsql-produces-negative-osm_id-values">Is there a reason why osm2pgsql produces negative osm_id values?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4789/how-to-configure-postgresql-for-mapnik-hourly-updates">How to configure postgresql for mapnik hourly updates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4888/missing-tables-during-osm2pgsql-import">Missing tables during osm2pgsql import</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5389/merging-2-countries-with-osm2pgsql">Merging 2 countries with osm2pgsql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5956/how-much-ram-does-osm2pgsql-need">How much RAM does osm2pgsql need?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6256/why-do-osm2pgsql-and-mapnik-use-spherical-projection-900913">Why do osm2pgsql and Mapnik use spherical projection 900913?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8108/osm-databases">osm databases</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8322/osm2pgsql-import-getting-killed-as-relations-are-processed">osm2pgsql import getting killed as relations are processed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1/how-do-you-make-the-osm2pgsql-diff-imports-run-faster-than-molasses-on-postgres-84">How do you make the osm2pgsql diff imports run faster than molasses on postgres 8.4?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

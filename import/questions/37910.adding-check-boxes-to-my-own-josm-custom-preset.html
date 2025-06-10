@@ -1,0 +1,735 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>adding check boxes to my own JOSM custom preset - OSM Help</title>
+        <meta name="description" content="I am working on a preset to apply to fuel stations. I want to use check boxes to enter data values for certain keys, for example,  &amp;lt;check key=&quot;fuel:gasoline_95&quot; text=&quot;Gas 95&quot; default=&quot;off&quot; delete_if_empty=&quot;true&quot; /&amp;gt;  What I would like is for the tag value to be set to &quot;no&quot; if the check box is u..." />
+        <meta name="keywords" content="josm,preset,check_box" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/37910/adding-check-boxes-to-my-own-josm-custom-preset" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/37910/adding-check-boxes-to-my-own-josm-custom-preset?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='IsIitkEeZMQmlo7g4N0NucwgsxCuRYmq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/37910/adding-check-boxes-to-my-own-josm-custom-preset">adding check boxes to my own JOSM custom preset</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-37910-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37910/up/" rel="nofollow"> </a>
+<div id="post-37910-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-37910-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37910/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/37910/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am working on a preset to apply to fuel stations. I want to use check boxes to enter data values for certain keys, for example, </p>
+<pre><code>&lt;check key="fuel:gasoline_95" text="Gas 95" default="off" delete_if_empty="true"  /&gt;
+</code></pre>
+<p>What I would like is for the tag value to be set to "no" if the check box is unchecked and "yes" if the check box is checked. I tried removing the delete_if_empty="true" phrase but it had no effect at all. Neither did changing "true" to "false". The only behavior I observe is that the key doesn't appear if the box is left unchecked.</p>
+<p>Is there a way to do this?
+Thanks....</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/preset/" class="post-tag tag-link-preset"
+                                        title="see questions tagged 'preset'" rel="tag">preset</a>
+                                
+                                    <a href="/tags/check_box/" class="post-tag tag-link-check_box"
+                                        title="see questions tagged 'check_box'" rel="tag">check_box</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Oct '14, 03:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/04dddf6f5ffde333747d385af3ce5829?s=32&amp;d=identicon&amp;r=g" alt="AlaskaDave's gravatar image" />
+    <p><a href="/users/5016/alaskadave">AlaskaDave</a><br/>
+    <span class="score" title="5415 reputation points"><span class="">5.4k</span></span><span title="76 badges"><span class="badge1">&#9679;</span><span class="badgecount">76</span></span><span title="107 badges"><span class="silver">&#9679;</span><span class="badgecount">107</span></span><span title="164 badges"><span class="bronze">&#9679;</span><span class="badgecount">164</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AlaskaDave has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37910/">
+                edited
+                <strong>24 Oct '14, 13:23</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-37910">
+    
+</div>
+<div id="comment-tools-37910" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37910-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/37910/adding-check-boxes-to-my-own-josm-custom-preset?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/37910/adding-check-boxes-to-my-own-josm-custom-preset?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/37910/adding-check-boxes-to-my-own-josm-custom-preset?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/37910/adding-check-boxes-to-my-own-josm-custom-preset?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="37960"></a>
+                    <div id="answer-container-37960" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-37960-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37960/up/" rel="nofollow"> </a>
+<div id="post-37960-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-37960-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37960/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="AlaskaDave has selected this answer as the correct answer"
+        href="/accept_answer/37960/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You need to change it as follows :
+</p><pre>&lt;check key="fuel:gasoline_95" text="Gas 95" default="off" value_on="yes" value_off="no"/&gt;
+</pre><p></p>
+<p>The problem might be that you are not using the value_on and value_off. You can see the supported directives in the default preset file that comes along with JOSM. The default preset xml file is available at : <a href="http://josm.openstreetmap.de/svn/trunk/data/defaultpresets.xml">http://josm.openstreetmap.de/svn/trunk/data/defaultpresets.xml</a> Alternatively you can extract the defaultpresets.xml from the data folder in the JOSM JAR file.</p>
+<p>I have written a Linux shell script to create the JOSM presets from text files a while back. You can find it here : <a href="https://github.com/primejyothi/JOSMPresetBuilder">https://github.com/primejyothi/JOSMPresetBuilder</a></p>
+<p>Hope this helps.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/37960/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Oct '14, 06:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/94b5bf3dcc698b1a4051d49f3204996e?s=32&amp;d=identicon&amp;r=g" alt="primej's gravatar image" />
+    <p><a href="/users/8383/primej">primej</a><br/>
+    <span class="score" title="106 reputation points">106</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="primej has 2 accepted answers">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37960/">
+                edited
+                <strong>26 Oct '14, 06:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-37960">
+    
+        <a name="37961"></a>
+        <div class="comment" id="comment-37961">
+            <div id="post-37961-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes, that works almost perfectly. I say that because in testing my new preset, I learned that there are not two states for a checkbox but three. Checked, unchecked and, for lack of a better term, cleared. When the preset is first called all boxes are a light blue color. If I clear the checkbox by clicking on it until the blue color changes to white,  the resultant tag will be set to "no". If I tick it, the tag will be "yes", as expected. If I do nothing, that is I do not tick it and I do not clear it, the tag does not get applied to the selection at all.</p></div>
+            <div class="comment-info" id="comment-37961-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '14, 07:37)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="37962"></a>
+        <div class="comment" id="comment-37962">
+            <div id="post-37962-score" class="comment-score">1</div>
+            <div class="comment-text"><p>To continue:</p>
+
+<p>Cycling through the clicks on a first call of the preset,  the first click turns the check mark on and sets the tag to "yes",  the next click clears the check mark and sets the tag to "no, the next resets the blue color to the box and causes the tag to not appear at all.</p>
+
+<p>At any rate, thanks for the great answer. I have adjusted my presets and they are working MUCH better than before. I have your preset builder already but haven't fooled with it enough to know if it will help me or hinder me as yet &lt;g&gt;</p></div>
+            <div class="comment-info" id="comment-37962-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '14, 07:38)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="37963"></a>
+        <div class="comment" id="comment-37963">
+            <div id="post-37963-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>, you are welcome, glad that I could help you.
+Your comments made me curious and looked through the defaultpresets.xml and found that the option disable_off for check box controls whether the tag to be present or not. If you set disable_off to true, the tag will not show up when it is unset. Setting it to true will cause to go through the cycles you mentioned in your first comment.</p></div>
+            <div class="comment-info" id="comment-37963-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '14, 07:58)</span>
+                <a class="comment-user userinfo" href="/users/8383/primej">primej</a>
+                
+            </div>
+        </div>
+    
+        <a name="37964"></a>
+        <div class="comment" id="comment-37964">
+            <div id="post-37964-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually, it seems that adding disable_off  to the control prevents setting the tag to "no". You can either set it to "yes" or if you leave it unset, the tag doesn't get applied. Unless I'm not understanding you perfectly.</p>
+
+<p>I like the ability to have a tag set to "no", e.g. , when there is no diesel fuel at a particular station. Before I could either set fuel:diesel to "yes" or say nothing about diesel at all. Thanks to your original answer, I can have it three ways.</p>
+
+<p>Please strike the word "almost" from my first comment above. &lt;g&gt;</p></div>
+            <div class="comment-info" id="comment-37964-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '14, 08:22)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37960" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37960-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/37910/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='IsIitkEeZMQmlo7g4N0NucwgsxCuRYmq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37910/adding-check-boxes-to-my-own-josm-custom-preset?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37910/adding-check-boxes-to-my-own-josm-custom-preset?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/preset/"
+            class="tag-link-preset"
+            title="see questions tagged'preset'using tags"
+            rel="tag">preset</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/check_box/"
+            class="tag-link-check_box"
+            title="see questions tagged'check_box'using tags"
+            rel="tag">check_box</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 24, 2014, 3:10 a.m.">24 Oct '14, 03:10</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,055 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 26, 2014, 8:22 a.m.">26 Oct '14, 08:22</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/39854/why-does-rows-in-josm-preset-not-work">Why does rows=&quot;...&quot; in JOSM Preset not work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20438/keyboard-macros-or-custom-presets">Keyboard macros or custom Presets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37912/conditionally-branch-within-a-josm-preset-or-apply-different-tags-based-on-a-choice">Conditionally branch within a JOSM preset or apply different tags based on a choice</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56029/blocking-whitespace-warning-when-trying-to-add-a-preset-in-josmwikipreset">Blocking whitespace warning when trying to add a preset in JOSM/wiki/preset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34858/josm-prefilled-preset">Josm prefilled preset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/864/how-to-add-node-with-exact-coordinates-in-josm">How to add node with exact coordinates in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/689/can-i-use-custom-presets-in-potlatch">Can I use custom presets in Potlatch?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/595/josm-how-to-set-a-hotkey-for-hiding-showing-the-wms-layer">JOSM: How to set a hotkey for hiding / showing the WMS layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1087/can-i-download-only-a-subset-of-data-in-josm">Can I download only a subset of data in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

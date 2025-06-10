@@ -1,0 +1,1304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>how to use openstreet map data - OSM Help</title>
+        <meta name="description" content="Hey everybody. I work with GeoServer using Apache Tomcat in NetBeans. What i want is using OpenStreetMap as base map. i search in some forums and i found that i have to add this code: &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;  &amp;lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;DTD/xhtml..." />
+        <meta name="keywords" content="openstreetmap,apache-tomcat,geoserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/32568/how-to-use-openstreet-map-data" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/32568/how-to-use-openstreet-map-data?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='DMrQS3enntCwghf47AlQFTAWiqxEGI4d' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/32568/how-to-use-openstreet-map-data">how to use openstreet map data</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-32568-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32568/up/" rel="nofollow"> </a>
+<div id="post-32568-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32568-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32568/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/32568/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hey everybody.</p>
+<p>I work with GeoServer using Apache Tomcat in NetBeans. What i want is using OpenStreetMap as base map.
+i search in some forums and i found that i have to add this code:</p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+</code></pre>
+<p>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;head&gt;
+        &lt;title&gt;OpenLayers map preview&lt;/title&gt;
+        
+        &lt;link rel="stylesheet" type="text/css" href="http://localhost:8080/geoserver/openlayers/theme/default/style.css"/&gt;
+        
+        &lt;style type="text/css"&gt;
+            /<em> General settings </em>/
+            body {
+                font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+                font-size: small;
+            }
+            /<em> Toolbar styles </em>/
+            #toolbar {
+                position: relative;
+                padding-bottom: 0.5em;
+                display: none;
+            }</p>
+<pre><code>        #toolbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #toolbar ul li {
+            float: left;
+            padding-right: 1em;
+            padding-bottom: 0.5em;
+        }
+
+        #toolbar ul li a {
+            font-weight: bold;
+            font-size: smaller;
+            vertical-align: middle;
+            color: black;
+            text-decoration: none;
+        }
+
+        #toolbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        #toolbar ul li * {
+            vertical-align: middle;
+        }
+
+        /* The map and the location bar */
+        #map {
+            clear: both;
+            position: relative;
+            width: 512px;
+            height: 365px;
+            border: 1px solid black;
+        }
+
+        #wrapper {
+            width: 512px;
+        }
+
+        #location {
+            float: right;
+        }
+
+        #options {
+            position: absolute;
+            left: 13px;
+            top: 7px;
+            z-index: 3000;
+        }
+
+        /* Styles used by the default GetFeatureInfo output, added to make IE happy */
+        table.featureInfo, table.featureInfo td, table.featureInfo th {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+            font-size: 90%;
+            padding: .2em .1em;
+        }
+
+        table.featureInfo th {
+            padding: .2em .2em;
+            font-weight: bold;
+            background: #eee;
+        }
+
+        table.featureInfo td {
+            background: #fff;
+        }
+
+        table.featureInfo tr.odd td {
+            background: #eee;
+        }
+
+        table.featureInfo caption {
+            text-align: left;
+            font-size: 100%;
+            font-weight: bold;
+            padding: .2em .2em;
+        }
+    &lt;/style&gt;
+    &lt;!-- Import OpenLayers, reduced, wms read only version --&gt;
+    &lt;script src="http://www.openlayers.org/api/OpenLayers.js"&gt;&lt;/script&gt;
+    &lt;script src="http://localhost:8080/geoserver/openlayers/OpenLayers.js" type="text/javascript"&gt;
+    &lt;/script&gt;
+    &lt;script defer="defer" type="text/javascript"&gt;
+        var map;
+        var mapnik;
+        var lonlat;
+        var untiled;
+        var tiled;
+        var pureCoverage = false;
+        // pink tile avoidance
+        OpenLayers.IMAGE_RELOAD_ATTEMPTS = 5;
+        // make OL compute scale according to WMS spec
+        OpenLayers.DOTS_PER_INCH = 25.4 / 0.28;
+
+        function init(){
+            // if this is just a coverage or a group of them, disable a few items,
+            // and default to jpeg format
+            format = 'image/png';
+            if(pureCoverage) {
+                document.getElementById('filterType').disabled = true;
+                document.getElementById('filter').disabled = true;
+                document.getElementById('antialiasSelector').disabled = true;
+                document.getElementById('updateFilterButton').disabled = true;
+                document.getElementById('resetFilterButton').disabled = true;
+                document.getElementById('jpeg').selected = true;
+                format = "image/jpeg";
+            }
+
+            var bounds = new OpenLayers.Bounds(
+                -6.92433643341064, 33.9211540222168,
+                -6.7672119140625, 34.0333366394043
+            );
+
+            var options = {
+                controls: [],
+                maxExtent: bounds,
+                maxResolution: 0.0006137676537037,
+                projection: "EPSG:900913",
+                units: 'm'
+            };
+            map = new OpenLayers.Map('map', options);
+            mapnik = new OpenLayers.Layer.OSM();
+
+            // setup tiled layer
+            tiled = new OpenLayers.Layer.WMS(
+                "Region_Rabat:routes - Tiled", "http://localhost:8080/geoserver/Region_Rabat/wms",
+                {
+                    LAYERS: 'Region_Rabat:routes',
+                    STYLES: '',
+                    format: format,
+                    tiled: true,
+                    tilesOrigin : map.maxExtent.left + ',' + map.maxExtent.bottom
+                },
+                {
+                    buffer: 0,
+                    displayOutsideMaxExtent: true,
+                    isBaseLayer: true,
+                    yx : {'EPSG:900913' : false}
+                } 
+            );
+
+            // setup single tiled layer
+            untiled = new OpenLayers.Layer.WMS(
+                "Region_Rabat:routes - Untiled", "http://localhost:8080/geoserver/Region_Rabat/wms",
+                {
+                    LAYERS: 'Region_Rabat:routes',
+                    STYLES: '',
+                    format: format
+                },
+                {
+                   singleTile: true, 
+                   ratio: 1, 
+                   isBaseLayer: true,
+                   yx : {'EPSG:900913' : false}
+                } 
+            );
+
+          lonlat = new OpenLayers.LonLat(-6.588, 33.571).transform(
+        new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+        new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator
+      );
+            map = new OpenLayers.Map("map",{
+            layers:[mapnik,tiled,untiled],
+            center: cent,
+            zoom: 10
+        });
+
+            // build up all controls
+            map.addControl(new OpenLayers.Control.PanZoomBar({
+                position: new OpenLayers.Pixel(2, 15)
+            }));
+            map.addControl(new OpenLayers.Control.Navigation());
+            map.addControl(new OpenLayers.Control.Scale($('scale')));
+            map.addControl(new OpenLayers.Control.MousePosition({element: $('location')}));
+            map.zoomToExtent(bounds);
+
+            // wire up the option button
+            var options = document.getElementById("options");
+            options.onclick = toggleControlPanel;
+
+            // support GetFeatureInfo
+            map.events.register('click', map, function (e) {
+                document.getElementById('nodelist').innerHTML = "Loading... please wait...";
+                var params = {
+                    REQUEST: "GetFeatureInfo",
+                    EXCEPTIONS: "application/vnd.ogc.se_xml",
+                    BBOX: map.getExtent().toBBOX(),
+                    SERVICE: "WMS",
+                    INFO_FORMAT: 'text/html',
+                    QUERY_LAYERS: map.layers[0].params.LAYERS,
+                    FEATURE_COUNT: 50,
+                    Layers: 'Region_Rabat:routes',
+                    WIDTH: map.size.w,
+                    HEIGHT: map.size.h,
+                    format: format,
+                    styles: map.layers[0].params.STYLES,
+                    srs: map.layers[0].params.SRS};
+
+                // handle the wms 1.3 vs wms 1.1 madness
+                if(map.layers[0].params.VERSION == "1.3.0") {
+                    params.version = "1.3.0";
+                    params.j = parseInt(e.xy.x);
+                    params.i = parseInt(e.xy.y);
+                } else {
+                    params.version = "1.1.1";
+                    params.x = parseInt(e.xy.x);
+                    params.y = parseInt(e.xy.y);
+                }
+
+                // merge filters
+                if(map.layers[0].params.CQL_FILTER != null) {
+                    params.cql_filter = map.layers[0].params.CQL_FILTER;
+                } 
+                if(map.layers[0].params.FILTER != null) {
+                    params.filter = map.layers[0].params.FILTER;
+                }
+                if(map.layers[0].params.FEATUREID) {
+                    params.featureid = map.layers[0].params.FEATUREID;
+                }
+                OpenLayers.loadURL("http://localhost:8080/geoserver/Region_Rabat/wms", params, this, setHTML, setHTML);
+                OpenLayers.Event.stop(e);
+            });
+        }
+
+        // sets the HTML provided into the nodelist element
+        function setHTML(response){
+            document.getElementById('nodelist').innerHTML = response.responseText;
+        };
+
+        // shows/hide the control panel
+        function toggleControlPanel(event){
+            var toolbar = document.getElementById("toolbar");
+            if (toolbar.style.display == "none") {
+                toolbar.style.display = "block";
+            }
+            else {
+                toolbar.style.display = "none";
+            }
+            event.stopPropagation();
+            map.updateSize()
+        }
+
+        // Tiling mode, can be 'tiled' or 'untiled'
+        function setTileMode(tilingMode){
+            if (tilingMode == 'tiled') {
+                untiled.setVisibility(false);
+                tiled.setVisibility(true);
+                map.setBaseLayer(tiled);
+            }
+            else {
+                untiled.setVisibility(true);
+                tiled.setVisibility(false);
+                map.setBaseLayer(untiled);
+            }
+        }
+
+        // Transition effect, can be null or 'resize'
+        function setTransitionMode(transitionEffect){
+            if (transitionEffect === 'resize') {
+                tiled.transitionEffect = transitionEffect;
+                untiled.transitionEffect = transitionEffect;
+            }
+            else {
+                tiled.transitionEffect = null;
+                untiled.transitionEffect = null;
+            }
+        }
+
+        // changes the current tile format
+        function setImageFormat(mime){
+            // we may be switching format on setup
+            if(tiled == null)
+              return;
+
+            tiled.mergeNewParams({
+                format: mime
+            });
+            untiled.mergeNewParams({
+                format: mime
+            });
+            /*
+            var paletteSelector = document.getElementById('paletteSelector')
+            if (mime == 'image/jpeg') {
+                paletteSelector.selectedIndex = 0;
+                setPalette('');
+                paletteSelector.disabled = true;
+            }
+            else {
+                paletteSelector.disabled = false;
+            }
+            */
+        }
+
+        // sets the chosen style
+        function setStyle(style){
+            // we may be switching style on setup
+            if(tiled == null)
+              return;
+
+            tiled.mergeNewParams({
+                styles: style
+            });
+            untiled.mergeNewParams({
+                styles: style
+            });
+        }
+
+        // sets the chosen WMS version
+        function setWMSVersion(wmsVersion){
+            // we may be switching style on setup
+            if(wmsVersion == null)
+              return;
+
+            if(wmsVersion == "1.3.0") {
+               origin = map.maxExtent.bottom + ',' + map.maxExtent.left;
+            } else {
+               origin = map.maxExtent.left + ',' + map.maxExtent.bottom;
+            }
+
+            tiled.mergeNewParams({
+                version: wmsVersion,
+                tilesOrigin : origin
+            });
+            untiled.mergeNewParams({
+                version: wmsVersion
+            });
+        }
+
+        function setAntialiasMode(mode){
+            tiled.mergeNewParams({
+                format_options: 'antialias:' + mode
+            });
+            untiled.mergeNewParams({
+                format_options: 'antialias:' + mode
+            });
+        }
+
+        function setPalette(mode){
+            if (mode == '') {
+                tiled.mergeNewParams({
+                    palette: null
+                });
+                untiled.mergeNewParams({
+                    palette: null
+                });
+            }
+            else {
+                tiled.mergeNewParams({
+                    palette: mode
+                });
+                untiled.mergeNewParams({
+                    palette: mode
+                });
+            }
+        }
+
+        function setWidth(size){
+            var mapDiv = document.getElementById('map');
+            var wrapper = document.getElementById('wrapper');
+
+            if (size == "auto") {
+                // reset back to the default value
+                mapDiv.style.width = null;
+                wrapper.style.width = null;
+            }
+            else {
+                mapDiv.style.width = size + "px";
+                wrapper.style.width = size + "px";
+            }
+            // notify OL that we changed the size of the map div
+            map.updateSize();
+        }
+
+        function setHeight(size){
+            var mapDiv = document.getElementById('map');
+
+            if (size == "auto") {
+                // reset back to the default value
+                mapDiv.style.height = null;
+            }
+            else {
+                mapDiv.style.height = size + "px";
+            }
+            // notify OL that we changed the size of the map div
+            map.updateSize();
+        }
+
+        function updateFilter(){
+            if(pureCoverage)
+              return;
+
+            var filterType = document.getElementById('filterType').value;
+            var filter = document.getElementById('filter').value;
+
+            // by default, reset all filters
+            var filterParams = {
+                filter: null,
+                cql_filter: null,
+                featureId: null
+            };
+            if (OpenLayers.String.trim(filter) != "") {
+                if (filterType == "cql") 
+                    filterParams["cql_filter"] = filter;
+                if (filterType == "ogc") 
+                    filterParams["filter"] = filter;
+                if (filterType == "fid") 
+                    filterParams["featureId"] = filter;
+            }
+            // merge the new filter definitions
+            mergeNewParams(filterParams);
+        }
+
+        function resetFilter() {
+            if(pureCoverage)
+              return;
+
+            document.getElementById('filter').value = "";
+            updateFilter();
+        }
+
+        function mergeNewParams(params){
+            tiled.mergeNewParams(params);
+            untiled.mergeNewParams(params);
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload="init()"&gt;
+
+&lt;p&gt;My HTML page with an embedded map&lt;/p&gt;
+
+    &lt;div id="toolbar" style="display: none;"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a&gt;WMS version:&lt;/a&gt;
+                &lt;select id="wmsVersionSelector" onchange="setWMSVersion(value)"&gt;
+                    &lt;option value="1.1.1"&gt;1.1.1&lt;/option&gt;
+                    &lt;option value="1.3.0"&gt;1.3.0&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a&gt;Tiling:&lt;/a&gt;
+                &lt;select id="tilingModeSelector" onchange="setTileMode(value)"&gt;
+                    &lt;option value="untiled"&gt;Single tile&lt;/option&gt;
+                    &lt;option value="tiled"&gt;Tiled&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a&gt;Transition effect:&lt;/a&gt;
+                &lt;select id="transitionEffectSelector" onchange="setTransitionMode(value)"&gt;
+                    &lt;option value=""&gt;None&lt;/option&gt;
+                    &lt;option value="resize"&gt;Resize&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a&gt;Antialias:&lt;/a&gt;
+                &lt;select id="antialiasSelector" onchange="setAntialiasMode(value)"&gt;
+                    &lt;option value="full"&gt;Full&lt;/option&gt;
+                    &lt;option value="text"&gt;Text only&lt;/option&gt;
+                    &lt;option value="none"&gt;Disabled&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a&gt;Format:&lt;/a&gt;
+                &lt;select id="imageFormatSelector" onchange="setImageFormat(value)"&gt;
+                    &lt;option value="image/png"&gt;PNG 24bit&lt;/option&gt;
+                    &lt;option value="image/png8"&gt;PNG 8bit&lt;/option&gt;
+                    &lt;option value="image/gif"&gt;GIF&lt;/option&gt;
+                    &lt;option id="jpeg" value="image/jpeg"&gt;JPEG&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a&gt;Styles:&lt;/a&gt;
+                &lt;select id="imageFormatSelector" onchange="setStyle(value)"&gt;
+                    &lt;option value=""&gt;Default&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/li&gt;
+            &lt;!-- Commented out for the moment, some code needs to be extended in 
+                 order to list the available palettes
+            &lt;li&gt;
+                &lt;a&gt;Palette:&lt;/a&gt;
+                &lt;select id="paletteSelector" onchange="setPalette(value)"&gt;
+                    &lt;option value=""&gt;None&lt;/option&gt;
+                    &lt;option value="safe"&gt;Web safe&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/li&gt;
+            --&gt;
+            &lt;li&gt;
+                &lt;a&gt;Width/Height:&lt;/a&gt;
+                &lt;select id="widthSelector" onchange="setWidth(value)"&gt;
+                    &lt;!--
+                    These values come from a statistics of the viewable area given a certain screen area
+                    (but have been adapted a litte, simplified numbers, added some resolutions for wide screen)
+                    You can find them here: <a href="http://www.evolt.org/article/Real_World_Browser_Size_Stats_Part_II/20/2297/">http://www.evolt.org/article/Real_World_Browser_Size_Stats_Part_II/20/2297/</a>
+                    --&gt;&lt;option value="auto"&gt;Auto&lt;/option&gt;
+                    &lt;option value="600"&gt;600&lt;/option&gt;
+                    &lt;option value="750"&gt;750&lt;/option&gt;
+                    &lt;option value="950"&gt;950&lt;/option&gt;
+                    &lt;option value="1000"&gt;1000&lt;/option&gt;
+                    &lt;option value="1200"&gt;1200&lt;/option&gt;
+                    &lt;option value="1400"&gt;1400&lt;/option&gt;
+                    &lt;option value="1600"&gt;1600&lt;/option&gt;
+                    &lt;option value="1900"&gt;1900&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;select id="heigthSelector" onchange="setHeight(value)"&gt;
+                    &lt;option value="auto"&gt;Auto&lt;/option&gt;
+                    &lt;option value="300"&gt;300&lt;/option&gt;
+                    &lt;option value="400"&gt;400&lt;/option&gt;
+                    &lt;option value="500"&gt;500&lt;/option&gt;
+                    &lt;option value="600"&gt;600&lt;/option&gt;
+                    &lt;option value="700"&gt;700&lt;/option&gt;
+                    &lt;option value="800"&gt;800&lt;/option&gt;
+                    &lt;option value="900"&gt;900&lt;/option&gt;
+                    &lt;option value="1000"&gt;1000&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a&gt;Filter:&lt;/a&gt;
+                &lt;select id="filterType"&gt;
+                    &lt;option value="cql"&gt;CQL&lt;/option&gt;
+                    &lt;option value="ogc"&gt;OGC&lt;/option&gt;
+                    &lt;option value="fid"&gt;FeatureID&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;input type="text" size="80" id="filter"/&gt;
+                &lt;img id="updateFilterButton" src="http://localhost:8080/geoserver/openlayers/img/east-mini.png" onClick="updateFilter()" title="Apply filter"/&gt;
+                &lt;img id="resetFilterButton" src="http://localhost:8080/geoserver/openlayers/img/cancel.png" onClick="resetFilter()" title="Reset filter"/&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id="map"&gt;
+        &lt;img id="options" title="Toggle options toolbar" src="http://localhost:8080/geoserver/options.png"/&gt;
+    &lt;/div&gt;
+    &lt;div id="wrapper"&gt;
+        &lt;div id="location"&gt;location&lt;/div&gt;
+        &lt;div id="scale"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="nodelist"&gt;
+        &lt;em&gt;Click on the map to get feature info&lt;/em&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<p>&lt;/html&gt;</p>
+<p>Thank you for your help.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                                    <a href="/tags/apache-tomcat/" class="post-tag tag-link-apache-tomcat"
+                                        title="see questions tagged 'apache-tomcat'" rel="tag">apache-tomcat</a>
+                                
+                                    <a href="/tags/geoserver/" class="post-tag tag-link-geoserver"
+                                        title="see questions tagged 'geoserver'" rel="tag">geoserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Apr '14, 15:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e276dd869c646f762e247187ce1f40e2?s=32&amp;d=identicon&amp;r=g" alt="yassine10's gravatar image" />
+    <p><a href="/users/8721/yassine10">yassine10</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="yassine10 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/32568/">
+                edited
+                <strong>25 Apr '14, 03:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-32568">
+    
+        <a name="32573"></a>
+        <div class="comment" id="comment-32573">
+            <div id="post-32573-score" class="comment-score"></div>
+            <div class="comment-text"><p>What's the error? What doesn't work? Are you aware that you need OpenLayers when using this code example?</p></div>
+            <div class="comment-info" id="comment-32573-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '14, 16:18)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32576"></a>
+        <div class="comment" id="comment-32576">
+            <div id="post-32576-score" class="comment-score"></div>
+            <div class="comment-text"><p>yeah i have a file openlayers in my project that contains a openlayers.js !! what i want is to have a base map to my layers !! when i run the project it showed just my layer without a base map...i don't know if you get what i want</p></div>
+            <div class="comment-info" id="comment-32576-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '14, 17:00)</span>
+                <a class="comment-user userinfo" href="/users/8721/yassine10">yassine10</a>
+                
+            </div>
+        </div>
+    
+        <a name="32581"></a>
+        <div class="comment" id="comment-32581">
+            <div id="post-32581-score" class="comment-score"></div>
+            <div class="comment-text"><p>I download teh OpenLayers library and add it in the same directory to my project !! am i wrong in something ?</p></div>
+            <div class="comment-info" id="comment-32581-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '14, 19:24)</span>
+                <a class="comment-user userinfo" href="/users/8721/yassine10">yassine10</a>
+                
+            </div>
+        </div>
+    
+        <a name="32584"></a>
+        <div class="comment" id="comment-32584">
+            <div id="post-32584-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Can you upload your project to some freehoster or share your project URL for further analysis? That would make things way easier for everyone.</p></div>
+            <div class="comment-info" id="comment-32584-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '14, 20:59)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="32592"></a>
+        <div class="comment" id="comment-32592">
+            <div id="post-32592-score" class="comment-score"></div>
+            <div class="comment-text"><p>when i run the project, it shows just the layer that i have in GeoServer !! what i want now is to show it with a base map OpenStreet Maps...</p></div>
+            <div class="comment-info" id="comment-32592-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '14, 23:11)</span>
+                <a class="comment-user userinfo" href="/users/8721/yassine10">yassine10</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32568" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32568-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/32568/how-to-use-openstreet-map-data?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/32568/how-to-use-openstreet-map-data?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/32568/how-to-use-openstreet-map-data?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/32568/how-to-use-openstreet-map-data?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="74900"></a>
+                    <div id="answer-container-74900" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74900-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74900/up/" rel="nofollow"> </a>
+<div id="post-74900-score" class="post-score"
+    title="current number of votes">
+    -3
+</div>
+<a id="post-74900-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74900/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>GeoFabrik is a company which specializes in working with OpenStreetMap. They provide a variety of free extracts in shapefile and raw OSM format on their download website. The advantage of downloading GeoFabrik data is that it is updated every day, and it’s easy and reliable. One disadvantage is that the data is extracted by country, and not all countries are available.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74900/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 May '20, 06:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d65bf3b998394330195797de81ff2de4?s=32&amp;d=identicon&amp;r=g" alt="Smith%20Hennry's gravatar image" />
+    <p><a href="/users/18158/smith-hennry">Smith Hennry</a><br/>
+    <span class="score" title="-20 reputation points">-20</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Smith Hennry has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74900">
+    
+        <a name="74901"></a>
+        <div class="comment" id="comment-74901">
+            <div id="post-74901-score" class="comment-score">3</div>
+            <div class="comment-text"><p>How does that answer relate to the question and are you aware you are answering to a 6 year old problem?</p></div>
+            <div class="comment-info" id="comment-74901-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 May '20, 08:24)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74900" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74900-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/32568/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='DMrQS3enntCwghf47AlQFTAWiqxEGI4d' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32568/how-to-use-openstreet-map-data?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32568/how-to-use-openstreet-map-data?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+        <a href="/tags/geoserver/"
+            class="tag-link-geoserver"
+            title="see questions tagged'geoserver'using tags"
+            rel="tag">geoserver</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/apache-tomcat/"
+            class="tag-link-apache-tomcat"
+            title="see questions tagged'apache-tomcat'using tags"
+            rel="tag">apache-tomcat</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 23, 2014, 3:43 p.m.">23 Apr '14, 15:43</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,915 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 19, 2020, 8:24 a.m.">19 May '20, 08:24</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/32848/get-a-style-of-openstreet-map">get a style of openstreet map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1574/is-it-openstreetmap-or-open-street-maps">Is it OpenStreetMap or Open Street Maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3174/how-to-integrate-openstreet-map-in-my-site">[closed] How to integrate openstreet map in my site?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2310/maps-for-we-travel">Maps for We-Travel?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2336/how-do-i-recover-my-account-details">[closed] How do I recover my account details?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2505/i-see-some-nodes-on-the-map-but-i-cant-find-them-in-planetosm-why">I see some nodes on the map, but I can&#39;t find them in Planet.osm. Why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1737/problem-with-some-name-tags-in-bulgarian-map">Problem with some name tags in Bulgarian map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5226/image-corrupt-or-truncated">Image corrupt or truncated</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6899/how-to-show-kml-in-osm-with-automatically-refresh">[closed] How to show KML in OSM with automatically refresh ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/639/how-do-i-use-openstreetmap-tiles-as-a-wms-background-in-josm">How do I use OpenStreetMap tiles as a WMS background in JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

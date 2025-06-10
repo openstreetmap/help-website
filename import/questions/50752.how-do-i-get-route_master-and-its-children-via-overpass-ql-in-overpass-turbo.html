@@ -1,0 +1,752 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I get route_master (and its children) via Overpass QL in overpass-turbo? - OSM Help</title>
+        <meta name="description" content="Hi, I am new to OSM and trying to understand Overpass QL so editing of public Transport data in JOSM will be easier in the future. My Question is, why this Overpass QL query won&#39;t give me any data, not even the data I just added myself? [out:json]; (  relation[&quot;type&quot;=&quot;route_master&quot;][&quot;route_master&quot;=&quot;..." />
+        <meta name="keywords" content="route_master,bus,route,relations,overpass-ql" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/50752/how-do-i-get-route_master-and-its-children-via-overpass-ql-in-overpass-turbo" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/50752/how-do-i-get-route_master-and-its-children-via-overpass-ql-in-overpass-turbo?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='t3xfSpZapk3jLZ6QHLwf1F74yrzhIDA9' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/50752/how-do-i-get-route_master-and-its-children-via-overpass-ql-in-overpass-turbo">How do I get route_master (and its children) via Overpass QL in overpass-turbo?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-50752-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50752/up/" rel="nofollow"> </a>
+<div id="post-50752-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-50752-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50752/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/50752/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, I am new to OSM and trying to understand Overpass QL so editing of public Transport data in JOSM will be easier in the future.</p>
+<p>My Question is, why this Overpass QL query won't give me any data, not even <a href="https://www.openstreetmap.org/relation/1729861">the data I just added myself</a>?</p>
+<pre><code>[out:json];
+(
+  relation["type"="route_master"]["route_master"="bus"](51.3649215, 9.2642212, 51.7134161, 9.810791);
+);
+rel(r);
+way(r);
+out meta qt;
+</code></pre>
+<p>As far as I think, this query works this way:</p>
+<ol>
+<li>I ask for json-data (but xml won't work, either)</li>
+<li>I like to get all relations in the bounding box which carry the tags type=route_master and route_master=bus</li>
+<li>from that I recursively ask for all child-relations</li>
+<li>and from that for child ways</li>
+<li>(and even if I ask for child nodes, I won't get any data)</li>
+<li>and then I print the result (with all data there is, geographically ordered (whatever this means) )</li>
+</ol>
+<p>So whats wrong with that query (or the data I added previously). Could anybody explain it to me?</p>
+<p>P.S.: I just had to type this once again, because the wait for email-validation (after creating a new account) didn't seem to keep this question pending, but instead deleted it.
+P.P.S.: It is denglish I am writing. If there is a native english speaker here who cares for educating his or hers language: I am listening.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/route_master/" class="post-tag tag-link-route_master"
+                                        title="see questions tagged 'route_master'" rel="tag">route_master</a>
+                                
+                                    <a href="/tags/bus/" class="post-tag tag-link-bus"
+                                        title="see questions tagged 'bus'" rel="tag">bus</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                                    <a href="/tags/overpass-ql/" class="post-tag tag-link-overpass-ql"
+                                        title="see questions tagged 'overpass-ql'" rel="tag">overpass-ql</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Jul '16, 11:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9783c8591af9a852805e5d69c461e828?s=32&amp;d=identicon&amp;r=g" alt="jannefleischer's gravatar image" />
+    <p><a href="/users/12531/jannefleischer">jannefleischer</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jannefleischer has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-50752">
+    
+</div>
+<div id="comment-tools-50752" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50752-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/50752/how-do-i-get-route_master-and-its-children-via-overpass-ql-in-overpass-turbo?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/50752/how-do-i-get-route_master-and-its-children-via-overpass-ql-in-overpass-turbo?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/50752/how-do-i-get-route_master-and-its-children-via-overpass-ql-in-overpass-turbo?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/50752/how-do-i-get-route_master-and-its-children-via-overpass-ql-in-overpass-turbo?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="50753"></a>
+                    <div id="answer-container-50753" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50753-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50753/up/" rel="nofollow"> </a>
+<div id="post-50753-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-50753-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50753/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="jannefleischer has selected this answer as the correct answer"
+        href="/accept_answer/50753/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Tricky question ... :)</p>
+<p>Master relations don't have any geometry on their own. That's why your query won't find anything for a given bounding box in step 2 already. I'm not sure if that's a bug or not, at least it doesn't work right now (<a href="https://github.com/drolbr/Overpass-API/issues/293">Github issue opened</a>).</p>
+<p>I have changed that part of your query to include the network "NVV" and effectively turned it into a global scale query for route_master relations. That's purely a performance tweak to reduce the number of relevant master relations from 21862 down to 64.</p>
+<p>Now, instead of applying the bounding box filter to the master relation, I'm using the individual bus routes via <code>(rel(r){{bbox}})</code> for that purpose. As those bus routes all have their proper geometry information, using the bounding box as a filter shouldn't be an issue anymore.</p>
+<p><a href="http://overpass-turbo.eu/s/hdA">overpass turbo link</a></p>
+<pre><code>[out:json];
+relation["type"="route_master"]["route_master"="bus"][network="NVV"];
+(rel(r)({{bbox}});&gt;;);
+out meta;
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50753/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '16, 11:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/264d84ab05b942224b05960903eba7a7?s=32&amp;d=identicon&amp;r=g" alt="mmd's gravatar image" />
+    <p><a href="/users/8708/mmd">mmd</a><br/>
+    <span class="score" title="5682 reputation points"><span class="">5.7k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="53 badges"><span class="silver">&#9679;</span><span class="badgecount">53</span></span><span title="88 badges"><span class="bronze">&#9679;</span><span class="badgecount">88</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmd has 44 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/50753/">
+                edited
+                <strong>09 Jul '16, 12:26</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50753">
+    
+        <a name="50755"></a>
+        <div class="comment" id="comment-50755">
+            <div id="post-50755-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Thanks for your immediate response. I had my problems with the first revision of your answer, but now I think I understood. The problem is, that, since the relation master_route do not contain any geometries, I can't filter it with a bounding box. So I first have to get the sub-routes (tag: route) and use the bounding-box filter over those.</p>
+
+<p>Thanks for pointing this out to me. It wasn't that trivial as I expected it to be, after all. :)</p>
+
+<p>The wizard provides a template called (in german) „Hauptroute" which does it wrong, too. Reported it: <a href="https://github.com/tyrasd/overpass-turbo/issues/254">https://github.com/tyrasd/overpass-turbo/issues/254</a></p></div>
+            <div class="comment-info" id="comment-50755-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '16, 12:28)</span>
+                <a class="comment-user userinfo" href="/users/12531/jannefleischer">jannefleischer</a>
+                
+            </div>
+        </div>
+    
+        <a name="51476"></a>
+        <div class="comment" id="comment-51476">
+            <div id="post-51476-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just a note: this answer helped me create a query to render a relation and it's subrelations (queried by master relation ID): <a href="http://overpass-turbo.eu/s/hTR">http://overpass-turbo.eu/s/hTR</a></p></div>
+            <div class="comment-info" id="comment-51476-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '16, 10:20)</span>
+                <a class="comment-user userinfo" href="/users/10142/joost-schouppe">joost schouppe</a>
+                
+            </div>
+        </div>
+    
+        <a name="51481"></a>
+        <div class="comment" id="comment-51481">
+            <div id="post-51481-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a>: <code>(relation(2099432);&gt;&gt;;);out body;</code> would be the usual approach, as you already have a relation id.</p></div>
+            <div class="comment-info" id="comment-51481-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '16, 11:53)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="51482"></a>
+        <div class="comment" id="comment-51482">
+            <div id="post-51482-score" class="comment-score"></div>
+            <div class="comment-text"><p>I noticed it does make a small difference: it also returns the tagged nodes that are members of the ways of the relations, whereas the other approach just returns member relations.</p></div>
+            <div class="comment-info" id="comment-51482-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '16, 12:00)</span>
+                <a class="comment-user userinfo" href="/users/10142/joost-schouppe">joost schouppe</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50753" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50753-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/50752/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='t3xfSpZapk3jLZ6QHLwf1F74yrzhIDA9' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50752/how-do-i-get-route_master-and-its-children-via-overpass-ql-in-overpass-turbo?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50752/how-do-i-get-route_master-and-its-children-via-overpass-ql-in-overpass-turbo?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/bus/"
+            class="tag-link-bus"
+            title="see questions tagged'bus'using tags"
+            rel="tag">bus</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/overpass-ql/"
+            class="tag-link-overpass-ql"
+            title="see questions tagged'overpass-ql'using tags"
+            rel="tag">overpass-ql</a> <span class="tag-number">&#215;65</span><br/>
+        
+        <a href="/tags/route_master/"
+            class="tag-link-route_master"
+            title="see questions tagged'route_master'using tags"
+            rel="tag">route_master</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 9, 2016, 11:14 a.m.">09 Jul '16, 11:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,809 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 17, 2016, noon">17 Aug '16, 12:00</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/27215/buses-that-have-alternate-routes">Buses that have alternate routes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42928/how-do-i-add-bus-route-information-to-bus-stops">How do I add bus route information to bus stops?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27210/bus-routes-which-have-an-alternate-route-eg-as-a-school-bus-service">Bus routes which have an alternate route, e.g. as a school bus service?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27214/bus-routes-that-occasionally-terminate-or-start-in-the-middle-of-the-standard-route">Bus routes that occasionally terminate or start in the middle of the standard route</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27291/how-do-you-use-route_relations">How do you use route_relations?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27306/splitting-relations">Splitting relations?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9775/how-can-i-set-up-a-public-transport-route_master-in-potlatch-2">How can I set up a public transport route_master in Potlatch 2 ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or">Roundabouts as part of bus routes (or cycle routes, or…)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27213/bus-routes-that-travel-back-and-forth">Bus routes that travel back and forth</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43658/mapping-bus-route-with-different-terminals-depending-on-time">Mapping bus route with different terminals depending on time?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

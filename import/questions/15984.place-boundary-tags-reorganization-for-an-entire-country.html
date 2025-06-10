@@ -1,0 +1,762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>place, boundary tags reorganization for an entire country - OSM Help</title>
+        <meta name="description" content="Motivation &amp;amp; Background (I will try to explain everything leading up to the question, so if you don&#39;t want to read that, go straight to the last section.) I noticed that Nominatim search results for South Korea was in a complete mess. So I&#39;m in the process of doing a complete overhaul of the bou..." />
+        <meta name="keywords" content="node,boundary,nominatim,place,area" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/15984/place-boundary-tags-reorganization-for-an-entire-country" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/15984/place-boundary-tags-reorganization-for-an-entire-country?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='1EHUsOMuyXEBWqgSxm09qlB5rEGbeI6v' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/15984/place-boundary-tags-reorganization-for-an-entire-country">place, boundary tags reorganization for an entire country</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-15984-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15984/up/" rel="nofollow"> </a>
+<div id="post-15984-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-15984-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15984/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/15984/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p><strong>Motivation &amp; Background</strong></p>
+<p><em>(I will try to explain everything leading up to the question, so if you don't want to read that, go straight to the last section.)</em></p>
+<p>I noticed that Nominatim search results for South Korea was in a complete mess. So I'm in the process of doing a complete overhaul of the boundaries in the hopes of having a coherent and consistent structure.</p>
+<p><strong>Notes</strong></p>
+<p>The boundaries for the provinces and cities in this country is well-defined, and they can be directly correlated to place=* since major settlements all fall within city borders. So it's only a matter of putting up the boundaries and tagging appropriately, as far as the scope of my work is concerned.</p>
+<p><strong>Progress</strong></p>
+<p>I was able to create an entire administrative boundary for the country (admin_level=2; the old one was mostly redacted by the bot, but it was inaccurate anyway), as well as for all the provinces / metropolitan cities (admin_level=4).</p>
+<p>Most recently, I placed the admin boundaries for all the cities / counties (admin_level=6) within the most populous province, Gyeonggi-do, with plans to expand this effort to other provinces. You can see that the country will have some relatively fine-grained administrative boundaries placed soon.</p>
+<p><strong>Problem!</strong></p>
+<p>I was initially making boundary relations that was tagged with boundary=administrative and admin_level=*. There were nodes tagged with place=* near the city centres, so I left them at that - they also seem to be where the map renderer puts the label. This apparently "used to be" how it should be done.</p>
+<p>But then I noticed that Nominatim began to recognize both the boundary relation and the node, resulting in two search results, not one. The node result comes out as (city name), (city name), (province), (country) - the first one being the node, and the second one being the boundary relation. So this clearly wasn't what I wanted to achieve.</p>
+<p>Upon further reading of this subject in the Help, Wiki, and other places, it seems that the "current" way to go about it is... when a boundary relation defining the area is created, move the place tag into it, and delete the node that originally had the tag. You don't want to duplicate data on two places in OSM, so I thought that sounded logical.</p>
+<p>So I removed all the nodes containing the place=* tag for the provinces and added it to their boundary relations. This did solve the Nominatim search problem. When it was time to do the same for the cities, I noticed another issue - I would like to have the label near the city center, not somewhere in the middle of the defined area. You can define a node as 'label' in the boundary relation to do this, apparently.</p>
+<p>However, there are lots of either outdated or conflicting info on whether a label would properly render at all. Some place says that 'label' node won't yet work, and you need a separate node with place=* tag in order for the place label to be rendered.</p>
+<p><strong>So the Questions are...</strong></p>
+<ol>
+<li>
+<p>Will the current OSM renderer put the province / city / etc. name on the center of the (administrative) boundary relations if it has a place=* defined? I know that a node with place=* will have its name rendered, so I want to know if this is true <strong>now</strong> for boundary relations, too.</p>
+</li>
+<li>
+<p>If so, will having a 'label' node in that relation let me position the label? Some old post mentioned this not being the case, so I'm hesitant.</p>
+</li>
+<li>
+<p>With the completion of national boundary relation (admin_level=2), it would only make sense that even the place=country tag should be added to the relation and have the separate node deleted, for the sake of consistency. Currently, the Wiki says that place=country should only be put in a node, but place=continent and place=state can be put in an area, so that doesn't sound consistent. Should I keep the node or not? This one is related to the previous questions, since I don't want the country label to go missing.</p>
+</li>
+</ol>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/node/" class="post-tag tag-link-node"
+                                        title="see questions tagged 'node'" rel="tag">node</a>
+                                
+                                    <a href="/tags/boundary/" class="post-tag tag-link-boundary"
+                                        title="see questions tagged 'boundary'" rel="tag">boundary</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/place/" class="post-tag tag-link-place"
+                                        title="see questions tagged 'place'" rel="tag">place</a>
+                                
+                                    <a href="/tags/area/" class="post-tag tag-link-area"
+                                        title="see questions tagged 'area'" rel="tag">area</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Sep '12, 04:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/580f3c1e083a5ec1bedd3f0472e50f42?s=32&amp;d=identicon&amp;r=g" alt="namuori's gravatar image" />
+    <p><a href="/users/4493/namuori">namuori</a><br/>
+    <span class="score" title="106 reputation points">106</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="namuori has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-15984">
+    
+</div>
+<div id="comment-tools-15984" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15984-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/15984/place-boundary-tags-reorganization-for-an-entire-country?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/15984/place-boundary-tags-reorganization-for-an-entire-country?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/15984/place-boundary-tags-reorganization-for-an-entire-country?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/15984/place-boundary-tags-reorganization-for-an-entire-country?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="16000"></a>
+                    <div id="answer-container-16000" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16000-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16000/up/" rel="nofollow"> </a>
+<div id="post-16000-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-16000-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16000/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="namuori has selected this answer as the correct answer"
+        href="/accept_answer/16000/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <ol>
+<li>
+<p>OSM tiles do not currently render labels for relations</p>
+</li>
+<li>
+<p>No, this was the proposal but I don't believe it is implemented</p>
+</li>
+<li>
+<p>The country place node is far less useful that other nodes, but I would say for consistency should be
+    included.</p>
+</li>
+</ol>
+<p>Its worth noting that Nominatim was recently (in the last 2 weeks) upgraded to handle duplicate node+relations pairs and to follow and merge data based on the label relation member.  Given this my current recommendation would be:</p>
+<ol>
+<li>Create a node tagged place=* with suitable name/tags at the central location of the admin feature (this may not be the geometric center, but rather the place that would subjectively by thought of as the center)</li>
+<li>Create an administrative boundary relation with admin_level defining the boundary of the feature in the normal way</li>
+<li>Add a 'label' member to that relation linking the label node and the relation (nominatim and other data users can use this to deduplicate data)</li>
+<li>Add a wikipedia tag to either the node or relation to allow Nominatim to work out the importance of the feature</li>
+</ol>
+<p>This would be my current gold standard for admin data to best work with both Nominatim and tile rendering while avoiding 'tagging for the renderer'.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16000/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Sep '12, 13:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bda08a105bb6a4a606d47c1b27187fac?s=32&amp;d=identicon&amp;r=g" alt="twain's gravatar image" />
+    <p><a href="/users/4/twain">twain</a><br/>
+    <span class="score" title="2381 reputation points"><span class="">2.4k</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="38 badges"><span class="bronze">&#9679;</span><span class="badgecount">38</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="twain has 15 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16000/">
+                edited
+                <strong>12 Sep '12, 14:19</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16000">
+    
+        <a name="16003"></a>
+        <div class="comment" id="comment-16003">
+            <div id="post-16003-score" class="comment-score"></div>
+            <div class="comment-text"><p>To avoid duplicates in Nominatim, your forgot to mention the new feature with the role "admin_centre" in the boundary relation linked to the "place" node (the one which is the administrative centre e.g. the capital for a country or a town or city for a region, province, county or municipality).</p></div>
+            <div class="comment-info" id="comment-16003-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Sep '12, 14:08)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+        <a name="16005"></a>
+        <div class="comment" id="comment-16005">
+            <div id="post-16005-score" class="comment-score"></div>
+            <div class="comment-text"><p>No, for things that are exactly the same you should use the 'label' relation member.  admin_centre is for things like 'Sheffield (node)' is the admin_centre of 'South Yorkshire (relation)'.  label is for things like 'Sheffield (node)' is the label for the 'Sheffield (relation)'</p></div>
+            <div class="comment-info" id="comment-16005-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Sep '12, 14:12)</span>
+                <a class="comment-user userinfo" href="/users/4/twain">twain</a>
+                
+            </div>
+        </div>
+    
+        <a name="16010"></a>
+        <div class="comment" id="comment-16010">
+            <div id="post-16010-score" class="comment-score"></div>
+            <div class="comment-text"><p>I didn't speak about label issue but Nominatim search results duplicates as mentionned in the question. admin_centre has to point to the related administrative place, nothing to do if it is 'exactly the same' or not. If you understand it like this, then I failed to document it on the wiki (yes I created this role a long time ago).</p></div>
+            <div class="comment-info" id="comment-16010-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Sep '12, 15:47)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+        <a name="16015"></a>
+        <div class="comment" id="comment-16015">
+            <div id="post-16015-score" class="comment-score"></div>
+            <div class="comment-text"><p>yes, my understanding is that admin_centre points to a a related feature (which may or may not have the same name, but is definitely not the exact same place).  The question asks about duplicated data i.e. where we have both a place=* node and a boundary=administrative relation for exactly the same place and how to avoid/handle this duplication.  In context admin_centre is not relevant although it may be additional useful information to add to a relation.</p></div>
+            <div class="comment-info" id="comment-16015-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Sep '12, 16:24)</span>
+                <a class="comment-user userinfo" href="/users/4/twain">twain</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16000" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16000-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/15984/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='1EHUsOMuyXEBWqgSxm09qlB5rEGbeI6v' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15984/place-boundary-tags-reorganization-for-an-entire-country?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15984/place-boundary-tags-reorganization-for-an-entire-country?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/area/"
+            class="tag-link-area"
+            title="see questions tagged'area'using tags"
+            rel="tag">area</a> <span class="tag-number">&#215;213</span><br/>
+        
+        <a href="/tags/boundary/"
+            class="tag-link-boundary"
+            title="see questions tagged'boundary'using tags"
+            rel="tag">boundary</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/node/"
+            class="tag-link-node"
+            title="see questions tagged'node'using tags"
+            rel="tag">node</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/place/"
+            class="tag-link-place"
+            title="see questions tagged'place'using tags"
+            rel="tag">place</a> <span class="tag-number">&#215;43</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 12, 2012, 4:19 a.m.">12 Sep '12, 04:19</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,536 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 12, 2012, 4:25 p.m.">12 Sep '12, 16:25</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/33731/nominatim-why-is-a-small-nearby-village-included-in-a-location-description">Nominatim - Why is a small nearby village included in a location description?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3942/how-to-map-inhabited-places-settlements">How to map inhabited places (settlements)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10851/place-node-vs-area">place=* - node vs. area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32147/how-to-define-the-name-of-an-area-which-is-not-an-administrative-area-nor-a-village">How to define the name of an area which is not an administrative area nor a village</a>
+        </p>
+        
+        <p>
+            <a href="/questions/589/how-to-tag-non-settlement-place-names">How to tag &#39;non-settlement&#39; place names?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28140/cities-is-a-placecity-node-always-needed">Cities - is a place=city node always needed?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api">How to find list of cities in a state with overpass osm api?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1391/why-does-nominatim-not-pick-up-a-country-name">Why does Nominatim not pick up a country name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10147/how-to-correct-the-details-of-a-place">How to correct the details of a place?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19407/how-to-make-post-office-town-available-to-nominatim">How to make &quot;post office town&quot; available to nominatim?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

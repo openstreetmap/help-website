@@ -1,0 +1,184 @@
++++
+type = "question"
+title = "Winter roads on OSM"
+description = '''Good evening. Could somebody explain whether the OSM service provides winter roads or not ? If yes how we can use this feature on OSM ? We need to use winter roads on OSM within our CRM system which is currently developed. Thanks a lot in advance. With best regards Sergey Barun'''
+date = "2019-04-17T17:17:00Z"
+lastmod = "2019-04-18T09:43:00Z"
+weight = 68826
+keywords = [ "winterroadsonosm" ]
+aliases = [ "/questions/68826" ]
+osqa_answers = 1
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Winter roads on OSM](/questions/68826/winter-roads-on-osm)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-68826-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-68826-score" class="post-score" title="current number of votes">
+0
+</div>
+<span id="post-68826-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span> <span id="favorite-mark" class="ajax-command favorite-mark" rel="nofollow" title="mark/unmark this question as favorite (click again to cancel)"> </span>
+<div id="favorite-count" class="favorite-count">
+&#10;</div>
+</div></td>
+<td><div id="item-right">
+<div class="question-body">
+<p>Good evening.</p>
+<p>Could somebody explain whether the OSM service provides winter roads or not ?</p>
+<p>If yes how we can use this feature on OSM ?</p>
+<p>We need to use winter roads on OSM within our CRM system which is currently developed.</p>
+<p>Thanks a lot in advance.</p>
+<p>With best regards Sergey Barun</p>
+</div>
+<div id="question-tags" class="tags-container tags">
+<span class="post-tag tag-link-winterroadsonosm" rel="tag" title="see questions tagged &#39;winterroadsonosm&#39;">winterroadsonosm</span>
+</div>
+<div id="question-controls" class="post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>asked <strong>17 Apr '19, 17:17</strong></p>
+<img src="https://secure.gravatar.com/avatar/84c18f7553414b368c8fcc34aa07af3b?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SMBarun&#39;s gravatar image" />
+<p><span>SMBarun</span><br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SMBarun has no accepted answers">0%</span></p>
+</div>
+</div>
+<div id="comments-container-68826" class="comments-container">
+<span id="68827"></span>
+<div id="comment-68827" class="comment">
+<div id="post-68827-score" class="comment-score">
+1
+</div>
+<div class="comment-text">
+<p>OSM isn't really a "service" as such - but you can download OSM data which might have winter road information in it (which people have added after looking <a href="https://wiki.openstreetmap.org/wiki/Key:winter_road#Mapping_winter_roads">here</a>), and there may be other people running services based on OSM data that can provide winter road information.</p>
+</div>
+<div id="comment-68827-info" class="comment-info">
+<span class="comment-age">(17 Apr '19, 17:52)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
+</div>
+</div>
+<span id="68828"></span>
+<div id="comment-68828" class="comment">
+<div id="post-68828-score" class="comment-score">
+2
+</div>
+<div class="comment-text">
+<p>When you say "we need to use winter roads on OSM", what do you envision here? Do you want to do some analysis with the raw data, display them on a map, use them for routing, or something else?</p>
+</div>
+<div id="comment-68828-info" class="comment-info">
+<span class="comment-age">(17 Apr '19, 18:47)</span> <span class="comment-user userinfo">alester</span>
+</div>
+</div>
+</div>
+<div id="comment-tools-68826" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-68826-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="68829"></span>
+
+<div id="answer-container-68829" class="answer">
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-68829-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-68829-score" class="post-score" title="current number of votes">
+-1
+</div>
+<span id="post-68829-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span>
+</div></td>
+<td><div class="item-right">
+<div class="answer-body">
+<p>The answer to any question that goes "does OSM provide X or not" must be "no, OSM does not provide X, at least not in a consistent or guaranteed fashion". OSM is what its volunteers put in, and there's no rule that volunteers must consider winter roads.</p>
+</div>
+<div class="answer-controls post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>answered <strong>17 Apr '19, 21:14</strong></p>
+<img src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Frederik%20Ramm&#39;s gravatar image" />
+<p><span>Frederik Ramm ♦</span><br />
+<span class="score" title="82494 reputation points"><span>82.5k</span></span><span title="92 badges"><span class="badge1">●</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">●</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">●</span><span class="badgecount">1273</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Frederik Ramm has 417 accepted answers">23%</span></p>
+</div>
+</div>
+<div id="comments-container-68829" class="comments-container">
+<span id="68831"></span>
+<div id="comment-68831" class="comment">
+<div id="post-68831-score" class="comment-score">
+&#10;</div>
+<div class="comment-text">
+<p>I find that answer a bit harsh. The answer to any question that goes "does OSM provide X" must rather be "yes, OSM does provide it generally, but degree of completeness and quality varies by area and activity of local mappers, and it is up to the data consumer to extract the relevant information in the way they need it by themselves. OSM is not a service that provides X in a immediately usable way."</p>
+</div>
+<div id="comment-68831-info" class="comment-info">
+<span class="comment-age">(18 Apr '19, 09:43)</span> <span class="comment-user userinfo">TZorn</span>
+</div>
+</div>
+</div>
+<div id="comment-tools-68829" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-68829-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

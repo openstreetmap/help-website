@@ -1,0 +1,869 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Personalised Maps - OSM Help</title>
+        <meta name="description" content="Morning All I&#39;ve done a fair amount of work on Google Maps and am investigating OSM for use with our websites. From the get go, I understand GM, they work for me and apart from some slightly odd places and Google doesn&#39;t always recognise our postcodes I&#39;m relatively comfortable with it. With Google ..." />
+        <meta name="keywords" content="private_osm,maps,custom,google_maps,personalised" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/27621/personalised-maps" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/27621/personalised-maps?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='77XzfdpHgQqAeWVtrDHlNuE9N5Bv69AG' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/27621/personalised-maps">Personalised Maps</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-27621-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27621/up/" rel="nofollow"> </a>
+<div id="post-27621-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-27621-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27621/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/27621/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Morning All</p>
+<p>I've done a fair amount of work on Google Maps and am investigating OSM for use with our websites. From the get go, I understand GM, they work for me and apart from some slightly odd places and Google doesn't always recognise our postcodes I'm relatively comfortable with it.</p>
+<p>With Google I can create personalised maps. For example I could just create a 'cycle map' for my area and use it for our cycling website. </p>
+<p>Is it possible to do this with OSM? </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/private_osm/" class="post-tag tag-link-private_osm"
+                                        title="see questions tagged 'private_osm'" rel="tag">private_osm</a>
+                                
+                                    <a href="/tags/maps/" class="post-tag tag-link-maps"
+                                        title="see questions tagged 'maps'" rel="tag">maps</a>
+                                
+                                    <a href="/tags/custom/" class="post-tag tag-link-custom"
+                                        title="see questions tagged 'custom'" rel="tag">custom</a>
+                                
+                                    <a href="/tags/google_maps/" class="post-tag tag-link-google_maps"
+                                        title="see questions tagged 'google_maps'" rel="tag">google_maps</a>
+                                
+                                    <a href="/tags/personalised/" class="post-tag tag-link-personalised"
+                                        title="see questions tagged 'personalised'" rel="tag">personalised</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Oct '13, 09:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6c91fd3d1390ca2c158af0c71ad5e0ee?s=32&amp;d=identicon&amp;r=g" alt="Submarine's gravatar image" />
+    <p><a href="/users/7687/submarine">Submarine</a><br/>
+    <span class="score" title="131 reputation points">131</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Submarine has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27621/">
+                edited
+                <strong>31 Oct '13, 10:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-27621">
+    
+        <a name="27622"></a>
+        <div class="comment" id="comment-27622">
+            <div id="post-27622-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am nearly sure that we have a similar question already (which likely would also have answers), but I could not find one.  The question <a href="/questions/11555/">is-it-possible-to-use-it-like-google-maps</a> is similar, but a bit more general (also about routing) and not that much about a custom (cycle) map.</p></div>
+            <div class="comment-info" id="comment-27622-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '13, 10:44)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="28595"></a>
+        <div class="comment" id="comment-28595">
+            <div id="post-28595-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Extension of this subject is at <a href="https://help.openstreetmap.org/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites">https://help.openstreetmap.org/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites</a> </p>
+
+<p>Worth reading for people interested in this subject</p></div>
+            <div class="comment-info" id="comment-28595-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '13, 10:10)</span>
+                <a class="comment-user userinfo" href="/users/7687/submarine">Submarine</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27621" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27621-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/27621/personalised-maps?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/27621/personalised-maps?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/27621/personalised-maps?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/27621/personalised-maps?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="27623"></a>
+                    <div id="answer-container-27623" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27623-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27623/up/" rel="nofollow"> </a>
+<div id="post-27623-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-27623-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27623/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Submarine has selected this answer as the correct answer"
+        href="/accept_answer/27623/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It is possible to do very much with OSM. OSM is just <a href="http://www.openstreetmap.org/copyright">free</a> (free-dom, not necessarily free beer) data – not a service. But <a href="//wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">many services are using OSM data</a> (including our own service <a href="http://www.openstreetmap.org">osm.org</a> which is mainly targeted at mappers). So, if someone would build a  program like the one, which google has running there, it would also be possible with OSM data in the background.</p>
+<p>A <em>service</em> which could <em>suit your needs</em> (at least party) <em>is <a href="//wiki.openstreetmap.org/wiki/UMap">uMap</a></em>. It also allows to place marker(s), draw lines on the map, add names and description to the markers, ….</p>
+<p>However, you mention you want to create a "cycle map": If the cycle routes are signposted and official you can <a href="//wiki.openstreetmap.org/wiki/Cycle_routes">add them to our OSM data</a> and view them e.g. at the <a href="http://www.openstreetmap.org/#layers=C">OpenCycleMap</a>. No need to keep them only for you. Please note that we are strictly not allowed and do not want to copy data from other sources (like google maps) – with a few exceptions. If, instead, these routes are just your personal favourite routes then they should not be added to the OSM data.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27623/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Oct '13, 10:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27623/">
+                edited
+                <strong>29 Oct '13, 13:01</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27623">
+    
+        <a name="27624"></a>
+        <div class="comment" id="comment-27624">
+            <div id="post-27624-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, I get as an editor we have to add official data. Well understood. And in my map area someone has done a good job of adding Cycle Maps. If I can give this example:</p>
+
+<p>Lets pretend I have bird watching website. And I wanted to create a birdwatch website wit hall of the points where I have seen a seagull. </p>
+
+<p>As I understand it I can't, as an editor, start adding seagull data points as its all my personal sightings. Correct?</p>
+
+<p>So, I want to create a birdwatch map that's 'mine'; similar to creating your own map with Google maps. Once I'm happy with that map I would then want to embed it into my website.</p>
+
+<p>Is it possible for me to create a map called 'My seagull map' add in all the seagull points and do that?</p>
+
+<p>Thanks in advance</p></div>
+            <div class="comment-info" id="comment-27624-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '13, 11:48)</span>
+                <a class="comment-user userinfo" href="/users/7687/submarine">Submarine</a>
+                
+            </div>
+        </div>
+    
+        <a name="27625"></a>
+        <div class="comment" id="comment-27625">
+            <div id="post-27625-score" class="comment-score">4</div>
+            <div class="comment-text"><p>aseerel4c26 answered your question already - check out uMap</p></div>
+            <div class="comment-info" id="comment-27625-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '13, 11:57)</span>
+                <a class="comment-user userinfo" href="/users/3/andy-allan">Andy Allan</a>
+                
+            </div>
+        </div>
+    
+        <a name="27626"></a>
+        <div class="comment" id="comment-27626">
+            <div id="post-27626-score" class="comment-score"></div>
+            <div class="comment-text"><p>Of course it is possible to create arbitrary overlays on top of an OSM map.</p></div>
+            <div class="comment-info" id="comment-27626-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '13, 12:11)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27628"></a>
+        <div class="comment" id="comment-27628">
+            <div id="post-27628-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/7687/submarine"></a><a href="/users/7687/submarine">@Submarine</a>: Yes, you can show all of the points where you have seen a seagull in a personal map (not by adding it to the OSM data since it is nothing permanent, real, only useful for you and so on). You can create such personal maps with (for example) uMap. For a simple map of seagull-sighting points <a href="http://aphes.com/map/">OpenScribble</a> may be enough (basic) functionality for you (<a href="http://aphes.com/map/aseegulls">example</a> - either does not like long names or names with numbers...).</p></div>
+            <div class="comment-info" id="comment-27628-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '13, 13:06)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27623" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27623-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="33768"></a>
+                    <div id="answer-container-33768" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33768-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33768/up/" rel="nofollow"> </a>
+<div id="post-33768-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33768-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33768/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>found a new one:</p>
+<p>have a look at <a href="http://geojson.io">http://geojson.io</a> and read its help text. You can draw geometries, display markers according to coordinate tables, overlay GPX or KML data, and finally share your map even privately.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33768/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jun '14, 09:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33768">
+    
+</div>
+<div id="comment-tools-33768" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33768-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/27621/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='77XzfdpHgQqAeWVtrDHlNuE9N5Bv69AG' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27621/personalised-maps?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27621/personalised-maps?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/maps/"
+            class="tag-link-maps"
+            title="see questions tagged'maps'using tags"
+            rel="tag">maps</a> <span class="tag-number">&#215;126</span><br/>
+        
+        <a href="/tags/custom/"
+            class="tag-link-custom"
+            title="see questions tagged'custom'using tags"
+            rel="tag">custom</a> <span class="tag-number">&#215;39</span><br/>
+        
+        <a href="/tags/google_maps/"
+            class="tag-link-google_maps"
+            title="see questions tagged'google_maps'using tags"
+            rel="tag">google_maps</a> <span class="tag-number">&#215;29</span><br/>
+        
+        <a href="/tags/personalised/"
+            class="tag-link-personalised"
+            title="see questions tagged'personalised'using tags"
+            rel="tag">personalised</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/private_osm/"
+            class="tag-link-private_osm"
+            title="see questions tagged'private_osm'using tags"
+            rel="tag">private_osm</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 29, 2013, 9:44 a.m.">29 Oct '13, 09:44</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>27,314 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 7, 2014, 9:43 a.m.">07 Jun '14, 09:43</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites">what is the best solution for creating personalised maps for use on client websites?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30549/how-can-i-create-map-images-to-use-as-a-graphic-no-codejust-custom-map-images">How can I create map images to use as a graphic? No code...just custom map images.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1761/which-gps-device">Which GPS Device ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1941/very-incorrect-road-names-how-to-fix">VERY incorrect road names - how to fix?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1973/cant-use-google-maps-background">Can&#39;t use Google Maps background?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2118/downloading-osm-maps-for-garmin-etrex-legend-hcx-with-memory-card">Downloading OSM maps for Garmin etrex Legend HCx with memory card?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2878/vector-maps-xml-files">Vector Maps-- XML files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2660/how-do-i-put-openstreetmap-on-my-garmin-76csx">How do I put OpenStreetMap on my Garmin 76csx?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3643/howto-setup-a-private-osm-for-public-planning-eg-at-charrettes">howto setup a private OSM for public planning, e.g., at charrettes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1859/dave-hansens-site">Dave Hansen&#39;s Site?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

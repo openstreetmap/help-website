@@ -1,0 +1,936 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to correct misplaced names? - OSM Help</title>
+        <meta name="description" content="Hi. We meet often wrong positioned names. For example, look at all those &quot;island&quot;-s rendered right over water/blue area objects in this link: http://www.openstreetmap.org/#map=13/38.0146/-121.5068 How to correct them?" />
+        <meta name="keywords" content="rendering,names,position" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/29573/how-to-correct-misplaced-names" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/29573/how-to-correct-misplaced-names?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='bUrNo65I6YMF4x32BWO4J5GOjfEA7ROf' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/29573/how-to-correct-misplaced-names">How to correct misplaced names?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-29573-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29573/up/" rel="nofollow"> </a>
+<div id="post-29573-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-29573-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29573/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/29573/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi. We meet often wrong positioned names. For example, look at all those "island"-s rendered right over water/blue area objects in this link:<br>
+<a href="http://www.openstreetmap.org/#map=13/38.0146/-121.5068">http://www.openstreetmap.org/#map=13/38.0146/-121.5068</a><br>
+How to correct them?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/names/" class="post-tag tag-link-names"
+                                        title="see questions tagged 'names'" rel="tag">names</a>
+                                
+                                    <a href="/tags/position/" class="post-tag tag-link-position"
+                                        title="see questions tagged 'position'" rel="tag">position</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 Jan '14, 20:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/03cd9ea0efd97a7040fda0d6a76aba8e?s=32&amp;d=identicon&amp;r=g" alt="sanser's gravatar image" />
+    <p><a href="/users/3194/sanser">sanser</a><br/>
+    <span class="score" title="695 reputation points">695</span><span title="38 badges"><span class="badge1">&#9679;</span><span class="badgecount">38</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="55 badges"><span class="bronze">&#9679;</span><span class="badgecount">55</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sanser has 2 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-29573">
+    
+</div>
+<div id="comment-tools-29573" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29573-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/29573/how-to-correct-misplaced-names?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/29573/how-to-correct-misplaced-names?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/29573/how-to-correct-misplaced-names?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/29573/how-to-correct-misplaced-names?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="29574"></a>
+                    <div id="answer-container-29574" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29574-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29574/up/" rel="nofollow"> </a>
+<div id="post-29574-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-29574-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29574/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Well OSM has a <a href="http://wiki.openstreetmap.org/wiki/Good_practice">basic rule</a> that is called 'don't tag for renderers', so you need to pay attention, that you don't try to tweak just to make it look good at the osm.org default rendering. This might break the semantic of the internal geodata or break other renderings or processing.</p>
+<p>So if ther label position is <strong>determind by finding the mean coordinates</strong> of the shape (here: island outer ways), there you can't do anything, as it's calculated by the Mapnik2 renderer. I know that there was a ticket at the old TRAC, but if you like, you can search and maybe open a new <a href="https://github.com/gravitystorm/openstreetmap-carto/issues">issue for the style</a>, that might be pushed upstream to the Mapnik devs.<br>
+If the label appears using a <a href="http://wiki.openstreetmap.org/wiki/Key:place">place=* node</a>, you can just move them till it fit's the reality.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29574/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Jan '14, 21:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/49a7d0e0408e9cf2f698faac0f4d837a?s=32&amp;d=identicon&amp;r=g" alt="iii's gravatar image" />
+    <p><a href="/users/4984/iii">iii</a><br/>
+    <span class="score" title="4892 reputation points"><span class="">4.9k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="40 badges"><span class="silver">&#9679;</span><span class="badgecount">40</span></span><span title="82 badges"><span class="bronze">&#9679;</span><span class="badgecount">82</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="iii has 16 accepted answers">10&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29574">
+    
+        <a name="29603"></a>
+        <div class="comment" id="comment-29603">
+            <div id="post-29603-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not quite pleased with the answer(s) for the following reasons: 
+1. The SkippyMap is the OSM's REFERENCE map and it is probably the most visited WEB map of the Planet today; 2. The question implicitly points to a serious systematic error somewhere on the way from the source data until the client rendering; 3. There should be a limit how far the "we are not tagging for renderers" saying should be used as an excuse for serious errors; and 4. The misplaced name examples in the permalink are there in years indicating weaknesses in the public Inspectors used in the data preparation.</p></div>
+            <div class="comment-info" id="comment-29603-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '14, 08:55)</span>
+                <a class="comment-user userinfo" href="/users/3194/sanser">sanser</a>
+                
+            </div>
+        </div>
+    
+        <a name="29604"></a>
+        <div class="comment" id="comment-29604">
+            <div id="post-29604-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I'm not here to argue, I can just point you to the reasons that I know.</p>
+
+<p>to 1.) There is no 'reference' map as OSM are just data per project definition. An incomplete overview is <a href="http://wiki.openstreetmap.org/wiki/Maps">http://wiki.openstreetmap.org/wiki/Maps</a><br>
+to 2.) ? This is Open Source and the bug is/can be reported and be fixed. Currently nobody seems to have the time to do so or an idea for a serious solution without breaking other behaviour/performance.</p></div>
+            <div class="comment-info" id="comment-29604-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '14, 09:06)</span>
+                <a class="comment-user userinfo" href="/users/4984/iii">iii</a>
+                
+            </div>
+        </div>
+    
+        <a name="29605"></a>
+        <div class="comment" id="comment-29605">
+            <div id="post-29605-score" class="comment-score">3</div>
+            <div class="comment-text"><p>to 3.) It's not an excuse, it's a basic principle to avoid that the community permantly alters the data just because the semantic fit's for ones processing usecase better thant for the others.<br>
+to 4.) We don't have inspectors or a professional QA. The <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">very basic QA</a> that the (local) community does is basically to monitor the data and guide new users in useful tagging etc.</p>
+
+<p>P.S: I don't like this style of allegations in a public support board. You are welcome to <a href="http://wiki.openstreetmap.org/wiki/Contact">help on working</a> on that topic.</p></div>
+            <div class="comment-info" id="comment-29605-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '14, 09:09)</span>
+                <a class="comment-user userinfo" href="/users/4984/iii">iii</a>
+                
+            </div>
+        </div>
+    
+        <a name="29607"></a>
+        <div class="comment" id="comment-29607">
+            <div id="post-29607-score" class="comment-score">5</div>
+            <div class="comment-text"><p>iii has given you an accurate answer, sanser. If you are "not quite pleased with it" you are welcome to help fix the underlying issue, but shooting the messenger isn't going to get you anywhere and will make people less likely to help you in future.</p></div>
+            <div class="comment-info" id="comment-29607-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '14, 10:09)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29574" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29574-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="29608"></a>
+                    <div id="answer-container-29608" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29608-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29608/up/" rel="nofollow"> </a>
+<div id="post-29608-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-29608-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29608/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Whilst not being a native of that part of the world, I've flown over it a few times.  The GNIS imported data (which is the basis for the names there I think) has called some things "islands" and some things "rivers", but from the air it just looks like one large wetland with some "slightly less damp" and some "slightly more damp" areas.<br>
+</p>
+<p>These "islands" and "rivers" don't always have well-defined boundaries - unfortunately you can't always expect what's there to match your pre-conceived notion of what a feature should look like.  Whoever's mapped that area has used GNIS, NHD and (by the looks of it) Bing, and they've done a good job reflecting those sources.<br>
+</p>
+<p>With regard to the rendering, I can't actually see an example where a label is grossly misplaced, only one where the name being rendered ("Mildred Island", based on GNIS data and matching exactly the imported node) doesn't seem to have an obvious match on Bing.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29608/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jan '14, 10:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29608">
+    
+</div>
+<div id="comment-tools-29608" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29608-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="29717"></a>
+                    <div id="answer-container-29717" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29717-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29717/up/" rel="nofollow"> </a>
+<div id="post-29717-score" class="post-score"
+    title="current number of votes">
+    -2
+</div>
+<a id="post-29717-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29717/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I am not answering my own question but targeting the quick and somewhat speculative answers, comments and especially the “vote” column in this forum. Well, I dare to do this even if I know I will get new down/negative votes.<br>
+As I understand, the OSM is a professional and scientific public project where arguments talk. So, there is no place there for filings based “like”/”don’t like” type of judgements and where any well-meant and constructive criticism should be welcome. Let me take some bullets:<br>
+1. If something is so frequently referenced/used as the SlippyMap (and its layers) by links, extracts and so on, then it is hard to deny that it is a reference map;<br>
+2. If someone just a bit carefully looks into the map-extract in the permalink (in the question) he may quickly find at least 10 island names assigned to water objects (rendered over blue background with no islands at all). This fact is so obvious and unquestionable argument in favour of a systematic error assertion that any excuse (like “looking from high above”) is simply speculative. You may “don’t like”-it but never qualified as “not useful” (eventually “don’t understand”);<br>
+3. If someone is even more careful, patient and curious he may discover that all the missing islands (holes in water area objects) are actually there. Unfortunately, some of them are inverted to water objects while most of them are overwritten by another water area data layer. And again, this unquestionable systematic error warning I may “don’t like” but never qualified as “not useful”;<br>
+4. Finally, this forum is probably the most visited among all OSM lists/forums. Therefore, a warning about a serious systematic error here may trigger the attention of many local editors and renderers. In my opinion, this may be of much larger help than just correcting several errors from the error class.<br>
+But still, I may be wrong.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29717/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jan '14, 13:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/03cd9ea0efd97a7040fda0d6a76aba8e?s=32&amp;d=identicon&amp;r=g" alt="sanser's gravatar image" />
+    <p><a href="/users/3194/sanser">sanser</a><br/>
+    <span class="score" title="695 reputation points">695</span><span title="38 badges"><span class="badge1">&#9679;</span><span class="badgecount">38</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="55 badges"><span class="bronze">&#9679;</span><span class="badgecount">55</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sanser has 2 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29717">
+    
+        <a name="29719"></a>
+        <div class="comment" id="comment-29719">
+            <div id="post-29719-score" class="comment-score">2</div>
+            <div class="comment-text"><p>As far as I can see there is one main problem: Instead of "misplaced names" there are lots of broken or incorrectly/insufficiently tagged multipolygons (according to Bing). They lead to islands being wrongly rendered as water / water wrongly rendered as land. Consequently also the names <em>seem</em> to be incorrectly placed, although they are not. Besides, each name relates from a place=island node. So even if the names would have wrong positions then you could just move the corresponding nodes to the correct position. But here the water/land polygons have to be fixed before doing anything else.</p></div>
+            <div class="comment-info" id="comment-29719-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '14, 14:39)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="29722"></a>
+        <div class="comment" id="comment-29722">
+            <div id="post-29722-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="/users/3194/sanser">@sanser</a> - I don't understand what you're trying to achieve.  OSM is a do-ocracy; if something's wrong, go and fix it.  Just pointing at something and saying "that's not very good" won't acheive a lot.</p></div>
+            <div class="comment-info" id="comment-29722-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '14, 15:12)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="29723"></a>
+        <div class="comment" id="comment-29723">
+            <div id="post-29723-score" class="comment-score"></div>
+            <div class="comment-text"><p>also remember that sometimes things are more complex, so it's hard to evaluate the best solution from afar. for example, Mildred Island is labeled in the middle of the river. if you look at the imagery, you can see what appears to be the outline of an island, but it's now inundated with water. yet, is that still called Mildred Island even though it's more like a reef? and, does the island still appear when the water is under a certain level? if you can find the answers to questions like this, maybe we can help you figure out a better solution.</p></div>
+            <div class="comment-info" id="comment-29723-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '14, 15:28)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29717" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29717-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/29573/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='bUrNo65I6YMF4x32BWO4J5GOjfEA7ROf' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29573/how-to-correct-misplaced-names?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29573/how-to-correct-misplaced-names?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/names/"
+            class="tag-link-names"
+            title="see questions tagged'names'using tags"
+            rel="tag">names</a> <span class="tag-number">&#215;54</span><br/>
+        
+        <a href="/tags/position/"
+            class="tag-link-position"
+            title="see questions tagged'position'using tags"
+            rel="tag">position</a> <span class="tag-number">&#215;20</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 3, 2014, 8:32 p.m.">03 Jan '14, 20:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,776 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 9, 2014, 3:28 p.m.">09 Jan '14, 15:28</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/27414/multiple-towncity-names">Multiple Town/City names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30381/why-no-map-names-for-post-offices">Why no map names for Post Offices</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47315/how-can-i-create-my-own-map-with-customized-road-names">How can I create my own map with customized road names ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/242/how-to-download-rendered-osm-maps">How to download rendered OSM maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/361/why-render-abandoned-railways">[closed] Why render abandoned railways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a>
+        </p>
+        
+        <p>
+            <a href="/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile">Given a lat/lon, how do I find the precise position on the tile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/815/am-i-doing-ok">Am i doing ok ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/460/is-there-any-way-to-group-the-rendering-of-changes-to-the-public-map">Is there any way to group the rendering of changes to the public map?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

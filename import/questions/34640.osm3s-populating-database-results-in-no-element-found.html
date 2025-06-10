@@ -1,0 +1,675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>osm3s populating database results in &quot;no element found&quot;. - OSM Help</title>
+        <meta name="description" content="I&#39;ve got a local installation of the osm3s running and it works fine with data from openstreetmap. I would like to use my own custom 3D data. I&#39;ve got an entire 3D model of a city in Microstation. It&#39;s in wireframes. I can set the projection to WGS84 and export it to KML and then convert it with ogr..." />
+        <meta name="keywords" content="dxf,osm3s,ogr2osm,3d" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/34640/osm3s-populating-database-results-in-no-element-found" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/34640/osm3s-populating-database-results-in-no-element-found?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='SEbV6lOQXPGdRzwdNbkl2uOW5e2wiEJ8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/34640/osm3s-populating-database-results-in-no-element-found">osm3s populating database results in &quot;no element found&quot;.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-34640-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34640/up/" rel="nofollow"> </a>
+<div id="post-34640-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-34640-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34640/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/34640/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I've got a local installation of the osm3s running and it works fine with data from openstreetmap.</p>
+<p>I would like to use my own custom 3D data. I've got an entire 3D model of a city in Microstation. It's in wireframes. I can set the projection to WGS84 and export it to KML and then convert it with ogr2osm.
+But when I try to populate the database for osm3s it return with "no elements found".</p>
+<p>Looking at the .osm-file does show a lot of nodes etc.</p>
+<p>What to do?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/dxf/" class="post-tag tag-link-dxf"
+                                        title="see questions tagged 'dxf'" rel="tag">dxf</a>
+                                
+                                    <a href="/tags/osm3s/" class="post-tag tag-link-osm3s"
+                                        title="see questions tagged 'osm3s'" rel="tag">osm3s</a>
+                                
+                                    <a href="/tags/ogr2osm/" class="post-tag tag-link-ogr2osm"
+                                        title="see questions tagged 'ogr2osm'" rel="tag">ogr2osm</a>
+                                
+                                    <a href="/tags/3d/" class="post-tag tag-link-3d"
+                                        title="see questions tagged '3d'" rel="tag">3d</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Jul '14, 14:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/864bb2bd659ffa71e4c36bab6a92884d?s=32&amp;d=identicon&amp;r=g" alt="haasor's gravatar image" />
+    <p><a href="/users/9161/haasor">haasor</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="haasor has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-34640">
+    
+</div>
+<div id="comment-tools-34640" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34640-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/34640/osm3s-populating-database-results-in-no-element-found?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/34640/osm3s-populating-database-results-in-no-element-found?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/34640/osm3s-populating-database-results-in-no-element-found?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/34640/osm3s-populating-database-results-in-no-element-found?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="34647"></a>
+                    <div id="answer-container-34647" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34647-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34647/up/" rel="nofollow"> </a>
+<div id="post-34647-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-34647-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34647/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Does your generated OSM file contain negative id values (which is the default for ogr2osm)? This will most likely cause some undesired side effects when loading using update_database for Overpass API, such as strange node ids (e.g. "18446744073707268155").</p>
+<p>Apart from that I can't really reproduce your issue. I converted some polygons from a PostGIS db to a shape file and then converted this via ogr2osm to an OSM file and loaded the file into Overpass API (latest github version) via update_database. I could query some of the nodes, although their id was completely screwed. This needs to be adjusted in the ogr2osm script.</p>
+<p>I believe you need to provide much more details like version of the programs involved, sample OSM snippets, log files etc.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34647/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Jul '14, 21:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/264d84ab05b942224b05960903eba7a7?s=32&amp;d=identicon&amp;r=g" alt="mmd's gravatar image" />
+    <p><a href="/users/8708/mmd">mmd</a><br/>
+    <span class="score" title="5682 reputation points"><span class="">5.7k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="53 badges"><span class="silver">&#9679;</span><span class="badgecount">53</span></span><span title="88 badges"><span class="bronze">&#9679;</span><span class="badgecount">88</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmd has 44 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34647/">
+                edited
+                <strong>04 Jul '14, 21:24</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34647">
+    
+        <a name="34717"></a>
+        <div class="comment" id="comment-34717">
+            <div id="post-34717-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is the top from the generated XML/OSM file: <a href="http://pastie.org/9366804">http://pastie.org/9366804</a></p></div>
+            <div class="comment-info" id="comment-34717-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jul '14, 08:30)</span>
+                <a class="comment-user userinfo" href="/users/9161/haasor">haasor</a>
+                
+            </div>
+        </div>
+    
+        <a name="34718"></a>
+        <div class="comment" id="comment-34718">
+            <div id="post-34718-score" class="comment-score"></div>
+            <div class="comment-text"><p>Programs involved are Microstation V8i, export to DXF, converted into osm via ogr2osm and loading into overpass-api/osm3s.</p></div>
+            <div class="comment-info" id="comment-34718-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jul '14, 08:35)</span>
+                <a class="comment-user userinfo" href="/users/9161/haasor">haasor</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34647" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34647-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/34640/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='SEbV6lOQXPGdRzwdNbkl2uOW5e2wiEJ8' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34640/osm3s-populating-database-results-in-no-element-found?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34640/osm3s-populating-database-results-in-no-element-found?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/3d/"
+            class="tag-link-3d"
+            title="see questions tagged'3d'using tags"
+            rel="tag">3d</a> <span class="tag-number">&#215;37</span><br/>
+        
+        <a href="/tags/ogr2osm/"
+            class="tag-link-ogr2osm"
+            title="see questions tagged'ogr2osm'using tags"
+            rel="tag">ogr2osm</a> <span class="tag-number">&#215;6</span><br/>
+        
+        <a href="/tags/dxf/"
+            class="tag-link-dxf"
+            title="see questions tagged'dxf'using tags"
+            rel="tag">dxf</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/osm3s/"
+            class="tag-link-osm3s"
+            title="see questions tagged'osm3s'using tags"
+            rel="tag">osm3s</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 4, 2014, 2:51 p.m.">04 Jul '14, 14:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,373 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 8, 2014, 8:35 a.m.">08 Jul '14, 08:35</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/7806/is-there-a-3d-trial-renderer-available-for-general-use">Is there a 3D trial-renderer available for general use?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9123/converting-shp-files-to-osm-files">Converting shp files to osm files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10138/different-layers-for-osm">Different layers for osm</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13425/export-vector-map">[closed] export vector map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18166/ogr2osm-imported-data-shifted-by-176m-222exported-from-arcgis">Ogr2Osm: Imported data shifted by 176m, 222°(exported from ArcGIS)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18427/how-can-i-remove-overlaping-administrative-boundaries">how can i remove overlaping administrative boundaries?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21398/terrainmodell-dtm">Terrainmodell (DTM)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25011/can-3d-building-shapes-be-previewed">Can 3D building shapes be previewed?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32820/3d-building-3d-building-visualization">3D building / 3D building visualization</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5845/create-3d-model-of-city-from-svg-files">Create 3D model of city from SVG files?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

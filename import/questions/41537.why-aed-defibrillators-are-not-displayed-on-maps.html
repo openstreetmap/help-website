@@ -1,0 +1,872 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why AED (defibrillators) are not displayed on maps? - OSM Help</title>
+        <meta name="description" content="AED (Automated external defibrillator) are getting widely diffused in Italy and in Europe lately, and I keep adding emergency:defibrillator tags where I see new stations.  Sadly on the default view of OpenStreetMap.org those devices are not displayed, while less imporant amenities like ATMs are visi..." />
+        <meta name="keywords" content="not_shown,defibrillator,aed" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/41537/why-aed-defibrillators-are-not-displayed-on-maps" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/41537/why-aed-defibrillators-are-not-displayed-on-maps?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hQcwODwT0SFxojDh82l8Xb4aIIKWMfRv' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/41537/why-aed-defibrillators-are-not-displayed-on-maps">Why AED (defibrillators) are not displayed on maps?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-41537-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/41537/up/" rel="nofollow"> </a>
+<div id="post-41537-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-41537-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/41537/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/41537/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>AED (<a href="Automated external defibrillator">Automated external defibrillator</a>) are getting widely diffused in Italy and in Europe lately, and I keep adding <a href="http://wiki.openstreetmap.org/wiki/Tag:emergency%3Ddefibrillator">emergency:defibrillator</a> tags where I see new stations. </p>
+<p>Sadly on the default view of <em>OpenStreetMap.org</em> those devices are not displayed, while less imporant amenities like ATMs are visible. </p>
+<p>I've added one <a href="http://www.openstreetmap.org/relation/46229#map=19/45.85501/9.38961">here</a> (<a href="http://www.openstreetmap.org/node/3347777149">node 3347777149</a>) , which is visible only on edit or on <a href="http://www.tappenbeck.net/osm/maps/deu/index.php?id=1029&amp;zoom=15&amp;lat=45.85492&amp;lon=9.38987&amp;layers=B00TTTF">specific maps</a>.</p>
+<p>Wouldn't it be useful to show such elements on the map?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/not_shown/" class="post-tag tag-link-not_shown"
+                                        title="see questions tagged 'not_shown'" rel="tag">not_shown</a>
+                                
+                                    <a href="/tags/defibrillator/" class="post-tag tag-link-defibrillator"
+                                        title="see questions tagged 'defibrillator'" rel="tag">defibrillator</a>
+                                
+                                    <a href="/tags/aed/" class="post-tag tag-link-aed"
+                                        title="see questions tagged 'aed'" rel="tag">aed</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Mar '15, 11:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/57231e12aa03b6c81cdf1869cfa82e47?s=32&amp;d=identicon&amp;r=g" alt="maxxer's gravatar image" />
+    <p><a href="/users/10620/maxxer">maxxer</a><br/>
+    <span class="score" title="76 reputation points">76</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="maxxer has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/41537/">
+                edited
+                <strong>07 Mar '15, 13:29</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-41537">
+    
+        <a name="60310"></a>
+        <div class="comment" id="comment-60310">
+            <div id="post-60310-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The discussion re the "OSM Carto" style is at <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/1603">https://github.com/gravitystorm/openstreetmap-carto/issues/1603</a> .  Other map styles (including at least one general map style that I can think of) do render them.</p></div>
+            <div class="comment-info" id="comment-60310-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 11:26)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60311"></a>
+        <div class="comment" id="comment-60311">
+            <div id="post-60311-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/9526/styrheim">@Styrheim</a> I moved your answer to a comment because it wasn't an answer.</p></div>
+            <div class="comment-info" id="comment-60311-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 11:28)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-41537" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-41537-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/41537/why-aed-defibrillators-are-not-displayed-on-maps?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/41537/why-aed-defibrillators-are-not-displayed-on-maps?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/41537/why-aed-defibrillators-are-not-displayed-on-maps?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/41537/why-aed-defibrillators-are-not-displayed-on-maps?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="41539"></a>
+                    <div id="answer-container-41539" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-41539-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/41539/up/" rel="nofollow"> </a>
+<div id="post-41539-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-41539-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/41539/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Because the key emergency is not in the database schema of opentreetmap-carto. New keys are not added at the moment.
+<a href="https://github.com/gravitystorm/openstreetmap-carto/issues/318">https://github.com/gravitystorm/openstreetmap-carto/issues/318</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/41539/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Mar '15, 11:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5b348ff6c373c2fffb6904e2d049312e?s=32&amp;d=identicon&amp;r=g" alt="Jojo4u's gravatar image" />
+    <p><a href="/users/10452/jojo4u">Jojo4u</a><br/>
+    <span class="score" title="129 reputation points">129</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jojo4u has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-41539">
+    
+        <a name="41540"></a>
+        <div class="comment not_top_scorer" id="comment-41540">
+            <div id="post-41540-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks, added my comment there</p></div>
+            <div class="comment-info" id="comment-41540-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '15, 11:44)</span>
+                <a class="comment-user userinfo" href="/users/10620/maxxer">maxxer</a>
+                
+            </div>
+        </div>
+    
+        <a name="41552"></a>
+        <div class="comment" id="comment-41552">
+            <div id="post-41552-score" class="comment-score">7</div>
+            <div class="comment-text"><p>It is rather unlikely that anybody would refer to the OSM standard style to find an AED in an emergency (or any other online or paper map for what it is worth), this extends to all saftey equiment. Naturally being able to find one as a POI in a navigation app on the other hand might be useful.</p></div>
+            <div class="comment-info" id="comment-41552-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '15, 17:07)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="50023"></a>
+        <div class="comment not_top_scorer" id="comment-50023">
+            <div id="post-50023-score" class="comment-score"></div>
+            <div class="comment-text"><p>However someone might see an AED on OSM that isn't immediately visible IRL (inside a medical facility for example) and remember it's location when it's needed in an emergency.</p></div>
+            <div class="comment-info" id="comment-50023-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '16, 05:23)</span>
+                <a class="comment-user userinfo" href="/users/12391/matthewsheffield">matthewsheff...</a>
+                
+            </div>
+        </div>
+    
+        <a name="50024"></a>
+        <div class="comment" id="comment-50024">
+            <div id="post-50024-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Possibly, but your example is poor: The staff at any medical facility that has an AED should know where it is or, more likely, they are. As a "first responder", I know exactly where our AED is and I would expect all of my colleagues to know it too, especially as we have regular training sessions about such things.</p>
+
+<p>In my mind, public non-medical facilities that have AEDs might be a better example for you. For instance where AEDs are located in an airport.</p>
+
+<p>But even in places like that, I find that I am always keeping an eye out for them, possibly due to my training, and if I needed access to one quickly I'd send someone to the closest one I'd noticed rather than attempt to fire up a web browser on a smart phone and try to find one on a OSM based map. I rather doubt that my phone's gps and/or network based location processing would be very good inside a building anyway and I'd be attending to more important things like starting CPR.</p>
+
+<p>I may be an exception and most people may not be looking for or consciously noting AED locations. But I harbor the suspicion that anyone likely to consider using an AED would also be the type to notice where they are.</p></div>
+            <div class="comment-info" id="comment-50024-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '16, 09:07)</span>
+                <a class="comment-user userinfo" href="/users/5918/n76">n76</a>
+                
+            </div>
+        </div>
+    
+        <a name="50025"></a>
+        <div class="comment not_top_scorer" id="comment-50025">
+            <div id="post-50025-score" class="comment-score"></div>
+            <div class="comment-text"><p>But if you were visiting somewhere new and needed find one?</p></div>
+            <div class="comment-info" id="comment-50025-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '16, 09:19)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="50026"></a>
+        <div class="comment" id="comment-50026">
+            <div id="post-50026-score" class="comment-score">4</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/644/andy-mackey"></a><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a> start OSMand or maps.me or whatever, but defintely not try to start openstreetmap.org and fiddly try to find my current location, find an AED and then find out how I get there.</p>
+
+<p>In any case  as stf says from a practical pov you either know where a nearby AED is or you don't, and you are defintely not going to go off hunting for one except if you are the nth (for large n) person at a incident site.</p></div>
+            <div class="comment-info" id="comment-50026-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '16, 09:58)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60313"></a>
+        <div class="comment" id="comment-60313">
+            <div id="post-60313-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Count one vote for showing AEDs when searching the Emergency category. At least those that are outdoors and available 24/7.</p>
+
+<p>Here in the Faroe Islands, all I find in the Emergency category is police- and fire stations. Those locations are no use at all during an emergency.</p>
+
+<p>If two helpers have started CPR, I think the third one may start looking for an AED?</p>
+
+<p>What positions might be useful in an emergency? I can think of first-aid kits, life buoys, fire extinguishers and AEDs. We should all make mental notes of those, as we do with emergency exits, but if we don't?</p>
+
+<p>What is the point of adding AEDs to the map, if they are not shown?</p></div>
+            <div class="comment-info" id="comment-60313-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 11:52)</span>
+                <a class="comment-user userinfo" href="/users/9526/styrheim">Styrheim</a>
+                
+            </div>
+        </div>
+    
+        <a name="60315"></a>
+        <div class="comment not_top_scorer" id="comment-60315">
+            <div id="post-60315-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/9526/styrheim">@Styrheim</a> The OSM dataset has multiple consumers.  Even if one particular renderer doesn't show AEDs, other renderers and other consumers might.</p>
+
+<p>As to a use-case for showing AEDs on osm.org: One who's planning a trip might choose which of a city's two airports to depart from based on how many AEDs each airport has.</p></div>
+            <div class="comment-info" id="comment-60315-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 16:21)</span>
+                <a class="comment-user userinfo" href="/users/13665/dsh4">dsh4</a>
+                
+            </div>
+        </div>
+    
+        <a name="60317"></a>
+        <div class="comment" id="comment-60317">
+            <div id="post-60317-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/9526/styrheim">@Styrheim</a>: you can use <a href="https://wambachers-osm.website/emergency/">https://wambachers-osm.website/emergency/</a> to show AEDs nowadays.</p></div>
+            <div class="comment-info" id="comment-60317-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 20:07)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="76046"></a>
+        <div class="comment not_top_scorer" id="comment-76046">
+            <div id="post-76046-score" class="comment-score"></div>
+            <div class="comment-text"><p>It would be useful to show AED locations as in preparation for an event as First Aider where I am not immediately local I wish to look up where AEDs are located and then visit to check that there is one there. There are more AEDs installed here in Ireland in recent years but many of them are internal in buildings due to protection from vandalism. Even with talking to local people it is very difficult to find AED locations.</p></div>
+            <div class="comment-info" id="comment-76046-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Aug '20, 14:26)</span>
+                <a class="comment-user userinfo" href="/users/12038/gaoithe">gaoithe</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-41539" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-41539-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/41537/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hQcwODwT0SFxojDh82l8Xb4aIIKWMfRv' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/41537/why-aed-defibrillators-are-not-displayed-on-maps?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/41537/why-aed-defibrillators-are-not-displayed-on-maps?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/not_shown/"
+            class="tag-link-not_shown"
+            title="see questions tagged'not_shown'using tags"
+            rel="tag">not_shown</a> <span class="tag-number">&#215;75</span><br/>
+        
+        <a href="/tags/defibrillator/"
+            class="tag-link-defibrillator"
+            title="see questions tagged'defibrillator'using tags"
+            rel="tag">defibrillator</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/aed/"
+            class="tag-link-aed"
+            title="see questions tagged'aed'using tags"
+            rel="tag">aed</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 6, 2015, 11:28 a.m.">06 Mar '15, 11:28</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,945 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 7, 2020, 2:26 p.m.">07 Aug '20, 14:26</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/11118/adding-a-aed">adding a AED</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5440/why-arent-my-uploaded-gps-traces-shown-on-the-maps">Why aren&#39;t my uploaded GPS traces shown on the maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6815/why-isnt-the-poi-that-i-added-showing-up-on-the-map">Why isn&#39;t the POI that I added showing up on the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10748/why-cant-i-see-the-benches-and-picnic-tables-i-added-to-the-map">Why can&#39;t I see the benches and picnic tables I added to the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4705/why-havent-my-changes-appeared-on-the-map">Why haven&#39;t my changes appeared on the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14079/edits-show-only-on-standard-map-not-cycle-map-etc">edits show only on standard map, not cycle map, etc.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25000/poi-shop-does-not-show-on-wwwopenstreetmaporg">POI (shop) does not show on www.openstreetmap.org</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25489/why-does-my-cycle-route-not-show-on-the-cycle-map-layer-when-tagged-as-such">Why does my cycle route not show on the cycle map layer when tagged as such?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27229/mit-welchem-key-kann-man-den-standort-von-defibrillatoren-kennzeichnen">[closed] Mit welchem Key kann man den Standort von Defibrillatoren kennzeichnen?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don&#39;t show up on the map</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

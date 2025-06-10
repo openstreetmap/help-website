@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>inconsistent display of changes, depending on zoom level - OSM Help</title>
+        <meta name="description" content="Hi, I&#39;m new to OSM edits and have a question which may have been asked before: The edits I did were some 2 days ago, so by now I would expect the changes to appear in regular map display. Yes, I read the FAQ about delays due to tile processing and server/browser caching. That&#39;s why I waited more tha..." />
+        <meta name="keywords" content="zoomlevel,changeset,display" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/85576/inconsistent-display-of-changes-depending-on-zoom-level" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/85576/inconsistent-display-of-changes-depending-on-zoom-level?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='XSDuo2vaZEwXw3lIrvM6ipe4H9hEgTUZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/85576/inconsistent-display-of-changes-depending-on-zoom-level">inconsistent display of changes, depending on zoom level</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-85576-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85576/up/" rel="nofollow"> </a>
+<div id="post-85576-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85576-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85576/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/85576/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, I'm new to OSM edits and have a question which may have been asked before:
+The edits I did were some 2 days ago, so by now I would expect the changes to appear in regular map display.
+Yes, I read the FAQ about delays due to tile processing and server/browser caching. That's why I waited more than 2 days - and of course cleared my browser cache before checking.
+Today I observed the following:</p>
+<ol>
+<li>In max zoom level, OSM German style, the changes are not visible (old building still there where it shouldn't be any more) - see <a href="https://www.dropbox.com/s/4xy1rcm59uedqbk/FF%20max%20zoom%2C%20OSM%20German%20style.jpg?dl=0">here</a></li>
+<li>In max zoom level, Mapnik style, you can see the new buildings, but there is obviously a mismatch to an adjacent tile - see <a href="https://www.dropbox.com/s/gekxxxc0ezyi2sz/FF%20max%20zoom%2C%20OSM%20Mapnik.jpg?dl=0">here</a></li>
+<li>in one zoom level below max (Mapnik style), the information seems correct - see <a href="https://www.dropbox.com/s/b4e52e02bzukdmz/FF%20max%20zoom%20-%201%2C%20OSM%20Mapnik.jpg?dl=0">here</a></li>
+</ol>
+<p>The corresponding changeset is <a href="https://www.openstreetmap.org/changeset/125787571#map=19/48.38616/10.00727">this</a> one. 
+I also observed at other places that recent changes only show up correctly at (one) zoom level below max.</p>
+<p>Is there anything I can do about this?
+Did I possibly do something wrong in submission?
+Or is this expected to fix itself over time? What time frame should I expect - days, weeks, months?
+Thanks for you help.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/zoomlevel/" class="post-tag tag-link-zoomlevel"
+                                        title="see questions tagged 'zoomlevel'" rel="tag">zoomlevel</a>
+                                
+                                    <a href="/tags/changeset/" class="post-tag tag-link-changeset"
+                                        title="see questions tagged 'changeset'" rel="tag">changeset</a>
+                                
+                                    <a href="/tags/display/" class="post-tag tag-link-display"
+                                        title="see questions tagged 'display'" rel="tag">display</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Sep '22, 08:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/63702b751321f7417b1372f03951dc72?s=32&amp;d=identicon&amp;r=g" alt="Samse26's gravatar image" />
+    <p><a href="/users/22200/samse26">Samse26</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Samse26 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/85576/">
+                edited
+                <strong>07 Sep '22, 08:38</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-85576">
+    
+</div>
+<div id="comment-tools-85576" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85576-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/85576/inconsistent-display-of-changes-depending-on-zoom-level?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/85576/inconsistent-display-of-changes-depending-on-zoom-level?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/85576/inconsistent-display-of-changes-depending-on-zoom-level?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/85576/inconsistent-display-of-changes-depending-on-zoom-level?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="85578"></a>
+                    <div id="answer-container-85578" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85578-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85578/up/" rel="nofollow"> </a>
+<div id="post-85578-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-85578-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85578/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is indeed a very frequently asked question, for example</p>
+<ul>
+<li><a href="https://help.openstreetmap.org/questions/56241/why-is-the-standard-updated-but-cycle-transport-and-humanitarian-still-show-old-data">Why is the Standard updated, but Cycle, Transport and Humanitarian still show old data?</a></li>
+<li><a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a></li>
+<li><a href="https://help.openstreetmap.org/questions/65314/changes-not-showing-after-edit">Changes not showing after edit</a></li>
+<li><a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a></li>
+</ul>
+<p>Perhaps one of these answers will help.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85578/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Sep '22, 09:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85578">
+    
+        <a name="85582"></a>
+        <div class="comment" id="comment-85582">
+            <div id="post-85582-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the links. I knew some of them but I wasn't aware about the strict split between OSM database and how much the various derived maps differ in their update cycle.
+What I find confusing anyway is if different zoom levels show different edit stages. So what do I do if I want to edit an item I see on zoom-level x, then I zoom in to level x+1 for more details - and see a different item?</p>
+
+<p>Anyway, I will train my patience and check again - in a week or a month or so ...</p>
+
+<p>BTW what happens if we conflicting edits get submitted by different mappers, unaware of the item being already edited? FIFO or most recent wins?</p>
+
+<p>FWIW: the mismatch in tiles in highest zoomlevel which I reported above is now gone. So Mapnik style is OK, German style still not updated.</p></div>
+            <div class="comment-info" id="comment-85582-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '22, 21:09)</span>
+                <a class="comment-user userinfo" href="/users/22200/samse26">Samse26</a>
+                
+            </div>
+        </div>
+    
+        <a name="85583"></a>
+        <div class="comment" id="comment-85583">
+            <div id="post-85583-score" class="comment-score">1</div>
+            <div class="comment-text"><p>When you edit an object your editor will always present you with the current version from the database, not the current version visible on the map. If two people edit the same object, the one who uploads first "wins" and the second person will see an upload conflict error message in their editor.</p></div>
+            <div class="comment-info" id="comment-85583-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '22, 21:17)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-85578" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85578-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/85576/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='XSDuo2vaZEwXw3lIrvM6ipe4H9hEgTUZ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/85576/inconsistent-display-of-changes-depending-on-zoom-level?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/85576/inconsistent-display-of-changes-depending-on-zoom-level?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/changeset/"
+            class="tag-link-changeset"
+            title="see questions tagged'changeset'using tags"
+            rel="tag">changeset</a> <span class="tag-number">&#215;127</span><br/>
+        
+        <a href="/tags/zoomlevel/"
+            class="tag-link-zoomlevel"
+            title="see questions tagged'zoomlevel'using tags"
+            rel="tag">zoomlevel</a> <span class="tag-number">&#215;99</span><br/>
+        
+        <a href="/tags/display/"
+            class="tag-link-display"
+            title="see questions tagged'display'using tags"
+            rel="tag">display</a> <span class="tag-number">&#215;59</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 7, 2022, 8:36 a.m.">07 Sep '22, 08:36</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,325 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 7, 2022, 9:17 p.m.">07 Sep '22, 21:17</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/15609/how-can-i-force-a-node-to-display-at-lower-zoom-levels">How can I force a node to display at lower zoom levels?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1518/can-i-visualize-show-changeset-on-a-map-somehow">Can I visualize (show) changeset on a map somehow?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3915/how-do-i-add-an-upload-comment-in-merkaartor">How do I add an upload comment in Merkaartor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2017/how-can-i-import-data-to-osm-from-a-csv-file">How can I import data to OSM from a .csv file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2408/upload-gpx-trackno-display-on-profile-no-error-of-osm-server-no-mail">[closed] Upload GPX track...no display on profile, no error of OSM server, no mail</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2603/what-does-incomplete-mean-for-a-changeset">What does &quot;incomplete&quot; mean for a changeset?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1895/how-to-close-a-changeset-in-potlatch-2">How to close a changeset in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3983/how-do-you-display-only-local-edits-in-the-changelog">How do you display only local edits in the changelog?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4044/how-to-display-a-specific-way-in-red-in-a-viewer">How to display a specific way in red in a viewer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/971/display-a-label-on-the-each-marker">Display a label on the each marker</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

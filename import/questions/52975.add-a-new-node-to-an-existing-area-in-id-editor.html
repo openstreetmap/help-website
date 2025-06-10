@@ -1,0 +1,858 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Add a new node to an existing area in iD editor? - OSM Help</title>
+        <meta name="description" content="How can I add a new node to an existing area in the iD editor? I&#39;ve tried every combination of mouse and cntl, shift, alt etc. There must be a way!" />
+        <meta name="keywords" content="node,ideditor,editing,area" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/52975/add-a-new-node-to-an-existing-area-in-id-editor" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52975/add-a-new-node-to-an-existing-area-in-id-editor?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='fB6dNsvCf6WFAzbx0te6S3SLjgu35Aj6' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52975/add-a-new-node-to-an-existing-area-in-id-editor">Add a new node to an existing area in iD editor?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52975-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52975/up/" rel="nofollow"> </a>
+<div id="post-52975-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-52975-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52975/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52975/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How can I add a new node to an existing area in the iD editor?</p>
+<p>I've tried every combination of mouse and cntl, shift, alt etc. There must be a way!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/node/" class="post-tag tag-link-node"
+                                        title="see questions tagged 'node'" rel="tag">node</a>
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/area/" class="post-tag tag-link-area"
+                                        title="see questions tagged 'area'" rel="tag">area</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Nov '16, 13:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6d4d2d4a2c2a8def23004be9f11a6e1c?s=32&amp;d=identicon&amp;r=g" alt="simonc8's gravatar image" />
+    <p><a href="/users/12990/simonc8">simonc8</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="simonc8 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52975/">
+                edited
+                <strong>23 Nov '16, 13:26</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6c2dd6a39d3f38f1bb47a8c1fe8325e2?s=32&amp;d=identicon&amp;r=g" alt="sleske's gravatar image" />
+            <p><a href="/users/666/sleske">sleske</a><br/>
+            <span class="score" title="4090 reputation points"><span class="">4.1k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="78 badges"><span class="bronze">&#9679;</span><span class="badgecount">78</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52975">
+    
+        <a name="52976"></a>
+        <div class="comment" id="comment-52976">
+            <div id="post-52976-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you say what OSM editor (i.e. is it the default one that you get from selecting "edit" from openstreetmap.org), what browser and what OS you're using?</p></div>
+            <div class="comment-info" id="comment-52976-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Nov '16, 13:18)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52977"></a>
+        <div class="comment" id="comment-52977">
+            <div id="post-52977-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I'm using Firefox, the iD editor and Windows 7.</p></div>
+            <div class="comment-info" id="comment-52977-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Nov '16, 13:52)</span>
+                <a class="comment-user userinfo" href="/users/12990/simonc8">simonc8</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52975" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52975-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52975/add-a-new-node-to-an-existing-area-in-id-editor?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52975/add-a-new-node-to-an-existing-area-in-id-editor?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52975/add-a-new-node-to-an-existing-area-in-id-editor?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52975/add-a-new-node-to-an-existing-area-in-id-editor?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52979"></a>
+                    <div id="answer-container-52979" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52979-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52979/up/" rel="nofollow"> </a>
+<div id="post-52979-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-52979-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52979/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="aseerel4c26 has selected this answer as the correct answer"
+        href="/accept_answer/52979/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Assuming that you simply want to add a new node to the area/polygon outline: select the outline, pull one of the intermediate "handle" icons (in the middle between two proper nodes), move the node that you just created to the intended place.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52979/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Nov '16, 15:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52979/">
+                edited
+                <strong>16 Nov '16, 15:07</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52979">
+    
+        <a name="52981"></a>
+        <div class="comment" id="comment-52981">
+            <div id="post-52981-score" class="comment-score"></div>
+            <div class="comment-text"><p>Many thanks - it's the thing I didn't try!</p></div>
+            <div class="comment-info" id="comment-52981-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Nov '16, 17:07)</span>
+                <a class="comment-user userinfo" href="/users/12990/simonc8">simonc8</a>
+                
+            </div>
+        </div>
+    
+        <a name="52983"></a>
+        <div class="comment" id="comment-52983">
+            <div id="post-52983-score" class="comment-score"></div>
+            <div class="comment-text"><p>NP, but please accept the answer.</p></div>
+            <div class="comment-info" id="comment-52983-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Nov '16, 18:25)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53012"></a>
+        <div class="comment" id="comment-53012">
+            <div id="post-53012-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: done - I am assuming this is sufficient for simonc8</p></div>
+            <div class="comment-info" id="comment-53012-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Nov '16, 21:50)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="82015"></a>
+        <div class="comment not_top_scorer" id="comment-82015">
+            <div id="post-82015-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have two things to say about this.</p>
+
+<ol>
+<li>
+<p>This information desperately needs to be added to the Learn OSM page ( <a href="https://learnosm.org/en/beginner/id-editor/#drawing-lines">https://learnosm.org/en/beginner/id-editor/#drawing-lines</a> ).  I learned it the hard way, then forgot it, and when I was making more OSM edits a year later, I had to learn it the hard way again.</p>
+</li>
+<li>
+<p>The "intermediate handle icon" is not always easy to find, if you're looking near the middle of a very long segment.  The interface should provide an alternate way to add a node – such as, making "add a node here" one of the options available when you right-click on a line.</p>
+</li>
+</ol></div>
+            <div class="comment-info" id="comment-82015-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Oct '21, 16:08)</span>
+                <a class="comment-user userinfo" href="/users/5197/gpspilot1">gpspilot1</a>
+                
+            </div>
+        </div>
+    
+        <a name="82017"></a>
+        <div class="comment" id="comment-82017">
+            <div id="post-82017-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/5197/gpspilot1">@gpspilot1</a>, this answer is five years old and iD has advanced since then. 
+ There is tutorial in iD which you can follow.</p>
+
+<p>To add a node to a way simply press the "node" button on the top and then click on the line where you want to ad the node.</p></div>
+            <div class="comment-info" id="comment-82017-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Oct '21, 20:15)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="82060"></a>
+        <div class="comment not_top_scorer" id="comment-82060">
+            <div id="post-82060-score" class="comment-score"></div>
+            <div class="comment-text"><p>TZorn, I have visually scrubbed the iD interface in detail, and I don't see a "node button on the top" (or anywhere else).  The buttons I have on top are Inspect, Point, Line, Area, Undo, Redo, and Save.</p>
+
+<p>Also, how to you get to the tutorial?  If I click "Help" in iD, it takes me to <a href="https://www.openstreetmap.org/help.">https://www.openstreetmap.org/help.</a></p>
+
+<p>And I have looked around at the various sections at that URL, but don't see anything about how to add a node to a way.</p></div>
+            <div class="comment-info" id="comment-82060-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Oct '21, 14:36)</span>
+                <a class="comment-user userinfo" href="/users/5197/gpspilot1">gpspilot1</a>
+                
+            </div>
+        </div>
+    
+        <a name="82065"></a>
+        <div class="comment" id="comment-82065">
+            <div id="post-82065-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It is the button labelled "Point".</p>
+
+<p>For the tutorial (Walkthrough), it is not the general OSM Help at the top of the screen, but the specific ID Help (bottom button on the right of the screen). I think new users are offered this automatically.</p>
+
+<p>Also, the "Lines" section in that ID Help explains: "You can also create new nodes along a line by double-clicking or  double-tapping the line, or by dragging the small triangles at the midpoints between nodes". I find the double click method convenient.</p></div>
+            <div class="comment-info" id="comment-82065-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Oct '21, 17:23)</span>
+                <a class="comment-user userinfo" href="/users/14272/alan_gr">alan_gr</a>
+                
+            </div>
+        </div>
+    
+        <a name="82068"></a>
+        <div class="comment not_top_scorer" id="comment-82068">
+            <div id="post-82068-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for clarifying, Alan. My iD is in German and I had just assumed it is "node" in English.</p></div>
+            <div class="comment-info" id="comment-82068-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Oct '21, 19:10)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52979" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52979-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52975/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='fB6dNsvCf6WFAzbx0te6S3SLjgu35Aj6' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52975/add-a-new-node-to-an-existing-area-in-id-editor?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52975/add-a-new-node-to-an-existing-area-in-id-editor?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/area/"
+            class="tag-link-area"
+            title="see questions tagged'area'using tags"
+            rel="tag">area</a> <span class="tag-number">&#215;213</span><br/>
+        
+        <a href="/tags/node/"
+            class="tag-link-node"
+            title="see questions tagged'node'using tags"
+            rel="tag">node</a> <span class="tag-number">&#215;92</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 16, 2016, 1:08 p.m.">16 Nov '16, 13:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,633 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 7, 2021, 7:10 p.m.">07 Oct '21, 19:10</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/27741/feature-request-copy-nodes">Feature request / Copy nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26594/how-can-i-extend-line-by-adding-a-new-node-in-id">How can I extend line by adding a new node in iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34151/how-do-i-change-a-point-node-to-an-area-way">How do I change a point (node) to an area (way)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32968/is-it-possible-to-change-lines-into-an-area-using-id">[closed] Is it possible to change lines into an area using iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27594/can-you-change-a-closed-line-into-an-area">Can you change a closed line into an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27591/how-to-combine-several-lines-to-an-area-with-editor-id">How to combine several lines to an area with editor id?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22184/cant-save-new-note-using-the-new-id-editor">Can&#39;t save new note using the new iD editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3942/how-to-map-inhabited-places-settlements">How to map inhabited places (settlements)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15984/place-boundary-tags-reorganization-for-an-entire-country">place, boundary tags reorganization for an entire country</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2457/what-is-the-easiest-way-of-adding-lots-of-landuse-polygons">What is the easiest way of adding lots of landuse polygons</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

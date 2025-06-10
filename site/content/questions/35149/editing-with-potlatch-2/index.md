@@ -1,0 +1,211 @@
++++
+type = "question"
+title = "Editing with Potlatch 2"
+description = '''I have made edits to OSM via Potlatch 2, but the edits are not showing up in the map when I reload it. How do I get my changes to take in the base map that everyone sees? Thanks!'''
+date = "2014-07-24T20:13:00Z"
+lastmod = "2014-07-25T17:47:00Z"
+weight = 35149
+keywords = [ "edit", "changes", "update" ]
+aliases = [ "/questions/35149" ]
+osqa_answers = 1
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Editing with Potlatch 2](/questions/35149/editing-with-potlatch-2)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-35149-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-35149-score" class="post-score" title="current number of votes">
+0
+</div>
+<span id="post-35149-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span> <span id="favorite-mark" class="ajax-command favorite-mark" rel="nofollow" title="mark/unmark this question as favorite (click again to cancel)"> </span>
+<div id="favorite-count" class="favorite-count">
+&#10;</div>
+</div></td>
+<td><div id="item-right">
+<div class="question-body">
+<p>I have made edits to OSM via Potlatch 2, but the edits are not showing up in the map when I reload it. How do I get my changes to take in the base map that everyone sees? Thanks!</p>
+</div>
+<div id="question-tags" class="tags-container tags">
+<span class="post-tag tag-link-edit" rel="tag" title="see questions tagged &#39;edit&#39;">edit</span> <span class="post-tag tag-link-changes" rel="tag" title="see questions tagged &#39;changes&#39;">changes</span> <span class="post-tag tag-link-update" rel="tag" title="see questions tagged &#39;update&#39;">update</span>
+</div>
+<div id="question-controls" class="post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>asked <strong>24 Jul '14, 20:13</strong></p>
+<img src="https://secure.gravatar.com/avatar/440bc6879bc7800e5b7c8a96d52bf91d?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="herrbarry&#39;s gravatar image" />
+<p><span>herrbarry</span><br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="herrbarry has no accepted answers">0%</span></p>
+</div>
+<div class="post-update-info post-update-info-edited">
+<p><span> edited <strong>25 Jul '14, 09:04</strong> </span></p>
+<img src="https://secure.gravatar.com/avatar/e5674dd96938593e0af5130dfffe0f90?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="nevw&#39;s gravatar image" />
+<p><span>nevw</span><br />
+<span class="score" title="9843 reputation points"><span>9.8k</span></span><span title="26 badges"><span class="badge1">●</span><span class="badgecount">26</span></span><span title="90 badges"><span class="silver">●</span><span class="badgecount">90</span></span><span title="178 badges"><span class="bronze">●</span><span class="badgecount">178</span></span></p>
+</div>
+</div>
+<div id="comments-container-35149" class="comments-container">
+<span id="35155"></span>
+<div id="comment-35155" class="comment">
+<div id="post-35155-score" class="comment-score">
+1
+</div>
+<div class="comment-text">
+<p>Could you please give or ad a link of your work area ?</p>
+</div>
+<div id="comment-35155-info" class="comment-info">
+<span class="comment-age">(24 Jul '14, 21:30)</span> <span class="comment-user userinfo">Hendrikklaas</span>
+</div>
+</div>
+<span id="35182"></span>
+<div id="comment-35182" class="comment">
+<div id="post-35182-score" class="comment-score">
+&#10;</div>
+<div class="comment-text">
+<p><a href="https://www.openstreetmap.org/user/herrbarry/history#map=15/39.1811/-84.3682&amp;layers=N">https://www.openstreetmap.org/user/herrbarry/history#map=15/39.1811/-84.3682&amp;layers=N</a></p>
+</div>
+<div id="comment-35182-info" class="comment-info">
+<span class="comment-age">(25 Jul '14, 15:16)</span> <span class="comment-user userinfo">andy mackey</span>
+</div>
+</div>
+</div>
+<div id="comment-tools-35149" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-35149-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="35164"></span>
+
+<div id="answer-container-35164" class="answer">
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-35164-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-35164-score" class="post-score" title="current number of votes">
+4
+</div>
+<span id="post-35164-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span>
+</div></td>
+<td><div class="item-right">
+<div class="answer-body">
+<p>Please see <a href="/questions/102/">i-have-made-edits-but-they-dont-show-up-on-the-map</a>. Yours is likely the usual problem of caches and rendering duration or that you are looking at a map which does not the kind of object which you have edited. This is likely not editor-dependent.</p>
+<p>Please comment if that helps and solved this question. If not, please provide further details (e.g. a location, changeset or object link).</p>
+</div>
+<div class="answer-controls post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>answered <strong>25 Jul '14, 01:52</strong></p>
+<img src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="aseerel4c26&#39;s gravatar image" />
+<p><span>aseerel4c26 ♦</span><br />
+<span class="score" title="32615 reputation points"><span>32.6k</span></span><span title="18 badges"><span class="badge1">●</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">●</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">●</span><span class="badgecount">554</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="aseerel4c26 has 169 accepted answers">18%</span></p>
+</div>
+<div class="post-update-info post-update-info-edited">
+<p><span> edited <strong>25 Jul '14, 01:53</strong> </span></p>
+</div>
+</div>
+<div id="comments-container-35164" class="comments-container">
+<span id="35168"></span>
+<div id="comment-35168" class="comment">
+<div id="post-35168-score" class="comment-score">
+2
+</div>
+<div class="comment-text">
+<p>Also note that yesterday an update to the map style was made, so the renderers are very busy.</p>
+</div>
+<div id="comment-35168-info" class="comment-info">
+<span class="comment-age">(25 Jul '14, 09:31)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
+</div>
+</div>
+<span id="35190"></span>
+<div id="comment-35190" class="comment">
+<div id="post-35190-score" class="comment-score">
+&#10;</div>
+<div class="comment-text">
+<p>Is there a page/blog/whatever that mentions maintenance &amp; changes like that? It would be useful to know that the reason something isn't showing up is due to planned updates/changes/fixes/blah.</p>
+</div>
+<div id="comment-35190-info" class="comment-info">
+<span class="comment-age">(25 Jul '14, 17:22)</span> <span class="comment-user userinfo">Jack the Ripper</span>
+</div>
+</div>
+<span id="35192"></span>
+<div id="comment-35192" class="comment">
+<div id="post-35192-score" class="comment-score">
+&#10;</div>
+<div class="comment-text">
+<p>There's <a href="http://wiki.openstreetmap.org/wiki/Platform_status">http://wiki.openstreetmap.org/wiki/Platform_status</a> , but that's only updated manually (and hasn't been for the recent rendering style deployment, probably because nothing actually stopped working)</p>
+</div>
+<div id="comment-35192-info" class="comment-info">
+<span class="comment-age">(25 Jul '14, 17:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
+</div>
+</div>
+</div>
+<div id="comment-tools-35164" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-35164-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

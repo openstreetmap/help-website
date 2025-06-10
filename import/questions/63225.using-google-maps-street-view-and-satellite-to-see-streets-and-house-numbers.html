@@ -1,0 +1,783 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Using Google Maps Street View and Satellite to see streets and house numbers? - OSM Help</title>
+        <meta name="description" content="Hi, I am mapping a small portion of the east coast of the west side of Malaysia, and there only seems to be one map source which is up to date (the rest seem to be older than 5 years old, the airport wasn&#39;t even built yet). I have read up on some previous posts and this is what I understand: It is o..." />
+        <meta name="keywords" content="google,street,legal,google_maps" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/63225/using-google-maps-street-view-and-satellite-to-see-streets-and-house-numbers" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/63225/using-google-maps-street-view-and-satellite-to-see-streets-and-house-numbers?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='lxWuKl3J6MEgXoMzaEjqvJeu3LiIo4e0' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/63225/using-google-maps-street-view-and-satellite-to-see-streets-and-house-numbers">Using Google Maps Street View and Satellite to see streets and house numbers?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-63225-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63225/up/" rel="nofollow"> </a>
+<div id="post-63225-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-63225-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63225/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/63225/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I am mapping a small portion of the east coast of the west side of Malaysia, and there only seems to be one map source which is up to date (the rest seem to be older than 5 years old, the airport wasn't even built yet). I have read up on some previous posts and this is what I understand: It is ok to use the "photos" from Google Street View to determine street names, but we can't take street names from the overlays. Tracing aerial photos is also not legal. Please correct me if that is incorrect.</p>
+<p>The map source that works is quite grainy/hazy around the portion I'm trying to map. As a result, I'm having some trouble finding streets quickly. I have lived there myself, however I'm currently in another country. Here are my 3 main questions:</p>
+<ol>
+<li>Are we allowed to use Google Street View in order to determine whether a street exists? (Overlays not allowed to be used)</li>
+<li>Are we allowed to use Google Satellite View without overlays in order to see a location in a higher resolution? (Eg: Determine fencing/separation of houses, determining where road ends)</li>
+<li>Are we allowed to use Google Street View in order to check house numbers? (Overlays not allowed to be used)</li>
+</ol>
+<p>Cheers.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/google/" class="post-tag tag-link-google"
+                                        title="see questions tagged 'google'" rel="tag">google</a>
+                                
+                                    <a href="/tags/street/" class="post-tag tag-link-street"
+                                        title="see questions tagged 'street'" rel="tag">street</a>
+                                
+                                    <a href="/tags/legal/" class="post-tag tag-link-legal"
+                                        title="see questions tagged 'legal'" rel="tag">legal</a>
+                                
+                                    <a href="/tags/google_maps/" class="post-tag tag-link-google_maps"
+                                        title="see questions tagged 'google_maps'" rel="tag">google_maps</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Apr '18, 02:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7d96e20c0642af8e402224dda4bee21d?s=32&amp;d=identicon&amp;r=g" alt="aaronshenhao's gravatar image" />
+    <p><a href="/users/15058/aaronshenhao">aaronshenhao</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aaronshenhao has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-63225">
+    
+</div>
+<div id="comment-tools-63225" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63225-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/63225/using-google-maps-street-view-and-satellite-to-see-streets-and-house-numbers?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/63225/using-google-maps-street-view-and-satellite-to-see-streets-and-house-numbers?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/63225/using-google-maps-street-view-and-satellite-to-see-streets-and-house-numbers?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/63225/using-google-maps-street-view-and-satellite-to-see-streets-and-house-numbers?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="63228"></a>
+                    <div id="answer-container-63228" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-63228-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63228/up/" rel="nofollow"> </a>
+<div id="post-63228-score" class="post-score"
+    title="current number of votes">
+    9
+</div>
+<a id="post-63228-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63228/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="aaronshenhao has selected this answer as the correct answer"
+        href="/accept_answer/63228/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Short answer is unfortunately, no (please avoid).</p>
+<blockquote>
+<p>Their terms of use explicitly forbid deriving maps from the data.</p>
+</blockquote>
+<p>Taken <a href="https://forum.openstreetmap.org/viewtopic.php?id=61024">from this</a>.</p>
+<p>One of the third-party apps, to sketch 3D building - to be uploaded to OpenStreetMap - <a href="https://www.reddit.com/r/openstreetmap/comments/88llme/photomatch_on_sketchosm_is_amazing_to_add_new/">got so many flak</a> for deriving things with Google Street View on their demo video.</p>
+<p>Also, could refer to <a href="https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps">a lengthy discussion over here</a>.</p>
+<p>From <a href="https://forum.openstreetmap.org/viewtopic.php?id=61024">the first link</a>, you can follow Google Maps/Google Earth Additional Terms of Service (last modified: January 31, 2018) which mentions</p>
+<blockquote>
+<p><strong>Prohibited Conduct.</strong> When using Google Maps/Google Earth, you <em>may not</em> (or allow those acting on your behalf to): use Google Maps/Google Earth to <em>create or augment any other mapping-related dataset</em> (including a mapping or navigation dataset, business listings database, mailing list, or telemarketing list) for use in a service that is a <em>substitute for, or a substantially similar service</em> to, Google Maps/Google Earth</p>
+</blockquote>
+<p>(Some emphasis, mine)</p>
+<p>Consider that their Street View is a part of their Google Maps and Earth products.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/63228/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Apr '18, 08:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/de7b93bd537287f5af7e862bf4cd2fec?s=32&amp;d=identicon&amp;r=g" alt="AkuAnakTimur's gravatar image" />
+    <p><a href="/users/9426/akuanaktimur">AkuAnakTimur</a><br/>
+    <span class="score" title="1070 reputation points"><span class="">1.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="31 badges"><span class="bronze">&#9679;</span><span class="badgecount">31</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AkuAnakTimur has one accepted answer">6&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/63228/">
+                edited
+                <strong>30 Apr '18, 08:31</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-63228">
+    
+        <a name="63230"></a>
+        <div class="comment not_top_scorer" id="comment-63230">
+            <div id="post-63230-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for answering, just to clarify is taking street names or unit numbers from Google Street View not allowed? I remember some people saying it was ok just taking street names here: <a href="https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps,">https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps,</a> but it was from 2011 and might be outdated.</p></div>
+            <div class="comment-info" id="comment-63230-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '18, 10:39)</span>
+                <a class="comment-user userinfo" href="/users/15058/aaronshenhao">aaronshenhao</a>
+                
+            </div>
+        </div>
+    
+        <a name="63231"></a>
+        <div class="comment" id="comment-63231">
+            <div id="post-63231-score" class="comment-score">1</div>
+            <div class="comment-text"><p>No, you really can't use Google Street View.  I also don't see that <a href="https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps">https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps</a> suggests that "some people saying it was ok just taking street names".</p></div>
+            <div class="comment-info" id="comment-63231-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '18, 10:49)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63234"></a>
+        <div class="comment" id="comment-63234">
+            <div id="post-63234-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Pieren's answer seems to suggest that. Not that I agree with it.</p></div>
+            <div class="comment-info" id="comment-63234-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '18, 12:58)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="63237"></a>
+        <div class="comment" id="comment-63237">
+            <div id="post-63237-score" class="comment-score">3</div>
+            <div class="comment-text"><p>There are two main issues with that - it ignores "sweat of the brow" (<a href="https://en.wikipedia.org/wiki/Sweat_of_the_brow">wikipedia</a> has a summary of UK vs US there; many people who say "facts cannot be copyrighted" seem not to understand that US law does not apply in the UK) and ignores the <a href="https://en.wikipedia.org/wiki/Database_Directive">Database Directive</a>.  OSMF is based in England and the laws of England and Wales apply to it.</p>
+
+<p>Obviously, I'm not a lawyer; I've also not been part of the decision-making on OSM licences (beyond agreeing at sign-up and licence change).  It appears to me that OSM's stragegy on this could perhaps be summarised as "let's avoid needing to use lawyers"; which sounds eminently sensible :)</p></div>
+            <div class="comment-info" id="comment-63237-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '18, 13:13)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63238"></a>
+        <div class="comment" id="comment-63238">
+            <div id="post-63238-score" class="comment-score">5</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/15058/aaronshenhao"></a><a href="https://help.openstreetmap.org/users/15058/aaronshenhao">@aaronshenhao</a></p>
+
+<p>Fair enough, that was from 2011. However, OpenStreetMap now can rely on two independent platforms for sharing street level photos -- and with explicit permission to use their photos for the OpenStreetMap project i.e. <a href="http://openstreetcam.org/">OpenStreetCam</a>and <a href="http://mapillary.com/">Mapillary</a>.</p>
+
+<p>Google however, didn't say anything: but then, quoting <a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> again, "let's avoid needing to use lawyers".</p>
+
+<p>I happen to align with <a href="https://www.reddit.com/r/openstreetmap/comments/88llme/photomatch_on_sketchosm_is_amazing_to_add_new/dwmb7ib/">this view too</a>, that</p>
+
+<blockquote>
+<p>OpenStreetMap is trying to have a "whiter than white" attitude towards copyright. We don't want grey areas. We want to know that our database is legit, and that people who use it can feel as safe as possible.</p>
+</blockquote></div>
+            <div class="comment-info" id="comment-63238-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '18, 13:23)</span>
+                <a class="comment-user userinfo" href="/users/9426/akuanaktimur">AkuAnakTimur</a>
+                
+            </div>
+        </div>
+    
+        <a name="63241"></a>
+        <div class="comment" id="comment-63241">
+            <div id="post-63241-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/9426/akuanaktimur"></a><a href="https://help.openstreetmap.org/users/9426/akuanaktimur">@AkuAnakTimur</a> <a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Thanks for the help in clarifying the legal stuff, better to be on the safe side then. Unfortunately, there doesn't seem to be any photos on OpenStreetCam and Mapillary for the area I'm mapping, so I'll probably have to do it the next time I visit.</p></div>
+            <div class="comment-info" id="comment-63241-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '18, 16:11)</span>
+                <a class="comment-user userinfo" href="/users/15058/aaronshenhao">aaronshenhao</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-63228" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63228-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/63225/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='lxWuKl3J6MEgXoMzaEjqvJeu3LiIo4e0' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63225/using-google-maps-street-view-and-satellite-to-see-streets-and-house-numbers?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63225/using-google-maps-street-view-and-satellite-to-see-streets-and-house-numbers?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/street/"
+            class="tag-link-street"
+            title="see questions tagged'street'using tags"
+            rel="tag">street</a> <span class="tag-number">&#215;142</span><br/>
+        
+        <a href="/tags/legal/"
+            class="tag-link-legal"
+            title="see questions tagged'legal'using tags"
+            rel="tag">legal</a> <span class="tag-number">&#215;64</span><br/>
+        
+        <a href="/tags/google/"
+            class="tag-link-google"
+            title="see questions tagged'google'using tags"
+            rel="tag">google</a> <span class="tag-number">&#215;53</span><br/>
+        
+        <a href="/tags/google_maps/"
+            class="tag-link-google_maps"
+            title="see questions tagged'google_maps'using tags"
+            rel="tag">google_maps</a> <span class="tag-number">&#215;29</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 30, 2018, 2:23 a.m.">30 Apr '18, 02:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,491 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 30, 2018, 4:11 p.m.">30 Apr '18, 16:11</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/53484/in-which-ways-is-openstreetmap-superior-to-google-maps">In which ways is OpenStreetMap superior to Google Maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps">Can Google Maps take OSM data and use it in their own maps ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32092/osm-coverage-compared-with-google-maps-or-others">OSM coverage compared with Google maps (or others)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34526/is-there-a-firefox-extension-allowing-to-switch-between-osm-and-google-maps">Is there a Firefox extension allowing to switch between OSM and Google maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/706/can-i-drawtrace-osm-data-from-a-google-map-or-yahoo">Can I draw/trace OSM data from a google map? Or Yahoo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/87685/google-maps">Google maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/710/can-i-use-google-streetview-to-help-create-maps">[closed] Can I use Google StreetView to help create maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7525/google-maps-licencing-terms">[closed] Google Maps licencing terms</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1149/can-i-contribute-the-same-data-to-non-osm-mapping-projects">Can I contribute the same data to non-OSM mapping projects?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1073/commercial-use-in-an-application-licenceable">[closed] Commercial use in an application - licenceable?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

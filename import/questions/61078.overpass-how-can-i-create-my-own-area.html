@@ -1,0 +1,929 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Overpass: How can I create my own area - OSM Help</title>
+        <meta name="description" content="Is it possible to create an area, as part of an Overpass query, for an arbitrary multypolygon relation?  Overpass does not create areas for multipolygons that have no name or postal code, according to areas.osm3s.  For example, I&#39;d like to find all orphan nodes in the area defined by relation 619535..." />
+        <meta name="keywords" content="overpass,area,overpass-ql,multipolygon" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/61078/overpass-how-can-i-create-my-own-area" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61078/overpass-how-can-i-create-my-own-area?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ew2fKEim4FzpXuuSwMTbWLqLM2yOpTGy' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61078/overpass-how-can-i-create-my-own-area">Overpass: How can I create my own area</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61078-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61078/up/" rel="nofollow"> </a>
+<div id="post-61078-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-61078-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61078/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61078/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is it possible to create an area, as part of an Overpass query, for an arbitrary multypolygon relation? </p>
+<p>Overpass does not create areas for multipolygons that have no name or postal code, according to <a href="https://github.com/drolbr/Overpass-API/blob/master/src/rules/areas.osm3s">areas.osm3s</a>. </p>
+<p>For example, I'd like to find all orphan nodes in the area defined by <a href="http://www.openstreetmap.org/relation/6195356">relation 6195356</a>. </p>
+<p><strong>If</strong> this relation had a built-in area, the Overpass query would be:</p>
+<pre><code>  node (area:3606195356);     // Find all nodes in multipolygon
+  (._; - (way(bn);node(w));); // Remove nodes used by ways
+  (._; - node._[~"."~"."];);  // Remove nodes with tags
+  (._; - (rel(bn);node(r));); // Remove nodes used by relations
+  out meta qt geom;
+</code></pre>
+<p>The requested solution would be Overpass Query statement(s) that will replace <code>node (area:3606195356);</code></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/area/" class="post-tag tag-link-area"
+                                        title="see questions tagged 'area'" rel="tag">area</a>
+                                
+                                    <a href="/tags/overpass-ql/" class="post-tag tag-link-overpass-ql"
+                                        title="see questions tagged 'overpass-ql'" rel="tag">overpass-ql</a>
+                                
+                                    <a href="/tags/multipolygon/" class="post-tag tag-link-multipolygon"
+                                        title="see questions tagged 'multipolygon'" rel="tag">multipolygon</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Dec '17, 10:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7f7ca553e7227a0e0fe502d1db88cb62?s=32&amp;d=identicon&amp;r=g" alt="zstadler's gravatar image" />
+    <p><a href="/users/9907/zstadler">zstadler</a><br/>
+    <span class="score" title="116 reputation points">116</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="zstadler has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61078/">
+                closed
+                <strong>11 Dec '17, 17:58</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61078">
+    
+        <a name="61144"></a>
+        <div class="comment" id="comment-61144">
+            <div id="post-61144-score" class="comment-score"></div>
+            <div class="comment-text"><p>The short and sad answer is it is not possible:</p>
+
+<pre><code>... you as a user cannot influence the area creation process by sending queries to the server. It's all defined in the area creation rules, see Overpass_API/Areas Mmd (talk) 17:22, 9 December 2017 (UTC)
+</code></pre>
+
+<p>Ref: 
+- <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/status">https://wiki.openstreetmap.org/wiki/Overpass_API/status</a>
+- <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Areas">https://wiki.openstreetmap.org/wiki/Overpass_API/Areas</a></p></div>
+            <div class="comment-info" id="comment-61144-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '17, 17:57)</span>
+                <a class="comment-user userinfo" href="/users/9907/zstadler">zstadler</a>
+                
+            </div>
+        </div>
+    
+        <a name="61145"></a>
+        <div class="comment" id="comment-61145">
+            <div id="post-61145-score" class="comment-score"></div>
+            <div class="comment-text"><p>The short and sad answer is it is not possible:</p>
+
+<pre><code>... you as a user cannot influence the area creation process by sending queries to the server. It's all defined in the area creation rules, see Overpass_API/Areas Mmd (talk) 17:22, 9 December 2017 (UTC)
+</code></pre>
+
+<p>Ref: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/status">https://wiki.openstreetmap.org/wiki/Overpass_API/status</a></p></div>
+            <div class="comment-info" id="comment-61145-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '17, 18:01)</span>
+                <a class="comment-user userinfo" href="/users/9907/zstadler">zstadler</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61078" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61078-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61078/overpass-how-can-i-create-my-own-area?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61078/overpass-how-can-i-create-my-own-area?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61078/overpass-how-can-i-create-my-own-area?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61078/overpass-how-can-i-create-my-own-area?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61085"></a>
+                    <div id="answer-container-61085" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61085-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61085/up/" rel="nofollow"> </a>
+<div id="post-61085-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61085-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61085/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There's a <code>map_to_area</code> operation that creates an area:</p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Map_way.2Frelation_to_area_.28map_to_area.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Map_way.2Frelation_to_area_.28map_to_area.29</a></p>
+<p>The documentation only says that the operation returns the area associated with the OSM object but it also appears to create it if it doesn't exist. I'm not sure how persistent the new areas are, but at the moment there is an area associated with that relation on the overpass-api.de server, apparently due to my experimenting.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61085/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Dec '17, 12:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c860445e868ebb21da141635a4aa7b06?s=32&amp;d=identicon&amp;r=g" alt="maxerickson's gravatar image" />
+    <p><a href="/users/10973/maxerickson">maxerickson</a><br/>
+    <span class="score" title="12700 reputation points"><span class="">12.7k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="176 badges"><span class="bronze">&#9679;</span><span class="badgecount">176</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="maxerickson has 93 accepted answers">32&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61085/">
+                edited
+                <strong>08 Dec '17, 12:44</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61085">
+    
+        <a name="61089"></a>
+        <div class="comment" id="comment-61089">
+            <div id="post-61089-score" class="comment-score"></div>
+            <div class="comment-text"><p>Unfortunately, this does not seem to work for the relation at hand. The following Overpass query returns nothing:</p>
+
+<pre><code>    rel(6195356);
+    map_to_area;
+    out;
+</code></pre></div>
+            <div class="comment-info" id="comment-61089-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Dec '17, 14:58)</span>
+                <a class="comment-user userinfo" href="/users/9907/zstadler">zstadler</a>
+                
+            </div>
+        </div>
+    
+        <a name="61092"></a>
+        <div class="comment" id="comment-61092">
+            <div id="post-61092-score" class="comment-score"></div>
+            <div class="comment-text"><p>Could be server specific. Here it returns an area: <a href="http://overpass-turbo.eu/s/tEL">http://overpass-turbo.eu/s/tEL</a></p>
+
+<p>(with overpass-api.de selected in the settings)</p></div>
+            <div class="comment-info" id="comment-61092-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Dec '17, 16:22)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="61099"></a>
+        <div class="comment" id="comment-61099">
+            <div id="post-61099-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm getting an empty set from the overpass-api.de server</p>
+
+<p><a href="http://overpass-api.de/api/interpreter?data=rel%286195356%29%3Bmap_to_area%3Bout%3B">http://overpass-api.de/api/interpreter?data=rel(6195356);map_to_area;out;</a></p>
+
+<p>or</p>
+
+<p><a href='http://overpass-api.de/api/interpreter?data=[out:popup("Results";[type];)];rel(6195356);map_to_area;out;'>http://overpass-api.de/api/interpreter?data=[out:popup("Result:";[type];)];rel(6195356);map_to_area;out;</a></p></div>
+            <div class="comment-info" id="comment-61099-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Dec '17, 20:58)</span>
+                <a class="comment-user userinfo" href="/users/9907/zstadler">zstadler</a>
+                
+            </div>
+        </div>
+    
+        <a name="61104"></a>
+        <div class="comment" id="comment-61104">
+            <div id="post-61104-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here's the output I get clicking your first link:</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;osm version="0.6" generator="Overpass API"&gt;
+&lt;note&gt;The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.&lt;/note&gt;
+&lt;meta osm_base="2017-12-09T00:25:02Z" areas="2017-12-08T23:26:03Z"/&gt;
+
+  &lt;area id="3606195356"&gt;
+    &lt;tag k="name" v="Israel and Palestine"/&gt;
+    &lt;tag k="name:de" v="Israel und Palästina"/&gt;
+    &lt;tag k="name:en" v="Israel and Palestine"/&gt;
+    &lt;tag k="note" v="Do not delete!"/&gt;
+    &lt;tag k="type" v="multipolygon"/&gt;
+  &lt;/area&gt;
+
+&lt;/osm&gt;
+</code></pre></div>
+            <div class="comment-info" id="comment-61104-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Dec '17, 00:28)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="61106"></a>
+        <div class="comment not_top_scorer" id="comment-61106">
+            <div id="post-61106-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here is what I get:</p>
+
+<pre><code>    &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+    &lt;osm version="0.6" generator="Overpass API 0.7.54.12 054bb0bb"&gt;
+    &lt;note&gt;The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.&lt;/note&gt;
+    &lt;meta osm_base="2017-12-09T06:15:02Z" areas="2017-12-09T05:42:02Z"/&gt;
+
+    &lt;/osm&gt;
+</code></pre>
+
+<p>Also note the difference in the "generator" text.</p>
+
+<p>Strange indeed.</p></div>
+            <div class="comment-info" id="comment-61106-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Dec '17, 06:19)</span>
+                <a class="comment-user userinfo" href="/users/9907/zstadler">zstadler</a>
+                
+            </div>
+        </div>
+    
+        <a name="61107"></a>
+        <div class="comment not_top_scorer" id="comment-61107">
+            <div id="post-61107-score" class="comment-score"></div>
+            <div class="comment-text"><p>There seems to be a difference between the two servers behind overpass-api.de</p>
+
+<pre><code>&gt; wget -q -O - <a href="http://178.63.48.217/api/interpreter?data=rel%286195356%29%3Bmap_to_area%3Bout%3B">http://178.63.48.217/api/interpreter?data=rel%286195356%29%3Bmap_to_area%3Bout%3B</a>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;osm version="0.6" generator="Overpass API 0.7.54.12 054bb0bb"&gt;
+&lt;note&gt;The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.&lt;/note&gt;
+&lt;meta osm_base="2017-12-09T06:34:02Z" areas="2017-12-09T05:42:02Z"/&gt;
+
+&lt;/osm&gt;
+
+&gt; wget -q -O - <a href="http://136.243.42.136/api/interpreter?data=rel%286195356%29%3Bmap_to_area%3Bout%3B">http://136.243.42.136/api/interpreter?data=rel%286195356%29%3Bmap_to_area%3Bout%3B</a>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;osm version="0.6" generator="Overpass API"&gt;
+&lt;note&gt;The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.&lt;/note&gt;
+&lt;meta osm_base="2017-12-09T06:34:02Z" areas="2017-12-09T05:21:02Z"/&gt;
+
+  &lt;area id="3606195356"&gt;
+    &lt;tag k="name" v="Israel and Palestine"/&gt;
+    &lt;tag k="name:de" v="Israel und Pal├ñstina"/&gt;
+    &lt;tag k="name:en" v="Israel and Palestine"/&gt;
+    &lt;tag k="note" v="Do not delete!"/&gt;
+    &lt;tag k="type" v="multipolygon"/&gt;
+  &lt;/area&gt;
+
+&lt;/osm&gt;
+</code></pre></div>
+            <div class="comment-info" id="comment-61107-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Dec '17, 06:40)</span>
+                <a class="comment-user userinfo" href="/users/9907/zstadler">zstadler</a>
+                
+            </div>
+        </div>
+    
+        <a name="61117"></a>
+        <div class="comment" id="comment-61117">
+            <div id="post-61117-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Apparently, the result provided the by "z.overpass-api.de" server (136.243.42.136), which contains the area element, is outdated. See <a href="https://github.com/drolbr/Overpass-API/issues/285#issuecomment-350312885">this comment for GitHub issue 285</a> and a <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/status">9-Dec-2017 server issue report</a>.</p></div>
+            <div class="comment-info" id="comment-61117-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Dec '17, 17:44)</span>
+                <a class="comment-user userinfo" href="/users/9907/zstadler">zstadler</a>
+                
+            </div>
+        </div>
+    
+        <a name="61132"></a>
+        <div class="comment not_top_scorer" id="comment-61132">
+            <div id="post-61132-score" class="comment-score"></div>
+            <div class="comment-text"><p>It seems like the old areas were also removed from the "z.overpass-api.de" server (136.243.42.136):</p>
+
+<pre>&gt; wget -q -O - <a href="http://z.overpass-api.de/api/interpreter?data=rel%286195356%29%3Bmap_to_area%3Bout%3B">http://z.overpass-api.de/api/interpreter?data=rel%286195356%29%3Bmap_to_area%3Bout%3B</a>
+
+&lt;osm version="0.6" generator="Overpass API 0.7.54.12 054bb0bb"&gt;
+&lt;note&gt;The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.&lt;/note&gt;
+&lt;meta osm_base="2017-12-11T09:57:02Z" areas="2017-12-11T08:55:02Z"/&gt;
+
+&lt;/osm&gt;
+</pre>
+
+<p>The question remains open</p></div>
+            <div class="comment-info" id="comment-61132-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '17, 10:00)</span>
+                <a class="comment-user userinfo" href="/users/9907/zstadler">zstadler</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61085" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61085-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61078/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ew2fKEim4FzpXuuSwMTbWLqLM2yOpTGy' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61078/overpass-how-can-i-create-my-own-area?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61078/overpass-how-can-i-create-my-own-area?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/area/"
+            class="tag-link-area"
+            title="see questions tagged'area'using tags"
+            rel="tag">area</a> <span class="tag-number">&#215;213</span><br/>
+        
+        <a href="/tags/multipolygon/"
+            class="tag-link-multipolygon"
+            title="see questions tagged'multipolygon'using tags"
+            rel="tag">multipolygon</a> <span class="tag-number">&#215;132</span><br/>
+        
+        <a href="/tags/overpass-ql/"
+            class="tag-link-overpass-ql"
+            title="see questions tagged'overpass-ql'using tags"
+            rel="tag">overpass-ql</a> <span class="tag-number">&#215;65</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 8, 2017, 10:58 a.m.">08 Dec '17, 10:58</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,537 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 11, 2017, 6:13 p.m.">11 Dec '17, 18:13</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/48088/what-makes-a-closed-way-show-up-as-an-enclosing-feature-with-query-features">What makes a closed way show up as an Enclosing Feature with Query Features?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44673/overpass-turboql-find-ways-that-are-normally-mapped-as-areas">Overpass Turbo/QL Find ways that are normally mapped as areas</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61851/how-can-i-call-north-or-south-part-of-area">How can i call North or South part of area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66988/polygon-as-global-area-for-overpass-query">polygon as global area for overpass query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31376/finding-areas-within-areas-with-overpass-ql">Finding Areas within Areas with Overpass QL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33206/find-all-rivers-ways-and-relations-intersecting-a-given-bbox">Find all rivers (ways and relations) intersecting a given BBOX?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35225/overpass-query-only-outer-ways-of-multipolygon">Overpass: query only outer ways of multipolygon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21330/extracting-features-that-are-inside-a-polygon-set-with-overpass-api">Extracting features that are inside a polygon set with overpass api</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23033/how-do-you-properly-map-water-bodies">How do you properly map water bodies?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20531/overpass-ql-nodes-and-ways-in-area">Overpass QL: Nodes and ways in area</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,989 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>API - Read Only with Basic Authentication? - OSM Help</title>
+        <meta name="description" content="Hi, When making calls to http://api.openstreetmap.org/api/0.6/ to update elements I am getting a &quot;405 (Method not allowed)&quot; response. I could swear it was working a week or so ago... The Basic Authentication itself seems to be working - if I use a dummy user name and/or password I get a 401 Unauthor..." />
+        <meta name="keywords" content="development,basic_authentication,http_status_code_405,api,https" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/55590/api-read-only-with-basic-authentication" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55590/api-read-only-with-basic-authentication?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='j2x34fj7kRkHU5rxMvX5sx5N7HRtIwn3' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55590/api-read-only-with-basic-authentication">API - Read Only with Basic Authentication?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55590-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55590/up/" rel="nofollow"> </a>
+<div id="post-55590-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55590-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55590/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55590/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+When making calls to <a href="http://api.openstreetmap.org/api/0.6/">http://api.openstreetmap.org/api/0.6/</a> to update elements I am getting a "405 (Method not allowed)" response. I could swear it was working a week or so ago...</p>
+<p>The Basic Authentication itself seems to be working - if I use a dummy user name and/or password I get a 401 Unauthorized. With the same authentication I can get the permissions using /api/0.6/permissions and they are all there. But when I go to do an actual update (opening and closing the changeset is working fine) I get the "405 (Method not allowed)". I am using PUT (as per the documentation) but I have tried using POST - same results. The response includes this header: "Allow: GET, HEAD, OPTIONS".</p>
+<p>Using https instead of http gives the same result, so I am sticking with http for the moment for ease of debugging (with Wireshark.)</p>
+<p>Using the same account with Potlatch has no problems - but that uses OAuth instead of Basic Auth.</p>
+<p>Am I doing something wrong? Has updating via Basic Auth been turned off deliberately? Any ideas?</p>
+<hr>
+<p>A bit background - this is how I issue requests to the server:</p>
+<pre><code>I am working in VB.Net using HttpWebRequest
+Typical url is <a href="http://api.openstreetmap.org/api/0.6/relation/12345,">http://api.openstreetmap.org/api/0.6/relation/12345,</a> using PUT, with XML payload
+Basic Authentication being added like this:
+                Dim cre As String = $"{Credentials.UserName}:{Credentials.Password}"
+                Dim bytes As Byte() = System.Text.Encoding.ASCII.GetBytes(cre)
+                Dim base64 As String = Convert.ToBase64String(bytes)
+                req.Headers.Add(“Authorization”, “Basic ” + base64)
+Payload written like this:
+                Dim b() As Byte
+                b = System.Text.Encoding.UTF8.GetBytes(sPayload)
+                req.ContentLength = b.Length
+                req.ContentType = "application/xml; charset=utf-8"
+                With req.GetRequestStream
+                    .Write(b, 0, b.Length)
+                    .Close()
+                End With
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/development/" class="post-tag tag-link-development"
+                                        title="see questions tagged 'development'" rel="tag">development</a>
+                                
+                                    <a href="/tags/basic_authentication/" class="post-tag tag-link-basic_authentication"
+                                        title="see questions tagged 'basic_authentication'" rel="tag">basic_authentication</a>
+                                
+                                    <a href="/tags/http_status_code_405/" class="post-tag tag-link-http_status_code_405"
+                                        title="see questions tagged 'http_status_code_405'" rel="tag">http_status_code_405</a>
+                                
+                                    <a href="/tags/api/" class="post-tag tag-link-api"
+                                        title="see questions tagged 'api'" rel="tag">api</a>
+                                
+                                    <a href="/tags/https/" class="post-tag tag-link-https"
+                                        title="see questions tagged 'https'" rel="tag">https</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Apr '17, 20:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/81868786ff539d9a5b1f21ed57b6e13a?s=32&amp;d=identicon&amp;r=g" alt="csmale's gravatar image" />
+    <p><a href="/users/11526/csmale">csmale</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="csmale has one accepted answer">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55590/">
+                edited
+                <strong>25 Mar '18, 23:47</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55590">
+    
+        <a name="55591"></a>
+        <div class="comment" id="comment-55591">
+            <div id="post-55591-score" class="comment-score">1</div>
+            <div class="comment-text"><p>not sure if that is related: but could you mention how you are issuing the requests to the server? </p>
+
+<p>Thanks for the additional info, I have merge it to your question text.</p></div>
+            <div class="comment-info" id="comment-55591-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '17, 20:45)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55596"></a>
+        <div class="comment" id="comment-55596">
+            <div id="post-55596-score" class="comment-score">2</div>
+            <div class="comment-text"><p>For testing please use the development API, see <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#URL_.2B_authentication">https://wiki.openstreetmap.org/wiki/API_v0.6#URL_.2B_authentication</a> .</p></div>
+            <div class="comment-info" id="comment-55596-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '17, 21:18)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55601"></a>
+        <div class="comment" id="comment-55601">
+            <div id="post-55601-score" class="comment-score"></div>
+            <div class="comment-text"><p>I currently get an error message when I try to upload from JOSM:
+Communication with the JOSM server 'https://api.openstreetmap.org/api/0.6/' timed out. ...
+However, I am using OAuth and Test Access Token works fine.
+Could it be that there is a general issue with uploads via this API?</p></div>
+            <div class="comment-info" id="comment-55601-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '17, 23:19)</span>
+                <a class="comment-user userinfo" href="/users/3621/nachtspazz">Nachtspazz</a>
+                
+            </div>
+        </div>
+    
+        <a name="55602"></a>
+        <div class="comment" id="comment-55602">
+            <div id="post-55602-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Before you do -anything- more: DO NOT TEST AGAINST THE PRODUCTION API</p>
+
+<p>Use one of the dev API and create objects there with the iD instance that runs on them. Further if you a planning to do a mechanical edit you need to think about following the corresponding guideline: <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct">http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct</a></p></div>
+            <div class="comment-info" id="comment-55602-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '17, 23:46)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55603"></a>
+        <div class="comment" id="comment-55603">
+            <div id="post-55603-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have created an object in the test DB which is good enough for testing for now.</p>
+
+<p>Testing on the dev instance shows different results. Despite my credentials being correct, attempting to create a changeset is giving "401 Unauthorized" (yes I know the dev credentials are separate from prod). A request to <a href="http://api06">http://api06</a> redirects to http<strong>s</strong>://master so I can't see what happens on the wire at the moment.</p>
+
+<p>I can see two possible ways forward. Debugging the https stream with Fiddler, or giving up on Basic Authentication and implementing OAuth. Personally I will be happy with Basic over https, and OAuth looks like being quite a bit of work. When the authentication works again, I could also rewrite the code to use osmChange uploads instead of the regular update API, if I can't get the update API to accept a PUT or a POST.</p>
+
+<p>Has anyone got some example code or an example application for a simple update (not an osmChange upload) with Basic Auth that is <em>working today</em>?</p></div>
+            <div class="comment-info" id="comment-55603-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '17, 07:45)</span>
+                <a class="comment-user userinfo" href="/users/11526/csmale">csmale</a>
+                
+            </div>
+        </div>
+    
+        <a name="55605"></a>
+        <div class="comment not_top_scorer" id="comment-55605">
+            <div id="post-55605-score" class="comment-score"></div>
+            <div class="comment-text"><p>By the way, my use case is nothing dramatic, just saving me a bit of typing - small numbers of individual updates to existing objects, each individually reviewed by me. It is neither bulk, nor blind. So I am assuming that it does not fall under the scope of the Automated Edits CoC which refers to "other systematic edits to the database by other means without consideration of each change."</p></div>
+            <div class="comment-info" id="comment-55605-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '17, 07:46)</span>
+                <a class="comment-user userinfo" href="/users/11526/csmale">csmale</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55590" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55590-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55590/api-read-only-with-basic-authentication?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55590/api-read-only-with-basic-authentication?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55590/api-read-only-with-basic-authentication?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55590/api-read-only-with-basic-authentication?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55613"></a>
+                    <div id="answer-container-55613" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55613-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55613/up/" rel="nofollow"> </a>
+<div id="post-55613-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-55613-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55613/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="aseerel4c26 has selected this answer as the correct answer"
+        href="/accept_answer/55613/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Found the problem, thanks to Fiddler....
+For debugging I was using http URLs. The server was returning a 301 permanent redirect to an https URL, which HttpWebRequest was handling automatically, resending the original request to the new location. However, the Authentication header is deliberately stripped when it follows the redirect, which makes sense when you think about it. Net result is that all the requests were unauthenticated.</p>
+<p>So it works if I avoid the redirects by using the ultimate URL (<a href="https://master">https://master</a>....) in the original request.</p>
+<p>So now I have to turn off automatic redirect handling and handle it myself, but that looks pretty simple (famous last words...)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55613/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Apr '17, 20:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/81868786ff539d9a5b1f21ed57b6e13a?s=32&amp;d=identicon&amp;r=g" alt="csmale's gravatar image" />
+    <p><a href="/users/11526/csmale">csmale</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="csmale has one accepted answer">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55613">
+    
+        <a name="55614"></a>
+        <div class="comment" id="comment-55614">
+            <div id="post-55614-score" class="comment-score"></div>
+            <div class="comment-text"><p>meta: thanks, so this question is solved now?</p></div>
+            <div class="comment-info" id="comment-55614-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '17, 22:00)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55615"></a>
+        <div class="comment" id="comment-55615">
+            <div id="post-55615-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, the question is answered for me... Sorry, is there some button I have to push to mark this question as "answered"? I am not familiar with this board, it doesn't seem to work quite the same as other forums.</p></div>
+            <div class="comment-info" id="comment-55615-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '17, 22:39)</span>
+                <a class="comment-user userinfo" href="/users/11526/csmale">csmale</a>
+                
+            </div>
+        </div>
+    
+        <a name="55616"></a>
+        <div class="comment" id="comment-55616">
+            <div id="post-55616-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/11526/csmale"></a><a href="https://help.openstreetmap.org/users/11526/csmale">@csmale</a>: don't worry. There is the <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">"accepted"</a> button, however, that does not work for self-answered questions. I did for you now.</p></div>
+            <div class="comment-info" id="comment-55616-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '17, 22:46)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55613" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55613-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55595"></a>
+                    <div id="answer-container-55595" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55595-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55595/up/" rel="nofollow"> </a>
+<div id="post-55595-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55595-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55595/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Basic Authentication should still work (e.g. <a href="https://josm.openstreetmap.de/wiki/Help/Preferences/Connection#Basicauthentication">JOSM supports it</a>).</p>
+<p>Just a vague guess: try to supply a meaningful user agent with the HTTP request. I guess you are currently using nothing or "VB.net".</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55595/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Apr '17, 21:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55595">
+    
+        <a name="55598"></a>
+        <div class="comment" id="comment-55598">
+            <div id="post-55598-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the comments so far...</p>
+
+<p>I have looked at JOSMs traffic with Wireshark - after setting JOSM to use Basic Auth with http. It does indeed work, but it uses a different call - POST on &lt;changeset&gt;/upload with an osmChange payload whereas I am using a PUT with an osm payload. What I am doing is according to the API documentation as far as I can see...</p>
+
+<p>I tried to use the dev API but the database is empty so I would have to actually write code to create an object first. All I am actually trying to do is to update a single tag.</p>
+
+<p>Is the user agent seriously relevant here? Does the API behaviour change according to the user agent string?</p></div>
+            <div class="comment-info" id="comment-55598-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '17, 21:30)</span>
+                <a class="comment-user userinfo" href="/users/11526/csmale">csmale</a>
+                
+            </div>
+        </div>
+    
+        <a name="55600"></a>
+        <div class="comment" id="comment-55600">
+            <div id="post-55600-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/11526/csmale"></a><a href="https://help.openstreetmap.org/users/11526/csmale">@csmale</a>: as said, the agent thing was just a guess. I do not know if there is possibly some blocking in place. Also it would not explain the 405 HTTP response. Let's wait a bit until someone more knowingly comes by.  </p>
+
+<p>Regarding the dev database: just add objects using JOSM.</p></div>
+            <div class="comment-info" id="comment-55600-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '17, 21:42)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55595" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55595-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55590/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='j2x34fj7kRkHU5rxMvX5sx5N7HRtIwn3' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55590/api-read-only-with-basic-authentication?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55590/api-read-only-with-basic-authentication?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/api/"
+            class="tag-link-api"
+            title="see questions tagged'api'using tags"
+            rel="tag">api</a> <span class="tag-number">&#215;290</span><br/>
+        
+        <a href="/tags/development/"
+            class="tag-link-development"
+            title="see questions tagged'development'using tags"
+            rel="tag">development</a> <span class="tag-number">&#215;113</span><br/>
+        
+        <a href="/tags/https/"
+            class="tag-link-https"
+            title="see questions tagged'https'using tags"
+            rel="tag">https</a> <span class="tag-number">&#215;19</span><br/>
+        
+        <a href="/tags/basic_authentication/"
+            class="tag-link-basic_authentication"
+            title="see questions tagged'basic_authentication'using tags"
+            rel="tag">basic_authentication</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/http_status_code_405/"
+            class="tag-link-http_status_code_405"
+            title="see questions tagged'http_status_code_405'using tags"
+            rel="tag">http_status_code_405</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 13, 2017, 8:17 p.m.">13 Apr '17, 20:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,324 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 25, 2018, 11:47 p.m.">25 Mar '18, 23:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/43458/changeset-query-api-not-working">Changeset query API not working</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18460/which-post-request-headers-to-use-for-osm-basic-authentication">which POST request headers to use for OSM Basic Authentication?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24462/how-can-our-app-send-traces-to-osm-user-accounts">How can our app send traces to OSM user accounts?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34902/tutorial-to-develop-with-osm-api-v06">tutorial to develop with OSM API v0.6</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49863/how-get-my-api-data">how get my api data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29838/how-can-i-make-my-location-data-available-so-osm-developers-can-include-my-locations-if-they-choose">How can I make my location data available so OSM developers can include my locations if they choose?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7313/is-there-an-osm-routing-api">Is there an OSM routing API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1804/is-it-easy-to-extract-the-shape-of-country-across-api">Is it easy to extract the shape of country across API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1377/api-howto-please">API howto please</a>
+        </p>
+        
+        <p>
+            <a href="/questions/713/how-to-extract-partial-data-for-large-regions">How to extract partial data for large regions ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

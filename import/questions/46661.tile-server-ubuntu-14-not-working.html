@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tile Server ubuntu 14 not working - OSM Help</title>
+        <meta name="description" content="Hi, I am a Linux newbie, and want to create a tile server on my Ubuntu computer for the application Xastir to grab maps (for ham radio APRS use). I am trying to test it out, but I am just getting pink tiles when I visit http://localhost/osm/slippymap.html and select &quot;local tiles&quot; The Command I ran w..." />
+        <meta name="keywords" content="tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/46661/tile-server-ubuntu-14-not-working" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/46661/tile-server-ubuntu-14-not-working?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='9LWITRz9KHmXUESFlSk7xhqa2dHL3t56' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/46661/tile-server-ubuntu-14-not-working">Tile Server ubuntu 14 not working</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-46661-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46661/up/" rel="nofollow"> </a>
+<div id="post-46661-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-46661-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46661/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/46661/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, I am a Linux newbie, and want to create a tile server on my Ubuntu computer for the application Xastir to grab maps (for ham radio APRS use).</p>
+<p>I am trying to test it out, but I am just getting pink tiles when I visit
+<a href="http://localhost/osm/slippymap.html">http://localhost/osm/slippymap.html</a> and select "local tiles"</p>
+<p>The Command I ran was</p>
+<p>osm2pgsql --slim -C 1500 --number-processes 4 ireland-and-northern-ireland-latest.osm.pbf
+(I used the Ireland maps for testing, and I ran this command on the home directory, and the same directory as the html page.)</p>
+<p>Here is how the above code finished executing:</p>
+<pre><code>All indexes on  planet_osm_line created  in 730s
+Completed planet_osm_line
+Stopped table: planet_osm_ways in 1310s
+Osm2pgsql took 3916s overall
+</code></pre>
+<p>According to the <a href="https://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/">website</a></p>
+<p>"If you are not opening slippymap.html on localhost and you are seeing only pink tiles, you will need to edit the html page and replace localhost with the correct server name in ‘new OpenLayers.Layer.OSM(“Local Tiles”…’ or change it to a relative URL."</p>
+<p>Well, I am using localhost, and I don't know how to find the correct server name, nor what the relative URL means.</p>
+<p>Could someone point me in the right direction?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Nov '15, 15:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b5d7e5fcef098b8ba280914b5ea846de?s=32&amp;d=identicon&amp;r=g" alt="Skyler's gravatar image" />
+    <p><a href="/users/11694/skyler">Skyler</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Skyler has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46661/">
+                edited
+                <strong>17 Nov '15, 17:26</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-46661">
+    
+        <a name="46682"></a>
+        <div class="comment" id="comment-46682">
+            <div id="post-46682-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am not sure about any solution, but maybe you kan do a search on this FAQ site for "localhost" ...</p></div>
+            <div class="comment-info" id="comment-46682-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Nov '15, 17:03)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46661" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46661-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/46661/tile-server-ubuntu-14-not-working?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/46661/tile-server-ubuntu-14-not-working?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/46661/tile-server-ubuntu-14-not-working?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/46661/tile-server-ubuntu-14-not-working?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="46683"></a>
+                    <div id="answer-container-46683" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-46683-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46683/up/" rel="nofollow"> </a>
+<div id="post-46683-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-46683-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46683/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Taking a bit of a step back, it's worth checking that tiles are being generated.  Here's a location in Ireland (using osm.org to display it):</p>
+<p><a href="http://www.openstreetmap.org/#map=18/54.50222/-8.18998">http://www.openstreetmap.org/#map=18/54.50222/-8.18998</a></p>
+<p>and if I right-click in the browser and "View image" the browser URL changes to:</p>
+<p><a href="http://b.tile.openstreetmap.org/18/125108/83543.png">http://b.tile.openstreetmap.org/18/125108/83543.png</a></p>
+<p>The first part of this - "b.tile.openstreetmap.org" describes the server that's serving the tiles out.  The second part "/18/125108/83543.png" is the path to one particular tile.</p>
+<p>It's a while since I've been through a "from packages", but from memory the URL for an individual tile is likely to be something like:</p>
+<p><a href="http://localhost/osm/18/125108/83543.png">http://localhost/osm/18/125108/83543.png</a></p>
+<p>When you go to this URL on a web browser on the same machine that you have gone through the "switch2osm" instructions on, you should see (after a short delay) is a map tile with an "Abrakebabra" on it, similar to what you get from "openstreetmap.org".  If that doesn't work try just:</p>
+<p><a href="http://localhost/">http://localhost/</a></p>
+<p>and see what happens.  "localhost" is just a name used to refer to the IPv4 address of the local machine - "127.0.0.1".  If you know an actual IP address of the machine you've installed on you can replace "localhost" with that.  Supposing I know that I'd installed on a machine with IP address "192.168.101.41" I could browse to:</p>
+<p><a href="http://192.168.101.41/osm/18/125108/83543.png">http://192.168.101.41/osm/18/125108/83543.png</a></p>
+<p>to see the same tile.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/46683/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Nov '15, 17:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-46683">
+    
+        <a name="46694"></a>
+        <div class="comment" id="comment-46694">
+            <div id="post-46694-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are no tiles. I can't find any PNG files on my system that were generated. When I right click on the image it says "not found" weather I view from localhost or the local IP.</p></div>
+            <div class="comment-info" id="comment-46694-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '15, 02:08)</span>
+                <a class="comment-user userinfo" href="/users/11694/skyler">Skyler</a>
+                
+            </div>
+        </div>
+    
+        <a name="46707"></a>
+        <div class="comment" id="comment-46707">
+            <div id="post-46707-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I wouldn't expect to see .png files on disk - I'd expect to see ".meta" files (each one combining several .pngs) in directories below e.g. /var/lib/mod_tile/default/ (though "default" might be different for you).</p>
+
+<p>When "it says not found", what was the full URL of the thing that it said was not found?</p></div>
+            <div class="comment-info" id="comment-46707-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '15, 09:34)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="46731"></a>
+        <div class="comment" id="comment-46731">
+            <div id="post-46731-score" class="comment-score"></div>
+            <div class="comment-text"><p>The requested URL /osm/18/125108/83543.png was not found on this server.</p></div>
+            <div class="comment-info" id="comment-46731-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Nov '15, 01:18)</span>
+                <a class="comment-user userinfo" href="/users/11694/skyler">Skyler</a>
+                
+            </div>
+        </div>
+    
+        <a name="46732"></a>
+        <div class="comment" id="comment-46732">
+            <div id="post-46732-score" class="comment-score"></div>
+            <div class="comment-text"><p>There is definitely something wrong with my tile server. In /var/lib/mod_tile, there is  only a file by the name of planet_import_complete. </p>
+
+<p>When I looked at this file with nano, it was blank.</p></div>
+            <div class="comment-info" id="comment-46732-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Nov '15, 01:29)</span>
+                <a class="comment-user userinfo" href="/users/11694/skyler">Skyler</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46683" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46683-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/46661/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='9LWITRz9KHmXUESFlSk7xhqa2dHL3t56' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46661/tile-server-ubuntu-14-not-working?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46661/tile-server-ubuntu-14-not-working?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 17, 2015, 3:33 p.m.">17 Nov '15, 15:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,987 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 20, 2015, 1:29 a.m.">20 Nov '15, 01:29</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/16972/configure-linux-for-osm-tile-server">Configure Linux for OSM Tile Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17474/tirex-prefetching-of-next-zoom-level">Tirex: Prefetching of next zoom level</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19156/cannot-load-the-local-map-tiles-from-the-db-in-my-slippy-map-using-the-switch2osm-package">Cannot load the local map tiles from the DB in my slippy map – using the Switch2OSM package</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19638/ipv6-for-tileservers">IPv6 for Tileservers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20286/mod_tile-build-on-rhel5">mod_tile build on RHEL5</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20645/manually-installing-a-tileserver-setting-up-postgis-errors">Manually Installing a TileServer: Setting up PostGIS (errors)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20735/country-place-and-street-names-in-english-instead-of-local-language-for-my-own-mapserver">Country, place and street names in English instead of local language for  my own mapserver</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21512/amazon-ec2-tile-drawer-stuck-on-software-installing">Amazon ec2 Tile Drawer: Stuck on Software Installing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21909/increase-improve-speed-up-rendering-performance-of-my-own-tileserver">Increase / Improve / Speed Up Rendering Performance of my own tileserver</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16917/own-openstreetmap-tile-server-oneclick">Own OpenStreetMap Tile Server OneClick</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

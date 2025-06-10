@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bot for adding Wikidata tags from Wikipedia tags - OSM Help</title>
+        <meta name="description" content="Is there a bot (or semi-automated tool) that would read the Wikipedia tags from relations (or nodes, ways) and place a proper Wikidata tag to the same object? I have a problem that relations are not displaying in Wikimedia Maps because they do not have Wikidata tags (but they do have Wikipedia tags)..." />
+        <meta name="keywords" content="wikidata,tag,wikipedia,bot,relation" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/69681/bot-for-adding-wikidata-tags-from-wikipedia-tags" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/69681/bot-for-adding-wikidata-tags-from-wikipedia-tags?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Np4px1sVH27zsFDFjWxyrJZbAUajhoWc' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/69681/bot-for-adding-wikidata-tags-from-wikipedia-tags">Bot for adding Wikidata tags from Wikipedia tags</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-69681-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69681/up/" rel="nofollow"> </a>
+<div id="post-69681-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-69681-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69681/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/69681/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is there a bot (or semi-automated tool) that would read the Wikipedia tags from relations (or nodes, ways) and place a proper Wikidata tag to the same object? I have a problem that relations are not displaying in Wikimedia Maps because they do not have Wikidata tags (but they do have Wikipedia tags).</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/wikidata/" class="post-tag tag-link-wikidata"
+                                        title="see questions tagged 'wikidata'" rel="tag">wikidata</a>
+                                
+                                    <a href="/tags/tag/" class="post-tag tag-link-tag"
+                                        title="see questions tagged 'tag'" rel="tag">tag</a>
+                                
+                                    <a href="/tags/wikipedia/" class="post-tag tag-link-wikipedia"
+                                        title="see questions tagged 'wikipedia'" rel="tag">wikipedia</a>
+                                
+                                    <a href="/tags/bot/" class="post-tag tag-link-bot"
+                                        title="see questions tagged 'bot'" rel="tag">bot</a>
+                                
+                                    <a href="/tags/relation/" class="post-tag tag-link-relation"
+                                        title="see questions tagged 'relation'" rel="tag">relation</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Jun '19, 12:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7d327873d48d28e563c9ad7259853c35?s=32&amp;d=identicon&amp;r=g" alt="Kozuch's gravatar image" />
+    <p><a href="/users/237/kozuch">Kozuch</a><br/>
+    <span class="score" title="1720 reputation points"><span class="">1.7k</span></span><span title="58 badges"><span class="badge1">&#9679;</span><span class="badgecount">58</span></span><span title="72 badges"><span class="silver">&#9679;</span><span class="badgecount">72</span></span><span title="85 badges"><span class="bronze">&#9679;</span><span class="badgecount">85</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kozuch has one accepted answer">8&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/69681/">
+                edited
+                <strong>20 Jun '19, 12:19</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-69681">
+    
+</div>
+<div id="comment-tools-69681" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69681-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/69681/bot-for-adding-wikidata-tags-from-wikipedia-tags?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/69681/bot-for-adding-wikidata-tags-from-wikipedia-tags?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/69681/bot-for-adding-wikidata-tags-from-wikipedia-tags?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/69681/bot-for-adding-wikidata-tags-from-wikipedia-tags?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="69682"></a>
+                    <div id="answer-container-69682" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69682-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69682/up/" rel="nofollow"> </a>
+<div id="post-69682-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-69682-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69682/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is something that has been done in the past but it was highly contentious to the point of some of these mass updates having to be reverted outright because they would introduce too many errors. </p>
+<p>It is not something that should be done automatically. Instead, a human being should verify whether a Wikidata entry really describes the same object as the OSM object, and only then add the Wikidata tag. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69682/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Jun '19, 12:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69682">
+    
+        <a name="69683"></a>
+        <div class="comment" id="comment-69683">
+            <div id="post-69683-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well I need only specific objects right now - US Interstate Highways. I think there would be no risk with these objects, of course I would prefer semi-automated tool. I just found osm.wikidata.link website, but seems to have too broad search.</p></div>
+            <div class="comment-info" id="comment-69683-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jun '19, 12:34)</span>
+                <a class="comment-user userinfo" href="/users/237/kozuch">Kozuch</a>
+                
+            </div>
+        </div>
+    
+        <a name="69686"></a>
+        <div class="comment" id="comment-69686">
+            <div id="post-69686-score" class="comment-score"></div>
+            <div class="comment-text"><p>Maybe you could do data processing on your side instead of running a bot on the main OSM DB?</p></div>
+            <div class="comment-info" id="comment-69686-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jun '19, 15:48)</span>
+                <a class="comment-user userinfo" href="/users/5587/yvecai">yvecai</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69682" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69682-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="69691"></a>
+                    <div id="answer-container-69691" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69691-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69691/up/" rel="nofollow"> </a>
+<div id="post-69691-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-69691-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69691/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is a Wikipedia plugin for the editor JOSM. It can fetch the proper wikidata object for a selected object based on the wikipedia tag and add the corresponding wikidata tag. You still have to manually select the objects but the lookup and tag placing is done automatically via a menu item in the data menu </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69691/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Jun '19, 22:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69691">
+    
+</div>
+<div id="comment-tools-69691" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69691-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/69681/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Np4px1sVH27zsFDFjWxyrJZbAUajhoWc' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69681/bot-for-adding-wikidata-tags-from-wikipedia-tags?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69681/bot-for-adding-wikidata-tags-from-wikipedia-tags?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/relation/"
+            class="tag-link-relation"
+            title="see questions tagged'relation'using tags"
+            rel="tag">relation</a> <span class="tag-number">&#215;128</span><br/>
+        
+        <a href="/tags/tag/"
+            class="tag-link-tag"
+            title="see questions tagged'tag'using tags"
+            rel="tag">tag</a> <span class="tag-number">&#215;101</span><br/>
+        
+        <a href="/tags/wikipedia/"
+            class="tag-link-wikipedia"
+            title="see questions tagged'wikipedia'using tags"
+            rel="tag">wikipedia</a> <span class="tag-number">&#215;20</span><br/>
+        
+        <a href="/tags/wikidata/"
+            class="tag-link-wikidata"
+            title="see questions tagged'wikidata'using tags"
+            rel="tag">wikidata</a> <span class="tag-number">&#215;19</span><br/>
+        
+        <a href="/tags/bot/"
+            class="tag-link-bot"
+            title="see questions tagged'bot'using tags"
+            rel="tag">bot</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 20, 2019, 12:18 p.m.">20 Jun '19, 12:18</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,203 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 20, 2019, 10:03 p.m.">20 Jun '19, 22:03</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/52380/relation-foret-domaniale-de-saint-germain-en-laye-148839-tags">Relation: Forêt Domaniale de Saint-Germain-en-Laye (148839) tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/420/how-can-i-create-a-map-highlighting-a-relation-which-then-could-be-used-for-wikipedia-articles">How can I create a map highlighting a relation which then could be used for wikipedia articles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48114/relationmultipolygon-single-boundary-with-multiple-joined-lines">Relation:Multipolygon- single boundary with multiple joined lines</a>
+        </p>
+        
+        <p>
+            <a href="/questions/76124/trouble-setting-up-to-use-boundary-on-wikipedia">Trouble setting up to use boundary on Wikipedia</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42644/is-it-okay-to-use-pictures-from-wikimedia-commons-to-help-me-map">Is it okay to use pictures from Wikimedia Commons to help me map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/933/does-it-make-sense-to-create-relations-for-very-large-objects-say-the-mediterranean-sea">Does it make sense to create relations for very large objects - say: the Mediterranean Sea?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/915/how-to-get-administrative-boundaries-in-a-gps-format-ideally-in-igc">How to get administrative boundaries in a GPS format, ideally in .igc?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/443/can-i-create-turn-by-turn-directions-from-a-relation">Can I create turn-by-turn directions from a relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1210/the-state-of-query-to-map">The state of Query-to-map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/665/which-possibilities-do-i-have-to-check-relations-for-errors">Which possibilities do I have to check relations for errors?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Best practices for edits and updates from App - OSM Help</title>
+        <meta name="description" content="Hello everyone,  We are developing an app for bar, hotel and restaurant reviews, called Revuie. With all the changes that have happened with hospitality recently, we need to be able to give our users a quick and easy way to edit or add venues. Hopefully, we can add back by contributing those edits. ..." />
+        <meta name="keywords" content="editing,api,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/80691/best-practices-for-edits-and-updates-from-app" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/80691/best-practices-for-edits-and-updates-from-app?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='AtluPii2pikXCRsgHJ1FkTWu6lodjtG3' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/80691/best-practices-for-edits-and-updates-from-app">Best practices for edits and updates from App</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-80691-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80691/up/" rel="nofollow"> </a>
+<div id="post-80691-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-80691-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80691/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/80691/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello everyone, </p>
+<p>We are developing an app for bar, hotel and restaurant reviews, called Revuie.</p>
+<p>With all the changes that have happened with hospitality recently, we need to be able to give our users a quick and easy way to edit or add venues. Hopefully, we can add back by contributing those edits. But we’re wary of the risk of bad edits.</p>
+<p>One initial idea was to just make the edits in our local data, and then publish a change file that could be used as a source for the community. But the problem we can’t get our heads around is how to de-dupe those changes on future imports of OSM data.</p>
+<p>Another alternative is to use the API to make the changes, identifying them as coming from a user tied to our app - and maybe setting them as needing review?</p>
+<p>Whatever approach we take, we can create guides for users so that they can get a feel for how and when to make edits - and as the change functionality is implemented in the app it can be buttoned down.</p>
+<p>We’d love to be a part of the community, and to contribute it back, so it would be great to get any advice and feedback people have on this, please.</p>
+<p>Another puzzle we're facing is how to enable users to tag venues, and keep that tag list in line with existing OSM tags, as the tags could come from various sources. For example, we'd definitely want to include cuisine. Some pubs have sport tags (like pool) which could be useful. Across food, drink and accommodation, there must be lots of tags that we haven't considered. Any advice on this would be great too. Ultimately, we want to encourage tagging of venues in the app to enhance user search, and it would be great to contribute this back too.</p>
+<p>Many thanks,</p>
+<p>John</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/api/" class="post-tag tag-link-api"
+                                        title="see questions tagged 'api'" rel="tag">api</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Jun '21, 15:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8f3e7fb1eed3f0aa42bdbc129500d31b?s=32&amp;d=identicon&amp;r=g" alt="JohnB-Revuie's gravatar image" />
+    <p><a href="/users/20411/johnb-revuie">JohnB-Revuie</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JohnB-Revuie has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/80691/">
+                edited
+                <strong>25 Jun '21, 08:21</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-80691">
+    
+</div>
+<div id="comment-tools-80691" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80691-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/80691/best-practices-for-edits-and-updates-from-app?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/80691/best-practices-for-edits-and-updates-from-app?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/80691/best-practices-for-edits-and-updates-from-app?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/80691/best-practices-for-edits-and-updates-from-app?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="80718"></a>
+                    <div id="answer-container-80718" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80718-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80718/up/" rel="nofollow"> </a>
+<div id="post-80718-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-80718-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80718/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi John, it sounds like you have two possible approaches here:</p>
+<ul>
+<li>Include limited OSM editing capability as a feature of your app, calling the API directly from users' devices. Many apps do this; OsmAnd is probably the most prominent. Any user of your app who wished to contribute data to OSM would need to create an OSM account, and supply your app with their credentials.</li>
+<li>Collect and curate data from your users into your own database, and import that data into OSM at intervals using a single dedicated OSM account. As you mention, there's the obvious problem of deduplication. Also, imports in general are a tricky topic, and there have been many over the years that have done a lot of damage, so prepare for a lot of resistance to this approach.</li>
+</ul>
+<p>Some useful reading:</p>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/Organised_Editing_Guidelines">https://wiki.openstreetmap.org/wiki/Organised_Editing_Guidelines</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct">https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a></li>
+</ul>
+<p>Regarding the tagging, you'll want to maintain parity with existing OSM tagging practices. There are established tags for cuisine, for indicating that pub has a pool table, etc. There may, though, be details that you're interested in that are considered out of scope for OSM, such as individual menu items, pricing information, special promotions, government inspection scores, and, of course, the reviews and ratings themselves.</p>
+<p>...</p>
+<p>Whenever I hear of third-party apps using OSM for business reviews, the biggest problem that comes to mind is that there is no standard method to ensure that an individual business has a persistent unique ID in OSM. Eg, one mapper might add a restaurant as a node, then another mapper might remap it as a building, which will be a different element in the OSM database. Then another mapper might decide it shouldn't be the whole building because it's a multi story building and the restaurant is only on the ground floor, so it gets moved to a brand new node inside the building.</p>
+<p>Then the restaurant moves into a new building across the street. A mapper might choose to move the node from the old building to the new one... or to create a new node in the new building, and change the tags on the old node so it's reused for the new business that's moved into the old space.</p>
+<p>Meanwhile, the name might change, eg "Greggorys"-&gt;"Greggory's"-&gt;"Gregory's"-&gt;"Gregory's Cafe". The phone number and website might change too. It would take a fair amount of work to sync a single record in a remote database with these different OSM elements and changing tag values.</p>
+<p>This is a solvable problem, but be aware that it will happen.</p>
+<p>Some more fun reading: <a href="https://wiki.openstreetmap.org/wiki/Persistent_Place_Identifier">https://wiki.openstreetmap.org/wiki/Persistent_Place_Identifier</a></p>
+<p>Good luck with your app!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80718/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Jun '21, 16:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/977d95e2184a885d9a01fb3297225872?s=32&amp;d=identicon&amp;r=g" alt="jmapb's gravatar image" />
+    <p><a href="/users/14350/jmapb">jmapb</a><br/>
+    <span class="score" title="3387 reputation points"><span class="">3.4k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">&#9679;</span><span class="badgecount">33</span></span><span title="61 badges"><span class="bronze">&#9679;</span><span class="badgecount">61</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jmapb has 22 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/80718/">
+                edited
+                <strong>25 Jun '21, 16:57</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80718">
+    
+        <a name="80723"></a>
+        <div class="comment not_top_scorer" id="comment-80723">
+            <div id="post-80723-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi jmapb, thanks for the detailed answer.</p>
+
+<p>With the editing, I wonder if there is an in between option, where we call the API for limited editing, but use a 'RevuieApp' OSM account, so the user doesn't have to create their own. This would also mean that any edits could be easily identified as coming from the app, so we could more easily tweak the process in the app based on feedback from the community. Would be great to hear any thoughts on that.</p>
+
+<p>Thanks for the tip on the persistent unique ID. We hadn't accounted for that, so will read up on the links and put some thought in to it. I'm sure we'll be back with more questions on that one!</p>
+
+<p>Thanks again,</p>
+
+<p>John</p></div>
+            <div class="comment-info" id="comment-80723-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Jun '21, 10:34)</span>
+                <a class="comment-user userinfo" href="/users/20411/johnb-revuie">JohnB-Revuie</a>
+                
+            </div>
+        </div>
+    
+        <a name="80724"></a>
+        <div class="comment" id="comment-80724">
+            <div id="post-80724-score" class="comment-score">2</div>
+            <div class="comment-text"><p>If you are creating a new app that submits edits it should already have a <a href="https://wiki.openstreetmap.org/wiki/Key:created%20by?uselang=en"><code>created_by</code></a> tag set on the changeset to make them identifiable regardless.</p></div>
+            <div class="comment-info" id="comment-80724-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Jun '21, 13:51)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+        <a name="80748"></a>
+        <div class="comment not_top_scorer" id="comment-80748">
+            <div id="post-80748-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks InsertUser, will have a look at that tag</p></div>
+            <div class="comment-info" id="comment-80748-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jun '21, 19:24)</span>
+                <a class="comment-user userinfo" href="/users/20411/johnb-revuie">JohnB-Revuie</a>
+                
+            </div>
+        </div>
+    
+        <a name="80750"></a>
+        <div class="comment" id="comment-80750">
+            <div id="post-80750-score" class="comment-score">1</div>
+            <div class="comment-text"><p>On the question of using a "'RevuieApp' OSM account", I suspect that you might struggle to agree to OSM's <a href="https://wiki.osmfoundation.org/wiki/Licence/Contributor_Terms">Contributor Terms</a> given that you don't know what users are submitting or where they've got it from.  Generally speaking apps use one account per actual user.  There's an OSM <a href="https://wiki.osmfoundation.org/wiki/Licensing_Working_Group">Licensing Working Group</a> and they'd have more idea than me.</p></div>
+            <div class="comment-info" id="comment-80750-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jun '21, 22:33)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="80755"></a>
+        <div class="comment" id="comment-80755">
+            <div id="post-80755-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/20411/johnb-revuie">@JohnB-Revuie</a> I can't speak for anyone but myself as an OSM mapper and user, but offhand... numerous users editing the map with a shared account doesn't sound like a good idea.</p>
+
+<p>By design, individual users are responsible for their own changes to the map, and other users may want to communicate with them about those changes. If I see a change I don't understand or wish to know more about, I can leave a comment on the changeset, or message the user directly. This will trigger an email to the address associated with the account.</p>
+
+<p>Whoever handles your RevuieApp account would get emails intended for the users who actually made the changes, eg "Why did you call this a doctor? It looks like a deli" or "Are you sure they're open? I passed by last week and it had a For Rent sign" or "Did Gregory's close, or is this another business in the same building?" or "Why did you change this to a restaurant?" These questions might make sense to the user who made the change, but not to whoever's checking the email account for the RevuieApp OSM user.</p></div>
+            <div class="comment-info" id="comment-80755-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '21, 02:19)</span>
+                <a class="comment-user userinfo" href="/users/14350/jmapb">jmapb</a>
+                
+            </div>
+        </div>
+    
+        <a name="80756"></a>
+        <div class="comment" id="comment-80756">
+            <div id="post-80756-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/20411/johnb-revuie">@JohnB-Revuie</a> Also, if one of your users was suspected of copyright infringement or vandalism, OSM's Data Working Group would get complaints against the entire RevuieApp account, and might choose the block all of this account's access, which would break the app for everyone.</p>
+
+<p>In short, what you're describing is different enough from the way that OSM usually works that I don't think it would go over well, and I wouldn't be surprised if it was somehow explicitly forbidden.</p></div>
+            <div class="comment-info" id="comment-80756-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '21, 02:21)</span>
+                <a class="comment-user userinfo" href="/users/14350/jmapb">jmapb</a>
+                
+            </div>
+        </div>
+    
+        <a name="80759"></a>
+        <div class="comment" id="comment-80759">
+            <div id="post-80759-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks jmapb and SomeoneElse. Some really key points for us to think about there, especially around the contributor terms and the risk to the whole account being blocked.</p></div>
+            <div class="comment-info" id="comment-80759-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '21, 12:18)</span>
+                <a class="comment-user userinfo" href="/users/20411/johnb-revuie">JohnB-Revuie</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80718" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80718-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/80691/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='AtluPii2pikXCRsgHJ1FkTWu6lodjtG3' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80691/best-practices-for-edits-and-updates-from-app?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80691/best-practices-for-edits-and-updates-from-app?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/api/"
+            class="tag-link-api"
+            title="see questions tagged'api'using tags"
+            rel="tag">api</a> <span class="tag-number">&#215;290</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 24, 2021, 3:11 p.m.">24 Jun '21, 15:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,265 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 28, 2021, 12:18 p.m.">28 Jun '21, 12:18</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/9453/do-i-need-an-api-key-for-my-project">Do I need an API key for my project?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36501/how-to-mass-change-tag-value">How to mass-change tag value</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4319/do-i-add-address-tags-to-the-poi-node-or-create-a-separate-node">Do I add address tags to the POI node or create a separate node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6107/how-to-tag-a-bank-that-does-not-offer-service-to-the-general-public">How to tag a bank that does not offer service to the general public?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23879/no-result-if-area-do-not-contain-nodes-osmorgapi06map">No result if area do not contain nodes (osm.org/api/0.6/map)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25880/how-can-i-add-traffic-lights">How can I add traffic lights?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3511/how-to-delete-existing-blocks-on-osm">How to delete existing blocks on OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area">When does it make sense to use place=* on an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5808/garmin-1490t-no-sd-card">Garmin 1490T no SD Card</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42269/bulk-changes-to-capitalize-tags">Bulk changes to capitalize tags</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

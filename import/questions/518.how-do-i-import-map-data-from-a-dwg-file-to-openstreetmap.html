@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I import map data from a .dwg file to OpenStreetMap? - OSM Help</title>
+        <meta name="description" content="What are the tools and methods to sucessfully import map data from a .dwg file to OpenStreetMap?" />
+        <meta name="keywords" content="import,conversion,tools,dwg,government" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='fhBe18EPyqIV3tA651CyKM0ZKxo3nvTN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap">How do I import map data from a .dwg file to OpenStreetMap?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-518-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/518/up/" rel="nofollow"> </a>
+<div id="post-518-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-518-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/518/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/518/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>What are the <strong>tools</strong> and <strong>methods</strong> to sucessfully import map data from a .dwg file to OpenStreetMap?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/import/" class="post-tag tag-link-import"
+                                        title="see questions tagged 'import'" rel="tag">import</a>
+                                
+                                    <a href="/tags/conversion/" class="post-tag tag-link-conversion"
+                                        title="see questions tagged 'conversion'" rel="tag">conversion</a>
+                                
+                                    <a href="/tags/tools/" class="post-tag tag-link-tools"
+                                        title="see questions tagged 'tools'" rel="tag">tools</a>
+                                
+                                    <a href="/tags/dwg/" class="post-tag tag-link-dwg"
+                                        title="see questions tagged 'dwg'" rel="tag">dwg</a>
+                                
+                                    <a href="/tags/government/" class="post-tag tag-link-government"
+                                        title="see questions tagged 'government'" rel="tag">government</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Jul '10, 17:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/77ac2d599553a2b1a968b473d4bf670b?s=32&amp;d=identicon&amp;r=g" alt="vgeorge's gravatar image" />
+    <p><a href="/users/117/vgeorge">vgeorge</a><br/>
+    <span class="score" title="201 reputation points">201</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="vgeorge has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-518">
+    
+</div>
+<div id="comment-tools-518" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-518-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="519"></a>
+                    <div id="answer-container-519" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-519-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/519/up/" rel="nofollow"> </a>
+<div id="post-519-score" class="post-score"
+    title="current number of votes">
+    12
+</div>
+<a id="post-519-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/519/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="vgeorge has selected this answer as the correct answer"
+        href="/accept_answer/519/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The first rule of imports is:</p>
+<p><strong>If you have to ask - don't do it.</strong></p>
+<p>Seriously, imports are difficult for a number of reasons. Firstly, not every import makes sense; for example, if it is third-party data which is well and actively maintained then importing the data into OSM will create a reduced-quality clone (because the data will not be updated when the original source updates). Or if the data is of a kind that cannot be sensibly improved by the community, like official boundaries or airspaces or building floor plans - that's also something that has very little reason to be in OSM. It is important to remember that OSM is a community mapping platform; data not meant for editing should not be in OSM.</p>
+<p>Secondly, even if the data is good and suitable, imports can discourage people from getting engaged (because the map looks complete). This is a problem we're seeing in some areas where imports have boosted the data but not the community. Andy Allan has an excellent parable about imports, <a href="http://www.gravitystorm.co.uk/shine/archives/2009/11/10/the-pottery-club/">The Pottery Club</a>, and Matt Amos has run an interesting <a href="http://www.asklater.com/matt/wordpress/2009/09/imports-and-the-community/">simulation</a> that aims to illustrate the effect of imports on community growth.</p>
+<p>Thirdly, doing imports properly requires a lot of knowledge. You have to select the right tagging, you have to make sure your data does not collide with anything that is already there, you have to make sure that adjacent polygons don't unnecessarily duplicate nodes, and so on. Some of these challenges can be solved by good importing software, some cannot.</p>
+<p>The second rule of imports is:</p>
+<p>Even if you find a program that seemingly does what you want, never try to run an import if you don't know exactly what the program does, and if you don't know exactly how to undo your import if something should go wrong.</p>
+<p>Any import needs to be well planned, needs to be discussed with the community, and professionally executed. The usual credo of "something is better than nothing", which we often use when surveying, does not apply to imports. There is a high risk of imports actually damaging the project rather than being of use.</p>
+<p>There is a piece of software that seems to read dxf files and create osm files, but it is seldom used and I have no idea whether or not this would work for your data set: </p>
+<p><a href="http://github.com/h4ck3rm1k3/TwoNickels"></a><a href="http://github.com/h4ck3rm1k3/TwoNickels"></a><a href="http://github.com/h4ck3rm1k3/TwoNickels">http://github.com/h4ck3rm1k3/TwoNickels</a></p>
+<p>Be sure to discuss your plans on the <a href="http://lists.openstreetmap.org/listinfo/imports">"imports" mailing list</a> before you do anything.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/519/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Jul '10, 23:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/519/">
+                edited
+                <strong>02 Dec '10, 12:59</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+            <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+            <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-519">
+    
+        <a name="545"></a>
+        <div class="comment" id="comment-545">
+            <div id="post-545-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Closed source CAD software might be necessary to convert DWG (Drawing) to DFX (Drawing File Exchange) formats, depending on the version of CAD used to generate the original file.</p></div>
+            <div class="comment-info" id="comment-545-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Aug '10, 07:59)</span>
+                <a class="comment-user userinfo" href="/users/160/skippern">Skippern</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-519" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-519-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="63583"></a>
+                    <div id="answer-container-63583" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-63583-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63583/up/" rel="nofollow"> </a>
+<div id="post-63583-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-63583-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63583/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Ad "Closed source CAD software": You can use GNU LibreDWG to read or write DWG or DXF files. I'm the maintainer of it, and I'm interested to create an automatic filter to ease the conversion from DWG (i.e. closed commercial GIS systems) to OpenStreetMap.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/63583/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 May '18, 20:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5c2888084ed6ac4c1c6e71cbd6bd23a4?s=32&amp;d=identicon&amp;r=g" alt="rurban's gravatar image" />
+    <p><a href="/users/15143/rurban">rurban</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rurban has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-63583">
+    
+</div>
+<div id="comment-tools-63583" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63583-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/518/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='fhBe18EPyqIV3tA651CyKM0ZKxo3nvTN' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/import/"
+            class="tag-link-import"
+            title="see questions tagged'import'using tags"
+            rel="tag">import</a> <span class="tag-number">&#215;196</span><br/>
+        
+        <a href="/tags/tools/"
+            class="tag-link-tools"
+            title="see questions tagged'tools'using tags"
+            rel="tag">tools</a> <span class="tag-number">&#215;35</span><br/>
+        
+        <a href="/tags/conversion/"
+            class="tag-link-conversion"
+            title="see questions tagged'conversion'using tags"
+            rel="tag">conversion</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/dwg/"
+            class="tag-link-dwg"
+            title="see questions tagged'dwg'using tags"
+            rel="tag">dwg</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/government/"
+            class="tag-link-government"
+            title="see questions tagged'government'using tags"
+            rel="tag">government</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 30, 2010, 5:28 p.m.">30 Jul '10, 17:28</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>16,000 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 20, 2018, 8:30 p.m.">20 May '18, 20:30</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13/importing-government-maps">Importing government maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12580/use-dwg-file-of-napoli-italy">Use DWG file of Napoli / Italy</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31868/how-do-i-convert-shp-files-to-gpx">How do I convert shp files to GPX</a>
+        </p>
+        
+        <p>
+            <a href="/questions/498/uploading-a-small-bit-of-new-tiger-data-and-3-other-unrelated-questions">Uploading a small bit of new TIGER data (and 3 other unrelated questions)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/828/uploading-a-gpx-from-ttgpslogger-doesnt-work">Uploading a GPX from TTGpsLogger doesn&#39;t work</a>
+        </p>
+        
+        <p>
+            <a href="/questions/849/how-to-convert-osm-to-kml-format">How to convert .osm to KML format?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/799/how-should-i-go-about-importing-a-city">How should I go about importing a city?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1194/what-osm-is-not">What OSM is not</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1457/exporting-osm-map-to-use-in-mapinfo">Exporting OSM map to use in MapInfo</a>
+        </p>
+        
+        <p>
+            <a href="/questions/953/translating-place-names">Translating place names</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

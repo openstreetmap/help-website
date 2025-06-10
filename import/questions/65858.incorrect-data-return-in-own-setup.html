@@ -1,0 +1,708 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Incorrect data return in own setup ? - OSM Help</title>
+        <meta name="description" content="hi, We setup our own instance of nominatim(version 3.1.0) with planet data (Planet data downloaded on July 1st week 2018 &amp;amp; not yet updating regularly). The below Nominatim reverse geocode URL return correct data. https://nominatim.openstreetmap.org/reverse?format=json&amp;amp;lat=19.1896835&amp;amp;lon=..." />
+        <meta name="keywords" content="postalcode,reversegeocoding,update,nominatim" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/65858/incorrect-data-return-in-own-setup" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/65858/incorrect-data-return-in-own-setup?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='a4XvEqh8xeb4kunAeC0BNA91Ma6kRZUP' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/65858/incorrect-data-return-in-own-setup">Incorrect data return in own setup ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-65858-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/65858/up/" rel="nofollow"> </a>
+<div id="post-65858-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-65858-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/65858/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/65858/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>hi,</p>
+<p>We setup our own instance of nominatim(version 3.1.0) with planet data (Planet data downloaded on July 1st week 2018 &amp; not yet updating regularly).</p>
+<p>The below Nominatim reverse geocode URL return correct data.</p>
+<p><a href="https://nominatim.openstreetmap.org/reverse?format=json&amp;lat=19.1896835&amp;lon=72.9465236">https://nominatim.openstreetmap.org/reverse?format=json&amp;lat=19.1896835&amp;lon=72.9465236</a></p>
+<p>But my nominatim server return incorrect result(postalcode only incorrect) as follows:</p>
+<pre><code>{"place_id":"1568360","licence":"Data © OpenStreetMap contributors, ODbL 1.0. https:\/\/osm.org\/copyright","osm_type":"way","osm_id":"390034175","lat":"19.18943535","lon":"72.9461104562161","display_name":"MANGAL KARYALAY, Shreenagar Main Rd, Kisan Nagar, ठाणे, Thane, Maharashtra, 560092, India","address":{"townhall":"MANGAL KARYALAY","road":"Shreenagar Main Rd","suburb":"Kisan Nagar","city":"ठाणे","state_district":"Thane","state":"Maharashtra","postcode":"560092","country":"India","country_code":"in"},"boundingbox":["19.1891871","19.1896785","72.9458731","72.9463452"]}
+</code></pre>
+<p>Note: The same data may updated recently(after i have downloaded planet data)? If yes, how to confirm the same. I tried as <a href="https://www.openstreetmap.org/api/0.6/way/390034175">https://www.openstreetmap.org/api/0.6/way/390034175</a> .  But it shows timestamp as 2 years old.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/postalcode/" class="post-tag tag-link-postalcode"
+                                        title="see questions tagged 'postalcode'" rel="tag">postalcode</a>
+                                
+                                    <a href="/tags/reversegeocoding/" class="post-tag tag-link-reversegeocoding"
+                                        title="see questions tagged 'reversegeocoding'" rel="tag">reversegeocoding</a>
+                                
+                                    <a href="/tags/update/" class="post-tag tag-link-update"
+                                        title="see questions tagged 'update'" rel="tag">update</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Sep '18, 07:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1ffa52ca3632b5a0cf02b51459b7529b?s=32&amp;d=identicon&amp;r=g" alt="Rajavelu_M's gravatar image" />
+    <p><a href="/users/11165/rajavelu_m">Rajavelu_M</a><br/>
+    <span class="score" title="253 reputation points">253</span><span title="45 badges"><span class="badge1">&#9679;</span><span class="badgecount">45</span></span><span title="48 badges"><span class="silver">&#9679;</span><span class="badgecount">48</span></span><span title="58 badges"><span class="bronze">&#9679;</span><span class="badgecount">58</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Rajavelu_M has one accepted answer">33&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/65858/">
+                edited
+                <strong>11 Sep '18, 19:18</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-65858">
+    
+</div>
+<div id="comment-tools-65858" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-65858-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/65858/incorrect-data-return-in-own-setup?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/65858/incorrect-data-return-in-own-setup?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/65858/incorrect-data-return-in-own-setup?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/65858/incorrect-data-return-in-own-setup?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="65859"></a>
+                    <div id="answer-container-65859" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-65859-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/65859/up/" rel="nofollow"> </a>
+<div id="post-65859-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-65859-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/65859/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Try running <code>./utils/update.php --calculate-postcodes</code> from the <code>build</code> directory. It will look at all postcodes and recalculate their (center) position.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/65859/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Sep '18, 12:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/96aad1e1801b7ea36fba50687924c935?s=32&amp;d=identicon&amp;r=g" alt="mtmail's gravatar image" />
+    <p><a href="/users/150/mtmail">mtmail</a><br/>
+    <span class="score" title="4757 reputation points"><span class="">4.8k</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mtmail has 50 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/65859/">
+                edited
+                <strong>11 Sep '18, 12:26</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-65859">
+    
+        <a name="65861"></a>
+        <div class="comment" id="comment-65861">
+            <div id="post-65861-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/150/mtmail"></a><a href="https://help.openstreetmap.org/users/150/mtmail">@mtmail</a>: Thanks for your reply.
+But, Still got the same incorrect postcode only.</p>
+
+<p>Also tried as fresh import of india data only (<a href="https://download.geofabrik.de/asia/india-latest.osm.pbf">https://download.geofabrik.de/asia/india-latest.osm.pbf</a> ). But got the above incorrect postcode only. Is there any changes done in Nominatim_3.2.0 for this issue? (Note: I am using 3.1.0)</p></div>
+            <div class="comment-info" id="comment-65861-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '18, 18:27)</span>
+                <a class="comment-user userinfo" href="/users/11165/rajavelu_m">Rajavelu_M</a>
+                
+            </div>
+        </div>
+    
+        <a name="65862"></a>
+        <div class="comment" id="comment-65862">
+            <div id="post-65862-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Sounds like the OSM postcode data might be incorrect and nominatim.osm.org is displaying older data. Go to <a href="http://overpass-turbo.eu/">http://overpass-turbo.eu/</a> zoom in to India and run the query "addr:postcode=560092" in the wizard. It will show one postcode 100km away from the others. That could be a reason. There's even two more that don't quite fit the others (10km away).</p></div>
+            <div class="comment-info" id="comment-65862-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '18, 18:44)</span>
+                <a class="comment-user userinfo" href="/users/150/mtmail">mtmail</a>
+                
+            </div>
+        </div>
+    
+        <a name="65896"></a>
+        <div class="comment" id="comment-65896">
+            <div id="post-65896-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/150/mtmail"></a><a href="https://help.openstreetmap.org/users/150/mtmail">@mtmail</a>: Thanks again.
+Yes. Thats the issue. Now i have deleted that incorrect node in osm and re-import with latest india data. Got correct postcode data now.</p></div>
+            <div class="comment-info" id="comment-65896-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Sep '18, 11:05)</span>
+                <a class="comment-user userinfo" href="/users/11165/rajavelu_m">Rajavelu_M</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-65859" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-65859-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/65858/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='a4XvEqh8xeb4kunAeC0BNA91Ma6kRZUP' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/65858/incorrect-data-return-in-own-setup?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/65858/incorrect-data-return-in-own-setup?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/update/"
+            class="tag-link-update"
+            title="see questions tagged'update'using tags"
+            rel="tag">update</a> <span class="tag-number">&#215;199</span><br/>
+        
+        <a href="/tags/reversegeocoding/"
+            class="tag-link-reversegeocoding"
+            title="see questions tagged'reversegeocoding'using tags"
+            rel="tag">reversegeocoding</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/postalcode/"
+            class="tag-link-postalcode"
+            title="see questions tagged'postalcode'using tags"
+            rel="tag">postalcode</a> <span class="tag-number">&#215;18</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 11, 2018, 7:24 a.m.">11 Sep '18, 07:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,436 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 14, 2018, 11:06 a.m.">14 Sep '18, 11:06</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/28695/how-can-i-change-nominatims-reverse-geocoding-behaviour">How can I change Nominatim&#39;s reverse geocoding behaviour?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30512/how-does-nominatim-reverse-geocode">How does Nominatim reverse geocode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17207/wrong-city-names">Wrong city names</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23680/error-on-osmosis-import-update-nullpointerexception-at-replicationdownloaderconfiguration">Error on osmosis-import update (NullPointerException at ReplicationDownloaderConfiguration)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay">Onetime bulk reverse geocoding: which amout is okay?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30492/updating-n-america-data-to-planet-data">Updating N America data to planet data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15474/the-search-shows-a-bavarian-city-as-being-in-thuringen">The search shows a Bavarian city as being in Thüringen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16255/warum-werden-einige-neu-erstellte-hausnummern-uber-die-suche-nicht-gefunden">Warum werden einige neu erstellte Hausnummern über die Suche nicht gefunden</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21497/nominatim-update-sql-error-in-placex_update">Nominatim update sql error in placex_update</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31059/nominatim-internal-server-error">Nominatim internal server error</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,797 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to query all elements within an outline way from Overpass API? - OSM Help</title>
+        <meta name="description" content="Given the id of a closed way which represents an area, as indicated by an &quot;area&quot; tag such as building=*, how can I retrieve all nodes/ways contained entirely or partially within that area from Overpass API? What I have found so far is area-query, which sounds as if it should cover this use case, and..." />
+        <meta name="keywords" content="overpass,area,closed_way,query" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='rWiNKX3VZcbX3zyUS7pspSHWnTYpnAK5' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api">How to query all elements within an outline way from Overpass API?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-20841-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20841/up/" rel="nofollow"> </a>
+<div id="post-20841-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-20841-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20841/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/20841/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Given the id of a closed way which represents an area, as indicated by an "area" tag such as building=*, how can I retrieve all nodes/ways contained entirely or partially within that area from Overpass API?</p>
+<p>What I have found so far is <em>area-query</em>, which sounds as if it should cover this use case, and it works as expected for areas represented as multipolygons (if you remember to add the magic number 3600000000 to the id):</p>
+<pre><code>&lt;query type="node"&gt;
+  &lt;area-query ref="3600015228"/&gt;
+&lt;/query&gt;
+</code></pre>
+<p><a href="http://overpass-turbo.eu/?Q=%3Cosm-script%20output%3D%22json%22%3E%0A%20%20%3Cquery%20type%3D%22node%22%3E%0A%20%20%20%20%3Carea-query%20ref%3D%223600015228%22%2F%3E%0A%20%20%3C%2Fquery%3E%0A%20%20%3Cprint%20mode%3D%22body%22%2F%3E%0A%3C%2Fosm-script%3E&amp;C=48.57056;13.45693;18&amp;R"><em>(Overpass Turbo)</em></a></p>
+<p>I've found a hint that adding 2400000000 to the id might do the trick for closed ways. However, this does not appear to work:</p>
+<pre><code>&lt;query type="node"&gt;
+  &lt;area-query ref="2501518744"/&gt;
+&lt;/query&gt;
+</code></pre>
+<p><a href="http://overpass-turbo.eu/?Q=%3Cosm-script%20output%3D%22json%22%3E%0A%20%20%3Cquery%20type%3D%22node%22%3E%0A%20%20%20%20%3Carea-query%20ref%3D%222501518744%22%2F%3E%0A%20%20%3C%2Fquery%3E%0A%20%20%3Cprint%20mode%3D%22body%22%2F%3E%0A%3C%2Fosm-script%3E&amp;C=48.56936;13.44751;18&amp;R"><em>(Overpass Turbo)</em></a></p>
+<p>This example query for way <a href="http://www.openstreetmap.org/browse/way/101518744">101518744</a> should return <a href="http://www.openstreetmap.org/browse/node/1172225070">1172225070</a> as well as other nodes, but the result is empty. Is there something I'm missing?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/area/" class="post-tag tag-link-area"
+                                        title="see questions tagged 'area'" rel="tag">area</a>
+                                
+                                    <a href="/tags/closed_way/" class="post-tag tag-link-closed_way"
+                                        title="see questions tagged 'closed_way'" rel="tag">closed_way</a>
+                                
+                                    <a href="/tags/query/" class="post-tag tag-link-query"
+                                        title="see questions tagged 'query'" rel="tag">query</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Mar '13, 18:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0626be5f46f32fce501353e8a5ec399c?s=32&amp;d=identicon&amp;r=g" alt="Tordanik's gravatar image" />
+    <p><a href="/users/14/tordanik">Tordanik</a><br/>
+    <span class="score" title="11998 reputation points"><span class="">12.0k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="106 badges"><span class="silver">&#9679;</span><span class="badgecount">106</span></span><span title="147 badges"><span class="bronze">&#9679;</span><span class="badgecount">147</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tordanik has 58 accepted answers">35&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-20841">
+    
+</div>
+<div id="comment-tools-20841" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20841-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="20865"></a>
+                    <div id="answer-container-20865" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-20865-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20865/up/" rel="nofollow"> </a>
+<div id="post-20865-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-20865-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20865/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In short: an area for the given way has never been generated because the way has no name. I'm sorry that there is no immediate solution to your problem.</p>
+<p>In more detail:
+<a href="https://github.com/drolbr/Overpass-API/blob/master/rules/areas.osm3s">https://github.com/drolbr/Overpass-API/blob/master/rules/areas.osm3s</a>
+contains the rules what objects are recognized as areas.</p>
+<p>In particular, ways are selected there only if they have a name and one of various other tags (including "building=yes"). This ruleset isn't a fixed law, but rather reflects the discussion on the mailing list. It is likely to be incomplete anyway. Please send a mail to talk(at)openstreetmap.org to put the discussion further. I'll then expand the list when there is consensus that this is useful.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/20865/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Mar '13, 08:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fcfdb0825826fd13d2ff0d83d58819c6?s=32&amp;d=identicon&amp;r=g" alt="Roland%20Olbricht's gravatar image" />
+    <p><a href="/users/3480/roland-olbricht">Roland Olbricht</a><br/>
+    <span class="score" title="6666 reputation points"><span class="">6.7k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Roland Olbricht has 40 accepted answers">36&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/20865/">
+                edited
+                <strong>21 Mar '13, 08:23</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-20865">
+    
+        <a name="20920"></a>
+        <div class="comment" id="comment-20920">
+            <div id="post-20920-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've taken this to talk now, as you asked: <a href="http://lists.openstreetmap.org/pipermail/talk/2013-March/066538.html">Thread archive</a></p></div>
+            <div class="comment-info" id="comment-20920-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '13, 20:03)</span>
+                <a class="comment-user userinfo" href="/users/14/tordanik">Tordanik</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-20865" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20865-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="28496"></a>
+                    <div id="answer-container-28496" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-28496-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28496/up/" rel="nofollow"> </a>
+<div id="post-28496-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-28496-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28496/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Is there some changes/news regarding this question which seems important. It would be very useful to have the possibility to make queries using for exemple ways[landuse] without name. </p>
+<p>Ex : Finding all residential buildings, all industrial buildings, etc. depending if they are included in ways with landuse=residential or landuse=industrial etc. but without any name. Most of the time, ways[landuse=residential] don't have name, then we can not use them as areas. </p>
+<p>In my use, I need categories of buildings to determine activities surfaces (buildings) on ground. (Building attractions in terms of activities/population)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/28496/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Nov '13, 16:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b7fc9df1510905dfa125c98598e6595c?s=32&amp;d=identicon&amp;r=g" alt="glider90's gravatar image" />
+    <p><a href="/users/7886/glider90">glider90</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="glider90 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-28496">
+    
+        <a name="28542"></a>
+        <div class="comment" id="comment-28542">
+            <div id="post-28542-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Problem localy solved for me with the installation of a local Overpass server on wich we changed rules for areas (/rules/areas.osm3s). Thanks for this usefull post.</p></div>
+            <div class="comment-info" id="comment-28542-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '13, 13:14)</span>
+                <a class="comment-user userinfo" href="/users/7886/glider90">glider90</a>
+                
+            </div>
+        </div>
+    
+        <a name="32488"></a>
+        <div class="comment" id="comment-32488">
+            <div id="post-32488-score" class="comment-score"></div>
+            <div class="comment-text"><p>FYI: There are now two similar GitHub tickets dealing with this issue:</p>
+
+<p><a href="https://github.com/drolbr/Overpass-API/issues/77">https://github.com/drolbr/Overpass-API/issues/77</a></p>
+
+<p><a href="https://github.com/drolbr/Overpass-API/issues/86">https://github.com/drolbr/Overpass-API/issues/86</a></p></div>
+            <div class="comment-info" id="comment-32488-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Apr '14, 10:54)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-28496" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28496-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/20841/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='rWiNKX3VZcbX3zyUS7pspSHWnTYpnAK5' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/area/"
+            class="tag-link-area"
+            title="see questions tagged'area'using tags"
+            rel="tag">area</a> <span class="tag-number">&#215;213</span><br/>
+        
+        <a href="/tags/query/"
+            class="tag-link-query"
+            title="see questions tagged'query'using tags"
+            rel="tag">query</a> <span class="tag-number">&#215;147</span><br/>
+        
+        <a href="/tags/closed_way/"
+            class="tag-link-closed_way"
+            title="see questions tagged'closed_way'using tags"
+            rel="tag">closed_way</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 20, 2013, 6:40 p.m.">20 Mar '13, 18:40</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,499 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 21, 2014, 10:54 a.m.">21 Apr '14, 10:54</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/86663/overpass-gather-information-on-ways-for-a-given-area-passing-coordinates-to-query">Overpass: Gather information on ways for a given area passing coordinates to query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36464/overpass-api-area-query-does-not-recognise-all-areas">Overpass API area query does not recognise all areas!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68749/i-am-trying-to-find-neighbouring-cities-of-a-citystate">I am trying to find neighbouring cities of a city/state.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77983/how-to-query-all-junctions-in-a-city">How to query all junctions in a city</a>
+        </p>
+        
+        <p>
+            <a href="/questions/75063/getting-the-areas-around-a-feature">Getting the areas around a feature</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56383/howto-reference-an-area-by-areaid">howto reference an area by area:id</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20304/overpass-user-clause">[closed] Overpass: user clause</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19914/overpass-polygon-query">Overpass: polygon query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20506/overpass-get-older-version">Overpass: get older version</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18368/export-all-boundaries-in-an-area-via-overpass">Export all boundaries in an area via overpass</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

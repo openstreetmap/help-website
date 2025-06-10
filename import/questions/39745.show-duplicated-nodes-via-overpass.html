@@ -1,0 +1,752 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Show duplicated nodes via Overpass - OSM Help</title>
+        <meta name="description" content="How to show the duplicated nodes, such as this, via the Overpass (API, Turbo)?" />
+        <meta name="keywords" content="overpass" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/39745/show-duplicated-nodes-via-overpass" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/39745/show-duplicated-nodes-via-overpass?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='5hiSori7x57XeqY60gw8wAiviMWHYUUd' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/39745/show-duplicated-nodes-via-overpass">Show duplicated nodes via Overpass</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-39745-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39745/up/" rel="nofollow"> </a>
+<div id="post-39745-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-39745-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39745/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/39745/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How to show the duplicated nodes, such as <a href="http://www.openstreetmap.org/edit?editor=potlatch2#map=23/45.01972/39.02164" title="Don't fix this, please :)">this</a>, via the Overpass (API, Turbo)?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Dec '14, 20:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e7ab0e74a89c411904b7077d5b1ddcff?s=32&amp;d=identicon&amp;r=g" alt="chilin's gravatar image" />
+    <p><a href="/users/10207/chilin">chilin</a><br/>
+    <span class="score" title="61 reputation points">61</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="chilin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/39745/">
+                edited
+                <strong>20 Dec '14, 20:37</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-39745">
+    
+        <a name="39756"></a>
+        <div class="comment" id="comment-39756">
+            <div id="post-39756-score" class="comment-score"></div>
+            <div class="comment-text"><p>As an aside, if you want to link to problem data that won't get accidentally fixed, you could use a link to a location via <a href="http://api06.dev.openstreetmap.org">http://api06.dev.openstreetmap.org</a> .  That has a separate set of test data, and no one will fix your example problem by accident.</p></div>
+            <div class="comment-info" id="comment-39756-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '14, 11:38)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="39757"></a>
+        <div class="comment" id="comment-39757">
+            <div id="post-39757-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: that probably won't work with overpass, as there's no instance pointing to the dev server I'm aware of. However, that's not a big issue. Just add [date:"2014-12-21T00:00:00Z"] to the top of the query to always reference that point in time.</p></div>
+            <div class="comment-info" id="comment-39757-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '14, 12:02)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="39762"></a>
+        <div class="comment" id="comment-39762">
+            <div id="post-39762-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok. <a href="http://level0.osmz.ru/?url=%2F%2Foverpass-api.de%2Fapi%2Finterpreter%3Fdata%3D%255Bdate%253A%25222014-12-21T00%253A00%253A00Z%2522%255D%250A%255Bbbox%253A45.01922299382942%252C39.02108520269394%252C45.02009039433733%252C39.02220368385315%255D%253B%250Anode%253B%250Aforeach-%253E.a%28%250A%2520%2520%2520%2520node%28around.a%253A0%29-%253E.b%253B%250A%2520%2520%2520%2520%28.b%253B%2520-%2520.a%29%253B%250A%2520%2520%2520%2520out%2520meta%253B%250A%29%253B">Here's a permanent link</a> to this place based on the due date.</p></div>
+            <div class="comment-info" id="comment-39762-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '14, 20:06)</span>
+                <a class="comment-user userinfo" href="/users/10207/chilin">chilin</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39745" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39745-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/39745/show-duplicated-nodes-via-overpass?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/39745/show-duplicated-nodes-via-overpass?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/39745/show-duplicated-nodes-via-overpass?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/39745/show-duplicated-nodes-via-overpass?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="39746"></a>
+                    <div id="answer-container-39746" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-39746-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39746/up/" rel="nofollow"> </a>
+<div id="post-39746-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-39746-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39746/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="chilin has selected this answer as the correct answer"
+        href="/accept_answer/39746/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As Overpass API is not the most common tool for this task, I will also mention a few more mainstream alternatives.</p>
+<p><strong>Option 1:</strong> Overpass API</p>
+<p>This query will first determine all nodes in the current bounding box. For each node found, we will then start looking for some nodes at exactly the same location. The result will return all pairs of duplicate nodes found in the current bbox.</p>
+<pre><code>[bbox:{{bbox}}];
+node;
+foreach-&gt;.a(
+    node(around.a:0)-&gt;.b;
+    (.b; - .a);
+    out meta;
+);
+</code></pre>
+<p>Unfortunately, this approach is extremely slow with <code>out meta;</code> (NB: this seems to be a bug, I've created a <a href="https://github.com/drolbr/Overpass-API/issues/165">Github issue for this</a>). If you don't need metadata information, just replace <code>out meta;</code> by <code>out;</code> and you will get the response almost instantly.</p>
+<p>Try it on overpass turbo: <a href="http://overpass-turbo.eu/s/6C7">very slow (with metadata</a>) and <a href="http://overpass-turbo.eu/s/6Cy">fast (without metadata)</a></p>
+<p><img alt="alt text" src="http://help.openstreetmap.org/upfiles/duplicates.png"></p>
+<p><strong>Option 2:</strong></p>
+<p>I'd really recommend to also look at <strong>keep right!</strong> (analysis data is a few weeks old): 
+see <a href="http://keepright.at/report_map.php?lang=en&amp;ch30=1&amp;ch40=1&amp;ch50=1&amp;ch70=1&amp;ch90=1&amp;ch100=1&amp;ch110=1&amp;ch120=1&amp;ch130=1&amp;ch150=1&amp;ch160=1&amp;ch170=1&amp;ch180=1&amp;ch191=1&amp;ch192=1&amp;ch193=1&amp;ch194=1&amp;ch195=1&amp;ch196=1&amp;ch197=1&amp;ch198=1&amp;ch201=1&amp;ch202=1&amp;ch203=1&amp;ch204=1&amp;ch205=1&amp;ch206=1&amp;ch207=1&amp;ch208=1&amp;ch210=1&amp;ch220=1&amp;ch231=1&amp;ch232=1&amp;ch270=1&amp;ch281=1&amp;ch282=1&amp;ch283=1&amp;ch284=1&amp;ch285=1&amp;ch291=1&amp;ch292=1&amp;ch293=1&amp;ch294=1&amp;ch295=1&amp;ch296=1&amp;ch297=1&amp;ch298=1&amp;ch311=1&amp;ch312=1&amp;ch313=1&amp;ch320=1&amp;ch350=1&amp;ch370=1&amp;ch380=1&amp;ch401=1&amp;ch402=1&amp;ch411=1&amp;ch412=1&amp;ch413=1&amp;number_of_tristate_checkboxes=8&amp;highlight_error_id=0&amp;highlight_schema=0&amp;lat=45.01903&amp;lon=39.02266&amp;zoom=17&amp;show_ign=1&amp;show_tmpign=1&amp;layers=B0T&amp;ch=0%2C20">this example for a layer with multiple nodes on the same spot</a></p>
+<p><strong>Option 3:</strong></p>
+<p>In addition to that, <strong>JOSM validator</strong> will warn you regarding many unconnected nodes without physical characteristics in that area - and even fix them! That's probably the best way to go.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/39746/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Dec '14, 21:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/264d84ab05b942224b05960903eba7a7?s=32&amp;d=identicon&amp;r=g" alt="mmd's gravatar image" />
+    <p><a href="/users/8708/mmd">mmd</a><br/>
+    <span class="score" title="5682 reputation points"><span class="">5.7k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="53 badges"><span class="silver">&#9679;</span><span class="badgecount">53</span></span><span title="88 badges"><span class="bronze">&#9679;</span><span class="badgecount">88</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmd has 44 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/39746/">
+                edited
+                <strong>21 Dec '14, 11:11</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-39746">
+    
+        <a name="39747"></a>
+        <div class="comment" id="comment-39747">
+            <div id="post-39747-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thank you for such a detailed answer.</p></div>
+            <div class="comment-info" id="comment-39747-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Dec '14, 22:54)</span>
+                <a class="comment-user userinfo" href="/users/10207/chilin">chilin</a>
+                
+            </div>
+        </div>
+    
+        <a name="39755"></a>
+        <div class="comment" id="comment-39755">
+            <div id="post-39755-score" class="comment-score"></div>
+            <div class="comment-text"><p>It should also be noted that multiple nodes on the same spot are not necessarily an error, and sometimes even required (e.g. in multi-level buildings).</p></div>
+            <div class="comment-info" id="comment-39755-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '14, 11:37)</span>
+                <a class="comment-user userinfo" href="/users/14/tordanik">Tordanik</a>
+                
+            </div>
+        </div>
+    
+        <a name="64077"></a>
+        <div class="comment" id="comment-64077">
+            <div id="post-64077-score" class="comment-score"></div>
+            <div class="comment-text"><p>For those coming here via a search, the above Overpass query requires an extra ';' after the '.a' variable:</p>
+
+<p>(.b; - .a;);</p></div>
+            <div class="comment-info" id="comment-64077-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jun '18, 12:47)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39746" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39746-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/39745/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='5hiSori7x57XeqY60gw8wAiviMWHYUUd' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39745/show-duplicated-nodes-via-overpass?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39745/show-duplicated-nodes-via-overpass?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 20, 2014, 8:34 p.m.">20 Dec '14, 20:34</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,553 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 7, 2018, 12:47 p.m.">07 Jun '18, 12:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13299/bad-changes-for-odessa-city-ukraine">[closed] Bad changes for Odessa city (Ukraine)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api">How to find list of cities in a state with overpass osm api?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13877/how-to-find-cities-and-states-using-osm-overpass-api">How to find cities and states using OSM overpass API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15101/overpassapi-query-with-two-specific-keys-and-any-value">OverpassAPI query with two specific keys and any value</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17336/overpass-api-query-question">Overpass API query question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17365/overpass-is-it-possible-to-use-it-as-an-alternative-to-the-api-relation-full-call">Overpass:  Is it possible to use it as an alternative to the API relation /full call?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18368/export-all-boundaries-in-an-area-via-overpass">Export all boundaries in an area via overpass</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18524/advanced-overpass-query">Advanced overpass query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program">I want to use Main/Overpass API for retrieving data in c++ program.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12543/i-cant-get-odessa-ukraine-node-with-overpass-api">I can&#39;t get Odessa (Ukraine) node with overpass API</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

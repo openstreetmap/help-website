@@ -1,0 +1,740 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tutorials about parsing osm.pbf? - OSM Help</title>
+        <meta name="description" content="I am currently trying to extract data from a OpenStreetMap &quot;osm.pbf&quot;-file. This data should then be used for further processing. Currently, I managed to extract a desired location from a database file using osmosis. Now, I would like to convert this area in some data structure which I can manipulate..." />
+        <meta name="keywords" content="graph,pbf,osm,parsing" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/25685/tutorials-about-parsing-osmpbf" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/25685/tutorials-about-parsing-osmpbf?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ys8mRAkF2tBx1CWQSReJjO8cr7vEf9Tx' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/25685/tutorials-about-parsing-osmpbf">Tutorials about parsing osm.pbf?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-25685-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25685/up/" rel="nofollow"> </a>
+<div id="post-25685-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25685-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25685/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/25685/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am currently trying to extract data from a OpenStreetMap "osm.pbf"-file. This data should then be used for further processing. Currently, I managed to extract a desired location from a database file using osmosis. Now, I would like to convert this area in some data structure which I can manipulate (e.g. a graph, where each edge represents a street), so that I can insert / delete streets / buildings etc.</p>
+<p>I found this post <a href="http://wiki.openstreetmap.org/wiki/PBF_Format">http://wiki.openstreetmap.org/wiki/PBF_Format</a> ,which gives some information about the pbf format for parsing. It says there, that there are Nodes/Ways/Relations and more, but I could not find any information, what a Node/Way/Relation represent or "mean". Therefore I am not completely sure, how to parse the file and extract the data I want. Are there any tutorials or sample code, which parses osm files and extract e.g. all streets in a certain location? I've seen a lot of different APIs - maybe there exist one, which converts the whole area into another datastructure - lets say e.g. a Java JGraph?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/graph/" class="post-tag tag-link-graph"
+                                        title="see questions tagged 'graph'" rel="tag">graph</a>
+                                
+                                    <a href="/tags/pbf/" class="post-tag tag-link-pbf"
+                                        title="see questions tagged 'pbf'" rel="tag">pbf</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/parsing/" class="post-tag tag-link-parsing"
+                                        title="see questions tagged 'parsing'" rel="tag">parsing</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Aug '13, 12:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/507357a2fa5f7c83378468b4872d15ca?s=32&amp;d=identicon&amp;r=g" alt="Pille456's gravatar image" />
+    <p><a href="/users/7197/pille456">Pille456</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Pille456 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-25685">
+    
+        <a name="25689"></a>
+        <div class="comment" id="comment-25689">
+            <div id="post-25689-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's not a tutorial, but <a href="http://www.mkgmap.org.uk/">mkgmap</a> is nicely-written (Java) code that understands PBF format files.</p></div>
+            <div class="comment-info" id="comment-25689-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Aug '13, 14:39)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25685" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25685-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/25685/tutorials-about-parsing-osmpbf?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/25685/tutorials-about-parsing-osmpbf?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/25685/tutorials-about-parsing-osmpbf?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/25685/tutorials-about-parsing-osmpbf?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="25698"></a>
+                    <div id="answer-container-25698" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25698-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25698/up/" rel="nofollow"> </a>
+<div id="post-25698-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-25698-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25698/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Pille456 has selected this answer as the correct answer"
+        href="/accept_answer/25698/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In support of Vincent's answer.</p>
+<p>It does not sound like you should be parsing PBF files. Your interest will be in the <a href="http://wiki.openstreetmap.org/wiki/Frameworks">frameworks/libraries</a> available for your language of choice. If you have skills with other geo data formats, you may want to use a <a href="http://wiki.openstreetmap.org/wiki/Converting_map_data_between_formats">conversion</a>.</p>
+<p>If you are going to stick to OSM data then understanding Nodes/Ways/Relations will be important. These are the <a href="http://wiki.openstreetmap.org/wiki/Elements">primitive data types</a>. The meaning of these primitives are dictated by the <a href="http://wiki.openstreetmap.org/wiki/Tags">tags</a> associated with them. So roads are identified by the value in the <a href="http://wiki.openstreetmap.org/wiki/Highway">highway key</a>.</p>
+<p>Since you're interested in having a graph data structure for your roads it is likely you'll be looking for a conversions which relate to <a href="http://wiki.openstreetmap.org/wiki/Routing#Developers">routing</a>.</p>
+<hr>
+<p>To answer the original question, the <a href="http://wiki.openstreetmap.org/wiki/PBF_Format">PBF Format</a> is the tutorial for parsing PBF files. I did a <a href="http://he-the-great.livejournal.com/47342.html">blog entry</a> describing my very basic parsing, it is basically the wiki page in code form.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25698/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Aug '13, 18:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7e77c05737bf455a5bf99c0f17ac19d8?s=32&amp;d=identicon&amp;r=g" alt="he_the_great's gravatar image" />
+    <p><a href="/users/4985/he_the_great">he_the_great</a><br/>
+    <span class="score" title="1175 reputation points"><span class="">1.2k</span></span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="he_the_great has 3 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25698">
+    
+</div>
+<div id="comment-tools-25698" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25698-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="25688"></a>
+                    <div id="answer-container-25688" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25688-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25688/up/" rel="nofollow"> </a>
+<div id="post-25688-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-25688-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25688/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>First of all, you are expected to already be familliar with the OSM data structure. The wiki will tell you about <a href="http://wiki.openstreetmap.org/wiki/Node">nodes</a>, <a href="http://wiki.openstreetmap.org/wiki/Way">ways</a>, <a href="http://wiki.openstreetmap.org/wiki/Relation">relations</a>, and <a href="http://wiki.openstreetmap.org/wiki/Tag">tags</a>.</p>
+<p>Second of all, you probably want to use one of the existing helper library instead of plain ProtocolBuffers. There are libraries for <a href="http://wiki.openstreetmap.org/wiki/Osmium">c++</a>, <a href="http://dev.omniscale.net/imposm.parser/">python</a>, <a href="https://github.com/planas/pbf_parser">ruby</a>, <a href="https://npmjs.org/package/osm-read">javascript</a>, and probably <a href="http://wiki.openstreetmap.org/wiki/Category:OSM_processing">others</a>. Follow the links for your tool of choice and you should find some tutorials.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25688/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Aug '13, 13:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d20f86db9a6f03cb070e9fbaaf0b7228?s=32&amp;d=identicon&amp;r=g" alt="Vincent%20de%20Phily's gravatar image" />
+    <p><a href="/users/867/vincent-de-phily">Vincent de P... ♦</a><br/>
+    <span class="score" title="17304 reputation points"><span class="">17.3k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="152 badges"><span class="silver">&#9679;</span><span class="badgecount">152</span></span><span title="249 badges"><span class="bronze">&#9679;</span><span class="badgecount">249</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vincent de Phily has 64 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25688">
+    
+</div>
+<div id="comment-tools-25688" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25688-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/25685/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ys8mRAkF2tBx1CWQSReJjO8cr7vEf9Tx' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25685/tutorials-about-parsing-osmpbf?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25685/tutorials-about-parsing-osmpbf?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/pbf/"
+            class="tag-link-pbf"
+            title="see questions tagged'pbf'using tags"
+            rel="tag">pbf</a> <span class="tag-number">&#215;60</span><br/>
+        
+        <a href="/tags/parsing/"
+            class="tag-link-parsing"
+            title="see questions tagged'parsing'using tags"
+            rel="tag">parsing</a> <span class="tag-number">&#215;19</span><br/>
+        
+        <a href="/tags/graph/"
+            class="tag-link-graph"
+            title="see questions tagged'graph'using tags"
+            rel="tag">graph</a> <span class="tag-number">&#215;18</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 23, 2013, 12:59 p.m.">23 Aug '13, 12:59</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>19,276 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 23, 2013, 6:14 p.m.">23 Aug '13, 18:14</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/40827/osm-routing-turning-one-way-into-an-edge">OSM routing - turning one way into an edge</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65255/how-to-match-node-placecity-to-appropriate-relation-boundaryadministrative">How to match node place=city to appropriate relation boundary=administrative</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23111/render-osmpbf-in-actionscript">Render osm/pbf in actionscript</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33926/osm-overpass-api-with-php-simplexml-minor-changes-to-the-parser">OSM Overpass API with PHP SimpleXML :: minor changes to the parser</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43497/creating-a-fine-grained-routing-graph">Creating a fine-grained routing graph</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50634/converting-osmpbf-file-to-shp-file-which-format-to-choose-at-reader-column">Converting .osm.pbf file to .shp file - which format to choose at reader column?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7430/creating-graphnodes-edges-from-osm-xml-data">Creating Graph(Nodes-Edges) from OSM XML Data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11679/transform-osm-data-to-simple-cities-villages-nodes-and-edges-that-connect-those-nodes">Transform OSM data to simple cities, villages nodes and edges that connect those nodes.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25310/how-to-use-pbf-file-in-osm">How to use PBF file in OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/67706/how-to-extract-osmpbf-data-for-the-entire-country-united-states-of-america">How to extract OSM(PBF) data for the entire country United states of America</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I see the history for my area? - OSM Help</title>
+        <meta name="description" content="I want to see who has edited in my area recently, and what they&#39;ve changed. How can I do that?" />
+        <meta name="keywords" content="changes,history" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/7/how-do-i-see-the-history-for-my-area" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/7/how-do-i-see-the-history-for-my-area?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='MLc3MxlbW4jaHxVWYusGuIvF2pCmLNwP' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/7/how-do-i-see-the-history-for-my-area">How do I see the history for my area?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-7-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7/up/" rel="nofollow"> </a>
+<div id="post-7-score" class="post-score"
+    title="current number of votes">
+    36
+</div>
+<a id="post-7-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/7/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   13
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I want to see who has edited in my area recently, and what they've changed. How can I do that?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/changes/" class="post-tag tag-link-changes"
+                                        title="see questions tagged 'changes'" rel="tag">changes</a>
+                                
+                                    <a href="/tags/history/" class="post-tag tag-link-history"
+                                        title="see questions tagged 'history'" rel="tag">history</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Jul '10, 17:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3b5143f79efbb5d8c7d52325f41e0e3a?s=32&amp;d=identicon&amp;r=g" alt="randomjunk's gravatar image" />
+    <p><a href="/users/7/randomjunk">randomjunk</a><br/>
+    <span class="score" title="1545 reputation points"><span class="">1.5k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="18 badges"><span class="bronze">&#9679;</span><span class="badgecount">18</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="randomjunk has 3 accepted answers">75&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/7/">
+                closed
+                <strong>05 Apr '16, 10:17</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+            <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+            <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-7">
+    
+        <a name="49051"></a>
+        <div class="comment" id="comment-49051">
+            <div id="post-49051-score" class="comment-score">1</div>
+            <div class="comment-text"><p>meta <a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: closing a question does not help in any way to make its answers more current - to the contrary. Reopened. Yes, old questions and answers for still current topics are a problem, but we don't solve it by closing. Let's discuss <a href="//wiki.openstreetmap.org/wiki/Talk:Help.openstreetmap.org">over there</a>.</p></div>
+            <div class="comment-info" id="comment-49051-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Apr '16, 20:26)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-7" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    8 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/7/how-do-i-see-the-history-for-my-area?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/7/how-do-i-see-the-history-for-my-area?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/7/how-do-i-see-the-history-for-my-area?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/7/how-do-i-see-the-history-for-my-area?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="631"></a>
+                    <div id="answer-container-631" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-631-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/631/up/" rel="nofollow"> </a>
+<div id="post-631-score" class="post-score"
+    title="current number of votes">
+    11
+</div>
+<a id="post-631-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/631/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="SomeoneElse has selected this answer as the correct answer"
+        href="/accept_answer/631/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can find a list of services to see what has been changed or added to the data for a certain area at <a href="http://wiki.openstreetmap.org/wiki/Change_monitoring"></a><a href="http://wiki.openstreetmap.org/wiki/Change_monitoring"></a><a href="http://wiki.openstreetmap.org/wiki/Change_monitoring">http://wiki.openstreetmap.org/wiki/Change_monitoring</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/631/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Aug '10, 16:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/631/">
+                edited
+                <strong>15 Sep '10, 19:06</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-631">
+    
+        <a name="49026"></a>
+        <div class="comment" id="comment-49026">
+            <div id="post-49026-score" class="comment-score">4</div>
+            <div class="comment-text"><p>Older tools vanish, new tools come, it may be best to just explore this list. Currently I often use <a href="//wiki.openstreetmap.org/wiki/WhoDidIt">Whodidit</a>.</p></div>
+            <div class="comment-info" id="comment-49026-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Apr '16, 19:53)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="77659"></a>
+        <div class="comment" id="comment-77659">
+            <div id="post-77659-score" class="comment-score"></div>
+            <div class="comment-text"><p>As a moderator here I've moved the "answer" to here as the previous answer, while valid at the time, was really of historical interest.</p></div>
+            <div class="comment-info" id="comment-77659-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Nov '20, 11:49)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-631" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-631-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="10"></a>
+                    <div id="answer-container-10" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-10-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10/up/" rel="nofollow"> </a>
+<div id="post-10-score" class="post-score"
+    title="current number of votes">
+    27
+</div>
+<a id="post-10-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><strong>[This answer is of historic interest only]</strong></p>
+<p>There are a few different ways to see the who has been editing in your area recently.</p>
+<p>The first method is to use the "History" tab on the OpenStreetMap website. Zoom into the area that you're interested in and click the "History" tab. This will show you all the changesets that have covered your area. The problem is that some changesets cover a huge area and so aren't relevant.</p>
+<p>The second method is to try the OSM Watch List (OWL) at <a href="http://matt.dev.openstreetmap.org/owl_viewer/">http://matt.dev.openstreetmap.org/owl_viewer/</a> (Note: is there any documentation for how to use this?). You can use this to get an RSS/ATOM feed for areas that you are interested in, and it updates every minute so you can see changes straight away.</p>
+<p>Third, there is a tool from <a href="http://www.itoworld.com/">ITO World</a> called <a href="http://www.itoworld.com/static/openstreetmap.html">OSM Mapper</a>. If you sign up to it you can see maps of the areas, and do things like colour-code by how recently it changed or by who worked in that area. It only covers ways though, not nodes or relation changes.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/10/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jul '10, 17:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3743b1b368f5e209eb8aad30164acc4?s=32&amp;d=identicon&amp;r=g" alt="Andy%20Allan's gravatar image" />
+    <p><a href="/users/3/andy-allan">Andy Allan</a><br/>
+    <span class="score" title="12456 reputation points"><span class="">12.5k</span></span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="128 badges"><span class="silver">&#9679;</span><span class="badgecount">128</span></span><span title="153 badges"><span class="bronze">&#9679;</span><span class="badgecount">153</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andy Allan has 46 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/10/">
+                edited
+                <strong>05 Apr '16, 10:22</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+            <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+            <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-10">
+    
+        <a name="165"></a>
+        <div class="comment" id="comment-165">
+            <div id="post-165-score" class="comment-score">9</div>
+            <div class="comment-text"><p>The History tab would be much more useful if it had a tick box to limit it to local changesets, or at least just hide the "(big)" changesets. As it is now it is pretty much useless.</p></div>
+            <div class="comment-info" id="comment-165-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '10, 13:13)</span>
+                <a class="comment-user userinfo" href="/users/98/grahams">GrahamS</a>
+                
+            </div>
+        </div>
+    
+        <a name="182"></a>
+        <div class="comment" id="comment-182">
+            <div id="post-182-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The plan is to use OWL to drive the history tab so that it does only show changesets which really change that area.</p></div>
+            <div class="comment-info" id="comment-182-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jul '10, 14:39)</span>
+                <a class="comment-user userinfo" href="/users/1/tomh">TomH ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="10876"></a>
+        <div class="comment" id="comment-10876">
+            <div id="post-10876-score" class="comment-score"></div>
+            <div class="comment-text"><p>"Hide the '(big)' changesets suggestion" comes up a lot GrahamS.  This question specifically talks about it: <a href="http://help.openstreetmap.org/questions/3983/how-do-you-display-only-local-edits-in-the-changelog/3985">http://help.openstreetmap.org/questions/3983/how-do-you-display-only-local-edits-in-the-changelog/3985</a>  My answer is kind of duplicate of this one here though...<br>
+</p>
+
+<p>But incidentally Andy could add a new option to his answer here: "ITO Map" is from the same company as "OSM Mapper" but different: <a href="http://www.itoworld.com/product/data/ito_map/">http://www.itoworld.com/product/data/ito_map/</a> It has the option to show 'recent edits in the past 7 days' or 90 days on a normal worldwide slippy map, to get a simple overview of recent activity.</p></div>
+            <div class="comment-info" id="comment-10876-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Feb '12, 00:59)</span>
+                <a class="comment-user userinfo" href="/users/107/harry-wood">Harry Wood</a>
+                
+            </div>
+        </div>
+    
+        <a name="25617"></a>
+        <div class="comment" id="comment-25617">
+            <div id="post-25617-score" class="comment-score">3</div>
+            <div class="comment-text"><p><a href="http://matt.dev.openstreetmap.org/owl_viewer">http://matt.dev.openstreetmap.org/owl_viewer</a> is no longer active.
+It is replaced by <a href="http://owl.openstreetmap.org/">http://owl.openstreetmap.org/</a></p></div>
+            <div class="comment-info" id="comment-25617-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '13, 11:31)</span>
+                <a class="comment-user userinfo" href="/users/7097/chaos99">Chaos99</a>
+                
+            </div>
+        </div>
+    
+        <a name="49024"></a>
+        <div class="comment" id="comment-49024">
+            <div id="post-49024-score" class="comment-score">1</div>
+            <div class="comment-text"><p>… and in the meantime <a href="http://owl.openstreetmap.org/">http://owl.openstreetmap.org/</a> does not work too.</p></div>
+            <div class="comment-info" id="comment-49024-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Apr '16, 19:30)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="59554"></a>
+        <div class="comment not_top_scorer" id="comment-59554">
+            <div id="post-59554-score" class="comment-score"></div>
+            <div class="comment-text"><p>the ITO Map is gone too</p></div>
+            <div class="comment-info" id="comment-59554-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '17, 21:08)</span>
+                <a class="comment-user userinfo" href="/users/11789/valerietheblonde">valeriethebl...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-10" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="14"></a>
+                    <div id="answer-container-14" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-14-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/14/up/" rel="nofollow"> </a>
+<div id="post-14-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-14-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/14/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you see that a particular item has changed, you can also use Potlatch 1's 'History' function to find out who changed it and when. Open Potlatch 1 (hover over the 'edit' tab until a menu appears); select the way or point in question; and press 'H' for history (or click the ID in the bottom left). In the window that opens, you'll see a drop-down list of who edited it and when. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/14/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jul '10, 10:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/14/">
+                edited
+                <strong>29 Feb '12, 10:18</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-14">
+    
+        <a name="53801"></a>
+        <div class="comment" id="comment-53801">
+            <div id="post-53801-score" class="comment-score">2</div>
+            <div class="comment-text"><p>It's perhaps worth mentioning that Potlatch 1 is still available as an editor, even though it's not in the drop-down list - select "Potlatch 2" and remove the "2" from the URL.</p></div>
+            <div class="comment-info" id="comment-53801-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jan '17, 16:39)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-14" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-14-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="35"></a>
+                    <div id="answer-container-35" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35/up/" rel="nofollow"> </a>
+<div id="post-35-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-35-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In JOSM you will use the history dialog : <a href="http://josm.openstreetmap.de/wiki/Help/Dialog/History">http://josm.openstreetmap.de/wiki/Help/Dialog/History</a> - it displays those objects from the current selection for which a history of object versions can be retrieved from the OSM server. It is quite a comprehensive display</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Jul '10, 10:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/733f7ff71f57fb10d9082b0c705b788f?s=32&amp;d=identicon&amp;r=g" alt="Jean_Marc%20Liotier's gravatar image" />
+    <p><a href="/users/19/jean_marc-liotier">Jean_Marc Li...</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jean_Marc Liotier has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35">
+    
+</div>
+<div id="comment-tools-35" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="74710"></a>
+                    <div id="answer-container-74710" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74710-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74710/up/" rel="nofollow"> </a>
+<div id="post-74710-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-74710-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74710/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are a lot of "quality assurance" tools <a href="https://wiki.openstreetmap.org/wiki/Quality_assurance">linked on this page</a>. So many in fact, that it's easy to get confused in them.
+Achavi or previously mentioned OSM History Viewer are good tools but doesn't fit the scope of this question IMO, as a lot of others, as they are tools to analyze single changesets.</p>
+<p><strong>If anyone finds this question, having looked for a tool that shows latest changes on the map to help seeing who has changed a certain area, I've found these the most helpful tools:</strong></p>
+<p><a href="https://tyrasd.github.io/latest-changes/">Last 3days/week/month on OSM</a> - slow to load but I've found it the best in this context as it actually puts the changesets on the map without the need to click on individual tiles</p>
+<p><a href="https://simon04.dev.openstreetmap.org/whodidit/">WHODIDIT</a> - the map is split into tiles and by clicking on a tile you can see latest changes in it. There are also edit age, changesest and user filtering options</p>
+<p><a href="https://resultmaps.neis-one.org/osm-change-tiles#14/56.9505/24.0981">Latest OpenStreetMap Edits per Tile</a> - basically the same as whodidit but can only filter by edit age</p>
+<p><a href="https://osmcha.org/filters">OSMcha</a> - Lots of filtering options. You don't see the map at first, but you can filter the area of your interest and time range and it will show a list of changesets in the sidebar. Awesome for individual evaluation of changesets but still has that "area" purpose that OP was asking for.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74710/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 May '20, 12:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/83a407005b50f4aec7b7ab0769089d5c?s=32&amp;d=identicon&amp;r=g" alt="ivss_xx's gravatar image" />
+    <p><a href="/users/14761/ivss_xx">ivss_xx</a><br/>
+    <span class="score" title="311 reputation points">311</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ivss_xx has 2 accepted answers">25&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74710">
+    
+</div>
+<div id="comment-tools-74710" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74710-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="77652"></a>
+                    <div id="answer-container-77652" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-77652-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/77652/up/" rel="nofollow"> </a>
+<div id="post-77652-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-77652-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/77652/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This page allows you to see all the changes in an area for up to 30 days in the past:
+<a href="https://tyrasd.github.io/latest-changes">https://tyrasd.github.io/latest-changes</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/77652/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Nov '20, 11:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d06464174f078d01f265bf553e711ce6?s=32&amp;d=identicon&amp;r=g" alt="martinst's gravatar image" />
+    <p><a href="/users/17746/martinst">martinst</a><br/>
+    <span class="score" title="156 reputation points">156</span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="martinst has one accepted answer">33&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/77652/">
+                edited
+                <strong>22 Nov '20, 11:51</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+            <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+            <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-77652">
+    
+        <a name="77663"></a>
+        <div class="comment" id="comment-77663">
+            <div id="post-77663-score" class="comment-score"></div>
+            <div class="comment-text"><p>Looking at the repository this tool has been around some time. Why have I never heard of it? I love it already. Thanks for the pointer.</p></div>
+            <div class="comment-info" id="comment-77663-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Nov '20, 22:04)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-77652" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-77652-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="29292"></a>
+                    <div id="answer-container-29292" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29292-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29292/up/" rel="nofollow"> </a>
+<div id="post-29292-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-29292-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29292/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Something useful that helps visualise the changes in a changeset is the "<a href="http://osmhv.openstreetmap.de/index.jsp">OSM history viewer</a>" over at openstreetmap.de.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29292/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Dec '13, 01:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29292">
+    
+</div>
+<div id="comment-tools-29292" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29292-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="84594"></a>
+                    <div id="answer-container-84594" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-84594-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/84594/up/" rel="nofollow"> </a>
+<div id="post-84594-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-84594-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/84594/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This tool (OSM Deep History) allows you to see a complete edit history for a specific feature <a href="https://osmlab.github.io/osm-deep-history/#/way/28158988.">https://osmlab.github.io/osm-deep-history/#/way/28158988.</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/84594/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 May '22, 13:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4485260ff45474dfe4be591ddde1d9d7?s=32&amp;d=identicon&amp;r=g" alt="smichal's gravatar image" />
+    <p><a href="/users/21822/smichal">smichal</a><br/>
+    <span class="score" title="0 reputation points">0</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="smichal has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-84594">
+    
+</div>
+<div id="comment-tools-84594" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-84594-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/7/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='MLc3MxlbW4jaHxVWYusGuIvF2pCmLNwP' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7/how-do-i-see-the-history-for-my-area?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7/how-do-i-see-the-history-for-my-area?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/history/"
+            class="tag-link-history"
+            title="see questions tagged'history'using tags"
+            rel="tag">history</a> <span class="tag-number">&#215;89</span><br/>
+        
+        <a href="/tags/changes/"
+            class="tag-link-changes"
+            title="see questions tagged'changes'using tags"
+            rel="tag">changes</a> <span class="tag-number">&#215;79</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 6, 2010, 5:43 p.m.">06 Jul '10, 17:43</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>39,305 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 26, 2022, 1:03 p.m.">26 May '22, 13:03</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/67918/i-would-like-to-build-a-webservice-to-visualize-historical-changelogs-in-osm-data">I would like to build a webservice to visualize historical changelogs in OSM data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7858/is-there-rssatom-feed-for-watching-history-of-objects-mainly-relations">Is there RSS/Atom feed for watching history of objects (mainly relations)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21357/is-there-any-log-of-the-changes-ive-done">is there any log of the changes i&#39;ve done?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33838/monitor-changes-to-specific-feature">Monitor changes to specific feature</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25623/change-monitoring-tool-that-detects-changes-to-waysrelations">Change monitoring tool that detects changes to ways/relations</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9602/how-can-i-see-the-actual-changes-in-my-area-before-and-after-map">How can I see the actual changes in my area (before and after map)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2052/map-editing">[closed] Map editing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1931/how-do-i-see-past-gps-traces-in-a-specific-area">How do I see past GPS Traces in a specific area ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1126/correcting-other-peoples-mapping">Correcting other people&#39;s mapping</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3983/how-do-you-display-only-local-edits-in-the-changelog">How do you display only local edits in the changelog?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

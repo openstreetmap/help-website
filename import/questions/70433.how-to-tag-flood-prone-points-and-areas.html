@@ -1,0 +1,657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to tag flood prone points and areas? - OSM Help</title>
+        <meta name="description" content="In the summer of 2018, we conducted a project called Assets and Threats mapping under the Ramani Huria project in Dar es Salaam, Tanzania that aims to make Dar es Salaam a more flood-resilient city. In this project, we focused on the assets/amenities in the city that are important to the community a..." />
+        <meta name="keywords" content="flood,poi,assets,aoi,risk" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/70433/how-to-tag-flood-prone-points-and-areas" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/70433/how-to-tag-flood-prone-points-and-areas?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Rz2Iz5daqLPK9trNnersIiSAR4BVYe6X' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/70433/how-to-tag-flood-prone-points-and-areas">How to tag flood prone points and areas?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-70433-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70433/up/" rel="nofollow"> </a>
+<div id="post-70433-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-70433-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70433/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/70433/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>In the summer of 2018, we conducted a project called <a href="https://docs.google.com/document/d/11HQttl5Pb8IFgATufV4LxaDn0eCXEcEuA56phrf1X0Y/edit#heading=h.gdboihqvh9gy">Assets and Threats mapping</a> under the Ramani Huria project in Dar es Salaam, Tanzania that aims to make Dar es Salaam a more flood-resilient city. In this project, we focused on the assets/amenities in the city that are important to the community and are at risk of flooding or not.</p>
+<p>After collecting all the information, we decided we should upload them in OSM to be shared with the world since it was a successful project to some extent. The challenge came when we could not upload these data since there is no specific tag to use for amenities or AoIs affected by floods, the only tag that we could find is 
+<a href="https://wiki.openstreetmap.org/wiki/Key:flood_prone">flood_prone=yes</a> but this is mostly applicable to “roads/ways" that go underwater after heavy rains.</p>
+<ol>
+<li>Is there any other tag that can be used for points under flooding threat or can we use another tag?</li>
+<li>Our initial thought was to create a new tag i.e. <code>asset:risk=yes</code> and <code>asset:risk=no</code> or we could overcome this challenge by <strong>having one tag that is used by the entire OSM community to identify ways, areas, or points</strong> that are prone to floods</li>
+</ol>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/flood/" class="post-tag tag-link-flood"
+                                        title="see questions tagged 'flood'" rel="tag">flood</a>
+                                
+                                    <a href="/tags/poi/" class="post-tag tag-link-poi"
+                                        title="see questions tagged 'poi'" rel="tag">poi</a>
+                                
+                                    <a href="/tags/assets/" class="post-tag tag-link-assets"
+                                        title="see questions tagged 'assets'" rel="tag">assets</a>
+                                
+                                    <a href="/tags/aoi/" class="post-tag tag-link-aoi"
+                                        title="see questions tagged 'aoi'" rel="tag">aoi</a>
+                                
+                                    <a href="/tags/risk/" class="post-tag tag-link-risk"
+                                        title="see questions tagged 'risk'" rel="tag">risk</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Aug '19, 09:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2a226ee3bf76ec222b0bf6ade02e59f0?s=32&amp;d=identicon&amp;r=g" alt="Imma%20Mwanja's gravatar image" />
+    <p><a href="/users/17020/imma-mwanja">Imma Mwanja</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Imma Mwanja has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-70433">
+    
+</div>
+<div id="comment-tools-70433" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70433-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/70433/how-to-tag-flood-prone-points-and-areas?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/70433/how-to-tag-flood-prone-points-and-areas?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/70433/how-to-tag-flood-prone-points-and-areas?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/70433/how-to-tag-flood-prone-points-and-areas?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="70435"></a>
+                    <div id="answer-container-70435" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-70435-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70435/up/" rel="nofollow"> </a>
+<div id="post-70435-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-70435-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70435/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi Imma,</p>
+<p>flood_prone=yes could be used. As <a href="https://taginfo.openstreetmap.org/keys/?key=flood_prone#combinations">taginfo shows</a> this tag has been used over 6600 times on an amenity of some kind (only 2800 times on highways actually). </p>
+<p>For a more detailed discussion on benefits of a separate/new tag I would suggest you take this question to the <a href="https://lists.openstreetmap.org/listinfo/tagging">tagging</a> <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a>. There are more people listening in who might have some valuable suggestions.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/70435/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Aug '19, 10:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-70435">
+    
+        <a name="70576"></a>
+        <div class="comment" id="comment-70576">
+            <div id="post-70576-score" class="comment-score"></div>
+            <div class="comment-text"><p>hello, <a href="https://help.openstreetmap.org/users/10133/tzorn">TZorn</a> thank you for your reply. I followed your suggestion and took my question to the <a href="https://lists.openstreetmap.org/listinfo/tagging">tagging mailing list</a> and like you, they think that <code>flood_prone=yes</code> is the right tag</p></div>
+            <div class="comment-info" id="comment-70576-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '19, 18:09)</span>
+                <a class="comment-user userinfo" href="/users/17020/imma-mwanja">Imma Mwanja</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-70435" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70435-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/70433/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Rz2Iz5daqLPK9trNnersIiSAR4BVYe6X' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70433/how-to-tag-flood-prone-points-and-areas?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70433/how-to-tag-flood-prone-points-and-areas?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/poi/"
+            class="tag-link-poi"
+            title="see questions tagged'poi'using tags"
+            rel="tag">poi</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/flood/"
+            class="tag-link-flood"
+            title="see questions tagged'flood'using tags"
+            rel="tag">flood</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/assets/"
+            class="tag-link-assets"
+            title="see questions tagged'assets'using tags"
+            rel="tag">assets</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/aoi/"
+            class="tag-link-aoi"
+            title="see questions tagged'aoi'using tags"
+            rel="tag">aoi</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/risk/"
+            class="tag-link-risk"
+            title="see questions tagged'risk'using tags"
+            rel="tag">risk</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 20, 2019, 9:04 a.m.">20 Aug '19, 09:04</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,837 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 31, 2019, 6:44 p.m.">31 Aug '19, 18:44</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/786/is-there-a-way-to-undelete-a-deleted-node-poi">Is there a way to undelete a deleted node (POI) ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">Can I influence what gets rendered in the main Mapnik layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1167/charging-money-for-creating-and-uploading-pois">Charging money for creating and uploading POIs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1194/what-osm-is-not">What OSM is not</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1311/how-do-i-create-a-map-for-printing-with-specific-poi">How do I create a map for printing with specific POI?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1365/for-groups-of-phone-booths-should-i-add-a-single-poi-or-multiple-pois">For groups of phone booths, should I add a single POI or multiple POIs?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1582/adding-metadata-using-websites">Adding &#39;metadata&#39; using websites?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1696/how-do-i-name-existing-pois-which-are-currently-unnamed">How do I name existing POIs which are currently unnamed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15/getting-point-of-interest-data-from-openstreetmap">Getting point of interest data from OpenStreetMap</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

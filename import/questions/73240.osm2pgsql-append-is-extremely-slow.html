@@ -1,0 +1,1097 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Osm2pgsql --append is extremely slow - OSM Help</title>
+        <meta name="description" content="So I was following https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/ to load a &quot;gis&quot; database with tiles of Azerbaijan and everything worked RELATIVELY quickly. But after I tried to append a map of central part of Russia the speed of PDB was horrible: Processing: Node(1..." />
+        <meta name="keywords" content="osm2pgsql" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/73240/osm2pgsql-append-is-extremely-slow" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/73240/osm2pgsql-append-is-extremely-slow?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='59KWNumDBlbAIooOsFGl4aqJfBmSXiG9' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/73240/osm2pgsql-append-is-extremely-slow">Osm2pgsql --append is extremely slow</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-73240-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73240/up/" rel="nofollow"> </a>
+<div id="post-73240-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-73240-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73240/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/73240/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>So I was following <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/</a>
+to load a "gis" database with tiles of Azerbaijan and everything worked RELATIVELY quickly.</p>
+<p>But after I tried to append a map of central part of Russia the speed of PDB was horrible:
+Processing: Node(1580k 5.1k/s) Way(0k 0.00k/s) Relation(0 0.00/s)
+And it didn't consume any resources: 3 CPUs were consumed more by x-org then by Osm2pgsql and there was plenty of RAM available (2.2G out of 9 were used)
+The script I run for this is as follows:</p>
+<pre><code>osm2pgsql -d gis --append --slim  -G --hstore --tag-transform-script ~/src/openstreetmap-carto/openstreetmap-carto.lua -C 2500 --number-processes 1 -S ~/src/openstreetmap-carto/openstreetmap-carto.style ~/data/central-fed-district-latest.osm.pbf
+</code></pre>
+<p>When I added Azerbaijan tiles, I used "--create" instead of "--append" option and the speed of Node processing was around 300 kb/sec (whichs extremly low as well, but not THAT low). I can't figure out what might be the reason for this, because there is a plenty of resources available.</p>
+<p>So my question is how do I speed this up, if possible.
+Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>26 Feb '20, 10:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7d9dea8db6c9981b45d28f28bb29f49d?s=32&amp;d=identicon&amp;r=g" alt="kartman1's gravatar image" />
+    <p><a href="/users/17942/kartman1">kartman1</a><br/>
+    <span class="score" title="38 reputation points">38</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="kartman1 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/73240/">
+                edited
+                <strong>26 Feb '20, 10:27</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-73240">
+    
+</div>
+<div id="comment-tools-73240" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73240-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/73240/osm2pgsql-append-is-extremely-slow?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/73240/osm2pgsql-append-is-extremely-slow?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/73240/osm2pgsql-append-is-extremely-slow?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/73240/osm2pgsql-append-is-extremely-slow?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="73241"></a>
+                    <div id="answer-container-73241" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73241-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73241/up/" rel="nofollow"> </a>
+<div id="post-73241-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-73241-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73241/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Don't use <code>--append</code>. Merge the .osm.pbf files you want to import with <code>osmium</code> (or <code>osmosis</code>), and then import the combined file. Appending is super slow because it uses the same processing chain as updating, and for every new object that comes in the update processing chain needs to check if the new information causes a change to existing data.   </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73241/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Feb '20, 10:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73241">
+    
+        <a name="73243"></a>
+        <div class="comment" id="comment-73243">
+            <div id="post-73243-score" class="comment-score"></div>
+            <div class="comment-text"><p>Then why (if this operation is so ineffecient) doesn't it consume more processing power? I don't really mind it doing some extra work, it's just weird that it refuses to use any resources. That is just being lazy at best.</p></div>
+            <div class="comment-info" id="comment-73243-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '20, 11:57)</span>
+                <a class="comment-user userinfo" href="/users/17942/kartman1">kartman1</a>
+                
+            </div>
+        </div>
+    
+        <a name="73244"></a>
+        <div class="comment" id="comment-73244">
+            <div id="post-73244-score" class="comment-score"></div>
+            <div class="comment-text"><p>My suspicion is that it is limited by disk I/O.</p></div>
+            <div class="comment-info" id="comment-73244-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '20, 12:00)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="73256"></a>
+        <div class="comment" id="comment-73256">
+            <div id="post-73256-score" class="comment-score"></div>
+            <div class="comment-text"><p>OMG I downloaded the PBF file for the whole Asia (7.7 Gb) and left it working for the night and when I got back, the speed of the Node Processing was 12 kb/s!!! Wtf is that!
+Wtf is that application!
+How do people even use it!
+My pc is a production grade machine and even though I run a VM it was configured to use more than a half of everything from the host system!
+Wtf is going on!
+Do I have to wait a whole month (if I'm lucky!) to load the database every time something small changes as well?!!</p></div>
+            <div class="comment-info" id="comment-73256-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '20, 07:46)</span>
+                <a class="comment-user userinfo" href="/users/17942/kartman1">kartman1</a>
+                
+            </div>
+        </div>
+    
+        <a name="73266"></a>
+        <div class="comment" id="comment-73266">
+            <div id="post-73266-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Please, calm down. Lose the "OMG"s and the "Wtf"s and the multiple exclamation marks. This is not high school. -- OSM data import is very I/O intensive. You absolutely must have a (local, not SAN) SSD/NVMe disk if you want to get any performance out of it, and when using virtualisation you must make sure that you have the right settings (disk drivers, emulation, whatever) as to not interfere with disk I/O performance. You can have the fattest production grade machine with 256 GB RAM and 64 CPU cores, the Asia import will still run for a week if you have rotating hard disk or bad virtualization. -- There are also some recommendations about tuning your PostgreSQL database for faster imports which you can find using your favourite search engine.</p></div>
+            <div class="comment-info" id="comment-73266-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '20, 10:09)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="73271"></a>
+        <div class="comment" id="comment-73271">
+            <div id="post-73271-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/17942/kartman1">@kartman1</a> Thanks for giving everyone a laugh this morning!</p>
+
+<p>To take a step back, the answer suggested "Merge the .osm.pbf files you want to import with osmium (or osmosis), and then import the combined file".  You at the time were trying to process Azerbaijan and part of Russia.  No-one suggested "download the whole of Asia and try and load that.  I'd suggest that you browse around <a href="http://download.geofabrik.de/asia.html">http://download.geofabrik.de/asia.html</a> and decide what bits you want.  If it's just 2 or more downloadable regions, then download them and merge using osmium or osmosis.  If it's part of a larger area, then perhaps cut the bit you want out of that larger area.  There's documentation linked from the OSM wiki - for example <a href="https://wiki.openstreetmap.org/wiki/Osmium#Osmium_Tool">https://wiki.openstreetmap.org/wiki/Osmium#Osmium_Tool</a> points to <a href="https://osmcode.org/osmium-tool/">https://osmcode.org/osmium-tool/</a> and one of the things that that mentions is "Create geographical extracts from OSM files".</p></div>
+            <div class="comment-info" id="comment-73271-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '20, 10:31)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="73273"></a>
+        <div class="comment not_top_scorer" id="comment-73273">
+            <div id="post-73273-score" class="comment-score"></div>
+            <div class="comment-text"><p>Helpfully, <a href="https://help.openstreetmap.org/questions/73252/how-to-download-the-newest-osmpbf-file-of-seattle-wa-directly">another question</a> has more detail about "how to obtain a smaller area from within a larger download".</p></div>
+            <div class="comment-info" id="comment-73273-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '20, 10:40)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="73275"></a>
+        <div class="comment not_top_scorer" id="comment-73275">
+            <div id="post-73275-score" class="comment-score"></div>
+            <div class="comment-text"><p>"Thanks for giving everyone a laugh this morning!" - you are welcome, I had to pay with something.</p></div>
+            <div class="comment-info" id="comment-73275-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '20, 13:17)</span>
+                <a class="comment-user userinfo" href="/users/17942/kartman1">kartman1</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73241" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73241-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="73320"></a>
+                    <div id="answer-container-73320" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73320-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73320/up/" rel="nofollow"> </a>
+<div id="post-73320-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73320-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73320/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Well...no postgres optimization helped, I moved vm from expanding disk to a fixed one, still had no impprovements.
+After searching a bit more carefully on this topick I found similar issues (on machines far more superior) with the way processing on a vm. So there is no surprise that playing around/tweaking/tiddling/widdling/etc. with conf files didn't help at all.
+As a result I had to borrow a machine with an I7-8700 CPU, 32 gb ram, samsung 970 evo 1TB SSD, Windows 10.
+And the performance was:</p>
+<p>Processing: Node(1160123k 321.1k/s) Way(146288k 7.23k/s) Relation(1128670 634.08/s)  parse time: 25620s
+Node stats: total(1160123207) , max(7248671584) in 3613s
+Way stats: total(146288690)   , max(776865119) in 20227s
+Relation stats: total(1128706), max(10758453) in 1780s</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73320/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Mar '20, 07:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7d9dea8db6c9981b45d28f28bb29f49d?s=32&amp;d=identicon&amp;r=g" alt="kartman1's gravatar image" />
+    <p><a href="/users/17942/kartman1">kartman1</a><br/>
+    <span class="score" title="38 reputation points">38</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="kartman1 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/73320/">
+                edited
+                <strong>03 Mar '20, 08:22</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73320">
+    
+        <a name="73321"></a>
+        <div class="comment" id="comment-73321">
+            <div id="post-73321-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Is this for Asia, and using a similar <code>osm2pgsql</code> command line as shown in your initial post (minus the --append)? Can you share the output of "osm2pgsql -v"?</p></div>
+            <div class="comment-info" id="comment-73321-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '20, 08:54)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="73323"></a>
+        <div class="comment" id="comment-73323">
+            <div id="post-73323-score" class="comment-score"></div>
+            <div class="comment-text"><p>It is for Asia with the following command:
+ osm2pgsql -d gis --create --slim  -G --hstore --tag-transform-script ~/src/openstreetmap-carto/openstreetmap-carto.lua -C 10500 --drop --disable-parallel-indexing --number-processes 5 -S ~/src/openstreetmap-carto/openstreetmap-carto.style ~/data/asia-latest.osm.pbfA</p></div>
+            <div class="comment-info" id="comment-73323-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '20, 11:50)</span>
+                <a class="comment-user userinfo" href="/users/17942/kartman1">kartman1</a>
+                
+            </div>
+        </div>
+    
+        <a name="73324"></a>
+        <div class="comment" id="comment-73324">
+            <div id="post-73324-score" class="comment-score"></div>
+            <div class="comment-text"><p>Silly question - do you actually want to load data for the whole of Asia?</p></div>
+            <div class="comment-info" id="comment-73324-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '20, 11:52)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="73326"></a>
+        <div class="comment" id="comment-73326">
+            <div id="post-73326-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah I needed Asian maps from the start.</p></div>
+            <div class="comment-info" id="comment-73326-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '20, 12:00)</span>
+                <a class="comment-user userinfo" href="/users/17942/kartman1">kartman1</a>
+                
+            </div>
+        </div>
+    
+        <a name="73328"></a>
+        <div class="comment not_top_scorer" id="comment-73328">
+            <div id="post-73328-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you have the osm2pgsql version for us (osm2pgsql -v)?</p></div>
+            <div class="comment-info" id="comment-73328-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '20, 12:30)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="73329"></a>
+        <div class="comment not_top_scorer" id="comment-73329">
+            <div id="post-73329-score" class="comment-score"></div>
+            <div class="comment-text"><p>osm2pgsql version 1.2.0 (1.2.0-269-g7892613) (64 bit id space)</p></div>
+            <div class="comment-info" id="comment-73329-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '20, 12:34)</span>
+                <a class="comment-user userinfo" href="/users/17942/kartman1">kartman1</a>
+                
+            </div>
+        </div>
+    
+        <a name="73333"></a>
+        <div class="comment" id="comment-73333">
+            <div id="post-73333-score" class="comment-score">1</div>
+            <div class="comment-text"><p>This import, with this osm2pgsql version and this command line (though dropping the -C10500 and adding a <code>--flat-nodes</code> file on the SSD) took 3 hours and 25 minutes on a reasonably big SSD machine here, without virtualisation, plain Ubuntu 16.04. (Node stats: total(1161737945), max(7259603803) in 432s; Way stats: total(146494361), max(777866045) in 3440s; 
+Relation stats: total(1129804), max(10780102) in 490s). This matches my expectations from importing full planet files. I tried the same import without --flat-nodes and everything else the same, and it took 8 hours 25 minutes instead (Node stats: total(1161737945), max(7259603803) in 2173s; Way stats: total(146494361), max(777866045) in 18040s; Relation stats: total(1129804), max(10780102) in 1755s).</p></div>
+            <div class="comment-info" id="comment-73333-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '20, 16:19)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73320" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73320-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="73345"></a>
+                    <div id="answer-container-73345" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73345-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73345/up/" rel="nofollow"> </a>
+<div id="post-73345-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73345-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73345/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You should definitely upgrade to osm2pgsql 1.2.1 (<a href="https://github.com/openstreetmap/osm2pgsql/releases).">https://github.com/openstreetmap/osm2pgsql/releases).</a> Although that may appear as a "minor" release, it actually fixes an important memory related bug caused by libosmium, that could cause out of memory issues running osm2pgsql due to GBs of RAM needed for area building. I personally experienced that issue, upgrading to 1.2.1 fixed it.</p>
+<p>As others stated: harddisks are <strong><em>totally</em></strong> dead for this kind of work. Building ways and relations requires fast random access to data stored on disk. Best is NVMe SSD, but I run osm2pgsql happily against a USB3 connected 2TB SATA EVO.</p>
+<p>VMs are not evil perse. I have successfully imported the whole of Europe (&gt; 20GB PBF) on a 12 GB RAM (+ swap configured)  Ubuntu 19.10 Virtualbox instance running PostgreSQL 11, running on an eight year old Core i7-2600 with 16GB RAM and Windows 10 as host system, with the described USB3 connected disk.</p>
+<p>Took about 2-3 days for the import if I remember well, not to bad, stats for nodes/ways/relation per sec were comparable to your figures I think. Building osm2pgsql with LUAJIT supports, seemed indeed to improve processing speed by about 25%, as mentioned on the osm2pgsql github site: <a href="https://github.com/openstreetmap/osm2pgsql">https://github.com/openstreetmap/osm2pgsql</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73345/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Mar '20, 21:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc8a1ef54d3e25744ee52d1ad1459a81?s=32&amp;d=identicon&amp;r=g" alt="mboeringa's gravatar image" />
+    <p><a href="/users/9580/mboeringa">mboeringa</a><br/>
+    <span class="score" title="1542 reputation points"><span class="">1.5k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mboeringa has 4 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/73345/">
+                edited
+                <strong>04 Mar '20, 08:25</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73345">
+    
+</div>
+<div id="comment-tools-73345" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73345-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/73240/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='59KWNumDBlbAIooOsFGl4aqJfBmSXiG9' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73240/osm2pgsql-append-is-extremely-slow?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73240/osm2pgsql-append-is-extremely-slow?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 26, 2020, 10:23 a.m.">26 Feb '20, 10:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,043 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 4, 2020, 8:25 a.m.">04 Mar '20, 08:25</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2259/is-there-a-reason-why-osm2pgsql-produces-negative-osm_id-values">Is there a reason why osm2pgsql produces negative osm_id values?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4789/how-to-configure-postgresql-for-mapnik-hourly-updates">How to configure postgresql for mapnik hourly updates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4888/missing-tables-during-osm2pgsql-import">Missing tables during osm2pgsql import</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5389/merging-2-countries-with-osm2pgsql">Merging 2 countries with osm2pgsql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5956/how-much-ram-does-osm2pgsql-need">How much RAM does osm2pgsql need?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6256/why-do-osm2pgsql-and-mapnik-use-spherical-projection-900913">Why do osm2pgsql and Mapnik use spherical projection 900913?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8108/osm-databases">osm databases</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8322/osm2pgsql-import-getting-killed-as-relations-are-processed">osm2pgsql import getting killed as relations are processed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1/how-do-you-make-the-osm2pgsql-diff-imports-run-faster-than-molasses-on-postgres-84">How do you make the osm2pgsql diff imports run faster than molasses on postgres 8.4?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

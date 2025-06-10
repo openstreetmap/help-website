@@ -1,0 +1,840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Reading of OSM database parameters - OSM Help</title>
+        <meta name="description" content="Hi all, two days ago I asked the question entitled: &quot;Data of routes characteristics (nodes, orientation) of a pedestrian walking path&quot;. I had no answers, but only a comment, useful and I thanks, but I would like to better formulate the question. I need to know the direction (orientation towards the ..." />
+        <meta name="keywords" content="database,display,orientation,road,accuracy" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/73208/reading-of-osm-database-parameters" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/73208/reading-of-osm-database-parameters?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sqB6TMIphe9EzERtHtMfWCGCkrcRJxi7' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/73208/reading-of-osm-database-parameters">Reading of OSM database parameters</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-73208-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73208/up/" rel="nofollow"> </a>
+<div id="post-73208-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73208-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73208/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/73208/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all,
+two days ago I asked the question entitled: "Data of routes characteristics (nodes, orientation) of a pedestrian walking path". I had no answers, but only a comment, useful and I thanks, but I would like to better formulate the question. I need to know the direction (orientation towards the north) of a straight road, of which you know the street, between two known addresses (e.g. address with house number). I need to know the value with the best possible accuracy. I would like to ask if it is possible to know the value of the direction, that I suppose is stored,  by asking a question to the OSM database without calculating the value through the coordinates of the two points after reading them on the display. As you know it's difficult to position the points on the display very well and this can cause errors
+Thank you very much</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/database/" class="post-tag tag-link-database"
+                                        title="see questions tagged 'database'" rel="tag">database</a>
+                                
+                                    <a href="/tags/display/" class="post-tag tag-link-display"
+                                        title="see questions tagged 'display'" rel="tag">display</a>
+                                
+                                    <a href="/tags/orientation/" class="post-tag tag-link-orientation"
+                                        title="see questions tagged 'orientation'" rel="tag">orientation</a>
+                                
+                                    <a href="/tags/road/" class="post-tag tag-link-road"
+                                        title="see questions tagged 'road'" rel="tag">road</a>
+                                
+                                    <a href="/tags/accuracy/" class="post-tag tag-link-accuracy"
+                                        title="see questions tagged 'accuracy'" rel="tag">accuracy</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Feb '20, 20:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0b7b93f8f715fa9978fda52959b494ae?s=32&amp;d=identicon&amp;r=g" alt="SergioV's gravatar image" />
+    <p><a href="/users/17934/sergiov">SergioV</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SergioV has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-73208">
+    
+</div>
+<div id="comment-tools-73208" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73208-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/73208/reading-of-osm-database-parameters?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/73208/reading-of-osm-database-parameters?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/73208/reading-of-osm-database-parameters?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/73208/reading-of-osm-database-parameters?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="73209"></a>
+                    <div id="answer-container-73209" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73209-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73209/up/" rel="nofollow"> </a>
+<div id="post-73209-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-73209-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73209/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Assuming that:</p>
+<ul>
+<li>you have two addresses with house numbers</li>
+<li>OpenStreetMap knows these addresses i.e. Nominatim can actually geocode them to the correct location</li>
+<li>the road between the two addresses is straight</li>
+</ul>
+<p>Then the steps required would be the following:</p>
+<ul>
+<li>geocode location 1 (resulting in lat1, lon1)</li>
+<li>geocode location 2 (resulting in lat2, lon2)</li>
+<li>calculate bearing (or heading) angle betwen lat1,lon1 and lat2,lon2 using a suitable formula (e.g. <a href="https://www.igismap.com/formula-to-find-bearing-or-heading-angle-between-two-points-latitude-longitude/)">https://www.igismap.com/formula-to-find-bearing-or-heading-angle-between-two-points-latitude-longitude/)</a></li>
+</ul>
+<p>This will yield precise results independent of display. However, it will give you the angle between the two address points which is not necessarily the angle of the street. If you want to be super precise, you will need to identify the street (possibly through an additional geocoding request) and retrieve its geometry, then drop the perpendicular from each of the address points to the street geometry, and use the resulting points that lie on the street for the angle calculation. This will be harder if for any reason the street should consist of multiple parts in OSM.</p>
+<p>There is no web service that would do this work for you.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73209/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Feb '20, 21:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73209">
+    
+</div>
+<div id="comment-tools-73209" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73209-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="73223"></a>
+                    <div id="answer-container-73223" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73223-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73223/up/" rel="nofollow"> </a>
+<div id="post-73223-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73223-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73223/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In the OSM database, ways (which are used to model streets among others) are mostly a list of nodes. Only the node have coordinates. See the OSM wiki for more details about the OSM.database model.</p>
+<p>So no, the direction of the ways is not stored. And they are usually not straight if composed of more than two nodes.</p>
+<p>I guess that routers (like graphhopper, OSRM, etc, see the other question) will provide the direction of each segment of a calculated route between two points. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73223/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Feb '20, 23:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73223">
+    
+</div>
+<div id="comment-tools-73223" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73223-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="73224"></a>
+                    <div id="answer-container-73224" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73224-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73224/up/" rel="nofollow"> </a>
+<div id="post-73224-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73224-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73224/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thanks for the answers. So if I need to know the direction of a stretch of road accurately I have to measure the coordinates of two points belonging to the stretch of road very accurately. I can't read the coordinates of the points on the display where the OSM is represented because it's not an accurate method, unless I zoom in on the map presentation</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73224/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Feb '20, 00:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0b7b93f8f715fa9978fda52959b494ae?s=32&amp;d=identicon&amp;r=g" alt="SergioV's gravatar image" />
+    <p><a href="/users/17934/sergiov">SergioV</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SergioV has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73224">
+    
+        <a name="73225"></a>
+        <div class="comment" id="comment-73225">
+            <div id="post-73225-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes. Drawing a map always incurs a loss of precision. Just how big that loss is depends on many factors, including resolution and zoom level, but also the particular map style and parameters used for drawing (for example, some maps might simplify geometries before drawing). To get best results you would first have to retrieve the data behind the map, e.g. through services like Nominatim or Overpass, and then base your computation on that.</p></div>
+            <div class="comment-info" id="comment-73225-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '20, 00:09)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73224" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73224-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/73208/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sqB6TMIphe9EzERtHtMfWCGCkrcRJxi7' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73208/reading-of-osm-database-parameters?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73208/reading-of-osm-database-parameters?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/road/"
+            class="tag-link-road"
+            title="see questions tagged'road'using tags"
+            rel="tag">road</a> <span class="tag-number">&#215;223</span><br/>
+        
+        <a href="/tags/database/"
+            class="tag-link-database"
+            title="see questions tagged'database'using tags"
+            rel="tag">database</a> <span class="tag-number">&#215;118</span><br/>
+        
+        <a href="/tags/display/"
+            class="tag-link-display"
+            title="see questions tagged'display'using tags"
+            rel="tag">display</a> <span class="tag-number">&#215;59</span><br/>
+        
+        <a href="/tags/accuracy/"
+            class="tag-link-accuracy"
+            title="see questions tagged'accuracy'using tags"
+            rel="tag">accuracy</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/orientation/"
+            class="tag-link-orientation"
+            title="see questions tagged'orientation'using tags"
+            rel="tag">orientation</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 23, 2020, 8:51 p.m.">23 Feb '20, 20:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,612 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 25, 2020, 12:09 a.m.">25 Feb '20, 00:09</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/29799/how-accurate-to-draw-a-road">How accurate to draw a road?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17787/right-importerdatabase-schema-to-store-osm-road-nodes-and-intersections-relations">Right Importer/Database Schema to store OSM road nodes and intersections (relations)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73318/how-to-keep-local-database-in-sync-with-osm">How to keep local database in sync with OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/81284/new-road-geometry-shown-only-partially-depending-on-map-scale">new road geometry shown only partially, depending on map scale</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2365/how-to-mark-bad-road-condition">How to mark bad road condition?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2408/upload-gpx-trackno-display-on-profile-no-error-of-osm-server-no-mail">[closed] Upload GPX track...no display on profile, no error of OSM server, no mail</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1755/how-do-i-enter-a-bridge-on-a-stretch-of-road-8-km-long-when-highlighted">How do I enter a Bridge on a stretch of road 8 km long when highlighted</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3280/how-many-gps-traces-are-in-osm">How many GPS traces are in OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2031/industrial-areas-road-tag">Industrial Areas - Road Tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2767/branching-roads">Branching Roads</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

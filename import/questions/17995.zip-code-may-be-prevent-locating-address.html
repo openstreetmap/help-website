@@ -1,0 +1,809 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>ZIP code may be prevent locating address - OSM Help</title>
+        <meta name="description" content="I have a problem locating an address (10000 S 400 E, Markleville, IN, 46056). When I search for 46056 alone it brings up two towns, Emporia and Markleville. People in Emporia have a 46056 zip code, but they have Markleville addresses. I suspect that when I search for 46056 that Emporia should not be..." />
+        <meta name="keywords" content="city,search,nominatim,address,zip-code" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/17995/zip-code-may-be-prevent-locating-address" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/17995/zip-code-may-be-prevent-locating-address?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mDmwMqMiW5UEdcKuvijwq7tNKoLZf60L' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/17995/zip-code-may-be-prevent-locating-address">ZIP code may be prevent locating address</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-17995-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17995/up/" rel="nofollow"> </a>
+<div id="post-17995-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-17995-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17995/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/17995/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a problem locating an address (10000 S 400 E, Markleville, IN, 46056).  When I search for 46056 alone it brings up two towns, Emporia and Markleville.  People in Emporia have a 46056 zip code, but they have Markleville addresses.  I suspect that when I search for 46056 that Emporia should not be listed.  If I (incorrectly) change the city in the address above to Emporia the address is correctly plotted on the map.</p>
+<p>I think there is some kind of incorrect zip code entry that makes nominatim think that people have Emporia addresses when they should all be Markleville addresses.  What would be the way to correct the problem? </p>
+<p>Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/city/" class="post-tag tag-link-city"
+                                        title="see questions tagged 'city'" rel="tag">city</a>
+                                
+                                    <a href="/tags/search/" class="post-tag tag-link-search"
+                                        title="see questions tagged 'search'" rel="tag">search</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/address/" class="post-tag tag-link-address"
+                                        title="see questions tagged 'address'" rel="tag">address</a>
+                                
+                                    <a href="/tags/zip-code/" class="post-tag tag-link-zip-code"
+                                        title="see questions tagged 'zip-code'" rel="tag">zip-code</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>26 Nov '12, 22:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/69c21e426e2f19730f0d983a2f1e8847?s=32&amp;d=identicon&amp;r=g" alt="Dennis%20Wallen's gravatar image" />
+    <p><a href="/users/5075/dennis-wallen">Dennis Wallen</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Dennis Wallen has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17995/">
+                retagged
+                <strong>27 Nov '12, 05:41</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/01d01832dff61a6bcf68913f1dc001bb?s=32&amp;d=identicon&amp;r=g" alt="Circeus's gravatar image" />
+            <p><a href="/users/2838/circeus">Circeus</a><br/>
+            <span class="score" title="583 reputation points">583</span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="26 badges"><span class="bronze">&#9679;</span><span class="badgecount">26</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-17995">
+    
+        <a name="17999"></a>
+        <div class="comment" id="comment-17999">
+            <div id="post-17999-score" class="comment-score"></div>
+            <div class="comment-text"><p>Why, if you are searching (presumably) for the <em>zipcode alone</em> would it <em>not</em> make sense that the database returns all inhabited places it locates within that zipcode?</p></div>
+            <div class="comment-info" id="comment-17999-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '12, 05:40)</span>
+                <a class="comment-user userinfo" href="/users/2838/circeus">Circeus</a>
+                
+            </div>
+        </div>
+    
+        <a name="18005"></a>
+        <div class="comment" id="comment-18005">
+            <div id="post-18005-score" class="comment-score"></div>
+            <div class="comment-text"><p>Germany has an interesting concept to solve this problem (and to avoid heuristics that may fail) : it maps boundaries for postal_code areas that frequently do not follow the administrative areas and their hierarchy of admin_level's.</p>
+
+<p>This case is not unique, it exists in many countries, and postcode areas generaly do not evolve at the same time as administrative areas.</p>
+
+<p>The same could be said to regional phone areas (the 3 digits in US and Canada before the local 7-digit phone number).</p></div>
+            <div class="comment-info" id="comment-18005-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '12, 08:35)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="18046"></a>
+        <div class="comment" id="comment-18046">
+            <div id="post-18046-score" class="comment-score"></div>
+            <div class="comment-text"><p>Circeus, there is nothing inherently wrong with returning all cities/towns that share the same zip code.  That could certainly be useful as a feature.</p>
+
+<p>My road has tags that point it to the 46056 zip code so it should be able to figure out that I have a Markleville address.  They are TIGER tags so maybe there needs to be a "postalCode" tag?  When nominatim tries to find me it seems to be insisting that I have an Emporia address.  I think that because it returns Emporia first and then Markleville when searching only by ZIP code.</p>
+
+<p>I'm just trying to figure out how to corretly locate my address.</p></div>
+            <div class="comment-info" id="comment-18046-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '12, 01:10)</span>
+                <a class="comment-user userinfo" href="/users/5075/dennis-wallen">Dennis Wallen</a>
+                
+            </div>
+        </div>
+    
+        <a name="18068"></a>
+        <div class="comment" id="comment-18068">
+            <div id="post-18068-score" class="comment-score">2</div>
+            <div class="comment-text"><p>You might go to the Nominatim page (<a href="http://nominatim.openstreetmap.org/search)">http://nominatim.openstreetmap.org/search)</a> and enter different terms and see what results you get.  Note that you can click on Details for each result and get more info about it.  So, for example, the zip codes appear to be nodes that aren't in OSM.  There are two nodes for 46056, so there's no reason why Nominatim would know you're in one or the other.  Your address doesn't have a road name (it's x,y style), which is something that might help it determine the correct city (municipal boundaries are parents for roads within them).</p></div>
+            <div class="comment-info" id="comment-18068-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '12, 15:20)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17995" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17995-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/17995/zip-code-may-be-prevent-locating-address?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/17995/zip-code-may-be-prevent-locating-address?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/17995/zip-code-may-be-prevent-locating-address?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/17995/zip-code-may-be-prevent-locating-address?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="18086"></a>
+                    <div id="answer-container-18086" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18086-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18086/up/" rel="nofollow"> </a>
+<div id="post-18086-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-18086-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18086/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The problem with your address is not the postcode but the <a href="http://www.openstreetmap.org/browse/relation/127615">administrative boundary for Markleville</a>. It only encloses the village itself. Road S 400 E is outside the village according to that. Nominatim then messes up a little bit as you can see on the <a href="http://nominatim.openstreetmap.org/details.php?place_id=31403768">details page for the road</a>. It actually places your road into Emporia because it is the closest village that does not have a boundary defined.</p>
+<p>To correct the situation, I'd recommend to do two things: add a addr:city=Markleville tag to your street, so that Nominatim knows to which village the road belongs, and then define a proper boundary relation for Emporia, so it knows to which village the road does not belong. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18086/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Nov '12, 21:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d888b712d85dee0aa304297f2dc697c7?s=32&amp;d=identicon&amp;r=g" alt="lonvia's gravatar image" />
+    <p><a href="/users/2921/lonvia">lonvia</a><br/>
+    <span class="score" title="6213 reputation points"><span class="">6.2k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="lonvia has 43 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18086">
+    
+        <a name="18117"></a>
+        <div class="comment" id="comment-18117">
+            <div id="post-18117-score" class="comment-score"></div>
+            <div class="comment-text"><p>But DOES this road belong to Markleville adminsitratively? I bet no, otherwise the boundary of Markleville would include the road and its surrounding households. So These households belong to another administrative town/city, Emporia, and Emporia has several ZIPs.</p>
+
+<p>To correct this the Germany solution (which is to map the postal code areas independantly of administrative boundaries) is a good solution. It allows a town to have several postal code areas, or the same postal area covering multiple towns or parts of them. And it's much easier than tagging each address node or street in that area.</p></div>
+            <div class="comment-info" id="comment-18117-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '12, 11:34)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="18118"></a>
+        <div class="comment" id="comment-18118">
+            <div id="post-18118-score" class="comment-score"></div>
+            <div class="comment-text"><p>And effectively, Emporia needs its own administrative boundary (covering that street, even if its postal addresses are handled in Markleville) : here again the postal area of Emporia does not cover the whole administrative town but only a part of it, excluding this street which is in another postal area.</p>
+
+<p>So: add the administrative boundary for Emporia, and add the two distinct boundaries for the postal areas of Emporia and Markleville.
+You then don't need to tag the streets to their postal areas, this is implicit. But you still need to associate the households to their street relation.</p></div>
+            <div class="comment-info" id="comment-18118-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '12, 11:41)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="18119"></a>
+        <div class="comment" id="comment-18119">
+            <div id="post-18119-score" class="comment-score"></div>
+            <div class="comment-text"><p>Note also that the admininstrative boundary of the city of Markleville has two small enclaves that are excluded administratively. To which city they belong then administratively? It's unknown (OSM does not specify it for these enclaves), even if they are in the postal area of Markleville (also not specified: Nominatim "guesses" it should be Markleville).</p>
+
+<p>Once again the postal area does not match the admininstrative boundary of the city, and the German solution (mapping separate postal boundary relations) is excellent to cover these cases without complex tagging for each household or street.</p></div>
+            <div class="comment-info" id="comment-18119-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '12, 11:54)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="18120"></a>
+        <div class="comment" id="comment-18120">
+            <div id="post-18120-score" class="comment-score">4</div>
+            <div class="comment-text"><p>As Dennis was looking for the address '10000 S 400 E, Markleville, IN, 46056', I dared to assume that Markleville is part of the postal address for this street even though it may not be within the administrative boundaries of the village. The answer relates to exactly this special case.</p>
+
+<p>The area of the postal code is completely irrelevant here, it is the town name that prevents Nominatim from finding the address. (Nominatim does get the postcode completely right, searching for 'S 400 E, 46056' returns the correct street.)</p></div>
+            <div class="comment-info" id="comment-18120-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '12, 12:43)</span>
+                <a class="comment-user userinfo" href="/users/2921/lonvia">lonvia</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18086" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18086-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/17995/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mDmwMqMiW5UEdcKuvijwq7tNKoLZf60L' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17995/zip-code-may-be-prevent-locating-address?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17995/zip-code-may-be-prevent-locating-address?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/address/"
+            class="tag-link-address"
+            title="see questions tagged'address'using tags"
+            rel="tag">address</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/search/"
+            class="tag-link-search"
+            title="see questions tagged'search'using tags"
+            rel="tag">search</a> <span class="tag-number">&#215;193</span><br/>
+        
+        <a href="/tags/city/"
+            class="tag-link-city"
+            title="see questions tagged'city'using tags"
+            rel="tag">city</a> <span class="tag-number">&#215;107</span><br/>
+        
+        <a href="/tags/zip-code/"
+            class="tag-link-zip-code"
+            title="see questions tagged'zip-code'using tags"
+            rel="tag">zip-code</a> <span class="tag-number">&#215;23</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 26, 2012, 10:37 p.m.">26 Nov '12, 22:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,248 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 30, 2012, 12:43 p.m.">30 Nov '12, 12:43</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/55856/search-does-not-find-address-when-city-is-not-municipality">Search does not find address when city is not municipality</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15474/the-search-shows-a-bavarian-city-as-being-in-thuringen">The search shows a Bavarian city as being in Thüringen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46701/how-to-get-the-city-and-the-country-of-every-osm-type">How to get the city and the country of every osm type?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68204/how-to-get-always-a-city-from-gps-coordinates">How to get ALWAYS a city from GPS coordinates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27351/two-city-names-listed-in-search-results-for-a-restaurant-i-cant-change-that">two city names listed in search results for a restaurant, I can&#39;t change that!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9109/limit-nominatim-search-to-a-specific-city-or-even-a-zip-code">limit nominatim search to a specific city or even a zip code</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7459/different-results-for-same-query">Different results for same query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9196/using-openstreetmap-with-keyword-search-bookmarks-in-firefox">Using OpenStreetMap with keyword search bookmarks in Firefox</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5819/added-street-doesnt-show-up-on-search">Added street doesn&#39;t show up on search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5826/can-nominatim-handle-zip4-lookup">Can Nominatim handle Zip+4 lookup?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

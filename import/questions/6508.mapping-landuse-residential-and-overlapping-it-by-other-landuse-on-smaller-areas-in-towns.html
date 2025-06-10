@@ -1,0 +1,921 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Mapping landuse residential and overlapping it by other landuse (on smaller areas in towns) - OSM Help</title>
+        <meta name="description" content="Hello, I&#39;m trying to map our village Zahorany u Berouna (Czech Republic) and I have question about correct use of landuse=residential with mapping towns/villages. I&#39;m new here. I red base conventions and Tag:landuse=residential and something about snapping polygons to highways. I mapping this from C..." />
+        <meta name="keywords" content="residential,landuse,mapping,overlap" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='27ZMGEI8vDXSYVLOXtWjmjhxIdrvYab4' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns">Mapping landuse residential and overlapping it by other landuse (on smaller areas in towns)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-6508-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6508/up/" rel="nofollow"> </a>
+<div id="post-6508-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-6508-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6508/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/6508/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I'm trying to map our village  <a href="http://www.openstreetmap.org/?lat=49.95462&amp;lon=14.02547&amp;zoom=17&amp;layers=M">Zahorany u Berouna (Czech Republic)</a> and I have question about correct use of landuse=residential with mapping towns/villages.</p>
+<p>I'm new here. I red base conventions and <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">Tag:landuse=residential</a> and something about snapping polygons to highways. I mapping this from Czech land parcel data (source=cuzk:km) so I'm mapping it on new nodes along the parcel edges (same recommendation I get on Czech Mailing-list). This is clear for me (not a subject of my question).</p>
+<p>By this I mapped each consistent residential block separately by accurate land parcel data edges (each residental block divided by some place, street, scrub, grass, green etc. have own polygon). Between this polygon I mapped other landuse (eventually natural) polygons e. g. grass, scrub, reservoir (pond), playground, village green, greenfield, garden (for creating detailed map of village). Dividing landuse=residential to individual blocks By this way I can map areas between residential blocks without its overlapping other polygons (especially other landuse polygons) - I red some basic topological rules and it's not allowed to overlap polygons especially with same tagtype - e. g. landuse with landuse. <a href="http://osm.kraluvdvur.cz/osm-zahorany-landuse-residential.png">JOSM screenshot with filtered landuse=residential</a></p>
+<p><strong>But I don't know if this mapping of landuse=residential is correct <em>especially its dividing by separeate blocks</em> and mapping by parcel egdes</strong>. Is this way correct or incorrect and it will be better have one big polygon for all this area (on screeenshot) and in some smaller areas overlapped with other landuse (grass, reservoir, playground, school, garden, park) or some natural=scrub etc. in areas where residential blocks are interrupt by some other places or highways.</p>
+<p>Thanks for answers and I'm sorry for my bad english.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/residential/" class="post-tag tag-link-residential"
+                                        title="see questions tagged 'residential'" rel="tag">residential</a>
+                                
+                                    <a href="/tags/landuse/" class="post-tag tag-link-landuse"
+                                        title="see questions tagged 'landuse'" rel="tag">landuse</a>
+                                
+                                    <a href="/tags/mapping/" class="post-tag tag-link-mapping"
+                                        title="see questions tagged 'mapping'" rel="tag">mapping</a>
+                                
+                                    <a href="/tags/overlap/" class="post-tag tag-link-overlap"
+                                        title="see questions tagged 'overlap'" rel="tag">overlap</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Jul '11, 09:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c8064f9b10490946ff56b1e4c40cf938?s=32&amp;d=identicon&amp;r=g" alt="Pavel%20Bokr's gravatar image" />
+    <p><a href="/users/1783/pavel-bokr">Pavel Bokr</a><br/>
+    <span class="score" title="36 reputation points">36</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Pavel Bokr has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6508/">
+                edited
+                <strong>23 Jul '11, 15:36</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-6508">
+    
+</div>
+<div id="comment-tools-6508" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6508-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="6510"></a>
+                    <div id="answer-container-6510" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6510-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6510/up/" rel="nofollow"> </a>
+<div id="post-6510-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-6510-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6510/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Pavel Bokr has selected this answer as the correct answer"
+        href="/accept_answer/6510/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Think of <code>landuse=residential</code> as "this is a residential area". A residential area may comprise a whole city quarter; a residential area can contain parks, playgrounds, trees, and roads of course; even the occasional shop doesn't turn a residential area into a retail or commercial area.</p>
+<p>This means that one would not normally use <code>landuse=residential</code> to denote only the area where a house and garden are; it will usually cover whole blocks. Also, a <code>landuse=residential</code> will not end on one side of the road and then begin again on the other; it will contain the road - unless perhaps the road is a 8-lane motorway.</p>
+<p>Personally I don't see a problem with a smaller area (e.g. <code>leisure=playground</code> or <code>landuse=grass</code>) being drawn "on top" of the landuse=residential area, but some mappers would also in these cases create a multipolygon and make the smaller area a "hole" in the landuse area. That's basically a matter of personal taste.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6510/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Jul '11, 11:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6510">
+    
+        <a name="6513"></a>
+        <div class="comment" id="comment-6513">
+            <div id="post-6513-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank for answer! So on this example <a href="http://osm.kraluvdvur.cz/osm-zahorany-landuse-residential-mapping.png">http://osm.kraluvdvur.cz/osm-zahorany-landuse-residential-mapping.png</a> is about range of residential area correct part A and part B is incorrect???</p>
+
+<p>Then I don't know why recommendation for accurate mapping about land parcel data edges before roads (if is available) if residential area is considered widely generaly with roads and others areas.</p>
+
+<p>If B on my image is wrong I can make correction to A and try to use multipolygon e. g. for farmland in the village etc.</p>
+
+<p>So what have I do?</p></div>
+            <div class="comment-info" id="comment-6513-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jul '11, 15:24)</span>
+                <a class="comment-user userinfo" href="/users/1783/pavel-bokr">Pavel Bokr</a>
+                
+            </div>
+        </div>
+    
+        <a name="6514"></a>
+        <div class="comment" id="comment-6514">
+            <div id="post-6514-score" class="comment-score"></div>
+            <div class="comment-text"><p>But I'm little confused from various recommendation which are mutually partly inconsistent and I don't find some detailed recommendation or detailed best practice examples (wiki is little short for this) - if is something about this or some good examples please give me a link.</p>
+
+<p>If B (image link in comment above) is wrong I think it will be good this geometry use for barriers=fence to draw closed area for walking-through the mapped area.</p></div>
+            <div class="comment-info" id="comment-6514-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jul '11, 15:25)</span>
+                <a class="comment-user userinfo" href="/users/1783/pavel-bokr">Pavel Bokr</a>
+                
+            </div>
+        </div>
+    
+        <a name="6517"></a>
+        <div class="comment" id="comment-6517">
+            <div id="post-6517-score" class="comment-score"></div>
+            <div class="comment-text"><p>Neither A nor B are wrong. Both validly define residential areas, B is just a little more detailed but this level of detail is not required. If you want to map it this way, do it. Some people like it, some may say it is an unnecessary level of detail. But in the end all depends on the use case scenario of the data.</p></div>
+            <div class="comment-info" id="comment-6517-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jul '11, 16:44)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6518"></a>
+        <div class="comment" id="comment-6518">
+            <div id="post-6518-score" class="comment-score">1</div>
+            <div class="comment-text"><p>In my opinion, B is very close to "wrong" because a residential road is certainly part of a "residential area", whereas B goes through a lot of effort to <em>exclude</em> the road from the residential area. This is more than "unnecessary detail"; it is misleading detail that helps nobody.</p></div>
+            <div class="comment-info" id="comment-6518-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jul '11, 17:40)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6519"></a>
+        <div class="comment" id="comment-6519">
+            <div id="post-6519-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank You! I Will try some compromise probably with multipolygon (maybe with <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Two_disjunct_outer_rings">http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Two_disjunct_outer_rings</a> too) to include residential roads to adjacent residental area and concurrently to try minimize overlaps landuse residental with other landuse or other polygons (so maybe exclude areas around playground, green by the stream and by the teriary highway etc).</p>
+
+<p>For me was misleading especially recommendation about not connecting landuse residental to roads and creating paralel edge if detailed parcel data is available. Thanks for explanation!</p></div>
+            <div class="comment-info" id="comment-6519-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jul '11, 19:11)</span>
+                <a class="comment-user userinfo" href="/users/1783/pavel-bokr">Pavel Bokr</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6510" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6510-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6509"></a>
+                    <div id="answer-container-6509" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6509-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6509/up/" rel="nofollow"> </a>
+<div id="post-6509-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-6509-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6509/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I don't see any problems with mapping in this way.  Whether to snap landuse polygons to highways is up to you, most mapping near me does not snap the polygons to highways.</p>
+<p>In the UK there are quite a lot of places where some overlap is used with a big residential area and then smaller places like grass, cemetery, recreation_ground are done with overlapping landuse.  Having a partial overlap is bad though, the smaller landuse areas are basically like implicit multipolygons.</p>
+<p>So your mapping looks great, I would continue in the same way.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6509/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Jul '11, 11:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7bb4d30bb6d40cf9b3644ff4f453e5bd?s=32&amp;d=identicon&amp;r=g" alt="quantumstate's gravatar image" />
+    <p><a href="/users/1002/quantumstate">quantumstate</a><br/>
+    <span class="score" title="455 reputation points">455</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="quantumstate has 3 accepted answers">30&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6509">
+    
+</div>
+<div id="comment-tools-6509" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6509-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6511"></a>
+                    <div id="answer-container-6511" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6511-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6511/up/" rel="nofollow"> </a>
+<div id="post-6511-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-6511-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6511/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Most users do not recommend joining landuse and highway nodes and ways, I think even <a href="http://wiki.openstreetmap.org/wiki/Keep_Right">keep right</a> did complain about it, but I cannot see any errors in your <a href="http://keepright.ipax.at/report_map.php?lat=49.95452&amp;lon=14.02518&amp;zoom=16">mapped area</a> related to landuse although there are <a href="http://keepright.ipax.at/report_map.php?lat=49.95906&amp;lon=14.04133&amp;zoom=13">a lot of other errors</a> in the surrounding which you may want to fix.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6511/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Jul '11, 13:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6511">
+    
+</div>
+<div id="comment-tools-6511" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6511-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/6508/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='27ZMGEI8vDXSYVLOXtWjmjhxIdrvYab4' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapping/"
+            class="tag-link-mapping"
+            title="see questions tagged'mapping'using tags"
+            rel="tag">mapping</a> <span class="tag-number">&#215;193</span><br/>
+        
+        <a href="/tags/landuse/"
+            class="tag-link-landuse"
+            title="see questions tagged'landuse'using tags"
+            rel="tag">landuse</a> <span class="tag-number">&#215;103</span><br/>
+        
+        <a href="/tags/residential/"
+            class="tag-link-residential"
+            title="see questions tagged'residential'using tags"
+            rel="tag">residential</a> <span class="tag-number">&#215;43</span><br/>
+        
+        <a href="/tags/overlap/"
+            class="tag-link-overlap"
+            title="see questions tagged'overlap'using tags"
+            rel="tag">overlap</a> <span class="tag-number">&#215;16</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 23, 2011, 9:33 a.m.">23 Jul '11, 09:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,808 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 23, 2011, 7:11 p.m.">23 Jul '11, 19:11</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/37722/landuse-delimited-by-different-types-of-barriers-best-way-to-map">landuse delimited by different types of barriers: best way to map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50125/hamlet-or-residential-area">Hamlet or Residential Area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18138/how-to-map-rural-areas-nested-landuse">How to map rural areas / nested landuse</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19598/landuseresidential-wont-render-name-together-with-place-key">Landuse=residential won&#39;t render name together with place key.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38671/should-i-tag-a-building-as-mall">Should I tag a building as mall?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40920/how-to-mark-the-town-hall-perimeter">How to Mark the Town Hall Perimeter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3489/rendering-of-multipolygons-tagged-with-landuse-tags">Rendering of multipolygons tagged with landuse tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4434/overlapping-polygons-">overlapping polygons - ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18495/is-it-okay-if-landuse-borders-share-nodes-with-streets-rivers">Is it okay if landuse borders share nodes with streets / rivers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62059/wie-zeichne-ich-diese-3-platze-richtig-ein">Wie zeichne ich diese 3 Plätze richtig ein.</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

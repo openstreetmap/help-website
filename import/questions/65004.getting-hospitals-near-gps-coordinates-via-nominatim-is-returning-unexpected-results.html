@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Getting hospitals near GPS coordinates via Nominatim is returning unexpected results - OSM Help</title>
+        <meta name="description" content="I&#39;ve constructed the following query, I want to get &quot;hospitals&quot; which is a special phrase according to this link https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN This is my query https://nominatim.openstreetmap.org/search?q=hospitals&amp;amp;format=jsonv2&amp;amp;polygon=50&amp;amp;addressdetail..." />
+        <meta name="keywords" content="query,gps,nominatim,coordinates,poi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/65004/getting-hospitals-near-gps-coordinates-via-nominatim-is-returning-unexpected-results" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/65004/getting-hospitals-near-gps-coordinates-via-nominatim-is-returning-unexpected-results?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zPB4xhJJMc4E5KlpWsTyW1Petus4vYUw' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/65004/getting-hospitals-near-gps-coordinates-via-nominatim-is-returning-unexpected-results">Getting hospitals near GPS coordinates via Nominatim is returning unexpected results</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-65004-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/65004/up/" rel="nofollow"> </a>
+<div id="post-65004-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-65004-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/65004/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/65004/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I've constructed the following query, I want to get "hospitals" which is a special phrase according to this link</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN">https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN</a></p>
+<p>This is my query</p>
+<p><a href="https://nominatim.openstreetmap.org/search?q=hospitals&amp;format=jsonv2&amp;polygon=50&amp;addressdetails=1&amp;lat=40.406932&amp;lon=-79.932963">https://nominatim.openstreetmap.org/search?q=hospitals&amp;format=jsonv2&amp;polygon=50&amp;addressdetails=1&amp;lat=40.406932&amp;lon=-79.932963</a></p>
+<p>those GPS coordinates are from Pittsburgh, PA. But the results contains results from Nicaragua and Libya and they are not hospitals. Where have I made a mistake?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/query/" class="post-tag tag-link-query"
+                                        title="see questions tagged 'query'" rel="tag">query</a>
+                                
+                                    <a href="/tags/gps/" class="post-tag tag-link-gps"
+                                        title="see questions tagged 'gps'" rel="tag">gps</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/coordinates/" class="post-tag tag-link-coordinates"
+                                        title="see questions tagged 'coordinates'" rel="tag">coordinates</a>
+                                
+                                    <a href="/tags/poi/" class="post-tag tag-link-poi"
+                                        title="see questions tagged 'poi'" rel="tag">poi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Jul '18, 16:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4f6e295d4a3e0e24268e948e79eae3fc?s=32&amp;d=identicon&amp;r=g" alt="Dave4784's gravatar image" />
+    <p><a href="/users/15452/dave4784">Dave4784</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Dave4784 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/65004/">
+                edited
+                <strong>29 Jul '18, 21:38</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-65004">
+    
+</div>
+<div id="comment-tools-65004" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-65004-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/65004/getting-hospitals-near-gps-coordinates-via-nominatim-is-returning-unexpected-results?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/65004/getting-hospitals-near-gps-coordinates-via-nominatim-is-returning-unexpected-results?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/65004/getting-hospitals-near-gps-coordinates-via-nominatim-is-returning-unexpected-results?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/65004/getting-hospitals-near-gps-coordinates-via-nominatim-is-returning-unexpected-results?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="65007"></a>
+                    <div id="answer-container-65007" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-65007-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/65007/up/" rel="nofollow"> </a>
+<div id="post-65007-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-65007-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/65007/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>A special phrase just means that nominatim will give some preference to items tagged amenity=hospital, it's still doing name matching on "Hospitals", so it's returning things with exactly that name.</p>
+<p><a href="http://overpass-turbo.eu/s/ADE">Here's an example Overpass-API query</a> that returns hospitals within a 10 Km radius of that location. Note that you can use that query outside of Overpass Turbo, it's just a convenient way to share it.</p>
+<p>You could also compute a bounding box from the coordinate and restrict the search to that area, if that were more suitable for your goal.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/65007/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Jul '18, 17:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c860445e868ebb21da141635a4aa7b06?s=32&amp;d=identicon&amp;r=g" alt="maxerickson's gravatar image" />
+    <p><a href="/users/10973/maxerickson">maxerickson</a><br/>
+    <span class="score" title="12700 reputation points"><span class="">12.7k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="176 badges"><span class="bronze">&#9679;</span><span class="badgecount">176</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="maxerickson has 93 accepted answers">32&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/65007/">
+                edited
+                <strong>29 Jul '18, 17:25</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-65007">
+    
+        <a name="66667"></a>
+        <div class="comment" id="comment-66667">
+            <div id="post-66667-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello. Is something like that available for Nominatim API?</p></div>
+            <div class="comment-info" id="comment-66667-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Nov '18, 10:17)</span>
+                <a class="comment-user userinfo" href="/users/15876/user5555">user5555</a>
+                
+            </div>
+        </div>
+    
+        <a name="66669"></a>
+        <div class="comment" id="comment-66669">
+            <div id="post-66669-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not beyond what is mentioned in the other answer.</p></div>
+            <div class="comment-info" id="comment-66669-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Nov '18, 10:46)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="66670"></a>
+        <div class="comment" id="comment-66670">
+            <div id="post-66670-score" class="comment-score"></div>
+            <div class="comment-text"><p>There isn't.</p></div>
+            <div class="comment-info" id="comment-66670-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Nov '18, 10:47)</span>
+                <a class="comment-user userinfo" href="/users/150/mtmail">mtmail</a>
+                
+            </div>
+        </div>
+    
+        <a name="66692"></a>
+        <div class="comment" id="comment-66692">
+            <div id="post-66692-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, thanks. Now I want to try Overpass-API. How to send just query using REST API (POST some json url)? And where to get results? Because your example draws on the map, but I want result in text format (json)</p></div>
+            <div class="comment-info" id="comment-66692-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Nov '18, 11:48)</span>
+                <a class="comment-user userinfo" href="/users/15876/user5555">user5555</a>
+                
+            </div>
+        </div>
+    
+        <a name="66694"></a>
+        <div class="comment" id="comment-66694">
+            <div id="post-66694-score" class="comment-score"></div>
+            <div class="comment-text"><p>Never mind. Found out <a href="https://www.overpass-api.de/api/interpreter?data=THE">https://www.overpass-api.de/api/interpreter?data=THE</a> SAME QUERY AS IN YOUR EXAMPLE, BUT EVERYTHING IN ONE LINE</p></div>
+            <div class="comment-info" id="comment-66694-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Nov '18, 12:04)</span>
+                <a class="comment-user userinfo" href="/users/15876/user5555">user5555</a>
+                
+            </div>
+        </div>
+    
+        <a name="66696"></a>
+        <div class="comment not_top_scorer" id="comment-66696">
+            <div id="post-66696-score" class="comment-score"></div>
+            <div class="comment-text"><p>And one more question - how to search for any building/place using any name? So it can be anything, not necessarily hospital. I tried replace "amenity" with "name", but it does't work like with Nominatim API, it excepts name which will match 100%, but I want just normal name query (like we search in Google and in Nominatim API)</p></div>
+            <div class="comment-info" id="comment-66696-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Nov '18, 13:55)</span>
+                <a class="comment-user userinfo" href="/users/15876/user5555">user5555</a>
+                
+            </div>
+        </div>
+    
+        <a name="66700"></a>
+        <div class="comment not_top_scorer" id="comment-66700">
+            <div id="post-66700-score" class="comment-score"></div>
+            <div class="comment-text"><p>Don't add questions to answers. Instead <a href="https://help.openstreetmap.org/questions/ask/">create a new question</a>.</p></div>
+            <div class="comment-info" id="comment-66700-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Nov '18, 14:31)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-65007" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-65007-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="65009"></a>
+                    <div id="answer-container-65009" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-65009-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/65009/up/" rel="nofollow"> </a>
+<div id="post-65009-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-65009-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/65009/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The /search endpoint doesn't understand &amp;lat or &amp;lon parameters (only /reverse does), setting &amp;polygon= to 50 has the same effect as 1 and only affects the output. See <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Search">https://wiki.openstreetmap.org/wiki/Nominatim#Search</a></p>
+<p>The closest you can get with Nominatim is using a query 'hospitals near 40.406932,-79.932963'. The 'near' (or 'in') is optional. You can set the &amp;limit=50 to get more results (maximum is 100).</p>
+<p>The Overpass-API system is more flexible (support more types of point-of-interest, more filters, better control over the search radius) overall.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/65009/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Jul '18, 21:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/96aad1e1801b7ea36fba50687924c935?s=32&amp;d=identicon&amp;r=g" alt="mtmail's gravatar image" />
+    <p><a href="/users/150/mtmail">mtmail</a><br/>
+    <span class="score" title="4757 reputation points"><span class="">4.8k</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mtmail has 50 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-65009">
+    
+        <a name="65068"></a>
+        <div class="comment" id="comment-65068">
+            <div id="post-65068-score" class="comment-score"></div>
+            <div class="comment-text"><p>I like using the "hospital near 40.406932,-79.932963" method, but at some places it returns nothing. Is there a way to increase the sq miles it checks?</p></div>
+            <div class="comment-info" id="comment-65068-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Aug '18, 21:26)</span>
+                <a class="comment-user userinfo" href="/users/15452/dave4784">Dave4784</a>
+                
+            </div>
+        </div>
+    
+        <a name="65152"></a>
+        <div class="comment" id="comment-65152">
+            <div id="post-65152-score" class="comment-score"></div>
+            <div class="comment-text"><p>Nominatim doesn't have a parameter for that.</p></div>
+            <div class="comment-info" id="comment-65152-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Aug '18, 11:13)</span>
+                <a class="comment-user userinfo" href="/users/150/mtmail">mtmail</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-65009" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-65009-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/65004/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zPB4xhJJMc4E5KlpWsTyW1Petus4vYUw' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/65004/getting-hospitals-near-gps-coordinates-via-nominatim-is-returning-unexpected-results?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/65004/getting-hospitals-near-gps-coordinates-via-nominatim-is-returning-unexpected-results?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/gps/"
+            class="tag-link-gps"
+            title="see questions tagged'gps'using tags"
+            rel="tag">gps</a> <span class="tag-number">&#215;235</span><br/>
+        
+        <a href="/tags/poi/"
+            class="tag-link-poi"
+            title="see questions tagged'poi'using tags"
+            rel="tag">poi</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/query/"
+            class="tag-link-query"
+            title="see questions tagged'query'using tags"
+            rel="tag">query</a> <span class="tag-number">&#215;147</span><br/>
+        
+        <a href="/tags/coordinates/"
+            class="tag-link-coordinates"
+            title="see questions tagged'coordinates'using tags"
+            rel="tag">coordinates</a> <span class="tag-number">&#215;144</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 29, 2018, 4:40 p.m.">29 Jul '18, 16:40</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,638 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 6, 2018, 2:31 p.m.">06 Nov '18, 14:31</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/64999/getting-hospitals-close-to-coordinates-use-nominatim-or-overpass-api-500-queriesd">getting hospitals close to coordinates: use Nominatim or Overpass API (&lt;500 queries/d)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65105/get-residential-street-closest-to-gps-coordinates">get residential street closest to gps coordinates</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28148/how-to-find-gps-coordinates">How to find GPS coordinates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15786/gps-coordinates-for-15m-addresses">GPS coordinates for 1.5M addresses</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20616/how-to-find-a-nearest-toilet-in-openstreetmap">How to find a [nearest] toilet in OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28075/how-to-correctly-map-a-pois-address">How to correctly map a POI&#39;s address ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8133/plotting-gps-coordinates-on-a-map">Plotting GPS coordinates on a map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">How do I list all the streets in a city with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14660/determine-the-border-gps-coordinates-of-the-currently-zoomed-in-view">Determine the border gps-coordinates of the currently zoomed in view</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8422/show-10000-gps-coordinates-on-a-map">Show 10000 GPS Coordinates on a Map</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

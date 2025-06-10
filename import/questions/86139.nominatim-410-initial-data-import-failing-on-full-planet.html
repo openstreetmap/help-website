@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>nominatim 4.1.0 initial data import failing on full planet - OSM Help</title>
+        <meta name="description" content="Hi, I am having nominatim 4.1.0 crash multiple times while trying to do the initial import. Any help would be greatly appreciated. I am importing into an Azure VM, machine type Standard E8bs v5 (8 vcpus, 64 GiB memory), disk Premium SSD LRS 2048GiB, OS ubuntu 22.04. I have tried importing the latest..." />
+        <meta name="keywords" content="import,nominatim,crash,osm2pgsql" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/86139/nominatim-410-initial-data-import-failing-on-full-planet" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/86139/nominatim-410-initial-data-import-failing-on-full-planet?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='JuECFcx9kzdRoL7k2SCWqOb3XUYx3Bvt' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/86139/nominatim-410-initial-data-import-failing-on-full-planet">nominatim 4.1.0 initial data import failing on full planet</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-86139-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86139/up/" rel="nofollow"> </a>
+<div id="post-86139-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-86139-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86139/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/86139/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I am having nominatim 4.1.0 crash multiple times while trying to do the initial import.  Any help would be greatly appreciated.</p>
+<p>I am importing into an Azure VM, machine type Standard E8bs v5 (8 vcpus, 64 GiB memory), disk Premium SSD LRS 2048GiB, OS ubuntu 22.04.  I have tried importing the latest planet export which is located at <a href="https://planet.openstreetmap.org/pbf/planet-221107.osm.pbf,">https://planet.openstreetmap.org/pbf/planet-221107.osm.pbf,</a> as well as <a href="https://planet.openstreetmap.org/pbf/planet-221031.osm.pbf">https://planet.openstreetmap.org/pbf/planet-221031.osm.pbf</a> extract to try to rule out data related issues.</p>
+<p>I have included the scripts to the full import log as well as the full script to setup Ubuntu at the end of this message.</p>
+<p>The import consistently gets to the same number of Nodes and then an error is thrown and I can't continue.  I've tried to delete the database and rerun the import.  I've also tried to rebuild the machine, and as previously mentioned, also import a different osm extract.  The error stack that is thrown is:</p>
+<p>Processing: Node(5013370k 550.7k/s) Way(0k 0.00k/s) Relation(0 0.0/s)Traceback (most recent call last):</p>
+<pre><code>File "/usr/local/bin/nominatim", line 14, in &lt;module&gt;
+exit(cli.nominatim(module_dir='/usr/local/lib/nominatim/module', File "/usr/local/lib/nominatim/lib-python/nominatim/cli.py", line 264, in nominatim
+return parser.run(**kwargs)   File "/usr/local/lib/nominatim/lib-python/nominatim/cli.py", line 126, in run
+return args.command.run(args)   File "/usr/local/lib/nominatim/lib-python/nominatim/clicmd/setup.py", line 92, in run
+database_import.import_osm_data(files, File "/usr/local/lib/nominatim/lib-python/nominatim/tools/database_import.py", line 108, in import_osm_data
+run_osm2pgsql(options)   File "/usr/local/lib/nominatim/lib-python/nominatim/tools/exec_utils.py", line 152, in run_osm2pgsql
+subprocess.run(cmd, cwd=options.get('cwd', '.'),   File "/usr/lib/python3.10/subprocess.py", line 524, in run
+raise CalledProcessError(retcode, process.args, subprocess.CalledProcessError: Command '['/usr/local/lib/nominatim/osm2pgsql', '--hstore', '--latlon', '--slim', '--with-forward-dependencies', 'false', '--log-progress', 'true', '--number-processes', '1', '--cache', '94513', '--output', 'gazetteer', '--style', '/usr/local/etc/nominatim/import-extratags.style', '--create', '/var/osm/extract/import.pbf']' died with &lt;Signals.SIGKILL: 9&gt;.
+</code></pre>
+<p>The command I use to do the initial import is</p>
+<p>nominatim import --osm2pgsql-cache 0 --osm-file /var/osm/extract/import.pbf --verbose 2&gt;&amp;1 | tee setup.log</p>
+<p>The full setup.log</p>
+<p>2022-11-12 22:08:52: Using project directory: /srv/nominatim/nominatim-planet
+2022-11-12 22:08:54: Creating database
+2022-11-12 22:08:54: Setting up country tables
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+CREATE TABLE
+COPY 23217
+CREATE INDEX
+2022-11-12 22:08:55: Importing OSM data file
+2022-11-12 22:08:55  osm2pgsql version 1.6.0
+2022-11-12 22:08:55  Database version: 14.5 (Ubuntu 14.5-0ubuntu0.22.04.1)
+2022-11-12 22:08:55  PostGIS version: 3.2
+2022-11-12 22:08:55  Parsing gazetteer style file '/usr/local/etc/nominatim/import-extratags.style'.
+NOTICE:  table "place" does not exist, skipping
+Processing: Node(5013370k 550.7k/s) Way(0k 0.00k/s) Relation(0 0.0/s)Traceback (most recent call last):
+  File "/usr/local/bin/nominatim", line 14, in &lt;module&gt;
+    exit(cli.nominatim(module_dir='/usr/local/lib/nominatim/module',
+  File "/usr/local/lib/nominatim/lib-python/nominatim/cli.py", line 264, in nominatim
+    return parser.run(**kwargs)
+  File "/usr/local/lib/nominatim/lib-python/nominatim/cli.py", line 126, in run
+    return args.command.run(args)
+  File "/usr/local/lib/nominatim/lib-python/nominatim/clicmd/setup.py", line 92, in run
+    database_import.import_osm_data(files,
+  File "/usr/local/lib/nominatim/lib-python/nominatim/tools/database_import.py", line 108, in import_osm_data
+    run_osm2pgsql(options)
+  File "/usr/local/lib/nominatim/lib-python/nominatim/tools/exec_utils.py", line 152, in run_osm2pgsql
+    subprocess.run(cmd, cwd=options.get('cwd', '.'),
+  File "/usr/lib/python3.10/subprocess.py", line 524, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/local/lib/nominatim/osm2pgsql', '--hstore', '--latlon', '--slim', '--with-forward-dependencies', 'false', '--log-progress', 'true', '--number-processes', '1', '--cache', '94513', '--output', 'gazetteer', '--style', '/usr/local/etc/nominatim/import-extratags.style', '--create', '/var/osm/extract/import.pbf']' died with &lt;signals.sigkill: 9=""&gt;.</p>
+<p>Ubuntu Setup Steps</p>
+<p>sudo mkdir -p /var/osm/extract
+sudo chmod 777 /var/osm/extract</p>
+<p>#planet</p>
+<p>wget -P /var/osm/extract <a href="https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf">https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf</a>
+mv /var/osm/extract/planet-latest.osm.pbf /var/osm/extract/import.pbf</p>
+<p>sudo useradd -d /srv/nominatim -s /bin/bash -m nominatim
+su nominatim</p>
+<p>sudo apt-get update -qq
+sudo apt install -y php-cgi
+sudo apt install -y build-essential cmake g++ libboost-dev libboost-system-dev \
+                    libboost-filesystem-dev libexpat1-dev zlib1g-dev \
+                    libbz2-dev libpq-dev \
+                    postgresql-server-dev-14 postgresql-14-postgis-3 \
+                    postgresql-contrib-14 postgresql-14-postgis-3-scripts \
+                    php-cli php-pgsql php-intl libicu-dev python3-dotenv \
+                    python3-psycopg2 python3-psutil python3-jinja2 \
+                    python3-icu python3-datrie</p>
+<p>export USERNAME=nominatim
+export USERHOME=/srv/nominatim</p>
+<p>chmod a+x $USERHOME</p>
+<p>sudo sed -i 's/#listen_addresses = '\''localhost'\''/listen_addresses = '\''*'\''/g' /etc/postgresql/14/main/postgresql.conf
+sudo sed -i 's/shared_buffers = 128MB/shared_buffers = 2GB/g' /etc/postgresql/14/main/postgresql.conf
+sudo sed -i 's/#maintenance_work_mem = 64MB/maintenance_work_mem = 10GB/g' /etc/postgresql/14/main/postgresql.conf
+sudo sed -i 's/#autovacuum_work_mem = -1/autovacuum_work_mem = 2GB/g' /etc/postgresql/14/main/postgresql.conf
+sudo sed -i 's/#work_mem = 4MB/work_mem = 50MB/g' /etc/postgresql/14/main/postgresql.conf
+sudo sed -i 's/#effective_cache_size = 4GB/effective_cache_size = 24GB/g' /etc/postgresql/14/main/postgresql.conf
+sudo sed -i 's/#synchronous_commit = on/synchronous_commit = off/g' /etc/postgresql/14/main/postgresql.conf
+sudo sed -i 's/#checkpoint_timeout = 5min/checkpoint_timeout = 10min/g' /etc/postgresql/14/main/postgresql.conf
+sudo sed -i 's/#checkpoint_completion_target = 0.5/checkpoint_completion_target = 0.9/g' /etc/postgresql/14/main/postgresql.conf</p>
+<p>echo '# Allow remote connections, the firewall limits external requests' | sudo tee /etc/postgresql/14/main/pg_hba.conf -a
+echo 'host all all 0.0.0.0/0 md5' | sudo tee /etc/postgresql/14/main/pg_hba.conf -a</p>
+<p>sudo systemctl restart postgresql</p>
+<p>sudo -u postgres createuser -s $USERNAME
+sudo -u postgres createuser www-data</p>
+<p>cd $USERHOME
+wget <a href="https://nominatim.org/release/Nominatim-4.1.0.tar.bz2">https://nominatim.org/release/Nominatim-4.1.0.tar.bz2</a>
+tar xf Nominatim-4.1.0.tar.bz2
+cd Nominatim-4.1.0</p>
+<p>wget -O data/country_osm_grid.sql.gz <a href="https://www.nominatim.org/data/country_grid.sql.gz">https://www.nominatim.org/data/country_grid.sql.gz</a></p>
+<p>mkdir build
+cd build
+cmake ..
+make
+sudo make install</p>
+<p>mkdir $USERHOME/nominatim-project
+cd $USERHOME/nominatim-project</p>
+<p>sudo apt install -y apache2 libapache2-mod-php</p>
+<p>sudo tee /etc/apache2/conf-available/nominatim.conf &lt;&lt; EOFAPACHECONF
+&lt;directory "$userhome="" nominatim-project="" website"=""&gt;
+  Options FollowSymLinks MultiViews
+  AddType text/html   .php
+  DirectoryIndex search.php
+  Require all granted
+&lt;/directory&gt;</p>
+<p>Alias /nominatim $USERHOME/nominatim-project/website
+EOFAPACHECONF</p>
+<p>sudo a2enconf nominatim
+sudo systemctl restart apache2</p>
+<p>mkdir ~/nominatim-planet
+cd ~/nominatim-planet</p>
+<p>export PROJECT_DIR=~/nominatim-planet</p>
+<p>sudo mkdir -p /var/osm/cache
+sudo chmod 777 /var/osm/cache</p>
+<p>wget <a href="https://www.nominatim.org/data/wikimedia-importance.sql.gz">https://www.nominatim.org/data/wikimedia-importance.sql.gz</a>
+wget <a href="https://www.nominatim.org/data/gb_postcodes.csv.gz">https://www.nominatim.org/data/gb_postcodes.csv.gz</a>
+wget <a href="https://www.nominatim.org/data/us_postcodes.csv.gz">https://www.nominatim.org/data/us_postcodes.csv.gz</a></p>
+<p>cp ~/Nominatim-4.1.0/settings/env.defaults .
+sudo sed -i 's/NOMINATIM_FLATNODE_FILE=/NOMINATIM_FLATNODE_FILE=\/var\/osm\/cache\/flatnode.file/g' env.defaults</p>
+<p>nominatim import --osm2pgsql-cache 0 --osm-file /var/osm/extract/import.pbf --verbose 2&gt;&amp;1 | tee setup.log</p>
+<p>Any help is really appreciated!</p>
+<p>Thanks in advance</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/import/" class="post-tag tag-link-import"
+                                        title="see questions tagged 'import'" rel="tag">import</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/crash/" class="post-tag tag-link-crash"
+                                        title="see questions tagged 'crash'" rel="tag">crash</a>
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Nov '22, 01:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d554c07eb8422e11c3e28d841c078122?s=32&amp;d=identicon&amp;r=g" alt="SuperUniqueName's gravatar image" />
+    <p><a href="/users/22429/superuniquename">SuperUniqueName</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SuperUniqueName has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-86139">
+    
+</div>
+<div id="comment-tools-86139" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86139-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/86139/nominatim-410-initial-data-import-failing-on-full-planet?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/86139/nominatim-410-initial-data-import-failing-on-full-planet?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/86139/nominatim-410-initial-data-import-failing-on-full-planet?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/86139/nominatim-410-initial-data-import-failing-on-full-planet?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="86142"></a>
+                    <div id="answer-container-86142" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-86142-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86142/up/" rel="nofollow"> </a>
+<div id="post-86142-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-86142-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86142/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="SuperUniqueName has selected this answer as the correct answer"
+        href="/accept_answer/86142/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You use the wrong name for your configuration file. The name should be <code>.env</code>. Therefore the flatnode configuration is not picked up by Nominatim and it runs out of memory.</p>
+<p>Other things to consider:</p>
+<ul>
+<li>Don't copy the full default config file. Simply put a <code>.env</code> file in place which contains only the settings you want to change.</li>
+<li>Don't use the option <code>--osm2pgsql-cache</code>. Nominatim will do the right thing per default. (And apparently not the right thing when <code>--osm2pgsql-cache 0</code> is given. There is a bug there that needs fixing.)</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/86142/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Nov '22, 09:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d888b712d85dee0aa304297f2dc697c7?s=32&amp;d=identicon&amp;r=g" alt="lonvia's gravatar image" />
+    <p><a href="/users/2921/lonvia">lonvia</a><br/>
+    <span class="score" title="6213 reputation points"><span class="">6.2k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="lonvia has 43 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-86142">
+    
+        <a name="86146"></a>
+        <div class="comment" id="comment-86146">
+            <div id="post-86146-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Ionvia,</p>
+
+<p>Thanks so much for taking the time to read my issue and share your reply.  I can see now that the flatfile was not being created, which heavily points to the fact that the configure file was not being read and points to your solution.</p>
+
+<p>I've changed my script from </p>
+
+<p>cp ~/Nominatim-4.1.0/settings/env.defaults .
+sudo sed -i 's/NOMINATIM_FLATNODE_FILE=/NOMINATIM_FLATNODE_FILE=\/var\/osm\/cache\/flatnode.file/g' env.defaults </p>
+
+<p>to be</p>
+
+<p>echo 'NOMINATIM_FLATNODE_FILE=/var/osm/cache/flatnode.file' | tee .env -a</p>
+
+<p>and have re-run the script.</p>
+
+<p>Not sure where to put improvement ideas for Nominatim but it'd be great if in nominatim import --verbose mode, it output the values of the configuration variables that it's running with e.g.
+NOMINATIM_DATABASE_DSN="pgsql:dbname=nominatim"
+NOMINATIM_DATABASE_WEBUSER="www-data"
+...
+NOMINATIM_FLATNODE_FILE=
+or
+NOMINATIM_FLATNODE_FILE=/var/osm/cache/flatnode.file</p>
+
+<p>as I found it really hard to get visibility over the configuration settings that nominatim was running with.</p>
+
+<p>Alternatively it could had some text to say "Running using configuration file /user/nominatim/nominatim_planet/.env" or "Running with no custom configuration file"</p>
+
+<p>Aside from that, just another huge thanks Ionvia!</p>
+
+<p>Cheers,</p></div>
+            <div class="comment-info" id="comment-86146-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '22, 21:04)</span>
+                <a class="comment-user userinfo" href="/users/22429/superuniquename">SuperUniqueName</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-86142" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86142-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/86139/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='JuECFcx9kzdRoL7k2SCWqOb3XUYx3Bvt' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/86139/nominatim-410-initial-data-import-failing-on-full-planet?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/86139/nominatim-410-initial-data-import-failing-on-full-planet?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/import/"
+            class="tag-link-import"
+            title="see questions tagged'import'using tags"
+            rel="tag">import</a> <span class="tag-number">&#215;196</span><br/>
+        
+        <a href="/tags/crash/"
+            class="tag-link-crash"
+            title="see questions tagged'crash'using tags"
+            rel="tag">crash</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 13, 2022, 1:57 a.m.">13 Nov '22, 01:57</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,687 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 24, 2022, 7:57 a.m.">24 Nov '22, 07:57</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/66080/importing-diff-files-into-a-nominatim-server-is-very-slow">Importing diff files into a Nominatim server is very slow</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16781/osm-hang-when-adding-more-osm-files-to-nominatim">[closed] OSM hang when adding More OSM files to Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8322/osm2pgsql-import-getting-killed-as-relations-are-processed">osm2pgsql import getting killed as relations are processed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12330/nominatim-setupphp-problem">Nominatim setup.php problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15505/import-more-osm-files-in-to-nominatim">Import more osm files in to Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15845/choose-regions-during-the-import-of-a-country-into-nominatim-database">Choose regions during the import of a country into nominatim database.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12286/how-can-i-get-the-zone-administrive-of-a-city-from-postgis-nominatim-import">How can I get the zone administrive of a city from postgis (nominatim import)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11687/osm2pgsql-performance-evaluation">osm2pgsql performance evaluation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed">Why is my import of planet-latest.osm KILLED?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13762/how-to-check-nominatim-planet-import-execution-is-running-in-background-or-terminated">How to check Nominatim planet import execution is running in background or terminated?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

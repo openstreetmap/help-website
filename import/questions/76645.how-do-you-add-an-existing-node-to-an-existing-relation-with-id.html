@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do you add an existing node to an existing relation with iD? - OSM Help</title>
+        <meta name="description" content="I am trying to add a node (a city) to an existing relation. I have searched but I haven&#39;t found instructions for doing this in the iD interface. Is this possible? What are the steps? Specifically, I am trying to add node 2638988934 to relation 238005. I&#39;ve tried using the iD editor focused on node 2..." />
+        <meta name="keywords" content="ideditor" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/76645/how-do-you-add-an-existing-node-to-an-existing-relation-with-id" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/76645/how-do-you-add-an-existing-node-to-an-existing-relation-with-id?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sK5rEf8XEHMG63zVIMBQl8hupJnZuLUY' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/76645/how-do-you-add-an-existing-node-to-an-existing-relation-with-id">How do you add an existing node to an existing relation with iD?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-76645-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76645/up/" rel="nofollow"> </a>
+<div id="post-76645-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-76645-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76645/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/76645/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am trying to add a node (a city) to an existing relation. I have searched but I haven't found instructions for doing this in the iD interface. Is this possible? What are the steps?</p>
+<p>Specifically, I am trying to add node 2638988934 to relation 238005. I've tried using the <a href="https://www.openstreetmap.org/edit?node=2638988934#map=20/47.04510/-122.89501">iD editor focused on node 2638988934</a>, scrolling to the bottom of the left panel where it says "Relations" next to a disclosure arrow, clicking +, and then typing "Olympia" in the "Choose a parent relation" box, to no avail. The only things that show up are either bus routes or the administrative boundaries (county and state) that are already associated with the node.</p>
+<p>I've also tried just entering the relationship by number but that did not seem to work either.</p>
+<p>If there's documentation on this somewhere, or an existing answer to a different question, I'm all eyes.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>15 Sep '20, 21:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fc2462740819de18b4ce1ea5fc6f83d2?s=32&amp;d=identicon&amp;r=g" alt="nocathere's gravatar image" />
+    <p><a href="/users/18970/nocathere">nocathere</a><br/>
+    <span class="score" title="61 reputation points">61</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="nocathere has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-76645">
+    
+        <a name="76651"></a>
+        <div class="comment" id="comment-76651">
+            <div id="post-76651-score" class="comment-score"></div>
+            <div class="comment-text"><p>iD isn't easy for large areas and relations, a combination of both here. I added it using Level0 <a href="https://www.openstreetmap.org/changeset/90949521.">https://www.openstreetmap.org/changeset/90949521.</a></p></div>
+            <div class="comment-info" id="comment-76651-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Sep '20, 00:02)</span>
+                <a class="comment-user userinfo" href="/users/16887/kovoschiz">Kovoschiz</a>
+                
+            </div>
+        </div>
+    
+        <a name="76668"></a>
+        <div class="comment" id="comment-76668">
+            <div id="post-76668-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/16887/kovoschiz">@Kovoschiz</a>: While of course being appreciated you helped out here may I suggest you wait a bit next time before doing such change. Now it has become impossible to find a way in iD suitable for nocathere.</p></div>
+            <div class="comment-info" id="comment-76668-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Sep '20, 19:01)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="76669"></a>
+        <div class="comment" id="comment-76669">
+            <div id="post-76669-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/10133/tzorn"></a><a href="https://help.openstreetmap.org/users/10133/tzorn">@TZorn</a> He commented "I won't risk contributing anything for now -- I don't want to mess it up -- I'm just curious about the resolution of the issue." as a concern below. One can surely play with the editor on his own without uploading. Regionally, this issue is common enough I can already manually find Eugene (<a href="https://www.openstreetmap.org/node/904722443)">https://www.openstreetmap.org/node/904722443)</a> and Albany (<a href="https://www.openstreetmap.org/node/150958779)">https://www.openstreetmap.org/node/150958779)</a> affected. I also suppose he is mainly concerned with an online editor, that he's willing to use object id. Level0 would fit his bill. Demonstrating a clear method would help meet his immediate (multi-question, multi-day) needs, without risking more confusion or frustration.</p></div>
+            <div class="comment-info" id="comment-76669-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Sep '20, 22:40)</span>
+                <a class="comment-user userinfo" href="/users/16887/kovoschiz">Kovoschiz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-76645" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76645-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/76645/how-do-you-add-an-existing-node-to-an-existing-relation-with-id?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/76645/how-do-you-add-an-existing-node-to-an-existing-relation-with-id?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/76645/how-do-you-add-an-existing-node-to-an-existing-relation-with-id?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/76645/how-do-you-add-an-existing-node-to-an-existing-relation-with-id?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="76648"></a>
+                    <div id="answer-container-76648" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76648-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76648/up/" rel="nofollow"> </a>
+<div id="post-76648-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-76648-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76648/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think iD only shows relations that have at least one member downloaded already. Your best bet is probably to scroll east to the nearby cemetery that seems to be excluded from the city bounds and see if it appears in the list. It might take a bit of careful clicking to avoid deselecting the city node along the way. </p>
+<p>(Aside: Having a node and relation to represent the same city seems odd to me as it breaks the "<a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one OSM element</a>" principle, but I'm not sure if this is considered a special case.)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76648/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Sep '20, 23:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ec8a0cf213f9797ad1c1ae2c28c2332d?s=32&amp;d=identicon&amp;r=g" alt="InsertUser's gravatar image" />
+    <p><a href="/users/4426/insertuser">InsertUser</a><br/>
+    <span class="score" title="11005 reputation points"><span class="">11.0k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="69 badges"><span class="silver">&#9679;</span><span class="badgecount">69</span></span><span title="185 badges"><span class="bronze">&#9679;</span><span class="badgecount">185</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="InsertUser has 73 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/76648/">
+                edited
+                <strong>15 Sep '20, 23:06</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76648">
+    
+        <a name="76649"></a>
+        <div class="comment" id="comment-76649">
+            <div id="post-76649-score" class="comment-score"></div>
+            <div class="comment-text"><p>Looks like if I scroll to the east I no longer get any options to add an existing relation, only to add a new relation.</p>
+
+<p>"Having a node and relation to represent the same city seems odd to me" -- interesting. I was considering it only because I see many cities with both nodes and relations (ex: Austin, Seattle, Washington DC, Paris, Derby). Should the nodes or the relations of those cities be purged?</p>
+
+<p>I won't risk contributing anything for now -- I don't want to mess it up -- I'm just curious about the resolution of the issue.</p></div>
+            <div class="comment-info" id="comment-76649-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Sep '20, 23:20)</span>
+                <a class="comment-user userinfo" href="/users/18970/nocathere">nocathere</a>
+                
+            </div>
+        </div>
+    
+        <a name="76652"></a>
+        <div class="comment" id="comment-76652">
+            <div id="post-76652-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/18970/nocathere"></a><a href="https://help.openstreetmap.org/users/18970/nocathere">@nocathere</a> <code>boundary=administrative</code> and <code>place=city</code> represent the "same city" differently. They both exist for good reason. The observation "Many administrative boundaries are currently tagged also with place=*. " is recorded in <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</a> (by this one sentence only). This is tagged on 24% of such relations. It would be a significant issue. (Personally this tag should probably be removed from the relations, given that members are already associated by role)</p></div>
+            <div class="comment-info" id="comment-76652-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Sep '20, 00:15)</span>
+                <a class="comment-user userinfo" href="/users/16887/kovoschiz">Kovoschiz</a>
+                
+            </div>
+        </div>
+    
+        <a name="76665"></a>
+        <div class="comment" id="comment-76665">
+            <div id="post-76665-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/16887/kovoschiz">@Kovoschiz</a> OK, thank you. It's pretty confusing -- especially that it only applies to a minority of relations -- but I guess OSM has their reasons. I'll try to include both in my local dataset and then weed out the "duplicates" in some way, and I'll keep my hands off the data itself.</p></div>
+            <div class="comment-info" id="comment-76665-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Sep '20, 17:33)</span>
+                <a class="comment-user userinfo" href="/users/18970/nocathere">nocathere</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-76648" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76648-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="76667"></a>
+                    <div id="answer-container-76667" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76667-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76667/up/" rel="nofollow"> </a>
+<div id="post-76667-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-76667-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76667/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Î had answered that <a href="https://help.openstreetmap.org/questions/71724/missing-admin_centre-in-relation?page=1&amp;focusedAnswerId=71748#71748">here</a> for a similar tricky case.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76667/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Sep '20, 18:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76667">
+    
+</div>
+<div id="comment-tools-76667" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76667-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/76645/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sK5rEf8XEHMG63zVIMBQl8hupJnZuLUY' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76645/how-do-you-add-an-existing-node-to-an-existing-relation-with-id?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76645/how-do-you-add-an-existing-node-to-an-existing-relation-with-id?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 15, 2020, 9:13 p.m.">15 Sep '20, 21:13</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,537 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 16, 2020, 11:10 p.m.">16 Sep '20, 23:10</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/21766/why-is-there-no-live-editing-in-potlatch-2-and-id">Why is there no live editing in Potlatch 2 and iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21854/punkte-auswahlen-ideditor-von-mapbox">Punkte auswählen (ideditor von mapbox)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22184/cant-save-new-note-using-the-new-id-editor">Can&#39;t save new note using the new iD editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22224/id-editor-questions">[closed] iD editor questions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22230/how-to-use-a-shapefile-in-id">[closed] How to use a shapefile in iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22234/how-to-display-longitude-and-latitude-in-id">How to display longitude and latitude in iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22378/is-there-a-way-to-view-node-or-way-ids-in-the-id-editor">Is there a way to view node or way IDs in the iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22379/list-of-keyboard-shortcuts-for-id-editor">List of keyboard shortcuts for iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22381/how-do-i-extend-an-existing-roadway-in-id-editor">How do I extend an existing road/way in iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21145/entrance-tag-preset-in-id-editor">entrance tag preset in iD editor?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

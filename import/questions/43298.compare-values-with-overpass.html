@@ -1,0 +1,1173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Compare values with Overpass - OSM Help</title>
+        <meta name="description" content="I&#39;d like to find Objects where certain Keys have the same value. Irish streets normally have two names, one in Irish and one in English. In osm the have three tags for that, name, name:en and name:ga. I&#39;d like to find all objects having all three tags where name doesn&#39;t match with name:en or name:ga..." />
+        <meta name="keywords" content="overpass,comparison" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/43298/compare-values-with-overpass" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/43298/compare-values-with-overpass?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Xhd2U4Sig0XK9MvxKiKi1l9dBVHbPpWt' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/43298/compare-values-with-overpass">Compare values with Overpass</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-43298-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43298/up/" rel="nofollow"> </a>
+<div id="post-43298-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-43298-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43298/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/43298/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'd like to find Objects where certain Keys have the same value. Irish streets normally have two names, one in Irish and one in English. In osm the have three tags for that, name, name:en and name:ga. I'd like to find all objects having all three tags where name doesn't match with name:en or name:ga.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/comparison/" class="post-tag tag-link-comparison"
+                                        title="see questions tagged 'comparison'" rel="tag">comparison</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 May '15, 08:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7ef3a3c25492438c9f0e5a548a36fa07?s=32&amp;d=identicon&amp;r=g" alt="Ogmios's gravatar image" />
+    <p><a href="/users/6268/ogmios">Ogmios</a><br/>
+    <span class="score" title="766 reputation points">766</span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="26 badges"><span class="silver">&#9679;</span><span class="badgecount">26</span></span><span title="39 badges"><span class="bronze">&#9679;</span><span class="badgecount">39</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ogmios has 3 accepted answers">25&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-43298">
+    
+</div>
+<div id="comment-tools-43298" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43298-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/43298/compare-values-with-overpass?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/43298/compare-values-with-overpass?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/43298/compare-values-with-overpass?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/43298/compare-values-with-overpass?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="43316"></a>
+                    <div id="answer-container-43316" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-43316-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43316/up/" rel="nofollow"> </a>
+<div id="post-43316-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-43316-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43316/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Ogmios has selected this answer as the correct answer"
+        href="/accept_answer/43316/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It's not possible with Overpass API today, but with a bit of post-processing you can get the results in a few minutes.</p>
+<p>The Overpass QL query below returns relevant nodes/way/rel having a name, name:en and name:ga tag in CSV output format (tab separator character). </p>
+<p>To get the data, just click on the following overpass turbo link: <a href="http://overpass-turbo.eu/s/9FN">http://overpass-turbo.eu/s/9FN</a> and then hit "Export" -&gt; "raw data directly from Overpass API". This should automatically open LibreOffice or Excel, depending on your local machine. When importing the CSV file, make sure to specify "tab" as separator character.</p>
+<p>There are only 11120 rows returned by the query, about 300 of them match your search criterion.
+Just add a formula to all rows to compare different names and you're probably all set.</p>
+<pre><code>[timeout:1800]
+[bbox:51.08282186160976,-12.8759765625,55.986091533808384,-1.86767578125]
+[out:csv(::id, ::type, name, "name:en", "name:ga")];
+
+( node[name]["name:en"]["name:ga"];
+  way[name]["name:en"]["name:ga"];
+  rel[name]["name:en"]["name:ga"];
+);
+out;
+</code></pre>
+<p>Overpass QL result in CSV format, as returned by Overpass API:</p>
+<pre><code><a href="http://help.openstreetmap.org/users/260/idoneus">@id</a> @type   name    name:en name:ga
+661291  node    Sutton  Sutton  Cill Fhionntain
+661448  node    Killester   Killester   Cill Easra
+661999  node    Glenageary  Glenageary  Gleann na Caorach
+662088  node    Booterstown Booterstown Baile an Bhóthair
+664528  node    Shankill    Shankill    Seanchill
+665844  node    Cowper  Cowper  Cúipéar
+666663  node    Milltown    Milltown    Baile An Mhuilinn
+12646992    node    Carrickmines    Carrickmines    Carraig Mhaighin
+12647002    node    Carrickmines    Carrickmines    Carraig Mhaighin
+12647038    node    Cherrywood  Cherrywood  Coill na Silíní
+19223931    node    Windy Arbour    Windy Arbour    Na Glasáin
+26608599    node    Cork Airport    Cork Airport    Aerfort Chorcaí
+26608601    node    Shannon Airport Shannon Airport Aerfort na Sionainne
+28650950    node    Cooanmore Point Cooanmore Point Gob an Chuain Mhóir
+28652693    node    Killaspug Point Killaspug Point Rinn Chill Easpaig
+
+[...]
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/43316/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 May '15, 16:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/264d84ab05b942224b05960903eba7a7?s=32&amp;d=identicon&amp;r=g" alt="mmd's gravatar image" />
+    <p><a href="/users/8708/mmd">mmd</a><br/>
+    <span class="score" title="5682 reputation points"><span class="">5.7k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="53 badges"><span class="silver">&#9679;</span><span class="badgecount">53</span></span><span title="88 badges"><span class="bronze">&#9679;</span><span class="badgecount">88</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmd has 44 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/43316/">
+                edited
+                <strong>31 May '15, 17:15</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-43316">
+    
+</div>
+<div id="comment-tools-43316" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43316-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="43321"></a>
+                    <div id="answer-container-43321" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-43321-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43321/up/" rel="nofollow"> </a>
+<div id="post-43321-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-43321-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43321/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Overpass isn't the only tool out there. Here's an alternative :</p>
+<ul>
+<li>Install <a href="http://www.gaia-gis.it/gaia-sins/">spatialite</a> using your platform's prefered install method</li>
+<li>download a <a href="http://download.geofabrik.de/europe/ireland-and-northern-ireland.html">country extract from geofabrik</a></li>
+<li>import the extract into an sqlite db using spatialite "spatialite_osm_raw -o input.pbf -d output.sqlite -jo"</li>
+<li>enter the database: "sqlite3 output.sqlite"</li>
+<li>run this query: "select t1.way_id,t1.v,t2.v,t3.v from osm_way_tags t1 left join osm_way_tags t2 on (t1.way_id=t2.way_id) left join osm_way_tags t3 on (t1.way_id=t3.way_id) where t1.k='name' and t2.k='name:ga' and t3.k='name:en' and t1.v &lt;&gt; t2.v and t1.v &lt;&gt; t3.v;"</li>
+</ul>
+<p>This give a result like this:</p>
+<pre><code>4934506|Suir Road Bridge|Bóthar na Siúire|Suir Road
+4934592|Macartney Bridge|Sráid Bhagóid Íochtarach|Baggot Street Lower
+4934663|Rialto Bridge|Cuarbóthar Theas|South Circular Road
+13769663|School Lane|Ascaill Na gCrann|Trees Avenue
+16315628|Trimleston Gardens|Gairdíní Baile Trimble|Trimbleston Garde
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/43321/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 May '15, 18:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d20f86db9a6f03cb070e9fbaaf0b7228?s=32&amp;d=identicon&amp;r=g" alt="Vincent%20de%20Phily's gravatar image" />
+    <p><a href="/users/867/vincent-de-phily">Vincent de P... ♦</a><br/>
+    <span class="score" title="17304 reputation points"><span class="">17.3k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="152 badges"><span class="silver">&#9679;</span><span class="badgecount">152</span></span><span title="249 badges"><span class="bronze">&#9679;</span><span class="badgecount">249</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vincent de Phily has 64 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/43321/">
+                edited
+                <strong>29 May '15, 18:22</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-43321">
+    
+        <a name="43322"></a>
+        <div class="comment" id="comment-43322">
+            <div id="post-43322-score" class="comment-score"></div>
+            <div class="comment-text"><p>That looks good. I will definately try it. Thanks.</p></div>
+            <div class="comment-info" id="comment-43322-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 May '15, 18:23)</span>
+                <a class="comment-user userinfo" href="/users/6268/ogmios">Ogmios</a>
+                
+            </div>
+        </div>
+    
+        <a name="43338"></a>
+        <div class="comment" id="comment-43338">
+            <div id="post-43338-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Downloading an extract (100MB) and creating an sqlite db from it (= 2,x GB(!)) seems a bit heavy to me for 11000 relevant objects.</p>
+
+<p>As an alternative to using a Geofabrik country extract, I'd really recommend to start with a small Overpass extract instead: <a href="http://overpass-turbo.eu/s/9FQ">http://overpass-turbo.eu/s/9FQ</a> -&gt; Export -&gt; raw data directly from Overpass API. The download will be around 12MB uncompressed OSM data (query takes about 1 minute), the resulting sqlite DB file size will be just 19MB.</p>
+
+<p>Also, it would be good to have some sql statements for nodes and relations as well to make the example complete.</p></div>
+            <div class="comment-info" id="comment-43338-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '15, 17:23)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="43340"></a>
+        <div class="comment" id="comment-43340">
+            <div id="post-43340-score" class="comment-score"></div>
+            <div class="comment-text"><p>Didn't have an estimate of the number of matches until you wrote your answer. Overpass and spatialite are both great tools with strenghts and weaknesses, it's good to know them both.</p></div>
+            <div class="comment-info" id="comment-43340-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 May '15, 21:39)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="59356"></a>
+        <div class="comment" id="comment-59356">
+            <div id="post-59356-score" class="comment-score"></div>
+            <div class="comment-text"><p>You don't have to install it now - just use the Wikidata+OSM sparql query - answer below :)</p></div>
+            <div class="comment-info" id="comment-59356-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '17, 08:35)</span>
+                <a class="comment-user userinfo" href="/users/13140/nyuriks">nyuriks</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-43321" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43321-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="67452"></a>
+                    <div id="answer-container-67452" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-67452-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/67452/up/" rel="nofollow"> </a>
+<div id="post-67452-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-67452-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/67452/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For those searching for a solution via internet search:</p>
+<p>It's now possible within Overpass:</p>
+<p><a href="http://overpass-turbo.eu/s/EYC">http://overpass-turbo.eu/s/EYC</a></p>
+<pre><code>// return keys that don't have same values
+[bbox:{{bbox}}];
+nwr[highway=footway][name]["name:en"]["name:ga"]
+(if: t["name"] != t["name:en"] &amp;&amp; t["name"] != t["name:ga"]); 
+out geom;
+</code></pre>
+<p>I'm sure it can be developed further.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/67452/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Jan '19, 21:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c9c8b421ad22f51ddd62f23413717036?s=32&amp;d=identicon&amp;r=g" alt="DaveF's gravatar image" />
+    <p><a href="/users/1532/davef">DaveF</a><br/>
+    <span class="score" title="3264 reputation points"><span class="">3.3k</span></span><span title="84 badges"><span class="badge1">&#9679;</span><span class="badgecount">84</span></span><span title="98 badges"><span class="silver">&#9679;</span><span class="badgecount">98</span></span><span title="133 badges"><span class="bronze">&#9679;</span><span class="badgecount">133</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DaveF has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/67452/">
+                edited
+                <strong>04 Jan '19, 21:41</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-67452">
+    
+</div>
+<div id="comment-tools-67452" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-67452-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="43310"></a>
+                    <div id="answer-container-43310" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-43310-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43310/up/" rel="nofollow"> </a>
+<div id="post-43310-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-43310-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43310/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I can't answer your query but are you aware that we have our own instance of overpass at <a href="http://overpass-turbo.openstreetmap.ie/">http://overpass-turbo.openstreetmap.ie/</a></p>
+<p>There are some folks in the Irish chatroom who might be able to assist also</p>
+<p><a href="http://wiki.openstreetmap.org/wiki/WikiProject_Ireland#Contacting_Irish_Mappers">http://wiki.openstreetmap.org/wiki/WikiProject_Ireland#Contacting_Irish_Mappers</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/43310/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 May '15, 14:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9f0faef4659de616c82f448ff3f4e8e2?s=32&amp;d=identicon&amp;r=g" alt="DaCor's gravatar image" />
+    <p><a href="/users/5669/dacor">DaCor</a><br/>
+    <span class="score" title="1339 reputation points"><span class="">1.3k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="29 badges"><span class="bronze">&#9679;</span><span class="badgecount">29</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DaCor has one accepted answer">2&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-43310">
+    
+        <a name="43317"></a>
+        <div class="comment" id="comment-43317">
+            <div id="post-43317-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thats neat but it throws an error with my query: "Error: runtime error: open64: 111 Connection refused /home/roles/overpass/db//osm3s_v0.7.52_osm_base Dispatcher_Client::3"</p></div>
+            <div class="comment-info" id="comment-43317-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 May '15, 17:06)</span>
+                <a class="comment-user userinfo" href="/users/6268/ogmios">Ogmios</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-43310" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43310-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="59309"></a>
+                    <div id="answer-container-59309" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-59309-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59309/up/" rel="nofollow"> </a>
+<div id="post-59309-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-59309-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59309/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can use <a href="https://wiki.openstreetmap.org/wiki/Wikidata%2BOSM_SPARQL_query_service">OSM+Wikidata service</a> to find it.</p>
+<pre><code>#defaultView:Map
+SELECT ?osmid ?name ?nameen ?namega ?loc {
+  # subjects must have all 3 tags: name, name:en, name:ga
+  ?osmid osmt:name ?name ;
+         osmt:name:en ?nameen ;
+         osmt:name:ga ?namega .
+
+  # "name" is not the same as "name:ga" or "name:en"
+  FILTER (?name != ?nameen &amp;&amp; ?name != ?namega)
+
+  # Limit to those that are within 500km around Ireland "center"
+  # The center is taken from Wikidata Q27 (Ireland), P625 (location)
+  wd:Q27 wdt:P625 ?irelandCenter .
+  SERVICE wikibase:around {
+    ?osmid osmm:loc ?loc .
+    bd:serviceParam wikibase:center ?irelandCenter .
+    bd:serviceParam wikibase:radius "500" .
+  }
+} LIMIT 100
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/59309/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Sep '17, 08:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d46d9a8875ccdaa0b3b39bf485df3ead?s=32&amp;d=identicon&amp;r=g" alt="nyuriks's gravatar image" />
+    <p><a href="/users/13140/nyuriks">nyuriks</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="nyuriks has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/59309/">
+                edited
+                <strong>06 Sep '17, 08:34</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-59309">
+    
+</div>
+<div id="comment-tools-59309" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59309-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/43298/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Xhd2U4Sig0XK9MvxKiKi1l9dBVHbPpWt' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43298/compare-values-with-overpass?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43298/compare-values-with-overpass?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/comparison/"
+            class="tag-link-comparison"
+            title="see questions tagged'comparison'using tags"
+            rel="tag">comparison</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 29, 2015, 8:17 a.m.">29 May '15, 08:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,992 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 4, 2019, 9:41 p.m.">04 Jan '19, 21:41</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13299/bad-changes-for-odessa-city-ukraine">[closed] Bad changes for Odessa city (Ukraine)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api">How to find list of cities in a state with overpass osm api?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13877/how-to-find-cities-and-states-using-osm-overpass-api">How to find cities and states using OSM overpass API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15101/overpassapi-query-with-two-specific-keys-and-any-value">OverpassAPI query with two specific keys and any value</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15970/comparison-between-nominatimosm-site-and-my-local-site">Comparison between nominatim.osm site and my local site</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17336/overpass-api-query-question">Overpass API query question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17365/overpass-is-it-possible-to-use-it-as-an-alternative-to-the-api-relation-full-call">Overpass:  Is it possible to use it as an alternative to the API relation /full call?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18368/export-all-boundaries-in-an-area-via-overpass">Export all boundaries in an area via overpass</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18524/advanced-overpass-query">Advanced overpass query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12543/i-cant-get-odessa-ukraine-node-with-overpass-api">I can&#39;t get Odessa (Ukraine) node with overpass API</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

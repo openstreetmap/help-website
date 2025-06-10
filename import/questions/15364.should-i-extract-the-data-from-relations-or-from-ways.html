@@ -1,0 +1,933 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Should I extract the data from relations or from ways? - OSM Help</title>
+        <meta name="description" content="I&#39;m working with the tag=power (power lines and similar) and seems like a lot of ways are not contained in relations. Do you know why is this happening and what will be the evolution of this data in the future? Relations will disappear or the existent ways will be included in new relations?" />
+        <meta name="keywords" content="power,relations" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/15364/should-i-extract-the-data-from-relations-or-from-ways" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/15364/should-i-extract-the-data-from-relations-or-from-ways?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='yGQVYc6ZDTSPzBCg4g3BHZOq3mfcmeEu' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/15364/should-i-extract-the-data-from-relations-or-from-ways">Should I extract the data from relations or from ways?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-15364-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15364/up/" rel="nofollow"> </a>
+<div id="post-15364-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-15364-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15364/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/15364/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm working with the tag=power (power lines and similar) and seems like a lot of ways are not contained in relations. Do you know why is this happening and what will be the evolution of this data in the future? Relations will disappear or the existent ways will be included in new relations?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/power/" class="post-tag tag-link-power"
+                                        title="see questions tagged 'power'" rel="tag">power</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Aug '12, 12:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/40d0052a4cd080ec949c64c2ae62bd82?s=32&amp;d=identicon&amp;r=g" alt="JorgePM's gravatar image" />
+    <p><a href="/users/3516/jorgepm">JorgePM</a><br/>
+    <span class="score" title="51 reputation points">51</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JorgePM has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15364/">
+                edited
+                <strong>22 Aug '12, 16:04</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1fe9a0c696a5000fb304ababea9f83af?s=32&amp;d=identicon&amp;r=g" alt="Sanderd17's gravatar image" />
+            <p><a href="/users/280/sanderd17">Sanderd17</a><br/>
+            <span class="score" title="1111 reputation points"><span class="">1.1k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="37 badges"><span class="bronze">&#9679;</span><span class="badgecount">37</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-15364">
+    
+        <a name="15371"></a>
+        <div class="comment" id="comment-15371">
+            <div id="post-15371-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Why do you think every way with a power tag should belong to a relation?</p></div>
+            <div class="comment-info" id="comment-15371-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '12, 13:14)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15377"></a>
+        <div class="comment" id="comment-15377">
+            <div id="post-15377-score" class="comment-score"></div>
+            <div class="comment-text"><p>Because there a lot of ways with similar characteristics than the ones that belong to relations, not being part of them. So for example, I tried to get all the 380kV lines and if you go for the relations, a lot of ways are left behind (not being shown) while they are exactly the same as the ones inside the relations. Maybe I'm missing something, but this is my experience working with the data. Maybe I'm missing the point about what relations really represent.</p></div>
+            <div class="comment-info" id="comment-15377-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '12, 14:30)</span>
+                <a class="comment-user userinfo" href="/users/3516/jorgepm">JorgePM</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15364" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15364-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/15364/should-i-extract-the-data-from-relations-or-from-ways?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/15364/should-i-extract-the-data-from-relations-or-from-ways?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/15364/should-i-extract-the-data-from-relations-or-from-ways?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/15364/should-i-extract-the-data-from-relations-or-from-ways?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15393"></a>
+                    <div id="answer-container-15393" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15393-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15393/up/" rel="nofollow"> </a>
+<div id="post-15393-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-15393-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15393/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="JorgePM has selected this answer as the correct answer"
+        href="/accept_answer/15393/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yep, it's better to go via ways.</p>
+<p>In fact, the best is to combine ways and relation search. Search for both and apply the tags of the relation to the ways. Sometimes, if someone decides some ways fits in a relation, they don't add the tags to the ways any more.</p>
+<p>About that relation, it does look like all those ways have the same number of lines and the same voltage, and they follow each other up. So one could argue they belong in a relation. Although the middle line has the suspicious tag source=guessed. And together with those weird turns, it makes the entire relation a bit incredible.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15393/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Aug '12, 15:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1fe9a0c696a5000fb304ababea9f83af?s=32&amp;d=identicon&amp;r=g" alt="Sanderd17's gravatar image" />
+    <p><a href="/users/280/sanderd17">Sanderd17</a><br/>
+    <span class="score" title="1111 reputation points"><span class="">1.1k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="37 badges"><span class="bronze">&#9679;</span><span class="badgecount">37</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Sanderd17 has 15 accepted answers">31&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15393">
+    
+        <a name="44845"></a>
+        <div class="comment" id="comment-44845">
+            <div id="post-44845-score" class="comment-score"></div>
+            <div class="comment-text"><p>relations are there to build transmission circuits, that's why they are composed of several substations and ways. </p></div>
+            <div class="comment-info" id="comment-44845-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Aug '15, 15:36)</span>
+                <a class="comment-user userinfo" href="/users/11388/widedangel">widedangel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15393" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15393-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="15379"></a>
+                    <div id="answer-container-15379" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15379-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15379/up/" rel="nofollow"> </a>
+<div id="post-15379-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-15379-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15379/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Please read this part of the OSM wiki, it will clarify your view on relations: <a href="http://wiki.openstreetmap.org/wiki/Relations/Relations_are_not_Categories">http://wiki.openstreetmap.org/wiki/Relations/Relations_are_not_Categories</a></p>
+<p>Next to that, you can use <a href="http://wiki.openstreetmap.org/wiki/Xapi">xapi</a> or the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass API</a> to gather features with the same tags.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15379/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Aug '12, 14:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1fe9a0c696a5000fb304ababea9f83af?s=32&amp;d=identicon&amp;r=g" alt="Sanderd17's gravatar image" />
+    <p><a href="/users/280/sanderd17">Sanderd17</a><br/>
+    <span class="score" title="1111 reputation points"><span class="">1.1k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="37 badges"><span class="bronze">&#9679;</span><span class="badgecount">37</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Sanderd17 has 15 accepted answers">31&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15379/">
+                edited
+                <strong>22 Aug '12, 14:40</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15379">
+    
+        <a name="15380"></a>
+        <div class="comment" id="comment-15380">
+            <div id="post-15380-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Relations in this case are mostly used for grouping ways (lines) going from one substation to another (sometimes they include the substation, some other times they don't). Then some other lines with the same behaviour do not belong to any relation. It means there are ways that if you put them together, will create a relation similar to the ones already exist. So what is the protocol for a way to form a relation or not when both ways the one that belongs to the relation and the one that it doesn't, are the same?</p></div>
+            <div class="comment-info" id="comment-15380-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '12, 14:48)</span>
+                <a class="comment-user userinfo" href="/users/3516/jorgepm">JorgePM</a>
+                
+            </div>
+        </div>
+    
+        <a name="15383"></a>
+        <div class="comment" id="comment-15383">
+            <div id="post-15383-score" class="comment-score"></div>
+            <div class="comment-text"><p>Like when you group the different pieces of way and the different houses of a street into a relation. Some mappers consider it valuable (because it makes sure the house is linked to the right street), others don't (because there is too much other work, and the chance that a house is assigned to a wrong way is small).</p>
+
+<p>The same goes for power lines. Some think it's valuable to put a relation over the line (because that entity is one power line), others don't because there is too much other work.</p></div>
+            <div class="comment-info" id="comment-15383-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '12, 15:09)</span>
+                <a class="comment-user userinfo" href="/users/280/sanderd17">Sanderd17</a>
+                
+            </div>
+        </div>
+    
+        <a name="15384"></a>
+        <div class="comment" id="comment-15384">
+            <div id="post-15384-score" class="comment-score"></div>
+            <div class="comment-text"><p>hmmm but then in this case relations are useless. Just to show my point, I'm working with the German transmission grid. Originally there were about 3.5k relations and about 150k ways. After some heavy data mining I have about 6.5k "new" relations formed by ways jointed together going from one substation to another. All the relations, new and old behave the same, same tags, same characteristics, same element. So if I want to perform any kind of analysis relations will only produce errors and not any given values because they are hiding lines.</p></div>
+            <div class="comment-info" id="comment-15384-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '12, 15:14)</span>
+                <a class="comment-user userinfo" href="/users/3516/jorgepm">JorgePM</a>
+                
+            </div>
+        </div>
+    
+        <a name="15385"></a>
+        <div class="comment not_top_scorer" id="comment-15385">
+            <div id="post-15385-score" class="comment-score"></div>
+            <div class="comment-text"><p>Even I tried to get some visualization not based on tiles server using OpenLayers and if you base it in relations you get a third of the lines that you get if you base it on ways... So when and/or why the relations are there if they are aleatory grouping elements or not. (They don't have anything in common, not the same TSO, nor voltage, just the user decides when to include the ways in a relation or not)</p></div>
+            <div class="comment-info" id="comment-15385-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '12, 15:17)</span>
+                <a class="comment-user userinfo" href="/users/3516/jorgepm">JorgePM</a>
+                
+            </div>
+        </div>
+    
+        <a name="15387"></a>
+        <div class="comment" id="comment-15387">
+            <div id="post-15387-score" class="comment-score">1</div>
+            <div class="comment-text"><p>can you give a link to such a relation, maybe the OSM data has a problem, or somebody tried to mass-edit it.</p></div>
+            <div class="comment-info" id="comment-15387-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '12, 15:23)</span>
+                <a class="comment-user userinfo" href="/users/280/sanderd17">Sanderd17</a>
+                
+            </div>
+        </div>
+    
+        <a name="15391"></a>
+        <div class="comment" id="comment-15391">
+            <div id="post-15391-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Sure, don't get me wrong, I'm trying to be constructive but the lack of coherence with the relations gave me some good headaches. <a href="http://www.openstreetmap.org/?relation=1728819">http://www.openstreetmap.org/?relation=1728819</a> That relation ends on the left into a substation (Denzlingen), the line that comes out from that substation are a group of ways. None of them belong to any relation. There are a good couple of thousands more cases like this. So when you try to analise what lines are available, if you go through relations, you will miss a lot of them. So it is better to go directly through ways... (PS: my data comes from geofabrik.de)</p></div>
+            <div class="comment-info" id="comment-15391-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '12, 15:38)</span>
+                <a class="comment-user userinfo" href="/users/3516/jorgepm">JorgePM</a>
+                
+            </div>
+        </div>
+    
+        <a name="15394"></a>
+        <div class="comment not_top_scorer" id="comment-15394">
+            <div id="post-15394-score" class="comment-score"></div>
+            <div class="comment-text"><p>can you make your last comment the answer for this question? I believe it is the correct one. I absolutely agree with the relations-ways combination strategy and it should be specified in some point of the wiki.</p></div>
+            <div class="comment-info" id="comment-15394-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '12, 16:00)</span>
+                <a class="comment-user userinfo" href="/users/3516/jorgepm">JorgePM</a>
+                
+            </div>
+        </div>
+    
+        <a name="15395"></a>
+        <div class="comment not_top_scorer" id="comment-15395">
+            <div id="post-15395-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have done so, about the wiki, well, lets just say it also needs some work.</p>
+
+<p>There is a lot quality data in OSM, but you need to study the data a lot before you can work with it.</p></div>
+            <div class="comment-info" id="comment-15395-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '12, 16:03)</span>
+                <a class="comment-user userinfo" href="/users/280/sanderd17">Sanderd17</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15379" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15379-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/15364/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='yGQVYc6ZDTSPzBCg4g3BHZOq3mfcmeEu' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15364/should-i-extract-the-data-from-relations-or-from-ways?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15364/should-i-extract-the-data-from-relations-or-from-ways?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/power/"
+            class="tag-link-power"
+            title="see questions tagged'power'using tags"
+            rel="tag">power</a> <span class="tag-number">&#215;24</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 22, 2012, 12:22 p.m.">22 Aug '12, 12:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,376 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 20, 2015, 6:53 p.m.">20 Aug '15, 18:53</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/64240/substations-in-power-plant-site-relations-without-role">Substations in &quot;power plant&quot; site relations without role</a>
+        </p>
+        
+        <p>
+            <a href="/questions/372/is-there-a-limit-to-the-number-of-ways-containing-a-node">Is there a limit to the number of ways containing a node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1225/place-names-at-different-zoom-levels">Place names at different zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/903/relations-in-josm">Relations in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/923/how-do-i-realize-a-node-or-way-is-a-member-of-a-relation">How do I realize a node or way is a member of a relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/924/is-there-a-list-of-most-important-relations-in-the-world-like-longest-rivers-country-borders-etc">Is there a list of most important relations in the world? Like longest rivers, country borders etc...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/489/what-do-i-do-when-two-separate-power-lines-temporarily-share-poles">What do I do when two separate power lines temporarily share poles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1535/holes-in-scrub-relations-inner-outer">Holes in scrub (relations, inner &amp; outer)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1580/should-i-tag-name-for-the-way-or-for-the-relation">Should I tag &quot;name&quot; for the way or for the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/365/is-there-a-limit-on-the-number-of-nodes-in-a-way">Is there a limit on the number of nodes in a way?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

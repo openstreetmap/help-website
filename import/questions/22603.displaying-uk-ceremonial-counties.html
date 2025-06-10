@@ -1,0 +1,805 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Displaying UK ceremonial counties - OSM Help</title>
+        <meta name="description" content="I would like to create a clickable map of UK ceremonial counties ( a little bit like : http://activeden.net/item/uk-interactive-map-over-130-clickable-counties/full_screen_preview/45933 ). My intent is to provide an easy way to click through to county level maps with GPS trail data (using openstreet..." />
+        <meta name="keywords" content="county,ceremonial" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/22603/displaying-uk-ceremonial-counties" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/22603/displaying-uk-ceremonial-counties?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='9Zq9e85BMNfTWjqWlS5wEkvpogDPFKBr' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/22603/displaying-uk-ceremonial-counties">Displaying UK ceremonial counties</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-22603-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22603/up/" rel="nofollow"> </a>
+<div id="post-22603-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-22603-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22603/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/22603/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I would like to create a clickable map of UK ceremonial counties ( a little bit like : <a href="http://activeden.net/item/uk-interactive-map-over-130-clickable-counties/full_screen_preview/45933">http://activeden.net/item/uk-interactive-map-over-130-clickable-counties/full_screen_preview/45933</a> ). My intent is to provide an easy way to click through to county level maps with GPS trail data (using openstreetmap), and therefore wondered if there was a way I could utilise openstreetmap to also achieve the county level mapping as well, maybe using a different tile collection?</p>
+<p>I've searched on Google but haven't found any signs of a county level tile set (ie. no roads / other stuff). I assume it's a far from trivial task to try and extract this small subset of data, and render a new tile collection?</p>
+<p>Any thoughts / advice on this would be much appreciated.</p>
+<p>Thanks,</p>
+<p>Paul</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/county/" class="post-tag tag-link-county"
+                                        title="see questions tagged 'county'" rel="tag">county</a>
+                                
+                                    <a href="/tags/ceremonial/" class="post-tag tag-link-ceremonial"
+                                        title="see questions tagged 'ceremonial'" rel="tag">ceremonial</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 May '13, 16:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3284f6358797d3c1ae2a18ab29acf468?s=32&amp;d=identicon&amp;r=g" alt="PaulNorwich's gravatar image" />
+    <p><a href="/users/6450/paulnorwich">PaulNorwich</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="PaulNorwich has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-22603">
+    
+</div>
+<div id="comment-tools-22603" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22603-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/22603/displaying-uk-ceremonial-counties?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/22603/displaying-uk-ceremonial-counties?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/22603/displaying-uk-ceremonial-counties?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/22603/displaying-uk-ceremonial-counties?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="78073"></a>
+                    <div id="answer-container-78073" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-78073-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/78073/up/" rel="nofollow"> </a>
+<div id="post-78073-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-78073-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/78073/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I found a decent one at: <a href="https://wikishire.co.uk/map">https://wikishire.co.uk/map</a></p>
+<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2020-12-27_10-12-15.png" width="600"></p>
+<p>Not sure exactly how it was created, but it does use OpenStreetMap. This page describes the map: <a href="https://wikishire.co.uk/wiki/Wikishire:Map">https://wikishire.co.uk/wiki/Wikishire:Map</a> but does not give any useful information on its construction.</p>
+<p>An interactive map with districts can be found here: <a href="https://mapping.dorsetforyou.gov.uk/map?version=mylocal&amp;lyrs=50">https://mapping.dorsetforyou.gov.uk/map?version=mylocal&amp;lyrs=50</a> but it seems to use Ordnance Survey data, I'm not sure if that data could be reused or not on OSM.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/78073/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Dec '20, 09:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c979bd881b6755f84947a5a8ecc7c6f7?s=32&amp;d=identicon&amp;r=g" alt="Ciro%20Santilli's gravatar image" />
+    <p><a href="/users/19444/ciro-santilli">Ciro Santilli</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ciro Santilli has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/78073/">
+                edited
+                <strong>27 Dec '20, 10:13</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-78073">
+    
+        <a name="78113"></a>
+        <div class="comment" id="comment-78113">
+            <div id="post-78113-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Strictly speaking, those are traditional (historic) counties rather than ceremonial ones, I think.  Ceremonial counties are what you can see at <a href="https://en.wikipedia.org/wiki/Ceremonial_counties_of_England">https://en.wikipedia.org/wiki/Ceremonial_counties_of_England</a> .  This may or may not be what the question asker actually wants of course!  </p>
+
+<p>Some traditional counties are complete in OSM, for example Flintshire: <a href="https://www.openstreetmap.org/relation/363512">https://www.openstreetmap.org/relation/363512</a> , but some are not: <a href="https://www.openstreetmap.org/relation/8743599">https://www.openstreetmap.org/relation/8743599</a> .</p></div>
+            <div class="comment-info" id="comment-78113-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Dec '20, 20:24)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78119"></a>
+        <div class="comment" id="comment-78119">
+            <div id="post-78119-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: thanks for the info!</p></div>
+            <div class="comment-info" id="comment-78119-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '20, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/19444/ciro-santilli">Ciro Santilli</a>
+                
+            </div>
+        </div>
+    
+        <a name="78131"></a>
+        <div class="comment" id="comment-78131">
+            <div id="post-78131-score" class="comment-score"></div>
+            <div class="comment-text"><p>... and what I should have said is that I think that UK <em>ceremonial</em> counties are in OSM.  See for example <a href="https://www.openstreetmap.org/relation/77268">https://www.openstreetmap.org/relation/77268</a> (ceremonial) as opposed to <a href="https://www.openstreetmap.org/relation/181040">https://www.openstreetmap.org/relation/181040</a> (administrative).  I suspect that some of the ceremonial ones may be broken multipolygons (Notts and Derby both were until I fixed them recently) because they're not widely rendered.  You could use a similar approach to <a href="https://www.openstreetmap.org/user/SomeoneElse/diary/395232">https://www.openstreetmap.org/user/SomeoneElse/diary/395232</a> to find issues.</p></div>
+            <div class="comment-info" id="comment-78131-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '20, 16:16)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78137"></a>
+        <div class="comment" id="comment-78137">
+            <div id="post-78137-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> is there any way to see all counties (cerimonial/adminstrative) all at once on the map and hopefully clearly named/even better colored as in the wikishire map (but with guaranteededly open data)</p></div>
+            <div class="comment-info" id="comment-78137-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '20, 18:27)</span>
+                <a class="comment-user userinfo" href="/users/19444/ciro-santilli">Ciro Santilli</a>
+                
+            </div>
+        </div>
+    
+        <a name="78138"></a>
+        <div class="comment" id="comment-78138">
+            <div id="post-78138-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are a few different ways.  For small areas <a href="https://overpass-turbo.eu/s/11PB">https://overpass-turbo.eu/s/11PB</a> will work.  Maybe you could do something with <a href="http://umap.openstreetmap.fr/en/">http://umap.openstreetmap.fr/en/</a> , and also creating a "normal" OSM map but with only ceremonial county data in it might be an option - see <a href="https://www.openstreetmap.org/user/SomeoneElse/diary/47027">https://www.openstreetmap.org/user/SomeoneElse/diary/47027</a> for a bit more on that.  I'm sure there are lots of other ways too.</p></div>
+            <div class="comment-info" id="comment-78138-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '20, 18:42)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-78073" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-78073-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="22644"></a>
+                    <div id="answer-container-22644" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22644-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22644/up/" rel="nofollow"> </a>
+<div id="post-22644-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-22644-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22644/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>First of all, do a text search about keywords like boundary or borders at the search box of this FAQ site ... there are a bunch of topics dealing with the exclusive filtering or displaying of borders taken from the OSM data.</p>
+<p>Secondly you want a feature to highlight a certain region if the mouse hovers over it, and make it clickable ... try to look at openlayers.org or leafletjs.org ... they have a lot of examples how that feature may be offered.</p>
+<p>Or have a look at <a href="http://download.geofabrik.de/">download.geofabrik.de</a> and hover over the list of countries or continents there ... each is highlighted on the map on the right screen. If this or similar is your aim, ask the team from geofabrik.de how they did it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22644/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 May '13, 16:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22644">
+    
+</div>
+<div id="comment-tools-22644" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22644-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/22603/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='9Zq9e85BMNfTWjqWlS5wEkvpogDPFKBr' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22603/displaying-uk-ceremonial-counties?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22603/displaying-uk-ceremonial-counties?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/county/"
+            class="tag-link-county"
+            title="see questions tagged'county'using tags"
+            rel="tag">county</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/ceremonial/"
+            class="tag-link-ceremonial"
+            title="see questions tagged'ceremonial'using tags"
+            rel="tag">ceremonial</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 21, 2013, 4:29 p.m.">21 May '13, 16:29</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>15,694 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 30, 2020, 6:42 p.m.">30 Dec '20, 18:42</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/14810/cornwall-uk-ceremonial-boundary-relation-problem">Cornwall, UK - ceremonial boundary relation problem?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10204/reverse-geo-coding-consistently-returns-incorrect-data">Reverse Geo-coding consistently returns incorrect data.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28110/how-to-correctly-mark-the-independent-cities-of-virginia">How to correctly mark the Independent Cities of Virginia?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35557/using-county-assessor-data">Using County Assessor data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22410/asking-nominatim-for-county-names-is-inconsistent-example-nevada-counties">Asking Nominatim for county names is inconsistent (example: Nevada counties)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25716/calculate-the-number-of-place_of_worship-in-a-specific-county-city">Calculate the number of place_of_worship in a specific county / city</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11780/incorrect-county-name">Incorrect County Name</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28546/county-overlay">County overlay</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7186/road-classification-us">[closed] road classification US</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1841/confused-about-nominatim-and-county-boundaries">[closed] Confused about Nominatim and County Boundaries</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

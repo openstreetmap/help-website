@@ -1,0 +1,891 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Rendering waterfalls - OSM Help</title>
+        <meta name="description" content="A newbie question: I see the ways I&#39;ve created in Mapnick and Osmarender, but not the nodes. Specifically, I&#39;ve drawn and tagged some paths (based on a GPS trace) for a local state park--and see them. But the tagged node I added for a waterfall does not seem to have been rendered--though it appear a..." />
+        <meta name="keywords" content="nodes,features" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/1764/rendering-waterfalls" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/1764/rendering-waterfalls?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='dq3g6EkdAaFRhP6g8ahhMuNxxHiImNAJ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/1764/rendering-waterfalls">Rendering waterfalls</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-1764-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1764/up/" rel="nofollow"> </a>
+<div id="post-1764-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-1764-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1764/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/1764/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>A newbie question: I see the ways I've created in Mapnick and Osmarender, but not the nodes.  Specifically, I've drawn and tagged some paths (based on a GPS trace) for a local state park--and see them.  But the tagged node I added for a waterfall does not seem to have been rendered--though it appear as data. Thanks! <br>
+</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/nodes/" class="post-tag tag-link-nodes"
+                                        title="see questions tagged 'nodes'" rel="tag">nodes</a>
+                                
+                                    <a href="/tags/features/" class="post-tag tag-link-features"
+                                        title="see questions tagged 'features'" rel="tag">features</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Dec '10, 22:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/709d8e8f70f912472cda0fd88fe6d189?s=32&amp;d=identicon&amp;r=g" alt="barte's gravatar image" />
+    <p><a href="/users/528/barte">barte</a><br/>
+    <span class="score" title="459 reputation points">459</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="17 badges"><span class="bronze">&#9679;</span><span class="badgecount">17</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="barte has one accepted answer">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/1764/">
+                edited
+                <strong>11 Dec '10, 00:10</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-1764">
+    
+</div>
+<div id="comment-tools-1764" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1764-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/1764/rendering-waterfalls?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/1764/rendering-waterfalls?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/1764/rendering-waterfalls?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/1764/rendering-waterfalls?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="1765"></a>
+                    <div id="answer-container-1765" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1765-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1765/up/" rel="nofollow"> </a>
+<div id="post-1765-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-1765-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1765/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It would really help if you had linked to the problem so we could see the problem first hand.</p>
+<p>Assuming that you have tagged the node waterway=waterfall you have done everything right. The problem is that mapnik and osmarender is not rendering waterfalls. Consider entering a <a href="http://trac.openstreetmap.org/newticket">bug report</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1765/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Dec '10, 23:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44a4438f0146dfd898e24c221fd28b58?s=32&amp;d=identicon&amp;r=g" alt="Gnonthgol's gravatar image" />
+    <p><a href="/users/131/gnonthgol">Gnonthgol ♦</a><br/>
+    <span class="score" title="13750 reputation points"><span class="">13.8k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="103 badges"><span class="silver">&#9679;</span><span class="badgecount">103</span></span><span title="198 badges"><span class="bronze">&#9679;</span><span class="badgecount">198</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gnonthgol has 57 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1765">
+    
+</div>
+<div id="comment-tools-1765" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1765-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1790"></a>
+                    <div id="answer-container-1790" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1790-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1790/up/" rel="nofollow"> </a>
+<div id="post-1790-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-1790-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1790/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The 'Mapnik' layer is very much an all-purpose style. I wouldn't say it's particularly urban-centric, but nor does it show absolutely everything that people might want to tag - the map would be ridiculously cluttered if so.</p>
+<p>The 'Cycle map' layer often has a more rural-friendly presentation (especially given the contour rendering) and you might consider raising a trac ticket against this to suggest including waterfalls. Note that this wouldn't be a "bug", however, but rather an "enhancement" which is at the discretion of the individual cartographer responsible for that layer.</p>
+<p>As you're in the States, you might also be interested in the very impressive <a href="http://www.toposm.com/">TopOSM</a>.</p>
+<p>OSM is about the data. The renderings on the main site are examples of what you can do with it. You're encouraged to use the rendering tools available (which are becoming more and more accessible - look at Maperitive for a good example) to make your own map, rather than expecting everything to be on one rendering.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1790/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Dec '10, 22:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1790">
+    
+        <a name="1794"></a>
+        <div class="comment" id="comment-1794">
+            <div id="post-1794-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for this thoughtful response.  TopOSM is indeed impressive--and I just came across Maperative yesterday.  The direction it represents--"customized" maps generated on demand--seem to me to be the long-term answer to the question: "Why should I mark and upload features if I can't see them?" Your overall point that OSM remains a work in progress is well taken. I'll keep experimenting.</p></div>
+            <div class="comment-info" id="comment-1794-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '10, 05:58)</span>
+                <a class="comment-user userinfo" href="/users/528/barte">barte</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1790" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1790-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1766"></a>
+                    <div id="answer-container-1766" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1766-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1766/up/" rel="nofollow"> </a>
+<div id="post-1766-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-1766-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1766/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="http://www.openstreetmap.org/?lat=38.0347&amp;lon=-122.72433&amp;zoom=17&amp;layers=M">Here's the link</a>. Would consider filling out a bug report if you think I've tagged it correctly. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1766/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Dec '10, 00:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/709d8e8f70f912472cda0fd88fe6d189?s=32&amp;d=identicon&amp;r=g" alt="barte's gravatar image" />
+    <p><a href="/users/528/barte">barte</a><br/>
+    <span class="score" title="459 reputation points">459</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="17 badges"><span class="bronze">&#9679;</span><span class="badgecount">17</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="barte has one accepted answer">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1766">
+    
+        <a name="1768"></a>
+        <div class="comment" id="comment-1768">
+            <div id="post-1768-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you. But please refrain from puting coments to anwsers and new information as a new anwser.</p>
+
+<p>The tagging seems to be OK as I suspected. If you want to help the bugfixers and have an artistic mind you can draw or find an icon to use.</p></div>
+            <div class="comment-info" id="comment-1768-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '10, 09:56)</span>
+                <a class="comment-user userinfo" href="/users/131/gnonthgol">Gnonthgol ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="1769"></a>
+        <div class="comment" id="comment-1769">
+            <div id="post-1769-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry about that--I wasn't clear on this board's structure. And thanks--looks like it has already been reported:   <a href="http://trac.openstreetmap.org/ticket/2954">http://trac.openstreetmap.org/ticket/2954</a>. Though that request is for a line--representing Niagra-class falls.  I was thinking more of an icon for smaller falls.</p></div>
+            <div class="comment-info" id="comment-1769-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '10, 15:04)</span>
+                <a class="comment-user userinfo" href="/users/528/barte">barte</a>
+                
+            </div>
+        </div>
+    
+        <a name="1770"></a>
+        <div class="comment" id="comment-1770">
+            <div id="post-1770-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, it is related to that one but it talkes about adding a LinePatternSymbolizer for ways. As I understands it you want a PointSymbolizer for nodes right?</p></div>
+            <div class="comment-info" id="comment-1770-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '10, 19:27)</span>
+                <a class="comment-user userinfo" href="/users/131/gnonthgol">Gnonthgol ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="1787"></a>
+        <div class="comment" id="comment-1787">
+            <div id="post-1787-score" class="comment-score"></div>
+            <div class="comment-text"><p>You're right--I hadn't made the distinction. With further experimentation though, I'm wondering if this is a broader issue.  In this example, the way I added (highway=path) shows, but the node I added (natural=beach) doesn't. 
+<a href="http://www.openstreetmap.org/?lat=19.47191&amp;lon=-155.92497&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=19.47191&amp;lon=-155.92497&amp;zoom=17&amp;layers=M</a></p>
+
+<p>So a newbie question: is OSM--at least for its two main rendering engines--geared more for urban mapping in the features it displays? In other words, it's not so much the specific icon I'm wondering about, but the visibility--in any form--of the node.</p></div>
+            <div class="comment-info" id="comment-1787-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '10, 21:44)</span>
+                <a class="comment-user userinfo" href="/users/528/barte">barte</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1766" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1766-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/1764/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='dq3g6EkdAaFRhP6g8ahhMuNxxHiImNAJ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1764/rendering-waterfalls?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1764/rendering-waterfalls?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nodes/"
+            class="tag-link-nodes"
+            title="see questions tagged'nodes'using tags"
+            rel="tag">nodes</a> <span class="tag-number">&#215;205</span><br/>
+        
+        <a href="/tags/features/"
+            class="tag-link-features"
+            title="see questions tagged'features'using tags"
+            rel="tag">features</a> <span class="tag-number">&#215;34</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 10, 2010, 10:24 p.m.">10 Dec '10, 22:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,680 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 13, 2010, 6:31 a.m.">13 Dec '10, 06:31</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/372/is-there-a-limit-to-the-number-of-ways-containing-a-node">Is there a limit to the number of ways containing a node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/495/what-tags-should-i-add-to-a-heliport">What tags should I add to a heliport?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/923/how-do-i-realize-a-node-or-way-is-a-member-of-a-relation">How do I realize a node or way is a member of a relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1103/should-i-tag-nodes-or-areas-for-amenity-and-tourism">Should I tag nodes or areas for amenity and tourism?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1208/why-do-some-nodes-appear-with-flashing-red-circles">Why do some nodes appear with flashing red circles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1598/change-same-attribute-of-a-lot-of-nodes">Change same attribute of a lot of nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1806/pending-approved-status-and-osm-data-in-an-openlayer">Pending, approved status and OSM data in an openLayer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2049/how-to-show-an-updated-list-of-wlan-hotspots-on-an-userdefined-map">How to show an updated list of WLAN-Hotspots on an userdefined map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2052/map-editing">[closed] Map editing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/365/is-there-a-limit-on-the-number-of-nodes-in-a-way">Is there a limit on the number of nodes in a way?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

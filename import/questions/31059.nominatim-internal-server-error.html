@@ -1,0 +1,837 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Nominatim internal server error - OSM Help</title>
+        <meta name="description" content="I&#39;m running Nominatim on my server and I recently (2 weeks ago) imported full planet data. I&#39;m assuming the import is complete (not sure if it is, as the output never explicitly stated &quot;finished&quot;). Here&#39;s my import output: Done 87399141 in 624893 @ 139.862564 per second - Rank 30 ETA (seconds): -30...." />
+        <meta name="keywords" content="nominatim,reversegeocoding,error" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/31059/nominatim-internal-server-error" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/31059/nominatim-internal-server-error?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='w24X2nka5H1jZxcedwGsXohgq4vzx7XA' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/31059/nominatim-internal-server-error">Nominatim internal server error</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-31059-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31059/up/" rel="nofollow"> </a>
+<div id="post-31059-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31059-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31059/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/31059/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm running Nominatim on my server and I recently (2 weeks ago) imported full planet data. I'm assuming the import is complete (not sure if it is, as the output never explicitly stated "finished"). Here's my import output:</p>
+<pre><code>Done 87399141 in 624893 @ 139.862564 per second - Rank 30 ETA (seconds): -30.558571
+Done 87399213 in 624894 @ 139.862473 per second - ETA (seconds): -31.073381
+Done 87399213 in 624894 @ 139.862473 per second - FINISHED
+...
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+</code></pre>
+<p>Postgres doesn't appear to be doing anything either:</p>
+<pre><code>[root~]# psql postgres
+psql (9.1.9)
+Type "help" for help.
+
+postgres=# select * from pg_stat_activity;
+ datid | datname  | procpid | usesysid | usename | application_name | client_addr | client_hostname | client
+_port |         backend_start         |          xact_start           |          query_start          | wait
+ing |          current_query
+-------+----------+---------+----------+---------+------------------+-------------+-----------------+-------
+------+-------------------------------+-------------------------------+-------------------------------+-----
+----+---------------------------------
+ 12780 | postgres |   31281 |    16385 | root    | psql             |             |                 |
+   -1 | 2014-02-26 11:52:00.615982-08 | 2014-02-26 11:52:10.074218-08 | 2014-02-26 11:52:10.074218-08 | f
+    | select * from pg_stat_activity;
+(1 row)
+</code></pre>
+<p>Having said that, I'm trying to reverse geocode via Nominatim, but it's giving me error messages:</p>
+<p>Query:</p>
+<pre><code><a href="http://my-servers-ip-address/nominatim/reverse?format=xml&amp;lat=40.731389&amp;lon=-73.998889&amp;zoom=18&amp;addressdetails=1">http://my-servers-ip-address/nominatim/reverse?format=xml&amp;lat=40.731389&amp;lon=-73.998889&amp;zoom=18&amp;addressdetails=1</a>
+</code></pre>
+<p>Output:</p>
+<pre><code>Internal Server Error
+Nominatim has encountered an internal error while processing your request. This is most likely because of a bug in the software.
+Details: Could not determine closest place. Feel free to report the bug in the <a href="http://trac.openstreetmap.org">http://trac.openstreetmap.org</a> OSM bug database. Please include the error message above and the URL you used.
+</code></pre>
+<p>How can I debug to see what went wrong? Could the import have gone wrong? (Nominatim, the same installation on the same machine, was working fine before I wiped the database and imported new data) Is the import actually not finished? </p>
+<p>Thanks</p>
+<p><strong>EDIT:</strong></p>
+<p>Adding apache error message and debug=1 option in the URL:</p>
+<p>Apache error message:</p>
+<pre><code>[Fri Feb 28 09:56:49 2014] [error] an unknown filter was not added: proxy-html
+[Fri Feb 28 09:56:49 2014] [error] [client my-ip-address] PHP Fatal error:  Cannot use object of type DB_Error as array in /postgres/OpenStreetMaps/Nominatim-2.2.0/lib/PlaceLookup.php on line 53
+</code></pre>
+<p>Output with debug=1 option:</p>
+<pre><code>string(561) "select place_id,parent_place_id,rank_search from placex WHERE ST_DWithin(ST_SetSRID(ST_Point(-73.998889,40.731389),4326), geometry, 0.0008) and rank_search != 28 and rank_search &gt;= 30 and (name is not null or housenumber is not null) and class not in ('waterway','railway','tunnel','bridge') and indexed_status = 0  and (ST_GeometryType(geometry) not in ('ST_Polygon','ST_MultiPolygon')  OR ST_DWithin(ST_SetSRID(ST_Point(-73.998889,40.731389),4326), centroid, 0.0008)) ORDER BY ST_distance(ST_SetSRID(ST_Point(-73.998889,40.731389),4326), geometry) ASC limit 1"
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/reversegeocoding/" class="post-tag tag-link-reversegeocoding"
+                                        title="see questions tagged 'reversegeocoding'" rel="tag">reversegeocoding</a>
+                                
+                                    <a href="/tags/error/" class="post-tag tag-link-error"
+                                        title="see questions tagged 'error'" rel="tag">error</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>26 Feb '14, 19:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/61de868d7785f30711497cecbdddf5f4?s=32&amp;d=identicon&amp;r=g" alt="baekacaek's gravatar image" />
+    <p><a href="/users/7476/baekacaek">baekacaek</a><br/>
+    <span class="score" title="176 reputation points">176</span><span title="12 badges"><span class="badge1">&#9679;</span><span class="badgecount">12</span></span><span title="13 badges"><span class="silver">&#9679;</span><span class="badgecount">13</span></span><span title="17 badges"><span class="bronze">&#9679;</span><span class="badgecount">17</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="baekacaek has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31059/">
+                edited
+                <strong>28 Feb '14, 18:06</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-31059">
+    
+        <a name="31064"></a>
+        <div class="comment" id="comment-31064">
+            <div id="post-31064-score" class="comment-score">2</div>
+            <div class="comment-text"><p>If you can, amend your question by adding the relevant messages of your Apache error log file. That will make answering easier.</p></div>
+            <div class="comment-info" id="comment-31064-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '14, 21:30)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31069"></a>
+        <div class="comment" id="comment-31069">
+            <div id="post-31069-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks. I added the apache error message. I'm not sure what it's telling me to do though.</p></div>
+            <div class="comment-info" id="comment-31069-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '14, 23:10)</span>
+                <a class="comment-user userinfo" href="/users/7476/baekacaek">baekacaek</a>
+                
+            </div>
+        </div>
+    
+        <a name="31072"></a>
+        <div class="comment" id="comment-31072">
+            <div id="post-31072-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is it possible that you forgot to create the www-data user before starting the import?</p></div>
+            <div class="comment-info" id="comment-31072-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '14, 07:23)</span>
+                <a class="comment-user userinfo" href="/users/2921/lonvia">lonvia</a>
+                
+            </div>
+        </div>
+    
+        <a name="31124"></a>
+        <div class="comment" id="comment-31124">
+            <div id="post-31124-score" class="comment-score"></div>
+            <div class="comment-text"><p>No, i created www-data user for my first import (this is my second import). I rechecked by running the command again, but no difference</p></div>
+            <div class="comment-info" id="comment-31124-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '14, 17:45)</span>
+                <a class="comment-user userinfo" href="/users/7476/baekacaek">baekacaek</a>
+                
+            </div>
+        </div>
+    
+        <a name="31139"></a>
+        <div class="comment" id="comment-31139">
+            <div id="post-31139-score" class="comment-score"></div>
+            <div class="comment-text"><p>It seems that for whatever reason the database query caused PostGIS to return an error. Check your database log file in /var/log/postgresql/ if you spot an error; or else do "su www-data", then "psql nominatim", and enter the "select place_id..." query in the psql shell. With any luck that will also return an error, and give us a hint about what is wrong.</p></div>
+            <div class="comment-info" id="comment-31139-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '14, 23:29)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31242"></a>
+        <div class="comment not_top_scorer" id="comment-31242">
+            <div id="post-31242-score" class="comment-score"></div>
+            <div class="comment-text"><p>I typed in "su www-data" from shell and I get "user www-data does not exist". Could this be the problem? If i run the query in psql shell, the query runs and I get 0 rows. No error message (unless I need to look elsewhere for the error message).</p></div>
+            <div class="comment-info" id="comment-31242-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '14, 23:10)</span>
+                <a class="comment-user userinfo" href="/users/7476/baekacaek">baekacaek</a>
+                
+            </div>
+        </div>
+    
+        <a name="31244"></a>
+        <div class="comment not_top_scorer" id="comment-31244">
+            <div id="post-31244-score" class="comment-score"></div>
+            <div class="comment-text"><p>Btw, I'm on CentOS.</p></div>
+            <div class="comment-info" id="comment-31244-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '14, 00:02)</span>
+                <a class="comment-user userinfo" href="/users/7476/baekacaek">baekacaek</a>
+                
+            </div>
+        </div>
+    
+        <a name="31252"></a>
+        <div class="comment not_top_scorer" id="comment-31252">
+            <div id="post-31252-score" class="comment-score"></div>
+            <div class="comment-text"><p>CentOS seems to have user <em>apache</em> instead of <em>www-data</em>.</p></div>
+            <div class="comment-info" id="comment-31252-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '14, 07:30)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31059" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31059-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/31059/nominatim-internal-server-error?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/31059/nominatim-internal-server-error?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/31059/nominatim-internal-server-error?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/31059/nominatim-internal-server-error?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="31066"></a>
+                    <div id="answer-container-31066" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31066-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31066/up/" rel="nofollow"> </a>
+<div id="post-31066-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-31066-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31066/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>To debug internal server errors, add <code>debug=1</code> as a parameter to your query. This will produce a lot of debug output which also includes the original SQL error message that is the cause of the internal error. There is a good chance that you simply have a permission problem.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31066/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Feb '14, 22:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d888b712d85dee0aa304297f2dc697c7?s=32&amp;d=identicon&amp;r=g" alt="lonvia's gravatar image" />
+    <p><a href="/users/2921/lonvia">lonvia</a><br/>
+    <span class="score" title="6213 reputation points"><span class="">6.2k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="lonvia has 43 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31066">
+    
+        <a name="31068"></a>
+        <div class="comment" id="comment-31068">
+            <div id="post-31068-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, I added the error message with the debug=1 option on. I could be wrong, but it doesn't appear to be permission problem.</p></div>
+            <div class="comment-info" id="comment-31068-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '14, 23:09)</span>
+                <a class="comment-user userinfo" href="/users/7476/baekacaek">baekacaek</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31066" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31066-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/31059/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='w24X2nka5H1jZxcedwGsXohgq4vzx7XA' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31059/nominatim-internal-server-error?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31059/nominatim-internal-server-error?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/error/"
+            class="tag-link-error"
+            title="see questions tagged'error'using tags"
+            rel="tag">error</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/reversegeocoding/"
+            class="tag-link-reversegeocoding"
+            title="see questions tagged'reversegeocoding'using tags"
+            rel="tag">reversegeocoding</a> <span class="tag-number">&#215;85</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 26, 2014, 7:57 p.m.">26 Feb '14, 19:57</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,497 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 4, 2014, 7:30 a.m.">04 Mar '14, 07:30</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/45261/error-nomination-geocode-with-wget">error nomination geocode with wget</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62244/error-using-nominatim-reverse-geocoding-node-node-xml-present-but-not-output">Error using Nominatim reverse geocoding node - node xml present, but not output</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68241/major-incorrect-postcode-returned-on-reversegeocode">Major incorrect postcode returned on reversegeocode</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31274/find-out-if-a-longitudelatitude-is-a-railway-via-a-webservice-or-program">Find out if a longitude/latitude is a railway via a webservice (or program)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30512/how-does-nominatim-reverse-geocode">How does Nominatim reverse geocode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1301/ajax-issues-with-nominatim">[closed] Ajax issues with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28695/how-can-i-change-nominatims-reverse-geocoding-behaviour">How can I change Nominatim&#39;s reverse geocoding behaviour?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15474/the-search-shows-a-bavarian-city-as-being-in-thuringen">The search shows a Bavarian city as being in Thüringen</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27701/nominatim-error-import-out-of-memory-for-node-cache-dense-index">nominatim error import &quot;Out of memory for node cache dense index&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12142/nominatim-setup-error">Nominatim setup error</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

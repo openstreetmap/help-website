@@ -1,0 +1,826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Finetuning inexact coordinates fitting to OSM - OSM Help</title>
+        <meta name="description" content="Dear All, I scanned an old map and georeferenced it with Qgis (gdal).The result is ok - nearly. When I compare in QMapshack the grids UTM32 - printed grid on the scan and the QSM Grid - they are a little bit different, maybe 50 m in X Y. The geotiff is inexact - I checked it.  My question is if I ca..." />
+        <meta name="keywords" content="utm32,coordinates,gdal" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/46246/finetuning-inexact-coordinates-fitting-to-osm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/46246/finetuning-inexact-coordinates-fitting-to-osm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ffb9WTmB92BdwYkfKBg0dLgQlJmPEGzy' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/46246/finetuning-inexact-coordinates-fitting-to-osm">Finetuning inexact coordinates fitting to OSM</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-46246-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46246/up/" rel="nofollow"> </a>
+<div id="post-46246-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-46246-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46246/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/46246/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Dear All,</p>
+<p>I scanned an old map and georeferenced it with Qgis (gdal).The result is ok - nearly.
+When I compare in QMapshack the grids UTM32 - printed grid on the scan and the QSM Grid - they
+are a little bit different, maybe 50 m in X Y. The geotiff is inexact - I checked it. 
+My question is if I can finetune the geotif coordinates so that the are exactly congruent to OSM-Grid ?</p>
+<p>Here's the output from gdalinfo:</p>
+<pre><code>gdalinfo wanderkarte_MK_54.tif 
+Driver: GTiff/GeoTIFF
+Files: wanderkarte_MK_54.tif
+Size is 8630, 3774
+Coordinate System is:
+GEOGCS["WGS 84",
+    DATUM["WGS_1984",
+        SPHEROID["WGS 84",6378137,298.257223563,
+            AUTHORITY["EPSG","7030"]],
+        AUTHORITY["EPSG","6326"]],
+    PRIMEM["Greenwich",0],
+    UNIT["degree",0.0174532925199433],
+    AUTHORITY["EPSG","4326"]]
+Origin = (7.611058772101766,51.326286037305387)
+Pixel Size = (0.000040664445937,-0.000040664445937)
+Metadata:
+  AREA_OR_POINT=Area
+Image Structure Metadata:
+  INTERLEAVE=PIXEL
+Corner Coordinates:
+Upper Left  (   7.6110588,  51.3262860) (  7d36'39.81"E, 51d19'34.63"N)
+Lower Left  (   7.6110588,  51.1728184) (  7d36'39.81"E, 51d10'22.15"N)
+Upper Right (   7.9619929,  51.3262860) (  7d57'43.17"E, 51d19'34.63"N)
+Lower Right (   7.9619929,  51.1728184) (  7d57'43.17"E, 51d10'22.15"N)
+Center      (   7.7865259,  51.2495522) (  7d47'11.49"E, 51d14'58.39"N)
+Band 1 Block=8630x1 Type=Byte, ColorInterp=Red
+  Mask Flags: PER_DATASET ALPHA 
+Band 2 Block=8630x1 Type=Byte, ColorInterp=Green
+  Mask Flags: PER_DATASET ALPHA 
+Band 3 Block=8630x1 Type=Byte, ColorInterp=Blue
+  Mask Flags: PER_DATASET ALPHA 
+Band 4 Block=8630x1 Type=Byte, ColorInterp=Alpha
+</code></pre>
+<p>Kind regards</p>
+<p>Rawbit</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/utm32/" class="post-tag tag-link-utm32"
+                                        title="see questions tagged 'utm32'" rel="tag">utm32</a>
+                                
+                                    <a href="/tags/coordinates/" class="post-tag tag-link-coordinates"
+                                        title="see questions tagged 'coordinates'" rel="tag">coordinates</a>
+                                
+                                    <a href="/tags/gdal/" class="post-tag tag-link-gdal"
+                                        title="see questions tagged 'gdal'" rel="tag">gdal</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Oct '15, 16:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dafc3603e66d984fc12fb51284858b78?s=32&amp;d=identicon&amp;r=g" alt="Rawbit's gravatar image" />
+    <p><a href="/users/11633/rawbit">Rawbit</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Rawbit has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46246/">
+                edited
+                <strong>30 Oct '15, 22:50</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-46246">
+    
+        <a name="46248"></a>
+        <div class="comment" id="comment-46248">
+            <div id="post-46248-score" class="comment-score"></div>
+            <div class="comment-text"><p>Please explain what the "QSM Grid" and the "OSM-Grid" are.</p></div>
+            <div class="comment-info" id="comment-46248-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '15, 18:11)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="46252"></a>
+        <div class="comment" id="comment-46252">
+            <div id="post-46252-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,</p>
+
+<p>I am referring to the grid for UMT which I can choose for an OSM map.
+In a second layer I use my scanned map which has a UMT grid as well.
+But the grid of my scanned map is not congruent and displaced a little bit.</p>
+
+<p>Thank's a lot for your answer !</p>
+
+<p>Kind regards</p>
+
+<p>Rawbit</p></div>
+            <div class="comment-info" id="comment-46252-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '15, 22:38)</span>
+                <a class="comment-user userinfo" href="/users/11633/rawbit">Rawbit</a>
+                
+            </div>
+        </div>
+    
+        <a name="46254"></a>
+        <div class="comment" id="comment-46254">
+            <div id="post-46254-score" class="comment-score">1</div>
+            <div class="comment-text"><p>And what is UMT?</p></div>
+            <div class="comment-info" id="comment-46254-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '15, 22:41)</span>
+                <a class="comment-user userinfo" href="/users/290/pnorman">pnorman</a>
+                
+            </div>
+        </div>
+    
+        <a name="46255"></a>
+        <div class="comment" id="comment-46255">
+            <div id="post-46255-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hi,</p>
+
+<p>oh sorry I mean UTM not UMT !
+Universal Transverse Mercator</p>
+
+<p>Kind regards</p>
+
+<p>Rawbit</p></div>
+            <div class="comment-info" id="comment-46255-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '15, 22:48)</span>
+                <a class="comment-user userinfo" href="/users/11633/rawbit">Rawbit</a>
+                
+            </div>
+        </div>
+    
+        <a name="46256"></a>
+        <div class="comment not_top_scorer" id="comment-46256">
+            <div id="post-46256-score" class="comment-score"></div>
+            <div class="comment-text"><p>What tool/website/program are you using to display the OSM map with an UTM grid?</p></div>
+            <div class="comment-info" id="comment-46256-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '15, 22:49)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="46257"></a>
+        <div class="comment" id="comment-46257">
+            <div id="post-46257-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I use Qmapshack with a .vrt file which is related to the mentioned raster geotiff.</p></div>
+            <div class="comment-info" id="comment-46257-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '15, 22:51)</span>
+                <a class="comment-user userinfo" href="/users/11633/rawbit">Rawbit</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46246" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46246-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/46246/finetuning-inexact-coordinates-fitting-to-osm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/46246/finetuning-inexact-coordinates-fitting-to-osm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/46246/finetuning-inexact-coordinates-fitting-to-osm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/46246/finetuning-inexact-coordinates-fitting-to-osm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="46260"></a>
+                    <div id="answer-container-46260" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-46260-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46260/up/" rel="nofollow"> </a>
+<div id="post-46260-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-46260-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46260/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="aseerel4c26 has selected this answer as the correct answer"
+        href="/accept_answer/46260/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>So if I understand you correctly, the problem is simply that the georeferencing didn't work as well as you would have expected. (This is not an OpenStreetMap specific question really and should have been asked in a more general GIS forum.) This is normal; the quality of the result depends on the quality of your scan, which algorithm you choose, how many GCPs you set, and how precise you are in setting them. </p>
+<p>If you believe that simply shifting the GeoTIFF will help, then the easiest option is to use <a href="http://www.gdal.org/gdal_edit.html">gdal_edit.py</a> to override the geographic bounds of the image.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/46260/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Oct '15, 23:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-46260">
+    
+        <a name="46267"></a>
+        <div class="comment" id="comment-46267">
+            <div id="post-46267-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Hi,</p>
+
+<p>thank you so much, gdal_edit is exactly what I'm looking for !
+I used gdal_edit.py -a_ullr 7.610300 51.326280 7.961292 51.172818  testmod.tif</p>
+
+<p>Kind regards</p>
+
+<p>Rawbit</p></div>
+            <div class="comment-info" id="comment-46267-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Oct '15, 09:18)</span>
+                <a class="comment-user userinfo" href="/users/11633/rawbit">Rawbit</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46260" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46260-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/46246/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ffb9WTmB92BdwYkfKBg0dLgQlJmPEGzy' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46246/finetuning-inexact-coordinates-fitting-to-osm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46246/finetuning-inexact-coordinates-fitting-to-osm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/coordinates/"
+            class="tag-link-coordinates"
+            title="see questions tagged'coordinates'using tags"
+            rel="tag">coordinates</a> <span class="tag-number">&#215;144</span><br/>
+        
+        <a href="/tags/gdal/"
+            class="tag-link-gdal"
+            title="see questions tagged'gdal'using tags"
+            rel="tag">gdal</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/utm32/"
+            class="tag-link-utm32"
+            title="see questions tagged'utm32'using tags"
+            rel="tag">utm32</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 30, 2015, 4:27 p.m.">30 Oct '15, 16:27</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,890 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 31, 2015, 9:57 a.m.">31 Oct '15, 09:57</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/885/exact-coordinates-in-potlatch">Exact coordinates in Potlatch</a>
+        </p>
+        
+        <p>
+            <a href="/questions/999/how-to-extract-elevation-information-from-tracks-in-josm">How to extract elevation information from tracks in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1069/how-to-calculate-the-size-of-a-map-tile-on-the-ground">How to calculate the size of a map tile on the ground?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1643/osm-coordinates-issue-how-to-convert-latlon-to-pixel-coordinate">[closed] OSM Coordinates issue: How to convert Lat/Lon to pixel coordinate ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2004/utm-or-latitude-longitude-coordinates-available-in-openstreetmap">UTM or Latitude-Longitude coordinates available in OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4386/centering-maps-in-openstreet">Centering maps in openstreet?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7183/how-to-get-roadcountries-boundary-intersection-point-coordinates">How to get road/countries boundary intersection point coordinates ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7645/openlayersmapserver-wms-coordinate-problem">OpenLayers+MapServer (WMS) - coordinate-problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8133/plotting-gps-coordinates-on-a-map">Plotting GPS coordinates on a map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/864/how-to-add-node-with-exact-coordinates-in-josm">How to add node with exact coordinates in JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

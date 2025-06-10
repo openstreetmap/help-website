@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Step by step installing Osmosis - OSM Help</title>
+        <meta name="description" content="Hi there, sorry if my questions is so newbie and lame but i really need some help. I am using FreeBSD 9.1 and really want to install open street map. Osmosis. So this is my step :   1. installing PostgreeSQL   2. Installing OSM2PgSQL  3. Installing Mapnik  4. installing postgis everything run ok in ..." />
+        <meta name="keywords" content="osmosis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/22357/step-by-step-installing-osmosis" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/22357/step-by-step-installing-osmosis?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='GooVXlogt6OIWwUP2KedFb0tnbvkmrpd' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/22357/step-by-step-installing-osmosis">Step by step installing Osmosis</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-22357-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22357/up/" rel="nofollow"> </a>
+<div id="post-22357-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-22357-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22357/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/22357/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi there, sorry if my questions is so newbie and lame but i really need some help.
+I am using FreeBSD 9.1 and really want to install open street map. Osmosis.</p>
+<p>So this is my step : 
+ 1. installing PostgreeSQL 
+ 2. Installing OSM2PgSQL
+ 3. Installing Mapnik
+ 4. installing postgis</p>
+<p>everything run ok in four step above. but when i tried to installing Mod Tile, i have so many error to compiling and make install.
+So many tutorial i've found but average the tutorial explain in Linux OS.</p>
+<p>Really i need some help. The step by step installing Osmosis on FreeBSD (Unix)
+i really dont know how, because i am new in Open Street Map.</p>
+<p>Thank You and I apologize for bad word.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 May '13, 08:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7eac8f615876dfeca9c571aab03cf40f?s=32&amp;d=identicon&amp;r=g" alt="Rizvi's gravatar image" />
+    <p><a href="/users/6392/rizvi">Rizvi</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Rizvi has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-22357">
+    
+        <a name="22359"></a>
+        <div class="comment" id="comment-22359">
+            <div id="post-22359-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You could try to show us your <em>first</em> error when running make.</p></div>
+            <div class="comment-info" id="comment-22359-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '13, 09:43)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="22361"></a>
+        <div class="comment" id="comment-22361">
+            <div id="post-22361-score" class="comment-score"></div>
+            <div class="comment-text"><p>when i try to "make" in mod_tile directory for installing, then a message appear:
+"Make : no target to make"
+Here, i just dunno what target, must i used to installing mod_tile.
+i am just already run "sh autogen.sh" in mod tile dir. but after that, i dunno what to do ?</p>
+
+<p>Thank you for response scai.</p></div>
+            <div class="comment-info" id="comment-22361-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '13, 10:09)</span>
+                <a class="comment-user userinfo" href="/users/6392/rizvi">Rizvi</a>
+                
+            </div>
+        </div>
+    
+        <a name="22362"></a>
+        <div class="comment not_top_scorer" id="comment-22362">
+            <div id="post-22362-score" class="comment-score"></div>
+            <div class="comment-text"><p>According to your error message there is no file <em>Makefile</em> in your current directory. Did you run <em>autogen.sh</em> and <em>configure</em> as explained <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server/">here</a>? If both commands succeed without problem then they should have generated a Makefile.</p></div>
+            <div class="comment-info" id="comment-22362-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '13, 10:41)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="22363"></a>
+        <div class="comment" id="comment-22363">
+            <div id="post-22363-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks again scai.
+everything done in compiling but in the ends, the instalation got error.
+here is the message</p>
+
+<pre><code>Stop in /usr/home/rizvi/mod_tile.
+*** [all-recursive] Error code 1
+
+Stop in /usr/home/rizvi/mod_tile.
+*** [all] Error code 1
+
+Stop in /usr/home/rizvi/mod_tile.
+</code></pre></div>
+            <div class="comment-info" id="comment-22363-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '13, 10:54)</span>
+                <a class="comment-user userinfo" href="/users/6392/rizvi">Rizvi</a>
+                
+            </div>
+        </div>
+    
+        <a name="22365"></a>
+        <div class="comment" id="comment-22365">
+            <div id="post-22365-score" class="comment-score">1</div>
+            <div class="comment-text"><p>There must be at least one other error before. Always try to find and fix the first error. Subsequent errors are often just a consequence of the first error.</p></div>
+            <div class="comment-info" id="comment-22365-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '13, 11:14)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="22367"></a>
+        <div class="comment not_top_scorer" id="comment-22367">
+            <div id="post-22367-score" class="comment-score"></div>
+            <div class="comment-text"><pre><code>sudo apt-get install apache2 apache2-threaded-dev apache2-mpm-prefork apache2-utils libagg-dev
+</code></pre>
+
+<p>are those mean, i need to install apache2, apache2-threaded-dev, apache2-mpm-prefork etc, before i installing mod tile. i guess, FreeBSD don't have a think like that.</p>
+
+<p>i take that from the site you gave to me.
+thanks again, scai</p></div>
+            <div class="comment-info" id="comment-22367-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '13, 12:02)</span>
+                <a class="comment-user userinfo" href="/users/6392/rizvi">Rizvi</a>
+                
+            </div>
+        </div>
+    
+        <a name="22369"></a>
+        <div class="comment" id="comment-22369">
+            <div id="post-22369-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes, <code>apt-get</code> is a Debian/Ubuntu command to install packages. Try to find the corresponding packages for FreeBSD. The names might be slightly different and some of those might be included in other packages etc.</p></div>
+            <div class="comment-info" id="comment-22369-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '13, 12:11)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-22357" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22357-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/22357/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='GooVXlogt6OIWwUP2KedFb0tnbvkmrpd' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22357/step-by-step-installing-osmosis?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22357/step-by-step-installing-osmosis?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 13, 2013, 8:33 a.m.">13 May '13, 08:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,250 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 13, 2013, 12:11 p.m.">13 May '13, 12:11</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/192/how-are-the-replication-diffs-created">How are the replication diffs created?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1980/installing-osmosis">Installing Osmosis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2017/how-can-i-import-data-to-osm-from-a-csv-file">How can I import data to OSM from a .csv file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2296/extracting-bounding-boxes-osmosis-usage-on-windows">Extracting bounding boxes - Osmosis usage on Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2905/osmosis-not-running">Osmosis not running</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3030/disk-space-required-for-importing-planetosm-into-postgresql-w-osmosis">Disk space required for importing planet.osm into PostgreSQL w/ Osmosis?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3214/installing-osmosis-on-osx">Installing Osmosis on OSX</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4065/getting-specific-poi-data-and-keeping-them-up-to-date">Getting specific POI data - and keeping them up to date.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2/use-osmosis-postgis-schema-with-qgis">Use Osmosis PostGIS schema with QGIS</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

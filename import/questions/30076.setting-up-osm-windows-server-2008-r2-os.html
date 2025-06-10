@@ -1,0 +1,890 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Setting up OSM Windows Server 2008 R2 (OS) - OSM Help</title>
+        <meta name="description" content="Hello List, I have installed PostGRES 9.2 and PostGIS on windows server OS and I am having issues using the import tools to import OSM data to PostGRES.  Just to start, I do not have an option of running any flavor of linux at all, virtual or not.  I wanted to use osm2pgsql to import the pbf files o..." />
+        <meta name="keywords" content="osm,postgres,osmosis,osm2pgsql" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/30076/setting-up-osm-windows-server-2008-r2-os" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/30076/setting-up-osm-windows-server-2008-r2-os?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Bmp68Q9TKive1Ivz2vhpMPMG9fwhwfu3' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/30076/setting-up-osm-windows-server-2008-r2-os">Setting up OSM Windows Server 2008 R2 (OS)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-30076-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30076/up/" rel="nofollow"> </a>
+<div id="post-30076-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-30076-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30076/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/30076/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello List,</p>
+<p>I have installed PostGRES 9.2 and PostGIS on windows server OS and I am having issues using the import tools to import OSM data to PostGRES.<br>
+</p>
+<p>Just to start, I do not have an option of running any flavor of linux at all, virtual or not.<br>
+</p>
+<p>I wanted to use osm2pgsql to import the pbf files of the whole planet into the PostGRES database, but the program keeps crashing in slim mode '--slim'.</p>
+<p>When I switch to osmosis, I just can't get it to setup correctly at all.  When I call the program from the .bat file, it say C:\program isn't a valid path, which it isn't.  So I moved the program to the root and placed it in c:\osmosis\bin.  I still cannot get the osmosis to work.</p>
+<p>Are there database tuning options I need to set in PostGRES?<br>
+Are there additional commands I need to set on the import of osm2pgsql to help with the program crashing?
+Is there a setup guide for windows for osmosis?</p>
+<p>Thank you</p>
+<p>A</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/postgres/" class="post-tag tag-link-postgres"
+                                        title="see questions tagged 'postgres'" rel="tag">postgres</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Jan '14, 13:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1df0b0daef7049f4aa8561e4c29fd7de?s=32&amp;d=identicon&amp;r=g" alt="Fisherman12i's gravatar image" />
+    <p><a href="/users/8200/fisherman12i">Fisherman12i</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Fisherman12i has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-30076">
+    
+        <a name="30077"></a>
+        <div class="comment" id="comment-30077">
+            <div id="post-30077-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Can you please post the crash log os osm2pgsql?</p></div>
+            <div class="comment-info" id="comment-30077-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jan '14, 13:34)</span>
+                <a class="comment-user userinfo" href="/users/4984/iii">iii</a>
+                
+            </div>
+        </div>
+    
+        <a name="30078"></a>
+        <div class="comment" id="comment-30078">
+            <div id="post-30078-score" class="comment-score"></div>
+            <div class="comment-text"><p>where is the crash report located?</p></div>
+            <div class="comment-info" id="comment-30078-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jan '14, 13:39)</span>
+                <a class="comment-user userinfo" href="/users/8200/fisherman12i">Fisherman12i</a>
+                
+            </div>
+        </div>
+    
+        <a name="30081"></a>
+        <div class="comment" id="comment-30081">
+            <div id="post-30081-score" class="comment-score">1</div>
+            <div class="comment-text"><p>When iii says "post the crash log", he means "post it to a text sharing site like Pastebin and post the URL here".</p></div>
+            <div class="comment-info" id="comment-30081-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jan '14, 13:50)</span>
+                <a class="comment-user userinfo" href="/users/6/jonathan-bennett">Jonathan Ben...</a>
+                
+            </div>
+        </div>
+    
+        <a name="30084"></a>
+        <div class="comment" id="comment-30084">
+            <div id="post-30084-score" class="comment-score"></div>
+            <div class="comment-text"><p>I was asking where the log file lives on the system so I can post it.  I looked in the osm2pgsql folders and didn't find it.  So i was wondering if it's placed in the appdata folders etc...  To be clear on the crashing, the process crashed on windows server, so there might not be a log file.</p></div>
+            <div class="comment-info" id="comment-30084-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jan '14, 14:10)</span>
+                <a class="comment-user userinfo" href="/users/8200/fisherman12i">Fisherman12i</a>
+                
+            </div>
+        </div>
+    
+        <a name="30092"></a>
+        <div class="comment" id="comment-30092">
+            <div id="post-30092-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Unless anyone has tried this on W2K8R2 (which I doubt) it's quite possible that no-one knows where the log's going to end up.  It's also possible (given that it's Windows) that the program might be failing because it can't open a logfile (or any other output file).  To try and work around that, try installing away from root and away from "program files" etc. (which it sounds like your're doing) and run from a command prompt so that you can see any errors written to stdout.</p>
+
+<p>You say that it's "crashing", but what error message do you see that tells you that?</p></div>
+            <div class="comment-info" id="comment-30092-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jan '14, 15:45)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30095"></a>
+        <div class="comment not_top_scorer" id="comment-30095">
+            <div id="post-30095-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not an answer, but may contain some hints - it might be worth trying to hunt down video / slides for <a href="http://lanyrd.com/2013/sotm/scpkgp/">this SOTM presentation</a>?</p></div>
+            <div class="comment-info" id="comment-30095-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jan '14, 16:06)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30151"></a>
+        <div class="comment not_top_scorer" id="comment-30151">
+            <div id="post-30151-score" class="comment-score"></div>
+            <div class="comment-text"><p>Crash log is here: <a href="http://pastebin.com/RZLa8cgE">http://pastebin.com/RZLa8cgE</a></p></div>
+            <div class="comment-info" id="comment-30151-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '14, 13:53)</span>
+                <a class="comment-user userinfo" href="/users/8200/fisherman12i">Fisherman12i</a>
+                
+            </div>
+        </div>
+    
+        <a name="30152"></a>
+        <div class="comment not_top_scorer" id="comment-30152">
+            <div id="post-30152-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's not a log from osm2pgsql as such, just Windows saying that it failed.  Try running from a command prompt to see if you can get anything more meaningful out of it.</p></div>
+            <div class="comment-info" id="comment-30152-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '14, 14:05)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30153"></a>
+        <div class="comment not_top_scorer" id="comment-30153">
+            <div id="post-30153-score" class="comment-score"></div>
+            <div class="comment-text"><p>No error message was spit out from osm2pgsql</p></div>
+            <div class="comment-info" id="comment-30153-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '14, 14:39)</span>
+                <a class="comment-user userinfo" href="/users/8200/fisherman12i">Fisherman12i</a>
+                
+            </div>
+        </div>
+    
+        <a name="30154"></a>
+        <div class="comment not_top_scorer" id="comment-30154">
+            <div id="post-30154-score" class="comment-score"></div>
+            <div class="comment-text"><p>So what is the actual problem? Can you please provide us the command line you use to invoke the import?</p></div>
+            <div class="comment-info" id="comment-30154-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '14, 15:11)</span>
+                <a class="comment-user userinfo" href="/users/4984/iii">iii</a>
+                
+            </div>
+        </div>
+    
+        <a name="30155"></a>
+        <div class="comment not_top_scorer" id="comment-30155">
+            <div id="post-30155-score" class="comment-score"></div>
+            <div class="comment-text"><p>Normally postgres log files are put in the data subdirectory of the postgres installation. I generally install postgres in a location with no spaces in directory names. You may wish to change the degree of logging for postgres, which you can do through an option in PgAdmin 3.</p>
+
+<p>However, before doing any of these things, it is important to know which version of each piece of software you are using and basic info about the configuration of your box (amount of RAM..).</p>
+
+<p>Try importing Liechtenstein, if it works come back here, else read the docs more closely.</p></div>
+            <div class="comment-info" id="comment-30155-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '14, 15:12)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30156"></a>
+        <div class="comment not_top_scorer" id="comment-30156">
+            <div id="post-30156-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, so I was wrong - <a href="https://github.com/openstreetmap/osm2pgsql/issues/117">at least one other person</a> uses osm2pgsl on Windows :-)</p></div>
+            <div class="comment-info" id="comment-30156-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '14, 15:17)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-30076" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30076-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/30076/setting-up-osm-windows-server-2008-r2-os?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/30076/setting-up-osm-windows-server-2008-r2-os?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/30076/setting-up-osm-windows-server-2008-r2-os?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/30076/setting-up-osm-windows-server-2008-r2-os?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="30179"></a>
+                    <div id="answer-container-30179" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30179-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30179/up/" rel="nofollow"> </a>
+<div id="post-30179-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-30179-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30179/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I was able to setup PostgreSQL (APIDB and PostGIS) loaded PostgreSQL (APIDB) it with the full planet file, and set it up to be updated from the hourly diffs. Using <strong>Windows Professional 7</strong> x64. Not Windows Server 2008R2, but not too different...</p>
+<p>To be able to run osmosis, the PATH variable must contain the directory for the <strong>Java runtime</strong> (JRE). In my case it is "C:\Program Files (x86)\Java\jre7\bin" (was able to run it using the 64-bit JRE, but this is another history). It'll be different for you, likely.</p>
+<p>The command I used to load the planet file was:</p>
+<pre><code>osmosis -v --fast-read-xml file=[location of planet file] --buffer bufferCapacity=100000 --log-progress --write-apidb host=[server] database=[database] user=[user] password=[password]
+</code></pre>
+<p>Most likely you'll want to change the --fast-read-xml to --read-pbf. That "xml" speaks for itself, it was done when the main form of the planet file was XML...</p>
+<p>Also, you may try to add a --tee and the appropriate command to save it to the PostGIS database <em>at the same time</em>.</p>
+<p>If you try to load the full planet file, osmosis (and very likely osmtopgsql as well) will fail with an <strong>PostgreSQL error</strong> stating that it cannot process transactions with more than 2^32 commands in it. For this problem the only workaround I found was to (temporarily!) disable transaction support of osmosis, altering its source code directly. More details about the changes can be found <a href="http://addictedtoosm.wordpress.com/2013/01/03/carga-do-planet-osm-possivel/">here</a> (Note: In portuguese)</p>
+<p>As far as I could find, this is a limitation of PostgreSQL, and may be fixed in the future. It arose about September/2012 when the planet file grew too large.</p>
+<p>For updating from the hourly diffs, I use the following osmosis command:</p>
+<pre><code>osmosis -v --rri workingDirectory=[path_of_osmosis_work_dir] --write-apidb-change host=[your_server] password=[password] database=[database] user=[user] validateSchemaVersion=yes allowIncorrectSchemaVersion=no populateCurrentTables=yes
+</code></pre>
+<p>In this case you also can use --tee to save changes to PostGIS at the same time.</p>
+<p>Anyway, the process took (i7 3770, 32GB RAM, PostgreSQL 9.2 64-bit, tables and index spread over 6 tablespaces on 7 physical disks) <strong>about 1.5 weeks</strong>.</p>
+<p>Make sure you have plenty of free disk space (the APIDB is now 1.5TB, PostGIS probably will grow to about 800GB). The temp files also grow very large, I prefer to unpack the planet file before loading it.</p>
+<p>Please contact me again if your trouble persists.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30179/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jan '14, 12:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/94b019f273c04cd88bc1c8dd0a8f2161?s=32&amp;d=identicon&amp;r=g" alt="MCPicoli's gravatar image" />
+    <p><a href="/users/4231/mcpicoli">MCPicoli</a><br/>
+    <span class="score" title="2172 reputation points"><span class="">2.2k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="47 badges"><span class="bronze">&#9679;</span><span class="badgecount">47</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="MCPicoli has 10 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/30179/">
+                edited
+                <strong>24 Jan '14, 15:21</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/49a7d0e0408e9cf2f698faac0f4d837a?s=32&amp;d=identicon&amp;r=g" alt="iii's gravatar image" />
+            <p><a href="/users/4984/iii">iii</a><br/>
+            <span class="score" title="4892 reputation points"><span class="">4.9k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="40 badges"><span class="silver">&#9679;</span><span class="badgecount">40</span></span><span title="82 badges"><span class="bronze">&#9679;</span><span class="badgecount">82</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30179">
+    
+</div>
+<div id="comment-tools-30179" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30179-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/30076/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Bmp68Q9TKive1Ivz2vhpMPMG9fwhwfu3' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/30076/setting-up-osm-windows-server-2008-r2-os?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/30076/setting-up-osm-windows-server-2008-r2-os?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/postgres/"
+            class="tag-link-postgres"
+            title="see questions tagged'postgres'using tags"
+            rel="tag">postgres</a> <span class="tag-number">&#215;34</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 22, 2014, 1:31 p.m.">22 Jan '14, 13:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,036 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 24, 2014, 3:21 p.m.">24 Jan '14, 15:21</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/30090/command-for-importing-diffs-with-osm2pgsql">Command for importing diffs with osm2pgsql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8108/osm-databases">osm databases</a>
+        </p>
+        
+        <p>
+            <a href="/questions/71541/download-certain-pois-for-a-whole-country-and-transfer-to-postgres-database">Download certain POIs for a whole country and transfer to Postgres-database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77810/postgresql-converting-osm-latlng-from-doublesfloat-to-integer">postgresql converting  osm latlng from doubles/float  to integer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10570/add-a-new-provider-to-routeme-library">Add a new provider to RouteMe library</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10677/setting-postgis-as-a-datasource">Setting PostGIS as a datasource</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11322/how-can-download-map-in-osmdroid">How can download map in osmdroid?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1/how-do-you-make-the-osm2pgsql-diff-imports-run-faster-than-molasses-on-postgres-84">How do you make the osm2pgsql diff imports run faster than molasses on postgres 8.4?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8117/getting-city-border-from-osm-data">Getting city border from osm data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5743/osmosisruntimeexception-cannot-represent-1-as-a-char">OsmosisRuntimeException: Cannot represent -1 as a char.</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

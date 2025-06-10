@@ -1,0 +1,1535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How precisely should a map feature be positioned for it to be considered accurately located? - OSM Help</title>
+        <meta name="description" content="I am trying to work out how precise I should be when positioning features in OSM. Of the questions already asked, &quot;Aligning roads to proper locations&quot; perhaps comes closest to what I am asking about, but doesn&#39;t really answer my question. After taking several of my GPS traces and averaging them, as ..." />
+        <meta name="keywords" content="imagery,position,gps,precision,accuracy" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/55741/how-precisely-should-a-map-feature-be-positioned-for-it-to-be-considered-accurately-located" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55741/how-precisely-should-a-map-feature-be-positioned-for-it-to-be-considered-accurately-located?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='dOum3o6xb9xQzdpi7nFxLi8J8Mlle1zH' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55741/how-precisely-should-a-map-feature-be-positioned-for-it-to-be-considered-accurately-located">How precisely should a map feature be positioned for it to be considered accurately located?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55741-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55741/up/" rel="nofollow"> </a>
+<div id="post-55741-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-55741-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55741/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55741/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am trying to work out how precise I should be when positioning features in OSM. Of the questions already asked, "<a href="https://help.openstreetmap.org/questions/17661/aligning-roads-to-proper-location">Aligning roads to proper locations</a>" perhaps comes closest to what I am asking about, but doesn't really answer my question. After taking several of my GPS traces and averaging them, as well as aligning the aerial imagery with them, and then drawing various map features, such as buildings and fences, I still find a discrepancy when I go and compare OSM with other sources of supposedly "accurate" geographic information. </p>
+<p>For example: the <a href="http://data.linz.govt.nz/data/">LINZ Data Service</a> has an OSM base map that allows one to display a wide range of aerial photographs, GIS and cadstral mapping layers from LINZ data over the top of OSM. As far as I can tell the LINZ data uses current or near current OSM data. In some cases I have been able to closely align various map features with the corresponding LINZ information, so that they overlay each other very closely.</p>
+<p>What I want to know is how close to the real world should I attempt to plot various map features, given all the uncertainties involved. Although the OSM database can record nodes to the nearest centimetre, or so, I realise that such a level of precision is probably not going to be practically achievable most of the time. But what level of precision should I consider is sufficient for an accurate OSM? </p>
+<p>That is, how precise should I try to be? </p>
+<p>And at what point should I stop worrying about precise positioning because the uncertainties become too great and so make further precision meaningless.</p>
+<p>For example: In Potlatch 2's wireframe mode at zoom level 19, the black wireframe lines would seem to be about 0.1 metres wide and nodes about 0.5 to 1 metre square. However, most of the time my GPS data is rarely more accurate than 3 metres and the position wanders around while the GPS unit is stationary. When I average my GPS data by taking several samples over time, I can only get the precise position to within about a metre or so. At zoom level 19, after aligning the imagery and my GPS traces, I find there is still a positional uncertainty of about 1 to 3 metres.</p>
+<p>Is a positional uncertainty of +/- 3 metres sufficiently precise for OSM? (At least at zoom level 19 or less.)</p>
+<p>And how positionally precise should I attempt to be at various other zoom levels? For example: Should I try to be precise to 1 cm at the highest zoom level of 23, say? </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/imagery/" class="post-tag tag-link-imagery"
+                                        title="see questions tagged 'imagery'" rel="tag">imagery</a>
+                                
+                                    <a href="/tags/position/" class="post-tag tag-link-position"
+                                        title="see questions tagged 'position'" rel="tag">position</a>
+                                
+                                    <a href="/tags/gps/" class="post-tag tag-link-gps"
+                                        title="see questions tagged 'gps'" rel="tag">gps</a>
+                                
+                                    <a href="/tags/precision/" class="post-tag tag-link-precision"
+                                        title="see questions tagged 'precision'" rel="tag">precision</a>
+                                
+                                    <a href="/tags/accuracy/" class="post-tag tag-link-accuracy"
+                                        title="see questions tagged 'accuracy'" rel="tag">accuracy</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Apr '17, 04:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1a623cf4b5df74bee1b91d0c21736921?s=32&amp;d=identicon&amp;r=g" alt="Huttite's gravatar image" />
+    <p><a href="/users/11060/huttite">Huttite</a><br/>
+    <span class="score" title="560 reputation points">560</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Huttite has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55741">
+    
+</div>
+<div id="comment-tools-55741" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55741-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    7 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55741/how-precisely-should-a-map-feature-be-positioned-for-it-to-be-considered-accurately-located?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55741/how-precisely-should-a-map-feature-be-positioned-for-it-to-be-considered-accurately-located?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55741/how-precisely-should-a-map-feature-be-positioned-for-it-to-be-considered-accurately-located?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55741/how-precisely-should-a-map-feature-be-positioned-for-it-to-be-considered-accurately-located?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55957"></a>
+                    <div id="answer-container-55957" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55957-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55957/up/" rel="nofollow"> </a>
+<div id="post-55957-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-55957-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55957/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Huttite has selected this answer as the correct answer"
+        href="/accept_answer/55957/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I live in an area that was quite active early on in OSMs history. At the time, with the exception of some rather off yahoo imagery for some areas, the only way to contribute was via generating GPS tracks and naturally that meant over- and under-runs in corners by 2 digit numbers of meters, wrong topology (roads merging in to the wrong one in a complicated junction for example) and in places where reception in general is not so good (forests etc) way off tracks, but the result was perfectly usable (actually the topology issues were and are far more annoying than anything else).</p>
+<p>As I mentioned we had some coverage by yahoo imagery early on and in those areas we've spent the last couple of years cleaning up details (mainly buildings) that were added from that imagery but unluckily from a bad source, creating a lot of completely unnecessary work with no real benefit at the time.</p>
+<p>As a consequence, getting back to answering the question. I believe the correct answer is that the required precision depends on the level of detail you want to add and as a corollary you shouldn't be adding detail where the available sources do not support that level of precision reasonably. </p>
+<p>Example: if you only have consumer grade GPS and no imagery, I would restrict myself to roads and map POIs as nodes and not try to add buildings en masse.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55957/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Apr '17, 08:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55957/">
+                edited
+                <strong>30 Apr '17, 12:14</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55957">
+    
+        <a name="56005"></a>
+        <div class="comment" id="comment-56005">
+            <div id="post-56005-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Thanks Simon. Your answer contains the sort of information I was wanting to obtain. </p>
+
+<p>First and foremost is map topology, i.e. connecting  streets so the street centre-line network has the correct shape and positioning points of interest in the right order, with respect to the street network.</p>
+
+<p>Then comes the detail, but only sufficient detail that can be supported by the available GPS data and any available imagery. </p>
+
+<p>Getting the street network reasonably aligned with imagery and GPS data should give clues about how accurate one can be. Additional external sources, such as official cadastral data, will help judging how accurate OSM is, and suggest how accurate one can be. </p>
+
+<p>(e.g. In NZ, OSM is a background layer for official LINZ (cadastral) data.)</p>
+
+<p>Buildings and other details should be added last, once one has good quality imagery available to trace and one is confident it is precisely positioned with respect to the street network. Draw in significant and notable buildings first but do not add all the buildings unless there is good quality imagery available.</p></div>
+            <div class="comment-info" id="comment-56005-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '17, 09:34)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55957" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55957-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55749"></a>
+                    <div id="answer-container-55749" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55749-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55749/up/" rel="nofollow"> </a>
+<div id="post-55749-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-55749-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55749/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think the answer is probably to decide for yourself what level of accuracy improves the overall data the most. Working to add centimeter precision buildings is often going to be less useful than adding rough alignments for missing roads or correcting larger issues with roads. An address point probably provides users with more eventual value than a building outline of any precision. And so on.</p>
+<p>I think it is still worthwhile to pay attention to what sort of accuracy and precision you get out of your mapping process and to look for improvements, I just don't think it is the thing with the highest priority.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55749/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Apr '17, 13:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c860445e868ebb21da141635a4aa7b06?s=32&amp;d=identicon&amp;r=g" alt="maxerickson's gravatar image" />
+    <p><a href="/users/10973/maxerickson">maxerickson</a><br/>
+    <span class="score" title="12700 reputation points"><span class="">12.7k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="176 badges"><span class="bronze">&#9679;</span><span class="badgecount">176</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="maxerickson has 93 accepted answers">32&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55749">
+    
+        <a name="55781"></a>
+        <div class="comment" id="comment-55781">
+            <div id="post-55781-score" class="comment-score"></div>
+            <div class="comment-text"><p>My question is not about the accuracy of the map but about its precision. Assuming I have added those missing roads and buildings so that they are accurately represented, but perhaps imprecisely positioned, and so may want to make adjustments. At what degree of precision should I say the extra effort is not worthwhile. While I might know the dimensions of a particular building and other features on a particular property to the nearest centimetre, because I have a site survey, I don't know the exact position or location because the aerial imagery is offset and my GPS measurements are only precise to +/- 1 to 3 metres (I hope). And the two do not align perfectly. Also, I don't know for certain which one is "out" and suspect they both could be. What I am trying to ascertain is what is an acceptable degree of precision. I realise +/- 1 centimete is too precice but is +/- 3 metres precise enough? Such a degree of precision could mean the difference between walking along a fence or in the gutter rather than the middle of a footpath. Is that acceptable with typical handheld GPS technology and the existing Bing imagery?</p></div>
+            <div class="comment-info" id="comment-55781-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 00:58)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+        <a name="55784"></a>
+        <div class="comment" id="comment-55784">
+            <div id="post-55784-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oh, a few meters is fine. Lots of people are adding lots of features without thinking much about how good the source is, so there is a bit of a baseline.</p></div>
+            <div class="comment-info" id="comment-55784-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 01:29)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="55790"></a>
+        <div class="comment" id="comment-55790">
+            <div id="post-55790-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you be more precise about "a few metres"? Do you mean something in the range of 1 to 5 metres, say, or is it more like 10 to 30 metres? In other words, is it the width of a footpath (~ 1 to 3 m), a traffic lane(~ 4 to 5 m), a street or road (~7 to 10 m), or a property frontage (~ 20 to 30 m) for example.</p></div>
+            <div class="comment-info" id="comment-55790-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 05:28)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+        <a name="55827"></a>
+        <div class="comment" id="comment-55827">
+            <div id="post-55827-score" class="comment-score">2</div>
+            <div class="comment-text"><p>It really depends. I wouldn't map buildings that I thought were 15 meters off, but I wouldn't hesitate to add a section of hiking trail that was 30 meters off (I would try to do better, but noting the approximate route of the trail is better than leaving it out). Same thing with a road, even if the best source isn't great, I still think it is better to have something than nothing.</p></div>
+            <div class="comment-info" id="comment-55827-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 16:15)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="56008"></a>
+        <div class="comment" id="comment-56008">
+            <div id="post-56008-score" class="comment-score"></div>
+            <div class="comment-text"><p>I question the "something is better than nothing" approach with roads and trails. Even if a road or trail cannot be precisely positioned on the map, it should at least be accurately represented. </p>
+
+<p>I recently encountered a street that was perhaps drawn 30 metres out of position. However it showed that one entered from the top of the street rather than the bottom. As a consequence, if one tried to follow the map, one found the street went up a flight of steps and then down a private footpath, rather than climbing along the rising edge of a vertical cliff then turning hard back in a zig-zag turn to go up the rest of the street. Because the cliff edge had given way, one could not drive up the road safely. However, pedestrians could walk up the steps and along the footpath to access the top end of the street. The inaccurate map meant you couldn't drive to where the map said you could but if you followed the street signs, and just thought the map showed the road out of position, you could end up driving over the cliff edge.</p>
+
+<p>When I looked at the imagery I wondered how anyone could make such a mistake, because the road was clearly shown. but the steps were not visible.</p></div>
+            <div class="comment-info" id="comment-56008-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '17, 10:45)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55749" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55749-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55744"></a>
+                    <div id="answer-container-55744" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55744-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55744/up/" rel="nofollow"> </a>
+<div id="post-55744-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-55744-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55744/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Huttile, it all comes down on the accuracy of your own GPS. If its +- 3.00 m you won’t be able to beat that figure. A professional GPS  does it better, you don’t wont to carry it around, is accurate up to 0,01 m.
+OSM is based on the availability of many trails or tracks of a way, the truth will statistically be somewhere in the middle. When I survey a specific building, I draw it outside the map locally using JOSM and based on the original building drawings (4 hours work), if available and place the figure inside the GPS nodes or marks, just to reduce the variations of the GPS traces.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55744/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Apr '17, 09:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55744">
+    
+        <a name="55782"></a>
+        <div class="comment" id="comment-55782">
+            <div id="post-55782-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't think it does just come down to the "accuracy" - really its the precision - of my own GPS. I know my GPS traces are only accurate to about +/- 3 metres and I know they change from moment to moment, so I know I need to use multiple traces or take fixes for "averaged waypoints". Even when I plot these points, precisely, I still notice that there are small discrepancies between my GPS and Bing imagery, for example. And I cannot tell if either are more precise! You seem to be suggesting that I should not be too concerned if things are mapped to within +/- 3 metres, since obtaining better precision requires using professional surveying equipment and techniques.</p></div>
+            <div class="comment-info" id="comment-55782-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 01:14)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+        <a name="55810"></a>
+        <div class="comment" id="comment-55810">
+            <div id="post-55810-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I think you should not be too concerned if it prevents you from doing other mapping work for example.</p>
+
+<p>The precision will increase in a few years with Galileo and the GPS III update so it'll be much easier to map down to 1 meter.</p>
+
+<p>In the mean time, both mappers and users will have a much lower precision, up to 3 meters for the maps + up to 3 meters for the user's GPS, so up to 6 meters on the map.</p></div>
+            <div class="comment-info" id="comment-55810-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 13:44)</span>
+                <a class="comment-user userinfo" href="/users/13627/the-redburn">The RedBurn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55744" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55744-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55752"></a>
+                    <div id="answer-container-55752" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55752-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55752/up/" rel="nofollow"> </a>
+<div id="post-55752-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-55752-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55752/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Just would like to add that I often find it useful if mappers document their position sources. It helps other mappers later on (or even the original mapper themselves) to judge about an objects positional accuracy. For example if a mapper documented (in a changeset <code>comment</code>/<code>source</code> or possibly even in a <code>source:position</code> tag on an object) that the position of a (for example) tower was acquired with averaging 10 EGNOS-DGPS-assisted GPS measurements over different days, then I would not want to move a point based on my single-pass GPS measurement or nowadays aerial imagery.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55752/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Apr '17, 17:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55752">
+    
+        <a name="55785"></a>
+        <div class="comment" id="comment-55785">
+            <div id="post-55785-score" class="comment-score"></div>
+            <div class="comment-text"><p>Definitely agree. In areas where I am mapping I have often selected feature visible in the imagery that I can use as a GPS waypoint position. Features like the end posts of a fence or similar barrier, or foot of a power pole that show as a clear sharp feature, with a linear shadow are good candidates. </p>
+
+<p>The problem arises when I have several of these points but cannot get them all to align precisely with the imagery, so have to compromises with using a close fit when a couple of reasonably close points are "out" by a metre or two over about 50 metres distance. I am assuming that even my "averaged waypoints" could be uncertain by 1 or 2 metres, because they seem to move around by that much each time I take another sample. Is this degree of imprecision acceptable for OSM, given the current state of GPS technology and Bing imagery? Or am I being too precise? Should I tolerate and accept more error in my measurements?</p></div>
+            <div class="comment-info" id="comment-55785-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 01:41)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+        <a name="55787"></a>
+        <div class="comment" id="comment-55787">
+            <div id="post-55787-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think you shouldn't be to focussed on aligning with Bing. I believe Bing is never very precise, the position of a feature can vary depending on the zoom level, stitching can be done badly, etc.</p></div>
+            <div class="comment-info" id="comment-55787-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 04:06)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="55788"></a>
+        <div class="comment" id="comment-55788">
+            <div id="post-55788-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am very aware that Bing imagery is not precisely positioned. I often find I have to adjust the offset of the original image by 10 or 20 metres so that it aligns with a particular part of the map. Yes, there are places where the different image boundaries are poorly stitched together but these are fairly obvious distortions over a small area or strip of image. Also I have found some places where the ortho-rectification process seems questionable, particularly near high cliffs or steep hills. However, once I align the imagery reasonably precisely, I do find it is remains fairly accurately aligned with features that are hundreds of metres or even kilometres apart. Perhaps just needing a tweek of a metre or so as I move a thousand metres from one reference point to the next. </p>
+
+<p>While I might take care to align the imagery with points I believe are precisely located, it is readily apparent that others might not take quite the same care. Often I encounter places where an area has been mapped directly off the imagery without it being aligned to precisely known locations. How much "misalignment" should I tolerate before moving whole city blocks of the map just a few metres sideways?</p></div>
+            <div class="comment-info" id="comment-55788-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 05:14)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+        <a name="55833"></a>
+        <div class="comment" id="comment-55833">
+            <div id="post-55833-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/11060/huttite"></a><a href="https://help.openstreetmap.org/users/11060/huttite">@Huttite</a>: in any way you should be sure that your alignment really is better than before. Maybe also contact the former (main) mappers if they are still active and/or  shortly discuss on a (preferably) local mailinglist or forum. I would move whole blocks if their absolute mispositioning becomes a problem. E.g. if building corners (old position) intrude street or park areas (new, good position). That likely is something around 5 m - depending on the city type.</p></div>
+            <div class="comment-info" id="comment-55833-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 19:54)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55752" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55752-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55954"></a>
+                    <div id="answer-container-55954" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55954-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55954/up/" rel="nofollow"> </a>
+<div id="post-55954-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-55954-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55954/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>An important question in this context is "how precise/accurate do we really need to be in order to produce a map that is useful for most users?".</p>
+<p>One thing is going OCD about "how accurate/precise can we possibly be with the tools at our hands", another thing is asking "how accurate/precise do most users really need the map to be?".</p>
+<p>Imagine a user riding a car or a bicycle; What's the chance that he would notice if a building or sign or whatever on the map was 3-5 meters off? My personal experience = really slim.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55954/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Apr '17, 07:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6edf3a421a450237beae62ba93582637?s=32&amp;d=identicon&amp;r=g" alt="Hjart's gravatar image" />
+    <p><a href="/users/3577/hjart">Hjart</a><br/>
+    <span class="score" title="2961 reputation points"><span class="">3.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="26 badges"><span class="silver">&#9679;</span><span class="badgecount">26</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hjart has 14 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55954">
+    
+        <a name="55959"></a>
+        <div class="comment" id="comment-55959">
+            <div id="post-55959-score" class="comment-score">1</div>
+            <div class="comment-text"><p>could you please un-abbreviate "OCD"? I fail to understand its meaning.</p></div>
+            <div class="comment-info" id="comment-55959-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '17, 11:29)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55961"></a>
+        <div class="comment" id="comment-55961">
+            <div id="post-55961-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://en.wikipedia.org/wiki/Obsessive%E2%80%93compulsive_disorder">https://en.wikipedia.org/wiki/Obsessive%E2%80%93compulsive_disorder</a></p></div>
+            <div class="comment-info" id="comment-55961-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '17, 16:43)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="56007"></a>
+        <div class="comment" id="comment-56007">
+            <div id="post-56007-score" class="comment-score"></div>
+            <div class="comment-text"><p>If I was walking I might notice that a path was 5 metres off if it was a good GPS day, but in a car or on a bicycle it would be less noticeable on a single occasion. However, repeated passes on different days could show up an error. However, as you say, is a map being that precise really needed by most users? Probably not needed if you are trying to find a public road. But it might be if the map is used as a background image for displaying official GIS data, which it is for Land Information in NZ (LINZ data) and Geonet.org.nz, for example. While locating the epicentre of an earthquake to the nearest kilometre is good enough, you may want to locate the centreline of a road or a boundary fence within a metre or so.</p></div>
+            <div class="comment-info" id="comment-56007-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '17, 10:11)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+        <a name="56009"></a>
+        <div class="comment" id="comment-56009">
+            <div id="post-56009-score" class="comment-score"></div>
+            <div class="comment-text"><p>TL;DR: As precise as needed, but not more ;)</p>
+
+<p>In my humble opinion, much of OSM use is by humans; so I'm mapping on a human scale: within a few meters (~20 feet?). If it does matter topologically (multiple footpaths in an urban terrain), I try to be more precise, but I don't think the data is actually usable for precision under 1 m (~3 ft) - the precision of individual points is, IMNSHO, unknown.</p></div>
+            <div class="comment-info" id="comment-56009-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '17, 11:42)</span>
+                <a class="comment-user userinfo" href="/users/9641/piskvor">Piskvor</a>
+                
+            </div>
+        </div>
+    
+        <a name="56062"></a>
+        <div class="comment" id="comment-56062">
+            <div id="post-56062-score" class="comment-score">1</div>
+            <div class="comment-text"><p>In other words, having the road centreline plotted on the carriageway between the property boundary fences is sufficient precision for human uses, but the data won't support putting the centreline on top of the 10 cm (4 inch) white line in the middle of the road. Although, if you tried to be really precise you could try and draw a road centreline in the middle of a road in the gap between traffic travelling in opposite directions. </p>
+
+<p>I.e You can find the road to travel on it, but you shouldn't be using OSM to find a buried pipe or power cable shown to be in the street.</p></div>
+            <div class="comment-info" id="comment-56062-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 May '17, 03:14)</span>
+                <a class="comment-user userinfo" href="/users/11060/huttite">Huttite</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55954" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55954-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="59797"></a>
+                    <div id="answer-container-59797" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-59797-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59797/up/" rel="nofollow"> </a>
+<div id="post-59797-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-59797-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59797/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>After taking several of my GPS traces and averaging them, as well as aligning the aerial imagery with 
+them, and then drawing various map features, such as buildings and fences,
+I still find a discrepancy when I go and compare OSM with other sources of supposedly "accurate" geographic information. </p>
+</blockquote>
+<p>if you have accurate geographic information (building positions, survey points, survey maps from national geodetic service) then you should use those, provided the copyright allows for that. Important part is that you need to make sure you use the same reference frame or convert to the one OSM uses: WGS 84.</p>
+<blockquote>
+<p>What I want to know is how close to the real world should I attempt to plot various map features, 
+given all the uncertainties involved. Although the OSM database can record nodes to the nearest 
+centimetre, or so, I realise that such a level of precision is probably not going to be practically 
+achievable most of the time. But what level of precision should I consider is sufficient for an 
+accurate OSM?</p>
+<p>That is, how precise should I try to be? </p>
+</blockquote>
+<p>Here again the problem is that OSM uses WGS 84. Problem with WGS 84 is that it does not account for continental drift and plate movement (that's one of the reasons why national bodies use their own reference frames). So for <em>absolute</em> positioning the best you can do is around 10 to 20 cm. More precise measurements will quickly get invalidated by natural processes.</p>
+<p>Given that the smallest items we do map (waste baskets, road signs, kerbs, etc.) are also 10 to 20 cm, a 1 cm level of precision, even in relative measurement, I'd say is overkill. For relative measurement, more important is information about the side of the path the bin is (or the side of a road the walkway is on), than the length away it is from the nearest junction.</p>
+<p>Similarly, for navigation for blind people, it's more important that you have a waste basket in front of bench than absolutely precise position of the waste basket but incorrect relative position of the bench near it.</p>
+<blockquote>
+<p>Is a positional uncertainty of +/- 3 metres sufficiently precise for OSM? (At least at zoom level 19 or less.)</p>
+</blockquote>
+<p>in the middle of nowhere, any data is better than no data - information that there is a road that leads from mapped point A to mapped point B and the general shape of it is useful (remember, you do not have to even use GPS or aerial maps for mapping in OSM!). Still, good practice in such situation is to either add <code>fixme=resurvey</code> tag, or <code>source=approximation</code> to the changeset. Similarly, if the best measurement you have is regular aerial imaginary (Bing, Yahoo) and GPS trace, then adding <code>source=gps</code> is good practice.</p>
+<p>If you do have access to ortophotographs, then I'd say you should map buildings and roads to within a meter or few decimeters (unless the photo has a lower resolution than that).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/59797/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Sep '17, 14:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7cfe49e263a76df97bd6defdb1a86714?s=32&amp;d=identicon&amp;r=g" alt="tomato42's gravatar image" />
+    <p><a href="/users/14238/tomato42">tomato42</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tomato42 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-59797">
+    
+</div>
+<div id="comment-tools-59797" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59797-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="75612"></a>
+                    <div id="answer-container-75612" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-75612-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/75612/up/" rel="nofollow"> </a>
+<div id="post-75612-score" class="post-score"
+    title="current number of votes">
+    -4
+</div>
+<a id="post-75612-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/75612/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thank you for sharing about how precisely should a map feature be positioned for it to be considered accurately located, your information helpful for all peoples. I am also working on a project for indoor positioning.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/75612/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '20, 08:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d65bf3b998394330195797de81ff2de4?s=32&amp;d=identicon&amp;r=g" alt="Smith%20Hennry's gravatar image" />
+    <p><a href="/users/18158/smith-hennry">Smith Hennry</a><br/>
+    <span class="score" title="-20 reputation points">-20</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Smith Hennry has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-75612">
+    
+</div>
+<div id="comment-tools-75612" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-75612-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55741/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='dOum3o6xb9xQzdpi7nFxLi8J8Mlle1zH' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55741/how-precisely-should-a-map-feature-be-positioned-for-it-to-be-considered-accurately-located?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55741/how-precisely-should-a-map-feature-be-positioned-for-it-to-be-considered-accurately-located?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/gps/"
+            class="tag-link-gps"
+            title="see questions tagged'gps'using tags"
+            rel="tag">gps</a> <span class="tag-number">&#215;235</span><br/>
+        
+        <a href="/tags/imagery/"
+            class="tag-link-imagery"
+            title="see questions tagged'imagery'using tags"
+            rel="tag">imagery</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/accuracy/"
+            class="tag-link-accuracy"
+            title="see questions tagged'accuracy'using tags"
+            rel="tag">accuracy</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/position/"
+            class="tag-link-position"
+            title="see questions tagged'position'using tags"
+            rel="tag">position</a> <span class="tag-number">&#215;20</span><br/>
+        
+        <a href="/tags/precision/"
+            class="tag-link-precision"
+            title="see questions tagged'precision'using tags"
+            rel="tag">precision</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 22, 2017, 4:31 a.m.">22 Apr '17, 04:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,058 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 9, 2020, 8:26 a.m.">09 Jul '20, 08:26</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/30075/extract-elevation-from-gps-tracks-available-in-osm">Extract Elevation from GPS tracks available in OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66491/how-can-i-photo-map-with-gps-coordinates-within-a-5-foot-accuracy">How can I photo map with gps coordinates within a 5 foot accuracy?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15585/directions-and-gps-position">directions and gps position</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21214/bing-map-had-changed-position">Bing Map had changed position</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50947/when-track-is-imprecise-should-i-add-the-way-and-mark-a-fixme-or-add-nothing">When track is imprecise, should I add the way and mark a fixme, or add nothing?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66375/what-is-the-point-of-recording-gps-tracks-when-there-is-imagery">What is the point of recording gps tracks when there is imagery?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11200/gps-device-taking-pictures-and-saving-orientationhdop">GPS device taking pictures and saving orientation+HDOP ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13449/if-i-live-somewhere-with-no-background-imagery-and-have-no-gps-device-whats-the-best-way-that-i-can-contribute">If I live somewhere with no background imagery and have no GPS device, what&#39;s the best way that I can contribute?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">Which is more reliable..? GPS traces or aerial imagery?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/802/can-we-get-more-updated-aerial-imagery-from-bing-or-mapquest-or-anything-but-yahoo">Can we get more updated aerial imagery from Bing or Mapquest or anything, but Yahoo?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

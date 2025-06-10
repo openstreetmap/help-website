@@ -1,0 +1,1113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Which rules do we use to determine the class of a road ? - OSM Help</title>
+        <meta name="description" content="Hi Im stumbling over primary, secondary etc roads. Whats the rule or rules to determine a minor from a service road or a residential from a livingstreet ? Are there quarternary roads in OSM ? Just peel them of from the outside of the rural area or is it the other way around, building up from the ins..." />
+        <meta name="keywords" content="rules,roads,streets,primairy,rural" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/15534/which-rules-do-we-use-to-determine-the-class-of-a-road" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/15534/which-rules-do-we-use-to-determine-the-class-of-a-road?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mZUzPMrBG8woGq62uZyuEVIEITgSL1YE' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/15534/which-rules-do-we-use-to-determine-the-class-of-a-road">Which rules do we use to determine the class of a road ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-15534-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15534/up/" rel="nofollow"> </a>
+<div id="post-15534-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-15534-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15534/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/15534/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi Im stumbling over primary, secondary etc roads. Whats the rule or rules to determine a minor from a service road or a residential from a livingstreet ? Are there quarternary roads in OSM ?
+Just peel them of from the outside of the rural area or is it the other way around, building up from the inside out ?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rules/" class="post-tag tag-link-rules"
+                                        title="see questions tagged 'rules'" rel="tag">rules</a>
+                                
+                                    <a href="/tags/roads/" class="post-tag tag-link-roads"
+                                        title="see questions tagged 'roads'" rel="tag">roads</a>
+                                
+                                    <a href="/tags/streets/" class="post-tag tag-link-streets"
+                                        title="see questions tagged 'streets'" rel="tag">streets</a>
+                                
+                                    <a href="/tags/primairy/" class="post-tag tag-link-primairy"
+                                        title="see questions tagged 'primairy'" rel="tag">primairy</a>
+                                
+                                    <a href="/tags/rural/" class="post-tag tag-link-rural"
+                                        title="see questions tagged 'rural'" rel="tag">rural</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Aug '12, 00:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15534/">
+                edited
+                <strong>27 Aug '12, 10:44</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+            <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+            <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-15534">
+    
+</div>
+<div id="comment-tools-15534" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15534-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/15534/which-rules-do-we-use-to-determine-the-class-of-a-road?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/15534/which-rules-do-we-use-to-determine-the-class-of-a-road?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/15534/which-rules-do-we-use-to-determine-the-class-of-a-road?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/15534/which-rules-do-we-use-to-determine-the-class-of-a-road?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15535"></a>
+                    <div id="answer-container-15535" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15535-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15535/up/" rel="nofollow"> </a>
+<div id="post-15535-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-15535-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15535/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Hendrikklaas has selected this answer as the correct answer"
+        href="/accept_answer/15535/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is "slightly" different from country to country. A major road in the Amazon forest will look different than the M25 around London.</p>
+<p>Since you are dutch: <a href="http://wiki.openstreetmap.org/wiki/NL:The_Netherlands_roads_tagging">The Netherlands roads tagging</a></p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Category:Tagging_guidelines_by_country">Tagging guidelines for other countries.</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15535/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Aug '12, 01:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fed945e27bb98de054a867827550812e?s=32&amp;d=identicon&amp;r=g" alt="cartinus's gravatar image" />
+    <p><a href="/users/2933/cartinus">cartinus</a><br/>
+    <span class="score" title="7033 reputation points"><span class="">7.0k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="66 badges"><span class="silver">&#9679;</span><span class="badgecount">66</span></span><span title="105 badges"><span class="bronze">&#9679;</span><span class="badgecount">105</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cartinus has 35 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15535/">
+                edited
+                <strong>27 Aug '12, 11:44</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15535">
+    
+        <a name="15541"></a>
+        <div class="comment" id="comment-15541">
+            <div id="post-15541-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Many people tag highways outside their living country (vacations, armchair, disaster mapping, etc). We should create a better link between these country specific documents in the wiki (NL road tagging, UK road tagging, US road tagging, DE, FR, etc) with e.g. a new category. My 2cents.</p></div>
+            <div class="comment-info" id="comment-15541-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Aug '12, 09:14)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+        <a name="15565"></a>
+        <div class="comment" id="comment-15565">
+            <div id="post-15565-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I guess you mean something like this:
+<a href="http://wiki.openstreetmap.org/wiki/Highway:International_equivalence">http://wiki.openstreetmap.org/wiki/Highway:International_equivalence</a></p></div>
+            <div class="comment-info" id="comment-15565-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Aug '12, 19:34)</span>
+                <a class="comment-user userinfo" href="/users/583/malenki">malenki</a>
+                
+            </div>
+        </div>
+    
+        <a name="15566"></a>
+        <div class="comment" id="comment-15566">
+            <div id="post-15566-score" class="comment-score">3</div>
+            <div class="comment-text"><p>No, I mean:<br>
+<a href="http://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging">http://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging</a><br>
+<a href="http://wiki.openstreetmap.org/wiki/FR:France_roads_tagging">http://wiki.openstreetmap.org/wiki/FR:France_roads_tagging</a><br>
+<a href="http://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines">http://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines</a><br>
+<a href="http://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines">http://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines</a></p></div>
+            <div class="comment-info" id="comment-15566-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Aug '12, 20:41)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15535" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15535-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="16401"></a>
+                    <div id="answer-container-16401" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16401-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16401/up/" rel="nofollow"> </a>
+<div id="post-16401-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16401-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16401/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The back woods of Southern Oregon (and probably other western US states, but these are what I know) have several kinds of roads. OSM allows specifying paved vs. dirt and the number of lanes. The problem is differentiating the different types of back-country dirt roads:</p>
+<ul>
+<li>dirt - 'well' maintained (sedans ok if you don't mind dust)</li>
+<li>dirt - 'poorly' road (not for a sedan, probably high clearance required, rough road)</li>
+<li>dirt - cat road (probably originally used to drag logs to a landing, 4-wheel drive recommended)</li>
+</ul>
+<p>I can think of examples of each of these types of roads currently mapped on OSM. These are definitely not primary roads. But labeling them all as secondary roads means losing much info for the map viewer.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16401/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Sep '12, 08:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad08b943325e0b57e015266c816eada0?s=32&amp;d=identicon&amp;r=g" alt="rbooth's gravatar image" />
+    <p><a href="/users/4596/rbooth">rbooth</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rbooth has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16401">
+    
+        <a name="16404"></a>
+        <div class="comment" id="comment-16404">
+            <div id="post-16404-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can describe these road more clearly by adding a <a href="http://wiki.openstreetmap.org/wiki/Key:surface">surface</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:smoothness">smoothness</a> tag. Additionally there is also a rather old <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/usability">usability</a> proposal.</p></div>
+            <div class="comment-info" id="comment-16404-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Sep '12, 09:21)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16401" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16401-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="16436"></a>
+                    <div id="answer-container-16436" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16436-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16436/up/" rel="nofollow"> </a>
+<div id="post-16436-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16436-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16436/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OSM seems to display roads differently depending on class. Most back-country roads seem to be classed as Residential. That seems to me to violate what I gather is the rule of thumb here - don't map something incorrectly just so it shows up correctly. Classifying these roads as residential seems to violate this rule. These roads are miles and miles (kilometers and kilomenters) from the nearest residence, unless you count deer, bears, bobcats, etc.</p>
+<p>So I chose secondary, but problem there is, that can kill folks. Matter of fact, a (city folk) guy died a few years ago on a nearby road (Bear Camp Road) after getting stuck in the snow. His wife and kids were rescued. His GPS drew the route that killed him.</p>
+<p>Showing these roads as secondary is wrong, and I'll go back and change them. But it irks me no end to label a road as residential when the whole reason I go there is it is as far from residential as I can get.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16436/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Sep '12, 06:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad08b943325e0b57e015266c816eada0?s=32&amp;d=identicon&amp;r=g" alt="rbooth's gravatar image" />
+    <p><a href="/users/4596/rbooth">rbooth</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rbooth has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16436">
+    
+        <a name="16439"></a>
+        <div class="comment" id="comment-16439">
+            <div id="post-16439-score" class="comment-score"></div>
+            <div class="comment-text"><p>Then the classification in your area is incorrect and should be fixed. There are lots of different <a href="http://wiki.openstreetmap.org/wiki/Key:highway">road classes</a>, not just secondary and residential.</p></div>
+            <div class="comment-info" id="comment-16439-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '12, 08:03)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16445"></a>
+        <div class="comment" id="comment-16445">
+            <div id="post-16445-score" class="comment-score">2</div>
+            <div class="comment-text"><p>The "residential" thing in the US is simply because that was the default classification used when data was imported from the federal TIGER dataset. It's not the correct classification to use in unpopulated areas and you should change it whenever you encounter it.</p></div>
+            <div class="comment-info" id="comment-16445-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '12, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16448"></a>
+        <div class="comment not_top_scorer" id="comment-16448">
+            <div id="post-16448-score" class="comment-score"></div>
+            <div class="comment-text"><p>I checked your link, scai.</p>
+
+<p>I found this for tertiary roads:</p>
+
+<p>A "C" road in the UK. Generally for use on roads wider than 4 metres (13') in width, and for faster/wider minor roads that aren't A or B roads. In the UK, they tend to have dashed lines down the middle, whereas unclassified roads don't.</p>
+
+<p>Ignoring the first sentence as UK-specific, the rest of the definition leaves out the roads I'm talking about. The ones I'm talking about are single-lane, mostly dirt, roads.</p>
+
+<p>I didn't find anything describing what minor roads are supposed to be. I'm assuming they are a lower class than tertiary. </p>
+
+<p>-- I have since found discussions on Wiki pages and such proposing that either quaternary or minor be used instead of unclassified. I'm guessing minor won. --</p>
+
+<p>Maybe minor is the class I should use.</p>
+
+<p>I appreciate the feedback both of you have given me. When I edit a map, I want my changes to be correct or to at least improve on what was there previously.</p></div>
+            <div class="comment-info" id="comment-16448-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '12, 11:21)</span>
+                <a class="comment-user userinfo" href="/users/4596/rbooth">rbooth</a>
+                
+            </div>
+        </div>
+    
+        <a name="16450"></a>
+        <div class="comment not_top_scorer" id="comment-16450">
+            <div id="post-16450-score" class="comment-score"></div>
+            <div class="comment-text"><p>Please do not create an <em>answer</em> every time, you are not responding to the original <em>question</em> and this is not a forum. If you have a separate question, create a new one.</p></div>
+            <div class="comment-info" id="comment-16450-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '12, 11:55)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16452"></a>
+        <div class="comment not_top_scorer" id="comment-16452">
+            <div id="post-16452-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you're in the US, I'd read <a href="http://wiki.openstreetmap.org/wiki/United_States_roads_tagging">this wiki page</a> and perhaps discuss on <a href="http://lists.openstreetmap.org/listinfo/talk-us">this mailing list</a>.<br>
+</p>
+
+<p>Road tagging has to be country-specific to an extent.  Something that in the UK would be tagged as "<a href="http://wiki.openstreetmap.org/wiki/Highway%3Dtrack">highway=track</a>" might be tagged as an actual road (perhaps "highway=unclassified, surface=something descriptive" elsewhere).</p></div>
+            <div class="comment-info" id="comment-16452-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '12, 12:04)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16457"></a>
+        <div class="comment" id="comment-16457">
+            <div id="post-16457-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Don't use 'minor' or 'quaternary'. These are not used in OSM.</p></div>
+            <div class="comment-info" id="comment-16457-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '12, 14:15)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16461"></a>
+        <div class="comment" id="comment-16461">
+            <div id="post-16461-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Minor Road <em>does</em> get used in the Potlatch 2 editor. The tag used is highway=unclassified, but it appears in the Simple view as 'Minor Road', which may be where any confusion comes from.</p></div>
+            <div class="comment-info" id="comment-16461-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '12, 16:21)</span>
+                <a class="comment-user userinfo" href="/users/34/chrish">ChrisH</a>
+                
+            </div>
+        </div>
+    
+        <a name="16468"></a>
+        <div class="comment" id="comment-16468">
+            <div id="post-16468-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Ah yes, I called it that because no-one ever understands what "unclassified" means. :)</p></div>
+            <div class="comment-info" id="comment-16468-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '12, 20:02)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16473"></a>
+        <div class="comment not_top_scorer" id="comment-16473">
+            <div id="post-16473-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<blockquote>
+<p>Please do not create an answer every time
+sorry, noob here. I'll try to be better.</p>
+</blockquote>
+</blockquote>
+
+<p>I changed the roads to minor. I have no idea if that's correct, but at this point, I'm tired of the discussion. If its wrong, feel free to modify my changes.</p></div>
+            <div class="comment-info" id="comment-16473-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Sep '12, 09:03)</span>
+                <a class="comment-user userinfo" href="/users/4596/rbooth">rbooth</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16436" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16436-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/15534/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mZUzPMrBG8woGq62uZyuEVIEITgSL1YE' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15534/which-rules-do-we-use-to-determine-the-class-of-a-road?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15534/which-rules-do-we-use-to-determine-the-class-of-a-road?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/roads/"
+            class="tag-link-roads"
+            title="see questions tagged'roads'using tags"
+            rel="tag">roads</a> <span class="tag-number">&#215;86</span><br/>
+        
+        <a href="/tags/streets/"
+            class="tag-link-streets"
+            title="see questions tagged'streets'using tags"
+            rel="tag">streets</a> <span class="tag-number">&#215;33</span><br/>
+        
+        <a href="/tags/rules/"
+            class="tag-link-rules"
+            title="see questions tagged'rules'using tags"
+            rel="tag">rules</a> <span class="tag-number">&#215;22</span><br/>
+        
+        <a href="/tags/rural/"
+            class="tag-link-rural"
+            title="see questions tagged'rural'using tags"
+            rel="tag">rural</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/primairy/"
+            class="tag-link-primairy"
+            title="see questions tagged'primairy'using tags"
+            rel="tag">primairy</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 27, 2012, 12:37 a.m.">27 Aug '12, 00:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,908 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 26, 2012, 9:03 a.m.">26 Sep '12, 09:03</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/43359/i-want-to-know-information-about-tags">i want to know information about tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1608/map-update-volunteer">Map update volunteer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7024/i-am-new-to-open-street-map-and-navfree">i am new to Open Street Map and Navfree</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5865/newly-saved-roads-not-showing-up-in-view-tab">Newly Saved Roads Not Showing Up In View Tab</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5997/roads-do-not-exist">Roads do not exist</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6820/2wd-vs-4wd-roads">2wd vs 4wd roads</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5492/obsolete-features">obsolete features</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7186/road-classification-us">[closed] road classification US</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7281/turning-lanes-parking">Turning lanes, parking</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1363/closed-roads-delete-tag">Closed Roads Delete? Tag?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

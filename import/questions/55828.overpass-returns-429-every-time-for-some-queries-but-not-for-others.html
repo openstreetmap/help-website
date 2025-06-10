@@ -1,0 +1,781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Overpass returns 429 every time for some queries, but not for others - OSM Help</title>
+        <meta name="description" content="I am trying to download streets from the Overpass API using a very simple Python script. This always worked just fine for me, until this morning when I started experiencing strange behavior. import requests url = &#39;http://www.overpass-api.de/api/interpreter&#39; timeout = 60 data = &#39;[out:json][timeout:60..." />
+        <meta name="keywords" content="python,overpass,api,server,query" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/55828/overpass-returns-429-every-time-for-some-queries-but-not-for-others" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55828/overpass-returns-429-every-time-for-some-queries-but-not-for-others?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sw22vfSZdtPRXyjx6fCIIEEAeneI80AI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55828/overpass-returns-429-every-time-for-some-queries-but-not-for-others">Overpass returns 429 every time for some queries, but not for others</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55828-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55828/up/" rel="nofollow"> </a>
+<div id="post-55828-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55828-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55828/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55828/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am trying to download streets from the Overpass API using a very simple Python script. This always worked just fine for me, until this morning when I started experiencing strange behavior.</p>
+<pre><code>import requests
+url = 'http://www.overpass-api.de/api/interpreter'
+timeout = 60
+data = '[out:json][timeout:60];(way["highway"]["area"!~"yes"]["highway"!~"cycleway|footway|path|pedestrian|steps|track|proposed|construction|bridleway|abandoned|platform|raceway|service"]["motor_vehicle"!~"no"]["motorcar"!~"no"]["access"!~"private"]["service"!~"parking|parking_aisle|driveway|private|emergency_access"](poly:"37.87539 -122.28873 37.87539 -122.26599 37.85736 -122.26599 37.85736 -122.28873 37.87539 -122.28873");&gt;;);out;'
+</code></pre>
+<p>When I post this request:</p>
+<pre><code>response = requests.post(url, data=data, timeout=timeout)
+</code></pre>
+<p>I receive status code 200 and the response data that I expect. </p>
+<p>However, when I use a more complex polygon:</p>
+<pre><code>url = 'http://www.overpass-api.de/api/interpreter'
+timeout = 60
+data = '[out:json][timeout:60];(way["highway"]["area"!~"yes"]["highway"!~"cycleway|footway|path|pedestrian|steps|track|proposed|construction|bridleway|abandoned|platform|raceway|service"]["motor_vehicle"!~"no"]["motorcar"!~"no"]["access"!~"private"]["service"!~"parking|parking_aisle|driveway|private|emergency_access"](poly:"37.82311 -122.25501 37.8232 -122.25503 37.82365 -122.25505 37.8241 -122.25503 37.82455 -122.25494 37.82499 -122.2548 37.82542 -122.2546 37.82582 -122.25435 37.82621 -122.25405 37.82657 -122.2537 37.8268 -122.25345 37.82692 -122.25333 37.82718 -122.25324 37.82738 -122.25318 37.8278 -122.25301 37.82821 -122.25279 37.8286 -122.25252 37.82896 -122.25221 37.8293 -122.25185 37.82961 -122.25145 37.82989 -122.25101 37.83014 -122.25057 37.8308 -122.24943 37.83084 -122.24941 37.8312 -122.24913 37.83129 -122.24905 37.83212 -122.24841 37.83239 -122.2482 37.83241 -122.24819 37.83245 -122.24816 37.8328 -122.24785 37.83313 -122.2475 37.83344 -122.24712 37.83371 -122.2467 37.83395 -122.24625 37.83415 -122.24577 37.83432 -122.24527 37.83445 -122.24475 37.83454 -122.24422 37.83458 -122.24369 37.83459 -122.24337 37.83468 -122.24304 37.83473 -122.24283 37.83476 -122.24268 37.83489 -122.24197 37.83491 -122.24182 37.83495 -122.24131 37.83496 -122.24115 37.83497 -122.24086 37.83498 -122.23985 37.83499 -122.23974 37.83501 -122.23956 37.83504 -122.23929 37.83506 -122.23923 37.83519 -122.23872 37.83528 -122.23821 37.83531 -122.23784 37.83535 -122.23772 37.83545 -122.23723 37.83548 -122.23703 37.83552 -122.2368 37.83555 -122.2366 37.83569 -122.23587 37.83574 -122.23562 37.83574 -122.23561 37.83597 -122.23434 37.83604 -122.23397 37.83645 -122.23263 37.83656 -122.23228 37.83684 -122.23138 37.83722 -122.23015 37.83736 -122.22962 37.83746 -122.22908 37.83752 -122.22853 37.83753 -122.22797 37.8375 -122.22742 37.83743 -122.22687 37.83731 -122.22633 37.83716 -122.22581 37.83696 -122.22531 37.83673 -122.22484 37.83646 -122.2244 37.83632 -122.22419 37.83591 -122.22358 37.8359 -122.22357 37.83586 -122.22351 37.83566 -122.22308 37.8356 -122.22298 37.83559 -122.22297 37.83558 -122.22295 37.83543 -122.22268 37.83543 -122.22268 37.83538 -122.22259 37.83537 -122.22257 37.83532 -122.22248 37.8353 -122.22243 37.83506 -122.22199 37.83505 -122.22198 37.83497 -122.22183 37.83472 -122.2214 37.83443 -122.221 37.83411 -122.22064 37.83377 -122.22032 37.8334 -122.22004 37.83301 -122.2198 37.83281 -122.21969 37.83227 -122.2194 37.83198 -122.21918 37.83161 -122.21891 37.83065 -122.21809 37.83065 -122.21809 37.83059 -122.21804 37.83052 -122.21798 37.8305 -122.21796 37.83041 -122.21789 37.83014 -122.21766 37.82981 -122.2174 37.82973 -122.21734 37.82963 -122.21728 37.8295 -122.21718 37.82943 -122.21713 37.82899 -122.21686 37.8287 -122.21671 37.82866 -122.21669 37.82838 -122.21654 37.82752 -122.21545 37.82743 -122.21535 37.8272 -122.21505 37.82719 -122.21504 37.82703 -122.21467 37.82687 -122.21431 37.8268 -122.21415 37.82674 -122.21404 37.82671 -122.21396 37.82664 -122.21379 37.82642 -122.21327 37.82615 -122.21279 37.82584 -122.21235 37.82575 -122.21223 37.82539 -122.21181 37.82501 -122.21145 37.825 -122.21145 37.82489 -122.21124 37.82476 -122.21101 37.8245 -122.21058 37.82373 -122.2093 37.82353 -122.20897 37.82349 -122.20889 37.82322 -122.20839 37.82315 -122.20826 37.82303 -122.20805 37.82262 -122.20727 37.82248 -122.20701 37.82223 -122.20657 37.82194 -122.20616 37.82162 -122.20579 37.82127 -122.20546 37.8209 -122.20517 37.82052 -122.20493 37.82011 -122.20474 37.81969 -122.2046 37.81926 -122.20451 37.81883 -122.20447 37.8184 -122.20448 37.81797 -122.20455 37.81755 -122.20467 37.81714 -122.20483 37.81674 -122.20505 37.81636 -122.20532 37.816 -122.20562 37.81567 -122.20598 37.81537 -122.20636 37.81496 -122.20694 37.81493 -122.20698 37.81467 -122.20735 37.81448 -122.20738 37.81434 -122.20741 37.81418 -122.20745 37.81403 -122.20748 37.81363 -122.20761 37.8135 -122.20766 37.81292 -122.20793 37.81291 -122.20793 37.81283 -122.20798 37.81269 -122.20807 37.81213 -122.20847 37.81198 -122.2086 37.81197 -122.2086 37.81158 -122.20882 37.81148 -122.20888 37.81124 -122.20904 37.81121 -122.20906 37.81119 -122.20908 37.81116 -122.2091 37.81114 -122.20912 37.81078 -122.20941 37.81073 -122.20945 37.81034 -122.20984 37.81021 -122.20999 37.81003 -122.2102 37.80994 -122.21031 37.80993 -122.21033 37.8096 -122.21061 37.80926 -122.21095 37.80895 -122.21134 37.80868 -122.21176 37.80843 -122.21221 37.80822 -122.21269 37.80805 -122.21319 37.80792 -122.21371 37.80783 -122.21424 37.80778 -122.21478 37.80777 -122.21533 37.8078 -122.21587 37.80788 -122.21641 37.80799 -122.21694 37.80815 -122.21745 37.80824 -122.21772 37.80841 -122.21822 37.8085 -122.21843 37.8085 -122.21843 37.80854 -122.21866 37.80855 -122.21873 37.80856 -122.2188 37.80859 -122.21897 37.80865 -122.21924 37.80874 -122.21966 37.80878 -122.21985 37.80908 -122.22122 37.80919 -122.2217 37.80926 -122.22199 37.80932 -122.22219 37.80932 -122.22221 37.80944 -122.22263 37.80955 -122.22334 37.80957 -122.22347 37.80958 -122.22351 37.80962 -122.22376 37.8097 -122.22421 37.80977 -122.22449 37.80996 -122.22531 37.80996 -122.22533 37.81002 -122.2256 37.81011 -122.22594 37.81018 -122.22618 37.81018 -122.22619 37.8104 -122.22693 37.81041 -122.22698 37.81052 -122.22747 37.81052 -122.22747 37.81098 -122.22949 37.8111 -122.23004 37.81114 -122.23025 37.81119 -122.23046 37.81126 -122.23079 37.81169 -122.23291 37.81169 -122.23292 37.81184 -122.23365 37.81203 -122.23437 37.8121 -122.23458 37.8121 -122.23461 37.81231 -122.23523 37.81233 -122.23531 37.81236 -122.23542 37.81251 -122.23596 37.81257 -122.23616 37.81262 -122.23634 37.81267 -122.2365 37.81269 -122.23659 37.8127 -122.23661 37.81277 -122.23685 37.81287 -122.23741 37.81292 -122.23796 37.81292 -122.23798 37.81294 -122.23821 37.81301 -122.23874 37.81311 -122.23927 37.8132 -122.23961 37.81345 -122.24064 37.81345 -122.24066 37.8135 -122.24084 37.81352 -122.24093 37.81367 -122.24171 37.81372 -122.24197 37.81377 -122.24219 37.81386 -122.24258 37.81413 -122.24377 37.81413 -122.24379 37.81423 -122.24418 37.81428 -122.2444 37.81432 -122.24455 37.81444 -122.245 37.81445 -122.24504 37.81449 -122.24519 37.81458 -122.2455 37.81463 -122.24566 37.81464 -122.24568 37.8148 -122.24618 37.81486 -122.24635 37.81501 -122.24677 37.81519 -122.24717 37.81523 -122.24726 37.81535 -122.24751 37.81541 -122.24763 37.81579 -122.2483 37.8159 -122.24847 37.81593 -122.2485 37.81606 -122.24881 37.81637 -122.24933 37.81641 -122.24939 37.81664 -122.24971 37.81667 -122.24975 37.81667 -122.24975 37.81672 -122.24981 37.81698 -122.25012 37.81711 -122.25027 37.81734 -122.25051 37.81748 -122.25064 37.81803 -122.25109 37.81811 -122.25115 37.81839 -122.25147 37.8184 -122.25148 37.81867 -122.25185 37.8196 -122.25315 37.8199 -122.25353 37.82023 -122.25388 37.82059 -122.25419 37.82097 -122.25445 37.82137 -122.25466 37.82178 -122.25483 37.8222 -122.25494 37.82263 -122.255 37.82306 -122.25501 37.82311 -122.25501");&gt;;);out;'
+</code></pre>
+<p>When I post this request:</p>
+<pre><code>response = requests.post(url, data=data, timeout=timeout)
+</code></pre>
+<p>This latter request used to work every single time (up to two days ago when I last tried it), but as of this morning I receive status code 429 (too many requests) every time I run it. I have tried this latter request from multiple computers and IP addresses, and I always get 429. While this response says "too many requests", I can immediately run the first request again and get status code 200 back. So it seems like I have indeed not actually made too many requests. Moreover, the API <a href="http://www.overpass-api.de/api/status">status page</a> tells me I have 2 slots available at all times throughout this process. I have also tried increasing/decreasing my timeouts but there is no change (in fact, the server responds with the 200 or the 429 within a second or two each time).</p>
+<p><strong>Why am I suddenly receiving 429 for this query that always worked in the past?</strong></p>
+<p>Edit: Every similarly complex polygon I try also returns a 429. Every simple polygon I try returns a 200. In the past, every polygon (simple or complex) returned a 200 with no problem.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/python/" class="post-tag tag-link-python"
+                                        title="see questions tagged 'python'" rel="tag">python</a>
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/api/" class="post-tag tag-link-api"
+                                        title="see questions tagged 'api'" rel="tag">api</a>
+                                
+                                    <a href="/tags/server/" class="post-tag tag-link-server"
+                                        title="see questions tagged 'server'" rel="tag">server</a>
+                                
+                                    <a href="/tags/query/" class="post-tag tag-link-query"
+                                        title="see questions tagged 'query'" rel="tag">query</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Apr '17, 18:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8eb28ad933ae655db57b6c6b8563eb67?s=32&amp;d=identicon&amp;r=g" alt="gboeing's gravatar image" />
+    <p><a href="/users/12827/gboeing">gboeing</a><br/>
+    <span class="score" title="136 reputation points">136</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gboeing has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55828/">
+                edited
+                <strong>24 Apr '17, 18:16</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55828">
+    
+</div>
+<div id="comment-tools-55828" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55828-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55828/overpass-returns-429-every-time-for-some-queries-but-not-for-others?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55828/overpass-returns-429-every-time-for-some-queries-but-not-for-others?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55828/overpass-returns-429-every-time-for-some-queries-but-not-for-others?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55828/overpass-returns-429-every-time-for-some-queries-but-not-for-others?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55845"></a>
+                    <div id="answer-container-55845" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55845-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55845/up/" rel="nofollow"> </a>
+<div id="post-55845-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-55845-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55845/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="gboeing has selected this answer as the correct answer"
+        href="/accept_answer/55845/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Short answer: Please set a Referer or change the User Agent to a less generic one. In Python,  <a href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.Request">https://docs.python.org/3.5/library/urllib.request.html#urllib.request.Request</a> and there origin_req_host.</p>
+<p>I'm sorry for the disruption.</p>
+<p>Long answer: During the last week I have seen a massive overuse by a single user who has sent his/her requests from multiple IP addresses, but without useful information to figure out whom to contact. User agent is "Python-urllib/2.7", referer is null. Usually, I would prefer to block only single IP addresses, but this would end up blocking completely a large Czech carrier and a Czech university.</p>
+<p>To keep damage to everybody else as low as possible, I have instead temporarily blocked requests that</p>
+<ul>
+<li>use POST</li>
+<li>set no referer</li>
+<li>have a request text that is longer than 2048 byte</li>
+</ul>
+<p>You have been hit accidentially by that block.</p>
+<p>As the best solution in such cases is to contact the affected user to find a long term solution, my suggestion is to set a referer which will get your requests distinct from the problematic ones.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55845/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Apr '17, 04:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fcfdb0825826fd13d2ff0d83d58819c6?s=32&amp;d=identicon&amp;r=g" alt="Roland%20Olbricht's gravatar image" />
+    <p><a href="/users/3480/roland-olbricht">Roland Olbricht</a><br/>
+    <span class="score" title="6666 reputation points"><span class="">6.7k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Roland Olbricht has 40 accepted answers">36&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55845">
+    
+</div>
+<div id="comment-tools-55845" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55845-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="77808"></a>
+                    <div id="answer-container-77808" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-77808-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/77808/up/" rel="nofollow"> </a>
+<div id="post-77808-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-77808-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/77808/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I fear I have been running into the same issue. How can I set a new referrer in an AJAX call done by a Leaflet plugin <a href="https://github.com/GuillaumeAmat/leaflet-overpass-layer">https://github.com/GuillaumeAmat/leaflet-overpass-layer</a> ?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/77808/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Nov '20, 15:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0782a57eca3816b0e7ee356a337fa2bd?s=32&amp;d=identicon&amp;r=g" alt="underscore's gravatar image" />
+    <p><a href="/users/19350/underscore">underscore</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="underscore has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-77808">
+    
+        <a name="77809"></a>
+        <div class="comment" id="comment-77809">
+            <div id="post-77809-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's unlikely that peoople will see your question, because you'e placed it as an "answer" under the original question.  I'd suggest asking it as a new question, but also linking to this question to make it clear what and why you are asking.</p></div>
+            <div class="comment-info" id="comment-77809-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '20, 16:30)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-77808" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-77808-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55828/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sw22vfSZdtPRXyjx6fCIIEEAeneI80AI' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55828/overpass-returns-429-every-time-for-some-queries-but-not-for-others?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55828/overpass-returns-429-every-time-for-some-queries-but-not-for-others?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/api/"
+            class="tag-link-api"
+            title="see questions tagged'api'using tags"
+            rel="tag">api</a> <span class="tag-number">&#215;290</span><br/>
+        
+        <a href="/tags/query/"
+            class="tag-link-query"
+            title="see questions tagged'query'using tags"
+            rel="tag">query</a> <span class="tag-number">&#215;147</span><br/>
+        
+        <a href="/tags/server/"
+            class="tag-link-server"
+            title="see questions tagged'server'using tags"
+            rel="tag">server</a> <span class="tag-number">&#215;123</span><br/>
+        
+        <a href="/tags/python/"
+            class="tag-link-python"
+            title="see questions tagged'python'using tags"
+            rel="tag">python</a> <span class="tag-number">&#215;78</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 24, 2017, 6:08 p.m.">24 Apr '17, 18:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,736 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 30, 2020, 4:30 p.m.">30 Nov '20, 16:30</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/36464/overpass-api-area-query-does-not-recognise-all-areas">Overpass API area query does not recognise all areas!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57546/query-keyvalue-pair-from-nominatim-coverage">Query Key,Value Pair From Nominatim &quot;Coverage&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20472/how-to-request-a-limited-no-of-features-in-overpass-api">How to request a limited no of features in Overpass api?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19419/my-query-to-retrieve-nodes-and-ways-is-not-returning-all-the-nodes">My query to retrieve nodes and ways is not returning all the nodes...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19914/overpass-polygon-query">Overpass: polygon query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20304/overpass-user-clause">[closed] Overpass: user clause</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12543/i-cant-get-odessa-ukraine-node-with-overpass-api">I can&#39;t get Odessa (Ukraine) node with overpass API</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12252/how-to-install-private-xapi-server">How to install private XAPI server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17365/overpass-is-it-possible-to-use-it-as-an-alternative-to-the-api-relation-full-call">Overpass:  Is it possible to use it as an alternative to the API relation /full call?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15101/overpassapi-query-with-two-specific-keys-and-any-value">OverpassAPI query with two specific keys and any value</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to mark a pub as (permanently) closed? - OSM Help</title>
+        <meta name="description" content="Some time ago I added a pub near where I live to the map. It has recently closed and now remains as the same building but boarded up and not open for business. The OSM Wiki&#39;s opening hours page doesn&#39;t mention things that never open, and doesn&#39;t seem quite right. How should I tag it as closed?" />
+        <meta name="keywords" content="pub,disused,closed,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/697/how-to-mark-a-pub-as-permanently-closed" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/697/how-to-mark-a-pub-as-permanently-closed?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='MK0nVE12UX18XXOmcqSHNUJHDcHeoOTm' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/697/how-to-mark-a-pub-as-permanently-closed">How to mark a pub as (permanently) closed?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-697-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/697/up/" rel="nofollow"> </a>
+<div id="post-697-score" class="post-score"
+    title="current number of votes">
+    11
+</div>
+<a id="post-697-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/697/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/697/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Some time ago I added a pub near where I live to the map.  It has recently closed and now remains as the same building but boarded up and not open for business.</p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">The OSM Wiki's opening hours page</a> doesn't mention things that never open, and doesn't seem quite right.  How should I tag it as closed?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/pub/" class="post-tag tag-link-pub"
+                                        title="see questions tagged 'pub'" rel="tag">pub</a>
+                                
+                                    <a href="/tags/disused/" class="post-tag tag-link-disused"
+                                        title="see questions tagged 'disused'" rel="tag">disused</a>
+                                
+                                    <a href="/tags/closed/" class="post-tag tag-link-closed"
+                                        title="see questions tagged 'closed'" rel="tag">closed</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Aug '10, 19:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/134585ff5b5b3e38ba29bfdf3feb92a6?s=32&amp;d=identicon&amp;r=g" alt="tomhukins's gravatar image" />
+    <p><a href="/users/178/tomhukins">tomhukins</a><br/>
+    <span class="score" title="176 reputation points">176</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tomhukins has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/697/">
+                edited
+                <strong>26 Aug '10, 14:18</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/278e1af65e82993efd0ba7bbbacf6435?s=32&amp;d=identicon&amp;r=g" alt="spaetz's gravatar image" />
+            <p><a href="/users/11/spaetz">spaetz</a><br/>
+            <span class="score" title="853 reputation points">853</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-697">
+    
+        <a name="856"></a>
+        <div class="comment" id="comment-856">
+            <div id="post-856-score" class="comment-score"></div>
+            <div class="comment-text"><p>Why not just simply deleting the pub?</p></div>
+            <div class="comment-info" id="comment-856-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Sep '10, 00:09)</span>
+                <a class="comment-user userinfo" href="/users/226/c1map">c1map</a>
+                
+            </div>
+        </div>
+    
+        <a name="1019"></a>
+        <div class="comment" id="comment-1019">
+            <div id="post-1019-score" class="comment-score">3</div>
+            <div class="comment-text"><p>@c1map: it could still be a useful landmark, even if it is closed. Also deleting it may mean that some other OSMer with access to some out-of-date dataset may add it back in again.</p></div>
+            <div class="comment-info" id="comment-1019-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Oct '10, 12:03)</span>
+                <a class="comment-user userinfo" href="/users/98/grahams">GrahamS</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-697" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-697-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/697/how-to-mark-a-pub-as-permanently-closed?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/697/how-to-mark-a-pub-as-permanently-closed?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/697/how-to-mark-a-pub-as-permanently-closed?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/697/how-to-mark-a-pub-as-permanently-closed?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="698"></a>
+                    <div id="answer-container-698" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-698-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/698/up/" rel="nofollow"> </a>
+<div id="post-698-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-698-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/698/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I normally tag that as <code>amenity=disused</code>, <code>disused=pub</code> along with a note explain how I know that it's no longer in business and when it closed.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/698/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Aug '10, 20:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/465f344e31e8ba1be0e0401414815db0?s=32&amp;d=identicon&amp;r=g" alt="petschge's gravatar image" />
+    <p><a href="/users/8/petschge">petschge</a><br/>
+    <span class="score" title="8279 reputation points"><span class="">8.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="73 badges"><span class="silver">&#9679;</span><span class="badgecount">73</span></span><span title="98 badges"><span class="bronze">&#9679;</span><span class="badgecount">98</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="petschge has 29 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/698/">
+                edited
+                <strong>10 Sep '10, 08:30</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9fe361843971cf8b23dc93517f00b996?s=32&amp;d=identicon&amp;r=g" alt="Jonathan%20Bennett's gravatar image" />
+            <p><a href="/users/6/jonathan-bennett">Jonathan Ben...</a><br/>
+            <span class="score" title="8261 reputation points"><span class="">8.3k</span></span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="85 badges"><span class="silver">&#9679;</span><span class="badgecount">85</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-698">
+    
+        <a name="11304"></a>
+        <div class="comment" id="comment-11304">
+            <div id="post-11304-score" class="comment-score">6</div>
+            <div class="comment-text"><p>Not sure when it was changed, but I have noticed the wiki currently recommends <a href="http://wiki.openstreetmap.org/w/index.php?title=Key:disused&amp;oldid=646737#Examples">what looks like an improvement</a> on the combination petschge mentions here. It suggests <code>disused:amenity=*</code>. This retains the original context/key. It seems the concept could be extended into the <code>demolished</code> and <code>abandoned</code> keys, too (e.g. <code>demolished:amenity=pub</code>). I'm using that to tag earthquake-affected premises in Christchurch, New Zealand.</p></div>
+            <div class="comment-info" id="comment-11304-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Mar '12, 20:27)</span>
+                <a class="comment-user userinfo" href="/users/3117/hughbris">hughbris</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-698" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-698-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="759"></a>
+                    <div id="answer-container-759" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-759-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/759/up/" rel="nofollow"> </a>
+<div id="post-759-score" class="post-score"
+    title="current number of votes">
+    -2
+</div>
+<a id="post-759-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/759/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think there is a tag disused=yes that you can along with other tags.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/759/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Sep '10, 07:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ca446edd75e87c48db5dd850d9f394a9?s=32&amp;d=identicon&amp;r=g" alt="ivanatora's gravatar image" />
+    <p><a href="/users/191/ivanatora">ivanatora</a><br/>
+    <span class="score" title="2740 reputation points"><span class="">2.7k</span></span><span title="35 badges"><span class="badge1">&#9679;</span><span class="badgecount">35</span></span><span title="55 badges"><span class="silver">&#9679;</span><span class="badgecount">55</span></span><span title="68 badges"><span class="bronze">&#9679;</span><span class="badgecount">68</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ivanatora has one accepted answer">7&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-759">
+    
+        <a name="761"></a>
+        <div class="comment" id="comment-761">
+            <div id="post-761-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Simply adding <code>disused=yes</code> to an existing set of tags isn't enough. If an application doesn't recognise this tag, it will treat the feature as still being in use. Never try to subtract information from other tags; Always add more information.</p></div>
+            <div class="comment-info" id="comment-761-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '10, 08:30)</span>
+                <a class="comment-user userinfo" href="/users/6/jonathan-bennett">Jonathan Ben...</a>
+                
+            </div>
+        </div>
+    
+        <a name="771"></a>
+        <div class="comment" id="comment-771">
+            <div id="post-771-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is what I meant. Set up all the tags needed, then add disused=yes.</p></div>
+            <div class="comment-info" id="comment-771-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '10, 13:04)</span>
+                <a class="comment-user userinfo" href="/users/191/ivanatora">ivanatora</a>
+                
+            </div>
+        </div>
+    
+        <a name="772"></a>
+        <div class="comment" id="comment-772">
+            <div id="post-772-score" class="comment-score">5</div>
+            <div class="comment-text"><p>Sure, but what Jonathan meant is: if an application doesn't recognize disused=yes, it will just parse your amenity=* and won't show the POI as disused. But if you use amenity=disused in the first place, there is no chance that this can happen. Either the application ignores the POI at all (or at least doesn't treat it as a regular POI) if it doesn't know amenity=disused, or it will handle it correctly as a disused amenity.</p></div>
+            <div class="comment-info" id="comment-772-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '10, 13:26)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="778"></a>
+        <div class="comment not_top_scorer" id="comment-778">
+            <div id="post-778-score" class="comment-score"></div>
+            <div class="comment-text"><p>Now I see the point, but it still doesn't seem right. The wiki page for the 'disused' key (<a href="http://wiki.openstreetmap.org/wiki/Key:disused">http://wiki.openstreetmap.org/wiki/Key:disused</a>) doesn't say you can use whatever value you wish, it says only 'yes' for a valid usage. If the application can't recognize the disused key you couldn't know how it will react to such a 'disused=*' combination. So which is more important - to view some object as 'not used now' and nothing more or view its amenity type? I think people have a different answers for that.</p></div>
+            <div class="comment-info" id="comment-778-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '10, 21:30)</span>
+                <a class="comment-user userinfo" href="/users/191/ivanatora">ivanatora</a>
+                
+            </div>
+        </div>
+    
+        <a name="780"></a>
+        <div class="comment" id="comment-780">
+            <div id="post-780-score" class="comment-score">4</div>
+            <div class="comment-text"><p>The wiki page is just a guide, and in this case it's a poor guide. In OpenStreetMap you can use Any Tags You Like[1], so just because a wiki page doesn't list an option you think is appropriate, it doesn't mean you can't use it. It's just that someone hasn't got round to updating the documentation.</p>
+
+<p>If an application doesn't understand <code>amenity=disused</code>, it simply doesn't show <em>anything</em> at that point on the map, and no-one gets misled. If an application doesn't understand <code>disused=no</code>, it will show that disused feature as in use.</p>
+
+<p>[1] <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">http://wiki.openstreetmap.org/wiki/Any_tags_you_like</a></p></div>
+            <div class="comment-info" id="comment-780-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '10, 00:51)</span>
+                <a class="comment-user userinfo" href="/users/6/jonathan-bennett">Jonathan Ben...</a>
+                
+            </div>
+        </div>
+    
+        <a name="1020"></a>
+        <div class="comment" id="comment-1020">
+            <div id="post-1020-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Maybe someone should update that wiki page then?</p></div>
+            <div class="comment-info" id="comment-1020-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Oct '10, 12:04)</span>
+                <a class="comment-user userinfo" href="/users/98/grahams">GrahamS</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-759" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-759-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/697/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='MK0nVE12UX18XXOmcqSHNUJHDcHeoOTm' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/697/how-to-mark-a-pub-as-permanently-closed?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/697/how-to-mark-a-pub-as-permanently-closed?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/closed/"
+            class="tag-link-closed"
+            title="see questions tagged'closed'using tags"
+            rel="tag">closed</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/disused/"
+            class="tag-link-disused"
+            title="see questions tagged'disused'using tags"
+            rel="tag">disused</a> <span class="tag-number">&#215;20</span><br/>
+        
+        <a href="/tags/pub/"
+            class="tag-link-pub"
+            title="see questions tagged'pub'using tags"
+            rel="tag">pub</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 24, 2010, 7:15 p.m.">24 Aug '10, 19:15</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>14,169 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 18, 2012, 8:27 p.m.">18 Mar '12, 20:27</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/49770/disused-greenhouse">Disused greenhouse</a>
+        </p>
+        
+        <p>
+            <a href="/questions/84302/what-tagging-should-be-used-for-a-temporary-closure-of-pub">What tagging should be used for a Temporary closure of pub?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20870/how-do-you-tag-a-disused-quarry">How do you tag a disused quarry?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39215/closed-shop">closed shop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50942/does-disusedrailway-require-railwaydisused">Does disused:railway=* require railway=disused?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66384/what-are-the-current-practices-for-road-closures">What are the current practices for road closures?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/739/how-to-mark-a-postbox-as-disused-or-temporarily-removed">How to mark a postbox as disused or temporarily removed ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2248/tagging-disused-airfield-runways">Tagging disused airfield runways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25244/how-to-tag-a-disused-colliery-tip">How to tag a disused colliery tip?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/162/how-do-i-tag-ways-with-partial-access">How do I tag ways with partial access?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

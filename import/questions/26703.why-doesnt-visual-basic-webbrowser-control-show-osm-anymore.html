@@ -1,0 +1,628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why doesn&#39;t Visual Basic WebBrowser control show OSM anymore? - OSM Help</title>
+        <meta name="description" content="Hi everyone! This newbie has an urgent question: I am using the following URL in a Visual Basic (2010) program to show the OSM map in a web browser control. (The VB Webbrowser control uses the settings of the IE on the machine the software runs on.) Me.Map.Navigate(&quot;http://www.openstreetmap.org/?mla..." />
+        <meta name="keywords" content="white,visualbasic,empty,vb2010" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/26703/why-doesnt-visual-basic-webbrowser-control-show-osm-anymore" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/26703/why-doesnt-visual-basic-webbrowser-control-show-osm-anymore?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='RGTTWTrPfTA7UBgyFh0rVADdV5YnSAhL' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/26703/why-doesnt-visual-basic-webbrowser-control-show-osm-anymore">Why doesn&#39;t Visual Basic WebBrowser control show OSM anymore?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-26703-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26703/up/" rel="nofollow"> </a>
+<div id="post-26703-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-26703-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26703/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/26703/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi everyone!</p>
+<p>This newbie has an urgent question: I am using the following URL in a Visual Basic (2010) program to show the OSM map in a web browser control. (The VB Webbrowser control uses the settings of the IE on the machine the software runs on.)</p>
+<p>Me.Map.Navigate("http://www.openstreetmap.org/?mlat=" &amp; lat &amp; "&amp;mlon=" &amp; lon &amp; "&amp;zoom=" &amp; level)</p>
+<p>Thus, the URL given to the control looks something like this at runtime:</p>
+<p><a href="http://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17">http://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17</a></p>
+<p>This always worked for the last three years. But strangely, it doesn't work anymore since yesterday(or maybe the day before, I don't know for sure). When I paste the URL into IE, it shows the map as usual, but when my software is told to open the link, it only shows a white page with the OSM Navigation bar on the left and nothing else.</p>
+<p>Can anyone help me with this, or at least tell me if anything has been changed in OSM lately? It does look like it, because the above mentioned URL automatically gets changed to the following when opened in a web browser:</p>
+<p><a href="http://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17#map=17/51.91120/8.13180">http://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17#map=17/51.91120/8.13180</a></p>
+<p>The last part beginning with #map seems to be new to me. But even when I change the URL in my program to the above, extended version, the map won't get shown.</p>
+<p>Any help would be very much appreciated, as my software runs on several computers and people start asking me what's wrong.</p>
+<p>Thanks, </p>
+<p>Dirk.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/white/" class="post-tag tag-link-white"
+                                        title="see questions tagged 'white'" rel="tag">white</a>
+                                
+                                    <a href="/tags/visualbasic/" class="post-tag tag-link-visualbasic"
+                                        title="see questions tagged 'visualbasic'" rel="tag">visualbasic</a>
+                                
+                                    <a href="/tags/empty/" class="post-tag tag-link-empty"
+                                        title="see questions tagged 'empty'" rel="tag">empty</a>
+                                
+                                    <a href="/tags/vb2010/" class="post-tag tag-link-vb2010"
+                                        title="see questions tagged 'vb2010'" rel="tag">vb2010</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Sep '13, 09:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4503a7a0d281a017a00814c3e8427cd3?s=32&amp;d=identicon&amp;r=g" alt="Dirk_R's gravatar image" />
+    <p><a href="/users/7447/dirk_r">Dirk_R</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Dirk_R has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-26703">
+    
+        <a name="26706"></a>
+        <div class="comment" id="comment-26706">
+            <div id="post-26706-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Not sure why your application can't handle the page anymore but this is actually not an <em>extended</em> version but a <em>shorter</em> one: <a href="http://www.openstreetmap.org/#map=17/51.91120/8.13180">http://www.openstreetmap.org/#map=17/51.91120/8.13180</a> (zoom/lat/lon) is now the new format.</p></div>
+            <div class="comment-info" id="comment-26706-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '13, 10:09)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26709"></a>
+        <div class="comment" id="comment-26709">
+            <div id="post-26709-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/158/scai">@scai</a> - not really, the original URL had a marker in it hence the one in the question really was the equivalent (with 2 sets of co-ordinates - one for the marker, one for the map centre).</p></div>
+            <div class="comment-info" id="comment-26709-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '13, 10:25)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26712"></a>
+        <div class="comment" id="comment-26712">
+            <div id="post-26712-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Are you sure the Webbrowser control uses the settings of IE on the machine the software runs on? I just threw a control on a Windows Form and navigated to the URL in your example and it looks the same as if I switch IE10 to IE7 standards mode.</p></div>
+            <div class="comment-info" id="comment-26712-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '13, 10:32)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26713"></a>
+        <div class="comment" id="comment-26713">
+            <div id="post-26713-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/387/someoneelse">@SomeoneElse</a> Oh I missed that, you are right.</p></div>
+            <div class="comment-info" id="comment-26713-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '13, 10:43)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26714"></a>
+        <div class="comment" id="comment-26714">
+            <div id="post-26714-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hi all and thanks for the fast replies!</p>
+
+<p>EdLoach, you are right! When I turn IE10 back to IE7 settings, that's exactly the picture I get in my program! Only why VB puts the browser element in IE7 mode, I don't know. But I will look into the settings of my project, maybe there's something I overlooked.</p>
+
+<p>Second thing I don't quite get is why this problem only started appearing two days ago. Maybe some of the latest MS security patches?!</p>
+
+<p>Thanks again for your prompt answers!</p>
+
+<p>Dirk</p></div>
+            <div class="comment-info" id="comment-26714-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '13, 11:08)</span>
+                <a class="comment-user userinfo" href="/users/7447/dirk_r">Dirk_R</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26703" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26703-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/26703/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='RGTTWTrPfTA7UBgyFh0rVADdV5YnSAhL' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26703/why-doesnt-visual-basic-webbrowser-control-show-osm-anymore?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26703/why-doesnt-visual-basic-webbrowser-control-show-osm-anymore?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/empty/"
+            class="tag-link-empty"
+            title="see questions tagged'empty'using tags"
+            rel="tag">empty</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/white/"
+            class="tag-link-white"
+            title="see questions tagged'white'using tags"
+            rel="tag">white</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/visualbasic/"
+            class="tag-link-visualbasic"
+            title="see questions tagged'visualbasic'using tags"
+            rel="tag">visualbasic</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/vb2010/"
+            class="tag-link-vb2010"
+            title="see questions tagged'vb2010'using tags"
+            rel="tag">vb2010</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 25, 2013, 9:37 a.m.">25 Sep '13, 09:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,877 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 25, 2013, 11:24 a.m.">25 Sep '13, 11:24</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1301/ajax-issues-with-nominatim">[closed] Ajax issues with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8692/how-do-i-make-the-names-brighter-or-more-visible">How do I make the names brighter or more visible</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19229/tiles-white-border">Tiles white border</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23131/unable-to-open-osm-file-gmapsuppimgnwe22052013">Unable To Open OSM File : gmapsupp.img.nwe.22052013</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24656/how-to-search-and-find-unused-empty-nodes-in-josm">how to search and find unused empty nodes in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27349/getting-empty-xml-for-node">Getting empty XML for node</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28782/looking-for-a-map-of-paris-blackwhite">Looking for a map of paris black/white</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30937/unoccupied-residential-building">Unoccupied residential building</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44252/overpass-tag-not-exists">Overpass tag not exists</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44962/pink-tiles-and-empty-varlibmod_tiles-folder">Pink tiles and empty /var/lib/mod_tiles folder</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

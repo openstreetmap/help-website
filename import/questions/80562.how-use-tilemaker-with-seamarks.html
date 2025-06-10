@@ -1,0 +1,818 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How use tilemaker with seamarks - OSM Help</title>
+        <meta name="description" content="Hello, have successfully created vector mbtiles with tilemaker. How can I now integrate navigation marks from OpenSeaMap. Got seamark planet.osm and converted to .pbf. How do config.json and process.lua write for this case?" />
+        <meta name="keywords" content="seamark,tilemaker,openseamap" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/80562/how-use-tilemaker-with-seamarks" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/80562/how-use-tilemaker-with-seamarks?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='F7OJTGxFWcglAWjjwQWCFtoghQbDfyDp' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/80562/how-use-tilemaker-with-seamarks">How use tilemaker with seamarks</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-80562-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80562/up/" rel="nofollow"> </a>
+<div id="post-80562-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-80562-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80562/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/80562/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, have successfully created vector mbtiles with tilemaker. How can I now integrate navigation marks from OpenSeaMap. Got seamark planet.osm and converted to .pbf. How do config.json and process.lua write for this case?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/seamark/" class="post-tag tag-link-seamark"
+                                        title="see questions tagged 'seamark'" rel="tag">seamark</a>
+                                
+                                    <a href="/tags/tilemaker/" class="post-tag tag-link-tilemaker"
+                                        title="see questions tagged 'tilemaker'" rel="tag">tilemaker</a>
+                                
+                                    <a href="/tags/openseamap/" class="post-tag tag-link-openseamap"
+                                        title="see questions tagged 'openseamap'" rel="tag">openseamap</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Jun '21, 23:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e8a1754250bc463bada58ddd0107f68b?s=32&amp;d=identicon&amp;r=g" alt="wkmhv's gravatar image" />
+    <p><a href="/users/20355/wkmhv">wkmhv</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="wkmhv has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-80562">
+    
+</div>
+<div id="comment-tools-80562" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80562-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/80562/how-use-tilemaker-with-seamarks?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/80562/how-use-tilemaker-with-seamarks?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/80562/how-use-tilemaker-with-seamarks?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/80562/how-use-tilemaker-with-seamarks?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="80580"></a>
+                    <div id="answer-container-80580" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80580-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80580/up/" rel="nofollow"> </a>
+<div id="post-80580-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-80580-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80580/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Add some Lua code to look for the tags you're expecting. For example, you could add this within <code>node_function</code>:</p>
+<p><code>local seamark = node:Find("seamark_type")
+if seamark=="buoy_lateral" then
+    node:Layer("seamarks", true)
+    node:Attribute("type", seamark)
+    node:Attribute("name", node:Find("seamark:name")
+end</code></p>
+<p>Use code like this in <code>node_function</code> and <code>way_function</code> to identify the tags you want, and write them to vector tiles.</p>
+<p>Then make sure the layers you're writing to are in the json layer config, e.g.:</p>
+<p><code>"seamarks": { "minzoom":  8,  "maxzoom": 14 },</code></p>
+<p>That's all you need - this will write the data to the vector tiles.</p>
+<p>Of course, this doesn't magically make the data render on-screen - that bit's outside the scope of tilemaker and is up to you. Use a style editor like Maputnik to choose the icons, colours etc. for the new data you've added to your vector tiles.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80580/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Jun '21, 08:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80580">
+    
+</div>
+<div id="comment-tools-80580" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80580-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="80591"></a>
+                    <div id="answer-container-80591" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80591-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80591/up/" rel="nofollow"> </a>
+<div id="post-80591-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-80591-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80591/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>why it founds only the first seamark ("man_made") with name "clock"</p>
+<p>&lt;node id="430222786" lat="54.1491789" lon="-4.4759688" version="6" timestamp="2016-05-20T20:49:47Z" changeset="0"&gt;
+        &lt;tag k="name" v="Jubilee Clock"/&gt;
+        &lt;tag k="amenity" v="clock"/&gt;
+        &lt;tag k="display" v="analogue"/&gt;
+        &lt;tag k="historic" v="monument"/&gt;
+        &lt;tag k="man_made" v="clock"/&gt;
+    &lt;/node&gt;</p>
+<p>function node_function(node)</p>
+<pre><code>    --local seamark = node:Find("seamark_type")
+    local seamark = node:Find("man_made")
+
+--if seamark=="buoy_lateral" then
+    --node:Layer("seamarks", true)
+    --node:Attribute("type", seamark)
+    --node:Attribute("name", node:Find("seamark:name"))
+--end
+
+if seamark~="" then
+print ('found seamark')
+print (seamark)
+ node:Layer("seamarks", true)
+ node:Attribute("type", seamark)
+ node:Attribute("name", node:Find("seamark:name"))
+end
+</code></pre>
+<p>end</p>
+<p>kmhv@ubuntu:~/tilemaker-master$ tilemaker --input isle-of-man-latest.osm.pbf --output server/isle-of-man1.mbtiles --config config.json --process process.lua
+mbtiles file exists, will overwrite (Ctrl-C to abort, rerun with --merge to keep)
+Bounding box -5.43455, -3.68872, 53.7324, 54.6706
+Layer waterway (z11-14)
+Layer transportation (z8-14)
+Layer building (z14-14)
+Layer poi (z13-14)
+Layer seamarks (z11-14)
+Resizing osm store to size: 64M              <br>
+Reading .pbf isle-of-man-latest.osm.pbf
+Total blocks: 33
+Resizing osm store to size: 128M              <br>
+Resizing osm store to size: 192M              <br>
+found seamarkoup 0 ways 0 relations 0      <br>
+clock
+Sorting nodesroup 0 ways 0 relations 0      <br>
+Total blocks: 5
+Resizing osm store to size: 256M              <br>
+Resizing osm store to size: 320M              <br>
+Sorting waysgroup 0 ways 8000 relations 0      <br>
+Total blocks: 1
+Resizing osm store to size: 384M              <br>
+Stored 217719 nodes, 27726 ways, 82 relations <br>
+Shape points: 0, lines: 0, polygons: 0
+Generated points: 1, lines: 9798, polygons: 12049
+Zoom level 13, writing tile 492 of 492             <br>
+Filled the tileset with good things at server/isle-of-man1.mbtiles</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80591/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Jun '21, 22:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e8a1754250bc463bada58ddd0107f68b?s=32&amp;d=identicon&amp;r=g" alt="wkmhv's gravatar image" />
+    <p><a href="/users/20355/wkmhv">wkmhv</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="wkmhv has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80591">
+    
+        <a name="80598"></a>
+        <div class="comment" id="comment-80598">
+            <div id="post-80598-score" class="comment-score"></div>
+            <div class="comment-text"><p>You need to work out which keys &amp; tags to parse (i.e., you can't just work from Richard's example). For instance most of the Isle of Man semarks seem to use "seamark:type" not seamark_type. See <a href="https://overpass-turbo.eu/s/18qj">https://overpass-turbo.eu/s/18qj</a></p></div>
+            <div class="comment-info" id="comment-80598-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jun '21, 13:37)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="80600"></a>
+        <div class="comment" id="comment-80600">
+            <div id="post-80600-score" class="comment-score"></div>
+            <div class="comment-text"><p>This work's</p>
+
+<p>node_keys = {"seamark:type"}</p>
+
+<p>function node_function(node)</p>
+
+<pre><code>    local seamark = node:Find("seamark:type")
+
+if seamark~="" then
+    node:Layer("seamarks", true)
+    node:Attribute("type", seamark)
+    node:Attribute("name", node:Find("seamark:name"))
+    node:Attribute("range",node:Find("seamark:light:range"))
+end
+</code></pre>
+
+<p>end</p></div>
+            <div class="comment-info" id="comment-80600-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jun '21, 18:02)</span>
+                <a class="comment-user userinfo" href="/users/20355/wkmhv">wkmhv</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80591" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80591-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/80562/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='F7OJTGxFWcglAWjjwQWCFtoghQbDfyDp' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80562/how-use-tilemaker-with-seamarks?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80562/how-use-tilemaker-with-seamarks?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openseamap/"
+            class="tag-link-openseamap"
+            title="see questions tagged'openseamap'using tags"
+            rel="tag">openseamap</a> <span class="tag-number">&#215;14</span><br/>
+        
+        <a href="/tags/seamark/"
+            class="tag-link-seamark"
+            title="see questions tagged'seamark'using tags"
+            rel="tag">seamark</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/tilemaker/"
+            class="tag-link-tilemaker"
+            title="see questions tagged'tilemaker'using tags"
+            rel="tag">tilemaker</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 13, 2021, 11:17 p.m.">13 Jun '21, 23:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,164 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 16, 2021, 6:02 p.m.">16 Jun '21, 18:02</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/68850/how-to-download-osm-db-data-with-both-land-and-sea-data">how to download OSM DB data with both land and sea data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1397/how-to-download-seamarks-directly-in-an-osm-file-from-the-online-web-interface">How to download seamarks directly in an .osm file from the online web interface ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7277/download-page-not-loading-for-openseamap">[closed] Download page not loading for OpenSeaMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12355/wie-bekomme-ich-openseamap-auf-android-mit-gps-unterstutzung">Wie bekomme ich OpenSeaMap auf Android mit GPS-Unterstützung</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12625/wie-kann-ich-eine-route-bei-openseamap-speichern-und-wieder-laden">[closed] Wie kann ich eine Route bei OpenSeaMap speichern und wieder laden?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15600/what-is-the-standard-for-mapping-buoys">What is the standard for mapping buoys?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31948/here-is-a-bridge-style-pier-drawn-as-an-area-that-is-rendering-with-water-on-the-inside">here is a bridge style pier drawn as an area that is rendering with water on the inside</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39032/openseamap-tile-server-url">openseamap tile server url</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49136/why-doesnt-osm-show-all-available-datasets-of-their-data-bases">Why doesn&#39;t OSM show all available datasets of their data bases?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52674/local-s-57-data-to-osm">local s-57 data to osm</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

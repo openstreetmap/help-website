@@ -1,0 +1,926 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tagging official ID of a school - OSM Help</title>
+        <meta name="description" content="In Argentina, there is a unique numeric code identifying every school in the country. What tag should be used to add that code? I think something related to ref would be most appropriate. Is there anything like ref:school? EDIT: This is complicated by the fact that a school providing eg. both primar..." />
+        <meta name="keywords" content="school,ref" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/17960/tagging-official-id-of-a-school" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/17960/tagging-official-id-of-a-school?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='2HTSuAliIPdwIWpS4CCbaQUZOzXxtv9g' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/17960/tagging-official-id-of-a-school">Tagging official ID of a school</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-17960-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17960/up/" rel="nofollow"> </a>
+<div id="post-17960-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-17960-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17960/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/17960/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>In Argentina, there is a unique numeric code identifying every school in the country. What tag should be used to add that code? I think something related to <code>ref</code> would be most appropriate. Is there anything like <code>ref:school</code>?</p>
+<p>EDIT: This is complicated by the fact that a school providing eg. both primary and secondary education in the same building, is often registered with the education ministry as <em>two separate schools</em>, with different IDs but the same address.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/school/" class="post-tag tag-link-school"
+                                        title="see questions tagged 'school'" rel="tag">school</a>
+                                
+                                    <a href="/tags/ref/" class="post-tag tag-link-ref"
+                                        title="see questions tagged 'ref'" rel="tag">ref</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Nov '12, 23:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/15962db3bafebdaa725a4c5709ccd932?s=32&amp;d=identicon&amp;r=g" alt="nicolas17's gravatar image" />
+    <p><a href="/users/4912/nicolas17">nicolas17</a><br/>
+    <span class="score" title="86 reputation points">86</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="nicolas17 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17960/">
+                edited
+                <strong>25 Nov '12, 00:07</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-17960">
+    
+</div>
+<div id="comment-tools-17960" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17960-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/17960/tagging-official-id-of-a-school?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/17960/tagging-official-id-of-a-school?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/17960/tagging-official-id-of-a-school?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/17960/tagging-official-id-of-a-school?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="17961"></a>
+                    <div id="answer-container-17961" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17961-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17961/up/" rel="nofollow"> </a>
+<div id="post-17961-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-17961-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17961/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="nicolas17 has selected this answer as the correct answer"
+        href="/accept_answer/17961/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Just use the tag ref. There is no need for the :school part, as it should be obvious from the other tags that it is a school.</p>
+<p>EDIT: If it is a single school with two references the two references can be separated with a semicolon like: ref=ref1;ref2. If it is actually two schools, then you would put two nodes inside the building outline, each with the tags amenity=school/ref=...</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17961/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Nov '12, 23:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fed945e27bb98de054a867827550812e?s=32&amp;d=identicon&amp;r=g" alt="cartinus's gravatar image" />
+    <p><a href="/users/2933/cartinus">cartinus</a><br/>
+    <span class="score" title="7033 reputation points"><span class="">7.0k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="66 badges"><span class="silver">&#9679;</span><span class="badgecount">66</span></span><span title="105 badges"><span class="bronze">&#9679;</span><span class="badgecount">105</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cartinus has 35 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17961/">
+                edited
+                <strong>25 Nov '12, 00:32</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17961">
+    
+        <a name="17962"></a>
+        <div class="comment" id="comment-17962">
+            <div id="post-17962-score" class="comment-score"></div>
+            <div class="comment-text"><p><code>ref</code> alone feels way too ambiguous to be useful for anything. And there's an extra complication that I hadn't noticed before (I added it to the question).</p></div>
+            <div class="comment-info" id="comment-17962-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Nov '12, 00:05)</span>
+                <a class="comment-user userinfo" href="/users/4912/nicolas17">nicolas17</a>
+                
+            </div>
+        </div>
+    
+        <a name="17963"></a>
+        <div class="comment" id="comment-17963">
+            <div id="post-17963-score" class="comment-score"></div>
+            <div class="comment-text"><p>Please look at the wiki page for <a href="http://wiki.openstreetmap.org/wiki/Ref">the tag ref</a>. You'll notice that in all the examples of the ref:something notation, it is used for references from specific named organizations/institutions. It is not used with generic terms like :school, :highway, etc. Neither will you find the generic terms on the first few pages of a <a href="http://taginfo.openstreetmap.org/search?q=ref">taginfo search for ref</a>.</p></div>
+            <div class="comment-info" id="comment-17963-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Nov '12, 00:36)</span>
+                <a class="comment-user userinfo" href="/users/2933/cartinus">cartinus</a>
+                
+            </div>
+        </div>
+    
+        <a name="17964"></a>
+        <div class="comment" id="comment-17964">
+            <div id="post-17964-score" class="comment-score"></div>
+            <div class="comment-text"><p>I agree that ref:school would be too generic. Perhaps ref:AR:cue? (CUE = Clave Única de Establecimiento)</p></div>
+            <div class="comment-info" id="comment-17964-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Nov '12, 00:49)</span>
+                <a class="comment-user userinfo" href="/users/4912/nicolas17">nicolas17</a>
+                
+            </div>
+        </div>
+    
+        <a name="17984"></a>
+        <div class="comment" id="comment-17984">
+            <div id="post-17984-score" class="comment-score"></div>
+            <div class="comment-text"><p>OSM is a geo database. Location is always part of the context, so the ref tag <em>is</em> appropriate because the thing at that position is a school. This can be hard to grasp, but it really does work.</p></div>
+            <div class="comment-info" id="comment-17984-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '12, 14:06)</span>
+                <a class="comment-user userinfo" href="/users/34/chrish">ChrisH</a>
+                
+            </div>
+        </div>
+    
+        <a name="17996"></a>
+        <div class="comment" id="comment-17996">
+            <div id="post-17996-score" class="comment-score"></div>
+            <div class="comment-text"><p>The thing at that position is also a building, which might concievably have a ref ID too. And how do you know if the ref on a school is a CUE or some other scheme?</p></div>
+            <div class="comment-info" id="comment-17996-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '12, 22:40)</span>
+                <a class="comment-user userinfo" href="/users/4912/nicolas17">nicolas17</a>
+                
+            </div>
+        </div>
+    
+        <a name="18006"></a>
+        <div class="comment not_top_scorer" id="comment-18006">
+            <div id="post-18006-score" class="comment-score"></div>
+            <div class="comment-text"><p>I also agree with ref:AR:cue : all external reference identifiers should specify the country and autority defining the identifier in its nomenclature. ref=* is often ambiguous, there are frequently multiple identifiers to map.</p>
+
+<p>Some identifiers are international and won't have a country code prefix (e.g. ref:ISO3166-1=*), but if the autority (or database) is national, the 2-letter country code (in capitals) should be used for qualifiying the tag's key between "ref:" and ":" before the identifier of the national authority or external database.</p></div>
+            <div class="comment-info" id="comment-18006-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '12, 08:54)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17961" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17961-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="17965"></a>
+                    <div id="answer-container-17965" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17965-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17965/up/" rel="nofollow"> </a>
+<div id="post-17965-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-17965-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17965/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>France has a numbering system for schools too, and they use a special ref tag (ref:UAI - see <a href="http://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dschool">http://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dschool</a> ) for that.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17965/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Nov '12, 00:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17965/">
+                edited
+                <strong>26 Nov '12, 15:38</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0e92f2d89853fd4e04c4b40a921e519b?s=32&amp;d=identicon&amp;r=g" alt="Pieren's gravatar image" />
+            <p><a href="/users/87/pieren">Pieren</a><br/>
+            <span class="score" title="9847 reputation points"><span class="">9.8k</span></span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="157 badges"><span class="bronze">&#9679;</span><span class="badgecount">157</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17965">
+    
+        <a name="18007"></a>
+        <div class="comment" id="comment-18007">
+            <div id="post-18007-score" class="comment-score"></div>
+            <div class="comment-text"><p>And here again, the country code should have been used! i.e. ref:FR:UAI=*.</p>
+
+<p>We should also have used ref:FR:INSEE instead of ref:INSEE, but this INSEE is so prevalent in France and these references are never used anywhere else than France, and it is so well known that we can keep the exception.</p>
+
+<p>But "UAI" is most often not known from the public, and it is not reserved as an organisation name (like INSEE) and conflicts of interpretations or misunderstanding should be avoided. ref's without a country code should be reserved to internationally recognized classifications to avoid future conflicts.</p></div>
+            <div class="comment-info" id="comment-18007-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '12, 09:02)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="18010"></a>
+        <div class="comment" id="comment-18010">
+            <div id="post-18010-score" class="comment-score">5</div>
+            <div class="comment-text"><p>OSM is a geo database. The object lies in a country, so the country code is not needed. This mistake has been made elsewhere. This multi-level hierachy is harmful, it puts beginners off  by displaying unneeded complexity. Mappers are OSM's most precious resource and we must not scare them away like this.</p></div>
+            <div class="comment-info" id="comment-18010-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '12, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/34/chrish">ChrisH</a>
+                
+            </div>
+        </div>
+    
+        <a name="18089"></a>
+        <div class="comment" id="comment-18089">
+            <div id="post-18089-score" class="comment-score"></div>
+            <div class="comment-text"><p>If I make a proper proposal for CUE, I <em>will</em> keep the country code, because I know for a fact that that acronym stands for something different yet related in another country.</p></div>
+            <div class="comment-info" id="comment-18089-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '12, 05:07)</span>
+                <a class="comment-user userinfo" href="/users/4912/nicolas17">nicolas17</a>
+                
+            </div>
+        </div>
+    
+        <a name="18102"></a>
+        <div class="comment" id="comment-18102">
+            <div id="post-18102-score" class="comment-score"></div>
+            <div class="comment-text"><p>As Chris says, you can tell whether it's in "another country" by looking at the latitude and longitude of the constituent nodes. If they're in France, then is it more likely to be (a) the French acronym or (b) the Burkina Faso acronym?</p></div>
+            <div class="comment-info" id="comment-18102-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '12, 21:10)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17965" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17965-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/17960/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='2HTSuAliIPdwIWpS4CCbaQUZOzXxtv9g' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17960/tagging-official-id-of-a-school?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17960/tagging-official-id-of-a-school?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/school/"
+            class="tag-link-school"
+            title="see questions tagged'school'using tags"
+            rel="tag">school</a> <span class="tag-number">&#215;30</span><br/>
+        
+        <a href="/tags/ref/"
+            class="tag-link-ref"
+            title="see questions tagged'ref'using tags"
+            rel="tag">ref</a> <span class="tag-number">&#215;21</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 24, 2012, 11:26 p.m.">24 Nov '12, 23:26</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,519 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 29, 2012, 9:10 p.m.">29 Nov '12, 21:10</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/498/uploading-a-small-bit-of-new-tiger-data-and-3-other-unrelated-questions">Uploading a small bit of new TIGER data (and 3 other unrelated questions)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1480/multilingual-ref-and-alternating-namesrefs">Multilingual Ref and alternating names/refs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1570/administrative-vs-street-names-and-refs">Administrative vs. Street names (and refs)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3529/why-should-or-should-i-not-use-ref-on-links">Why should or should I not use ref=* on links?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15284/comment-integrer-ecole-sans-ref-uai">comment intégrer école sans ref UAI</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15399/how-to-tag-a-time-based-maxspeed-for-school-zone">How to tag a time-based maxspeed for School Zone</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15766/how-should-i-tag-school-playgrounds-that-are-also-publicly-accessible-parks">How should I tag school playgrounds that are also publicly accessible parks?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16968/naming-a-school-or-other-building">Naming a school (or other building)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18294/road-reference-ref-official-old-and-on-the-signs">Road reference (ref) official, old and on the signs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/312/how-do-i-indicate-that-a-route-number-is-not-marked-on-signs">How do I indicate that a route number is not marked on signs?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

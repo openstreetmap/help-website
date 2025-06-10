@@ -1,0 +1,737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Strategies to keep cost of hosting your own map server and geocoder low - OSM Help</title>
+        <meta name="description" content="I already asked this over at gis.stackexchange.com, but the response was very little. Also, I think it suits much better here. I&#39;m currently thinking about setting up my own tile server (mapnik, mod_tile, renderd) and geocoder (nominatim) for my application. In short, the application aims to let a u..." />
+        <meta name="keywords" content="cost,tileserver,geocoding,server" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/47730/strategies-to-keep-cost-of-hosting-your-own-map-server-and-geocoder-low" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/47730/strategies-to-keep-cost-of-hosting-your-own-map-server-and-geocoder-low?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='R2XLbHWaWU39fBqz1LVMCkMCohiiUj5K' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/47730/strategies-to-keep-cost-of-hosting-your-own-map-server-and-geocoder-low">Strategies to keep cost of hosting your own map server and geocoder low</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-47730-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47730/up/" rel="nofollow"> </a>
+<div id="post-47730-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-47730-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47730/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/47730/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I already asked this over at gis.stackexchange.com, but the response was very little. Also, I think it suits much better here.</p>
+<p>I'm currently thinking about setting up my own tile server (mapnik, mod_tile, renderd) and geocoder (nominatim) for my application. In short, the application aims to let a user specify his location via address, which is then converted into coordinates. Furthermore, the user is able to create POI. The given address of the POI is also geocoded to acquire the coordinates. The least level of interactiveness required is that the maps is able to display pins of the user location and the location of the POIs.</p>
+<p>Currently, the app encompasses only one country, Germany. The map doesn't have to be totally up-to-date. I'm still a bit worried that the Nominatim and Map databases impose too much of a burden on the hardware and finally the costs of hosting. So my questions is:</p>
+<p>Are there any strategies to alleviate the hosting costs like pre-rendering? I just used this tool <a href="http://tools.geofabrik.de/calc/">http://tools.geofabrik.de/calc/</a> to determine the data size of all tiles in Germany. It seems to be 83GB in total at zoom level 17. Is it viable to pre-render all the tiles up to this zoom level and to do this e.g. once per month for updates? It should make the displaying of maps "free" of hardware after the rendering, or am I wrong?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/cost/" class="post-tag tag-link-cost"
+                                        title="see questions tagged 'cost'" rel="tag">cost</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                                    <a href="/tags/geocoding/" class="post-tag tag-link-geocoding"
+                                        title="see questions tagged 'geocoding'" rel="tag">geocoding</a>
+                                
+                                    <a href="/tags/server/" class="post-tag tag-link-server"
+                                        title="see questions tagged 'server'" rel="tag">server</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Jan '16, 11:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/055b275d9a8bb0b7226912b5fc163948?s=32&amp;d=identicon&amp;r=g" alt="Emtschikay's gravatar image" />
+    <p><a href="/users/11924/emtschikay">Emtschikay</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Emtschikay has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-47730">
+    
+        <a name="47731"></a>
+        <div class="comment" id="comment-47731">
+            <div id="post-47731-score" class="comment-score"></div>
+            <div class="comment-text"><p>You'll still need to serve the tiles (so hosting costs are always there); the load of running Nominatim and db are negligible, except for the initial import. Also, the biggest storage cost would be for zooms 17+18, but I'd guess that not every of those tiles would be actually requested.</p></div>
+            <div class="comment-info" id="comment-47731-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '16, 11:43)</span>
+                <a class="comment-user userinfo" href="/users/9641/piskvor">Piskvor</a>
+                
+            </div>
+        </div>
+    
+        <a name="47732"></a>
+        <div class="comment" id="comment-47732">
+            <div id="post-47732-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, I'm aware of that, but the computation for rendering the tiles should be gone? On second thought, I'm probably wrong. If I'll prerender all tiles, tiles are rendered that are maybe not even requested. Consequently, rendering on the fly is cheaper in terms of computation of I don't update my data?</p></div>
+            <div class="comment-info" id="comment-47732-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '16, 11:52)</span>
+                <a class="comment-user userinfo" href="/users/11924/emtschikay">Emtschikay</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47730" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47730-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/47730/strategies-to-keep-cost-of-hosting-your-own-map-server-and-geocoder-low?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/47730/strategies-to-keep-cost-of-hosting-your-own-map-server-and-geocoder-low?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/47730/strategies-to-keep-cost-of-hosting-your-own-map-server-and-geocoder-low?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/47730/strategies-to-keep-cost-of-hosting-your-own-map-server-and-geocoder-low?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="47733"></a>
+                    <div id="answer-container-47733" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47733-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47733/up/" rel="nofollow"> </a>
+<div id="post-47733-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-47733-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47733/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>A Nominatim for Germany can be 50-100GB as well. I don't have a recent installation to check. On a 16core, 48GB RAM, SSD drives it took half a day to create the initial index. I wouldn't attempt the index build with less than 8GB RAM, it might still take several days. During query time Nominatim (or rather PostgreSQL) works best with more RAM, I'd say 4GB and more for Germany.</p>
+<p>For tiles you have to remember that only a tiny fraction is seen by users.</p>
+<p>It sounds like such a POI website would need more frequent updates as users/mappers want feedback "has this been added now?" when they come back the next day (or next hour, or check the next 10 minutes).</p>
+<p>Personally I would concentrate on a static website (hosting cost $0 with github pages or every cheap regardless) and pay of tiles and geocoding. Let others worry about hardware costs, installation and keeping the data (worldwide, minutely) uptodate with OSM. I'm biased, I run a hosted geocoder, and will only point to website listing several geocoder options <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47733/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Jan '16, 13:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/96aad1e1801b7ea36fba50687924c935?s=32&amp;d=identicon&amp;r=g" alt="mtmail's gravatar image" />
+    <p><a href="/users/150/mtmail">mtmail</a><br/>
+    <span class="score" title="4757 reputation points"><span class="">4.8k</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mtmail has 50 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47733">
+    
+        <a name="47738"></a>
+        <div class="comment" id="comment-47738">
+            <div id="post-47738-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your answer. The problem with most offered geocoders and mapservice is, that they have restrictions in their usage (not allowed to stored coordinates etc. - see Mapbox). I don't think that we would be the primary ressource for mappers to check whether their additions are already visible in our maps and they are also not really the audience we are targeting (needless to say that we still value their work, OSM is an amazing project). So, in the end, I hardly see any other solution than hosting it ourselves, since quotas or restrictions in the ToS force us to do so.</p></div>
+            <div class="comment-info" id="comment-47738-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '16, 14:48)</span>
+                <a class="comment-user userinfo" href="/users/11924/emtschikay">Emtschikay</a>
+                
+            </div>
+        </div>
+    
+        <a name="47740"></a>
+        <div class="comment" id="comment-47740">
+            <div id="post-47740-score" class="comment-score"></div>
+            <div class="comment-text"><p>You choose to save money, that's fine. But I disagree that you're forced to host yourself. Compare how many hours you'll spend installing and administering systems over time. My advice is to build the system using hosted services and only if it gets enough users/traction install your own map tile and geocoding systems. You'll have enough work with the app itself and user registration (users have to agree to the OSM terms of service, save data in their name). It's entirely possible the application won't be used as much as you're planning. Mapbox wasn't listed on the URL I gave in my last answer, others don't have the saving restriction.</p></div>
+            <div class="comment-info" id="comment-47740-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '16, 15:10)</span>
+                <a class="comment-user userinfo" href="/users/150/mtmail">mtmail</a>
+                
+            </div>
+        </div>
+    
+        <a name="47743"></a>
+        <div class="comment" id="comment-47743">
+            <div id="post-47743-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah, you're probably right. I'!! have a look at the alternarives in your URL. Thanks a lot for your tips!</p></div>
+            <div class="comment-info" id="comment-47743-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '16, 18:21)</span>
+                <a class="comment-user userinfo" href="/users/11924/emtschikay">Emtschikay</a>
+                
+            </div>
+        </div>
+    
+        <a name="47746"></a>
+        <div class="comment" id="comment-47746">
+            <div id="post-47746-score" class="comment-score"></div>
+            <div class="comment-text"><p>OpenCage sure looks nice and simple!</p></div>
+            <div class="comment-info" id="comment-47746-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '16, 22:11)</span>
+                <a class="comment-user userinfo" href="/users/11924/emtschikay">Emtschikay</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47733" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47733-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/47730/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='R2XLbHWaWU39fBqz1LVMCkMCohiiUj5K' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47730/strategies-to-keep-cost-of-hosting-your-own-map-server-and-geocoder-low?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47730/strategies-to-keep-cost-of-hosting-your-own-map-server-and-geocoder-low?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/geocoding/"
+            class="tag-link-geocoding"
+            title="see questions tagged'geocoding'using tags"
+            rel="tag">geocoding</a> <span class="tag-number">&#215;133</span><br/>
+        
+        <a href="/tags/server/"
+            class="tag-link-server"
+            title="see questions tagged'server'using tags"
+            rel="tag">server</a> <span class="tag-number">&#215;123</span><br/>
+        
+        <a href="/tags/cost/"
+            class="tag-link-cost"
+            title="see questions tagged'cost'using tags"
+            rel="tag">cost</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 29, 2016, 11:23 a.m.">29 Jan '16, 11:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,870 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 29, 2016, 10:11 p.m.">29 Jan '16, 22:11</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/35317/local-tile-server-from-packages-404-when-displaying-tiles">Local Tile Server from Packages: 404 when displaying tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54771/how-to-filter-tile-content-in-server">how to filter tile content in server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19959/rendering-geocoding-and-routing-with-two-servers">Rendering, geocoding and routing with two servers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34953/tileserver-switch2osm-adjust-cache-size-problem">tileserver switch2osm adjust cache size problem.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50649/tile-server-hardware-to-support-18k-requestsmin">Tile server hardware to support 18k requests/min</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53472/install-tile-server-and-nominatime-on-same-box">[closed] Install tile server and Nominatime on same box</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16917/own-openstreetmap-tile-server-oneclick">Own OpenStreetMap Tile Server OneClick</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16972/configure-linux-for-osm-tile-server">Configure Linux for OSM Tile Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23250/osm2pgsql-import-for-geo-coding">Osm2pgsql import for geo-coding</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56557/plotting-data-on-my-tile-server">Plotting data on my tile server</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

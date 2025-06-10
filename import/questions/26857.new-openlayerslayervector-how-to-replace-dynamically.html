@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>[closed] new OpenLayers.Layer.Vector how to replace dynamically ? - OSM Help</title>
+        <meta name="description" content="Hello, everybody!   We are experiencing some issues while using your map.   The task is to display markers on the OpenLayers map. Every marker has own image different from another ones. All the markers can be easily replaced (change their location).  When you hover over the marker a message is displ..." />
+        <meta name="keywords" content="layer,vector,openlayers,dynamically,replace" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/26857/new-openlayerslayervector-how-to-replace-dynamically" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/26857/new-openlayerslayervector-how-to-replace-dynamically?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='B2eqcFRHRasXJZzitTeeSYyZbav6WmxU' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/26857/new-openlayerslayervector-how-to-replace-dynamically">[closed] new OpenLayers.Layer.Vector how to replace dynamically ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-26857-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26857/up/" rel="nofollow"> </a>
+<div id="post-26857-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-26857-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26857/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/26857/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <pre><code>Hello, everybody!
+
+ We are experiencing some issues while using your map.
+
+ The task is to display markers on the OpenLayers map. Every marker has own image different from another ones. All the markers can be easily replaced (change their location).
+ When you hover over the marker a message is displayed on the screen. While zoom in the area where two or more markers meet together they should unite in one unique marker (with it's own image).
+
+ Eventually we want to get something similar to <a href="http://maps.livejournal.com/.">http://maps.livejournal.com/.</a> But instead of the above <a href="http://maps.livejournal.com/images/svg/post-place-icon.svg">http://maps.livejournal.com/images/svg/post-place-icon.svg</a> we have different images that are set dynamically and can be easily replaced at any moment.
+
+ The essence of the problem is:
+
+ We are obtained to perform every item of the task sepparatelly.
+ But is it impossible to connect all of them together.
+
+ Here is what I do:
+ connecting the map (not google maps!)
+</code></pre>
+<p>my sample example code here  <a href="http://valentin.in.ua/download/help_en.zip">http://valentin.in.ua/download/help_en.zip</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/layer/" class="post-tag tag-link-layer"
+                                        title="see questions tagged 'layer'" rel="tag">layer</a>
+                                
+                                    <a href="/tags/vector/" class="post-tag tag-link-vector"
+                                        title="see questions tagged 'vector'" rel="tag">vector</a>
+                                
+                                    <a href="/tags/openlayers/" class="post-tag tag-link-openlayers"
+                                        title="see questions tagged 'openlayers'" rel="tag">openlayers</a>
+                                
+                                    <a href="/tags/dynamically/" class="post-tag tag-link-dynamically"
+                                        title="see questions tagged 'dynamically'" rel="tag">dynamically</a>
+                                
+                                    <a href="/tags/replace/" class="post-tag tag-link-replace"
+                                        title="see questions tagged 'replace'" rel="tag">replace</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Sep '13, 10:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c12588f73e8054e7e7530caec832c6ab?s=32&amp;d=identicon&amp;r=g" alt="ur5fes's gravatar image" />
+    <p><a href="/users/7493/ur5fes">ur5fes</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ur5fes has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/26857/">
+                edited
+                <strong>30 Sep '13, 12:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-26857">
+    
+</div>
+<div id="comment-tools-26857" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26857-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="question-status" style="margin-bottom:15px">
+            <h3>
+                The question has been closed for the following reason "Not an OpenStreetMap question. Please see www.openlayers.org for OpenLayers support and Mailing Lists." by
+                <a href="/users/104/frederik-ramm">Frederik Ramm</a>
+                 30 Sep '13, 10:40
+            </h3>
+            </div>
+            
+            
+        <form id="fmanswer" action="/questions/26857/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='B2eqcFRHRasXJZzitTeeSYyZbav6WmxU' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26857/new-openlayerslayervector-how-to-replace-dynamically?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26857/new-openlayerslayervector-how-to-replace-dynamically?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openlayers/"
+            class="tag-link-openlayers"
+            title="see questions tagged'openlayers'using tags"
+            rel="tag">openlayers</a> <span class="tag-number">&#215;122</span><br/>
+        
+        <a href="/tags/layer/"
+            class="tag-link-layer"
+            title="see questions tagged'layer'using tags"
+            rel="tag">layer</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/vector/"
+            class="tag-link-vector"
+            title="see questions tagged'vector'using tags"
+            rel="tag">vector</a> <span class="tag-number">&#215;45</span><br/>
+        
+        <a href="/tags/dynamically/"
+            class="tag-link-dynamically"
+            title="see questions tagged'dynamically'using tags"
+            rel="tag">dynamically</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/replace/"
+            class="tag-link-replace"
+            title="see questions tagged'replace'using tags"
+            rel="tag">replace</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 30, 2013, 10:37 a.m.">30 Sep '13, 10:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,955 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 30, 2013, 12:43 p.m.">30 Sep '13, 12:43</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/81773/tags-open-street-map">Tags Open Street Map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10891/vector-layer-disappears-when-switching-to-osm-layer">Vector layer disappears when switching to OSM layer...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21646/how-to-convert-osm-way-xml-to-openlayers-feature">How to convert osm way xml to openlayers feature?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50639/create-map-of-bike-friendly-streets">Create map of Bike-Friendly Streets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35287/satelite-image-and-shape-files">[closed] satelite image and shape files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19463/points-all-going-to-00">points all going to (0,0)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2878/vector-maps-xml-files">Vector Maps-- XML files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2559/bridge-on-ground-level">Bridge on ground level</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1804/is-it-easy-to-extract-the-shape-of-country-across-api">Is it easy to extract the shape of country across API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3615/other-projection-in-openlayers">other Projection in OpenLayers</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

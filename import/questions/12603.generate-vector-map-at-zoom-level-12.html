@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Generate vector map at zoom level 12 - OSM Help</title>
+        <meta name="description" content="Hi, I have a requirement to display a default map for a country at zoom level 10. i.e. I need a vector map for a country at zoom level 10 so that the user can use it as default map. The map has to be generated using Osmosis&#39;s --mapfile-writer plugin and to be used by Mapsforge APIs on the Android de..." />
+        <meta name="keywords" content="mapsforge,zoom,mapfile-writer,level" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/12603/generate-vector-map-at-zoom-level-12" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/12603/generate-vector-map-at-zoom-level-12?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mwgmJl3Z2Aftx0IuRdTllpYJLblJ8NIS' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/12603/generate-vector-map-at-zoom-level-12">Generate vector map at zoom level 12</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-12603-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12603/up/" rel="nofollow"> </a>
+<div id="post-12603-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-12603-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12603/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/12603/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I have a requirement to display a default map for a country at zoom level 10.
+i.e. I need a vector map for a country at zoom level 10 so that the user can use it as default map.  The map has to be generated using Osmosis's --mapfile-writer plugin and to be used by Mapsforge APIs on the Android device.</p>
+<p>Note: I use polygon files to extract country info from Planet OSM.</p>
+<p>Thank you for your suggestions.</p>
+<ul>
+<li>ananth</li>
+</ul>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mapsforge/" class="post-tag tag-link-mapsforge"
+                                        title="see questions tagged 'mapsforge'" rel="tag">mapsforge</a>
+                                
+                                    <a href="/tags/zoom/" class="post-tag tag-link-zoom"
+                                        title="see questions tagged 'zoom'" rel="tag">zoom</a>
+                                
+                                    <a href="/tags/mapfile-writer/" class="post-tag tag-link-mapfile-writer"
+                                        title="see questions tagged 'mapfile-writer'" rel="tag">mapfile-writer</a>
+                                
+                                    <a href="/tags/level/" class="post-tag tag-link-level"
+                                        title="see questions tagged 'level'" rel="tag">level</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 May '12, 03:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/382f63907e37a769341f345c01d8e8df?s=32&amp;d=identicon&amp;r=g" alt="kris's gravatar image" />
+    <p><a href="/users/3404/kris">kris</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="kris has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12603/">
+                edited
+                <strong>08 May '12, 17:42</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+            <p><a href="/users/99/stephan75">stephan75</a><br/>
+            <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-12603">
+    
+        <a name="12605"></a>
+        <div class="comment" id="comment-12605">
+            <div id="post-12605-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Was there a question in there?</p></div>
+            <div class="comment-info" id="comment-12605-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '12, 10:09)</span>
+                <a class="comment-user userinfo" href="/users/131/gnonthgol">Gnonthgol ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12607"></a>
+        <div class="comment" id="comment-12607">
+            <div id="post-12607-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are you asking someone to do something for you, or asking how to do something?  It really isn't clear from the question which.<br>
+</p>
+
+<p>Perhaps if you can add a bit more detail saying what you've tried and what didn't work, or perhaps that someone's asked you to do something and you're looking for "getting started" tips?</p></div>
+            <div class="comment-info" id="comment-12607-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '12, 10:54)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12662"></a>
+        <div class="comment" id="comment-12662">
+            <div id="post-12662-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The question is:
+How do I generate a vector map file (.map file) using Osmosis plugin for a particular zoom level?</p>
+
+<p>For example, if you convert a osm.bz2 file (for a smaller area) to vector map file, there is no option to generate the map file for a particular zoom level.  By default the vector map generated by Osmosis (--mapfile-writer plugin) generates for all the zoom level (making it heavier??)</p>
+
+<p>Thanks</p>
+
+<p>Kris</p></div>
+            <div class="comment-info" id="comment-12662-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 May '12, 07:31)</span>
+                <a class="comment-user userinfo" href="/users/3404/kris">kris</a>
+                
+            </div>
+        </div>
+    
+        <a name="12668"></a>
+        <div class="comment" id="comment-12668">
+            <div id="post-12668-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Do you know the difference between a bitmap tile based map and a vector based map?</p>
+
+<p>When you use tiles, then you have to define what zoom levels are to be created by a renderer.</p>
+
+<p>But with a vector map there is no need to define zoom levels if you create the base map file. Because the renderer is painting the map on-the-fly ... ok?</p></div>
+            <div class="comment-info" id="comment-12668-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 May '12, 18:15)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+        <a name="12695"></a>
+        <div class="comment" id="comment-12695">
+            <div id="post-12695-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Stephan,</p>
+
+<p>Thank you for your reply.</p>
+
+<p>I do understand the difference between bitmap tiles and mapsfile-writer generated vector map tiles.
+Some of the areas are pretty big to use as vector maps. Say for example, Europe. The mapfile-writer plugin generates the vector map file having all zoom levels.</p>
+
+<p>What Im trying to do is that if a vector map can be generated having zoom levels from 10 to 18, it may be sufficient (such that the map file size is lesser than having a map with all the zoom levels).</p>
+
+<ul>
+<li>ananth</li>
+</ul></div>
+            <div class="comment-info" id="comment-12695-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '12, 17:36)</span>
+                <a class="comment-user userinfo" href="/users/3404/kris">kris</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12603" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12603-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/12603/generate-vector-map-at-zoom-level-12?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/12603/generate-vector-map-at-zoom-level-12?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/12603/generate-vector-map-at-zoom-level-12?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/12603/generate-vector-map-at-zoom-level-12?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="12711"></a>
+                    <div id="answer-container-12711" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12711-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12711/up/" rel="nofollow"> </a>
+<div id="post-12711-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-12711-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12711/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>A bit more confusion. Of course we are doing (scale/zoom) level generation and tiling on vector/parametric map data. Especially when we pretend on efficient server – client vector data transmission by streaming via cellular networks. Scale levels and tiling are essential for any modern (vector, raster or mixed) mapping system. But generating pre-scaled vector versions (polyline smoothing, data reduction …) and tiling (multi-tiling where the last/client tiles are generated on-the-fly) are complex and complicated subjects. As a rule the corresponding algorithms are IPR or license protected (or kept as technology  secrecy). Tuning of parameters requires extensive experimental work  and there are no unique formal rules for these algorithms. Therefore, don’t be disappointed if you don’t find (good) answers to your question in the public domain. “Free” versions of such tools are, as a rule, just a kind of invitation to go for the commercial versions.</p>
+<p>Finally, all the above stuff has nothing (or very little) to do with OSM. Slippy map, Mapnik, Osmosis, Opentiles, Geofabrik, Mapsforge … are only examples how OSM data may be used. But in this area tings are rapidly changing.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12711/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 May '12, 09:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/03cd9ea0efd97a7040fda0d6a76aba8e?s=32&amp;d=identicon&amp;r=g" alt="sanser's gravatar image" />
+    <p><a href="/users/3194/sanser">sanser</a><br/>
+    <span class="score" title="695 reputation points">695</span><span title="38 badges"><span class="badge1">&#9679;</span><span class="badgecount">38</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="55 badges"><span class="bronze">&#9679;</span><span class="badgecount">55</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sanser has 2 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12711">
+    
+</div>
+<div id="comment-tools-12711" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12711-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/12603/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mwgmJl3Z2Aftx0IuRdTllpYJLblJ8NIS' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12603/generate-vector-map-at-zoom-level-12?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12603/generate-vector-map-at-zoom-level-12?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/zoom/"
+            class="tag-link-zoom"
+            title="see questions tagged'zoom'using tags"
+            rel="tag">zoom</a> <span class="tag-number">&#215;107</span><br/>
+        
+        <a href="/tags/level/"
+            class="tag-link-level"
+            title="see questions tagged'level'using tags"
+            rel="tag">level</a> <span class="tag-number">&#215;27</span><br/>
+        
+        <a href="/tags/mapsforge/"
+            class="tag-link-mapsforge"
+            title="see questions tagged'mapsforge'using tags"
+            rel="tag">mapsforge</a> <span class="tag-number">&#215;12</span><br/>
+        
+        <a href="/tags/mapfile-writer/"
+            class="tag-link-mapfile-writer"
+            title="see questions tagged'mapfile-writer'using tags"
+            rel="tag">mapfile-writer</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 8, 2012, 3:44 a.m.">08 May '12, 03:44</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,069 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 14, 2012, 9:52 a.m.">14 May '12, 09:52</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/33376/zoom-level">zoom level</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29042/zoom-level-road-name-visibility">zoom level road name visibility</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8794/footpaths-not-showing-in-certain-zoom-levels">Footpaths not showing in certain zoom levels.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32473/export-a-wide-area-but-at-a-zoom-level-where-you-can-see-the-house-numbers">Export a wide area, but at a zoom level where you can see the house numbers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48830/umap-change-marker-size-with-zoom-level">UMAP - Change marker size with zoom level</a>
+        </p>
+        
+        <p>
+            <a href="/questions/82665/how-to-create-levelsfloors">How to create levels/floors ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5614/bing-satellite-imagery-coverage-zoom-level">Bing satellite imagery coverage (zoom level)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8121/tagged-object-and-zoom-level">Tagged object and zoom level</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7813/data-not-appearing">[closed] data not appearing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6605/download-a-map-of-the-mediterranean-with-just-large-scale-features">Download a map of the Mediterranean with just large scale features</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

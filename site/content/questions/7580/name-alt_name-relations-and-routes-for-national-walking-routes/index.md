@@ -1,0 +1,436 @@
++++
+type = "question"
+title = "Name, alt_name, relations and routes for national walking routes"
+description = '''Hi, I am quite confused. I am editing some regional walking and cycling routes, and am unsure as to the best way to tag the paths in relation to their national and regional routes. If I search for &quot;Pennine Bridleway&quot;, the results seem to come up with only those paths that have their actual name, or ...'''
+date = "2011-09-03T08:32:00Z"
+lastmod = "2011-09-06T11:34:00Z"
+weight = 7580
+keywords = [ "walking", "cycling", "name", "relations" ]
+aliases = [ "/questions/7580" ]
+osqa_answers = 5
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Name, alt_name, relations and routes for national walking routes](/questions/7580/name-alt_name-relations-and-routes-for-national-walking-routes)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-7580-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-7580-score" class="post-score" title="current number of votes">
+1
+</div>
+<span id="post-7580-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span> <span id="favorite-mark" class="ajax-command favorite-mark" rel="nofollow" title="mark/unmark this question as favorite (click again to cancel)"> </span>
+<div id="favorite-count" class="favorite-count">
+&#10;</div>
+</div></td>
+<td><div id="item-right">
+<div class="question-body">
+<p>Hi, I am quite confused. I am editing some regional walking and cycling routes, and am unsure as to the best way to tag the paths in relation to their national and regional routes. If I search for "Pennine Bridleway", the results seem to come up with only those paths that have their actual <code>name</code>, or <code>alt_name</code> set to "<code>Pennine Bridleway</code>", which doesn't seem to take into account their relations to the national route.</p>
+<p>Additionally, the actual exisitng relation for the Pennine Bridleway (50288/211) is set as <code>type=route, route=bridleway</code> This doesn't seem to allow one to add it as a national route in the walking area, as the relations don't designate it as a walking route. The route is in fact designated for walkers, cyclists and equestrians, though it's not a designated national cycle route via the National Cycling Network. Shouldn't it be classified as <code>route=hiking</code> with cycling and horses allowed?</p>
+<p>The other slightly confusing thing with this route is that there is a regional loop called the Mary Towneley Loop, that forms part of the Pennine Bridleway. Now, this is designated by the council as a cycle route in the region. There is an existing relation for it (241091/0) but this doesn't designate it as either walking or cycling either. What is the best thing to do?</p>
+</div>
+<div id="question-tags" class="tags-container tags">
+<span class="post-tag tag-link-walking" rel="tag" title="see questions tagged &#39;walking&#39;">walking</span> <span class="post-tag tag-link-cycling" rel="tag" title="see questions tagged &#39;cycling&#39;">cycling</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span>
+</div>
+<div id="question-controls" class="post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>asked <strong>03 Sep '11, 08:32</strong></p>
+<img src="https://secure.gravatar.com/avatar/c62d3f5ba808673e9df9a9bff067c7fd?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="iand109&#39;s gravatar image" />
+<p><span>iand109</span><br />
+<span class="score" title="46 reputation points">46</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">●</span><span class="badgecount">4</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="iand109 has no accepted answers">0%</span></p>
+</div>
+<div class="post-update-info post-update-info-edited">
+<p><span> edited <strong>05 Sep '11, 13:59</strong> </span></p>
+<img src="https://secure.gravatar.com/avatar/f09c0b7a655fed386e070e036e2da248?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="dieterdreist&#39;s gravatar image" />
+<p><span>dieterdreist</span><br />
+<span class="score" title="3677 reputation points"><span>3.7k</span></span><span title="11 badges"><span class="badge1">●</span><span class="badgecount">11</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="67 badges"><span class="bronze">●</span><span class="badgecount">67</span></span></p>
+</div>
+</div>
+<div id="comments-container-7580" class="comments-container">
+&#10;</div>
+<div id="comment-tools-7580" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-7580-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+5 Answers:
+
+</div>
+
+</div>
+
+<span id="7586"></span>
+
+<div id="answer-container-7586" class="answer">
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-7586-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-7586-score" class="post-score" title="current number of votes">
+2
+</div>
+<span id="post-7586-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span>
+</div></td>
+<td><div class="item-right">
+<div class="answer-body">
+<p>With regard to the Pennine Bridleway, the National Byway has a main-route-with-loops structure that is a bit similar (but longer) and there's a wiki page that describes how that's been done here:</p>
+<p><a href="http://wiki.openstreetmap.org/wiki/National_Byway">http://wiki.openstreetmap.org/wiki/National_Byway</a></p>
+<p>A similar approach for the Pennine Bridleway may work, but it's probably a question for the talk-gb mailing list rather than here.</p>
+</div>
+<div class="answer-controls post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>answered <strong>03 Sep '11, 11:51</strong></p>
+<img src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SomeoneElse&#39;s gravatar image" />
+<p><span>SomeoneElse ♦</span><br />
+<span class="score" title="36866 reputation points"><span>36.9k</span></span><span title="71 badges"><span class="badge1">●</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">●</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">●</span><span class="badgecount">866</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SomeoneElse has 228 accepted answers">16%</span></p>
+</div>
+</div>
+<div id="comments-container-7586" class="comments-container">
+&#10;</div>
+<div id="comment-tools-7586" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-7586-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<span id="7634"></span>
+
+<div id="answer-container-7634" class="answer">
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-7634-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-7634-score" class="post-score" title="current number of votes">
+1
+</div>
+<span id="post-7634-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span>
+</div></td>
+<td><div class="item-right">
+<div class="answer-body">
+<p>With regard to naming, what I wouldn't do is add e.g. "Mary Towneley Loop" as the name of any of the bridleways and tracks that that route runs on. In quite a few places near me people have started doing this with various routes, and unless that <em>really</em> is the name of the track (which is unlikely) it's not a good idea. Many tracks have their own proper names, and may belong to multiple long-distance routes, so for example there are tracks that are <em>part of</em> the "Mary Towneley Loop" and "Pennine Bridleway" (and sometimes the "Pennine Way" as well) but the tracks aren't actually <em>called</em> that.</p>
+</div>
+<div class="answer-controls post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>answered <strong>05 Sep '11, 14:08</strong></p>
+<img src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SomeoneElse&#39;s gravatar image" />
+<p><span>SomeoneElse ♦</span><br />
+<span class="score" title="36866 reputation points"><span>36.9k</span></span><span title="71 badges"><span class="badge1">●</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">●</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">●</span><span class="badgecount">866</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SomeoneElse has 228 accepted answers">16%</span></p>
+</div>
+</div>
+<div id="comments-container-7634" class="comments-container">
+&#10;</div>
+<div id="comment-tools-7634" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-7634-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<span id="7628"></span>
+
+<div id="answer-container-7628" class="answer">
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-7628-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-7628-score" class="post-score" title="current number of votes">
+0
+</div>
+<span id="post-7628-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span>
+</div></td>
+<td><div class="item-right">
+<div class="answer-body">
+<ol>
+<li>I'm not sure "<a href="http://taginfo.openstreetmap.org/keys/route#values">bridleway</a>" is a proper value for the <a href="http://wiki.openstreetmap.org/wiki/Route">route tag</a>. I'd probably go with "hiking", as that's what bridleways are used for nowadays. I could imagine highway=bridleway if the road type was distinctive enough to have its own category, but really highway=track (or whatever's appropriate) should be used instead.</li>
+<li>The tools (mapnik, mkgmap...) aren't great at displaying/finding routes right now. Try contacting the particular tool's authors about routes (although I'm sure it's already on their long todo-list).</li>
+<li>As a somewhat-satisfactory workaround, you can tag the way if a section of the route is exclusively used for that route (I've done that <a href="http://www.openstreetmap.org/browse/relation/1534823">here</a> for example).</li>
+</ol>
+</div>
+<div class="answer-controls post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>answered <strong>05 Sep '11, 11:15</strong></p>
+<img src="https://secure.gravatar.com/avatar/d20f86db9a6f03cb070e9fbaaf0b7228?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Vincent%20de%20Phily&#39;s gravatar image" />
+<p><span>Vincent de P... ♦</span><br />
+<span class="score" title="17304 reputation points"><span>17.3k</span></span><span title="18 badges"><span class="badge1">●</span><span class="badgecount">18</span></span><span title="152 badges"><span class="silver">●</span><span class="badgecount">152</span></span><span title="249 badges"><span class="bronze">●</span><span class="badgecount">249</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Vincent de Phily has 64 accepted answers">19%</span></p>
+</div>
+</div>
+<div id="comments-container-7628" class="comments-container">
+<span id="7629"></span>
+<div id="comment-7629" class="comment">
+<div id="post-7629-score" class="comment-score">
+1
+</div>
+<div class="comment-text">
+<p>Re: 1, that's not the case here - the Pennine Bridleway is expressly a multi-user route, not just a hiking route. The campaigner who led to its creation, Lady Mary Towneley, was a horse-rider who wanted a Pennine route for riders (as there's already a Pennine Way for hikers, and a Pennine Cycleway for cyclists).</p>
+</div>
+<div id="comment-7629-info" class="comment-info">
+<span class="comment-age">(05 Sep '11, 11:26)</span> <span class="comment-user userinfo">Richard ♦</span>
+</div>
+</div>
+</div>
+<div id="comment-tools-7628" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-7628-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<span id="7635"></span>
+
+<div id="answer-container-7635" class="answer">
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-7635-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-7635-score" class="post-score" title="current number of votes">
+0
+</div>
+<span id="post-7635-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span>
+</div></td>
+<td><div class="item-right">
+<div class="answer-body">
+<p>IMHO we should differentiate in the mapping in order to try to represent the real world entities the best in OSM. I don't know this particular way, that's why I'll answer generally.</p>
+<p><strong>If</strong> there is a thing like "the Pennine Bridleway" that is <strong>a national route for equestrians</strong> then you can represent this in OSM with a relation <code>type=route</code>,<code>route=horse</code> (according to <a href="http://taginfo.openstreetmap.org/keys/route#values">taginfo</a> and the <a href="http://wiki.openstreetmap.org/wiki/Relation:route">wiki</a>) and after looking into <a href="http://taginfo.openstreetmap.org/keys/network#values">taginfo</a> also with <code>network=national</code> according to this proposal: <a href="http://wiki.openstreetmap.org/wiki/Proposed_Features/Importance">importance</a>. There is proposed <code>network</code> values for walking (nwn) and cycling networks (ncn) on the <a href="http://wiki.openstreetmap.org/wiki/Relation:route">description of the route-key</a>, but no suggestion for horseriding. I'd <strong>not</strong> continue this logics (e.g. nrn, national-riding-network) because it is not really self-explaining and uses abbreviations, and it doesn't seem there is any actual use of horse-specific network-tags.</p>
+<p>If there are <em>other</em> routes for walking or cycling I'd make distinct route relations for them.</p>
+<p>If there is routes with mixed designation (they are all the same network) things become more difficult. You might either</p>
+<ul>
+<li><p>make several distinct relations like above and then combine them into one object (relation)</p></li>
+<li><p>or you made one relation with multi-values in route (<code>route=bicycle;foot;horse</code>)</p></li>
+<li><p>or you used something like <code>route=mixed</code> together with <code>access</code>-tags (<code>foot=designated, horse=designated</code>, ...)</p></li>
+</ul>
+<p>The first solution seems horrible to maintain (if the different means of transport variate at certains spots I'd definitely go for this), multi-values are not popular at all and the third alternative is not in use. Mixed is also ambiguous because the route tag is used also for other kind of routes (public_transport, ferries, etc.).</p>
+</div>
+<div class="answer-controls post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>answered <strong>05 Sep '11, 14:36</strong></p>
+<img src="https://secure.gravatar.com/avatar/f09c0b7a655fed386e070e036e2da248?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="dieterdreist&#39;s gravatar image" />
+<p><span>dieterdreist</span><br />
+<span class="score" title="3677 reputation points"><span>3.7k</span></span><span title="11 badges"><span class="badge1">●</span><span class="badgecount">11</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="67 badges"><span class="bronze">●</span><span class="badgecount">67</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="dieterdreist has 4 accepted answers">3%</span></p>
+</div>
+<div class="post-update-info post-update-info-edited">
+<p><span> edited <strong>05 Sep '11, 15:10</strong> </span></p>
+</div>
+</div>
+<div id="comments-container-7635" class="comments-container">
+<span id="7638"></span>
+<div id="comment-7638" class="comment">
+<div id="post-7638-score" class="comment-score">
+2
+</div>
+<div class="comment-text">
+<p>Actually - you raise an important point there (one that I'd forgotten). The start point for horseriders at the southern end of the "Pennine Bridleway" is different to the start point for cyclists:</p>
+<p><a href="http://www.nationaltrail.co.uk/penninebridleway/text.asp?PageId=2">http://www.nationaltrail.co.uk/penninebridleway/text.asp?PageId=2</a></p>
+<p>so it might make sense to have more than one relation (although often they overlap). It really ought to be discussed on talk-gb rather than here though.</p>
+<p>Interestingly, that page also notes that the OS incorrectly labels the Pennine Bridleway in places - something that we spotted ages ago.</p>
+</div>
+<div id="comment-7638-info" class="comment-info">
+<span class="comment-age">(05 Sep '11, 14:46)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
+</div>
+</div>
+<span id="7641"></span>
+<div id="comment-7641" class="comment">
+<div id="post-7641-score" class="comment-score">
+1
+</div>
+<div class="comment-text">
+<p>if the routes for horses and bicycles are not exactly the same (like you suggest by naming small variations) I'd definitely go for different relations (still they might get the same name, i.e. the name the have got).</p>
+</div>
+<div id="comment-7641-info" class="comment-info">
+<span class="comment-age">(05 Sep '11, 14:53)</span> <span class="comment-user userinfo">dieterdreist</span>
+</div>
+</div>
+</div>
+<div id="comment-tools-7635" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-7635-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<span id="7649"></span>
+
+<div id="answer-container-7649" class="answer answered-by-owner">
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="width: 30px; vertical-align: top"><div class="vote-buttons">
+<span id="post-7649-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span>
+<div id="post-7649-score" class="post-score" title="current number of votes">
+0
+</div>
+<span id="post-7649-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span>
+</div></td>
+<td><div class="item-right">
+<div class="answer-body">
+<p>Sorry to continue this if it's in the wrong place (can anyone move this to the right place?), but the route is a mixed route for walkers, horse-riders and cyclists, so yes it is mixed-use.</p>
+<p>It seems that apart from the initial start-points at the southern end (which join up soon enough), the intention is for the entire route, once complete, to be a single route for all forms of transport (though currently due to incompleteness, there are bits of separate routes for cyclists and walkers, whilst certain bits aren't yet suitable for horse-riders).</p>
+<p>This seems to point toward the idea of making more than one relation and combining them into one object (though I'm not entirely sure how to do that)</p>
+</div>
+<div class="answer-controls post-controls">
+&#10;</div>
+<div class="post-update-info-container">
+<div class="post-update-info post-update-info-user">
+<p>answered <strong>05 Sep '11, 21:58</strong></p>
+<img src="https://secure.gravatar.com/avatar/c62d3f5ba808673e9df9a9bff067c7fd?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="iand109&#39;s gravatar image" />
+<p><span>iand109</span><br />
+<span class="score" title="46 reputation points">46</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">●</span><span class="badgecount">4</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="iand109 has no accepted answers">0%</span></p>
+</div>
+</div>
+<div id="comments-container-7649" class="comments-container">
+<span id="7663"></span>
+<div id="comment-7663" class="comment">
+<div id="post-7663-score" class="comment-score">
+&#10;</div>
+<div class="comment-text">
+<p>What I was trying to say is that this site is more suited to questions which have specific answers than those that need a bit of community discussion to reach concensus.</p>
+<p>The talk-gb mailing list info page is here: <a href="http://lists.openstreetmap.org/listinfo/talk-gb">http://lists.openstreetmap.org/listinfo/talk-gb</a></p>
+<p>The top link is to the archives and they're easily searchable by sticking e.g. "pennine site:<a href="http://lists.openstreetmap.org/pipermail/talk-gb/">lists.openstreetmap.org/pipermail/talk-gb/"</a> in the search box of your browser.</p>
+</div>
+<div id="comment-7663-info" class="comment-info">
+<span class="comment-age">(06 Sep '11, 11:30)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
+</div>
+</div>
+<span id="7664"></span>
+<div id="comment-7664" class="comment">
+<div id="post-7664-score" class="comment-score">
+&#10;</div>
+<div class="comment-text">
+<p>Once some sort of concensus has been reached it'll need someone (or some people) to make it happen - create any new relations, document them on a wiki page, add new links where necessary (e.g. from the Cycle_routes page), and to keep an eye on it as people update it.</p>
+<p>That's exactly what happened with the National_Byway page, which is why I picked it as an example at the top.</p>
+</div>
+<div id="comment-7664-info" class="comment-info">
+<span class="comment-age">(06 Sep '11, 11:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
+</div>
+</div>
+</div>
+<div id="comment-tools-7649" class="comment-tools">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+<div id="comment-7649-form-container" class="comment-form-container">
+&#10;</div>
+<div class="clear">
+&#10;</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

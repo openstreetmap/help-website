@@ -1,0 +1,830 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>When splitting an existing way in JOSM, can I determine which way will retain history? - OSM Help</title>
+        <meta name="description" content="I&#39;m splitting a way that&#39;s A====B====C====D=====E This way&#39;s first version was A===B===C  (in the example, A, B,C,D, and E are nodes).  If I split the way at node D, can I choose whether I want DE to have the original way&#39;s history or ABC?  If so, how?" />
+        <meta name="keywords" content="ways,josm,split,history" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/39247/when-splitting-an-existing-way-in-josm-can-i-determine-which-way-will-retain-history" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/39247/when-splitting-an-existing-way-in-josm-can-i-determine-which-way-will-retain-history?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gx6q5v0xhMR4QC6Lo0dg1fBUWaKQF7ke' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/39247/when-splitting-an-existing-way-in-josm-can-i-determine-which-way-will-retain-history">When splitting an existing way in JOSM, can I determine which way will retain history?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-39247-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39247/up/" rel="nofollow"> </a>
+<div id="post-39247-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-39247-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39247/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/39247/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm splitting a way that's <code>A====B====C====D=====E</code></p>
+<p>This way's first version was <code>A===B===C</code> 
+(in the example, A, B,C,D, and E are nodes). </p>
+<p>If I split the way at node D, can I choose whether I want DE to have the original way's history or ABC? </p>
+<p>If so, how?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ways/" class="post-tag tag-link-ways"
+                                        title="see questions tagged 'ways'" rel="tag">ways</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/split/" class="post-tag tag-link-split"
+                                        title="see questions tagged 'split'" rel="tag">split</a>
+                                
+                                    <a href="/tags/history/" class="post-tag tag-link-history"
+                                        title="see questions tagged 'history'" rel="tag">history</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Dec '14, 19:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3f2a3925f19f9684808db864d290682c?s=32&amp;d=identicon&amp;r=g" alt="skorasaurus's gravatar image" />
+    <p><a href="/users/429/skorasaurus">skorasaurus</a><br/>
+    <span class="score" title="1398 reputation points"><span class="">1.4k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="31 badges"><span class="silver">&#9679;</span><span class="badgecount">31</span></span><span title="37 badges"><span class="bronze">&#9679;</span><span class="badgecount">37</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="skorasaurus has 3 accepted answers">12&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/39247/">
+                edited
+                <strong>01 Aug '15, 23:56</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-39247">
+    
+</div>
+<div id="comment-tools-39247" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39247-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/39247/when-splitting-an-existing-way-in-josm-can-i-determine-which-way-will-retain-history?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/39247/when-splitting-an-existing-way-in-josm-can-i-determine-which-way-will-retain-history?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/39247/when-splitting-an-existing-way-in-josm-can-i-determine-which-way-will-retain-history?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/39247/when-splitting-an-existing-way-in-josm-can-i-determine-which-way-will-retain-history?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52542"></a>
+                    <div id="answer-container-52542" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52542-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52542/up/" rel="nofollow"> </a>
+<div id="post-52542-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-52542-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52542/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>(Since the JOSM version which was <a href="https://josm.openstreetmap.de/wiki/Changelog/2015#stable-release-15.10">released on 2015-10-30</a>:) JOSM reuses the id (and hence the way's history) of the existing way for the longest (node count) split segment and allows expert users to choose another segment. Also see the <a href="https://josm.openstreetmap.de/wiki/Help/Action/SplitWay#Usingoldobjectid">relevant section in the documentation of the "split way" function</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52542/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Oct '16, 20:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52542/">
+                edited
+                <strong>13 Oct '16, 22:16</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52542">
+    
+</div>
+<div id="comment-tools-52542" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52542-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="39248"></a>
+                    <div id="answer-container-39248" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-39248-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39248/up/" rel="nofollow"> </a>
+<div id="post-39248-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-39248-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39248/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi, 
+Never thought of this before but it's the first section of the way that retains the history. So if you want the other half to retain the history then reverse the way before splitting it.</p>
+<p>Bernard </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/39248/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Dec '14, 20:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e3283a6b5f83e16214ec39a1478f64f0?s=32&amp;d=identicon&amp;r=g" alt="BCNorwich's gravatar image" />
+    <p><a href="/users/2925/bcnorwich">BCNorwich</a><br/>
+    <span class="score" title="6299 reputation points"><span class="">6.3k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="BCNorwich has 44 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-39248">
+    
+        <a name="39249"></a>
+        <div class="comment" id="comment-39249">
+            <div id="post-39249-score" class="comment-score">1</div>
+            <div class="comment-text"><p>RPR is the key sequence (first select the node, and if needed the way, of course) I often use for this purpose. This keeps the history at the part I want and does not change the way directions needlessly.</p>
+
+<p>In fact a tool for this would be nice.</p></div>
+            <div class="comment-info" id="comment-39249-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '14, 21:24)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="39250"></a>
+        <div class="comment" id="comment-39250">
+            <div id="post-39250-score" class="comment-score"></div>
+            <div class="comment-text"><p>Also I would automatically add a tag like meta:history:split_off_from=$oldwayID to the new (ID: 0) ways (which could be automatically removed in subsequent object versions like it is done for created_by tags). Anybody thought of this before? :-)</p></div>
+            <div class="comment-info" id="comment-39250-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '14, 21:29)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="39254"></a>
+        <div class="comment" id="comment-39254">
+            <div id="post-39254-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not a bad idea. But it gets a little more complicated when splitting the way again or merging it with another way. Likewise it would be useful to keep such a reference when replacing a point feature with an area feature.</p></div>
+            <div class="comment-info" id="comment-39254-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '14, 08:36)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="39255"></a>
+        <div class="comment" id="comment-39255">
+            <div id="post-39255-score" class="comment-score"></div>
+            <div class="comment-text"><p>Splitting ways and (not) keeping history was a hot topic during ODbL license change. Tracking a way's history across splits was also discussed back then in much detail (while I don't happen to remember any specifics). Simon probably can chime in here.</p></div>
+            <div class="comment-info" id="comment-39255-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '14, 09:22)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="41050"></a>
+        <div class="comment" id="comment-41050">
+            <div id="post-41050-score" class="comment-score">1</div>
+            <div class="comment-text"><p><strong><a href="http://help.openstreetmap.org/users/158/scai">@scai</a></strong>:</p>
+
+<p>Use "replace geometry" from utilsplugin2 when converting nodes to areas.</p></div>
+            <div class="comment-info" id="comment-41050-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Feb '15, 15:07)</span>
+                <a class="comment-user userinfo" href="/users/10460/skyper">skyper</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39248" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39248-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/39247/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gx6q5v0xhMR4QC6Lo0dg1fBUWaKQF7ke' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39247/when-splitting-an-existing-way-in-josm-can-i-determine-which-way-will-retain-history?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39247/when-splitting-an-existing-way-in-josm-can-i-determine-which-way-will-retain-history?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/ways/"
+            class="tag-link-ways"
+            title="see questions tagged'ways'using tags"
+            rel="tag">ways</a> <span class="tag-number">&#215;167</span><br/>
+        
+        <a href="/tags/history/"
+            class="tag-link-history"
+            title="see questions tagged'history'using tags"
+            rel="tag">history</a> <span class="tag-number">&#215;89</span><br/>
+        
+        <a href="/tags/split/"
+            class="tag-link-split"
+            title="see questions tagged'split'using tags"
+            rel="tag">split</a> <span class="tag-number">&#215;34</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 12, 2014, 7:27 p.m.">12 Dec '14, 19:27</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,563 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 13, 2016, 10:16 p.m.">13 Oct '16, 22:16</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/17773/new-road-not-visible-in-the-map">[closed] New road not visible in the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26028/do-we-split-a-way-leading-to-a-roundabout">Do we split a way leading to a roundabout?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8197/re-ordering-sorting-ways-in-a-relation">Re-ordering / sorting ways in a relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14151/split-osm-file-without-fragmenting-ways-and-relations">Split .osm file without fragmenting ways and relations</a>
+        </p>
+        
+        <p>
+            <a href="/questions/248/how-to-see-roads-underneath-areas-in-josm">How to see roads underneath areas in JOSM ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20603/increase-the-width-of-the-ways-in-the-map-display-style-in-josm">[closed] Increase the width of the ways in the map display (style) in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1931/how-do-i-see-past-gps-traces-in-a-specific-area">How do I see past GPS Traces in a specific area ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8196/adding-ways-to-relation-without-visual-editor">Adding ways to relation without visual editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9053/how-to-split-a-building-for-naming">How to split a building for naming</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26517/how-do-i-get-a-copy-of-a-way-id-in-josm">How do I get a copy of a Way ID in JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

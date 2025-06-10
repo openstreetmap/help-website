@@ -1,0 +1,805 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How should a farm be tagged? - OSM Help</title>
+        <meta name="description" content="The wiki entry for farm suggests that the main farm buildings should be tagged with landuse=farmyard with the surrounding fields tagged as landuse=farm or landuse=farmland  However I see that there is a place=farm tag suggested in the wiki so when should this be used? Experimenting shows that Mapnik..." />
+        <meta name="keywords" content="best-practise,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/504/how-should-a-farm-be-tagged" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/504/how-should-a-farm-be-tagged?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='v2cMQLoDgAoafOxH8ZTr3QbwHpk6JZ4J' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/504/how-should-a-farm-be-tagged">How should a farm be tagged?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-504-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/504/up/" rel="nofollow"> </a>
+<div id="post-504-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-504-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/504/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/504/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>The <a href="http://wiki.openstreetmap.org/wiki/Farm" title="Farm - OpenSteetMap Wiki">wiki entry for farm</a> suggests that the main farm buildings should be tagged with <code>landuse=farmyard</code> with the surrounding fields tagged as <code>landuse=farm</code> or <code>landuse=farmland</code></p>
+<p><img alt="Farmward depiction from Wiki" src="http://wiki.openstreetmap.org/w/images/thumb/8/86/Landuse%3Dfarmyard.jpg/500px-Landuse%3Dfarmyard.jpg"></p>
+<p>However I see that there is a <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dfarm"><code>place=farm</code> tag suggested in the wiki</a> so when should this be used?</p>
+<p>Experimenting shows that Mapnik does not render <code>place=farm</code>, but Osmarender does.
+Both render <code>landuse=farmyard</code> and display a name at close zoom levels.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/best-practise/" class="post-tag tag-link-best-practise"
+                                        title="see questions tagged 'best-practise'" rel="tag">best-practise</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Jul '10, 10:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f61876d1f1d2de794259119cdd596316?s=32&amp;d=identicon&amp;r=g" alt="GrahamS's gravatar image" />
+    <p><a href="/users/98/grahams">GrahamS</a><br/>
+    <span class="score" title="3635 reputation points"><span class="">3.6k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="45 badges"><span class="silver">&#9679;</span><span class="badgecount">45</span></span><span title="54 badges"><span class="bronze">&#9679;</span><span class="badgecount">54</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="GrahamS has 7 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-504">
+    
+</div>
+<div id="comment-tools-504" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-504-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/504/how-should-a-farm-be-tagged?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/504/how-should-a-farm-be-tagged?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/504/how-should-a-farm-be-tagged?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/504/how-should-a-farm-be-tagged?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="537"></a>
+                    <div id="answer-container-537" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-537-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/537/up/" rel="nofollow"> </a>
+<div id="post-537-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-537-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/537/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="GrahamS has selected this answer as the correct answer"
+        href="/accept_answer/537/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Use <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmyard">landuse=farmyard</a> with a polygon around the general area of the clutch of buildings making up a farm. You might then also do a few building=yes polygons for individual buildings if you have a way of mapping those accurately. That's pretty similar to how we map several buildings making up a school or a hospital.</p>
+<p>place=farm is confusing (and I must say I disagreed with its addition in the first place) but it's part of the family of tags on <a href="http://wiki.openstreetmap.org/wiki/Key:place">Key:place</a> which are for naming an area. So for example an area is known by the locals as "Upperknowle Farm". In fact there doesn't necessarily need to be an active farm there, or any buildings whatsoever. These can be labels for bits of moorland traced from old out of copyright maps for example, and maybe that's the best time to use it.</p>
+<p>If you have an active visible farm with a particular name, I'd say it's better to tag it landuse=farmyard, name=x  ...and forget about the place tag.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/537/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Aug '10, 12:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/537/">
+                edited
+                <strong>02 Aug '10, 14:26</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-537">
+    
+        <a name="550"></a>
+        <div class="comment" id="comment-550">
+            <div id="post-550-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah, from my experimenting I'd have to agree. Thanks Harry.</p></div>
+            <div class="comment-info" id="comment-550-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Aug '10, 10:29)</span>
+                <a class="comment-user userinfo" href="/users/98/grahams">GrahamS</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-537" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-537-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="505"></a>
+                    <div id="answer-container-505" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-505-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/505/up/" rel="nofollow"> </a>
+<div id="post-505-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-505-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/505/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If I understand that wiki page correctly <code>place=farm</code> is used to mark a farm that is considered it's own - well - place like a village or hamlet. I'd use it (additionally to <code>landuse=farmyard</code>) if it has a name that is also used as it's address.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/505/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Jul '10, 11:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c8367f123240268431ceae261af0dac9?s=32&amp;d=identicon&amp;r=g" alt="RoToRa's gravatar image" />
+    <p><a href="/users/122/rotora">RoToRa</a><br/>
+    <span class="score" title="88 reputation points">88</span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RoToRa has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-505">
+    
+        <a name="506"></a>
+        <div class="comment" id="comment-506">
+            <div id="post-506-score" class="comment-score"></div>
+            <div class="comment-text"><p>The OS OpenData in the UK usually has farm names on it and it is very common for these to be used as the farm address. But if I tag a node place=farm AND mark the area as landuse=farmyward, and give them both names, then they will both be rendered in Osmarender which doesn't look right.</p></div>
+            <div class="comment-info" id="comment-506-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jul '10, 11:15)</span>
+                <a class="comment-user userinfo" href="/users/98/grahams">GrahamS</a>
+                
+            </div>
+        </div>
+    
+        <a name="508"></a>
+        <div class="comment" id="comment-508">
+            <div id="post-508-score" class="comment-score"></div>
+            <div class="comment-text"><p>I actually thought to tag the area with both and not add an additional node.</p></div>
+            <div class="comment-info" id="comment-508-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jul '10, 11:38)</span>
+                <a class="comment-user userinfo" href="/users/122/rotora">RoToRa</a>
+                
+            </div>
+        </div>
+    
+        <a name="509"></a>
+        <div class="comment" id="comment-509">
+            <div id="post-509-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay I've just tried tagging the same area with place=farm and landuse=farmyard. That looks okay in Mapnik, but in Osmarender it renders the name twice. Once in large black text and again in smaller blue text, with the blue text rendered directly on top of the black.</p></div>
+            <div class="comment-info" id="comment-509-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jul '10, 12:18)</span>
+                <a class="comment-user userinfo" href="/users/98/grahams">GrahamS</a>
+                
+            </div>
+        </div>
+    
+        <a name="554"></a>
+        <div class="comment" id="comment-554">
+            <div id="post-554-score" class="comment-score">2</div>
+            <div class="comment-text"><p>That would be a bug in Osmarender then.</p></div>
+            <div class="comment-info" id="comment-554-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Aug '10, 16:17)</span>
+                <a class="comment-user userinfo" href="/users/122/rotora">RoToRa</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-505" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-505-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/504/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='v2cMQLoDgAoafOxH8ZTr3QbwHpk6JZ4J' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/504/how-should-a-farm-be-tagged?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/504/how-should-a-farm-be-tagged?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/best-practise/"
+            class="tag-link-best-practise"
+            title="see questions tagged'best-practise'using tags"
+            rel="tag">best-practise</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 30, 2010, 10:58 a.m.">30 Jul '10, 10:58</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,472 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 3, 2010, 4:17 p.m.">03 Aug '10, 16:17</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/116/which-tags-do-i-use">Which tag(s) do I use?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/125/how-do-i-stop-rivers-from-rendering-where-the-riverbanks-are-mapped">How do I stop rivers from rendering where the riverbanks are mapped?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/129/how-to-tag-a-no-entrance-except-to-bus-and-bicycle">How to tag a &#39;no entrance except to bus and bicycle&#39;?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/134/how-do-i-map-a-road-that-has-traffic-lights-only-in-one-direction">How do I map a road that has traffic lights only in one direction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/153/how-do-you-tell-if-a-minor-service-road-is-accessprivate-destination-or-permissive">How do you tell if a minor service road is access=private, destination, or permissive?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/162/how-do-i-tag-ways-with-partial-access">How do I tag ways with partial access?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/170/does-the-legal-status-of-a-road-public-or-private-ownership-always-matter-when-dealing-with-access-tags">Does the legal status of a road (public or private ownership) always matter when dealing with access tags?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/228/uk-road-was-detrunked-why-does-osm-still-have-it-tagged-highwaytrunk">[UK road] was detrunked; why does OSM still have it tagged highway=trunk?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/240/how-can-i-get-a-list-of-all-objects-with-a-certain-tag">How can I get a list of all objects with a certain tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/88/how-to-tag-a-cafe-restaurant-bar">How to tag a Cafe, Restaurant &amp; Bar</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Select multiple buildings - OSM Help</title>
+        <meta name="description" content="I want to do a bulk edit on a huge number of small buildings. How can I select multiple buildings to do that? Clicking them all individually I just tried, spend 10 minutes on it, and then my selection got discarded silently without any warning, and without the possibility to undo that. Fix this plea..." />
+        <meta name="keywords" content="editing" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/80677/select-multiple-buildings" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/80677/select-multiple-buildings?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='q0I59hGwPHpyYyjU3NnMOkrvex34QsdN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/80677/select-multiple-buildings">Select multiple buildings</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-80677-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80677/up/" rel="nofollow"> </a>
+<div id="post-80677-score" class="post-score"
+    title="current number of votes">
+    -12
+</div>
+<a id="post-80677-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80677/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/80677/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I want to do a bulk edit on a huge number of small buildings. How can I select multiple buildings to do that?</p>
+<p>Clicking them all individually I just tried, spend 10 minutes on it, and then my selection got discarded silently without any warning, and without the possibility to undo that. Fix this please!! I'm quite annoyed by this, frankly.</p>
+<p>So how to do this properly?</p>
+<p>If I drag a selection around them, it only selects "points", the nodes that make up a building. But not the buildings themselves. There's also no filter. I would ideally first unclutter the editing map to hide features I'm not interested in editing. Then drag a selection around the buildings, and have that select <em>buildings</em>, not the nodes that make up buildings.</p>
+<p>Also, searching doesn't really work. I was hoping to search by tag or something and do a bulk action from there, but no.</p>
+<p>What is the best way to do this?</p>
+<p>/edit
+btw I'm trying the iD editor. I also tried JOSM, but my goggly goodness that is a piece of crap. Sorry, but it really is. It lives in 1993 and it's just... Ugh. Nope, I won't be using that anymore. Multiselecting with the iD editor seems the way to go. Shouldn't be that hard either, really.</p>
+<p>Specially what I need to do: select ALL buildings dragging a selection around them, then filter that selection by a specific tag (generic building, not house/apartment/whatever). How hard can it be??</p>
+<p>/edit2
+Even when hiding ALL features except building, the draggy selection tool insists on selection points, and NEVER any buildings. And I just discovered it also only works (incorrectly) when zoomed in. But seriously, how does it manage to select features that I've hidden? And not select other features (that aren't points) that ARE hidden? Why can't it just bloody select buildings?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Jun '21, 00:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7ef8697a6d7e0d32d9249e002d2e7fda?s=32&amp;d=identicon&amp;r=g" alt="Thanatica's gravatar image" />
+    <p><a href="/users/20408/thanatica">Thanatica</a><br/>
+    <span class="score" title="57 reputation points">57</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Thanatica has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/80677/">
+                edited
+                <strong>24 Jun '21, 01:20</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-80677">
+    
+        <a name="80679"></a>
+        <div class="comment" id="comment-80679">
+            <div id="post-80679-score" class="comment-score">2</div>
+            <div class="comment-text"><p>For the record, I see that you have created issues in the iD repository, it's probably the best course to solve your problem using only that software.</p>
+
+<p>Please refrain from using harsh words about a project on which a lot of people invest a lot of time ! And IMHO JOSM is the best OSM editor available, maybe I live in 1993... I could use some harsh about iD, but only in private. ;-)</p>
+
+<p>Regards.</p></div>
+            <div class="comment-info" id="comment-80679-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 10:31)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+        <a name="80682"></a>
+        <div class="comment" id="comment-80682">
+            <div id="post-80682-score" class="comment-score"></div>
+            <div class="comment-text"><p>FWIW I've voted the question up since in among the JOSM UI hate there are some valid questions being asked.</p>
+
+<p>The right tool for the job here rather depends on what the job is - if it's "select a few things to make the same changes to each" than iD will work just fine; if it's "perform a complicated overpass query to only select certain objects and then change them" then it's either JOSM or use overpass externally and go into iD once per object (which is probably not the best approach).</p>
+
+<p>Also if you're making "the same sort of change" to lots of things then you'll definitely want to explore using the JOSM validator to list other things worth investigating.  Not all of them will be errors, but they'll all be worth looking at.</p></div>
+            <div class="comment-info" id="comment-80682-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 10:59)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="80687"></a>
+        <div class="comment" id="comment-80687">
+            <div id="post-80687-score" class="comment-score">3</div>
+            <div class="comment-text"><p>As others have said, making derogatory comments about editors is unlikely to encourage people to help you with your issue. Furthermore the people creating these editors are real people &amp; they can really do without this kind of comment: we have certainly had maintainers stop because of this kind of thing.</p></div>
+            <div class="comment-info" id="comment-80687-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 12:57)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="80693"></a>
+        <div class="comment not_top_scorer" id="comment-80693">
+            <div id="post-80693-score" class="comment-score"></div>
+            <div class="comment-text"><p>Mates, I can't even move the map by dragging, or make a selection in lasso mode. It keeps moving nodes. Yes, nodes are EVERYWHERE, so how can I not select a node?? JOSM is awful, and that is not my opinion. It's measurably crap.</p>
+
+<p>The thing is, since people put so much of their time in these projects, I would expect something better. Surely, they too would want their stuff to work brilliant, wouldn't they? It's no use being all happy and dandy about it if it's broken.</p></div>
+            <div class="comment-info" id="comment-80693-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 15:41)</span>
+                <a class="comment-user userinfo" href="/users/20408/thanatica">Thanatica</a>
+                
+            </div>
+        </div>
+    
+        <a name="80696"></a>
+        <div class="comment" id="comment-80696">
+            <div id="post-80696-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/20408/thanatica"></a><a href="https://help.openstreetmap.org/users/20408/thanatica">@Thanatica</a> </p>
+
+<ol>
+<li>You move the map by dragging with [RMB]. </li>
+<li>Explain how you can't lasso select? </li>
+<li>There's a Unselect Node button and hotkey. </li>
+<li>In search, you add <code>type:way</code> or <code>-type:node</code> to Select or Add; use <code>type:way</code> in Find In Selection; or use <code>type:node</code> in Remove From Selection.</li>
+</ol>
+
+<p>Throwing your "crap" at it with such "awful" attitude is not going to solve your "broken" problem.</p></div>
+            <div class="comment-info" id="comment-80696-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 15:47)</span>
+                <a class="comment-user userinfo" href="/users/16887/kovoschiz">Kovoschiz</a>
+                
+            </div>
+        </div>
+    
+        <a name="80697"></a>
+        <div class="comment" id="comment-80697">
+            <div id="post-80697-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/20408/thanatica">@Thanatica</a> Perhaps it's worth taking a step back and asking yourself after posting that "measurably crap" comment?  Do you actually want anyone to help you, or not?  If not, then there are probably better places on the Internet set to provoke an argument.  I hear Twitter is popular these days.</p>
+
+<p>If, on the other hand you actually want someone to help you to do what you want to do in OSM then it's worth listening to people suggest, not merely saying "I want X to do Y.  No, I will not use Z (which does Y)".</p></div>
+            <div class="comment-info" id="comment-80697-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 15:48)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80677" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80677-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/80677/select-multiple-buildings?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/80677/select-multiple-buildings?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/80677/select-multiple-buildings?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/80677/select-multiple-buildings?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="80678"></a>
+                    <div id="answer-container-80678" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80678-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80678/up/" rel="nofollow"> </a>
+<div id="post-80678-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-80678-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80678/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>What you want to do is advanced editing that cannot be done with ID editor. JOSM is the advanced editing tool for OSM. It's neither beautiful nor intuitive, but it is the right program for your task. If you can bring yourself to use JOSM, I'd be happy to help you accomplish this task with it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80678/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jun '21, 09:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ec46821d791b304a5c3c9380ab661d11?s=32&amp;d=identicon&amp;r=g" alt="Discostu36's gravatar image" />
+    <p><a href="/users/15148/discostu36">Discostu36</a><br/>
+    <span class="score" title="236 reputation points">236</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Discostu36 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80678">
+    
+        <a name="80681"></a>
+        <div class="comment" id="comment-80681">
+            <div id="post-80681-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I've not voted this down because you offered to help, but the first part of this answer isn't actually correct since selecting multiple things in iD to make changes to them is actually very straightforward.</p></div>
+            <div class="comment-info" id="comment-80681-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 10:51)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="80684"></a>
+        <div class="comment" id="comment-80684">
+            <div id="post-80684-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanatica specifically asked for "selection by a specific tag (generic building, not house/apartment/whatever)", this is not possible with ID.</p></div>
+            <div class="comment-info" id="comment-80684-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 11:49)</span>
+                <a class="comment-user userinfo" href="/users/15148/discostu36">Discostu36</a>
+                
+            </div>
+        </div>
+    
+        <a name="80686"></a>
+        <div class="comment" id="comment-80686">
+            <div id="post-80686-score" class="comment-score"></div>
+            <div class="comment-text"><p>True, that was one of the other things asked lower down, but the first line of the question is literally "I want to do a bulk edit on a huge number of small buildings. How can I select multiple buildings to do that?".</p></div>
+            <div class="comment-info" id="comment-80686-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 12:23)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="80694"></a>
+        <div class="comment" id="comment-80694">
+            <div id="post-80694-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried JOSM. It's awful. And it too silently discards a selection if I happen to do something that JOSM thinks in its infinite brilliance should discard any selection, of course without the possibility to ctrl+z it.</p>
+
+<p>iD at least has somewhat of an intuitive GUI, if it could be bothered to not select things I've hidden away, and (again) not silently discard a painstakingly made selection!</p></div>
+            <div class="comment-info" id="comment-80694-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 15:43)</span>
+                <a class="comment-user userinfo" href="/users/20408/thanatica">Thanatica</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80678" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80678-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="80680"></a>
+                    <div id="answer-container-80680" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80680-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80680/up/" rel="nofollow"> </a>
+<div id="post-80680-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-80680-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80680/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I was confused, so I checked - you can make changes to multiple things with iD (and with Potlatch, and with JOSM).  In iD use "shift select" to select more that one item.  <a href="https://www.openstreetmap.org/changeset/106889113">https://www.openstreetmap.org/changeset/106889113</a> is the test change, by the way.</p>
+<p>However, it's absolutely true that there are some things that you can do in JOSM that you can't do in iD, and that's by design - with JOSM it's fairly easy for people unfamiliar with what they're doing to accidentally change things they weren't expecting to (examples including "adding a tag to all nodes in a multi-select as well as all ways" and "accidentally dragging everything in a large area somewhere else").</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80680/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jun '21, 10:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80680">
+    
+        <a name="80695"></a>
+        <div class="comment" id="comment-80695">
+            <div id="post-80695-score" class="comment-score"></div>
+            <div class="comment-text"><p>Shift select works by having to click on each and every feature individually. And like I said, one misclick and the whole selection is gone. POOF.</p></div>
+            <div class="comment-info" id="comment-80695-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 15:45)</span>
+                <a class="comment-user userinfo" href="/users/20408/thanatica">Thanatica</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80680" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80680-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="80692"></a>
+                    <div id="answer-container-80692" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80692-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80692/up/" rel="nofollow"> </a>
+<div id="post-80692-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-80692-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80692/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>To elaborate: </p>
+<ol>
+<li>JOSM Vanilla allows seeing and selecting selection history. (This is not "undo" since it's not an actual "edit") </li>
+<li>JOSM Vanilla allows searching by tags and other metadata; by various syntax (viz RegEx and MapCSS additionally); to include, exlude, or find within selected objects. </li>
+<li>JOSM Vanilla has a lasso select tool.</li>
+<li>JOSM's Utilsplugin2 has a Select All Inside tool for areas. (And, Unselect Nodes) </li>
+<li>iD has such loading behavior when zooming far away. This is an inherent limitation. To compare, JOSM further has a Continous Download plugin (and Download Along); on top of downloading data or opening files, including loading from Overpass Turbo query. </li>
+<li>JOSM has a powerful filter working the same as the search function, to hide different objects. (Using a <code>-type:node</code> hide filter will allow you to see, select, and edit only lines in the main interface)</li>
+</ol>
+<p>Conclusion: Yes, JOSM is the solution. No, it's not "goggly goodness that is a piece of crap. Sorry, but it really is. It lives in 1993 and it's just... Ugh.". If you don't want to use it, it's your choice. Don't blame, let alone shit on anyone. "Multiselecting with the iD editor seems the way to go." is ultimately untrue, for all the design and use concerns here. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80692/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jun '21, 15:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/76ffbb56c811e8a8ccdd4c28f122399f?s=32&amp;d=identicon&amp;r=g" alt="Kovoschiz's gravatar image" />
+    <p><a href="/users/16887/kovoschiz">Kovoschiz</a><br/>
+    <span class="score" title="2434 reputation points"><span class="">2.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="47 badges"><span class="bronze">&#9679;</span><span class="badgecount">47</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kovoschiz has 22 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/80692/">
+                edited
+                <strong>24 Jun '21, 16:20</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80692">
+    
+        <a name="80698"></a>
+        <div class="comment" id="comment-80698">
+            <div id="post-80698-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not balming anyone personally. I don't even know who made it. If I conclude a program is crap, I am free to let people know, thank you very much.</p>
+
+<p>So the question remains: how to I easily multiselect a whole bunch of features, without my selection going POOF at some arbitrary point, and having that selection tool actually selecting what I'm seeing on the map, not what is hidden?</p>
+
+<p>The answer is: JOSM can't do that. No, it just bloody can't. I can't make a selection by dragging. You may claim it can, but it's kjust not possible in practice. iD also can't do it. What remains is a LOT of work for me, and frankly I will not be doing that.</p>
+
+<p>I'm willing to if I can just bloody select things properly. Isn't that supposed to be one of the most basic features of map editing?!</p></div>
+            <div class="comment-info" id="comment-80698-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 15:49)</span>
+                <a class="comment-user userinfo" href="/users/20408/thanatica">Thanatica</a>
+                
+            </div>
+        </div>
+    
+        <a name="80699"></a>
+        <div class="comment" id="comment-80699">
+            <div id="post-80699-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/20408/thanatica"></a><a href="https://help.openstreetmap.org/users/20408/thanatica">@Thanatica</a> Ok I see your problem. If you are so concerned, you need to make a <code>type:node</code> hide filter to hide all points. Then you can select only lines directly. </p>
+
+<p>A possible reason for not implementing a direct action yet is it could match at least my workflow better. I'm not going to toggle filters, or press more buttons when selecting every time. If I want to do it simple, I use Unselect Nodes. If I need it complex, I use Search. You can definitely check and comment on any open tickets for adding functions in JOSM. </p>
+
+<p>Do you get how explaining clearly or checking yourself can help solve an issue now? Much more useful than unloading a bunch of "crap" upfront.</p></div>
+            <div class="comment-info" id="comment-80699-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 15:53)</span>
+                <a class="comment-user userinfo" href="/users/16887/kovoschiz">Kovoschiz</a>
+                
+            </div>
+        </div>
+    
+        <a name="80700"></a>
+        <div class="comment" id="comment-80700">
+            <div id="post-80700-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/16887/kovoschiz"></a><a href="https://help.openstreetmap.org/users/16887/kovoschiz">@Kovoschiz</a> Actually, it'd be really useful to either create an OSM diary entry explaining those steps in JOSM in a bit more detail.  For example "JOSM Vanilla allows seeing and selecting selection history" doesn't really explain to someone how to do that.  A web search for "josm selection history" finds a <a href="https://wiki.openstreetmap.org/wiki/JOSM/Basic_editing">couple</a> <a href="https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing">of</a> pages, but doesn't find the <a href="https://josm.openstreetmap.de/wiki/Help">JOSM help</a> at all.  I've never found searching <a href="https://josm.openstreetmap.de/search?q=selection+history">within</a> the JOSM help especially useful.</p>
+
+<p>In terms of what exists now, <a href="https://learnosm.org/en/josm/start-josm/">Learnosm's pages</a> are a good a place to start as any.</p></div>
+            <div class="comment-info" id="comment-80700-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '21, 15:59)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80692" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80692-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/80677/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='q0I59hGwPHpyYyjU3NnMOkrvex34QsdN' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80677/select-multiple-buildings?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80677/select-multiple-buildings?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 24, 2021, 12:31 a.m.">24 Jun '21, 00:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,604 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 24, 2021, 4:20 p.m.">24 Jun '21, 16:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/60/what-is-the-difference-between-live-and-with-save-mode-in-map-edit-with-potlatch">What is the difference between live and with save mode in map edit (with Potlatch)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don&#39;t show up on the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/216/what-should-i-do-about-vandalism">What should I do about vandalism?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/231/how-can-i-edit-all-ways-with-certain-tag-in-an-area">How can I edit all ways with certain tag in an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/497/how-can-i-edit-gpx-tracks-in-potlatch-2">How can I edit GPX tracks in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/954/how-do-i-set-my-home-location">How do I set my home location?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1012/fixing-a-subway-stop">Fixing a subway stop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch">How do I ensure that ways are connected in Potlatch ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

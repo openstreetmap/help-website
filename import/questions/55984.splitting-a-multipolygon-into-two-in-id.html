@@ -1,0 +1,757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Splitting a multipolygon into two in iD - OSM Help</title>
+        <meta name="description" content="In the area I am working on there are a number of large multi polygons that were originally created that could really do with being split down to more correctly reflect the actual sub-areas, such as individual fields. If mapped as individual fields their boundaries show up - otherwise you just get o..." />
+        <meta name="keywords" content="ideditor,multipolygon,split,splitting" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/55984/splitting-a-multipolygon-into-two-in-id" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55984/splitting-a-multipolygon-into-two-in-id?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Ene3w4a6QATMSR6VZdXc53MIDs55wtOd' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55984/splitting-a-multipolygon-into-two-in-id">Splitting a multipolygon into two in iD</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55984-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55984/up/" rel="nofollow"> </a>
+<div id="post-55984-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-55984-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55984/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55984/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>In the area I am working on there are a number of large multi polygons that were originally created that could really do with being split down to more correctly reflect the actual sub-areas, such as individual fields. If mapped as individual fields their boundaries show up - otherwise you just get one very large area of arable land with no clear boundaries except where there are hedges.</p>
+<p>I am using iD and am happy with it apart from one problem - if I click on a node and the semi-circular palette appears, and then I click on the scissors icon to split the line nothing visually changes. The scissors icon gets greyed out and the pop-up text changes to say "Lines can't be split at their beginning or end", so it looks like the line has been split, but I can't work out how to pick up each end of the line to move them. I have hunted through the Help and tried Googling for this, but I can't find out how to separate the two split ends. I have tried all sorts of modifier keys but none of them seem to work either.</p>
+<p>Pleas advise how I can separate the two split ends in order to create two separate multipolygons.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/multipolygon/" class="post-tag tag-link-multipolygon"
+                                        title="see questions tagged 'multipolygon'" rel="tag">multipolygon</a>
+                                
+                                    <a href="/tags/split/" class="post-tag tag-link-split"
+                                        title="see questions tagged 'split'" rel="tag">split</a>
+                                
+                                    <a href="/tags/splitting/" class="post-tag tag-link-splitting"
+                                        title="see questions tagged 'splitting'" rel="tag">splitting</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 May '17, 23:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a3175e6a29c8c0e004ea5d7f31493908?s=32&amp;d=identicon&amp;r=g" alt="nickc's gravatar image" />
+    <p><a href="/users/13656/nickc">nickc</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="nickc has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55984/">
+                edited
+                <strong>01 May '17, 23:33</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55984">
+    
+</div>
+<div id="comment-tools-55984" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55984-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55984/splitting-a-multipolygon-into-two-in-id?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55984/splitting-a-multipolygon-into-two-in-id?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55984/splitting-a-multipolygon-into-two-in-id?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55984/splitting-a-multipolygon-into-two-in-id?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="56068"></a>
+                    <div id="answer-container-56068" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56068-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56068/up/" rel="nofollow"> </a>
+<div id="post-56068-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-56068-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56068/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>After using the scissors to split the line at the node, you now have 2 line ends that share a node. If you move the node, both lines move, because they are both connected to the node. You need to disconnect the 2 line ends from each other before you can separate them. The disconnect button in iD looks like arrows pointing left and right.</p>
+<p>However, iD does not let you disconnect two lines that are members of a relation (such as the multipolygon). So you have to remove one of the parts from the relation first. Which you probably need to do anyway, if you want it to be in a new multipolygon. After you make your 1 or more likely 2 node splits, select one segment and delete its membership in the multipolygon relation (trash can on sidebar under All Relations). Now you can use disconnect on the two split nodes, close them up and/or move them, and make a new multipolygon relation for the split-off part. Or, you can put the split-off part back into the same multipolygon relation if that was your goal.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56068/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 May '17, 03:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c1e98ded2982cd352d4c77075aa0cd74?s=32&amp;d=identicon&amp;r=g" alt="ljb_nj's gravatar image" />
+    <p><a href="/users/11758/ljb_nj">ljb_nj</a><br/>
+    <span class="score" title="659 reputation points">659</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ljb_nj has one accepted answer">12&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56068">
+    
+        <a name="56082"></a>
+        <div class="comment" id="comment-56082">
+            <div id="post-56082-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks very much for your answer, although I couldn't quite follow it - in particular I can't see anything in a sidebar labelled All Relations. I have now just about worked out how to do it, but it felt like more luck than judgment!</p>
+
+<p>Here is how it works for anyone else needing to do this:</p>
+
+<ol>
+<li>Click on the node at which you want to split the multipolygon.</li>
+<li>Click on the scissors split icon on the palette.</li>
+<li>Click on the trashcan icon - the node at which you are splitting disappears and the two adjoining nodes become the end points.</li>
+</ol>
+
+<p>You can then extend these lines using the Continue this line icon on the palette. If you want to create two separate multi polygons you have to split the first one at another point, then you can join the split ends of the two parts together, again using the Continue this line icon on the palette.</p></div>
+            <div class="comment-info" id="comment-56082-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '17, 23:30)</span>
+                <a class="comment-user userinfo" href="/users/13656/nickc">nickc</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56068" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56068-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="56710"></a>
+                    <div id="answer-container-56710" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56710-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56710/up/" rel="nofollow"> </a>
+<div id="post-56710-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-56710-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56710/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi <a href="https://help.openstreetmap.org/users/13656/nickc">@nickc</a>, yes I really want this feature too!<br>
+We're tracking it here:  <a href="https://github.com/openstreetmap/iD/issues/3934">https://github.com/openstreetmap/iD/issues/3934</a></p>
+<p>In the meantime, the best solution is to use JOSM to split up large areas.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56710/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Jun '17, 15:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5372740989fdca18458f194a285fcb3e?s=32&amp;d=identicon&amp;r=g" alt="bhousel's gravatar image" />
+    <p><a href="/users/7499/bhousel">bhousel</a><br/>
+    <span class="score" title="2089 reputation points"><span class="">2.1k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="28 badges"><span class="bronze">&#9679;</span><span class="badgecount">28</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="bhousel has 13 accepted answers">38&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56710">
+    
+</div>
+<div id="comment-tools-56710" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56710-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55984/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Ene3w4a6QATMSR6VZdXc53MIDs55wtOd' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55984/splitting-a-multipolygon-into-two-in-id?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55984/splitting-a-multipolygon-into-two-in-id?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/multipolygon/"
+            class="tag-link-multipolygon"
+            title="see questions tagged'multipolygon'using tags"
+            rel="tag">multipolygon</a> <span class="tag-number">&#215;132</span><br/>
+        
+        <a href="/tags/split/"
+            class="tag-link-split"
+            title="see questions tagged'split'using tags"
+            rel="tag">split</a> <span class="tag-number">&#215;34</span><br/>
+        
+        <a href="/tags/splitting/"
+            class="tag-link-splitting"
+            title="see questions tagged'splitting'using tags"
+            rel="tag">splitting</a> <span class="tag-number">&#215;13</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 1, 2017, 11:10 p.m.">01 May '17, 23:10</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,483 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 21, 2017, 3:10 p.m.">21 Jun '17, 15:10</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/58408/trouble-creating-multipolygon-out-of-existing-area">Trouble creating multipolygon out of existing area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/71551/need-help-understanding-whats-happening-with-a-specific-junction-i-66-westbound-at-dulles-toll-road-split">Need help understanding what&#39;s happening with a specific junction (I-66 westbound at Dulles toll road split)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26992/falsche-namensbezeichnung-eines-scheinbar-nicht-vorhandenen-objektes">Falsche Namensbezeichnung eines scheinbar nicht vorhandenen Objektes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor">add name on an existing road which changes its name - how do i devide the road in 2 sections with the iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64918/how-do-i-split-a-roadway-where-the-name-changes-using-the-id-editor">How do I split a road/way where the name changes using the iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65577/newbie-question-how-to-fill-and-island-with-forest">Newbie question: How to &quot;fill&quot; and island with forest</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">How do I map an island in a lake using iD editor and the multipolygon tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22864/can-multipolygons-be-created-in-the-new-id-editor">[closed] Can multipolygons be created in the new iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27442/how-best-to-split-a-large-multipolygon">How best to split a large multipolygon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/78913/my-first-multipolygon-forest-doesnt-appear-has-intermittent-boundary">My first multipolygon forest doesn&#39;t appear, has intermittent boundary.</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

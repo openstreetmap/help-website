@@ -1,0 +1,899 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>No Map in edit mode - OSM Help</title>
+        <meta name="description" content="When I go to EDIT mode, I get an icon library in the left panel and an empty panel where the map should be. I tried with IE9 and FireFox 12, but the result is the same. Help ? PS: using Potlatch2. Tried it with PL1: I get a map, but it takes forever to load and another eternity to pan to another are..." />
+        <meta name="keywords" content="edit,potlatch2" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/12856/no-map-in-edit-mode" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/12856/no-map-in-edit-mode?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ulXzG3c23qho6vRcTQYr3Y2GQwrRpMG5' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/12856/no-map-in-edit-mode">No Map in edit mode</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-12856-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12856/up/" rel="nofollow"> </a>
+<div id="post-12856-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-12856-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12856/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/12856/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When I go to EDIT mode, I get an icon  library in the left panel and an empty panel where the map should be. I tried with IE9 and FireFox 12, but the result is the same.
+Help ?
+PS: using Potlatch2. Tried it with PL1: I get a map, but it takes forever to load and another eternity to pan to another area.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/edit/" class="post-tag tag-link-edit"
+                                        title="see questions tagged 'edit'" rel="tag">edit</a>
+                                
+                                    <a href="/tags/potlatch2/" class="post-tag tag-link-potlatch2"
+                                        title="see questions tagged 'potlatch2'" rel="tag">potlatch2</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 May '12, 22:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4b097211eeb08647e5635300ff883458?s=32&amp;d=identicon&amp;r=g" alt="Gilbert's gravatar image" />
+    <p><a href="/users/3650/gilbert">Gilbert</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gilbert has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12856/">
+                edited
+                <strong>21 May '12, 22:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-12856">
+    
+        <a name="12859"></a>
+        <div class="comment" id="comment-12859">
+            <div id="post-12859-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Can you send a link to the area you are trying to edit, and say what zoom level you are trying to use to edit? It sounds like you are trying to edit an area where there is a lot of data which is taking some time to load. </p></div>
+            <div class="comment-info" id="comment-12859-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '12, 08:26)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12862"></a>
+        <div class="comment" id="comment-12862">
+            <div id="post-12862-score" class="comment-score">2</div>
+            <div class="comment-text"><p>There is a related discussion at <a href="http://forum.openstreetmap.org/viewtopic.php?id=16229">http://forum.openstreetmap.org/viewtopic.php?id=16229</a> : the OpenMapquest P2 editor works for some people.</p></div>
+            <div class="comment-info" id="comment-12862-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '12, 12:03)</span>
+                <a class="comment-user userinfo" href="/users/21/mike-n">Mike N</a>
+                
+            </div>
+        </div>
+    
+        <a name="12864"></a>
+        <div class="comment" id="comment-12864">
+            <div id="post-12864-score" class="comment-score">3</div>
+            <div class="comment-text"><p>That's probably because MQ Open is using an old version. More recent versions pull in some code from the Adobe servers (to minimise the .swf filesize) and it appears to be this that's failing on some setups. We're investigating what to do about this. At present taking Adobe outside and shooting them seems like a convincing solution.</p></div>
+            <div class="comment-info" id="comment-12864-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '12, 12:30)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12878"></a>
+        <div class="comment" id="comment-12878">
+            <div id="post-12878-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Looked at the related discussion, and indeed, I get a map with PL2 in OpenMapQuest. Loading speed is variable, but the area I'm looking at has lots of little streets. Maybe that's slowing down the loading.</p>
+
+<p><a href="/users/339/edloach">@EdLoach</a>: I'm looking at <a href="http://www.openstreetmap.org/?lat=51.19369&amp;lon=5.04247&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=51.19369&amp;lon=5.04247&amp;zoom=15&amp;layers=M</a></p>
+
+<p>I'm a newbie here. When I edit things in OMQ, is it having the same effect as editing in OSM ? In other words, are we editing the same instance of the map ?</p></div>
+            <div class="comment-info" id="comment-12878-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '12, 20:02)</span>
+                <a class="comment-user userinfo" href="/users/3650/gilbert">Gilbert</a>
+                
+            </div>
+        </div>
+    
+        <a name="12881"></a>
+        <div class="comment" id="comment-12881">
+            <div id="post-12881-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes - it's the same map (I've just added something via Mapquest Open and it's appeared in OSM)</p></div>
+            <div class="comment-info" id="comment-12881-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '12, 23:07)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12943"></a>
+        <div class="comment not_top_scorer" id="comment-12943">
+            <div id="post-12943-score" class="comment-score"></div>
+            <div class="comment-text"><p>Please check again now - P2 has been updated so that it no longer requests files from adobe.com, which we think might have been the problem.</p></div>
+            <div class="comment-info" id="comment-12943-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '12, 22:46)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12856" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12856-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/12856/no-map-in-edit-mode?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/12856/no-map-in-edit-mode?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/12856/no-map-in-edit-mode?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/12856/no-map-in-edit-mode?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="13038"></a>
+                    <div id="answer-container-13038" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13038-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13038/up/" rel="nofollow"> </a>
+<div id="post-13038-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-13038-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13038/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Problem is still the same. See attached screenshot.<img alt="alt text" src="http://help.openstreetmap.org/upfiles/nomap.jpg"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13038/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 May '12, 21:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4b097211eeb08647e5635300ff883458?s=32&amp;d=identicon&amp;r=g" alt="Gilbert's gravatar image" />
+    <p><a href="/users/3650/gilbert">Gilbert</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gilbert has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13038">
+    
+        <a name="13051"></a>
+        <div class="comment" id="comment-13051">
+            <div id="post-13051-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Very difficult to diagnose from a distance, but you might try going to <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html">http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html</a> and reporting back your settings under the second tab ("Global Storage Settings"), the third tab ("Global Security Settings"), and the sixth tab ("Website Storage Settings" - scroll down to find www.openstreetmap.org).</p></div>
+            <div class="comment-info" id="comment-13051-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 May '12, 09:06)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13097"></a>
+        <div class="comment" id="comment-13097">
+            <div id="post-13097-score" class="comment-score"></div>
+            <div class="comment-text"><p>That did the trick. Thanks!
+Still slow - sometimes to the point where I wonder if I'm still connected... but that's the same on MQ Open. I guess the OSM server is just slow ? My internet connection is 30 Mb.</p></div>
+            <div class="comment-info" id="comment-13097-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 May '12, 22:37)</span>
+                <a class="comment-user userinfo" href="/users/3650/gilbert">Gilbert</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13038" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13038-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="13043"></a>
+                    <div id="answer-container-13043" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13043-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13043/up/" rel="nofollow"> </a>
+<div id="post-13043-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-13043-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13043/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I had the same problem with Firefox and it works (for me) when I switch to private browsing (Tools/start private browsing). I don't know why but it works...</p>
+<p>Good luck!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13043/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 May '12, 23:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b06617c36d7035085a5940ead56c5219?s=32&amp;d=identicon&amp;r=g" alt="Hugues%20F's gravatar image" />
+    <p><a href="/users/3689/hugues-f">Hugues F</a><br/>
+    <span class="score" title="391 reputation points">391</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hugues F has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13043">
+    
+        <a name="13056"></a>
+        <div class="comment" id="comment-13056">
+            <div id="post-13056-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hmmmm... that suggests to me that there's an issue with the Flash cookie settings. Could you try (without private browsing) the suggestion I've made under Gilbert's screenshot above, and let me know?</p></div>
+            <div class="comment-info" id="comment-13056-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 May '12, 10:26)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13093"></a>
+        <div class="comment" id="comment-13093">
+            <div id="post-13093-score" class="comment-score"></div>
+            <div class="comment-text"><p>Now, it works fine! I think there was an update that fixed the problem. So whatever I do now, it works.</p>
+
+<p>I don't know who I have to thank, but thanks!</p></div>
+            <div class="comment-info" id="comment-13093-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 May '12, 21:36)</span>
+                <a class="comment-user userinfo" href="/users/3689/hugues-f">Hugues F</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13043" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13043-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/12856/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ulXzG3c23qho6vRcTQYr3Y2GQwrRpMG5' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12856/no-map-in-edit-mode?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12856/no-map-in-edit-mode?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/potlatch2/"
+            class="tag-link-potlatch2"
+            title="see questions tagged'potlatch2'using tags"
+            rel="tag">potlatch2</a> <span class="tag-number">&#215;210</span><br/>
+        
+        <a href="/tags/edit/"
+            class="tag-link-edit"
+            title="see questions tagged'edit'using tags"
+            rel="tag">edit</a> <span class="tag-number">&#215;94</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 21, 2012, 10:20 p.m.">21 May '12, 22:20</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,994 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 29, 2012, 10:37 p.m.">29 May '12, 22:37</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/2983/how-to-edit-the-changeset-save-commentnote-after-saving-againmultiple-times-in-an-potlatch-2-editing-session">How to edit the changeset (save) comment/note after saving again/multiple times in an Potlatch 2 editing session?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22303/server-error-http-500-when-trying-to-start-potlatch-2-in-may-2013">[closed] Server error (HTTP 500) when trying to start Potlatch 2 in May 2013</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53381/potlatch-2-advanced-editing">Potlatch 2 advanced editing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1695/potlatch-2-error-on-upload">Potlatch 2 Error on upload</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2052/map-editing">[closed] Map editing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2159/how-do-i-turn-off-default-background-map-imagery-in-potlatch-2">How do I turn off default background map imagery in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1785/red-circles-around-nodes-in-potlatch-2">Red circles around nodes in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2221/is-there-a-way-to-resolve-conflicts-in-potlatch-2">Is there a way to resolve conflicts in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2243/changes-in-new-version-of-potlatch-2">Changes in New Version of Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2178/how-to-download-a-large-area-and-use-it-in-josm">HOW TO download a &quot;large area&quot; and use it in JOSM ??</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

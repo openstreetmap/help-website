@@ -1,0 +1,879 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I remove review_requested=yes from a changeset? - OSM Help</title>
+        <meta name="description" content="I published a changeset but I&#39;ve accidentally added a request to review, that I didn&#39;t intend to toggle and this is a problem because edits that want reviews are not added to DB and I needed to immediately add something after I published it but when downloading the data it downloads whats on the DB ..." />
+        <meta name="keywords" content="changeset,review,editing,review_requested,validation" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/61500/how-do-i-remove-review_requestedyes-from-a-changeset" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61500/how-do-i-remove-review_requestedyes-from-a-changeset?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ge9dtNo8llWzSMlt4kLc77cDBpP0ypth' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61500/how-do-i-remove-review_requestedyes-from-a-changeset">How do I remove review_requested=yes from a changeset?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61500-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61500/up/" rel="nofollow"> </a>
+<div id="post-61500-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61500-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61500/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61500/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I published a changeset but I've accidentally added a request to review, that I didn't intend to toggle and this is a problem because edits that want reviews are not added to DB and I needed to immediately add something after I published it but when downloading the data it downloads whats on the DB which isn't what I published. After a while of searching, I still can't find any way to validate edits. I now can't edit in that area until that correct changeset is "corrected" so that nothing is reverted. Any help would be greatly appreciated!</p>
+<p><a href="https://www.openstreetmap.org/changeset/55200419">Changeset</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/changeset/" class="post-tag tag-link-changeset"
+                                        title="see questions tagged 'changeset'" rel="tag">changeset</a>
+                                
+                                    <a href="/tags/review/" class="post-tag tag-link-review"
+                                        title="see questions tagged 'review'" rel="tag">review</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/review_requested/" class="post-tag tag-link-review_requested"
+                                        title="see questions tagged 'review_requested'" rel="tag">review_requested</a>
+                                
+                                    <a href="/tags/validation/" class="post-tag tag-link-validation"
+                                        title="see questions tagged 'validation'" rel="tag">validation</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Jan '18, 03:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44ea1eaf80bc2e913b1f9a64325d8d30?s=32&amp;d=identicon&amp;r=g" alt="Mxdanger's gravatar image" />
+    <p><a href="/users/14531/mxdanger">Mxdanger</a><br/>
+    <span class="score" title="194 reputation points">194</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Mxdanger has one accepted answer">25&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61500/">
+                edited
+                <strong>06 Jan '18, 11:13</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61500">
+    
+        <a name="61502"></a>
+        <div class="comment" id="comment-61502">
+            <div id="post-61502-score" class="comment-score">5</div>
+            <div class="comment-text"><p>This flag does not mean that the data is not added to the database.</p></div>
+            <div class="comment-info" id="comment-61502-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '18, 07:06)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61500" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61500-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61500/how-do-i-remove-review_requestedyes-from-a-changeset?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61500/how-do-i-remove-review_requestedyes-from-a-changeset?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61500/how-do-i-remove-review_requestedyes-from-a-changeset?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61500/how-do-i-remove-review_requestedyes-from-a-changeset?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61504"></a>
+                    <div id="answer-container-61504" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61504-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61504/up/" rel="nofollow"> </a>
+<div id="post-61504-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-61504-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61504/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Like all other <a href="https://wiki.openstreetmap.org/wiki/Changeset#Tags_on_changesets">changeset tags</a>, the review_requested tag cannot be modified after the changeset is closed. This is the same mechanism as with the changeset's comment and source, see for example <a href="https://help.openstreetmap.org/questions/8439/is-it-possible-to-change-comments-in-changeset-history">"Is it possible to change comments in changeset history"</a>.</p>
+<p>As <a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> has pointed out, this tag does not mean that your data is not added to the database. The only effect is that people will be more likely to review your changeset. If you still want to make it clear that you added the tag by accident, you can use your changeset's <a href="https://wiki.openstreetmap.org/wiki/Changeset#Changeset_Discussions">discussion</a> for that.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61504/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jan '18, 09:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0626be5f46f32fce501353e8a5ec399c?s=32&amp;d=identicon&amp;r=g" alt="Tordanik's gravatar image" />
+    <p><a href="/users/14/tordanik">Tordanik</a><br/>
+    <span class="score" title="11998 reputation points"><span class="">12.0k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="106 badges"><span class="silver">&#9679;</span><span class="badgecount">106</span></span><span title="147 badges"><span class="bronze">&#9679;</span><span class="badgecount">147</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tordanik has 58 accepted answers">35&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61504">
+    
+</div>
+<div id="comment-tools-61504" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61504-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="61501"></a>
+                    <div id="answer-container-61501" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61501-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61501/up/" rel="nofollow"> </a>
+<div id="post-61501-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61501-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61501/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I looked at the change set and while there are things that look wrong to me (number of lanes on motorway changes when going over the bridges) I'd "review" it if I could. But I don't see a way on the OSM website nor in JOSM to do the review.</p>
+<p>That review button showed up on JOSM fairly recently and I've not seen an explanation of how it is supposed to work.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61501/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jan '18, 03:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f60af53a4eba0c21f25c22674fb4a8cc?s=32&amp;d=identicon&amp;r=g" alt="n76's gravatar image" />
+    <p><a href="/users/5918/n76">n76</a><br/>
+    <span class="score" title="10839 reputation points"><span class="">10.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="82 badges"><span class="silver">&#9679;</span><span class="badgecount">82</span></span><span title="172 badges"><span class="bronze">&#9679;</span><span class="badgecount">172</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="n76 has 48 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61501">
+    
+        <a name="61503"></a>
+        <div class="comment" id="comment-61503">
+            <div id="post-61503-score" class="comment-score">4</div>
+            <div class="comment-text"><p>The concept was introduced in iD before it was implemented in JOSM. Pascal Neis explains in his <a href="https://neis-one.org/2017/09/review-requests-osm/">blog</a> how you can assist in the review of such change requests.</p>
+
+<p>You can review a changeset, write a comment, but you cannot mark it as "being reviewed"</p></div>
+            <div class="comment-info" id="comment-61503-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '18, 07:08)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="61507"></a>
+        <div class="comment" id="comment-61507">
+            <div id="post-61507-score" class="comment-score"></div>
+            <div class="comment-text"><p>So Is there any way to "accept it" so that I can continue working in that area and not having to redo everything I just did?</p></div>
+            <div class="comment-info" id="comment-61507-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '18, 21:58)</span>
+                <a class="comment-user userinfo" href="/users/14531/mxdanger">Mxdanger</a>
+                
+            </div>
+        </div>
+    
+        <a name="61510"></a>
+        <div class="comment" id="comment-61510">
+            <div id="post-61510-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/14531/mxdanger">@Mxdanger</a> you don't need to redo anything - all edits to OSM affect the live data immediately.</p></div>
+            <div class="comment-info" id="comment-61510-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '18, 22:33)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61511"></a>
+        <div class="comment" id="comment-61511">
+            <div id="post-61511-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> I looked at it in osm website in data mode and it isn't what I published. Even when using JOSM to download the area it downloads the "current/old" one.</p></div>
+            <div class="comment-info" id="comment-61511-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '18, 22:36)</span>
+                <a class="comment-user userinfo" href="/users/14531/mxdanger">Mxdanger</a>
+                
+            </div>
+        </div>
+    
+        <a name="61516"></a>
+        <div class="comment" id="comment-61516">
+            <div id="post-61516-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you provide a link to where the map doesn't show your update?  Just the browser address bar should do.</p></div>
+            <div class="comment-info" id="comment-61516-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '18, 22:47)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61519"></a>
+        <div class="comment not_top_scorer" id="comment-61519">
+            <div id="post-61519-score" class="comment-score"></div>
+            <div class="comment-text"><p>what do you mean with "current/old" one ? If JOSM shows all of your changes, it's in the database. If it then doesn't show up on the "map" on osm.org:</p>
+
+<ul>
+<li>the renderer didn't  process you request yet. (very unlikely)</li>
+<li>your browser cache still shows the old situation</li>
+<li>you mapped something incorrectly</li>
+<li>you mapped something that is never shown on the standard map.</li>
+</ul>
+
+<p>If you download the area with JOSM and it retrieves the data from before your change, somehow something went wrong during the upload and your changes did not make into the database. This has nothing to do with the checkbox you clicked.</p>
+
+<p>The OSM infrastructure  has nothing in place to set data apart until it is reviewed. All data go directly from the editor into the database.</p></div>
+            <div class="comment-info" id="comment-61519-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '18, 07:19)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61501" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61501-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61500/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ge9dtNo8llWzSMlt4kLc77cDBpP0ypth' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61500/how-do-i-remove-review_requestedyes-from-a-changeset?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61500/how-do-i-remove-review_requestedyes-from-a-changeset?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/changeset/"
+            class="tag-link-changeset"
+            title="see questions tagged'changeset'using tags"
+            rel="tag">changeset</a> <span class="tag-number">&#215;127</span><br/>
+        
+        <a href="/tags/validation/"
+            class="tag-link-validation"
+            title="see questions tagged'validation'using tags"
+            rel="tag">validation</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/review/"
+            class="tag-link-review"
+            title="see questions tagged'review'using tags"
+            rel="tag">review</a> <span class="tag-number">&#215;15</span><br/>
+        
+        <a href="/tags/review_requested/"
+            class="tag-link-review_requested"
+            title="see questions tagged'review_requested'using tags"
+            rel="tag">review_requested</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 6, 2018, 3:11 a.m.">06 Jan '18, 03:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,493 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 7, 2018, 7:20 a.m.">07 Jan '18, 07:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/56805/automatically-apply-changeset-to-local-osm-rails-stack">Automatically apply changeset to local OSM Rails stack</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3983/how-do-you-display-only-local-edits-in-the-changelog">How do you display only local edits in the changelog?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16418/revision-control-for-map-changes">revision control for map changes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21501/how-do-i-edit-a-changeset-comment">How do I edit a changeset comment?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/84154/tool-to-review-changeset-modifications-for-a-given-user">Tool to review changeset modifications for a given user</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18165/review-changesets-download-and-open-osmchange-xml">Review Changesets /Download and open osmChange XML</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1518/can-i-visualize-show-changeset-on-a-map-somehow">Can I visualize (show) changeset on a map somehow?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/497/how-can-i-edit-gpx-tracks-in-potlatch-2">How can I edit GPX tracks in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don&#39;t show up on the map</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

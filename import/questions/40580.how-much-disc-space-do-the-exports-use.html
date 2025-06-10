@@ -1,0 +1,989 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How much disc space do the exports use? - OSM Help</title>
+        <meta name="description" content="I need to have a local tile server set up because you guys block MOBAC, and I need offline maps for geocaching. (These are for my consumption, and I don&#39;t need uninterrupted service. But it&#39;s also nice to be able to point Leaflet at them, and maybe tweak them. And I do need tiles for offline use, fo..." />
+        <meta name="keywords" content="planet,extract,osm2pgsql,osmosis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/40580/how-much-disc-space-do-the-exports-use" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/40580/how-much-disc-space-do-the-exports-use?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='xiN7ZWeNwyOZgIrahi0PVSl0SCZnHtxW' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/40580/how-much-disc-space-do-the-exports-use">How much disc space do the exports use?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-40580-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40580/up/" rel="nofollow"> </a>
+<div id="post-40580-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-40580-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40580/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/40580/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I need to have a local tile server set up because you guys block MOBAC, and I need offline maps for geocaching. (These are for my consumption, and I don't need uninterrupted service. But it's also nice to be able to point Leaflet at them, and maybe tweak them. And I <em>do</em> need tiles for offline use, for both Cachebox and Cachewolf.)</p>
+<p>Now, I’ve imported Belgium, to try this out, and the entire disc use is about 8 GiB after installing everything needed, where /var/lib/postgresql is about 5½ GiB. I do not have unlimited space here, only about (currently) 16 GiB more. (I could possibly try to get this set up on another box though I'd need space estimates there too. It could probably do 400 GB.)</p>
+<p>I have two ways I can go forward from here:</p>
+<p>① drop DB, recreate DB, import Europe extract from Geofabrik</p>
+<p>② combine NL/BE/LU/DE/AT/CH extracts where I need them</p>
+<p>The problems here are:</p>
+<p>osm2pgsql does not want to do ②; I’m being told to combine the extracts with osmosis before importing. However, how do I keep the combination up-to-date later?</p>
+<p>How much disc space would I need for ① ? I assume I can then throw the files from <a href="http://download.geofabrik.de/europe-updates/000/000/">http://download.geofabrik.de/europe-updates/000/000/</a> to osm2pgsql to keep it updated?</p>
+<p>Could I possibly import just the Europe changesets in the ② scenario, too?</p>
+<p>osm2pgsql works. I didn’t use osmosis yet, and I don’t quite see what parts of its functionality I need for all this (GIS newbie here).</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/planet/" class="post-tag tag-link-planet"
+                                        title="see questions tagged 'planet'" rel="tag">planet</a>
+                                
+                                    <a href="/tags/extract/" class="post-tag tag-link-extract"
+                                        title="see questions tagged 'extract'" rel="tag">extract</a>
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Jan '15, 21:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4a1f42a59e40446158ce872818a963a3?s=32&amp;d=identicon&amp;r=g" alt="mirabilos's gravatar image" />
+    <p><a href="/users/10376/mirabilos">mirabilos</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mirabilos has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/40580/">
+                edited
+                <strong>25 Jan '15, 12:55</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-40580">
+    
+        <a name="40582"></a>
+        <div class="comment" id="comment-40582">
+            <div id="post-40582-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hm, <a href="http://www.grulic.org.ar/~mdione/glob/posts/osm-planet-importing-and-rendering-times/">this</a> sounds like I need 200-300 GiB total for Europe uncut, and to stay away from flat nodes due to lack of upgradability. Still, the question stays open, in case someone else has better figures, and (more importantly) instructions/recommendations.</p></div>
+            <div class="comment-info" id="comment-40582-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jan '15, 22:02)</span>
+                <a class="comment-user userinfo" href="/users/10376/mirabilos">mirabilos</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40580" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40580-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/40580/how-much-disc-space-do-the-exports-use?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/40580/how-much-disc-space-do-the-exports-use?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/40580/how-much-disc-space-do-the-exports-use?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/40580/how-much-disc-space-do-the-exports-use?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="40586"></a>
+                    <div id="answer-container-40586" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40586-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40586/up/" rel="nofollow"> </a>
+<div id="post-40586-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-40586-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40586/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Flat nodes don't impact upgradability but their benefit is greatest for full planet imports. </p>
+<p>Since you do not need a continuously running tile server - you can afford downtimes while updating - the most space-efficient way to do what you want is</p>
+<ol>
+<li>if your area of interest is rectangular, goto 2; else determine the area you want and create a "poly" file for it (e.g. draw polygon in josm, save as .osm, use osm2poly.pl - or use another method)</li>
+<li>download europe-latest.osm.pbf from Geofabrik</li>
+<li>use osmosis (or osmcut or osm-history-splitter) to cut out the area of interest from the Europe file</li>
+<li>import the resulting file with osm2pgsql using the <code>--slim</code> and <code>--drop</code> options which leads to a non-updatable database and makes the database unusable during import</li>
+<li>whenever you want to update, repeat steps 1-4.</li>
+</ol>
+<p>Alternatively, if you <em>do</em> want uninterrupted service, follow steps 1-3 above and then</p>
+<ol>
+<li>import the resulting file with osm2pgsql using <code>--slim</code></li>
+<li>when you want to update, repeat steps 1-3 above and then</li>
+<li>use osmosis with the <code>--derive-change</code> option to compute the difference between the new file of interest and the last one and save to an .osc file</li>
+<li>use osm2pgsql with <code>--append</code> to load that .osc file</li>
+</ol>
+<p>There are other options, like consuming the Europe diffs from the Geofabrik site, but that would lead to unnecessary data in your database that you would have to remove from time to time.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40586/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Jan '15, 00:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/40586/">
+                edited
+                <strong>27 Jan '15, 09:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40586">
+    
+        <a name="40592"></a>
+        <div class="comment" id="comment-40592">
+            <div id="post-40592-score" class="comment-score">2</div>
+            <div class="comment-text"><p>If you want to trim diffs to your poly of bounding box before applying, have a look at trim_osc.py in <a href="https://github.com/Zverik/regional">https://github.com/Zverik/regional</a> .  That will greatly reduce database growth due to "out of area" updates.</p></div>
+            <div class="comment-info" id="comment-40592-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '15, 09:28)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40597"></a>
+        <div class="comment" id="comment-40597">
+            <div id="post-40597-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, this mostly sounds like a plan. (Indeed, I don't need uninterrupted service.) But it seems I have no way to estimate the size? Also, “use osmosis to…” is still a bit hard to look through, I don't grok its documentation well. Mh. I'll wait a bit to see what other answers there are.</p></div>
+            <div class="comment-info" id="comment-40597-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '15, 12:50)</span>
+                <a class="comment-user userinfo" href="/users/10376/mirabilos">mirabilos</a>
+                
+            </div>
+        </div>
+    
+        <a name="40646"></a>
+        <div class="comment" id="comment-40646">
+            <div id="post-40646-score" class="comment-score">2</div>
+            <div class="comment-text"><p><code>osmosis --read-pbf in.osm.pbf --bbox left=a right=b top=c bottom=d --write-pbf out.pbf</code> is the command line for cutting out a rectangle, and <code>osmosis --read-pbf new.osm.pbf --read-pbf old.osm.pbf --derive-change --write-xml-change diff.osc.gz</code> is the command line for producing a diff.</p></div>
+            <div class="comment-info" id="comment-40646-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jan '15, 09:11)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40647"></a>
+        <div class="comment" id="comment-40647">
+            <div id="post-40647-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks for this recipe. This was one of those recipes I was looking for actually :-)</p></div>
+            <div class="comment-info" id="comment-40647-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jan '15, 14:19)</span>
+                <a class="comment-user userinfo" href="/users/10255/nordie69">nordie69</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40586" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40586-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="40593"></a>
+                    <div id="answer-container-40593" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40593-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40593/up/" rel="nofollow"> </a>
+<div id="post-40593-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-40593-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40593/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In answer to "How much disc space would I need for ① ?", I suspect that 300Gb would be a bit low, currently.  I don't have a Europe extract maintained currently, but when I last did (a couple of years ago) my recollection is that it needed 250-300Gb, so the requirement would be larger now.</p>
+<p>However, I'm sure that someone must have more up to date figures.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40593/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Jan '15, 09:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40593">
+    
+        <a name="40598"></a>
+        <div class="comment" id="comment-40598">
+            <div id="post-40598-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hm okay. Thanks for the estimate. (Maybe I'll just get another box to play mapserver.)</p></div>
+            <div class="comment-info" id="comment-40598-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '15, 12:50)</span>
+                <a class="comment-user userinfo" href="/users/10376/mirabilos">mirabilos</a>
+                
+            </div>
+        </div>
+    
+        <a name="40645"></a>
+        <div class="comment" id="comment-40645">
+            <div id="post-40645-score" class="comment-score">1</div>
+            <div class="comment-text"><p>A world-wide planet needs about 450 GB in PostGIS, and the planet.osm.pbf is 27 GB. The europe.osm.pbf is about half that size so 250 GB will probably be sufficient. This is for an updatable <code>--slim</code> database; <code>--drop</code> should save quite a bit of that. All just a wild guess though since of course the relation between PBF size and database size is not necessarily constant.</p></div>
+            <div class="comment-info" id="comment-40645-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jan '15, 09:09)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40593" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40593-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="40594"></a>
+                    <div id="answer-container-40594" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40594-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40594/up/" rel="nofollow"> </a>
+<div id="post-40594-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-40594-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40594/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>At the start of this you say "I need to have a local tile server set up because you guys block MOBAC, and I need offline maps for geocaching.".</p>
+<p>I'm guessing that the issue here is lack of data coverage and cost of mobile data when you're out and about.  </p>
+<p>However, maybe it's worth taking a step back and asking if lots of individual map tiles is the best way to hold and display data?  I don't know what you're displaying data on, but if it's a phone there are quite a few options (<a href="http://wiki.osm.org/wiki/OsmAnd">Osmand</a>'s offline layer may work for you if you're using an Android phone, and plenty of <a href="http://wiki.osm.org/wiki/Android#Android_software_supporting_OpenStreetMap">other options</a> are available).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40594/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Jan '15, 09:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40594">
+    
+        <a name="40599"></a>
+        <div class="comment" id="comment-40599">
+            <div id="post-40599-score" class="comment-score"></div>
+            <div class="comment-text"><p>The issue here is the price (and speed) of GPRS coverage in foreign countries, yes. I am using Cachebox for Windows Mobile which serves my Geocaching needs and also seems to be the best moving map application for Windows Mobile.</p></div>
+            <div class="comment-info" id="comment-40599-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '15, 12:53)</span>
+                <a class="comment-user userinfo" href="/users/10376/mirabilos">mirabilos</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40594" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40594-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/40580/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='xiN7ZWeNwyOZgIrahi0PVSl0SCZnHtxW' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40580/how-much-disc-space-do-the-exports-use?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40580/how-much-disc-space-do-the-exports-use?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/extract/"
+            class="tag-link-extract"
+            title="see questions tagged'extract'using tags"
+            rel="tag">extract</a> <span class="tag-number">&#215;83</span><br/>
+        
+        <a href="/tags/planet/"
+            class="tag-link-planet"
+            title="see questions tagged'planet'using tags"
+            rel="tag">planet</a> <span class="tag-number">&#215;56</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 24, 2015, 9:09 p.m.">24 Jan '15, 21:09</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,930 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 27, 2015, 2:19 p.m.">27 Jan '15, 14:19</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/2905/osmosis-not-running">Osmosis not running</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73498/duplicate-key-error-when-appending-diffs-with-osm2pgsql">Duplicate key error when appending diffs with osm2pgsql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77874/using-osmosis-update-osm-planet-extreamly-slow">Using osmosis update OSM Planet extreamly slow.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed">Why is my import of planet-latest.osm KILLED?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11687/osm2pgsql-performance-evaluation">osm2pgsql performance evaluation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8108/osm-databases">osm databases</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4994/how-long-does-it-take-to-extract-a-city-from-the-osm-globe">How long does it take to extract a city from the OSM globe?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7711/bounding-box-polygon-for-osmosis">bounding-box polygon for osmosis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7449/osmosis-sourecode-merge">Osmosis sourecode &quot;--merge&quot;</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,739 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How can I start TileMill that it will be centered on specified area and zoomed in? - OSM Help</title>
+        <meta name="description" content="I am loading and testing very small area. But currently started TileMill is not centering on area with data, it displays map of the entire world. As it generates tiles it takes some time to reach area that I wanted to see. Is there some way to provide parameters from program or edit some config file..." />
+        <meta name="keywords" content="tilemill" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/34301/how-can-i-start-tilemill-that-it-will-be-centered-on-specified-area-and-zoomed-in" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/34301/how-can-i-start-tilemill-that-it-will-be-centered-on-specified-area-and-zoomed-in?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='kOsYWc2xTHo7N4tD3LXsvhvIGRrv9VGq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/34301/how-can-i-start-tilemill-that-it-will-be-centered-on-specified-area-and-zoomed-in">How can I start TileMill that it will be centered on specified area and zoomed in?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-34301-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34301/up/" rel="nofollow"> </a>
+<div id="post-34301-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-34301-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34301/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/34301/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am loading and testing very small area. But currently started TileMill is not centering on area with data, it displays map of the entire world. As it generates tiles it takes some time to reach area that I wanted to see.</p>
+<p>Is there some way to provide parameters from program or edit some config file that I would not need to pan through entire world looking for this 5km x 5km area that is rendered?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tilemill/" class="post-tag tag-link-tilemill"
+                                        title="see questions tagged 'tilemill'" rel="tag">tilemill</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Jun '14, 06:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fd2f7303e92334ed1eef75268aed7611?s=32&amp;d=identicon&amp;r=g" alt="Bulwersator's gravatar image" />
+    <p><a href="/users/7196/bulwersator">Bulwersator</a><br/>
+    <span class="score" title="468 reputation points">468</span><span title="12 badges"><span class="badge1">&#9679;</span><span class="badgecount">12</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="25 badges"><span class="bronze">&#9679;</span><span class="badgecount">25</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bulwersator has one accepted answer">14&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34301/">
+                edited
+                <strong>25 Jun '14, 06:42</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-34301">
+    
+</div>
+<div id="comment-tools-34301" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34301-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/34301/how-can-i-start-tilemill-that-it-will-be-centered-on-specified-area-and-zoomed-in?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/34301/how-can-i-start-tilemill-that-it-will-be-centered-on-specified-area-and-zoomed-in?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/34301/how-can-i-start-tilemill-that-it-will-be-centered-on-specified-area-and-zoomed-in?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/34301/how-can-i-start-tilemill-that-it-will-be-centered-on-specified-area-and-zoomed-in?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="34302"></a>
+                    <div id="answer-container-34302" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34302-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34302/up/" rel="nofollow"> </a>
+<div id="post-34302-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-34302-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34302/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Bulwersator has selected this answer as the correct answer"
+        href="/accept_answer/34302/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There's a "project.mml" file that controls your layers; it is a JSON file that has, usually right at the beginning, a section like</p>
+<pre><code>"center": [
+  -77.036,
+  38.9013,
+  12
+],
+</code></pre>
+<p>change these values to the coordinates and zoom level you require, and you'll be fine.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34302/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Jun '14, 07:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34302">
+    
+        <a name="34303"></a>
+        <div class="comment" id="comment-34303">
+            <div id="post-34303-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Is it possible to override it? This file is tracked by repository so I would prefer to not modify it - see <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/project.mml">https://github.com/gravitystorm/openstreetmap-carto/blob/master/project.mml</a></p></div>
+            <div class="comment-info" id="comment-34303-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '14, 07:34)</span>
+                <a class="comment-user userinfo" href="/users/7196/bulwersator">Bulwersator</a>
+                
+            </div>
+        </div>
+    
+        <a name="34305"></a>
+        <div class="comment" id="comment-34305">
+            <div id="post-34305-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Not that I'm aware of, but I find it pretty annoying too. If I knew how to write the plugins for Tilemill I'd create a bookmarks plugin, since every time I start work on openstreetmap-carto I spend minutes trying to pan and zoom to where I want to work.</p></div>
+            <div class="comment-info" id="comment-34305-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jun '14, 08:48)</span>
+                <a class="comment-user userinfo" href="/users/3/andy-allan">Andy Allan</a>
+                
+            </div>
+        </div>
+    
+        <a name="34464"></a>
+        <div class="comment" id="comment-34464">
+            <div id="post-34464-score" class="comment-score"></div>
+            <div class="comment-text"><p>My search failed to find relevant ticket so I reported it as <a href="https://github.com/mapbox/tilemill/issues/2358">https://github.com/mapbox/tilemill/issues/2358</a></p>
+
+<p>Not that I expect implementation.</p></div>
+            <div class="comment-info" id="comment-34464-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jun '14, 12:00)</span>
+                <a class="comment-user userinfo" href="/users/7196/bulwersator">Bulwersator</a>
+                
+            </div>
+        </div>
+    
+        <a name="34466"></a>
+        <div class="comment" id="comment-34466">
+            <div id="post-34466-score" class="comment-score">3</div>
+            <div class="comment-text"><p>You could try to work around this by stashing your "private" coordinates with Git.</p>
+
+<p>See: <a href="http://git-scm.com/book/en/Git-Tools-Stashing">Git - Stashing</a></p></div>
+            <div class="comment-info" id="comment-34466-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jun '14, 12:18)</span>
+                <a class="comment-user userinfo" href="/users/2933/cartinus">cartinus</a>
+                
+            </div>
+        </div>
+    
+        <a name="34474"></a>
+        <div class="comment not_top_scorer" id="comment-34474">
+            <div id="post-34474-score" class="comment-score"></div>
+            <div class="comment-text"><p>I will also try exporting from command line - see <a href="https://www.mapbox.com/tilemill/docs/manual/exporting/">https://www.mapbox.com/tilemill/docs/manual/exporting/</a></p></div>
+            <div class="comment-info" id="comment-34474-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jun '14, 16:25)</span>
+                <a class="comment-user userinfo" href="/users/7196/bulwersator">Bulwersator</a>
+                
+            </div>
+        </div>
+    
+        <a name="34476"></a>
+        <div class="comment" id="comment-34476">
+            <div id="post-34476-score" class="comment-score">1</div>
+            <div class="comment-text"><p>This is one of the reasons I wrote the (tiny, hackish) Sputnik, so that map views could be bookmarkable: <a href="https://github.com/systemed/sputnik">https://github.com/systemed/sputnik</a></p></div>
+            <div class="comment-info" id="comment-34476-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jun '14, 21:50)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34302" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34302-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/34301/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='kOsYWc2xTHo7N4tD3LXsvhvIGRrv9VGq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34301/how-can-i-start-tilemill-that-it-will-be-centered-on-specified-area-and-zoomed-in?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34301/how-can-i-start-tilemill-that-it-will-be-centered-on-specified-area-and-zoomed-in?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tilemill/"
+            class="tag-link-tilemill"
+            title="see questions tagged'tilemill'using tags"
+            rel="tag">tilemill</a> <span class="tag-number">&#215;36</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 25, 2014, 6:42 a.m.">25 Jun '14, 06:42</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,122 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 30, 2014, 9:50 p.m.">30 Jun '14, 21:50</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/10614/need-clarification-on-tile-creation-strategy">Need clarification on tile creation strategy</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11624/librarytool-for-generating-an-mbtiles-file-from-online-osm-data">library/tool for generating an MBTiles file from online osm data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11715/easiest-way-of-importing-osm-data-into-tilemill-using-windows">Easiest way of importing OSM data into Tilemill using Windows?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14468/format-of-osmxml-stylesheet">format of osm.xml stylesheet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14500/tilemill-with-non-map-images">TileMill with non map images</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15875/how-to-output-from-tilemill-in-a-format-like-openstreetmaporg-standard">How to output from TileMill in a format like openstreetmap.org standard</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17043/bus-stops-partially-missing-in-zoom-level-17">Bus Stops partially missing in zoom level 17</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18470/increase-png-output-resolution-in-mapnik">Increase PNG output resolution in Mapnik</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20477/how-to-change-street-names-language-of-openstreetmap-extract-using-tilemill">How to change street names language of OpenStreetMap extract using TileMill</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8380/customize-a-map">Customize a map</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Complete import job after disk out of space - indexes - OSM Help</title>
+        <meta name="description" content="Hi,  I started the full planet import, and after a week of work the job was ALMOST done, failed during building indexes after the import was probably done, but the harddrive run out of space.  1) Is there a way how I can just rebuild the indexes without reimporting the whole set? By running commands..." />
+        <meta name="keywords" content="osm2pgsql" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/78728/complete-import-job-after-disk-out-of-space-indexes" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/78728/complete-import-job-after-disk-out-of-space-indexes?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='QrIU1blqieeOoqZ9VENQKrX1nMW9rV1l' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/78728/complete-import-job-after-disk-out-of-space-indexes">Complete import job after disk out of space - indexes</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-78728-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/78728/up/" rel="nofollow"> </a>
+<div id="post-78728-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-78728-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/78728/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/78728/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+  I started the full planet import, and after a week of work the job was ALMOST done, failed during building indexes after the import was probably done, but the harddrive run out of space. </p>
+<p>1) Is there a way how I can just rebuild the indexes without reimporting the whole set? By running commands directly in PGSQL I guess? Where? How? (i know how to use command line sql tool, but not skilled in PGSQL, just MySQL)</p>
+<p>2) I did the import with autovacuum=off. Is there any way I can run it now to save some additional space?</p>
+<p>Here is the docker log. </p>
+<pre><code>sudo -u renderer osm2pgsql -d gis --create --slim -G --hstore --tag-transform-script /home/renderer/src/openstreetm                                                                                                                        ap-carto/openstreetmap-carto.lua --number-processes 8 -S /home/renderer/src/openstreetmap-carto/openstreetmap-carto.s                                                                                                                        tyle /data.osm.pbf -C 32000 --flat-nodes /nodes/flat_nodes.bin
+2021-01-30 17:39:17  osm2pgsql version 1.4.0
+2021-01-30 17:39:17  Database version: 12.5 (Ubuntu 12.5-1.pgdg18.04+1)
+2021-01-30 17:39:17  PostGIS version: 3.0
+2021-01-30 17:39:17  Node-cache: cache=32000MB, maxblocks=512000*65536, allocation method=11
+2021-01-30 17:39:17  Setting up table 'planet_osm_point'
+2021-01-30 17:39:17  Setting up table 'planet_osm_line'
+2021-01-30 17:39:17  Setting up table 'planet_osm_polygon'
+2021-01-30 17:39:17  Setting up table 'planet_osm_roads'
+2021-02-07 22:53:59  Reading input files done in 710082s (197h 14m 42s).      4/s)
+2021-02-07 22:53:59    Processed 6634698177 nodes in 5524s (1h 32m 4s) - 1201k/s
+2021-02-07 22:53:59    Processed 733743019 ways in 303789s (84h 23m 9s) - 2k/s
+2021-02-07 22:53:59    Processed 8593984 relations in 400769s (111h 19m 29s) - 21/s
+2021-02-07 22:54:00  Clustering table 'planet_osm_polygon' by geometry...
+2021-02-07 22:54:00  Clustering table 'planet_osm_point' by geometry...
+2021-02-07 22:54:00  Clustering table 'planet_osm_line' by geometry...
+2021-02-07 22:54:00  Clustering table 'planet_osm_roads' by geometry...
+2021-02-07 22:54:01  Building index on table 'planet_osm_ways'
+2021-02-07 22:54:01  Building index on table 'planet_osm_rels'
+2021-02-08 05:14:21  node cache: stored: 3812666007(57.47%), storage efficiency: 90.90% (dense blocks: 472519, sparse nodes: 161717496), hit rate: 56.10%
+2021-02-08 05:14:24  ERROR: Database error: ERROR:  could not extend file "base/16385/5832519.8": No space left on device
+HINT:  Check free disk space.
+</code></pre>
+<p>Postgres log from within the docker:</p>
+<pre><code>2021-01-30 17:39:17.177 UTC [75] postgres@gis STATEMENT:  CREATE EXTENSION hstore;
+2021-02-08 01:45:40.776 UTC [161] renderer@gis ERROR:  could not extend file "base/16385/5832515.2": No space left on device
+2021-02-08 01:45:40.776 UTC [161] renderer@gis HINT:  Check free disk space.
+2021-02-08 01:45:40.776 UTC [161] renderer@gis STATEMENT:  CREATE INDEX ON planet_osm_rels USING GIN (parts)  WITH (fastupdate = off) ;
+
+2021-02-08 01:45:40.776 UTC [127] renderer@gis ERROR:  could not extend file "base/16385/5832517": No space left on device
+2021-02-08 01:45:40.776 UTC [127] renderer@gis HINT:  Check free disk space.
+2021-02-08 01:45:40.776 UTC [127] renderer@gis STATEMENT:  CREATE TABLE "planet_osm_roads_tmp"  AS SELECT * FROM "planet_osm_roads" WHERE ST_IsValid(way) ORDER BY way
+2021-02-08 01:45:40.776 UTC [124] renderer@gis ERROR:  could not extend file "base/16385/5832519.8": No space left on device
+2021-02-08 01:45:40.776 UTC [124] renderer@gis HINT:  Check free disk space.
+2021-02-08 01:45:40.776 UTC [124] renderer@gis STATEMENT:  CREATE TABLE "planet_osm_point_tmp"  AS SELECT * FROM "planet_osm_point" WHERE ST_IsValid(way) ORDER BY way
+2021-02-08 01:45:40.776 UTC [125] renderer@gis ERROR:  could not write to file "base/pgsql_tmp/pgsql_tmp125.10": No space left on device
+2021-02-08 01:45:40.776 UTC [125] renderer@gis STATEMENT:  CREATE TABLE "planet_osm_line_tmp"  AS SELECT * FROM "planet_osm_line" WHERE ST_IsValid(way) ORDER BY way
+2021-02-08 01:45:41.541 UTC [167] FATAL:  terminating connection due to administrator command
+2021-02-08 01:45:41.541 UTC [167] STATEMENT:  CREATE TABLE "planet_osm_point_tmp"  AS SELECT * FROM "planet_osm_point" WHERE ST_IsValid(way) ORDER BY way
+2021-02-08 01:45:41.542 UTC [168] FATAL:  terminating connection due to administrator command
+2021-02-08 01:45:41.542 UTC [168] STATEMENT:  CREATE TABLE "planet_osm_roads_tmp"  AS SELECT * FROM "planet_osm_roads" WHERE ST_IsValid(way) ORDER BY way
+2021-02-08 01:45:41.570 UTC [165] FATAL:  terminating connection due to administrator command
+2021-02-08 01:45:41.570 UTC [165] STATEMENT:  CREATE TABLE "planet_osm_line_tmp"  AS SELECT * FROM "planet_osm_line" WHERE ST_IsValid(way) ORDER BY way
+2021-02-08 01:45:41.588 UTC [166] FATAL:  terminating connection due to administrator command
+2021-02-08 01:45:41.588 UTC [166] STATEMENT:  CREATE TABLE "planet_osm_point_tmp"  AS SELECT * FROM "planet_osm_point" WHERE ST_IsValid(way) ORDER BY way
+2021-02-08 01:45:41.589 UTC [164] FATAL:  terminating connection due to administrator command
+2021-02-08 01:45:41.589 UTC [164] STATEMENT:  CREATE TABLE "planet_osm_line_tmp"  AS SELECT * FROM "planet_osm_line" WHERE ST_IsValid(way) ORDER BY way
+2021-02-08 01:45:44.565 UTC [27] LOG:  background worker "parallel worker" (PID 167) exited with exit code 1
+2021-02-08 01:45:44.565 UTC [27] LOG:  background worker "parallel worker" (PID 166) exited with exit code 1
+2021-02-08 01:45:44.570 UTC [27] LOG:  background worker "parallel worker" (PID 168) exited with exit code 1
+2021-02-08 01:45:44.683 UTC [27] LOG:  background worker "parallel worker" (PID 165) exited with exit code 1
+2021-02-08 01:45:45.182 UTC [27] LOG:  background worker "parallel worker" (PID 164) exited with exit code 1
+2021-02-08 05:12:16.096 UTC [160] renderer@gis ERROR:  could not extend file "base/16385/5832514.10": wrote only 4096 of 8192 bytes at block 1441264
+2021-02-08 05:12:16.096 UTC [160] renderer@gis HINT:  Check free disk space.
+2021-02-08 05:12:16.096 UTC [160] renderer@gis STATEMENT:  CREATE INDEX ON planet_osm_ways USING GIN (nodes)  WITH (fastupdate = off) ;
+
+2021-02-08 05:14:15.671 UTC [126] renderer@gis ERROR:  could not write to file "base/pgsql_tmp/pgsql_tmp126.30": No space left on device
+2021-02-08 05:14:15.671 UTC [126] renderer@gis STATEMENT:  CREATE TABLE "planet_osm_polygon_tmp"  AS SELECT * FROM "planet_osm_polygon" WHERE ST_IsValid(way) ORDER BY way
+2021-02-08 05:14:15.672 UTC [163] FATAL:  terminating connection due to administrator command
+2021-02-08 05:14:15.672 UTC [163] STATEMENT:  CREATE TABLE "planet_osm_polygon_tmp"  AS SELECT * FROM "planet_osm_polygon" WHERE ST_IsValid(way) ORDER BY way
+2021-02-08 05:14:15.699 UTC [162] ERROR:  could not write to file "base/pgsql_tmp/pgsql_tmp162.29": No space left on device
+2021-02-08 05:14:15.699 UTC [162] STATEMENT:  CREATE TABLE "planet_osm_polygon_tmp"  AS SELECT * FROM "planet_osm_polygon" WHERE ST_IsValid(way) ORDER BY way
+2021-02-08 05:14:18.877 UTC [27] LOG:  background worker "parallel worker" (PID 163) exited with exit code 1
+2021-02-08 05:14:19.022 UTC [27] LOG:  background worker "parallel worker" (PID 162) exited with exit code 1
+</code></pre>
+<p>Thank you! Radek</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Feb '21, 13:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6ea6fb11ea43f247e60f7ad3d4c22733?s=32&amp;d=identicon&amp;r=g" alt="Palalet's gravatar image" />
+    <p><a href="/users/19700/palalet">Palalet</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Palalet has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-78728">
+    
+</div>
+<div id="comment-tools-78728" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-78728-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/78728/complete-import-job-after-disk-out-of-space-indexes?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/78728/complete-import-job-after-disk-out-of-space-indexes?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/78728/complete-import-job-after-disk-out-of-space-indexes?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/78728/complete-import-job-after-disk-out-of-space-indexes?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="78729"></a>
+                    <div id="answer-container-78729" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-78729-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/78729/up/" rel="nofollow"> </a>
+<div id="post-78729-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-78729-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/78729/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Palalet has selected this answer as the correct answer"
+        href="/accept_answer/78729/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>A typical osm2pgsql 1.4 run would create these indexes:</p>
+<p><code>CREATE INDEX planet_osm_line_osm_id_idx ON public.planet_osm_line USING btree (osm_id);
+CREATE INDEX planet_osm_line_way_idx ON public.planet_osm_line USING gist (way);
+CREATE INDEX planet_osm_point_osm_id_idx ON public.planet_osm_point USING btree (osm_id);
+CREATE INDEX planet_osm_point_way_idx ON public.planet_osm_point USING gist (way);
+CREATE INDEX planet_osm_polygon_osm_id_idx ON public.planet_osm_polygon USING btree (osm_id);
+CREATE INDEX planet_osm_polygon_way_idx ON public.planet_osm_polygon USING gist (way);
+CREATE INDEX planet_osm_rels_parts_idx ON public.planet_osm_rels USING gin (parts) WITH (fastupdate=off);
+CREATE INDEX planet_osm_roads_osm_id_idx ON public.planet_osm_roads USING btree (osm_id);
+CREATE INDEX planet_osm_roads_way_idx ON public.planet_osm_roads USING gist (way);
+CREATE INDEX planet_osm_ways_nodes_idx ON public.planet_osm_ways USING gin (nodes) WITH (fastupdate=off);</code></p>
+<p>You can probably just run these commands and they will simply fail where the index already exists. After that your database should be good to go, but remember that many map styles will require the creation of additional indexes for performance. </p>
+<p>You can switch on autovacuum before running the above commands if you want. It is unlikely to save space though. If you have a world-wide database, the planet_osm_ways_nodes index can easily use 200 GB of space. osm2pgsql 1.4 has a somewhat experimental feature where it allows you to reduce the size of that index at the cost of a little performance degradation during data updates (see option <code>--middle-way-node-index-id-shift</code>). Note that your database is likely going to grow by 30% within a few weeks if you run continuous updates due to database and index bloat, so be sure to have enough room.</p>
+<p>Of course if you don't need data updates at all then you can save a lot of space by dropping the tables <code>planet_osm_ways</code> and <code>planet_osm_rels</code> and omitting their indexes from the list, and you can also omit the four "btree(osm_id)" indexes on the other tables and delete the flatnodes file. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/78729/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Feb '21, 13:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-78729">
+    
+        <a name="78730"></a>
+        <div class="comment" id="comment-78730">
+            <div id="post-78730-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks, will run the indexes and see what happens :) I do not plan to update it way too often, I rather need some basic map data source for my other work, no need to be 100% up to date. Didnt expect this to grow up to some 600Gb during the work, and I do not want to loose one week of procesing :) This is too much new technologies for me, appreciate your help!</p></div>
+            <div class="comment-info" id="comment-78730-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Feb '21, 14:12)</span>
+                <a class="comment-user userinfo" href="/users/19700/palalet">Palalet</a>
+                
+            </div>
+        </div>
+    
+        <a name="78837"></a>
+        <div class="comment" id="comment-78837">
+            <div id="post-78837-score" class="comment-score"></div>
+            <div class="comment-text"><p>well, I am unable to finish the task :( I did most of the indexes, but when I run the </p>
+
+<p>CREATE INDEX planet_osm_ways_nodes_idx ON public.planet_osm_ways USING gin (nodes) WITH (fastupdate=off);</p>
+
+<p>command, I get into trouble. The table is 160Gb, and running the index command takes up another 280Gb of space, before I had to kill it just before I run out of space again. Is this normal, that building the index takes x times more space than the original table? I tried to have them on separate tablespaces, one for data, one for index, but no help, it just eats up all available space :(</p></div>
+            <div class="comment-info" id="comment-78837-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Feb '21, 20:20)</span>
+                <a class="comment-user userinfo" href="/users/19700/palalet">Palalet</a>
+                
+            </div>
+        </div>
+    
+        <a name="78843"></a>
+        <div class="comment" id="comment-78843">
+            <div id="post-78843-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, this is normal. I suggest to do what I said above under "of course if you don't need..." - just drop the tables required for updates, and don't create the planet_osm_ways_nodes index at all. You'll be fine for rendering, and you can worry about loading new data later. Your disk is too small for running a continuously updated planet. (Unless, perhaps, you try the experimental osm2pgsql option also mentioned above, or maybe try a zfs compressed file system.)</p></div>
+            <div class="comment-info" id="comment-78843-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Feb '21, 11:41)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="78854"></a>
+        <div class="comment" id="comment-78854">
+            <div id="post-78854-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks, I will do it as you say, I cannot keep up with this space consumption :) - the table is 160Gb, while the complete index (yes, I made it after all) is 321Gb, which is utter nonsense :( so it would need some 800Gb+ to do the whole import</p></div>
+            <div class="comment-info" id="comment-78854-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Feb '21, 06:47)</span>
+                <a class="comment-user userinfo" href="/users/19700/palalet">Palalet</a>
+                
+            </div>
+        </div>
+    
+        <a name="78855"></a>
+        <div class="comment" id="comment-78855">
+            <div id="post-78855-score" class="comment-score"></div>
+            <div class="comment-text"><p>btw, is there a documentation which table contain what, what is their purpose? Where can I get the information which tables do I need just for the render and for the import? Also, not sure what role plays the flatnodes file, you mentioned I can delete it, so I guess is is some "temporary table" that is created during the transformation from the OSM file to final Postgres tables?</p></div>
+            <div class="comment-info" id="comment-78855-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Feb '21, 07:57)</span>
+                <a class="comment-user userinfo" href="/users/19700/palalet">Palalet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-78729" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-78729-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/78728/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='QrIU1blqieeOoqZ9VENQKrX1nMW9rV1l' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/78728/complete-import-job-after-disk-out-of-space-indexes?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/78728/complete-import-job-after-disk-out-of-space-indexes?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 8, 2021, 1:32 p.m.">08 Feb '21, 13:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,219 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 15, 2021, 7:58 a.m.">15 Feb '21, 07:58</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2259/is-there-a-reason-why-osm2pgsql-produces-negative-osm_id-values">Is there a reason why osm2pgsql produces negative osm_id values?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4789/how-to-configure-postgresql-for-mapnik-hourly-updates">How to configure postgresql for mapnik hourly updates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4888/missing-tables-during-osm2pgsql-import">Missing tables during osm2pgsql import</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5389/merging-2-countries-with-osm2pgsql">Merging 2 countries with osm2pgsql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5956/how-much-ram-does-osm2pgsql-need">How much RAM does osm2pgsql need?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6256/why-do-osm2pgsql-and-mapnik-use-spherical-projection-900913">Why do osm2pgsql and Mapnik use spherical projection 900913?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8108/osm-databases">osm databases</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8322/osm2pgsql-import-getting-killed-as-relations-are-processed">osm2pgsql import getting killed as relations are processed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1/how-do-you-make-the-osm2pgsql-diff-imports-run-faster-than-molasses-on-postgres-84">How do you make the osm2pgsql diff imports run faster than molasses on postgres 8.4?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,892 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to create fantasy/imaginary maps with OpenStreetMap? - OSM Help</title>
+        <meta name="description" content="Hello, let&#39;s say we want to create something like Tolkien&#39;s Middle Earth map with OSM. What would be the best way for achieving this? I&#39;ve drawn a fantasy map on Inkscape and Gimp. Now that I&#39;ve discovered OSM, I think it would allow to get much more details and expressions than with those tools. I&#39;..." />
+        <meta name="keywords" content="fantasy,ceyx,josm,private,server" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hMH3P7ZFbhObIrebF4gmp4CjLPxWgkwg' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap">How to create fantasy/imaginary maps with OpenStreetMap?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-4496-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4496/up/" rel="nofollow"> </a>
+<div id="post-4496-score" class="post-score"
+    title="current number of votes">
+    14
+</div>
+<a id="post-4496-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4496/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/4496/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   5
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>let's say we want to create something like Tolkien's Middle Earth map with OSM. What would be the best way for achieving this?</p>
+<p>I've drawn a fantasy map on Inkscape and Gimp. Now that I've discovered OSM, I think it would allow to get much more details and expressions than with those tools. I've begun to import the svg trace into JOSM. It's working great and it's quite easy to use. But now the problem is for rendering it. When using  Osmarender (from josm or from the command line with xsltproc), I can get a SVG file, which is too wide for Inkscape (the map is 1800 km wide). Besides, the rendering is not complete, I have several parts which are not shown. </p>
+<p>That's why I think it may be appropriate to launch my own OSM server and database, for filling it with this fantasy world (of could it would be completely independant from the official OSM)
+I've read the tutorial on <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">http://wiki.openstreetmap.org/wiki/The_Rails_Port</a> and installed it on my server. It's working, but from the beginning, it loads data (maps) from the official OSM server. I'd like to get an empty map (yet my database should be empty).</p>
+<p>Maybe there is an easier way for doing this? I'd prefer if possible to create everything within JOSM, and render my .osm file for getting a jpg or png file. But it doesn't seem the rendering tools are supposed to render a whole world. Is it possible to do it easily with Mapnik? I'd also like to browse tiles of different parts of this world, like we do with OSM.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/fantasy/" class="post-tag tag-link-fantasy"
+                                        title="see questions tagged 'fantasy'" rel="tag">fantasy</a>
+                                
+                                    <a href="/tags/ceyx/" class="post-tag tag-link-ceyx"
+                                        title="see questions tagged 'ceyx'" rel="tag">ceyx</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/private/" class="post-tag tag-link-private"
+                                        title="see questions tagged 'private'" rel="tag">private</a>
+                                
+                                    <a href="/tags/server/" class="post-tag tag-link-server"
+                                        title="see questions tagged 'server'" rel="tag">server</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Apr '11, 20:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/71d339cacc167d5b3fef9344badd74e5?s=32&amp;d=identicon&amp;r=g" alt="otto's gravatar image" />
+    <p><a href="/users/1183/otto">otto</a><br/>
+    <span class="score" title="251 reputation points">251</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="otto has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/4496/">
+                edited
+                <strong>17 Jul '11, 23:49</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-4496">
+    
+        <a name="4543"></a>
+        <div class="comment" id="comment-4543">
+            <div id="post-4543-score" class="comment-score">1</div>
+            <div class="comment-text"><p>On a more practical note, this also works for metaphysical mapping, such as mapping a virtual reality like Second Life, or a game like World of Warcraft.</p></div>
+            <div class="comment-info" id="comment-4543-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Apr '11, 05:03)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4496" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4496-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="4505"></a>
+                    <div id="answer-container-4505" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4505-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4505/up/" rel="nofollow"> </a>
+<div id="post-4505-score" class="post-score"
+    title="current number of votes">
+    9
+</div>
+<a id="post-4505-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4505/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You should be able to achieve a considerable map size even without your own database. I should think that you would hit the editor size limit first, before you start to see rendering problems. Maybe you should try <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> instead of Osmarender. (Note however that Maperitive is not Open Source so you if think you may need modifications over and above what you can achieve with style sheets then Maperitive may not be the way to go.) You can also use the <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> rendering engine, either running directly on your .osm file or running on a PostGIS database created with osm2pgsql; this also does not require the rails port.</p>
+<p>Tiles can be created with Mapnik (that's how most people do it) but also with Maperitive and with Osmarender (via the tiles@home software), and tile creation is independent of running a rails port.</p>
+<p>Both Mapnik and Maperitive can output directly to PNG, and both will happily render the whole world.</p>
+<p>The rails port really only comes into play if you want a proper database with versioning and multiple users and partial editing and so on; as long as you have one big file that you're working on alone and that can be loaded fully into JOSM, there's no reason why you would install the rails port.</p>
+<p>Having said that, the rails port does <em>not</em> come with data pre-loaded; after the "rake db:migrate" step you will have an empty database. You must then first register a user account for yourself and then you can start working with that.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4505/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Apr '11, 21:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/4505/">
+                edited
+                <strong>15 Apr '11, 07:14</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4505">
+    
+        <a name="4520"></a>
+        <div class="comment" id="comment-4520">
+            <div id="post-4520-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you have any Maperitive rules for fantasy maps? Ofcourse I could write one myself, but my sense of art is... nonexistant :)</p></div>
+            <div class="comment-info" id="comment-4520-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Apr '11, 06:41)</span>
+                <a class="comment-user userinfo" href="/users/191/ivanatora">ivanatora</a>
+                
+            </div>
+        </div>
+    
+        <a name="4521"></a>
+        <div class="comment" id="comment-4521">
+            <div id="post-4521-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't but there is a <a href="http://groups.google.com/group/maperitive">Maperitive Google Group</a> where you could ask this question.</p></div>
+            <div class="comment-info" id="comment-4521-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Apr '11, 07:12)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="4547"></a>
+        <div class="comment" id="comment-4547">
+            <div id="post-4547-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hello, thank you for your explanations! I wasn't sure how to use Mapnik, and you helped me to go further into this direction. </p>
+
+<p>I managed to get something interesting, even though it will be maybe a bit longer than I expected, because Mapnik, and probably other tools as well, need some rules for processing the osm file directly. In a way, it's not that bad because a fantasy map ought to look different than a map for driving a car.</p>
+
+<p>I found some enlightning receipes there: <a href="http://wiki.openstreetmap.org/wiki/Mapnik:_Map_from_scratch">http://wiki.openstreetmap.org/wiki/Mapnik:_Map_from_scratch</a></p>
+
+<p>I'll post later with some working examples.</p></div>
+            <div class="comment-info" id="comment-4547-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Apr '11, 10:19)</span>
+                <a class="comment-user userinfo" href="/users/1183/otto">otto</a>
+                
+            </div>
+        </div>
+    
+        <a name="6381"></a>
+        <div class="comment" id="comment-6381">
+            <div id="post-6381-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Finally, I managed to achieve what I wanted by using <a href="http://wiki.openstreetmap.org/wiki/Ceyx">ceyx</a>.</p>
+
+<p>I posted a description of this on cartographersguild (last post, at the moment):</p>
+
+<p><a href="http://www.cartographersguild.com/showthread.php?5409-A-world-without-name">http://www.cartographersguild.com/showthread.php?5409-A-world-without-name</a></p>
+
+<p>If you're not registered on their forum, you can get the images there:
+<a href="http://anamnese.online.fr/site2/index.php?page=monde">http://anamnese.online.fr/site2/index.php?page=monde</a></p>
+
+<p>The version using ceyx is the one at the bottom there:
+<a href="http://anamnese.online.fr/site2/divers/monde_carte17.jpg">http://anamnese.online.fr/site2/divers/monde_carte17.jpg</a></p>
+
+<p>And here is a quick export to the default mapcss:
+<a href="http://anamnese.online.fr/site2/divers/monde_carte17b.jpg">http://anamnese.online.fr/site2/divers/monde_carte17b.jpg</a></p></div>
+            <div class="comment-info" id="comment-6381-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '11, 23:30)</span>
+                <a class="comment-user userinfo" href="/users/1183/otto">otto</a>
+                
+            </div>
+        </div>
+    
+        <a name="9114"></a>
+        <div class="comment" id="comment-9114">
+            <div id="post-9114-score" class="comment-score"></div>
+            <div class="comment-text"><p>Would be epic to create a map of Second Life's mainland.  I realize it's a rather dynamic place, but there's still a lot of long-term landmarks that don't change for years.  Especially the highway and railway networks.  The Lindens have entirely tolerated mapping efforts in the past; I encourage anybody interested to get in touch with me at baloo@<a href="http://ursamundi.org">ursamundi.org</a></p></div>
+            <div class="comment-info" id="comment-9114-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Nov '11, 14:39)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4505" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4505-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="79976"></a>
+                    <div id="answer-container-79976" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79976-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79976/up/" rel="nofollow"> </a>
+<div id="post-79976-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-79976-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79976/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>See <a href="https://opengeofiction.net/">OpenGeoFiction</a> for land-grab and build your own.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79976/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 May '21, 08:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/543f907c30de5772ec0625b82264c188?s=32&amp;d=identicon&amp;r=g" alt="grin's gravatar image" />
+    <p><a href="/users/5624/grin">grin</a><br/>
+    <span class="score" title="158 reputation points">158</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79976">
+    
+        <a name="80003"></a>
+        <div class="comment" id="comment-80003">
+            <div id="post-80003-score" class="comment-score"></div>
+            <div class="comment-text"><p>thank you for the information, I wasn't aware of this project, that's very interesting. I've just set an account and started to try it out. It's not fantasy or SF, but it's a great initiative!</p></div>
+            <div class="comment-info" id="comment-80003-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '21, 11:47)</span>
+                <a class="comment-user userinfo" href="/users/1183/otto">otto</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79976" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79976-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/4496/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hMH3P7ZFbhObIrebF4gmp4CjLPxWgkwg' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/server/"
+            class="tag-link-server"
+            title="see questions tagged'server'using tags"
+            rel="tag">server</a> <span class="tag-number">&#215;123</span><br/>
+        
+        <a href="/tags/private/"
+            class="tag-link-private"
+            title="see questions tagged'private'using tags"
+            rel="tag">private</a> <span class="tag-number">&#215;51</span><br/>
+        
+        <a href="/tags/fantasy/"
+            class="tag-link-fantasy"
+            title="see questions tagged'fantasy'using tags"
+            rel="tag">fantasy</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/ceyx/"
+            class="tag-link-ceyx"
+            title="see questions tagged'ceyx'using tags"
+            rel="tag">ceyx</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 14, 2011, 8:02 p.m.">14 Apr '11, 20:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>41,364 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 5, 2021, 11:47 a.m.">05 May '21, 11:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/19878/private-maps-do-i-need-to-install-my-own-osm-server">Private Maps: Do I Need to Install My Own OSM Server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5170/setting-up-own-osm-server-mirror-server">Setting up own OSM Server / Mirror Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29769/can-i-reserve-allocate-official-osm-ids-for-private-use">Can I reserve / allocate official osm ids for private use?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47104/local-osm-editing">Local OSM editing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/639/how-do-i-use-openstreetmap-tiles-as-a-wms-background-in-josm">How do I use OpenStreetMap tiles as a WMS background in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg">How can I make sense of munin.openstreetmap.org?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/903/relations-in-josm">Relations in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/595/josm-how-to-set-a-hotkey-for-hiding-showing-the-wms-layer">JOSM: How to set a hotkey for hiding / showing the WMS layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/864/how-to-add-node-with-exact-coordinates-in-josm">How to add node with exact coordinates in JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

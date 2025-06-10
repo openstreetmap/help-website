@@ -1,0 +1,778 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Mapping Photovoltaic vs. Thermal collectors from aerial imagery - OSM Help</title>
+        <meta name="description" content="Hello, the last few days I have mapped quite a few solar panels in the town where I live (Jülich, Germany). Using JOSM, I have found a workflow for myself with which I think I would be able to gather quite a lot of data from aerial imagery (which is quite good in my area). So far, I&#39;ve been using th..." />
+        <meta name="keywords" content="photovoltaic,solar,power" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/86548/mapping-photovoltaic-vs-thermal-collectors-from-aerial-imagery" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/86548/mapping-photovoltaic-vs-thermal-collectors-from-aerial-imagery?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='rYGYcQcFjjMxkAAMsqhDTuY5ChF3qnCT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/86548/mapping-photovoltaic-vs-thermal-collectors-from-aerial-imagery">Mapping Photovoltaic vs. Thermal collectors from aerial imagery</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-86548-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86548/up/" rel="nofollow"> </a>
+<div id="post-86548-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-86548-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86548/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/86548/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, the last few days I have mapped quite a few solar panels in the town where I live (Jülich, Germany). Using JOSM, I have found a workflow for myself with which I think I would be able to gather quite a lot of data from aerial imagery (which is quite good in my area). So far, I've been using the photovoltaic tags</p>
+<p>power=generator<br>
+generator:source=solar<br>
+generator:method=photovoltaic<br>
+generator:type=solar_photovoltaic_panel<br>
+generator:output:electricity=small_installation<br>
+location=roof  </p>
+<p>as suggested here: <a href="https://wiki.openstreetmap.org/wiki/Tag:generator:source%3Dsolar">https://wiki.openstreetmap.org/wiki/Tag:generator:source%3Dsolar</a><br>
+However, it occurred to me that for future solar panel mapping, even more precise tagging would be possible with regards to PV vs. thermal collectors, as also suggested on above webpage. <br>
+My question: Is it possible to differentiate PV/thermal collectors just from aerial imagery? If so, could you provide me with some examples? (I have added some myself below, from mapping done by other users) Or is it preferable to only map PV which you recognize as such, or map everything but stick with more general tags such as</p>
+<p>power=generator<br>
+generator:source=solar<br>
+location=roof<br>
+..?</p>
+<p>Here are some examples of a nearby German village with some tagging provided by other users; PV left-hand side, thermal collectors right-hand side (I do not know if they are correct, but from the examples, it appears that PV modules have a wider range of different aspect ratios and are usually bigger):
+<a href="https://ibb.co/ZmbDCBT">https://ibb.co/ZmbDCBT</a></p>
+<p>(EDIT: My guess now is that it is quite difficult to differentiate in general, see e.g. this photo of a PV and thermal collector panel which would appear very similar on aerial imagery:<br>
+<a href="https://de.wikipedia.org/wiki/Sonnenkollektor#/media/Datei:Dach_des_G%C3%A4stehauses_Freiherr_vom_Stein_-_Solarthermie_und_Photovoltaik.JPG">https://de.wikipedia.org/wiki/Sonnenkollektor#/media/Datei:Dach_des_G%C3%A4stehauses_Freiherr_vom_Stein_-_Solarthermie_und_Photovoltaik.JPG</a><br>
+So my question still stands if I should 1. map all panels and use more general tags or 2. map only PV which are clearly recognizable as such)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/photovoltaic/" class="post-tag tag-link-photovoltaic"
+                                        title="see questions tagged 'photovoltaic'" rel="tag">photovoltaic</a>
+                                
+                                    <a href="/tags/solar/" class="post-tag tag-link-solar"
+                                        title="see questions tagged 'solar'" rel="tag">solar</a>
+                                
+                                    <a href="/tags/power/" class="post-tag tag-link-power"
+                                        title="see questions tagged 'power'" rel="tag">power</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Jan '23, 23:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d4fbbd18a2aa930d230b379bf902a2e5?s=32&amp;d=identicon&amp;r=g" alt="HektorSchlegel's gravatar image" />
+    <p><a href="/users/22638/hektorschlegel">HektorSchlegel</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="HektorSchlegel has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/86548/">
+                edited
+                <strong>22 Jan '23, 23:37</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-86548">
+    
+</div>
+<div id="comment-tools-86548" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86548-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/86548/mapping-photovoltaic-vs-thermal-collectors-from-aerial-imagery?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/86548/mapping-photovoltaic-vs-thermal-collectors-from-aerial-imagery?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/86548/mapping-photovoltaic-vs-thermal-collectors-from-aerial-imagery?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/86548/mapping-photovoltaic-vs-thermal-collectors-from-aerial-imagery?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="86554"></a>
+                    <div id="answer-container-86554" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-86554-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86554/up/" rel="nofollow"> </a>
+<div id="post-86554-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-86554-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86554/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="HektorSchlegel has selected this answer as the correct answer"
+        href="/accept_answer/86554/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yes, it is possible to discriminate between the two with a bit of practice. Note that it is not uncommon for houses to have both.</p>
+<p>Typical thermal collectors have somewhat larger panels than solar PV (which are usually 1.6 by 1 m), usually only occur as 2-3 panels together, have external pipe work, visible on good quality aerial imagery. Making use of one of the measurement tools available in most editors can often help because of this size difference.</p>
+<p>At least in the UK, solar PV is now much commoner than thermal collectors. I suspect the same is true in other European countries.</p>
+<p>In Britain we use <code>generator:solar:modules</code> to count the number of visible modules. Adding this count can be useful for a future review as module counts of 3 or under may be either kind of solar panel. If you are really unsure then also add a fieme tag. Also, because of the smaller size of solar collector installations, incorrect identification is relatively unimportant (as long as a module count is available or the installation is mapped as an area).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/86554/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Jan '23, 21:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-86554">
+    
+        <a name="86555"></a>
+        <div class="comment" id="comment-86555">
+            <div id="post-86555-score" class="comment-score"></div>
+            <div class="comment-text"><p>Many of the solar thermo collectors in my area are simple dark rubber or plastic mats with embedded tubing that cover about the same area as a solar photovoltaic. They are often modular with each rectangle about the same size as a photovoltaic panel. Output is warm, not hot, water used for heating swimming pools. Those can be quite hard to tell from photovoltaic as the color is the same, the tubing is about the same diameter as wiring and they cover about the same amount of area. So if the yard associated with the house has a swimming pool, I am much less certain of the type of solar collector.</p>
+
+<p>The domestic hot water solar thermal systems generally can be distinguished from the photovoltaic as you mentioned due to smaller number of panels and, with good imagery, the plumbing being visible.</p></div>
+            <div class="comment-info" id="comment-86555-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '23, 21:44)</span>
+                <a class="comment-user userinfo" href="/users/5918/n76">n76</a>
+                
+            </div>
+        </div>
+    
+        <a name="86561"></a>
+        <div class="comment" id="comment-86561">
+            <div id="post-86561-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ahh, yes, I've come across exactly one of these in the UK, but had forgotten that they are much commoner in Germany. I think size will still be a bit odd compared with solar pv, but quite subtle distinction.(Also there's quite a bit of variability in default image quality, which doesn't help)</p></div>
+            <div class="comment-info" id="comment-86561-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jan '23, 13:34)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-86554" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86554-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="86549"></a>
+                    <div id="answer-container-86549" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-86549-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86549/up/" rel="nofollow"> </a>
+<div id="post-86549-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-86549-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86549/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>On my old house we had solar thermo for water heating. On my current house we have solar photovoltaic.</p>
+<p>At least for the part of the world I live in I will have to say, it depends. Some solar thermo have visible tank systems associated with them. And some solar panels have characteristic patterns that can be visible in higher resolution imagery. But there are some that I believe would be quite difficult to tell.</p>
+<p>For the roof top solar I have mapped, if I could not tell from the aerial imagery I simply did not map it. In retrospect that probably was not a good way to do things but my general philosophy for OSM is that no data is better than bad data.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/86549/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Jan '23, 01:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f60af53a4eba0c21f25c22674fb4a8cc?s=32&amp;d=identicon&amp;r=g" alt="n76's gravatar image" />
+    <p><a href="/users/5918/n76">n76</a><br/>
+    <span class="score" title="10839 reputation points"><span class="">10.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="82 badges"><span class="silver">&#9679;</span><span class="badgecount">82</span></span><span title="172 badges"><span class="bronze">&#9679;</span><span class="badgecount">172</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="n76 has 48 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-86549">
+    
+</div>
+<div id="comment-tools-86549" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86549-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/86548/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='rYGYcQcFjjMxkAAMsqhDTuY5ChF3qnCT' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/86548/mapping-photovoltaic-vs-thermal-collectors-from-aerial-imagery?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/86548/mapping-photovoltaic-vs-thermal-collectors-from-aerial-imagery?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/power/"
+            class="tag-link-power"
+            title="see questions tagged'power'using tags"
+            rel="tag">power</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/solar/"
+            class="tag-link-solar"
+            title="see questions tagged'solar'using tags"
+            rel="tag">solar</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/photovoltaic/"
+            class="tag-link-photovoltaic"
+            title="see questions tagged'photovoltaic'using tags"
+            rel="tag">photovoltaic</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 22, 2023, 11:21 p.m.">22 Jan '23, 23:21</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,111 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 24, 2023, 1:34 p.m.">24 Jan '23, 13:34</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/33408/landuse-for-photovoltaic-plants">landuse for photovoltaic plants</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43120/solar-farm-tagging">Solar farm tagging</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70168/adding-long-narrow-solar-panels-in-a-solar-pv-plant">Adding long, narrow solar panels in a solar PV plant</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8385/placing-windmills-and-power-generators-with-potlatch2">Placing windmills and power generators with Potlatch2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22547/data-disappearing-in-osmosis-tag-filter-powerline">Data disappearing in Osmosis Tag Filter (power=line)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28988/anybody-know-about-this-error-osm-solar">Anybody know about this error?- osm solar</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15364/should-i-extract-the-data-from-relations-or-from-ways">Should I extract the data from relations or from ways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12713/where-is-the-information-on-power-lines-in-the-geofabrik-download">where is the information on power lines in the geofabrik download</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45781/power-lines-minor_line-threshold">Power lines: minor_line threshold ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7831/finding-voltage-information-for-power-lines">Finding Voltage information for Power Lines</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

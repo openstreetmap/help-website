@@ -1,0 +1,999 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>OpenStreetMap Display Cities with Latin Alphabet or English Names? - OSM Help</title>
+        <meta name="description" content="Hi all, I need to display the cities/states with their English names ? The app shows the map with the following source code in javascript ;  L.tileLayer(&#39;http://{s}.tile.osm.org/{z}/{x}/{y}.png&#39;, {  attribution: &#39;&amp;amp;copy; &amp;lt;a href=&quot;http://osm.org/copyright&quot;&amp;gt;OpenStreetMap&amp;lt;/a&amp;gt; contributor..." />
+        <meta name="keywords" content="openstreetmap,english,latin,tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/52943/openstreetmap-display-cities-with-latin-alphabet-or-english-names" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52943/openstreetmap-display-cities-with-latin-alphabet-or-english-names?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='o77aHhpbTMNYTmpXaFSKQ86TVYUHkwig' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52943/openstreetmap-display-cities-with-latin-alphabet-or-english-names">OpenStreetMap Display Cities with Latin Alphabet or English Names?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52943-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52943/up/" rel="nofollow"> </a>
+<div id="post-52943-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52943-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52943/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52943/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all,
+I need to display the cities/states with their English names ? The app shows the map with the following source code in javascript ; </p>
+<pre><code>L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&amp;copy; &lt;a href="http://osm.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors',
+    maxZoom: 18
+}).addTo(map);
+</code></pre>
+<p>For a simple scenario, I should put a param into the url provided by OpenStreetMap Tile server. If the way like I stated, could you please provide the sytnax for it? 
+Additionally, I've explored the way of changing name of places, and some people provided some ways in the following link ; </p>
+<p><a href="http://gis.stackexchange.com/questions/187863/change-the-language-of-osm-maps-in-qgis">http://gis.stackexchange.com/questions/187863/change-the-language-of-osm-maps-in-qgis</a></p>
+<ol>
+<li>
+<p>Render the tiles using the Mapnik
+    toolchain or Maperitive using the
+    name:en field instead of the name
+    field for labelling. Add them with
+    the TileLayer plugin to your
+    project.</p>
+</li>
+<li>
+<p>Using the QuickOSM plugin, download
+    elements that have a name:en tag,
+    set the rendering to transparent,
+    and label inside QGIS with the
+    name_en field.</p>
+</li>
+</ol>
+<p>I could not understand the ways stated above. Could you please detail these way of solutions ? Putting in simple words ; </p>
+<p>Is there any way of getting tiles with their English names from tile servers by setting needed parameters like name:en or whatever it is?</p>
+<p>Thanks &amp; Best Regards</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                                    <a href="/tags/english/" class="post-tag tag-link-english"
+                                        title="see questions tagged 'english'" rel="tag">english</a>
+                                
+                                    <a href="/tags/latin/" class="post-tag tag-link-latin"
+                                        title="see questions tagged 'latin'" rel="tag">latin</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Nov '16, 17:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/310e3c47ef21b0b8852fd50dd78a5a7a?s=32&amp;d=identicon&amp;r=g" alt="Cranberries's gravatar image" />
+    <p><a href="/users/12978/cranberries">Cranberries</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Cranberries has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52943">
+    
+</div>
+<div id="comment-tools-52943" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52943-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52943/openstreetmap-display-cities-with-latin-alphabet-or-english-names?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52943/openstreetmap-display-cities-with-latin-alphabet-or-english-names?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52943/openstreetmap-display-cities-with-latin-alphabet-or-english-names?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52943/openstreetmap-display-cities-with-latin-alphabet-or-english-names?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52944"></a>
+                    <div id="answer-container-52944" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52944-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52944/up/" rel="nofollow"> </a>
+<div id="post-52944-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-52944-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52944/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The tilelayer defined in your snippet "<code>tile.osm.org</code>" does <em>not</em> have latin names in it.  Render your own tiles with latin names, and use the URL for that in place of "tile.osm.org".</p>
+<p>In order to create a tile server, see examples such as <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">this</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52944/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Nov '16, 17:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52944">
+    
+        <a name="52945"></a>
+        <div class="comment" id="comment-52945">
+            <div id="post-52945-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,
+Isn't there any other alternative way for this approach ? I mean, does OpenStreetmap have any options for the tile server with some language packs/options ? </p>
+
+<p>Is the map in the following link also provided by a custom tile server ? </p>
+
+<p><a href="http://openstreetmap.in/demo/#9.08/38.3220/35.6500">http://openstreetmap.in/demo/#9.08/38.3220/35.6500</a></p>
+
+<p>The second question I would like to is, for the first solution you mentioned, how can I get the city/states name labels in English or Latin Alphabet?</p>
+
+<p>Thanks &amp; Best Regards,</p></div>
+            <div class="comment-info" id="comment-52945-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '16, 18:29)</span>
+                <a class="comment-user userinfo" href="/users/12978/cranberries">Cranberries</a>
+                
+            </div>
+        </div>
+    
+        <a name="52949"></a>
+        <div class="comment" id="comment-52949">
+            <div id="post-52949-score" class="comment-score">1</div>
+            <div class="comment-text"><p>There are 4 different styles available on osm.org and 2 of them show Latin names, but you'd need to check the terms of use before using in your own leaflet map.</p>
+
+<p>Essentially OSM is data with which you can create your own map. Think of the styles on osm.org as examples.</p>
+
+<p>Edit: Following re-reading several replies below this it's worth mentioning how you can see the "other" tile layers at OpenStreetMap.org.  At the right-hand-side of the map display there are some icons.  One of them, the fourth one down, looks like a "stack of books".  If you hover your mouse over it (assuming you're using a PC and have a mouse, of course) a message displays "layers".  If you click that you can choose between "standard map", "cycle map", "transport map" and "humanitarian".  If you choose "cycle" or "transport", you'll notice that places with non-latin names have a latin name displayed after them. If you think that these other layers are a bit "hidden" and difficult to discover, I agree :)</p></div>
+            <div class="comment-info" id="comment-52949-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '16, 20:14)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52952"></a>
+        <div class="comment" id="comment-52952">
+            <div id="post-52952-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,
+Could you please share one of them with me ? Is there any url for the style with Latin Aplhabet? I have no idea about the way applying solution you mentioned actually..  What do you mean by saying terms of use ? Is Latin name feature priced ?</p></div>
+            <div class="comment-info" id="comment-52952-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '16, 21:01)</span>
+                <a class="comment-user userinfo" href="/users/12978/cranberries">Cranberries</a>
+                
+            </div>
+        </div>
+    
+        <a name="52963"></a>
+        <div class="comment" id="comment-52963">
+            <div id="post-52963-score" class="comment-score">2</div>
+            <div class="comment-text"><p>To be clear, OpenStreetMap isn't designed as a map service you can use.  It's some map data that you can contribute to and create your own maps from.  Let's take Visakhapatnam as an example.  In the openstreetmap.in example map, that's <a href="http://openstreetmap.in/demo/#9.54/17.6915/83.1969">http://openstreetmap.in/demo/#9.54/17.6915/83.1969</a> .  In the OSM data, it's <a href="http://www.openstreetmap.org/node/245641840">http://www.openstreetmap.org/node/245641840</a> .  You can see the available names that you can use to incorporate into maps there.</p>
+
+<p>Various people have created maps that feature latin names - the cycle map and transport layers at openstreetmap.org among them.  Another example is "Gnome Maps" which uses tiles from Mapbox (see <a href="http://www.omgubuntu.co.uk/2016/07/gnome-maps-new-tile-service">here</a> for the story of that).</p></div>
+            <div class="comment-info" id="comment-52963-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Nov '16, 00:06)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52944" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52944-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="53592"></a>
+                    <div id="answer-container-53592" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53592-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53592/up/" rel="nofollow"> </a>
+<div id="post-53592-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53592-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53592/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I did see the mention of 4 different styles. There was no link there. In your reply to my grumpy comment there is, but that goes to something about Gnome Maps and a whole lot of text and so forth and so on, ad infinitum.</p>
+<p>The point that seems to be so hard to communicate is that OSM, <em>itself</em>, not in a layer, not in some other program, not in a script tweak, <em>itself</em>, needs to have a little button in the upper right corner which is a dropdown menu that allows you to choose the alphabet.</p>
+<p>This is basic.</p>
+<p>I do know you're not being rude. And I very much appreciate that you're not responding to me jumping up and down and shouting by doing the same! :)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53592/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Dec '16, 03:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3187f4bdfd39f6aeab160ef19a458ee8?s=32&amp;d=identicon&amp;r=g" alt="quixote7's gravatar image" />
+    <p><a href="/users/7825/quixote7">quixote7</a><br/>
+    <span class="score" title="8 reputation points">8</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="quixote7 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53592">
+    
+        <a name="53597"></a>
+        <div class="comment" id="comment-53597">
+            <div id="post-53597-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Re "... 4 different styles. There was no link there ..." I've expanded the comment above that explains how to get the the "layer" switcher on OpenStreetMap.org.</p></div>
+            <div class="comment-info" id="comment-53597-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '16, 14:17)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53592" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53592-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="53588"></a>
+                    <div id="answer-container-53588" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53588-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53588/up/" rel="nofollow"> </a>
+<div id="post-53588-score" class="post-score"
+    title="current number of votes">
+    -3
+</div>
+<a id="post-53588-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53588/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>So if I understand SomeoneElse correctly, there's no way to get place names in alphabets that are familiar to the user.  ?? Really? In order to use OpenStreetMaps without being a coder I need to read Hindi and Japanese and Arabic and Latin alphabet and, well, you know what I'm trying to say.</p>
+<p>As if Wikipedia gave us information about everything, but if you wanted to know something about, say, Ulan Bator you had to be able to read Mongolian.</p>
+<p>"OpenStreetMap isn't designed as a map service you can use." Indeed, apparently.</p>
+<p>(Sorry to be so annoyed, and OSM is a truly great project, and I signed up years ago so I could contribute, and this factor is the one huge stumbling block that makes it impossible for me to use it most of the time. I came back to check since I figured it had to have been fixed by now, and instead I find this question.)</p>
+<p>(And an answer that says, just like in the good old days, write your own program if you don't like it.)</p>
+<p>(:REALLY?:)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53588/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Dec '16, 17:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3187f4bdfd39f6aeab160ef19a458ee8?s=32&amp;d=identicon&amp;r=g" alt="quixote7's gravatar image" />
+    <p><a href="/users/7825/quixote7">quixote7</a><br/>
+    <span class="score" title="8 reputation points">8</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="quixote7 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53588">
+    
+        <a name="53590"></a>
+        <div class="comment" id="comment-53590">
+            <div id="post-53590-score" class="comment-score">3</div>
+            <div class="comment-text"><p>I suggest that you read some of the text that I've written above again, starting with "There are 4 different styles available on osm.org and 2 of them show Latin names" and making sure to include " Another example is "Gnome Maps" which uses tiles from Mapbox (see <a href="http://www.omgubuntu.co.uk/2016/07/gnome-maps-new-tile-service">here</a> for the story of that)."</p>
+
+<p>I'm not trying to be rude (in fact, I'm deliberately trying <em>not</em> to be rude) but I think "the ability to follow a hyperlink" doesn't exactly fall into the category of "write your own program if you don't like it".</p></div>
+            <div class="comment-info" id="comment-53590-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Dec '16, 18:22)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53595"></a>
+        <div class="comment" id="comment-53595">
+            <div id="post-53595-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The German and French communities made maps in resp. German and French which are available from their website. I think that OsmAnd, and app for Android also displays labels in the language of the user (or local language depending on a preset).</p></div>
+            <div class="comment-info" id="comment-53595-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '16, 11:00)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="53596"></a>
+        <div class="comment" id="comment-53596">
+            <div id="post-53596-score" class="comment-score">3</div>
+            <div class="comment-text"><p>What you're asking is a great thing to aim for, but (unless OSM was to be unacceptably English-centric) means generating and hosting map tiles for every language in the world. That's a big ask, especially - as stated several times in answers here - openstreetmap.org is not really intended as an end-user mapping site, but as a source of data for the world's mapping sites and applications. Even going from one to ten languages would be a massive jump.</p>
+
+<p>In the medium to long term, this may perhaps be solved by moving to "vector tiles" (where the map is both drawn and displayed in your browser) rather than "raster tiles" (.png files that are drawn by the server and displayed in your browser). Moving to vector tiles is sure to happen sooner or later, but if you'd like to make it sooner rather than later, new developers are always welcome.</p></div>
+            <div class="comment-info" id="comment-53596-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '16, 13:50)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53588" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53588-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52943/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='o77aHhpbTMNYTmpXaFSKQ86TVYUHkwig' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52943/openstreetmap-display-cities-with-latin-alphabet-or-english-names?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52943/openstreetmap-display-cities-with-latin-alphabet-or-english-names?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/english/"
+            class="tag-link-english"
+            title="see questions tagged'english'using tags"
+            rel="tag">english</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/latin/"
+            class="tag-link-latin"
+            title="see questions tagged'latin'using tags"
+            rel="tag">latin</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 14, 2016, 5:09 p.m.">14 Nov '16, 17:09</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,144 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 18, 2016, 2:17 p.m.">18 Dec '16, 14:17</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/64738/why-do-i-need-to-specify-the-style-when-importing-data-to-postgis-how-should-that-work-with-multiple-styles">Why do I need to specify the style when importing data to postgis? How should that work with multiple styles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65031/what-is-minimum-time-taken-for-rendering-a-single-tile-without-any-tile-cache-or-prerendering-from-tile-server">What is minimum time taken for rendering a single tile without any tile cache or prerendering from tile server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53247/tile-server-error-for-ways-conflict-for-planet-file-during-installation">Tile server error for ways conflict for planet file during installation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61183/building-a-tileserver-postgis-errors">Building a Tileserver - PostGIS Errors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64925/hardware-configuration-for-a-production-tile-server-with-high-usage-and-serving-multiple-styles">Hardware Configuration for a Production Tile Server with high usage and serving multiple styles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64945/should-i-use-ssd-or-hdd-in-raid-0-array-for-storing-prerendered-tiles-in-my-tile-server">Should I use SSD or HDD in Raid 0 array for storing prerendered tiles in my tile server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37183/openstreetmap-carto-for-switch2osm-from-packages">openstreetmap-carto for switch2osm &#39;&#39;from packages&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52973/tile-server-for-planet-working-slow-and-shows-error-on-high-end-server">tile server for planet working slow and shows error on high end server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54758/mapnik-log-segmentation-fault-renderd-error-4-in-libmapnikso3012-on-ubuntu-1404-osm-carto-310">Mapnik LOG: Segmentation fault; renderd error 4 in libmapnik.so.3.0.12 on ubuntu 14.04, osm-carto 3.1.0</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66796/maps-are-not-in-english">[closed] Maps are not in English</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

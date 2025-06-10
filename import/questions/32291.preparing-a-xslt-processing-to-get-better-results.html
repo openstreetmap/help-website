@@ -1,0 +1,1027 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>preparing a xslt-processing  to  get better results - OSM Help</title>
+        <meta name="description" content="on opensuse 13.1 i try to do some gis-works with a large file: france-latest.osm.bz2 which i gathered from here: [url]http://download.geofabrik.de/europe.html[/url] what do i do with that file france-latest.osm.bz2  bzcat france-latest.osm.bz2  what is aimed? i want to extract all things that belong..." />
+        <meta name="keywords" content="extract" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/32291/preparing-a-xslt-processing-to-get-better-results" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/32291/preparing-a-xslt-processing-to-get-better-results?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='5cHFBv6B3qzCTdrVJtQhRFHa9RDiDa0s' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/32291/preparing-a-xslt-processing-to-get-better-results">preparing a xslt-processing  to  get better results</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-32291-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32291/up/" rel="nofollow"> </a>
+<div id="post-32291-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32291-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32291/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/32291/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>on opensuse 13.1 i try to  do some gis-works with a large file:  france-latest.osm.bz2 which i gathered from here: [url]<a href="http://download.geofabrik.de/europe.html[/url]">http://download.geofabrik.de/europe.html[/url]</a></p>
+<p>what do i do with that file france-latest.osm.bz2</p>
+<pre><code>   bzcat france-latest.osm.bz2
+</code></pre>
+<p>what is aimed? i want to extract all things that belong to the POI restaurant which is 
+long lat 
+name 
+adress
+etc - etx.</p>
+<p>i have the following things up and running: </p>
+<p>package perl-XML-Twig and run xml_split</p>
+<p>with a command available on openSUSE to split xml files named xml_split (it is part of the package perl-XML-Twig) Now we try to run the following command (I hope we have enough hard disk space since the output is roughly 20GB).</p>
+<pre><code> bzcat france.osm.bz2 | xml_split -s 100M -b france -n 3 -
+</code></pre>
+<p>this will result in a bunch of 100 Mb large xml files france-001.xml,france-002.xml and so on. Weu then have the xslt (the name of the root element) and of course we will need a loop in the bash to process the several files and collect all the results together.</p>
+<pre><code>&lt;xsl:stylesheet version = '1.0'
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:xml_split="http://xmltwig.com/xml_split"
+        xmlns:xsl='http://www.w3.org/1999/XSL/Transform'&gt;
+
+    &lt;xsl:output method="text" encoding="UTF-8"/&gt;
+    &lt;xsl:template match="/"&gt;
+
+            &lt;xsl:for-each select="xml_split:root/node/tag[<a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a>='amenity' and <a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a>='restaurant']"&gt;
+            &lt;xsl:value-of select="../<a href="/users/260/idoneus">@id</a>"/&gt;
+            &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+            &lt;xsl:value-of select="../<a href="/users/5110/latroc">@lat</a>"/&gt;
+            &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+            &lt;xsl:value-of select="../<a href="/users/1350/longestaugust">@lon</a>"/&gt;
+            &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+            &lt;xsl:for-each select="../tag[<a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a>='name']"&gt;
+                &lt;xsl:value-of select="<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a>"/&gt;
+            &lt;/xsl:for-each&gt;
+            &lt;xsl:text&gt;&amp;#x0A;&lt;/xsl:text&gt;
+        &lt;/xsl:for-each&gt;
+    &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;
+</code></pre>
+<p>question: what do i need to  get all the aimed data out of the dataset - i.e. </p>
+<p>long lat 
+name 
+adress
+etc - etx.</p>
+<p>here below we have a data-chunk out of the xml-file that we have parsed: see it</p>
+<pre><code>&lt;node id="52768810" lat="48.2044749" lon="11.3249434" version="7" changeset="9490517" user="wheelmap_visitor" uid="290680" timestamp="2011-10-07T20:24:46Z"&gt;
+    &lt;tag k="addr:city" v="Olching" /&gt;
+    &lt;tag k="addr:country" v="DE" /&gt;
+    &lt;tag k="addr:housenumber" v="72" /&gt;
+    &lt;tag k="addr:postcode" v="82140" /&gt;
+    &lt;tag k="addr:street" v="Hauptstraße" /&gt;
+    &lt;tag k="amenity" v="restaurant" /&gt;
+    &lt;tag k="cuisine" v="mexican" /&gt;
+    &lt;tag k="email" v="info@cantina-olching.de" /&gt;
+    &lt;tag k="name" v="La Cantina" /&gt;
+    &lt;tag k="opening_hours" v="Mo-Su 17:00-01:00" /&gt;
+    &lt;tag k="phone" v="+49 (8142) 444393" /&gt;
+    &lt;tag k="website" v="http://www.cantina-olching.com/" /&gt;
+    &lt;tag k="wheelchair" v="no" /&gt;
+</code></pre>
+<p>well - how to get all the data out of the above mentioned file with the xslt-processing</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/extract/" class="post-tag tag-link-extract"
+                                        title="see questions tagged 'extract'" rel="tag">extract</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Apr '14, 11:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bf4d2d8660e82c4a7387b7d2a8a8cfcd?s=32&amp;d=identicon&amp;r=g" alt="say_hello_to_the_world's gravatar image" />
+    <p><a href="/users/8644/say_hello_to_the_world">say_hello_to...</a><br/>
+    <span class="score" title="19 reputation points">19</span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="24 badges"><span class="silver">&#9679;</span><span class="badgecount">24</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="say_hello_to_the_world has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/32291/">
+                edited
+                <strong>11 Apr '14, 11:41</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-32291">
+    
+        <a name="32306"></a>
+        <div class="comment" id="comment-32306">
+            <div id="post-32306-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I would NOT recommend using xslt to extract data from OSM XML files. It's just a lot more work and more complicated than using some of the available OSM tools.</p></div>
+            <div class="comment-info" id="comment-32306-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '14, 15:39)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32316"></a>
+        <div class="comment" id="comment-32316">
+            <div id="post-32316-score" class="comment-score"></div>
+            <div class="comment-text"><p>hello dear sk53 many many thanks - i will follow your advices and will do as you recommend.  btw - if i have a big big file such as the one of germany - should i separate it into pieces using xml-split!?</p></div>
+            <div class="comment-info" id="comment-32316-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '14, 13:39)</span>
+                <a class="comment-user userinfo" href="/users/8644/say_hello_to_the_world">say_hello_to...</a>
+                
+            </div>
+        </div>
+    
+        <a name="32320"></a>
+        <div class="comment" id="comment-32320">
+            <div id="post-32320-score" class="comment-score"></div>
+            <div class="comment-text"><p>Personally, I'd use <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> to extract data from within a large downloaded .osm or osm.pbf file</p></div>
+            <div class="comment-info" id="comment-32320-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '14, 14:16)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32322"></a>
+        <div class="comment" id="comment-32322">
+            <div id="post-32322-score" class="comment-score"></div>
+            <div class="comment-text"><p>See also <a href="http://forum.openstreetmap.org/viewtopic.php?id=25031">this forum question</a> which seems to be related (and has a bit more info).</p></div>
+            <div class="comment-info" id="comment-32322-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '14, 15:48)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32291" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32291-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/32291/preparing-a-xslt-processing-to-get-better-results?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/32291/preparing-a-xslt-processing-to-get-better-results?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/32291/preparing-a-xslt-processing-to-get-better-results?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/32291/preparing-a-xslt-processing-to-get-better-results?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="32323"></a>
+                    <div id="answer-container-32323" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32323-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32323/up/" rel="nofollow"> </a>
+<div id="post-32323-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-32323-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32323/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="say_hello_to_the_world has selected this answer as the correct answer"
+        href="/accept_answer/32323/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I wouldn't get hung up on the fact that OSM data's in XML format.  As <a href="/users/647/sk53">@SK53</a> suggested above, there are lots of existing OSM tools for extracting data (most of which have had questions asked about before here).<br>
+</p>
+<p>I'd extract (an initially small) geographical area using <a href="https://help.openstreetmap.org/search/?q=osmosis&amp;Submit=Search&amp;t=question">osmosis</a>, then look at using <a href="https://help.openstreetmap.org/search/?q=osmfilter&amp;Submit=Search&amp;t=question">osmfilter</a> to extract the data (possibly having used <a href="https://help.openstreetmap.org/search/?q=osmconvert&amp;Submit=Search&amp;t=question">osmconvert</a> to convert the data into a format that osmfilter can understand).  Also perhaps consider <a href="https://help.openstreetmap.org/search/?q=osmium&amp;Submit=Search&amp;t=question">osmium</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32323/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Apr '14, 15:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32323">
+    
+        <a name="32330"></a>
+        <div class="comment" id="comment-32330">
+            <div id="post-32330-score" class="comment-score"></div>
+            <div class="comment-text"><p>many many thanks for all your ideas  - i will add all those packages on opensuse 13.1 .- hopefully i will get them installed - either via commandline or yast</p></div>
+            <div class="comment-info" id="comment-32330-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '14, 21:07)</span>
+                <a class="comment-user userinfo" href="/users/8644/say_hello_to_the_world">say_hello_to...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32323" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32323-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="32292"></a>
+                    <div id="answer-container-32292" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32292-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32292/up/" rel="nofollow"> </a>
+<div id="post-32292-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32292-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32292/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Are you aware that bzcat and bz2 file name extension is a hint to a compressed osm file?</p>
+<p>You have to uncompress it in the very right way, so I would NOT recommend to use anything like a pipe in your console prompt.</p>
+<p>Instead of downloading france.osm.bz2 ... try the osm.pbf file ... it is a kind of binary format.</p>
+<p>Then you should get familiar with the tools calles osmconvert and osmfilter ... see the OSM wiki how to use them.</p>
+<p>and before processing the whole France, I recommend to try some tests before with a smaller country extract or a region extract available also via geofabrik.de</p>
+<p>With osmconvert you can produce a CSV file from raw OSM data, to load in a database or spreadsheet programm.</p>
+<p>Success?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32292/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Apr '14, 12:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+    <p><a href="/users/99/stephan75">stephan75</a><br/>
+    <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephan75 has 37 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32292">
+    
+        <a name="32310"></a>
+        <div class="comment" id="comment-32310">
+            <div id="post-32310-score" class="comment-score">1</div>
+            <div class="comment-text"><p>He already uncompresses it via <code>bzcat</code>.</p></div>
+            <div class="comment-info" id="comment-32310-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '14, 21:23)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32314"></a>
+        <div class="comment" id="comment-32314">
+            <div id="post-32314-score" class="comment-score"></div>
+            <div class="comment-text"><p>hello dear stephan many many thanks - i will follow your advices and will do as you recommend. </p>
+
+<p>i try to work on a smaller country-extract or region - guess that geofabrik has some.</p>
+
+<p>love to do some conversions to csv - or to load into a  db-or spreadsheet</p></div>
+            <div class="comment-info" id="comment-32314-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '14, 13:37)</span>
+                <a class="comment-user userinfo" href="/users/8644/say_hello_to_the_world">say_hello_to...</a>
+                
+            </div>
+        </div>
+    
+        <a name="32317"></a>
+        <div class="comment" id="comment-32317">
+            <div id="post-32317-score" class="comment-score"></div>
+            <div class="comment-text"><p>btw - if i have a big big file such as the one of germany - should i separate it into pieces using xml-split!?</p></div>
+            <div class="comment-info" id="comment-32317-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '14, 13:39)</span>
+                <a class="comment-user userinfo" href="/users/8644/say_hello_to_the_world">say_hello_to...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32292" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32292-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="32333"></a>
+                    <div id="answer-container-32333" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32333-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32333/up/" rel="nofollow"> </a>
+<div id="post-32333-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32333-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32333/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>btw - i also installed osmfilter: see  here </p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
+<pre><code>Download and build in one run:   wget -O - <a href="http://m.m.i24.cc/osmfilter.c">http://m.m.i24.cc/osmfilter.c</a> |cc -x c - -O3 -o osmfilter
+
+As usual: There is no warranty, to the extent permitted by law.
+
+linux-70ce:/home/martin #  wget -O - <a href="http://m.m.i24.cc/osmfilter.c">http://m.m.i24.cc/osmfilter.c</a> |cc -x c - -O3 -o osmfilter
+--2014-04-12 22:34:49--  <a href="http://m.m.i24.cc/osmfilter.c">http://m.m.i24.cc/osmfilter.c</a>
+Auflösen des Hostnamen »m.m.i24.cc (m.m.i24.cc)«... 80.67.17.148, 2a00:1158:0:300:432f::1
+Verbindungsaufbau zu m.m.i24.cc (m.m.i24.cc)|80.67.17.148|:80... verbunden.
+HTTP-Anforderung gesendet, warte auf Antwort... 200 OK
+Länge: 213497 (208K) [text/plain]
+In »»STDOUT«« speichern.
+
+100%[==========================================================================================================================================&gt;] 213.497     1,14MB/s   in 0,2s
+
+2014-04-12 22:34:49 (1,14 MB/s) - auf die Standardausgabe geschrieben [213497/213497]
+
+&lt;stdin&gt;: In function ‘oo__close’:
+&lt;stdin&gt;:5166:5: warning: call to function ‘read_close’ without a real prototype [-Wunprototyped-calls]
+&lt;stdin&gt;:1079:13: note: ‘read_close’ was declared here
+linux-70ce:/home/martin #
+</code></pre>
+<p>i am not sure if it succeedet or failed!?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32333/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Apr '14, 21:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bf4d2d8660e82c4a7387b7d2a8a8cfcd?s=32&amp;d=identicon&amp;r=g" alt="say_hello_to_the_world's gravatar image" />
+    <p><a href="/users/8644/say_hello_to_the_world">say_hello_to...</a><br/>
+    <span class="score" title="19 reputation points">19</span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="24 badges"><span class="silver">&#9679;</span><span class="badgecount">24</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="say_hello_to_the_world has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32333">
+    
+</div>
+<div id="comment-tools-32333" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32333-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/32291/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='5cHFBv6B3qzCTdrVJtQhRFHa9RDiDa0s' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32291/preparing-a-xslt-processing-to-get-better-results?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32291/preparing-a-xslt-processing-to-get-better-results?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/extract/"
+            class="tag-link-extract"
+            title="see questions tagged'extract'using tags"
+            rel="tag">extract</a> <span class="tag-number">&#215;83</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 11, 2014, 11:38 a.m.">11 Apr '14, 11:38</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,038 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 12, 2014, 9:43 p.m.">12 Apr '14, 21:43</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1590/export-road-way-data-for-large-regions">Export Road (Way) data for large regions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2702/extracting-coordinates-by-clicking-on-an-openstreetmap">Extracting Coordinates by clicking on an OpenStreetMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2905/osmosis-not-running">Osmosis not running</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3646/extracting-country-specific-data">Extracting country specific data.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4994/how-long-does-it-take-to-extract-a-city-from-the-osm-globe">How long does it take to extract a city from the OSM globe?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7436/how-to-avoid-exceeding-roads-through-country-borders">How to avoid exceeding roads through country borders ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7449/osmosis-sourecode-merge">Osmosis sourecode &quot;--merge&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7711/bounding-box-polygon-for-osmosis">bounding-box polygon for osmosis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8117/getting-city-border-from-osm-data">Getting city border from osm data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/713/how-to-extract-partial-data-for-large-regions">How to extract partial data for large regions ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

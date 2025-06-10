@@ -1,0 +1,838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Identifying Roads Uniquely and Traffic API - OSM Help</title>
+        <meta name="description" content="I&#39;m currently working on a project which involves tracing the path(GPS coordinates) taken by a vehicle (1) and measuring the traffic conditions(is it jammed and whats the speed during the time the vehicle was there) along the path in which the driver took (2). This is to judge whether the driver had..." />
+        <meta name="keywords" content="roads,api,traffic,road" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/43370/identifying-roads-uniquely-and-traffic-api" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/43370/identifying-roads-uniquely-and-traffic-api?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='f78PaU8i3V6RFVEhHRZlmztsEI9dtuHw' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/43370/identifying-roads-uniquely-and-traffic-api">Identifying Roads Uniquely and Traffic API</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-43370-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43370/up/" rel="nofollow"> </a>
+<div id="post-43370-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-43370-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43370/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/43370/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm currently working on a project which involves tracing the path(GPS coordinates) taken by a vehicle (1) and measuring the traffic conditions(is it jammed and whats the speed during the time the vehicle was there) along the path in which the driver took (2). This is to judge whether the driver had made the appropriate actions to drive environmentally friendly and fuel efficiently during his time on route.</p>
+<p>Therefore i need 2 things.</p>
+<p>(1) A Way to Uniquely identify each road based on their direction it heads towards ( 2 or more for each road) 
+I understand that there are OpenStreetMaps- WAY which provides me a set of nodes which will identify a road  with a unique id however i am currently struggling to find the API service which can provide it to me.</p>
+<p>(2) Any traffic APi reccomendation that can provide me with historical traffic data which i can use.</p>
+<p>Cheers</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/roads/" class="post-tag tag-link-roads"
+                                        title="see questions tagged 'roads'" rel="tag">roads</a>
+                                
+                                    <a href="/tags/api/" class="post-tag tag-link-api"
+                                        title="see questions tagged 'api'" rel="tag">api</a>
+                                
+                                    <a href="/tags/traffic/" class="post-tag tag-link-traffic"
+                                        title="see questions tagged 'traffic'" rel="tag">traffic</a>
+                                
+                                    <a href="/tags/road/" class="post-tag tag-link-road"
+                                        title="see questions tagged 'road'" rel="tag">road</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 Jun '15, 12:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/58bb60c363eb14f0cbbb9b37e75e4a6c?s=32&amp;d=identicon&amp;r=g" alt="DillyDallyKing's gravatar image" />
+    <p><a href="/users/11058/dillydallyking">DillyDallyKing</a><br/>
+    <span class="score" title="25 reputation points">25</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DillyDallyKing has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-43370">
+    
+        <a name="43379"></a>
+        <div class="comment" id="comment-43379">
+            <div id="post-43379-score" class="comment-score"></div>
+            <div class="comment-text"><p>about (1): Maybe you need something like geocoding? then see <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a> ...</p>
+
+<p>or about the most used OSM APIs:
+<a href="http://wiki.openstreetmap.org/wiki/Xapi">http://wiki.openstreetmap.org/wiki/Xapi</a> </p>
+
+<p>or (even better!): <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a></p></div>
+            <div class="comment-info" id="comment-43379-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '15, 16:41)</span>
+                <a class="comment-user userinfo" href="/users/99/stephan75">stephan75</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-43370" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43370-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/43370/identifying-roads-uniquely-and-traffic-api?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/43370/identifying-roads-uniquely-and-traffic-api?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/43370/identifying-roads-uniquely-and-traffic-api?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/43370/identifying-roads-uniquely-and-traffic-api?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="43429"></a>
+                    <div id="answer-container-43429" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-43429-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43429/up/" rel="nofollow"> </a>
+<div id="post-43429-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-43429-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43429/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For this task I suggest to use the <a href="https://github.com/graphhopper/map-matching">map matching project</a> (where I'm the author of)</p>
+<p>With this project you can easily associate arbitrary GPS coordinates to edge IDs of GraphHopper. An edge is the connection between two junctions. And then you can use this to influence the routing of GraphHopper itself. I've blogged about the map matching <a href="https://karussell.wordpress.com/2015/05/26/map-matching-use-cases-or-why-an-open-source-and-open-data-alternative-is-superior-to-the-google-maps-roads-api/">here</a> and also about the traffic influenced routing <a href="https://karussell.wordpress.com/2015/04/08/visualize-and-handle-traffic-information-with-graphhopper-in-real-time-for-cologne-germany-koln/">here</a>. The problem you'll encounter is that you can get the edge IDs but not the OSM IDs and you'll have to take care when you re-import the data with fresh OSM data where the edge IDs will change. But as I've already done this several times I can say there are ways to make it working ;)</p>
+<p>For the second part of your question I only have a partial answer. We've started to collect some open/free data sources <a href="https://github.com/graphhopper/open-traffic-collection">here</a> where often e.g. only the traffic counts is available (not the flow or speed of the vehicles). Feel free to add your known sources and maybe make this more popular so that more people add their sources ;)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/43429/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jun '15, 18:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fec61c70a4cc98b1e84a5dfbde1e9a6e?s=32&amp;d=identicon&amp;r=g" alt="peatar's gravatar image" />
+    <p><a href="/users/10729/peatar">peatar</a><br/>
+    <span class="score" title="351 reputation points">351</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="peatar has one accepted answer">8&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/43429/">
+                edited
+                <strong>06 Jun '15, 18:56</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-43429">
+    
+</div>
+<div id="comment-tools-43429" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43429-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="43453"></a>
+                    <div id="answer-container-43453" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-43453-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43453/up/" rel="nofollow"> </a>
+<div id="post-43453-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-43453-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43453/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is currently an open project well underway to define both an API and a matching algorithm based on OSM data here: <a href="https://github.com/opentraffic">https://github.com/opentraffic</a> they use an approach based on osm ID and way start/end coordinates.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/43453/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jun '15, 16:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-43453">
+    
+</div>
+<div id="comment-tools-43453" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43453-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="43465"></a>
+                    <div id="answer-container-43465" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-43465-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43465/up/" rel="nofollow"> </a>
+<div id="post-43465-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-43465-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43465/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For (1) (identifying roads), it depends on how you want to process the data. if you were to import OSM data into a PostGIS database with osm2pgsql, then you can look at the <code>osm_id</code> column to determine the OSM id of the underlying way object. However, OSM can, and does, split ways when a tag changes, so "one street"/"one road" can be represented as many different ways in OSM.</p>
+<p>It's also possible for an OSM object to be deleted and replaced by a mapper, meaning the old id would no longer be valid and there'd be a new id.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/43465/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Jun '15, 13:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/16e12e337f6edc3750681492656097ed?s=32&amp;d=identicon&amp;r=g" alt="rorym's gravatar image" />
+    <p><a href="/users/30/rorym">rorym</a><br/>
+    <span class="score" title="5358 reputation points"><span class="">5.4k</span></span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="49 badges"><span class="silver">&#9679;</span><span class="badgecount">49</span></span><span title="100 badges"><span class="bronze">&#9679;</span><span class="badgecount">100</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rorym has 18 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-43465">
+    
+</div>
+<div id="comment-tools-43465" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43465-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/43370/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='f78PaU8i3V6RFVEhHRZlmztsEI9dtuHw' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43370/identifying-roads-uniquely-and-traffic-api?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43370/identifying-roads-uniquely-and-traffic-api?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/api/"
+            class="tag-link-api"
+            title="see questions tagged'api'using tags"
+            rel="tag">api</a> <span class="tag-number">&#215;290</span><br/>
+        
+        <a href="/tags/road/"
+            class="tag-link-road"
+            title="see questions tagged'road'using tags"
+            rel="tag">road</a> <span class="tag-number">&#215;223</span><br/>
+        
+        <a href="/tags/roads/"
+            class="tag-link-roads"
+            title="see questions tagged'roads'using tags"
+            rel="tag">roads</a> <span class="tag-number">&#215;86</span><br/>
+        
+        <a href="/tags/traffic/"
+            class="tag-link-traffic"
+            title="see questions tagged'traffic'using tags"
+            rel="tag">traffic</a> <span class="tag-number">&#215;25</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 3, 2015, 12:14 p.m.">03 Jun '15, 12:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,006 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 8, 2015, 1:24 p.m.">08 Jun '15, 13:24</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/32863/how-to-properly-map-three-way-junctions">How to properly map three-way junctions?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49828/joining-us-road-segments-at-state-boundaries">Joining US Road Segments at State Boundaries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13241/multiple-lanes-in-one-road">Multiple lanes in one road</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30692/export-only-roads">Export only roads?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36824/snap-to-road-using-api">Snap to road using API</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38372/api-or-tool-to-match-a-gps-track-to-existing-roads">API or tool to match a GPS track to existing roads</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7301/road-problems">road problems</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10088/mapnik-rendering-road-cores-and-casings">[closed] Mapnik - Rendering - Road Cores and Casings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15450/detection-of-direction-of-one-way-streets">Detection of direction of one way streets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51304/openstreetmaps-api-for-java-platform-get-congestion-details-from-traffic-message-channels">Openstreetmaps api for Java Platform/ Get congestion details from Traffic Message Channels</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,878 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Successful Overpass query not returning results on one term - OSM Help</title>
+        <meta name="description" content="Folks, I&#39;m trying to get some data out of OSM using Overpass for a beta corona community leaflet distribution process. My aim is to eventually have a spreadsheet with the streets in 2 areas, lat/long data - then push that data to a map so folks can visualise which streets have been done.  I managed ..." />
+        <meta name="keywords" content="overpass" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/73810/successful-overpass-query-not-returning-results-on-one-term" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/73810/successful-overpass-query-not-returning-results-on-one-term?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qHdqYnH9m6CJ7DKxFIRbXk0BGjd0Pequ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/73810/successful-overpass-query-not-returning-results-on-one-term">Successful Overpass query not returning results on one term</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-73810-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73810/up/" rel="nofollow"> </a>
+<div id="post-73810-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73810-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73810/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/73810/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Folks, I'm trying to get some data out of OSM using Overpass for a beta corona community leaflet distribution process. My aim is to eventually have a spreadsheet with the streets in 2 areas, lat/long data - then push that data to a map so folks can visualise which streets have been done. </p>
+<p>I managed to get the query below to return results for <a href="https://www.openstreetmap.org/search?query=hollingdean#map=14/50.8443/-0.1281">Hollingdean</a>, but not <a href="https://www.openstreetmap.org/search?query=hollingbury#map=19/50.85628/-0.12390">Hollingbury</a>. </p>
+<p>I'm a bit of a beginner to this (only come to Overpass API for this project), but I fiddled around a bit trying to get the ID of "Hollingbury" suburb to work and it didn't. Then I decided that it was due to the fact that maybe the Hollingbury search didn't show up any areas. I've now labelled an area (that was already drawn up) as Hollingbury, so the search pulls up an area, but still no search results returned. </p>
+<ul>
+<li>Am I correct in the assumption that this search is searching for a residential area? </li>
+<li>If yes, are the lack of results due to the system not being updated with the new label? This was done about 18hrs ago.</li>
+<li>If no, what am I doing wrong? Why am I not getting any results for the "Hollingbury" search?</li>
+<li>Finally, any folks have a way of interfacing spreadsheets (online) with a map? Google used to have a <a href="https://www.google.com/earth/outreach/learn/mapping-from-a-google-spreadsheet/">Spreadsheet Mapper</a> but due to changes in the way that kml files work, I have to faff around importing into Google Earth then Maps, with a bunch of formatting lost in the process. An OSM solution would be great! </li>
+</ul>
+<p>Thanks very much in advance for your help!</p>
+<pre><code>[out:csv("name", ::type, ::id, ::lat, ::lon)]
+[timeout:25];
+area[name="Hollingbury"];
+way(area)[highway][name];
+foreach(           // for each way tagged as highway=* do...
+  out center;             // output way id
+);
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Mar '20, 13:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6708dd35358365ab722eca934ab1ed21?s=32&amp;d=identicon&amp;r=g" alt="jt196's gravatar image" />
+    <p><a href="/users/18100/jt196">jt196</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jt196 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-73810">
+    
+        <a name="73812"></a>
+        <div class="comment" id="comment-73812">
+            <div id="post-73812-score" class="comment-score"></div>
+            <div class="comment-text"><p>Scratch that, either the DB was updated or I needed to refresh the page with another query, it's working now. </p>
+
+<p>Any answers to my spreadsheet question, or do I have to figure out another API!? ;)</p></div>
+            <div class="comment-info" id="comment-73812-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '20, 14:37)</span>
+                <a class="comment-user userinfo" href="/users/18100/jt196">jt196</a>
+                
+            </div>
+        </div>
+    
+        <a name="73820"></a>
+        <div class="comment" id="comment-73820">
+            <div id="post-73820-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are some leaflet plugins that will display a csv on a map. Haven't used one, so can't say if it works nice or not.</p>
+
+<p>The repeated results come from the OSM data model. If something like the surface of the street varies, a new way is created for each different part. Depending on the scale of what you are doing, you may want to evaluate each one manually.</p>
+
+<p>If you have many regions, there might be a way to get combined centers using aggregation functions: <a href="https://dev.overpass-api.de/blog/flat_world.html">https://dev.overpass-api.de/blog/flat_world.html</a></p></div>
+            <div class="comment-info" id="comment-73820-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '20, 19:51)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="73822"></a>
+        <div class="comment" id="comment-73822">
+            <div id="post-73822-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/18100/jt196">@jt196</a>: Please use the "add new comment" function or edit your question if you have additional questions or information. "Your answer" is reserved for answers resolving your question.</p></div>
+            <div class="comment-info" id="comment-73822-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '20, 20:43)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="73832"></a>
+        <div class="comment" id="comment-73832">
+            <div id="post-73832-score" class="comment-score"></div>
+            <div class="comment-text"><p>I see what I've done there - I know the format, but assumed it was just usual forum rules. Can I reformat the answers to make it clearer?</p></div>
+            <div class="comment-info" id="comment-73832-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Mar '20, 12:24)</span>
+                <a class="comment-user userinfo" href="/users/18100/jt196">jt196</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73810" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73810-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/73810/successful-overpass-query-not-returning-results-on-one-term?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/73810/successful-overpass-query-not-returning-results-on-one-term?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/73810/successful-overpass-query-not-returning-results-on-one-term?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/73810/successful-overpass-query-not-returning-results-on-one-term?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="73813"></a>
+                    <div id="answer-container-73813" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73813-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73813/up/" rel="nofollow"> </a>
+<div id="post-73813-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73813-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73813/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Strange. I'm still getting an error atm.</p>
+<p>Note, the <code>foreach</code> &amp; [name] isn't required &amp; I've removed <code>::type</code> as only ways are being searched for.</p>
+<pre><code>[out:csv("name", ::id, ::lat, ::lon)];
+area[name="Hollingdean"];
+way(area)[highway];
+out center;
+</code></pre>
+<p>What output format is needed? The lat/lon is the approximate centre point of linear ways.
+Would this be more useful (Click on the Data tab): </p>
+<pre><code>area[name=Hollingdean][landuse=residential]-&gt;.Suburb;
+way[highway](area.Suburb);
+out meta geom;
+way(pivot.Suburb);
+out geom;
+
+//Hollingdean
+//Hollingbury
+
+{{style: 
+way[highway] {color:green}
+}}
+</code></pre>
+<p>Also, check out the 'export' tools. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73813/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Mar '20, 15:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c9c8b421ad22f51ddd62f23413717036?s=32&amp;d=identicon&amp;r=g" alt="DaveF's gravatar image" />
+    <p><a href="/users/1532/davef">DaveF</a><br/>
+    <span class="score" title="3264 reputation points"><span class="">3.3k</span></span><span title="84 badges"><span class="badge1">&#9679;</span><span class="badgecount">84</span></span><span title="98 badges"><span class="silver">&#9679;</span><span class="badgecount">98</span></span><span title="133 badges"><span class="bronze">&#9679;</span><span class="badgecount">133</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DaveF has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73813">
+    
+        <a name="73815"></a>
+        <div class="comment" id="comment-73815">
+            <div id="post-73815-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for this Dave! </p>
+
+<p>The idea was to import it into a google spreadsheet in the following format:</p>
+
+<p>area    road name   Latitude    Longitude
+Hollingbury Bavant Road 50.8447577  -0.1484516</p>
+
+<p>ID isn't super essential. </p>
+
+<p>I need every road in the area - including ones on the border of the area, so I don't know whether I'd need to add any other search criteria or not? </p>
+
+<p>I added the foreach command as I was getting multiple outputs for each street, that seemed to limit it to one (aside from a limited number of cases). </p>
+
+<pre><code>[out:csv("name", ::id, ::lat, ::lon)];
+area[name=Hollingdean][landuse=residential]-&gt;.Suburb;
+way[highway](area.Suburb);
+out meta geom;
+way(pivot.Suburb);
+out geom;
+
+//Hollingdean
+//Hollingbury
+
+{{style: 
+way[highway] {color:green}
+}}
+</code></pre>
+
+<p>Excuse the cut and paste ninja work, I'm really new at this, and having a little difficulty getting my head around the code, despite having read the manual! </p>
+
+<p>This seems to work but I get this kind of output:</p>
+
+<pre><code>Lambourne Close 4748228 50.8447944  -0.1231223
+    4748229 50.8461658  -0.1205447
+    4748230 50.8439343  -0.1232559
+    4748231 50.8438419  -0.1229539
+    4748232 50.8441320  -0.1229460
+    etc
+</code></pre></div>
+            <div class="comment-info" id="comment-73815-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '20, 16:17)</span>
+                <a class="comment-user userinfo" href="/users/18100/jt196">jt196</a>
+                
+            </div>
+        </div>
+    
+        <a name="73816"></a>
+        <div class="comment" id="comment-73816">
+            <div id="post-73816-score" class="comment-score"></div>
+            <div class="comment-text"><p>Exporting data is great but I really need a way of casual folk being able to interact with the information, hence me extracting the data, then adding it to an online spreadsheet in order for folk to be able to edit. Importing that info into Gmaps is pretty straightforward after, even though I'd prefer not to use it.</p></div>
+            <div class="comment-info" id="comment-73816-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '20, 16:20)</span>
+                <a class="comment-user userinfo" href="/users/18100/jt196">jt196</a>
+                
+            </div>
+        </div>
+    
+        <a name="73819"></a>
+        <div class="comment" id="comment-73819">
+            <div id="post-73819-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ah, I made a slight mistake, where I said you didn't need 'name'.
+way(area)[highway][name]; &lt; this line returns all ways with a 'highway' tag that have a 'name' tag. This may be what you want, but it could include footways, tracks etc. Alternatively use way(area)[highway=residential]; which will restrict it to just residential roads. There is one without a name. if you know it please add it: <a href="https://www.openstreetmap.org/way/4747413">https://www.openstreetmap.org/way/4747413</a></p></div>
+            <div class="comment-info" id="comment-73819-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '20, 19:41)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+        <a name="73821"></a>
+        <div class="comment" id="comment-73821">
+            <div id="post-73821-score" class="comment-score"></div>
+            <div class="comment-text"><p>In your latest output what your seeing is one named way &amp; a few unnamed ways (probably footways). '4748229' are the IDs. Try this: <a href="https://overpass-turbo.eu/s/S1C.">https://overpass-turbo.eu/s/S1C.</a> I've removed the first line header (with 'false') &amp; added ";" so it returns comma separated data.</p></div>
+            <div class="comment-info" id="comment-73821-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '20, 19:56)</span>
+                <a class="comment-user userinfo" href="/users/1532/davef">DaveF</a>
+                
+            </div>
+        </div>
+    
+        <a name="73833"></a>
+        <div class="comment" id="comment-73833">
+            <div id="post-73833-score" class="comment-score"></div>
+            <div class="comment-text"><p>Dave I've added the street name (pulled from another source). </p>
+
+<p>Your link had a "." at the end so confused me for a bit. Looks like it's working fine and dandy now thanks very much!</p>
+
+<p>As I found before, when you change the search term (Hollingdean to Hollingbury), the Overpass API outputs nothing, then if you run one of the sample queries, then paste back in an updated query, it works again.</p></div>
+            <div class="comment-info" id="comment-73833-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Mar '20, 12:31)</span>
+                <a class="comment-user userinfo" href="/users/18100/jt196">jt196</a>
+                
+            </div>
+        </div>
+    
+        <a name="73857"></a>
+        <div class="comment not_top_scorer" id="comment-73857">
+            <div id="post-73857-score" class="comment-score"></div>
+            <div class="comment-text"><p>So, this was the working answer from Dave:</p>
+
+<pre><code>[out:csv("name", ::lat, ::lon; false; ",")];
+area[name=Hollingdean][landuse=residential];
+way[highway=residential](area);
+out geom;
+</code></pre></div>
+            <div class="comment-info" id="comment-73857-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Mar '20, 12:26)</span>
+                <a class="comment-user userinfo" href="/users/18100/jt196">jt196</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73813" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73813-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/73810/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='qHdqYnH9m6CJ7DKxFIRbXk0BGjd0Pequ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73810/successful-overpass-query-not-returning-results-on-one-term?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73810/successful-overpass-query-not-returning-results-on-one-term?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 28, 2020, 1:53 p.m.">28 Mar '20, 13:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,474 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 30, 2020, 12:26 p.m.">30 Mar '20, 12:26</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13299/bad-changes-for-odessa-city-ukraine">[closed] Bad changes for Odessa city (Ukraine)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api">How to find list of cities in a state with overpass osm api?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13877/how-to-find-cities-and-states-using-osm-overpass-api">How to find cities and states using OSM overpass API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15101/overpassapi-query-with-two-specific-keys-and-any-value">OverpassAPI query with two specific keys and any value</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17336/overpass-api-query-question">Overpass API query question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17365/overpass-is-it-possible-to-use-it-as-an-alternative-to-the-api-relation-full-call">Overpass:  Is it possible to use it as an alternative to the API relation /full call?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18368/export-all-boundaries-in-an-area-via-overpass">Export all boundaries in an area via overpass</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18524/advanced-overpass-query">Advanced overpass query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program">I want to use Main/Overpass API for retrieving data in c++ program.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12543/i-cant-get-odessa-ukraine-node-with-overpass-api">I can&#39;t get Odessa (Ukraine) node with overpass API</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

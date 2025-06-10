@@ -1,0 +1,963 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Private Tile Server not rendering - OSM Help</title>
+        <meta name="description" content="I searched other topics but didn&#39;t found a post that used this version of Ubuntu (18.04), so I think it would be a good idea to don&#39;t merge this with other topics, despite similar problem. I followed the tutorial available at https://switch2osm.org/manually-building-a-tile-server-18-04-lts/ to setup..." />
+        <meta name="keywords" content="rendering,mod_tile,osm,tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/71682/private-tile-server-not-rendering" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/71682/private-tile-server-not-rendering?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='1fAcn5EE03L0R9xX7uJrFLnZWx08Fsoq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/71682/private-tile-server-not-rendering">Private Tile Server not rendering</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-71682-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/71682/up/" rel="nofollow"> </a>
+<div id="post-71682-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-71682-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/71682/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/71682/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I searched other topics but didn't found a post that used this version of Ubuntu (18.04), so I think it would be a good idea to don't merge this with other topics, despite similar problem.</p>
+<p>I followed the tutorial available at <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/manually-building-a-tile-server-18-04-lts/</a> to setup my own tile server.
+I'm building the server in my computer and everything went fine. The <a href="http://localhost/hot/0/0/0.png">http://localhost/hot/0/0/0.png</a> showed the world map correctly, but <a href="http://localhost/hot/1/0/0.png">http://localhost/hot/1/0/0.png</a> gives Not Found error.</p>
+<p>In the last step, where I should view the tiles, they aren't shown, but for some reason, when I put the zoom lv 0 it shows the map.</p>
+<p>I'm opening the "sample_leaflet.html" file inside folder /src/mod_tile/extra/ using Firefox Browser.</p>
+<p>Thanks in advance. Please ask me to post any other useful info that would help to debug this problem.</p>
+<p><img src="https://i.imgur.com/o9T3yGZ.png" width="800"></p>
+<p><img src="https://i.imgur.com/ct5klJC.png" width="800"></p>
+<p>UPDATE #1: </p>
+<p>The Browser Console shows the following errors.</p>
+<p><img src="https://i.imgur.com/vabUeYR.png" width="800"></p>
+<p>This is my leaflet file</p>
+<p><img src="https://i.imgur.com/JXVUMzX.png" width="800"></p>
+<p><code>systemctl status renderd</code> give the following:</p>
+<p><img src="https://i.imgur.com/wkS9JA6.png" width="800"></p>
+<p>This is the result from <code>tail -f /var/log/syslog | grep " TILE "</code></p>
+<p><img src="https://i.imgur.com/IbnLrrt.png" width="800"></p>
+<p>UPDATE #3: I checked folder "/var/lib/mod_tile/ajt/", where its supposed to store the tiles and it is occupying a total of 60.9 Kb, so clearly the tiles aren't being stored there.</p>
+<p><img src="https://i.imgur.com/DEFQBB8.png" width="800"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/mod_tile/" class="post-tag tag-link-mod_tile"
+                                        title="see questions tagged 'mod_tile'" rel="tag">mod_tile</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Nov '19, 01:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5f1f061e7e81f0e885227d27d95752f6?s=32&amp;d=identicon&amp;r=g" alt="carlosguedes's gravatar image" />
+    <p><a href="/users/16880/carlosguedes">carlosguedes</a><br/>
+    <span class="score" title="91 reputation points">91</span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="carlosguedes has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/71682/">
+                edited
+                <strong>19 Nov '19, 16:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-71682">
+    
+</div>
+<div id="comment-tools-71682" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-71682-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/71682/private-tile-server-not-rendering?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/71682/private-tile-server-not-rendering?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/71682/private-tile-server-not-rendering?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/71682/private-tile-server-not-rendering?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="71728"></a>
+                    <div id="answer-container-71728" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-71728-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/71728/up/" rel="nofollow"> </a>
+<div id="post-71728-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-71728-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/71728/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="carlosguedes has selected this answer as the correct answer"
+        href="/accept_answer/71728/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You have a "failed to write metafile to file" error, so you need to check:</p>
+<ul>
+<li>What account you are running the command that is trying to write to that directory</li>
+<li>What access rights are needed to write to that directory.</li>
+</ul>
+<p>Here's what it looks like on a server of mine:</p>
+<pre><code>renderaccount@myserver:~$ cd /var/lib/mod_tile/ajt
+renderaccount@myserver:/var/lib/mod_tile/ajt$ ls -ald .
+drwxrwxr-x 27 renderaccount renderaccount 4096 Oct 23  2018 .
+renderaccount@myserver:/var/lib/mod_tile/ajt$
+</code></pre>
+<p>The process that renders tiles runs as a user called "renderaccount" and that account has write access to that directory.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/71728/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Nov '19, 15:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/71728/">
+                edited
+                <strong>19 Nov '19, 15:08</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-71728">
+    
+        <a name="71736"></a>
+        <div class="comment" id="comment-71736">
+            <div id="post-71736-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm logging in OS using my root account, but in Terminal I do <code>su renderaccount</code> to run commands as the user renderaccount, is that correct?</p>
+
+<p>I did the following commands:</p>
+
+<p>sudo chown renderaccount /var/lib/mod_tile/</p>
+
+<p>sudo chmod u+w /var/lib/mod_tile/</p>
+
+<p>Isn't that enough to give write permisions for renderaccount?</p></div>
+            <div class="comment-info" id="comment-71736-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '19, 16:08)</span>
+                <a class="comment-user userinfo" href="/users/16880/carlosguedes">carlosguedes</a>
+                
+            </div>
+        </div>
+    
+        <a name="71739"></a>
+        <div class="comment" id="comment-71739">
+            <div id="post-71739-score" class="comment-score"></div>
+            <div class="comment-text"><p>Now it worked! But I don't know exactly what solved it, because I did 2 things.</p>
+
+<p>1) I did the chown command with : after the username, like this sudo chown renderaccount: /var/lib/mod_tile/ but I don't know if the : is needed (the switch2osm tutorial dont use it)</p>
+
+<p>2) I did chown and chmod commands both in /var/lib/mod_tile/  and /var/lib/mod_tile/ajt/ but I'm not sure if an user having permision to write in a folder is enough to write in its subfolder.</p></div>
+            <div class="comment-info" id="comment-71739-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '19, 16:43)</span>
+                <a class="comment-user userinfo" href="/users/16880/carlosguedes">carlosguedes</a>
+                
+            </div>
+        </div>
+    
+        <a name="71740"></a>
+        <div class="comment" id="comment-71740">
+            <div id="post-71740-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Looking at the "drwxrwxr-x" in my comment above, the first "rwx" means that the owner of the directory has the right to read files, write files and cd into that directory.  The owner of the directory is "renderaccount".  The second "rwx" means that anyone in the group "renderaccount" can read, write, and enter into that directory.  The "r-x" at the end means that everyone else can read that directory and cd into it but not write files there.</p>
+
+<p>The level of detail in the "switch2osm" guide is a compromise - it tries to assume no prior knowledge so that if you follow the instructions you'll get something working at the other end, but it doesn't go into so much detail about the various Unix concepts that you encounter on the way through.  If it did it'd be an awful lot longer, and all of that stuff is available elsewhere.</p></div>
+            <div class="comment-info" id="comment-71740-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '19, 16:57)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-71728" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-71728-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="71684"></a>
+                    <div id="answer-container-71684" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-71684-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/71684/up/" rel="nofollow"> </a>
+<div id="post-71684-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-71684-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/71684/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>First of all:</p>
+<p>have you prerendered any tiles? Those metatiles on e.g. on zoom 6 can take up to 2 CPU-Hours to render for the first time, but you should at least see renderd showing up in the syslog, so there is sth. else not working between leaflet and your apache/renderd toolchain.</p>
+<p>Do you see any errors in the js console of the firefox developer tab?</p>
+<p>And please use grep renderd on your syslog to watch renderds work, not grep " TILE ".</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/71684/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Nov '19, 09:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e06ed329df6032df14b5639de4d64782?s=32&amp;d=identicon&amp;r=g" alt="Spiekerooger's gravatar image" />
+    <p><a href="/users/17439/spiekerooger">Spiekerooger</a><br/>
+    <span class="score" title="3148 reputation points"><span class="">3.1k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Spiekerooger has 18 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/71684/">
+                edited
+                <strong>17 Nov '19, 14:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-71684">
+    
+        <a name="71687"></a>
+        <div class="comment" id="comment-71687">
+            <div id="post-71687-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's my first time rendering tiles.
+I left my laptop on for all night long to check if its rendering but nothing appeared.
+Its specs are 16 GB RAM, i7-8550U, MX150 2 GB and all running in SSD, should it take that long?
+Geofabrik don't have OSM data of smaller parts of Brazil, like states or cities, that's why I used the whole country.
+I updated my question with the screenshot of the Browser Console, is that the right console?
+I did grep renderd also but didn't got any message.</p></div>
+            <div class="comment-info" id="comment-71687-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Nov '19, 16:33)</span>
+                <a class="comment-user userinfo" href="/users/16880/carlosguedes">carlosguedes</a>
+                
+            </div>
+        </div>
+    
+        <a name="71706"></a>
+        <div class="comment" id="comment-71706">
+            <div id="post-71706-score" class="comment-score"></div>
+            <div class="comment-text"><p>After reinstalling everything with the right account now it shows the tile messages in console, despite now showing the tiles itself. I updated my question.</p></div>
+            <div class="comment-info" id="comment-71706-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '19, 02:48)</span>
+                <a class="comment-user userinfo" href="/users/16880/carlosguedes">carlosguedes</a>
+                
+            </div>
+        </div>
+    
+        <a name="71708"></a>
+        <div class="comment" id="comment-71708">
+            <div id="post-71708-score" class="comment-score"></div>
+            <div class="comment-text"><p>So it does look as if you don't have permission to write the metatiles into the file structure. Check the owner and rights or your ajt directory in a terminal and check renderd.conf settings for the internal tile path.</p></div>
+            <div class="comment-info" id="comment-71708-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '19, 05:42)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="71727"></a>
+        <div class="comment" id="comment-71727">
+            <div id="post-71727-score" class="comment-score"></div>
+            <div class="comment-text"><p>Correcting my last comment: After reinstalling everything with the right account now it shows the tile messages in console, despite not showing the tiles itself. I updated my question.</p></div>
+            <div class="comment-info" id="comment-71727-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '19, 15:00)</span>
+                <a class="comment-user userinfo" href="/users/16880/carlosguedes">carlosguedes</a>
+                
+            </div>
+        </div>
+    
+        <a name="71729"></a>
+        <div class="comment" id="comment-71729">
+            <div id="post-71729-score" class="comment-score"></div>
+            <div class="comment-text"><p>But you syslog tells us that renderd is not able to write the metatiles to a file. Sou check (e.g. via top) the linux user that is running renderd and than check file permissions at the ajt directory.</p></div>
+            <div class="comment-info" id="comment-71729-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '19, 15:09)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="71738"></a>
+        <div class="comment not_top_scorer" id="comment-71738">
+            <div id="post-71738-score" class="comment-score"></div>
+            <div class="comment-text"><p>the command top -U renderaccount shows that renderaccount is indeed running renderd.</p></div>
+            <div class="comment-info" id="comment-71738-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '19, 16:24)</span>
+                <a class="comment-user userinfo" href="/users/16880/carlosguedes">carlosguedes</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-71684" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-71684-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/71682/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='1fAcn5EE03L0R9xX7uJrFLnZWx08Fsoq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/71682/private-tile-server-not-rendering?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/71682/private-tile-server-not-rendering?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/mod_tile/"
+            class="tag-link-mod_tile"
+            title="see questions tagged'mod_tile'using tags"
+            rel="tag">mod_tile</a> <span class="tag-number">&#215;80</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 17, 2019, 1:45 a.m.">17 Nov '19, 01:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,346 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 19, 2019, 4:57 p.m.">19 Nov '19, 16:57</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/18237/map-not-updating-to-changes-made">map not updating to changes made</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43219/switch2osm-on-ubuntu-1404-map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty">Switch2osm on Ubuntu 14:04: Map not displayed in the browser and mod_tile folder is empty.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21801/tile-server-not-displaying-tiles">tile server not displaying tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17474/tirex-prefetching-of-next-zoom-level">Tirex: Prefetching of next zoom level</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20286/mod_tile-build-on-rhel5">mod_tile build on RHEL5</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20925/how-to-render-plain-bus-routes">How to render plain bus routes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10572/exporting-indoor-map-from-openstreetmap">Exporting Indoor map from openstreetmap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8316/combining-coastlines-for-rendering">Combining coastlines for rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15822/is-there-a-way-to-render-tiles-from-pbf">Is there a way to render tiles from PBF</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14374/osm-maps-look-truncated-near-the-last-tile-near-new-zealand-and-fiji">OSM maps look truncated near the last tile near New Zealand and Fiji</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

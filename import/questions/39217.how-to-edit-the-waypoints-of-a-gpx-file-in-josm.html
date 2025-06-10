@@ -1,0 +1,966 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to edit the waypoints of a gpx file in JOSM? - OSM Help</title>
+        <meta name="description" content="When I open a gpx file into JOSM, I can edit its track by converting the gpx layer into a new OSM data layer. But, I find that all waypoints in the gpx file can not be converted to a new OSM data layer so that I can not edit any waypoint. And, the waypoint in the gpx file does show on the screen. I ..." />
+        <meta name="keywords" content="josm,gpx,waypoints" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/39217/how-to-edit-the-waypoints-of-a-gpx-file-in-josm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/39217/how-to-edit-the-waypoints-of-a-gpx-file-in-josm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='VJqX8ijipNzorNOHAVhZERDLbzzsvX5L' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/39217/how-to-edit-the-waypoints-of-a-gpx-file-in-josm">How to edit the waypoints of a gpx file in JOSM?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-39217-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39217/up/" rel="nofollow"> </a>
+<div id="post-39217-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-39217-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39217/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/39217/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When I open a gpx file into JOSM, I can edit its track by converting the gpx layer into a new OSM data layer. But, I find that all waypoints in the gpx file can not be converted to a new OSM data layer so that I can not edit any waypoint. And, the waypoint in the gpx file does show on the screen. I can not edit it although I see it. Can anyone help me to solve this problem? Thank you very much.    </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/gpx/" class="post-tag tag-link-gpx"
+                                        title="see questions tagged 'gpx'" rel="tag">gpx</a>
+                                
+                                    <a href="/tags/waypoints/" class="post-tag tag-link-waypoints"
+                                        title="see questions tagged 'waypoints'" rel="tag">waypoints</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Dec '14, 14:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b9733047694b7d65f03c152e0b487e7e?s=32&amp;d=identicon&amp;r=g" alt="delicadiesel's gravatar image" />
+    <p><a href="/users/10134/delicadiesel">delicadiesel</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="delicadiesel has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/39217/">
+                edited
+                <strong>11 Dec '14, 15:04</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-39217">
+    
+        <a name="39218"></a>
+        <div class="comment" id="comment-39218">
+            <div id="post-39218-score" class="comment-score"></div>
+            <div class="comment-text"><p>(this might not be the answer that you're looking for but) you can just edit a .gpx file in a text editor - whether that's useful or not rather depends on what you're trying to do, of course.</p></div>
+            <div class="comment-info" id="comment-39218-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '14, 15:13)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="39219"></a>
+        <div class="comment" id="comment-39219">
+            <div id="post-39219-score" class="comment-score"></div>
+            <div class="comment-text"><p>just in case you want to edit gpx waypoints without wanting to use them for further editing and contribution to OSM, or without necessarily using JOSM: see <a href="//wiki.openstreetmap.org/wiki/Edit_GPS_tracks#Options">other tools</a>.</p></div>
+            <div class="comment-info" id="comment-39219-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '14, 15:13)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="39220"></a>
+        <div class="comment" id="comment-39220">
+            <div id="post-39220-score" class="comment-score">3</div>
+            <div class="comment-text"><p>I must explain it. I want to edit my gpx file in JOSM because JOSM can show many layers of maps. And, JOSM also can change the transparency of any map immediately by adjusting one tool up or down. I can use those maps to help me proofreading. After proofreading my tracks and waypoints, I am confident of uploading it to OSM. I hope an answer to make it. Thank everybody again.</p></div>
+            <div class="comment-info" id="comment-39220-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '14, 15:41)</span>
+                <a class="comment-user userinfo" href="/users/10134/delicadiesel">delicadiesel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39217" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39217-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/39217/how-to-edit-the-waypoints-of-a-gpx-file-in-josm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/39217/how-to-edit-the-waypoints-of-a-gpx-file-in-josm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/39217/how-to-edit-the-waypoints-of-a-gpx-file-in-josm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/39217/how-to-edit-the-waypoints-of-a-gpx-file-in-josm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="39260"></a>
+                    <div id="answer-container-39260" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-39260-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39260/up/" rel="nofollow"> </a>
+<div id="post-39260-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-39260-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39260/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think I find the answer from this....<a href="http://forum.openstreetmap.org/viewtopic.php?pid=180263">http://forum.openstreetmap.org/viewtopic.php?pid=180263</a>
+By using GPSBabel, we can convert a gpx file to another osm one. And, we must correct the content of this osm file after. Especially, it is must "....osm version='0.6'...." in the osm file. But, all is troublesome. So, I will suggest JOSM developers to let gpx waypoints put on a data layer to edit.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/39260/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Dec '14, 14:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b9733047694b7d65f03c152e0b487e7e?s=32&amp;d=identicon&amp;r=g" alt="delicadiesel's gravatar image" />
+    <p><a href="/users/10134/delicadiesel">delicadiesel</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="delicadiesel has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-39260">
+    
+        <a name="39267"></a>
+        <div class="comment" id="comment-39267">
+            <div id="post-39267-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The gpxedit plugin for JOSM will allow you to delete individual gpx data points if that is any help.</p></div>
+            <div class="comment-info" id="comment-39267-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '14, 18:09)</span>
+                <a class="comment-user userinfo" href="/users/3973/dud1">dud1</a>
+                
+            </div>
+        </div>
+    
+        <a name="39269"></a>
+        <div class="comment" id="comment-39269">
+            <div id="post-39269-score" class="comment-score"></div>
+            <div class="comment-text"><p>But it won't keep waypoints as far as I know, because loading a GPX file in JOSM will create individual layers for tracks and waypoints.</p></div>
+            <div class="comment-info" id="comment-39269-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '14, 22:31)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39260" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39260-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="50890"></a>
+                    <div id="answer-container-50890" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50890-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50890/up/" rel="nofollow"> </a>
+<div id="post-50890-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-50890-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50890/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The easiest way is like in this answer: <a href="http://help.openstreetmap.org/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node/47188">http://help.openstreetmap.org/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node/47188</a></p>
+<p>I’ll quote it:</p>
+<ol>
+<li>Open the gpx file</li>
+<li>Right-click on the gpx layer, select "convert to data layer"</li>
+<li>Switch to editing this layer instead of the osm data layer</li>
+<li>Select waypoint(s), Edit them</li>
+</ol>
+<p>Maybe that wasn’t possible when you wrote your question (two years ago).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50890/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Jul '16, 13:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/793c9f0cfb9f3cc6001d73f127644c67?s=32&amp;d=identicon&amp;r=g" alt="erik's gravatar image" />
+    <p><a href="/users/5517/erik">erik</a><br/>
+    <span class="score" title="558 reputation points">558</span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="34 badges"><span class="bronze">&#9679;</span><span class="badgecount">34</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="erik has one accepted answer">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/50890/">
+                edited
+                <strong>13 Jul '16, 13:46</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50890">
+    
+        <a name="62898"></a>
+        <div class="comment" id="comment-62898">
+            <div id="post-62898-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm stuck at Step 3: After opening a GPX file, how do I "pull it" so it goes through a different route? At this point, the route is shown in yellow after converting it to a data layer : <a href="https://preview.ibb.co/e7E0ux/53005_C91_3_A6_E_4_F1_C_866_B_F6_B42_E8_D47_B3.png">https://preview.ibb.co/e7E0ux/53005_C91_3_A6_E_4_F1_C_866_B_F6_B42_E8_D47_B3.png</a></p></div>
+            <div class="comment-info" id="comment-62898-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Apr '18, 11:26)</span>
+                <a class="comment-user userinfo" href="/users/3711/shohreh">Shohreh</a>
+                
+            </div>
+        </div>
+    
+        <a name="62900"></a>
+        <div class="comment" id="comment-62900">
+            <div id="post-62900-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can't "pull" it to go a different route. JOSM is not a routing engine. You have to move every node yourself.</p></div>
+            <div class="comment-info" id="comment-62900-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Apr '18, 12:15)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="62901"></a>
+        <div class="comment" id="comment-62901">
+            <div id="post-62901-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the confirmation.</p></div>
+            <div class="comment-info" id="comment-62901-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Apr '18, 14:28)</span>
+                <a class="comment-user userinfo" href="/users/3711/shohreh">Shohreh</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50890" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50890-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="62915"></a>
+                    <div id="answer-container-62915" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-62915-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/62915/up/" rel="nofollow"> </a>
+<div id="post-62915-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-62915-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/62915/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If I'm stuck without anything else available I'd just edit the GPX file with a text editor...</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/62915/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Apr '18, 23:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-62915">
+    
+</div>
+<div id="comment-tools-62915" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-62915-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/39217/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='VJqX8ijipNzorNOHAVhZERDLbzzsvX5L' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39217/how-to-edit-the-waypoints-of-a-gpx-file-in-josm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39217/how-to-edit-the-waypoints-of-a-gpx-file-in-josm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/gpx/"
+            class="tag-link-gpx"
+            title="see questions tagged'gpx'using tags"
+            rel="tag">gpx</a> <span class="tag-number">&#215;255</span><br/>
+        
+        <a href="/tags/waypoints/"
+            class="tag-link-waypoints"
+            title="see questions tagged'waypoints'using tags"
+            rel="tag">waypoints</a> <span class="tag-number">&#215;35</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 11, 2014, 2:59 p.m.">11 Dec '14, 14:59</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,327 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 4, 2018, 11:15 p.m.">04 Apr '18, 23:15</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/17739/how-do-i-see-gpx-waypoints-in-josm">How do I see GPX waypoints in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">JOSM - Is it possible to convert an individual waypoint in a GPX file to a node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51125/josm-displaying-waypoints-labels-with-local-gpx-files-only">JOSM displaying waypoints labels with local GPX files only?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37093/josm-gpx-not-displaying-waypoints">JOSM: gpx not displaying waypoints</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details">In JOSM is it possible to see GPX track waypoint details?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7618/josm-is-it-possible-to-move-gpx-waypoints-out-of-the-way-to-see-what-might-be-underneath">JOSM - Is it possible to move GPX waypoints out of the way to see what might be underneath?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1503/how-to-download-map-data-along-a-gpx-track-in-josm">How to download map data along a gpx track? (In Josm)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1159/how-to-uploading-a-waypoint-in-gpx">How to uploading a Waypoint in gpx</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1477/identifying-individual-gpx-tracks-from-the-downloaded-gpx-tracks-in-josm">Identifying individual gpx tracks from the downloaded gpx tracks in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/999/how-to-extract-elevation-information-from-tracks-in-josm">How to extract elevation information from tracks in JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

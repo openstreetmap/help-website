@@ -1,0 +1,929 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to add yahoo imagery to my potlatch editor - OSM Help</title>
+        <meta name="description" content="Hi there, I happpen to notice yahoo images has a higher resolution of the area I wish to edit than the other options like Bing etc.. How would i add the url to the list of background images I would like to use? I cant seem to get whatever i put in the list to do anything. Im just a beginner with thi..." />
+        <meta name="keywords" content="potlatch2,satellie,yahoo,imagery" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/13395/how-to-add-yahoo-imagery-to-my-potlatch-editor" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/13395/how-to-add-yahoo-imagery-to-my-potlatch-editor?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ktI9hq6x55aUzsJBNp7oADoDg9gzLq34' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/13395/how-to-add-yahoo-imagery-to-my-potlatch-editor">How to add yahoo imagery to my potlatch editor</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-13395-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13395/up/" rel="nofollow"> </a>
+<div id="post-13395-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-13395-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13395/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/13395/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi there, I happpen to notice yahoo images has a higher resolution of the area I wish to edit than the other options like Bing etc.. How would i add the url to the list of background images I would like to use? I cant seem to get whatever i put in the list to do anything.</p>
+<p>Im just a beginner with this. I cant seem to find any tutorials that specifically show how to add yahoo maps to my list of background options. thanks for any help in advance
+Michael</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/potlatch2/" class="post-tag tag-link-potlatch2"
+                                        title="see questions tagged 'potlatch2'" rel="tag">potlatch2</a>
+                                
+                                    <a href="/tags/satellie/" class="post-tag tag-link-satellie"
+                                        title="see questions tagged 'satellie'" rel="tag">satellie</a>
+                                
+                                    <a href="/tags/yahoo/" class="post-tag tag-link-yahoo"
+                                        title="see questions tagged 'yahoo'" rel="tag">yahoo</a>
+                                
+                                    <a href="/tags/imagery/" class="post-tag tag-link-imagery"
+                                        title="see questions tagged 'imagery'" rel="tag">imagery</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Jun '12, 04:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66001846f0632f073fa821d84341d7cf?s=32&amp;d=identicon&amp;r=g" alt="Azzitizz's gravatar image" />
+    <p><a href="/users/3805/azzitizz">Azzitizz</a><br/>
+    <span class="score" title="445 reputation points">445</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="18 badges"><span class="bronze">&#9679;</span><span class="badgecount">18</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Azzitizz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-13395">
+    
+        <a name="13398"></a>
+        <div class="comment" id="comment-13398">
+            <div id="post-13398-score" class="comment-score">2</div>
+            <div class="comment-text"><p>It yould be helpful if you could state which geographic area you are intending to work on.</p></div>
+            <div class="comment-info" id="comment-13398-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jun '12, 07:54)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13441"></a>
+        <div class="comment" id="comment-13441">
+            <div id="post-13441-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I see, Thanks. But from reading the Wiki page quoted by others: <a href="http://wiki.openstreetmap.org/wiki/Yahoo">http://wiki.openstreetmap.org/wiki/Yahoo</a> It sounds as if yahoo doesnt prohibit the use of their satellite imagery in order to trace roads etc...</p>
+
+<p>I see no mention of it being out of their terms of use. In fact the wiki appears to be saying the opposite that its OK to do it but Yahoo hasnt given specific permission but its within their user agreement.  Maybe Im reading it wrong.</p>
+
+<p>But it seems the question may be answered as well about how to add other sources into the menu bar for backgrounds. So sounds like its not even possible with yahoo. Im working in the area of Montebello Quebec Canada. the raod I live on Cote Azelie is not even yet traced on open street map and I would like to do it as my first prohect. But I see that there is no areal immagery available (including Bing) with a high enough resolution to do a basic trace. Yahoo seems to have by far the best resolution out of them all for this particular region. </p>
+
+<p>Any Ideas how I can acheive a decent trace without using a GPS? </p>
+
+<p>Thanks again
+Michael</p></div>
+            <div class="comment-info" id="comment-13441-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '12, 01:25)</span>
+                <a class="comment-user userinfo" href="/users/3805/azzitizz">Azzitizz</a>
+                
+            </div>
+        </div>
+    
+        <a name="13450"></a>
+        <div class="comment" id="comment-13450">
+            <div id="post-13450-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The "how can I contribute without GPS or imagery" is a good separate question, so I've asked that <a href="http://help.openstreetmap.org/questions/13449/if-i-live-somewhere-with-no-background-imagery-and-have-no-gps-device-whats-the-best-way-that-i-can-contribute">here</a>.</p></div>
+            <div class="comment-info" id="comment-13450-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '12, 09:14)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13452"></a>
+        <div class="comment" id="comment-13452">
+            <div id="post-13452-score" class="comment-score">4</div>
+            <div class="comment-text"><p>The OSM wiki tends to suffer from a lot of wordiness when a short simple statement would be better. </p>
+
+<p>In this case we got fuzzy permission to trace from the imagery Yahoo previously offered. We have NO such permission for the new offerings.</p>
+
+<p>In general we assume that a data source is not usable for OSM except for clear cut cases (clearly PD data for example) or where we have received explicit permission.</p></div>
+            <div class="comment-info" id="comment-13452-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '12, 10:02)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13395" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13395-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/13395/how-to-add-yahoo-imagery-to-my-potlatch-editor?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/13395/how-to-add-yahoo-imagery-to-my-potlatch-editor?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/13395/how-to-add-yahoo-imagery-to-my-potlatch-editor?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/13395/how-to-add-yahoo-imagery-to-my-potlatch-editor?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="13397"></a>
+                    <div id="answer-container-13397" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13397-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13397/up/" rel="nofollow"> </a>
+<div id="post-13397-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-13397-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13397/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Have a look at the answers to <a href="http://help.openstreetmap.org/questions/10128/why-has-yahoo-aerial-photography-disapeared">this</a> question that explain why Yahoo imagery is no longer available.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13397/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Jun '12, 07:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13397">
+    
+</div>
+<div id="comment-tools-13397" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13397-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="13396"></a>
+                    <div id="answer-container-13396" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13396-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13396/up/" rel="nofollow"> </a>
+<div id="post-13396-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-13396-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13396/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is likely to be new imagery from Yahoo for which we probably do not have permission to use at this point in time. </p>
+<p>To answer your question (if you have imagery that we can actually use): it is possible to add further imagery sources in Potlatch 2 via the menus Background -&gt; Edit -&gt; Add. The format of the entry in the list depends on the imagery provider. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13396/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Jun '12, 07:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/13396/">
+                edited
+                <strong>12 Jun '12, 08:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13396">
+    
+        <a name="13413"></a>
+        <div class="comment" id="comment-13413">
+            <div id="post-13413-score" class="comment-score"></div>
+            <div class="comment-text"><p>Note that Yahoo requires that access is via their API. Support for the Yahoo API has recently been removed from Potlatch 2. Therefore even if we had legal permission, there wouldn't be any way to add the imagery to P2.</p></div>
+            <div class="comment-info" id="comment-13413-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jun '12, 18:22)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13470"></a>
+        <div class="comment" id="comment-13470">
+            <div id="post-13470-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK thank, I think I can get a hold of a few sources of maps developed by the government , scan them and use them. From others experience, is it usually OK to use government issued maps (like maps from land surveys and other departments..) </p>
+
+<p>Ill make an inquiry myself but if I see the trend is that its OK ill at least get started in searching for the maps and scanning etc...) I never thought of that. Ill have to make sure I get the orientation of the map spot on while scanning... </p>
+
+<p>Im sure theres some tools to adjust the placement of a map in the background in order to line it up with existing data..</p></div>
+            <div class="comment-info" id="comment-13470-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '12, 16:36)</span>
+                <a class="comment-user userinfo" href="/users/3805/azzitizz">Azzitizz</a>
+                
+            </div>
+        </div>
+    
+        <a name="13471"></a>
+        <div class="comment" id="comment-13471">
+            <div id="post-13471-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Please make sure that your government data is compatible with our terms, for most countries this is not the case!</p></div>
+            <div class="comment-info" id="comment-13471-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '12, 17:02)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13473"></a>
+        <div class="comment" id="comment-13473">
+            <div id="post-13473-score" class="comment-score"></div>
+            <div class="comment-text"><p>I just checked and the government terms of use is that as long as the data is not being used for commercial purposes its public domain and I specified the use of tracing maps onto a publicly shared and viewed online map (OSM) and this was OK. </p>
+
+<p>This is great because looking a little deeper I see there is a plethora of government available data with different land images and maps...</p></div>
+            <div class="comment-info" id="comment-13473-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '12, 18:36)</span>
+                <a class="comment-user userinfo" href="/users/3805/azzitizz">Azzitizz</a>
+                
+            </div>
+        </div>
+    
+        <a name="13474"></a>
+        <div class="comment" id="comment-13474">
+            <div id="post-13474-score" class="comment-score"></div>
+            <div class="comment-text"><p>Either it is Public Domain or it isn't. In any case both the current and future OSM licence explicitly allows commercial usage and a lot of such use exists. In other words the imagery you are considering for use can not be used for OSM, at least not without further clarification.</p>
+
+<p>Further, OSM is NOT a "publicly shared and viewed online map". While there is a map presented on the main page mainly for marketing and practical reasons, OSM is a database of geoinformation that has many uses beyond the map shown on the www.openstreetmap.org.</p></div>
+            <div class="comment-info" id="comment-13474-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '12, 18:46)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13475"></a>
+        <div class="comment not_top_scorer" id="comment-13475">
+            <div id="post-13475-score" class="comment-score"></div>
+            <div class="comment-text"><p>Your right, I wasnt clear enough. I just asked again and what is clear is that all the geodata from the gov.of Canada can be used in any way, including commercial use, with the only condition that one indicates the source. (which is already a practice on OSM it seems)</p></div>
+            <div class="comment-info" id="comment-13475-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '12, 19:03)</span>
+                <a class="comment-user userinfo" href="/users/3805/azzitizz">Azzitizz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13396" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13396-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/13395/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ktI9hq6x55aUzsJBNp7oADoDg9gzLq34' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13395/how-to-add-yahoo-imagery-to-my-potlatch-editor?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13395/how-to-add-yahoo-imagery-to-my-potlatch-editor?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/potlatch2/"
+            class="tag-link-potlatch2"
+            title="see questions tagged'potlatch2'using tags"
+            rel="tag">potlatch2</a> <span class="tag-number">&#215;210</span><br/>
+        
+        <a href="/tags/imagery/"
+            class="tag-link-imagery"
+            title="see questions tagged'imagery'using tags"
+            rel="tag">imagery</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/yahoo/"
+            class="tag-link-yahoo"
+            title="see questions tagged'yahoo'using tags"
+            rel="tag">yahoo</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/satellie/"
+            class="tag-link-satellie"
+            title="see questions tagged'satellie'using tags"
+            rel="tag">satellie</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 10, 2012, 4:32 a.m.">10 Jun '12, 04:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,485 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 12, 2012, 7:03 p.m.">12 Jun '12, 19:03</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/12256/why-does-background-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level-in-potlatch2">Why does background imagery (such as Bing) only display up to a certain zoom level in Potlatch2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6632/bing-imagery-comes-yahoo-goes-what-about-ovi">Bing imagery comes, Yahoo goes, what about Ovi?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57313/make-new-wms-background-for-potlatch2">Make new wms background for Potlatch2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63883/potlatch-2-background-image-list-is-blank">Potlatch 2 background image list is blank</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1689/adjusting-permamently-aerial-backgrounds-in-potlatch-2">Adjusting PERMAMENTLY aerial backgrounds in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1740/where-can-i-see-the-history-of-a-way-node-in-potlatch-2">Where can I see the history of a way / node in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1702/how-old-are-the-bing-images">How old are the Bing images?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2159/how-do-i-turn-off-default-background-map-imagery-in-potlatch-2">How do I turn off default background map imagery in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1695/potlatch-2-error-on-upload">Potlatch 2 Error on upload</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2040/red-error-tiles-in-josm">Red error tiles in JOSM</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

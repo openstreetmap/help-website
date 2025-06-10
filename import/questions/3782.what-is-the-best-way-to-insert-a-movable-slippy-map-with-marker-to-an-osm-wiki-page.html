@@ -1,0 +1,702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>what is the best way to insert a (movable) slippy map with marker to an OSM-wiki page? - OSM Help</title>
+        <meta name="description" content="What is the best way to insert a (movable) slippy map with marker to an OSM-wiki page?" />
+        <meta name="keywords" content="marker,mediawiki,osm,extension,slippymap" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/3782/what-is-the-best-way-to-insert-a-movable-slippy-map-with-marker-to-an-osm-wiki-page" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/3782/what-is-the-best-way-to-insert-a-movable-slippy-map-with-marker-to-an-osm-wiki-page?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gYeVUnQxyW5VCz4SqqETpOcQzoMJfKLy' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/3782/what-is-the-best-way-to-insert-a-movable-slippy-map-with-marker-to-an-osm-wiki-page">what is the best way to insert a (movable) slippy map with marker to an OSM-wiki page?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-3782-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3782/up/" rel="nofollow"> </a>
+<div id="post-3782-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-3782-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3782/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/3782/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>What is the best way to insert a (movable) slippy map with marker to an OSM-wiki page?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/marker/" class="post-tag tag-link-marker"
+                                        title="see questions tagged 'marker'" rel="tag">marker</a>
+                                
+                                    <a href="/tags/mediawiki/" class="post-tag tag-link-mediawiki"
+                                        title="see questions tagged 'mediawiki'" rel="tag">mediawiki</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/extension/" class="post-tag tag-link-extension"
+                                        title="see questions tagged 'extension'" rel="tag">extension</a>
+                                
+                                    <a href="/tags/slippymap/" class="post-tag tag-link-slippymap"
+                                        title="see questions tagged 'slippymap'" rel="tag">slippymap</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Mar '11, 19:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f09c0b7a655fed386e070e036e2da248?s=32&amp;d=identicon&amp;r=g" alt="dieterdreist's gravatar image" />
+    <p><a href="/users/936/dieterdreist">dieterdreist</a><br/>
+    <span class="score" title="3677 reputation points"><span class="">3.7k</span></span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="67 badges"><span class="bronze">&#9679;</span><span class="badgecount">67</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dieterdreist has 4 accepted answers">3&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3782/">
+                edited
+                <strong>14 Mar '11, 05:52</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bc6d0b055d631830f7891d3f89edb66b?s=32&amp;d=identicon&amp;r=g" alt="katpatuka's gravatar image" />
+            <p><a href="/users/32/katpatuka">katpatuka</a><br/>
+            <span class="score" title="1041 reputation points"><span class="">1.0k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="26 badges"><span class="silver">&#9679;</span><span class="badgecount">26</span></span><span title="36 badges"><span class="bronze">&#9679;</span><span class="badgecount">36</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-3782">
+    
+</div>
+<div id="comment-tools-3782" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3782-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/3782/what-is-the-best-way-to-insert-a-movable-slippy-map-with-marker-to-an-osm-wiki-page?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/3782/what-is-the-best-way-to-insert-a-movable-slippy-map-with-marker-to-an-osm-wiki-page?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/3782/what-is-the-best-way-to-insert-a-movable-slippy-map-with-marker-to-an-osm-wiki-page?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/3782/what-is-the-best-way-to-insert-a-movable-slippy-map-with-marker-to-an-osm-wiki-page?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="3783"></a>
+                    <div id="answer-container-3783" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3783-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3783/up/" rel="nofollow"> </a>
+<div id="post-3783-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-3783-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3783/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="dieterdreist has selected this answer as the correct answer"
+        href="/accept_answer/3783/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm guessing you need to smile at the wiki admins and get them to install the MediaWiki Maps extension</p>
+<p><a href="http://mapping.referata.com/wiki/Maps">http://mapping.referata.com/wiki/Maps</a></p>
+<p>Alternatively contact the developers of the installed SlippyMap extension and see if they'll address this line of code:</p>
+<p><code>if ($marker) $error = 'marker support is disactivated on the OSM wiki pending discussions about wiki syntax';</code></p>
+<p>as I can't find any discussions on the wiki (why not just mlat and mlon as optional?). MediaWiki suggests future development of this plugin is unlikely, but not sure where they got that information from.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3783/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Mar '11, 20:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f25a8392e12ed696b16554b3d08e4e2b?s=32&amp;d=identicon&amp;r=g" alt="EdLoach's gravatar image" />
+    <p><a href="/users/339/edloach">EdLoach ♦</a><br/>
+    <span class="score" title="19478 reputation points"><span class="">19.5k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="156 badges"><span class="silver">&#9679;</span><span class="badgecount">156</span></span><span title="280 badges"><span class="bronze">&#9679;</span><span class="badgecount">280</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="EdLoach has 93 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3783/">
+                edited
+                <strong>13 Mar '11, 20:26</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3783">
+    
+        <a name="3784"></a>
+        <div class="comment" id="comment-3784">
+            <div id="post-3784-score" class="comment-score">2</div>
+            <div class="comment-text"><p>further reference <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map_MediaWiki_Extension">http://wiki.openstreetmap.org/wiki/Slippy_Map_MediaWiki_Extension</a></p></div>
+            <div class="comment-info" id="comment-3784-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Mar '11, 05:49)</span>
+                <a class="comment-user userinfo" href="/users/32/katpatuka">katpatuka</a>
+                
+            </div>
+        </div>
+    
+        <a name="3796"></a>
+        <div class="comment" id="comment-3796">
+            <div id="post-3796-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I'm the developer of the original MediaWiki extension (including the cited line of code with the "pending discussions" error message) I keep meaning to look into this some more. I used to worry a lot about establishing wiki syntax which we would then not be able to change easily because all the pages would be using it. Worth thinking about, but I was probably worrying more than necessary.</p>
+
+<p>Part of the reason I never got around to tackling this some more, is that I've grown frustrated with use of my own extension. It slows down wiki page loading. I prefer the 'Simple Image' extension.</p></div>
+            <div class="comment-info" id="comment-3796-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Mar '11, 14:48)</span>
+                <a class="comment-user userinfo" href="/users/107/harry-wood">Harry Wood</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3783" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3783-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/3782/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gYeVUnQxyW5VCz4SqqETpOcQzoMJfKLy' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3782/what-is-the-best-way-to-insert-a-movable-slippy-map-with-marker-to-an-osm-wiki-page?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3782/what-is-the-best-way-to-insert-a-movable-slippy-map-with-marker-to-an-osm-wiki-page?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/marker/"
+            class="tag-link-marker"
+            title="see questions tagged'marker'using tags"
+            rel="tag">marker</a> <span class="tag-number">&#215;98</span><br/>
+        
+        <a href="/tags/slippymap/"
+            class="tag-link-slippymap"
+            title="see questions tagged'slippymap'using tags"
+            rel="tag">slippymap</a> <span class="tag-number">&#215;35</span><br/>
+        
+        <a href="/tags/extension/"
+            class="tag-link-extension"
+            title="see questions tagged'extension'using tags"
+            rel="tag">extension</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/mediawiki/"
+            class="tag-link-mediawiki"
+            title="see questions tagged'mediawiki'using tags"
+            rel="tag">mediawiki</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 13, 2011, 7:24 p.m.">13 Mar '11, 19:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>18,264 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 14, 2011, 2:48 p.m.">14 Mar '11, 14:48</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/44463/svg-map-with-markers">SVG map with markers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10908/wie-kann-man-einen-hyperlink-auf-marker-legen-osm-slippymap-generator">Wie kann man einen Hyperlink auf Marker legen (OSM SlippyMap Generator)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17398/why-does-our-own-tile-server-sometimes-abort-rendering-tiles">Why does our own tile server sometimes abort rendering tiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39925/how-to-show-marker-detail-on-marker-click-in-android-osm">how to show marker detail on marker click in android osm ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52973/tile-server-for-planet-working-slow-and-shows-error-on-high-end-server">tile server for planet working slow and shows error on high end server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22724/add-a-custom-marker-issues-need-an-example">[closed] Add a custom marker - issues, need an example</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6723/point-to-pixel-ratio-in-open-street-map-image">Point to pixel ratio in open street map image</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1778/how-can-i-display-a-map-with-multiple-markers">How can I display a map with multiple markers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1455/using-map-in-adobe-illustrator">Using map in Adobe Illustrator?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1089/how-do-i-remove-search-marker-in-the-map">How do I remove Search-Marker in the map?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

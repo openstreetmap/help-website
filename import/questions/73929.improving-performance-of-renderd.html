@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Improving performance of renderd - OSM Help</title>
+        <meta name="description" content="Hello, I am running my own OSM server setup as per the instructions on switch2osm.org (Manually building a tile server (18.04 LTS). Renderd (or rather PostgreSQL) is working quite slowly. From everything I have read, this is to be expected the first time that it generates tiles for an area. However,..." />
+        <meta name="keywords" content="performance,tiles,renderd,postgresql,rendering" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/73929/improving-performance-of-renderd" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/73929/improving-performance-of-renderd?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='9ArZZ5CesoMxPE1PYLpTVqwlSQwVlBU1' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/73929/improving-performance-of-renderd">Improving performance of renderd</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-73929-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73929/up/" rel="nofollow"> </a>
+<div id="post-73929-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73929-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73929/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/73929/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, I am running my own OSM server setup as per the instructions on switch2osm.org (<a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/">Manually building a tile server (18.04 LTS)</a>.</p>
+<p>Renderd (or rather PostgreSQL) is working quite slowly. From everything I have read, this is to be expected the first time that it generates tiles for an area.</p>
+<p>However, are there any performance tune-ups that anyone can suggest to speed up PostgreSQL specifically for Renderd?</p>
+<p>I have a m5.2xlarge machine in AWS EC2 (32 GB RAM, 1.5TB SSD (EBS), 8  vCPUs (4 Cores x 2 Threads per Core)). I think that this size of machine should perform faster than it is right now.</p>
+<p>Here are some sample renderd results from "/var/log/syslog"</p>
+<pre><code>Apr  1 07:54:36 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 17 83680-83687 49440-49447, age 4.69 days
+Apr  1 07:54:36 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 17 83672-83679 49440-49447, age 4.69 days
+Apr  1 07:54:36 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 16 41840-41847 24720-24727, age 4.12 days
+Apr  1 07:54:36 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 16 41832-41839 24720-24727, age 4.12 days
+Apr  1 07:54:40 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 17 83672-83679 49440-49447 in 3.643 seconds
+Apr  1 07:54:40 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 15 20912-20919 12360-12367, age 3.68 days
+Apr  1 07:54:40 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 17 83680-83687 49440-49447 in 3.822 seconds
+Apr  1 07:54:40 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 15 20920-20927 12360-12367, age 3.56 days
+Apr  1 07:54:40 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 16 41840-41847 24720-24727 in 3.339 seconds
+Apr  1 07:54:40 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 14 10456-10463 6176-6183, age 3.62 days
+Apr  1 07:54:40 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 16 41832-41839 24720-24727 in 3.657 seconds
+Apr  1 07:54:43 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 15 20920-20927 12360-12367 in 3.146 seconds
+Apr  1 07:54:43 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 15 20912-20919 12360-12367 in 3.624 seconds
+Apr  1 07:54:45 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 14 10456-10463 6176-6183 in 5.515 seconds
+Apr  1 07:55:13 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 13 5224-5231 3088-3095, age 3.72 days
+Apr  1 07:55:18 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 13 5224-5231 3088-3095 in 4.517 seconds
+Apr  1 07:55:22 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 10 656-663 384-391, age 3.08 days
+Apr  1 07:55:23 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 9 320-327 192-199, age 3.10 days
+Apr  1 07:55:23 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 9 328-335 192-199, age 3.10 days
+Apr  1 07:55:24 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 8 160-167 88-95, age 3.05 days
+Apr  1 07:55:25 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 10 656-663 384-391 in 2.751 seconds
+Apr  1 07:55:25 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 8 160-167 96-103, age 3.10 days
+Apr  1 07:55:30 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 9 328-335 192-199 in 7.276 seconds
+Apr  1 07:55:30 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 7 80-87 48-55, age 3.05 days
+Apr  1 07:55:49 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 9 320-327 192-199 in 26.345 seconds
+Apr  1 07:55:49 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 7 80-87 40-47, age 3.04 days
+Apr  1 07:56:18 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 8 160-167 96-103 in 53.762 seconds
+Apr  1 07:56:18 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 8 136-143 88-95, new metatile
+Apr  1 07:56:18 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 8 160-167 88-95 in 54.763 seconds
+Apr  1 07:56:18 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 7 72-79 48-55, age 3.04 days
+Apr  1 07:56:31 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 7 80-87 48-55 in 60.663 seconds
+Apr  1 07:56:31 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 6 40-47 16-23, age 3.01 days
+Apr  1 08:00:27 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 7 72-79 48-55 in 248.214 seconds
+Apr  1 08:00:27 ip-172-30-0-160 renderd[30679]: DEBUG: START TILE ajt 8 136-143 80-87, new metatile
+Apr  1 08:39:57 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 7 80-87 40-47 in 2647.823 seconds
+Apr  1 09:00:17 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 6 40-47 16-23 in 3826.766 seconds
+</code></pre>
+<p>It gets super slow in that zoom level sweet spot of 6, 7, or 8. I understand that these intermediate zoom levels have the most data to process.</p>
+<p>From various places around the web, I have gotten tidbits of information to speedup the performance.
+- I have set the PostgreSQL "maintenance_work_mem" setting to 64 MB (<a href="https://www.youtube.com/watch?v=Lxloo42gl8A">https://www.youtube.com/watch?v=Lxloo42gl8A</a>)
+- Renderd "num_threads" is the default 4 (<a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Tuning_renderd_memory_usage">https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Tuning_renderd_memory_usage</a>)</p>
+<p>I also came across this StackExchange post (<a href="https://gis.stackexchange.com/questions/181728/mod-tile-not-using-all-available-threads">https://gis.stackexchange.com/questions/181728/mod-tile-not-using-all-available-threads</a>) from several years ago that indicates that maybe the right indexes don't exist on my PostgreSQL setup.</p>
+<p>I ran the suggested command to see the indexes</p>
+<pre><code>SELECT relname, indexrelname, idx_scan, idx_tup_read, idx_tup_fetch 
+FROM pg_stat_all_indexes 
+WHERE schemaname = 'public' order by 1;
+</code></pre>
+<p>Here is the output</p>
+<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2020-04-01_at_9.12.25_AM.png" alt="alt text"></p>
+<p>Can anyone comment on my setup and / or suggest any way of speeding up Renderd/PostgreSQL?</p>
+<p>I also tried running render_list to pre-render tiles but it ran for several hours without giving me any indication that it was doing anything - there were no messages on the screen indicating any progress, and "ps -aux" indicated that the total time run by render_list was 0:00. Maybe I was looking in the wrong place for progress information?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/performance/" class="post-tag tag-link-performance"
+                                        title="see questions tagged 'performance'" rel="tag">performance</a>
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                                    <a href="/tags/renderd/" class="post-tag tag-link-renderd"
+                                        title="see questions tagged 'renderd'" rel="tag">renderd</a>
+                                
+                                    <a href="/tags/postgresql/" class="post-tag tag-link-postgresql"
+                                        title="see questions tagged 'postgresql'" rel="tag">postgresql</a>
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Apr '20, 17:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1b58f01d0ae94d1c1f788e287efeacdf?s=32&amp;d=identicon&amp;r=g" alt="Buzz1000's gravatar image" />
+    <p><a href="/users/18115/buzz1000">Buzz1000</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Buzz1000 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/73929/">
+                edited
+                <strong>02 Apr '20, 18:07</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e06ed329df6032df14b5639de4d64782?s=32&amp;d=identicon&amp;r=g" alt="Spiekerooger's gravatar image" />
+            <p><a href="/users/17439/spiekerooger">Spiekerooger</a><br/>
+            <span class="score" title="3148 reputation points"><span class="">3.1k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-73929">
+    
+</div>
+<div id="comment-tools-73929" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73929-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/73929/improving-performance-of-renderd?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/73929/improving-performance-of-renderd?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/73929/improving-performance-of-renderd?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/73929/improving-performance-of-renderd?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="73967"></a>
+                    <div id="answer-container-73967" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73967-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73967/up/" rel="nofollow"> </a>
+<div id="post-73967-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-73967-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73967/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The numbers from renderd in /var/log/syslog are alright.</p>
+<p>You just have to pre_render most of the tiles for at least up to zoom 12.</p>
+<p>But the way you are telling it, your prerendering failed. Did you miss the -m {mapname} param or the -a (or --all) in your render_list call? (I think it would be -m ajt in your case).</p>
+<p>You should start pre-rendering by calling</p>
+<pre><code>render_list -m ajt -z 0 -Z 12 -n 4 -l 20 --all
+</code></pre>
+<p>and watch /var/log/syslog | grep renderd to see if the prerendering is working.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73967/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Apr '20, 18:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e06ed329df6032df14b5639de4d64782?s=32&amp;d=identicon&amp;r=g" alt="Spiekerooger's gravatar image" />
+    <p><a href="/users/17439/spiekerooger">Spiekerooger</a><br/>
+    <span class="score" title="3148 reputation points"><span class="">3.1k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Spiekerooger has 18 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73967">
+    
+        <a name="73968"></a>
+        <div class="comment" id="comment-73968">
+            <div id="post-73968-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for confirming the numbers.</p>
+
+<p>I have run render_list again and am seeing progress. Thanks for pointing out to use "/var/log/syslog | grep renderd". This shows progress being made.</p></div>
+            <div class="comment-info" id="comment-73968-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '20, 18:15)</span>
+                <a class="comment-user userinfo" href="/users/18115/buzz1000">Buzz1000</a>
+                
+            </div>
+        </div>
+    
+        <a name="73969"></a>
+        <div class="comment" id="comment-73969">
+            <div id="post-73969-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are you running full planet or just a country/region? If it's the former (planet) than just wait for some days now for the prerendering to run thru.</p></div>
+            <div class="comment-info" id="comment-73969-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '20, 18:21)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73967" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73967-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/73929/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='9ArZZ5CesoMxPE1PYLpTVqwlSQwVlBU1' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73929/improving-performance-of-renderd?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73929/improving-performance-of-renderd?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+        <a href="/tags/postgresql/"
+            class="tag-link-postgresql"
+            title="see questions tagged'postgresql'using tags"
+            rel="tag">postgresql</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/renderd/"
+            class="tag-link-renderd"
+            title="see questions tagged'renderd'using tags"
+            rel="tag">renderd</a> <span class="tag-number">&#215;105</span><br/>
+        
+        <a href="/tags/performance/"
+            class="tag-link-performance"
+            title="see questions tagged'performance'using tags"
+            rel="tag">performance</a> <span class="tag-number">&#215;28</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 1, 2020, 5:14 p.m.">01 Apr '20, 17:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,850 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 2, 2020, 6:22 p.m.">02 Apr '20, 18:22</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/56349/ssd-iops-suggestion-for-osm-tile-server">SSD IOPS suggestion for OSM tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3909/tile-rendering-queue-limit">Tile rendering queue limit?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61120/tiles-do-not-render-for-low-zoom-levels">Tiles do not render for low zoom levels</a>
+        </p>
+        
+        <p>
+            <a href="/questions/84464/tile-rendering-extremly-slow">Tile rendering extremly slow</a>
+        </p>
+        
+        <p>
+            <a href="/questions/242/how-to-download-rendered-osm-maps">How to download rendered OSM maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11357/rendering-imagesmaps-from-postgresqlpostgis-database">Rendering images/maps from Postgresql/PostGIS Database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13250/what-is-the-correct-projection-i-should-use-with-mapnik">What is the correct projection I should use with Mapnik?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5274/uk-topographic-maps">UK topographic maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8395/how-to-set-zoom-levels-while-generating-tiles">How to set zoom levels while generating tiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2562/trinidad-coastline-not-rerendering">Trinidad coastline not rerendering</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

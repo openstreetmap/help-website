@@ -1,0 +1,843 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Offline map use (downloaded latest weekly planet file) - how to use? - OSM Help</title>
+        <meta name="description" content="Guys bare with the silly question. I just searched for a open-source map that I can use on my offline PC...sort of like my own world map. I don&#39;t want to use Google products...eventually after searching for options I stumbled on OSM. I&#39;ve downloaded the latest weekly planet file planet-130626.osm.bz..." />
+        <meta name="keywords" content="windows,offline,osm,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/23857/offline-map-use-downloaded-latest-weekly-planet-file-how-to-use" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/23857/offline-map-use-downloaded-latest-weekly-planet-file-how-to-use?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='6ohiz4iSu2jCylCFw94ut9wHgYwZN5CE' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/23857/offline-map-use-downloaded-latest-weekly-planet-file-how-to-use">Offline map use (downloaded latest weekly planet file) - how to use?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-23857-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23857/up/" rel="nofollow"> </a>
+<div id="post-23857-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23857-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23857/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/23857/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Guys bare with the silly question. I just searched for a open-source map that I can use on my offline PC...sort of like my own world map. I don't want to use Google products...eventually after searching for options I stumbled on OSM.</p>
+<p>I've downloaded the latest weekly planet file planet-130626.osm.bz2 and the MD5 check is ok so I guess I have the entire OSM map correctly downloaded.</p>
+<p>What I want to do is;</p>
+<ul>
+<li>have the map available to preview on
+   my offline PC, the entire world map</li>
+<li>be able to tag places (like pins on Google maps), possibly with short descriptions </li>
+</ul>
+<p>With the OSM file I have, what is my next step, what software do I need? Thanks a lot.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/windows/" class="post-tag tag-link-windows"
+                                        title="see questions tagged 'windows'" rel="tag">windows</a>
+                                
+                                    <a href="/tags/offline/" class="post-tag tag-link-offline"
+                                        title="see questions tagged 'offline'" rel="tag">offline</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Jul '13, 07:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/88829f7de51e5f3f661076a0a26e97f2?s=32&amp;d=identicon&amp;r=g" alt="TM23's gravatar image" />
+    <p><a href="/users/6764/tm23">TM23</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TM23 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23857/">
+                edited
+                <strong>01 Jul '13, 07:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-23857">
+    
+</div>
+<div id="comment-tools-23857" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23857-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/23857/offline-map-use-downloaded-latest-weekly-planet-file-how-to-use?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/23857/offline-map-use-downloaded-latest-weekly-planet-file-how-to-use?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/23857/offline-map-use-downloaded-latest-weekly-planet-file-how-to-use?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/23857/offline-map-use-downloaded-latest-weekly-planet-file-how-to-use?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="23858"></a>
+                    <div id="answer-container-23858" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23858-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23858/up/" rel="nofollow"> </a>
+<div id="post-23858-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-23858-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23858/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The file you have downloaded is not a map; it is a file that contains all the OSM data.</p>
+<p>The difference is: A <em>map</em> has a certain map style - how thick the lines for roads are on what zoom scale, what the road colours are, and so on. The <em>data</em> doesn't have a style - it just has the information "there's a road of class so-and-so named so-and-so here". </p>
+<p>So if you want to see a map, you need a software that draws a map from the raw data. That is usually called a rendering engine. There are no rendering engines that can directly read the OSM planet file; you will have to pre-process the data in some way. Programs that can preprocess and display the whole planet file are e.g. "gosmore" and "navit", both are however geared towards navigation use and will not show all the area and POI types might be used to from browsing www.openstreetmap.org. Another option is importing the data into a PostgreSQL database and then displaying it with MapServer or TileMill; this might give you a u ser experience more like www.openstreetmap.org but at the cost ~ 400 GB of database storage and a couple days data import. </p>
+<p>I would strongly suggest that you start with a small data file, just for a state or a country, to try out the software because processing the whole planet file can take hours or, if you have a small machine, even days.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23858/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Jul '13, 08:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23858">
+    
+        <a name="23859"></a>
+        <div class="comment" id="comment-23859">
+            <div id="post-23859-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you very much for your answer Frederik. </p>
+
+<p>I can't believe that it's so "complicated" to have a map on your computer. Is there a non-navigational map, without street level detail that can serve the purpose?</p></div>
+            <div class="comment-info" id="comment-23859-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Jul '13, 08:28)</span>
+                <a class="comment-user userinfo" href="/users/6764/tm23">TM23</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23858" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23858-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="23861"></a>
+                    <div id="answer-container-23861" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23861-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23861/up/" rel="nofollow"> </a>
+<div id="post-23861-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-23861-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23861/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Continuing after Frederiks's good answer regarding the use of the planet file …</p>
+<p>(some found via <a href="/tags/offline/?sort=mostvoted">questions tagged "offline"</a>) you could use those other, maybe more easy, options:</p>
+<ul>
+<li><a href="/questions/18416/downloading-maps-in-order-to-use-marble-offline">marble</a> (vector data rendering on-the-fly  or  tile download [please no high level zoom tiles!]) (I am not sure if marking locations is possible)  or <br>
+</li>
+<li>the list in that question: <a href="/questions/5374/">offline-map-software-for-windows</a></li>
+<li>look in this list: <a href="//wiki.openstreetmap.org/wiki/Software/Desktop#Map_display_features">Software/Desktop#Map_display_features</a></li>
+<li><a href="//wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/QLandkarte">QLandkarte GT</a> (or the commercial <a href="//wiki.openstreetmap.org/wiki/BaseCamp">BaseCamp</a>) might be useful too (they use <a href="//wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">pre-made Garmin image files (using OSM data)</a>)</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23861/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Jul '13, 13:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23861/">
+                edited
+                <strong>03 Jul '13, 00:18</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23861">
+    
+        <a name="23864"></a>
+        <div class="comment" id="comment-23864">
+            <div id="post-23864-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've installed QLandkarte GT...and I can zoom in on any part of the world. So that's due to internet access I guess.</p>
+
+<p>Is there a way to have this level of functionality without internet access?</p></div>
+            <div class="comment-info" id="comment-23864-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Jul '13, 15:49)</span>
+                <a class="comment-user userinfo" href="/users/6764/tm23">TM23</a>
+                
+            </div>
+        </div>
+    
+        <a name="23883"></a>
+        <div class="comment" id="comment-23883">
+            <div id="post-23883-score" class="comment-score"></div>
+            <div class="comment-text"><p>The simplest solution is. Garmin BaseCamp is a free download and as a basic world map. If you wish to use OSM with it, and with more detail you can by downloading a garmin.img file see OSM on Garmin in the wiki for details.  <a href="http://wiki.openstreetmap.org/w/index.php?search=basecamp&amp;title=Special%3ASearch">http://wiki.openstreetmap.org/w/index.php?search=basecamp&amp;title=Special%3ASearch</a></p></div>
+            <div class="comment-info" id="comment-23883-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Jul '13, 21:51)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="23885"></a>
+        <div class="comment" id="comment-23885">
+            <div id="post-23885-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/6764/tm23">@TM23</a>: I do not use it myself, but you should be able to use garmin image files  (like in basecamp; download linked in my answer) in Qlandkarte GT. They can be downloaded for offline use.</p></div>
+            <div class="comment-info" id="comment-23885-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jul '13, 01:15)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23890"></a>
+        <div class="comment" id="comment-23890">
+            <div id="post-23890-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/6764/tm23">@TM23</a> At least Marble is able to cache tiles and to download tiles for user-defined areas. However you have to respect the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> and keep in mind that <a href="http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">tiles are large</a>.</p></div>
+            <div class="comment-info" id="comment-23890-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jul '13, 08:44)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23861" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23861-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/23857/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='6ohiz4iSu2jCylCFw94ut9wHgYwZN5CE' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23857/offline-map-use-downloaded-latest-weekly-planet-file-how-to-use?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23857/offline-map-use-downloaded-latest-weekly-planet-file-how-to-use?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/offline/"
+            class="tag-link-offline"
+            title="see questions tagged'offline'using tags"
+            rel="tag">offline</a> <span class="tag-number">&#215;106</span><br/>
+        
+        <a href="/tags/windows/"
+            class="tag-link-windows"
+            title="see questions tagged'windows'using tags"
+            rel="tag">windows</a> <span class="tag-number">&#215;48</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 1, 2013, 7:42 a.m.">01 Jul '13, 07:42</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,044 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 3, 2013, 12:18 a.m.">03 Jul '13, 00:18</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/18836/zoomed-out-maps-not-display">Zoomed out maps not display</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25310/how-to-use-pbf-file-in-osm">How to use PBF file in OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13125/local-osm-server-on-windows">Local OSM server on windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18788/a-few-questions-for-using-with-gps">A few questions for using with GPS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19789/how-to-build-osm-to-run-offline-on-android">How to build OSM to run offline on android</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23738/library-to-read-osm-maps-on-android">Library to read OSM maps on Android</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5374/offline-map-software-for-windows">Offline map software for Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12386/how-to-create-map-tiles-from-openstreetmap-offline-and-display-it-on-jxmapviewer">How to create map tiles from OpenStreetMap offline and display it on JxMapViewer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15967/how-to-implement-osm-offline-map-in-android-application">how to implement OSM offline map in android application ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30200/downloading-and-viewing-a-map-offline-on-a-windows-81-notebook">downloading and viewing a map offline on a Windows 8.1 notebook</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,967 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Server Spec for running OSM - OSM Help</title>
+        <meta name="description" content="I&#39;m looking to run an OSM tile server and have been wondering what spec machine to get. I expect fairly heavy usage across a full planet of data and have taken the current yevaud spec as a benchmark of a high usage web-server. http://wiki.openstreetmap.org/wiki/Servers/yevaud My only question on thi..." />
+        <meta name="keywords" content="setup,server" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/11949/server-spec-for-running-osm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/11949/server-spec-for-running-osm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='SBGY3jat484icYekJMWY5531x7SjQ97m' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/11949/server-spec-for-running-osm">Server Spec for running OSM</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-11949-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11949/up/" rel="nofollow"> </a>
+<div id="post-11949-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-11949-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11949/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/11949/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm looking to run an OSM tile server and have been wondering what spec machine to get.  I expect fairly heavy usage across a full planet of data and have taken the current yevaud spec as a benchmark of a high usage web-server.</p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Servers/yevaud">http://wiki.openstreetmap.org/wiki/Servers/yevaud</a></p>
+<p>My only question on this is what is the SSD disk used for in particular setup? it's not big enough to cover the storage of the tiles (stated at ~1.2Tb).  What is being kept on this disk?  the disk itself would seem to represent half the cost of the server.<br>
+</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/setup/" class="post-tag tag-link-setup"
+                                        title="see questions tagged 'setup'" rel="tag">setup</a>
+                                
+                                    <a href="/tags/server/" class="post-tag tag-link-server"
+                                        title="see questions tagged 'server'" rel="tag">server</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Apr '12, 22:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9ef4e665e6e82f6b5f08952ff8c69d23?s=32&amp;d=identicon&amp;r=g" alt="John%20Perrin's gravatar image" />
+    <p><a href="/users/3277/john-perrin">John Perrin</a><br/>
+    <span class="score" title="76 reputation points">76</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="John Perrin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-11949">
+    
+</div>
+<div id="comment-tools-11949" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11949-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/11949/server-spec-for-running-osm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/11949/server-spec-for-running-osm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/11949/server-spec-for-running-osm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/11949/server-spec-for-running-osm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="11951"></a>
+                    <div id="answer-container-11951" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11951-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11951/up/" rel="nofollow"> </a>
+<div id="post-11951-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-11951-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11951/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="John Perrin has selected this answer as the correct answer"
+        href="/accept_answer/11951/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You need the SSD for the PostGIS tablespace in order to be able to quickly render tiles when somebody requests them. Remember, a tile server is not a passive component that just hands out tiles - they will often have to be computed on the fly.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11951/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Apr '12, 22:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11951">
+    
+        <a name="11952"></a>
+        <div class="comment" id="comment-11952">
+            <div id="post-11952-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks!  So this will hold the data files that are downloaded from planet.osm?  That's actually a relief as i thought I was going to have to recreate Smaug as well!</p></div>
+            <div class="comment-info" id="comment-11952-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '12, 22:36)</span>
+                <a class="comment-user userinfo" href="/users/3277/john-perrin">John Perrin</a>
+                
+            </div>
+        </div>
+    
+        <a name="11953"></a>
+        <div class="comment" id="comment-11953">
+            <div id="post-11953-score" class="comment-score"></div>
+            <div class="comment-text"><p>You don't need Smaug, but you do need a database on the tile server itself. You will download the planet file and process it with osm2pgsql, whereby it will be written to the PostGIS database and onto the SSD. This will currently require about 280 GB of SSD space - less if you don't want updates, more if you want to add extra columns that are not in the standard OSM style.</p></div>
+            <div class="comment-info" id="comment-11953-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '12, 22:46)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11951" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11951-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="11958"></a>
+                    <div id="answer-container-11958" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11958-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11958/up/" rel="nofollow"> </a>
+<div id="post-11958-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-11958-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11958/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are two main components to the storage system of a tile server,
+each of which can have different requirements depending on the circumstances</p>
+<p>1) Tile storage cache</p>
+<p>For the tile storage usually one needs quite a bit of space, but
+performance isn't quite as critical. For a general purpose world wide
+map you will likely need somewhere on the order of above 600 GB. The
+full world wide tile set is considerably larger than that, but rendering
+on the fly of e.g. z18 ocean tiles is usually possible without too much
+problems. I don't know the exact scaling, but it seems like above
+somewhere between 300 - 600 GB the cache hit rate only increases slowly
+with size of the cache.</p>
+<p>Performance wise, it appears like 1000 tiles/s will generate somewhere
+on the order of 300 - 500 iops on the disk system, although that
+obviously depends on the size of ram of the server and the distribution
+of areas served. This is a level of performance that you can probably
+get out a raid array of a few sata disks. The performance requirement on
+this part of the disks likely scale fairly straightforward with the
+number of tiles served per second. Adding a reverse proxy in front of
+the tile server can also help reasonably to distribute load for tile
+serving. For most tile servers I have seen so far tile serving hasn't
+really been much of an issue, but in the order above 1000 Tiles/s you
+probably do need to consider it as well.</p>
+<p>2) Rendering database</p>
+<p>The rendering database is where for most people the disk performance
+bottlenecks are. For the full planet, the postgis database with indexes
+is around 300 - 400GB in size. This is as others have pointed out where
+some people use SSDs for. Quite a bit of performance is consumed in
+keeping the database up to date with minutely diffs from OSM. This
+performance does not depend at all on how many tiles you serve, but only
+the rate of editing in OSM. From what I have seen (and other might
+correct me), a 2 - 4 disk sata raid array might not be able to keep up
+with edits during absolute peak editing times (e.g. Sunday afternoon
+European time), but should catch back up during the night. On top of
+that is the actual rendering of tiles. As typically one doesn't
+re-render tiles in advance (other than low zoom tiles), but only once
+they are actually viewed. Rendering performance does to some degree
+depend on the tile serving performance. If it doesn't matter how up to
+date rendered tiles are, rendering requests can be queued and rendered
+during quiet periods, which considerably reduces the performance
+requirements on the database.</p>
+<p>So overall whether you need an SSD for the database mostly depends on
+how up-to-date you want to me with respect to OSM edits. If you want to
+be in the order of minutes behind OSM, you probably will need an SSD.
+Given that a fast update is important for mappers as reward for their
+work, the SSD in osm's tile server has been a big win. If daily updates
+or less are fine, then you might not need one. Once you get down to
+monthly updates, you are likely best not using an "updateable database"
+but do full reimports, the size of the database reduces typically to
+less than half the size.</p>
+<p>It also depends on how spatially distributed your requests are. If e.g.
+your site has a "bunch of locations" around which it displays local
+maps. I.e. the same locations are shown over and over again, the
+rendering load is much less than if you offer "Downloading country wide
+tiles for offline use in a mobile app" even with the same amount of
+serving load.</p>
+<p>If you don't need a world wide map, then hardware requirements also
+considerably reduce and once you get down to only e.g. a country like
+e.g. Italy or the UK, you possibly don't really have to worry about the
+database anymore at all, as any modern hardware is probably sufficient.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11958/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Apr '12, 02:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32c974c4ca8b246698c2b82c64924da5?s=32&amp;d=identicon&amp;r=g" alt="apmon's gravatar image" />
+    <p><a href="/users/65/apmon">apmon</a><br/>
+    <span class="score" title="6527 reputation points"><span class="">6.5k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="apmon has 9 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11958">
+    
+        <a name="56348"></a>
+        <div class="comment" id="comment-56348">
+            <div id="post-56348-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/65/apmon"></a><a href="https://help.openstreetmap.org/users/65/apmon">@apmon</a> - I know this is old, but wondering if you could elaborate on optimizing IOPS for the SSD.  You mention 300 - 500 IOPS for storage cache, but what is that also sufficient for the rendering database disk?  I am considering using a AWS SSD with pre-provisioned IOPS.  They make you pay for IOPS as well as storage so I don't want to over do it, but also don't want a bottleneck.</p></div>
+            <div class="comment-info" id="comment-56348-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 May '17, 05:19)</span>
+                <a class="comment-user userinfo" href="/users/13544/rgwozdz">rgwozdz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11958" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11958-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="53557"></a>
+                    <div id="answer-container-53557" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53557-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53557/up/" rel="nofollow"> </a>
+<div id="post-53557-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53557-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53557/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi,</p>
+<p>I'm trying to instal my own OSM server but it always fails at full disk. I have this server <a href="https://www.hetzner.de/de/hosting/produkte_rootserver/ex51ssd">https://www.hetzner.de/de/hosting/produkte_rootserver/ex51ssd</a> with 500GB SSD. I have tried to import the DB for whole planet without slim tables but there is not enough RAM, and also with flat-nodes but no luck. Please can somebody write here what are current server requirements? What size of disk it needs for successful import and also some raw estimate for cache size?</p>
+<p>Thank you very much.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53557/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Dec '16, 09:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/72017dd262b7afa7e109cabc5bfd879e?s=32&amp;d=identicon&amp;r=g" alt="mariansedivy's gravatar image" />
+    <p><a href="/users/13087/mariansedivy">mariansedivy</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mariansedivy has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/53557/">
+                edited
+                <strong>15 Dec '16, 15:51</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53557">
+    
+        <a name="53560"></a>
+        <div class="comment" id="comment-53560">
+            <div id="post-53560-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are you running a full planet import? Or only a specific country/city?</p></div>
+            <div class="comment-info" id="comment-53560-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '16, 12:32)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53561"></a>
+        <div class="comment" id="comment-53561">
+            <div id="post-53561-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, I want full planet.</p></div>
+            <div class="comment-info" id="comment-53561-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '16, 12:50)</span>
+                <a class="comment-user userinfo" href="/users/13087/mariansedivy">mariansedivy</a>
+                
+            </div>
+        </div>
+    
+        <a name="53570"></a>
+        <div class="comment" id="comment-53570">
+            <div id="post-53570-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Please see if these are helpful for you. <a href="http://wiki.openstreetmap.org/wiki/Servers">servers</a> and <a href="https://hardware.openstreetmap.org/">servers</a></p></div>
+            <div class="comment-info" id="comment-53570-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Dec '16, 03:32)</span>
+                <a class="comment-user userinfo" href="/users/12655/gagan">Gagan</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53557" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53557-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/11949/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='SBGY3jat484icYekJMWY5531x7SjQ97m' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11949/server-spec-for-running-osm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11949/server-spec-for-running-osm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/server/"
+            class="tag-link-server"
+            title="see questions tagged'server'using tags"
+            rel="tag">server</a> <span class="tag-number">&#215;123</span><br/>
+        
+        <a href="/tags/setup/"
+            class="tag-link-setup"
+            title="see questions tagged'setup'using tags"
+            rel="tag">setup</a> <span class="tag-number">&#215;15</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 12, 2012, 10:08 p.m.">12 Apr '12, 22:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>18,436 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 29, 2017, 5:36 a.m.">29 May '17, 05:36</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg">How can I make sense of munin.openstreetmap.org?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1706/how-do-i-use-the-osm-tile-map-server-in-mapinfo">How do I use the osm tile map server in mapinfo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3334/frequent-internal-server-error-when-uploading-to-osm">Frequent &quot;Internal Server Error&quot; when uploading to OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3375/editing-for-my-own-map">editing for my own map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4422/rails-port-and-osm-server">Rails Port and OSM Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4433/server-problems">[closed] server problems??</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap">How to create fantasy/imaginary maps with OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4722/i-downloaded-josm-testedjar-now-what">I downloaded josm-tested.jar, now what?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

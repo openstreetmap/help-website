@@ -1,0 +1,904 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tiles taking too long to render on my tile server - OSM Help</title>
+        <meta name="description" content="Hello, I&#39;ve followed the tutorial available here. The installation worked alright, but opening the tile in a browser leads to a 404 error. The only error from the server is &quot;Failed to read cmd on fd 10&quot;. After a long while, the tile is rendered (here, 1600 seconds): renderd[18586]: DEBUG: DONE TILE ..." />
+        <meta name="keywords" content="mod_tile,mapnik,tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/34036/tiles-taking-too-long-to-render-on-my-tile-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/34036/tiles-taking-too-long-to-render-on-my-tile-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='cxqtpQxCJ8VtWd8YHn9HEv8KA0mhZtzR' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/34036/tiles-taking-too-long-to-render-on-my-tile-server">Tiles taking too long to render on my tile server</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-34036-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34036/up/" rel="nofollow"> </a>
+<div id="post-34036-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-34036-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34036/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/34036/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I've followed the tutorial available <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/" title="Manually building a tile server">here</a>. The installation worked alright, but opening the tile in a browser leads to a 404 error. The only error from the server is "Failed to read cmd on fd 10".</p>
+<p>After a long while, the tile is rendered (here, 1600 seconds):</p>
+<p>renderd[18586]: DEBUG: DONE TILE default 13 4264-4271 2984-2991 in 1594.968 seconds
+debug: Creating and writing a metatile to /var/lib/mod_tile/default/13/0/16/11/170/136.meta</p>
+<p>How can I solve this problem?</p>
+<p>Thank you for your help. Regards, Alex.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mod_tile/" class="post-tag tag-link-mod_tile"
+                                        title="see questions tagged 'mod_tile'" rel="tag">mod_tile</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Jun '14, 16:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f36ee4312cb91587eed59341e9761d18?s=32&amp;d=identicon&amp;r=g" alt="ale42's gravatar image" />
+    <p><a href="/users/9046/ale42">ale42</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ale42 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34036/">
+                edited
+                <strong>17 Jun '14, 22:51</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-34036">
+    
+</div>
+<div id="comment-tools-34036" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34036-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/34036/tiles-taking-too-long-to-render-on-my-tile-server?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/34036/tiles-taking-too-long-to-render-on-my-tile-server?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/34036/tiles-taking-too-long-to-render-on-my-tile-server?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/34036/tiles-taking-too-long-to-render-on-my-tile-server?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="34037"></a>
+                    <div id="answer-container-34037" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34037-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34037/up/" rel="nofollow"> </a>
+<div id="post-34037-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-34037-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34037/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can increase the timeout in your mod_tile configuration, in your case a</p>
+<p>ModTileMissingRequestTimeout 1800</p>
+<p>would have made the browser wait for up to 1800 seconds instead of returning a 404 after a couple of seconds. </p>
+<p>To achieve faster rendering, try one or a combination of the following: </p>
+<ul>
+<li>have your whole OSM database in RAM or on an SSD disk, or at least on a RAID-10 volume of spinning disks;</li>
+<li>tune your database (depends on machine, memory, and PostGIS version - often toying with PostGIS memory settings can help);</li>
+<li>create more indexes (temporarily activate PostGIS logging to find out which queries take most of the time, then create specific index for those);</li>
+<li>modify your map style to make less expensive queries;</li>
+<li>pre-render the tiles that you expect are likely to be viewed.</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34037/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jun '14, 16:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34037">
+    
+        <a name="34138"></a>
+        <div class="comment" id="comment-34138">
+            <div id="post-34138-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your answer Fred.</p>
+
+<p>I will try to put the whole OSM database in RAM.</p>
+
+<p>About the error (Failed to read cmd on fd 10),have you any idea if it can influence the very long time to render tile? How can this be fix?</p>
+
+<p>Tks, Alex.</p></div>
+            <div class="comment-info" id="comment-34138-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 12:50)</span>
+                <a class="comment-user userinfo" href="/users/9046/ale42">ale42</a>
+                
+            </div>
+        </div>
+    
+        <a name="34139"></a>
+        <div class="comment" id="comment-34139">
+            <div id="post-34139-score" class="comment-score">1</div>
+            <div class="comment-text"><p>For info I mentioned the "failed to read cmd" issue here:</p>
+
+<p><a href="https://github.com/openstreetmap/mod_tile/issues/77">https://github.com/openstreetmap/mod_tile/issues/77</a></p>
+
+<p>In my case it didn't have any adverse impact on serving tiles.</p></div>
+            <div class="comment-info" id="comment-34139-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 13:21)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34140"></a>
+        <div class="comment" id="comment-34140">
+            <div id="post-34140-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok thanks for your answer.</p>
+
+<p>I really don't understand why it's taking this long time to render these tiles.</p>
+
+<p>I try to set up the same configuration on a virtual machine and it takes less than 5 seconds to render one tile. Here, I try this in a OVH server which is more powerfull. 
+I really don't understand.</p></div>
+            <div class="comment-info" id="comment-34140-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 13:50)</span>
+                <a class="comment-user userinfo" href="/users/9046/ale42">ale42</a>
+                
+            </div>
+        </div>
+    
+        <a name="34143"></a>
+        <div class="comment" id="comment-34143">
+            <div id="post-34143-score" class="comment-score"></div>
+            <div class="comment-text"><p>In that case I would start by comparing things like CPU usage, memory (including swap!) usage and I/O load (via <code>iotop</code>) as well as I/O wait ("wa" in <code>top</code>) between those two systems.</p></div>
+            <div class="comment-info" id="comment-34143-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 14:05)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34171"></a>
+        <div class="comment" id="comment-34171">
+            <div id="post-34171-score" class="comment-score"></div>
+            <div class="comment-text"><p>My configuration for the server is like this :
+- RAM : 64 Go DDR ECC 1600 Mhz
+- CPU : Intel Xeon E5-1620v2
+- No SSD
+- 2 disks x 2 To SATA3HGST Ent. 7K4000</p>
+
+<p>So I don't think my configuration is a problem, isn't it?</p>
+
+<p>I check PostgreSQL queries and these queries don't take more than 1 or 2 ms. So, put the whole database will not be usefull, isn't it?</p></div>
+            <div class="comment-info" id="comment-34171-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jun '14, 09:31)</span>
+                <a class="comment-user userinfo" href="/users/9046/ale42">ale42</a>
+                
+            </div>
+        </div>
+    
+        <a name="42390"></a>
+        <div class="comment not_top_scorer" id="comment-42390">
+            <div id="post-42390-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/9046/ale42">@ale42</a> did you resolve this? I have an <em>incredibly</em> slow tile server.</p></div>
+            <div class="comment-info" id="comment-42390-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Apr '15, 15:35)</span>
+                <a class="comment-user userinfo" href="/users/9344/haroldship">haroldship</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34037" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34037-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="34141"></a>
+                    <div id="answer-container-34141" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34141-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34141/up/" rel="nofollow"> </a>
+<div id="post-34141-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-34141-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34141/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Another possibility that could drastically slow down database access would be if for some reason the index creation process failed at import time?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34141/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Jun '14, 13:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34141">
+    
+        <a name="34142"></a>
+        <div class="comment" id="comment-34142">
+            <div id="post-34142-score" class="comment-score">2</div>
+            <div class="comment-text"><p>How can I check that? Or rebuild it?</p></div>
+            <div class="comment-info" id="comment-34142-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 13:57)</span>
+                <a class="comment-user userinfo" href="/users/9046/ale42">ale42</a>
+                
+            </div>
+        </div>
+    
+        <a name="51759"></a>
+        <div class="comment" id="comment-51759">
+            <div id="post-51759-score" class="comment-score"></div>
+            <div class="comment-text"><p>To answer the first bit, when osm2pgsql completes it'll say something like "Osm2pgsql took 238s overall" (or much longer). It it doesn't say that, it hasn't finished, and indexes probably aren't created.</p></div>
+            <div class="comment-info" id="comment-51759-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Aug '16, 01:21)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34141" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34141-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/34036/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='cxqtpQxCJ8VtWd8YHn9HEv8KA0mhZtzR' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34036/tiles-taking-too-long-to-render-on-my-tile-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34036/tiles-taking-too-long-to-render-on-my-tile-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/mod_tile/"
+            class="tag-link-mod_tile"
+            title="see questions tagged'mod_tile'using tags"
+            rel="tag">mod_tile</a> <span class="tag-number">&#215;80</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 17, 2014, 4:32 p.m.">17 Jun '14, 16:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,077 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 28, 2016, 1:21 a.m.">28 Aug '16, 01:21</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/20286/mod_tile-build-on-rhel5">mod_tile build on RHEL5</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41600/how-to-split-up-osm-8x8-meta-file-into-64-single-tiles">How to split up osm 8x8 meta file into 64 single tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50541/mod_tilemapnik-bottleneck-in-save_as_png8_hex">mod_tile/mapnik bottleneck in save_as_png8_hex?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/68173/build-tile-server-manually-with-postgres-db-on-a-different-server">build tile server manually with Postgres db on a different server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42692/list-all-missing-metatiles-for-zoom-level-on-tile-server">List all missing metatiles for zoom level on tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24290/local-tile-server-extremely-slow-rendering">Local Tile Server - EXTREMELY slow rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23088/how-to-correctly-import-aster-data-contours-into-a-postgis-database">How to correctly import ASTER data (contours) into a PostGIS database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33582/how-to-restrict-access-to-the-tile-server">How to restrict access to the tile server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20159/fail-to-connect-my-tiles-server">Fail to connect my tiles server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13689/problem-with-mod_tile-make">Problem with mod_tile make</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

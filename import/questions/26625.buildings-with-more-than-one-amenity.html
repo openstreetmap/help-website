@@ -1,0 +1,890 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Buildings with more than one amenity. - OSM Help</title>
+        <meta name="description" content="How should I tag building that has more than one amenity? For example: in my neighbourhood there is one building used for dentist, veterinarian and pharmacy. I&#39;m sure that all those amenities shouldn&#39;t be mixed up in tags for one building because tags like &quot;phone&quot;, &quot;opening_hours&quot;, or &quot;website&quot; (and..." />
+        <meta name="keywords" content="buildings,multiple,amenity" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/26625/buildings-with-more-than-one-amenity" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/26625/buildings-with-more-than-one-amenity?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='jIzCoTpa4Gt0izMMqGietJDoyJxBAm68' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/26625/buildings-with-more-than-one-amenity">Buildings with more than one amenity.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-26625-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26625/up/" rel="nofollow"> </a>
+<div id="post-26625-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-26625-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26625/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/26625/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How should I tag building that has more than one amenity? For example: in my neighbourhood there is one building used for dentist, veterinarian and pharmacy. I'm sure that all those amenities shouldn't be mixed up in tags for one building because tags like "phone", "opening_hours", or "website" (and many others) would be inaccurate. </p>
+<p>So.. my idea was to tag building only with address and "building=yes", and to put separate nodes of these amenities on it with specified data about them. </p>
+<p>But there is another question. What to do with addresses? Should I tag all those separate amenities with addresses or the one made for building will suffice? Or my whole idea is wrong? Please help.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/buildings/" class="post-tag tag-link-buildings"
+                                        title="see questions tagged 'buildings'" rel="tag">buildings</a>
+                                
+                                    <a href="/tags/multiple/" class="post-tag tag-link-multiple"
+                                        title="see questions tagged 'multiple'" rel="tag">multiple</a>
+                                
+                                    <a href="/tags/amenity/" class="post-tag tag-link-amenity"
+                                        title="see questions tagged 'amenity'" rel="tag">amenity</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Sep '13, 00:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08f475a8bb3c347e3b9860776eacada8?s=32&amp;d=identicon&amp;r=g" alt="KoyotGamma's gravatar image" />
+    <p><a href="/users/7031/koyotgamma">KoyotGamma</a><br/>
+    <span class="score" title="193 reputation points">193</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="KoyotGamma has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-26625">
+    
+        <a name="51090"></a>
+        <div class="comment" id="comment-51090">
+            <div id="post-51090-score" class="comment-score"></div>
+            <div class="comment-text"><p>While not directly applicable to this question specifically, if a building has more than one entrance and each entrance is associated with a different amenity, then I would tag each entrance with the information for the amenity and just leave the building as building:yes with the address information (assuming the address for all parts of the building is the same).</p></div>
+            <div class="comment-info" id="comment-51090-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 22:07)</span>
+                <a class="comment-user userinfo" href="/users/9931/zellfaze">zellfaze</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26625" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26625-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/26625/buildings-with-more-than-one-amenity?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/26625/buildings-with-more-than-one-amenity?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/26625/buildings-with-more-than-one-amenity?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/26625/buildings-with-more-than-one-amenity?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="51214"></a>
+                    <div id="answer-container-51214" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51214-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51214/up/" rel="nofollow"> </a>
+<div id="post-51214-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-51214-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51214/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'll split this answer into two parts: How to map the amenities, and how to map the addresses.</p>
+<h2>Mapping multiple amenities in a building</h2>
+<p>The easiest and most common solution is to create <strong>one node per amenity</strong>. As you noticed yourself, using only one element for all of them would cause conflicts between their attributes. Therefore, using one node, way, or relation for each "thing" – no more, no less – is a common principle in OSM tagging known as <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature, one OSM element</a>.</p>
+<p>If you want to add more detail, though, you might be interested in concepts from <strong>indoor mapping</strong>. With a tagging style such as <a href="https://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging">Simple Indoor Tagging</a> (see the <a href="https://wiki.openstreetmap.org/wiki/Indoor_Mapping">overview</a> for alternatives), this can be as simple as adding level tags to each amenity. On the other end of the spectrum, you might see amenities mapped as areas which represent their share of the floor, together with hallways, staircases and other features.</p>
+<h2>Mapping multiple amenities with the same address</h2>
+<p>Adding the shared address to the <strong>building outline</strong> is a good start. Not only does it avoid duplication, it's also entirely possible for programs to find out which amenities are inside the building outline, and conclude that they share the building's address. In practice, however, not many programs actually support that feature, so mappers often decide to tag the <strong>address on the amenities</strong> as well as the building outline. If there is already a consensus among mappers in your area, it's best to stick to that.</p>
+<p>Every now and then, other approaches have been proposed, usually using <strong>relations</strong>. Those would be able to express very complex address situations. However, they tend to be strongly rejected in votes (<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/AssociatedAddress_(new)#Voting">example</a>), and none of them has been mature enough to gain significant support yet.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51214/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Aug '16, 18:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0626be5f46f32fce501353e8a5ec399c?s=32&amp;d=identicon&amp;r=g" alt="Tordanik's gravatar image" />
+    <p><a href="/users/14/tordanik">Tordanik</a><br/>
+    <span class="score" title="11998 reputation points"><span class="">12.0k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="106 badges"><span class="silver">&#9679;</span><span class="badgecount">106</span></span><span title="147 badges"><span class="bronze">&#9679;</span><span class="badgecount">147</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tordanik has 58 accepted answers">35&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51214">
+    
+</div>
+<div id="comment-tools-51214" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51214-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="26632"></a>
+                    <div id="answer-container-26632" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-26632-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26632/up/" rel="nofollow"> </a>
+<div id="post-26632-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-26632-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26632/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi,
+A good question which I hoped someone else might answer before me as I have a similar problem with this building which is a health centre accommodating doctors, dentist, pharmacy &amp; physiotherapist all having different opening hours and contact details <a href="http://www.openstreetmap.org/browse/way/223249817">http://www.openstreetmap.org/browse/way/223249817</a></p>
+<p>The multiple values in the amenity tag don't really work and I think I will replace them with the single value 'clinic'  http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dclinic  This would apply to the building which would continue to be tagged with the name Hillcrest Healthcare. I'd also delete the tag 'dispensing=yes' which only applies to the pharmacy part of the clinic.</p>
+<p>I'd then put on separate nodes for each of the amenities with specified data about them as you suggest.  I'm not sure what to do about addresses – just one for the building or individual ones for each amenity?  Perhaps someone can advise.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/26632/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Sep '13, 08:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0b78593a39b9f71b9697697876327c6a?s=32&amp;d=identicon&amp;r=g" alt="NZGraham's gravatar image" />
+    <p><a href="/users/6756/nzgraham">NZGraham</a><br/>
+    <span class="score" title="1814 reputation points"><span class="">1.8k</span></span><span title="12 badges"><span class="badge1">&#9679;</span><span class="badgecount">12</span></span><span title="26 badges"><span class="silver">&#9679;</span><span class="badgecount">26</span></span><span title="49 badges"><span class="bronze">&#9679;</span><span class="badgecount">49</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="NZGraham has 7 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-26632">
+    
+        <a name="26642"></a>
+        <div class="comment" id="comment-26642">
+            <div id="post-26642-score" class="comment-score">4</div>
+            <div class="comment-text"><p>Following the principle "<a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature, one OSM element</a>", I tag the address only once on the building polyogon or on a node attached to the facade. But some people don't think that address is a feature and repeats the same information on all POI's. It's a point of view question : if you are interrested by the dentist, you like to see immediatly his adress attached to its node. If you are interrested by addresses, you don't like unnecessary duplicates.</p></div>
+            <div class="comment-info" id="comment-26642-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '13, 14:31)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26632" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26632-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="26635"></a>
+                    <div id="answer-container-26635" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-26635-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26635/up/" rel="nofollow"> </a>
+<div id="post-26635-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-26635-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26635/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In my city ( <a href="http://www.openstreetmap.org/#map=17/50.06186/19.93749">http://www.openstreetmap.org/#map=17/50.06186/19.93749</a> ) I see two methods: ignore less important places (Sukiennice are filled with multiple shops, none is marked) or mark amenity as point objects (some buildings have 5 or more amenities).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/26635/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Sep '13, 09:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fd2f7303e92334ed1eef75268aed7611?s=32&amp;d=identicon&amp;r=g" alt="Bulwersator's gravatar image" />
+    <p><a href="/users/7196/bulwersator">Bulwersator</a><br/>
+    <span class="score" title="468 reputation points">468</span><span title="12 badges"><span class="badge1">&#9679;</span><span class="badgecount">12</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="25 badges"><span class="bronze">&#9679;</span><span class="badgecount">25</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bulwersator has one accepted answer">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-26635">
+    
+        <a name="26646"></a>
+        <div class="comment" id="comment-26646">
+            <div id="post-26646-score" class="comment-score">4</div>
+            <div class="comment-text"><p>A feature should not get ignored only because there is a more important one next to it.</p></div>
+            <div class="comment-info" id="comment-26646-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '13, 14:58)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="72452"></a>
+        <div class="comment" id="comment-72452">
+            <div id="post-72452-score" class="comment-score"></div>
+            <div class="comment-text"><p>How should I tag building that has more than one amenity? The one building used for rice_mill,corn_grinding and carpenter work with diesel generator.Should I try to tag more amenities on it with specified data about them? Please help.</p></div>
+            <div class="comment-info" id="comment-72452-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '20, 05:35)</span>
+                <a class="comment-user userinfo" href="/users/17687/chaw-myat">chaw myat</a>
+                
+            </div>
+        </div>
+    
+        <a name="72453"></a>
+        <div class="comment" id="comment-72453">
+            <div id="post-72453-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/17687/chaw-myat">@chaw myat</a>: please create a new question if the answers on this question do not apply to your situation.</p></div>
+            <div class="comment-info" id="comment-72453-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '20, 07:53)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26635" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26635-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/26625/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='jIzCoTpa4Gt0izMMqGietJDoyJxBAm68' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26625/buildings-with-more-than-one-amenity?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26625/buildings-with-more-than-one-amenity?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/amenity/"
+            class="tag-link-amenity"
+            title="see questions tagged'amenity'using tags"
+            rel="tag">amenity</a> <span class="tag-number">&#215;94</span><br/>
+        
+        <a href="/tags/buildings/"
+            class="tag-link-buildings"
+            title="see questions tagged'buildings'using tags"
+            rel="tag">buildings</a> <span class="tag-number">&#215;75</span><br/>
+        
+        <a href="/tags/multiple/"
+            class="tag-link-multiple"
+            title="see questions tagged'multiple'using tags"
+            rel="tag">multiple</a> <span class="tag-number">&#215;53</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 23, 2013, 12:43 a.m.">23 Sep '13, 00:43</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,828 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 9, 2020, 7:53 a.m.">09 Jan '20, 07:53</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/36091/facility-made-up-of-multiple-connected-buildings">[closed] Facility made up of multiple connected buildings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1103/should-i-tag-nodes-or-areas-for-amenity-and-tourism">Should I tag nodes or areas for amenity and tourism?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1778/how-can-i-display-a-map-with-multiple-markers">How can I display a map with multiple markers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1365/for-groups-of-phone-booths-should-i-add-a-single-poi-or-multiple-pois">For groups of phone booths, should I add a single POI or multiple POIs?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity">Should all buildings at in a university campus be tagged amenity=university?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1697/tagging-more-than-one-company-in-one-building">Tagging more than one company in one building</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1298/selecting-multiple-area-ways">Selecting multiple area ways</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1836/how-to-add-factories">How to add factories</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3680/how-can-i-add-a-hackspace-to-the-map">How can I add a hackspace to the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1029/put-the-place-name-in-amenities">Put the place name in amenities ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

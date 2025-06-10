@@ -1,0 +1,849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>render map dont create images - OSM Help</title>
+        <meta name="description" content="i installed mapnik and other scripts for render the map now i run the sample command &quot;sudo render_list -n 3 -z 0 -Z 1 -a&quot; and  dont create any image in /var/lib/mod_tile folder and i got the output: peiman@map:~$ sudo render_list -n 3 -z 0 -Z 1 -a debug: init_storage_backend: initialising file stora..." />
+        <meta name="keywords" content="rendered,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/73447/render-map-dont-create-images" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/73447/render-map-dont-create-images?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='6MIL7OMTsMuw2jPjRmXqxfFxnNHVfI6E' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/73447/render-map-dont-create-images">render map dont create images</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-73447-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73447/up/" rel="nofollow"> </a>
+<div id="post-73447-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73447-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73447/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/73447/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>i installed mapnik and other scripts for render the map</p>
+<p>now i run the sample command "sudo render_list -n 3 -z 0 -Z 1 -a" and 
+dont create any image in /var/lib/mod_tile folder</p>
+<p>and i got the output:</p>
+<pre><code>peiman@map:~$ sudo render_list -n 3 -z 0 -Z 1 -a
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile
+Rendering client
+Starting 3 rendering threads
+Rendering all tiles from zoom 0 to zoom 1
+Rendering all tiles for zoom 0 from (0, 0) to (0, 0)
+Rendering all tiles for zoom 1 from (0, 0) to (1, 1)
+Waiting for rendering threads to finish
+rendering failed with command 4, pausing.
+rendering failed with command 4, pausing.
+
+*****************************************************
+*****************************************************
+Total for all tiles rendered
+Meta tiles rendered: Rendered 2 tiles in 10.00 seconds (0.20 tiles/s)
+Total tiles rendered: Rendered 128 tiles in 10.00 seconds (12.80 tiles/s)
+Total tiles handled: Rendered 2 tiles in 10.00 seconds (0.20 tiles/s)
+*****************************************************
+*****************************************************
+</code></pre>
+<p>how can i debug my process?
+this is my rendered config file </p>
+<pre><code>peiman@map:~$ sudo cat /etc/renderd.conf
+[renderd]
+stats_file=/var/run/renderd/renderd.stats
+socketname=/var/run/renderd/renderd.sock
+num_threads=4
+tile_dir=/var/lib/mod_tile
+
+[mapnik]
+plugins_dir=/usr/lib/mapnik/3.0/input
+font_dir=/usr/share/fonts
+font_dir_recurse=true
+
+[default]
+URI=/osm_tiles/
+TILEDIR=/var/lib/mod_tile
+
+XML=/home/peiman/src/openstreetmap-carto/style.xml
+DESCRIPTION=This is the standard osm mapnik style
+
+
+;ATTRIBUTION=&amp;copy;&lt;a href=\"http://www.openstreetmap.org/\"&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\"http://wiki.openstreetmap.org/w\
+;iki/Contributors\"&gt;contributors&lt;/a&gt;, &lt;a href=\"http://creativecommons.org/licenses/by-sa/2.0/\"&gt;CC-BY-SA&lt;/a&gt;
+HOST=localhost
+TILESIZE=256
+
+;SERVER_ALIAS=<a href="http://a.tile.openstreetmap.org">http://a.tile.openstreetmap.org</a>
+;SERVER_ALIAS=<a href="http://b.tile.openstreetmap.org">http://b.tile.openstreetmap.org</a>
+;HTCPHOST=proxy.openstreetmap.org
+</code></pre>
+<p>also some scripts and versions</p>
+<pre><code>peiman@map:~$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 18.04.4 LTS
+Release:        18.04
+Codename:       bionic
+peiman@map:~$ mapnik-config -v
+3.0.22
+peiman@map:~$ mapnik-config --input-plugins
+/usr/lib/mapnik/3.0/input
+peiman@map:~$ carto -v
+1.2.0
+</code></pre>
+<p>/var/log/syslog</p>
+<pre><code>Mar 10 05:38:17 map renderd[1559]: Starting stats thread
+Mar 10 05:38:17 map renderd[1559]: Loading parameterization function for
+Mar 10 05:38:17 map renderd[1559]: message repeated 3 times: [ Loading parameterization function for]
+Mar 10 05:38:17 map renderd[1559]: An error occurred while loading the map layer 'default': Postgis Plugin: FATAL:  role "www-data" does not exist#012Connection string: ' dbname=gis connect_timeout=4'#012  encountered during parsing of $
+Mar 10 05:38:17 map renderd[1559]: message repeated 3 times: [ An error occurred while loading the map layer 'default': Postgis Plugin: FATAL:  role "www-data" does not exist#012Connection string: ' dbname=gis connect_timeout=4'#012  en$
+Mar 10 05:38:17 map cloud-init[1565]: Cloud-init v. 19.4-33-gbb4131a2-0ubuntu1~18.04.1 running 'modules:final' at Tue, 10 Mar 2020 05:38:17 +0000. Up 23.51 seconds.
+Mar 10 05:38:17 map cloud-init[1565]: Cloud-init v. 19.4-33-gbb4131a2-0ubuntu1~18.04.1 finished at Tue, 10 Mar 2020 05:38:17 +0000. Datasource DataSourceNoCloud [seed=/var/lib/cloud/seed/nocloud-net][dsmode=net].  Up 23.73 seconds
+Mar 10 05:38:18 map systemd[1]: Started Execute cloud user/final scripts.
+Mar 10 05:38:18 map systemd[1]: Reached target Cloud-init target.
+Mar 10 05:38:18 map systemd[1]: Startup finished in 3.616s (kernel) + 20.190s (userspace) = 23.806s.
+Mar 10 05:38:27 map systemd[1]: Created slice User Slice of peiman.
+Mar 10 05:38:27 map systemd[1]: Starting User Manager for UID 1000...
+Mar 10 05:38:27 map systemd[1]: Started Session 1 of user peiman.
+Mar 10 05:38:27 map systemd[1617]: Reached target Timers.
+Mar 10 05:38:27 map systemd[1617]: Reached target Paths.
+Mar 10 05:38:27 map systemd[1617]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+Mar 10 05:38:27 map systemd[1617]: Listening on GnuPG cryptographic agent and passphrase cache.
+Mar 10 05:38:27 map systemd[1617]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+Mar 10 05:38:27 map systemd[1617]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Mar 10 05:38:27 map systemd[1617]: Listening on REST API socket for snapd user session agent.
+Mar 10 05:38:27 map systemd[1617]: Listening on GnuPG network certificate management daemon.
+Mar 10 05:38:27 map systemd[1617]: Reached target Sockets.
+Mar 10 05:38:27 map systemd[1617]: Reached target Basic System.
+Mar 10 05:38:27 map systemd[1617]: Reached target Default.
+Mar 10 05:38:27 map systemd[1617]: Startup finished in 197ms.
+Mar 10 05:38:27 map systemd[1]: Started User Manager for UID 1000.
+Mar 10 05:38:19 map systemd-timesyncd[599]: Synchronized to time server 91.189.89.199:123 (ntp.ubuntu.com).
+Mar 10 05:39:30 map renderd[1559]: DEBUG: Got incoming connection, fd 7, number 1
+Mar 10 05:39:30 map renderd[1559]: DEBUG: Got incoming connection, fd 8, number 2
+Mar 10 05:39:30 map renderd[1559]: DEBUG: Got incoming connection, fd 9, number 3
+Mar 10 05:39:30 map render_list: DEBUG: Sending render cmd(6 default 0/0/0) with protocol version 2 to fd 4
+Mar 10 05:39:30 map render_list: DEBUG: Sending render cmd(6 default 1/0/0) with protocol version 2 to fd 3
+Mar 10 05:39:30 map renderd[1559]: DEBUG: Got incoming request with protocol version 2
+Mar 10 05:39:30 map renderd[1559]: DEBUG: Got command RenderBulk fd(8) xml(default), z(0), x(0), y(0), mime(image/png), options()
+Mar 10 05:39:30 map renderd[1559]: DEBUG: Got incoming request with protocol version 2
+Mar 10 05:39:30 map renderd[1559]: Received request for map layer 'default' which failed to load
+Mar 10 05:39:30 map renderd[1559]: DEBUG: Got command RenderBulk fd(7) xml(default), z(1), x(0), y(0), mime(image/png), options()
+Mar 10 05:39:30 map renderd[1559]: DEBUG: Sending render cmd(4 default 0/0/0) with protocol version 2 to fd 8
+Mar 10 05:39:30 map renderd[1559]: DEBUG: Failed to read cmd on fd 9
+Mar 10 05:39:30 map renderd[1559]: DEBUG: Connection 2, fd 9 closed, now 2 left
+Mar 10 05:39:30 map renderd[1559]: Received request for map layer 'default' which failed to load
+Mar 10 05:39:30 map renderd[1559]: DEBUG: Sending render cmd(4 default 1/0/0) with protocol version 2 to fd 7
+Mar 10 05:39:30 map render_list: DEBUG: Got incoming request with protocol version 2
+Mar 10 05:39:30 map render_list: DEBUG: Got incoming request with protocol version 2
+Mar 10 05:39:40 map renderd[1559]: DEBUG: Failed to read cmd on fd 7
+Mar 10 05:39:40 map renderd[1559]: DEBUG: Connection 0, fd 7 closed, now 1 left
+Mar 10 05:39:40 map renderd[1559]: DEBUG: Failed to read cmd on fd 8
+Mar 10 05:39:40 map renderd[1559]: DEBUG: Connection 0, fd 8 closed, now 0 left
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rendered/" class="post-tag tag-link-rendered"
+                                        title="see questions tagged 'rendered'" rel="tag">rendered</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Mar '20, 15:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0cc5add59daed413ca657703467678ea?s=32&amp;d=identicon&amp;r=g" alt="peiman2's gravatar image" />
+    <p><a href="/users/18007/peiman2">peiman2</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="peiman2 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/73447/">
+                edited
+                <strong>10 Mar '20, 05:45</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-73447">
+    
+        <a name="73451"></a>
+        <div class="comment" id="comment-73451">
+            <div id="post-73451-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Errors from the renderer will probably be written here:</p>
+
+<pre><code> /var/log/syslog
+</code></pre></div>
+            <div class="comment-info" id="comment-73451-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Mar '20, 23:12)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="73452"></a>
+        <div class="comment" id="comment-73452">
+            <div id="post-73452-score" class="comment-score"></div>
+            <div class="comment-text"><p>i added the syslog to my post.thank you</p></div>
+            <div class="comment-info" id="comment-73452-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Mar '20, 05:46)</span>
+                <a class="comment-user userinfo" href="/users/18007/peiman2">peiman2</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73447" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73447-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/73447/render-map-dont-create-images?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/73447/render-map-dont-create-images?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/73447/render-map-dont-create-images?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/73447/render-map-dont-create-images?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="73482"></a>
+                    <div id="answer-container-73482" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73482-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73482/up/" rel="nofollow"> </a>
+<div id="post-73482-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73482-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73482/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This seems to be the problem:</p>
+<pre><code>Mar 10 05:38:17 map renderd[1559]: An error occurred while loading the map layer 'default': Postgis Plugin: FATAL:  role "www-data" does not exist#012Connection string: ' dbname=gis connect_timeout=4'
+</code></pre>
+<p>The renderd process runs with user <code>www-data</code>, but that user does not have access to the PostGIS database. So either you have to create a user <code>www-data</code> in the database and grant it access permissions to the data it wants to access, or you have to configure a different, existing database user in the PostgreSQL connection string.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73482/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Mar '20, 21:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/97f754e0356a74acc666550948b48bd6?s=32&amp;d=identicon&amp;r=g" alt="hfs's gravatar image" />
+    <p><a href="/users/409/hfs">hfs</a><br/>
+    <span class="score" title="851 reputation points">851</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="25 badges"><span class="bronze">&#9679;</span><span class="badgecount">25</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hfs has 3 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73482">
+    
+        <a name="73483"></a>
+        <div class="comment" id="comment-73483">
+            <div id="post-73483-score" class="comment-score"></div>
+            <div class="comment-text"><p>In addition, you seem to be trying to run render_list as root - I'm not sure why.</p></div>
+            <div class="comment-info" id="comment-73483-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Mar '20, 21:49)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="73543"></a>
+        <div class="comment" id="comment-73543">
+            <div id="post-73543-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@someoneElse</a> are talking about <code>sudo</code> or something else? i run command without <code>sudo</code> and also run after <code>su tileserver</code> but nothing changed.</p></div>
+            <div class="comment-info" id="comment-73543-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Mar '20, 11:10)</span>
+                <a class="comment-user userinfo" href="/users/18007/peiman2">peiman2</a>
+                
+            </div>
+        </div>
+    
+        <a name="73544"></a>
+        <div class="comment" id="comment-73544">
+            <div id="post-73544-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/409/hfs">@hfs</a> why the renderd process use 'www-data' i added <code>tileserver</code> user for  connect to database.also at this point i dont have to use mode_tile.i need to create tile images locally and save them to hard disk.</p></div>
+            <div class="comment-info" id="comment-73544-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Mar '20, 11:13)</span>
+                <a class="comment-user userinfo" href="/users/18007/peiman2">peiman2</a>
+                
+            </div>
+        </div>
+    
+        <a name="73548"></a>
+        <div class="comment" id="comment-73548">
+            <div id="post-73548-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, "sudo render_list" will run that command as root.  You would almost never want to do that here.</p></div>
+            <div class="comment-info" id="comment-73548-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Mar '20, 12:37)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73482" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73482-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/73447/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='6MIL7OMTsMuw2jPjRmXqxfFxnNHVfI6E' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73447/render-map-dont-create-images?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73447/render-map-dont-create-images?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/rendered/"
+            class="tag-link-rendered"
+            title="see questions tagged'rendered'using tags"
+            rel="tag">rendered</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 9, 2020, 3:14 p.m.">09 Mar '20, 15:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,269 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 16, 2020, 12:37 p.m.">16 Mar '20, 12:37</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/498/uploading-a-small-bit-of-new-tiger-data-and-3-other-unrelated-questions">Uploading a small bit of new TIGER data (and 3 other unrelated questions)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1004/simple-legendkey">Simple legend/key?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile">How to trigger a repaint for a specific OSM map tile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">Can I influence what gets rendered in the main Mapnik layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1580/should-i-tag-name-for-the-way-or-for-the-relation">Should I tag &quot;name&quot; for the way or for the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1746/running-generate_image-gives-features-only-present-in-mapnik-version-071-error">Running generate_image gives &quot;features only present in Mapnik version 0.7.1&quot; error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1774/features-not-exported-in-svg-export">Features not exported in SVG export</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1885/hide-administrative-boundaries-in-default-mapnik-layer">[closed] Hide administrative boundaries in default mapnik layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1887/mapnik-does-not-render-my-new-ways-already-for-a-couple-of-day-now">Mapnik does not render my new ways already for a couple of day now</a>
+        </p>
+        
+        <p>
+            <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">Why do the changes I have made to coastline not appear on the map?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

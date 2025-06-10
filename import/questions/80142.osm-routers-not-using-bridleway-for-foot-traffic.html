@@ -1,0 +1,1079 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>OSM routers not using bridleway for foot traffic - OSM Help</title>
+        <meta name="description" content="Why are OSRM and graphopper both routing foot traffic a long way &quot;round the houses&quot; when there&#39;s a much shorter bridleway directly the specified points?  See https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;amp;route=51.59491%2C0.01149%3B51.59436%2C0.01163#map=17/51.59244/0.01339&amp;am..." />
+        <meta name="keywords" content="foot,osrm,routing,bridleway,graphhopper" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/80142/osm-routers-not-using-bridleway-for-foot-traffic" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/80142/osm-routers-not-using-bridleway-for-foot-traffic?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ViXpQArqtdXZ12Xi8p6T5gacCGs31mV1' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/80142/osm-routers-not-using-bridleway-for-foot-traffic">OSM routers not using bridleway for foot traffic</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-80142-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80142/up/" rel="nofollow"> </a>
+<div id="post-80142-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-80142-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80142/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/80142/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Why are OSRM and graphopper both routing foot traffic a long way "round the houses" when there's a much shorter bridleway directly the specified points?</p>
+<p><img src="https://help.openstreetmap.org/upfiles/2021-05-12_23_01_30_OpenStreetMap.jpg" alt="alt text"></p>
+<p>See <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;route=51.59491%2C0.01149%3B51.59436%2C0.01163#map=17/51.59244/0.01339&amp;layers=N">https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;route=51.59491%2C0.01149%3B51.59436%2C0.01163#map=17/51.59244/0.01339&amp;layers=N</a> and <a href="https://www.openstreetmap.org/directions?engine=graphhopper_foot&amp;route=51.59491%2C0.01149%3B51.59436%2C0.01163#map=17/51.59244/0.01338&amp;layers=N">https://www.openstreetmap.org/directions?engine=graphhopper_foot&amp;route=51.59491%2C0.01149%3B51.59436%2C0.01163#map=17/51.59244/0.01338&amp;layers=N</a></p>
+<p>There have been no mapping changes to the bridleway since 2016.</p>
+<p>If the reason is that the bridleway is not tagged foot=yes, then something needs fixing because according to <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbridleway">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbridleway</a> the bridleway tag already implies foot=yes.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/foot/" class="post-tag tag-link-foot"
+                                        title="see questions tagged 'foot'" rel="tag">foot</a>
+                                
+                                    <a href="/tags/osrm/" class="post-tag tag-link-osrm"
+                                        title="see questions tagged 'osrm'" rel="tag">osrm</a>
+                                
+                                    <a href="/tags/routing/" class="post-tag tag-link-routing"
+                                        title="see questions tagged 'routing'" rel="tag">routing</a>
+                                
+                                    <a href="/tags/bridleway/" class="post-tag tag-link-bridleway"
+                                        title="see questions tagged 'bridleway'" rel="tag">bridleway</a>
+                                
+                                    <a href="/tags/graphhopper/" class="post-tag tag-link-graphhopper"
+                                        title="see questions tagged 'graphhopper'" rel="tag">graphhopper</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 May '21, 22:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/abc0839b7c039ccfb48fcbe8691904f7?s=32&amp;d=identicon&amp;r=g" alt="harg's gravatar image" />
+    <p><a href="/users/7093/harg">harg</a><br/>
+    <span class="score" title="281 reputation points">281</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="harg has one accepted answer">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/80142/">
+                edited
+                <strong>12 May '21, 23:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-80142">
+    
+        <a name="80300"></a>
+        <div class="comment" id="comment-80300">
+            <div id="post-80300-score" class="comment-score"></div>
+            <div class="comment-text"><p>I had to reactive the map note, after it was resolved without comment ?? just a tidy up? It was then commented on very comprehensively by user thanks  "harg" </p></div>
+            <div class="comment-info" id="comment-80300-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 May '21, 08:41)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80142" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80142-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/80142/osm-routers-not-using-bridleway-for-foot-traffic?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/80142/osm-routers-not-using-bridleway-for-foot-traffic?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/80142/osm-routers-not-using-bridleway-for-foot-traffic?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/80142/osm-routers-not-using-bridleway-for-foot-traffic?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="80143"></a>
+                    <div id="answer-container-80143" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80143-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80143/up/" rel="nofollow"> </a>
+<div id="post-80143-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-80143-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80143/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It's pretty easy to come up with "router fails" with the routers on osm.org, to be honest.  <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;route=53.99220%2C-0.91070%3B53.99260%2C-0.91030#map=13/53.9992/-0.8805">This</a> is one that I came up with a while ago.</p>
+<p>To be fair to the routers on osm.org, they're basically there to show that you can use OSM data for routing rather than give you a perfect route in every place in the world.  They're not trying to make sure that they follow the <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access_restrictions#Default">different routing rules for each country</a> - and those routing rules aren't hard and fast, as the asterisks in some of the tables make clear.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80143/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 May '21, 23:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80143">
+    
+        <a name="80145"></a>
+        <div class="comment" id="comment-80145">
+            <div id="post-80145-score" class="comment-score"></div>
+            <div class="comment-text"><p>About your "fail", I guess they didn't imagine sidewalks on trunk road ! Sounds scary. Or maybe they don't take sidewalk into account at all (yet)... In that case, I understand blacklisting trunk roads for foot routing. But yeah, 15km detour seems harsh... ;-)</p></div>
+            <div class="comment-info" id="comment-80145-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '21, 00:21)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+        <a name="80146"></a>
+        <div class="comment" id="comment-80146">
+            <div id="post-80146-score" class="comment-score"></div>
+            <div class="comment-text"><p>Think that's scary?  Try <a href="https://www.openstreetmap.org/way/99750085">cycling on a motorway</a>!</p></div>
+            <div class="comment-info" id="comment-80146-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '21, 00:27)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80143" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80143-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="80144"></a>
+                    <div id="answer-container-80144" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80144-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80144/up/" rel="nofollow"> </a>
+<div id="post-80144-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-80144-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80144/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Actually the text of the wiki page shows that England legally has foot=yes and Germany doesn't.</p>
+<p>And the <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access_restrictions">defaults</a> page (which routers might use) says that bridleways are only for horses internationaly. I'm not sure the country level defaults are used by any router. You might want to test in various countries.</p>
+<p>So the infobox "Implies... " is misleading and should probably be changed to "Useful combinations". </p>
+<p>And you should probably add foot=yes to the shown bridleway if you're sure it's allowed.</p>
+<p>Regards.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80144/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 May '21, 00:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80144">
+    
+</div>
+<div id="comment-tools-80144" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80144-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="80156"></a>
+                    <div id="answer-container-80156" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-80156-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/80156/up/" rel="nofollow"> </a>
+<div id="post-80156-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-80156-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/80156/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think they will route successfully if tagged foot=yes. I have added foot=yes and bicycle=yes to the bridleway.  It should route soon, maybe a day.    I often use an online app ( which i don't want name, it also displays copyrighted maps that have usage limits) to create gpxes and it seems to work if the above tags are present. Other will disagree.  UPDATE  I am fairly sure this Bridleway can be used by walkers. If I lived close by I should survey it and note local signage before tagging it.  The routeing with OSRM now does as expected. see pic</p>
+<p><img src="https://help.openstreetmap.org/upfiles/Routing_Works_Now.JPG" alt="alt text"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/80156/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 May '21, 12:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/80156/">
+                edited
+                <strong>14 May '21, 13:14</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-80156">
+    
+        <a name="80157"></a>
+        <div class="comment" id="comment-80157">
+            <div id="post-80157-score" class="comment-score"></div>
+            <div class="comment-text"><p>We don't actually know the legal status of this bridleway (<a href="https://www.openstreetmap.org/way/42328362">https://www.openstreetmap.org/way/42328362</a> just has "highway=bridleway", there's no "designation" tag).  Generally speaking adding "foot=yes" to fix a router bug is a bad idea, since it downgrades the value of where people know that "foot-yes" is actually correct based on actual survey or knowledge of the legal status (e.g. if a local authority's public footpath data has been made available to OSM under a suitable licence).</p>
+
+<p>In this case it's <em>probably</em> a public bridleway and so this tag is <em>quite possibly</em> correct, but it really needs more information.  Perhaps you could investigate whether there is licence-compatible data from the local authority that OSM could use to tag it properly as a "public_bridleway"?  There's nothing at <a href="https://wiki.openstreetmap.org/wiki/Local_councils_in_the_United_Kingdom">https://wiki.openstreetmap.org/wiki/Local_councils_in_the_United_Kingdom</a> unfortunately.</p></div>
+            <div class="comment-info" id="comment-80157-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '21, 12:17)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="80160"></a>
+        <div class="comment" id="comment-80160">
+            <div id="post-80160-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'd assumed the questioner knew it is a bridleway, and in England bridleway is foot=yes but I should NOT have assumed.  I'll research a bit more or maybe "harg" can confirm the legal status or official signage of that bridle way.</p></div>
+            <div class="comment-info" id="comment-80160-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '21, 12:56)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="80163"></a>
+        <div class="comment" id="comment-80163">
+            <div id="post-80163-score" class="comment-score"></div>
+            <div class="comment-text"><p>For completeness, "highway=bridleway" in England and Wales just means "designed for use by horses" (as it does elsewhere in the world) not necessarily "designation=public_bridleway" (which is what a "public bridleway" sign would imply).  Permissive bridleways are pretty common - <a href="https://www.openstreetmap.org/way/39589904/history">https://www.openstreetmap.org/way/39589904/history</a> is one I found a couple of weeks ago.  That example of mine is designed for use by horses, and horses are currently allowed to use it, but that's only by permission of the landowner and that permission can be withdrawn at any time.</p></div>
+            <div class="comment-info" id="comment-80163-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '21, 13:51)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="80164"></a>
+        <div class="comment" id="comment-80164">
+            <div id="post-80164-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm confused this disagrees. <a href="https://www.gov.uk/right-of-way-open-access-land/use-public-rights-of-way">https://www.gov.uk/right-of-way-open-access-land/use-public-rights-of-way</a></p></div>
+            <div class="comment-info" id="comment-80164-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '21, 14:05)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="80165"></a>
+        <div class="comment not_top_scorer" id="comment-80165">
+            <div id="post-80165-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have added a note to the map is this a footpath ?</p></div>
+            <div class="comment-info" id="comment-80165-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '21, 14:07)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="80166"></a>
+        <div class="comment not_top_scorer" id="comment-80166">
+            <div id="post-80166-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not all ways "designed for use by horses" are in England/Wales legal terms "public rights of way".  If you see a sign at the end saying "Public Bridleway" then it is, but many others (like the example I linked to earlier) don't have that legal status.</p>
+
+<p>Hopefully your OSM note "is this a footpath and cycleway what do the signs say? please" will get people to report what signage there is, but the OSM terms highway=footway, highway=cycleway and highway=bridleway don't correspond one to one with English/Welsh legal statuses.  It's quite common for a cycleway to have the legal status "Public Footpath", for example: <a href="https://www.openstreetmap.org/way/485751846">https://www.openstreetmap.org/way/485751846</a> .</p></div>
+            <div class="comment-info" id="comment-80166-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '21, 14:48)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="80167"></a>
+        <div class="comment" id="comment-80167">
+            <div id="post-80167-score" class="comment-score">1</div>
+            <div class="comment-text"><p>"maybe "harg" can confirm the legal status"</p>
+
+<p>Unfortunately, although Waltham Forest has the statutory duty to maintain the definitive Rights of Way information for the area, there's no statutory duty to make it available online and Waltham Forest does not do this. And so far the only place where I can find it described as a bridleway is on OSM. </p>
+
+<p>What I can say is:</p>
+
+<ul>
+<li>It's part of Epping Forest </li>
+<li>At <a href="https://www.cityoflondon.gov.uk/things-to-do/green-spaces/epping-forest/activities-in-epping-forest/horse-riding-in-epping-forest">https://www.cityoflondon.gov.uk/things-to-do/green-spaces/epping-forest/activities-in-epping-forest/horse-riding-in-epping-forest</a> is the statement: "The Forest is a great place for a ride with your horse. You can ride on any of the 284km of shared use paths that run through the Forest. </li>
+<li>The map linked from that page shows the entire area as green, keyed as "Forest land with unlimited access for walking. "</li>
+<li>That particular path is shown on it as a dotted line, but the map doesn't provide a key to indicate what it means</li>
+</ul>
+
+<p>So it seems it's definitely available to the public for walking (horse riding requires a licence) but may or may not be a statutory bridleway</p></div>
+            <div class="comment-info" id="comment-80167-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '21, 14:55)</span>
+                <a class="comment-user userinfo" href="/users/7093/harg">harg</a>
+                
+            </div>
+        </div>
+    
+        <a name="80168"></a>
+        <div class="comment not_top_scorer" id="comment-80168">
+            <div id="post-80168-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually, it looks like a permit is required for horses in Epping Forest: <a href="https://www.cityoflondon.gov.uk/things-to-do/green-spaces/epping-forest/apply-for-a-licence-in-epping-forest/horse-riding-in-epping-forest">https://www.cityoflondon.gov.uk/things-to-do/green-spaces/epping-forest/apply-for-a-licence-in-epping-forest/horse-riding-in-epping-forest</a> .</p>
+
+<p>In the past I've mapped this sort of thing like <a href="https://www.openstreetmap.org/way/142216479">https://www.openstreetmap.org/way/142216479</a> - but that might not be the best way.</p></div>
+            <div class="comment-info" id="comment-80168-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '21, 15:03)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="80181"></a>
+        <div class="comment not_top_scorer" id="comment-80181">
+            <div id="post-80181-score" class="comment-score"></div>
+            <div class="comment-text"><p>I found this.  Which suggests we can walk the path
+.<a href="https://eppingforestheritagetrust.org.uk/wp-content/uploads/2019/09/epping-forest-map.pdf">https://eppingforestheritagetrust.org.uk/wp-content/uploads/2019/09/epping-forest-map.pdf</a></p></div>
+            <div class="comment-info" id="comment-80181-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 May '21, 15:04)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-80156" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-80156-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/80142/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ViXpQArqtdXZ12Xi8p6T5gacCGs31mV1' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80142/osm-routers-not-using-bridleway-for-foot-traffic?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/80142/osm-routers-not-using-bridleway-for-foot-traffic?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/routing/"
+            class="tag-link-routing"
+            title="see questions tagged'routing'using tags"
+            rel="tag">routing</a> <span class="tag-number">&#215;305</span><br/>
+        
+        <a href="/tags/osrm/"
+            class="tag-link-osrm"
+            title="see questions tagged'osrm'using tags"
+            rel="tag">osrm</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/graphhopper/"
+            class="tag-link-graphhopper"
+            title="see questions tagged'graphhopper'using tags"
+            rel="tag">graphhopper</a> <span class="tag-number">&#215;21</span><br/>
+        
+        <a href="/tags/foot/"
+            class="tag-link-foot"
+            title="see questions tagged'foot'using tags"
+            rel="tag">foot</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/bridleway/"
+            class="tag-link-bridleway"
+            title="see questions tagged'bridleway'using tags"
+            rel="tag">bridleway</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 12, 2021, 10:59 p.m.">12 May '21, 22:59</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,168 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 26, 2021, 8:42 a.m.">26 May '21, 08:42</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/58890/osrm-routing-on-foot">osrm routing on foot</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60844/routing-for-ski-pistes-and-ski-lifts">Routing for Ski Pistes and Ski Lifts</a>
+        </p>
+        
+        <p>
+            <a href="/questions/81183/do-any-routing-engines-pay-attention-to-the-sidewalkseparate-tag">Do any routing engines pay attention to the `sidewalk=separate` tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56035/router-gives-wrong-directions">Router gives wrong directions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47171/does-routing-with-graphhopper-and-mapzen-have-length-restrictions">Does routing with graphhopper and mapzen have length restrictions?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52675/osrm-access-control-allow-origin">OSRM Access-Control-Allow-Origin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42094/how-can-i-make-my-local-graphhopper-installation-obey-bicycleno">How can I make my local GraphHopper installation obey bicycle=no?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30272/how-the-routing-osrm-algorithm-works">how the routing OSRM algorithm works?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36739/offline-multi-modal-routing-on-mobile">Offline multi-modal routing on mobile</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19695/how-to-use-osrm-on-offline">How to use OSRM on offline?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

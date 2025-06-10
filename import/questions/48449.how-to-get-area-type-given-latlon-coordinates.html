@@ -1,0 +1,758 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to get area type given lat/lon coordinates ? - OSM Help</title>
+        <meta name="description" content="Hi - sorry if this question seems stupid.  Given a lat/lon coordinates, I&#39;d like to known if the point is in a lake, in a forest or on an highway for instance. Nominatim geocoding gives me the nearest node thus it does not really answer my need. What&#39;s the right way / tool to use to get that ? Thank..." />
+        <meta name="keywords" content="reversegeocoding,geocoding,coordinates,area" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/48449/how-to-get-area-type-given-latlon-coordinates" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/48449/how-to-get-area-type-given-latlon-coordinates?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='fVr1hwjzMQqaCRUVB2iUQQy4zzjaSRTA' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/48449/how-to-get-area-type-given-latlon-coordinates">How to get area type given lat/lon coordinates ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-48449-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48449/up/" rel="nofollow"> </a>
+<div id="post-48449-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-48449-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48449/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/48449/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi -</p>
+<p>sorry if this question seems stupid. 
+Given a lat/lon coordinates, I'd like to known if the point is in a lake, in a forest or on an highway for instance.</p>
+<p>Nominatim geocoding gives me the nearest node thus it does not really answer my need.</p>
+<p>What's the right way / tool to use to get that ?</p>
+<p>Thanks a lot for your help</p>
+<p>--
+david</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/reversegeocoding/" class="post-tag tag-link-reversegeocoding"
+                                        title="see questions tagged 'reversegeocoding'" rel="tag">reversegeocoding</a>
+                                
+                                    <a href="/tags/geocoding/" class="post-tag tag-link-geocoding"
+                                        title="see questions tagged 'geocoding'" rel="tag">geocoding</a>
+                                
+                                    <a href="/tags/coordinates/" class="post-tag tag-link-coordinates"
+                                        title="see questions tagged 'coordinates'" rel="tag">coordinates</a>
+                                
+                                    <a href="/tags/area/" class="post-tag tag-link-area"
+                                        title="see questions tagged 'area'" rel="tag">area</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Mar '16, 13:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/878fd3d25e7dd8ba8c0fb59e7e450587?s=32&amp;d=identicon&amp;r=g" alt="dmercier90's gravatar image" />
+    <p><a href="/users/11931/dmercier90">dmercier90</a><br/>
+    <span class="score" title="76 reputation points">76</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dmercier90 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48449/">
+                edited
+                <strong>02 Mar '16, 14:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-48449">
+    
+</div>
+<div id="comment-tools-48449" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48449-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/48449/how-to-get-area-type-given-latlon-coordinates?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/48449/how-to-get-area-type-given-latlon-coordinates?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/48449/how-to-get-area-type-given-latlon-coordinates?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/48449/how-to-get-area-type-given-latlon-coordinates?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="48450"></a>
+                    <div id="answer-container-48450" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48450-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48450/up/" rel="nofollow"> </a>
+<div id="post-48450-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-48450-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48450/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="dmercier90 has selected this answer as the correct answer"
+        href="/accept_answer/48450/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is exactly what "query feature" on the <a href="http://osm.org/">http://osm.org/</a> map does, using <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass Turbo</a>:</p>
+<pre><code>[timeout:5][out:json];is_in(lat,lon)-&gt;.a;way(pivot.a);out tags geom({{bbox}});relation(pivot.a);out tags bb;
+</code></pre>
+<p>Where you need to replace <code>lon</code> and <code>lat</code> with the coordinates of the point, and replace <code>{{bbox}}</code> by the current map bounding box (if you need that). This gives you the elements <em>surrounding</em> the given point. Note that this also returns administrative boundaries (county, state, etc.), not just physical elements - you'd need to filter on this, perhaps by throwing away <code>boundary</code> relations etc. See e.g. <a href="http://overpass-api.de/api/convert?data=%5Btimeout%3A5%5D%5Bout%3Ajson%5D%3Bis_in(50.08417%2C14.35882)-%3E.a%3Bway(pivot.a)%3Bout%20tags%20geom(50.08157175512576%2C14.357349872589111%2C50.08436684351692%2C14.374194145202637)%3Brelation(pivot.a)%3Bout%20tags%20bb%3B&amp;target=compact">this query</a> - note that the largest enclosing feature is the entire country.</p>
+<p>Also, this will give you <em>enclosing</em> features - so for a highway (which is usually an unclosed way), you wouldn't get a usable result. For that, you may need the other query, "nearby features":</p>
+<pre><code>[timeout:5][out:json];(node(around:radius,lat,lon);way(around:radius,lat,lon));out tags geom({{bbox}});relation(around:radius,lat,lon);out geom({{bbox}});
+</code></pre>
+<p>Again, you need to replace <code>lon</code>,<code>lat</code>,<code>{{bbox}}</code>, and in addition <code>radius</code> (how far from the point to look, not sure of the unit) with your data. See e.g. <a href="http://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A5%5D%3B%28node%28around%3A35%2C50%2E08417%2C14%2E35882%29%3Bway%28around%3A35%2C50%2E08417%2C14%2E35882%29%3B%29%3Bout%20tags%20geom%2850%2E0824805209559%2C14%2E355810284614563%2C50%2E08604657192704%2C14%2E362789392471315%29%3Brelation%28around%3A22%2E5%2C50%2E08417%2C14%2E35882%29%3Bout%20body%20geom%2850%2E0824805209559%2C14%2E355810284614563%2C50%2E08604657192704%2C14%2E362789392471315%29%3B%0A">this query</a> - note that by setting the radius too high, there will be many objects; but with a radius too low, there may not be anything found. Depending on your goal, perhaps you might want to start out small and increase the radius in a few steps.</p>
+<p>Pay attention also to the freshness data returned with results - Overpass uses its own cache, and updates it from the main db; this can sometimes take <em>days</em>, so newest edits may not be returned in the results immediately.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48450/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Mar '16, 14:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8200fa5c0cc8feb096558c5972a6191c?s=32&amp;d=identicon&amp;r=g" alt="Piskvor's gravatar image" />
+    <p><a href="/users/9641/piskvor">Piskvor</a><br/>
+    <span class="score" title="1266 reputation points"><span class="">1.3k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="35 badges"><span class="bronze">&#9679;</span><span class="badgecount">35</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Piskvor has 9 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48450/">
+                edited
+                <strong>02 Mar '16, 16:51</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48450">
+    
+        <a name="48451"></a>
+        <div class="comment" id="comment-48451">
+            <div id="post-48451-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks a lot for your fast answer Piskvor !</p>
+
+<p>I'm going to have a look at Overpass, it seems it will help for sure.
+Btw I didn't found any access to overpass API from <a href="http://osm.org">http://osm.org</a>, maybe something's missing me or I didn't understand. As far as I know osm.org reverse geocoding is using Nominatim, not Overpass.</p>
+
+<p>Example queries you have provided will be very usefull, thanks again.</p></div>
+            <div class="comment-info" id="comment-48451-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '16, 15:00)</span>
+                <a class="comment-user userinfo" href="/users/11931/dmercier90">dmercier90</a>
+                
+            </div>
+        </div>
+    
+        <a name="48452"></a>
+        <div class="comment" id="comment-48452">
+            <div id="post-48452-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Overpass is accessed when you use the "Query features" tool, the "?" at the bottom of the right button bar.</p></div>
+            <div class="comment-info" id="comment-48452-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '16, 15:11)</span>
+                <a class="comment-user userinfo" href="/users/10973/maxerickson">maxerickson</a>
+                
+            </div>
+        </div>
+    
+        <a name="48454"></a>
+        <div class="comment" id="comment-48454">
+            <div id="post-48454-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Maxerickson, I'm going to change my glasses :)</p></div>
+            <div class="comment-info" id="comment-48454-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '16, 15:24)</span>
+                <a class="comment-user userinfo" href="/users/11931/dmercier90">dmercier90</a>
+                
+            </div>
+        </div>
+    
+        <a name="48455"></a>
+        <div class="comment" id="comment-48455">
+            <div id="post-48455-score" class="comment-score"></div>
+            <div class="comment-text"><p>To correct answer, it seems is_in takes (lat,lon), not (lon,lat)</p></div>
+            <div class="comment-info" id="comment-48455-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '16, 16:27)</span>
+                <a class="comment-user userinfo" href="/users/11931/dmercier90">dmercier90</a>
+                
+            </div>
+        </div>
+    
+        <a name="48456"></a>
+        <div class="comment" id="comment-48456">
+            <div id="post-48456-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, good catch! Silly me, edited.</p></div>
+            <div class="comment-info" id="comment-48456-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '16, 16:49)</span>
+                <a class="comment-user userinfo" href="/users/9641/piskvor">Piskvor</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48450" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48450-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/48449/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='fVr1hwjzMQqaCRUVB2iUQQy4zzjaSRTA' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48449/how-to-get-area-type-given-latlon-coordinates?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48449/how-to-get-area-type-given-latlon-coordinates?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/area/"
+            class="tag-link-area"
+            title="see questions tagged'area'using tags"
+            rel="tag">area</a> <span class="tag-number">&#215;213</span><br/>
+        
+        <a href="/tags/coordinates/"
+            class="tag-link-coordinates"
+            title="see questions tagged'coordinates'using tags"
+            rel="tag">coordinates</a> <span class="tag-number">&#215;144</span><br/>
+        
+        <a href="/tags/geocoding/"
+            class="tag-link-geocoding"
+            title="see questions tagged'geocoding'using tags"
+            rel="tag">geocoding</a> <span class="tag-number">&#215;133</span><br/>
+        
+        <a href="/tags/reversegeocoding/"
+            class="tag-link-reversegeocoding"
+            title="see questions tagged'reversegeocoding'using tags"
+            rel="tag">reversegeocoding</a> <span class="tag-number">&#215;85</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 2, 2016, 1:23 p.m.">02 Mar '16, 13:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,641 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 2, 2016, 4:51 p.m.">02 Mar '16, 16:51</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/54194/postgis-address-normalization-and-geocode">PostGIS - address normalization and geocode</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63661/get-coordinates-of-an-area">Get coordinates of an area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32822/osm-offline-reverse-geocoding-for-android">OSM offline reverse geocoding for Android</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44800/how-to-get-continent-of-geo-locationlatitude-and-longtitude">How to get continent of geo-location(latitude and longtitude)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59825/how-can-we-get-the-area-cordinates">How can we get the area cordinates.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61456/incorrect-data-received-in-reverse-geocoding">Incorrect data received in reverse geocoding</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13543/set-of-coordinates-for-city-or-town-or-approximate-radius">Set of Coordinates for City or Town, or approximate radius</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay">Onetime bulk reverse geocoding: which amout is okay?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33976/nominatim-with-all-tags">Nominatim with all tags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65105/get-residential-street-closest-to-gps-coordinates">get residential street closest to gps coordinates</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

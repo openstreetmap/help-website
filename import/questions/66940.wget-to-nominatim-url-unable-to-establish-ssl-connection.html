@@ -1,0 +1,783 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>wget to nominatim URL: Unable to establish SSL connection. - OSM Help</title>
+        <meta name="description" content="I have possibly the same problem as that older question; I copied the url to a windows 10 installation. result:  wget &quot;http://nominatim.openstreetmap.org/reverse?format=xml&amp;amp;limit=1&amp;amp;addressdetails=1&amp;amp;zoom=18&amp;amp;email=&amp;amp;lat=-0.24136&amp;amp;lon=98.48281&quot;  --21:36:57-- http://nominatim.opens..." />
+        <meta name="keywords" content="wget,nominatim" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/66940/wget-to-nominatim-url-unable-to-establish-ssl-connection" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/66940/wget-to-nominatim-url-unable-to-establish-ssl-connection?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='I4bAlOGS4WC7gx5XtWd0gMQk3PbEuiPP' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/66940/wget-to-nominatim-url-unable-to-establish-ssl-connection">wget to nominatim URL: Unable to establish SSL connection.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-66940-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66940/up/" rel="nofollow"> </a>
+<div id="post-66940-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-66940-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66940/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/66940/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have possibly the same problem as <a href="https://help.openstreetmap.org/questions/45261/error-nomination-geocode-with-wget">that older question</a>; I copied the url to a windows 10 installation. result:</p>
+<pre><code>  wget "http://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281"
+    --21:36:57--  <a href="http://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281">http://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281</a>
+               =&gt; `reverse@format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281'
+    Resolving nominatim.openstreetmap.org... done.
+    Connecting to nominatim.openstreetmap.org[130.117.76.9]:80... connected.
+    HTTP request sent, awaiting response... 301 Moved Permanently
+    Location: <a href="https://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281">https://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281</a> [following]
+    --21:36:57--  <a href="https://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281">https://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281</a>
+               =&gt; `reverse@format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281'
+    Connecting to nominatim.openstreetmap.org[130.117.76.9]:443... connected.
+
+    Unable to establish SSL connection.
+
+    Unable to establish SSL connection.
+</code></pre>
+<p>I also tried direct https:</p>
+<pre><code>wget "https://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281"
+--21:39:27--  <a href="https://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281">https://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281</a>
+           =&gt; `reverse@format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281'
+Resolving nominatim.openstreetmap.org... done.
+Connecting to nominatim.openstreetmap.org[130.117.76.9]:443... connected.
+
+Unable to establish SSL connection.
+
+Unable to establish SSL connection.
+</code></pre>
+<p>What is the problem here?
+In a browser on the same machine the same URls succseed.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/wget/" class="post-tag tag-link-wget"
+                                        title="see questions tagged 'wget'" rel="tag">wget</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Nov '18, 20:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7b22f0b3304066470193db063a024ea2?s=32&amp;d=identicon&amp;r=g" alt="stefanwoe's gravatar image" />
+    <p><a href="/users/15966/stefanwoe">stefanwoe</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stefanwoe has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/66940/">
+                converted to question
+                <strong>27 Nov '18, 20:54</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-66940">
+    
+        <a name="66946"></a>
+        <div class="comment" id="comment-66946">
+            <div id="post-66946-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The <a href="https://www.gnu.org/software/wget/manual/wget.html#Logging-and-Input-File-Options">GNU Wget documentation</a> says you can add <code>--debug</code> to the wget command line to get more detailed debugging information. Does this give any useful information? Please edit your question to include the result it shows when you try this.</p></div>
+            <div class="comment-info" id="comment-66946-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '18, 03:43)</span>
+                <a class="comment-user userinfo" href="/users/15871/krubo">Krubo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-66940" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66940-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/66940/wget-to-nominatim-url-unable-to-establish-ssl-connection?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/66940/wget-to-nominatim-url-unable-to-establish-ssl-connection?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/66940/wget-to-nominatim-url-unable-to-establish-ssl-connection?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/66940/wget-to-nominatim-url-unable-to-establish-ssl-connection?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="66941"></a>
+                    <div id="answer-container-66941" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-66941-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66941/up/" rel="nofollow"> </a>
+<div id="post-66941-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-66941-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66941/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I guess you do not have the same problem. Rather your wget cannot establish the SSL connection - which may be due to a variety of reasons. Default output of wget is already verbose mode, so we cannot get more details of the logging.</p>
+<p>I <em>guess</em> the problem may be that your wget does not have the right CA certificate available. In my wget output (on linux) I see an additional line <code>Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'</code>. I would have expected a different error message from wget, though.  Can you successfully use wget with other https URLs?</p>
+<p>Anyway: Do not use Windows! ;-)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/66941/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Nov '18, 21:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/66941/">
+                edited
+                <strong>27 Nov '18, 21:10</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-66941">
+    
+        <a name="66942"></a>
+        <div class="comment" id="comment-66942">
+            <div id="post-66942-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello aseerel4c26, thanks for your answer.</p>
+
+<p>My original goal is it, to get nominatim access from a windows applications, where users can search for places etc. We are doing this since many years quite well with other providers (with google, bing, mapquest etc.) and i wanted to add nominatim as well. This is a c++ application on windows using boost::asio for https / https access. https works well for all other services.
+But using nominatim  i get the same results as using wget.</p>
+
+<p>Any hint what i can do here?</p>
+
+<p>And yes: wget works coorect with other https URLs</p></div>
+            <div class="comment-info" id="comment-66942-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '18, 21:12)</span>
+                <a class="comment-user userinfo" href="/users/15966/stefanwoe">stefanwoe</a>
+                
+            </div>
+        </div>
+    
+        <a name="66943"></a>
+        <div class="comment" id="comment-66943">
+            <div id="post-66943-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's nice to add nominatim. Nominatim has a Let's encrypt cert, just to rule out this specialty (in case your CA certs are a bit outdated), try <code>--no-check-certificate</code> as additional parameter for wget. </p>
+
+<p>Side note: Please obey <a href="https://operations.osmfoundation.org/policies/nominatim/">https://operations.osmfoundation.org/policies/nominatim/</a> .</p>
+
+<p>Just by chance: if you already tried many many times from your IP your access may (although I would expect the block to happen after the establishment of the SSL connection) be blocked due to policy violation. Try to set a useful user agent for wget'S request - maybe your mail address or your application's (unique) name.</p></div>
+            <div class="comment-info" id="comment-66943-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '18, 21:24)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="66944"></a>
+        <div class="comment" id="comment-66944">
+            <div id="post-66944-score" class="comment-score"></div>
+            <div class="comment-text"><p>i use wget from unixutils (GNU Wget 1.8.2) it does not accept a parameter like --no-check-certificate.
+Also in our application we do not check any certificates.</p>
+
+<p>I doubt that i was blocked - all calls in the browser succeed without problems.</p></div>
+            <div class="comment-info" id="comment-66944-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '18, 21:56)</span>
+                <a class="comment-user userinfo" href="/users/15966/stefanwoe">stefanwoe</a>
+                
+            </div>
+        </div>
+    
+        <a name="66947"></a>
+        <div class="comment" id="comment-66947">
+            <div id="post-66947-score" class="comment-score"></div>
+            <div class="comment-text"><p>wget 1.8.2 is from 2002. Due to its age it can't have support for TLS &gt;= 1.1. All previous TLS/SSL versions are outdated and insecure. Update your software for your own sake.</p></div>
+            <div class="comment-info" id="comment-66947-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '18, 07:23)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="66949"></a>
+        <div class="comment" id="comment-66949">
+            <div id="post-66949-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ouch! I use GNU Wget 1.19.5 -- your version is (according to <a href="https://ftp.gnu.org/gnu/wget/">https://ftp.gnu.org/gnu/wget/</a> ) from year 2002. That's quite stone age - in 2002  TLS 1.0 was current and possibly the highest TLS version supported by your wget version. According to <a href="https://www.ssllabs.com/ssltest/analyze.html?d=nominatim.openstreetmap.org&amp;s=130.117.76.9&amp;latest">ssllabs</a> the nominatim server would <em>still</em> support TLS 1.0. However, please update your wget (and then post the debug log as suggested by Krubo).</p></div>
+            <div class="comment-info" id="comment-66949-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '18, 07:38)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-66941" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66941-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/66940/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='I4bAlOGS4WC7gx5XtWd0gMQk3PbEuiPP' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/66940/wget-to-nominatim-url-unable-to-establish-ssl-connection?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/66940/wget-to-nominatim-url-unable-to-establish-ssl-connection?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/wget/"
+            class="tag-link-wget"
+            title="see questions tagged'wget'using tags"
+            rel="tag">wget</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 27, 2018, 8:44 p.m.">27 Nov '18, 20:44</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,987 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 30, 2018, 7:16 a.m.">30 Nov '18, 07:16</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/45261/error-nomination-geocode-with-wget">error nomination geocode with wget</a>
+        </p>
+        
+        <p>
+            <a href="/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer">Why does Nominatim return an error for queries from Internet Explorer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2478/added-austria-when-will-i-see-the-change">Added austria. When will I see the change ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1391/why-does-nominatim-not-pick-up-a-country-name">Why does Nominatim not pick up a country name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1447/nominatim-search">nominatim search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1841/confused-about-nominatim-and-county-boundaries">[closed] Confused about Nominatim and County Boundaries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1301/ajax-issues-with-nominatim">[closed] Ajax issues with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2572/i-added-some-road-name-and-are-not-found-on-nominatim">I added some road name and are not found on nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2680/can-i-produce-a-database-of-addresses-from-osm-data">Can I produce a database of addresses from OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/642/issues-with-httpnominatimopenstreetmaporg">Issues with http://nominatim.openstreetmap.org/ ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

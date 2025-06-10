@@ -1,0 +1,1094 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>When does it make sense to use place=* on an area? - OSM Help</title>
+        <meta name="description" content="When tagging a village/town/city, I can use place=city/town/suburb... to mark it as a town etc.  I&#39;m not quite clear on how to use this tag:  If I understand correctly, the Wiki  recommends:  1) putting the place= tag  on a node in the center, and 2) drawing the  official boundary of the place as a ..." />
+        <meta name="keywords" content="boundaries,editing,place,tagging" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/4068/when-does-it-make-sense-to-use-place-on-an-area" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FGbj5F0JbkqiWPhvk04ujR3jfrxfA2Qk' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area">When does it make sense to use place=* on an area?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-4068-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4068/up/" rel="nofollow"> </a>
+<div id="post-4068-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-4068-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4068/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/4068/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When tagging a village/town/city, I can use <code>place=city/town/suburb...</code> to mark it as a town etc. </p>
+<p>I'm not quite clear on how to use this tag:</p>
+<ul>
+<li>If I understand correctly, the Wiki
+   recommends:
+   1) putting the <code>place=</code> tag
+   on a node in the center, and 2) drawing the
+   official boundary of the place as a way and
+   tagging it with
+   <code>administrative=boundary</code> (<a href="http://wiki.openstreetmap.org/wiki/Key:place">http://wiki.openstreetmap.org/wiki/Key:place</a> ,
+   section "Core values / As areas" ).</li>
+<li>However, in the database I sometimes
+   see places which have both an area
+   tagged <code>place=</code> <em>and</em> a
+   (different) area tagged
+   <code>boundary=administrative</code>. One
+   example would be Dieren (NL) (search
+   for "Dieren" on Nominatim).</li>
+</ul>
+<p>What is the point of this? Isn't this contradictory? Or are there situations where the area of the place differs from its official boundary?</p>
+<p>So should I use <code>place=</code> on a node or on an area? If the latter, when would the area of a <code>place=*</code>, be different from its official boundary?</p>
+<p><em>This question was prompted by the discussion on my answer to <a href="http://help.openstreetmap.org/questions/3892/way-in-wrong-country">Way in wrong country</a>.</em></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/boundaries/" class="post-tag tag-link-boundaries"
+                                        title="see questions tagged 'boundaries'" rel="tag">boundaries</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/place/" class="post-tag tag-link-place"
+                                        title="see questions tagged 'place'" rel="tag">place</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Mar '11, 11:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6c2dd6a39d3f38f1bb47a8c1fe8325e2?s=32&amp;d=identicon&amp;r=g" alt="sleske's gravatar image" />
+    <p><a href="/users/666/sleske">sleske</a><br/>
+    <span class="score" title="4090 reputation points"><span class="">4.1k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="78 badges"><span class="bronze">&#9679;</span><span class="badgecount">78</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sleske has 19 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/4068/">
+                edited
+                <strong>25 Mar '11, 11:44</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-4068">
+    
+        <a name="4808"></a>
+        <div class="comment" id="comment-4808">
+            <div id="post-4808-score" class="comment-score"></div>
+            <div class="comment-text"><p>Does this <a href="http://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative#4736">http://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative#4736</a> answer your question? I ended up asking practically the same question as you as I felt that we weren't getting far here.</p></div>
+            <div class="comment-info" id="comment-4808-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Apr '11, 19:29)</span>
+                <a class="comment-user userinfo" href="/users/831/ponzu">ponzu</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4068" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4068-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="4073"></a>
+                    <div id="answer-container-4073" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4073-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4073/up/" rel="nofollow"> </a>
+<div id="post-4073-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-4073-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4073/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="sleske has selected this answer as the correct answer"
+        href="/accept_answer/4073/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Putting stuff that has some extend (say if seen from above it is bigger than 1 square meter) as an area is generally better, because it stores information about position and size in greater detail. It also allows for later evaluation, which objects are contained.</p>
+<p>Therefor I'd prefer to map place on a closed way (usually referred to as built-up area in contrast to administrative boundaries).<br>
+</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4073/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Mar '11, 12:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f09c0b7a655fed386e070e036e2da248?s=32&amp;d=identicon&amp;r=g" alt="dieterdreist's gravatar image" />
+    <p><a href="/users/936/dieterdreist">dieterdreist</a><br/>
+    <span class="score" title="3677 reputation points"><span class="">3.7k</span></span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="67 badges"><span class="bronze">&#9679;</span><span class="badgecount">67</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dieterdreist has 4 accepted answers">3&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4073">
+    
+        <a name="4082"></a>
+        <div class="comment" id="comment-4082">
+            <div id="post-4082-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/701/joshd/">@JoshD</a> would you mind to explain why you don't think that mapping places as areas is fine (I saw you voted the answer down).</p></div>
+            <div class="comment-info" id="comment-4082-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '11, 13:40)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+        <a name="4089"></a>
+        <div class="comment" id="comment-4089">
+            <div id="post-4089-score" class="comment-score">2</div>
+            <div class="comment-text"><p>"putting stuff as an area[...] is generally better": I'd agree usually, but specifically with places a "center node" provides information that an area does not, namely where the center of the place is - this is often not the geometric center, but some place like downtown, the shopping district or the townhall. This is useful for e.g. calculating distances between cities, and for showing the label in a sensible place.</p></div>
+            <div class="comment-info" id="comment-4089-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '11, 16:51)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="4117"></a>
+        <div class="comment" id="comment-4117">
+            <div id="post-4117-score" class="comment-score"></div>
+            <div class="comment-text"><p>I agree. but the "showing the label in a sensible place" can also be a problem: at the real center of a place the features are often crowded, and mappers tend to move the place-node away from this center in order to have as much information rendered as possible.</p></div>
+            <div class="comment-info" id="comment-4117-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '11, 22:35)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+        <a name="4214"></a>
+        <div class="comment" id="comment-4214">
+            <div id="post-4214-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/936/dieterdreist/"></a><a href="/users/936/dieterdreist/">@dieterdreist</a>: Putting the place-node outside the place's center to help the renderer would be "tagging for the renderer", which is strongly discouraged. Anyway, it shouldn't be too hard for a renderer to move the place name a bit aside to make room for other features.</p></div>
+            <div class="comment-info" id="comment-4214-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Mar '11, 10:54)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="4216"></a>
+        <div class="comment" id="comment-4216">
+            <div id="post-4216-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/666/sleske/"></a><a href="/users/666/sleske/">@sleske</a>: nah, I feel that you are seeing "tagging for the renderers" too narrow. There is no "center" as a point in a city. In almost all cases you might opt with good arguments for several spots to declare as a "center".</p></div>
+            <div class="comment-info" id="comment-4216-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Mar '11, 12:24)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+        <a name="4470"></a>
+        <div class="comment not_top_scorer" id="comment-4470">
+            <div id="post-4470-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/936/dieterdreist/"></a><a href="/users/936/dieterdreist/">@dieterdreist</a>: "There is no "center" as a point in a city." Well, at least where I live, in each city/town there is usually one small area that is generally considered the "center", and that people will refer to as "center". Usually it's the central market square, or the town hall, or similiar. Providing this "center" seems useful for routing engines (though it's debatable whether it should be rendered on maps). If no such notion of "center" exists for a place, obviously no center node will be necessary.</p></div>
+            <div class="comment-info" id="comment-4470-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '11, 10:38)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="4492"></a>
+        <div class="comment not_top_scorer" id="comment-4492">
+            <div id="post-4492-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/666/sleske/"></a><a href="/users/666/sleske/">@sleske</a>: Yes, you confirm, it is an area, not a "point", that's what I intended above: people are moving the node(=point) around in the area perceived as "center" to optimize rendering.</p></div>
+            <div class="comment-info" id="comment-4492-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '11, 17:31)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+        <a name="4497"></a>
+        <div class="comment not_top_scorer" id="comment-4497">
+            <div id="post-4497-score" class="comment-score"></div>
+            <div class="comment-text"><p>The solution for rendering (and programmatically identifying) the "center" of any admin boundary lies with the use of the "admin_centre" role and, perhaps, the "label" role as documented here: <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">http://wiki.openstreetmap.org/wiki/Relation:boundary</a>  Unfortunately, few mappers and even fewer renderers honor this improved schema.</p>
+
+<p>Note how it suggests that you take an existing object, such as city hall or market square and add it as a role=admin_centre to the relation. That's just one reminder to keep entities to a necessary minimum. (Hint: having a node and a boundary for the same place is bad.)</p></div>
+            <div class="comment-info" id="comment-4497-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '11, 20:14)</span>
+                <a class="comment-user userinfo" href="/users/831/ponzu">ponzu</a>
+                
+            </div>
+        </div>
+    
+        <a name="4527"></a>
+        <div class="comment not_top_scorer" id="comment-4527">
+            <div id="post-4527-score" class="comment-score"></div>
+            <div class="comment-text"><p>Why would a marketplace be an "administrative centre"? The location of the administrative centre is the seat of the administration (maybe there might be also more then one?)</p></div>
+            <div class="comment-info" id="comment-4527-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Apr '11, 12:13)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4073" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4073-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="4493"></a>
+                    <div id="answer-container-4493" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4493-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4493/up/" rel="nofollow"> </a>
+<div id="post-4493-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-4493-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4493/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think we need both to make searches and nomination work correctly.otherwise what limits the boundary of a town or suburb. please see my question "how-can-i-find-and-modify-a-boundary"   I have been trying to map some local suburbs and parishes but they seem to leak out miles I'm not sure why this is.It is made more difficult as there seems a very long delay (weeks) for boundaries to take effect on the nomination</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4493/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Apr '11, 18:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4493">
+    
+        <a name="4498"></a>
+        <div class="comment" id="comment-4498">
+            <div id="post-4498-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for pointing this out. I think we are involved in a complicated dance between maintaining OSM data integrity, nomination (I assume you refer to the algorithm of building Nominatim database off OSM data) and rendering. We do not "tag for renderers" and we do not "tag for services", yet we have to keep them in mind. It seems to me most of these questions are asked from the standpoint of one or the other (and maybe a third). I don't see anyone looking at the holistic solution. Maybe the solution is to fix Mapnik. Then we can start losing the place nodes that are throwing nomination off.</p></div>
+            <div class="comment-info" id="comment-4498-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '11, 20:20)</span>
+                <a class="comment-user userinfo" href="/users/831/ponzu">ponzu</a>
+                
+            </div>
+        </div>
+    
+        <a name="4499"></a>
+        <div class="comment" id="comment-4499">
+            <div id="post-4499-score" class="comment-score"></div>
+            <div class="comment-text"><p>And again, good point about Nominatim taking forever to update and it being frustrating for projects such as yours. I saw Twain's explanation somewhere that additions to OSM data are reflected quickly, but updates take very long (by design - otherwise his server would get overwhelmed). I wonder how quickly - or if at all - he processes deletions. I deleted a town point yesterday (keeping the boundary of course), just to test the effects on nomination. Surely all this is documented - or at least discussed - somewhere. Or am I dreaming?</p></div>
+            <div class="comment-info" id="comment-4499-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '11, 20:23)</span>
+                <a class="comment-user userinfo" href="/users/831/ponzu">ponzu</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4493" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4493-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="4072"></a>
+                    <div id="answer-container-4072" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4072-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4072/up/" rel="nofollow"> </a>
+<div id="post-4072-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-4072-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4072/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>have a look at <a href="http://help.openstreetmap.org/questions/3942/how-to-map-inhabited-places-settlements">this question</a>, which seems to cover the same topic:</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4072/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Mar '11, 11:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f09c0b7a655fed386e070e036e2da248?s=32&amp;d=identicon&amp;r=g" alt="dieterdreist's gravatar image" />
+    <p><a href="/users/936/dieterdreist">dieterdreist</a><br/>
+    <span class="score" title="3677 reputation points"><span class="">3.7k</span></span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="67 badges"><span class="bronze">&#9679;</span><span class="badgecount">67</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dieterdreist has 4 accepted answers">3&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4072">
+    
+        <a name="4074"></a>
+        <div class="comment" id="comment-4074">
+            <div id="post-4074-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes this is similar, but it's a bit more general. I wanted to ask specifically whether (and when) it makes sense to create an area for the <code>place=</code> <em>in addition to</em> an administrative boundary. If the exact boundary is unknown, it might be better to have at least an approximate area for a place, rather than just a node.</p></div>
+            <div class="comment-info" id="comment-4074-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '11, 12:02)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="4079"></a>
+        <div class="comment" id="comment-4079">
+            <div id="post-4079-score" class="comment-score"></div>
+            <div class="comment-text"><p>see the answer below. Place is to map settlements, this has not much to do with administrative boundaries (which cover the settlement plus all other area that is administrated from the settlement, like fields, forests, ...)</p></div>
+            <div class="comment-info" id="comment-4079-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '11, 13:27)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4072" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4072-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/4068/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FGbj5F0JbkqiWPhvk04ujR3jfrxfA2Qk' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/boundaries/"
+            class="tag-link-boundaries"
+            title="see questions tagged'boundaries'using tags"
+            rel="tag">boundaries</a> <span class="tag-number">&#215;129</span><br/>
+        
+        <a href="/tags/place/"
+            class="tag-link-place"
+            title="see questions tagged'place'using tags"
+            rel="tag">place</a> <span class="tag-number">&#215;43</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 25, 2011, 11:43 a.m.">25 Mar '11, 11:43</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,534 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 25, 2011, 7:29 p.m.">25 Apr '11, 19:29</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/10147/how-to-correct-the-details-of-a-place">How to correct the details of a place?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25880/how-can-i-add-traffic-lights">How can I add traffic lights?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4319/do-i-add-address-tags-to-the-poi-node-or-create-a-separate-node">Do I add address tags to the POI node or create a separate node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6107/how-to-tag-a-bank-that-does-not-offer-service-to-the-general-public">How to tag a bank that does not offer service to the general public?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10680/how-do-i-recognize-policitical-boundaries-in-switzerland">How do I recognize (policitical) boundaries (in Switzerland)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13009/which-tag-for-a-place-in-the-french-meaning-of-it">Which tag for a place (in the french meaning of it)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/341/how-do-i-tag-parks-with-a-legal-status-lower-than-national">How do I tag parks with a legal status lower than national?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3511/how-to-delete-existing-blocks-on-osm">How to delete existing blocks on OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5808/garmin-1490t-no-sd-card">Garmin 1490T no SD Card</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30939/how-should-i-tag-an-indian-reservation">How should I tag an Indian reservation?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

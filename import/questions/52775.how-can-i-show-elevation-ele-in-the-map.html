@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How can I show elevation &quot;ele=..&quot; in the map - OSM Help</title>
+        <meta name="description" content="Hi to all The elevation &quot;ele=xyz&quot; in meters are shown directly in the map for the tags &quot;Natural=peck&quot; &quot;Natural=saddle&quot;. I tried in a lot of way but I cannot show in the map the elevation for others tags, for example of &quot;Place=hamlet&quot;. The purpose is to supply the information of the elevation directl..." />
+        <meta name="keywords" content="elevation,ele" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/52775/how-can-i-show-elevation-ele-in-the-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52775/how-can-i-show-elevation-ele-in-the-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='QzXQnyarqnI6RWPCEOufrJNwf47PB5ya' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52775/how-can-i-show-elevation-ele-in-the-map">How can I show elevation &quot;ele=..&quot; in the map</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52775-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52775/up/" rel="nofollow"> </a>
+<div id="post-52775-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52775-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52775/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52775/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi to all
+The elevation "ele=xyz" in meters are shown directly in the map for the tags "Natural=peck" "Natural=saddle".
+I tried in a lot of way but I cannot show in the map the elevation for others tags, for example of "Place=hamlet".
+The purpose is to supply the information of the elevation directly in the map without activate the layers and check the box Data in the map and select the tag and .... all annoying thinks when you use a smartphone in the mountains.
+Someone can help me ?
+Best regards
+Danilo
+PS I don't want insert estensively the elevation, from example from GPS data, because these are not reliable. I want take the elevation from the topo maps for some important tags (hamlet, path intersections, springs ...etc) if the GPS is not working well (it supplies wrong coordinates, sometimes happens) it is important to know the elevation of the place around to met it in the old way.... </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/elevation/" class="post-tag tag-link-elevation"
+                                        title="see questions tagged 'elevation'" rel="tag">elevation</a>
+                                
+                                    <a href="/tags/ele/" class="post-tag tag-link-ele"
+                                        title="see questions tagged 'ele'" rel="tag">ele</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Nov '16, 17:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/443ca47def2516be9306b3419b80d789?s=32&amp;d=identicon&amp;r=g" alt="danbag's gravatar image" />
+    <p><a href="/users/12939/danbag">danbag</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="danbag has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52775">
+    
+        <a name="52778"></a>
+        <div class="comment" id="comment-52778">
+            <div id="post-52778-score" class="comment-score">1</div>
+            <div class="comment-text"><p>When you say "shown directly in the map" what do you mean by "the map"?</p></div>
+            <div class="comment-info" id="comment-52778-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Nov '16, 20:29)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52794"></a>
+        <div class="comment" id="comment-52794">
+            <div id="post-52794-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Sorry I have not explained that my notes are referred at mountains. Walking in that steep situation the elevation of a point sometime is much more important that the GPS coordinates.... it is so... beleave me !
+Said that I think the situation is more clear...
+At the moment I have avoided the problem using a bug of OSM: the tag "place=locality" does not show nothing in the map (this is a bug) so I use that with "name=q.1740" and on the map we can see only the name and the name is the elevation (q. means quota,elevation).
+For another common situation I use to add to the name the elevation, example:
+place=hamlet
+ele=700
+name=Intragna q.700</p>
+
+<p>on the map we can see "Intragna q.700" with the simbol of hamlet.</p>
+
+<p>I explain onother bug of OSM:
+the situation is: an old small village in mountain is now only ruins, its name is la Trecciura  and its elevation is 1335 mt. The OSM code is:</p>
+
+<p>name=la Trecciura q.1335
+place=locality
+ele=1335</p>
+
+<p>the ruins are coded in this way:</p>
+
+<p>abandoned:building=ruins</p>
+
+<p>On the map is shown ONLY the name "la Trecciura q.1335" there is no ruins, there is no icon of the locality ......</p>
+
+<p>I have no words.....about the bugs and about the impossibilty to show the elevations, but I agree your suggestions.</p>
+
+<p>Best regards
+Danilo (danbag)</p>
+
+<p>PS you can see in the OSM map but is better in JOSM:
+q.1740 46°01.793'N 8°32.221'E
+la Trecciura q.1335 46°00.586'N 8°33.463'E
+and around that places a lot of examples tagged by me (danbag)</p></div>
+            <div class="comment-info" id="comment-52794-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Nov '16, 09:01)</span>
+                <a class="comment-user userinfo" href="/users/12939/danbag">danbag</a>
+                
+            </div>
+        </div>
+    
+        <a name="52797"></a>
+        <div class="comment" id="comment-52797">
+            <div id="post-52797-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi danbag, please don’t use OSM and an editors bug as if it were your "own".
+Please read these pages <a href="https://wiki.openstreetmap.org/wiki/Names">https://wiki.openstreetmap.org/wiki/Names</a> (sorry not in Italian) and act accordingly by deleting your own "false" tags. And start reading these Italian <a href="https://wiki.openstreetmap.org/wiki/IT:Beginners%27_guide">https://wiki.openstreetmap.org/wiki/IT:Beginners%27_guide</a>    as well ;-)</p></div>
+            <div class="comment-info" id="comment-52797-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Nov '16, 09:55)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+        <a name="52803"></a>
+        <div class="comment" id="comment-52803">
+            <div id="post-52803-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the clarifications. I will delete the quote inserted erroneusly in the name, but the problem of elevation remain in "toto".... the bug used are clearly not a good solution but they solved the problem ! In any case I will delete.. and I stop to work with OSM in the same way I stopped with opensea for the same problem with the depths ... I answered to a opensea specialist in this way: in Italy we say that "il meglio uccide il bene" i.e. if someone want to reach the best it is possible he doesn't reach not even the good.
+In the sea the depth are important like in mountain the elevation, and if it is impossible to put both, the map in the sea and the map in mountain are useless.
+I am speaking with knowledgement both for mountain and for sea; I was alpinist and I reached the summit of 65 mountain over 4000 mt and in the sea I was with my boat in Greenland and at Cape Horn (detail in www.shaulatre.blogspot.it). Good luck !</p></div>
+            <div class="comment-info" id="comment-52803-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Nov '16, 22:31)</span>
+                <a class="comment-user userinfo" href="/users/12939/danbag">danbag</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52775" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52775-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52775/how-can-i-show-elevation-ele-in-the-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52775/how-can-i-show-elevation-ele-in-the-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52775/how-can-i-show-elevation-ele-in-the-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52775/how-can-i-show-elevation-ele-in-the-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52804"></a>
+                    <div id="answer-container-52804" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52804-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52804/up/" rel="nofollow"> </a>
+<div id="post-52804-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-52804-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52804/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The map you see on openstreetmap.org is only one of <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">many different maps</a> based on the OSM database. While this one doesn't render the "ele" tag for most objects, there may be another map out there that does.</p>
+<p>Very importantly, please do not <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tag for the renderer</a>. The OSM data is used for many different purposes, not just for rendering images on a map. By adding the elevation to the name tag of an object, you make the name tag less useful for other data consumers. Please add the information in the intended tags and leave it up to each map renderer to decide what to show. Don't mix additional information into the name tag or use an inappropriate place=* tag just so an object will show up the way you want on one particular map rendering.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52804/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Nov '16, 22:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/087bb38ba920baadf1df9dfc473208ec?s=32&amp;d=identicon&amp;r=g" alt="alester's gravatar image" />
+    <p><a href="/users/8189/alester">alester</a><br/>
+    <span class="score" title="6631 reputation points"><span class="">6.6k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="66 badges"><span class="silver">&#9679;</span><span class="badgecount">66</span></span><span title="100 badges"><span class="bronze">&#9679;</span><span class="badgecount">100</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="alester has 37 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52804">
+    
+</div>
+<div id="comment-tools-52804" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52804-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="52805"></a>
+                    <div id="answer-container-52805" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52805-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52805/up/" rel="nofollow"> </a>
+<div id="post-52805-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-52805-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52805/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are currently 4 map styles on OpenStreetMap.org.  the "standard" map style (which I presume you are talking about) is only one of those 4.  It does not show the elevantion for "place=locality", but it does for "natural=peak".  The "standard" map style is maintained <a href="https://github.com/gravitystorm/openstreetmap-carto/">here</a>.  With a github account you can log bugs there and suggest improvements.  It isn't possible to show absolutely everything in OSM data though - it would just look a mess.  However, iIf you want to show elevation data against things like localities, then you can create your own map using OSM data to show that.  Various "how to set up a server for my own map style" sites have been set up, including <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">this one</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52805/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Nov '16, 22:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52805">
+    
+</div>
+<div id="comment-tools-52805" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52805-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="52777"></a>
+                    <div id="answer-container-52777" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52777-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52777/up/" rel="nofollow"> </a>
+<div id="post-52777-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52777-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52777/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi danbag, there some hiccups in your plan. 
+What do you want to do with the knowledge ? Here are a few points;
+A saddle and peak have a pin point height, 
+A hamlet like Castelmezzano is pin pointed by its size, but looking at the widely spread buildings over some distance, it is clearly a village on a hillside. The height won’t be a pin pointed spot but a moving one (downhill) with every new building added to the hamlet or village.
+Copying form any map won’t do, because the copyright and agreements as stated here, <a href="https://wiki.openstreetmap.org/wiki/Open_Database_License">https://wiki.openstreetmap.org/wiki/Open_Database_License</a> <br>
+Use your own not reliable GPS together with a lot of other people to get a reliable outcome, but it’s not ready quick. But in the end you ve got to talk about it at the tagging and other OSM Fora to do so.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52777/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Nov '16, 20:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52777/">
+                edited
+                <strong>01 Nov '16, 20:21</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52777">
+    
+</div>
+<div id="comment-tools-52777" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52777-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52775/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='QzXQnyarqnI6RWPCEOufrJNwf47PB5ya' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52775/how-can-i-show-elevation-ele-in-the-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52775/how-can-i-show-elevation-ele-in-the-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/elevation/"
+            class="tag-link-elevation"
+            title="see questions tagged'elevation'using tags"
+            rel="tag">elevation</a> <span class="tag-number">&#215;30</span><br/>
+        
+        <a href="/tags/ele/"
+            class="tag-link-ele"
+            title="see questions tagged'ele'using tags"
+            rel="tag">ele</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 1, 2016, 5:17 p.m.">01 Nov '16, 17:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,398 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 2, 2016, 10:45 p.m.">02 Nov '16, 22:45</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/2367/how-to-show-elevation-contours-in-josm">[closed] How to show elevation contours in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3069/elevation-maps">elevation maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3089/are-contour-lines-available">[closed] Are contour lines available?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6639/can-i-use-elevations-spot-heights-from-maps-or-must-i-use-my-own-gps-data">can I use elevations (spot heights) from maps or must I use my own GPS data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9135/how-to-remove-altitude">How to remove altitude</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9681/adding-elevation-data-to-existing-routes-conflation">adding elevation data to existing routes - conflation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10498/what-is-this-strm-thing">What is this STRM thing?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11869/summit-and-peak-number-elevation">Summit and Peak Number (Elevation?)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13173/exporting-peaks-coordinates">exporting peak&#39;s coordinates</a>
+        </p>
+        
+        <p>
+            <a href="/questions/999/how-to-extract-elevation-information-from-tracks-in-josm">How to extract elevation information from tracks in JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1062 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to use tiles? - OSM Help</title>
+        <meta name="description" content="Hello, I&#39;ve followed this well done tutorial https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/ But I&#39;m missing something... I downloaded the map &quot;azerbaijan-latest.osm.pbf&quot; but I don&#39;t understand how to access / display it with the web browser. Must I install Javascript API? How to..." />
+        <meta name="keywords" content="openstreetmap,tiles" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/56885/how-to-use-tiles" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/56885/how-to-use-tiles?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='biqqTaqvU8h7xGCp8nDfxGjvZK6noxko' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/56885/how-to-use-tiles">How to use tiles?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-56885-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56885/up/" rel="nofollow"> </a>
+<div id="post-56885-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56885-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56885/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/56885/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I've followed this well done tutorial <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a>
+But I'm missing something...</p>
+<p>I downloaded the map "azerbaijan-latest.osm.pbf" but I don't understand how to access / display it with the web browser.
+Must I install Javascript API? How to use it?</p>
+<p>Thanks,
+Matt</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jul '17, 12:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e2352f3439236c1cbb72ae94772c8186?s=32&amp;d=identicon&amp;r=g" alt="matt-'s gravatar image" />
+    <p><a href="/users/13895/matt-">matt-</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="matt- has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-56885">
+    
+</div>
+<div id="comment-tools-56885" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56885-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/56885/how-to-use-tiles?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/56885/how-to-use-tiles?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/56885/how-to-use-tiles?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/56885/how-to-use-tiles?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="56886"></a>
+                    <div id="answer-container-56886" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56886-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56886/up/" rel="nofollow"> </a>
+<div id="post-56886-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-56886-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56886/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Have you seen the <a href="https://switch2osm.org/using-tiles/">Using Tiles</a> section of the guide at the bottom of "Build a tileserver" guide? That will explain how to use the tiles.</p>
+<p>You mention you have a <code>.osm.pbf</code> file, but you have to import that into PostgreSQL with <code>osm2pgsql</code>. The "Loading Data" section of the <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">Building a Tile server</a> page will tell you how to import that.</p>
+<p>Are you getting stuck on any particular step?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56886/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jul '17, 12:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/16e12e337f6edc3750681492656097ed?s=32&amp;d=identicon&amp;r=g" alt="rorym's gravatar image" />
+    <p><a href="/users/30/rorym">rorym</a><br/>
+    <span class="score" title="5358 reputation points"><span class="">5.4k</span></span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="49 badges"><span class="silver">&#9679;</span><span class="badgecount">49</span></span><span title="100 badges"><span class="bronze">&#9679;</span><span class="badgecount">100</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rorym has 18 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56886">
+    
+        <a name="56887"></a>
+        <div class="comment" id="comment-56887">
+            <div id="post-56887-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello rorym,</p>
+
+<p>This community seems to be very quick, fortunately for me!</p>
+
+<p>Yes, I've followed the "Loading Data" and it was imported successfully.
+I'm stuck with "Using Tiles";  I don't know how to use my tile file with the javascript layer.</p></div>
+            <div class="comment-info" id="comment-56887-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 12:37)</span>
+                <a class="comment-user userinfo" href="/users/13895/matt-">matt-</a>
+                
+            </div>
+        </div>
+    
+        <a name="56888"></a>
+        <div class="comment" id="comment-56888">
+            <div id="post-56888-score" class="comment-score"></div>
+            <div class="comment-text"><p>You don't use the file directly with JS. You use the mod_tile based webserver. Have you followed the guide for "Using Tiles"? Have you gotten stuck on any of those bits</p></div>
+            <div class="comment-info" id="comment-56888-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 12:49)</span>
+                <a class="comment-user userinfo" href="/users/30/rorym">rorym</a>
+                
+            </div>
+        </div>
+    
+        <a name="56896"></a>
+        <div class="comment" id="comment-56896">
+            <div id="post-56896-score" class="comment-score"></div>
+            <div class="comment-text"><p>There is not a lot mentioned in "Using tiles", just links to API and map providers.</p></div>
+            <div class="comment-info" id="comment-56896-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 13:43)</span>
+                <a class="comment-user userinfo" href="/users/13895/matt-">matt-</a>
+                
+            </div>
+        </div>
+    
+        <a name="56898"></a>
+        <div class="comment" id="comment-56898">
+            <div id="post-56898-score" class="comment-score"></div>
+            <div class="comment-text"><p>There's a link to <a href="https://switch2osm.org/using-tiles/getting-started-with-leaflet/">https://switch2osm.org/using-tiles/getting-started-with-leaflet/</a> , though actually Leaflet's own site <a href="http://leafletjs.com/">http://leafletjs.com/</a> is pretty good for examples and tutorials etc.</p></div>
+            <div class="comment-info" id="comment-56898-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 13:52)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56900"></a>
+        <div class="comment not_top_scorer" id="comment-56900">
+            <div id="post-56900-score" class="comment-score"></div>
+            <div class="comment-text"><p>It doesn't explain how to include .pbf files.</p></div>
+            <div class="comment-info" id="comment-56900-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 13:58)</span>
+                <a class="comment-user userinfo" href="/users/13895/matt-">matt-</a>
+                
+            </div>
+        </div>
+    
+        <a name="56901"></a>
+        <div class="comment not_top_scorer" id="comment-56901">
+            <div id="post-56901-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> describes what to do with pbf files - add the data from them to a database with osm2pgsql, then make tiles available using "mod_tile" and "apache".</p></div>
+            <div class="comment-info" id="comment-56901-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 14:39)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56903"></a>
+        <div class="comment not_top_scorer" id="comment-56903">
+            <div id="post-56903-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes.
+But once it's available, how do you use it?</p></div>
+            <div class="comment-info" id="comment-56903-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 14:43)</span>
+                <a class="comment-user userinfo" href="/users/13895/matt-">matt-</a>
+                
+            </div>
+        </div>
+    
+        <a name="56904"></a>
+        <div class="comment not_top_scorer" id="comment-56904">
+            <div id="post-56904-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think you might need to explain a bit more what the problem is.  You've asked "how do you use it?" in a comment on an answer that links to "how you use it" so there's clearly a miscommunication happening somewhere.</p>
+
+<p>We don't know what you've done and what you haven't done; we don't know what works for you and what doesn't.  All we know is that you see no tiles.  That could be down to any one of an OS problem, web server, mod_tile, fonts, node version, data loading and probably many more.</p>
+
+<p>Perhaps it would help to add an OSM diary entry (or a Github, gist, or some other way of sharing a reasonable amont of text) explaining what you did and what happened.  For example, when you typed "renderd -f -c /usr/local/etc/renderd.conf" as per the instructions, what happened?  When you pointed a web browser at <a href="http://yourserveripaddress/hot/0/0/0.png">http://yourserveripaddress/hot/0/0/0.png</a> , what happened then?</p></div>
+            <div class="comment-info" id="comment-56904-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 14:50)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56910"></a>
+        <div class="comment not_top_scorer" id="comment-56910">
+            <div id="post-56910-score" class="comment-score"></div>
+            <div class="comment-text"><p>You're right, I was not enough specific.</p>
+
+<p>I managed to go some steps further.
+I included the Leaflet library.</p>
+
+<p>Now, on this page : <a href="https://switch2osm.org/using-tiles/getting-started-with-leaflet/">https://switch2osm.org/using-tiles/getting-started-with-leaflet/</a> , in the "leafletembed.js" file, we load the map on South-England. That works.</p>
+
+<p>In this tutorial : <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> , we download and insert the map of Azerbaijan in the database.
+How can I read it with my web browser?</p></div>
+            <div class="comment-info" id="comment-56910-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '17, 07:48)</span>
+                <a class="comment-user userinfo" href="/users/13895/matt-">matt-</a>
+                
+            </div>
+        </div>
+    
+        <a name="56914"></a>
+        <div class="comment" id="comment-56914">
+            <div id="post-56914-score" class="comment-score">1</div>
+            <div class="comment-text"><p>At the bit in <a href="https://switch2osm.org/using-tiles/getting-started-with-leaflet/">https://switch2osm.org/using-tiles/getting-started-with-leaflet/</a> where it says "Point a web browser at: <a href="http://yourserveripaddress/hot/0/0/0.png">http://yourserveripaddress/hot/0/0/0.png"</a> - that's the first point in the process where you're testing that you can read it with your web browser.  If that doesn't work, then you'll need to backtrack - look at what was displayed when you ran "renderd -f -c /usr/local/etc/renderd.conf", for example.</p></div>
+            <div class="comment-info" id="comment-56914-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '17, 10:19)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56886" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56886-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="56890"></a>
+                    <div id="answer-container-56890" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56890-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56890/up/" rel="nofollow"> </a>
+<div id="post-56890-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-56890-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56890/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In addition to Rorym's answer, there's another option mentioned over at <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> - if you're using the Chrome or Chromium browser you can add an add-on to that that allows you to rewrite parts of URLs.  This allows you to see your tiles on the <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> site.  Basically, install this add-on:</p>
+<pre><code><a href="https://chrome.google.com/webstore/detail/switcheroo-redirector/cnmciclhnghalnpfhhleggldniplelbg?hl=en">https://chrome.google.com/webstore/detail/switcheroo-redirector/cnmciclhnghalnpfhhleggldniplelbg?hl=en</a>
+</code></pre>
+<p>Click on the little "S" that appears to the right of the address bar and add "<strong>tile-a.openstreetmap.fr/hot/</strong>" in the "From" column and something like "<strong>mywebserverurl/maps/hot/</strong>" in the "To" column, then add the same rule twice more for “<strong>tile-b</strong>” and “<strong>tile-c”</strong>.  Then when you browse to <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> (http, not https) and select the "Humanitarian" layer, you'll see your tiles.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56890/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jul '17, 13:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56890">
+    
+        <a name="56891"></a>
+        <div class="comment" id="comment-56891">
+            <div id="post-56891-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually, that's the only part of the procedure that didn't work. 
+I don't see my tiles.</p></div>
+            <div class="comment-info" id="comment-56891-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 13:28)</span>
+                <a class="comment-user userinfo" href="/users/13895/matt-">matt-</a>
+                
+            </div>
+        </div>
+    
+        <a name="56892"></a>
+        <div class="comment" id="comment-56892">
+            <div id="post-56892-score" class="comment-score"></div>
+            <div class="comment-text"><p>You're definitely trying http not https?</p></div>
+            <div class="comment-info" id="comment-56892-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 13:29)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56893"></a>
+        <div class="comment" id="comment-56893">
+            <div id="post-56893-score" class="comment-score"></div>
+            <div class="comment-text"><p>Trying http</p></div>
+            <div class="comment-info" id="comment-56893-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 13:34)</span>
+                <a class="comment-user userinfo" href="/users/13895/matt-">matt-</a>
+                
+            </div>
+        </div>
+    
+        <a name="56894"></a>
+        <div class="comment" id="comment-56894">
+            <div id="post-56894-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/upfiles/screens_20170613_02010.png">Example screenshot</a></p></div>
+            <div class="comment-info" id="comment-56894-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 13:39)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56895"></a>
+        <div class="comment" id="comment-56895">
+            <div id="post-56895-score" class="comment-score"></div>
+            <div class="comment-text"><p><img alt="screenshot" src="https://help.openstreetmap.org/upfiles/2017-07-05_14_40_30-.png"></p>
+
+<p>I've just realized... There is no "hot" folder on my server.
+Should it be put in /var/www/hot  ?</p></div>
+            <div class="comment-info" id="comment-56895-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 13:42)</span>
+                <a class="comment-user userinfo" href="/users/13895/matt-">matt-</a>
+                
+            </div>
+        </div>
+    
+        <a name="56897"></a>
+        <div class="comment not_top_scorer" id="comment-56897">
+            <div id="post-56897-score" class="comment-score"></div>
+            <div class="comment-text"><p>I just chose "hot" as a convenient folder name - if your tiles are somewhere else, just add "somewhere else" in the "to" part of each switcheroo line.  For completeness, the full path to an example HOT tile is something like <a href="http://tile-a.openstreetmap.fr/hot/9/253/166.png">http://tile-a.openstreetmap.fr/hot/9/253/166.png</a> where "9" is the zoom, 253 the "x" co-ordinate and 166 the "y" co-ordinate.</p></div>
+            <div class="comment-info" id="comment-56897-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 13:49)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56899"></a>
+        <div class="comment not_top_scorer" id="comment-56899">
+            <div id="post-56899-score" class="comment-score"></div>
+            <div class="comment-text"><p>I set "hot" as per the guide <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> .
+I created "hot" folder in /var/www,  yet it doesn't work.</p></div>
+            <div class="comment-info" id="comment-56899-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 13:53)</span>
+                <a class="comment-user userinfo" href="/users/13895/matt-">matt-</a>
+                
+            </div>
+        </div>
+    
+        <a name="56902"></a>
+        <div class="comment not_top_scorer" id="comment-56902">
+            <div id="post-56902-score" class="comment-score"></div>
+            <div class="comment-text"><p>Where the tiles get created is controlled by /usr/local/etc/renderd.conf .  It's likely then when you run renderd, you're getting some sort of error.  That's why it says to run renderd in the foreground first ("renderd -f -c /usr/local/etc/renderd.conf") and check that tiles are rendered by pointing a web browser at <a href="http://yourserveripaddress/hot/0/0/0.png">http://yourserveripaddress/hot/0/0/0.png</a> .</p></div>
+            <div class="comment-info" id="comment-56902-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 14:41)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56890" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56890-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/56885/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='biqqTaqvU8h7xGCp8nDfxGjvZK6noxko' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56885/how-to-use-tiles?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56885/how-to-use-tiles?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 5, 2017, 12:21 p.m.">05 Jul '17, 12:21</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,658 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 6, 2017, 10:19 a.m.">06 Jul '17, 10:19</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/55685/generate-styled-map-tiles">Generate styled Map Tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70076/osm-tiles-not-visible">OSM tiles not visible</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34632/how-to-render-tiles-in-openstreetmap">How to render tiles in openstreetmap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44498/how-to-disable-draggingwhen-reach-top-or-bottom">how to disable dragging,when reach top or bottom</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65917/the-standard-mapnik-raster-tile-is-not-loaded">The standard Mapnik raster tile is not loaded</a>
+        </p>
+        
+        <p>
+            <a href="/questions/69579/too-many-requests-when-using-https-atileopenstreet-and-no-issues-when-using-http-atileopenstreet">Too many requests when using HTTPS a.tile.openstreet and no issues when using HTTP a.tile.openstreet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8279/how-to-create-map-tiles-from-openstreetmap-offline-and-display-it-on-android">How to create map tiles from OpenStreetMap offline and display it on Android?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16377/commercial-use-of-open-street-tiles">Commercial use of Open street tiles.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34755/want-to-merge-tiles-of-different-jpg-images-and-show-it-on-map">want to merge tiles of different jpg images and show it on map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70617/get-gpstiles-data-of-a-specific-street">get gps/tiles data of a specific street</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

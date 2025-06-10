@@ -1,0 +1,907 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to tag an &quot;unincorporated area&quot; within a town? - OSM Help</title>
+        <meta name="description" content="There are a couple places nearby that have notable locations that are &quot;unincorporated areas&quot;. These places have their own post offices, they have a signage indicating their place names, but they are not self-governing. What should the tag place=? have indicated? Should it include the is_in tag for t..." />
+        <meta name="keywords" content="town,political,place,unincorporated,is_in" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/55136/how-to-tag-an-unincorporated-area-within-a-town" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55136/how-to-tag-an-unincorporated-area-within-a-town?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='4LJ9y1KxPtBRQ3bOvapNxqBCNw6uGDXq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55136/how-to-tag-an-unincorporated-area-within-a-town">How to tag an &quot;unincorporated area&quot; within a town?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55136-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55136/up/" rel="nofollow"> </a>
+<div id="post-55136-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-55136-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55136/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55136/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>There are a couple places nearby that have notable locations that are <a href="https://en.wikipedia.org/wiki/Unincorporated_area">"unincorporated areas"</a>. These places have their own post offices, they have a signage indicating their place names, but they are not self-governing. What should the tag <strong>place=?</strong> have indicated? Should it include the <strong>is_in</strong> tag for the town which governs it?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/town/" class="post-tag tag-link-town"
+                                        title="see questions tagged 'town'" rel="tag">town</a>
+                                
+                                    <a href="/tags/political/" class="post-tag tag-link-political"
+                                        title="see questions tagged 'political'" rel="tag">political</a>
+                                
+                                    <a href="/tags/place/" class="post-tag tag-link-place"
+                                        title="see questions tagged 'place'" rel="tag">place</a>
+                                
+                                    <a href="/tags/unincorporated/" class="post-tag tag-link-unincorporated"
+                                        title="see questions tagged 'unincorporated'" rel="tag">unincorporated</a>
+                                
+                                    <a href="/tags/is_in/" class="post-tag tag-link-is_in"
+                                        title="see questions tagged 'is_in'" rel="tag">is_in</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Mar '17, 00:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cb68523a12e3580728c6bee495ae602e?s=32&amp;d=identicon&amp;r=g" alt="mtc's gravatar image" />
+    <p><a href="/users/12686/mtc">mtc</a><br/>
+    <span class="score" title="411 reputation points">411</span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="29 badges"><span class="bronze">&#9679;</span><span class="badgecount">29</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mtc has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55136">
+    
+</div>
+<div id="comment-tools-55136" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55136-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55136/how-to-tag-an-unincorporated-area-within-a-town?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55136/how-to-tag-an-unincorporated-area-within-a-town?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55136/how-to-tag-an-unincorporated-area-within-a-town?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55136/how-to-tag-an-unincorporated-area-within-a-town?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55156"></a>
+                    <div id="answer-container-55156" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55156-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55156/up/" rel="nofollow"> </a>
+<div id="post-55156-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-55156-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55156/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="mtc has selected this answer as the correct answer"
+        href="/accept_answer/55156/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Whether or not it has an administrative boundary, you can always add a place node. See the <a href="http://wiki.openstreetmap.org/wiki/Key:place#Populated_settlements.2C_urban_and_rural">Places - Populated Settlements - Urban and Rural</a> table for guidance about which value might be appropriate. </p>
+<p>These tags are not related to official designations. For example, a small incorporated city may be tagged as a town or village.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55156/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Mar '17, 13:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cebf8499a8a3009705e261cfd224e8c0?s=32&amp;d=identicon&amp;r=g" alt="neuhausr's gravatar image" />
+    <p><a href="/users/595/neuhausr">neuhausr</a><br/>
+    <span class="score" title="7460 reputation points"><span class="">7.5k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="70 badges"><span class="silver">&#9679;</span><span class="badgecount">70</span></span><span title="121 badges"><span class="bronze">&#9679;</span><span class="badgecount">121</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="neuhausr has 36 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55156">
+    
+        <a name="55163"></a>
+        <div class="comment" id="comment-55163">
+            <div id="post-55163-score" class="comment-score"></div>
+            <div class="comment-text"><p>I agree that just a node is required, but not sure about the place=* tagging. I am leaning toward using neighbourhood but it seems more important than that name implies.</p></div>
+            <div class="comment-info" id="comment-55163-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Mar '17, 17:14)</span>
+                <a class="comment-user userinfo" href="/users/12686/mtc">mtc</a>
+                
+            </div>
+        </div>
+    
+        <a name="55164"></a>
+        <div class="comment" id="comment-55164">
+            <div id="post-55164-score" class="comment-score"></div>
+            <div class="comment-text"><p>You could always use suburb or quarter instead of neighbourhood, then. From a US perspective these names feel pretty awkward, but the concept is very useful! If you want more specific advice, you might link to info about the area you have in mind.</p></div>
+            <div class="comment-info" id="comment-55164-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Mar '17, 17:41)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+        <a name="55168"></a>
+        <div class="comment" id="comment-55168">
+            <div id="post-55168-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/12686/mtc"></a><a href="https://help.openstreetmap.org/users/12686/mtc">@mtc</a> What's the place name, where about's is it? How many inhabitants? place=village or place=hamlet?</p>
+
+<p>Sounds like a rural populated settlement, see <a href="http://wiki.openstreetmap.org/wiki/Key:place#Populated_settlements.2C_urban_and_rural">http://wiki.openstreetmap.org/wiki/Key:place#Populated_settlements.2C_urban_and_rural</a></p></div>
+            <div class="comment-info" id="comment-55168-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Mar '17, 22:00)</span>
+                <a class="comment-user userinfo" href="/users/183/aharvey">aharvey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55156" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55156-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55139"></a>
+                    <div id="answer-container-55139" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55139-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55139/up/" rel="nofollow"> </a>
+<div id="post-55139-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-55139-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55139/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There has been a lengthy discussion on the Australian mailing list about this topic in December-January. You can find it in the <a href="https://lists.openstreetmap.org/pipermail/talk-au/2016-December/011121.html">mailing list archive</a></p>
+<p>I do not remember whether a consensus was reached, but some people did not want to add an admin boundary at all, while others where willing to stretch/adapt the current definition of administrative boundaries in Australia. I suggest you read the thread and come up with your own conclusion (or ask the mailing list)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55139/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Mar '17, 04:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/813a136afe7d4c95fd5bccdd78705e0e?s=32&amp;d=identicon&amp;r=g" alt="escada's gravatar image" />
+    <p><a href="/users/5390/escada">escada</a><br/>
+    <span class="score" title="19043 reputation points"><span class="">19.0k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="166 badges"><span class="silver">&#9679;</span><span class="badgecount">166</span></span><span title="302 badges"><span class="bronze">&#9679;</span><span class="badgecount">302</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="escada has 97 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55139">
+    
+        <a name="55162"></a>
+        <div class="comment" id="comment-55162">
+            <div id="post-55162-score" class="comment-score"></div>
+            <div class="comment-text"><p>I agree no boundary is needed. I want to reference the name &amp; location with a node, but not sure about the place=* tagging</p>
+
+<p>Thanks for the link to the discussion. Will be checking it out.</p></div>
+            <div class="comment-info" id="comment-55162-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Mar '17, 17:11)</span>
+                <a class="comment-user userinfo" href="/users/12686/mtc">mtc</a>
+                
+            </div>
+        </div>
+    
+        <a name="55165"></a>
+        <div class="comment" id="comment-55165">
+            <div id="post-55165-score" class="comment-score"></div>
+            <div class="comment-text"><p>Could it be a place=district ? The wiki does not have much information on this type of place, but the area itself calls itself a Village District. It is a small part of town with its own zoning and planning boards. The wiki seems to indicate a place=district is a large-scale (state-wide) area...</p></div>
+            <div class="comment-info" id="comment-55165-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Mar '17, 18:05)</span>
+                <a class="comment-user userinfo" href="/users/12686/mtc">mtc</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55139" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55139-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55167"></a>
+                    <div id="answer-container-55167" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55167-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55167/up/" rel="nofollow"> </a>
+<div id="post-55167-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55167-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55167/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Agree with neuhausr above - just use the tag 'place' as appropriate. </p>
+<p>The consensus on the Australian talk list was that unincorporated areas can be tagged the same as incorporated areas. There is one dissenter with this consensus.  </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55167/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Mar '17, 21:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e6ef4bd836d6c9170208764f2e65d6b9?s=32&amp;d=identicon&amp;r=g" alt="Warin61's gravatar image" />
+    <p><a href="/users/13482/warin61">Warin61</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Warin61 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55167">
+    
+</div>
+<div id="comment-tools-55167" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55167-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55136/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='4LJ9y1KxPtBRQ3bOvapNxqBCNw6uGDXq' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55136/how-to-tag-an-unincorporated-area-within-a-town?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55136/how-to-tag-an-unincorporated-area-within-a-town?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/place/"
+            class="tag-link-place"
+            title="see questions tagged'place'using tags"
+            rel="tag">place</a> <span class="tag-number">&#215;43</span><br/>
+        
+        <a href="/tags/town/"
+            class="tag-link-town"
+            title="see questions tagged'town'using tags"
+            rel="tag">town</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/is_in/"
+            class="tag-link-is_in"
+            title="see questions tagged'is_in'using tags"
+            rel="tag">is_in</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/political/"
+            class="tag-link-political"
+            title="see questions tagged'political'using tags"
+            rel="tag">political</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/unincorporated/"
+            class="tag-link-unincorporated"
+            title="see questions tagged'unincorporated'using tags"
+            rel="tag">unincorporated</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 17, 2017, 12:35 a.m.">17 Mar '17, 00:35</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,121 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 17, 2017, 10:03 p.m.">17 Mar '17, 22:03</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3942/how-to-map-inhabited-places-settlements">How to map inhabited places (settlements)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area">When does it make sense to use place=* on an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4607/is-there-a-way-to-get-a-county-city-and-suburb-name-rendered-without-using-a-place-node">Is there a way to get a county, city and suburb name rendered without using a place=* node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5292/boundary-data-and-postcodes-for-areas-and-towns-in-uk">[closed] Boundary data and postcodes for areas and towns in UK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10147/how-to-correct-the-details-of-a-place">How to correct the details of a place?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10851/place-node-vs-area">place=* - node vs. area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13009/which-tag-for-a-place-in-the-french-meaning-of-it">Which tag for a place (in the french meaning of it)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13568/is-church-in-places-menu">Is CHURCH in places menu ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13869/precedence-in-place-name-display">Precedence in place name display</a>
+        </p>
+        
+        <p>
+            <a href="/questions/589/how-to-tag-non-settlement-place-names">How to tag &#39;non-settlement&#39; place names?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Google map line - OSM Help</title>
+        <meta name="description" content="How can I export a line drawn on a google map and convert it for general use or OSB. Technicaly these are only a series of geocoördinates (trackdata). Now I have to export a OSB map and manualy handdrawn the lines on the map. If there are to few reference points on the OSB maps, as in the countrysit..." />
+        <meta name="keywords" content="geodata,export" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/1245/google-map-line" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/1245/google-map-line?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='fgckhFSRYOYNl8lXoa9WNNtjLaVlUJo5' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/1245/google-map-line">Google map line</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-1245-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1245/up/" rel="nofollow"> </a>
+<div id="post-1245-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-1245-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1245/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/1245/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How can I export a line drawn on a google map and convert it for general use or OSB. Technicaly these are only a series of geocoördinates (trackdata).  Now I have to export a OSB map and manualy handdrawn the lines on the map. If there are to few reference points on the OSB maps, as in the countrysite this is a big problem.  Is there some handy way to do this?</p>
+<p><a href="http://maps.google.nl/maps/ms?t=h&amp;hl=en&amp;ie=UTF8&amp;msa=0&amp;msid=113926885661481583715.00048547dce4d39b32363&amp;ll=50.526851,5.133018&amp;spn=0.037322,0.107632&amp;z=13">example</a></p>
+<p>The lines are ex-vicinal railwaylines whose route I have extensively researched, with old maps, google earth etc. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/geodata/" class="post-tag tag-link-geodata"
+                                        title="see questions tagged 'geodata'" rel="tag">geodata</a>
+                                
+                                    <a href="/tags/export/" class="post-tag tag-link-export"
+                                        title="see questions tagged 'export'" rel="tag">export</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Oct '10, 14:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/57b9510f15842b95b07a0c5c596423cc?s=32&amp;d=identicon&amp;r=g" alt="smiley%20toerist's gravatar image" />
+    <p><a href="/users/159/smiley-toerist">smiley toerist</a><br/>
+    <span class="score" title="104 reputation points">104</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="smiley toerist has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/1245/">
+                edited
+                <strong>23 Oct '10, 18:25</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44a4438f0146dfd898e24c221fd28b58?s=32&amp;d=identicon&amp;r=g" alt="Gnonthgol's gravatar image" />
+            <p><a href="/users/131/gnonthgol">Gnonthgol ♦</a><br/>
+            <span class="score" title="13750 reputation points"><span class="">13.8k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="103 badges"><span class="silver">&#9679;</span><span class="badgecount">103</span></span><span title="198 badges"><span class="bronze">&#9679;</span><span class="badgecount">198</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-1245">
+    
+        <a name="1248"></a>
+        <div class="comment" id="comment-1248">
+            <div id="post-1248-score" class="comment-score"></div>
+            <div class="comment-text"><p>Some clarifications you could make in your question. What does OSB stand for in this context? I may be being stupid, but to me that means OpenStreetBugs.</p>
+
+<p>What is your intended use? It sort of seems like you are talking about contributing data to the OpenStreetMap database (which is not allowed for legal reasons), but this isn't entirely clear, and other uses may be allowed.</p></div>
+            <div class="comment-info" id="comment-1248-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '10, 15:54)</span>
+                <a class="comment-user userinfo" href="/users/107/harry-wood">Harry Wood</a>
+                
+            </div>
+        </div>
+    
+        <a name="1257"></a>
+        <div class="comment" id="comment-1257">
+            <div id="post-1257-score" class="comment-score"></div>
+            <div class="comment-text"><p>You are rigth, I meant OSM.</p>
+
+<p>Intended use is wikipedia. I now use external links in the article. zie <a href="http://nl.wikipedia.org/wiki/Buurtspoorwegen_van_de_provincie_Namen">http://nl.wikipedia.org/wiki/Buurtspoorwegen_van_de_provincie_Namen</a> (section= Andere lijnen die deel uitmaken van het nationaal net)
+To replace these links with license free maps is a lot of work and is inflexible. You need to store the route independantly from the background map.  The problem is that the wiki community is dependant of google and the owner (me) of the map.</p></div>
+            <div class="comment-info" id="comment-1257-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '10, 22:18)</span>
+                <a class="comment-user userinfo" href="/users/159/smiley-toerist">smiley toerist</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1245" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1245-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/1245/google-map-line?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/1245/google-map-line?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/1245/google-map-line?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/1245/google-map-line?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="1247"></a>
+                    <div id="answer-container-1247" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1247-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1247/up/" rel="nofollow"> </a>
+<div id="post-1247-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-1247-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1247/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Sorry but I don't think you would be allowed to do this. If you drew the line using Google Maps or Google Earth then you have used their intellectual property to position it correctly.</p>
+<p>You cannot then put the work under CC-by-SA as it is based on Google's maps and geopositioning.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1247/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Oct '10, 16:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f61876d1f1d2de794259119cdd596316?s=32&amp;d=identicon&amp;r=g" alt="GrahamS's gravatar image" />
+    <p><a href="/users/98/grahams">GrahamS</a><br/>
+    <span class="score" title="3635 reputation points"><span class="">3.6k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="45 badges"><span class="silver">&#9679;</span><span class="badgecount">45</span></span><span title="54 badges"><span class="bronze">&#9679;</span><span class="badgecount">54</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="GrahamS has 7 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1247">
+    
+        <a name="1258"></a>
+        <div class="comment" id="comment-1258">
+            <div id="post-1258-score" class="comment-score"></div>
+            <div class="comment-text"><p>On the legal issue: I think the route I draw is my work and property. It is my research. However any printout or other use of the routemap together with the googlemap is restricted. The use of a google tool to make an object is not restricted.  If this is the case all documents made with microsoft Word would be licensed to Microsoft!
+The geografic information is free. Any geografic coordinates noted in the google standard is used everywhere. In principle I see no difference between a list of coordinates made during a walk and a list of coordinates extracted from a google map or any other map.</p></div>
+            <div class="comment-info" id="comment-1258-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '10, 22:19)</span>
+                <a class="comment-user userinfo" href="/users/159/smiley-toerist">smiley toerist</a>
+                
+            </div>
+        </div>
+    
+        <a name="1265"></a>
+        <div class="comment" id="comment-1265">
+            <div id="post-1265-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You might not see a difference and it might be hard to prove that the list of coordinates is derived from google maps instead of a walk with a GPS unit, but due to the Terms of Service of google maps you can't use the data (at least in europe).
+This restriction on geodata and that popular maps like google maps (and OS) are free as in beer not free as in speach are really the whole reason why OpenStreetMap was started!
+So don't use any Google derived data in OpenStreetMap.</p></div>
+            <div class="comment-info" id="comment-1265-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Oct '10, 08:01)</span>
+                <a class="comment-user userinfo" href="/users/8/petschge">petschge</a>
+                
+            </div>
+        </div>
+    
+        <a name="1278"></a>
+        <div class="comment" id="comment-1278">
+            <div id="post-1278-score" class="comment-score">4</div>
+            <div class="comment-text"><p>It may be your work and your research but if you position those lines using the information on the Google Map then you have derived from their work and you cannot submit it to OSM.</p></div>
+            <div class="comment-info" id="comment-1278-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Oct '10, 23:44)</span>
+                <a class="comment-user userinfo" href="/users/98/grahams">GrahamS</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1247" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1247-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1289"></a>
+                    <div id="answer-container-1289" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1289-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1289/up/" rel="nofollow"> </a>
+<div id="post-1289-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-1289-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1289/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You absolutely must not do this. Your work will be deleted from OSM if you do.</p>
+<p>Please see the <a href="http://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F">FAQ entry</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1289/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Oct '10, 18:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1289">
+    
+</div>
+<div id="comment-tools-1289" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1289-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1259"></a>
+                    <div id="answer-container-1259" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1259-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1259/up/" rel="nofollow"> </a>
+<div id="post-1259-score" class="post-score"
+    title="current number of votes">
+    -3
+</div>
+<a id="post-1259-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1259/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The streetpatterns on the maps will look the the same on every map. What is copyrigthed is how the information is rendered. For example an Michelin map.</p>
+<p>I suspect the legal issue is not copyrigth, but the use of data. You can use any individual telefoonnumber out of the telefoonbook, but you are not allowed to copy the whole book or sort it by telefoonnumber.</p>
+<p>Back to the issue: Is there any way or format to store a list of geografic coordinates (route) and project it on a map such as OSM? Such an object exist of course in a OSM editor, but can it be externalized or exported? My idea is to store such an object in wiki commons and then to project it on any desired map. Any image location out of the wiki commons can now be projected on any desired maps. Why not a route?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1259/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Oct '10, 22:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/57b9510f15842b95b07a0c5c596423cc?s=32&amp;d=identicon&amp;r=g" alt="smiley%20toerist's gravatar image" />
+    <p><a href="/users/159/smiley-toerist">smiley toerist</a><br/>
+    <span class="score" title="104 reputation points">104</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="smiley toerist has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1259">
+    
+        <a name="1277"></a>
+        <div class="comment" id="comment-1277">
+            <div id="post-1277-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Sorry this is not correct. Google own their map. It is their Intellectual Property. Not just the rendering, but the map information itself. You cannot use a Google Map to position your lines and then claim that they are CC-by-SA.</p></div>
+            <div class="comment-info" id="comment-1277-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Oct '10, 23:42)</span>
+                <a class="comment-user userinfo" href="/users/98/grahams">GrahamS</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1259" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1259-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/1245/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='fgckhFSRYOYNl8lXoa9WNNtjLaVlUJo5' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1245/google-map-line?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1245/google-map-line?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/export/"
+            class="tag-link-export"
+            title="see questions tagged'export'using tags"
+            rel="tag">export</a> <span class="tag-number">&#215;315</span><br/>
+        
+        <a href="/tags/geodata/"
+            class="tag-link-geodata"
+            title="see questions tagged'geodata'using tags"
+            rel="tag">geodata</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 20, 2010, 2:36 p.m.">20 Oct '10, 14:36</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,377 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 23, 2010, 6:25 p.m.">23 Oct '10, 18:25</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8444/is-there-any-possibility-to-download-data-into-shape-format-shp">Is there any possibility to download data into shape format? (.shp)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/824/getting-geodata-of-all-capital-cities-and-displaying-it-on-a-world-map-of-open-street-map">Getting geodata of all capital cities and displaying it on a world map of open street map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1681/problem-with-manually-selecting-an-area-and-exporting">problem with manually selecting an area and exporting?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1267/server-too-busy-to-export-a-map">Server too busy to export a map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1546/osm-in-we-travel">OSM in We-Travel</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1590/export-road-way-data-for-large-regions">Export Road (Way) data for large regions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/915/how-to-get-administrative-boundaries-in-a-gps-format-ideally-in-igc">How to get administrative boundaries in a GPS format, ideally in .igc?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1694/export-openmap-data-xml-to-autocadmicrostation">Export Openmap Data (XML) to AUtocad/Microstation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1773/how-do-i-exportdownload-a-map">How do I export/download a map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/713/how-to-extract-partial-data-for-large-regions">How to extract partial data for large regions ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

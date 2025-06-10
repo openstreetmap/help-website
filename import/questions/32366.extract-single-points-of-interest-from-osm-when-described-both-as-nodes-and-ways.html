@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Extract single points of interest from OSM when described both as nodes and ways - OSM Help</title>
+        <meta name="description" content="I extracted both nodes and ways from OpenStreetMap in PostgreSQL with Osmosis. I&#39;m looking for all restaurants in a given area. The issue is that some of them are coded in OSM as nodes and others as ways. How is it possible to have only one point when it is represented both as a node and a way? The ..." />
+        <meta name="keywords" content="centroid,postgresql,osmosis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/32366/extract-single-points-of-interest-from-osm-when-described-both-as-nodes-and-ways" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/32366/extract-single-points-of-interest-from-osm-when-described-both-as-nodes-and-ways?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='NLU8RDP61r8bM7azQO52K84WQZR9Opca' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/32366/extract-single-points-of-interest-from-osm-when-described-both-as-nodes-and-ways">Extract single points of interest from OSM when described both as nodes and ways</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-32366-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32366/up/" rel="nofollow"> </a>
+<div id="post-32366-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32366-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32366/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/32366/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I extracted both nodes and ways from <a href="http://openstreetmap.org/">OpenStreetMap</a> in PostgreSQL with <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>. I'm looking for all restaurants in a given area. The issue is that some of them are coded in OSM as nodes and others as ways.</p>
+<p>How is it possible to have only one point when it is represented both as a node and a way?</p>
+<p>The intuitive answer is to intersect the ways with the nodes. If a node is inside a way, they will both count as one. Otherwise, if there is only a node or only a way without nodes inside, it's fine.</p>
+<p>The 'geometry' column in the 'ways' table does not contain information (it has something like a geometry, but all values are similar). Or maybe it is possible to use the 'nodes' table?</p>
+<p>The fundamental question is: How is it possible to have a proper geometry column in PostgreSQL with Osmosis?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/centroid/" class="post-tag tag-link-centroid"
+                                        title="see questions tagged 'centroid'" rel="tag">centroid</a>
+                                
+                                    <a href="/tags/postgresql/" class="post-tag tag-link-postgresql"
+                                        title="see questions tagged 'postgresql'" rel="tag">postgresql</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Apr '14, 17:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/65da3e87020b1932ba6fc144a74394f6?s=32&amp;d=identicon&amp;r=g" alt="antonind's gravatar image" />
+    <p><a href="/users/8628/antonind">antonind</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="antonind has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/32366/">
+                edited
+                <strong>14 Apr '14, 18:29</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/49a7d0e0408e9cf2f698faac0f4d837a?s=32&amp;d=identicon&amp;r=g" alt="iii's gravatar image" />
+            <p><a href="/users/4984/iii">iii</a><br/>
+            <span class="score" title="4892 reputation points"><span class="">4.9k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="40 badges"><span class="silver">&#9679;</span><span class="badgecount">40</span></span><span title="82 badges"><span class="bronze">&#9679;</span><span class="badgecount">82</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-32366">
+    
+</div>
+<div id="comment-tools-32366" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32366-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/32366/extract-single-points-of-interest-from-osm-when-described-both-as-nodes-and-ways?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/32366/extract-single-points-of-interest-from-osm-when-described-both-as-nodes-and-ways?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/32366/extract-single-points-of-interest-from-osm-when-described-both-as-nodes-and-ways?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/32366/extract-single-points-of-interest-from-osm-when-described-both-as-nodes-and-ways?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="32371"></a>
+                    <div id="answer-container-32371" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32371-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32371/up/" rel="nofollow"> </a>
+<div id="post-32371-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-32371-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32371/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="antonind has selected this answer as the correct answer"
+        href="/accept_answer/32371/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Alternatively, use osm2pgsql which builds geometries.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32371/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Apr '14, 20:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32371">
+    
+        <a name="32378"></a>
+        <div class="comment" id="comment-32378">
+            <div id="post-32378-score" class="comment-score"></div>
+            <div class="comment-text"><p>How do you do tag-filtering with osm2pgsql? I guess via a style file. If I'm not interested in some key, I just delete them from the style file?</p></div>
+            <div class="comment-info" id="comment-32378-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Apr '14, 10:02)</span>
+                <a class="comment-user userinfo" href="/users/8628/antonind">antonind</a>
+                
+            </div>
+        </div>
+    
+        <a name="32379"></a>
+        <div class="comment" id="comment-32379">
+            <div id="post-32379-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You should be able to do that with <a href="https://github.com/openstreetmap/osm2pgsql/blob/master/README_lua.md">lua tag transformations</a>.</p></div>
+            <div class="comment-info" id="comment-32379-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Apr '14, 10:10)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32380"></a>
+        <div class="comment" id="comment-32380">
+            <div id="post-32380-score" class="comment-score">1</div>
+            <div class="comment-text"><p>But just deleting lines in the style file wouldn't do the thing?</p></div>
+            <div class="comment-info" id="comment-32380-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Apr '14, 10:38)</span>
+                <a class="comment-user userinfo" href="/users/8628/antonind">antonind</a>
+                
+            </div>
+        </div>
+    
+        <a name="32393"></a>
+        <div class="comment" id="comment-32393">
+            <div id="post-32393-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes it would work; the only thing you can't do in the style file is saying "I want highway=A but not highway=B". You can only say that you want, or don't want, highway.</p></div>
+            <div class="comment-info" id="comment-32393-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Apr '14, 21:37)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32409"></a>
+        <div class="comment" id="comment-32409">
+            <div id="post-32409-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It worked perfectly by just removing some lines in the style file and using 'osm2pgsql -S default.style --host=something.com --username myUsername --password --database myDB switzerland-latest.osm.pbf</p></div>
+            <div class="comment-info" id="comment-32409-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Apr '14, 13:33)</span>
+                <a class="comment-user userinfo" href="/users/8628/antonind">antonind</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32371" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32371-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="32368"></a>
+                    <div id="answer-container-32368" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32368-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32368/up/" rel="nofollow"> </a>
+<div id="post-32368-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32368-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32368/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The general understand is already ok.</p>
+<p>For the postprocessing you might want to derive a own table/db as it's a custom procedure that depends on your own needs:</p>
+<ul>
+<li>you want just the node holding all (maybe merged) metainformation</li>
+<li>you might want to be able to determine the original OSM object (might be nessary for updates etc)</li>
+</ul>
+<p>I guess you can do the processing just using PGSQL, but I would recommend e.g. a python script that:</p>
+<ol>
+<li>Creates a new table</li>
+<li>Add all nodes as lat/lon point geoms, maybe with additional fields for address, www, ...</li>
+<li>Find all restaurant closed ways (any maybe just building=*)<ol>
+<li>Check if existing lat/lon points lay within this shape -&gt; Flag shape as "processed"</li>
+<li>if not, calculate centeroid of that shape and add it in your point table</li>
+</ol>
+</li>
+</ol>
+<p>Sorry, I can't provide code, but maybe this will be helpful if you decide to do it the Python way: <a href="http://conference.scipy.org/scipy2013/tutorial_detail.php?id=110">http://conference.scipy.org/scipy2013/tutorial_detail.php?id=110</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32368/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Apr '14, 18:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/49a7d0e0408e9cf2f698faac0f4d837a?s=32&amp;d=identicon&amp;r=g" alt="iii's gravatar image" />
+    <p><a href="/users/4984/iii">iii</a><br/>
+    <span class="score" title="4892 reputation points"><span class="">4.9k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="40 badges"><span class="silver">&#9679;</span><span class="badgecount">40</span></span><span title="82 badges"><span class="bronze">&#9679;</span><span class="badgecount">82</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="iii has 16 accepted answers">10&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32368">
+    
+</div>
+<div id="comment-tools-32368" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32368-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/32366/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='NLU8RDP61r8bM7azQO52K84WQZR9Opca' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32366/extract-single-points-of-interest-from-osm-when-described-both-as-nodes-and-ways?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32366/extract-single-points-of-interest-from-osm-when-described-both-as-nodes-and-ways?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/postgresql/"
+            class="tag-link-postgresql"
+            title="see questions tagged'postgresql'using tags"
+            rel="tag">postgresql</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/centroid/"
+            class="tag-link-centroid"
+            title="see questions tagged'centroid'using tags"
+            rel="tag">centroid</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 14, 2014, 5:14 p.m.">14 Apr '14, 17:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,670 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 17, 2014, 1:33 p.m.">17 Apr '14, 13:33</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/29549/which-schematools-to-use">which schema/tools to use</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59542/filtering-osc-files-and-import-to-postgresql">Filtering osc files and import to PostgreSQL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11330/using-osmosis-bzcat-and-postgresql">Using Osmosis, bzcat and Postgresql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24766/unable-to-write-osm-data-into-database">Unable to write osm data into database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37926/osmosis-fails-on-windows-7x64">Osmosis fails on WIndows 7x64</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51995/duplicate-key-value-violates-unique-constraint-relations_pkey">duplicate key value violates unique constraint &quot;relations_pkey&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3030/disk-space-required-for-importing-planetosm-into-postgresql-w-osmosis">Disk space required for importing planet.osm into PostgreSQL w/ Osmosis?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5066/error-while-following-osmosis-import-to-database-examples">Error while following osmosis import to database examples</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19919/postgis-db-to-osm-pbf-file">Postgis DB to osm pbf file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59610/osmosis-postgresql-error">Osmosis PostgreSQL error</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

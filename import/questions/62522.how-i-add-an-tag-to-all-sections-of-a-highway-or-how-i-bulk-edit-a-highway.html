@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How I add an tag to all sections of a highway? Or how I bulk-edit a highway? - OSM Help</title>
+        <meta name="description" content="Hi! I want to add an cycling=permissive tag to a highway that is 250km long. Is there any easy way to do this? Using iD editor, I would need edit every highway section, but it is simply too much sections to edit every single one." />
+        <meta name="keywords" content="bulk_editing,highway" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/62522/how-i-add-an-tag-to-all-sections-of-a-highway-or-how-i-bulk-edit-a-highway" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/62522/how-i-add-an-tag-to-all-sections-of-a-highway-or-how-i-bulk-edit-a-highway?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ZGBpBOmYiORwajBm5TZn9fs5fczUG9XC' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/62522/how-i-add-an-tag-to-all-sections-of-a-highway-or-how-i-bulk-edit-a-highway">How I add an tag to all sections of a highway? Or how I bulk-edit a highway?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-62522-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/62522/up/" rel="nofollow"> </a>
+<div id="post-62522-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-62522-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/62522/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/62522/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi! I want to add an cycling=permissive tag to a highway that is 250km long. Is there any easy way to do this? Using iD editor, I would need edit every highway section, but it is simply too much sections to edit every single one.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bulk_editing/" class="post-tag tag-link-bulk_editing"
+                                        title="see questions tagged 'bulk_editing'" rel="tag">bulk_editing</a>
+                                
+                                    <a href="/tags/highway/" class="post-tag tag-link-highway"
+                                        title="see questions tagged 'highway'" rel="tag">highway</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Mar '18, 13:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bf734b57c8fce8ecad1f04ef5775a0c8?s=32&amp;d=identicon&amp;r=g" alt="danilolessa's gravatar image" />
+    <p><a href="/users/14835/danilolessa">danilolessa</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="danilolessa has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-62522">
+    
+        <a name="62523"></a>
+        <div class="comment" id="comment-62523">
+            <div id="post-62523-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You probably don't - no-one has used that tag before:
+<a href="https://taginfo.openstreetmap.org/search?q=cycling%3Dpermissive">https://taginfo.openstreetmap.org/search?q=cycling%3Dpermissive</a> .</p>
+
+<p>You may, however, mean "bicycle=permissive".  See <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a> for what the "permissive" tag generally means.  Again, you probably don't mean that - is this really a long private road on which the owner tolerates bicycles?  If not, "bicycle=permissive" is not the right tag.</p>
+
+<p>This, incidentally, is part of the reason why some editors don't support the "mass retagging" approach - it's too easy to make a massive number of errors.</p></div>
+            <div class="comment-info" id="comment-62523-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '18, 13:32)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="62525"></a>
+        <div class="comment" id="comment-62525">
+            <div id="post-62525-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Can you describe the situation on the ground?  Are cyclists allowed just on that particular highway, but not on other highways in the region?  Do cyclists have a legal right of way there?</p></div>
+            <div class="comment-info" id="comment-62525-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '18, 13:37)</span>
+                <a class="comment-user userinfo" href="/users/13665/dsh4">dsh4</a>
+                
+            </div>
+        </div>
+    
+        <a name="62528"></a>
+        <div class="comment" id="comment-62528">
+            <div id="post-62528-score" class="comment-score">3</div>
+            <div class="comment-text"><p>The situation is that there are some highways here at São Paulo that on OSM that are set to bicycle=no, but the highways have an lane specifically to pedestrians, broken cars and bicycles (I don't know how to say it in english, in portuguese we call it "acostamento", G-T suggested "coasting" or "support")</p>
+
+<p>Legally speaking, the local laws explicity allows cyclists to travel on that lane. But sometimes the highway operator have the right to disallow cycling traffic there. It is a bit of a grey issue really.</p></div>
+            <div class="comment-info" id="comment-62528-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '18, 14:35)</span>
+                <a class="comment-user userinfo" href="/users/14835/danilolessa">danilolessa</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-62522" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-62522-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/62522/how-i-add-an-tag-to-all-sections-of-a-highway-or-how-i-bulk-edit-a-highway?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/62522/how-i-add-an-tag-to-all-sections-of-a-highway-or-how-i-bulk-edit-a-highway?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/62522/how-i-add-an-tag-to-all-sections-of-a-highway-or-how-i-bulk-edit-a-highway?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/62522/how-i-add-an-tag-to-all-sections-of-a-highway-or-how-i-bulk-edit-a-highway?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="62531"></a>
+                    <div id="answer-container-62531" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-62531-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/62531/up/" rel="nofollow"> </a>
+<div id="post-62531-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-62531-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/62531/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In JOSM, the "Search" and "Filter" tools can be used to implement mass-editing.</p>
+<p>I assume the highway in question has some tag that uniquely identifies it (most probably a <code>ref</code> tag).  After downloading the relevant area, use Edit-&gt;Search and search for <code>ref=foo</code>.  That will select all segments of the highway.  <em>Make sure the selection is correct</em> (it may match both directions of the highway, for example), then add the tag as usual.</p>
+<p>It might be necessary to use a more refined search query, for example, "highway=motorway ref=foo" to avoid matching bus stops with ref=foo.</p>
+<p>Instead of using the "Search" tool, the "Filter" tool in 'inverse' mode (to grey out or hide <em>non</em>-matching elements) can also be used.</p>
+<p>As always with mass edits, remember to discuss the edit with the local (in this case, Brazilian) community before making it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/62531/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Mar '18, 18:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8440750fd002fd989ab2e6b613ca3ccb?s=32&amp;d=identicon&amp;r=g" alt="dsh4's gravatar image" />
+    <p><a href="/users/13665/dsh4">dsh4</a><br/>
+    <span class="score" title="867 reputation points">867</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="13 badges"><span class="silver">&#9679;</span><span class="badgecount">13</span></span><span title="30 badges"><span class="bronze">&#9679;</span><span class="badgecount">30</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dsh4 has one accepted answer">4&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-62531">
+    
+        <a name="62533"></a>
+        <div class="comment" id="comment-62533">
+            <div id="post-62533-score" class="comment-score">1</div>
+            <div class="comment-text"><p>... and if "downloading the relevant area" does not work, because it is too large/contains too much data (which likely happens with 250 km of road), then download only the relevant data in the area via Overpass. However, this needs even more care (and experience with our data model) - especially when not doing only tag additions but also other edit operations.</p></div>
+            <div class="comment-info" id="comment-62533-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '18, 19:27)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-62531" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-62531-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="62529"></a>
+                    <div id="answer-container-62529" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-62529-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/62529/up/" rel="nofollow"> </a>
+<div id="post-62529-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-62529-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/62529/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It sounds like what you're describing is perhaps a <a href="https://taginfo.openstreetmap.org/search?q=shoulder#values">cycleway=shoulder</a>?  See also the discussion on <a href="https://wiki.openstreetmap.org/wiki/Key:cycleway">this</a> page.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/62529/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Mar '18, 16:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-62529">
+    
+        <a name="62530"></a>
+        <div class="comment" id="comment-62530">
+            <div id="post-62530-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, it it exactly that. There are some highways here that have shoulders from start to end. Is there any way of bulk adding the cycleway=shoulder then?</p></div>
+            <div class="comment-info" id="comment-62530-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '18, 17:40)</span>
+                <a class="comment-user userinfo" href="/users/14835/danilolessa">danilolessa</a>
+                
+            </div>
+        </div>
+    
+        <a name="62532"></a>
+        <div class="comment" id="comment-62532">
+            <div id="post-62532-score" class="comment-score"></div>
+            <div class="comment-text"><p>As per other answer, yes - there are OSM editors that allow you to do that.  However you'd have to be sure that there's a cyclable shoulder all the way (which if you've travelled the road I'm sure you are) rather than just "guessing that there probably is".</p></div>
+            <div class="comment-info" id="comment-62532-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '18, 18:55)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="62534"></a>
+        <div class="comment" id="comment-62534">
+            <div id="post-62534-score" class="comment-score"></div>
+            <div class="comment-text"><p>that is not really an answer to the "question", don't you think? A comment below the question suits better.</p></div>
+            <div class="comment-info" id="comment-62534-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '18, 19:29)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-62529" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-62529-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/62522/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ZGBpBOmYiORwajBm5TZn9fs5fczUG9XC' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/62522/how-i-add-an-tag-to-all-sections-of-a-highway-or-how-i-bulk-edit-a-highway?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/62522/how-i-add-an-tag-to-all-sections-of-a-highway-or-how-i-bulk-edit-a-highway?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/highway/"
+            class="tag-link-highway"
+            title="see questions tagged'highway'using tags"
+            rel="tag">highway</a> <span class="tag-number">&#215;163</span><br/>
+        
+        <a href="/tags/bulk_editing/"
+            class="tag-link-bulk_editing"
+            title="see questions tagged'bulk_editing'using tags"
+            rel="tag">bulk_editing</a> <span class="tag-number">&#215;14</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 6, 2018, 1:17 p.m.">06 Mar '18, 13:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,232 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 6, 2018, 7:29 p.m.">06 Mar '18, 19:29</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1060/how-do-i-tag-a-street-as-two-way">How do I tag a street as two-way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1271/highway-classification-for-side-road-from-roundabout-onto-primary-routes">Highway Classification for Side Road from Roundabout onto Primary Routes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1663/creating-a-t-street">Creating a &#39;T&#39; Street</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1871/about-naming-roads">About naming roads</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1909/bridges-duplicating-highway-segments">Bridges duplicating highway segments</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2708/os-opendata-locator-has-wrong-name">OS OpenData Locator has wrong name</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2750/pedestrian-vs-footway">&quot;pedestrian&quot; vs. &quot;footway&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2767/branching-roads">Branching Roads</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2957/relation-for-slip-road">relation for slip road</a>
+        </p>
+        
+        <p>
+            <a href="/questions/922/how-to-map-a-park-alley">How to map a park alley?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

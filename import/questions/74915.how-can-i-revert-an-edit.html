@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How can I revert an edit? - OSM Help</title>
+        <meta name="description" content="Alright, so I was mapping on JOSM, and I accidently deleted something by mistake. Normally, this wouldn&#39;t be a big issue. However, I made a lot of edits afterwards that if I undoed the deletion of the building, the edits made afterward would dissapear. I&#39;ve heard a lot about reverting edits in JOSM,..." />
+        <meta name="keywords" content="josm,edits,revert" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/74915/how-can-i-revert-an-edit" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/74915/how-can-i-revert-an-edit?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Cb01EOHs08ioMf12gxmDQSDqTsRQgapb' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/74915/how-can-i-revert-an-edit">How can I revert an edit?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-74915-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74915/up/" rel="nofollow"> </a>
+<div id="post-74915-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-74915-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74915/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/74915/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Alright, so I was mapping on JOSM, and I accidently deleted something by mistake. Normally, this wouldn't be a big issue. However, I made a lot of edits afterwards that if I undoed the deletion of the building, the edits made afterward would dissapear. I've heard a lot about reverting edits in JOSM, but I'm not entirely sure how to do it. Any help would be appricated.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/edits/" class="post-tag tag-link-edits"
+                                        title="see questions tagged 'edits'" rel="tag">edits</a>
+                                
+                                    <a href="/tags/revert/" class="post-tag tag-link-revert"
+                                        title="see questions tagged 'revert'" rel="tag">revert</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 May '20, 21:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b3c43e68353fb119848cbad80c687109?s=32&amp;d=identicon&amp;r=g" alt="TheAdventurer64's gravatar image" />
+    <p><a href="/users/15341/theadventurer64">TheAdventurer64</a><br/>
+    <span class="score" title="139 reputation points">139</span><span title="12 badges"><span class="badge1">&#9679;</span><span class="badgecount">12</span></span><span title="13 badges"><span class="silver">&#9679;</span><span class="badgecount">13</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TheAdventurer64 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-74915">
+    
+</div>
+<div id="comment-tools-74915" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74915-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/74915/how-can-i-revert-an-edit?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/74915/how-can-i-revert-an-edit?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/74915/how-can-i-revert-an-edit?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/74915/how-can-i-revert-an-edit?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="74917"></a>
+                    <div id="answer-container-74917" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74917-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74917/up/" rel="nofollow"> </a>
+<div id="post-74917-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-74917-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74917/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <h3>If you have already uploaded</h3>
+<p>JOSM has a <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">reverter plugin</a> for this. I think the  <em>Partial reverts</em> section on the wiki page has what you're after. </p>
+<p>If you only do a selective upload of the building (and nodes) you had deleted (via <em>File</em>&gt;<em>Upload selection</em>), then delete the data layer, you should end up with the building restored and the rest of the edit intact.</p>
+<h3>If you have not uploaded</h3>
+<p>You should be able to select the modified objects with a search (<code>CTRL+F</code>) for "modifed" and upload just those objects via <em>File</em>&gt;<em>Upload selection</em> (<code>CTRL+ALT+SHIFT+U</code>). </p>
+<p>Alternatively, you can re-download the area as a new layer and selectively merge (<em>Edit</em>&gt;<em>Merge Selection</em>) the changes you do want to upload across to the new layer leaving the deletion behind in the original layer. You can then upload the new layer as normal.</p>
+<p>In both of these options (especially the first), you should be weary of leaving orphaned nodes (ones without tags or "parent" objects) if you have changed the geometry of existing ways. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74917/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 May '20, 01:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ec8a0cf213f9797ad1c1ae2c28c2332d?s=32&amp;d=identicon&amp;r=g" alt="InsertUser's gravatar image" />
+    <p><a href="/users/4426/insertuser">InsertUser</a><br/>
+    <span class="score" title="11005 reputation points"><span class="">11.0k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="69 badges"><span class="silver">&#9679;</span><span class="badgecount">69</span></span><span title="185 badges"><span class="bronze">&#9679;</span><span class="badgecount">185</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="InsertUser has 73 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/74917/">
+                edited
+                <strong>22 May '20, 10:36</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74917">
+    
+        <a name="74918"></a>
+        <div class="comment" id="comment-74918">
+            <div id="post-74918-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry, but I am confused onto how to use the modified tool. Could I send you a DM via OSM?</p></div>
+            <div class="comment-info" id="comment-74918-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 May '20, 01:24)</span>
+                <a class="comment-user userinfo" href="/users/15341/theadventurer64">TheAdventurer64</a>
+                
+            </div>
+        </div>
+    
+        <a name="74950"></a>
+        <div class="comment" id="comment-74950">
+            <div id="post-74950-score" class="comment-score"></div>
+            <div class="comment-text"><p>Better try to solve it here so that others can profit from the resolution, too.<br>
+Could you share the changeset and the id of the deleted building?</p></div>
+            <div class="comment-info" id="comment-74950-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '20, 10:07)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="74951"></a>
+        <div class="comment" id="comment-74951">
+            <div id="post-74951-score" class="comment-score"></div>
+            <div class="comment-text"><p>There is no separate modified tool, it is a search term within the search tool. I will try to edit for clarity. </p>
+
+<p>It wasn't clear to me from your initial post whether you had uploaded the edits yet or not. Have you?</p></div>
+            <div class="comment-info" id="comment-74951-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '20, 10:21)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74917" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74917-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/74915/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Cb01EOHs08ioMf12gxmDQSDqTsRQgapb' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74915/how-can-i-revert-an-edit?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74915/how-can-i-revert-an-edit?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/revert/"
+            class="tag-link-revert"
+            title="see questions tagged'revert'using tags"
+            rel="tag">revert</a> <span class="tag-number">&#215;86</span><br/>
+        
+        <a href="/tags/edits/"
+            class="tag-link-edits"
+            title="see questions tagged'edits'using tags"
+            rel="tag">edits</a> <span class="tag-number">&#215;46</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 19, 2020, 9:59 p.m.">19 May '20, 21:59</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,603 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 22, 2020, 10:36 a.m.">22 May '20, 10:36</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/63848/josm-revert-nodes-within-closed-polygon">JOSM revert nodes within closed polygon.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/84291/josm-revert-changest-selection-only-still-loads-of-conflicts">JOSM Revert Changest - &#39;Selection Only&#39; - Still loads of Conflicts</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26469/revert-total-changeset-wanted">Revert total changeset wanted!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52108/reverting-a-very-large-changeset">Reverting a very large changeset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65686/how-to-remove-a-changeset">How to remove a changeset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/75179/can-someone-help-to-revert-a-changeset">Can someone help to revert a changeset?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11096/josm-resuming-interrupted-upload-of-osm-file">JOSM: Resuming interrupted upload of .osm file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12973/how-to-cancel-my-edits-days-later-after-a-mistake">How to cancel my edits days later after a mistake?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40792/editing-large-multipolygons-in-josm">Editing large multipolygons in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/87139/josm-how-to-revert-a-relation">JOSM: How to revert a relation?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

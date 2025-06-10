@@ -1,0 +1,966 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Car park entrance/exits - OSM Help</title>
+        <meta name="description" content="Is there a way to tag car park entrances and exits, if the route of vehicles within the car park is not known? In the past I have just tagged the entrance/exit roads with the appropriate oneway tag, but it seems oneways that do not create a loop seem to be viewed as errors. Recently there has been a..." />
+        <meta name="keywords" content="parking_entrance,exit,oneway" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/44227/car-park-entranceexits" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/44227/car-park-entranceexits?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='T76oNSHeDtqZyUj5I52pDXHhltSASu2C' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/44227/car-park-entranceexits">Car park entrance/exits</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-44227-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44227/up/" rel="nofollow"> </a>
+<div id="post-44227-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-44227-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44227/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/44227/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is there a way to tag car park entrances and exits, if the route of vehicles within the car park is not known?</p>
+<p>In the past I have just tagged the entrance/exit roads with the appropriate oneway tag, but it seems oneways that do not create a loop seem to be viewed as errors. Recently there has been a flurry of people playing the <a href="http://osmlab.github.io/to-fix/#/task/deadendoneway">http://osmlab.github.io/to-fix/#/task/deadendoneway</a> game going around stripping entrance/exit roads of their oneway tag</p>
+<p>eg <a href="http://www.openstreetmap.org/way/228323772">http://www.openstreetmap.org/way/228323772</a> is the exit from an underground car park below the visible upper one</p>
+<p>If I can't tag them as oneway, is there a way to tag them as entrance/exit roads and the traffic direction to be interpolated from that?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/parking_entrance/" class="post-tag tag-link-parking_entrance"
+                                        title="see questions tagged 'parking_entrance'" rel="tag">parking_entrance</a>
+                                
+                                    <a href="/tags/exit/" class="post-tag tag-link-exit"
+                                        title="see questions tagged 'exit'" rel="tag">exit</a>
+                                
+                                    <a href="/tags/oneway/" class="post-tag tag-link-oneway"
+                                        title="see questions tagged 'oneway'" rel="tag">oneway</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Jul '15, 00:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7c24812608179f09b4374b3231cfb750?s=32&amp;d=identicon&amp;r=g" alt="YoP's gravatar image" />
+    <p><a href="/users/8578/yop">YoP</a><br/>
+    <span class="score" title="506 reputation points">506</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="YoP has one accepted answer">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/44227/">
+                edited
+                <strong>17 Jul '15, 00:55</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-44227">
+    
+</div>
+<div id="comment-tools-44227" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44227-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/44227/car-park-entranceexits?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/44227/car-park-entranceexits?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/44227/car-park-entranceexits?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/44227/car-park-entranceexits?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="44236"></a>
+                    <div id="answer-container-44236" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-44236-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44236/up/" rel="nofollow"> </a>
+<div id="post-44236-score" class="post-score"
+    title="current number of votes">
+    12
+</div>
+<a id="post-44236-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44236/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is a massive difference on OpenStreetMap between inaccurate and accurate, but incomplete, data. </p>
+<p>Stub ways showing the direction of service roads entering &amp; leaving car parks clearly fall into the latter category. They have useful information, and are not wrong.</p>
+<p>I would politely ask the people removing this information to desist: they clearly have a less clear picture of the situation than the original mapper. I'm afraid it's a case of blindly following a false positive from a QA tool. They should also be requested to revert edits which have removed valid information from OSM.</p>
+<p>It may help to add other tags, but I would suggest following a couple of fairly widely used conventions by adding a <a href="http://wiki.openstreetmap.org/wiki/Key:fixme">fixme</a> tag:</p>
+<ul>
+<li>Add <code>fixme=continue</code> on the last unattached node of the way. </li>
+<li>Add a <code>fixme=stub for further survey</code> to the way itself.</li>
+</ul>
+<p>A much less used convention would be to add a further way connecting entrance &amp; exit purely to illustrate the correct connectivity. This could be tagged <code>artificial_path=yes</code>, which has been used for rivers/streams passing through lakes and reservoirs.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/44236/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '15, 11:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/44236/">
+                edited
+                <strong>20 Jul '15, 10:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-44236">
+    
+        <a name="44284"></a>
+        <div class="comment" id="comment-44284">
+            <div id="post-44284-score" class="comment-score"></div>
+            <div class="comment-text"><p>Good advice. Note that it's "fixme=continue" (not "continues"), according to both wiki and current usage. I corrected that part.</p></div>
+            <div class="comment-info" id="comment-44284-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '15, 08:20)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="44291"></a>
+        <div class="comment" id="comment-44291">
+            <div id="post-44291-score" class="comment-score"></div>
+            <div class="comment-text"><p>I happen to use fixme=continues, which seems more natural to me. More to the point it really doesnt matter which is used: it is there to help people avoid blunders of removing reasonable data.</p></div>
+            <div class="comment-info" id="comment-44291-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '15, 10:02)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-44236" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44236-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="44231"></a>
+                    <div id="answer-container-44231" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-44231-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44231/up/" rel="nofollow"> </a>
+<div id="post-44231-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-44231-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44231/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can use <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking_entrance">amenity=parking_entrance</a>, but I don't know whether all QA-tools and validators take it into account.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/44231/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '15, 06:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/813a136afe7d4c95fd5bccdd78705e0e?s=32&amp;d=identicon&amp;r=g" alt="escada's gravatar image" />
+    <p><a href="/users/5390/escada">escada</a><br/>
+    <span class="score" title="19043 reputation points"><span class="">19.0k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="166 badges"><span class="silver">&#9679;</span><span class="badgecount">166</span></span><span title="302 badges"><span class="bronze">&#9679;</span><span class="badgecount">302</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="escada has 97 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-44231">
+    
+</div>
+<div id="comment-tools-44231" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44231-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="44283"></a>
+                    <div id="answer-container-44283" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-44283-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44283/up/" rel="nofollow"> </a>
+<div id="post-44283-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-44283-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44283/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You could resolve this by adding the missing parking area, even if only approximately.</p>
+<p>Add an area to indicate the underground car park. It need not be absolutely precise, but you can probably roughly guess the area (e.g. from the various entries). Tag it as "amenity=parking", "parking=underground", "level=-1", and possibly "fixme=resurvey" to indicate the area is only estimated.</p>
+<p>SK53's answer still stands: It is incorrect to blindly correct this, but by mapping it like this you avoid any ambiguity, and provide valuable information (namely that there is an underground car park, which for example routers may offer to people looking for parking).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/44283/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Jul '15, 08:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6c2dd6a39d3f38f1bb47a8c1fe8325e2?s=32&amp;d=identicon&amp;r=g" alt="sleske's gravatar image" />
+    <p><a href="/users/666/sleske">sleske</a><br/>
+    <span class="score" title="4090 reputation points"><span class="">4.1k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="78 badges"><span class="bronze">&#9679;</span><span class="badgecount">78</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sleske has 19 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-44283">
+    
+</div>
+<div id="comment-tools-44283" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44283-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="48242"></a>
+                    <div id="answer-container-48242" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48242-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48242/up/" rel="nofollow"> </a>
+<div id="post-48242-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-48242-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48242/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<blockquote>
+<p>Is there a way to tag car park <strong>entrances</strong> and <strong>exits</strong>, if the route of vehicles within the car park is not known?</p>
+</blockquote>
+</blockquote>
+<p>I agree. IMHO...
+ Just as streets are usually tagged as unidirectional or bidirectional, All entry/exit points to those roads should be as well. This should help navigation to proper point to the amenity to avoid future glitches that could result in vehicular collisions.</p>
+<blockquote>
+<blockquote>
+<p>eg <a href="http://www.openstreetmap.org/way/228323772">http://www.openstreetmap.org/way/228323772</a> is the exit from an underground car park below the visible upper one</p>
+</blockquote>
+</blockquote>
+<p><a href="http://www.openstreetmap.org/?mlat=47.61599&amp;mlon=-122.34063#map=19/47.61599/-122.34063">This exit only point</a> will become an unidirectional exit only linked underground to <a href="http://www.openstreetmap.org/?mlat=47.61584&amp;mlon=-122.34058#map=19/47.61584/-122.34058">this entry/exit bidirectional parking entry/exit point</a>.</p>
+<blockquote>
+<blockquote>
+<p>If I can't tag them as one-way, is there a way to tag them as entrance/exit roads and the traffic direction to be interpolated from that?</p>
+</blockquote>
+</blockquote>
+<p>So my question is similar to the original post.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48242/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Feb '16, 17:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/45200d6c589a6bb79222db45c233025d?s=32&amp;d=identicon&amp;r=g" alt="EugeneWII's gravatar image" />
+    <p><a href="/users/11752/eugenewii">EugeneWII</a><br/>
+    <span class="score" title="44 reputation points">44</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="EugeneWII has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48242">
+    
+</div>
+<div id="comment-tools-48242" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48242-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/44227/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='T76oNSHeDtqZyUj5I52pDXHhltSASu2C' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/44227/car-park-entranceexits?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/44227/car-park-entranceexits?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/oneway/"
+            class="tag-link-oneway"
+            title="see questions tagged'oneway'using tags"
+            rel="tag">oneway</a> <span class="tag-number">&#215;49</span><br/>
+        
+        <a href="/tags/exit/"
+            class="tag-link-exit"
+            title="see questions tagged'exit'using tags"
+            rel="tag">exit</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/parking_entrance/"
+            class="tag-link-parking_entrance"
+            title="see questions tagged'parking_entrance'using tags"
+            rel="tag">parking_entrance</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 17, 2015, 12:49 a.m.">17 Jul '15, 00:49</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,215 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 20, 2016, 5:47 p.m.">20 Feb '16, 17:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/727/how-to-tag-a-road-that-is-oneway-only-in-some-parts">How to tag a road that is oneway only in some parts?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1060/how-do-i-tag-a-street-as-two-way">How do I tag a street as two-way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1611/how-to-tag-alternate-flow-roads">How to tag alternate flow roads</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4572/when-to-use-two-parallel-ways-for-roads">When to use two parallel ways for roads.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7038/tagging-roads-with-traffic-type-dependent-access-restrictions">Tagging roads with traffic type dependent access restrictions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8826/why-do-roundabouts-without-a-oneway-tag-show-direction-arrows-in-potlatch-2">Why do roundabouts without a oneway tag show direction arrows in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9398/why-does-this-two-way-street-appear-one-way-to-routing-software">Why does this two-way street appear one way to routing software?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9944/how-to-tag-a-only-section-of-a-road-as-oneway">How to tag a only section of a road as oneway?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10586/road-is-22-ways-but-without-central-separation">road is  2+2 ways but without central separation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66/dividednon-divided-intersection">Divided/Non-Divided Intersection</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

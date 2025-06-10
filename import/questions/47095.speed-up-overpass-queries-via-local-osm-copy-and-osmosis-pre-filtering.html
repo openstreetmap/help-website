@@ -1,0 +1,872 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Speed up Overpass Queries via Local OSM Copy and Osmosis pre-filtering? - OSM Help</title>
+        <meta name="description" content="I am using Overpass API (on overpass-api.de) to query for transport-related elements along a recorded GPS track/journey. Currently, I perform several &quot;around&quot;-queries for each track point of the journey to get the IDs of e.g. public transport routes and stops, roads, railway etc. within 50m. This ta..." />
+        <meta name="keywords" content="overpass,optimization,osmosis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/47095/speed-up-overpass-queries-via-local-osm-copy-and-osmosis-pre-filtering" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/47095/speed-up-overpass-queries-via-local-osm-copy-and-osmosis-pre-filtering?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='HnDwIfkizO580XDul0Amu7gCgprFcdgr' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/47095/speed-up-overpass-queries-via-local-osm-copy-and-osmosis-pre-filtering">Speed up Overpass Queries via Local OSM Copy and Osmosis pre-filtering?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-47095-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47095/up/" rel="nofollow"> </a>
+<div id="post-47095-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-47095-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47095/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/47095/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am using Overpass API (on overpass-api.de) to query for transport-related elements along a recorded GPS track/journey. Currently, I perform several "around"-queries for each track point of the journey to get the IDs of e.g. public transport routes and stops, roads, railway etc. within 50m. This takes a few seconds for each track point, and since each journey consists of about 100 track points, collecting all data takes minutes instead of desired &lt;10s.</p>
+<p>I have the following idea for optimizing this:</p>
+<ul>
+<li>create a local copy of planet.osm <strike>and Overpass API</strike> on my own server.  --&gt; no sharing of server-load</li>
+<li>use Osmosis to pre-filter planet.osm for only the transport-related elements I am looking for --&gt; <strike>Overpass</strike> only has to search a smaller database.</li>
+</ul>
+<p>Since I am not experienced with OSM and this requires considerable effort:</p>
+<ul>
+<li><strong>Are my assumptions correct and do they make sense?</strong></li>
+<li><strong>Can I expect a significant speed-up from this?</strong></li>
+</ul>
+<p>Thanks in advance!</p>
+<p>Arik</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                                    <a href="/tags/optimization/" class="post-tag tag-link-optimization"
+                                        title="see questions tagged 'optimization'" rel="tag">optimization</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Dec '15, 13:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/382c1236163ab7156d672328538ba11e?s=32&amp;d=identicon&amp;r=g" alt="Arik's gravatar image" />
+    <p><a href="/users/11756/arik">Arik</a><br/>
+    <span class="score" title="51 reputation points">51</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Arik has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47095/">
+                edited
+                <strong>11 Dec '15, 15:38</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-47095">
+    
+        <a name="47098"></a>
+        <div class="comment" id="comment-47098">
+            <div id="post-47098-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Is there any reason you particularly want to use Overpass locally? Simple PostGIS queries should be able to do this if you load OSM data into a spatial database using the standard tools.</p></div>
+            <div class="comment-info" id="comment-47098-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '15, 15:00)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47099"></a>
+        <div class="comment" id="comment-47099">
+            <div id="post-47099-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your comment! I was actually not aware of the fact that there is a different way to access the data. 
+So, let's forget about Overpass in my question... I'll read about PostGIS to query a local database.
+Now, does the assumption with the prefiltering make sense?</p></div>
+            <div class="comment-info" id="comment-47099-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '15, 15:11)</span>
+                <a class="comment-user userinfo" href="/users/11756/arik">Arik</a>
+                
+            </div>
+        </div>
+    
+        <a name="47100"></a>
+        <div class="comment not_top_scorer" id="comment-47100">
+            <div id="post-47100-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/11756/arik">@Arik</a> Would it be possible to describe the sort of queries that you might want to do?  Not in query language - just at the level of "I want to find houses near a road called X" or similar.</p></div>
+            <div class="comment-info" id="comment-47100-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '15, 15:14)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47101"></a>
+        <div class="comment" id="comment-47101">
+            <div id="post-47101-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Sure, for example: I want to know whether there is at least one road within 50m around given coordinates. Then replace "road" with several other elements like "bus stop", "train station", "subway route" and query again.
+For routes, the ID of the relation would be useful as well.</p>
+
+<p>P.S.: more generally, my goal is to find out what means of transport could have been used while recording the GPS track</p></div>
+            <div class="comment-info" id="comment-47101-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '15, 15:34)</span>
+                <a class="comment-user userinfo" href="/users/11756/arik">Arik</a>
+                
+            </div>
+        </div>
+    
+        <a name="47106"></a>
+        <div class="comment not_top_scorer" id="comment-47106">
+            <div id="post-47106-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you please post your original Overpass Query as overpass turbo link, so we can check if the issue persists with the latest beta version. Thanks.</p></div>
+            <div class="comment-info" id="comment-47106-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '15, 17:20)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="47108"></a>
+        <div class="comment not_top_scorer" id="comment-47108">
+            <div id="post-47108-score" class="comment-score"></div>
+            <div class="comment-text"><p>It is not an issue with Overpass, I guess. Querying a lot of elements just takes its time.
+Instead, I will use PostGIS as suggested by Richard, I guess. The only remaining question is whether it makes sense to create a reduced dataset first which only includes all transport-related elements. I would strongly guess that the answer is yes and would be happy for a confirmation by an experienced user before I waste my time setting everything up.</p></div>
+            <div class="comment-info" id="comment-47108-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '15, 17:47)</span>
+                <a class="comment-user userinfo" href="/users/11756/arik">Arik</a>
+                
+            </div>
+        </div>
+    
+        <a name="47109"></a>
+        <div class="comment" id="comment-47109">
+            <div id="post-47109-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You mentioned a response time of several seconds. In the current beta, I would expect sub-second response time. I'm just asking to confirm that it's no longer an issue.</p>
+
+<p>How much the savings of a reduced data set are in reality is hard to tell without running some tests. Biggest issue being: setting up a full planet db for comparison - that may easily take a few days. In any case I recommend to start out with some small extract (from download.geofabrik.de) and get familiar with the toolchain.</p></div>
+            <div class="comment-info" id="comment-47109-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '15, 17:50)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+        <a name="47110"></a>
+        <div class="comment not_top_scorer" id="comment-47110">
+            <div id="post-47110-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, sure, so below you find the link to an example. I use the regex because I experienced it to be significantly faster than using the union of the queries of all the key-value pairs. And you're right, it takes about one second. I recently also tried to get all the nodes belonging to the elements (see the part that is commented out), which takes longer.</p>
+
+<p><a href="http://overpass-turbo.eu/s/ddY">http://overpass-turbo.eu/s/ddY</a></p></div>
+            <div class="comment-info" id="comment-47110-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '15, 18:10)</span>
+                <a class="comment-user userinfo" href="/users/11756/arik">Arik</a>
+                
+            </div>
+        </div>
+    
+        <a name="47111"></a>
+        <div class="comment" id="comment-47111">
+            <div id="post-47111-score" class="comment-score">1</div>
+            <div class="comment-text"><p>ok, thanks! On the dev instance I get 880ms response time for the official 0.7.52 version and about 550ms on the beta (running with <code>osm3s_query</code>, data in buffer cache). Response times on overpass-api.de are higher due to overall higher CPU utilization there. overpass-api.de only accepts one query at a time, but rambler.ru instance doesn't have that limit. If you set up your own instance, you can of course run as many queries in parallel as you wish (or your hardware can handle).</p></div>
+            <div class="comment-info" id="comment-47111-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Dec '15, 18:28)</span>
+                <a class="comment-user userinfo" href="/users/8708/mmd">mmd</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47095" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47095-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/47095/speed-up-overpass-queries-via-local-osm-copy-and-osmosis-pre-filtering?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/47095/speed-up-overpass-queries-via-local-osm-copy-and-osmosis-pre-filtering?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/47095/speed-up-overpass-queries-via-local-osm-copy-and-osmosis-pre-filtering?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/47095/speed-up-overpass-queries-via-local-osm-copy-and-osmosis-pre-filtering?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="47118"></a>
+                    <div id="answer-container-47118" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47118-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47118/up/" rel="nofollow"> </a>
+<div id="post-47118-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-47118-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47118/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Arik has selected this answer as the correct answer"
+        href="/accept_answer/47118/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>A smaller database for Overpass API would indeed help to speed things up a bit:</p>
+<p>Here's a small comparison I ran for your sample query <a href="http://overpass-turbo.eu/s/ddY">http://overpass-turbo.eu/s/ddY</a></p>
+<ul>
+<li>Full planet on v0.7.52 (official) - 880ms</li>
+<li>Full Planet on <a href="https://github.com/mmd-osm/Overpass-API/wiki/Overpass-API-test754">v0.7.54_mmd (beta)</a> - 550ms</li>
+</ul>
+<p>Now comparing that with a smaller Berlin extract provided by Geofabrik and various database compression settings (lz4, gzip or no compression):</p>
+<ul>
+<li><a href="http://download.geofabrik.de/europe/germany/berlin.html">Berlin-only extract</a> on <a href="https://github.com/mmd-osm/Overpass-API/wiki/Overpass-API-test754">v0.7.54_mmd (beta)</a>, lz4 - 140ms (default for this branch)</li>
+<li><a href="http://download.geofabrik.de/europe/germany/berlin.html">Berlin-only extract</a> on <a href="https://github.com/mmd-osm/Overpass-API/wiki/Overpass-API-test754">v0.7.54_mmd (beta)</a>, gzip  - 250ms (also default in v0.7.52)</li>
+<li><a href="http://download.geofabrik.de/europe/germany/berlin.html">Berlin-only extract</a> on <a href="https://github.com/mmd-osm/Overpass-API/wiki/Overpass-API-test754">v0.7.54_mmd (beta)</a>, no compression - 100ms (also default in v0.7.51)</li>
+</ul>
+<p>Database was populated using:</p>
+<pre><code>osmconvert berlin-latest.osm.pbf --out-osm | ./update_database --db-dir=~/berlin --meta
+</code></pre>
+<p>or with one of the following compression settings:</p>
+<pre><code>    osmconvert berlin-latest.osm.pbf --out-osm | ./update_database --db-dir=~/berlin --meta --compression_method=gz
+
+    osmconvert berlin-latest.osm.pbf --out-osm | ./update_database --db-dir=~/berlin --meta --compression_method=no
+</code></pre>
+<p>Query was run using:</p>
+<pre><code>./osm3s_query --db-dir=~/berlin &lt; query
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47118/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Dec '15, 10:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/264d84ab05b942224b05960903eba7a7?s=32&amp;d=identicon&amp;r=g" alt="mmd's gravatar image" />
+    <p><a href="/users/8708/mmd">mmd</a><br/>
+    <span class="score" title="5682 reputation points"><span class="">5.7k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="53 badges"><span class="silver">&#9679;</span><span class="badgecount">53</span></span><span title="88 badges"><span class="bronze">&#9679;</span><span class="badgecount">88</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmd has 44 accepted answers">37&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47118/">
+                edited
+                <strong>13 Dec '15, 13:12</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47118">
+    
+        <a name="47127"></a>
+        <div class="comment" id="comment-47127">
+            <div id="post-47127-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks for the effort! It's great news that reducing the database to a certain region helps.</p>
+
+<p>In my case, I want to reduce the database by only including the elements in my query (transport-related elements). I guess, this is possible with Osmosis and will speed it up as well.
+I'll test it with the Berlin-extract first, thanks for the idea :)</p></div>
+            <div class="comment-info" id="comment-47127-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '15, 11:20)</span>
+                <a class="comment-user userinfo" href="/users/11756/arik">Arik</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47118" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47118-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/47095/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='HnDwIfkizO580XDul0Amu7gCgprFcdgr' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47095/speed-up-overpass-queries-via-local-osm-copy-and-osmosis-pre-filtering?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47095/speed-up-overpass-queries-via-local-osm-copy-and-osmosis-pre-filtering?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/optimization/"
+            class="tag-link-optimization"
+            title="see questions tagged'optimization'using tags"
+            rel="tag">optimization</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 11, 2015, 1:35 p.m.">11 Dec '15, 13:35</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,493 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 13, 2015, 1:12 p.m.">13 Dec '15, 13:12</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/41893/how-to-optimize-requests-on-ways">How to optimize requests on ways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57417/optimising-overpass-api-ql-request">optimising overpass API QL request</a>
+        </p>
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2017/how-can-i-import-data-to-osm-from-a-csv-file">How can I import data to OSM from a .csv file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2296/extracting-bounding-boxes-osmosis-usage-on-windows">Extracting bounding boxes - Osmosis usage on Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2905/osmosis-not-running">Osmosis not running</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3214/installing-osmosis-on-osx">Installing Osmosis on OSX</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3030/disk-space-required-for-importing-planetosm-into-postgresql-w-osmosis">Disk space required for importing planet.osm into PostgreSQL w/ Osmosis?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4065/getting-specific-poi-data-and-keeping-them-up-to-date">Getting specific POI data - and keeping them up to date.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1980/installing-osmosis">Installing Osmosis</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

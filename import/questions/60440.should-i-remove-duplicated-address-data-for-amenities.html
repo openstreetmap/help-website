@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Should I Remove Duplicated Address Data for Amenities? - OSM Help</title>
+        <meta name="description" content="Sometimes I see that there&#39;s redundant (to my mind) data on the map. For example, there&#39;s a building with filled addr:housenumber and addr:street, so address data is present. Also, there&#39;re several amenities inside this building. And each amenity also has filled addr:housenumber and addr:street tags..." />
+        <meta name="keywords" content="amenity,tagging,address" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/60440/should-i-remove-duplicated-address-data-for-amenities" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/60440/should-i-remove-duplicated-address-data-for-amenities?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='h4eBmsJTXuPweq5DvzWlXQJ2DquJPher' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/60440/should-i-remove-duplicated-address-data-for-amenities">Should I Remove Duplicated Address Data for Amenities?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-60440-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60440/up/" rel="nofollow"> </a>
+<div id="post-60440-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-60440-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60440/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/60440/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Sometimes I see that there's redundant (to my mind) data on the map.</p>
+<p>For example, there's a building with filled <code>addr:housenumber</code> and <code>addr:street</code>, so address data is present.</p>
+<p>Also, there're several amenities inside this building. And each amenity also has filled  <code>addr:housenumber</code> and <code>addr:street</code> tags. So, basically address data is being duplicated.</p>
+<p>Should such things be fixed as long as all amenities have address of the building? </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/amenity/" class="post-tag tag-link-amenity"
+                                        title="see questions tagged 'amenity'" rel="tag">amenity</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                                    <a href="/tags/address/" class="post-tag tag-link-address"
+                                        title="see questions tagged 'address'" rel="tag">address</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Nov '17, 20:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7beec6d85fed7bf5255d6657d7609ad0?s=32&amp;d=identicon&amp;r=g" alt="Sergey%20Karavay's gravatar image" />
+    <p><a href="/users/10543/sergey-karavay">Sergey Karavay</a><br/>
+    <span class="score" title="539 reputation points">539</span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="21 badges"><span class="silver">&#9679;</span><span class="badgecount">21</span></span><span title="34 badges"><span class="bronze">&#9679;</span><span class="badgecount">34</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Sergey Karavay has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/60440/">
+                edited
+                <strong>02 Nov '17, 20:29</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-60440">
+    
+</div>
+<div id="comment-tools-60440" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60440-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/60440/should-i-remove-duplicated-address-data-for-amenities?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/60440/should-i-remove-duplicated-address-data-for-amenities?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/60440/should-i-remove-duplicated-address-data-for-amenities?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/60440/should-i-remove-duplicated-address-data-for-amenities?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="60441"></a>
+                    <div id="answer-container-60441" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-60441-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60441/up/" rel="nofollow"> </a>
+<div id="post-60441-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-60441-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60441/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Sergey Karavay has selected this answer as the correct answer"
+        href="/accept_answer/60441/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In general address information on POIs is a harmless duplication that in some situations is even useful. Tthere is no real reason to remove it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/60441/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Nov '17, 22:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-60441">
+    
+        <a name="60445"></a>
+        <div class="comment" id="comment-60445">
+            <div id="post-60445-score" class="comment-score"></div>
+            <div class="comment-text"><p>Though it's not harmless, but is it really useful? </p>
+
+<p>Maybe it is useful if the building has several addresses, POI should have their own address tags then just to choose correct from a few.</p></div>
+            <div class="comment-info" id="comment-60445-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Nov '17, 09:29)</span>
+                <a class="comment-user userinfo" href="/users/10543/sergey-karavay">Sergey Karavay</a>
+                
+            </div>
+        </div>
+    
+        <a name="60447"></a>
+        <div class="comment" id="comment-60447">
+            <div id="post-60447-score" class="comment-score"></div>
+            <div class="comment-text"><p>Assume one of the POIs moves down the street, if you move the node and change the address that is documented. The other issue is, as you note, that the building could have multiple addresses or the address could be on an entrance node, which again would make it sensible to have the address information on the POIs.</p>
+
+<p>Note: I'm somewhat a convert in this respect, I used to tends towards reducing such redundancy, but now think it is OK (I won't actively add it in simple cases, but do not remove it).</p></div>
+            <div class="comment-info" id="comment-60447-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Nov '17, 09:48)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60441" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60441-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="60448"></a>
+                    <div id="answer-container-60448" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-60448-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60448/up/" rel="nofollow"> </a>
+<div id="post-60448-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-60448-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60448/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OpenStreetMap does not treat addresses as objects in themselves: they are usually attached to other elements such as buildings, land parcels or points of interest and other amenities. </p>
+<p>The fundamental nature of the OSM data model does not provide for non-geographically locatable information, and thus modelling addresses as objects is not realistically possible*. Therefore duplication of address information is inevitable and not something to worry about. (Note that most components of an address (street, city etc.) will <strong>always</strong> be duplicated in OSM.</p>
+<p>For information on "addresses as objects" papers and slides by Morten Lind on the Danish address system, such as <a href="https://www.slideshare.net/Mortlin/addresses-and-address-data-experiences-from-denmark">this one</a>, are a good start.</p>
+<p>On a practical level, data consumers may only be interested in a subset of POIs. Removing address data from such POIs will make it harder to consume such data.</p>
+<p>At a theoretical level, the OSM data model does not enforce and does not expect normalisation of tagged data. This is true of most free-format tagging approaches or folksonomies.</p>
+<p>* Relations in principle allow anything; so it is, theoretically. a valid approach.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/60448/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Nov '17, 11:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/60448/">
+                edited
+                <strong>04 Nov '17, 22:02</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-60448">
+    
+        <a name="60461"></a>
+        <div class="comment" id="comment-60461">
+            <div id="post-60461-score" class="comment-score">2</div>
+            <div class="comment-text"><p>This answer makes good arguments, but it needs to be pointed out that this is not a resolved topic and different opinions on the matter do co-exist. In particular, a common expectation found in mapping practice is that addresses are "inherited": If a building has an address, then all entrances of the building, as well as the shops and amenities inside, share that address by default. Likewise, if a site (e.g. a school grounds) is tagged with an address, then all buildings on that site share the address unless otherwise specified.</p>
+
+<p>And while there are practical benefits of duplication, there are also downsides: It can easily lead to the same address showing up on a map multiple times. So neither solution is clearly better than the other. Be careful and use communication when updating other mappers' work by either adding or removing redundant address tags.</p></div>
+            <div class="comment-info" id="comment-60461-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Nov '17, 15:18)</span>
+                <a class="comment-user userinfo" href="/users/14/tordanik">Tordanik</a>
+                
+            </div>
+        </div>
+    
+        <a name="60462"></a>
+        <div class="comment" id="comment-60462">
+            <div id="post-60462-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/14/tordanik">@Tordanik</a>, actually, that was my point when I asked. I also stick to inheritance. POIs can always fallback to parent's (building's) address when they don't have their own.</p></div>
+            <div class="comment-info" id="comment-60462-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Nov '17, 16:46)</span>
+                <a class="comment-user userinfo" href="/users/10543/sergey-karavay">Sergey Karavay</a>
+                
+            </div>
+        </div>
+    
+        <a name="60465"></a>
+        <div class="comment" id="comment-60465">
+            <div id="post-60465-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/14/tordanik">@Tordanik</a> this issue is actually a serious topic in formal database design. It is unlikely that one can treat the issues in a Q&amp;A such as this. It is true that in the vast majority of cases addresses can be inherited, but there are plenty of 'black swans' to show that this is not always the case. But the simple example of a post office box is a useful counterfactual to common assumptions about address data.</p></div>
+            <div class="comment-info" id="comment-60465-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Nov '17, 22:00)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60448" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60448-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/60440/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='h4eBmsJTXuPweq5DvzWlXQJ2DquJPher' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60440/should-i-remove-duplicated-address-data-for-amenities?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60440/should-i-remove-duplicated-address-data-for-amenities?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/address/"
+            class="tag-link-address"
+            title="see questions tagged'address'using tags"
+            rel="tag">address</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/amenity/"
+            class="tag-link-amenity"
+            title="see questions tagged'amenity'using tags"
+            rel="tag">amenity</a> <span class="tag-number">&#215;94</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 2, 2017, 8:14 p.m.">02 Nov '17, 20:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,371 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 4, 2017, 10:02 p.m.">04 Nov '17, 22:02</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/4670/how-do-i-tag-a-pub-or-restaurant-that-offers-bed-and-breakfast">How do I tag a pub or restaurant that offers bed and breakfast?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7755/how-do-you-tag-a-courier-company">How do you tag a courier company?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity">Should all buildings at in a university campus be tagged amenity=university?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4319/do-i-add-address-tags-to-the-poi-node-or-create-a-separate-node">Do I add address tags to the POI node or create a separate node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6107/how-to-tag-a-bank-that-does-not-offer-service-to-the-general-public">How to tag a bank that does not offer service to the general public?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6115/tagging-members-only-fuel-station">Tagging &quot;Members Only&quot; Fuel Station</a>
+        </p>
+        
+        <p>
+            <a href="/questions/739/how-to-mark-a-postbox-as-disused-or-temporarily-removed">How to mark a postbox as disused or temporarily removed ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1103/should-i-tag-nodes-or-areas-for-amenity-and-tourism">Should I tag nodes or areas for amenity and tourism?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3680/how-can-i-add-a-hackspace-to-the-map">How can I add a hackspace to the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13845/add-my-own-business-to-openstreetmap">Add my Own business to OpenStreetMap</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

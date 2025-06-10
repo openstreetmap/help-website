@@ -1,0 +1,1187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Coordinates when editing in OSM (using iD editor) - OSM Help</title>
+        <meta name="description" content="When adding paths (and adjusting existing paths) deep inside a forest, I need to put the path points at their exact coordinates, but no coordinates are shown while moving the cursor around inside the editing window. (I realize that a recorded path from the GPS could be used, though memory is crowded..." />
+        <meta name="keywords" content="ideditor,editing,display,coordinates" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/45846/coordinates-when-editing-in-osm-using-id-editor" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/45846/coordinates-when-editing-in-osm-using-id-editor?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='TonED4DlJgN1OxITBKKz3JsKGbPNluCf' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/45846/coordinates-when-editing-in-osm-using-id-editor">Coordinates when editing in OSM (using iD editor)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-45846-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45846/up/" rel="nofollow"> </a>
+<div id="post-45846-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-45846-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45846/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/45846/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When adding paths (and adjusting existing paths) deep inside a forest, I need to put the path points at their exact coordinates, but no coordinates are shown while moving the cursor around inside the editing window.
+(I realize that a recorded path from the GPS could be used, though memory is crowded, so I only record the end points and curve points.)
+How can I switch on "show coordinates" in the iD-editor window?
+This problem might very well explain why several forest paths are "off location".</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ideditor/" class="post-tag tag-link-ideditor"
+                                        title="see questions tagged 'ideditor'" rel="tag">ideditor</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/display/" class="post-tag tag-link-display"
+                                        title="see questions tagged 'display'" rel="tag">display</a>
+                                
+                                    <a href="/tags/coordinates/" class="post-tag tag-link-coordinates"
+                                        title="see questions tagged 'coordinates'" rel="tag">coordinates</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Oct '15, 09:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7e614f6f52e8d63580c25b6114ca24f4?s=32&amp;d=identicon&amp;r=g" alt="Geoknold's gravatar image" />
+    <p><a href="/users/11569/geoknold">Geoknold</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Geoknold has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-45846">
+    
+        <a name="45848"></a>
+        <div class="comment" id="comment-45848">
+            <div id="post-45848-score" class="comment-score">2</div>
+            <div class="comment-text"><p>How do YOU get exact co-ords?</p></div>
+            <div class="comment-info" id="comment-45848-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '15, 11:03)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="45870"></a>
+        <div class="comment" id="comment-45870">
+            <div id="post-45870-score" class="comment-score"></div>
+            <div class="comment-text"><p>Reading this, suggests that you cannot set the 30 to save directly to microSd, unlike the old etrex,vista and the nuvi garmins. see <a href="http://www.rambler-info.org.uk/gps/howto/ht_rec_etrex10.htm">http://www.rambler-info.org.uk/gps/howto/ht_rec_etrex10.htm</a>
+ When you say that you can't record a long trace you may have been fooled by auto archiving. So look in archive folder they may be there. To lessen the corner cut effect that most of us have seen in traces try:- setup/tracks/record method/ distance/000 </p>
+
+<p>also set auto archiving to when full and clear track just before the survey. see if that works for you.</p></div>
+            <div class="comment-info" id="comment-45870-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Oct '15, 13:12)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="45873"></a>
+        <div class="comment" id="comment-45873">
+            <div id="post-45873-score" class="comment-score">2</div>
+            <div class="comment-text"><p>You're saying "memory is crowded" on your etrex30 - what exactly do you mean by that?</p>
+
+<p>I found some reports about a firmware bug in the etrex20/30:
+<a href="http://www.geocaching-ms.de/2012/05/garmin-etrex-30-speicher-voll-problem-geloest/">http://www.geocaching-ms.de/2012/05/garmin-etrex-30-speicher-voll-problem-geloest/</a>
+They quote a changelog message for a firmware update published in 2012: "Fixed issue that was causing some devices to display a ‚memory full‘ message followed by bad device behavior."
+Maybe updating your device firmware would solve your problem?</p>
+
+<p>In a "typical" setup with a 4GB microSD card with your OSM maps, most of the internal memory could be free and you could keep 1-point-per-second tracklogs for several months on the device without filling it. Mapping is much easier and more accurate when you have logs like that, and you don't have to stop to save a waypoint at every turn (like it seems you're doing now).</p></div>
+            <div class="comment-info" id="comment-45873-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Oct '15, 17:46)</span>
+                <a class="comment-user userinfo" href="/users/9676/dawidi">dawidi</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-45846" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45846-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/45846/coordinates-when-editing-in-osm-using-id-editor?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/45846/coordinates-when-editing-in-osm-using-id-editor?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/45846/coordinates-when-editing-in-osm-using-id-editor?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/45846/coordinates-when-editing-in-osm-using-id-editor?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="82970"></a>
+                    <div id="answer-container-82970" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-82970-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82970/up/" rel="nofollow"> </a>
+<div id="post-82970-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-82970-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82970/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Now, this is possible by selecting "Map Data" in the right panel, then "Show Measurement Panel". This will show black box on the bottom right, with the information about selected element (area, path, point) with exact coordinates of the point, area size, perimeter, centroid and more useful information.</p>
+<p><img alt="measurement panel" src="https://help.openstreetmap.org/upfiles/Screenshot_from_2022-01-06_10-23-14.png"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/82970/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jan '22, 09:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b8e8759ad9a50739704dca2e84fa9b50?s=32&amp;d=identicon&amp;r=g" alt="Jakuje's gravatar image" />
+    <p><a href="/users/14088/jakuje">Jakuje</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jakuje has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-82970">
+    
+</div>
+<div id="comment-tools-82970" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82970-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="85104"></a>
+                    <div id="answer-container-85104" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85104-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85104/up/" rel="nofollow"> </a>
+<div id="post-85104-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-85104-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85104/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I have just discovered one of the iD features I was not aware of previously, It's not my usual editor. Select Background scroll down and tic "show location panel".  I hope the JPEG will show how to get Co-ordinates Lat,Lon on screen while editing. </p>
+<p><img alt="alt text" src="https://help.openstreetmap.org/upfiles/iD_location_data.jpg"> </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85104/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '22, 10:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/85104/">
+                edited
+                <strong>18 Jul '22, 06:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85104">
+    
+</div>
+<div id="comment-tools-85104" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85104-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="45849"></a>
+                    <div id="answer-container-45849" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-45849-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45849/up/" rel="nofollow"> </a>
+<div id="post-45849-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-45849-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45849/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><img src="http://help.openstreetmap.org/upfiles/iD_all_traces.JPG" alt="alt text">Welcome to the help site. I don't know of a way to display cursor co-ords with iD. (It is easy JOSM and Potlatch2 ). I am wondering how you are getting exact co-ords in, or out of forests. To get the best accuracy I upoload all my traces as public to openstreetmap. When editing I display ALL available traces. I average them to check and adjust the Bing and draw paths and roads. One trace can't be relied upon but several recorded over serveral days is about as exact as most of us can get. Maybe you have professional survaying kit which may give exact co-ords, I use ordinary consumer kit. for info i use or have used Garmins etrex, Vista HCX Oregon 450 and nuvi 1310T, a Motorola defy and Tesco hudl all do record good usable traces. Hope this is of some help.  </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/45849/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Oct '15, 11:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/45849/">
+                edited
+                <strong>12 Oct '15, 11:42</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-45849">
+    
+        <a name="45851"></a>
+        <div class="comment" id="comment-45851">
+            <div id="post-45851-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank your very much for your reply.
+The Extrex 30 (with GPS + Glonass) provides about 5m precision (often better when stabilizing after 1 minute or averaging), but sadly memory is small and full of geocaches etc., so recording tracks causes many waypoints to be lost due to memory overflow.
+Therefore, I simply record only the necessary points and wish to click the cursor at those points - nowhere else. Many forest paths seem to have been entered by transferring a path from GPS into OSM and therefore "cutting corners". By MTB'ing at 30 km/h such paths are quite inaccurate and need to adjustment.
+I also tried Potlatch, and can't find how to show cursor coordinates there either. Is that possible, and how?
+Kind regards from Copenhagen</p></div>
+            <div class="comment-info" id="comment-45851-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '15, 13:12)</span>
+                <a class="comment-user userinfo" href="/users/11569/geoknold">Geoknold</a>
+                
+            </div>
+        </div>
+    
+        <a name="45853"></a>
+        <div class="comment" id="comment-45853">
+            <div id="post-45853-score" class="comment-score"></div>
+            <div class="comment-text"><p>Set up of your garmin:- Clear the track log just before you start the survey and put it on record a point every second. you should be able to do 10000 of them.
+ In potlatch2 top far right of screen options, click on that then tick box for show lat lon.</p></div>
+            <div class="comment-info" id="comment-45853-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '15, 14:03)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="45855"></a>
+        <div class="comment" id="comment-45855">
+            <div id="post-45855-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you connect your etrex30 to a pc you can see how much free memory it has of the 1.7gb. If it is short of space move some stuff like geo caches to the pc along with old traces or waypoints.  I think that data can also be kept and viewed in Garmin Basecamp. Basecamp will display an OSM map if you do an osm on garmin download.</p></div>
+            <div class="comment-info" id="comment-45855-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '15, 14:34)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="45856"></a>
+        <div class="comment" id="comment-45856">
+            <div id="post-45856-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wow. I'll call you God... :-)
+1. Potlash2 -&gt; options etc...: There it is!
+2-3. Saving path on microsd: Still trying, so far no dice, but will look more into the menu maze ;-)
+Thanks and bye.</p></div>
+            <div class="comment-info" id="comment-45856-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '15, 14:43)</span>
+                <a class="comment-user userinfo" href="/users/11569/geoknold">Geoknold</a>
+                
+            </div>
+        </div>
+    
+        <a name="85209"></a>
+        <div class="comment" id="comment-85209">
+            <div id="post-85209-score" class="comment-score"></div>
+            <div class="comment-text"><p>Geoknold  How to see cursor Co-ords in Potlatch, options top right and tic box show co-ords</p></div>
+            <div class="comment-info" id="comment-85209-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '22, 18:57)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-45849" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45849-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="85035"></a>
+                    <div id="answer-container-85035" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85035-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85035/up/" rel="nofollow"> </a>
+<div id="post-85035-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85035-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85035/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thank you a lot - 
+this is what i search for. how to show gps coordinates  :)) </p>
+<p>Now it is simple to make some points of interest in my forest.  It would be nice if there is an easy way to say - This Point on this GPS coordinates . 
+Now i slowly move my mouse over the screen to  hit it   .. But better than don`t know where the exactly point is that i want to save in the map.</p>
+<hr>
+<p>Naja um es auf Deutsch zu sagen, das ist genau die Antwort die ich suchte.. Vielen Dank dafür . 
+So ist es viel einfacher einen Punkt in der Mappe zu plazieren als ohne.
+Viel schöner wäre es jedoch wenn man dies peer Eingabe machen könnte.
+So bewege ich nun ganz langsamm die Maus über den Schirm damit ich den Punkt auch treffe :)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85035/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Jul '22, 18:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bb18b68ffab4cc242c47b57805885681?s=32&amp;d=identicon&amp;r=g" alt="Joe_West's gravatar image" />
+    <p><a href="/users/21999/joe_west">Joe_West</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Joe_West has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/85035/">
+                edited
+                <strong>11 Jul '22, 19:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85035">
+    
+</div>
+<div id="comment-tools-85035" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85035-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="85172"></a>
+                    <div id="answer-container-85172" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85172-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85172/up/" rel="nofollow"> </a>
+<div id="post-85172-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85172-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85172/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you have some waypoints (GPX) stored on your PC or in the connected GPS.  Just open iD editor then drag the waypoint(s) into the iD window.  It is that simple. When I created some (as a test) I renamed them to meaningful names on my Garmin Oregon 650 and I found the name appears in the iD editor window. The group of waypoints were in a folder (named the date of the day date) and they all appear on dragging and dropping the folder into the window. For best accuracy use the averaging feature which should maximise accuracy.</p>
+<p><img alt="alt text" src="https://help.openstreetmap.org/upfiles/Drag_into_ID_window_0lVt5VB.jpg"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85172/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Jul '22, 06:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/85172/">
+                edited
+                <strong>24 Jul '22, 18:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85172">
+    
+</div>
+<div id="comment-tools-85172" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85172-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/45846/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='TonED4DlJgN1OxITBKKz3JsKGbPNluCf' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45846/coordinates-when-editing-in-osm-using-id-editor?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45846/coordinates-when-editing-in-osm-using-id-editor?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/ideditor/"
+            class="tag-link-ideditor"
+            title="see questions tagged'ideditor'using tags"
+            rel="tag">ideditor</a> <span class="tag-number">&#215;301</span><br/>
+        
+        <a href="/tags/coordinates/"
+            class="tag-link-coordinates"
+            title="see questions tagged'coordinates'using tags"
+            rel="tag">coordinates</a> <span class="tag-number">&#215;144</span><br/>
+        
+        <a href="/tags/display/"
+            class="tag-link-display"
+            title="see questions tagged'display'using tags"
+            rel="tag">display</a> <span class="tag-number">&#215;59</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 12, 2015, 9:04 a.m.">12 Oct '15, 09:04</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,172 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 24, 2022, 6:57 p.m.">24 Jul '22, 18:57</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/28409/id-how-do-i-divide-a-linear-row-of-residential-dwellings-to-single-buildings">iD: How do I divide a linear row of residential dwellings to single buildings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34441/add-a-part-of-a-path-to-relation-in-id">Add a part of a path to relation in iD</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22234/how-to-display-longitude-and-latitude-in-id">How to display longitude and latitude in iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27741/feature-request-copy-nodes">Feature request / Copy nodes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor">add name on an existing road which changes its name - how do i devide the road in 2 sections with the iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32968/is-it-possible-to-change-lines-into-an-area-using-id">[closed] Is it possible to change lines into an area using iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12623/displaying-gps-coordinates">Displaying GPS coordinates</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22184/cant-save-new-note-using-the-new-id-editor">Can&#39;t save new note using the new iD editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26594/how-can-i-extend-line-by-adding-a-new-node-in-id">How can I extend line by adding a new node in iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34482/ids-ui-not-allowing-editing-of-nodes">iD&#39;s UI not allowing editing of nodes</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

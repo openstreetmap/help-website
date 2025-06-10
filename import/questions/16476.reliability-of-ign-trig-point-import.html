@@ -1,0 +1,903 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Reliability of IGN trig point import - OSM Help</title>
+        <meta name="description" content="Lots of things have been imported into OSM from IGM as &quot;trig points&quot;  QV - http://wiki.openstreetmap.org/wiki/WikiProject_France/Repères_Géodésiques#Permanence_des_rep.C3.A8res But some of these &quot;trig points&quot; don&#39;t have any evidence on the ground. For instance, node 670525588 says &quot;Cimetiere : Mur d..." />
+        <meta name="keywords" content="ign,survey_point,verifiability,imports" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/16476/reliability-of-ign-trig-point-import" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/16476/reliability-of-ign-trig-point-import?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CVaZQOhVj2mVaEopRAgxrAsfpLGYRdsB' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/16476/reliability-of-ign-trig-point-import">Reliability of IGN trig point import</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-16476-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16476/up/" rel="nofollow"> </a>
+<div id="post-16476-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-16476-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16476/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/16476/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Lots of things have been imported into OSM from IGM as "trig points" </p>
+<p>QV -
+<a href="http://wiki.openstreetmap.org/wiki/WikiProject_France/Repères_Géodésiques#Permanence_des_rep.C3.A8res">http://wiki.openstreetmap.org/wiki/WikiProject_France/Repères_Géodésiques#Permanence_des_rep.C3.A8res</a></p>
+<p>But some of these "trig points" don't have any evidence on the ground. For instance, node 670525588 says "Cimetiere : Mur de cloture : Face Ouest : Boulon scellé - Point constaté détruit en 2002" so should it be included, even if no visible trace of it exists, if it is used to survey other things that do exist?</p>
+<p>Also, some of these "trig points" are very small and you would have to look very hard to find them - I think "Boulon scellé" means bolthead? Isn't it mainly useful to have them as landmarks?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ign/" class="post-tag tag-link-ign"
+                                        title="see questions tagged 'ign'" rel="tag">ign</a>
+                                
+                                    <a href="/tags/survey_point/" class="post-tag tag-link-survey_point"
+                                        title="see questions tagged 'survey_point'" rel="tag">survey_point</a>
+                                
+                                    <a href="/tags/verifiability/" class="post-tag tag-link-verifiability"
+                                        title="see questions tagged 'verifiability'" rel="tag">verifiability</a>
+                                
+                                    <a href="/tags/imports/" class="post-tag tag-link-imports"
+                                        title="see questions tagged 'imports'" rel="tag">imports</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>26 Sep '12, 10:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d3308e0fe68a0e94e4e9aca8a65c96dd?s=32&amp;d=identicon&amp;r=g" alt="Tenietz's gravatar image" />
+    <p><a href="/users/4518/tenietz">Tenietz</a><br/>
+    <span class="score" title="233 reputation points">233</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tenietz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16476/">
+                edited
+                <strong>03 Oct '12, 10:54</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/42c2884557564b38b9f64ab293334069?s=32&amp;d=identicon&amp;r=g" alt="davespod's gravatar image" />
+            <p><a href="/users/95/davespod">davespod</a><br/>
+            <span class="score" title="548 reputation points">548</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="18 badges"><span class="bronze">&#9679;</span><span class="badgecount">18</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-16476">
+    
+</div>
+<div id="comment-tools-16476" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16476-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/16476/reliability-of-ign-trig-point-import?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/16476/reliability-of-ign-trig-point-import?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/16476/reliability-of-ign-trig-point-import?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/16476/reliability-of-ign-trig-point-import?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="16477"></a>
+                    <div id="answer-container-16477" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16477-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16477/up/" rel="nofollow"> </a>
+<div id="post-16477-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-16477-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16477/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>These survey points are very usefull for evaluating and fixing the position of imagery support, or positioning natural peaks.
+These points are (or was) mainly attached to a building or construction that is visible on imagery, or to a natural peak.</p>
+<p>You're pointing a points that is marked as destroyed (« Point constaté détruit »). Ok, this point doesn't exist anymore on the ground, but we know that this position is on the west wall of the cimetery (« Mur de cloture : Face Ouest »), so the position of this point is still usefull. We can check that the cimetery visible on an imagery is well positioned in regard of this survey point.</p>
+<p>We have some discussions in the french community for storing this points in a separate database. The main motivation is that these points should not be moved. But technically, it easier to have them in the main database for now, so that they are loaded automatically.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16477/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Sep '12, 10:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2839f25c5f2da24f6ffd25de1641684?s=32&amp;d=identicon&amp;r=g" alt="NicolasDumoulin's gravatar image" />
+    <p><a href="/users/868/nicolasdumoulin">NicolasDumoulin</a><br/>
+    <span class="score" title="3327 reputation points"><span class="">3.3k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="NicolasDumoulin has 15 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16477/">
+                edited
+                <strong>26 Sep '12, 11:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16477">
+    
+        <a name="16479"></a>
+        <div class="comment" id="comment-16479">
+            <div id="post-16479-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Discussion on french mailing list: <a href="http://lists.openstreetmap.org/pipermail/talk-fr/2012-September/047449.html">http://lists.openstreetmap.org/pipermail/talk-fr/2012-September/047449.html</a></p></div>
+            <div class="comment-info" id="comment-16479-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Sep '12, 11:04)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16477" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16477-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="16484"></a>
+                    <div id="answer-container-16484" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16484-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16484/up/" rel="nofollow"> </a>
+<div id="post-16484-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16484-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16484/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Isn't it OSM policy that everything in the database should have a visible trace on the ground? </p>
+<p>I'm not convinced it's useful to have these points in the database unless they're on a structure of their own like this -</p>
+<p><a href="http://upload.wikimedia.org/wikipedia/commons/2/2f/Trig_Point_near_Wootton_Wawen.jpg">http://upload.wikimedia.org/wikipedia/commons/2/2f/Trig_Point_near_Wootton_Wawen.jpg</a></p>
+<p>For sake of reference, the wall itself is already in there, and it's not at a summit.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16484/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Sep '12, 16:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d3308e0fe68a0e94e4e9aca8a65c96dd?s=32&amp;d=identicon&amp;r=g" alt="Tenietz's gravatar image" />
+    <p><a href="/users/4518/tenietz">Tenietz</a><br/>
+    <span class="score" title="233 reputation points">233</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tenietz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16484">
+    
+        <a name="16485"></a>
+        <div class="comment" id="comment-16485">
+            <div id="post-16485-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Are the administrative boundaries visible on the ground?</p>
+
+<p>Sorry, but I don't understand the purpose of your last sentence. You agree that the coordinates of the survey point are still relevant although the survey point doesn't exist on the ground, <em>because</em> the support structure is still there (concrete, wall, building)?</p></div>
+            <div class="comment-info" id="comment-16485-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Sep '12, 16:28)</span>
+                <a class="comment-user userinfo" href="/users/868/nicolasdumoulin">NicolasDumoulin</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16484" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16484-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="16650"></a>
+                    <div id="answer-container-16650" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16650-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16650/up/" rel="nofollow"> </a>
+<div id="post-16650-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16650-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16650/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi Tenietz, the bolt youre pointing at is a old but secure point for local use of levveling-instruments. All the levels of the bolts in the area are listed and marked. Its not important to tag them since theyre located in local buildings or whatever is available to make a sturdy point. The real trig point (Governmental triangle points) are ment for theodolites to survey the surroundings and fi visible on topographic maps. But the system has probatly been abandoned with new systems in use with GPS instead. Greetz </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16650/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Oct '12, 21:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16650">
+    
+        <a name="16654"></a>
+        <div class="comment" id="comment-16654">
+            <div id="post-16654-score" class="comment-score">1</div>
+            <div class="comment-text"><p>omg. He is speaking about this : <a href="http://geodesie.ign.fr/index.php?page=points_geodesiques">http://geodesie.ign.fr/index.php?page=points_geodesiques</a></p>
+
+<p>They are used in OSM to accurately reposition external images like Bing. If the point is physically away but the support still there (church, wall, building, peak, etc), it is still present in many documents (cadastre, maps, images) and still can be used to reposition accurately external sources.</p></div>
+            <div class="comment-info" id="comment-16654-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Oct '12, 12:08)</span>
+                <a class="comment-user userinfo" href="/users/87/pieren">Pieren</a>
+                
+            </div>
+        </div>
+    
+        <a name="16659"></a>
+        <div class="comment" id="comment-16659">
+            <div id="post-16659-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks &amp; greetz</p></div>
+            <div class="comment-info" id="comment-16659-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Oct '12, 13:09)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16650" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16650-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/16476/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='CVaZQOhVj2mVaEopRAgxrAsfpLGYRdsB' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16476/reliability-of-ign-trig-point-import?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16476/reliability-of-ign-trig-point-import?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/imports/"
+            class="tag-link-imports"
+            title="see questions tagged'imports'using tags"
+            rel="tag">imports</a> <span class="tag-number">&#215;6</span><br/>
+        
+        <a href="/tags/verifiability/"
+            class="tag-link-verifiability"
+            title="see questions tagged'verifiability'using tags"
+            rel="tag">verifiability</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/ign/"
+            class="tag-link-ign"
+            title="see questions tagged'ign'using tags"
+            rel="tag">ign</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/survey_point/"
+            class="tag-link-survey_point"
+            title="see questions tagged'survey_point'using tags"
+            rel="tag">survey_point</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 26, 2012, 10:01 a.m.">26 Sep '12, 10:01</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,777 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 4, 2012, 1:09 p.m.">04 Oct '12, 13:09</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/624/can-i-use-or-trace-from-cc-by-data-under-the-new-contributor-terms">Can I use or trace from CC-BY data under the new Contributor Terms?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8240/what-sources-of-information-are-usually-used-for-forest-areas">What sources of information are usually used for forest areas?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22787/adding-address-for-geocode-lookup-with-nominatim">Adding address for geocode lookup with Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24355/data-import-seems-stuck">Data import seems stuck</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36968/can-i-make-a-correction-of-the-data-agencies-from-spain">Can I make a correction of the data agencies? (from Spain)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49772/should-accessno-tag-be-verifiable">Should &quot;access=no&quot; tag be verifiable?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62862/existence-of-asian-highway-network-three-digit-routes-in-guangdong-and-hong-kong">Existence of Asian Highway Network three-digit routes in Guangdong and Hong Kong</a>
+        </p>
+        
+        <p>
+            <a href="/questions/81860/trying-to-import-pois-into-osmand">Trying to import POIs into OsmAnd</a>
+        </p>
+        
+        <p>
+            <a href="/questions/85333/man_madesurvey_point">man_made=survey_point</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Installing OSM (main objective is reverse geocoding) on windows 2008 server - OSM Help</title>
+        <meta name="description" content="Hi, i have theese questions below... any help is welcome...  I was wonder if anyone can suggest me tutorials to teach how to install the base of OSM on my own server... Important: i&#39;m using Windows 2008 server... The main objective is to use reverse geocoding with queries from my own server ... exac..." />
+        <meta name="keywords" content="windows,nominatim,installation" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='PZcS4zQcWCgJbvwXti0z9xbufgea8TSB' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server">Installing OSM (main objective is reverse geocoding) on windows 2008 server</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-9467-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9467/up/" rel="nofollow"> </a>
+<div id="post-9467-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-9467-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9467/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/9467/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, i have theese questions below... any help is welcome...</p>
+<ol>
+<li>I was wonder if anyone can suggest me tutorials to teach how to install the base of OSM on my own server...  Important: i'm using Windows 2008 server...</li>
+<li>The main objective is to use reverse geocoding with queries from my own server ... exactly like nominatims api, but on my own server... Is that possible?</li>
+<li>By the way... is nominatims api available for download?</li>
+</ol>
+<p>[]'s</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/windows/" class="post-tag tag-link-windows"
+                                        title="see questions tagged 'windows'" rel="tag">windows</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/installation/" class="post-tag tag-link-installation"
+                                        title="see questions tagged 'installation'" rel="tag">installation</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Dec '11, 18:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dfed8e249ec19c2a8d6319eba52a3a6a?s=32&amp;d=identicon&amp;r=g" alt="rspilki's gravatar image" />
+    <p><a href="/users/2496/rspilki">rspilki</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rspilki has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/9467/">
+                edited
+                <strong>21 Feb '16, 01:47</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-9467">
+    
+        <a name="9474"></a>
+        <div class="comment" id="comment-9474">
+            <div id="post-9474-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you mean Windows Server 2008 or SQL Server 2008?</p></div>
+            <div class="comment-info" id="comment-9474-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '11, 20:54)</span>
+                <a class="comment-user userinfo" href="/users/6/jonathan-bennett">Jonathan Ben...</a>
+                
+            </div>
+        </div>
+    
+        <a name="9478"></a>
+        <div class="comment" id="comment-9478">
+            <div id="post-9478-score" class="comment-score"></div>
+            <div class="comment-text"><p>I mean windows 2008 server... R2 Edition... not SQLServer... i like to do all those stufe above on windows 2008 but i dont found any tutorials... can you helpme?</p></div>
+            <div class="comment-info" id="comment-9478-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '11, 22:44)</span>
+                <a class="comment-user userinfo" href="/users/2496/rspilki">rspilki</a>
+                
+            </div>
+        </div>
+    
+        <a name="9801"></a>
+        <div class="comment" id="comment-9801">
+            <div id="post-9801-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry for the up... but i'm realy need to do this thing... anybody can helpme?</p></div>
+            <div class="comment-info" id="comment-9801-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jan '12, 15:54)</span>
+                <a class="comment-user userinfo" href="/users/2496/rspilki">rspilki</a>
+                
+            </div>
+        </div>
+    
+        <a name="9802"></a>
+        <div class="comment" id="comment-9802">
+            <div id="post-9802-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you don't get your answer from here then you may reask this question on the <a href="http://lists.openstreetmap.org/listinfo/dev">dev mailing list</a> .</p></div>
+            <div class="comment-info" id="comment-9802-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jan '12, 16:28)</span>
+                <a class="comment-user userinfo" href="/users/268/rm87">RM87</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9467" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9467-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="9479"></a>
+                    <div id="answer-container-9479" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-9479-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9479/up/" rel="nofollow"> </a>
+<div id="post-9479-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-9479-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9479/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>None of the servers run Windows (blame Microsoft). The tutorial on how to install Nominatim is avalable on the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">wiki</a>. The requirements is on the top. I have not heard of anyone who have been able to install the requirements on Windows. It is possible but your operating system are not helping you out. You may do as the last guy I helped with this and install Ubuntu in a virtual machine.</p>
+<p>Once you have all the requirements you can just follow the rest of the tutorial. The commands are for UNIX machines and you might want <a href="http://www.cygwin.com/">cygwin</a> to make all the commands work.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/9479/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Dec '11, 23:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/44a4438f0146dfd898e24c221fd28b58?s=32&amp;d=identicon&amp;r=g" alt="Gnonthgol's gravatar image" />
+    <p><a href="/users/131/gnonthgol">Gnonthgol ♦</a><br/>
+    <span class="score" title="13750 reputation points"><span class="">13.8k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="103 badges"><span class="silver">&#9679;</span><span class="badgecount">103</span></span><span title="198 badges"><span class="bronze">&#9679;</span><span class="badgecount">198</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gnonthgol has 57 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-9479">
+    
+        <a name="9516"></a>
+        <div class="comment" id="comment-9516">
+            <div id="post-9516-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, thank's for the answeres...</p>
+
+<p>I'm install the virtual box, cygwin and ubuntu on my server... just for tests...</p>
+
+<p>But when i put the initial command in terminal appear the errors message below:</p>
+
+<p>E: The package "postgresql-8.4-postgis' has no installation candidate</p>
+
+<p>E: Could not find package pear</p>
+
+<p>E: Unable to find install package</p>
+
+<p>E: Could not find package db</p>
+
+<p>Can you help me with this?</p></div>
+            <div class="comment-info" id="comment-9516-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '11, 09:15)</span>
+                <a class="comment-user userinfo" href="/users/2496/rspilki">rspilki</a>
+                
+            </div>
+        </div>
+    
+        <a name="9548"></a>
+        <div class="comment" id="comment-9548">
+            <div id="post-9548-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Just checking - when you "put the initial command in terminal" you're typing that into a terminal onto an Ubuntu virtual machine running inside Virtualbox?</p>
+
+<p>If so, the pertinent question is "what version of Ubuntu did you install?".</p></div>
+            <div class="comment-info" id="comment-9548-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '11, 14:38)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="9742"></a>
+        <div class="comment" id="comment-9742">
+            <div id="post-9742-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi... sorry for the late answer...</p>
+
+<p>YES! Ubuntu 11.10...</p>
+
+<p>I do something incorrect?</p></div>
+            <div class="comment-info" id="comment-9742-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jan '12, 10:39)</span>
+                <a class="comment-user userinfo" href="/users/2496/rspilki">rspilki</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9479" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9479-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="9468"></a>
+                    <div id="answer-container-9468" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-9468-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9468/up/" rel="nofollow"> </a>
+<div id="post-9468-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-9468-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9468/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hello,</p>
+<p>currently none of the OSM tools are using SQL Server 2008 as a backend unfortunately. All of them are using Postgresql.
+Fortunately Postgresql is running on Windows without a problem. 
+If you want to perform reverse geocoding, you can use Nominatim service that is written in PHP and using Postgresql as a back end. While I have never tried it, it should be therefore possible to run on Windows with minimal modification of the code.
+Nominatim code can be found on the subversion server of the project.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/9468/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Dec '11, 19:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fc34340b0f5b16ceb2802f2c485801d6?s=32&amp;d=identicon&amp;r=g" alt="Melaskia's gravatar image" />
+    <p><a href="/users/114/melaskia">Melaskia</a><br/>
+    <span class="score" title="149 reputation points">149</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Melaskia has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-9468">
+    
+</div>
+<div id="comment-tools-9468" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9468-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/9467/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='PZcS4zQcWCgJbvwXti0z9xbufgea8TSB' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/installation/"
+            class="tag-link-installation"
+            title="see questions tagged'installation'using tags"
+            rel="tag">installation</a> <span class="tag-number">&#215;61</span><br/>
+        
+        <a href="/tags/windows/"
+            class="tag-link-windows"
+            title="see questions tagged'windows'using tags"
+            rel="tag">windows</a> <span class="tag-number">&#215;48</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 12, 2011, 6:53 p.m.">12 Dec '11, 18:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,221 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 21, 2016, 1:47 a.m.">21 Feb '16, 01:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/16175/nominatim-installation-problem-projection-code-failed">Nominatim Installation Problem - Projection Code Failed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21579/error-while-installing-nominatim">Error while installing Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12373/import-error-with-nominatim-installation-no-data-and-db-error-insufficient-permissions">Import error with Nominatim installation: No Data and DB Error: insufficient permissions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15563/nominatim-install-problem-final-step-php">Nominatim Install Problem, Final Step. PHP?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20326/nominatim-installation-not-finding-proj-headers">Nominatim installation - Not finding proj headers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21125/importing-nominatim-database-error-libgeos-cant-be-opened">Importing Nominatim database error: libgeos can&#39;t be opened</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3651/problem-installing-the-nominatim-web-front-end">Problem installing the Nominatim web front-end</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10955/nominatim-planet_osm_rels-does-not-exist">Nominatim: planet_osm_rels does not exist</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12958/set-up-nominatim">Set up Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30968/nominatim-installation-line-4-result-place_boundingbox">Nominatim installation LINE 4:   result place_boundingbox;</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

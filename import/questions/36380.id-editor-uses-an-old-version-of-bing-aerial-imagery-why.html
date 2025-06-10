@@ -1,0 +1,1314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>iD editor uses an old version of bing aerial imagery. why? - OSM Help</title>
+        <meta name="description" content="When I use regular osm map editor (edit with iD (in browser)), the bing aerial imagery in the background is really old. But when I use the potlatch editor, bing aerial imagery is new. Why regular editor uses old version? please see the links below for the same area, notice the difference.   regular ..." />
+        <meta name="keywords" content="bing,version,old,editor" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/36380/id-editor-uses-an-old-version-of-bing-aerial-imagery-why" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/36380/id-editor-uses-an-old-version-of-bing-aerial-imagery-why?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='oCDqMbIhmVOZ8lmOk5qbCn4uojyXNNks' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/36380/id-editor-uses-an-old-version-of-bing-aerial-imagery-why">iD editor uses an old version of bing aerial imagery. why?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-36380-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36380/up/" rel="nofollow"> </a>
+<div id="post-36380-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-36380-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36380/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/36380/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When I use regular osm map editor (edit with iD (in browser)), the bing aerial imagery in the background is really old. But when I use the potlatch editor, bing aerial imagery is new. Why regular editor uses old version? please see the links below for the same area, notice the difference. </p>
+<ul>
+<li>regular (iD): <a href="https://www.openstreetmap.org/edit?editor=id#map=18/44.73295/-63.66788">https://www.openstreetmap.org/edit?editor=id#map=18/44.73295/-63.66788</a></li>
+<li>Potlatch: <a href="http://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73312/-63.66802">http://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73312/-63.66802</a></li>
+</ul>
+<p>thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bing/" class="post-tag tag-link-bing"
+                                        title="see questions tagged 'bing'" rel="tag">bing</a>
+                                
+                                    <a href="/tags/version/" class="post-tag tag-link-version"
+                                        title="see questions tagged 'version'" rel="tag">version</a>
+                                
+                                    <a href="/tags/old/" class="post-tag tag-link-old"
+                                        title="see questions tagged 'old'" rel="tag">old</a>
+                                
+                                    <a href="/tags/editor/" class="post-tag tag-link-editor"
+                                        title="see questions tagged 'editor'" rel="tag">editor</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Aug '14, 22:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3c5107c4dc069803aa7a53a8a7a1b141?s=32&amp;d=identicon&amp;r=g" alt="kavur's gravatar image" />
+    <p><a href="/users/9555/kavur">kavur</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="kavur has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/36380/">
+                edited
+                <strong>30 Aug '14, 12:49</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-36380">
+    
+        <a name="36381"></a>
+        <div class="comment" id="comment-36381">
+            <div id="post-36381-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I would suggest clearing your browser cache and comparing then again.</p></div>
+            <div class="comment-info" id="comment-36381-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Aug '14, 22:19)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36382"></a>
+        <div class="comment not_top_scorer" id="comment-36382">
+            <div id="post-36382-score" class="comment-score"></div>
+            <div class="comment-text"><p>that's not the correct answer unfortunately. click the links and see the difference.</p></div>
+            <div class="comment-info" id="comment-36382-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Aug '14, 23:05)</span>
+                <a class="comment-user userinfo" href="/users/9555/kavur">kavur</a>
+                
+            </div>
+        </div>
+    
+        <a name="36383"></a>
+        <div class="comment not_top_scorer" id="comment-36383">
+            <div id="post-36383-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can see the same car parked in the same place in the carpark at the left in both pictures:</p>
+
+<p><img alt="alt text" src="http://help.openstreetmap.org/upfiles/bg1.png"></p>
+
+<p><img alt="alt text" src="http://help.openstreetmap.org/upfiles/bg2.png"></p></div>
+            <div class="comment-info" id="comment-36383-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Aug '14, 23:20)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36384"></a>
+        <div class="comment" id="comment-36384">
+            <div id="post-36384-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Find another computer and see how they compare. I can see no difference.</p></div>
+            <div class="comment-info" id="comment-36384-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Aug '14, 23:20)</span>
+                <a class="comment-user userinfo" href="/users/7440/wynndale">Wynndale</a>
+                
+            </div>
+        </div>
+    
+        <a name="36385"></a>
+        <div class="comment" id="comment-36385">
+            <div id="post-36385-score" class="comment-score">1</div>
+            <div class="comment-text"><p>A side note: Please rather say "bing aerial imagery" instead of "bing maps" to prevent misunderstandings as are not allowed to use all parts of bing maps. See <a href="//wiki.openstreetmap.org/wiki/Bing">bing in our wiki</a>.</p></div>
+            <div class="comment-info" id="comment-36385-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Aug '14, 23:24)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36386"></a>
+        <div class="comment" id="comment-36386">
+            <div id="post-36386-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/upfiles/potlatch.png">http://help.openstreetmap.org/upfiles/potlatch.png</a>
+<a href="http://help.openstreetmap.org/upfiles/regular.png">http://help.openstreetmap.org/upfiles/regular.png</a>
+I see these images in three different computers. It's not slightly different, it's completely different.</p></div>
+            <div class="comment-info" id="comment-36386-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Aug '14, 23:48)</span>
+                <a class="comment-user userinfo" href="/users/9555/kavur">kavur</a>
+                
+            </div>
+        </div>
+    
+        <a name="36402"></a>
+        <div class="comment" id="comment-36402">
+            <div id="post-36402-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: thanks for those screenshots! Is it possible for you to find out the URLs of those images? Or even the IPs of the serving servers? Might be a bit technical … ;-)</p></div>
+            <div class="comment-info" id="comment-36402-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '14, 12:40)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36404"></a>
+        <div class="comment not_top_scorer" id="comment-36404">
+            <div id="post-36404-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: when i click the links in the question, i see these images. as for server ips i can do that if you tell me how to do it :)</p></div>
+            <div class="comment-info" id="comment-36404-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '14, 13:02)</span>
+                <a class="comment-user userinfo" href="/users/9555/kavur">kavur</a>
+                
+            </div>
+        </div>
+    
+        <a name="36405"></a>
+        <div class="comment not_top_scorer" id="comment-36405">
+            <div id="post-36405-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Remote Address:23.209.107.4:443
+Request URL:<a href="https://ecn.t3.tiles.virtualearth.net/tiles/a030322101213302321.jpeg?g=587&amp;mkt=en-gb&amp;n=z">https://ecn.t3.tiles.virtualearth.net/tiles/a030322101213302321.jpeg?g=587&amp;mkt=en-gb&amp;n=z</a>
+Request Method:GET
+Status Code:200 OK (from cache)</p>
+
+<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: would this help?</p></div>
+            <div class="comment-info" id="comment-36405-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '14, 13:07)</span>
+                <a class="comment-user userinfo" href="/users/9555/kavur">kavur</a>
+                
+            </div>
+        </div>
+    
+        <a name="36408"></a>
+        <div class="comment not_top_scorer" id="comment-36408">
+            <div id="post-36408-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/9555/kavur"></a><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: I am just guessing/trying, maybe we find something odd or interesting. Yes, exactly. Best use a location where there are clear differences. Now compare or post URLs and IPs for the request from both editors. Maybe they are served by different servers. Maybe on is via http and one via https which magically makes a difference, I do not know.  Whatever we find out, maybe, in the end, we cannot change it because the aerial imagery is served directly by microsoft. But let's see …</p></div>
+            <div class="comment-info" id="comment-36408-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '14, 14:11)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36409"></a>
+        <div class="comment not_top_scorer" id="comment-36409">
+            <div id="post-36409-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: these are header info for id and potlatch editors for the (almost) same area: 
+for potlatch: Remote Address:193.63.75.103:80
+Request URL:<a href="http://www.openstreetmap.org/edit?editor=potlatch2">http://www.openstreetmap.org/edit?editor=potlatch2</a>
+Request Method:GET
+Status Code:200 OK 
+and for id: Remote Address:193.63.75.100:443
+Request URL:<a href="https://www.openstreetmap.org/edit?editor=id">https://www.openstreetmap.org/edit?editor=id</a>
+Request Method:GET
+Status Code:200 OK
+hope it helps.</p></div>
+            <div class="comment-info" id="comment-36409-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '14, 14:55)</span>
+                <a class="comment-user userinfo" href="/users/9555/kavur">kavur</a>
+                
+            </div>
+        </div>
+    
+        <a name="36411"></a>
+        <div class="comment not_top_scorer" id="comment-36411">
+            <div id="post-36411-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: Hmm, no, this last info is not really helpful. I meant that you look for those tiles.virtualearth.net URLs. Those may be interesting.  </p>
+
+<p>Oh, and, could you please try to access iD also (as you do so too for potlatch2) without https? → <a href="http://www.openstreetmap.org/edit?editor=id">http://www.openstreetmap.org/edit?editor=id</a>  see what happens then.</p></div>
+            <div class="comment-info" id="comment-36411-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '14, 15:11)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36412"></a>
+        <div class="comment not_top_scorer" id="comment-36412">
+            <div id="post-36412-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: i tried http instead of https, it didn't change.</p>
+
+<p>in potlatch editor, under developer tools i can't see images. so i'm not sure what to do.</p></div>
+            <div class="comment-info" id="comment-36412-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '14, 15:23)</span>
+                <a class="comment-user userinfo" href="/users/9555/kavur">kavur</a>
+                
+            </div>
+        </div>
+    
+        <a name="36429"></a>
+        <div class="comment not_top_scorer" id="comment-36429">
+            <div id="post-36429-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: could you please look up the URLs and IPs for the tiles.virtualearth.net  requests by both editors?  That is my only idea.</p></div>
+            <div class="comment-info" id="comment-36429-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '14, 00:11)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36430"></a>
+        <div class="comment not_top_scorer" id="comment-36430">
+            <div id="post-36430-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: can you tell me how do i do that?</p></div>
+            <div class="comment-info" id="comment-36430-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '14, 00:20)</span>
+                <a class="comment-user userinfo" href="/users/9555/kavur">kavur</a>
+                
+            </div>
+        </div>
+    
+        <a name="36432"></a>
+        <div class="comment not_top_scorer" id="comment-36432">
+            <div id="post-36432-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: i think i figured: </p>
+
+<p>this is for id:</p>
+
+<p>Remote Address:23.209.107.4:443
+Request URL:<a href="https://ecn.t0.tiles.virtualearth.net/tiles/a0303221012133023123.jpeg?g=587&amp;mkt=en-gb&amp;n=z">https://ecn.t0.tiles.virtualearth.net/tiles/a0303221012133023123.jpeg?g=587&amp;mkt=en-gb&amp;n=z</a></p>
+
+<p>and this is for potlatch:</p>
+
+<p>Remote Address:23.209.107.4:80
+Request URL:<a href="http://ecn.t0.tiles.virtualearth.net/tiles/a0303221012133023032.jpeg?g=587&amp;mkt=en-gb&amp;n=z">http://ecn.t0.tiles.virtualearth.net/tiles/a0303221012133023032.jpeg?g=587&amp;mkt=en-gb&amp;n=z</a></p></div>
+            <div class="comment-info" id="comment-36432-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '14, 00:30)</span>
+                <a class="comment-user userinfo" href="/users/9555/kavur">kavur</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36380" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 16
+        </span>
+        <a href="#" class="show-all-comments-link">show 11 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36380-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/36380/id-editor-uses-an-old-version-of-bing-aerial-imagery-why?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/36380/id-editor-uses-an-old-version-of-bing-aerial-imagery-why?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/36380/id-editor-uses-an-old-version-of-bing-aerial-imagery-why?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/36380/id-editor-uses-an-old-version-of-bing-aerial-imagery-why?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="36433"></a>
+                    <div id="answer-container-36433" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36433-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36433/up/" rel="nofollow"> </a>
+<div id="post-36433-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-36433-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36433/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thanks for the info about the servers (from your comment): </p>
+<ul>
+<li>iD: Remote Address:23.209.107.4:443 Request URL:<a href="https://ecn.t0.tiles.virtualearth.net/tiles/a0303221012133023123.jpeg?g=587&amp;mkt=en-gb&amp;n=z">https://ecn.t0.tiles.virtualearth.net/tiles/a0303221012133023123.jpeg?g=587&amp;mkt=en-gb&amp;n=z</a></li>
+<li>potlatch: Remote Address:23.209.107.4:80 Request URL:<a href="http://ecn.t0.tiles.virtualearth.net/tiles/a0303221012133023032.jpeg?g=587&amp;mkt=en-gb&amp;n=z">http://ecn.t0.tiles.virtualearth.net/tiles/a0303221012133023032.jpeg?g=587&amp;mkt=en-gb&amp;n=z</a></li>
+</ul>
+<p>I think I got it now: It seems you are served by a Akamai (this is a content distribution service which is apparently used by Microsoft) server from Cambridge (23.209.107.4) (USA) and I by one from Switzerland (2.20.118.87).</p>
+<p>The <em>interesting</em> part (I just hope that I did not make a stupid mistake somewhere):</p>
+<p>I have circumvented DNS (via <a href="//en.wikipedia.org/wiki/Hosts_%28file%29">hosts file</a>) and targeted my requests to the Cambridge server (23.209.107.4). Observation: This server serves different images via HTTP respectively HTTPS! Tested with <code>ecn.t0.tiles.virtualearth.net/tiles/a0303221012133023123.jpeg?g=587&amp;mkt=en-gb&amp;n=z</code>. Here are screenshots with and without https, ctrl+f5 of course (see in log below: HTTP200 – not HTTP304): <a href="/upfiles/bingshttpscdnfail_cambridge.gif">gif animation Cambridge</a>.</p>
+<p>Then I reverted my hosts file change (so I am back on 2.20.118.87 via DNS): same, new, content via HTTP respectively HTTPS. <a href="/upfiles/bingshttpscdnfail_swiss.gif">gif animation Switzerland</a>. Note the much faster timing than from Cambridge (that is the reason why usually the nearest server is assigned to you).</p>
+<p>By the way: Others from near Cambridge or even the whole USA (those "others" who get assigned to this server by MS/Akamai's DNS system) should experience the same as you. As far as I know/guess all who commented here are not editing from the US.</p>
+<p><em>What to do?</em> </p>
+<ul>
+<li>So in principle you should get the new images if you access via HTTP, I am not sure why it seems that you do not get the new images (judging from your comment above – maybe your browser cache? or does iD always use HTTPS for the bing aerial imagery even if accessed via HTTP?). </li>
+<li>As a workaround you could use your hosts file to direct your requests to ecn.t0.tiles.virtualearth.net to the IP of the Switzerland server. Add the line <code>2.20.118.87 ecn.t0.tiles.virtualearth.net</code> to your hosts file. Note: apparently Chromium (which you seem to use) does not refresh its DNS cache by ctrl+F5. I used Firefox in my test. Chromium only obeyed the change in the hosts file after a restart.</li>
+<li>Ask Microsoft to sync their CDN servers (whyever there is different content for HTTPS on this server …).</li>
+<li>use HTTP Potlatch, get outside and have a look at the real world, wait, … ;-)</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36433/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Aug '14, 01:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/36433/">
+                edited
+                <strong>31 Aug '14, 02:18</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36433">
+    
+        <a name="36591"></a>
+        <div class="comment" id="comment-36591">
+            <div id="post-36591-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: thank you. it's good now :)</p></div>
+            <div class="comment-info" id="comment-36591-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Sep '14, 12:21)</span>
+                <a class="comment-user userinfo" href="/users/9555/kavur">kavur</a>
+                
+            </div>
+        </div>
+    
+        <a name="36622"></a>
+        <div class="comment" id="comment-36622">
+            <div id="post-36622-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/9555/kavur"></a><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: do you mean that the problem (as described in your question) does not exist anymore? By doing nothing? Or did you change anything?</p></div>
+            <div class="comment-info" id="comment-36622-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Sep '14, 23:14)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36623"></a>
+        <div class="comment" id="comment-36623">
+            <div id="post-36623-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: yes, the problem has been solved. I can see same pictures in poth editors. I didn't do anything. I thought you fixed it.</p></div>
+            <div class="comment-info" id="comment-36623-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Sep '14, 00:20)</span>
+                <a class="comment-user userinfo" href="/users/9555/kavur">kavur</a>
+                
+            </div>
+        </div>
+    
+        <a name="36624"></a>
+        <div class="comment" id="comment-36624">
+            <div id="post-36624-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: No, I did not do anything except investigating and writing this answer. Thanks for your comments!</p></div>
+            <div class="comment-info" id="comment-36624-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Sep '14, 00:24)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36433" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36433-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="36426"></a>
+                    <div id="answer-container-36426" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36426-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36426/up/" rel="nofollow"> </a>
+<div id="post-36426-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-36426-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36426/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think they are the same the dates are the same, The car is it the same position and the shadows look the same to. in this slightly moved views.
+  <a href="https://www.openstreetmap.org/edit?editor=id#map=20/44.73284/-63.66907">https://www.openstreetmap.org/edit?editor=id#map=20/44.73284/-63.66907</a>
+ <a href="http://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73280/-63.66900">http://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73280/-63.66900</a>
+ if you move south a little the brown patches in the vegetation are the same and the car in the car park to the SW is the same. 
+Near by on the freeway two vehicles are passing each other in both editors
+<a href="http://www.openstreetmap.org/edit?editor=id#map=19/44.73296/-63.67221">http://www.openstreetmap.org/edit?editor=id#map=19/44.73296/-63.67221</a>
+<a href="https://www.openstreetmap.org/edit?editor=potlatch2#map=18/44.73295/-63.67233">https://www.openstreetmap.org/edit?editor=potlatch2#map=18/44.73295/-63.67233</a>
+which I think proves the images are at the same time.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36426/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Aug '14, 21:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/36426/">
+                edited
+                <strong>30 Aug '14, 21:57</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36426">
+    
+        <a name="36428"></a>
+        <div class="comment" id="comment-36428">
+            <div id="post-36428-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/644/andy-mackey"></a><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy</a>-mackey: obviously we see completely different stuff. when i click the first link (id), i see most of the houses aren't even there. they weren't built yet. the image is from 2007 most optimistically.</p>
+
+<p>did you see the screenshots i posted in one of those comments?</p></div>
+            <div class="comment-info" id="comment-36428-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '14, 23:25)</span>
+                <a class="comment-user userinfo" href="/users/9555/kavur">kavur</a>
+                
+            </div>
+        </div>
+    
+        <a name="36438"></a>
+        <div class="comment" id="comment-36438">
+            <div id="post-36438-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks kavur it must have been hard for you show that</p></div>
+            <div class="comment-info" id="comment-36438-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '14, 08:28)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36426" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36426-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="85476"></a>
+                    <div id="answer-container-85476" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85476-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85476/up/" rel="nofollow"> </a>
+<div id="post-85476-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-85476-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85476/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Having looked into this today it seems to be (at least in my case) a parameter that iD sends to Bing Maps API, the whole thing is being discussed extensively <a href="https://github.com/openstreetmap/iD/issues/9153">here</a>. iD sends <code>pr=odbl</code> to the API, if you remove this you will get the newest images. No idea what this parameter is or why it is supposed to do. An easy workaround for the time being is to go to the <code>Backgrounds</code> menu in iD and select <code>Custom</code> in the end. In the dialog that opens input <code><a href="https://ecn.t">https://ecn.t</a>{switch:0,1,2,3}.tiles.virtualearth.net/tiles/a{u}.jpeg?g=1&amp;n=z</code> and click <code>OK</code>. If this does not work immediately try to refresh the page a few times.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85476/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Aug '22, 18:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/99cc65eafb1a1f47f2f5ae5286f3261e?s=32&amp;d=identicon&amp;r=g" alt="esteros's gravatar image" />
+    <p><a href="/users/22173/esteros">esteros</a><br/>
+    <span class="score" title="0 reputation points">0</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="esteros has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85476">
+    
+        <a name="85478"></a>
+        <div class="comment" id="comment-85478">
+            <div id="post-85478-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You are responding in a thread from 2014. Everything you point out  on the current issue has already been pointed out in the corresponding github issue.</p></div>
+            <div class="comment-info" id="comment-85478-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Aug '22, 18:55)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-85476" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85476-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/36380/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='oCDqMbIhmVOZ8lmOk5qbCn4uojyXNNks' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/36380/id-editor-uses-an-old-version-of-bing-aerial-imagery-why?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/36380/id-editor-uses-an-old-version-of-bing-aerial-imagery-why?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/bing/"
+            class="tag-link-bing"
+            title="see questions tagged'bing'using tags"
+            rel="tag">bing</a> <span class="tag-number">&#215;83</span><br/>
+        
+        <a href="/tags/editor/"
+            class="tag-link-editor"
+            title="see questions tagged'editor'using tags"
+            rel="tag">editor</a> <span class="tag-number">&#215;48</span><br/>
+        
+        <a href="/tags/version/"
+            class="tag-link-version"
+            title="see questions tagged'version'using tags"
+            rel="tag">version</a> <span class="tag-number">&#215;26</span><br/>
+        
+        <a href="/tags/old/"
+            class="tag-link-old"
+            title="see questions tagged'old'using tags"
+            rel="tag">old</a> <span class="tag-number">&#215;15</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 29, 2014, 10:11 p.m.">29 Aug '14, 22:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,010 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 29, 2022, 6:55 p.m.">29 Aug '22, 18:55</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3522/image-of-bing-is-very-old">image of Bing is very old</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23960/how-to-retrieve-older-versions-of-deleted-objects">How to retrieve older versions of deleted objects?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1059/how-do-you-set-the-name-of-a-street">How do you set the name of a street?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2">Adjusting aerial backgrounds in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1689/adjusting-permamently-aerial-backgrounds-in-potlatch-2">Adjusting PERMAMENTLY aerial backgrounds in Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1702/how-old-are-the-bing-images">How old are the Bing images?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1889/how-can-i-use-bing-in-potlatch-1">How can I use Bing in Potlatch 1 ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1726/josm-adjusting-bing-bitmaps">JOSM: Adjusting Bing bitmaps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2391/starting-potlatch2-from-the-gpx-traces-list">Starting Potlatch2 from the GPX traces list</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1602/how-can-i-use-microsofts-aerial-imagery-in-potlatch">How can I use Microsoft&#39;s aerial imagery in Potlatch?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

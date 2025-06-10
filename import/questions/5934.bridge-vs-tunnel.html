@@ -1,0 +1,1605 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bridge vs Tunnel? - OSM Help</title>
+        <meta name="description" content="So, how do you decide if a way is a bridge over another way, or if it has a tunnel going under it? Here are some examples, all involving a railway track that&#39;s a cutting, with roads going over it at various points: Would this be a bridge? It&#39;s only the width of the road (which in my mind would be to..." />
+        <meta name="keywords" content="tunnel,bridge,layer,level" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/5934/bridge-vs-tunnel" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/5934/bridge-vs-tunnel?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Bnk9ciX1DUjUb9HTOar1VuObJEcvjfFT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/5934/bridge-vs-tunnel">Bridge vs Tunnel?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-5934-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5934/up/" rel="nofollow"> </a>
+<div id="post-5934-score" class="post-score"
+    title="current number of votes">
+    17
+</div>
+<a id="post-5934-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5934/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/5934/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   4
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>So, how do you decide if a way is a bridge over another way, or if it has a tunnel going under it?</p>
+<p>Here are some examples, all involving a railway track that's a cutting, with roads going over it at various points:</p>
+<p>Would this be a bridge? It's only the width of the road (which in my mind would be too short for a tunnel), but the road doesn't raise up to go over the railway, as the track is at a lower level..</p>
+<p><img alt="alt text" src="http://i.imgur.com/0fiMd.png"></p>
+<hr>
+<p>How about this? I thought this made sense being marked as a tunnel, as it's clearly going under various roads, and it's a relatively long section.</p>
+<p><img alt="alt text" src="http://i.imgur.com/nwUQu.png"></p>
+<hr>
+<p>This seems borderline again.. bridge or tunnel?</p>
+<p><img alt="alt text" src="http://i.imgur.com/vovrv.png"></p>
+<hr>
+<p>I suppose layers come into this as well don't they? I assume the track should be marked as <code>cutting=yes</code> and <code>layer=-1</code>. The bridge could be explicitly marked as <code>layer=0</code> to signify that there is no change in level as it crosses the other way. Or would that not make sense to do? Should the track just be marked as having a section of tunnel?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tunnel/" class="post-tag tag-link-tunnel"
+                                        title="see questions tagged 'tunnel'" rel="tag">tunnel</a>
+                                
+                                    <a href="/tags/bridge/" class="post-tag tag-link-bridge"
+                                        title="see questions tagged 'bridge'" rel="tag">bridge</a>
+                                
+                                    <a href="/tags/layer/" class="post-tag tag-link-layer"
+                                        title="see questions tagged 'layer'" rel="tag">layer</a>
+                                
+                                    <a href="/tags/level/" class="post-tag tag-link-level"
+                                        title="see questions tagged 'level'" rel="tag">level</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Jun '11, 21:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d35ac2d7ba52cccf2e2e41a5cf87c654?s=32&amp;d=identicon&amp;r=g" alt="Sekai's gravatar image" />
+    <p><a href="/users/1581/sekai">Sekai</a><br/>
+    <span class="score" title="291 reputation points">291</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Sekai has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/5934/">
+                edited
+                <strong>22 Jun '11, 13:01</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f09c0b7a655fed386e070e036e2da248?s=32&amp;d=identicon&amp;r=g" alt="dieterdreist's gravatar image" />
+            <p><a href="/users/936/dieterdreist">dieterdreist</a><br/>
+            <span class="score" title="3677 reputation points"><span class="">3.7k</span></span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="67 badges"><span class="bronze">&#9679;</span><span class="badgecount">67</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-5934">
+    
+        <a name="5938"></a>
+        <div class="comment" id="comment-5938">
+            <div id="post-5938-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I always do it on method of construction; therefore, the above three would likely all be bridges.  Definitely, 1 and 3 are....  2 might be considered a cut-and-cover tunnel....  survey might be needed (o;</p></div>
+            <div class="comment-info" id="comment-5938-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '11, 01:17)</span>
+                <a class="comment-user userinfo" href="/users/489/c2r">c2r</a>
+                
+            </div>
+        </div>
+    
+        <a name="5951"></a>
+        <div class="comment" id="comment-5951">
+            <div id="post-5951-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I changed level to layer in your post, because the commonly used tag is layer.</p>
+
+<p>actually layer=0 is default and can be avoided (you might still want to use it to emphasize that you didn't simply forget to put it). Layers in OSM don't actually say if something is below or above ground, they only come to play in relation to other objects crossing them: the higher the layer is the higher is the feature in the order of overlapping features.</p></div>
+            <div class="comment-info" id="comment-5951-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '11, 13:04)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+        <a name="25578"></a>
+        <div class="comment" id="comment-25578">
+            <div id="post-25578-score" class="comment-score"></div>
+            <div class="comment-text"><p>Using bride or tunnel, you can completely get rid of the layers=* They really only play a role if some features cross WITHOUT a bridge or tunnel or if there is more than one bridge/tunnel crossing at the same point. They are only a hint to the renderer what to draw on top and carry no other meaning in terms of height. But for bridges/tunnels, the renderer already knows what to do.</p></div>
+            <div class="comment-info" id="comment-25578-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Aug '13, 16:18)</span>
+                <a class="comment-user userinfo" href="/users/7097/chaos99">Chaos99</a>
+                
+            </div>
+        </div>
+    
+        <a name="25588"></a>
+        <div class="comment" id="comment-25588">
+            <div id="post-25588-score" class="comment-score">1</div>
+            <div class="comment-text"><p>youll get a complaint adding a bridge over a way, without a tag layer 1 or -1.</p></div>
+            <div class="comment-info" id="comment-25588-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Aug '13, 21:56)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5934" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5934-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    7 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/5934/bridge-vs-tunnel?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/5934/bridge-vs-tunnel?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/5934/bridge-vs-tunnel?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/5934/bridge-vs-tunnel?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="6484"></a>
+                    <div id="answer-container-6484" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6484-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6484/up/" rel="nofollow"> </a>
+<div id="post-6484-score" class="post-score"
+    title="current number of votes">
+    10
+</div>
+<a id="post-6484-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6484/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="http://www.openstreetmap.org/user/Harry%20Wood/diary/14067">Down the pub one time</a> we suggested the simple rule: <em>"If the road passing under is longer (underneath) than the gap is wide, then it should be a tunnel on the under way, rather than a bridge on the over way."</em> ....But we were all completely drunk at the time :-) </p>
+<p>By that rule I'd say your second and third images are both tunnels (and that is how I would map them), but your first one is 50/50. Could be a bridge.  See comments on my diary for some further discussion. I've also just added a <a href="http://wiki.openstreetmap.org/wiki/Key:bridge#Bridge_vs_Tunnel">specific section to the wiki</a> where we should one day answer this question. <br>
+<strong><em>[update] :</em></strong>  The wiki page was modified to carry some more specific advice, which is good I guess. See <a href="http://wiki.openstreetmap.org/wiki/Talk:Key:bridge#Bridge_vs_Tunnels">the discussion here</a></p>
+<p>But on the whole I agree with Vincent de Phily. If you have a case where you can't decide between bridge or tunnel... well then it probably doesn't matter too much. Getting levels right matters more (mainly to help the renderers). Avoiding connections where there are none is important (To avoid routing problems)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6484/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Jul '11, 18:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6484/">
+                edited
+                <strong>08 Feb '12, 13:51</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6484">
+    
+</div>
+<div id="comment-tools-6484" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6484-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5943"></a>
+                    <div id="answer-container-5943" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5943-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5943/up/" rel="nofollow"> </a>
+<div id="post-5943-score" class="post-score"
+    title="current number of votes">
+    9
+</div>
+<a id="post-5943-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5943/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>That's always going to be a little subjective. To me the presence/absence of a slope on the top/bottom highway doesn't make a difference. The construction type is tempting, but I can see many cases were it will not yield a definite answer. I'd say if the bottom highway crosses a single feature (however broad the feature may be) it's a bridge, otherwise it's a tunnel. So I'd rate your 1&amp;3 as bridges, 2 as tunnel.</p>
+<p>YMMV. In the end it's not a big issue, the main thing is to have no connectiing nodes and to have the layers right.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5943/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jun '11, 10:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d20f86db9a6f03cb070e9fbaaf0b7228?s=32&amp;d=identicon&amp;r=g" alt="Vincent%20de%20Phily's gravatar image" />
+    <p><a href="/users/867/vincent-de-phily">Vincent de P... ♦</a><br/>
+    <span class="score" title="17304 reputation points"><span class="">17.3k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="152 badges"><span class="silver">&#9679;</span><span class="badgecount">152</span></span><span title="249 badges"><span class="bronze">&#9679;</span><span class="badgecount">249</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vincent de Phily has 64 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5943">
+    
+        <a name="5945"></a>
+        <div class="comment" id="comment-5945">
+            <div id="post-5945-score" class="comment-score">4</div>
+            <div class="comment-text"><p>+1 The difference between tunnel and bridge is really somewhat arbitrary, and not really important for most applications. The important thing (especially for routing) is to use <a href="//wiki.openstreetmap.org/wiki/Key:layer"><code>layer</code></a>s (because that indicates that it's not a level crossing). If it's ambiguous, just choose one; the rule of thumb given looks fine.</p></div>
+            <div class="comment-info" id="comment-5945-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '11, 11:29)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="42681"></a>
+        <div class="comment" id="comment-42681">
+            <div id="post-42681-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry, in my comment above "levels" should have been "layers", as that is the right tag to use.</p></div>
+            <div class="comment-info" id="comment-42681-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '15, 12:21)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="42683"></a>
+        <div class="comment" id="comment-42683">
+            <div id="post-42683-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/666/sleske">@sleske</a>: I've edited it – better now? :-)  Then please delete your and my (this) comment.</p></div>
+            <div class="comment-info" id="comment-42683-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '15, 12:29)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5943" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5943-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5950"></a>
+                    <div id="answer-container-5950" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5950-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5950/up/" rel="nofollow"> </a>
+<div id="post-5950-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-5950-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5950/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Technically these structures are all bridges (because not dug in the massive earth but constructed openly and then later covered, and not longer then 80 / 160 metres). I would still tag 1 and 3 as bridge and 2 might be better represented as tunnel in osm (because otherwise you would miss the start and end of the covered part of the way, and you might end up with lots of parallel bridges what I would consider a worse representation compared to a simple tunnel for the way below).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5950/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jun '11, 12:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f09c0b7a655fed386e070e036e2da248?s=32&amp;d=identicon&amp;r=g" alt="dieterdreist's gravatar image" />
+    <p><a href="/users/936/dieterdreist">dieterdreist</a><br/>
+    <span class="score" title="3677 reputation points"><span class="">3.7k</span></span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="67 badges"><span class="bronze">&#9679;</span><span class="badgecount">67</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dieterdreist has 4 accepted answers">3&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5950">
+    
+        <a name="6183"></a>
+        <div class="comment" id="comment-6183">
+            <div id="post-6183-score" class="comment-score">3</div>
+            <div class="comment-text"><p>+1 good point about the "multiple parallel bridges". That's something that often bothers me with OSM renderings.</p></div>
+            <div class="comment-info" id="comment-6183-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '11, 02:10)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="6679"></a>
+        <div class="comment" id="comment-6679">
+            <div id="post-6679-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'd agree they are all bridges. Surely a tunnel implies tunneling through some sort of natural feature?</p></div>
+            <div class="comment-info" id="comment-6679-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jul '11, 00:04)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32802"></a>
+        <div class="comment" id="comment-32802">
+            <div id="post-32802-score" class="comment-score"></div>
+            <div class="comment-text"><p>I solved the paralel bridges with highway areas &amp; railway areas.  Then went on to map road widths with areas too.  The routeing lines stay to as they are linked and tagged like in comercial products to aid simplifed routing algorithiums.</p></div>
+            <div class="comment-info" id="comment-32802-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '14, 21:50)</span>
+                <a class="comment-user userinfo" href="/users/7473/govanus">Govanus</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5950" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5950-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5939"></a>
+                    <div id="answer-container-5939" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5939-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5939/up/" rel="nofollow"> </a>
+<div id="post-5939-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-5939-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5939/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Imagery is not the main way data should ideally be collected for OSM, ground surveying is.</p>
+<p>The best way to get data into OSM is to go to the place and check it out. Take your GPS with you, collect tracks, make observations.</p>
+<p>If you want to know if it's a bridge or a tunnel, head over there and check it out.</p>
+<p>If it's not near you, then focus on what is! You should be mapping what's local to you, what you can observe yourself, and use the imagery as a backup.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5939/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jun '11, 03:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5f2082b86cc50d63c05f33f55166df2d?s=32&amp;d=identicon&amp;r=g" alt="emacsen's gravatar image" />
+    <p><a href="/users/540/emacsen">emacsen</a><br/>
+    <span class="score" title="1191 reputation points"><span class="">1.2k</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="emacsen has 4 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5939">
+    
+        <a name="5944"></a>
+        <div class="comment" id="comment-5944">
+            <div id="post-5944-score" class="comment-score">6</div>
+            <div class="comment-text"><p>While what you say is true, it's offtopic I think. Going on-site probably won't make things clearer in this case. For all we know, the OP might have been on-site and know the area well, but used aerial imagery to illustrate his question.</p></div>
+            <div class="comment-info" id="comment-5944-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '11, 10:58)</span>
+                <a class="comment-user userinfo" href="/users/867/vincent-de-phily">Vincent de P... ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5948"></a>
+        <div class="comment" id="comment-5948">
+            <div id="post-5948-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You hit the nail on the head Vincent. Thanks for the advice though emacsen!</p></div>
+            <div class="comment-info" id="comment-5948-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '11, 12:03)</span>
+                <a class="comment-user userinfo" href="/users/1581/sekai">Sekai</a>
+                
+            </div>
+        </div>
+    
+        <a name="32799"></a>
+        <div class="comment" id="comment-32799">
+            <div id="post-32799-score" class="comment-score"></div>
+            <div class="comment-text"><p>I try to to do this mostly seeing the site and possibly taking down notes before using the corrected offset satelight/arial pics to line things up at a drawing out stage.  Sometimes when I try using JOSM with no internet and no imagry my attempts are delibratly errored to make it more obvious that the fetures like building outlines still need correction.  Still I'd still be pondering after having stared at a long overbridge about this issue.</p></div>
+            <div class="comment-info" id="comment-32799-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '14, 21:20)</span>
+                <a class="comment-user userinfo" href="/users/7473/govanus">Govanus</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5939" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5939-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6488"></a>
+                    <div id="answer-container-6488" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6488-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6488/up/" rel="nofollow"> </a>
+<div id="post-6488-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-6488-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6488/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Alas even knowing the structure may still be ambiguous, a cut and cover tunnel is in essence a very wide bridge.  Adding to the abiguity are some larger culverts which typically I'd consider a tunnel, but some may consider a bridge</p>
+<p><a href="http://www.dot.state.oh.us/Divisions/Communications/BridgingtheGap/PublishingImages/box-culvert.jpg">http://www.dot.state.oh.us/Divisions/Communications/BridgingtheGap/PublishingImages/box-culvert.jpg</a>
+<a href="http://utca.eng.ua.edu/projects/final_reports/00219report_files/image106.jpg">http://utca.eng.ua.edu/projects/final_reports/00219report_files/image106.jpg</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6488/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Jul '11, 21:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f6827fbcbfc77428dfb7f8743ab775db?s=32&amp;d=identicon&amp;r=g" alt="Sundance's gravatar image" />
+    <p><a href="/users/1774/sundance">Sundance</a><br/>
+    <span class="score" title="467 reputation points">467</span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Sundance has one accepted answer">3&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6488">
+    
+        <a name="6682"></a>
+        <div class="comment" id="comment-6682">
+            <div id="post-6682-score" class="comment-score">3</div>
+            <div class="comment-text"><p>So you're saying most of the NYC subway isn't really underground, the street above is just a bridge?</p></div>
+            <div class="comment-info" id="comment-6682-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jul '11, 07:18)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+        <a name="6683"></a>
+        <div class="comment" id="comment-6683">
+            <div id="post-6683-score" class="comment-score">1</div>
+            <div class="comment-text"><p>cut and cover constructions are technically considered tunnels if they are very long (e.g. at least 80m in Germany, 160m in the USA). I'd consider the box culvert in your first image a bridge.</p></div>
+            <div class="comment-info" id="comment-6683-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jul '11, 08:44)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+        <a name="6885"></a>
+        <div class="comment" id="comment-6885">
+            <div id="post-6885-score" class="comment-score">1</div>
+            <div class="comment-text"><p>No I'm saying the construction techniques for a some cut and cover tunnel can be identical to a bridge.  A good example of this would be the Seattle freeway lids on Mercer Island and soon to be on State Route 520.</p>
+
+<p>The longer curved one, okay tunnel, the shorter ones, bridge or tunnel is more ambiguous
+<a href="http://www.openstreetmap.org/?lat=47.5881&amp;lon=-122.23165&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=47.5881&amp;lon=-122.23165&amp;zoom=15&amp;layers=M</a></p>
+
+<p>And yes I would map a cut and cover tunnel as a tunnel.  There is some vagueness in some wider bridges as in this example, or in some culverts.</p></div>
+            <div class="comment-info" id="comment-6885-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '11, 17:10)</span>
+                <a class="comment-user userinfo" href="/users/1774/sundance">Sundance</a>
+                
+            </div>
+        </div>
+    
+        <a name="32801"></a>
+        <div class="comment" id="comment-32801">
+            <div id="post-32801-score" class="comment-score"></div>
+            <div class="comment-text"><p>cut and covers are very common for underpasses and metros alike seem bottom catch all solution.</p></div>
+            <div class="comment-info" id="comment-32801-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '14, 21:43)</span>
+                <a class="comment-user userinfo" href="/users/7473/govanus">Govanus</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6488" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6488-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6477"></a>
+                    <div id="answer-container-6477" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6477-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6477/up/" rel="nofollow"> </a>
+<div id="post-6477-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-6477-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6477/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>These should all be tagged as bridges, because they are bridges. Don't tag something as a tunnel just because it looks nicer in mapnik.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6477/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Jul '11, 15:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0ae71d66eba9ad7437196ee1d689295f?s=32&amp;d=identicon&amp;r=g" alt="Janjko's gravatar image" />
+    <p><a href="/users/1761/janjko">Janjko</a><br/>
+    <span class="score" title="323 reputation points">323</span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Janjko has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6477">
+    
+</div>
+<div id="comment-tools-6477" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6477-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="32800"></a>
+                    <div id="answer-container-32800" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32800-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32800/up/" rel="nofollow"> </a>
+<div id="post-32800-score" class="post-score"
+    title="current number of votes">
+    -2
+</div>
+<a id="post-32800-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32800/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>if your simply maping a single line for a route then on the over route put a bridge section across all the apans in one (unless a bank (like an earth bank) is used between spans).
+Then on the other route mark it as a tunnel from the point it passes under to the point it emerges.
+add appropiate elevation higt and level tags to fit with surounds such as buildings with indor and basement level features etc.</p>
+<p>In this way the fact that the tunnel is very short under the bridge is recorded and the systems can easily handle the relationships to their own needs.</p>
+<p>The use of level tags is important idealy if the bridge went over flat across a cutting it would fair to say that the level was 0 (or the same as the reast of the line for elevated routes espcially relating to urban buildings with indoor level plans [think more of a ubrban scape with roads raised off the ground and interacting with the upper floors of buildings possibly with entrances or by passing through them entirly enveloped for a stretch).</p>
+<p>I'd consider a higher level (and elevation hight) either for midway nodes or bridge line sections if it were hump-backed [a bridge whose over path rises to get above and over a suporting arch] and for simlar varient cases].</p>
+<p>Its worth noteing this helps when handleing [automaticly] complex transport junctions with stacked bridges and viaducted canals snd railways passing over and under each other in a small area like in Brimingham Britain.</p>
+<hr>
+<p><img alt="Spegetti-junction on the M6 at Birmingham, UK, EU." src="http://help.openstreetmap.org/upfiles/Untitled4.jpg">
+This example shows arange of moterways mainroads cyclepths local road and rregional distributer roads Weaving link roads and canals rivers and railway services.</p>
+<p>Even before railways birmingham had similar major junctions on the canal system complete with aquduct overpasses and lock-ed link routes to ease the heavy barge traffic!</p>
+<p>Sticking to one level may be difficult.  Ireality they are built with undulating bridges with some of the older routes in cuttings tunnels and embankments.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32800/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 May '14, 21:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/30d90feb3a40fa6255767f95a8cd7943?s=32&amp;d=identicon&amp;r=g" alt="Govanus's gravatar image" />
+    <p><a href="/users/7473/govanus">Govanus</a><br/>
+    <span class="score" title="154 reputation points">154</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Govanus has one accepted answer">3&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/32800/">
+                edited
+                <strong>05 May '14, 19:16</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32800">
+    
+        <a name="32817"></a>
+        <div class="comment" id="comment-32817">
+            <div id="post-32817-score" class="comment-score"></div>
+            <div class="comment-text"><ol>
+<li>
+<p>Don't mark both a tunnel and bridge unless there really is a bridge crossing above a tunnel, which would be exceedingly rare. In nearly all cases it's one or the other, but not both.</p>
+</li>
+<li>
+<p>Don't tag different parts of a bridge with different layer tags just because it's hump-backed. That isn't what the layer tag is for. It's only for determining the relative position of objects (ie. one object passes above another), not for any kind of elevation change. If one bridge is crossing one other way, the entire bridge should have a layer one step higher than the way underneath.</p>
+</li>
+</ol></div>
+            <div class="comment-info" id="comment-32817-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 May '14, 17:01)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="32880"></a>
+        <div class="comment" id="comment-32880">
+            <div id="post-32880-score" class="comment-score"></div>
+            <div class="comment-text"><p>probably fair enough about a basic humpback and levels but when link road weave up and down as they pass it could be tough to keep to one level.
+    I think I had other cases in mind like elevated and undground service that have connections to buildings at that aren't at ground level like in soul corea.</p>
+
+<p>for isea of the weaveing I'll append an image to the main answer.</p></div>
+            <div class="comment-info" id="comment-32880-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '14, 19:07)</span>
+                <a class="comment-user userinfo" href="/users/7473/govanus">Govanus</a>
+                
+            </div>
+        </div>
+    
+        <a name="32881"></a>
+        <div class="comment" id="comment-32881">
+            <div id="post-32881-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/7473/govanus">@Govanus</a> please stop reopening extremly old questions</p></div>
+            <div class="comment-info" id="comment-32881-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '14, 19:30)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32892"></a>
+        <div class="comment" id="comment-32892">
+            <div id="post-32892-score" class="comment-score"></div>
+            <div class="comment-text"><p>It doesn't matter if a link road weaves up and down. The physical shape of the road has no relation to the layer tag. The layer tag only indicates the vertical relationship between two crossing ways. That is, it simply indicates one way passes above or under another. Nothing more, nothing less. If you want to represent the changing physical height of a road, the ele=* tag is what you want.</p></div>
+            <div class="comment-info" id="comment-32892-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 May '14, 00:20)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32800" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32800-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/5934/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Bnk9ciX1DUjUb9HTOar1VuObJEcvjfFT' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5934/bridge-vs-tunnel?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5934/bridge-vs-tunnel?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/layer/"
+            class="tag-link-layer"
+            title="see questions tagged'layer'using tags"
+            rel="tag">layer</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/bridge/"
+            class="tag-link-bridge"
+            title="see questions tagged'bridge'using tags"
+            rel="tag">bridge</a> <span class="tag-number">&#215;71</span><br/>
+        
+        <a href="/tags/level/"
+            class="tag-link-level"
+            title="see questions tagged'level'using tags"
+            rel="tag">level</a> <span class="tag-number">&#215;27</span><br/>
+        
+        <a href="/tags/tunnel/"
+            class="tag-link-tunnel"
+            title="see questions tagged'tunnel'using tags"
+            rel="tag">tunnel</a> <span class="tag-number">&#215;21</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 21, 2011, 9:28 p.m.">21 Jun '11, 21:28</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>27,645 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 29, 2015, 12:29 p.m.">29 Apr '15, 12:29</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/2559/bridge-on-ground-level">Bridge on ground level</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14961/why-are-layers-numbered-1-and-1-and-is-there-no-other-variation">Why are layers numbered -1 and 1 and is there no other variation ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/67645/drain-under-road">drain under road</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17696/rendering-of-layer-color-oversight">Rendering of layer color oversight</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57024/tagging-building-levels-on-a-bridge">Tagging building levels on a bridge</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10289/indicator-for-bikeped-tunnel-or-skyway">indicator for bike/ped tunnel or skyway?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15348/how-to-tag-a-path-thats-below-a-building">How to tag a path thats below a building</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25008/shouldnt-a-man-made-pier-get-layer-1">Shouldnt a man-made pier get layer 1 ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15663/how-to-tag-a-road-digged-in-under-a-road-that-has-been-lifted">How to tag a road (digged in) under a road that has been lifted ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/71778/tunnelbuilding_passage-in-the-map-brandt">tunnel=building_passage in the map, &quot;Brandt&quot;</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

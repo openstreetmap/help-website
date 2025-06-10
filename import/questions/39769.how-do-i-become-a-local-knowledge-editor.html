@@ -1,0 +1,852 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I become a local knowledge editor - OSM Help</title>
+        <meta name="description" content="I was looking around OSM and found an incorrect location for our city library, it is off about 4 blocks. My wife and I travel every weekend taking photos and I am interested in helping with map error corrections." />
+        <meta name="keywords" content="errors" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/39769/how-do-i-become-a-local-knowledge-editor" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/39769/how-do-i-become-a-local-knowledge-editor?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='MgVVkGuh13t4ewzlQ4xGwCxjt9QGAWfQ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/39769/how-do-i-become-a-local-knowledge-editor">How do I become a local knowledge editor</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-39769-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39769/up/" rel="nofollow"> </a>
+<div id="post-39769-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-39769-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39769/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/39769/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I was looking around OSM and found an incorrect location for our city library, it is off about 4 blocks. My wife and I travel every weekend taking photos and I am interested in helping with map error corrections.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/errors/" class="post-tag tag-link-errors"
+                                        title="see questions tagged 'errors'" rel="tag">errors</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Dec '14, 03:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/195bebc2b01b7dbb7a2de3efa8caa509?s=32&amp;d=identicon&amp;r=g" alt="earthshaker77's gravatar image" />
+    <p><a href="/users/10211/earthshaker77">earthshaker77</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="earthshaker77 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-39769">
+    
+        <a name="39770"></a>
+        <div class="comment" id="comment-39770">
+            <div id="post-39770-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry, but I don't understand your question. Can you plz. try to summarize it in one sentence? Is it just about contribution?</p></div>
+            <div class="comment-info" id="comment-39770-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '14, 07:26)</span>
+                <a class="comment-user userinfo" href="/users/4984/iii">iii</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39769" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39769-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/39769/how-do-i-become-a-local-knowledge-editor?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/39769/how-do-i-become-a-local-knowledge-editor?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/39769/how-do-i-become-a-local-knowledge-editor?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/39769/how-do-i-become-a-local-knowledge-editor?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="39771"></a>
+                    <div id="answer-container-39771" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-39771-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39771/up/" rel="nofollow"> </a>
+<div id="post-39771-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-39771-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39771/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are many ways to contribute to OSM, the best is simply to add the information and fix problems yourself.</p>
+<p>See <a href="http://www.openstreetmap.org/fixthemap">http://www.openstreetmap.org/fixthemap</a></p>
+<p>The first two chapters of <a href="http://learnosm.org/en/beginner/start-osm/">http://learnosm.org/en/beginner/start-osm/</a> give a good instruction to the very basics, please be sure to watch the introduction to the iD editor video.</p>
+<p>If you take lots of photographs you should investigate if you can add geographic coordinates to them, either directly with the cameras or by recording the positions with a seperate device. However, at least for me, there is a big difference between taking a snapshot, typically with a mobile phone, for surveying purposes and a photograph that I would want to show somebody else.</p>
+<p>A further possibility is to contribute to mapillary.com the photographs and sequences stored there are available to OSM contributors for improving our map data.</p>
+<p>The best way to locate mappers nearby is <a href="http://resultmaps.neis-one.org/oooc?zoom=10&amp;lat=40.92312&amp;lon=-100.16213&amp;layers=B00TFFFFFT">http://resultmaps.neis-one.org/oooc?zoom=10&amp;lat=40.92312&amp;lon=-100.16213&amp;layers=B00TFFFFFT</a> however as you will see, you are fairly on your own in Nebraska. You should in any case subscribe to the US mailing list <a href="https://lists.openstreetmap.org/listinfo/talk-us">https://lists.openstreetmap.org/listinfo/talk-us</a></p>
+<p>US OpenStreetMap peculiarity: the street network in the US was imported from a public data source "TIGER" very early on. Unluckily the in many places the net result was not particularly good, the good news is that while a lot of Gothenburg seems to be untouched TIGER data, it does seems to be of reasonable quality. Likely however there are lots of details (shops, facitilies, buildings, addresses, turn restrictions) that are missing and/or out of date.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/39771/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Dec '14, 09:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/39771/">
+                edited
+                <strong>22 Dec '14, 13:16</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-39771">
+    
+        <a name="39782"></a>
+        <div class="comment" id="comment-39782">
+            <div id="post-39782-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi take a look here <a href="https://www.openstreetmap.org/user/earthshaker77">https://www.openstreetmap.org/user/earthshaker77</a> and touch your own name in the right upper corner, beneath profile has a menu whos around me. Enjoy.</p></div>
+            <div class="comment-info" id="comment-39782-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '14, 13:09)</span>
+                <a class="comment-user userinfo" href="/users/3443/hendrikklaas">Hendrikklaas</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39771" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39771-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="39773"></a>
+                    <div id="answer-container-39773" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-39773-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39773/up/" rel="nofollow"> </a>
+<div id="post-39773-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-39773-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39773/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi. Thanks for your interest in OSM. We welcome your contributions. There is no offical standards or offical local knowledge experts. People just add to the map and improve it as they see fit. If there's something wrong on the map, then jump right in and start fixing it! As mentioned there are a few good resources to learn how to start: <a href="http://www.openstreetmap.org/fixthemap">http://www.openstreetmap.org/fixthemap</a> and <a href="http://learnosm.org/en/beginner/start-osm/">http://learnosm.org/en/beginner/start-osm/</a> and <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> . Feel free to ask questions here if you get stuck. Try to see if there are any other OSM users in your area/city/town/county/country. Look at the wiki for lists of local groups. They might help.</p>
+<p>Happy mapping. :)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/39773/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Dec '14, 09:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/16e12e337f6edc3750681492656097ed?s=32&amp;d=identicon&amp;r=g" alt="rorym's gravatar image" />
+    <p><a href="/users/30/rorym">rorym</a><br/>
+    <span class="score" title="5358 reputation points"><span class="">5.4k</span></span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="49 badges"><span class="silver">&#9679;</span><span class="badgecount">49</span></span><span title="100 badges"><span class="bronze">&#9679;</span><span class="badgecount">100</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rorym has 18 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-39773">
+    
+        <a name="39778"></a>
+        <div class="comment" id="comment-39778">
+            <div id="post-39778-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks, I would like to get in touch with other local people, but I haven't found the list yet.</p></div>
+            <div class="comment-info" id="comment-39778-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '14, 12:07)</span>
+                <a class="comment-user userinfo" href="/users/10211/earthshaker77">earthshaker77</a>
+                
+            </div>
+        </div>
+    
+        <a name="39779"></a>
+        <div class="comment" id="comment-39779">
+            <div id="post-39779-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hi <a href="http://help.openstreetmap.org/users/10211/earthshaker77">@earthshaker77</a>, Where abouts do you live? I could help you find the right list. There's also a web forum <a href="http://forum.openstreetmap.org/">http://forum.openstreetmap.org/</a> ? If you set your "home location" in your OSM profile, it will be able to show you "nearby users". You can then message them, and ask them</p></div>
+            <div class="comment-info" id="comment-39779-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '14, 12:21)</span>
+                <a class="comment-user userinfo" href="/users/30/rorym">rorym</a>
+                
+            </div>
+        </div>
+    
+        <a name="39780"></a>
+        <div class="comment" id="comment-39780">
+            <div id="post-39780-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Gothenburg, Nebraska, USA</p></div>
+            <div class="comment-info" id="comment-39780-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '14, 12:36)</span>
+                <a class="comment-user userinfo" href="/users/10211/earthshaker77">earthshaker77</a>
+                
+            </div>
+        </div>
+    
+        <a name="39781"></a>
+        <div class="comment" id="comment-39781">
+            <div id="post-39781-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've added some more stuff to my answer.</p></div>
+            <div class="comment-info" id="comment-39781-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '14, 13:03)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="39783"></a>
+        <div class="comment" id="comment-39783">
+            <div id="post-39783-score" class="comment-score"></div>
+            <div class="comment-text"><p>You could try the OpenStreetMap US group <a href="http://openstreetmap.us/community/">http://openstreetmap.us/community/</a> they list several ways to get in touch with the local community, mailing list, IRC, Facebook, Twitter, meetups etc.</p></div>
+            <div class="comment-info" id="comment-39783-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '14, 13:09)</span>
+                <a class="comment-user userinfo" href="/users/30/rorym">rorym</a>
+                
+            </div>
+        </div>
+    
+        <a name="39796"></a>
+        <div class="comment not_top_scorer" id="comment-39796">
+            <div id="post-39796-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can also view this map of contributors in the area (<a href="http://resultmaps.neis-one.org/oooc?zoom=9&amp;lat=40.90919&amp;lon=-99.77139&amp;layers=B00TFFFFFT),">http://resultmaps.neis-one.org/oooc?zoom=9&amp;lat=40.90919&amp;lon=-99.77139&amp;layers=B00TFFFFFT),</a> and try sending a message to them through OSM. Might want to check how recent their edits are, though!</p></div>
+            <div class="comment-info" id="comment-39796-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '14, 16:19)</span>
+                <a class="comment-user userinfo" href="/users/595/neuhausr">neuhausr</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39773" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39773-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/39769/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='MgVVkGuh13t4ewzlQ4xGwCxjt9QGAWfQ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39769/how-do-i-become-a-local-knowledge-editor?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39769/how-do-i-become-a-local-knowledge-editor?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/errors/"
+            class="tag-link-errors"
+            title="see questions tagged'errors'using tags"
+            rel="tag">errors</a> <span class="tag-number">&#215;45</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 22, 2014, 3:45 a.m.">22 Dec '14, 03:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,119 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 22, 2014, 4:19 p.m.">22 Dec '14, 16:19</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/678/problem-installing-gosmore">Problem installing gosmore?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">What are the most common mapping mistakes that other users make?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1126/correcting-other-peoples-mapping">Correcting other people&#39;s mapping</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1695/potlatch-2-error-on-upload">Potlatch 2 Error on upload</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1771/fixing-the-error-of-not-joining-ways">Fixing the error of NOT joining ways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1941/very-incorrect-road-names-how-to-fix">VERY incorrect road names - how to fix?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5241/how-to-add-a-road-name-and-how-to-amend-a-road-name">How to add a road name and how to amend a road name</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5356/who-edited-my-map-corrections-and-made-it-all-wrong-again">who edited my map corrections and made it all wrong again</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5558/correcting-map-errors">Correcting map errors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/644/where-is-the-site-with-a-list-of-openstreetmap-errors">Where is the site with a list of OpenStreetMap errors?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

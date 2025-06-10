@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to merge maps that were developed independently? - OSM Help</title>
+        <meta name="description" content="Hello. Some time ago I have downloaded pbf map (MAP-1) from geofabrik. Since then I have edited this map for my own purposes (mostly added some ways). Now I have downloaded a new map (MAP-2) of a different region and I would like to merge those maps (to further edit them locally).  The problem is, t..." />
+        <meta name="keywords" content="conflicts,map,id,osmosis,merge" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/69103/how-to-merge-maps-that-were-developed-independently" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/69103/how-to-merge-maps-that-were-developed-independently?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FOxzUVrorluTu4OxdOrEsCFrT2NSSyjG' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/69103/how-to-merge-maps-that-were-developed-independently">How to merge maps that were developed independently?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-69103-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69103/up/" rel="nofollow"> </a>
+<div id="post-69103-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-69103-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69103/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/69103/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello.</p>
+<p>Some time ago I have downloaded pbf map (MAP-1) from geofabrik. Since then I have edited this map for my own purposes (mostly added some ways). Now I have downloaded a new map (MAP-2) of a different region and I would like to merge those maps (to further edit them locally). <br>
+The problem is, that after using osmosis merge, some of the ways that I have edited in MAP-1 suddenly lead to MAP-2 and back. </p>
+<p>What I think happened is that there are node ID conflicts because both maps have a common source, but were later developed independently - I have added some nodes, they got own IDs and official osm MAP-2 was edited at the same time, and nodes with the same IDs were created but in different places. That way depending on the conflict resolution method in osmosis merge command, either the way on the MAP-2 leads to the MAP-1 or vice versa.</p>
+<p>Solutions that I have thought about:</p>
+<ol>
+<li>
+<p>Extract changes done by me (either by finding author, or using timestamp) from local MAP-1, download new MAP-1-new, merge MAP-1-new with MAP-2 and add the changes back</p>
+</li>
+<li>
+<p>Increase IDs of objects that were created by me by a huge number, so that no conflict occurs</p>
+</li>
+</ol>
+<p>Extra suggestions are most welcome.</p>
+<p>I have no idea how to implement any of the solutions nor if they are correct. I will be grateful for any hints.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/conflicts/" class="post-tag tag-link-conflicts"
+                                        title="see questions tagged 'conflicts'" rel="tag">conflicts</a>
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                                    <a href="/tags/id/" class="post-tag tag-link-id"
+                                        title="see questions tagged 'id'" rel="tag">id</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                                    <a href="/tags/merge/" class="post-tag tag-link-merge"
+                                        title="see questions tagged 'merge'" rel="tag">merge</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 May '19, 13:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/30591e74ea983d1d5f193b588868c497?s=32&amp;d=identicon&amp;r=g" alt="JacekDAC's gravatar image" />
+    <p><a href="/users/16638/jacekdac">JacekDAC</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JacekDAC has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-69103">
+    
+        <a name="69106"></a>
+        <div class="comment" id="comment-69106">
+            <div id="post-69106-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are the ways that you have added in some way unsuitable for inclusion in OpenStreetMap? </p>
+
+<p>I think that the strategy used by some of the editing software is to use negative IDs for items that hanve't yet been uploaded to avoid conflicts, but my experience is restricted to user-side stuff, not anything on the backend.</p></div>
+            <div class="comment-info" id="comment-69106-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 May '19, 16:09)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+        <a name="69109"></a>
+        <div class="comment" id="comment-69109">
+            <div id="post-69109-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, the changes are not suitable to be included in OpenStreetMap.</p>
+
+<p>Unfortunately, this is not a case. I run my own OpenStreetMap server and I have published the data there - this means that IDs are not negative. </p>
+
+<p>I think that osmosis --read-apidb-change intervalBegin would be suitable but I need to read file not database. I need something like --read-pbf-change. Of filter by the author</p></div>
+            <div class="comment-info" id="comment-69109-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '19, 08:07)</span>
+                <a class="comment-user userinfo" href="/users/16638/jacekdac">JacekDAC</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-69103" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69103-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/69103/how-to-merge-maps-that-were-developed-independently?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/69103/how-to-merge-maps-that-were-developed-independently?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/69103/how-to-merge-maps-that-were-developed-independently?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/69103/how-to-merge-maps-that-were-developed-independently?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="69111"></a>
+                    <div id="answer-container-69111" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-69111-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/69111/up/" rel="nofollow"> </a>
+<div id="post-69111-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-69111-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/69111/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I would simply renumber one of the datasets see <a href="https://docs.osmcode.org/osmium/latest/osmium-renumber.html">https://docs.osmcode.org/osmium/latest/osmium-renumber.html</a> (starting with ids that are guaranteed to not conflict with what you have used).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/69111/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 May '19, 12:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/69111/">
+                edited
+                <strong>07 May '19, 12:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-69111">
+    
+</div>
+<div id="comment-tools-69111" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-69111-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/69103/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FOxzUVrorluTu4OxdOrEsCFrT2NSSyjG' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69103/how-to-merge-maps-that-were-developed-independently?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/69103/how-to-merge-maps-that-were-developed-independently?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/id/"
+            class="tag-link-id"
+            title="see questions tagged'id'using tags"
+            rel="tag">id</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/merge/"
+            class="tag-link-merge"
+            title="see questions tagged'merge'using tags"
+            rel="tag">merge</a> <span class="tag-number">&#215;41</span><br/>
+        
+        <a href="/tags/conflicts/"
+            class="tag-link-conflicts"
+            title="see questions tagged'conflicts'using tags"
+            rel="tag">conflicts</a> <span class="tag-number">&#215;27</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 6, 2019, 1:33 p.m.">06 May '19, 13:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,912 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 7, 2019, 12:04 p.m.">07 May '19, 12:04</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/72735/merge-with-osmosis-problem-with-missing-version-attribute">Merge with Osmosis: problem with missing version attribute</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77936/problem-with-wrong-calculated-boundary-box">Problem with wrong calculated boundary box</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19904/merging-osm-files-with-osmosis-and-import-to-postgres-with-osm2pgsql">Merging OSM files with OSMOSIS and import to Postgres with OSM2PGSQL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">How do I find a way by ID in iD to fix &quot;version mismatch&quot; and then save my edit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73414/russian-states-are-missing-in-the-whole-asia-map">Russian states are missing in the whole asia map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/77290/how-to-extract-only-tags-from-db-without-rest-entities">How to extract only tags from DB without rest entities</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12140/generate-transport-map-using-osmosis-help-needed">Generate Transport Map using Osmosis - Help needed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12469/osmosis-merge-issue-pipeline-entities-are-not-sorted-or-contain-multiple-versions">Osmosis - merge issue (Pipeline entities are not sorted or contain multiple versions)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24838/diffpatch-osm-files-using-foreign-key">Diff/patch .osm files using foreign key</a>
+        </p>
+        
+        <p>
+            <a href="/questions/80093/how-to-get-id-of-all-cities-provinces-in-a-country">How to get id of all cities (provinces) in a country ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

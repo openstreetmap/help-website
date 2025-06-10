@@ -1,0 +1,830 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Rendering of Chinese place names show as messy code - OSM Help</title>
+        <meta name="description" content="I have set up the rails port on ubuntu14.04, and then I build my local tile server under the instruction of &quot;Manually building a tile server (14.04)&quot;. And I have changed the OSM map to my local tile server. I just import the beijing-china.osm.pbf data to the gis database, everything works well, but ..." />
+        <meta name="keywords" content="renderd,postgres,tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/51467/rendering-of-chinese-place-names-show-as-messy-code" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/51467/rendering-of-chinese-place-names-show-as-messy-code?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='fnmu5ctxu9DfL29Zox1ZJFuhtqK0p9Vl' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/51467/rendering-of-chinese-place-names-show-as-messy-code">Rendering of Chinese place names show as messy code</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-51467-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51467/up/" rel="nofollow"> </a>
+<div id="post-51467-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-51467-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51467/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/51467/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have set up the rails port on ubuntu14.04, and then I build my local tile server under the instruction of "<a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">Manually building a tile server (14.04)</a>". And I have changed the OSM map to my local tile server. I just import the beijing-china.osm.pbf data to the gis database, everything works well, but when I view the <a href="http://localhost:3000">http://localhost:3000</a> website, I search beijing and the map works well, but rhe names of Chinese places show as messy code, what should I do?
+<img src="http://help.openstreetmap.org/upfiles/map1.png" alt="alt text"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/renderd/" class="post-tag tag-link-renderd"
+                                        title="see questions tagged 'renderd'" rel="tag">renderd</a>
+                                
+                                    <a href="/tags/postgres/" class="post-tag tag-link-postgres"
+                                        title="see questions tagged 'postgres'" rel="tag">postgres</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Aug '16, 05:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3522efac952d508cf251cd2590e68ca5?s=32&amp;d=identicon&amp;r=g" alt="yuyy's gravatar image" />
+    <p><a href="/users/12524/yuyy">yuyy</a><br/>
+    <span class="score" title="236 reputation points">236</span><span title="22 badges"><span class="badge1">&#9679;</span><span class="badgecount">22</span></span><span title="24 badges"><span class="silver">&#9679;</span><span class="badgecount">24</span></span><span title="31 badges"><span class="bronze">&#9679;</span><span class="badgecount">31</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="yuyy has one accepted answer">20&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-51467">
+    
+</div>
+<div id="comment-tools-51467" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51467-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/51467/rendering-of-chinese-place-names-show-as-messy-code?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/51467/rendering-of-chinese-place-names-show-as-messy-code?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/51467/rendering-of-chinese-place-names-show-as-messy-code?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/51467/rendering-of-chinese-place-names-show-as-messy-code?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="51469"></a>
+                    <div id="answer-container-51469" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51469-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51469/up/" rel="nofollow"> </a>
+<div id="post-51469-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-51469-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51469/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>That looks as if you are missing fonts, while not the same style the information on fonts here <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md">https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md</a> may be halpful.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51469/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Aug '16, 07:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51469">
+    
+        <a name="51475"></a>
+        <div class="comment" id="comment-51475">
+            <div id="post-51475-score" class="comment-score"></div>
+            <div class="comment-text"><p>How can I add fonts? I run the command sudo apt-get install fonts-dejavu-core fonts-droid ttf-unifont \ fonts-sipa-arundina fonts-sil-padauk fonts-khmeros \ fonts-beng-extra fonts-gargi fonts-taml-tscu fonts-tibetan-machine as the install.md said, but it doesn't work, I don't how to add the new install fonts to the stylesheet. Can you express more clearly? I am not familiar with it, thanks.</p></div>
+            <div class="comment-info" id="comment-51475-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '16, 09:23)</span>
+                <a class="comment-user userinfo" href="/users/12524/yuyy">yuyy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51469" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51469-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="51471"></a>
+                    <div id="answer-container-51471" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51471-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51471/up/" rel="nofollow"> </a>
+<div id="post-51471-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-51471-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51471/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You are missing fonts for chinese characters. I think that font style is <a href="https://github.com/mapbox/osm-bright">OSM Bright</a>, which had this problem for a long time. There is now a <a href="https://github.com/mapbox/osm-bright/pull/101">merged pull request</a> which fixes this problem. So if you downloaded it recently it <em>should</em> work. If not try to redownload.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51471/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Aug '16, 08:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/16e12e337f6edc3750681492656097ed?s=32&amp;d=identicon&amp;r=g" alt="rorym's gravatar image" />
+    <p><a href="/users/30/rorym">rorym</a><br/>
+    <span class="score" title="5358 reputation points"><span class="">5.4k</span></span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="49 badges"><span class="silver">&#9679;</span><span class="badgecount">49</span></span><span title="100 badges"><span class="bronze">&#9679;</span><span class="badgecount">100</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rorym has 18 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51471">
+    
+        <a name="51477"></a>
+        <div class="comment" id="comment-51477">
+            <div id="post-51477-score" class="comment-score"></div>
+            <div class="comment-text"><p>I changed the /usr/local/etc/renderd.conf file, I replace the font_dir=/usr/share/fonts/truetype/ttf-dejavu line with font_dir=/usr/share/fonts/truetype/unifont, then the problem solved. But the pagesite you provide said that unifont does, but it also shows a character for the left-to-right mark, and hence unsuitable. And it said that I should add in the fonts that the <a href="https://github.com/gravitystorm/openstreetmap-carto/">https://github.com/gravitystorm/openstreetmap-carto/</a> project uses, but I don't konw how to add the new fonts, can you help me,thanks.</p></div>
+            <div class="comment-info" id="comment-51477-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '16, 10:25)</span>
+                <a class="comment-user userinfo" href="/users/12524/yuyy">yuyy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51471" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51471-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="51474"></a>
+                    <div id="answer-container-51474" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51474-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51474/up/" rel="nofollow"> </a>
+<div id="post-51474-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-51474-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51474/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I run the command 
+<strong>sudo apt-get install fonts-dejavu-core fonts-droid ttf-unifont \
+  fonts-sipa-arundina fonts-sil-padauk fonts-khmeros \
+  fonts-beng-extra fonts-gargi fonts-taml-tscu fonts-tibetan-machine</strong>
+as the install.md said in the  <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md">https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md</a> .But I don't know where did the font download, and the problem do not solve. I then change the /usr/local/etc/renderd.conf file, I replace the <strong>font_dir=/usr/share/fonts/truetype/ttf-dejavu</strong> line with <strong>font_dir=/usr/share/fonts/truetype/unifont</strong>, then the problem solved, I don't if the method is correct and would not generate other problems in the future.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51474/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Aug '16, 09:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3522efac952d508cf251cd2590e68ca5?s=32&amp;d=identicon&amp;r=g" alt="yuyy's gravatar image" />
+    <p><a href="/users/12524/yuyy">yuyy</a><br/>
+    <span class="score" title="236 reputation points">236</span><span title="22 badges"><span class="badge1">&#9679;</span><span class="badgecount">22</span></span><span title="24 badges"><span class="silver">&#9679;</span><span class="badgecount">24</span></span><span title="31 badges"><span class="bronze">&#9679;</span><span class="badgecount">31</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="yuyy has one accepted answer">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51474">
+    
+</div>
+<div id="comment-tools-51474" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51474-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/51467/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='fnmu5ctxu9DfL29Zox1ZJFuhtqK0p9Vl' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51467/rendering-of-chinese-place-names-show-as-messy-code?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51467/rendering-of-chinese-place-names-show-as-messy-code?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/renderd/"
+            class="tag-link-renderd"
+            title="see questions tagged'renderd'using tags"
+            rel="tag">renderd</a> <span class="tag-number">&#215;105</span><br/>
+        
+        <a href="/tags/postgres/"
+            class="tag-link-postgres"
+            title="see questions tagged'postgres'using tags"
+            rel="tag">postgres</a> <span class="tag-number">&#215;34</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 17, 2016, 5:14 a.m.">17 Aug '16, 05:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,993 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 17, 2016, 10:25 a.m.">17 Aug '16, 10:25</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/52185/what-is-the-tile-server-the-id-editor-used-to-renderd">What is the tile server the iD editor used to renderd?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59488/running-renderd-for-the-first-time">Running renderd for the first time</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35317/local-tile-server-from-packages-404-when-displaying-tiles">Local Tile Server from Packages: 404 when displaying tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43816/switch2osm-tile-server-404ing">switch2osm tile server 404ing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53854/the-renderd_expire-command-update-wrong-tiles">The renderd_expire command update wrong tiles.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57052/segmentation-fault-on-a-command-sudo-u-taras-renderd-f-c-usrlocaletcrenderdconf">Segmentation fault on a command &quot;sudo -u taras renderd -f -c /usr/local/etc/renderd.conf&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22201/how-to-install-renderd-as-a-service">[closed] How to install renderd as a service</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24290/local-tile-server-extremely-slow-rendering">Local Tile Server - EXTREMELY slow rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37611/renderd-doesnt-update-tiles">Renderd doesn&#39;t update tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62519/renderd-segmentation-fault">renderd segmentation fault</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

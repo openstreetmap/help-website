@@ -1,0 +1,753 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How can I get OSM data to work on my Garmin Nuvi 260? - OSM Help</title>
+        <meta name="description" content="Hi, I&#39;m trying to get OSM data loaded onto my Garmin Nuvi 260. I downloaded data from http://www.osmmaps.com/maps/united-states , extracted it, and put the contents on a freshly FAT32 formatted 8GB microSD card. The contents are as follows (/Volumes/NUVI is the mountpoint on my machine, &quot;Garmin&quot; is ..." />
+        <meta name="keywords" content="260,nuvi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/28592/how-can-i-get-osm-data-to-work-on-my-garmin-nuvi-260" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/28592/how-can-i-get-osm-data-to-work-on-my-garmin-nuvi-260?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='yVLkXNuFaLvielwqaZjoaFmNs2UgE258' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/28592/how-can-i-get-osm-data-to-work-on-my-garmin-nuvi-260">How can I get OSM data to work on my Garmin Nuvi 260?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-28592-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28592/up/" rel="nofollow"> </a>
+<div id="post-28592-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-28592-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28592/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/28592/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I'm trying to get OSM data loaded onto my Garmin Nuvi 260. I downloaded data from <a href="http://www.osmmaps.com/maps/united-states">http://www.osmmaps.com/maps/united-states</a> , extracted it, and put the contents on a freshly FAT32 formatted 8GB microSD card. The contents are as follows (/Volumes/NUVI is the mountpoint on my machine, "Garmin" is in the root of the SD card):</p>
+<pre><code>/Volumes/NUVI
+/Volumes/NUVI/._.Trashes
+/Volumes/NUVI/.Trashes
+/Volumes/NUVI/.fseventsd
+/Volumes/NUVI/.fseventsd/fseventsd-uuid
+/Volumes/NUVI/Garmin
+/Volumes/NUVI/Garmin/gmapsupp.img   &lt;--- the 3.3GB file from OSM
+/Volumes/NUVI/Garmin/._gmapsupp.img
+</code></pre>
+<p>When I insert the card into my Nuvi 260 and power it on, I see a green progress bar on the boot screen of the Nuvi (which I don't see under normal operation, eg without the SD card). After powering on, which takes ~30 seconds, I open the maps/map info options, and unfortunately do not see the OSM data; I only see the stock "City Navigator North America NT 2009".</p>
+<p>Any suggestions on things I might have missed along the way?</p>
+<p>Thanks so much!</p>
+<p>nuvi 260, Software Version 2.80</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/260/" class="post-tag tag-link-260"
+                                        title="see questions tagged '260'" rel="tag">260</a>
+                                
+                                    <a href="/tags/nuvi/" class="post-tag tag-link-nuvi"
+                                        title="see questions tagged 'nuvi'" rel="tag">nuvi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Nov '13, 22:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a3d6887041bc564a5d60cdc811ae4ef9?s=32&amp;d=identicon&amp;r=g" alt="jedediah's gravatar image" />
+    <p><a href="/users/7906/jedediah">jedediah</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jedediah has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-28592">
+    
+        <a name="28594"></a>
+        <div class="comment" id="comment-28594">
+            <div id="post-28594-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't own a Garmin, but maybe you need to work with a '/map/gsupmap?.img' as suggested for Nüvi 2350? <a href="http://wiki.openstreetmap.org/wiki/Garmin#N.C3.BCvi_series">http://wiki.openstreetmap.org/wiki/Garmin#N.C3.BCvi_series</a></p></div>
+            <div class="comment-info" id="comment-28594-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '13, 08:53)</span>
+                <a class="comment-user userinfo" href="/users/4984/iii">iii</a>
+                
+            </div>
+        </div>
+    
+        <a name="28597"></a>
+        <div class="comment" id="comment-28597">
+            <div id="post-28597-score" class="comment-score"></div>
+            <div class="comment-text"><p>Garmin/gmapsupp.img should be ok, no other names are allowed as far as I know, 
+btw what is this file ._gmapsupp.img doing there?</p></div>
+            <div class="comment-info" id="comment-28597-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '13, 11:18)</span>
+                <a class="comment-user userinfo" href="/users/1077/ligfietser">ligfietser</a>
+                
+            </div>
+        </div>
+    
+        <a name="28605"></a>
+        <div class="comment" id="comment-28605">
+            <div id="post-28605-score" class="comment-score">1</div>
+            <div class="comment-text"><p>(from reading the question, the questioner has already done this bit, but for the benefit of anyone else coming here):</p>
+
+<p>After installing a new map, you'll probably need to turn it on.</p>
+
+<p>On the Nuvi 1300 in front of me, I have to select "tools / settings / map / info" and ensure that the box next to the map that you want to use is ticked.</p></div>
+            <div class="comment-info" id="comment-28605-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '13, 15:45)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-28592" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28592-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/28592/how-can-i-get-osm-data-to-work-on-my-garmin-nuvi-260?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/28592/how-can-i-get-osm-data-to-work-on-my-garmin-nuvi-260?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/28592/how-can-i-get-osm-data-to-work-on-my-garmin-nuvi-260?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/28592/how-can-i-get-osm-data-to-work-on-my-garmin-nuvi-260?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="28596"></a>
+                    <div id="answer-container-28596" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-28596-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28596/up/" rel="nofollow"> </a>
+<div id="post-28596-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-28596-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28596/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="jedediah has selected this answer as the correct answer"
+        href="/accept_answer/28596/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Maybe your nüvi wont accept large SDHC cards (my 310 only accepts cards with max 2 Gb capacity)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/28596/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Nov '13, 11:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0f5ffc3756c4662b9dfad80b7665ac6c?s=32&amp;d=identicon&amp;r=g" alt="ligfietser's gravatar image" />
+    <p><a href="/users/1077/ligfietser">ligfietser</a><br/>
+    <span class="score" title="2894 reputation points"><span class="">2.9k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="27 badges"><span class="silver">&#9679;</span><span class="badgecount">27</span></span><span title="57 badges"><span class="bronze">&#9679;</span><span class="badgecount">57</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ligfietser has 8 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/28596/">
+                edited
+                <strong>29 Nov '13, 11:16</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-28596">
+    
+        <a name="28598"></a>
+        <div class="comment" id="comment-28598">
+            <div id="post-28598-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Btw, latest firmware is v. 5.10 <a href="http://www8.garmin.com/support/download_details.jsp?id=3665">http://www8.garmin.com/support/download_details.jsp?id=3665</a></p></div>
+            <div class="comment-info" id="comment-28598-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '13, 12:09)</span>
+                <a class="comment-user userinfo" href="/users/1077/ligfietser">ligfietser</a>
+                
+            </div>
+        </div>
+    
+        <a name="28606"></a>
+        <div class="comment" id="comment-28606">
+            <div id="post-28606-score" class="comment-score"></div>
+            <div class="comment-text"><p>That'd be my guess as well.  See also:</p>
+
+<p><a href="https://groups.google.com/forum/#!topic/alt.satellite.gps.garmin/_LIdi5fXDpA">https://groups.google.com/forum/#!topic/alt.satellite.gps.garmin/_LIdi5fXDpA</a></p></div>
+            <div class="comment-info" id="comment-28606-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '13, 15:53)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="29181"></a>
+        <div class="comment" id="comment-29181">
+            <div id="post-29181-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Thanks!</p>
+
+<p>I ended up using <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> to build a map that was relevant to my area and fit within 2GB.</p></div>
+            <div class="comment-info" id="comment-29181-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '13, 03:55)</span>
+                <a class="comment-user userinfo" href="/users/7906/jedediah">jedediah</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-28596" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28596-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/28592/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='yVLkXNuFaLvielwqaZjoaFmNs2UgE258' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28592/how-can-i-get-osm-data-to-work-on-my-garmin-nuvi-260?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28592/how-can-i-get-osm-data-to-work-on-my-garmin-nuvi-260?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nuvi/"
+            class="tag-link-nuvi"
+            title="see questions tagged'nuvi'using tags"
+            rel="tag">nuvi</a> <span class="tag-number">&#215;28</span><br/>
+        
+        <a href="/tags/260/"
+            class="tag-link-260"
+            title="see questions tagged'260'using tags"
+            rel="tag">260</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 28, 2013, 10:57 p.m.">28 Nov '13, 22:57</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,663 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 19, 2013, 3:55 a.m.">19 Dec '13, 03:55</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/4748/nuvi-1300-problem">nuvi 1300 problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded">What should I do with a gmapsupp.img that I downloaded?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5393/garmin-store-maps-on-nuvi-not-sd-card">Garmin: Store maps on Nuvi, not SD Card</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5803/import-the-favorites-current-file-from-garmin-nuvi-to-osm">Import the Favorites (current file) from Garmin Nuvi to OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12666/osm-on-garmin-nuvi-205">OSM on Garmin Nuvi 205</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15681/cant-use-osm-maps-on-nuvi-500-what-am-i-doing-wrong">Can&#39;t use OSM maps on Nuvi 500-What am I doing wrong?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16351/garmin-nuvi-1350-and-uk-routing">Garmin nuvi 1350 and UK routing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16854/which-files-to-delete-from-my-nuvi-to-make-room">Which files to delete from my Nuvi to make room?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17258/new-map-not-displayed-on-garmin">New map not displayed on Garmin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4005/garmin-260-nuvi-doesnt-seem-to-read-map">Garmin 260 Nuvi doesn&#39;t seem to read map</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

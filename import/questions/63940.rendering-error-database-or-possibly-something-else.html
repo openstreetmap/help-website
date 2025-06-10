@@ -1,0 +1,822 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Rendering error: Database or possibly something else - OSM Help</title>
+        <meta name="description" content="Still using Unbuntu 18.04 and used the switch2osm guide along with some of @SomeoneElse&#39;s documentation.  Somewhere in the process of, in this order, cleaning up permissions, incorporating automatic updates, reloading the database, and pre-rendering some tiles, I seem to have broken the rendering pr..." />
+        <meta name="keywords" content="osm2pgsql,postgis,mod_tile" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/63940/rendering-error-database-or-possibly-something-else" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/63940/rendering-error-database-or-possibly-something-else?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='3JUpqoCQThfQWoRcZJdvMwFzOCZoTgUy' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/63940/rendering-error-database-or-possibly-something-else">Rendering error: Database or possibly something else</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-63940-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63940/up/" rel="nofollow"> </a>
+<div id="post-63940-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-63940-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63940/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/63940/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Still using Unbuntu 18.04 and used the switch2osm guide along with some of <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>'s documentation. </p>
+<p>Somewhere in the process of, in this order, cleaning up permissions, incorporating automatic updates, reloading the database, and pre-rendering some tiles,  I seem to have broken the rendering process.</p>
+<p><code>render_list</code> works as I have pre-rendered, and they show up in the browser, z0 through z10. However, tiles not yet in existence fail to load. </p>
+<p>Returned <code>renderd</code> to a manual run, and found it is now spitting an error: </p>
+<pre><code>An error occurred while loading the map layer 'ajt': Postgis Plugin: ERROR:  column reference "surface" is ambiguous...encountered during parsing of layer 'turning-circle-fill' in Layer at line 22178 of '/home/tileserver/src/openstreetmap-carto/mapnik.xml'
+</code></pre>
+<p>My initial thinking was that I didn't get a good database (<code>osm2pgsql</code>) load this time, but I didn't see any errors in the process and I was able to use <code>render_list</code> to generate a bunch of tiles. </p>
+<p>Thoughts? Is this likely a database issue? Or something with <code>mod_tile</code>? Or is the real hint related to <code>Postgis</code>? Or, something I haven't thought of?</p>
+<p>Thanks!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                                    <a href="/tags/postgis/" class="post-tag tag-link-postgis"
+                                        title="see questions tagged 'postgis'" rel="tag">postgis</a>
+                                
+                                    <a href="/tags/mod_tile/" class="post-tag tag-link-mod_tile"
+                                        title="see questions tagged 'mod_tile'" rel="tag">mod_tile</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Jun '18, 16:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9d2fa479c7f7984fd8fd435b2badbc4d?s=32&amp;d=identicon&amp;r=g" alt="tim_rohrer's gravatar image" />
+    <p><a href="/users/15159/tim_rohrer">tim_rohrer</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tim_rohrer has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-63940">
+    
+</div>
+<div id="comment-tools-63940" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63940-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/63940/rendering-error-database-or-possibly-something-else?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/63940/rendering-error-database-or-possibly-something-else?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/63940/rendering-error-database-or-possibly-something-else?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/63940/rendering-error-database-or-possibly-something-else?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="63942"></a>
+                    <div id="answer-container-63942" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-63942-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63942/up/" rel="nofollow"> </a>
+<div id="post-63942-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-63942-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63942/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I suspect that the SQL query at line 22178 of mapnik.xml will somehow join two tables ("select something from table1, table2 where condition" and that either "something" or "condition" will reference the "surface" column, which happens to be available in table1 and table2. You will either have to fix the query, or rob one of the tables of its "surface" column. Can you post the query? </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/63942/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Jun '18, 16:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-63942">
+    
+        <a name="63952"></a>
+        <div class="comment" id="comment-63952">
+            <div id="post-63952-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry for the delay. I had to drive to our new site.</p>
+
+<p>Your suspicion is correct. </p>
+
+<p>Here is the entire error: <a href="https://pastebin.com/2GnSgZz3">https://pastebin.com/2GnSgZz3</a></p></div>
+            <div class="comment-info" id="comment-63952-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '18, 00:04)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+        <a name="63958"></a>
+        <div class="comment" id="comment-63958">
+            <div id="post-63958-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I didn't know we were meanwhile applying different rendering to turning circles depending on the road surface but I guess the decline in rendering speed has to come from somewhere ;) you have a choice of changing the two occurrences of "WHEN surface IN" to either "WHEN l.surface IN" (to honour the <code>surface</code> tag of the road that ends in the turning circle) or to "WHEN p.surface IN" (to honour a potential specific surface description of the turning circle). I'd suggest the former, mimicking whe "WHEN l.service IN" line a bit further down.</p></div>
+            <div class="comment-info" id="comment-63958-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '18, 11:11)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63959"></a>
+        <div class="comment" id="comment-63959">
+            <div id="post-63959-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's not 100% clear from the question, but if you're using the "OSM Carto" style straight out of github I'd suggest mentioning the problem there, too.</p></div>
+            <div class="comment-info" id="comment-63959-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '18, 11:21)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63967"></a>
+        <div class="comment" id="comment-63967">
+            <div id="post-63967-score" class="comment-score"></div>
+            <div class="comment-text"><p>Last night I reloaded the database and found the problem persists. </p>
+
+<p>Part of what is strange is that I had built another server using the same guides, but Washington state data vice California. That server seems to be working without this issue. </p>
+
+<p>My goal with this project is to potentially help a non-profit set up a tile server to support a couple of apps they use. I mention this because as I'm assessing the viability of this effort, I am, in part, trying to understand if this issue I'm having is coming from the maturity of the tools, or because I've goofed something up good. :-)</p>
+
+<p>Judging from your comments above, it may be helpful for the community if I continue to track this down and enter issues into GitHub. But I'd also like to know if there are more mature software packages I should be investigating?</p>
+
+<p>Thanks!</p></div>
+            <div class="comment-info" id="comment-63967-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '18, 16:18)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+        <a name="63968"></a>
+        <div class="comment" id="comment-63968">
+            <div id="post-63968-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>But I'd also like to know if there are more mature software packages I should be investigating?</p>
+</blockquote>
+
+<p>:)</p>
+
+<p>Short answer - no.  OSM Carto is so mature it's like that piece of cheese in the fridge that it's almost opening the door from the inside in order to come out to meet you.  New releases may be a bit "bleeding edge" though - it may be that there's a problem that you're seeing with different software versions that other users are not.  You have various options - grab an earlier <a href="https://github.com/gravitystorm/openstreetmap-carto/releases">release</a>, grab a version by <a href="https://github.com/gravitystorm/openstreetmap-carto/commits/e3a508a0c50e7ff5e25164516ba6529872b82c44/roads.mss">date</a> that just predates the "render surface" commit, or use a different style altogether.  I regularly use the one described <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1804_tileserver_load">here</a> on 18.04 and I've fixed at least one issue there that <em>only</em> appeared on 18.04 (one minor one, to do with roof handling, remains).  You could try that instead if you don't mind blue interstates.</p></div>
+            <div class="comment-info" id="comment-63968-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '18, 17:05)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63974"></a>
+        <div class="comment not_top_scorer" id="comment-63974">
+            <div id="post-63974-score" class="comment-score"></div>
+            <div class="comment-text"><p>Interestingly I've just loaded the latest OSM Carto style on an Ubuntu 18.04 machine.  Line 22178 is still "turning circle fill" so I guess it's the same as you're using, but I don't see any loading errors and a small area (corresponding to <a href="https://www.openstreetmap.org/node/65451036#map=16/37.3415/-122.0197">https://www.openstreetmap.org/node/65451036#map=16/37.3415/-122.0197</a> in CA that has a turning circle in it with surface set) displays just fine.</p></div>
+            <div class="comment-info" id="comment-63974-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '18, 11:44)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64116"></a>
+        <div class="comment not_top_scorer" id="comment-64116">
+            <div id="post-64116-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>. Well, that seems to be both good news and bad news. The question then is why am I having this trouble. </p>
+
+<p>I don't pretend to understand how all the pieces interact. Are you using carto 1.0.1 to generate mapnik.xml?</p>
+
+<p>Also, I get a ton of warnings, but no obvious errors when I generate mapnik.xml. What is considered normal?</p></div>
+            <div class="comment-info" id="comment-64116-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '18, 03:21)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+        <a name="64128"></a>
+        <div class="comment not_top_scorer" id="comment-64128">
+            <div id="post-64128-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/15159/tim_rohrer">@tim_rohrer</a> "carto -v" shows 1.0.0.  This is on a laptop cleanly installed with Ubuntu 18.04 on 20th May 2018, and software initially installed as per <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1804_tileserver_load">here</a> (which is a different map style to but the same software as <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">here</a>.  I then added another section to renderd.conf to point at a "standard" OSM Carto style loaded from an adjacent database (I just edited dbname in mapnik.xml) on 3rd June.</p></div>
+            <div class="comment-info" id="comment-64128-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '18, 10:33)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64131"></a>
+        <div class="comment not_top_scorer" id="comment-64131">
+            <div id="post-64131-score" class="comment-score"></div>
+            <div class="comment-text"><p>I switched over to your styles and things appear to be working, which seems to confirm my setup as okay, and that <a href="https://help.openstreetmap.org/users/104/frederik-ramm">@Frederik Ramm</a> may be correct that an issue needs to be raised.</p>
+
+<p>I'd like to (eventually) switch back in order to test the styles identified in the <code>switch2osm</code> guide. Am I correct that to do that I (technically) need to:</p>
+
+<p>1) Recreate the <code>gis</code> database using <code>osm2pgsql</code>, pointing to whichever style I want to use (-S), and using the associated (?) lua script? I'm a little confused on these dependencies still. 
+2) Recompile <code>mapnik.xml</code> from the <code>project.mml</code> in the chosen carto.
+3) Restart renderd service</p>
+
+<p>I guess I'd also need to remove the already generated tiles and recreate them...</p>
+
+<p>Am I missing anything?</p></div>
+            <div class="comment-info" id="comment-64131-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '18, 18:37)</span>
+                <a class="comment-user userinfo" href="/users/15159/tim_rohrer">tim_rohrer</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-63942" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63942-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/63940/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='3JUpqoCQThfQWoRcZJdvMwFzOCZoTgUy' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63940/rendering-error-database-or-possibly-something-else?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63940/rendering-error-database-or-possibly-something-else?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/postgis/"
+            class="tag-link-postgis"
+            title="see questions tagged'postgis'using tags"
+            rel="tag">postgis</a> <span class="tag-number">&#215;134</span><br/>
+        
+        <a href="/tags/mod_tile/"
+            class="tag-link-mod_tile"
+            title="see questions tagged'mod_tile'using tags"
+            rel="tag">mod_tile</a> <span class="tag-number">&#215;80</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 1, 2018, 4 p.m.">01 Jun '18, 16:00</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,996 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 9, 2018, 6:37 p.m.">09 Jun '18, 18:37</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/41876/how-do-you-change-the-served-region-of-a-tileserver">How do you  change the served region of a tileserver?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20159/fail-to-connect-my-tiles-server">Fail to connect my tiles server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9875/duplicate-key-value-violates-unique-constraint-planet_osm_nodes_pkey">duplicate key value violates unique constraint &quot;planet_osm_nodes_pkey&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13428/is-there-a-datum-shift-between-osm-and-true-wgs84">is there a  datum shift between OSM  and true WGS84</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19904/merging-osm-files-with-osmosis-and-import-to-postgres-with-osm2pgsql">Merging OSM files with OSMOSIS and import to Postgres with OSM2PGSQL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19932/indexes-created-by-osm2pgsql">Indexes created by OSM2PGSQL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed">Why is my import of planet-latest.osm KILLED?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10677/setting-postgis-as-a-datasource">Setting PostGIS as a datasource</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13124/how-to-find-the-polygon">How to find the polygon?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16695/osm2pgsql-doesnt-work-with-hstore-flag-if-hstore-extension-is-not-loaded">osm2pgsql doesn&#39;t work with --hstore flag if hstore extension is not loaded</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to map units in a townhouse complex? - OSM Help</title>
+        <meta name="description" content="I am currently mapping a towhnouse complex (&quot;Fernbrook&quot;) in suburban Brisbane: http://www.openstreetmap.org/way/13932593#map=18/-27.44844/152.94040 Is the current mapping the ideal one? I just mapped a block of buildings for the moment, which makes it more easy to have an idea of how the complex is ..." />
+        <meta name="keywords" content="complex,relations,tagging,address" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/29921/how-to-map-units-in-a-townhouse-complex" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/29921/how-to-map-units-in-a-townhouse-complex?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='8bF7sdxC1FH0VZ8ozpY2WMaUB6cDVqms' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/29921/how-to-map-units-in-a-townhouse-complex">How to map units in a townhouse complex?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-29921-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29921/up/" rel="nofollow"> </a>
+<div id="post-29921-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-29921-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29921/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/29921/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am currently mapping a towhnouse complex ("Fernbrook") in suburban Brisbane:
+<a href="http://www.openstreetmap.org/way/13932593#map=18/-27.44844/152.94040">http://www.openstreetmap.org/way/13932593#map=18/-27.44844/152.94040</a>
+Is the current mapping the ideal one? I just mapped a block of buildings for the moment, which makes it more easy to have an idea of how the complex is subdivided.</p>
+<p>More precisely, I would like to know:</p>
+<ul>
+<li>Should the whole complex be tagged as a residential area with a name?</li>
+<li>Are the addresses including the street number supposed to be a node placed at the entrance (i.e. the gate) of each part of this complex?</li>
+<li>Is each building tagged properly, i.e. should the house number also be tagged for each building? Are the unit numbers (e.g. "addr:unit=11,12,13") tagged properly?</li>
+<li>Should a relation be used here? (Be it joining all the buildings as part of the complex, or giving all the buildings of one block the same address)</li>
+</ul>
+<p>Cheers</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/complex/" class="post-tag tag-link-complex"
+                                        title="see questions tagged 'complex'" rel="tag">complex</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                                    <a href="/tags/address/" class="post-tag tag-link-address"
+                                        title="see questions tagged 'address'" rel="tag">address</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Jan '14, 02:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/19c111f5c672fdb25353073c835f6a38?s=32&amp;d=identicon&amp;r=g" alt="stephane-guillou's gravatar image" />
+    <p><a href="/users/5607/stephane-guillou">stephane-gui...</a><br/>
+    <span class="score" title="585 reputation points">585</span><span title="12 badges"><span class="badge1">&#9679;</span><span class="badgecount">12</span></span><span title="18 badges"><span class="silver">&#9679;</span><span class="badgecount">18</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stephane-guillou has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-29921">
+    
+        <a name="29929"></a>
+        <div class="comment" id="comment-29929">
+            <div id="post-29929-score" class="comment-score"></div>
+            <div class="comment-text"><p>I like a clarification of what you mean by townhouse. Modern British context is a terrace of houses with a garage on the ground floor and living accommodation on the higher floors (usually 2/3 rooms per floor). From your query this does not seem to be what you are talking about.</p></div>
+            <div class="comment-info" id="comment-29929-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '14, 09:30)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="29930"></a>
+        <div class="comment" id="comment-29930">
+            <div id="post-29930-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've got a similar question about residential blocks composed by more than one building. See pic at <a href="http://sdrv.ms/1dDVv7n">http://sdrv.ms/1dDVv7n</a></p>
+
+<p>Mapping each individual building seems more accurate, but then the whole residential area (including park and swimming pool is not mapped...</p></div>
+            <div class="comment-info" id="comment-29930-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '14, 10:05)</span>
+                <a class="comment-user userinfo" href="/users/8174/david-hurt">David Hurt</a>
+                
+            </div>
+        </div>
+    
+        <a name="29935"></a>
+        <div class="comment" id="comment-29935">
+            <div id="post-29935-score" class="comment-score"></div>
+            <div class="comment-text"><p>If the buildings are multifamily, I map individual buildings. You can also add green areas and swimming pools. It takes more time, of course (still needs more work). If the area is composed of individual single family houses, I just do one residential area. Attaching an example of the buildings I did recently. Regards, Martin</p></div>
+            <div class="comment-info" id="comment-29935-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '14, 15:22)</span>
+                <a class="comment-user userinfo" href="/users/6453/slover98">slover98</a>
+                
+            </div>
+        </div>
+    
+        <a name="29936"></a>
+        <div class="comment" id="comment-29936">
+            <div id="post-29936-score" class="comment-score"></div>
+            <div class="comment-text"><p>" (still needs more work)" refers to the example....</p></div>
+            <div class="comment-info" id="comment-29936-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '14, 15:23)</span>
+                <a class="comment-user userinfo" href="/users/6453/slover98">slover98</a>
+                
+            </div>
+        </div>
+    
+        <a name="29941"></a>
+        <div class="comment" id="comment-29941">
+            <div id="post-29941-score" class="comment-score">1</div>
+            <div class="comment-text"><p>cool, thanks. I've tagged the common area as landuse=residential, I think it's more accurate, since it's private (partly green, but private). Inside the residential area are the three building. <a href="http://osm.org/go/b_Mfnhnyh-">http://osm.org/go/b_Mfnhnyh-</a></p>
+
+<p>this is my first contribution. I'll add more data!</p></div>
+            <div class="comment-info" id="comment-29941-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '14, 16:34)</span>
+                <a class="comment-user userinfo" href="/users/8174/david-hurt">David Hurt</a>
+                
+            </div>
+        </div>
+    
+        <a name="29953"></a>
+        <div class="comment not_top_scorer" id="comment-29953">
+            <div id="post-29953-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi SK53. In my case, the buildings look like townhouses but are horizontally divided in different units. I guess I could also use building:part because the units are physically distinct.</p></div>
+            <div class="comment-info" id="comment-29953-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '14, 00:11)</span>
+                <a class="comment-user userinfo" href="/users/5607/stephane-guillou">stephane-gui...</a>
+                
+            </div>
+        </div>
+    
+        <a name="29961"></a>
+        <div class="comment not_top_scorer" id="comment-29961">
+            <div id="post-29961-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/8174/david-hurt">@David Hurt</a>: your link does not show an image for me. Seems it needs javascript, cookie, whatever permissions. In addition: please open a new question for... new questions. Thank you.</p></div>
+            <div class="comment-info" id="comment-29961-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '14, 02:32)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29921" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29921-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/29921/how-to-map-units-in-a-townhouse-complex?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/29921/how-to-map-units-in-a-townhouse-complex?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/29921/how-to-map-units-in-a-townhouse-complex?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/29921/how-to-map-units-in-a-townhouse-complex?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="29934"></a>
+                    <div id="answer-container-29934" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29934-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29934/up/" rel="nofollow"> </a>
+<div id="post-29934-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-29934-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29934/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><img alt="alt text" src="http://help.openstreetmap.org/upfiles/residential.GIF"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29934/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jan '14, 15:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06b9779157ed5d9958611cdc3b6aa4a7?s=32&amp;d=identicon&amp;r=g" alt="slover98's gravatar image" />
+    <p><a href="/users/6453/slover98">slover98</a><br/>
+    <span class="score" title="567 reputation points">567</span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="32 badges"><span class="bronze">&#9679;</span><span class="badgecount">32</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="slover98 has one accepted answer">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29934">
+    
+        <a name="29951"></a>
+        <div class="comment" id="comment-29951">
+            <div id="post-29951-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Slover98. It would be great if you could comment your picture, the renderer does not make any tagging convention explicit.</p></div>
+            <div class="comment-info" id="comment-29951-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '14, 00:04)</span>
+                <a class="comment-user userinfo" href="/users/5607/stephane-guillou">stephane-gui...</a>
+                
+            </div>
+        </div>
+    
+        <a name="29956"></a>
+        <div class="comment" id="comment-29956">
+            <div id="post-29956-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Stephane: I am guessing you are asking for an actual link to the example I showed (?). If so, here is the link to the whole residential subdivision. Regards, Martin</p>
+
+<p><a href="http://www.openstreetmap.org/edit?editor=id#map=17/38.79074/-77.52785">http://www.openstreetmap.org/edit?editor=id#map=17/38.79074/-77.52785</a></p></div>
+            <div class="comment-info" id="comment-29956-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '14, 00:37)</span>
+                <a class="comment-user userinfo" href="/users/6453/slover98">slover98</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29934" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29934-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/29921/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='8bF7sdxC1FH0VZ8ozpY2WMaUB6cDVqms' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29921/how-to-map-units-in-a-townhouse-complex?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29921/how-to-map-units-in-a-townhouse-complex?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/address/"
+            class="tag-link-address"
+            title="see questions tagged'address'using tags"
+            rel="tag">address</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/complex/"
+            class="tag-link-complex"
+            title="see questions tagged'complex'using tags"
+            rel="tag">complex</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 18, 2014, 2:23 a.m.">18 Jan '14, 02:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,839 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 19, 2014, 2:32 a.m.">19 Jan '14, 02:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/9177/how-to-make-the-following-routes-compatible-with-the-public-transport-line-diagram">How to make the following routes &quot;compatible&quot; with the Public Transport Line Diagram?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16333/how-can-i-indicate-different-categories-of-parking-for-an-institution">How can I indicate different categories of parking for an institution?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2590/tagging-disused-quarries">Tagging disused quarries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5894/how-to-taggroup-buildings-that-are-made-up-of-more-than-one-area">How to tag/group buildings that are made up of more than one area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13845/add-my-own-business-to-openstreetmap">Add my Own business to OpenStreetMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14040/whats-the-easiest-way-to-generate-ref-tags-for-ways-from-relations">What&#39;s the easiest way to generate ref= tags for ways from relations?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1580/should-i-tag-name-for-the-way-or-for-the-relation">Should I tag &quot;name&quot; for the way or for the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2545/tag-tram-tracks-with-name-ref-or-use-relationroute">Tag tram tracks with name=*, ref=* - or use Relation:route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4319/do-i-add-address-tags-to-the-poi-node-or-create-a-separate-node">Do I add address tags to the POI node or create a separate node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19023/how-best-to-map-adjacent-fenced-areas">How best to map adjacent fenced areas?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

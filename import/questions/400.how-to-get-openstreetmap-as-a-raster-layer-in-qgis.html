@@ -1,0 +1,1115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>[closed] How to get OpenStreetMap as a raster layer in QGIS? - OSM Help</title>
+        <meta name="description" content="How can I bring in OpenStreetMap raster maps into QGIS? QGIS supports WMS layers for raster maps. Are there OpenStreetMap WMS servers? but also, is there any easy support for standard &quot;google format&quot; tile servers (like tile.openstreetmap.org which uses tile URLs matching google&#39;s approach) (Note bri..." />
+        <meta name="keywords" content="qgis,tiles" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='djQberEyFpyfpHu9h7BHN2LHuJ1hP5td' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis">[closed] How to get OpenStreetMap as a raster layer in QGIS?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-400-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/400/up/" rel="nofollow"> </a>
+<div id="post-400-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-400-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/400/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/400/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How can I bring in OpenStreetMap raster maps into QGIS?</p>
+<p>QGIS supports WMS layers for raster maps. Are there OpenStreetMap WMS servers? but also, is there any easy support for standard "google format" tile servers (like tile.openstreetmap.org which uses <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">tile URLs matching google's approach</a>)</p>
+<p><em>(Note bringing in OpenStreetMap vector data is, in many ways, more interesting. See <a href="http://help.openstreetmap.org/questions/148/how-can-i-use-openstreetmap-data-in-my-gis-program">How can I use OpenStreetMap data in GIS program?</a> This question is about using raster map layers)</em> </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/qgis/" class="post-tag tag-link-qgis"
+                                        title="see questions tagged 'qgis'" rel="tag">qgis</a>
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Jul '10, 15:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/400/">
+                edited
+                <strong>10 Dec '16, 14:27</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+            <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+            <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-400">
+    
+        <a name="53461"></a>
+        <div class="comment" id="comment-53461">
+            <div id="post-53461-score" class="comment-score"></div>
+            <div class="comment-text"><p>For an updated version of this question relevant to QGIS versions 2.10 upwards see <a href="https://help.openstreetmap.org/questions/52409/how-can-i-adding-osm-tiles-as-a-background-layer-in-qgis-21x-and-3x">https://help.openstreetmap.org/questions/52409/how-can-i-adding-osm-tiles-as-a-background-layer-in-qgis-21x-and-3x</a></p></div>
+            <div class="comment-info" id="comment-53461-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Dec '16, 14:27)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-400" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-400-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="question-status" style="margin-bottom:15px">
+            <h3>
+                The question has been closed for the following reason "Problem is not reproducible or outdated. Answers refer to many out-of-date QGIS versions, and may not be directly applicable in current versions." by
+                <a href="/users/647/sk53">SK53</a>
+                 15 Dec '14, 15:29
+            </h3>
+            </div>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15909"></a>
+                    <div id="answer-container-15909" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15909-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15909/up/" rel="nofollow"> </a>
+<div id="post-15909-score" class="post-score"
+    title="current number of votes">
+    9
+</div>
+<a id="post-15909-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15909/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Two different ways:</p>
+<p><strong>1)</strong> The easiest way is to <strong>install the <a href="https://github.com/sourcepole/qgis-openlayers-plugin">OpenLayers QGIS plugin</a></strong>.  Unfortunately the installation process is a little clumsy since this plug-in is in a different repository.</p>
+<ul>
+<li>Choose 'Plugins' menu -&gt; 'Fetch Python Plugins...'</li>
+<li>Select the 'Repositories' tab at the top</li>
+<li>Add a new repository with the URL: <code><a href="http://build.sourcepole.ch/qgis/plugins.xml">http://build.sourcepole.ch/qgis/plugins.xml</a></code></li>
+</ul>
+<p>This should allow you to find and install the OpenLayers plugin</p>
+<p><strong>2)</strong> The second approach is to <strong><a href="http://www.3liz.com/blog/rldhont/index.php?post/2012/07/17/OpenStreetMap-Tiles-in-QGIS">set up a GDAL configuration as described in this blog post</a></strong>: </p>
+<p>Copy this into an XML file, and then simply open that file as a new raster layer.</p>
+<pre>&lt;GDAL_WMS&gt;
+  &lt;Service name="TMS"&gt;
+  &lt;ServerUrl&gt;<a href="http://tile.openstreetmap.org/${z}/${x}/${y}.png</ServerUrl>">http://tile.openstreetmap.org/${z}/${x}/${y}.png&lt;/ServerUrl&gt;</a>
+  &lt;/Service&gt;
+  &lt;DataWindow&gt;
+    &lt;UpperLeftX&gt;-20037508.34&lt;/UpperLeftX&gt;
+    &lt;UpperLeftY&gt;20037508.34&lt;/UpperLeftY&gt;
+    &lt;LowerRightX&gt;20037508.34&lt;/LowerRightX&gt;
+    &lt;LowerRightY&gt;-20037508.34&lt;/LowerRightY&gt;
+    &lt;TileLevel&gt;18&lt;/TileLevel&gt;
+    &lt;TileCountX&gt;1&lt;/TileCountX&gt;
+    &lt;TileCountY&gt;1&lt;/TileCountY&gt;
+    &lt;YOrigin&gt;top&lt;/YOrigin&gt;
+  &lt;/DataWindow&gt;
+  &lt;Projection&gt;EPSG:900913&lt;/Projection&gt;
+  &lt;BlockSizeX&gt;256&lt;/BlockSizeX&gt;
+  &lt;BlockSizeY&gt;256&lt;/BlockSizeY&gt;
+  &lt;BandsCount&gt;3&lt;/BandsCount&gt;
+  &lt;Cache /&gt;
+&lt;/GDAL_WMS&gt;
+</pre>
+
+<p>This second approach is more flexible e.g. if you wanted to point at a different tile server such as MapQuest Open. Don't forget to display some credits to OpenStreetMap in your outputs. The first approach adds this automatically.</p>
+<p>With either approach you should do 'view' menu -&gt; 'zoom actual size'. QGIS then locks onto a good zoom to match the resolution of the tiles.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15909/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Sep '12, 01:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e04333be840d50c6aa66fb112aad77c?s=32&amp;d=identicon&amp;r=g" alt="Harry%20Wood's gravatar image" />
+    <p><a href="/users/107/harry-wood">Harry Wood</a><br/>
+    <span class="score" title="9489 reputation points"><span class="">9.5k</span></span><span title="25 badges"><span class="badge1">&#9679;</span><span class="badgecount">25</span></span><span title="88 badges"><span class="silver">&#9679;</span><span class="badgecount">88</span></span><span title="128 badges"><span class="bronze">&#9679;</span><span class="badgecount">128</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Harry Wood has 19 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15909/">
+                edited
+                <strong>09 Sep '12, 04:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15909">
+    
+        <a name="41179"></a>
+        <div class="comment" id="comment-41179">
+            <div id="post-41179-score" class="comment-score"></div>
+            <div class="comment-text"><p>I like the second approach. How can we modify the XML parameters to increase the quality / precision of the image? Anyone is familiar with this format?</p></div>
+            <div class="comment-info" id="comment-41179-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Feb '15, 13:33)</span>
+                <a class="comment-user userinfo" href="/users/8628/antonind">antonind</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15909" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15909-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="406"></a>
+                    <div id="answer-container-406" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-406-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/406/up/" rel="nofollow"> </a>
+<div id="post-406-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-406-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/406/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For a list of WMS servers, see <a href="http://wiki.openstreetmap.org/wiki/WMS#OSM_WMS_Servers">the OSM Wiki</a>. Most of these either require a paid subscription, or have limited coverage, a reduced update frequency, or reduced image quality. The reason for that is that operating a WMS server is more expensive in terms of resources used than for example a tile server. There was a time when OSM itself operated a WMS server but that was long ago.</p>
+<p>There is a Google plugin for QGIS. You need to have Python support enabled for qgis (package qgis-python installed under Ubuntu), then install the "plugin installer" plugin from the "Plugins/Manage Plugins" menu. Then go to "Plugins/Fetch Python Plugins", enable third party repositories, and you will be able to install a "Google Layers" plugin.</p>
+<p>This plugin only works when your project projection is set to EPSG:3785 (or 900913), and it is hard-coded to work with Google static map images. You can change this to work with OSM static maps. Look at the gmaps.py source in ~/.qgis/python/plugins/GoogleLayers after you have installed the plugin and change the lines</p>
+<pre><code>url = "http://maps.google.com/staticmap?"
+url += "center=%s,%s&amp;zoom=%s&amp;size=%sx%s&amp;sensor=false&amp;format=%s&amp;maptype=%s" % (self.cwgs.y(), self.cwgs.x(), \
+   self.zoomlevel, self.tile_width, self.tile_height, self.format, self.maptype)
+</code></pre>
+<p>into</p>
+<pre><code>url = "http://dev.openstreetmap.org/~pafciu17/?module=map&amp;center=%s,%s&amp;zoom=%s&amp;width=%s&amp;height=%s"  % \
+   (self.cwgs.x(), self.cwgs.y(), self.zoomlevel, self.tile_width, self.tile_height)
+</code></pre>
+<p>Of course if you're a proper Python programmer you could also extend the plugin to have a data source selection and support OSM in addition to Google, instead of just hardwiring it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/406/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Jul '10, 16:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/406/">
+                edited
+                <strong>22 Jul '10, 21:05</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-406">
+    
+        <a name="8909"></a>
+        <div class="comment" id="comment-8909">
+            <div id="post-8909-score" class="comment-score"></div>
+            <div class="comment-text"><p>There is also an OpenLayers plugin that would theoretically do the job. I have never gotten it to work though. <a href="http://hub.qgis.org/projects/openlayers/wiki">http://hub.qgis.org/projects/openlayers/wiki</a></p></div>
+            <div class="comment-info" id="comment-8909-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '11, 18:07)</span>
+                <a class="comment-user userinfo" href="/users/17/mvexel">mvexel</a>
+                
+            </div>
+        </div>
+    
+        <a name="15910"></a>
+        <div class="comment" id="comment-15910">
+            <div id="post-15910-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just trying this again in QGIS 1.8.0 . Neither "Google Layers" nor "OpenLayers" seem to be available as plugins nowadays, so it seems this answer no longer works</p></div>
+            <div class="comment-info" id="comment-15910-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Sep '12, 02:01)</span>
+                <a class="comment-user userinfo" href="/users/107/harry-wood">Harry Wood</a>
+                
+            </div>
+        </div>
+    
+        <a name="15918"></a>
+        <div class="comment" id="comment-15918">
+            <div id="post-15918-score" class="comment-score"></div>
+            <div class="comment-text"><p>Correction 'enable third party repositories' no longer exists as an option, but I was able to install OpenLayers plugin by adding a repository URL. Once installed, good news!, it no longer requires the tinkering described here. OpenStreetMap is available as an option on the menu. I've given an updated answer</p></div>
+            <div class="comment-info" id="comment-15918-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Sep '12, 13:45)</span>
+                <a class="comment-user userinfo" href="/users/107/harry-wood">Harry Wood</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-406" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-406-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="20589"></a>
+                    <div id="answer-container-20589" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-20589-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20589/up/" rel="nofollow"> </a>
+<div id="post-20589-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-20589-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20589/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Note that the answers from 2010 are a bit outdated, the current "best practice" is the OpenLayers Plugin, which is described in this blog post: <a href="http://spatialgalaxy.net/2012/01/14/qgis-plugin-of-the-week-openlayers/">http://spatialgalaxy.net/2012/01/14/qgis-plugin-of-the-week-openlayers/</a> .</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/20589/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Mar '13, 10:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/806d5a652505590a9eba797ad5bea8db?s=32&amp;d=identicon&amp;r=g" alt="gormo's gravatar image" />
+    <p><a href="/users/4653/gormo">gormo</a><br/>
+    <span class="score" title="2928 reputation points"><span class="">2.9k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="26 badges"><span class="silver">&#9679;</span><span class="badgecount">26</span></span><span title="60 badges"><span class="bronze">&#9679;</span><span class="badgecount">60</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gormo has 13 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-20589">
+    
+</div>
+<div id="comment-tools-20589" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20589-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="31095"></a>
+                    <div id="answer-container-31095" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31095-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31095/up/" rel="nofollow"> </a>
+<div id="post-31095-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-31095-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31095/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It's much simpler now.</p>
+<ol>
+<li>Plugins &gt; Manage and Install Plugins</li>
+<li>Install and ensure ticked "OpenLayers Plugin" plugin.</li>
+<li>Restart</li>
+<li>Plugins &gt; OpenLayers Plugin &gt; Choose your map</li>
+</ol>
+<p>A new Map layer is added with the map layer you choose in step 4.</p>
+<p>You might need to drag the new OSM layer to the bottom of the layers list, so that the layering is correct.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31095/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Feb '14, 16:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3f44a2a3f0cffbc9787ba28fe973e2a4?s=32&amp;d=identicon&amp;r=g" alt="smsm1's gravatar image" />
+    <p><a href="/users/20/smsm1">smsm1</a><br/>
+    <span class="score" title="166 reputation points">166</span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="smsm1 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31095">
+    
+        <a name="39150"></a>
+        <div class="comment" id="comment-39150">
+            <div id="post-39150-score" class="comment-score">1</div>
+            <div class="comment-text"><p>For me using QGIS 2.4, note that for step 4 the OpenLayers Plugin appears under the Web menu:</p>
+
+<p>Web -&gt; OpenLayers plugin -&gt; Choose your map</p></div>
+            <div class="comment-info" id="comment-39150-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Dec '14, 02:03)</span>
+                <a class="comment-user userinfo" href="/users/3300/robbieonsea">robbieonsea</a>
+                
+            </div>
+        </div>
+    
+        <a name="39158"></a>
+        <div class="comment" id="comment-39158">
+            <div id="post-39158-score" class="comment-score"></div>
+            <div class="comment-text"><p>Note that QGIS is now at 2.6. The means of adding the OpenLayers plugin (and indeed whether it works or not) has changed significantly over various point releases of QGIS (from 1.4 onwards). I would suggest closing this question, simply because so many of the up-voted answers are out of date, and even newer answers refer to releases which have already been superseded a couple of times.</p></div>
+            <div class="comment-info" id="comment-39158-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Dec '14, 12:09)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52397"></a>
+        <div class="comment" id="comment-52397">
+            <div id="post-52397-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've no idea why you closed the question - it's still a valid question, even today. I'd like to see the best answer nowadays, but instead google leads me here and there's no way for people to improve the situation with new answers.</p></div>
+            <div class="comment-info" id="comment-52397-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Oct '16, 17:36)</span>
+                <a class="comment-user userinfo" href="/users/3/andy-allan">Andy Allan</a>
+                
+            </div>
+        </div>
+    
+        <a name="52408"></a>
+        <div class="comment" id="comment-52408">
+            <div id="post-52408-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/3/andy-allan">@Andy Allan</a>: by all means ask the question again and then we can start with answers relevant to QGIS 2.1x and 3.0. I closed the question at QGIS 2.6 when most of the information was already considerably outdated. It is much more so now.</p></div>
+            <div class="comment-info" id="comment-52408-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Oct '16, 10:50)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31095" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31095-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/400/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='djQberEyFpyfpHu9h7BHN2LHuJ1hP5td' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+        <a href="/tags/qgis/"
+            class="tag-link-qgis"
+            title="see questions tagged'qgis'using tags"
+            rel="tag">qgis</a> <span class="tag-number">&#215;67</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 21, 2010, 3:43 p.m.">21 Jul '10, 15:43</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>83,521 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 10, 2016, 2:28 p.m.">10 Dec '16, 14:28</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/52409/how-can-i-adding-osm-tiles-as-a-background-layer-in-qgis-21x-and-3x">How can I adding OSM Tiles as a Background Layer in QGIS 2.1x and 3.x</a>
+        </p>
+        
+        <p>
+            <a href="/questions/79549/load-osm-tiles-using-url-in-custom-qgis-application-c">Load OSM tiles using URL in custom QGIS application (C++)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/840/problem-with-map-scale-when-generating-maps-with-osmarender">Problem with map scale when generating maps with Osmarender</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile">How to trigger a repaint for a specific OSM map tile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1586/is-there-a-tileset-like-the-hybrid-label-overlay-in-google-maps">Is there a tileset like the hybrid label overlay in google maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1999/newbie-3rd-zoom-level-rendering-issue-after-edit">Newbie: 3rd zoom level rendering issue after edit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3285/http-get-request-times-out">HTTP GET Request Times Out</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2562/trinidad-coastline-not-rerendering">Trinidad coastline not rerendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3409/how-to-display-your-own-rendering-tiles-in-a-symbian-phone">How to display your own rendering tiles in a Symbian Phone?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/886/expire-tiles-after-postgres-db-update">Expire tiles after Postgres DB update</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

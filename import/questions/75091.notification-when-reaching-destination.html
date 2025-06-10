@@ -1,0 +1,704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Notification when reaching destination - OSM Help</title>
+        <meta name="description" content="I am developing a Python app in which starting from a source point (given in lat, lon) after reaching a destination point I want to be notified after reaching my destination.  What I had actually thought to do was recalculating the current position of the user after some interval with calculating it..." />
+        <meta name="keywords" content="python,routing,osmrm" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/75091/notification-when-reaching-destination" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/75091/notification-when-reaching-destination?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mPTffRQc6FqLVAH6EiqL2V7I2vHh8YXN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/75091/notification-when-reaching-destination">Notification when reaching destination</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-75091-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/75091/up/" rel="nofollow"> </a>
+<div id="post-75091-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-75091-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/75091/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/75091/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am developing a Python app in which starting from a source point (given in lat, lon) after reaching a destination point I want to be notified after reaching my destination. </p>
+<p>What I had actually thought to do was recalculating the current position of the user after some interval with calculating its distance. When the distance becomes less than 0.1 to the destination. I'd assume that the user have reached the destination. (According to Haversine formula).</p>
+<p>Could anyone pls suggest me a better approach with OSRM apis? as this approach would be compute-intensive. </p>
+<p>Thanks in advance.
+Rachna.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/python/" class="post-tag tag-link-python"
+                                        title="see questions tagged 'python'" rel="tag">python</a>
+                                
+                                    <a href="/tags/routing/" class="post-tag tag-link-routing"
+                                        title="see questions tagged 'routing'" rel="tag">routing</a>
+                                
+                                    <a href="/tags/osmrm/" class="post-tag tag-link-osmrm"
+                                        title="see questions tagged 'osmrm'" rel="tag">osmrm</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Jun '20, 10:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/481f05d677d38b749a5f5de6d561c221?s=32&amp;d=identicon&amp;r=g" alt="rachnarai's gravatar image" />
+    <p><a href="/users/18381/rachnarai">rachnarai</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rachnarai has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/75091/">
+                edited
+                <strong>04 Jun '20, 19:56</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-75091">
+    
+        <a name="75092"></a>
+        <div class="comment" id="comment-75092">
+            <div id="post-75092-score" class="comment-score"></div>
+            <div class="comment-text"><p>Converted comment (from <a href="https://help.openstreetmap.org/questions/12946/calculate-time-and-distance-between-two-latlng-points-with-a-json-response)">https://help.openstreetmap.org/questions/12946/calculate-time-and-distance-between-two-latlng-points-with-a-json-response)</a> to a question.</p></div>
+            <div class="comment-info" id="comment-75092-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '20, 10:42)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="75094"></a>
+        <div class="comment" id="comment-75094">
+            <div id="post-75094-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I don't see why this involves a router at all. Just compare the current position with the position of the destination. If the calculated distance is small enough you have reached your destination. Why do you need a routing engine for this task?</p></div>
+            <div class="comment-info" id="comment-75094-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '20, 14:11)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="75108"></a>
+        <div class="comment" id="comment-75108">
+            <div id="post-75108-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Alex, yes there won't be any need to do this. But after getting the current user location, at some interval I would need to calculate distance from that point to destination and this distance will be called several times until user reaches his destination. Will this approach be valid anyway? I'm doubtful about it, because I'd be needing to calculate distance periodically.</p></div>
+            <div class="comment-info" id="comment-75108-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '20, 17:58)</span>
+                <a class="comment-user userinfo" href="/users/18381/rachnarai">rachnarai</a>
+                
+            </div>
+        </div>
+    
+        <a name="75110"></a>
+        <div class="comment not_top_scorer" id="comment-75110">
+            <div id="post-75110-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you need to calculate the road distance periodically or just the bee line (you mentioned the Haversine formula in your question)?</p></div>
+            <div class="comment-info" id="comment-75110-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '20, 19:40)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="75111"></a>
+        <div class="comment not_top_scorer" id="comment-75111">
+            <div id="post-75111-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just the Haversine formula, only concerned with comparison. Thats all</p></div>
+            <div class="comment-info" id="comment-75111-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '20, 19:45)</span>
+                <a class="comment-user userinfo" href="/users/18381/rachnarai">rachnarai</a>
+                
+            </div>
+        </div>
+    
+        <a name="75113"></a>
+        <div class="comment" id="comment-75113">
+            <div id="post-75113-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Then I can't see what you would need a router for, either. I repeat scai's question: Why do you believe you need a router? What is the router supposed to do?</p>
+
+<p>Do you need something to geo-locate the destination? That would be a one-time call only and you don't have to repeat that with every distance calculation iteration.</p></div>
+            <div class="comment-info" id="comment-75113-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '20, 10:01)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="75116"></a>
+        <div class="comment not_top_scorer" id="comment-75116">
+            <div id="post-75116-score" class="comment-score"></div>
+            <div class="comment-text"><p>I would already have the destination geocode, but I would have to get the User's current location which would be changing repeatedly due to his moment.</p>
+
+<p>So I need to compare this location until this current location matches the destination geocode. </p>
+
+<p>Therefore, for this I would need to calculate distance until the distance becomes &lt; 0.1. (That's how we compare two geocodes)</p>
+
+<p>Now coming to the question I have asked, I want to reduce the number of calls to my distance calculation function. (of course I would do this after some interval but this can be reduced if i get the estimated time.) </p>
+
+<p>So, for that I wanted to get the estimated time in order to reach a point then after that if user couldn't reach there, I'd calculate estimated time again and check again whether he has reached. (Or by other way as this can be done in multiple ways.) So I had thought maybe this can reduce time complexity in order to accomplish this. Then I came across the OSRM routing engine which gives estimated time and distance but that will be too complicated and would be too compute intensive. </p>
+
+<p>I'm hoping now that my question is clear, Awaiting for your thoughts and suggestions.</p></div>
+            <div class="comment-info" id="comment-75116-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '20, 12:59)</span>
+                <a class="comment-user userinfo" href="/users/18381/rachnarai">rachnarai</a>
+                
+            </div>
+        </div>
+    
+        <a name="75132"></a>
+        <div class="comment" id="comment-75132">
+            <div id="post-75132-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You can calculate the ETA on your own by looking at distance and speed. Of course this will be less accurate than using a router. However it will also be much cheaper, so you can perform it more frequently. If the ETA is far in the future then use scarce recalculations, if the ETA is near or the distance is short then increase the recalculation frequency.</p></div>
+            <div class="comment-info" id="comment-75132-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '20, 07:03)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="75133"></a>
+        <div class="comment not_top_scorer" id="comment-75133">
+            <div id="post-75133-score" class="comment-score"></div>
+            <div class="comment-text"><p>Calculating the distance is pretty cheap. So why not do something like this: If the bee-line distance is &gt; 5km re-calculate every minute. If the distance is &gt; 1km re-calculate every 10 seconds. After that re-calculate every second. I assume a car here. Intervals could be longer or shorter for foot traffic or an airplane.</p></div>
+            <div class="comment-info" id="comment-75133-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '20, 07:59)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-75091" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-75091-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/75091/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mPTffRQc6FqLVAH6EiqL2V7I2vHh8YXN' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/75091/notification-when-reaching-destination?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/75091/notification-when-reaching-destination?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/routing/"
+            class="tag-link-routing"
+            title="see questions tagged'routing'using tags"
+            rel="tag">routing</a> <span class="tag-number">&#215;305</span><br/>
+        
+        <a href="/tags/python/"
+            class="tag-link-python"
+            title="see questions tagged'python'using tags"
+            rel="tag">python</a> <span class="tag-number">&#215;78</span><br/>
+        
+        <a href="/tags/osmrm/"
+            class="tag-link-osmrm"
+            title="see questions tagged'osmrm'using tags"
+            rel="tag">osmrm</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 2, 2020, 10:32 a.m.">02 Jun '20, 10:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>914 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 4, 2020, 7:56 p.m.">04 Jun '20, 19:56</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/57168/get-amenities-inside-a-range">Get amenities inside a range</a>
+        </p>
+        
+        <p>
+            <a href="/questions/275/how-do-i-connect-a-high-speed-bidirectional-trunk-road-to-the-network">How do I connect a high speed bidirectional (trunk) road to the network ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/804/are-cyclists-allowed-on-trunk-roads">Are cyclists allowed on trunk roads?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/467/how-do-i-use-osm-maps-in-my-gps">How do I use OSM maps in my GPS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/687/are-motorcars-allowed-on-track-roads">Are motorcars allowed on &#39;track&#39; roads ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/737/is-there-any-windows-ce-navigation-software-that-uses-osm-data">Is there any Windows CE navigation software that uses OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/310/how-do-you-tag-gates-that-are-open-most-of-the-time">How do you tag gates that are open most of the time?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/852/routing-by-address">Routing by Address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1033/is-there-any-free-libre-traffic-information-data">Is there any free (libre) traffic information data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/259/what-is-the-recommended-way-to-tag-temporary-road-works-and-traffic-situations">What is the recommended way to tag temporary road works and traffic situations?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

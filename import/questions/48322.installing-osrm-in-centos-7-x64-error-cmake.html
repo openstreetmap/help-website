@@ -1,0 +1,1006 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Installing OSRM in CENTOS 7 x64 - error Cmake .. - OSM Help</title>
+        <meta name="description" content="I&#39;m trying to install osrm in my server centos 7, but i can&#39;t do it... i tried a lot and differents ways.. but i can&#39;t  [root@u18343387 build]# cmake .. -- Building on a 64 bit system -- Configuring OSRM in release mode -- Setting linker optimizations -- Boost version: 1.52.0 -- Found the following ..." />
+        <meta name="keywords" content="osrm,problem,cmake,installation,centos" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/48322/installing-osrm-in-centos-7-x64-error-cmake" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/48322/installing-osrm-in-centos-7-x64-error-cmake?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='p0AnZHaWXOR51GLF4IYLbjzYV79wRVOQ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/48322/installing-osrm-in-centos-7-x64-error-cmake">Installing OSRM in CENTOS 7 x64 - error Cmake ..</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-48322-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48322/up/" rel="nofollow"> </a>
+<div id="post-48322-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-48322-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48322/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/48322/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p><strong>I'm trying to install osrm in my server centos  7, but i can't do it... i tried a lot and differents ways.. but i can't</strong></p>
+<hr>
+<pre><code>[root@u18343387 build]# cmake ..
+-- Building on a 64 bit system
+-- Configuring OSRM in release mode
+-- Setting linker optimizations
+-- Boost version: 1.52.0
+-- Found the following Boost libraries:
+--   date_time
+--   filesystem
+--   iostreams
+--   program_options
+--   regex
+--   system
+--   thread
+--   unit_test_framework
+-- Found Intel TBB
+-- Looking for Luabind...
+CMake Error at /usr/local/share/cmake-3.4/Modules/FindPackageHandleStandardArgs.cmake:148 (message):
+  Could NOT find Luabind (missing: LUABIND_LIBRARIES LUABIND_INCLUDE_DIR)
+Call Stack (most recent call first):
+  /usr/local/share/cmake-3.4/Modules/FindPackageHandleStandardArgs.cmake:388 (_FPHSA_FAILURE_MESSAGE)
+  cmake/FindLuabind.cmake:64 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  CMakeLists.txt:247 (find_package)
+</code></pre>
+<hr>
+<p><strong>what can i do...
+plx, explane me, i'm a new in this...
+this  the content of the file cmake error</strong></p>
+<hr>
+<pre><code>Performing C++ SOURCE FILE Test LTO_AVAILABLE failed with the following output:
+Change Dir: /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2838510061/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2838510061.dir/build.make CMakeFiles/cmTryCompileExec2838510061.dir/build
+gmake[1]: Entering directory `/home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2838510061.dir/src.cxx.o
+/usr/bin/c++    -DLTO_AVAILABLE   -flto -o CMakeFiles/cmTryCompileExec2838510061.dir/src.cxx.o -c /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: error: unrecognized command line option "-flto"
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2838510061.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory `/home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2838510061/fast] Error 2
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test HAS_COLOR_FLAG failed with the following output:
+Change Dir: /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2322203982/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2322203982.dir/build.make CMakeFiles/cmTryCompileExec2322203982.dir/build
+gmake[1]: Entering directory `/home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2322203982.dir/src.cxx.o
+/usr/bin/c++    -DHAS_COLOR_FLAG   -fdiagnostics-color=auto -o CMakeFiles/cmTryCompileExec2322203982.dir/src.cxx.o -c /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: error: unrecognized command line option "-fdiagnostics-color=auto"
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2322203982.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory `/home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2322203982/fast] Error 2
+
+Source file was:
+int main() { return 0;}
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec869518868/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec869518868.dir/build.make CMakeFiles/cmTryCompileExec869518868.dir/build
+gmake[1]: Entering directory `/home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec869518868.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec869518868.dir/CheckSymbolExists.c.o   -c /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec869518868
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec869518868.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec869518868.dir/CheckSymbolExists.c.o  -o cmTryCompileExec869518868 -rdynamic 
+CMakeFiles/cmTryCompileExec869518868.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0xc): undefined reference to `pthread_create'
+collect2: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec869518868] Error 1
+gmake[1]: Leaving directory `/home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec869518868/fast] Error 2
+
+File /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include &lt;pthread.h&gt;
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&amp;pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1634399928/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1634399928.dir/build.make CMakeFiles/cmTryCompileExec1634399928.dir/build
+gmake[1]: Entering directory `/home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1634399928.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1634399928.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1634399928
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1634399928.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1634399928.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1634399928 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec1634399928] Error 1
+gmake[1]: Leaving directory `/home/osrm/osrm-backend/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1634399928/fast] Error 2
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osrm/" class="post-tag tag-link-osrm"
+                                        title="see questions tagged 'osrm'" rel="tag">osrm</a>
+                                
+                                    <a href="/tags/problem/" class="post-tag tag-link-problem"
+                                        title="see questions tagged 'problem'" rel="tag">problem</a>
+                                
+                                    <a href="/tags/cmake/" class="post-tag tag-link-cmake"
+                                        title="see questions tagged 'cmake'" rel="tag">cmake</a>
+                                
+                                    <a href="/tags/installation/" class="post-tag tag-link-installation"
+                                        title="see questions tagged 'installation'" rel="tag">installation</a>
+                                
+                                    <a href="/tags/centos/" class="post-tag tag-link-centos"
+                                        title="see questions tagged 'centos'" rel="tag">centos</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Feb '16, 07:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9bd2a84fbfcb6ee54b372f83189bb6d1?s=32&amp;d=identicon&amp;r=g" alt="DarckBlezzer's gravatar image" />
+    <p><a href="/users/11396/darckblezzer">DarckBlezzer</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DarckBlezzer has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48322/">
+                edited
+                <strong>24 Feb '16, 07:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-48322">
+    
+</div>
+<div id="comment-tools-48322" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48322-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/48322/installing-osrm-in-centos-7-x64-error-cmake?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/48322/installing-osrm-in-centos-7-x64-error-cmake?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/48322/installing-osrm-in-centos-7-x64-error-cmake?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/48322/installing-osrm-in-centos-7-x64-error-cmake?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="48323"></a>
+                    <div id="answer-container-48323" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48323-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48323/up/" rel="nofollow"> </a>
+<div id="post-48323-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-48323-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48323/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <pre><code>Make Error at /usr/local/share/cmake-3.4/Modules/FindPackageHandleStandardArgs.cmake:148 (message):   Could NOT find Luabind (missing: LUABIND_LIBRARIES LUABIND_INCLUDE_DIR)
+</code></pre>
+<p>You have to install luabind. See <a href="https://github.com/Project-OSRM/osrm-backend/wiki/Building-OSRM">Building OSRM</a> in the OSRM wiki for information on how to build OSRM on CentOS.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48323/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Feb '16, 09:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48323">
+    
+        <a name="48335"></a>
+        <div class="comment" id="comment-48335">
+            <div id="post-48335-score" class="comment-score"></div>
+            <div class="comment-text"><p>i have this error </p>
+
+<pre><code>-- Building on a 64 bit system
+-- Configuring OSRM in release mode
+-- Setting linker optimizations
+-- Boost version: 1.52.0
+-- Found the following Boost libraries:
+--   date_time
+--   filesystem
+--   iostreams
+--   program_options
+--   regex
+--   system
+--   thread
+--   unit_test_framework
+-- Found Intel TBB
+-- Looking for Luabind...
+-- Found Luabind: /opt/osrm_infrastructure/luabind-0.9.1/lib/libluabindd.so
+-- Found Luabind: /opt/osrm_infrastructure/luabind-0.9.1/lib/libluabindd.so
+-- Found Lua52: /usr/lib64/liblua.so;/usr/lib64/libm.so (found version "5.1.4")
+-- Looking for LuaJIT 5.2
+-- Found LUAJIT: /opt/osrm_infrastructure/LuaJIT-2.0.2/lib/libluajit-5.1.so
+-- Found LuaJIT: LUAJIT_LIBRARY-NOTFOUND
+-- Performing Test LUABIND_WORKS
+-- Performing Test LUABIND_WORKS - Failed
+-- Luabind/Lua5.2 not feasible, falling back to Lua 5.1.
+-- Found Lua51: /usr/lib64/liblua.so;/usr/lib64/libm.so (found version "5.1.4")
+-- Looking for LuaJIT 5.1
+-- Found LuaJIT: LUAJIT_LIBRARY-NOTFOUND
+-- Performing Test LUABIND51_WORKS
+-- Performing Test LUABIND51_WORKS - Failed
+CMake Error at cmake/check_luabind.cmake:38 (message):
+  Luabind does not work with Lua 5.1 at /usr/lib64/liblua-5.1.so, no working
+  Luabind found
+Call Stack (most recent call first
+</code></pre>
+
+<p>I need to downgrade lua???</p></div>
+            <div class="comment-info" id="comment-48335-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '16, 16:34)</span>
+                <a class="comment-user userinfo" href="/users/11396/darckblezzer">DarckBlezzer</a>
+                
+            </div>
+        </div>
+    
+        <a name="48336"></a>
+        <div class="comment" id="comment-48336">
+            <div id="post-48336-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The first hit when searching for "Luabind does not work with Lua 5.1" is <a href="https://github.com/Project-OSRM/osrm-backend/issues/1196">OSRM issue 1196</a>. According to the comments this can happen if you have a parallel installation of lua 5.1 and 5.2 (which should be fixed if I understood correctly) or your system has not enough memory. The latter is also explained in <a href="https://github.com/Project-OSRM/osrm-backend/issues/1580">issue 1580</a>.</p></div>
+            <div class="comment-info" id="comment-48336-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '16, 17:22)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48323" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48323-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="48343"></a>
+                    <div id="answer-container-48343" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48343-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48343/up/" rel="nofollow"> </a>
+<div id="post-48343-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-48343-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48343/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Well i have less error, but i can't pass from this, i don't know how to downgrade or change the LUA,</p>
+<p>now i have this error</p>
+<pre><code>[root@u18343387 build]# cmake ..
+-- Building on a 64 bit system
+-- Configuring OSRM in release mode
+-- Setting linker optimizations
+-- Boost version: 1.52.0
+-- Found the following Boost libraries:
+--   date_time
+--   filesystem
+--   iostreams
+--   program_options
+--   regex
+--   system
+--   thread
+--   unit_test_framework
+-- Found Intel TBB
+-- Looking for Luabind...
+-- Found Luabind: /opt/osrm_infrastructure/luabind-0.9.1/lib/libluabindd.so
+-- Looking for LuaJIT 5.2
+-- Found LuaJIT: LUAJIT_LIBRARY-NOTFOUND
+-- Performing Test LUABIND_WORKS
+-- Performing Test LUABIND_WORKS - Failed
+-- Luabind/Lua5.2 not feasible, falling back to Lua 5.1.
+-- Found Lua51: /usr/lib64/liblua.so;/usr/lib64/libm.so
+-- Looking for LuaJIT 5.1
+-- Found LuaJIT: LUAJIT_LIBRARY-NOTFOUND
+-- Performing Test LUABIND51_WORKS
+-- Performing Test LUABIND51_WORKS - Failed
+CMake Error at cmake/check_luabind.cmake:38 (message):
+  Luabind does not work with Lua 5.1 at /usr/lib64/liblua-5.1.so, no working
+  Luabind found
+Call Stack (most recent call first):
+  CMakeLists.txt:248 (include)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/osrm/osrm-backend/build/CMakeFiles/CMakeOutput.log".
+See also "/home/osrm/osrm-backend/build/CMakeFiles/CMakeError.log".
+</code></pre>
+<p>i saw the last links but i can't find a answer to change or somthing to make it run correctly</p>
+<pre><code>[root@u18343387 build]# rpm -qa | grep lua
+lua-devel-5.1.4-4.1.el6.x86_64
+lua-5.1.4-4.1.el6.x86_64
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48343/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Feb '16, 23:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9bd2a84fbfcb6ee54b372f83189bb6d1?s=32&amp;d=identicon&amp;r=g" alt="DarckBlezzer's gravatar image" />
+    <p><a href="/users/11396/darckblezzer">DarckBlezzer</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DarckBlezzer has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48343/">
+                edited
+                <strong>24 Feb '16, 23:26</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48343">
+    
+        <a name="48344"></a>
+        <div class="comment" id="comment-48344">
+            <div id="post-48344-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you check for the other cause of the problem I mentioned in my comment, i.e. too few memory?</p></div>
+            <div class="comment-info" id="comment-48344-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '16, 08:00)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="48357"></a>
+        <div class="comment" id="comment-48357">
+            <div id="post-48357-score" class="comment-score"></div>
+            <div class="comment-text"><p>the server has 16 gb of ram, and i think it doesn't affect,or not?</p></div>
+            <div class="comment-info" id="comment-48357-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '16, 15:36)</span>
+                <a class="comment-user userinfo" href="/users/11396/darckblezzer">DarckBlezzer</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48343" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48343-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/48322/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='p0AnZHaWXOR51GLF4IYLbjzYV79wRVOQ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48322/installing-osrm-in-centos-7-x64-error-cmake?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48322/installing-osrm-in-centos-7-x64-error-cmake?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osrm/"
+            class="tag-link-osrm"
+            title="see questions tagged'osrm'using tags"
+            rel="tag">osrm</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/problem/"
+            class="tag-link-problem"
+            title="see questions tagged'problem'using tags"
+            rel="tag">problem</a> <span class="tag-number">&#215;69</span><br/>
+        
+        <a href="/tags/installation/"
+            class="tag-link-installation"
+            title="see questions tagged'installation'using tags"
+            rel="tag">installation</a> <span class="tag-number">&#215;61</span><br/>
+        
+        <a href="/tags/centos/"
+            class="tag-link-centos"
+            title="see questions tagged'centos'using tags"
+            rel="tag">centos</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/cmake/"
+            class="tag-link-cmake"
+            title="see questions tagged'cmake'using tags"
+            rel="tag">cmake</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 24, 2016, 7:24 a.m.">24 Feb '16, 07:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,959 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 25, 2016, 3:36 p.m.">25 Feb '16, 15:36</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/45071/problem-installing-osrm-in-windows">Problem installing OSRM in Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43244/problems-installing-nominatim-relations-and-functions-not-found">Problems installing Nominatim: relations and functions not found</a>
+        </p>
+        
+        <p>
+            <a href="/questions/69828/osrm-vs-switch2osmo-tutorial-dual-data-set-imports-first-time-installer">OSRM vs switch2osmo Tutorial Dual Data Set Imports? First Time Installer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/69829/appropriate-filter-parameters-for-optimal-vehicle-routing-first-time-installer">Appropriate filter parameters for optimal vehicle routing?  First Time Installer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6684/how-to-install-openstreetmap-for-working-offline">How to install OpenStreetMap for working offline</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7413/address-search-results-unsatisfactory">address search results unsatisfactory</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3651/problem-installing-the-nominatim-web-front-end">Problem installing the Nominatim web front-end</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server">Installing OSM (main objective is reverse geocoding) on windows 2008 server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6671/login-problems">Login problems</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8756/construction-site-how-to-add-one-to-an-existing-road">Construction site - how to add one to an existing road</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

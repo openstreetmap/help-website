@@ -1,0 +1,693 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to convert this trace into GPX (correct timestamps) for OSM using gpsbabel? - OSM Help</title>
+        <meta name="description" content="Hi there. What is this format? pastebin.com link  What input and output file format should I use in gpsbabel so I can convert and upload this GPS trace in OpenStreetMap?  Thanks. " />
+        <meta name="keywords" content="gpslogmee,gpsbabel,convert,gpx,timestamps" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/29940/how-to-convert-this-trace-into-gpx-correct-timestamps-for-osm-using-gpsbabel" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/29940/how-to-convert-this-trace-into-gpx-correct-timestamps-for-osm-using-gpsbabel?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='DB3hXnDP3aHVZpuccvkE7Q4PfGCvbf23' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/29940/how-to-convert-this-trace-into-gpx-correct-timestamps-for-osm-using-gpsbabel">How to convert this trace into GPX (correct timestamps) for OSM using gpsbabel?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-29940-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29940/up/" rel="nofollow"> </a>
+<div id="post-29940-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-29940-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29940/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/29940/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi there.</p>
+<p>What is this format?
+<a href="http://pastebin.com/HhpEfV6L">pastebin.com link</a><br>
+</p>
+<p>What input and output file format should I use in <a href="http://www.gpsbabel.org/">gpsbabel</a> so I can convert and upload this GPS trace in OpenStreetMap?<br>
+</p>
+<p>Thanks.<br>
+</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/gpslogmee/" class="post-tag tag-link-gpslogmee"
+                                        title="see questions tagged 'gpslogmee'" rel="tag">gpslogmee</a>
+                                
+                                    <a href="/tags/gpsbabel/" class="post-tag tag-link-gpsbabel"
+                                        title="see questions tagged 'gpsbabel'" rel="tag">gpsbabel</a>
+                                
+                                    <a href="/tags/convert/" class="post-tag tag-link-convert"
+                                        title="see questions tagged 'convert'" rel="tag">convert</a>
+                                
+                                    <a href="/tags/gpx/" class="post-tag tag-link-gpx"
+                                        title="see questions tagged 'gpx'" rel="tag">gpx</a>
+                                
+                                    <a href="/tags/timestamps/" class="post-tag tag-link-timestamps"
+                                        title="see questions tagged 'timestamps'" rel="tag">timestamps</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Jan '14, 16:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3b09c80bc2f346ff49cf0d8eb22260b5?s=32&amp;d=identicon&amp;r=g" alt="dobri_z's gravatar image" />
+    <p><a href="/users/8176/dobri_z">dobri_z</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dobri_z has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/29940/">
+                edited
+                <strong>18 Jan '14, 19:07</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-29940">
+    
+</div>
+<div id="comment-tools-29940" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29940-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/29940/how-to-convert-this-trace-into-gpx-correct-timestamps-for-osm-using-gpsbabel?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/29940/how-to-convert-this-trace-into-gpx-correct-timestamps-for-osm-using-gpsbabel?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/29940/how-to-convert-this-trace-into-gpx-correct-timestamps-for-osm-using-gpsbabel?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/29940/how-to-convert-this-trace-into-gpx-correct-timestamps-for-osm-using-gpsbabel?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="29942"></a>
+                    <div id="answer-container-29942" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29942-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29942/up/" rel="nofollow"> </a>
+<div id="post-29942-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-29942-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29942/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This seems to be already in <a href="//en.wikipedia.org/wiki/GPS_eXchange_Format">GPX format</a>, in principle. Does the upload to OSM not work? I guess it may be due to the timestamps not being in ISO 8601 date-time format (they are e.g. "Sat Jan 18 2014 14:01:32 GMT+0200 (EET)"). If possible you should configure your app to record the time stamps in the correct format, tell the app author or use another one.<br>
+</p>
+<p>I <em>do not know how to use gpsbabel</em> to convert the time stamps. However, I see two alternative options:</p>
+<ol>
+<li>As an ugly workaround you could replace the timestamps in wrong format by new ones in the correct format. On upload please select the "private" privacy option which hides the time/speed info to other users as it is faked. <ol>
+<li>You can use gbsbabel to add fake timestamps (see also <a href="/questions/1260/how-to-create-fake-timestamps-with-gpsbabel">1</a> and <a href="http://www.gpsbabel.org/htmldoc-1.4.4/filter_track.html">2</a>): <br><code>gpsbabel -i gpx -f gps_logmee.gpx -x track,faketime=f19700101000000+1 -o gpx -F outputfilename.gpx</code></li>
+<li>You could use a <a href="//en.wikipedia.org/wiki/Regular_expression">regexp</a>-capable text editor and search <br> <code>&lt;time&gt;[^&lt;]*&lt;/time&gt;</code><br> and replace all by<br> <code>&lt;time&gt;1970-01-01T00:00:00Z&lt;/time&gt;</code></li>
+</ol>
+</li>
+<li>Alternatively you could use the gpx file directly (without uploading) in most editors (iD, JOSM, Potlatch2). That works even without correct time stamps. Of course that "no upload method" looses the benefit to other mappers.</li>
+</ol>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29942/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jan '14, 16:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/29942/">
+                edited
+                <strong>18 Jan '14, 18:06</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29942">
+    
+        <a name="29945"></a>
+        <div class="comment" id="comment-29945">
+            <div id="post-29945-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Thank you for your quick response.<br>
+Problem solved.<br>
+All three methods work fine.<br>
+Have a nice day.</p></div>
+            <div class="comment-info" id="comment-29945-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jan '14, 18:42)</span>
+                <a class="comment-user userinfo" href="/users/8176/dobri_z">dobri_z</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29942" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29942-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/29940/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='DB3hXnDP3aHVZpuccvkE7Q4PfGCvbf23' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29940/how-to-convert-this-trace-into-gpx-correct-timestamps-for-osm-using-gpsbabel?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29940/how-to-convert-this-trace-into-gpx-correct-timestamps-for-osm-using-gpsbabel?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/gpx/"
+            class="tag-link-gpx"
+            title="see questions tagged'gpx'using tags"
+            rel="tag">gpx</a> <span class="tag-number">&#215;255</span><br/>
+        
+        <a href="/tags/convert/"
+            class="tag-link-convert"
+            title="see questions tagged'convert'using tags"
+            rel="tag">convert</a> <span class="tag-number">&#215;35</span><br/>
+        
+        <a href="/tags/timestamps/"
+            class="tag-link-timestamps"
+            title="see questions tagged'timestamps'using tags"
+            rel="tag">timestamps</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/gpsbabel/"
+            class="tag-link-gpsbabel"
+            title="see questions tagged'gpsbabel'using tags"
+            rel="tag">gpsbabel</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/gpslogmee/"
+            class="tag-link-gpslogmee"
+            title="see questions tagged'gpslogmee'using tags"
+            rel="tag">gpslogmee</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 18, 2014, 4:02 p.m.">18 Jan '14, 16:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,042 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 18, 2014, 7:07 p.m.">18 Jan '14, 19:07</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/12811/ive-uploaded-a-gps-track-whats-the-easiest-way-to-add-it-to-the-map">I&#39;ve uploaded a GPS track - what&#39;s the easiest way to add it to the map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33500/convert-osm-files-to-a-gpx-file">Convert OSM files to a gpx file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12413/wie-kann-ich-itm-daten-in-gpx-dateien-umwandeln">Wie kann ich .itm-Daten in GPX-Dateien umwandeln?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12415/change-gpx-file-to-fit-format">Change GPX file to Fit format</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13576/should-i-modify-simplifying-filtering-by-accuracy-my-gps-traces-before-uploading-to-osm-if-yes-how">Should I modify (Simplifying, filtering by accuracy) my GPS traces before uploading to OSM ? If yes, how ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15636/how-to-convert-this-gps-format-into-gpx-used-here">How to convert this GPS Format into GPX used here</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1917/inserting-timestamp-in-tracks-drawn-from-gpsmapedit">Inserting Timestamp in tracks drawn from GPSMapEdit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11292/fit-files">.fit files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1260/how-to-create-fake-timestamps-with-gpsbabel">How to create fake timestamps with gpsbabel?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41227/easy-solution-for-lack-of-time-tag-in-gpx-or-found-no-good-gpx-points-in-input-data">[closed] Easy solution for lack of time tag in GPX or &quot;Found no good GPX points in input data&quot;</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

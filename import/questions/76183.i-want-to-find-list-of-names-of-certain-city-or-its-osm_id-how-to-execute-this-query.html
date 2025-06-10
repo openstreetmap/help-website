@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>I want to find list of names of certain city or its OSM_ID - how to execute this query? - OSM Help</title>
+        <meta name="description" content="I want to find the old name of the city. So, using Nominatim API I just execute  https://nominatim.openstreetmap.org/search?#?city=Kyiv&amp;amp;state=Kyiv&amp;amp;country=Ukraine&amp;amp;format=json&amp;amp;namedetails=1 And have a list of city&#39;s names. But I can&#39;t figure out how to execute this query from the data..." />
+        <meta name="keywords" content="osm_id,query,nominatim,osm,database" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/76183/i-want-to-find-list-of-names-of-certain-city-or-its-osm_id-how-to-execute-this-query" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/76183/i-want-to-find-list-of-names-of-certain-city-or-its-osm_id-how-to-execute-this-query?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='elGJiEyU7deli179XesRtHtlbfSvUH9s' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/76183/i-want-to-find-list-of-names-of-certain-city-or-its-osm_id-how-to-execute-this-query">I want to find list of names of certain city or its OSM_ID - how to execute this query?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-76183-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76183/up/" rel="nofollow"> </a>
+<div id="post-76183-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-76183-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76183/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/76183/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I want to find the old name of the city. So, using Nominatim API I just execute 
+<a href="https://nominatim.openstreetmap.org/search?#?city=Kyiv&amp;state=Kyiv&amp;country=Ukraine&amp;format=json&amp;namedetails=1">https://nominatim.openstreetmap.org/search?#?city=Kyiv&amp;state=Kyiv&amp;country=Ukraine&amp;format=json&amp;namedetails=1</a></p>
+<p>And have a list of city's names.</p>
+<p>But I can't figure out how to execute this query from the database.</p>
+<p>I can write something like:
+SELECT name
+FROM placex
+WHERE OSM_ID='XXXXX'</p>
+<p>But to do it I need to know the OSM_id of the city. </p>
+<p>So, my question is 
+How to find old names (or at least osm_id) of the city if I have city_name, state and country?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osm_id/" class="post-tag tag-link-osm_id"
+                                        title="see questions tagged 'osm_id'" rel="tag">osm_id</a>
+                                
+                                    <a href="/tags/query/" class="post-tag tag-link-query"
+                                        title="see questions tagged 'query'" rel="tag">query</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/database/" class="post-tag tag-link-database"
+                                        title="see questions tagged 'database'" rel="tag">database</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Aug '20, 14:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/15f1f94010a3f646d648f1ed2e60e16e?s=32&amp;d=identicon&amp;r=g" alt="MariiaZav's gravatar image" />
+    <p><a href="/users/18841/mariiazav">MariiaZav</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="MariiaZav has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-76183">
+    
+</div>
+<div id="comment-tools-76183" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76183-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/76183/i-want-to-find-list-of-names-of-certain-city-or-its-osm_id-how-to-execute-this-query?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/76183/i-want-to-find-list-of-names-of-certain-city-or-its-osm_id-how-to-execute-this-query?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/76183/i-want-to-find-list-of-names-of-certain-city-or-its-osm_id-how-to-execute-this-query?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/76183/i-want-to-find-list-of-names-of-certain-city-or-its-osm_id-how-to-execute-this-query?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="76197"></a>
+                    <div id="answer-container-76197" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-76197-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/76197/up/" rel="nofollow"> </a>
+<div id="post-76197-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-76197-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/76197/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Searching for city use the API documented in <a href="https://nominatim.org/release-docs/latest/api/Search/">https://nominatim.org/release-docs/latest/api/Search/</a></p>
+<p>saint petersburg, russia</p>
+<p><a href="https://nominatim.openstreetmap.org/search.php?q=saint%20petersburg%2C%20russia&amp;format=jsonv2">https://nominatim.openstreetmap.org/search.php?q=saint%20petersburg%2C%20russia&amp;format=jsonv2</a></p>
+<p>or structured, though many big cities are also states which makes it harder for a computer to differentiate</p>
+<p><a href="https://nominatim.openstreetmap.org/search.php?city=saint%20petersburg&amp;country=russia&amp;format=jsonv2">https://nominatim.openstreetmap.org/search.php?city=saint%20petersburg&amp;country=russia&amp;format=jsonv2</a></p>
+<p>If you have your own server replace the domain the IP address of your server or 'localhost'.</p>
+<p>Alternatively in your installation in the 'build' directory there's a script <code>utils/query.php</code>.</p>
+<p>Add <code>&amp;namedetails=1</code> and you get a list of all names. <a href="https://nominatim.openstreetmap.org/search.php?q=saint%20petersburg%2C%20russia&amp;format=jsonv2&amp;namedetails=1&amp;pretty=1">https://nominatim.openstreetmap.org/search.php?q=saint%20petersburg%2C%20russia&amp;format=jsonv2&amp;namedetails=1&amp;pretty=1</a></p>
+<p><code>"name:tzl": "Sant Pairbuerg",
+            "short_name": "СПб",
+            "alt_name:mk": "Петроград",
+            "alt_name:pl": "Sankt Petersburg",
+            "alt_name:vi": "Sankt-Peterburg",
+            "old_name:ar": "لينينغراد;بيتروغراد",
+            "old_name:ca": "Petrograd;Leningrad",</code></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/76197/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Aug '20, 23:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/96aad1e1801b7ea36fba50687924c935?s=32&amp;d=identicon&amp;r=g" alt="mtmail's gravatar image" />
+    <p><a href="/users/150/mtmail">mtmail</a><br/>
+    <span class="score" title="4757 reputation points"><span class="">4.8k</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mtmail has 50 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-76197">
+    
+        <a name="76220"></a>
+        <div class="comment" id="comment-76220">
+            <div id="post-76220-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your answer. I have no problem to execute query from Nominatim API. The main problem is to run this query from the database.
+It has 784 tables and no descriptions of it.</p>
+
+<p>I can't figure out how to get osm_id of the city without using Nominatim API and just using database.</p></div>
+            <div class="comment-info" id="comment-76220-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Aug '20, 19:01)</span>
+                <a class="comment-user userinfo" href="/users/18841/mariiazav">MariiaZav</a>
+                
+            </div>
+        </div>
+    
+        <a name="76221"></a>
+        <div class="comment" id="comment-76221">
+            <div id="post-76221-score" class="comment-score"></div>
+            <div class="comment-text"><p>Adding &amp;debug=1 to the URL <a href="https://nominatim.openstreetmap.org/search.php?city=saint%20petersburg&amp;country=russia&amp;format=jsonv2&amp;debug=1">https://nominatim.openstreetmap.org/search.php?city=saint%20petersburg&amp;country=russia&amp;format=jsonv2&amp;debug=1</a> gives some output of the SQL that is run. In the background Nominatim uses several thousand lines of code to create and manage the SQL, finding places in a world-wide database is complex, especially finding the most relevant/important city when many have the same name. There's no single or few SQL queries one can run manually to get the same result.</p></div>
+            <div class="comment-info" id="comment-76221-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Aug '20, 20:49)</span>
+                <a class="comment-user userinfo" href="/users/150/mtmail">mtmail</a>
+                
+            </div>
+        </div>
+    
+        <a name="76231"></a>
+        <div class="comment" id="comment-76231">
+            <div id="post-76231-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you so much! I didn't know about the debug mode. It helps me a lot!</p></div>
+            <div class="comment-info" id="comment-76231-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Aug '20, 08:23)</span>
+                <a class="comment-user userinfo" href="/users/18841/mariiazav">MariiaZav</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-76197" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-76197-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/76183/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='elGJiEyU7deli179XesRtHtlbfSvUH9s' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76183/i-want-to-find-list-of-names-of-certain-city-or-its-osm_id-how-to-execute-this-query?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/76183/i-want-to-find-list-of-names-of-certain-city-or-its-osm_id-how-to-execute-this-query?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/query/"
+            class="tag-link-query"
+            title="see questions tagged'query'using tags"
+            rel="tag">query</a> <span class="tag-number">&#215;147</span><br/>
+        
+        <a href="/tags/database/"
+            class="tag-link-database"
+            title="see questions tagged'database'using tags"
+            rel="tag">database</a> <span class="tag-number">&#215;118</span><br/>
+        
+        <a href="/tags/osm_id/"
+            class="tag-link-osm_id"
+            title="see questions tagged'osm_id'using tags"
+            rel="tag">osm_id</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 18, 2020, 2:30 p.m.">18 Aug '20, 14:30</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,840 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 20, 2020, 8:23 a.m.">20 Aug '20, 08:23</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/17315/how-do-i-find-the-nearest-cities-to-a-point-using-latitude-and-longitude-in-nominatim">How do I find the nearest cities to a point using latitude and longitude in nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52757/same-data-base-for-nominatim-and-overpass">Same data base for Nominatim and Overpass?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/80669/im-trying-to-download-the-internal-boundaries-of-nearly-each-country-and-facing-runtime-errors">I&#39;m trying to download the internal boundaries of nearly each country and facing runtime errors.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13183/to-find-nearest-places-using-mapquest-open-js-sdk">To find nearest places using mapquest open js sdk</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12608/extract-pois-for-a-region">extract POIs for a region</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12671/getting-error-when-importing-data-using-nominatim-index_placex-update-failed-error-upper-bound-of-for-loop-cannot-be-null">Getting error when importing data using Nominatim : index_placex: UPDATE failed: ERROR:  upper bound of FOR loop cannot be null</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12388/best-way-to-get-all-cities-of-a-specific-area">Best way to get all cities of a specific area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">How do I list all the streets in a city with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12286/how-can-i-get-the-zone-administrive-of-a-city-from-postgis-nominatim-import">How can I get the zone administrive of a city from postgis (nominatim import)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2680/can-i-produce-a-database-of-addresses-from-osm-data">Can I produce a database of addresses from OSM data?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

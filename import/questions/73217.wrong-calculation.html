@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>wrong calculation - OSM Help</title>
+        <meta name="description" content="Hello, I have updated a motorway road section where it is possible to be used by bikes (police recommendation), but although that the route calculation is not working as expected. do I have done something wrong or is there any reason for that?? Thanks in advance. (https://www.openstreetmap.org/direc..." />
+        <meta name="keywords" content="bike,calculate,road" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/73217/wrong-calculation" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/73217/wrong-calculation?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='8qaNwLYEaGWxtxtPW22VUJHDldHrIDjf' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/73217/wrong-calculation">wrong calculation</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-73217-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73217/up/" rel="nofollow"> </a>
+<div id="post-73217-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73217-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73217/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/73217/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I have updated a motorway road section where it is possible to be used by bikes (police recommendation), but although that the route calculation is not working as expected.</p>
+<p>do I have done something wrong or is there any reason for that??</p>
+<p>Thanks in advance.</p>
+<p>(<a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_bike&amp;route=42.96384%2C-2.85286%3B42.96392%2C-2.85369#map=19/42.96401/-2.85310)">https://www.openstreetmap.org/directions?engine=fossgis_osrm_bike&amp;route=42.96384%2C-2.85286%3B42.96392%2C-2.85369#map=19/42.96401/-2.85310)</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bike/" class="post-tag tag-link-bike"
+                                        title="see questions tagged 'bike'" rel="tag">bike</a>
+                                
+                                    <a href="/tags/calculate/" class="post-tag tag-link-calculate"
+                                        title="see questions tagged 'calculate'" rel="tag">calculate</a>
+                                
+                                    <a href="/tags/road/" class="post-tag tag-link-road"
+                                        title="see questions tagged 'road'" rel="tag">road</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Feb '20, 11:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7c41df60761e793d0fde8002449233bf?s=32&amp;d=identicon&amp;r=g" alt="Xabier's gravatar image" />
+    <p><a href="/users/17953/xabier">Xabier</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Xabier has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-73217">
+    
+        <a name="73219"></a>
+        <div class="comment" id="comment-73219">
+            <div id="post-73219-score" class="comment-score">1</div>
+            <div class="comment-text"><p>How long have you waited since you changed the data? Routing engines don't update instantaneously.</p></div>
+            <div class="comment-info" id="comment-73219-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '20, 16:39)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="73221"></a>
+        <div class="comment" id="comment-73221">
+            <div id="post-73221-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't think all the ways have cycle tags.</p></div>
+            <div class="comment-info" id="comment-73221-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '20, 22:21)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73217" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73217-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/73217/wrong-calculation?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/73217/wrong-calculation?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/73217/wrong-calculation?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/73217/wrong-calculation?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="73220"></a>
+                    <div id="answer-container-73220" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73220-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73220/up/" rel="nofollow"> </a>
+<div id="post-73220-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-73220-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73220/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi</p>
+<p>Motorways are simply not considered for the biking profile. As a cyclist myself, I cringe at the thought of going on a motorway :) but I guess it is to be expected that somewhere, for some situation, bikes are accepted on a "motorway" (motorway being a bit country specific in OSM).</p>
+<p>I opened a ticket here <a href="https://github.com/fossgis-routing-server/cbf-routing-profiles/issues/4">https://github.com/fossgis-routing-server/cbf-routing-profiles/issues/4</a> you can follow the progress there or even help to improve the profile.</p>
+<p>thanks for the report and best regards</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73220/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Feb '20, 20:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0697f0a3c5fdeff1999768f7df9cb2af?s=32&amp;d=identicon&amp;r=g" alt="datendelphin's gravatar image" />
+    <p><a href="/users/3029/datendelphin">datendelphin</a><br/>
+    <span class="score" title="234 reputation points">234</span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="datendelphin has one accepted answer">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73220">
+    
+        <a name="73228"></a>
+        <div class="comment" id="comment-73228">
+            <div id="post-73228-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Motorways are simply not considered for the biking profile. As a cyclist myself, I cringe at the thought of going on a motorway</p>
+</blockquote>
+
+<p><code>highway=motorway_link</code> is a deep issue since _link refers to the road it leads to from the last junction, but it does not consider where the legal or de facto "motorway" area begins, so you get situations like this.</p></div>
+            <div class="comment-info" id="comment-73228-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '20, 09:22)</span>
+                <a class="comment-user userinfo" href="/users/16887/kovoschiz">Kovoschiz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73220" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73220-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="73226"></a>
+                    <div id="answer-container-73226" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73226-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73226/up/" rel="nofollow"> </a>
+<div id="post-73226-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73226-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73226/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thank you very much.</p>
+<p>It is true that morways are not usable by bikes. This concrete motorway section has three lanes, two for the motorway and one for the link between two regional roads. Instead of giving an "extra work" and open a ticket, how about if:</p>
+<p>1.- I can add an extra regional road paralell to the motorway.</p>
+<p>2.- Technically the motorway finishes just before this section, I can convert all the following roads to another type.</p>
+<p>3.- Not no change anything and open a ticket.</p>
+<p>Let me know what you think.</p>
+<p>Once again, thank you very much.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73226/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Feb '20, 07:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7c41df60761e793d0fde8002449233bf?s=32&amp;d=identicon&amp;r=g" alt="Xabier's gravatar image" />
+    <p><a href="/users/17953/xabier">Xabier</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Xabier has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73226">
+    
+        <a name="73227"></a>
+        <div class="comment" id="comment-73227">
+            <div id="post-73227-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Please don't enter wrong data just to fix one particular router! There are other routers that support bicycle routing on motorways if the right access tag is present, so you'll be breaking those even if you're "fixing" the bike router used on osm.org.</p></div>
+            <div class="comment-info" id="comment-73227-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '20, 08:07)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="73229"></a>
+        <div class="comment" id="comment-73229">
+            <div id="post-73229-score" class="comment-score"></div>
+            <div class="comment-text"><p>This wiki page about routers has a category "Routes bicycles over motorways with bicycle=yes". I don't know for sure if it is fully up to date, but it might give you some ideas if you want to check out other routers.
+<a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">https://wiki.openstreetmap.org/wiki/Routing/online_routers</a></p>
+
+<p>For example maybe you already noticed that if you select Bicycle(Graphhopper) instead of Bicycle(OSRM), it does route over the motorway link:
+<a href="https://www.openstreetmap.org/directions?engine=graphhopper_bicycle&amp;route=42.96384%2C-2.85286%3B42.96392%2C-2.85369#map=19/42.96401/-2.85329">https://www.openstreetmap.org/directions?engine=graphhopper_bicycle&amp;route=42.96384%2C-2.85286%3B42.96392%2C-2.85369#map=19/42.96401/-2.85329</a></p></div>
+            <div class="comment-info" id="comment-73229-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '20, 11:58)</span>
+                <a class="comment-user userinfo" href="/users/14272/alan_gr">alan_gr</a>
+                
+            </div>
+        </div>
+    
+        <a name="73238"></a>
+        <div class="comment" id="comment-73238">
+            <div id="post-73238-score" class="comment-score"></div>
+            <div class="comment-text"><p>I agree with Richard. Map what is on the ground. I would rather be able to put a penalty on such connections.</p></div>
+            <div class="comment-info" id="comment-73238-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '20, 09:05)</span>
+                <a class="comment-user userinfo" href="/users/3029/datendelphin">datendelphin</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73226" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73226-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/73217/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='8qaNwLYEaGWxtxtPW22VUJHDldHrIDjf' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73217/wrong-calculation?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73217/wrong-calculation?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/road/"
+            class="tag-link-road"
+            title="see questions tagged'road'using tags"
+            rel="tag">road</a> <span class="tag-number">&#215;223</span><br/>
+        
+        <a href="/tags/bike/"
+            class="tag-link-bike"
+            title="see questions tagged'bike'using tags"
+            rel="tag">bike</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/calculate/"
+            class="tag-link-calculate"
+            title="see questions tagged'calculate'using tags"
+            rel="tag">calculate</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 24, 2020, 11:13 a.m.">24 Feb '20, 11:13</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,607 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 26, 2020, 9:05 a.m.">26 Feb '20, 09:05</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1755/how-do-i-enter-a-bridge-on-a-stretch-of-road-8-km-long-when-highlighted">How do I enter a Bridge on a stretch of road 8 km long when highlighted</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1871/about-naming-roads">About naming roads</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2031/industrial-areas-road-tag">Industrial Areas - Road Tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2365/how-to-mark-bad-road-condition">How to mark bad road condition?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2767/branching-roads">Branching Roads</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3177/car-parks-footpaths-and-auto-routing">Car parks footpaths and auto-routing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4471/road-web-service">Road web service</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4513/how-do-i-know-if-a-road-is-unclassified-or-tertiary">How do I know if a road is &#39;unclassified&#39; or &#39;tertiary&#39;?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4870/road-or-unclassified-for-unknown-highway">&#39;road&#39; or &#39;unclassified&#39; for unknown highway?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1083/tagging-seasonal-use-roads-questions-road-type-blockout-months-4x4">Tagging &quot;seasonal use roads&quot; (questions: road type, blockout months, 4x4)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

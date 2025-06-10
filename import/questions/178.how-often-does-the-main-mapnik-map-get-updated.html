@@ -1,0 +1,1002 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How often does the main (mapnik) map get updated - OSM Help</title>
+        <meta name="description" content="When looking at the main map on OpenStreetMap.org, some of the data that was added only minutes ago already shows up, whereas other data that was added weeks or months ago isn&#39;t visible yet. How does the update process of the main mapnik map work?" />
+        <meta name="keywords" content="map,rendering,update,expiry" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/178/how-often-does-the-main-mapnik-map-get-updated?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='IQzWMtGb2DeB24DEJ9H9iTprgzsBXqns' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-178-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/178/up/" rel="nofollow"> </a>
+<div id="post-178-score" class="post-score"
+    title="current number of votes">
+    46
+</div>
+<a id="post-178-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/178/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/178/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   21
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When looking at the main map on OpenStreetMap.org, some of the data that was added only minutes ago already shows up, whereas other data that was added weeks or months ago isn't visible yet. How does the update process of the main mapnik map work?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/update/" class="post-tag tag-link-update"
+                                        title="see questions tagged 'update'" rel="tag">update</a>
+                                
+                                    <a href="/tags/expiry/" class="post-tag tag-link-expiry"
+                                        title="see questions tagged 'expiry'" rel="tag">expiry</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Jul '10, 14:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32c974c4ca8b246698c2b82c64924da5?s=32&amp;d=identicon&amp;r=g" alt="apmon's gravatar image" />
+    <p><a href="/users/65/apmon">apmon</a><br/>
+    <span class="score" title="6527 reputation points"><span class="">6.5k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="apmon has 9 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/178/">
+                edited
+                <strong>18 Oct '13, 03:14</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-178">
+    
+</div>
+<div id="comment-tools-178" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-178-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="183"></a>
+                    <div id="answer-container-183" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-183-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/183/up/" rel="nofollow"> </a>
+<div id="post-183-score" class="post-score"
+    title="current number of votes">
+    94
+</div>
+<a id="post-183-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/183/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The short answer to this question is: The rendering of the main (mapnik) map should typically update within a few (tens of) minutes, however occasionally it can take longer.</p>
+<p>The longer answer is a little more complicated, as there are many components that interact in subtle ways to produce the updated results. So I'll try and explain the process, which may be a little technical at points:</p>
+<p>First of all, if you edit OpenStreetMap data, your changes get applied to the main database and are immediately visible from the API. The rendering of the map however uses a secondary database that needs to be kept updated from the main database. For this purpose, the main database publishes <a href="http://planet.openstreetmap.org/replication/minute/">minutely diffs</a> that are then applied to the rendering database on OpenStreetMap.org and other rendering servers. As the name suggests, these diffs typically are produced once a minute and so the rendering database is typically 1 - 2 minutes behind the main database. Occasionally (although this shouldn't happen) the diffs get stuck though, and this delay may increase a bit. You can see graphs the current delay of imports for the two rendering servers, <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/replication_delay.html">yevaud</a> and <a href="http://munin.openstreetmap.org/openstreetmap/orm.openstreetmap/replication_delay.html">orm</a>.</p>
+<p>Once the new data is in the rendering database, it then needs to actually get rendered. However, the server does not have the capacity and resources to rerender all changed tiles immediately, so a clever algorithm tries to only render those tiles that are necessary in an order to try and ensure that the map appears to be as up to date as possible:</p>
+<p>When your browser requests a tile from the server, the server checks if it has already rendered an up to date copy of this tile. If it has, then it simply sends back that copy to the client. If the copy the server has on the other hand is found to be out of date, it checks to see if it (the server) is not overloaded (e.g. in peak time) then tries to rerender the tile from the current rendering database and send this back to the client. If however it is overloaded, it returns the out of date copy back to the client. Similarly, if the rendering process takes more than 3 seconds, again the old tile gets returned to the client to not make the browser wait for ages to get the map. In both cases though, the tile gets added to the rendering queue and will typically get rendered in the background in the next hour or so. Therefore if you visit the same area e.g. an hour later, it should then have finished the rendering and you will see the up to date data.</p>
+<p>In some cases when the server is severely overloaded, the rendering queue might fill up and then the rendering request may get dropped, which means the area won't get rerendered and updated until someone else goes and views the area when the queues are no longer full, in which case the procedure above applies again.</p>
+<p>You can see if the rendering queue is full and thus it is likely that the map currently won't appear to update on these <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/#renderd">graphs</a>.</p>
+<p>Now this leaves the question of how and when does the server decide if a tile is out of date or not: For this purpose, during the import of the diffs into the rendering db, an extra program calculates which tiles need rerendering based on those diffs. As deciding which tiles are effected, is a hard problem without actually rendering everything, this is only based on heuristics. I.e. it is based upon if there are nodes in the tile, or ways that are in the diff have nodes in those tiles. Relations currently get ignored completely in this process. Similarly, for areas, only the perimeter of the area gets expired.</p>
+<p>If you suspect that the tile was not correctly expired, there is a way to manually overwrite this expiry mechanism by appending a /dirty to the url which will append the tile to the back of the rendering queue. However, in nearly all cases this should not be necessary.</p>
+<p>As tiles only get rerendered once they are viewed, some of the higher zoom levels that are seldomly viewed might therefore appear out of date by quite a bit. It also means that neighbouring tiles that might have been viewed recently are more up to date, and thus show some strange artefacts of different rendering times.</p>
+<p>In most cases hitting the refresh button a couple of times a few minutes apart will fix these issues.</p>
+<p>On top of all this, is the additional issue of (proxy) caching, both in your browser and server side to reduce load. This may introduce an additional delay of a few hours and may cause the tile not to get rerenderd as the request might never reaches the server to trigger the rerender.</p>
+<p>As you see, this whole things is complicated, but in most cases the short answer is sufficient. i.e. it normally updates within a few minutes.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/183/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Jul '10, 14:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32c974c4ca8b246698c2b82c64924da5?s=32&amp;d=identicon&amp;r=g" alt="apmon's gravatar image" />
+    <p><a href="/users/65/apmon">apmon</a><br/>
+    <span class="score" title="6527 reputation points"><span class="">6.5k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="apmon has 9 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/183/">
+                edited
+                <strong>20 Oct '13, 07:07</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5634c46072077e10f5b7c0da9b4bbb62?s=32&amp;d=identicon&amp;r=g" alt="pnorman's gravatar image" />
+            <p><a href="/users/290/pnorman">pnorman</a><br/>
+            <span class="score" title="2352 reputation points"><span class="">2.4k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="21 badges"><span class="silver">&#9679;</span><span class="badgecount">21</span></span><span title="40 badges"><span class="bronze">&#9679;</span><span class="badgecount">40</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-183">
+    
+        <a name="682"></a>
+        <div class="comment" id="comment-682">
+            <div id="post-682-score" class="comment-score">7</div>
+            <div class="comment-text"><p>apmon excellent explanation, but it would benefit from a small additional mention that coastlines are an exception. Coastlines being updated every so often. (typically twice a month.)</p></div>
+            <div class="comment-info" id="comment-682-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Aug '10, 12:30)</span>
+                <a class="comment-user userinfo" href="/users/48/firefishy">Firefishy ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="7977"></a>
+        <div class="comment" id="comment-7977">
+            <div id="post-7977-score" class="comment-score">2</div>
+            <div class="comment-text"><p>more information about the coastline process in the wiki: <a href="http://wiki.openstreetmap.org/wiki/Coastline#Main_Mapnik_layer">http://wiki.openstreetmap.org/wiki/Coastline#Main_Mapnik_layer</a></p></div>
+            <div class="comment-info" id="comment-7977-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Sep '11, 16:40)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+        <a name="10798"></a>
+        <div class="comment" id="comment-10798">
+            <div id="post-10798-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Seems like there is heavy daytime load dependency to be seen in the graphs. What about not dropping any tiles from rendering but instead moving them to rendering during night off-peak hours? Finally, higher server load is not a big financial issues, right? I mean in terms of higher electricity comsumption for instance...</p></div>
+            <div class="comment-info" id="comment-10798-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '12, 10:14)</span>
+                <a class="comment-user userinfo" href="/users/237/kozuch">Kozuch</a>
+                
+            </div>
+        </div>
+    
+        <a name="12500"></a>
+        <div class="comment not_top_scorer" id="comment-12500">
+            <div id="post-12500-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can see my changes are being applied to the standard map, but the open cyclemap layer remains unchanged. How often does the open cyclemap get updated? I have been making corrections to some cycle paths that are not connected correctly thus causing routing errors.</p></div>
+            <div class="comment-info" id="comment-12500-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 May '12, 11:24)</span>
+                <a class="comment-user userinfo" href="/users/1031/paulcooke">paulcooke</a>
+                
+            </div>
+        </div>
+    
+        <a name="12503"></a>
+        <div class="comment not_top_scorer" id="comment-12503">
+            <div id="post-12503-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The cycle map layer uses Andy Allen's <a href="http://www.opencyclemap.org/">opencyclemap</a> tiles.  <a href="http://www.gravitystorm.co.uk/shine/cycle-info/">He says</a> that "The map is updated every week (on a Thursday or Friday, normally)".</p></div>
+            <div class="comment-info" id="comment-12503-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 May '12, 12:23)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30150"></a>
+        <div class="comment" id="comment-30150">
+            <div id="post-30150-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Does the above described algorithm only apply for zoomlevels &gt;=13 ? I usually always have to manually <em>/dirty</em> tiles with zoomlevel 12, 11 and 10 to have tertiary roads show up on those tiles...</p></div>
+            <div class="comment-info" id="comment-30150-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jan '14, 12:58)</span>
+                <a class="comment-user userinfo" href="/users/32/katpatuka">katpatuka</a>
+                
+            </div>
+        </div>
+    
+        <a name="53908"></a>
+        <div class="comment not_top_scorer" id="comment-53908">
+            <div id="post-53908-score" class="comment-score"></div>
+            <div class="comment-text"><p>What I read above seems quite clear but, what happens to me is a little more strange:
+I deleted an old obsolete track segment and I drew a new track more actual replacing the old one lightly displaced with respect the old one.
+I did all the modifications about 24 hours ago.
+Now I can see the updated situation if I set the zoom to have the map scale on 300m or 100m.
+If the map scale is on 50m the modification is only partial
+If the map scale is 30m no modification is shown and I see the old situation
+If the map scale is 20m the modifications are completely shown
+All these things happen using the Standard Map; if I set the Cycling Map no modification appears on every zoom level.</p></div>
+            <div class="comment-info" id="comment-53908-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '17, 17:25)</span>
+                <a class="comment-user userinfo" href="/users/13168/gbal45">gbal45</a>
+                
+            </div>
+        </div>
+    
+        <a name="53910"></a>
+        <div class="comment not_top_scorer" id="comment-53910">
+            <div id="post-53910-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/13168/gbal45">@gbal45</a> pls do not add further questions to existing question and pls don't add them as answers. In any case you are simply seeing in browser caching effects. Refreshing and/or deleting the cache should help except if there is an overload situation on the tile servers.</p></div>
+            <div class="comment-info" id="comment-53910-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '17, 20:07)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53972"></a>
+        <div class="comment not_top_scorer" id="comment-53972">
+            <div id="post-53972-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the great answer! </p>
+
+<p>Just a heads up, the <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/#renderd">http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/#renderd</a> link is broken, and returns a 404 error.</p></div>
+            <div class="comment-info" id="comment-53972-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '17, 02:21)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+        <a name="55450"></a>
+        <div class="comment not_top_scorer" id="comment-55450">
+            <div id="post-55450-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Additional info: zoom levels 12 and below do not get marked dirty by map changes. Apparently they only re-render manually or when render styles change.</p></div>
+            <div class="comment-info" id="comment-55450-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '17, 15:20)</span>
+                <a class="comment-user userinfo" href="/users/13551/mrpete">MrPete</a>
+                
+            </div>
+        </div>
+    
+        <a name="61246"></a>
+        <div class="comment" id="comment-61246">
+            <div id="post-61246-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Some additional details:</p>
+
+<ul>
+<li>
+<p>we have now 4 rendering servers instead of 2 (orm, yevaud, scorch, vial - see <a href="https://wiki.openstreetmap.org/wiki/Servers/tile">https://wiki.openstreetmap.org/wiki/Servers/tile</a> )</p>
+</li>
+<li>
+<p>global rendering graphs are here: <a href="https://munin.openstreetmap.org/openstreetmap/render.openstreetmap/index.html#renderd">https://munin.openstreetmap.org/openstreetmap/render.openstreetmap/index.html#renderd</a></p>
+</li>
+<li>
+<p>Low and medium zoom tiles (z0-z12) are usually re-rendered only when a new osm-carto version is being deployed and on the first Sunday of each month (see <a href="https://github.com/openstreetmap/chef/issues/138#issuecomment-346863212">https://github.com/openstreetmap/chef/issues/138#issuecomment-346863212</a> )</p>
+</li>
+</ul></div>
+            <div class="comment-info" id="comment-61246-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '17, 03:59)</span>
+                <a class="comment-user userinfo" href="/users/11332/kocio">kocio</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-183" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 11
+        </span>
+        <a href="#" class="show-all-comments-link">show 6 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-183-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="88034"></a>
+                    <div id="answer-container-88034" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-88034-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/88034/up/" rel="nofollow"> </a>
+<div id="post-88034-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-88034-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/88034/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I tested a bit, and it seems I am more successful in trigering a re-render of tiles when i use "force-reload" in my browser. This is done by pressing [Ctrl]+[F5] in most browsers on Windows or Linux. On Mac, try [Shift]+[Command]+[R]. Clicking the reload-button while holding down the [Shift]-key shold also do the trick in most browsers and OS'es.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/88034/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Nov '23, 20:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/86eba4947ddf5c683b09aa5e54cebbfa?s=32&amp;d=identicon&amp;r=g" alt="frodeseverin's gravatar image" />
+    <p><a href="/users/23502/frodeseverin">frodeseverin</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="frodeseverin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/88034/">
+                edited
+                <strong>30 Nov '23, 20:14</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-88034">
+    
+        <a name="88036"></a>
+        <div class="comment" id="comment-88036">
+            <div id="post-88036-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Good points frodeseverin on the rendering. NOTE  Newer users may expect routing to be quick but in my experience even though the road or path shows on mapnik  routers will need a three to five days to react to an edit.</p></div>
+            <div class="comment-info" id="comment-88036-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '23, 22:33)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-88034" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-88034-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/178/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='IQzWMtGb2DeB24DEJ9H9iTprgzsBXqns' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/178/how-often-does-the-main-mapnik-map-get-updated?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/178/how-often-does-the-main-mapnik-map-get-updated?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/update/"
+            class="tag-link-update"
+            title="see questions tagged'update'using tags"
+            rel="tag">update</a> <span class="tag-number">&#215;199</span><br/>
+        
+        <a href="/tags/expiry/"
+            class="tag-link-expiry"
+            title="see questions tagged'expiry'using tags"
+            rel="tag">expiry</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 14, 2010, 2 p.m.">14 Jul '10, 14:00</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>59,465 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 30, 2023, 10:33 p.m.">30 Nov '23, 22:33</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/11179/wie-haufig-wird-die-standard-karte-auf-osmorg-aktualisiert">Wie häufig wird die Standard-Karte auf OSM.org aktualisiert?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61826/problem-of-visibilityzoom">Problem of visibility/zoom</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62268/zooming-rendering-question">[closed] Zooming (rendering) question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4313/create-a-simple-minimalist-black-and-white-map">create a simple, minimalist black and white map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/139/how-can-i-design-some-simple-maps">How can I design some simple maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3755/map-rendering-update-after-resolving-conflicts">Map rendering update after resolving conflicts</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3452/getting-to-the-base-map">Getting to the base map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1234/why-wont-zoom-11-update">[closed] Why won&#39;t zoom 11 update?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1081/clackmannanshire">Clackmannanshire</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

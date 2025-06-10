@@ -1,0 +1,1029 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Помощь гуру - OSM Help</title>
+        <meta name="description" content="пару лет назад отрисовывал свой город (Желтые Воды, Днепропетровская, Украина) в josm-e. много чего было сделано. вот сейчас созрел выложить для всех. но есть вопросы: рисовал для печати, т.е., возможно, не так как положено; некоторые улицы нынче переименованы. что посоветуете?" />
+        <meta name="keywords" content="файла,импорт,локального,lang-ru" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/53631/" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/53631/?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='YwDXrP7jN1A4jDwkA9ON2oLI6hqyLqT3' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/53631/">Помощь гуру</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-53631-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53631/up/" rel="nofollow"> </a>
+<div id="post-53631-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53631-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53631/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/53631/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>пару лет назад отрисовывал свой город (Желтые Воды, Днепропетровская, Украина) в josm-e. много чего было сделано. вот сейчас созрел выложить для всех. но есть вопросы: рисовал для печати, т.е., возможно, не так как положено; некоторые улицы нынче переименованы. что посоветуете?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/%25D1%2584%25D0%25B0%25D0%25B9%25D0%25BB%25D0%25B0/" class="post-tag tag-link-файла"
+                                        title="see questions tagged 'файла'" rel="tag">файла</a>
+                                
+                                    <a href="/tags/%25D0%25B8%25D0%25BC%25D0%25BF%25D0%25BE%25D1%2580%25D1%2582/" class="post-tag tag-link-импорт"
+                                        title="see questions tagged 'импорт'" rel="tag">импорт</a>
+                                
+                                    <a href="/tags/%25D0%25BB%25D0%25BE%25D0%25BA%25D0%25B0%25D0%25BB%25D1%258C%25D0%25BD%25D0%25BE%25D0%25B3%25D0%25BE/" class="post-tag tag-link-локального"
+                                        title="see questions tagged 'локального'" rel="tag">локального</a>
+                                
+                                    <a href="/tags/lang-ru/" class="post-tag tag-link-lang-ru"
+                                        title="see questions tagged 'lang-ru'" rel="tag">lang-ru</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Dec '16, 13:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d0fdc5f12e8b0d711ae2674e5362e94e?s=32&amp;d=identicon&amp;r=g" alt="AntraxI's gravatar image" />
+    <p><a href="/users/13104/antraxi">AntraxI</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AntraxI has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/53631/">
+                edited
+                <strong>21 Dec '16, 16:23</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+            <p><a href="/users/158/scai">scai ♦</a><br/>
+            <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-53631">
+    
+</div>
+<div id="comment-tools-53631" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53631-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/53631?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/53631?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/53631?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/53631?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="53653"></a>
+                    <div id="answer-container-53653" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53653-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53653/up/" rel="nofollow"> </a>
+<div id="post-53653-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53653-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53653/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Почему было сразу не выложить это в ОСМ. Сейчас скорей всего будет мало желающих разгребать это и импортировать. Но можете попробовать создать тему на форуме, выложить свой файл и может быть кто-нибудь возьмётся.
+Это всё конечно при условии, что информация там не скопирована с других карт, иначе для ОСМ она не представляет ни какого интереса.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53653/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Dec '16, 06:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0148de082bc491462382f8ac188442bb?s=32&amp;d=identicon&amp;r=g" alt="freeExec's gravatar image" />
+    <p><a href="/users/10504/freeexec">freeExec</a><br/>
+    <span class="score" title="116 reputation points">116</span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="freeExec has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53653">
+    
+</div>
+<div id="comment-tools-53653" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53653-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="53671"></a>
+                    <div id="answer-container-53671" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53671-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53671/up/" rel="nofollow"> </a>
+<div id="post-53671-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53671-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53671/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><em>&gt; Почему было сразу не выложить это в ОСМ</em><br>
+потому что в то время можно было отрисовывать только по бингу, у которого были некачественные снимки. я отрисовывал в josm`e по картам ovi (nokia), которые, по сути, гугловские но с большим масштабом и более актуальные на тот момент. т.е. эдакая серая схема.<br>
+<em>&gt; Сейчас скорей всего будет мало желающих разгребать это и импортировать</em><br>
+разгребать что? не совсем понял. импортировать я и сам могу, но вопрос-то в правильности рисования (не расположения объектов!), например, типов объектов, типов проезжих частей и т.д. и т.п.<br>
+<em>&gt;  Это всё конечно при условии, что информация там не скопирована с других карт</em><br>
+это абсолютно авторская карта. рисованная с нуля. более того скажу, как-то случайно в джосме нажал отправку на сервак и часть моей отрисовки (новая часть города) загрузилась на осм.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53671/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Dec '16, 13:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d0fdc5f12e8b0d711ae2674e5362e94e?s=32&amp;d=identicon&amp;r=g" alt="AntraxI's gravatar image" />
+    <p><a href="/users/13104/antraxi">AntraxI</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AntraxI has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/53671/">
+                edited
+                <strong>22 Dec '16, 13:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53671">
+    
+        <a name="53672"></a>
+        <div class="comment" id="comment-53672">
+            <div id="post-53672-score" class="comment-score"></div>
+            <div class="comment-text"><p>this looks like a comment on freeExec's answer. Could you please use the "add new comment" (being logged in is needed) button to post it?</p></div>
+            <div class="comment-info" id="comment-53672-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '16, 14:07)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53671" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53671-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="53777"></a>
+                    <div id="answer-container-53777" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53777-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53777/up/" rel="nofollow"> </a>
+<div id="post-53777-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53777-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53777/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Ну, во-первых, чтобы делать импорт, нужно для этого следовать процедуре: сделать страницу в Вики, написать в список рассылки import@, опубликовать данные для того, чтобы их могли оценить другие. Всё это делать на английском.</p>
+<p>И я бы помог с этим, но вы описали проблемы:</p>
+<ol>
+<li>Вы рисовали на основе коммерческих карт. Всё, можно не продолжать, это нельзя импортировать в ОСМ</li>
+<li>Данные устарели, исправлять некому</li>
+</ol>
+<p>В ОСМ должны быть только лицензионно чистые данные, это -- цель проекта, сделать <em>свободную</em> базу геоданных. Что касательно второго пункта, то исправлять за кем-то сложнее, чем нарисовать с нуля.</p>
+<p>Поэтому, к сожалению, в вашем случае это никак не поможет ОСМ.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53777/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Dec '16, 15:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2940f9e6fd838c861770d30ce96a5ed7?s=32&amp;d=identicon&amp;r=g" alt="_sev's gravatar image" />
+    <p><a href="/users/13129/_sev">_sev</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="_sev has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53777">
+    
+</div>
+<div id="comment-tools-53777" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53777-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="54296"></a>
+                    <div id="answer-container-54296" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54296-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54296/up/" rel="nofollow"> </a>
+<div id="post-54296-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54296-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54296/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="https://www.openstreetmap.org/way/454929944#map=17/50.82678/28.96050">https://www.openstreetmap.org/way/454929944#map=17/50.82678/28.96050</a> - как сделать связи и какие теги чтоб нанести этот бред
+Полигоны по земкадастру населен пунктов здесь верны. Но эта полоска-кусок Малинська вулиця она числится с домами и жителями в соседних Чоповичи. Эта инфа достоверна:я выходил на сельсовет там мне расказалди что у них здесь полигон земля и план схема улиц не дружат друг с другом , они разные . Здесь полно мест когда на земле одного поселка стоят дома и вместе с жителями они относятся к другому поселку граница которого далеко. 
+За подтверждение я предоставляю видео внутреннего документа миграционной службы/ бывший паспортной отдел/ - реестр улиц по поселкам с диапазоном нумерации Малинского района  время видео на 0;40 - видно Чоповичи улица Малинська 1-10<br>
+<a href="https://drive.google.com/open?id=0BwlADA1U6HeZbnpRbkd6ZHpQSVk">https://drive.google.com/open?id=0BwlADA1U6HeZbnpRbkd6ZHpQSVk</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54296/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Jan '17, 09:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d4aa7a8d5f23b72dac9d5112a5dfb55e?s=32&amp;d=identicon&amp;r=g" alt="Bondar%20Bohdan's gravatar image" />
+    <p><a href="/users/13255/bondar-bohdan">Bondar Bohdan</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bondar Bohdan has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54296">
+    
+</div>
+<div id="comment-tools-54296" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54296-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="54337"></a>
+                    <div id="answer-container-54337" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54337-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54337/up/" rel="nofollow"> </a>
+<div id="post-54337-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54337-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54337/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Bondar Bohdan, это к чему? каким боком мои Желтые Воды к Чоповичи?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54337/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Jan '17, 18:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d0fdc5f12e8b0d711ae2674e5362e94e?s=32&amp;d=identicon&amp;r=g" alt="AntraxI's gravatar image" />
+    <p><a href="/users/13104/antraxi">AntraxI</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AntraxI has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54337">
+    
+</div>
+<div id="comment-tools-54337" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54337-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/53631/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='YwDXrP7jN1A4jDwkA9ON2oLI6hqyLqT3' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53631/?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53631/?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lang-ru/"
+            class="tag-link-lang-ru"
+            title="see questions tagged'lang-ru'using tags"
+            rel="tag">lang-ru</a> <span class="tag-number">&#215;54</span><br/>
+        
+        <a href="/tags/%25D0%25B8%25D0%25BC%25D0%25BF%25D0%25BE%25D1%2580%25D1%2582/"
+            class="tag-link-импорт"
+            title="see questions tagged'импорт'using tags"
+            rel="tag">импорт</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/%25D0%25BB%25D0%25BE%25D0%25BA%25D0%25B0%25D0%25BB%25D1%258C%25D0%25BD%25D0%25BE%25D0%25B3%25D0%25BE/"
+            class="tag-link-локального"
+            title="see questions tagged'локального'using tags"
+            rel="tag">локального</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/%25D1%2584%25D0%25B0%25D0%25B9%25D0%25BB%25D0%25B0/"
+            class="tag-link-файла"
+            title="see questions tagged'файла'using tags"
+            rel="tag">файла</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 21, 2016, 1:28 p.m.">21 Dec '16, 13:28</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,944 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 27, 2017, 6:56 p.m.">27 Jan '17, 18:56</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/2701/how-to-create-moving-objects-such-as-transport">Как создать движущиеся объекты типа транспорта \ How to create moving objects such as transport</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8205/">почему после редактирования карты изменения сохраняются не на все ее слои, а лишь на некоторые</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9739/">не грузятся карты</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9805/ru-sar-osm-nm2">Навител RU-SAR-osm-nm2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14751/">Изменения не сохраняются. Что не так?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18857/">пишет, что город НЕ ОПРЕДЕЛЕН</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18916/">[closed] Как правильно добавлять объекты, видимые при любом увеличении</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20082/">показ объекта при разном масштабе</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20202/">Переименовние файла</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2621/osm-structure-of-the-osm-file">Структура OSM файла / Structure of the OSM file</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

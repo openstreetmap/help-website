@@ -1,0 +1,782 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>XML/Postgresql Rendering - OSM Help</title>
+        <meta name="description" content="Heyho! I try to render my map from a Postgresql/PostGIS Database. I use a simple XML-Stylesheet. Can somebody please tell me, what this error-message means and how I can fix it? That would be really kind! The error-massage is quoted at the end of this post. If needed, I can quote/upload my code as w..." />
+        <meta name="keywords" content="xml,geometry,postgresql,postgis,database" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/11405/xmlpostgresql-rendering" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/11405/xmlpostgresql-rendering?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='K9qByqtwqvWa49TIykrHYgVfio1ICjpD' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/11405/xmlpostgresql-rendering">XML/Postgresql Rendering</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-11405-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11405/up/" rel="nofollow"> </a>
+<div id="post-11405-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-11405-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11405/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/11405/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Heyho!</p>
+<p>I try to render my map from a Postgresql/PostGIS Database.
+I use a simple XML-Stylesheet.</p>
+<p>Can somebody please tell me, what this error-message means and how I can fix it?
+That would be really kind!</p>
+<p>The error-massage is quoted at the end of this post.
+If needed, I can quote/upload my code as well.</p>
+<p>Greetings
+Matze</p>
+<hr>
+<pre><code>Traceback (most recent call last):
+  File "C:/0A/run_python", line 3, in &lt;module&gt;
+    execfile(r"C:\0A\7\schwentine.py")
+  File "C:\0A\7\schwentine.py", line 57, in &lt;module&gt;
+    render_image()
+  File "C:\0A\7\schwentine.py", line 21, in render_image
+    mapnik.load_map(m,r"C:\0A\7\schwentine.xml")
+RuntimeError: Postgis Plugin: PSQL error:
+ERROR:  syntax error at or near "planet_osm_line"
+LINE 1: ... srid FROM geometry_columns WHERE f_table_name=' 'planet_osm...
+                                                             ^
+Full sql was: 'SELECT f_geometry_column, srid FROM geometry_columns WHERE f_table_name=' 'planet_osm_line' ''
+ (encountered during parsing of layer 'tutorial' in map 'C:\0A\7\schwentine.xml')
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/xml/" class="post-tag tag-link-xml"
+                                        title="see questions tagged 'xml'" rel="tag">xml</a>
+                                
+                                    <a href="/tags/geometry/" class="post-tag tag-link-geometry"
+                                        title="see questions tagged 'geometry'" rel="tag">geometry</a>
+                                
+                                    <a href="/tags/postgresql/" class="post-tag tag-link-postgresql"
+                                        title="see questions tagged 'postgresql'" rel="tag">postgresql</a>
+                                
+                                    <a href="/tags/postgis/" class="post-tag tag-link-postgis"
+                                        title="see questions tagged 'postgis'" rel="tag">postgis</a>
+                                
+                                    <a href="/tags/database/" class="post-tag tag-link-database"
+                                        title="see questions tagged 'database'" rel="tag">database</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Mar '12, 08:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cc0198a02af3c41ad04b61e028c3b126?s=32&amp;d=identicon&amp;r=g" alt="MHein's gravatar image" />
+    <p><a href="/users/3139/mhein">MHein</a><br/>
+    <span class="score" title="141 reputation points">141</span><span title="11 badges"><span class="badge1">&#9679;</span><span class="badgecount">11</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="MHein has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-11405">
+    
+</div>
+<div id="comment-tools-11405" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11405-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/11405/xmlpostgresql-rendering?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/11405/xmlpostgresql-rendering?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/11405/xmlpostgresql-rendering?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/11405/xmlpostgresql-rendering?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="11457"></a>
+                    <div id="answer-container-11457" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11457-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11457/up/" rel="nofollow"> </a>
+<div id="post-11457-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-11457-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11457/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="MHein has selected this answer as the correct answer"
+        href="/accept_answer/11457/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>What is the last line of your inc/settings.xml.inc file? If you are running the default setup it should be &lt;!ENTITY prefix "planet_osm"&gt;</p>
+<p>It looks like you might have put in extra quotes.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11457/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Mar '12, 06:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5634c46072077e10f5b7c0da9b4bbb62?s=32&amp;d=identicon&amp;r=g" alt="pnorman's gravatar image" />
+    <p><a href="/users/290/pnorman">pnorman</a><br/>
+    <span class="score" title="2352 reputation points"><span class="">2.4k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="21 badges"><span class="silver">&#9679;</span><span class="badgecount">21</span></span><span title="40 badges"><span class="bronze">&#9679;</span><span class="badgecount">40</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="pnorman has 9 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11457">
+    
+        <a name="11458"></a>
+        <div class="comment" id="comment-11458">
+            <div id="post-11458-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is my XML-Stylesheet:</p>
+
+<p></p><hr>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;<p></p>
+<p>&lt;!DOCTYPE Map
+[
+       &lt;!ENTITY world_boundaries_dir   "/home/foo/mapnik/world_boundaries/"&gt;
+       &lt;!ENTITY dbtype "postgis"&gt;
+       &lt;!ENTITY dbhost "localhost"&gt;
+       &lt;!ENTITY dbuser "Hein"&gt;
+       &lt;!ENTITY dbname "gis_schwentine"&gt;
+       &lt;!ENTITY dbprefix "planet_osm"&gt;
+       &lt;!ENTITY tutorial-casing SYSTEM "/home/foo/spreadnik/tutorial-casing.sty"&gt;
+]&gt;</p>
+<p>&lt;Map bgcolor="#b5d0d0" &gt;</p>
+<pre><code>&amp;lt;Style name="world"&amp;gt;&amp;lt;/Style&amp;gt;
+&amp;lt;Style name="coast-poly"&amp;gt;&amp;lt;/Style&amp;gt;
+&amp;lt;Style name="builtup"&amp;gt;&amp;lt;/Style&amp;gt;
+
+&amp;lt;Layer name="world"&amp;gt;&amp;lt;/Layer&amp;gt;
+&amp;lt;Layer name="coast-poly"&amp;gt;&amp;lt;/Layer&amp;gt;
+&amp;lt;Layer name="builtup"&amp;gt;&amp;lt;/Layer&amp;gt;
+
+&amp;lt;Layer name="tutorial"&amp;gt;
+&amp;lt;StyleName&amp;gt;tutorial-fill&amp;lt;/StyleName&amp;gt;
+    &amp;lt;Datasource&amp;gt;
+        &amp;lt;Parameter name="type"&amp;gt;&amp;amp;dbtype;&amp;lt;/Parameter&amp;gt;
+        &amp;lt;Parameter name="user"&amp;gt;&amp;amp;dbuser;&amp;lt;/Parameter&amp;gt;
+        &amp;lt;Parameter name="dbname"&amp;gt;&amp;amp;dbname;&amp;lt;/Parameter&amp;gt;
+        &amp;lt;Parameter name="table"&amp;gt; 'planet_osm_points' &amp;lt;/Parameter&amp;gt;
+        &amp;lt;Parameter name="estimate_extent"&amp;gt;false&amp;lt;/Parameter&amp;gt;
+        &amp;lt;Parameter name="extent"&amp;gt;-20037508,-19929239,20037508,19929239&amp;lt;/Parameter&amp;gt;
+    &amp;lt;/Datasource&amp;gt;
+&amp;lt;/Layer&amp;gt;
+</code></pre>
+</code><p><code>&lt;/Map&gt;
+</code></p></pre><p></p></div>
+            <div class="comment-info" id="comment-11458-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '12, 06:53)</span>
+                <a class="comment-user userinfo" href="/users/3139/mhein">MHein</a>
+                
+            </div>
+        </div>
+    
+        <a name="11459"></a>
+        <div class="comment" id="comment-11459">
+            <div id="post-11459-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is my Python-file</p>
+
+<p></p><hr>
+<pre><code>    #!/usr/bin/python<p></p>
+<p>import mapnik 
+from mapnik import Layer, PostGIS
+import sys, os</p>
+<p>def render_image():</p>
+<pre><code>ll = (-180.0,-90.0, 180.0,90.0)
+prj = mapnik.Projection("+proj=utm +zone=32U +ellps=GRS80 +datum=WGS84 +units=m +no_defs")
+#prj = mapnik.Projection("+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.999601 +x_0=400000 +y_0=-100000 +ellps=airy  +units=m +towgs84=446.448,-125.157,542.060,0.1502,0.2470,0.8421,-20.4894 +units=m +nodefs")
+#prj = mapnik.Projection("+proj=latlong +datum=WGS84")
+c0 = prj.forward(mapnik.Coord(ll[0],ll[1]))
+c1 = prj.forward(mapnik.Coord(ll[2],ll[3]))
+
+z = 3
+imgx = 336 * z
+imgy = 450 * z
+
+m = mapnik.Map(imgx,imgy)
+mapnik.load_map(m,r"C:\0A\7\schwentine.xml")
+
+db_params = dict(
+  dbname = 'gis_schwentine',
+  user = 'Hein',
+  password = '1234',
+  host = 'localhost',
+  port = 5432,
+  estimate_extent = False,
+  extent = "3390650.221286806, -3163145.87245787, 3609898.596229789, -2956043.104540316"
+)
+
+lyr = Layer('points',"+init=epsg:900913")
+db_params['table'] = (planet_osm_point)
+lyr.datasource = PostGIS(**db_params)
+lyr.styles.append('points')
+m.layers.append(lyr)
+
+if hasattr(mapnik,'mapnik_version') and mapnik.mapnik_version() &amp;gt;= 800:
+    bbox = mapnik.Box2d(c0.x,c0.y,c1.x,c1.y)
+else:
+    bbox = mapnik.Envelope(c0.x,c0.y,c1.x,c1.y)
+m.zoom_to_box(bbox)
+im = mapnik.Image(imgx,imgy)
+mapnik.render(m, im)
+view = im.view(0,0,imgx,imgy) # x,y,width,height
+view.save("schwentine.png",'png')
+</code></pre>
+</code><p><code>if <strong>name</strong> == "<strong>main</strong>":
+  render_image()
+</code></p></pre><p></p></div>
+            <div class="comment-info" id="comment-11459-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '12, 07:41)</span>
+                <a class="comment-user userinfo" href="/users/3139/mhein">MHein</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11457" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11457-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/11405/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='K9qByqtwqvWa49TIykrHYgVfio1ICjpD' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11405/xmlpostgresql-rendering?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11405/xmlpostgresql-rendering?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/postgresql/"
+            class="tag-link-postgresql"
+            title="see questions tagged'postgresql'using tags"
+            rel="tag">postgresql</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/postgis/"
+            class="tag-link-postgis"
+            title="see questions tagged'postgis'using tags"
+            rel="tag">postgis</a> <span class="tag-number">&#215;134</span><br/>
+        
+        <a href="/tags/database/"
+            class="tag-link-database"
+            title="see questions tagged'database'using tags"
+            rel="tag">database</a> <span class="tag-number">&#215;118</span><br/>
+        
+        <a href="/tags/xml/"
+            class="tag-link-xml"
+            title="see questions tagged'xml'using tags"
+            rel="tag">xml</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/geometry/"
+            class="tag-link-geometry"
+            title="see questions tagged'geometry'using tags"
+            rel="tag">geometry</a> <span class="tag-number">&#215;22</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 22, 2012, 8:19 a.m.">22 Mar '12, 08:19</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,338 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 23, 2012, 8:28 a.m.">23 Mar '12, 08:28</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13124/how-to-find-the-polygon">How to find the polygon?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12388/best-way-to-get-all-cities-of-a-specific-area">Best way to get all cities of a specific area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/80768/overpass-api-on-custom-osm-postgres-database-exported-as-xml">Overpass-API on custom osm postgres database exported as XML</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52642/why-is-plain-postgres-instead-of-postgis-used-for-main-database">Why is plain Postgres instead of PostGIS used for main database?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11357/rendering-imagesmaps-from-postgresqlpostgis-database">Rendering images/maps from Postgresql/PostGIS Database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed">Why is my import of planet-latest.osm KILLED?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10671/osm-postgis-mapnik-problem">OSM – PostGIS – Mapnik problem!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5066/error-while-following-osmosis-import-to-database-examples">Error while following osmosis import to database examples</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8363/how-to-setup-postgis-server-and-import-osm-file-on-windows">How to setup PostGIS server and import .osm-file on Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3988/speeding-up-openstreetmap-postgis-querying">Speeding up OpenStreetMap PostGIS querying</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

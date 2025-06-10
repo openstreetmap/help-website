@@ -1,0 +1,618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Use different tile style with openstreetmap-tile-server - OSM Help</title>
+        <meta name="description" content="I have downloaded and configured openstreetmap-tile-server from github repository which is just great and works fine with my map. I would like to test different style insead of gravitystorm&#39;s. I checked the dockerfile and made research over internet to understand how this server works behind the sce..." />
+        <meta name="keywords" content="generate_tiles,tiles,switch2osm,tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/79199/use-different-tile-style-with-openstreetmap-tile-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/79199/use-different-tile-style-with-openstreetmap-tile-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='66kBWBsinF2KlB2NMUkmHqblt8z5BAew' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/79199/use-different-tile-style-with-openstreetmap-tile-server">Use different tile style with openstreetmap-tile-server</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-79199-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79199/up/" rel="nofollow"> </a>
+<div id="post-79199-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-79199-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79199/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/79199/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have downloaded and configured openstreetmap-tile-server from <a href="https://github.com/Overv/openstreetmap-tile-server/blob/master/README.md">github repository</a> which is just great and works fine with my map.<br>
+I would like to test different style insead of <a href="https://github.com/gravitystorm/openstreetmap-carto">gravitystorm's</a>. I checked the dockerfile and made research over internet to understand how this server works behind the scene.<br>
+What I found - that server install and uses carto to export gravitystorms project.mml into readable mapnik.xml for Mapnik application.<br>
+But I have found different interesting <a href="https://github.com/tilery/pianoforte">style</a> which I would like to use with current image.<br> What I understand by README file- this is whole application to serve tiles, but I would like to get only CSSes styles as it's written in dockerfile with downloading gravitystorm's style. Is it possible to extract CSS styles?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/generate_tiles/" class="post-tag tag-link-generate_tiles"
+                                        title="see questions tagged 'generate_tiles'" rel="tag">generate_tiles</a>
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                                    <a href="/tags/switch2osm/" class="post-tag tag-link-switch2osm"
+                                        title="see questions tagged 'switch2osm'" rel="tag">switch2osm</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Mar '21, 12:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/735ed8c1abf1a1f7b907b78d9594303c?s=32&amp;d=identicon&amp;r=g" alt="engopy's gravatar image" />
+    <p><a href="/users/19203/engopy">engopy</a><br/>
+    <span class="score" title="126 reputation points">126</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="engopy has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-79199">
+    
+        <a name="79200"></a>
+        <div class="comment" id="comment-79200">
+            <div id="post-79200-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are a bunch of questions over at that github repository already - <a href="https://github.com/Overv/openstreetmap-tile-server/search?q=style&amp;type=issues">https://github.com/Overv/openstreetmap-tile-server/search?q=style&amp;type=issues</a> - do any of those help?</p>
+
+<p>In particular <a href="https://github.com/Overv/openstreetmap-tile-server/issues/152">https://github.com/Overv/openstreetmap-tile-server/issues/152</a> suggests a couple of options.</p></div>
+            <div class="comment-info" id="comment-79200-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Mar '21, 12:31)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="79201"></a>
+        <div class="comment" id="comment-79201">
+            <div id="post-79201-score" class="comment-score"></div>
+            <div class="comment-text"><p>After studying dockerfile I understand I need to generate mapnik.xml with carto and it is fine. </p>
+
+<p>What is curious for me is- how to know which file (form repository I listed in post) should I convert with carto into mapnik.xml?  There is no <code>project.mml</code> - in fact there is no <em>.mml file at all. I found file <code>piano.yml</code> which looks like good candidate to be converted but the extension is .yml and it is confusing. I found some of other repositories with no </em>.mml files.</p>
+
+<p>I know I could ask on all repositories separately, but I gues it's a newbie question and it can be obvious for users here.</p></div>
+            <div class="comment-info" id="comment-79201-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Mar '21, 13:00)</span>
+                <a class="comment-user userinfo" href="/users/19203/engopy">engopy</a>
+                
+            </div>
+        </div>
+    
+        <a name="79276"></a>
+        <div class="comment" id="comment-79276">
+            <div id="post-79276-score" class="comment-score"></div>
+            <div class="comment-text"><p>If the file lists the layers, it's the right one. <a href="https://github.com/tilery/pianoforte/blob/master/piano.yml">https://github.com/tilery/pianoforte/blob/master/piano.yml</a> is indeed the right one.</p></div>
+            <div class="comment-info" id="comment-79276-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '21, 20:32)</span>
+                <a class="comment-user userinfo" href="/users/15564/marcos-dione">Marcos Dione</a>
+                
+            </div>
+        </div>
+    
+        <a name="79277"></a>
+        <div class="comment" id="comment-79277">
+            <div id="post-79277-score" class="comment-score"></div>
+            <div class="comment-text"><p>See laso: <a href="https://help.openstreetmap.org/questions/65257/how-to-convert-yml-to-mml-file">https://help.openstreetmap.org/questions/65257/how-to-convert-yml-to-mml-file</a></p></div>
+            <div class="comment-info" id="comment-79277-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '21, 20:35)</span>
+                <a class="comment-user userinfo" href="/users/15564/marcos-dione">Marcos Dione</a>
+                
+            </div>
+        </div>
+    
+        <a name="79302"></a>
+        <div class="comment" id="comment-79302">
+            <div id="post-79302-score" class="comment-score">1</div>
+            <div class="comment-text"><p>At the end I have forked openstreetmap-carto repository and with kosmtik I've edited official style to my custom. Than during build OSM docker image I've changed style download path to my repository. It works fine.</p></div>
+            <div class="comment-info" id="comment-79302-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Mar '21, 16:51)</span>
+                <a class="comment-user userinfo" href="/users/19203/engopy">engopy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79199" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79199-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/79199/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='66kBWBsinF2KlB2NMUkmHqblt8z5BAew' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79199/use-different-tile-style-with-openstreetmap-tile-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79199/use-different-tile-style-with-openstreetmap-tile-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/switch2osm/"
+            class="tag-link-switch2osm"
+            title="see questions tagged'switch2osm'using tags"
+            rel="tag">switch2osm</a> <span class="tag-number">&#215;36</span><br/>
+        
+        <a href="/tags/generate_tiles/"
+            class="tag-link-generate_tiles"
+            title="see questions tagged'generate_tiles'using tags"
+            rel="tag">generate_tiles</a> <span class="tag-number">&#215;24</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 9, 2021, 12:17 p.m.">09 Mar '21, 12:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,604 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 16, 2021, 4:51 p.m.">16 Mar '21, 16:51</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/87585/tiles-not-displaying-on-tile-server">Tiles not displaying on tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66877/how-to-hide-buildings-from-the-tile-layer">How to hide buildings from the tile layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/75676/tile-server-image-generation-speed">tile server image generation speed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/82628/is-there-a-simple-way-to-turn-osm-file-to-tilepng">Is there a simple way to turn .osm file to tile.png ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30698/switch2osm-tile-server-insert-more-countries">Switch2osm tile server insert more countries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/80710/how-to-filter-or-shrink-osmpbf-size-for-planet-map">How to filter or shrink .osm.pbf size for planet map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64604/use-a-custom-style-for-self-hosted-tile-server">Use a custom style for self-hosted tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29724/tile-resources">Tile Resources</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28585/download-tile-for-my-apps-usage">Download tile for my apps usage</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20735/country-place-and-street-names-in-english-instead-of-local-language-for-my-own-mapserver">Country, place and street names in English instead of local language for  my own mapserver</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

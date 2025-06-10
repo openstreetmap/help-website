@@ -1,0 +1,770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to use Josm update my own tile server? - OSM Help</title>
+        <meta name="description" content="Hello,I build my own tile server on my ubuntu16.04. I import a small area of mapdata to PostgreSQL.Then I use Apache and mod_tile and mapnik to render the tile.finally I use openlayer to display my Web map.  I want do some change without update my change to openstreetmap server,just edit my local ti..." />
+        <meta name="keywords" content="edit,tile,local,serever" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/60468/how-to-use-josm-update-my-own-tile-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/60468/how-to-use-josm-update-my-own-tile-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='1NNOhZ4gkPWUyHADDKy3sXKHe79QyxG7' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/60468/how-to-use-josm-update-my-own-tile-server">How to use Josm update my own tile server?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-60468-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60468/up/" rel="nofollow"> </a>
+<div id="post-60468-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60468-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60468/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/60468/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,I build my own tile server on my ubuntu16.04. I import a small area of mapdata to PostgreSQL.Then I use Apache and mod_tile and mapnik to render the tile.finally I use openlayer to display my Web map.
+    I want do some change without update my change to openstreetmap server,just edit my local tile server.I choose install Rais Port.In Josm connecting server option ,I choose :<a href="http://localhost:3000/api.But">http://localhost:3000/api.But</a> after I do some change and upload to my server.I cannot see my changes.
+    How can I edit my local tile server?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/edit/" class="post-tag tag-link-edit"
+                                        title="see questions tagged 'edit'" rel="tag">edit</a>
+                                
+                                    <a href="/tags/tile/" class="post-tag tag-link-tile"
+                                        title="see questions tagged 'tile'" rel="tag">tile</a>
+                                
+                                    <a href="/tags/local/" class="post-tag tag-link-local"
+                                        title="see questions tagged 'local'" rel="tag">local</a>
+                                
+                                    <a href="/tags/serever/" class="post-tag tag-link-serever"
+                                        title="see questions tagged 'serever'" rel="tag">serever</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Nov '17, 08:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66e4305afae2faf808a2b600525c4cc9?s=32&amp;d=identicon&amp;r=g" alt="gleide's gravatar image" />
+    <p><a href="/users/14367/gleide">gleide</a><br/>
+    <span class="score" title="79 reputation points">79</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gleide has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-60468">
+    
+</div>
+<div id="comment-tools-60468" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60468-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/60468/how-to-use-josm-update-my-own-tile-server?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/60468/how-to-use-josm-update-my-own-tile-server?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/60468/how-to-use-josm-update-my-own-tile-server?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/60468/how-to-use-josm-update-my-own-tile-server?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="60472"></a>
+                    <div id="answer-container-60472" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-60472-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60472/up/" rel="nofollow"> </a>
+<div id="post-60472-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60472-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60472/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Your tile server database (likely a osm2pgsql schema DB) needs to be updated from the data in the rails port database. If it is a small area it probably doesn't make sense to use the minutely diff mechanism for updating, </p>
+<p>Exporting the data in OSM XML format from the rails-port DB can likely be done with osmosis, see <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.46">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.46</a> </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/60472/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Nov '17, 09:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-60472">
+    
+        <a name="60479"></a>
+        <div class="comment" id="comment-60479">
+            <div id="post-60479-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your help.But I didin't express my question clearly.What I really want to do as following:
+   In Rails Port,there are online editor like iD potlatch2,I want to edit my map and save the change to my local server not the openstreetmap server for some policy limitation.but when I save my change It asked me whether to upload to openstreetmap server,How can I only save my change on my local server but not openstreetmap server.</p></div>
+            <div class="comment-info" id="comment-60479-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Nov '17, 14:41)</span>
+                <a class="comment-user userinfo" href="/users/14367/gleide">gleide</a>
+                
+            </div>
+        </div>
+    
+        <a name="60487"></a>
+        <div class="comment" id="comment-60487">
+            <div id="post-60487-score" class="comment-score"></div>
+            <div class="comment-text"><p>I completely understood that. If you are using iD on your rails-port instance you are already storing in your local DB, but as explained above wont automatically be reflected in your rendering DB.</p></div>
+            <div class="comment-info" id="comment-60487-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Nov '17, 20:40)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60472" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60472-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="60477"></a>
+                    <div id="answer-container-60477" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-60477-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60477/up/" rel="nofollow"> </a>
+<div id="post-60477-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60477-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60477/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Another option, that may be easier than setting up the Rails port locally, is to create the file you want to update in .osc format and throw it at Osmosis.  If you look <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load#Updating_your_database_as_people_edit_OpenStreetMap">here</a> and at the "openstreetmap-tiles-update-expire" script you can see how that script calls Osmosis with a .osc file.  Create a file in that format (e.g. from JOSM) and call Osmosis with it.</p>
+<p>Also, if you're adding completely new stuff and there's not much of it, you could call osm2pgsql in append mode.  See <a href="https://github.com/SomeoneElseOSM/SomeoneElse-style-legend/blob/master/update_generated_legend.sh#L47">here</a> for an example of that in context.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/60477/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Nov '17, 13:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-60477">
+    
+        <a name="60480"></a>
+        <div class="comment" id="comment-60480">
+            <div id="post-60480-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your help.But what I really want to do is not updating my database as people edit OpenStreetMap.What I really want to do as following: In Rails Port,there are online editor like iD potlatch2,I want to edit my map online and save the change to my local server not the openstreetmap server for some policy limitation.
+Ｉ　would really appreciate it if you could help me solve my problem.</p></div>
+            <div class="comment-info" id="comment-60480-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Nov '17, 14:48)</span>
+                <a class="comment-user userinfo" href="/users/14367/gleide">gleide</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60477" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60477-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/60468/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='1NNOhZ4gkPWUyHADDKy3sXKHe79QyxG7' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60468/how-to-use-josm-update-my-own-tile-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60468/how-to-use-josm-update-my-own-tile-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/edit/"
+            class="tag-link-edit"
+            title="see questions tagged'edit'using tags"
+            rel="tag">edit</a> <span class="tag-number">&#215;94</span><br/>
+        
+        <a href="/tags/tile/"
+            class="tag-link-tile"
+            title="see questions tagged'tile'using tags"
+            rel="tag">tile</a> <span class="tag-number">&#215;57</span><br/>
+        
+        <a href="/tags/local/"
+            class="tag-link-local"
+            title="see questions tagged'local'using tags"
+            rel="tag">local</a> <span class="tag-number">&#215;39</span><br/>
+        
+        <a href="/tags/serever/"
+            class="tag-link-serever"
+            title="see questions tagged'serever'using tags"
+            rel="tag">serever</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 6, 2017, 8:16 a.m.">06 Nov '17, 08:16</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,157 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 6, 2017, 8:40 p.m.">06 Nov '17, 20:40</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/36946/set-railsport-and-josm-to-use-local-tile-server">Set RailsPort and JOSM to use local tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60716/how-can-edit-my-local-tile-server-without-uploading-changes-to-openstreetmap-server">How can edit my local tile server without uploading changes to openstreetmap server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1706/how-do-i-use-the-osm-tile-map-server-in-mapinfo">How do I use the osm tile map server in mapinfo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2052/map-editing">[closed] Map editing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2178/how-to-download-a-large-area-and-use-it-in-josm">HOW TO download a &quot;large area&quot; and use it in JOSM ??</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2983/how-to-edit-the-changeset-save-commentnote-after-saving-againmultiple-times-in-an-potlatch-2-editing-session">How to edit the changeset (save) comment/note after saving again/multiple times in an Potlatch 2 editing session?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3417/source-key">Source key</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3210/creating-layers-on-offline-tiles">creating layers on offline tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3983/how-do-you-display-only-local-edits-in-the-changelog">How do you display only local edits in the changelog?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2040/red-error-tiles-in-josm">Red error tiles in JOSM</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

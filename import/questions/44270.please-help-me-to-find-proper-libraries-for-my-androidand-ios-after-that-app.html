@@ -1,0 +1,1092 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Please Help me to find proper libraries for my android(and iOS after that) app - OSM Help</title>
+        <meta name="description" content="Hi guys, Here is what I have in my mind:  I have a ~40GB compressed XML file on the host of OSM, I want to have separate downloadable files on my website for each city, so one shouldn&#39;t download whole country&#39;s database. However I guess I should include freeways and outskirts of a city, and it will ..." />
+        <meta name="keywords" content="openstreetmap" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/44270/please-help-me-to-find-proper-libraries-for-my-androidand-ios-after-that-app" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/44270/please-help-me-to-find-proper-libraries-for-my-androidand-ios-after-that-app?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='KSjMaFti8S5bfebas6gM2QtCONmKPUPa' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/44270/please-help-me-to-find-proper-libraries-for-my-androidand-ios-after-that-app">Please Help me to find proper libraries for my android(and iOS after that) app</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-44270-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44270/up/" rel="nofollow"> </a>
+<div id="post-44270-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-44270-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44270/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/44270/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi guys,
+Here is what I have in my mind:</p>
+<ul>
+<li>I have a ~40GB compressed XML file on the host of OSM, I want to have separate downloadable files on my website for each city, so one shouldn't download whole country's database. However I guess I should include freeways and outskirts of a city, and it will probably have common areas if one wants to download two nearby cities, so it should understand and won't download what is already available.</li>
+<li>No need to download further information for routing. The routing information should be included</li>
+<li>I want to add extra information about a point on the map (either text or image), and they should be dynamic, so it shows metro schedule and the next train, or current problems on route or certain location online.</li>
+<li>I want to add traffic information, and include it in routing.</li>
+<li>If it is possible I want to add multiple condition for routing, e.g. one can say how can I go to X and have a Gas station, bank and... in my way with minimum traffic base on the hour.</li>
+</ul>
+<p>I haven't worked with OSM APIs, so I don't know what they can do... which would work together better, and where should I implement my own codes.
+I read wiki.openstreetmap.org, but there where little information about each APIs and it would be nice to see a lot of sample codes so I can get ideas from them, there are only a simple project with each API, not a compilation of them.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Jul '15, 12:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0f14e93f9694860b5e7619e7ea826d57?s=32&amp;d=identicon&amp;r=g" alt="youyeg's gravatar image" />
+    <p><a href="/users/11249/youyeg">youyeg</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="youyeg has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/44270/">
+                edited
+                <strong>19 Jul '15, 12:19</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-44270">
+    
+        <a name="44273"></a>
+        <div class="comment" id="comment-44273">
+            <div id="post-44273-score" class="comment-score">4</div>
+            <div class="comment-text"><p>This is way too ambitious for a simple help.openstreetmap.org answer. Essentially you want a complete mapping stack customised to your own requirements. Your requirements would take an OSM specialist days, even weeks to build (and several parts, such as train schedules and traffic levels, are not included in OSM at any rate). I think the nearest you'll get is checking out Mapbox's paid-for plans (<a href="http://mapbox.com">http://mapbox.com</a>), which are substantially OSM-based, and seeing if any of them come close to your requirements.</p></div>
+            <div class="comment-info" id="comment-44273-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '15, 16:14)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="44277"></a>
+        <div class="comment" id="comment-44277">
+            <div id="post-44277-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't know where to began and choose which APIs. I need to know where I should began to implement my own parts, and where I can use others' work. I explained, so you know where I am to go. Thanks..</p></div>
+            <div class="comment-info" id="comment-44277-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '15, 21:25)</span>
+                <a class="comment-user userinfo" href="/users/11249/youyeg">youyeg</a>
+                
+            </div>
+        </div>
+    
+        <a name="44285"></a>
+        <div class="comment" id="comment-44285">
+            <div id="post-44285-score" class="comment-score">2</div>
+            <div class="comment-text"><p>First of all, <a href="http://wiki.openstreetmap.org/wiki/API">openstreetmap.org's API</a> is for editing. You're not building a map editor, so it's not relevant to you. You will need to use third-party components based on OSM data. As it happens, since you want offline use, online "APIs" per se probably aren't much use.</p>
+
+<p>As SomeoneElse said, you need to break the question into parts - you have asked for simply too much. But at a very rough stab, look at GraphHopper for routing, and the Mapbox SDKs for map display. Traffic information is not included in OSM, nor are public transport timetables. I don't know of any modern, common library that uses the same info for map display and for routing.</p></div>
+            <div class="comment-info" id="comment-44285-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '15, 08:31)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="44286"></a>
+        <div class="comment not_top_scorer" id="comment-44286">
+            <div id="post-44286-score" class="comment-score"></div>
+            <div class="comment-text"><p>You know, the reason why I explain my work as a whole was that the reader know what I need. Surely if I wanted to ask separately I should have give explanation for each API I think I might need, and I thought it would cause further confusion. Anyway, I looked into Mapbox, and began to read its documents. About the traffic, I was thinking if it is possible to give the routes a weight, like a graph, so the nearest destination calculate base on the sum of weights.
+I don't expect that I have all I want at once, I want a library to access to map, a library for routing, and a library to display the map, and I know I should develop rest of it on my own. Could you please recommend those library which work best together? Reading map, Displaying map, and Routing.
+Thanks :)</p></div>
+            <div class="comment-info" id="comment-44286-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '15, 08:53)</span>
+                <a class="comment-user userinfo" href="/users/11249/youyeg">youyeg</a>
+                
+            </div>
+        </div>
+    
+        <a name="44288"></a>
+        <div class="comment" id="comment-44288">
+            <div id="post-44288-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Well, the general expectation is that you try and find some stuff out yourself, and then come here when you're stuck.</p>
+
+<p>Yes, you can give segments in a routing graph a weight, using OSRM or GraphHopper or any similar library. I'd suggest you download one, play with it, and then ask again here if you're having troubles.</p>
+
+<p>Bear in mind that OSRM (aka Mapbox Directions) will not run comfortably on-device, whereas GraphHopper can.</p></div>
+            <div class="comment-info" id="comment-44288-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '15, 09:05)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="44289"></a>
+        <div class="comment not_top_scorer" id="comment-44289">
+            <div id="post-44289-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you Richard.</p></div>
+            <div class="comment-info" id="comment-44289-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '15, 09:09)</span>
+                <a class="comment-user userinfo" href="/users/11249/youyeg">youyeg</a>
+                
+            </div>
+        </div>
+    
+        <a name="44330"></a>
+        <div class="comment" id="comment-44330">
+            <div id="post-44330-score" class="comment-score">3</div>
+            <div class="comment-text"><p>The main OSM API is only for editing so you won't be using that. Then there's a Nominatim API operated by the project which allows you to find places on the map of which you only know a name. Then there's project-osrm.org which is a third-party OSM based routing engine that finds you the fastest route from A to B. Then there's overpass-api.de which is a third-party search service for the OSM database that can do more "programmer like" queries than Nominatim can. All of these services require an online connection and have strict usage limits. If you want to go offline then you might want to look into "libosmscout". But if you hope that there are ready-made components that you just have to mix and match then you will be disappointed; existing libraries will only do a small part of what you are looking for.</p></div>
+            <div class="comment-info" id="comment-44330-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jul '15, 19:10)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="44336"></a>
+        <div class="comment not_top_scorer" id="comment-44336">
+            <div id="post-44336-score" class="comment-score"></div>
+            <div class="comment-text"><p>Your answer was very helpful Frederik, I wish I know more about OSM-based free offline APIs so I could combine and develop what I need. I looked into wiki.openstreetmap.org, but there were no comprehensive list of OSM-based projects, it would be great if there were a list with features of each one. Anyway, I should thank you a lot. :)</p></div>
+            <div class="comment-info" id="comment-44336-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '15, 08:46)</span>
+                <a class="comment-user userinfo" href="/users/11249/youyeg">youyeg</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-44270" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44270-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/44270/please-help-me-to-find-proper-libraries-for-my-androidand-ios-after-that-app?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/44270/please-help-me-to-find-proper-libraries-for-my-androidand-ios-after-that-app?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/44270/please-help-me-to-find-proper-libraries-for-my-androidand-ios-after-that-app?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/44270/please-help-me-to-find-proper-libraries-for-my-androidand-ios-after-that-app?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="44279"></a>
+                    <div id="answer-container-44279" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-44279-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44279/up/" rel="nofollow"> </a>
+<div id="post-44279-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-44279-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44279/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As Richard has said, public libraries to do what you want in its entirety do not exist (on any platform).  As you've found, there are solutions to some parts of the problems that you're posing yourself, but not others, and certainly not all together.</p>
+<p>Where you go next is likely to depend on what it is that you're actually trying to do and how much money you've got - are you trying to develop a commercial app, or is this just a college project?  If the former, then paying someone someone else to help you with what's possible, what's not and how much it'll all cost is surely the way forward.  There are some possibilities listed <a href="https://switch2osm.org/providers/">here</a>, and I'm sure there will be suggestions in the wiki too.  If the latter, then obviously you have to develop something yourself.  I'd suggest breaking the problem down into parts and seeing what bits OSM data can help with and what parts it can't.  The essence of OSM is that 40Gb of data that you've downloaded - what you do with it after that is up to you.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/44279/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Jul '15, 22:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-44279">
+    
+</div>
+<div id="comment-tools-44279" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44279-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="44388"></a>
+                    <div id="answer-container-44388" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-44388-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44388/up/" rel="nofollow"> </a>
+<div id="post-44388-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-44388-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44388/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For Android you can try mapsforge and GraphHopper which both are running offline on the device. GraphHopper includes a simple Android demo including some maps to download. GraphHopper also runs <a href="https://github.com/graphhopper/graphhopper-ios">on iOS</a> too, but I do not know much about offline libs for maps there. (note: I'm the author of GraphHopper)</p>
+<p>But traffic data and offline is not fitting well together :). Though you can integrate traffic in the routing but your devices need online access - see <a href="https://karussell.wordpress.com/2015/04/08/visualize-and-handle-traffic-information-with-graphhopper-in-real-time-for-cologne-germany-koln/">this blog post</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/44388/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Jul '15, 10:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fec61c70a4cc98b1e84a5dfbde1e9a6e?s=32&amp;d=identicon&amp;r=g" alt="peatar's gravatar image" />
+    <p><a href="/users/10729/peatar">peatar</a><br/>
+    <span class="score" title="351 reputation points">351</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="peatar has one accepted answer">8&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-44388">
+    
+        <a name="44402"></a>
+        <div class="comment" id="comment-44402">
+            <div id="post-44402-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, I began to work of GraphHopper, and I will ask if there were anything to ask. I thought I could have something like MAMPS.ME (MapsWithMe) so routing data and maps data could be together. Would it be possible? With GraphHopper?
+ :) Thanks.</p></div>
+            <div class="comment-info" id="comment-44402-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '15, 08:47)</span>
+                <a class="comment-user userinfo" href="/users/11249/youyeg">youyeg</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-44388" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44388-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="44272"></a>
+                    <div id="answer-container-44272" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-44272-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44272/up/" rel="nofollow"> </a>
+<div id="post-44272-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-44272-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44272/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi youyeg, two rules for this forum;
+its specific for OSM troubles, not for developers and theyre troubleshooting.
+ask one question at the time, so that you end up whith an clear answer to your question.
+Greetz
+Ps
+Try to ask or take a look here <a href="http://wiki.openstreetmap.org/wiki/Develop">http://wiki.openstreetmap.org/wiki/Develop</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/44272/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Jul '15, 16:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-44272">
+    
+        <a name="44282"></a>
+        <div class="comment" id="comment-44282">
+            <div id="post-44282-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, could you please link me to the proper section? Thanks. :)</p></div>
+            <div class="comment-info" id="comment-44282-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '15, 05:30)</span>
+                <a class="comment-user userinfo" href="/users/11249/youyeg">youyeg</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-44272" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44272-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="44281"></a>
+                    <div id="answer-container-44281" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-44281-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44281/up/" rel="nofollow"> </a>
+<div id="post-44281-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-44281-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44281/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OK. But, what I was looking for was what the existing APIs can do, and where should I try to fill the gap. It would be very appreciated if someone could say: A can do this, but has this limitation, and B can do that part for you and...
+I couldn't even find collection of examples in OSM, just API and an example only for that API. I wish I could find a slightly similar project and look into it and then finally figure out what should I do!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/44281/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Jul '15, 03:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0f14e93f9694860b5e7619e7ea826d57?s=32&amp;d=identicon&amp;r=g" alt="youyeg's gravatar image" />
+    <p><a href="/users/11249/youyeg">youyeg</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="youyeg has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/44281/">
+                edited
+                <strong>20 Jul '15, 05:34</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-44281">
+    
+</div>
+<div id="comment-tools-44281" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44281-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/44270/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='KSjMaFti8S5bfebas6gM2QtCONmKPUPa' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/44270/please-help-me-to-find-proper-libraries-for-my-androidand-ios-after-that-app?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/44270/please-help-me-to-find-proper-libraries-for-my-androidand-ios-after-that-app?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 19, 2015, 12:18 p.m.">19 Jul '15, 12:18</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,940 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 28, 2015, 5:24 p.m.">28 Jul '15, 17:24</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/639/how-do-i-use-openstreetmap-tiles-as-a-wms-background-in-josm">How do I use OpenStreetMap tiles as a WMS background in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1574/is-it-openstreetmap-or-open-street-maps">Is it OpenStreetMap or Open Street Maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1737/problem-with-some-name-tags-in-bulgarian-map">Problem with some name tags in Bulgarian map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2310/maps-for-we-travel">Maps for We-Travel?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2336/how-do-i-recover-my-account-details">[closed] How do I recover my account details?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2505/i-see-some-nodes-on-the-map-but-i-cant-find-them-in-planetosm-why">I see some nodes on the map, but I can&#39;t find them in Planet.osm. Why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3174/how-to-integrate-openstreet-map-in-my-site">[closed] How to integrate openstreet map in my site?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5226/image-corrupt-or-truncated">Image corrupt or truncated</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6899/how-to-show-kml-in-osm-with-automatically-refresh">[closed] How to show KML in OSM with automatically refresh ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/534/how-does-nominatim-have-data-that-is-not-in-openstreetmap">How does Nominatim have data that is not in OpenStreetMap?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,787 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Libosmium - How to filter and store tags from a POI? - OSM Help</title>
+        <meta name="description" content="Hi  I&#39;m new to OSM and Libosmium. My goal is to filter certain POI e.g. all the libraries worldwide with the location and certain tags and store it as a json to later processing (e.g. search nearest library). As source file sI use OSM extracts from http://download.geofabrik.de/ To be able to process..." />
+        <meta name="keywords" content="libosmium,json,store" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/85291/libosmium-how-to-filter-and-store-tags-from-a-poi" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/85291/libosmium-how-to-filter-and-store-tags-from-a-poi?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='he3a1vk2fIbboDfXzrGmlxlEdEzlxv47' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/85291/libosmium-how-to-filter-and-store-tags-from-a-poi">Libosmium - How to filter and store tags from a POI?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-85291-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85291/up/" rel="nofollow"> </a>
+<div id="post-85291-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85291-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85291/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/85291/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi </p>
+<p>I'm new to OSM and Libosmium. My goal is to filter certain POI e.g. all the libraries worldwide with the location and certain tags and store it as a json to later processing (e.g. search nearest library). As source file sI use OSM extracts from <a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a></p>
+<p>To be able to process it locally I started to look into Libosmium even though I'm a newbie with cpp. I'm using Ubuntu 20.04 and was able to compile Libosmium (which was already great).
+Under /examples/ I found a pretty close example <code>osmium_amenity_list.cpp</code> 
+<a href="https://github.com/osmcode/libosmium/blob/master/examples/osmium_amenity_list.cpp">https://github.com/osmcode/libosmium/blob/master/examples/osmium_amenity_list.cpp</a>
+which I want to adop to my needs.
+Could someone please help me with the following:</p>
+<p>1) How can I filter on <code>amenity=library</code>?
+   My current solution:</p>
+<pre><code>const char *amenity_type = node.tags()["amenity"];
+if (amenity_type)
+{
+    if (strcmp(amenity_type, "library") == 0)
+    {...
+</code></pre>
+<p>Is there a way to query amentiy=libray within the first line? </p>
+<pre><code>const char *amenity_type = node.tags()["amenity"];
+</code></pre>
+<p>2) Is there a way to loop through all available fields e.g. for nodes
+   I want to extract as well not only "name" + "location (lat, lon)", but also e.g. id, addr:country, 
+        addr:city, addr:street, addr:housenumber, ...</p>
+<p>3) Instead of printf() of <code>print_amenity()</code> I want to store it as json file. I'm still new to cpp (I'm more familiar with python, where I would e.g. store each entry as a dict() within a list() and later convert the list into a json or dataframe). e.g. I would like to query later either with cpp or python the json for the closest libraries within a certain range via haversine.</p>
+<p>-&gt; How would I adopt it to instead of print store it in a json or similar format? 
+What I found was e.g. the proposal to use a map in combination with a tuple and a vector.  </p>
+<pre><code>#include &lt;map&gt;
+#include &lt;tuple&gt;
+#include &lt;vector&gt;
+using KeyType = std::tuple&lt;int, int&gt;;
+using ValueType = std::vector&lt;KeyType&gt;;
+std::map&lt;KeyType, ValueType&gt; Nodes;
+</code></pre>
+<p>Not sure if this is the best way to be used with Libosmium (or put different how should I replace <code>print_amenity()</code> to be able to store and later further process it)?</p>
+<p>Thank you very much</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/libosmium/" class="post-tag tag-link-libosmium"
+                                        title="see questions tagged 'libosmium'" rel="tag">libosmium</a>
+                                
+                                    <a href="/tags/json/" class="post-tag tag-link-json"
+                                        title="see questions tagged 'json'" rel="tag">json</a>
+                                
+                                    <a href="/tags/store/" class="post-tag tag-link-store"
+                                        title="see questions tagged 'store'" rel="tag">store</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Aug '22, 13:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a8584e178b3c216a8d75fc32ac58a095?s=32&amp;d=identicon&amp;r=g" alt="Muran123's gravatar image" />
+    <p><a href="/users/22112/muran123">Muran123</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Muran123 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/85291/">
+                edited
+                <strong>10 Aug '22, 10:29</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-85291">
+    
+</div>
+<div id="comment-tools-85291" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85291-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/85291/libosmium-how-to-filter-and-store-tags-from-a-poi?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/85291/libosmium-how-to-filter-and-store-tags-from-a-poi?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/85291/libosmium-how-to-filter-and-store-tags-from-a-poi?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/85291/libosmium-how-to-filter-and-store-tags-from-a-poi?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="85298"></a>
+                    <div id="answer-container-85298" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85298-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85298/up/" rel="nofollow"> </a>
+<div id="post-85298-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-85298-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85298/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Rather than learning C++ for this project and especially because you are already familiar with Python I suggest the following approach: Use the <a href="https://osmcode.org/osmium-tool/">osmium command line tool</a> to do a rough filtering of the input, for instance with <code>osmium tags-filter input.osm.pbf n/amenity=library -o output.osm.pbf</code>. This will give you an OSM file with only those nodes that have a tag <code>amenity=library</code> which is much much smaller than what you had before and because Osmium is written in C++ it is quite fast. After that use <a href="https://osmcode.org/pyosmium/">PyOsmium</a> for the rest, more detailed filtering, conversion to JSON or whatever else you want to do. It will be a bit slower than processing in C++, but development will be much easier.</p>
+<p>To answer your questions (somewhat): 1. The approach you are using is correct, 2. You can loop over all tags with <code>for (auto const &amp;tag : node.tags()) {...}</code>. 3. You'll need a JSON library, it depends on the library how best to drive that. The answer to that goes well beyond something I can answer quickly here.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85298/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Aug '22, 08:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2d4dfcdcde73aa5e2ffa4a9b3a7cb51d?s=32&amp;d=identicon&amp;r=g" alt="Jochen%20Topf's gravatar image" />
+    <p><a href="/users/112/jochen-topf">Jochen Topf</a><br/>
+    <span class="score" title="5244 reputation points"><span class="">5.2k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="50 badges"><span class="silver">&#9679;</span><span class="badgecount">50</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jochen Topf has 32 accepted answers">31&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85298">
+    
+</div>
+<div id="comment-tools-85298" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85298-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="85308"></a>
+                    <div id="answer-container-85308" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-85308-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/85308/up/" rel="nofollow"> </a>
+<div id="post-85308-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-85308-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/85308/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="https://help.openstreetmap.org/users/112/jochen-topf"><a href="https://help.openstreetmap.org/users/112/jochen-topf">@Jochen</a></a>: Thank you very much for your answer. I like you proposed approach and I followed on it.</p>
+<p>a) Thanks to the amazing "osmium command line tool" I was able to quickly filter the pbf file for  amenity=library (I only extended the filter to also include ways and relations with "nwr/" instead of "n/" only for nodes. </p>
+<p>b) For the further processing I already tried to use PyOsium before and was struggling to get it working to extract tags and store them (<a href="https://github.com/osmcode/pyosmium/issues/208">https://github.com/osmcode/pyosmium/issues/208</a>). I was trying to follow the recommendations in <a href="https://github.com/osmcode/pyosmium/blob/master/doc/intro.rst">https://github.com/osmcode/pyosmium/blob/master/doc/intro.rst</a> but I keep getting <em>"RuntimeError: Node callback keeps reference to OSM object. This is not allowed."</em>  That's the reason why I started to try to do it with Libosmium, because I was stuck with this error in python.
+When I try to run it with the following python program (which is a copy of the example from <a href="https://github.com/osmcode/pyosmium/blob/master/doc/intro.rst">2</a> like mentioned in the github issue <a href="https://github.com/osmcode/pyosmium/issues/208">1</a>, adopted for "amenity=library" and with the file <a href="http://download.geofabrik.de/europe/germany-latest.osm.pbf">http://download.geofabrik.de/europe/germany-latest.osm.pbf </a> from Geofabrik.</p>
+<pre><code>import osmium
+from pathlib import Path
+
+class HotelHandler(osmium.SimpleHandler):
+    def __init__(self):
+        super(HotelHandler, self).__init__()
+        self.hotels = []
+
+    def node(self, o):
+        if o.tags.get('amenity') == 'library' and 'name' in o.tags:
+            print(str(o.tags['name']))
+            self.hotels.append(o.tags['name'])
+
+def main():
+    data_file = Path('/home/..../germany-latest.osm.pbf')
+    h = HotelHandler()
+    h.apply_file(data_file)
+
+    print(sorted(h.hotels))
+
+main()
+</code></pre>
+<p>I get the first 2 entries</p>
+<p>Stadtbibliothek Weinheim</p>
+<p>Deutsche Nationalbibliothek</p>
+<p>appended to the list (and also print out) and afterwards the program stops with  <em>"Node callback keeps reference to OSM object. This is not allowed."</em></p>
+<p>My technical set-up: Ubuntu 20.04, Python 3.8.10, IDE PyCharm 2022.2</p>
+<p>May I ask you, if you could help me with what is going wrong in the python program?
+Thank you very much</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/85308/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Aug '22, 17:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a8584e178b3c216a8d75fc32ac58a095?s=32&amp;d=identicon&amp;r=g" alt="Muran123's gravatar image" />
+    <p><a href="/users/22112/muran123">Muran123</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Muran123 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/85308/">
+                edited
+                <strong>11 Aug '22, 10:01</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-85308">
+    
+</div>
+<div id="comment-tools-85308" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-85308-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/85291/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='he3a1vk2fIbboDfXzrGmlxlEdEzlxv47' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/85291/libosmium-how-to-filter-and-store-tags-from-a-poi?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/85291/libosmium-how-to-filter-and-store-tags-from-a-poi?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/json/"
+            class="tag-link-json"
+            title="see questions tagged'json'using tags"
+            rel="tag">json</a> <span class="tag-number">&#215;28</span><br/>
+        
+        <a href="/tags/store/"
+            class="tag-link-store"
+            title="see questions tagged'store'using tags"
+            rel="tag">store</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/libosmium/"
+            class="tag-link-libosmium"
+            title="see questions tagged'libosmium'using tags"
+            rel="tag">libosmium</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 9, 2022, 1:08 p.m.">09 Aug '22, 13:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,560 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 12, 2022, 8:58 a.m.">12 Aug '22, 08:58</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/11751/store-locator">store locator</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18255/softwarelibraries-to-convert-osm-data-to-geojson-without-using-api">Software/Libraries to Convert OSM Data to Geojson (without using API)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22247/add-stores-please">Add stores please</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24126/overpassapi-different-json-formats">OverpassAPI: different json formats</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26330/build-custom-maps-using-javascript-noobie">Build Custom Maps using Javascript (noobie)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33295/android-app-get-json-data-using-overpass-api">Android app get json data using overpass api</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36597/osm-oauth-json-responses-possible">OSM Oauth JSON-Responses possible?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37212/what-osm-uses-for-data-transfer">what osm uses for data transfer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37874/any-advices-on-osrm-server-api">Any advices on OSRM Server API</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9890/save-coordinates-and-mark-point-on-map-running-local">[closed] save coordinates and mark point on map (running local)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

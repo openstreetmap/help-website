@@ -1,0 +1,784 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>own Nominatim server not working with geopy - OSM Help</title>
+        <meta name="description" content="I have a database of over 6k entries of addresses need for geocoding, thus I have installed nominatim server with docker for geocoding work. It works as it should in the web form on the &#39;localhost:8080&#39;. However, when I try to query with geopy in jupyter. It throws error all the time. My Jupyter cod..." />
+        <meta name="keywords" content="nominatim" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/57336/own-nominatim-server-not-working-with-geopy" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/57336/own-nominatim-server-not-working-with-geopy?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Vqg1EeuhucYUVPbBE2oysEKlpVP9iJO8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/57336/own-nominatim-server-not-working-with-geopy">own Nominatim server not working with geopy</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-57336-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57336/up/" rel="nofollow"> </a>
+<div id="post-57336-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57336-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57336/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/57336/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a database of over 6k entries of addresses need for geocoding, thus I have installed nominatim server with docker for geocoding work. It works as it should in the web form on the 'localhost:8080'.</p>
+<p>However, when I try to query with geopy in jupyter. It throws error all the time.</p>
+<p>My Jupyter code:</p>
+<pre><code>from geopy.geocoder import Nominatim
+nom=Nominatim(domain='http://localhost:8080')
+nom.geocode('some address') #the address works on the public server
+</code></pre>
+<p>The error stack:</p>
+<pre><code>gaierror                                  Traceback (most recent call last)
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/urllib/request.py in do_open(self, http_class, req, **http_conn_args)
+   1253             try:
+-&gt; 1254                 h.request(req.get_method(), req.selector, req.data, headers)
+   1255             except OSError as err: # timeout error
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/http/client.py in request(self, method, url, body, headers)
+   1105         """Send a complete request to the server."""
+-&gt; 1106         self._send_request(method, url, body, headers)
+   1107
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/http/client.py in _send_request(self, method, url, body, headers)
+   1150             body = _encode(body, 'body')
+-&gt; 1151         self.endheaders(body)
+   1152
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/http/client.py in endheaders(self, message_body)
+   1101             raise CannotSendHeader()
+-&gt; 1102         self._send_output(message_body)
+   1103
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/http/client.py in _send_output(self, message_body)
+    933 
+--&gt; 934         self.send(msg)
+    935         if message_body is not None:
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/http/client.py in send(self, data)
+    876             if self.auto_open:
+--&gt; 877                 self.connect()
+    878             else:
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/http/client.py in connect(self)
+   1251 
+-&gt; 1252             super().connect()
+   1253
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/http/client.py in connect(self)
+    848         self.sock = self._create_connection(
+--&gt; 849             (self.host,self.port), self.timeout, self.source_address)
+    850         self.sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/socket.py in create_connection(address, timeout, source_address)
+    692     err = None
+--&gt; 693     for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+    694         af, socktype, proto, canonname, sa = res
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/socket.py in getaddrinfo(host, port, family, type, proto, flags)
+    731     addrlist = []
+--&gt; 732     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+    733         af, socktype, proto, canonname, sa = res
+
+gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+URLError                                  Traceback (most recent call last)
+/Users/nmbqz/.virtualenvs/scrapy/lib/python3.5/site-packages/geopy/geocoders/base.py in _call_geocoder(self, url, timeout, raw, requester, deserializer, **kwargs)
+    142         try:
+--&gt; 143             page = requester(req, timeout=(timeout or self.timeout), **kwargs)
+    144         except Exception as error: # pylint: disable=W0703
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/urllib/request.py in urlopen(url, data, timeout, cafile, capath, cadefault, context)
+    162         opener = _opener
+--&gt; 163     return opener.open(url, data, timeout)
+    164
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/urllib/request.py in open(self, fullurl, data, timeout)
+    465 
+--&gt; 466         response = self._open(req, data)
+    467
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/urllib/request.py in _open(self, req, data)
+    483         result = self._call_chain(self.handle_open, protocol, protocol +
+--&gt; 484                                   '_open', req)
+    485         if result:
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/urllib/request.py in _call_chain(self, chain, kind, meth_name, *args)
+    443             func = getattr(handler, meth_name)
+--&gt; 444             result = func(*args)
+    445             if result is not None:
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/urllib/request.py in https_open(self, req)
+   1296             return self.do_open(http.client.HTTPSConnection, req,
+-&gt; 1297                 context=self._context, check_hostname=self._check_hostname)
+   1298
+
+/usr/local/Cellar/python3/3.5.2_3/Frameworks/Python.framework/Versions/3.5/lib/python3.5/urllib/request.py in do_open(self, http_class, req, **http_conn_args)
+   1255             except OSError as err: # timeout error
+-&gt; 1256                 raise URLError(err)
+   1257             r = h.getresponse()
+
+URLError: &lt;urlopen error [Errno 8] nodename nor servname provided, or not known&gt;
+
+During handling of the above exception, another exception occurred:
+
+GeocoderServiceError                      Traceback (most recent call last)
+&lt;ipython-input-141-ad9610064de4&gt; in &lt;module&gt;()
+----&gt; 1 nom.geocode('Revontulentie 11')
+
+/Users/nmbqz/.virtualenvs/scrapy/lib/python3.5/site-packages/geopy/geocoders/osm.py in geocode(self, query, exactly_one, timeout, addressdetails, language, geometry)
+    191         logger.debug("%s.geocode: %s", self.__class__.__name__, url)
+    192         return self._parse_json(
+--&gt; 193             self._call_geocoder(url, timeout=timeout), exactly_one
+    194         )
+    195
+
+/Users/nmbqz/.virtualenvs/scrapy/lib/python3.5/site-packages/geopy/geocoders/base.py in _call_geocoder(self, url, timeout, raw, requester, deserializer, **kwargs)
+    169                 if "timed out" in message:
+    170                     raise GeocoderTimedOut('Service timed out')
+--&gt; 171             raise GeocoderServiceError(message)
+    172 
+    173         if hasattr(page, 'getcode'):
+
+GeocoderServiceError: [Errno 8] nodename nor servname provided, or not known
+</code></pre>
+<p>Appreciate some clues!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Jul '17, 19:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7b5b9afd501c8b84fe1086ea959b4676?s=32&amp;d=identicon&amp;r=g" alt="Jimmy_Jin's gravatar image" />
+    <p><a href="/users/13993/jimmy_jin">Jimmy_Jin</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jimmy_Jin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-57336">
+    
+</div>
+<div id="comment-tools-57336" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57336-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/57336/own-nominatim-server-not-working-with-geopy?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/57336/own-nominatim-server-not-working-with-geopy?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/57336/own-nominatim-server-not-working-with-geopy?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/57336/own-nominatim-server-not-working-with-geopy?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="57342"></a>
+                    <div id="answer-container-57342" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57342-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57342/up/" rel="nofollow"> </a>
+<div id="post-57342-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-57342-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57342/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Jimmy_Jin has selected this answer as the correct answer"
+        href="/accept_answer/57342/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm pretty sure your local Nominatim installation runs on <a href="http://localhost:8080/nominatim/search?format=jsonv2&amp;q=Berlin&amp;limit=1">http://localhost:8080/nominatim/search?format=jsonv2&amp;q=Berlin&amp;limit=1</a> Note the <code>/nominatim</code> part of the path that the server nominatim.openstreetmap.org is missing.</p>
+<p>Try</p>
+<p><code>nom = Nominatim(domain='localhost:8080/nominatim', scheme='http')</code></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57342/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Jul '17, 23:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/96aad1e1801b7ea36fba50687924c935?s=32&amp;d=identicon&amp;r=g" alt="mtmail's gravatar image" />
+    <p><a href="/users/150/mtmail">mtmail</a><br/>
+    <span class="score" title="4757 reputation points"><span class="">4.8k</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mtmail has 50 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/57342/">
+                edited
+                <strong>28 Jul '17, 23:22</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57342">
+    
+        <a name="57343"></a>
+        <div class="comment" id="comment-57343">
+            <div id="post-57343-score" class="comment-score"></div>
+            <div class="comment-text"><p>by try I mean that worked when I ran it against my local Nominatim</p></div>
+            <div class="comment-info" id="comment-57343-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '17, 23:27)</span>
+                <a class="comment-user userinfo" href="/users/150/mtmail">mtmail</a>
+                
+            </div>
+        </div>
+    
+        <a name="57345"></a>
+        <div class="comment" id="comment-57345">
+            <div id="post-57345-score" class="comment-score">1</div>
+            <div class="comment-text"><p>My link does not actually contain nomination :
+'http://127.0.0.1:8080/search.php?q=Berlin&amp;polygon=1&amp;viewbox='
+I  find the wrong part is:
+nom=Nominatim(domain='http://localhost:8080')</p>
+
+<p>the correct  form is </p>
+
+<p>nom=Nominatim(domain='localhost:8080', scheme='http')</p>
+
+<p>I got hint from your answer, thanks.</p></div>
+            <div class="comment-info" id="comment-57345-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '17, 23:39)</span>
+                <a class="comment-user userinfo" href="/users/13993/jimmy_jin">Jimmy_Jin</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57342" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57342-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/57336/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Vqg1EeuhucYUVPbBE2oysEKlpVP9iJO8' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57336/own-nominatim-server-not-working-with-geopy?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57336/own-nominatim-server-not-working-with-geopy?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 28, 2017, 7:22 p.m.">28 Jul '17, 19:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,270 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 28, 2017, 11:39 p.m.">28 Jul '17, 23:39</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/642/issues-with-httpnominatimopenstreetmaporg">Issues with http://nominatim.openstreetmap.org/ ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer">Why does Nominatim return an error for queries from Internet Explorer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1301/ajax-issues-with-nominatim">[closed] Ajax issues with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1391/why-does-nominatim-not-pick-up-a-country-name">Why does Nominatim not pick up a country name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1447/nominatim-search">nominatim search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1841/confused-about-nominatim-and-county-boundaries">[closed] Confused about Nominatim and County Boundaries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2478/added-austria-when-will-i-see-the-change">Added austria. When will I see the change ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2572/i-added-some-road-name-and-are-not-found-on-nominatim">I added some road name and are not found on nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2680/can-i-produce-a-database-of-addresses-from-osm-data">Can I produce a database of addresses from OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/534/how-does-nominatim-have-data-that-is-not-in-openstreetmap">How does Nominatim have data that is not in OpenStreetMap?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

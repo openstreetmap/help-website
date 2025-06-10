@@ -1,0 +1,761 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Map layers and .png output - OSM Help</title>
+        <meta name="description" content="I&#39;m having trouble with two things. The first is that I want 2 maps, one without roads or highway shields and a second with only roads and highway shields in order to insert a traffic layer between them. The second is that I would like to download, using C#, a .png file of each map described above. ..." />
+        <meta name="keywords" content="layers,usage,png" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/61588/map-layers-and-png-output" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61588/map-layers-and-png-output?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='JLWZv0jhgjde9d1Ss7DZwBss4jH0WhZc' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61588/map-layers-and-png-output">Map layers and .png output</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61588-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61588/up/" rel="nofollow"> </a>
+<div id="post-61588-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61588-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61588/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61588/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm having trouble with two things.</p>
+<p>The first is that I want 2 maps, one without roads or highway shields and a second with only roads and highway shields in order to insert a traffic layer between them.</p>
+<p>The second is that I would like to download, using C#, a .png file of each map described above.</p>
+<p>In javascript using leaflet, this seems to support this download, but it seems to derived from the leaflet.js.</p>
+<p>new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');</p>
+<p>Any help with these would be welcome and appreciated.</p>
+<p>Thank you</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/layers/" class="post-tag tag-link-layers"
+                                        title="see questions tagged 'layers'" rel="tag">layers</a>
+                                
+                                    <a href="/tags/usage/" class="post-tag tag-link-usage"
+                                        title="see questions tagged 'usage'" rel="tag">usage</a>
+                                
+                                    <a href="/tags/png/" class="post-tag tag-link-png"
+                                        title="see questions tagged 'png'" rel="tag">png</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Jan '18, 18:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1e84593f7ccde651358522a82e90b3dc?s=32&amp;d=identicon&amp;r=g" alt="chascallaway's gravatar image" />
+    <p><a href="/users/14628/chascallaway">chascallaway</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="chascallaway has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61588/">
+                edited
+                <strong>19 Jan '18, 20:43</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61588">
+    
+        <a name="61589"></a>
+        <div class="comment" id="comment-61589">
+            <div id="post-61589-score" class="comment-score"></div>
+            <div class="comment-text"><p>At the risk of stating the obvious, if you want to download a .png map tile layer with only certain data on it (say, no roads) then you're going to need to create a map style that shows the information you want and render the tiles for the area that you're interested in.</p>
+
+<p>Or, alternatively, look for a "non-png" based approach - there are various ways of creating "vector tiles" out there, not all documented very well unfortunately, but this may be a more suitable approach for you.</p></div>
+            <div class="comment-info" id="comment-61589-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '18, 00:45)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61590"></a>
+        <div class="comment" id="comment-61590">
+            <div id="post-61590-score" class="comment-score"></div>
+            <div class="comment-text"><p>I admit I'm a newbie, but I'm aware that I need to create a map style that shows the information I want but all I find at openstreetmap.org is a selection of styles - all without specific layer (badges, road, water, etc.) settings.  For instance, I can choose a background but what if I don't want one at all?</p>
+
+<p>If I need to create a stylesheet specifically disabling the hundred or so layers exposed by MapBox, I can, but what are they called?  </p>
+
+<p>And a C# sample I could find to download a (styled) .png file from a url???</p>
+
+<p>Thanks</p></div>
+            <div class="comment-info" id="comment-61590-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '18, 01:40)</span>
+                <a class="comment-user userinfo" href="/users/14628/chascallaway">chascallaway</a>
+                
+            </div>
+        </div>
+    
+        <a name="61591"></a>
+        <div class="comment" id="comment-61591">
+            <div id="post-61591-score" class="comment-score"></div>
+            <div class="comment-text"><p>So this is a question about OpenStreetMap in the Mapbox UI ?</p></div>
+            <div class="comment-info" id="comment-61591-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '18, 04:26)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="61592"></a>
+        <div class="comment" id="comment-61592">
+            <div id="post-61592-score" class="comment-score"></div>
+            <div class="comment-text"><p>No. I wish not to use MapBox if possible.</p></div>
+            <div class="comment-info" id="comment-61592-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '18, 06:58)</span>
+                <a class="comment-user userinfo" href="/users/14628/chascallaway">chascallaway</a>
+                
+            </div>
+        </div>
+    
+        <a name="61693"></a>
+        <div class="comment" id="comment-61693">
+            <div id="post-61693-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK.  No answers yet.<br>
+So, is it possible to turn off the roads or background layers in open source openstreetmap?
+Can an openstreetmap map be saved as a .png file?</p></div>
+            <div class="comment-info" id="comment-61693-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jan '18, 23:44)</span>
+                <a class="comment-user userinfo" href="/users/14628/chascallaway">chascallaway</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61588" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61588-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61588/map-layers-and-png-output?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61588/map-layers-and-png-output?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61588/map-layers-and-png-output?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61588/map-layers-and-png-output?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61694"></a>
+                    <div id="answer-container-61694" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61694-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61694/up/" rel="nofollow"> </a>
+<div id="post-61694-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-61694-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61694/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <pre><code>So, is it possible to turn off the roads or background layers in open source openstreetmap? Can an openstreetmap map be saved as a .png file?
+</code></pre>
+<p>The answer is "yes", but the problem is there are many different sorts of "OpenStreetMap map".  You're going to have to find one that suits your needs.</p>
+<p>OpenStreetMap is basically just a big lump of data.  The process of turning that into a map is called <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering</a>.  As can be seen from that page, you have a huge number of options.  Looking at one example, the "standard" map style that's the default at osm.org is described <a href="https://github.com/gravitystorm/openstreetmap-carto/">here</a>.  The map is composed of lots of smaller .png files joined together.  These .pngs are sent from the map server to the client and knitted together there.  The layers in that map are described in <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/project.mml">this file</a>.  Each of those layers is described by something like <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/landcover.mss">this</a>.  There are many more carto-based styles that work in the same basic way as this one, but there are many many more using different technologies altogether.  <a href="http://paulnorman.ca/blog/2016/11/serving-vector-tiles/">Here</a>, for example, is an in-depth discussion of some of the various vector tile technologies available for use with OpenStreetMap data.  With vector tiles, instead of .pngs being sent from server to client data is, and the client then renders it.</p>
+<p>You won't be able to start with an existing example and "turn off a layer" to create something that works for you; you'll need to start with something very simple that contains minimal information in the three layers that you're interested in and work up from there.  You'll need to decide whether something based on raster tiles, vector tiles or a combination (data drawn on top of raster tiles) is best for you, and that'll depend on things like what is going to be the client and server in your example, available bandwidth, available storage space, the amount of the world you want to be able to process and many more variables.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61694/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jan '18, 00:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61694">
+    
+        <a name="61727"></a>
+        <div class="comment" id="comment-61727">
+            <div id="post-61727-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your answer. It reflects a knowledge of OpenStreetMap maps far beyond mine.  I'll gladly award points, but how many points are a lot?  I would like to reflect the level of my appreciation.  I naively thought this would be easy.</p>
+
+<p>That said, at this time, I need to get static maps of about 2 dozen locations defined by bounding boxes but need two maps for each - a background, which I can get, but also a second map having only the road badges plus road and city names (.png - I'm adding an additional layer between them).  I can get the first one without issue.  Both maps will be saved as .png in a C# app.  I like MapBox and Google maps, but the recurring cost is prohibitive.</p>
+
+<p>Whom would you suggest I approach to get this done?</p></div>
+            <div class="comment-info" id="comment-61727-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '18, 14:36)</span>
+                <a class="comment-user userinfo" href="/users/14628/chascallaway">chascallaway</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61694" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61694-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61588/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='JLWZv0jhgjde9d1Ss7DZwBss4jH0WhZc' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61588/map-layers-and-png-output?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61588/map-layers-and-png-output?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/usage/"
+            class="tag-link-usage"
+            title="see questions tagged'usage'using tags"
+            rel="tag">usage</a> <span class="tag-number">&#215;104</span><br/>
+        
+        <a href="/tags/layers/"
+            class="tag-link-layers"
+            title="see questions tagged'layers'using tags"
+            rel="tag">layers</a> <span class="tag-number">&#215;69</span><br/>
+        
+        <a href="/tags/png/"
+            class="tag-link-png"
+            title="see questions tagged'png'using tags"
+            rel="tag">png</a> <span class="tag-number">&#215;14</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 11, 2018, 6:19 p.m.">11 Jan '18, 18:19</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,061 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 19, 2018, 8:43 p.m.">19 Jan '18, 20:43</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/52341/map-with-leaflet-and-custom-data-layers-render-to-image">Map with leaflet and custom data layers - render to image?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/67223/changing-the-map-layers-on-android">Changing the map layers on Android</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1138/looking-for-an-overview-of-professional-uses-of-openstreetmap-maps-data">Looking for an overview of professional uses of OpenStreetMap maps / data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1546/osm-in-we-travel">OSM in We-Travel</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1625/bridge-wont-render-correctly">Bridge won&#39;t render correctly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2811/how-can-i-download-all-the-data">How can I download all the data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5554/is-anything-making-use-of-relations-with-typedual_carriageway">Is anything making use of relations with type=dual_carriageway?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4827/how-to-license-some-small-maps-for-my-public-domain-book">how to license some small maps for my public-domain book?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6033/how-do-i-turn-off-layers-street-names-etc">[closed] How do I turn off layers, street names, etc?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1404/usability-of-the-maps">Usability of the maps</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

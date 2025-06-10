@@ -1,0 +1,832 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Using python to extract osm map from bounding box coordinates - OSM Help</title>
+        <meta name="description" content="Hello everyone. I have started working with OSM maps. However, I have been struggling with one issue. Is there any way to extract the OSM map given the set of bounding box coordinates of min and max longitude and latitudes? Please let me know how I can visualize the roads, buildings, and water withi..." />
+        <meta name="keywords" content="python,visualization,osmapi_python,osm,extraction" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/86262/using-python-to-extract-osm-map-from-bounding-box-coordinates" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/86262/using-python-to-extract-osm-map-from-bounding-box-coordinates?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='wlmbpXizGnDETKwAmEitqvF4ZjkC0jlP' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/86262/using-python-to-extract-osm-map-from-bounding-box-coordinates">Using python to extract osm map from bounding box coordinates</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-86262-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86262/up/" rel="nofollow"> </a>
+<div id="post-86262-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-86262-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86262/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/86262/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello everyone. I have started working with OSM maps. However, I have been struggling with one issue. Is there any way to extract the OSM map given the set of bounding box coordinates of min and max longitude and latitudes? Please let me know how I can visualize the roads, buildings, and water within these coordinates as I intend to use it as a semantic segmentation mask for my UAV imagery with the exact bounding box coordinates.</p>
+<p>Thank you</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/python/" class="post-tag tag-link-python"
+                                        title="see questions tagged 'python'" rel="tag">python</a>
+                                
+                                    <a href="/tags/visualization/" class="post-tag tag-link-visualization"
+                                        title="see questions tagged 'visualization'" rel="tag">visualization</a>
+                                
+                                    <a href="/tags/osmapi_python/" class="post-tag tag-link-osmapi_python"
+                                        title="see questions tagged 'osmapi_python'" rel="tag">osmapi_python</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/extraction/" class="post-tag tag-link-extraction"
+                                        title="see questions tagged 'extraction'" rel="tag">extraction</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Nov '22, 12:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8afc27ce83b9b8725cb9a2b48ffafebf?s=32&amp;d=identicon&amp;r=g" alt="Dawood's gravatar image" />
+    <p><a href="/users/22485/dawood">Dawood</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Dawood has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-86262">
+    
+</div>
+<div id="comment-tools-86262" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86262-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/86262/using-python-to-extract-osm-map-from-bounding-box-coordinates?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/86262/using-python-to-extract-osm-map-from-bounding-box-coordinates?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/86262/using-python-to-extract-osm-map-from-bounding-box-coordinates?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/86262/using-python-to-extract-osm-map-from-bounding-box-coordinates?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="86268"></a>
+                    <div id="answer-container-86268" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-86268-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86268/up/" rel="nofollow"> </a>
+<div id="post-86268-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-86268-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86268/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>Is there any way to extract the OSM map</p>
+</blockquote>
+<p>if by map you mean the render on OSM.org, then you don't need to extract anythig. </p>
+<p>if by map you mean the data, then it's probably better to download an extract of the are of interest (see <a href="https://download.geofabrik.de/),">https://download.geofabrik.de/),</a> load it in a database, and then use psycopg or any other python-pg library.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/86268/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Nov '22, 19:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e4587465b2b1b94834e5e625b80a29dd?s=32&amp;d=identicon&amp;r=g" alt="Marcos%20Dione's gravatar image" />
+    <p><a href="/users/15564/marcos-dione">Marcos Dione</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Marcos Dione has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-86268">
+    
+        <a name="86269"></a>
+        <div class="comment" id="comment-86269">
+            <div id="post-86269-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the reply Marcos. Sorry I am new to this. I want to extract the renders only. Could you explain what do you mean by 'you don't need to extract anything'? Becuase whenever I try to download the render maps from OSM.org usinhg http link, it downloads the osm file instead which I dont require as I need the rendered maps (preferrably without symbols).</p></div>
+            <div class="comment-info" id="comment-86269-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '22, 19:10)</span>
+                <a class="comment-user userinfo" href="/users/22485/dawood">Dawood</a>
+                
+            </div>
+        </div>
+    
+        <a name="86270"></a>
+        <div class="comment" id="comment-86270">
+            <div id="post-86270-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>I want to extract the renders only</p>
+</blockquote>
+
+<p>and </p>
+
+<blockquote>
+<p>I need the rendered maps (preferrably without symbols).</p>
+</blockquote>
+
+<p>are a little bit contradictory. Let me try to explain:</p>
+
+<p>You can already create web maps that use OSM's tilesas background. This is legal and requires almost no effort from your part. You can also add more data on top. You have probably already seen many of these types of maps. But that means you get the tiles as they are.</p>
+
+<p>If you want to render your own maps, then the effort is quite different. Check <a href="https://switch2osm.org/serving-tiles/">https://switch2osm.org/serving-tiles/</a></p></div>
+            <div class="comment-info" id="comment-86270-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '22, 07:15)</span>
+                <a class="comment-user userinfo" href="/users/15564/marcos-dione">Marcos Dione</a>
+                
+            </div>
+        </div>
+    
+        <a name="86274"></a>
+        <div class="comment" id="comment-86274">
+            <div id="post-86274-score" class="comment-score"></div>
+            <div class="comment-text"><p>I understand your answer. However, my requirement is a little different. I have a set of coordinates (min and max lat and long) for a bounding box e.g. east = 13.372295, west = 13.3692166. north = 52.523443, south = 52.5214641 and I want to extract the exact osm map that lies inside these geographic coordinates. However, when I try to extract the map I always receive a tile with the unnecessary area which is outside my bounding box. Please let me know if this is possible. If yes, then how?</p></div>
+            <div class="comment-info" id="comment-86274-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Nov '22, 11:24)</span>
+                <a class="comment-user userinfo" href="/users/22485/dawood">Dawood</a>
+                
+            </div>
+        </div>
+    
+        <a name="86288"></a>
+        <div class="comment" id="comment-86288">
+            <div id="post-86288-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It's quite complex. You first have to convert your LatLon coords into tile numbers. For ZL0 it's easy, because it's always 0,0,0; for ZL1 is not that difficult, having only 4 tiles to select from. But for deeper Zoom Levels, it's a formula like (but not quite) the one in this function:</p>
+
+<p><a href="https://github.com/StyXman/osm-tile-tools/blob/master/map_utils.py#L64">https://github.com/StyXman/osm-tile-tools/blob/master/map_utils.py#L64</a></p>
+
+<p>So first you have to decide which ZL you want, then find the right tiles to download, then do just that. I wish I had a better code to point you to, or more time to do it myself, but with a little bit of luck you can take it from here.</p></div>
+            <div class="comment-info" id="comment-86288-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Dec '22, 16:36)</span>
+                <a class="comment-user userinfo" href="/users/15564/marcos-dione">Marcos Dione</a>
+                
+            </div>
+        </div>
+    
+        <a name="86289"></a>
+        <div class="comment" id="comment-86289">
+            <div id="post-86289-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I <em>think</em> you just need to further divide the answer by 256 to get the numbers you need.</p></div>
+            <div class="comment-info" id="comment-86289-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Dec '22, 17:15)</span>
+                <a class="comment-user userinfo" href="/users/15564/marcos-dione">Marcos Dione</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-86268" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86268-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="86290"></a>
+                    <div id="answer-container-86290" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-86290-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/86290/up/" rel="nofollow"> </a>
+<div id="post-86290-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-86290-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/86290/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames</a></p>
+<p>But please remember, downloading a big amount of tiles is bad, and contradicts <a href="https://operations.osmfoundation.org/policies/tiles/">https://operations.osmfoundation.org/policies/tiles/</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/86290/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Dec '22, 19:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3c7cffe544d6a1c46c97a25b2fdcdedc?s=32&amp;d=identicon&amp;r=g" alt="yvecai's gravatar image" />
+    <p><a href="/users/5587/yvecai">yvecai</a><br/>
+    <span class="score" title="1481 reputation points"><span class="">1.5k</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="26 badges"><span class="bronze">&#9679;</span><span class="badgecount">26</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="yvecai has 7 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-86290">
+    
+</div>
+<div id="comment-tools-86290" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-86290-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/86262/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='wlmbpXizGnDETKwAmEitqvF4ZjkC0jlP' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/86262/using-python-to-extract-osm-map-from-bounding-box-coordinates?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/86262/using-python-to-extract-osm-map-from-bounding-box-coordinates?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/python/"
+            class="tag-link-python"
+            title="see questions tagged'python'using tags"
+            rel="tag">python</a> <span class="tag-number">&#215;78</span><br/>
+        
+        <a href="/tags/visualization/"
+            class="tag-link-visualization"
+            title="see questions tagged'visualization'using tags"
+            rel="tag">visualization</a> <span class="tag-number">&#215;22</span><br/>
+        
+        <a href="/tags/extraction/"
+            class="tag-link-extraction"
+            title="see questions tagged'extraction'using tags"
+            rel="tag">extraction</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/osmapi_python/"
+            class="tag-link-osmapi_python"
+            title="see questions tagged'osmapi_python'using tags"
+            rel="tag">osmapi_python</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 29, 2022, 12:52 p.m.">29 Nov '22, 12:52</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,459 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 1, 2022, 7:09 p.m.">01 Dec '22, 19:09</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/56415/add-new-node">Add new node</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70914/how-to-find-out-coordinates-of-routeroad">How to find out coordinates of route/road?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37102/using-osmapi-how-can-i-extract-data-of-an-entire-region">Using OsmApi, how can I extract data of an entire region?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55110/using-python-to-get-a-list-of-ways-from-a-bounding-box">Using python to get a list of ways from a bounding box</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58852/how-can-i-get-neighbors-nodes-in-python">how can i get neighbors nodes in python</a>
+        </p>
+        
+        <p>
+            <a href="/questions/67972/how-to-use-osmapiwayget">How to use osmapi.WayGet ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12154/getting-latlong-based-on-distance-travelled-along-street">Getting lat/long based on distance travelled along street</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19013/help-for-my-final-yr-projectextracting-osm-data">Help for my final yr project...extracting osm data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54487/how-to-get-land-use-information-for-a-given-area">How to get land use information for a given area</a>
+        </p>
+        
+        <p>
+            <a href="/questions/74926/cant-find-any-link-or-tutorial-to-setup-osm-local-database-on-windows">Cant find any link or tutorial to setup OSM local database on Windows.</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

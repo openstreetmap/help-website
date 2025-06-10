@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>No space on device while using osm2postgresql (with PBF file) - OSM Help</title>
+        <meta name="description" content="I am running osm2postgresql on an Ubuntu virtual machine (EC2 micro instance) using the instructions provided on the wiki.  Everything runs fine but I get the following error after the program has been running for a long time: Mar 04, 2014 2:42:31 PM org.openstreetmap.osmosis.core.pipeline.common.Ac..." />
+        <meta name="keywords" content="osm2pgsql" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/31275/no-space-on-device-while-using-osm2postgresql-with-pbf-file" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/31275/no-space-on-device-while-using-osm2postgresql-with-pbf-file?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='cCgHfk61VMjdd739oYeWlkKvMOgRHyZi' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/31275/no-space-on-device-while-using-osm2postgresql-with-pbf-file">No space on device while using osm2postgresql (with PBF file)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-31275-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31275/up/" rel="nofollow"> </a>
+<div id="post-31275-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31275-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31275/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/31275/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am running osm2postgresql on an Ubuntu virtual machine (EC2 micro instance) using the instructions provided on the wiki. </p>
+<p>Everything runs fine but I get the following error after the program has been running for a long time:</p>
+<pre><code>Mar 04, 2014 2:42:31 PM org.openstreetmap.osmosis.core.pipeline.common.ActiveTaskManager waitForCompletion
+FINE: Waiting for task 1-read-pbf to complete.
+Mar 04, 2014 3:29:56 PM org.openstreetmap.osmosis.core.pipeline.common.ActiveTaskManager waitForCompletion
+SEVERE: Thread for task 1-read-pbf failed
+org.openstreetmap.osmosis.core.OsmosisRuntimeException: An output error has occurred, aborting.
+        at org.openstreetmap.osmosis.core.store.DataPostbox.checkForOutputErrors(DataPostbox.java:78)
+        at org.openstreetmap.osmosis.core.store.DataPostbox.populateCentralQueue(DataPostbox.java:134)
+        at org.openstreetmap.osmosis.core.store.DataPostbox.put(DataPostbox.java:184)
+        at org.openstreetmap.osmosis.core.buffer.v0_6.EntityBuffer.process(EntityBuffer.java:38)
+        at crosby.binary.osmosis.OsmosisBinaryParser.parseWays(OsmosisBinaryParser.java:172)
+        at crosby.binary.BinaryParser.parse(BinaryParser.java:121)
+        at crosby.binary.BinaryParser.handleBlock(BinaryParser.java:68)
+        at crosby.binary.file.FileBlock.process(FileBlock.java:135)
+        at crosby.binary.file.BlockInputStream.process(BlockInputStream.java:34)
+        at crosby.binary.osmosis.OsmosisReader.run(OsmosisReader.java:37)
+        at java.lang.Thread.run(Thread.java:744)
+
+Mar 04, 2014 3:29:56 PM org.openstreetmap.osmosis.pgsnapshot.common.CopyFileWriter release
+SEVERE: Unable to close writer.
+java.io.IOException: No space left on device
+        at java.io.FileOutputStream.writeBytes(Native Method)
+        at java.io.FileOutputStream.write(FileOutputStream.java:345)
+        at java.io.BufferedOutputStream.Mar 04, 2014 3:29:57 PM org.openstreetmap.osmosis.core.pipeline.common.ActiveTaskManager waitForCompletion
+SEVERE: Thread for task 2-buffer failed
+org.openstreetmap.osmosis.core.OsmosisRuntimeException: Unable to write value (SRID=4326;POLYGON((-93.2169649 44.9913991,-93.2169649 44.9914236,-93.2169311 44.9914236,-93.2169311 44.9913991,-93.2169649 44.9913991)))
+        at org.openstreetmap.osmosis.pgsnapshot.common.CopyFileWriter.writeField(CopyFileWriter.java:253)
+        at org.openstreetmap.osmosis.pgsnapshot.v0_6.impl.CopyFilesetBuilder.process(CopyFilesetBuilder.java:187)
+        at org.openstreetmap.osmosis.core.container.v0_6.WayContainer.process(WayContainer.java:60)
+        at org.openstreetmap.osmosis.pgsnapshot.v0_6.impl.CopyFilesetBuilder.process(CopyFilesetBuilder.java:115)
+        at org.openstreetmap.osmosis.pgsnapshot.v0_6.PostgreSqlDumpWriter.process(PostgreSqlDumpWriter.java:58)
+        at org.openstreetmap.osmosis.core.buffer.v0_6.EntityBuffer.run(EntityBuffer.java:74)
+        at java.lang.Thread.run(Thread.java:744)
+Caused by: java.io.IOException: No space left on device
+        at java.io.FileOutputStream.writeBytes(Native Method)
+        at java.io.FileOutputStream.write(FileOutputStream.java:345)
+        at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+        at java.io.BufferedOutputStream.write(BufferedOutputStream.java:126)
+        at sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:221)
+        at sun.nio.cs.StreamEncoder.implWrite(StreamEncoder.java:282)
+        at sun.nio.cs.StreamEncoder.write(StreamEncoder.java:125)
+        at java.io.OutputStreamWriter.write(OutputStreamWriter.java:207)
+        at java.io.BufferedWriter.flushBuffer(BufferedWriter.java:129)
+        at java.io.BufferedWriter.write(BufferedWriter.java:230)
+        at java.io.Writer.write(Writer.java:157)
+        at org.openstreetmap.osmosis.pgsnapshot.common.CopyFileWriter.writeField(CopyFileWriter.java:249)
+        ... 6 more
+
+Mar 04, 2014 3:29:57 PM org.openstreetmap.osmosis.core.pipeline.common.PassiveTaskManager waitForCompletion
+FINE: Task 3-write-pgsql-dump is passive, no completion wait required.
+Mar 04, 2014 3:29:57 PM org.openstreetmap.osmosis.core.Osmosis main
+SEVERE: Execution aborted.
+org.openstreetmap.osmosis.core.OsmosisRuntimeException: One or more tasks failed.
+        at org.openstreetmap.osmosis.core.pipeline.common.Pipeline.waitForCompletion(Pipeline.java:146)
+        at org.openstreetmap.osmosis.core.Osmosis.run(Osmosis.java:92)
+        at org.openstreetmap.osmosis.core.Osmosis.main(Osmosis.java:37)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.launchStandard(Launcher.java:329)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:239)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+        at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+
+Error 1. The command which triggered the error was:
+./$osmosis_version/bin/osmosis -v --read-$filetype file="$osmfile" --buffer --write-pgsql-dump enableBboxBuilder=yes enableLinestringBuilder=yes nodeLocationStoreType="TempFile" directory="$temporarydir"
+on line 435 of the osm2postgresql script.
+## To delete the imported or temporary data, you might need to
+ ## run something similar to this (use with care the lines with the '*'):
+ # To remove osmosis temporary data:
+ rm osmosis-0.40.tgz
+ rm -r osmosis-0.40/
+ rm -r ./tempgis
+ # To delete the imported data, you may need to run:
+ dropdb -p 5432 gis
+ # If you created a tablespace:
+ echo "DROP TABLESPACE ;" | /usr/lib/postgresql/9.1/bin/psql -p 5432
+ # If you created a tablespace or used the --install option:
+ sudo rm -r /var/lib/postgresql/PostgresPlus/data
+</code></pre>
+<p>Only 20% of the disk space (out of 30 gigs) has been used. How can I resolve this error?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Mar '14, 16:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ce2105c628f0492c916ba08fab8455d4?s=32&amp;d=identicon&amp;r=g" alt="vr3690's gravatar image" />
+    <p><a href="/users/8445/vr3690">vr3690</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="vr3690 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31275/">
+                edited
+                <strong>04 Mar '14, 16:56</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+            <p><a href="/users/158/scai">scai ♦</a><br/>
+            <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-31275">
+    
+        <a name="31276"></a>
+        <div class="comment" id="comment-31276">
+            <div id="post-31276-score" class="comment-score">1</div>
+            <div class="comment-text"><p>30 GB disk space is very little. Are you sure you aren't using more than 20% <em>during</em> the run of osm2postgresql? I would expect it to clean up afterwards, even if an error occurs. And how large is the file you are trying to import?</p></div>
+            <div class="comment-info" id="comment-31276-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '14, 16:59)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31277"></a>
+        <div class="comment" id="comment-31277">
+            <div id="post-31277-score" class="comment-score"></div>
+            <div class="comment-text"><p>How big's the PBF you're using?</p></div>
+            <div class="comment-info" id="comment-31277-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '14, 17:08)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31278"></a>
+        <div class="comment" id="comment-31278">
+            <div id="post-31278-score" class="comment-score"></div>
+            <div class="comment-text"><p>The PBF file is about 144MB in size. After the temp files are removed, around 9% of the disk space shows up as used. Should I be using a bigger disk?</p>
+
+<p>EDIT: just checked again. The PBF file is around 137 MB downloaded from here - <a href="http://download.geofabrik.de/north-america/us/minnesota.html">http://download.geofabrik.de/north-america/us/minnesota.html</a></p></div>
+            <div class="comment-info" id="comment-31278-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '14, 17:10)</span>
+                <a class="comment-user userinfo" href="/users/8445/vr3690">vr3690</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31275" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31275-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/31275/no-space-on-device-while-using-osm2postgresql-with-pbf-file?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/31275/no-space-on-device-while-using-osm2postgresql-with-pbf-file?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/31275/no-space-on-device-while-using-osm2postgresql-with-pbf-file?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/31275/no-space-on-device-while-using-osm2postgresql-with-pbf-file?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="31317"></a>
+                    <div id="answer-container-31317" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31317-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31317/up/" rel="nofollow"> </a>
+<div id="post-31317-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-31317-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31317/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="vr3690 has selected this answer as the correct answer"
+        href="/accept_answer/31317/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>First of all, are you really sure you need osm2postgresql? The program has been last modified 3 years ago. A lot has happened since then. For most uses, <a href="http://wiki.openstreetmpap.org/osm2pgsql">osm2pgsql</a> or <a href="http://www.imposm.org/">imposm</a> are the superior choices.<br>
+</p>
+<p>osm2postgresql will download and install an Osmosis version (0.40) that is known to have issues with 64-bit node IDs in some situations, but I am unsure if this would affect your use case.</p>
+<p>Osmosis will write a temporary file to store node locations, and the results of Osmosis will be stored in another temporary file, to be loaded into PostgreSQL after; meaning that the process is likely to temporarily use much more memory than needed in the end. osm2postgresql lets you select where these files are stored; make sure you're not accidentally writing them to a partition that only has a fraction of the total hard disk available.</p>
+<p>But again, check if you really want to use osm2postgresql at all.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31317/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Mar '14, 09:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31317/">
+                edited
+                <strong>05 Mar '14, 09:54</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0e92f2d89853fd4e04c4b40a921e519b?s=32&amp;d=identicon&amp;r=g" alt="Pieren's gravatar image" />
+            <p><a href="/users/87/pieren">Pieren</a><br/>
+            <span class="score" title="9847 reputation points"><span class="">9.8k</span></span><span title="20 badges"><span class="badge1">&#9679;</span><span class="badgecount">20</span></span><span title="83 badges"><span class="silver">&#9679;</span><span class="badgecount">83</span></span><span title="157 badges"><span class="bronze">&#9679;</span><span class="badgecount">157</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31317">
+    
+</div>
+<div id="comment-tools-31317" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31317-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/31275/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='cCgHfk61VMjdd739oYeWlkKvMOgRHyZi' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31275/no-space-on-device-while-using-osm2postgresql-with-pbf-file?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31275/no-space-on-device-while-using-osm2postgresql-with-pbf-file?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 4, 2014, 4:40 p.m.">04 Mar '14, 16:40</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,665 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 5, 2014, 9:54 a.m.">05 Mar '14, 09:54</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2259/is-there-a-reason-why-osm2pgsql-produces-negative-osm_id-values">Is there a reason why osm2pgsql produces negative osm_id values?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4789/how-to-configure-postgresql-for-mapnik-hourly-updates">How to configure postgresql for mapnik hourly updates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4888/missing-tables-during-osm2pgsql-import">Missing tables during osm2pgsql import</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5389/merging-2-countries-with-osm2pgsql">Merging 2 countries with osm2pgsql</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5956/how-much-ram-does-osm2pgsql-need">How much RAM does osm2pgsql need?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6256/why-do-osm2pgsql-and-mapnik-use-spherical-projection-900913">Why do osm2pgsql and Mapnik use spherical projection 900913?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8108/osm-databases">osm databases</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8322/osm2pgsql-import-getting-killed-as-relations-are-processed">osm2pgsql import getting killed as relations are processed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1/how-do-you-make-the-osm2pgsql-diff-imports-run-faster-than-molasses-on-postgres-84">How do you make the osm2pgsql diff imports run faster than molasses on postgres 8.4?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

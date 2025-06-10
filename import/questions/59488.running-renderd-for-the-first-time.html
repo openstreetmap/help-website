@@ -1,0 +1,1034 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Running renderd for the first time - OSM Help</title>
+        <meta name="description" content="Hello, i have followed the instructions from https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/ to manually build my own tile server. I followed the instruction &amp;gt;&amp;gt; renderd -f -c /usr/local/etc/renderd.conf &amp;lt;&amp;lt; to get a map via the web browser, but it doesnt work.  rendera..." />
+        <meta name="keywords" content="renderd,tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/59488/running-renderd-for-the-first-time" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/59488/running-renderd-for-the-first-time?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FGOFf14zhmDHugupLlmwXOHsepewRa9N' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/59488/running-renderd-for-the-first-time">Running renderd for the first time</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-59488-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59488/up/" rel="nofollow"> </a>
+<div id="post-59488-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-59488-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59488/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/59488/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>i have followed the instructions from <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> to manually build my own tile server.</p>
+<p>I followed the instruction &gt;&gt; renderd -f -c /usr/local/etc/renderd.conf &lt;&lt; to get a map via the web browser, but it doesnt work. </p>
+<pre><code>renderaccount@lantech-MOBILE-1524:~/src/openstreetmap-carto$ renderd -f -c /usr/local/etc/renderd.conf
+renderd[21650]: Rendering daemon started
+renderd[21650]: Initiating request_queue
+renderd[21650]: Parsing section renderd
+renderd[21650]: Parsing render section 0
+renderd[21650]: Parsing section mapnik
+renderd[21650]: Parsing section ajt
+renderd[21650]: config renderd: unix socketname=/var/run/renderd/renderd.sock
+renderd[21650]: config renderd: num_threads=4
+renderd[21650]: config renderd: num_slaves=0
+renderd[21650]: config renderd: tile_dir=/var/lib/mod_tile
+renderd[21650]: config renderd: stats_file=/var/run/renderd/renderd.stats
+renderd[21650]: config mapnik:  plugins_dir=/usr/lib/mapnik/3.0/input
+renderd[21650]: config mapnik:  font_dir=/usr/share/fonts/truetype
+renderd[21650]: config mapnik:  font_dir_recurse=1
+renderd[21650]: config renderd(0): Active
+renderd[21650]: config renderd(0): unix socketname=/var/run/renderd/renderd.sock
+renderd[21650]: config renderd(0): num_threads=4
+renderd[21650]: config renderd(0): tile_dir=/var/lib/mod_tile
+renderd[21650]: config renderd(0): stats_file=/var/run/renderd/renderd.stats
+renderd[21650]: config map 0:   name(ajt) file(/home/renderaccount/src/openstreetmap-carto/mapnik.xml) uri(/hot/) htcp() host(localhost)
+renderd[21650]: Initialising unix server socket on /var/run/renderd/renderd.sock
+renderd[21650]: Created server socket 5
+renderd[21650]: Renderd is using mapnik version 3.0.9
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/padauk/Padauk-bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/padauk/Padauk-bookbold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/padauk/Padauk.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/padauk/Padauk-book.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Umpush-Light.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Norasi.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Purisa.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Loma-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Waree-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Umpush.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Kinnari-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Sawasdee-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Kinnari-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgMono.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Loma-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Laksaman.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Kinnari-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypewriter-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Laksaman-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Norasi-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Sawasdee-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Waree-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypo-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Loma-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgMono-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Norasi-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypist-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Garuda-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypo.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypewriter-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Garuda.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Umpush-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Sawasdee.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Kinnari.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypist-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypewriter.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Umpush-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Umpush-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Purisa-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Garuda-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Kinnari-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Umpush-LightOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Purisa-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Purisa-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypo-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Laksaman-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Norasi-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Laksaman-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Kinnari-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgMono-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Norasi-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypo-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Garuda-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Waree-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Loma.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypewriter-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypist.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgTypist-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Sawasdee-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/TlwgMono-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Waree.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tlwg/Norasi-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/openoffice/opens___.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifMalayalam-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansThaiUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansKannada-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifGujarati-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansSaurashtra-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansLaoUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansInscriptionalParthian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansSyriacEstrangela-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansOldTurkic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifBengali-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansArmenian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifKannada-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansMyanmar-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifThai-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansShavian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansBengali-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansOldPersian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansHebrew-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansEthiopic-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTibetan-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoNastaliqUrdu-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansUI-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansDevanagariUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifLao-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGujarati-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGothic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansKharoshthi-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansUI-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansDevanagariUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansKannadaUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansArmenian-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansNewTaiLue-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGurmukhi-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansCarian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifTelugu-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansDeseret-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansDevanagari-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSans-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifLao-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansMalayalamUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansHebrew-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansOsmanya-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGujaratiUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansMyanmar-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansBuhid-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTibetan-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansKhmerUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansSyriacWestern-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoKufiArabic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansCypriot-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansCherokee-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGeorgian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGujaratiUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansAvestan-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansSylotiNagri-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifArmenian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansOriyaUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansMongolian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansThaana-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGujarati-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansLaoUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansMyanmarUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansLinearB-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifGeorgian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerif-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansKaithi-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansKannada-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansHanunoo-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerif-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTifinagh-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifBengali-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansCanadianAboriginal-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTelugu-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGurmukhi-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansMeeteiMayek-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansOriya-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifKhmer-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoNaskhArabicUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifMalayalam-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansBamum-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansLao-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansKhmer-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansYi-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifArmenian-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansKhmer-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansBatak-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansThaiUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansBengaliUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansBengaliUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansSinhala-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansBrahmi-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansKayahLi-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTaiViet-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansOriya-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansKannadaUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansLisu-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansBengali-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansMandaic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSans-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansMalayalam-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansRunic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerif-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTamil-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansOlChiki-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGurmukhiUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansThaana-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTagbanwa-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTamilUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansCuneiform-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansMalayalam-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTagalog-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansImperialAramaic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansPhagsPa-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansLao-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansSamaritan-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifTamil-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansJavanese-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerif-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansVai-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansSundanese-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifTelugu-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansBuginese-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoNaskhArabic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansOldItalic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSans-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTaiLe-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifGujarati-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoNaskhArabic-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansLimbu-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTamilUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansCham-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansLepcha-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansMyanmarUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansLycian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansSymbols-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansBalinese-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifTamil-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansThai-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansMalayalamUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansPhoenician-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTelugu-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoNaskhArabicUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansEthiopic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansKhmerUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansLydian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansCoptic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansEgyptianHieroglyphs-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansThai-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansCham-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoKufiArabic-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansOriyaUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansSinhala-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansInscriptionalPahlavi-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGeorgian-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTaiTham-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGlagolitic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansRejang-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifThai-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansNKo-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansOldSouthArabian-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTeluguUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansOgham-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansUgaritic-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTeluguUI-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansSyriacEastern-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansGurmukhiUI-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSans-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifKannada-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSansTamil-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifKhmer-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/noto/NotoSerifGeorgian-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/unifont/unifont.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/unifont/unifont_csur.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/unifont/unifont_upper_csur.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/unifont/unifont_sample.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/unifont/unifont_upper.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/sinhala/lklug.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/fonts-guru-extra/Saab.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/tibetan-machine/TibetanMachineUni.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-khmeros-core/KhmerOS.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-khmeros-core/KhmerOSsys.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/nanum/NanumMyeongjo.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/nanum/NanumGothicBold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/nanum/NanumBarunGothicBold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/nanum/NanumGothic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/nanum/NanumMyeongjoBold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/lao/Phetsarath_OT.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst-one/KacstOne-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst-one/KacstOne.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-ExtraLight.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/lohit-punjabi/Lohit-Punjabi.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/takao-gothic/TakaoPGothic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeMonoOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeMono.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeSansBold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeMonoBold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeMonoBoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeSansBoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeSansOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeSans.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/freefont/FreeSerif.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ancient-scripts/Symbola_hint.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSansNarrow-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSansNarrow-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSansNarrow-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationMono-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSansNarrow-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationMono-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationMono-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSansCondensed.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSans-ExtraLight.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSans-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSansMono-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Oblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSansMono-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-BoldOblique.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed-Italic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed-Bold.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/dejavu/DejaVuSerif-BoldItalic.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/abyssinica/AbyssinicaSIL-R.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-M.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-BI.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-LI.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-MI.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-B.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-RI.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-RI.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-B.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-L.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-BI.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-C.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-R.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstOffice.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstBook.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstLetter.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstArt.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstPen.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstDigital.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstDecorative.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstPoster.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstNaskh.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstTitleL.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/mry_KacstQurn.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstTitle.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstQurn.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstFarsi.ttf
+renderd[21650]: DEBUG: Loading font: /usr/share/fonts/truetype/kacst/KacstScreen.ttf
+Running in foreground mode...
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile
+renderd[21650]: Loading parameterization function for 
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile
+renderd[21650]: Loading parameterization function for 
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile
+renderd[21650]: Starting stats thread
+renderd[21650]: Loading parameterization function for 
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile
+renderd[21650]: Loading parameterization function for 
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Bold' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Bold' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-0'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02:renderd[21650]: An error occurred while loading the map layer 'ajt': Shape Plugin: shapefile '/home/renderaccount/src/openstreetmap-carto/data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp' does not exist  encountered during parsing of layer 'world' in Layer at line 268 of '/home/renderaccount/src/openstreetmap-carto/mapnik.xml'
+ warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Bold' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-1'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Sans CJK JP Bold' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02:renderd[21650]: An error occurred while loading the map layer 'ajt': Shape Plugin: shapefile '/home/renderaccount/src/openstreetmap-carto/data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp' does not exist  encountered during parsing of layer 'world' in Layer at line 268 of '/home/renderaccount/src/openstreetmap-carto/mapnik.xml'
+ warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-2'
+Mapnik LOG&gt; 2017-09-08 13:36:02: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-2'
+renderd[21650]: An error occurred while loading the map layer 'ajt': Shape Plugin: shapefile '/home/renderaccount/src/openstreetmap-carto/data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp' does not exist  encountered during parsing of layer 'world' in Layer at line 268 of '/home/renderaccount/src/openstreetmap-carto/mapnik.xml'
+renderd[21650]: An error occurred while loading the map layer 'ajt': Shape Plugin: shapefile '/home/renderaccount/src/openstreetmap-carto/data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp' does not exist  encountered during parsing of layer 'world' in Layer at line 268 of '/home/renderaccount/src/openstreetmap-carto/mapnik.xml'
+renderd[21650]: DEBUG: Got incoming connection, fd 8, number 1
+renderd[21650]: DEBUG: Got incoming request with protocol version 2
+renderd[21650]: DEBUG: Got command RenderPrio fd(8) xml(ajt), z(0), x(0), y(0), mime(image/png), options()
+renderd[21650]: Received request for map layer 'ajt' which failed to load
+renderd[21650]: DEBUG: Sending render cmd(4 ajt 0/0/0) with protocol version 2 to fd 8
+renderd[21650]: DEBUG: Connection 0, fd 8 closed, now 0 left
+</code></pre>
+<p>Could anybody help me to resolve the problem ?</p>
+<p>Regards
+Boki</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/renderd/" class="post-tag tag-link-renderd"
+                                        title="see questions tagged 'renderd'" rel="tag">renderd</a>
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Sep '17, 12:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/af6aa01f49eba45057355124d57dc823?s=32&amp;d=identicon&amp;r=g" alt="Boki_Z's gravatar image" />
+    <p><a href="/users/14186/boki_z">Boki_Z</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Boki_Z has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-59488">
+    
+        <a name="59493"></a>
+        <div class="comment" id="comment-59493">
+            <div id="post-59493-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Have you checked to see if the file '/home/renderaccount/src/openstreetmap-carto/data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp' exists? The error says it doesn't, so that seems like the obvious place to start troubleshooting.</p></div>
+            <div class="comment-info" id="comment-59493-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Sep '17, 17:18)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="59494"></a>
+        <div class="comment" id="comment-59494">
+            <div id="post-59494-score" class="comment-score"></div>
+            <div class="comment-text"><p>For info, as of about a week ago, the scripts that unpack the lowzoom shapefiles still worked for me when I set up a tile server this way.</p>
+
+<p>Perhaps you forgot to do the "Shapefile download" bit (and perhaps fonts too)?</p></div>
+            <div class="comment-info" id="comment-59494-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Sep '17, 17:33)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="59523"></a>
+        <div class="comment" id="comment-59523">
+            <div id="post-59523-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Oh yes my mistake. I have created the folder /data in /renderaccount. Now i get the tile on localhost/hot/0/0/0.png.</p>
+
+<p>Thank you :).</p></div>
+            <div class="comment-info" id="comment-59523-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '17, 07:12)</span>
+                <a class="comment-user userinfo" href="/users/14186/boki_z">Boki_Z</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-59488" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59488-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/59488/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FGOFf14zhmDHugupLlmwXOHsepewRa9N' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/59488/running-renderd-for-the-first-time?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/59488/running-renderd-for-the-first-time?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/renderd/"
+            class="tag-link-renderd"
+            title="see questions tagged'renderd'using tags"
+            rel="tag">renderd</a> <span class="tag-number">&#215;105</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 8, 2017, 12:53 p.m.">08 Sep '17, 12:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,196 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 11, 2017, 7:12 a.m.">11 Sep '17, 07:12</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/51467/rendering-of-chinese-place-names-show-as-messy-code">Rendering of Chinese place names show as messy code</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57052/segmentation-fault-on-a-command-sudo-u-taras-renderd-f-c-usrlocaletcrenderdconf">Segmentation fault on a command &quot;sudo -u taras renderd -f -c /usr/local/etc/renderd.conf&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35317/local-tile-server-from-packages-404-when-displaying-tiles">Local Tile Server from Packages: 404 when displaying tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43816/switch2osm-tile-server-404ing">switch2osm tile server 404ing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52185/what-is-the-tile-server-the-id-editor-used-to-renderd">What is the tile server the iD editor used to renderd?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53854/the-renderd_expire-command-update-wrong-tiles">The renderd_expire command update wrong tiles.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22201/how-to-install-renderd-as-a-service">[closed] How to install renderd as a service</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24290/local-tile-server-extremely-slow-rendering">Local Tile Server - EXTREMELY slow rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37611/renderd-doesnt-update-tiles">Renderd doesn&#39;t update tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62519/renderd-segmentation-fault">renderd segmentation fault</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

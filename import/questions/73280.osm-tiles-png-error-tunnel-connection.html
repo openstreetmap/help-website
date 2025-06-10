@@ -1,0 +1,911 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>OSM / Tiles / PNG / Error Tunnel Connection - OSM Help</title>
+        <meta name="description" content="When I go here: https://openlayers.org/en/latest/examples/canvas-tiles.html many times I receive this kind of error: https://a.tile.openstreetmap.org/2/0/3.png net::ERR_TUNNEL_CONNECTION_FAILED (Chrome) Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at htt..." />
+        <meta name="keywords" content="tiles,osm,connection,png,error" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/73280/osm-tiles-png-error-tunnel-connection" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/73280/osm-tiles-png-error-tunnel-connection?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FELul7iqIB4xLWyI9Iw7HGCur9VrJXnA' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/73280/osm-tiles-png-error-tunnel-connection">OSM / Tiles / PNG / Error Tunnel Connection</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-73280-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73280/up/" rel="nofollow"> </a>
+<div id="post-73280-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73280-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73280/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/73280/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>When I go here:</p>
+<p><a href="https://openlayers.org/en/latest/examples/canvas-tiles.html">https://openlayers.org/en/latest/examples/canvas-tiles.html</a></p>
+<p>many times I receive this kind of error:</p>
+<p><a href="https://a.tile.openstreetmap.org/2/0/3.png">https://a.tile.openstreetmap.org/2/0/3.png</a> net::ERR_TUNNEL_CONNECTION_FAILED (Chrome)</p>
+<p>Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at <a href="https://a.tile.openstreetmap.org/3/0/3.png.">https://a.tile.openstreetmap.org/3/0/3.png.</a> (Reason: CORS request did not succeed). (Firefox)</p>
+<p>It depends on my proxy or it is a temporary problem on the server?</p>
+<p>P.S. I am doing a test with an HTML on my machine copying the code on the example</p>
+<p>Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/connection/" class="post-tag tag-link-connection"
+                                        title="see questions tagged 'connection'" rel="tag">connection</a>
+                                
+                                    <a href="/tags/png/" class="post-tag tag-link-png"
+                                        title="see questions tagged 'png'" rel="tag">png</a>
+                                
+                                    <a href="/tags/error/" class="post-tag tag-link-error"
+                                        title="see questions tagged 'error'" rel="tag">error</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Feb '20, 13:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dd544fdbfcaf6906fb6cd8bf7f4eff29?s=32&amp;d=identicon&amp;r=g" alt="gf_eu's gravatar image" />
+    <p><a href="/users/17971/gf_eu">gf_eu</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gf_eu has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-73280">
+    
+        <a name="73306"></a>
+        <div class="comment" id="comment-73306">
+            <div id="post-73306-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually the problem is also when I load this example: <a href="https://openlayers.org/en/latest/examples/canvas-tiles.html.">https://openlayers.org/en/latest/examples/canvas-tiles.html.</a> But it doesn't happen always, just sometime.</p>
+
+<p>Now for example I am having this ok:</p>
+
+<p><em><a href="https://b.tile.openstreetmap.org/8/140/128.png">https://b.tile.openstreetmap.org/8/140/128.png</a>
+via: 1.1 trogdor.openstreetmap.org (squid/4.10)
+x-cache: MISS from trogdor.openstreetmap.org</em></p>
+
+<p>and this other on error
+<em><a href="https://c.tile.openstreetmap.org/8/140/129.png">https://c.tile.openstreetmap.org/8/140/129.png</a></em></p>
+
+<p>And this cause me problem in viewing the map in some point. And yes, looks I have the same problem with codesanbox, here for example:</p>
+
+<p><em><a href="https://b.tile.openstreetmap.org/13/4590/4150.png">https://b.tile.openstreetmap.org/13/4590/4150.png</a>
+x-cache: MISS from necrosan.openstreetmap.org</em></p>
+
+<p>Now I am noticing that I don't have any problem with ARCGis Tiles (either on the example, either on my local file) and I replaced this:</p>
+
+<p><em>source: new ol.source.OSM()</em></p>
+
+<p>with this:</p>
+
+<p><em>source: new ol.source.XYZ({
+  attributions: 'Tiles © <a href="https://services.arcgisonline.com/ArcGIS/' + 
+  'rest/services/World_Topo_Map/MapServer">ArcGIS</a>',
+  url: 'https://server.arcgisonline.com/ArcGIS/rest/services/' + 'World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
+})</em></p>
+
+<p>What do you suggest? To do some investigation or keep going with ARCGis Tiles that work well for me?</p></div>
+            <div class="comment-info" id="comment-73306-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '20, 09:16)</span>
+                <a class="comment-user userinfo" href="/users/17971/gf_eu">gf_eu</a>
+                
+            </div>
+        </div>
+    
+        <a name="73357"></a>
+        <div class="comment" id="comment-73357">
+            <div id="post-73357-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, I have some information more, I am going to update that ticket, maybe we can find (and give help). And It looks I have the same problem with ARCGis Tiles.</p>
+
+<p>Basically when I open the HTML (before the map is loaded), sometime the page ask me for the proxy credentials, sometimes not (I don't know what's the logic but it's about cache). When the page ask for proxy credentials and I insert them everything works fine otherwise I have that error (Open Layer Engine seems to be "offline", piece of the map are shown sometime depending on what there is in the cache I guess). </p>
+
+<p>But also, even when is "offline" (and not working) sometime (but rarely) doing "Zoom In" and "Zoom out" the browser (not always) ask me for proxy credentials and the Open Layer Engine come "back online" and start to work again.</p>
+
+<p>Now...as workaround maybe I can think about do a "request on the Internet" before loading everything or I don't know "skip the cache" (I tried with the meta tag but nothing). Any idea?</p>
+
+<p>Thanks again.</p></div>
+            <div class="comment-info" id="comment-73357-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '20, 10:48)</span>
+                <a class="comment-user userinfo" href="/users/17971/gf_eu">gf_eu</a>
+                
+            </div>
+        </div>
+    
+        <a name="73368"></a>
+        <div class="comment" id="comment-73368">
+            <div id="post-73368-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not sure I understand your problem.</p>
+
+<p>When you say that a proxy ask for credentials, it's a proxy on your side ? Not the tile cache server ?</p>
+
+<p>Maybe there a problem with chaining proxies...</p>
+
+<p>Does openstreetmap.org work with your setup ?</p>
+
+<p>Could you give a bit more details ?</p>
+
+<p>Regards.</p></div>
+            <div class="comment-info" id="comment-73368-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '20, 15:23)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73280" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73280-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/73280/osm-tiles-png-error-tunnel-connection?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/73280/osm-tiles-png-error-tunnel-connection?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/73280/osm-tiles-png-error-tunnel-connection?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/73280/osm-tiles-png-error-tunnel-connection?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="73292"></a>
+                    <div id="answer-container-73292" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73292-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73292/up/" rel="nofollow"> </a>
+<div id="post-73292-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73292-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73292/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I guess the "Cross-Origin Request Blocked" error might because you're loading your HTML via http, and the tiles via https. Unfortunately the main OSM servers don't provide http anymore. The problem should only happen in the reverse situation...</p>
+<p>I tried with leafletjs, it works fine. I won't install npm to try the OpenLayer code, but it should be similar.</p>
+<p>Did you try with "codesanbox" ? (the Edit button at top right of your example page) It also works fine for me.</p>
+<p>For the server status, you can check <a href="https://a.tile.openstreetmap.org/">https://a.tile.openstreetmap.org/</a>, to get the name of your tile server, then on <a href="https://hardware.openstreetmap.org/">https://hardware.openstreetmap.org/</a> you'll find a munin link, with all the stats.</p>
+<p>You can also check the Headers (x-cache) to find the tile cache server (proxy) that served you, and check it the same way.</p>
+<p>Hope this helps.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73292/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Feb '20, 22:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73292">
+    
+</div>
+<div id="comment-tools-73292" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73292-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="73310"></a>
+                    <div id="answer-container-73310" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-73310-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/73310/up/" rel="nofollow"> </a>
+<div id="post-73310-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-73310-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/73310/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It might be a problem with your connection, but I notice on <a href="https://uptime.openstreetmap.org/">https://uptime.openstreetmap.org/</a> that trogdor and necrosan are not the most stable tile cache servers. </p>
+<p>On the other hand, there is a <a href="https://github.com/openstreetmap/operations/issues/366">ticket</a> at the OSM Operation Team that looks like your problem, maybe you could help them with more data. First try on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> to check that you can reproduce the problem.</p>
+<p>Of course if you're happy with ArcGIS license and data, please use them...</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/73310/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Mar '20, 18:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-73310">
+    
+        <a name="73372"></a>
+        <div class="comment" id="comment-73372">
+            <div id="post-73372-score" class="comment-score"></div>
+            <div class="comment-text"><p>Answer to H_mlet.</p>
+
+<p>Yes, there is a proxy on my side. And also using ARCGis Tiles I am having ERR_TUNNEL_CONNECTION_FAILED, even I am not sure yet it's the exact same error as with OSM Tiles.</p>
+
+<p>What I did now, my workaround, is to "force a Internet request" before everything (I chose to use the same ARCGIS Map url but I could use everything on the web):</p>
+
+<p><em>$.ajax({<br> 
+   type : "GET",<br> 
+   url : 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer',<br> 
+   success : function(data) {<br> 
+   init();<br> 
+   }<br> 
+   });<br></em> </p>
+
+<p>Only after this request is done I initialize the map (method init):</p>
+
+<p><em>function init(){<br> 
+   ...<br> 
+   layer = new ol.layer.Tile({<br> 
+   source: new ol.source.XYZ({<br> 
+   attributions: 'Tiles ' + <br> 'rest/services/World_Topo_Map/MapServer"&gt;ArcGIS',<br> 
+   url: 'https://server.arcgisonline.com/ArcGIS/rest/services/' + <br>    'World_Topo_Map/MapServer/tile/{z}/{y}/{x}'<br> 
+   })<br> 
+   }); <br> 
+   map = new ol.Map({<br> 
+      target: 'map',<br> 
+      layers: [layer, vector],<br> 
+      view: new ol.View({<br> 
+      center: ol.proj.fromLonLat([...]),<br> 
+      zoom: 5<br> 
+   })<br> 
+   });<br> 
+   ...<br> 
+   }<br></em> </p>
+
+<p>What happen now: when I open the HTML first thing the browser does is to ask me the proxy credentials, after the map is loaded and the map works correctly. I am not having any ERR_TUNNEL_CONNECTION_FAILED. If this is a workaround can work also with OSM Tiles and outside of proxy connection I can't say yet....If I do a test I will tell you.</p>
+
+<p>I suppose that there is a problem in the Open Layer Javascript but It can be I will be happy with this workaround...</p>
+
+<p>Hope this can help...and can make any sense for you.</p></div>
+            <div class="comment-info" id="comment-73372-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '20, 16:25)</span>
+                <a class="comment-user userinfo" href="/users/17971/gf_eu">gf_eu</a>
+                
+            </div>
+        </div>
+    
+        <a name="73373"></a>
+        <div class="comment" id="comment-73373">
+            <div id="post-73373-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well I don't really understand, but I'm glad you found a workaround, and thanks for sharing. :-)</p>
+
+<p>Anyway it looks more like a bug of OpenLayers, you might want to report it to them : <a href="https://github.com/openlayers/openlayers/issues">https://github.com/openlayers/openlayers/issues</a></p>
+
+<p>Regards</p></div>
+            <div class="comment-info" id="comment-73373-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '20, 16:29)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-73310" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-73310-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/73280/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FELul7iqIB4xLWyI9Iw7HGCur9VrJXnA' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73280/osm-tiles-png-error-tunnel-connection?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/73280/osm-tiles-png-error-tunnel-connection?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/error/"
+            class="tag-link-error"
+            title="see questions tagged'error'using tags"
+            rel="tag">error</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+        <a href="/tags/connection/"
+            class="tag-link-connection"
+            title="see questions tagged'connection'using tags"
+            rel="tag">connection</a> <span class="tag-number">&#215;20</span><br/>
+        
+        <a href="/tags/png/"
+            class="tag-link-png"
+            title="see questions tagged'png'using tags"
+            rel="tag">png</a> <span class="tag-number">&#215;14</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 28, 2020, 1:46 p.m.">28 Feb '20, 13:46</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,323 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 4, 2020, 4:29 p.m.">04 Mar '20, 16:29</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/30698/switch2osm-tile-server-insert-more-countries">Switch2osm tile server insert more countries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36484/osm-map-loaded-onto-etrex20-sd-card-does-not-work">OSM map loaded onto etrex20 sd card does not work</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23055/strange-tile-borders-forest-cuts-off">Strange tile borders - forest cuts off</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30621/can-i-install-nominatim-and-switch2osm-tile-server-on-same-machine">Can i install nominatim and switch2osm tile server on same machine ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31038/guide-me-how-to-getting-started-with-osm-offline-map">Guide me how to getting started with OSM Offline Map ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33317/osm-tiles-png-generation">OSM Tiles (png) generation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13551/mio-moov-m300-win-ce5-osm-tracker-error-at-start">Mio Moov M300 + Win CE5 + OSM tracker -  error at start</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21801/tile-server-not-displaying-tiles">tile server not displaying tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26158/how-to-generate-list-of-tiles-from-bbox">How to generate list of tiles from bbox</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38080/tiles-not-showing-up-in-default-web-interface">Tiles not showing up in default web interface</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,660 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How can I get osmosis to use more than two CPUs/cores? - OSM Help</title>
+        <meta name="description" content="The simplest version of the command I&#39;m using is (pretty formatting for easier reading - it&#39;s usually one line): osmosis --read-pbf-fast file=&quot;north-america-latest.osm.pbf&quot;   --bounding-polygon file=&quot;holyoke_ma.poly&quot; --write-xml file=&quot;holyoke_ma.osm&quot;  I get more complex by adding --tee ## with ## be..." />
+        <meta name="keywords" content="pbf,polygon,osmosis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/29892/how-can-i-get-osmosis-to-use-more-than-two-cpuscores" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/29892/how-can-i-get-osmosis-to-use-more-than-two-cpuscores?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ZFxD2hEEjJjgDohAE6DWG5moDCGBJj26' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/29892/how-can-i-get-osmosis-to-use-more-than-two-cpuscores">How can I get osmosis to use more than two CPUs/cores?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-29892-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29892/up/" rel="nofollow"> </a>
+<div id="post-29892-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-29892-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29892/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/29892/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>The simplest version of the command I'm using is (pretty formatting for easier reading - it's usually one line):</p>
+<pre><code>osmosis --read-pbf-fast file="north-america-latest.osm.pbf" 
+        --bounding-polygon file="holyoke_ma.poly" --write-xml file="holyoke_ma.osm"
+</code></pre>
+<p>I get more complex by adding <code>--tee ##</code> with <code>##</code> being the number of files being read/written. So that's something like (pretty formatting for easier reading - it's usually one line):</p>
+<pre><code>osmosis --read-pbf-fast file="north-america-latest.osm.pbf" --tee 4 
+        --bounding-polygon file="city1.poly" --write-xml file="city1.osm"
+        --bounding-polygon file="city2.poly" --write-xml file="city2.osm"
+        --bounding-polygon file="city3.poly" --write-xml file="city3.osm"
+        --bounding-polygon file="city4.poly" --write-xml file="city4.osm"
+</code></pre>
+<p>I've tried adding <code>workers=##</code> to the mix, with <code>##</code> being the number of cores on the server. That results in something like (pretty formatting for easier reading - it's usually one line):</p>
+<pre><code>osmosis --read-pbf-fast workers=4 file="north-america-latest.osm.pbf" --tee 4 
+        --bounding-polygon file="city1.poly" --write-xml file="city1.osm"
+        --bounding-polygon file="city2.poly" --write-xml file="city2.osm"
+        --bounding-polygon file="city3.poly" --write-xml file="city3.osm"
+        --bounding-polygon file="city4.poly" --write-xml file="city4.osm"
+</code></pre>
+<p>In any of my attempts, with 2 or more cores, the process tops out at nearly 200% CPU use (when viewed in <code>top</code>). When viewed in <code>mpstat -P ALL</code> (which you can get after running <code>apt-get install sysstat</code>), there's one CPU that usually sits at about 20-30%, and the others are mostly idle.</p>
+<p>I verified that I can get a process to use all cores (4 in this case) by running <code>sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run</code> (which you can get after running <code>apt-get install sysbench</code>) ... This would spike the process to 400% (when viewed in <code>top</code>).</p>
+<ul>
+<li>How do I get <code>osmosis</code> to use all of the available CPUs/cores?</li>
+<li>Where (if anywhere) should <code>--buffer</code> entries be placed? Before the <code>--bounding-polygon</code> flag? Before the <code>--write-xml</code> flag?</li>
+<li>Should I keep a limit to my <code>--tee</code> usage? Does that tie to the number of cores at all? Sometimes I have hundreds (up to a thousand or so) of <code>.poly</code> files to process - can I put them all into a single <code>osmosis</code> command with a very large <code>tee</code> value?</li>
+</ul>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/pbf/" class="post-tag tag-link-pbf"
+                                        title="see questions tagged 'pbf'" rel="tag">pbf</a>
+                                
+                                    <a href="/tags/polygon/" class="post-tag tag-link-polygon"
+                                        title="see questions tagged 'polygon'" rel="tag">polygon</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Jan '14, 19:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0ada7b97d85873855231744286452af4?s=32&amp;d=identicon&amp;r=g" alt="JamesChevalier's gravatar image" />
+    <p><a href="/users/7201/jameschevalier">JamesChevalier</a><br/>
+    <span class="score" title="151 reputation points">151</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JamesChevalier has one accepted answer">25&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-29892">
+    
+</div>
+<div id="comment-tools-29892" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29892-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/29892/how-can-i-get-osmosis-to-use-more-than-two-cpuscores?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/29892/how-can-i-get-osmosis-to-use-more-than-two-cpuscores?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/29892/how-can-i-get-osmosis-to-use-more-than-two-cpuscores?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/29892/how-can-i-get-osmosis-to-use-more-than-two-cpuscores?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="29893"></a>
+                    <div id="answer-container-29893" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29893-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29893/up/" rel="nofollow"> </a>
+<div id="post-29893-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-29893-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29893/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I would suggest to place one "buffer" before and after each --bounding-polygon directive. I haven't tried more than about 50 "tee" threads but I guess more would still be possible - but keep in mind that the number of "point in polygon" checks that osmosis has to make is the size of your input file multiplied by the number of --bounding-polygon threads you're using - each object will be checked against all (thousands of) polygons. Therefore it is more efficient to first divide up your input file into a couple of smaller regions and extract your files from them. </p>
+<p>Here's an <a href="http://blog.geofabrik.de/?p=75">older blog entry</a> that describes how we used to run the Geofabrik extracts. We nowadays use the <a href="https://github.com/MaZderMind/osm-history-splitter">history splitter</a> which offers better performance when doing a large number of polygon splits at once.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29893/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Jan '14, 19:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29893">
+    
+        <a name="29894"></a>
+        <div class="comment" id="comment-29894">
+            <div id="post-29894-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks! (I actually came across your blog post the other day, and thought about contacting you directly).
+I've mostly used a country OSM file (like germany-latest.osm.pbf), but I did run some tests with a 'state' level file (like brandenburg-latest.osm.pbf). Those definitely finished quicker, but still didn't make full use of the CPU.
+I'll try again with your suggestion of <code>buffer</code> placement.</p></div>
+            <div class="comment-info" id="comment-29894-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jan '14, 19:37)</span>
+                <a class="comment-user userinfo" href="/users/7201/jameschevalier">JamesChevalier</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29893" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29893-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/29892/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ZFxD2hEEjJjgDohAE6DWG5moDCGBJj26' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29892/how-can-i-get-osmosis-to-use-more-than-two-cpuscores?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29892/how-can-i-get-osmosis-to-use-more-than-two-cpuscores?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/polygon/"
+            class="tag-link-polygon"
+            title="see questions tagged'polygon'using tags"
+            rel="tag">polygon</a> <span class="tag-number">&#215;92</span><br/>
+        
+        <a href="/tags/pbf/"
+            class="tag-link-pbf"
+            title="see questions tagged'pbf'using tags"
+            rel="tag">pbf</a> <span class="tag-number">&#215;60</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 16, 2014, 7:12 p.m.">16 Jan '14, 19:12</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,695 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 16, 2014, 7:37 p.m.">16 Jan '14, 19:37</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/64139/how-do-extract-a-polygon-of-osm-boundary-relation-using-osmosis">how do extract a polygon of osm boundary relation using osmosis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65527/how-to-extract-all-address-from-pbf-in-exactly-one-city">how to extract all address from PBF in exactly one city?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39221/osmosis-extract-via-bbox-or-poly-which-is-faster">osmosis - extract via bbox or poly - which is faster?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43470/resolved-osmosis-command-execution-on-php-on-nominatim">[RESOLVED] Osmosis command execution on PHP on Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61539/how-to-convert-pbf-into-osm-using-osmosis">How to convert .pbf into .osm using osmosis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50350/extract-all-polygons-for-postal-codes-in-germany-to-view-in-qgis">Extract all polygons for postal codes in Germany to view in QGIS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7711/bounding-box-polygon-for-osmosis">bounding-box polygon for osmosis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8117/getting-city-border-from-osm-data">Getting city border from osm data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41392/how-best-to-filter-main-roads-highways-from-a-large-pbf-file">How best to filter &#39;main&#39; roads (highways) from a large PBF file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73498/duplicate-key-error-when-appending-diffs-with-osm2pgsql">Duplicate key error when appending diffs with osm2pgsql</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

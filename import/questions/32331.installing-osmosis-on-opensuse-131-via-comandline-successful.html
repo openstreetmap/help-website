@@ -1,0 +1,823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>installing osmosis on opensuse 13.1 via comandline - successful - OSM Help</title>
+        <meta name="description" content="hello dear linux-experts ive installed osmosis on suselinux version 13.1 )  linux-70ce:/home/martin # LANG=en_US.UTF-8 wget http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz --2014-04-12 22:09:52-- http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz Resolving bret..." />
+        <meta name="keywords" content="osmosis,linux" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/32331/installing-osmosis-on-opensuse-131-via-comandline-successful" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/32331/installing-osmosis-on-opensuse-131-via-comandline-successful?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='rFTDqfI16APcBizc8Z7OOoLt1ylj6Pjb' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/32331/installing-osmosis-on-opensuse-131-via-comandline-successful">installing osmosis on opensuse 13.1 via comandline - successful</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-32331-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32331/up/" rel="nofollow"> </a>
+<div id="post-32331-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32331-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32331/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/32331/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>hello dear linux-experts</p>
+<p>ive installed osmosis on suselinux version 13.1</p>
+<pre><code>) 
+linux-70ce:/home/martin # LANG=en_US.UTF-8  wget <a href="http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz">http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz</a>
+--2014-04-12 22:09:52--  <a href="http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz">http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz</a>
+Resolving bretth.dev.openstreetmap.org (bretth.dev.openstreetmap.org)... 128.40.168.103
+Connecting to bretth.dev.openstreetmap.org (bretth.dev.openstreetmap.org)|128.40.168.103|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9079737 (8.7M) [application/x-gzip]
+Saving to: ‘osmosis-latest.tgz’
+
+100%[==========================================================================================================================================&gt;] 9,079,737   1.38MB/s   in 6.3s
+
+2014-04-12 22:09:58 (1.39 MB/s) - ‘osmosis-latest.tgz’ saved [9079737/9079737]
+
+linux-70ce:/home/martin # tar xvfz osmosis-latest.tgz
+readme.txt
+copying.txt
+changes.txt
+script/
+script/pgsnapshot_load_0.6.sql
+script/pgsnapshot_schema_0.6_action.sql
+script/pgsimple_schema_0.6_linestring.sql
+script/pgsnapshot_schema_0.6_linestring.sql
+script/pgsnapshot_schema_0.6_upgrade_4-5.sql
+script/pgsimple_schema_0.6_action.sql
+script/pgsimple_load_0.6.sql
+script/pgsnapshot_schema_0.6_bbox.sql
+script/pgsnapshot_schema_0.6_upgrade_5-6.sql
+script/pgsnapshot_and_pgsimple.txt
+script/fix_line_endings.sh
+script/pgsimple_schema_0.6.sql
+script/pgsimple_schema_0.6_bbox.sql
+script/pgsnapshot_schema_0.6.sql
+script/contrib/
+script/contrib/dump_apidb.sh
+script/contrib/replicate_osm_file.sh
+script/contrib/CreateGeometryForWays.sql
+script/contrib/apidb_0.6_osmosis_xid_indexing.sql
+script/contrib/apidb_0.6.sql
+script/munin/
+script/munin/README
+script/munin/osm_replication_lag
+script/munin/osm_replication.conf
+bin/
+bin/osmosis-extract-apidb-0.6
+bin/osmosis.bat
+bin/osmosis-extract-mysql-0.6
+bin/osmosis
+config/
+config/plexus.conf
+lib/
+lib/default/
+lib/default/plexus-classworlds-2.4.jar
+lib/default/commons-logging-1.1.1.jar
+lib/default/jpf-1.5.jar
+lib/default/stax2-api-3.1.1.jar
+lib/default/woodstox-core-lgpl-4.1.4.jar
+lib/default/xz-1.0.jar
+lib/default/commons-compress-1.4.1.jar
+lib/default/xercesImpl-2.9.1.jar
+lib/default/commons-codec-1.7.jar
+lib/default/commons-pool-1.5.4.jar
+lib/default/commons-dbcp-1.4.jar
+lib/default/spring-asm-3.1.2.RELEASE.jar
+lib/default/spring-core-3.1.2.RELEASE.jar
+lib/default/spring-beans-3.1.2.RELEASE.jar
+lib/default/aopalliance-1.0.jar
+lib/default/spring-aop-3.1.2.RELEASE.jar
+lib/default/spring-expression-3.1.2.RELEASE.jar
+lib/default/spring-context-3.1.2.RELEASE.jar
+lib/default/spring-tx-3.1.2.RELEASE.jar
+lib/default/spring-jdbc-3.1.2.RELEASE.jar
+lib/default/postgresql-9.1-901-1.jdbc4.jar
+lib/default/mysql-connector-java-5.1.21.jar
+lib/default/protobuf-java-2.4.1.jar
+lib/default/postgis-jdbc-1.3.3.jar
+lib/default/netty-3.2.7.Final.jar
+lib/default/osmosis-apidb-0.43.1.jar
+lib/default/osmosis-areafilter-0.43.1.jar
+lib/default/osmosis-core-0.43.1.jar
+lib/default/osmosis-dataset-0.43.1.jar
+lib/default/osmosis-extract-0.43.1.jar
+lib/default/osmosis-pbf-0.43.1.jar
+lib/default/osmosis-pbf2-0.43.1.jar
+lib/default/osmosis-pgsimple-0.43.1.jar
+lib/default/osmosis-pgsnapshot-0.43.1.jar
+lib/default/osmosis-replication-0.43.1.jar
+lib/default/osmosis-replication-http-0.43.1.jar
+lib/default/osmosis-set-0.43.1.jar
+lib/default/osmosis-tagfilter-0.43.1.jar
+lib/default/osmosis-tagtransform-0.43.1.jar
+lib/default/osmosis-xml-0.43.1.jar
+lib/default/osmosis-osm-binary-0.43.1.jar
+lib/default/osmosis-hstore-jdbc-0.43.1.jar
+linux-70ce:/home/martin # cd osmosis-0.39
+bash: cd: osmosis-0.39: Datei oder Verzeichnis nicht gefunden
+linux-70ce:/home/martin # chmod a+x bin/osmosis
+linux-70ce:/home/martin # bin/osmosis ls
+Apr 12, 2014 10:16:19 PM org.openstreetmap.osmosis.core.Osmosis main
+Schwerwiegend: Execution aborted.
+org.openstreetmap.osmosis.core.OsmosisRuntimeException: Expected argument 1 to be an option or task name.
+        at org.openstreetmap.osmosis.core.cli.CommandLineParser.parse(CommandLineParser.java:79)
+        at org.openstreetmap.osmosis.core.Osmosis.run(Osmosis.java:74)
+        at org.openstreetmap.osmosis.core.Osmosis.main(Osmosis.java:37)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.launchStandard(Launcher.java:329)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:239)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+        at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+        at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+
+linux-70ce:/home/martin #
+</code></pre>
+<p>well what do you say - is this all correct!?</p>
+<p>see here</p>
+<pre><code>bash: cd: osmosis-0.39: Datei oder Verzeichnis nicht gefunden
+</code></pre>
+<p>which means - file or directory not found!`?</p>
+<p>btw i afterwards tried to install osmfilter </p>
+<p><a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
+<p>Download and build in one run:   wget -O - <a href="http://m.m.i24.cc/osmfilter.c">http://m.m.i24.cc/osmfilter.c</a> |cc -x c - -O3 -o osmfilter</p>
+<p>As usual: There is no warranty, to the extent permitted by law.</p>
+<pre><code>linux-70ce:/home/martin #  wget -O - <a href="http://m.m.i24.cc/osmfilter.c">http://m.m.i24.cc/osmfilter.c</a> |cc -x c - -O3 -o osmfilter
+--2014-04-12 22:34:49--  <a href="http://m.m.i24.cc/osmfilter.c">http://m.m.i24.cc/osmfilter.c</a>
+Auflösen des Hostnamen »m.m.i24.cc (m.m.i24.cc)«... 80.67.17.148, 2a00:1158:0:300:432f::1
+Verbindungsaufbau zu m.m.i24.cc (m.m.i24.cc)|80.67.17.148|:80... verbunden.
+HTTP-Anforderung gesendet, warte auf Antwort... 200 OK
+Länge: 213497 (208K) [text/plain]
+In »»STDOUT«« speichern.
+
+100%[==========================================================================================================================================&gt;] 213.497     1,14MB/s   in 0,2s
+
+2014-04-12 22:34:49 (1,14 MB/s) - auf die Standardausgabe geschrieben [213497/213497]
+
+&lt;stdin&gt;: In function ‘oo__close’:
+&lt;stdin&gt;:5166:5: warning: call to function ‘read_close’ without a real prototype [-Wunprototyped-calls]
+&lt;stdin&gt;:1079:13: note: ‘read_close’ was declared here
+linux-70ce:/home/martin #
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                                    <a href="/tags/linux/" class="post-tag tag-link-linux"
+                                        title="see questions tagged 'linux'" rel="tag">linux</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Apr '14, 21:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bf4d2d8660e82c4a7387b7d2a8a8cfcd?s=32&amp;d=identicon&amp;r=g" alt="say_hello_to_the_world's gravatar image" />
+    <p><a href="/users/8644/say_hello_to_the_world">say_hello_to...</a><br/>
+    <span class="score" title="19 reputation points">19</span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="24 badges"><span class="silver">&#9679;</span><span class="badgecount">24</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="say_hello_to_the_world has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/32331/">
+                edited
+                <strong>12 Apr '14, 21:36</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-32331">
+    
+</div>
+<div id="comment-tools-32331" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32331-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/32331/installing-osmosis-on-opensuse-131-via-comandline-successful?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/32331/installing-osmosis-on-opensuse-131-via-comandline-successful?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/32331/installing-osmosis-on-opensuse-131-via-comandline-successful?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/32331/installing-osmosis-on-opensuse-131-via-comandline-successful?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="32332"></a>
+                    <div id="answer-container-32332" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32332-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32332/up/" rel="nofollow"> </a>
+<div id="post-32332-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-32332-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32332/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You successfully installed osmosis and you can now run it by typing</p>
+<pre><code>/home/martin/bin/osmosis ...arguments...
+</code></pre>
+<p>In your first attempt, you called osmosis and passed the argument "ls" which is not valid. See the Osmsis documentation for what arguments Osmosis accepts. In your second attempt, you tried to enter a directory called "osmosis-0.39" which you never created.</p>
+<p>The one thing that you should have done differently is creating an extra directory for osmosis, like</p>
+<pre><code>wget <a href="http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz">http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz</a>
+mkdir osmosis
+cd osmosis
+tar xzf ../osmosis-latest.tgz
+</code></pre>
+<p>That way, Osmosis wouldn't have ended up directly in your $HOME, and you would then use </p>
+<pre><code>/home/martin/osmosis/bin/osmosis ...arguments...
+</code></pre>
+<p>to call it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32332/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Apr '14, 21:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32332">
+    
+        <a name="32346"></a>
+        <div class="comment" id="comment-32346">
+            <div id="post-32346-score" class="comment-score"></div>
+            <div class="comment-text"><p>hello - many many thanks!!</p>
+
+<p>did it like you adviced:</p>
+
+<pre><code>linux-70ce:/home/martin # wget <a href="http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz">http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz</a>
+--2014-04-13 09:54:23--  <a href="http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz">http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz</a>
+Auflösen des Hostnamen »bretth.dev.openstreetmap.org (bretth.dev.openstreetmap.org)«... 128.40.168.103
+Verbindungsaufbau zu bretth.dev.openstreetmap.org (bretth.dev.openstreetmap.org)|128.40.168.103|:80... verbunden.
+HTTP-Anforderung gesendet, warte auf Antwort... 200 OK
+Länge: 9079737 (8,7M) [application/x-gzip]
+In »»osmosis-latest.tgz.1«« speichern.
+
+100%[==========================================================================================================================================&gt;] 9.079.737   1,41MB/s   in 6,3s
+
+2014-04-13 09:54:29 (1,38 MB/s) - »»osmosis-latest.tgz.1«« gespeichert [9079737/9079737]
+
+linux-70ce:/home/martin # mkdir osmosis
+linux-70ce:/home/martin # cd osmosis
+</code></pre>
+
+<p>btw  regarding the two other toools osmconvert osmfilter - i have had a loook at the corresponding websites.</p>
+
+<p>should i have to install it like it is written on here : </p>
+
+<blockquote>
+<p>wiki.openstreetmap.org/wiki/Osmconvert‎</p>
+<p>wiki.openstreetmap.org/wiki/Osmfilter‎</p>
+</blockquote>
+
+<p>Download and build in one run:   wget -O - <a href="http://m.m.i24.cc/osmconvert.c">http://m.m.i24.cc/osmconvert.c</a> | cc -x c - -lz -O3 -o osmconvert</p>
+
+<p>Download and build in one run:   wget -O - <a href="http://m.m.i24.cc/osmfilter.c">http://m.m.i24.cc/osmfilter.c</a> |cc -x c - -O3 -o osmfilter</p>
+
+<p>is this correct!? can i install osmconvert and filter in the above mentioned way.?</p></div>
+            <div class="comment-info" id="comment-32346-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '14, 09:02)</span>
+                <a class="comment-user userinfo" href="/users/8644/say_hello_to_the_world">say_hello_to...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32332" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32332-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/32331/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='rFTDqfI16APcBizc8Z7OOoLt1ylj6Pjb' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32331/installing-osmosis-on-opensuse-131-via-comandline-successful?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32331/installing-osmosis-on-opensuse-131-via-comandline-successful?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+        <a href="/tags/linux/"
+            class="tag-link-linux"
+            title="see questions tagged'linux'using tags"
+            rel="tag">linux</a> <span class="tag-number">&#215;30</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 12, 2014, 9:22 p.m.">12 Apr '14, 21:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,537 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 13, 2014, 10:23 a.m.">13 Apr '14, 10:23</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/192/how-are-the-replication-diffs-created">How are the replication diffs created?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/768/how-can-i-keep-a-osm-file-of-a-specific-area-country-always-up-to-date">How can I keep a .osm file of a specific area (country) always up-to-date?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/862/how-long-should-minutely-and-hourly-diff-take-with-8gb-memory">How long should minutely and hourly diff take with 8GB memory?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1980/installing-osmosis">Installing Osmosis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2017/how-can-i-import-data-to-osm-from-a-csv-file">How can I import data to OSM from a .csv file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2296/extracting-bounding-boxes-osmosis-usage-on-windows">Extracting bounding boxes - Osmosis usage on Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2905/osmosis-not-running">Osmosis not running</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3030/disk-space-required-for-importing-planetosm-into-postgresql-w-osmosis">Disk space required for importing planet.osm into PostgreSQL w/ Osmosis?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3214/installing-osmosis-on-osx">Installing Osmosis on OSX</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2/use-osmosis-postgis-schema-with-qgis">Use Osmosis PostGIS schema with QGIS</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

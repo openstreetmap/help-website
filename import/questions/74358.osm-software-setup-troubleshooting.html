@@ -1,0 +1,920 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>OSM software setup troubleshooting - OSM Help</title>
+        <meta name="description" content="I&#39;m done with my first suite setup attempt =&amp;gt; the maps render blank and I have no idea how to troubleshoot. Any tips on where should I start please? To make things worse, I&#39;m both OSM and Linux novice too. For what it&#39;s worth, I ran &quot;sudo -u renderaccount -- /usr/local/bin/renderd -fc /usr/local/..." />
+        <meta name="keywords" content="setup,osm,software" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/74358/osm-software-setup-troubleshooting" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/74358/osm-software-setup-troubleshooting?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='LRdEhRANhwXWN5P0XvownqecJA4SlSY5' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/74358/osm-software-setup-troubleshooting">OSM software setup troubleshooting</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-74358-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74358/up/" rel="nofollow"> </a>
+<div id="post-74358-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-74358-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74358/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/74358/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm done with my first suite setup attempt =&gt; the maps render blank and I have no idea how to troubleshoot.  Any tips on where should I start please?  To make things worse, I'm both OSM and Linux novice too.</p>
+<p>For what it's worth, I ran "sudo -u renderaccount -- /usr/local/bin/renderd -fc /usr/local/etc/renderd.conf" manually and did not notice any errors.  Some .meta files are getting generated in directories under /var/lib/mod_tile/ajt.  For rendering I used this example <a href="https://switch2osm.github.io/using-tiles/getting-started-with-leaflet/">https://switch2osm.github.io/using-tiles/getting-started-with-leaflet/</a> and did replace 'https://{s}.tile.openstreetmap.org' with 'http://ip address'.</p>
+<p>I followed the instructions at <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/</a> and am wondering if the various pieces of software/ styles/ fonts that will be used for rendering - starting from osm2pgsql in the list - do those need to be installed logged in as the user who'll do the rendering?  In this particular document renderaccount.</p>
+<p>Also, if I'll have to throw away the VM and redo the setup again, are there any better setup instructions?</p>
+<p>Thanks very much,  Eugen</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/setup/" class="post-tag tag-link-setup"
+                                        title="see questions tagged 'setup'" rel="tag">setup</a>
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/software/" class="post-tag tag-link-software"
+                                        title="see questions tagged 'software'" rel="tag">software</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Apr '20, 03:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad8f49d67fd7b8e25376900e86f57542?s=32&amp;d=identicon&amp;r=g" alt="eugen_nw's gravatar image" />
+    <p><a href="/users/18251/eugen_nw">eugen_nw</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="eugen_nw has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/74358/">
+                edited
+                <strong>25 Apr '20, 03:46</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-74358">
+    
+</div>
+<div id="comment-tools-74358" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74358-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/74358/osm-software-setup-troubleshooting?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/74358/osm-software-setup-troubleshooting?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/74358/osm-software-setup-troubleshooting?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/74358/osm-software-setup-troubleshooting?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="74366"></a>
+                    <div id="answer-container-74366" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74366-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74366/up/" rel="nofollow"> </a>
+<div id="post-74366-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-74366-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74366/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>Some .meta files are getting generated in directories</p>
+</blockquote>
+<p>That means that it's rendering tiles, which is the hard bit, and we just need to figure out why you can't see them in a browser.  </p>
+<p>What I'd suggest first is to use the web developer tools in your browser (usually via f12) to have a look at any errors and to see what's not loading.</p>
+<p>When you tried "http://yourserveripaddress/hot/0/0/0.png" did that work?  Did you try the html file “sample_leaflet.html” in mod_tile’s “extras” folder?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74366/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Apr '20, 23:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/74366/">
+                edited
+                <strong>28 Apr '20, 01:12</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74366">
+    
+        <a name="74429"></a>
+        <div class="comment" id="comment-74429">
+            <div id="post-74429-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks very much <a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> for having looked into this!</p>
+
+<p>"http://yourserveripaddress/hot/0/0/0.png" works, it shows a small &amp; blank map of the world.</p>
+
+<p>I cleared everything under /var/lib/mod_tile/ajtk, ran "sudo -u renderaccount -- /usr/local/bin/renderd -fc /usr/local/etc/renderd.conf" manually and did not notice any error.  The browser's developer view complains only about not being able to find favicon.ico, other than that it loads successfully various .PNG files.</p>
+
+<p>I loaded into postgres the data from us-pacific-latest.osm.pbf that I downloaded from <a href="https://download.geofabrik.de/north-america.html">https://download.geofabrik.de/north-america.html</a></p>
+
+<p>I took a quick peek into the gis database and the tables seem to be populated with data:</p>
+
+<p>gis=# SELECT COUNT(*) FROM "planet_osm_ways";
+-[ RECORD 1 ]-
+count | 486952</p>
+
+<p>gis=# SELECT COUNT(*) FROM "planet_osm_nodes";
+-[ RECORD 1 ]--
+count | 9573637</p>
+
+<p>Right on the Linux VM where I have this running I opened the ~/src/mod_tile/extra/sample_leaflet.html file in FireFox and I see only a blank map.</p>
+
+<p>I'd guess that the expected behavior would be that if I zoom into the west coast of the N. American continent to see some map being rendered. I see only a blank map.</p></div>
+            <div class="comment-info" id="comment-74429-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '20, 01:08)</span>
+                <a class="comment-user userinfo" href="/users/18251/eugen_nw">eugen_nw</a>
+                
+            </div>
+        </div>
+    
+        <a name="74430"></a>
+        <div class="comment" id="comment-74430">
+            <div id="post-74430-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is there a way we can see the Mapnik component's log?  Is there a possibility that it cannot read the data from the Postgres database?</p></div>
+            <div class="comment-info" id="comment-74430-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '20, 01:12)</span>
+                <a class="comment-user userinfo" href="/users/18251/eugen_nw">eugen_nw</a>
+                
+            </div>
+        </div>
+    
+        <a name="74431"></a>
+        <div class="comment" id="comment-74431">
+            <div id="post-74431-score" class="comment-score"></div>
+            <div class="comment-text"><p>Assuming you're running renderd in the background as you zoom around you should see "renderd" messages to /var/log/syslog .</p></div>
+            <div class="comment-info" id="comment-74431-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Apr '20, 01:28)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="74488"></a>
+        <div class="comment not_top_scorer" id="comment-74488">
+            <div id="post-74488-score" class="comment-score"></div>
+            <div class="comment-text"><p>As I run renderd interactively, I see in renderd's output START/DONE TILE information and that it writes data into metafiles. In the browser's F12 window I do see calls like 'http://51.141.179.146/osm_tiles/7/20/43.png' displayed in red and with (canceled) Status. That may very well explain the behavior that I'm experiencing and shows that the rendering is not very successful.</p>
+
+<p>This begs the question on what logs I should start looking at to diagnose this problem and where are those logs located? Alternatively, what do I need to do in order to enable the required logs to get generated? From what I've seen so far, renderd appears to be doing the right thing, so it could be either Mapnik, Postgres or some fault in the data import process.</p></div>
+            <div class="comment-info" id="comment-74488-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '20, 01:25)</span>
+                <a class="comment-user userinfo" href="/users/18251/eugen_nw">eugen_nw</a>
+                
+            </div>
+        </div>
+    
+        <a name="74496"></a>
+        <div class="comment" id="comment-74496">
+            <div id="post-74496-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If you demand a tile at zoom 7 by the browser which had not been rendered before, your browser would have to wait minutes and minutes for that (meta)tile to render and caps the connection before the rendering is finished. Tiles below zoom 12 have to better be pre-rendered by render_list.</p></div>
+            <div class="comment-info" id="comment-74496-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '20, 07:29)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="74506"></a>
+        <div class="comment not_top_scorer" id="comment-74506">
+            <div id="post-74506-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks very much <a href="https://help.openstreetmap.org/users/17439/spiekerooger"></a><a href="https://help.openstreetmap.org/users/17439/spiekerooger">@Spiekerooger</a> for having looked into this!  I can certainly run render_list beforehand.</p>
+
+<p>The required .PNG files are getting generated during rendering, right?  Where are they cached please?  In the subdirectories of my /var/lib/mod_tile/ equivalent directory I see only *.meta files.</p>
+
+<p>I see information like below in renderd's output which made me believe that the rendering completed.</p>
+
+<p>renderd[13515]: DEBUG: START TILE ajt 6 8-15 16-23, new metatile<br>
+renderd[13515]: Rendering projected coordinates 6 8 16 -&gt; -15028131.257100|5009377.085700 -10018754.171400|10018754.171400 to a 8 x 8 tile<br>
+renderd[13515]: DEBUG: DONE TILE ajt 6 8-15 16-23 in 0.757 seconds
+debug: Creating and writing a metatile to /datadrive/caches/osm_tiles/ajt/6/0/0/0/1/128.meta</p></div>
+            <div class="comment-info" id="comment-74506-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '20, 11:09)</span>
+                <a class="comment-user userinfo" href="/users/18251/eugen_nw">eugen_nw</a>
+                
+            </div>
+        </div>
+    
+        <a name="74507"></a>
+        <div class="comment" id="comment-74507">
+            <div id="post-74507-score" class="comment-score">1</div>
+            <div class="comment-text"><p>They are only cached as metatitle in /var/lib/mod_tile or its equivalent. mod_tile (the apache module) retrieves the acutal tiles from the meta tile to display them.</p>
+
+<p>What did you changed the TileLayer URL in your leaflet setup to?</p>
+
+<p>It should be <a href="http://51.141.179.146/osm_tiles/{z}/{x}/{y}.png">http://51.141.179.146/osm_tiles/{z}/{x}/{y}.png</a> if "osm_tiles" is the url as defined in the renderd.conf.</p></div>
+            <div class="comment-info" id="comment-74507-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '20, 12:43)</span>
+                <a class="comment-user userinfo" href="/users/17439/spiekerooger">Spiekerooger</a>
+                
+            </div>
+        </div>
+    
+        <a name="74516"></a>
+        <div class="comment not_top_scorer" id="comment-74516">
+            <div id="post-74516-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks very much again!</p>
+
+<p>Yes I have it set to 'http://51.141.179.146/osm_tiles/{z}/{x}/{y}.png'  The problem was that I did not have mod_tile configured in Apache2.  I did configure it and now all the 'http://51.141.179.146/osm_tiles/7/20/43.png' type calls sent from the browser are successful.  However, the map is still blank so now I'll start looking at the data in the Postgres database as I guess that missing/unreadable data may cause the tiles to display empty.</p>
+
+<p>Alternatively, is it possible to enable logging in mod_tile so I can get an idea on what it does?</p></div>
+            <div class="comment-info" id="comment-74516-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Apr '20, 19:44)</span>
+                <a class="comment-user userinfo" href="/users/18251/eugen_nw">eugen_nw</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74366" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74366-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="74615"></a>
+                    <div id="answer-container-74615" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74615-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74615/up/" rel="nofollow"> </a>
+<div id="post-74615-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-74615-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74615/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think that <a href="https://help.openstreetmap.org/users/17439/spiekerooger">@Spiekerooger</a> suggestion to run render_list got my maps to show, thanks very much!</p>
+<p>I am not certain though because I did lots of tweaking using various pieces of information from two other OMS setup instructions websites.  As of right now, I think that <a href="https://www.linuxbabe.com/ubuntu/openstreetmap-tile-server-ubuntu-18-04-osm">https://www.linuxbabe.com/ubuntu/openstreetmap-tile-server-ubuntu-18-04-osm</a> has the best list of setup instructions.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74615/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 May '20, 22:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad8f49d67fd7b8e25376900e86f57542?s=32&amp;d=identicon&amp;r=g" alt="eugen_nw's gravatar image" />
+    <p><a href="/users/18251/eugen_nw">eugen_nw</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="eugen_nw has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74615">
+    
+</div>
+<div id="comment-tools-74615" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74615-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/74358/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='LRdEhRANhwXWN5P0XvownqecJA4SlSY5' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74358/osm-software-setup-troubleshooting?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74358/osm-software-setup-troubleshooting?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/software/"
+            class="tag-link-software"
+            title="see questions tagged'software'using tags"
+            rel="tag">software</a> <span class="tag-number">&#215;31</span><br/>
+        
+        <a href="/tags/setup/"
+            class="tag-link-setup"
+            title="see questions tagged'setup'using tags"
+            rel="tag">setup</a> <span class="tag-number">&#215;15</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 25, 2020, 3:32 a.m.">25 Apr '20, 03:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,499 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 4, 2020, 10:15 p.m.">04 May '20, 22:15</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/6027/osm-maps-on-blackberry">[closed] OSM maps on Blackberry?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6028/osm-maps-on-blackberry">OSM maps on Blackberry?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2425/kaart-van-osm-naar-mapsource-douwnloaden-download-osm-map-for-mapsource">Kaart van OSM naar Mapsource douwnloaden - Download OSM map for Mapsource</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2919/osm-memory-map-compatibility">OSM &amp; Memory Map compatibility</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3782/what-is-the-best-way-to-insert-a-movable-slippy-map-with-marker-to-an-osm-wiki-page">what is the best way to insert a (movable) slippy map with marker to an OSM-wiki page?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4193/placing-a-non-commecial-restriction-on-osm-derived-products">Placing a non-commecial restriction on OSM-derived products</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4422/rails-port-and-osm-server">Rails Port and OSM Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4286/can-i-create-an-android-application-that-uses-osm-data">Can I create an Android application that uses OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4722/i-downloaded-josm-testedjar-now-what">I downloaded josm-tested.jar, now what?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2676/can-i-use-osm-in-software-that-is-password-protected">Can I use OSM in software that is password protected?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

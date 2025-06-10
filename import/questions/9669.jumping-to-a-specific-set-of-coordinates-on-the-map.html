@@ -1,0 +1,1270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Jumping to a specific set of coordinates on the map - OSM Help</title>
+        <meta name="description" content="I have the coordinates (latitude and longitude) for a location. How can I make the map on www.openstreetmap.org display the area in question?" />
+        <meta name="keywords" content="osm.org,entering,coordinates" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/9669/jumping-to-a-specific-set-of-coordinates-on-the-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/9669/jumping-to-a-specific-set-of-coordinates-on-the-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='WcQ6Ik7PuDkX5Fi7n5iPEowdO2EHzYT8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/9669/jumping-to-a-specific-set-of-coordinates-on-the-map">Jumping to a specific set of coordinates on the map</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-9669-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9669/up/" rel="nofollow"> </a>
+<div id="post-9669-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-9669-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9669/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/9669/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have the coordinates (latitude and longitude) for a location. How can I make the map on www.openstreetmap.org display the area in question?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osm.org/" class="post-tag tag-link-osm.org"
+                                        title="see questions tagged 'osm.org'" rel="tag">osm.org</a>
+                                
+                                    <a href="/tags/entering/" class="post-tag tag-link-entering"
+                                        title="see questions tagged 'entering'" rel="tag">entering</a>
+                                
+                                    <a href="/tags/coordinates/" class="post-tag tag-link-coordinates"
+                                        title="see questions tagged 'coordinates'" rel="tag">coordinates</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Dec '11, 00:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/68674d3986e8e974ff3ab159a91b29be?s=32&amp;d=identicon&amp;r=g" alt="Allan%20J's gravatar image" />
+    <p><a href="/users/2547/allan-j">Allan J</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Allan J has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/9669/">
+                edited
+                <strong>29 Jul '16, 20:54</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-9669">
+    
+</div>
+<div id="comment-tools-9669" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9669-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/9669/jumping-to-a-specific-set-of-coordinates-on-the-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/9669/jumping-to-a-specific-set-of-coordinates-on-the-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/9669/jumping-to-a-specific-set-of-coordinates-on-the-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/9669/jumping-to-a-specific-set-of-coordinates-on-the-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="9673"></a>
+                    <div id="answer-container-9673" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-9673-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9673/up/" rel="nofollow"> </a>
+<div id="post-9673-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-9673-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9673/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The web site on <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> does not have a dedicated coordinate input field, but you can easily construct an URL that gets you to a set of coordinates by writing</p>
+<p><a href="http://www.openstreetmap.org/?mlat=">http://www.openstreetmap.org/?mlat=</a><em>latitude</em>&amp;mlon=<em>longitude</em>&amp;zoom=12</p>
+<p>You can also enter <em>latitude</em>,<em>longitude</em> in the search box which will then present you with a pseudo "search result" consisting of exactly such a link.</p>
+<p>It would be trivial to set up your own OpenLayers web site that has a dedicated latitude/longitude input box if that is important to you.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/9673/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Dec '11, 07:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-9673">
+    
+        <a name="13252"></a>
+        <div class="comment" id="comment-13252">
+            <div id="post-13252-score" class="comment-score"></div>
+            <div class="comment-text"><p>And this make another example why osm is useless.</p>
+
+<p>a friend give me this location. 
+i will use google, because there is no other variant that i can use without installing a server !!!!!!~!! Are you kidding me ?</p>
+
+<p>45°31’49.28″N, 25°59’18.94″E</p>
+
+<p>this is basic, not even basic, but elementary.</p>
+
+<p>happy complaining that people prefer to use gm instead of osm.</p>
+
+<p>Don`t make a google maps competition, but make the site usable at least.</p></div>
+            <div class="comment-info" id="comment-13252-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '12, 18:24)</span>
+                <a class="comment-user userinfo" href="/users/3538/badita-florin">Badita Florin</a>
+                
+            </div>
+        </div>
+    
+        <a name="13253"></a>
+        <div class="comment" id="comment-13253">
+            <div id="post-13253-score" class="comment-score">4</div>
+            <div class="comment-text"><p>Yes. You need coordinates with decimal degrees, not the ones with degrees, minutes, and decimal seconds that you have used. Convert a DD°MM'SS.FF coordinate to decimal degrees by computing the value of DD+(MM/60)+(SS.FF/3600), use a negative sign for West or South. In your case this yields 49.530355 and 25.98859. Of course you could easily make a Javascript page that does this computation if you wanted. You could also ask people to add this code to the main OSM web site but opening your request with the line "OSM is useless" will not get you the desired response.</p></div>
+            <div class="comment-info" id="comment-13253-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '12, 18:24)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15807"></a>
+        <div class="comment" id="comment-15807">
+            <div id="post-15807-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Frederik I understand you, but I think that altough he is not polite he represents very big userbase. I think OSM community should start seriously investigate what are the blockers for these users, because by not giving them what need we potentially loose many users and later on contributors. I think we should learn from reactions like that.</p></div>
+            <div class="comment-info" id="comment-15807-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Sep '12, 09:04)</span>
+                <a class="comment-user userinfo" href="/users/690/gorn">gorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="15828"></a>
+        <div class="comment" id="comment-15828">
+            <div id="post-15828-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Fully agree with Gorn, the feature of being able to enter coordinates in some different formats both in the viewer and Potlatch editor is absolutely essential!</p></div>
+            <div class="comment-info" id="comment-15828-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Sep '12, 18:41)</span>
+                <a class="comment-user userinfo" href="/users/4447/tobiasra">tobiasra</a>
+                
+            </div>
+        </div>
+    
+        <a name="16083"></a>
+        <div class="comment" id="comment-16083">
+            <div id="post-16083-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am glad for all the answers, and i know that osm.org is not a website, it`s a database. </p>
+
+<p><a href="/users/104/frederik-ramm">@Frederik</a> i am saying strong statements because i`m sick of seeing people contributing to the wrong project (by wrong i reffer to closed sourced ) instead of osm because they will not use 10 different websites when they could use only one. </p>
+
+<p>I do workshops and presentations where i present osm and the advantages, asked the romanian users of google map maker why they contribute,etc. As i posted in my diary, a osm website 2.0 it`s useful. <a href="http://www.openstreetmap.org/user/baditaflorin/diary/16914">http://www.openstreetmap.org/user/baditaflorin/diary/16914</a></p></div>
+            <div class="comment-info" id="comment-16083-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Sep '12, 14:05)</span>
+                <a class="comment-user userinfo" href="/users/3538/badita-florin">Badita Florin</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9673" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9673-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="36095"></a>
+                    <div id="answer-container-36095" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36095-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36095/up/" rel="nofollow"> </a>
+<div id="post-36095-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-36095-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36095/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>On the map page you will have something like this <a href="http://www.openstreetmap.org/#map=9/-38.3266/144.8781">http://www.openstreetmap.org/#map=9/-38.3266/144.8781</a></p>
+<p>just edit the latitude and longitude. and the map can jump to the new location.</p>
+<p>note negative is used for west and south and positive for north and east. If you wish convert Degrees Minutes and seconds to decimal degrees then you can use this site <a href="http://transition.fcc.gov/mb/audio/bickel/DDDMMSS-decimal.html">http://transition.fcc.gov/mb/audio/bickel/DDDMMSS-decimal.html</a> (note link not working now) minutes are 1/60 of a degree and seconds are 1/60 of a minute.... you'll need to do the maths. So 52 : 25 : 46 would become  52 + 25/60 + 46/3600 decimal degrees for example.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36095/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Aug '14, 22:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/36095/">
+                edited
+                <strong>29 Jul '16, 20:30</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36095">
+    
+</div>
+<div id="comment-tools-36095" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36095-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="51173"></a>
+                    <div id="answer-container-51173" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51173-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51173/up/" rel="nofollow"> </a>
+<div id="post-51173-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-51173-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51173/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>another option: just enter some coordinates into the search box (e.g. 52.51834,13.37568 ) and Go/Enter. Then click on the one "Results from Internal" link. It will jump to this location.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51173/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Jul '16, 20:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51173">
+    
+        <a name="51175"></a>
+        <div class="comment" id="comment-51175">
+            <div id="post-51175-score" class="comment-score"></div>
+            <div class="comment-text"><p>This works 52.51834,13.37568.... but 52 N 13 E did not so format is important. This fails 52.5,  -.3   but 52.5,  -0.3 is ok</p></div>
+            <div class="comment-info" id="comment-51175-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jul '16, 23:08)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51173" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51173-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="36092"></a>
+                    <div id="answer-container-36092" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36092-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36092/up/" rel="nofollow"> </a>
+<div id="post-36092-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-36092-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36092/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>First to thank you for a great resource in OSM, it is much appreciated.</p>
+<p>Wakening an old thread but first result from a Google search.
+Gorn speaks directly to the point when he says "because by not giving them what need we potentially loose many users and later on contributors. I think we should learn from reactions like that."</p>
+<p>My scenario that may or may not prove useful to this regard and is more related to user actions.  The conversion appears succesful but the interaction beyond this is not expected.</p>
+<ol>
+<li>using Garmin gps and then Basecamp during my travels I mark waypoints for the specific use of my own maps and updating OSM.  </li>
+<li>reviewing my gps logs/waypoints I download to Basecamp which gives me the location as such "N41° 13.734' W75° 03.450'"</li>
+<li>login to OSM to post a 'closed road' or whatever by searching by that exact coordinate returns with the following url and a red dropoint in the middle of the map, looking at the east coast of the USA.          </li>
+<li>Zoom is far out so I mouse over and mouse click on the zoom adjustment more and more.  The red dropoint disappears every time I mouse over the map to zoom in, so adjust, click on search link, zoom, adjust, zoom, adjust, click on search link, etc.</li>
+<li>Finally get to reasonable visible level and this is the result url: 
+<a href="https://www.openstreetmap.org/search?query=N41%C2%B0%2013.734%27%20W75%C2%B0%2003.450%27#map=13/41.2290/-75.0576">https://www.openstreetmap.org/search?query=N41%C2%B0%2013.734%27%20W75%C2%B0%2003.450%27#map=13/41.2290/-75.0576</a></li>
+<li>Desired Resolution:  keep red dropoint and maintain during click-zoom interaction. </li>
+</ol>
+<p>May or not be useful, just some points.
+Thank you for a great resource and all the work that is provided.
+Marcus</p>
+<p>ps - autolist numbering is odd.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36092/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Aug '14, 21:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4066be0d674d379d88460be8df5f9ff1?s=32&amp;d=identicon&amp;r=g" alt="econwatch's gravatar image" />
+    <p><a href="/users/9507/econwatch">econwatch</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="econwatch has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36092">
+    
+        <a name="51169"></a>
+        <div class="comment" id="comment-51169">
+            <div id="post-51169-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It's easy to change the lat/lon format in Basecamp to one in decimal degrees. There are numerous tools online such as GeoHack, nearby.org which will convert between various formats and provide links to major map engines (including</p></div>
+            <div class="comment-info" id="comment-51169-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jul '16, 16:31)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="51176"></a>
+        <div class="comment" id="comment-51176">
+            <div id="post-51176-score" class="comment-score"></div>
+            <div class="comment-text"><p>On many Garmin Gpses lat/lon format as options. so:-   Position Format: choose hdddd.dddd  and your device will diplay decimal degrees format as used by OSM but note west is represented by negative sign. this may be easier for you.</p></div>
+            <div class="comment-info" id="comment-51176-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jul '16, 07:40)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="51177"></a>
+        <div class="comment" id="comment-51177">
+            <div id="post-51177-score" class="comment-score"></div>
+            <div class="comment-text"><p>Works on Oregon 450, Vista HCX and NUVI 1310</p></div>
+            <div class="comment-info" id="comment-51177-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jul '16, 07:44)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36092" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36092-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="60073"></a>
+                    <div id="answer-container-60073" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-60073-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60073/up/" rel="nofollow"> </a>
+<div id="post-60073-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60073-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60073/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>But what about simply putting a marker on the map, without adding anything to the database?
+By way of example:
+I would like to be able to pop up OCM from a QR'd URL (for example: <a href="https://www.opencyclemap.org/?mlat=61.2">https://www.opencyclemap.org/?mlat=61.2</a> … 5&amp;zoom=18) and have an actual marker at that point.  I suppose I could add points in the DB for every instance I placed a QR code maker on a trail, but that seems a bit of extra work for nought.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/60073/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Oct '17, 23:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e4cadcf9f86d306510a1e19319359877?s=32&amp;d=identicon&amp;r=g" alt="net-buoy's gravatar image" />
+    <p><a href="/users/6939/net-buoy">net-buoy</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="net-buoy has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-60073">
+    
+        <a name="60076"></a>
+        <div class="comment" id="comment-60076">
+            <div id="post-60076-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://www.openstreetmap.org/?mlat=53.9027&amp;mlon=-1.2717&amp;layers=C">http://www.openstreetmap.org/?mlat=53.9027&amp;mlon=-1.2717&amp;layers=C</a> ?</p></div>
+            <div class="comment-info" id="comment-60076-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '17, 07:04)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60088"></a>
+        <div class="comment" id="comment-60088">
+            <div id="post-60088-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you, Frederik</p>
+
+<p>It looks like the pointer is provided via the permalink feature (#map), while the (layers=) provides the opencyclemap layer, the zoom can be set by "zoom=" OR it can be set as the first portion of the permalink, appended to the mlon= ( e.g. #map=18/61.20605/-149.78565) 
+Is that all accurate, and if so, is there one part of the wiki that provides the specifics on using URLs to reference OSM?</p></div>
+            <div class="comment-info" id="comment-60088-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '17, 17:49)</span>
+                <a class="comment-user userinfo" href="/users/6939/net-buoy">net-buoy</a>
+                
+            </div>
+        </div>
+    
+        <a name="60089"></a>
+        <div class="comment" id="comment-60089">
+            <div id="post-60089-score" class="comment-score"></div>
+            <div class="comment-text"><p>Probably several :)</p>
+
+<p><a href="https://wiki.openstreetmap.org/wiki/FAQ">https://wiki.openstreetmap.org/wiki/FAQ</a> and <a href="https://wiki.openstreetmap.org/wiki/Browsing">https://wiki.openstreetmap.org/wiki/Browsing</a> among others mention it.</p></div>
+            <div class="comment-info" id="comment-60089-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '17, 17:53)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="60090"></a>
+        <div class="comment" id="comment-60090">
+            <div id="post-60090-score" class="comment-score">1</div>
+            <div class="comment-text"><p>AHA! The link on browsing ( <a href="https://wiki.openstreetmap.org/wiki/Browsing">https://wiki.openstreetmap.org/wiki/Browsing</a> ) was just what I needed! The full explanation on the share panel was excellent, and the details on the composition on a URL was comprehensive.</p>
+
+<p>THANKS!</p></div>
+            <div class="comment-info" id="comment-60090-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '17, 18:38)</span>
+                <a class="comment-user userinfo" href="/users/6939/net-buoy">net-buoy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60073" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60073-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/9669/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='WcQ6Ik7PuDkX5Fi7n5iPEowdO2EHzYT8' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9669/jumping-to-a-specific-set-of-coordinates-on-the-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9669/jumping-to-a-specific-set-of-coordinates-on-the-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/coordinates/"
+            class="tag-link-coordinates"
+            title="see questions tagged'coordinates'using tags"
+            rel="tag">coordinates</a> <span class="tag-number">&#215;144</span><br/>
+        
+        <a href="/tags/osm.org/"
+            class="tag-link-osm.org"
+            title="see questions tagged'osm.org'using tags"
+            rel="tag">osm.org</a> <span class="tag-number">&#215;89</span><br/>
+        
+        <a href="/tags/entering/"
+            class="tag-link-entering"
+            title="see questions tagged'entering'using tags"
+            rel="tag">entering</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 29, 2011, 12:57 a.m.">29 Dec '11, 00:57</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>86,181 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 12, 2017, 6:38 p.m.">12 Oct '17, 18:38</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/885/exact-coordinates-in-potlatch">Exact coordinates in Potlatch</a>
+        </p>
+        
+        <p>
+            <a href="/questions/954/how-do-i-set-my-home-location">How do I set my home location?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/999/how-to-extract-elevation-information-from-tracks-in-josm">How to extract elevation information from tracks in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1069/how-to-calculate-the-size-of-a-map-tile-on-the-ground">How to calculate the size of a map tile on the ground?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1643/osm-coordinates-issue-how-to-convert-latlon-to-pixel-coordinate">[closed] OSM Coordinates issue: How to convert Lat/Lon to pixel coordinate ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1966/how-to-select-language-for-main-map-page">How to select language for main map page?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2004/utm-or-latitude-longitude-coordinates-available-in-openstreetmap">UTM or Latitude-Longitude coordinates available in OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4386/centering-maps-in-openstreet">Centering maps in openstreet?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7183/how-to-get-roadcountries-boundary-intersection-point-coordinates">How to get road/countries boundary intersection point coordinates ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/864/how-to-add-node-with-exact-coordinates-in-josm">How to add node with exact coordinates in JOSM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

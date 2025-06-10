@@ -1,0 +1,1633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>segmentation fault after building a tile server - OSM Help</title>
+        <meta name="description" content="I followed exactly the following tutorial, and everything worked without problems. http://switch2osm.org/serving-tiles/manually-building-a-tile-server/ In the end, at the end of the sequence: sudo mkdir /var/run/renderd sudo chown myuser /var/run/renderd renderd -f -c /usr/local/etc/renderd.conf  I ..." />
+        <meta name="keywords" content="tile,segfault,installation,server" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/14846/segmentation-fault-after-building-a-tile-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/14846/segmentation-fault-after-building-a-tile-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='xl62klPFc2lbgge0sF8sg6ElxPb8f9Jo' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/14846/segmentation-fault-after-building-a-tile-server">segmentation fault after building a tile server</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-14846-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/14846/up/" rel="nofollow"> </a>
+<div id="post-14846-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-14846-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/14846/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/14846/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I followed exactly the following tutorial, and everything worked without problems.
+<a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server/">http://switch2osm.org/serving-tiles/manually-building-a-tile-server/</a></p>
+<p>In the end, at the end of the sequence:</p>
+<pre><code>sudo mkdir /var/run/renderd
+sudo chown myuser /var/run/renderd
+renderd -f -c /usr/local/etc/renderd.conf
+</code></pre>
+<p>I am receiving a segmentation fault message:</p>
+<pre><code>myuser@gis:~$ renderd -f -c /usr/local/etc/renderd.conf
+renderd[9707]: Rendering daemon started
+renderd[9707]: Parsing section renderd
+renderd[9707]: Parsing render section 0
+renderd[9707]: Parsing section mapnik
+renderd[9707]: Parsing section default
+renderd[9707]: config renderd: unix socketname=/var/run/renderd/renderd.sock
+renderd[9707]: config renderd: num_threads=4
+renderd[9707]: config renderd: num_slaves=0
+renderd[9707]: config renderd: tile_dir=/var/lib/mod_tile
+renderd[9707]: config renderd: stats_file=/var/run/renderd/renderd.stats
+renderd[9707]: config mapnik:  plugins_dir=/usr/local/lib/mapnik/input
+renderd[9707]: config mapnik:  font_dir=/usr/share/fonts/truetype/ttf-dejavu
+renderd[9707]: config mapnik:  font_dir_recurse=1
+renderd[9707]: config renderd(0): Active
+renderd[9707]: config renderd(0): unix socketname=/var/run/renderd/renderd.sock
+renderd[9707]: config renderd(0): num_threads=4
+renderd[9707]: config renderd(0): tile_dir=/var/lib/mod_tile
+renderd[9707]: config renderd(0): stats_file=/var/run/renderd/renderd.stats
+renderd[9707]: config map 0:   name(default) file(/home/myuser/src/mapnik-style/osm.xml) uri(/osm_tiles2/) htcp() host(localhost)
+renderd[9707]: Initialising unix server socket on /var/run/renderd/renderd.sock
+renderd[9707]: Created server socket 4
+renderd[9707]: Renderd is using mapnik version 0.7.2
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-ExtraLight.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Oblique.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Bold.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Oblique.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-BoldItalic.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-BoldOblique.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Italic.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-Oblique.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Italic.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Bold.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-Bold.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-BoldOblique.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-BoldOblique.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Bold.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-BoldItalic.ttf
+renderd[9707]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Bold.ttf
+Running in foreground mode...
+renderd[9707]: Starting stats thread
+Segmentation fault
+</code></pre>
+<p>Running dmesg, the following error appears:</p>
+<pre><code>[ 5132.442678] renderd[9713]: **segfault** at 1a ip 00007f4c3c448b12 sp 00007f4c2ef397a0 error 4 in **libxml2.so.2.7.6**[7f4c3c3ef000+146000]
+</code></pre>
+<p>or</p>
+<pre><code>[ 5423.308084] renderd[10245] **general protection** ip:7fe4d82ec2a2 sp:7fe4c9264748 error:0 in **libc-2.11.1.so**[7fe4d8269000+17a000]
+</code></pre>
+<p>Trying to restart manually the httpd server, another error appears:</p>
+<pre><code>myuser@gis:~$ sudo /etc/init.d/apache2 restart
+ * Restarting web server apache2    [Sun Aug 05 14:28:51 2012] [notice] Committing tile config default
+Segmentation fault    [fail]
+</code></pre>
+<p>Looking in dmesg (the segfault with libc appears twice):</p>
+<pre><code>[ 5491.172508] apache2[10319]: **segfault** at 0 ip 00007f3a4c5803e4 sp 00007fff5444fa88 error 4 in **libc-2.11.1.so**[7f3a4c4fd000+17a000]
+[ 5491.231489] apache2[10327]: **segfault** at 0 ip 00007f8fc8fa03e4 sp 00007fffd2798c38 error 4 in **libc-2.11.1.so**[7f8fc8f1d000+17a000]
+</code></pre>
+<p>So, where is the problem ? I can't figure out.
+Should I downgrade some packages ?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tile/" class="post-tag tag-link-tile"
+                                        title="see questions tagged 'tile'" rel="tag">tile</a>
+                                
+                                    <a href="/tags/segfault/" class="post-tag tag-link-segfault"
+                                        title="see questions tagged 'segfault'" rel="tag">segfault</a>
+                                
+                                    <a href="/tags/installation/" class="post-tag tag-link-installation"
+                                        title="see questions tagged 'installation'" rel="tag">installation</a>
+                                
+                                    <a href="/tags/server/" class="post-tag tag-link-server"
+                                        title="see questions tagged 'server'" rel="tag">server</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Aug '12, 13:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5598e066f7d11f2179682c98f66b60bc?s=32&amp;d=identicon&amp;r=g" alt="aes693's gravatar image" />
+    <p><a href="/users/4234/aes693">aes693</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aes693 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/14846/">
+                edited
+                <strong>05 Aug '12, 15:58</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+            <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+            <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-14846">
+    
+        <a name="14848"></a>
+        <div class="comment" id="comment-14848">
+            <div id="post-14848-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are you using the original OSM map styles or have you made any changes to the XML file?</p></div>
+            <div class="comment-info" id="comment-14848-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '12, 13:41)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="14851"></a>
+        <div class="comment" id="comment-14851">
+            <div id="post-14851-score" class="comment-score"></div>
+            <div class="comment-text"><p>I downloaded a map for one country. I didn't change anything.</p></div>
+            <div class="comment-info" id="comment-14851-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '12, 15:39)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="14883"></a>
+        <div class="comment" id="comment-14883">
+            <div id="post-14883-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I just installed this morning Ubuntu 12.04 LTS (x86_64).
+The machine has 4GB ram and 3Ghz cpu (AMD).
+Following the tutorial, I installed the packages (some updated).
+At the end I am confronted with the same issue.
+It's not the mod_tile.so.
+It's renderd that what gaves me errors.
+Now the segfault errors are related to:
+libxml2.so.2.7.8 and libc-2.15.so.
+So, could be a compiling problem ?</p>
+
+<p>I am newbie using gdb, but if I'll find the issue (hopefully),
+I'll report it.</p></div>
+            <div class="comment-info" id="comment-14883-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Aug '12, 12:30)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="15054"></a>
+        <div class="comment" id="comment-15054">
+            <div id="post-15054-score" class="comment-score"></div>
+            <div class="comment-text"><p>Same problem here. Have you found a solution? I have tried the same instructions on three Ubuntu 12.04. Can anyone help?</p></div>
+            <div class="comment-info" id="comment-15054-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '12, 09:44)</span>
+                <a class="comment-user userinfo" href="/users/4286/bluescreen">bluescreen</a>
+                
+            </div>
+        </div>
+    
+        <a name="15079"></a>
+        <div class="comment not_top_scorer" id="comment-15079">
+            <div id="post-15079-score" class="comment-score"></div>
+            <div class="comment-text"><p>The segfault in apache might be solved after you do an svn update.</p>
+
+<p>Not sure about the issue in renderd yet though. A more informative stack trace would hopefully be helpful tracking this down.</p></div>
+            <div class="comment-info" id="comment-15079-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '12, 16:37)</span>
+                <a class="comment-user userinfo" href="/users/65/apmon">apmon</a>
+                
+            </div>
+        </div>
+    
+        <a name="16266"></a>
+        <div class="comment not_top_scorer" id="comment-16266">
+            <div id="post-16266-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just another data point, but when I ran through the more recent version <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/">http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/</a> a couple of days ago there were no segfault issues.</p></div>
+            <div class="comment-info" id="comment-16266-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Sep '12, 09:29)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16267"></a>
+        <div class="comment not_top_scorer" id="comment-16267">
+            <div id="post-16267-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/387/someoneelse">@SomeoneElse</a>: thanks for information; I will double check asap if there are changes and if it's working here too.</p></div>
+            <div class="comment-info" id="comment-16267-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Sep '12, 09:45)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="16315"></a>
+        <div class="comment not_top_scorer" id="comment-16315">
+            <div id="post-16315-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/387/someoneelse">@SomeoneElse</a>: thank you very much, now I see, that how-to web page
+was modified on the top, in the software installation section:
+now, there are 29 packages to be installed (18 previous).
+Postgresql server is 9.1 (I added myself manually before this
+modification anyway; previous was 8.4 @ Ubuntu 10.04).
+At "Install Mapnik library" section, that downloading and compiling the source of ... 'sudo apt-get install libltdl3-dev libpng12-dev libtiff4-dev libicu-dev [...]' disappeared.
+I hope it will work now; I will install it from zero again.</p></div>
+            <div class="comment-info" id="comment-16315-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Sep '12, 17:46)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="16316"></a>
+        <div class="comment not_top_scorer" id="comment-16316">
+            <div id="post-16316-score" class="comment-score"></div>
+            <div class="comment-text"><p>I will repeat another question now, so please, be patient with me:
+my problem can be related to my wish of using a map for only one
+country instead the whole planet ?
+Do I have to open a new topic / search (more) for an answer ?
+Sorry for bothering with newbie questions and thank you all who answered for your effort &amp; help.</p></div>
+            <div class="comment-info" id="comment-16316-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Sep '12, 17:50)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="16318"></a>
+        <div class="comment" id="comment-16318">
+            <div id="post-16318-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Generally you'd ask one question per question, because it gets confusing otherwise, but no - the fact that you've imported only one country rather than the whole planet wouldn't cause the issue that you're seeing; the only difference it would make would be that the data import would happen faster and require less memory.</p></div>
+            <div class="comment-info" id="comment-16318-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Sep '12, 17:57)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16319"></a>
+        <div class="comment not_top_scorer" id="comment-16319">
+            <div id="post-16319-score" class="comment-score"></div>
+            <div class="comment-text"><p>I know and I'm sorry. I should write in the title of the topic from the beggining/or in the body of the question: '(working with only a country map)' and express my worry because I didn't follow 100% the tutorial (because of the hardware and also the uselessness of using the map of the whole planet). Thank you for your answer !</p></div>
+            <div class="comment-info" id="comment-16319-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Sep '12, 18:03)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-14846" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 11
+        </span>
+        <a href="#" class="show-all-comments-link">show 6 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-14846-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/14846/segmentation-fault-after-building-a-tile-server?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/14846/segmentation-fault-after-building-a-tile-server?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/14846/segmentation-fault-after-building-a-tile-server?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/14846/segmentation-fault-after-building-a-tile-server?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15538"></a>
+                    <div id="answer-container-15538" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15538-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15538/up/" rel="nofollow"> </a>
+<div id="post-15538-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-15538-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15538/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The segmentation fault in renderd appears to be triggered by a long standing bug in libxml[1,2] and therefore outside of the control of mod_tile/renderd</p>
+<p>One can also trigger the segmentation fault with "xmllint --noent /etc/mapnik-osm-data/osm.xml" (or whereever the path of your osm style sheet)</p>
+<p>The problem seems to be a missing external entity in your osm style sheet. Try running "xmllint /etc/mapnik-osm-data/osm.xml" and see if it tells you which entity is missing, or not correctly configured. Once the style sheet is correctly configured, renderd should no longer segfault.</p>
+<p>The segmentation fault in apache / mod_tile should be fixed in the latest code. So recompiling and re-installing mod_tile after an svn update should fix the problem.</p>
+<p>[1] <a href="https://github.com/mapnik/mapnik/issues/566">https://github.com/mapnik/mapnik/issues/566</a>
+[2] <a href="https://bugs.launchpad.net/lxml/+bug/502959">https://bugs.launchpad.net/lxml/+bug/502959</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15538/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Aug '12, 04:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32c974c4ca8b246698c2b82c64924da5?s=32&amp;d=identicon&amp;r=g" alt="apmon's gravatar image" />
+    <p><a href="/users/65/apmon">apmon</a><br/>
+    <span class="score" title="6527 reputation points"><span class="">6.5k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="apmon has 9 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15538">
+    
+        <a name="16264"></a>
+        <div class="comment" id="comment-16264">
+            <div id="post-16264-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry for delay and thank you for answer.
+I'm looking forward to find a solution to display
+the country's tiles.
+Btw: is it possible to put all of these to work under CentOS ?
+Thanks.</p></div>
+            <div class="comment-info" id="comment-16264-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Sep '12, 23:05)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15538" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15538-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="15055"></a>
+                    <div id="answer-container-15055" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15055-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15055/up/" rel="nofollow"> </a>
+<div id="post-15055-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-15055-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15055/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Try using the ready-made packages from  <a href="http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/">http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/</a> instead of compiling your own.</p>
+<p>Segmentation faults in Apache (likely from mod_tile) and in renderd are unlikely to have the same root cause; both components access the tile directories and the renderd.conf file but that's about all they have in common.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15055/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Aug '12, 09:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15055">
+    
+        <a name="15064"></a>
+        <div class="comment" id="comment-15064">
+            <div id="post-15064-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/104/frederik-ramm">@Frederik Ramm</a></p>
+
+<p>Thank you for your response.
+Well, I tried to eliminate the possible causes, one by one.
+I commented the following lines from the file
+/etc/apache2/sites-available/default</p>
+
+<h1>LoadTileConfigFile /usr/local/etc/renderd.conf</h1>
+
+<h1>ModTileRenderdSocketName /var/run/renderd/renderd.sock</h1>
+
+<h1>ModTileRequestTimeout 0</h1>
+
+<h1>ModTileMissingRequestTimeout 30</h1>
+
+<p>Then, I restarted the Apache:</p>
+
+<p>myuser@gis:~$ sudo /etc/init.d/apache2 restart</p>
+
+<ul>
+<li>Restarting web server apache2</li>
+</ul>
+
+<p>apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName [...etc..] [ OK ]</p></div>
+            <div class="comment-info" id="comment-15064-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '12, 11:28)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="15065"></a>
+        <div class="comment" id="comment-15065">
+            <div id="post-15065-score" class="comment-score"></div>
+            <div class="comment-text"><p>Then, I wanted to see if the modules (also mod_tile) were loaded:</p>
+
+<p>myuser@gis:/var/log/apache2$ apachectl -t -D DUMP_MODULES
+/usr/sbin/apachectl: 87: ulimit: error setting limit (Operation not permitted)
+apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+Loaded Modules:</p>
+
+<p>core_module (static)
+ [...other 23 modules...]
+ tile_module (shared)
+Syntax OK</p>
+
+<p>So, the next question: if the module [tile_module] was corrupted,
+shouldn't appeared at the startup at least a warning ?</p>
+
+<p>Thank you very much for your hint.
+I will dig deeper in parallel.</p></div>
+            <div class="comment-info" id="comment-15065-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '12, 11:29)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="15226"></a>
+        <div class="comment not_top_scorer" id="comment-15226">
+            <div id="post-15226-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, following  ready-made packages from <a href="http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/">http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/</a> I have a new situation:</p>
+
+<p>I downloaded
+<a href="http://ppa.launchpad.net/kakrueger/openstreetmap/ubuntu/pool/main/liba/libapache2-mod-tile/libapache2-mod-tile_0.4-11~precise2.tar.gz">http://ppa.launchpad.net/kakrueger/openstreetmap/ubuntu/pool/main/liba/libapache2-mod-tile/libapache2-mod-tile_0.4-11~precise2.tar.gz</a></p>
+
+<p>and I compiled. Then I unmarked those 4 lines above.
+I restarted the apache2 service.</p>
+
+<p>Restarting web server apache2
+[...]
+[Fri Aug 17 22:15:23 2012] [notice] Loading tile config default at /osm_tiles2/ for zooms 0 - 18 from tile directory /var/lib/mod_tile with extension .png and mime type image/png
+[ OK ]</p></div>
+            <div class="comment-info" id="comment-15226-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '12, 20:21)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="15227"></a>
+        <div class="comment" id="comment-15227">
+            <div id="post-15227-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Then I typed as in the guide:
+sudo mkdir /var/run/renderd
+sudo chown myuser /var/run/renderd
+renderd -f -c /usr/local/etc/renderd.conf</p>
+
+<p>but the result it's the same:</p>
+
+<p>renderd[10342]: Rendering daemon started
+[...etc...]
+Running in foreground mode...
+renderd[10342]: Starting stats thread
+Segmentation fault (core dumped)</p>
+
+<p>myuser@gis:~$ dmesg</p>
+
+<p>...
+[ 1702.604071] renderd[9561]: segfault at 1b ip 00007f0fcc8cb600 sp 00007f0fbe1723b0 error 4 in libxml2.so.2.7.8[7f0fcc874000+151000]</p></div>
+            <div class="comment-info" id="comment-15227-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '12, 20:25)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="15236"></a>
+        <div class="comment not_top_scorer" id="comment-15236">
+            <div id="post-15236-score" class="comment-score"></div>
+            <div class="comment-text"><p>by the way: I used also the .deb packages, but without success:</p>
+
+<p>libapache2-mod-tile_0.4-11~precise2_amd64.deb and renderd_0.4-11~precise2_amd64.deb from
+<a href="http://ppa.launchpad.net/kakrueger/openstreetmap/ubuntu/pool/main/liba/libapache2-mod-tile/">http://ppa.launchpad.net/kakrueger/openstreetmap/ubuntu/pool/main/liba/libapache2-mod-tile/</a></p></div>
+            <div class="comment-info" id="comment-15236-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '12, 07:13)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="15240"></a>
+        <div class="comment" id="comment-15240">
+            <div id="post-15240-score" class="comment-score">1</div>
+            <div class="comment-text"><p>So far I haven't been able to reproduce this segfault. I just followed the instructions in a fresh (fully up-to-date) Ubuntu 12.04 (64bit) VM and did not have any issues. It is correctly rendering and I can view the tiles in the browser via mod_tile.</p>
+
+<p>Can you give any additional information that might help track these issues down?</p></div>
+            <div class="comment-info" id="comment-15240-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '12, 09:19)</span>
+                <a class="comment-user userinfo" href="/users/65/apmon">apmon</a>
+                
+            </div>
+        </div>
+    
+        <a name="15254"></a>
+        <div class="comment not_top_scorer" id="comment-15254">
+            <div id="post-15254-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/65/apmon">@apmon</a>: sure. Please, give me details how can I provide a fully accurate report.</p></div>
+            <div class="comment-info" id="comment-15254-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '12, 18:11)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="15346"></a>
+        <div class="comment not_top_scorer" id="comment-15346">
+            <div id="post-15346-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, I installed the old 10.04.4 LTS onto an old 32bit single core AMD 2ghz machine <br>
+with 3GB Ram (VMware), (gaving 1GB Ram to Ubuntu). <br>
+I installed and configured all packages using SSH, using putty, saving all the <br>
+printable output (session log), and I noticed that there are no errors. <br>
+Running apache, renderd, I also noticed the lack of errors. <br>
+<br>
+The differences between this and previous installations: <br>
+- at the beggining of the installation I gave an <br>
+  sudo apt-get install update &amp;&amp; sudo apt-get upgrade <br>
+- the file ~/src/mapnik-style/inc/settings.xml.inc shouldn't have <br>
+  uncommented those to be replaced lines (as the one below) ? <br>
+ <b>&lt;ENTITY osm2pgsql_projection "&amp;srs900913;"&gt;</b><br>
+- at the building of the Mapnik library's from source, <br>
+  git checkout 0.7 <br>
+  ... apears: falling to 0.7.2; <br>
+- having only one GB Ram, I used the values: <br>
+sudo sysctl -w kernel.shmmax=536870912 ; 512 MB <br>
+sudo sysctl -w kernel.shmall=131072    ; shmmax / 4096 <br>
+<br>
+Tomorrow I will go back to the machine with Ubuntu 12.04 LTS (x86_64) and I will try to: <br>
+a) make the modifications to the ~/src/mapnik-style/inc/settings.xml.inc file, or <br>
+b) reinstall all from zero and log everything at installations &amp; configurations. <br>
+<br>
+I have one more question: if (because the hardware) I can't (because I don't need to) <br>
+use the whole planet [file] and I want to use just a country (package), the procedure it's <br>
+similar, mean e.g. using the file wget <a href="http://192.168.1.1/countryX.osm.bz2">http://192.168.1.1/countryX.osm.bz2</a> and run a <br>
+osm2pgsql --slim -d gis -C 2048 ~/planet/countryX.osm.bz2 ? <br>
+<br>
+I tried to see if there are generated tiles of that country, using a slippymap e.g.<br>
+<a href="http://192.168.1.2/osm/slippymap.html,">http://192.168.1.2/osm/slippymap.html,</a> but when I switched from Mapnik to Local Tiles, <br>
+(over the countryX), the tiles turned from standard, colored to pink with no content. <br>
+Using Firedebug I could see that the server returned 404 errors e.g. couldn't find the <br>
+following resources (tiles supposed to be generated): e.g. <a href="http://192.168.1.2/osm/0/12/34.png">http://192.168.1.2/osm/0/12/34.png</a> <br></p></div>
+            <div class="comment-info" id="comment-15346-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '12, 22:35)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+        <a name="15415"></a>
+        <div class="comment" id="comment-15415">
+            <div id="post-15415-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Partially solved, some questions remains.<br>
+There are two causes what generated those errors:<br><br>
+1) The old/default <b>mod_tile.so</b> and <b>renderd</b> have some (yet) unidentified issues,<br>
+so, following Mr. Frederik Ramm advice, I am using <b>mod_tile.so</b>and <b>renderd</b><br>
+from Mr. Kai Kruger (see above); results: no problems with apache httpd/renderd;<br><br>
+2) I logged on the machine with Ubuntu 12.04 LTS (x86_64) and I just edited<br>
+<b>/home/myuser/src/mapnik-style/inc/settings.xml.inc</b>.<br>
+I <b>commented</b> (!--) and <b>uncommented</b> (!) one by one the following lines:<br><br>
+&lt;!ENTITY symbols "symbols"&gt;<br>
+&lt;!ENTITY osm2pgsql_projection "&amp;srs900913;"&gt;<br>
+&lt;!ENTITY dwithin_node_way "&amp;dwithin_900913;"&gt;<br>
+&lt;!ENTITY world_boundaries "/usr/local/share/world_boundaries"&gt;<br>
+&lt;!ENTITY prefix "planet_osm"&gt;<br><br>
+Letting <b>uncommented</b> the last line (ENTITY prefix "planet_osm) will generates <b>segmentation fault</b><br>
+(in renderd), while letting <b>commented</b>, will generates the follwing output:<br><br>
+myuser@gis:~$ renderd -f -c /usr/local/etc/renderd.conf<br>
+renderd[9730]: Rendering daemon started<br>
+renderd[9730]: Parsing section renderd<br>
+renderd[9730]: Parsing render section 0<br>
+renderd[9730]: Parsing section mapnik<br>
+renderd[9730]: Parsing section default<br>
+renderd[9730]: config renderd: unix socketname=/var/run/renderd/renderd.sock<br>
+renderd[9730]: config renderd: num_threads=2<br>
+renderd[9730]: config renderd: num_slaves=0<br>
+renderd[9730]: config renderd: tile_dir=/var/lib/mod_tile<br>
+renderd[9730]: config renderd: stats_file=/var/run/renderd/renderd.stats<br>
+renderd[9730]: config mapnik:  plugins_dir=/usr/local/lib/mapnik/input<br>
+renderd[9730]: config mapnik:  font_dir=/usr/share/fonts/truetype/ttf-dejavu<br>
+renderd[9730]: config mapnik:  font_dir_recurse=1<br>
+renderd[9730]: config renderd(0): Active<br>
+renderd[9730]: config renderd(0): unix socketname=/var/run/renderd/renderd.sock<br>
+renderd[9730]: config renderd(0): num_threads=2<br>
+renderd[9730]: config renderd(0): tile_dir=/var/lib/mod_tile<br>
+renderd[9730]: config renderd(0): stats_file=/var/run/renderd/renderd.stats<br>
+renderd[9730]: config map 0:   name(default) file(/home/myuser/src/mapnik-style/osm.xml) uri(/osm_tiles2/) htcp() host(localhost)<br>
+renderd[9730]: Initialising unix server socket on /var/run/renderd/renderd.sock<br>
+renderd[9730]: Created server socket 5<br>
+renderd[9730]: Renderd is using mapnik version 0.7.2<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Italic.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Bold.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-Bold.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Bold.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-BoldOblique.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Oblique.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Oblique.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-Oblique.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-BoldItalic.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Bold.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-BoldOblique.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-BoldItalic.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Italic.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Bold.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-ExtraLight.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf<br>
+renderd[9730]: DEBUG: Loading font: /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-BoldOblique.ttf<br>
+Running in foreground mode...<br>
+renderd[9730]: Starting stats thread<br>
+renderd[9730]: An error occurred while loading the map layer 'default': XML document not well formed:<br>
+Start tag expected, '&lt;' not found (encountered in file '/home/myuser/src/mapnik-style/osm.xml' at line 9)renderd[9730]: An error occurred while loading the map layer 'default': XML document not well formed:<br>
+Start tag expected, '&lt;' not found (encountered in file '/home/myuser/src/mapnik-style/osm.xml' at line 9)<br><br>
+mean the line:<br><br>
+<b>&lt;Map bgcolor="#b5d0d0" srs="&amp;srs900913;" minimum_version="0.7.1"&gt;</b><br><br>
+Now, the last questions: this output is because I am not using the planet file (and just one country),<br>
+and if so, how can I correct set up the config files to work with only one country, so the<br>
+tiles to be generated ?<br>
+Thank you very much and sorry for bothering you with my questions.</p></div>
+            <div class="comment-info" id="comment-15415-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Aug '12, 22:42)</span>
+                <a class="comment-user userinfo" href="/users/4234/aes693">aes693</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15055" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15055-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="16352"></a>
+                    <div id="answer-container-16352" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16352-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16352/up/" rel="nofollow"> </a>
+<div id="post-16352-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-16352-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16352/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="/users/387/someoneelse"><a href="/users/387/someoneelse">@SomeoneElse</a></a>, Frederik Ramm, apmon: I <b>solved</b> finally.<br>
+It's working even with the map for one country instead the whole planet.<br>
+My worries that wouldn't work and will require a special procedure were unjustified.<br><br>
+It was a mix of various issues like external (libxml, libc) and internal<br>
+(typing, missing [un]commented lines), also forget to modify slippymap.html.<br>
+I guess besides those external, those internal are newbies' errors.<br><br>
+My newbie advices (after I dig into the config files) are:<br><br>
+<b>a)</b> be careful when editing renderd.conf<br>
+I filled it up with appropriate values for paths, and I used alternatively
+<b>numthreads=1</b> (I will tune after),<br>
+then I took care to use the same path (/osm_tiles2/)
+with that from slippymap.html<br>
+e.g. <a href="http://192.168.0.1/osm_tiles2/${z}/${x}/${y}.png">http://192.168.0.1/osm_tiles2/${z}/${x}/${y}.png</a><br>
+(in the javascript part); then I used an IP value for HOST instead "<b>host=localhost</b>";<br><br>
+<b>b)</b> don't forget to check into /etc/apache2/sites-available/default for order allow, deny<br>
+and allow from all at the beginning to get rid of initial troubles.<br><br>
+<b>c)</b> osm.xml can provide further informations if you missed something in the config files<br>
+(see the usage of "xmllint /home/myuser/src/mapnik-style/osm.xml" above)<br><br>
+<b>d)</b> now, the last part: in the ~/src/mapnik-style/inc/ folder, only two files are<br>
+editable (as in the tutorial): <b>settings.xml.inc</b> and <b>datasource-settings.xml.inc</b> ;<br>
+users must be very carefully when (un)commenting:<br>
+in datasource-settings.inc the lines with password, host, port, user should be commented as:<br>
+&lt;!-- Parameter name ="password"&gt;%(password)s&lt;/Parameter --&gt;<br>
+it's important to pay attention to the sintax (the first 4 and the last 3 characters) !<br>
+Then, in the settings.xml.inc, you should keep 7 lines (take care at the sintax),<br>
+those with: "symbols", "osm2pgsql_projection", "dwithin_900913", "dwithin_4326",<br>
+dwithin_node_way, world_boundaries (take care at the path), and the line with prefix.<br>
+These seven lines begin and terminate in the same manner: (first two and the last chr$ are important)<br>
+&lt;!ENTITY symbols "symbols"&gt;<br><br>
+OK, at last, at the installation point, if you don't have plenty RAM memory and an old CPU, instead of using<br>
+osm2pgsql --slim -d gis -C 16000 --number-processes 3 ~/planet/planet-latest.osm.pbf (or ...Xcountry.pbf),<br>
+you can use: osm2pgsql --slim -d gis -C 2048 ~/planet/countryX.osm.bz2<br><br>
+I think that was all. Thank you very much for your support and for the patience.<br>
+See you next time ! :)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16352/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Sep '12, 19:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5598e066f7d11f2179682c98f66b60bc?s=32&amp;d=identicon&amp;r=g" alt="aes693's gravatar image" />
+    <p><a href="/users/4234/aes693">aes693</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aes693 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16352/">
+                edited
+                <strong>22 Sep '12, 19:22</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16352">
+    
+</div>
+<div id="comment-tools-16352" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16352-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="16313"></a>
+                    <div id="answer-container-16313" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16313-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16313/up/" rel="nofollow"> </a>
+<div id="post-16313-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16313-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16313/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="/users/65/apmon">@apmon</a>:<br><br>
+Hi,<br><br>
+'xmllint /home/myuser/src/mapnik-style/osm.xml'<br>
+or<br>
+'xmllint --noent /home/myuser/src/mapnik-style/osm.xml'<br>
+have the same result:<br><br>
+myuser@gis:/$ xmllint /home/myuser/src/mapnik-style/osm.xml<br>
+/home/myuser/src/mapnik-style/osm.xml:4: parser error : Char 0x0 out of allowed range<br>
+%entities;<br>
+              ^<br>
+Entity: line 1:<br>
+ %entities;<br>
+                ^<br>
+/home/myuser/src/mapnik-style/osm.xml:6: parser error : Comment must not contain '--' (double-hyphen)<br>
+&lt;!-- This stylesheet uses features only available in mapnik builds with<br>
+     ^<br>
+/home/myuser/src/mapnik-style/osm.xml:8: parser error : Comment doesn't start and stop in the same entity<br>
+      and behaviour that necessitate an upgrade to mapnik 0.7.1 --&gt;<br>
+                                                                                              ^<br>
+/home/myuser/src/mapnik-style/osm.xml:9: parser error : internal error<br>
+&lt;Map bgcolor="#b5d0d0" srs="&amp;srs900913;" minimum_version="0.7.1"&gt;<br>
+^<br>
+/home/myuser/src/mapnik-style/osm.xml:9: parser error : DOCTYPE improperly terminated<br>
+&lt;Map bgcolor="#b5d0d0" srs="&amp;srs900913;" minimum_version="0.7.1"&gt;<br>
+^<br>
+/home/myuser/src/mapnik-style/osm.xml:9: parser error : Start tag expected, '&lt;' not found<br>
+&lt;Map bgcolor="#b5d0d0" srs="&amp;srs900913;" minimum_version="0.7.1"&gt;<br>
+  ^<br></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16313/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Sep '12, 16:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5598e066f7d11f2179682c98f66b60bc?s=32&amp;d=identicon&amp;r=g" alt="aes693's gravatar image" />
+    <p><a href="/users/4234/aes693">aes693</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aes693 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16313">
+    
+</div>
+<div id="comment-tools-16313" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16313-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/14846/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='xl62klPFc2lbgge0sF8sg6ElxPb8f9Jo' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/14846/segmentation-fault-after-building-a-tile-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/14846/segmentation-fault-after-building-a-tile-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/server/"
+            class="tag-link-server"
+            title="see questions tagged'server'using tags"
+            rel="tag">server</a> <span class="tag-number">&#215;123</span><br/>
+        
+        <a href="/tags/installation/"
+            class="tag-link-installation"
+            title="see questions tagged'installation'using tags"
+            rel="tag">installation</a> <span class="tag-number">&#215;61</span><br/>
+        
+        <a href="/tags/tile/"
+            class="tag-link-tile"
+            title="see questions tagged'tile'using tags"
+            rel="tag">tile</a> <span class="tag-number">&#215;57</span><br/>
+        
+        <a href="/tags/segfault/"
+            class="tag-link-segfault"
+            title="see questions tagged'segfault'using tags"
+            rel="tag">segfault</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 5, 2012, 1:02 p.m.">05 Aug '12, 13:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>18,207 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 22, 2012, 7:22 p.m.">22 Sep '12, 19:22</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/37451/problem-uploading-gpx-to-private-server">Problem uploading GPX to private server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46672/configure-linux-for-osm-tile-server">configure linux for osm tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10363/which-software-serves-status-and-dirty-tile-directives">Which software serves /status and /dirty tile directives ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33178/accessing-data-by-using-own-instance-of-osm-api-06">Accessing data by using own instance of OSM API 0.6</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1706/how-do-i-use-the-osm-tile-map-server-in-mapinfo">How do I use the osm tile map server in mapinfo?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39032/openseamap-tile-server-url">openseamap tile server url</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5986/how-to-install-own-tile-serverrenderer">how to install own tile server/renderer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7579/use-of-free-tile-servers-in-tablet-apps">Use of free tile servers in tablet apps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22952/how-to-get-permission-for-using-openstreetmaporg-in-ios-html-email-editor">How to get Permission for Using Openstreetmap.org in iOS Html Email Editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55926/remote-access-to-local-openstreetmap-website">Remote access to local openstreetmap-website</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

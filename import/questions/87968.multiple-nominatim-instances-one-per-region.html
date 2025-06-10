@@ -1,0 +1,667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Multiple nominatim instances, one per region. - OSM Help</title>
+        <meta name="description" content="Hi, I have successfully installed Nominatim with a single Postgres Database in my infrastructure. However, our infrastructure team has informed me that the planet database is too large, and they recommend working with smaller databases for better performance. My initial idea is to set up separate in..." />
+        <meta name="keywords" content="region,nominatim,database" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/87968/multiple-nominatim-instances-one-per-region" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/87968/multiple-nominatim-instances-one-per-region?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='VWvGGBs3jZRBReJvtvFkCxEmCEXe3HkJ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/87968/multiple-nominatim-instances-one-per-region">Multiple nominatim instances, one per region.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-87968-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/87968/up/" rel="nofollow"> </a>
+<div id="post-87968-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-87968-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/87968/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/87968/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I have successfully installed Nominatim with a single Postgres Database in my infrastructure. However, our infrastructure team has informed me that the planet database is too large, and they recommend working with smaller databases for better performance. My initial idea is to set up separate instances of Nominatim for different regions and create a gateway to expose the API as a unified deployment.</p>
+<p>To achieve this, I'm considering making the 'countryCode' mandatory in user requests and then forwarding the request to the appropriate Nominatim instance based on the country code. For example, if the 'countryCode' is 'Austria,' I would route the request to the Europe region instance.</p>
+<p>However, I'm concerned about potential issues, especially when a user requests an address in a place like Hawaii, which falls within the Oceania region. In this case, for a 'countryCode' of 'US,' I may need to query at least two regions simultaneously and somehow combine the results.</p>
+<p>My primary concern is not the increased complexity of this deployment (multiple databases and API servers) as the infrastructure constraints take precedence. I'm more interested in understanding potential functional issues that I might not be aware of at the moment. Has anyone faced a similar challenge or has insights to share on the best practices for handling such a multi-region Nominatim deployment?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/region/" class="post-tag tag-link-region"
+                                        title="see questions tagged 'region'" rel="tag">region</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/database/" class="post-tag tag-link-database"
+                                        title="see questions tagged 'database'" rel="tag">database</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>31 Oct '23, 14:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0900332f0ef93125d5acc2bf12fbae47?s=32&amp;d=identicon&amp;r=g" alt="MattCon's gravatar image" />
+    <p><a href="/users/23321/mattcon">MattCon</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="MattCon has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-87968">
+    
+</div>
+<div id="comment-tools-87968" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-87968-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/87968/multiple-nominatim-instances-one-per-region?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/87968/multiple-nominatim-instances-one-per-region?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/87968/multiple-nominatim-instances-one-per-region?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/87968/multiple-nominatim-instances-one-per-region?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="87969"></a>
+                    <div id="answer-container-87969" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-87969-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/87969/up/" rel="nofollow"> </a>
+<div id="post-87969-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-87969-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/87969/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Let me guess, your IT people want to run everything "in the cloud" and somehow a single cloud node (or whatever the term in the particular cloud infrastructure is) cannot allocate the resources needed. And now you are on a quest to spend several person-weeks of design time to implement a workaround for this infrastructure shortcoming, resulting in a system that is more complex and more prone to failure and where (unlike when running a "standard" Nominatim) your organisation will be the only group on earth using it, so the chances of finding others with similar problems (should problems arise) are near zero. Brilliant plan!</p>
+<p>Less cynically, I think your plan can work as long as you avoid splitting countries. Nominatim doesn't like it if a country boundary is not fully there. This could require some work if you are dealing with countries that have overseas territories, like France. You might have to cut out your regions from a planet file with Osmium and ensure referential integrity on county border relations, something that is not granted in e.g. Geofabrik download files (where the Europe file will not contain French Dom-Tom areas like Martinique).</p>
+<p>I would still strongly advise against your plan. If you cannot allocate the ~ 1 TB of disk space and 64 GB of RAM to run a full-blown Nominatim server (and finding these resources will almost certainly be cheaper than continuing down the path you have started on!), then you might consider</p>
+<ul>
+<li>doing the Nominatim <em>import</em> on a beefy machine that is non-production and therefore maybe sits outside the strict requirements by your infrastructure team, then only replicating the necessary bits of the database to a production machine with less resources. This way you might get away with something like 16 GB RAM, 500 GB disk space for the client machine</li>
+<li>switching to "Photon" altogether for which you can download ready-made database files that will only need ~250 GB of disk space; Photon may not do everything that Nominatim does but if it is sufficient for you then things are way easier.</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/87969/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Oct '23, 14:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-87969">
+    
+        <a name="87970"></a>
+        <div class="comment" id="comment-87970">
+            <div id="post-87970-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Frederik for your answer, you made me smile. I want to assure you than except for this question, no more time was spent on this cursed path and no more will be spent. </p>
+
+<p>The critical resource here is space, so I'm interested in the first option you pictured. Could you please elaborate or point me to existing resources on this? Thanks a lot!</p></div>
+            <div class="comment-info" id="comment-87970-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Oct '23, 16:00)</span>
+                <a class="comment-user userinfo" href="/users/23321/mattcon">MattCon</a>
+                
+            </div>
+        </div>
+    
+        <a name="87971"></a>
+        <div class="comment" id="comment-87971">
+            <div id="post-87971-score" class="comment-score"></div>
+            <div class="comment-text"><p>When Nominatim does the initial import it uses a number of extra database tables that are not required for production use, but are needed during the import process and - if later incremental updates are desired - also during updates.</p>
+
+<p>If you do not need incremental updates (and instead can live with, say, doing a full new data load once a month) then you can simply remove the excess information from your database after the import, see <a href="https://nominatim.org/release-docs/latest/admin/Import/#dropping-data-required-for-dynamic-updates">https://nominatim.org/release-docs/latest/admin/Import/#dropping-data-required-for-dynamic-updates</a> - and after that copy the much-reduced database to the actual production machine.</p>
+
+<p>If you would like to do incremental updates, then a variant of the above can be achieved by setting up PostgreSQL logical replication between a beefy "import server" (that has the extra tables needed for updates, and keeps them), and one (or more - there's an easy option for scaling here) "followers" that do the actual request serving but only have the subset of tables required for that. PostgreSQL replication allows you to selectively replicate tables.</p></div>
+            <div class="comment-info" id="comment-87971-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Oct '23, 18:10)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-87969" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-87969-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/87968/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='VWvGGBs3jZRBReJvtvFkCxEmCEXe3HkJ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/87968/multiple-nominatim-instances-one-per-region?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/87968/multiple-nominatim-instances-one-per-region?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/database/"
+            class="tag-link-database"
+            title="see questions tagged'database'using tags"
+            rel="tag">database</a> <span class="tag-number">&#215;118</span><br/>
+        
+        <a href="/tags/region/"
+            class="tag-link-region"
+            title="see questions tagged'region'using tags"
+            rel="tag">region</a> <span class="tag-number">&#215;17</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 31, 2023, 2:31 p.m.">31 Oct '23, 14:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,462 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 31, 2023, 6:10 p.m.">31 Oct '23, 18:10</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/15970/comparison-between-nominatimosm-site-and-my-local-site">Comparison between nominatim.osm site and my local site</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56010/update-nominatim-from-a-custom-region">Update Nominatim from a custom region</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12286/how-can-i-get-the-zone-administrive-of-a-city-from-postgis-nominatim-import">How can I get the zone administrive of a city from postgis (nominatim import)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2680/can-i-produce-a-database-of-addresses-from-osm-data">Can I produce a database of addresses from OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35529/nominatim-pgsql-database-size-growing-gradually">Nominatim PgSQL database size growing gradually</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46540/missing-dbphp">[closed] Missing DB.php</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12561/was-does-the-leading-space-mean-in-wordword_token">Was does the leading space mean in word.word_token?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12388/best-way-to-get-all-cities-of-a-specific-area">Best way to get all cities of a specific area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22889/lossy-and-lossless-methods-getting-osm-data">Lossy and Lossless Methods Getting OSM Data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65605/how-can-i-create-a-nominatim-instance-on-my-own-server">How can I create a Nominatim instance on my own server?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

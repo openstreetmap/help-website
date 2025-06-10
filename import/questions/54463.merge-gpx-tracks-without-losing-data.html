@@ -1,0 +1,1006 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Merge GPX tracks without losing data? - OSM Help</title>
+        <meta name="description" content="I wander around with two tracking devices. I would like to merge the tracks into a single file. &quot;Solutions&quot; I&#39;ve read really aren&#39;t. Some merely append the tracks end to end. Another strips ALL data except lat/long (elevation and timestamps and anything else lost). I can convert to CSV, load into sp..." />
+        <meta name="keywords" content="merge" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/54463/merge-gpx-tracks-without-losing-data" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54463/merge-gpx-tracks-without-losing-data?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='d0yqBoBbmcXlx1Lu4FePHHMJMthJX1zh' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54463/merge-gpx-tracks-without-losing-data">Merge GPX tracks without losing data?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54463-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54463/up/" rel="nofollow"> </a>
+<div id="post-54463-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54463-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54463/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54463/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I wander around with two tracking devices.  I would like to merge the tracks into a single file.</p>
+<p>"Solutions" I've read really aren't.  Some merely append the tracks end to end.  Another strips ALL data except lat/long (elevation and timestamps and anything else lost).</p>
+<p>I can convert to CSV, load into spreadsheet, sort by timestamp, and convert back, but if someone else hasn't already automated this, I'd be surprised.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/merge/" class="post-tag tag-link-merge"
+                                        title="see questions tagged 'merge'" rel="tag">merge</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Feb '17, 20:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4dbb88ad9ac898c20c4d084107218785?s=32&amp;d=identicon&amp;r=g" alt="Happy%20Hobo's gravatar image" />
+    <p><a href="/users/13292/happy-hobo">Happy Hobo</a><br/>
+    <span class="score" title="85 reputation points">85</span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Happy Hobo has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54463">
+    
+</div>
+<div id="comment-tools-54463" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54463-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54463/merge-gpx-tracks-without-losing-data?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54463/merge-gpx-tracks-without-losing-data?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54463/merge-gpx-tracks-without-losing-data?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54463/merge-gpx-tracks-without-losing-data?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54466"></a>
+                    <div id="answer-container-54466" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54466-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54466/up/" rel="nofollow"> </a>
+<div id="post-54466-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-54466-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54466/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Happy Hobo has selected this answer as the correct answer"
+        href="/accept_answer/54466/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>GPSBabel is the Swiss Army knife of GPX editors. I found this in the manual:</p>
+<p>Merge multiple tracks for the same way.
+This option puts all track points from all tracks into a single track and sorts them by time stamp. Points
+with identical time stamps will be dropped.</p>
+<p>Example 4.9. Merging tracks with the track filter</p>
+<p>Suppose you want to merge tracks recorded with two different GPS devices at the same time. To do that,
+use this command line:</p>
+<p>gpsbabel -t -i gpx -f john.gpx -i gpx -f doe.gpx -x
+track,merge,title="COMBINED LOG" -o gpx -F john_doe.gpx</p>
+<p>This example shows the command line version but it also has a GUI one can use if you prefer. The site is here:</p>
+<p><a href="https://www.gpsbabel.org">https://www.gpsbabel.org</a></p>
+<p>Cheers,</p>
+<p>Dave</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54466/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Feb '17, 22:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/04dddf6f5ffde333747d385af3ce5829?s=32&amp;d=identicon&amp;r=g" alt="AlaskaDave's gravatar image" />
+    <p><a href="/users/5016/alaskadave">AlaskaDave</a><br/>
+    <span class="score" title="5415 reputation points"><span class="">5.4k</span></span><span title="76 badges"><span class="badge1">&#9679;</span><span class="badgecount">76</span></span><span title="107 badges"><span class="silver">&#9679;</span><span class="badgecount">107</span></span><span title="164 badges"><span class="bronze">&#9679;</span><span class="badgecount">164</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AlaskaDave has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54466">
+    
+        <a name="54467"></a>
+        <div class="comment" id="comment-54467">
+            <div id="post-54467-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, that worked.  One of the things I read suggested gpsbabel, but their method was the one that discarded all data but lat/lon.  Interesting that this command for whatever reason arbitrarily split the track into several trkseg.  The amusing result shows that the two devices are constantly on opposite sides of the street from each other.  :-). <a href="http://www.gpsvisualizer.com/display/20170204145114-03119-map.html">http://www.gpsvisualizer.com/display/20170204145114-03119-map.html</a></p></div>
+            <div class="comment-info" id="comment-54467-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Feb '17, 22:49)</span>
+                <a class="comment-user userinfo" href="/users/13292/happy-hobo">Happy Hobo</a>
+                
+            </div>
+        </div>
+    
+        <a name="54468"></a>
+        <div class="comment" id="comment-54468">
+            <div id="post-54468-score" class="comment-score">2</div>
+            <div class="comment-text"><p>If you intent to upload your tracks to OSM then don't upload this merged version. Instead upload a separate track for each of your device.</p></div>
+            <div class="comment-info" id="comment-54468-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Feb '17, 09:05)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="54470"></a>
+        <div class="comment" id="comment-54470">
+            <div id="post-54470-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> - It's all data that might be useful for determining imagery offsets so whether it's loaded as one track or two, isn't the end result the same?</p></div>
+            <div class="comment-info" id="comment-54470-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Feb '17, 10:00)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="54471"></a>
+        <div class="comment" id="comment-54471">
+            <div id="post-54471-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a> No, see the track visualization. At several locations the merged track jumps continuously from one side of the road to the other. The merged track is just a large mess. Uploading both tracks individually would be much better.</p></div>
+            <div class="comment-info" id="comment-54471-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Feb '17, 10:32)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="54472"></a>
+        <div class="comment" id="comment-54472">
+            <div id="post-54472-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The positional quality of one or both of these traces is low but after they're uploaded to OSM they are merely a bunch of nodes with lat/lon coordinates. GPS visualizer and even the JOSM displays show them as being "connected" but that is artificial. No such connecting lines exist in the actual data.</p>
+
+<p>That said, the quality issue might convince me to not upload those tracks at all. How much help can such poor data actually offer to users looking to correct an imagery offset?</p></div>
+            <div class="comment-info" id="comment-54472-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Feb '17, 10:39)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54466" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54466-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="54474"></a>
+                    <div id="answer-container-54474" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54474-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54474/up/" rel="nofollow"> </a>
+<div id="post-54474-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54474-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54474/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I have also used two track recording devices at the same time. I have uploaded both ( to OSM traces as public )  on some occasions which works as a second opinion, or more when using all public traces are viewed. Currently i prefer to use GPS Prune to display both traces at the same time overlaid onto current OSM data. GPS Prune gives me the ability to delete bad points or detours into poor reception areas that are useless and "birds nest" tangles that are generated when stationary for a while. Prune also gives me the chance to edit the traces so i the only upload useful data and also avoid uploading data when I'm a little lost and drifted off a public rights of way, this iffy data could get used by mappers that haven't surveyed the area themselves, and think "someone as been there, it must be a path".   I realise this isn't exactly what you asked for but hopefully it is another way to use your data.      </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54474/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Feb '17, 12:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54474">
+    
+        <a name="54476"></a>
+        <div class="comment" id="comment-54476">
+            <div id="post-54476-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, the merged result looks bad.  But the problem with either track alone is that while it <em>looks</em> good, it is seriously wrong!  The next step after merging is to do some smoothing.  There's no point in uploading a track that is completely wrong, whether it looks good or not.</p></div>
+            <div class="comment-info" id="comment-54476-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Feb '17, 13:56)</span>
+                <a class="comment-user userinfo" href="/users/13292/happy-hobo">Happy Hobo</a>
+                
+            </div>
+        </div>
+    
+        <a name="54486"></a>
+        <div class="comment" id="comment-54486">
+            <div id="post-54486-score" class="comment-score"></div>
+            <div class="comment-text"><p>I did try to smooth the track but probably not the best algorithm.  The results still sucked.</p></div>
+            <div class="comment-info" id="comment-54486-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Feb '17, 20:29)</span>
+                <a class="comment-user userinfo" href="/users/13292/happy-hobo">Happy Hobo</a>
+                
+            </div>
+        </div>
+    
+        <a name="54499"></a>
+        <div class="comment" id="comment-54499">
+            <div id="post-54499-score" class="comment-score"></div>
+            <div class="comment-text"><p>I looked at them <a href="http://www.gpsvisualizer.com/display/20170204145114-03119-map.html">http://www.gpsvisualizer.com/display/20170204145114-03119-map.html</a> and would just delete some sections of the traces, the gps wasn't getting a good signal. Seeing that the area is a city I assume there are lots of good traces available already??. I don't think using averaging the obviously wrong points serve any purpose at all, it will just corrupt the better stuff, Human input needed in a case such as this.</p></div>
+            <div class="comment-info" id="comment-54499-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '17, 06:15)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="54507"></a>
+        <div class="comment" id="comment-54507">
+            <div id="post-54507-score" class="comment-score"></div>
+            <div class="comment-text"><p>The thought was that with one device erring northwest and one northeast that a five-point weighted average would partially cancel the errors.  And it did, but the weighting I used wasn't the best.  But even where the errors were smaller, along the river, the trace is consistently not on the path.</p></div>
+            <div class="comment-info" id="comment-54507-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '17, 08:21)</span>
+                <a class="comment-user userinfo" href="/users/13292/happy-hobo">Happy Hobo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54474" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54474-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="54501"></a>
+                    <div id="answer-container-54501" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54501-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54501/up/" rel="nofollow"> </a>
+<div id="post-54501-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54501-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54501/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><img src="http://help.openstreetmap.org/upfiles/PRUNE_Speed_close_up.JPG" alt="alt text"><img src="http://help.openstreetmap.org/upfiles/PRUNE_Speed_CrbByoZ.JPG" alt="alt text"></p>
+<p>Having seen the traces <a href="http://www.gpsvisualizer.com/display/20170204145114-03119-map.html">http://www.gpsvisualizer.com/display/20170204145114-03119-map.html</a><br>
+I would guess that one device didn't have good signal all the time, was it in a pocket or a bag? high rise building can also cause problems. see
+ <a href="http://wiki.openstreetmap.org/wiki/Accuracy_of_GPS_data">http://wiki.openstreetmap.org/wiki/Accuracy_of_GPS_data</a>
+I believe some devices now discard obviously faulty points, by seeing the average speed they calculate the large jumps of speed the zig zags would induce aren't likely and disregard them. It's possible this could be done with clever spread sheet, (the distance between consecutive, once a second points can't &gt; 6 km/h ( if walking) then ignore it) For me it's just easier to delete rogue points by looking at them with GPS Prune, which does display the speed between consecutive points by the way.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54501/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Feb '17, 07:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54501/">
+                edited
+                <strong>06 Feb '17, 07:44</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54501">
+    
+        <a name="54505"></a>
+        <div class="comment" id="comment-54505">
+            <div id="post-54505-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The buildings are undoubtedly part, as it is slightly better along the river.  But looking at the two traces separately, one is consistently northwest of the truth and the other consistently southeast.  I wasn't trying to improve the map but to have something decent for a few relatives who want to see where I wander.  I knew human input would be necessary; I just want to minimize it.  These are so bad that it would be more efficient to pull up a map and draw the tracks freehand.  One of them, the eTrex-30, once told me its accuracy was three meters as I went out on a footpath and four meters when I came back.  But the map showed the two paths fairly straight but twelve meters apart!  Same device told me on another occasion after a five minute walk away from buildings that my average speed was 18 KPH.</p></div>
+            <div class="comment-info" id="comment-54505-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '17, 08:14)</span>
+                <a class="comment-user userinfo" href="/users/13292/happy-hobo">Happy Hobo</a>
+                
+            </div>
+        </div>
+    
+        <a name="54508"></a>
+        <div class="comment" id="comment-54508">
+            <div id="post-54508-score" class="comment-score"></div>
+            <div class="comment-text"><p>I usually get very good results with my Garmins but i have had High rise building shadowing problems in the past. I agree, do a screen grab of OSM draw on it and send that to them.</p></div>
+            <div class="comment-info" id="comment-54508-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '17, 08:32)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54501" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54501-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54463/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='d0yqBoBbmcXlx1Lu4FePHHMJMthJX1zh' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54463/merge-gpx-tracks-without-losing-data?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54463/merge-gpx-tracks-without-losing-data?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/merge/"
+            class="tag-link-merge"
+            title="see questions tagged'merge'using tags"
+            rel="tag">merge</a> <span class="tag-number">&#215;41</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 4, 2017, 8:40 p.m.">04 Feb '17, 20:40</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,361 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 6, 2017, 8:32 a.m.">06 Feb '17, 08:32</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/5604/mixed-way-types-but-same-name-the-same-road-how-to-dotag-that">mixed way types but same name / the same road - how to do/tag that?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5957/how-to-combine-osm-filesmap-data">How to Combine OSM files/map data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9124/am-i-doing-this-correctly">Am I doing this correctly?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12469/osmosis-merge-issue-pipeline-entities-are-not-sorted-or-contain-multiple-versions">Osmosis - merge issue (Pipeline entities are not sorted or contain multiple versions)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19904/merging-osm-files-with-osmosis-and-import-to-postgres-with-osm2pgsql">Merging OSM files with OSMOSIS and import to Postgres with OSM2PGSQL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22094/separate-roads">Separate roads?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24838/diffpatch-osm-files-using-foreign-key">Diff/patch .osm files using foreign key</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24987/import-kml-into-osm-file">Import .kml into .osm file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25734/how-to-merge-two-areas-in-id-or-potlatch">How to merge two areas in iD or Potlatch?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4132/merge-accounts-was-can-not-log-in-and-my-e-mail-service-has-been-closed">Merge accounts?  (Was: Can not log in, and my e-mail-service has been closed.)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

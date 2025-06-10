@@ -1,0 +1,883 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Building tiles server - OSM Help</title>
+        <meta name="description" content="Hi everyone, currently i&#39;m working on my own .net implementation of a tiles server. I&#39;ve made some progress but currently im facing a problem with gaps in the rendered lines (example motorways) Look at the image, there are gaps in the blue motorway. I&#39;m rendering data based on the nodes and ways rel..." />
+        <meta name="keywords" content="tileserver" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/58781/building-tiles-server" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/58781/building-tiles-server?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='YCzIBwYu4JumqAM2uFeaQnxXPoqrgkYa' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/58781/building-tiles-server">Building tiles server</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-58781-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58781/up/" rel="nofollow"> </a>
+<div id="post-58781-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-58781-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58781/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/58781/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi everyone,</p>
+<p>currently i'm working on my own .net implementation of a tiles server.
+I've made some progress but currently im facing a problem with gaps in the rendered lines (example motorways)
+Look at the image, there are gaps in the blue motorway.
+I'm rendering data based on the nodes and ways relations imported to my custom database.
+Any ideas what am I missing? I've already tried to include all types of 'roads' to my query.</p>
+<p>Thank you for any suggestions :)</p>
+<p><img src="https://help.openstreetmap.org/upfiles/osm_problem.JPG" alt="alt text"></p>
+<p>Here is the db structure, and a query answering scai's question
+So yes, all nodes seems to be imported correctly.
+and yes i am debuging the problem already for 2 days :)
+:<img src="https://help.openstreetmap.org/upfiles/osm_db_structure.JPG" alt="alt text"></p>
+<p>How data is rendered on the tile:
+i'm using this <a href="https://help.openstreetmap.org/upfiles/osm_problem.JPG">http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#C.23</a>
+to get lat and lng for each tile number (left top corner). Getting the +1 tile geoposition gives me right bottom corner. Let's call those two beginingGeoPosition and endGeoPosition.
+that gives me a set of nodes and their lat and lng.</p>
+<p>Knowing my tiles are 256x256 i can get a pixel possition for each node on the tile:</p>
+<pre><code>var x = 256 * (node.Longitude - beginingGeoPosition.Longitude ) / (endGeoPosition.Longitude - beginingGeoPosition.Longitude )
+var y = 256 * (node.Latitude - beginingGeoPosition.Latitude )/(endGeoPosition.Latitude -beginingGeoPosition.Latitude );
+</code></pre>
+<p>(currently it will work only for lat and lng &gt; 0, but thats not the point)</p>
+<p>so that gives us groups of points (for each way) on image tile positioned by their x and y.
+connectiong those points gives us a part of a motorway. Precisly in .net </p>
+<p><code>gfx.DrawLines(new Pen(Color.Blue, 3), linePoints);</code> it creates line through all the points in the linePoints array - each point has its x and y</p>
+<p>and the full query looks like this.</p>
+<pre><code>select n.nodeid, n.latitude, n.longitude, wn.wayid, wt.tagname, wt.tagvalue, wn.orderid
+                        from nodes n
+                        join waynodes wn on n.nodeid = wn.nodeid
+                        join waytags wt on wn.wayid = wt.wayid
+                        where wt.tagname IN ('route', 'area:highway', 'highway') and wt.tagvalue IN ('motorway','trunk','primary','secondary','tertiary','unclassified', 'road', 'motorway_link','trunk_link','primary_link','secondary_link','tertiary_link','unclassified_link','road_link')
+                        and n.latitude BETWEEN 52.30848 and 52.32191
+                        and n.longitude BETWEEN 15.49072 and 15.5127
+                        order by wn.orderid asc
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Aug '17, 09:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7ead15b2da5578cbe4ba69e985684623?s=32&amp;d=identicon&amp;r=g" alt="michal_poz's gravatar image" />
+    <p><a href="/users/14116/michal_poz">michal_poz</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="michal_poz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/58781/">
+                edited
+                <strong>24 Aug '17, 16:32</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-58781">
+    
+        <a name="58782"></a>
+        <div class="comment" id="comment-58782">
+            <div id="post-58782-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Please tell us at least the location or ideally the way IDs that won't get rendered.</p></div>
+            <div class="comment-info" id="comment-58782-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '17, 09:38)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58786"></a>
+        <div class="comment" id="comment-58786">
+            <div id="post-58786-score" class="comment-score"></div>
+            <div class="comment-text"><p>For example i'm issuing the problem for 52.319371, 15.494535
+I think the problem is about connecting the ways. I'm drawing roads for nodes (lat and lng) grouped by wayid, so one line on my img is build of connected points (nodes lat lng) in one group.</p></div>
+            <div class="comment-info" id="comment-58786-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '17, 11:11)</span>
+                <a class="comment-user userinfo" href="/users/14116/michal_poz">michal_poz</a>
+                
+            </div>
+        </div>
+    
+        <a name="58787"></a>
+        <div class="comment" id="comment-58787">
+            <div id="post-58787-score" class="comment-score">1</div>
+            <div class="comment-text"><p>This seems to be around <a href="http://www.openstreetmap.org/way/223282681">http://www.openstreetmap.org/way/223282681</a> and there doesn't seem to be an obvious correspondance between ways in OSM and what is missing. </p>
+
+<p>You'll need to describe in more detail what you have actually done to stand a chance of anyone being able to reply with useful information.</p></div>
+            <div class="comment-info" id="comment-58787-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '17, 11:20)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58788"></a>
+        <div class="comment not_top_scorer" id="comment-58788">
+            <div id="post-58788-score" class="comment-score"></div>
+            <div class="comment-text"><p>Maybe it helps to (re-)read about the basic OSM data model, i.e. <a href="https://wiki.openstreetmap.org/wiki/OSM_XML">https://wiki.openstreetmap.org/wiki/OSM_XML</a> and <a href="https://wiki.openstreetmap.org/wiki/Elements.">https://wiki.openstreetmap.org/wiki/Elements.</a></p></div>
+            <div class="comment-info" id="comment-58788-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '17, 11:34)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58792"></a>
+        <div class="comment not_top_scorer" id="comment-58792">
+            <div id="post-58792-score" class="comment-score"></div>
+            <div class="comment-text"><p>For example, it's exactly this line <a href="http://www.openstreetmap.org/way/497464371#map=14/52.3202/15.4986">http://www.openstreetmap.org/way/497464371#map=14/52.3202/15.4986</a> that is not rendered correctly.</p>
+
+<p>And to be more precise about what i alerady did: I've created db with tables that describes relations betwen nodes, ways, way tags (waytags values). Each node has its lat and lng.</p>
+
+<p>I've also created a api that provides an endpoint for z/x/y parameters. So based on z x and y (zoom and tile number) i can get the lat and lng coordinates.</p>
+
+<p>After that i can query my db getting all nodes betwen begining lat/lng and end lat/lng. It's a join query on ways and waytags so i get nodes for specific waytag value. In our discusion its highway = motorway It gives me all nodes between left top corner and bottom right corner of specific tile.</p>
+
+<p>Then i know that my tile is 256x256 px, so based on node lat and lng i can specifie its position on the tile - that gives me an array of points (nodes) so i can create a polyline which is drawn on my img.</p>
+
+<p>Hope it's clear enought what i just wrote. I could also post a quere here if that would help. Thanks again</p></div>
+            <div class="comment-info" id="comment-58792-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '17, 12:28)</span>
+                <a class="comment-user userinfo" href="/users/14116/michal_poz">michal_poz</a>
+                
+            </div>
+        </div>
+    
+        <a name="58793"></a>
+        <div class="comment not_top_scorer" id="comment-58793">
+            <div id="post-58793-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I've created db with tables that describes relations betwen nodes, ways, way tags (waytags values).</p>
+</blockquote>
+
+<p>That's not really enough detail - you know the schema, so you'll need to debug it.  Also you've not said how the data once retrieved from the database is turned into a tile.</p></div>
+            <div class="comment-info" id="comment-58793-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '17, 12:32)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58794"></a>
+        <div class="comment" id="comment-58794">
+            <div id="post-58794-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Then start debugging your software. Does way 497464371 and all corresponding nodes exist in your database? Does it get selected for rendering? What does the renderer finally do with it?</p></div>
+            <div class="comment-info" id="comment-58794-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '17, 12:34)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58810"></a>
+        <div class="comment not_top_scorer" id="comment-58810">
+            <div id="post-58810-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've added some more precised description to the topic on how i am drawing roads.
+Besides that...shouldn't i use relations that are grouping ways? i mean the relations in the osm xml file</p></div>
+            <div class="comment-info" id="comment-58810-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '17, 16:34)</span>
+                <a class="comment-user userinfo" href="/users/14116/michal_poz">michal_poz</a>
+                
+            </div>
+        </div>
+    
+        <a name="58827"></a>
+        <div class="comment" id="comment-58827">
+            <div id="post-58827-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/14116/michal_poz">@michal_poz</a>, have you had the time to test the hypothesis in my answer below? I posted it within minutes of your edit, so maybe you've missed it. Let us know if you're still seeing this problem!</p></div>
+            <div class="comment-info" id="comment-58827-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Aug '17, 12:33)</span>
+                <a class="comment-user userinfo" href="/users/14/tordanik">Tordanik</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58781" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58781-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/58781/building-tiles-server?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/58781/building-tiles-server?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/58781/building-tiles-server?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/58781/building-tiles-server?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="58811"></a>
+                    <div id="answer-container-58811" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58811-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58811/up/" rel="nofollow"> </a>
+<div id="post-58811-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-58811-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58811/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="michal_poz has selected this answer as the correct answer"
+        href="/accept_answer/58811/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The gaps in the highway seem to be suspiciously correlated with boundaries between tiles. This might be useful for debugging your problem.</p>
+<p>In particular, you write:</p>
+<blockquote>
+<p>After that i can query my db getting all nodes betwen begining lat/lng and end lat/lng.</p>
+</blockquote>
+<p>To render the section of a way that is within a given tile, you need at the very least one additional node beyond the border of the tile. Otherwise, the parts of the way that cross over into the adjacent tile will be missing.</p>
+<p>So if you indeed only query for nodes within the tile boundaries, this might explain the broken highways.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58811/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Aug '17, 16:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0626be5f46f32fce501353e8a5ec399c?s=32&amp;d=identicon&amp;r=g" alt="Tordanik's gravatar image" />
+    <p><a href="/users/14/tordanik">Tordanik</a><br/>
+    <span class="score" title="11998 reputation points"><span class="">12.0k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="106 badges"><span class="silver">&#9679;</span><span class="badgecount">106</span></span><span title="147 badges"><span class="bronze">&#9679;</span><span class="badgecount">147</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tordanik has 58 accepted answers">35&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58811">
+    
+        <a name="58836"></a>
+        <div class="comment" id="comment-58836">
+            <div id="post-58836-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I've tested it and that is what is cousing the problem
+When a single node is not returned in the query for a specific way and lat/ lng range im getting a gap on the edge of a tile. I've tested it by creating a query that returned data for 9 tiles (one tile that i am interested in and 8 other around that first one). That gave me a image with size 768x768 px (3 x256 = 768) and all roads were drawn correctly.
+So now i have to figure out how to add a additional point on the edge of a tile, that would make roads align with eachother.</p></div>
+            <div class="comment-info" id="comment-58836-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Aug '17, 12:58)</span>
+                <a class="comment-user userinfo" href="/users/14116/michal_poz">michal_poz</a>
+                
+            </div>
+        </div>
+    
+        <a name="58838"></a>
+        <div class="comment" id="comment-58838">
+            <div id="post-58838-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I've just got it working correctly. By querying db for data for all 9 tiles and drawing just the middle tile using all nodes.
+Its possible becouse .net graphic DrawLine method allows to pass also points with x/y possition less than 0.
+The line is just drawn and ends at the edge of an image.
+Rendering lasts a big longer but i've added a caching mechanism</p>
+
+<p>Than you all for your comments and help</p>
+
+<p>He is the result.<img alt="alt text" src="https://help.openstreetmap.org/upfiles/osm_result.JPG"></p></div>
+            <div class="comment-info" id="comment-58838-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Aug '17, 15:36)</span>
+                <a class="comment-user userinfo" href="/users/14116/michal_poz">michal_poz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58811" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58811-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/58781/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='YCzIBwYu4JumqAM2uFeaQnxXPoqrgkYa' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58781/building-tiles-server?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58781/building-tiles-server?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 24, 2017, 9:36 a.m.">24 Aug '17, 09:36</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,451 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 29, 2017, 8:01 a.m.">29 Aug '17, 08:01</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/16972/configure-linux-for-osm-tile-server">Configure Linux for OSM Tile Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17474/tirex-prefetching-of-next-zoom-level">Tirex: Prefetching of next zoom level</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19156/cannot-load-the-local-map-tiles-from-the-db-in-my-slippy-map-using-the-switch2osm-package">Cannot load the local map tiles from the DB in my slippy map – using the Switch2OSM package</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19638/ipv6-for-tileservers">IPv6 for Tileservers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20286/mod_tile-build-on-rhel5">mod_tile build on RHEL5</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20645/manually-installing-a-tileserver-setting-up-postgis-errors">Manually Installing a TileServer: Setting up PostGIS (errors)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20735/country-place-and-street-names-in-english-instead-of-local-language-for-my-own-mapserver">Country, place and street names in English instead of local language for  my own mapserver</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21512/amazon-ec2-tile-drawer-stuck-on-software-installing">Amazon ec2 Tile Drawer: Stuck on Software Installing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21909/increase-improve-speed-up-rendering-performance-of-my-own-tileserver">Increase / Improve / Speed Up Rendering Performance of my own tileserver</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16917/own-openstreetmap-tile-server-oneclick">Own OpenStreetMap Tile Server OneClick</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

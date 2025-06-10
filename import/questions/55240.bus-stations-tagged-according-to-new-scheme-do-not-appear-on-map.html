@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bus stations tagged according to new scheme do not appear on map - OSM Help</title>
+        <meta name="description" content="Hello, I recently added some bus stations according to what I understood to be the new scheme, tagging them as public_transport=station and bus=yes. Surprisingly none of them appears on the map, whereas stations tagged with amenity=bus_station are shown. Did I get something wrong and there is someth..." />
+        <meta name="keywords" content="bus_station,map,new_scheme,tagging,show" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/55240/bus-stations-tagged-according-to-new-scheme-do-not-appear-on-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55240/bus-stations-tagged-according-to-new-scheme-do-not-appear-on-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hWMTMw8VuyiAUGjkR98nEok7FEpNUYPP' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55240/bus-stations-tagged-according-to-new-scheme-do-not-appear-on-map">Bus stations tagged according to new scheme do not appear on map</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55240-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55240/up/" rel="nofollow"> </a>
+<div id="post-55240-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-55240-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55240/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55240/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I recently added some bus stations according to what I understood to be the new scheme, tagging them as public_transport=station and bus=yes. Surprisingly none of them appears on the map, whereas stations tagged with amenity=bus_station are shown. Did I get something wrong and there is something missing? I'm tempted to change the tags to the old scheme to make them visible.</p>
+<p>Knut</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bus_station/" class="post-tag tag-link-bus_station"
+                                        title="see questions tagged 'bus_station'" rel="tag">bus_station</a>
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                                    <a href="/tags/new_scheme/" class="post-tag tag-link-new_scheme"
+                                        title="see questions tagged 'new_scheme'" rel="tag">new_scheme</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                                    <a href="/tags/show/" class="post-tag tag-link-show"
+                                        title="see questions tagged 'show'" rel="tag">show</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Mar '17, 17:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f03c3c74641d9bd0999b9249921f5218?s=32&amp;d=identicon&amp;r=g" alt="Knut%20Hildebrandt's gravatar image" />
+    <p><a href="/users/13506/knut-hildebrandt">Knut Hildebr...</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Knut Hildebrandt has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55240">
+    
+        <a name="55244"></a>
+        <div class="comment" id="comment-55244">
+            <div id="post-55244-score" class="comment-score">2</div>
+            <div class="comment-text"><p>For info, there's discussion about the rendering of these on the "standard" map style over at <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/311">https://github.com/gravitystorm/openstreetmap-carto/issues/311</a> .  Other map styles may already render them, of course.</p></div>
+            <div class="comment-info" id="comment-55244-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '17, 18:29)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55246"></a>
+        <div class="comment" id="comment-55246">
+            <div id="post-55246-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the hint. As much as I understood, there is a rendering problem with the new scheme that persists for almost 2 1/2 years. And the only viable solution for the moment seems to be double tagging. Thus I won't replace the new tags with the old ones but add these  too in the hope the stops and stations will be shown on the maps.</p>
+
+<p>BTW, this problem does not only exist on the Openstreetmap website but also in OsmAnd,the navigator I use.</p></div>
+            <div class="comment-info" id="comment-55246-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '17, 21:23)</span>
+                <a class="comment-user userinfo" href="/users/13506/knut-hildebrandt">Knut Hildebr...</a>
+                
+            </div>
+        </div>
+    
+        <a name="55249"></a>
+        <div class="comment" id="comment-55249">
+            <div id="post-55249-score" class="comment-score"></div>
+            <div class="comment-text"><p>Related: <a href="https://help.openstreetmap.org/questions/43542/tagging-a-bus-station">tagging a bus station</a>.</p></div>
+            <div class="comment-info" id="comment-55249-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '17, 12:01)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="55251"></a>
+        <div class="comment" id="comment-55251">
+            <div id="post-55251-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Note that <code>amenity=bus_station</code> is <em>not</em> for tagging individual bus stops, it is for bus stations, i.e. large installations where many buses stop, typically with service buildings.</p></div>
+            <div class="comment-info" id="comment-55251-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '17, 12:15)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="55252"></a>
+        <div class="comment" id="comment-55252">
+            <div id="post-55252-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/666/sleske">@sleske</a> Thanks for the hints. I know that amenity=bus_station is not for individual stops and I only used it for smaller or bigger bus stations. And I also understood how to use the new scheme but unfortunately stations only tagged according to it, are not shown on the maps ;-(</p></div>
+            <div class="comment-info" id="comment-55252-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '17, 12:39)</span>
+                <a class="comment-user userinfo" href="/users/13506/knut-hildebrandt">Knut Hildebr...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55240" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55240-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55240/bus-stations-tagged-according-to-new-scheme-do-not-appear-on-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55240/bus-stations-tagged-according-to-new-scheme-do-not-appear-on-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55240/bus-stations-tagged-according-to-new-scheme-do-not-appear-on-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55240/bus-stations-tagged-according-to-new-scheme-do-not-appear-on-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55250"></a>
+                    <div id="answer-container-55250" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55250-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55250/up/" rel="nofollow"> </a>
+<div id="post-55250-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-55250-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55250/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As mentioned by SomeoneElse's comment, there are currently two schemes for tagging bus stops:</p>
+<ul>
+<li>the old scheme: put a node where the bus shelter/stop sign is, tag it <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop"><code>highway=bus_stop</code></a></li>
+<li>the new scheme, called <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport"><strong>Public Transport scheme</strong></a>: tag the stop position on the road as <code>public_transport=stop_position</code>, <code>bus=yes</code>, and the shelter position as <code>public_transport=platform</code> (and ideally combine them into a relation tagged <code>type=public_transport</code>, <code>public_transport=stop_area</code>).</li>
+</ul>
+<p>An introduction to the new scheme is under <a href="https://wiki.openstreetmap.org/wiki/Key:public_transport">Key:public_transport</a>.</p>
+<hr>
+<p>The new Public Transport scheme was introduced to address problems with the old scheme, mainly because the old scheme did not work well for other types of public transport.</p>
+<p>However, the OSM main map does not yet render the new scheme - see <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/311">issue 311</a> for details.</p>
+<p><strong>So, for the time being, the pragmatic solution is to tag according to <em>both</em> schemes</strong> - that means you are compatible with all data consumers. If there is ever a consensus to abandon the old scheme, the old tags can be removed automatically if desired.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55250/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Mar '17, 12:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6c2dd6a39d3f38f1bb47a8c1fe8325e2?s=32&amp;d=identicon&amp;r=g" alt="sleske's gravatar image" />
+    <p><a href="/users/666/sleske">sleske</a><br/>
+    <span class="score" title="4090 reputation points"><span class="">4.1k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="78 badges"><span class="bronze">&#9679;</span><span class="badgecount">78</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sleske has 19 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55250/">
+                edited
+                <strong>23 Mar '17, 12:12</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55250">
+    
+</div>
+<div id="comment-tools-55250" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55250-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55240/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hWMTMw8VuyiAUGjkR98nEok7FEpNUYPP' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55240/bus-stations-tagged-according-to-new-scheme-do-not-appear-on-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55240/bus-stations-tagged-according-to-new-scheme-do-not-appear-on-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/show/"
+            class="tag-link-show"
+            title="see questions tagged'show'using tags"
+            rel="tag">show</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/bus_station/"
+            class="tag-link-bus_station"
+            title="see questions tagged'bus_station'using tags"
+            rel="tag">bus_station</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/new_scheme/"
+            class="tag-link-new_scheme"
+            title="see questions tagged'new_scheme'using tags"
+            rel="tag">new_scheme</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 22, 2017, 5:47 p.m.">22 Mar '17, 17:47</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,776 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 23, 2017, 12:39 p.m.">23 Mar '17, 12:39</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/77898/religious-area-not-showing-well-on-map">Religious Area not showing well on map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2049/how-to-show-an-updated-list-of-wlan-hotspots-on-an-userdefined-map">How to show an updated list of WLAN-Hotspots on an userdefined map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5164/how-to-map-loading-docks">How to map Loading Docks?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/72106/simple-url-query-to-display-address">simple url query to display address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23784/can-we-create-a-personal-map-to-show-a-tour-route">can we create a personal map to show a tour route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5054/how-do-i-map-a-underground-gas-line">How do I map a underground gas line?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/134/how-do-i-map-a-road-that-has-traffic-lights-only-in-one-direction">How do I map a road that has traffic lights only in one direction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/129/how-to-tag-a-no-entrance-except-to-bus-and-bicycle">How to tag a &#39;no entrance except to bus and bicycle&#39;?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don&#39;t show up on the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/153/how-do-you-tell-if-a-minor-service-road-is-accessprivate-destination-or-permissive">How do you tell if a minor service road is access=private, destination, or permissive?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Should parking=street_side connect to the road? - OSM Help</title>
+        <meta name="description" content="There are some street side parking spaces mapped by a particular user like this:  These small service roads don&#39;t really exist, but are used to fill the gap between a road mapped as a way without an area and a street side parking space. How do I go about correcting this? I see following options:  pa..." />
+        <meta name="keywords" content="editing,tagging,road,parking" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/79745/should-parkingstreet_side-connect-to-the-road" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/79745/should-parkingstreet_side-connect-to-the-road?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='p3ksz1fcxiAT0Mz7JXg9Fo81zjoWMsEA' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/79745/should-parkingstreet_side-connect-to-the-road">Should parking=street_side connect to the road?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-79745-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79745/up/" rel="nofollow"> </a>
+<div id="post-79745-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-79745-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79745/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/79745/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>There are some street side parking spaces mapped by a particular user like this:
+<img src="https://help.openstreetmap.org/upfiles/original_O2vi3Fd.PNG" alt="alt text"></p>
+<p>These small service roads don't really exist, but are used to fill the gap between a road mapped as a way without an area and a street side parking space.</p>
+<p>How do I go about correcting this? I see following options:</p>
+<ol>
+<li>parking:lane could be used, but I don't want to remove details added by other mapper.</li>
+<li>
+<p>Tag:parking=street_side wiki article has a picture where street side parking space is not connected to the road at all. But imagine two parallel roads with parking spaces in between. There is no way of knowing from which road they are accessible. And shouldn't we try to connect all infrastructure, which is actually connected? <img src="https://wiki.openstreetmap.org/w/images/0/06/Street_side_parking_carto_rendering.png" alt="alt text"></p>
+</li>
+<li>
+<p>I could connect street-side parking directly to the road, so that it would share one side with the road. But I don't actually know if this is acceptable. <img src="https://help.openstreetmap.org/upfiles/variant1_oGefjMw.png" alt="alt text"></p>
+</li>
+<li>Maybe I'm wrong and the fake service ways are actually acceptable.</li>
+</ol>
+<p>Personally, I think that option 3 is better, but since option 2 is mentioned in wiki, is it the only acceptable option?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                                    <a href="/tags/road/" class="post-tag tag-link-road"
+                                        title="see questions tagged 'road'" rel="tag">road</a>
+                                
+                                    <a href="/tags/parking/" class="post-tag tag-link-parking"
+                                        title="see questions tagged 'parking'" rel="tag">parking</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Apr '21, 18:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b5b23f132c989f20ec4286a6aedc5d55?s=32&amp;d=identicon&amp;r=g" alt="qqqqqqqqqqqqqqqqqqqq's gravatar image" />
+    <p><a href="/users/20072/qqqqqqqqqqqqqqqqqqqq">qqqqqqqqqqqq...</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="qqqqqqqqqqqqqqqqqqqq has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/79745/">
+                edited
+                <strong>19 Apr '21, 20:51</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-79745">
+    
+        <a name="79747"></a>
+        <div class="comment" id="comment-79747">
+            <div id="post-79747-score" class="comment-score"></div>
+            <div class="comment-text"><p>I only just learned about this tag today. I'm not really sure of the "right" way to represent the connectivity for these.</p>
+
+<p>That being said, I would argue that option 3 is objectively "wrong". If the parking was connected to the highway way like in your example image, it would semantically be saying that the parking extends out to the centerline of the highway, which wouldn't reflect reality.</p></div>
+            <div class="comment-info" id="comment-79747-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Apr '21, 19:32)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="79751"></a>
+        <div class="comment" id="comment-79751">
+            <div id="post-79751-score" class="comment-score"></div>
+            <div class="comment-text"><p>In reality roads aren't narrow lines either, but we accept them as a such simplified representation on maps. In my personal opinion, maps are always a simplified version of reality. For me, this would be mean that the parking spaces extend UNTIL the road, not it's CENTERLINE.</p>
+
+<p>As another example, imagine a paved road to which connects a dirt road. The dirt road would connect as you say to centerline, but near the connection point in reality it would be a paved surface, which won't be represented on a map.</p>
+
+<p>This is why I feel like the option 3 is better, but thank you for your opinion anyway, that's why I'm asking.</p></div>
+            <div class="comment-info" id="comment-79751-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Apr '21, 20:48)</span>
+                <a class="comment-user userinfo" href="/users/20072/qqqqqqqqqqqqqqqqqqqq">qqqqqqqqqqqq...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79745" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79745-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/79745/should-parkingstreet_side-connect-to-the-road?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/79745/should-parkingstreet_side-connect-to-the-road?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/79745/should-parkingstreet_side-connect-to-the-road?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/79745/should-parkingstreet_side-connect-to-the-road?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="79760"></a>
+                    <div id="answer-container-79760" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79760-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79760/up/" rel="nofollow"> </a>
+<div id="post-79760-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-79760-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79760/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I would just leave them as standalone parking (option 2). Most routing software will span a gap of a few metres for routing purposes, all the other approaches involve mapping spurious things that aren't there: there are no service roads for access, the parking does not span to the road centre-line. Option 1 is often the best because it fits better with OSM's centre-line data model, but I agree with you about removing detail.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79760/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Apr '21, 10:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79760">
+    
+        <a name="79770"></a>
+        <div class="comment" id="comment-79770">
+            <div id="post-79770-score" class="comment-score"></div>
+            <div class="comment-text"><p>The small service roads feel definitely wrong. When you change them you could leave a comment in the change set that created those pointing to the wiki.</p></div>
+            <div class="comment-info" id="comment-79770-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Apr '21, 20:17)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="83141"></a>
+        <div class="comment" id="comment-83141">
+            <div id="post-83141-score" class="comment-score"></div>
+            <div class="comment-text"><p>If this is indeed the "correct" answer, software like Vespucci (which internally uses Osmosis to find issues) needs to stop complaining about unconnected parking lots, because that's where people (including myself) get the idea to insert those fake service roads in the first place.</p></div>
+            <div class="comment-info" id="comment-83141-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jan '22, 12:18)</span>
+                <a class="comment-user userinfo" href="/users/19990/smheidrich">smheidrich</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79760" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79760-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="79773"></a>
+                    <div id="answer-container-79773" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79773-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79773/up/" rel="nofollow"> </a>
+<div id="post-79773-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-79773-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79773/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Parking without roads connected to it either seems inaccessible or not completely mapped.For fine detail parking mapping, if imagery is good enough, I use gridify plugin to convert to individual parking spaces. I link them and the general area all into a relation. Either way, I extend the area to reach the road and not go beyond unless there is more parking on its other side. I connect it to the road when the road is an edge/point of the now defined area. For the first image, I'd drag those diagonal edges out toward the road at the same angle which results in being able to see the parking flow even without all parking spaces mapped nor does it require one-way to be mapped/correct to see through such omissions/errors. 'if' I separated the 5 from the main area, id still extend it to the road as I did with the little block just south of it.https://www.openstreetmap.org/#map=19/33.64299/-112.22476 shows one example of how that can turn out for how it works and how it gets awkward. I lose consistency just to the right of 'arrowhead towne center transit center' with the long extension to the 5 spots to its right and they reach beyond the road and back up to the above area where the majority of parking reaches down to it. I also chose to divide the larger area into two separate areas which gets into a micromapping thing and I do have them linked into the same relation. Not sure why the tile renders at best zoom with two 'p' symbols for the bigger left half. I could find other big/small examples if desired though I didn't know what the community even thinks of this work.
+  The thought that the road/serviceway doesn't extend into the parking...does for most spots I have mapped; asphalt continued to flow from being a road to being a parking spot without any barrier. I guess if a dispute came up then you could start mapping each driveway into each spot. I guess we could also make the area connecting between be area=parking-way or some fun.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79773/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Apr '21, 02:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/11863de191822fdbf4429e56a4323366?s=32&amp;d=identicon&amp;r=g" alt="mirror176's gravatar image" />
+    <p><a href="/users/16568/mirror176">mirror176</a><br/>
+    <span class="score" title="45 reputation points">45</span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mirror176 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79773">
+    
+        <a name="79789"></a>
+        <div class="comment" id="comment-79789">
+            <div id="post-79789-score" class="comment-score"></div>
+            <div class="comment-text"><p>What are suggesting in short is: make the parking connected to the road, but map parking spaces with amenity:parking_space, if I understood you correctly.</p>
+
+<p>When the road isn't wide it may look good, but if the road has many lanes and the centerline if far from the road egde, then the parking will extend very far into the road. I feel like both option 2 and option 3 are not ideal now and have flaws.</p></div>
+            <div class="comment-info" id="comment-79789-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Apr '21, 11:49)</span>
+                <a class="comment-user userinfo" href="/users/20072/qqqqqqqqqqqqqqqqqqqq">qqqqqqqqqqqq...</a>
+                
+            </div>
+        </div>
+    
+        <a name="79791"></a>
+        <div class="comment" id="comment-79791">
+            <div id="post-79791-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/16568/mirror176">@mirror176</a>: this seems hugely complicated to say "here are 5 parking spaces at the side of the road". We should keep OSM simple enough that anyone can quickly add such information</p></div>
+            <div class="comment-info" id="comment-79791-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Apr '21, 13:16)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79773" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79773-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/79745/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='p3ksz1fcxiAT0Mz7JXg9Fo81zjoWMsEA' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79745/should-parkingstreet_side-connect-to-the-road?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79745/should-parkingstreet_side-connect-to-the-road?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/road/"
+            class="tag-link-road"
+            title="see questions tagged'road'using tags"
+            rel="tag">road</a> <span class="tag-number">&#215;223</span><br/>
+        
+        <a href="/tags/parking/"
+            class="tag-link-parking"
+            title="see questions tagged'parking'using tags"
+            rel="tag">parking</a> <span class="tag-number">&#215;71</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 19, 2021, 6:41 p.m.">19 Apr '21, 18:41</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,762 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 21, 2022, 12:18 p.m.">21 Jan '22, 12:18</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/4870/road-or-unclassified-for-unknown-highway">&#39;road&#39; or &#39;unclassified&#39; for unknown highway?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6307/bridleway-on-metalled-road">Bridleway on metalled road</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3511/how-to-delete-existing-blocks-on-osm">How to delete existing blocks on OSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4319/do-i-add-address-tags-to-the-poi-node-or-create-a-separate-node">Do I add address tags to the POI node or create a separate node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5808/garmin-1490t-no-sd-card">Garmin 1490T no SD Card</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6107/how-to-tag-a-bank-that-does-not-offer-service-to-the-general-public">How to tag a bank that does not offer service to the general public?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1083/tagging-seasonal-use-roads-questions-road-type-blockout-months-4x4">Tagging &quot;seasonal use roads&quot; (questions: road type, blockout months, 4x4)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2365/how-to-mark-bad-road-condition">How to mark bad road condition?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area">When does it make sense to use place=* on an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6915/difference-between-residential-and-living-street">Difference between &quot;residential&quot; and &quot;living street&quot;</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can&#39;t update osm2pgsql database - OSM Help</title>
+        <meta name="description" content="Hi Alex_Z, &#39;fraid this is post is not an answer but a me-too. I am hoping you resolved your problem and can let me know how... I have got my system set up a bit simpler, with only the one database &#39;gis&#39;, used for rendering tiles. I set everything up mostly according to the instructions on switch2osm..." />
+        <meta name="keywords" content="osm2pgsql,mapnik,update" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/21517/cant-update-osm2pgsql-database" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/21517/cant-update-osm2pgsql-database?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='a2ZMfuVDn7Msf25z1fElTi66DDcb8SB2' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/21517/cant-update-osm2pgsql-database">Can&#39;t update osm2pgsql database</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-21517-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21517/up/" rel="nofollow"> </a>
+<div id="post-21517-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-21517-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21517/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/21517/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi Alex_Z, 'fraid this is post is not an answer but a me-too. I am hoping you resolved your problem and can let me know how...
+I have got my system set up a bit simpler, with only the one database 'gis', used for rendering tiles. I set everything up mostly according to the instructions on switch2osm.org but it is proving a bit of a struggle, mostly because I only have a slow old machine available to use for the installation.</p>
+<p>Because of space and time constraints I did not use the full planet but used a map of GB downloaded from geofabrik. When rendered it I was able to use mobac to supply myself and some friends with some atlases for our mobile phones, so the main aim was achieved.</p>
+<p>After about 10 days I thought I had better set up a system to update the database so I followed the instructions in Minutely_Mapnik for a daily update. The resulting merged update file was 1G+ which seemed a bit large but I went ahead.
+Unfortunately the m/c hung that evening and I think it was a memory problem so I ran it again the next day without anything much else running and the osm2pgsql run completed in about 10 hours.New tiles were being rendered and everything seemed ok.
+So the day after that success I thought I would continue with the latest daily update (from geofabrik) but for no reason I can understand yet this won't enter the database, and I have the same errors you reported:</p>
+<p>%osm2pgsql -a -v -dgis -C1600 -e18 -oexpire-list -s --drop changes.osc.gz</p>
+<p>osm2pgsql SVN version 0.81.0 (64bit id space)</p>
+<p>Using projection SRS 900913 (Spherical Mercator)</p>
+<p>Setting up table: planet_osm_point</p>
+<p>NOTICE:  table "planet_osm_point_tmp" does not exist, skipping</p>
+<p>Setting up table: planet_osm_line</p>
+<p>etc...
+..until</p>
+<p>Allocating memory for sparse node cache</p>
+<p>Node-cache: cache=1600MB, maxblocks=0*204801, allocation method=8192</p>
+<p>Mid: pgsql, scale=100 cache=1600</p>
+<p>Setting up table: planet_osm_nodes</p>
+<p>PREPARE insert_node (int8, int4, int4, text[]) AS INSERT INTO planet_osm_nodes VALUES ($1,$2,$3,$4);</p>
+<p>PREPARE get_node (int8) AS SELECT lat,lon,tags FROM planet_osm_nodes WHERE id = $1 LIMIT 1;</p>
+<p>PREPARE delete_node (int8) AS DELETE FROM planet_osm_nodes WHERE id = $1;</p>
+<p>failed: ERROR:  relation "planet_osm_nodes" does not exist</p>
+<p>LINE 1: ...rt_node (int8, int4, int4, text[]) AS INSERT INTO planet_osm...</p>
+<pre><code>                                                         ^
+</code></pre>
+<p>Error occurred, cleaning up</p>
+<hr>
+<p>I don't know how to query the database effectively from a command line to confirm if planet_osm_nodes is there or not,
+but I am right now running renderd, which is querying the db of course, and I am watching the logs in 
+pg_activity, all seems well and tiles are appearing.</p>
+<p>Minutely Mapnik had another suggestion for updating the database using osmosis, so I tried that too.
+Perhaps a bit foolish of me 'cos I don't know what it is doing exactly. I got errors again :-(</p>
+<p>%osmosis --read-xml-change file="changes.osc.gz" --write-pgsql-change database=gis
+ Apr 14, 2013 8:31:39 AM org.openstreetmap.osmosis.core.Osmosis run</p>
+<p>INFO: Osmosis Version 0.43-SNAPSHOT</p>
+<p>Apr 14, 2013 8:31:42 AM org.java.plugin.registry.xml.ManifestParser &lt;init&gt;</p>
+<p>INFO: got SAX parser factory - org.apache.xerces.jaxp.SAXParserFactoryImpl@681db8</p>
+<p>...more stuff until...</p>
+<p>Apr 14, 2013 8:19:43 AM org.openstreetmap.osmosis.core.pipeline.common.ActiveTaskManager waitForCompletion</p>
+<p>SEVERE: Thread for task 1-read-xml-change failed</p>
+<p>org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [SELECT version FROM schema_info]; nested exception is org.postgresql.util.PSQLException: ERROR: relation "schema_info" does not exist</p>
+<p>...and so on...</p>
+<p>Anybody any ideas about what I have done wrong?
+I have a copy of the database from before the updates and I will probably go back to that and go through the update steps again to see if I can find where I went wrong.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                                    <a href="/tags/update/" class="post-tag tag-link-update"
+                                        title="see questions tagged 'update'" rel="tag">update</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Apr '13, 09:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1bca123c0c1f7ff52cb5ac0972837cc7?s=32&amp;d=identicon&amp;r=g" alt="Panca%20Kanga's gravatar image" />
+    <p><a href="/users/5906/panca-kanga">Panca Kanga</a><br/>
+    <span class="score" title="30 reputation points">30</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Panca Kanga has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/21517/">
+                converted to question
+                <strong>14 Apr '13, 11:45</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+            <p><a href="/users/5/richard">Richard ♦</a><br/>
+            <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-21517">
+    
+        <a name="21520"></a>
+        <div class="comment" id="comment-21520">
+            <div id="post-21520-score" class="comment-score"></div>
+            <div class="comment-text"><p>Converted to question rather than just a 'me too' on someone else's post.</p></div>
+            <div class="comment-info" id="comment-21520-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '13, 11:46)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-21517" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21517-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/21517/cant-update-osm2pgsql-database?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/21517/cant-update-osm2pgsql-database?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/21517/cant-update-osm2pgsql-database?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/21517/cant-update-osm2pgsql-database?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="21534"></a>
+                    <div id="answer-container-21534" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-21534-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21534/up/" rel="nofollow"> </a>
+<div id="post-21534-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-21534-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21534/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is guessing a bit of what might have gone wrong, but one possible issue is your use of "--drop"</p>
+<p>osm2pgsql creates two sets of tables. 1) The rendering tables "planet_osm_point" "planet_osm_line" "planet_osm_roads" and "planet_osm_polygon" and 2) the "slim mode" tables "planet_osm_nodes" "planet_osm_ways" and "planet_osm_rels".</p>
+<p>For rendering, only the rendering tables are needed. These contain a lossy (not all tags and data are needed), transformed ( using postgis geometries rather than OSM nodes and ways) version of the OSM data optimised for rendering.</p>
+<p>In the slim mode tables on the other hand, the (more or less) original OSM data is stored. This is necessary during the initial import if you don't have enough memory to store everything in RAM and for updating the data with the diff files. It is however not necessary for rendering with renderd.</p>
+<p>The --drop option deletes the slim mode tables after the initial import. This is useful if you don't intend to run updates, as it saves time during the initial import and reduces the amount of disk space you need by about half.</p>
+<p>If you do want to run updates, you will need to re-import the entire data (UK) from scratch in slim mode and without the --drop option. After that you should be able to do diff imports as described above. But again make sure you don't have the --drop option specified.</p>
+<p>1Gb+ for a single days update seems excessive (if that is the compressed size). You can get daily diffs covering the entire planet at <a href="http://planet.openstreetmap.org/replication/day/000/000/">http://planet.openstreetmap.org/replication/day/000/000/</a> and they are about 50 - 100Mb compressed. You can also get daily diff files only for GB at <a href="http://download.geofabrik.de/europe/great-britain-updates/000/000/">http://download.geofabrik.de/europe/great-britain-updates/000/000/</a> which are about 1 - 5Mb in size.</p>
+<p>With regard to osmosis, I don't think you can mix osm2pgsql and osmosis databases, as they use an entirely different data layout in the database.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/21534/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Apr '13, 01:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32c974c4ca8b246698c2b82c64924da5?s=32&amp;d=identicon&amp;r=g" alt="apmon's gravatar image" />
+    <p><a href="/users/65/apmon">apmon</a><br/>
+    <span class="score" title="6527 reputation points"><span class="">6.5k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="apmon has 9 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-21534">
+    
+</div>
+<div id="comment-tools-21534" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21534-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="21562"></a>
+                    <div id="answer-container-21562" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-21562-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21562/up/" rel="nofollow"> </a>
+<div id="post-21562-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-21562-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21562/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thank you very much apmon , that was very clear and helpful, not least because you confirm what I was beginning to suspect about the --drop flag.</p>
+<p>I think there were 3 possible contributing causes for the problem I was having:</p>
+<ol>
+<li>I misused the --drop flag of osm2pgsql</li>
+<li>My machine ran out of memory and hung while the database was updating. I had to switch it off to reboot it.</li>
+<li>I may have been using a corrupted changes.osc.gz file.</li>
+</ol>
+<p>The results of these 3 things may have been cumulative but I suspect my inclusion of the --drop flag would have been enough.</p>
+<h2>The rest of this email is just an extension on the above observation.</h2>
+<p>apmon&gt; osm2pgsql creates two sets of tables...</p>
+<p>I don't know anything about the structure of the database so this is interesting to find out. Thanks for the explanation.</p>
+<p>After I wrote to help.openstreetmap I continued trying to check out what I had done wrong.
+First I made a new directory-dump of my database.
+When I compared that dump with the original one it was much smaller in size and contained fewer files.
+So then I looked up the appropriate pgsql syntax to list the tables and confirmed (as per the error message) that my problem, planet_osm_nodes, among others was indeed missing.</p>
+<p>apmon&gt; The --drop option deletes the slim mode tables after the initial import...</p>
+<p>osm2pgsql --help suggested that --drop deleted "temporary tables after import", so that misled me, though checking again I see there is a rider: "(no updates)"which was doubtless intended to warn against using --drop with updates.
+So that would completely explain my lost tables.</p>
+<p>I 'drop'ed the existing (broken) database and reloaded the good copy from the dump I made at the end  of March.</p>
+<p>apmon&gt;If you do want to run updates, you will need to re-import the entire data (UK) from scratch in slim mode ...</p>
+<p>In normal circumstances it would be a bit daft rebuild the db from a dump, wouldn't it? It took about as long to load it back in as it takes to download and instal an up-to-date version of the UK db. But it did take me back to where I was so I could try to check the wrong steps I had made.</p>
+<p>With the database back I used wget to get the next change file:</p>
+<p>%wget <a href="http://download.geofabrik.de/europe/great-britain-updates/000/000/026.osc.g">http://download.geofabrik.de/europe/great-britain-updates/000/000/026.osc.g</a></p>
+<p>(I used wget to get one file because I was not entirely sure if I had set up the osmosis replication command correctly).</p>
+<p>and used osm2pgsql to add that (Even before your reply I was suspicious about te --drop flag and did not include it):</p>
+<p>%osm2pgsql -a -dgis -v -e6-15 -oexpire-list26 -s 026.osc.gz</p>
+<p>All the tables were still there. So that was clearly a step in the right direction for me.</p>
+<p>So next I set the maxInterval option in configuration.txt to 86400 sec (1 day) and used osmosis to get the next change file in my sequence:</p>
+<p>osmosis --read-replication-interval workingDirectory=./ --simplify-change --write-xml-change  change27.osc.gz</p>
+<p>and added it to the database. All ok.</p>
+<p>apmon&gt;...make sure you don't have the --drop option specified.</p>
+<p>I was going to try adding a group of changes with the  --drop flag included in the osm2pgsql line (just to see what would happen) but I think basically, and thanks to your reply, I can now say "QED" and not risk destroying the db again.</p>
+<p>apmon&gt;1Gb+ for a single days update seems excessive (if that is the compressed size)</p>
+<p>Originally I had used osmosis to download and merge about 10 days worth of change files, which might explain why the change.osc.gz file was so large.
+I have deleted the file now so can't confirm the size again. Maybe I just read the output from ls -l  wrong. I am quite capable of such a thing.</p>
+<p>I have experimented a bit more, and currently, with my setup I can only download one daily file at a time with the above osmosis command.
+If I put a period of two days (172800 secs) in the config.txt file (or a 0) and try to download and merge two (or more) daily files the command drops out with errors. The errors scrolled off the top of the screen and were not obvious so this is what leads me to think I had previously been using a corrupted change file.</p>
+<p>I don't think it is worth reporting this as a bug as the m/c I am using is only a 5 year old laptop installed with fedora18 and with &lt;1G memory and a 1.6GHz Pentium III CPU. I expect it is complicit with whatever faults I might see.</p>
+<p>BTW. There is also a bit-count difference between the files returned by osmosis and those downloaded by wget:</p>
+<p>ls -l changes-28.osc.gz 028.osc.gz
+-rw-rw-r--. 1 paka paka 1505042 Mar 31 02:43 028.osc.gz
+-rw-rw-r--. 1 paka paka 1505053 Apr 15 14:03 changes-28.osc.gz</p>
+<p>If you unzip them and run od -x on them they don't look like the same file.
+I don't know what the significance of that is. Though I assume it is a result of the --simplify-change flag.</p>
+<p>apmon&gt;With regard to osmosis, I don't think you can mix osm2pgsql and osmosis databases, as they use an entirely different data layout in the database.</p>
+<p>Thank you again. That is worth noting too.
+Looking back through the osmosis_detailed_usage in the wiki I realised that, as you say, it explains that I would need to do some more work to alter the configuration of the db to work with osmosis.</p>
+<p>As I don't exactly understand what it is that should be done - The wiki admits at one point that the term `schema' (the subject of the error when I ran the osmosis command) is context dependant - so I think I will leave well alone, (for now:-) and stick with using osm2pgsql for updating the db.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/21562/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Apr '13, 23:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1bca123c0c1f7ff52cb5ac0972837cc7?s=32&amp;d=identicon&amp;r=g" alt="Panca%20Kanga's gravatar image" />
+    <p><a href="/users/5906/panca-kanga">Panca Kanga</a><br/>
+    <span class="score" title="30 reputation points">30</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Panca Kanga has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-21562">
+    
+</div>
+<div id="comment-tools-21562" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21562-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/21517/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='a2ZMfuVDn7Msf25z1fElTi66DDcb8SB2' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/21517/cant-update-osm2pgsql-database?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/21517/cant-update-osm2pgsql-database?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/update/"
+            class="tag-link-update"
+            title="see questions tagged'update'using tags"
+            rel="tag">update</a> <span class="tag-number">&#215;199</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 14, 2013, 9:21 a.m.">14 Apr '13, 09:21</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>17,510 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 15, 2013, 11:06 p.m.">15 Apr '13, 23:06</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/4789/how-to-configure-postgresql-for-mapnik-hourly-updates">How to configure postgresql for mapnik hourly updates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66220/how-do-i-periodically-update-my-tile-server-and-keep-it-up-to-date">How do I periodically update my tile server and keep it up to date</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15115/what-connection-is-there-between-mapnik-cyclemap-and-the-others">What connection is there between Mapnik, Cyclemap and the others?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11179/wie-haufig-wird-die-standard-karte-auf-osmorg-aktualisiert">Wie häufig wird die Standard-Karte auf OSM.org aktualisiert?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11796/how-to-setup-localised-maps">How to setup Localised maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13458/does-planet_osm_roads-of-the-osm2pgsqlschema-contain-all-roads">Does planet_osm_roads of the Osm2pgsql/schema contain all roads?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6172/why-is-the-coastline-updated-only-once-a-month">[closed] Why is the coastline updated only once a month?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9875/duplicate-key-value-violates-unique-constraint-planet_osm_nodes_pkey">duplicate key value violates unique constraint &quot;planet_osm_nodes_pkey&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10677/setting-postgis-as-a-datasource">Setting PostGIS as a datasource</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11542/mapnik-error-column-generatorsource-does-not-exist">Mapnik error:  column &quot;generator:source&quot; does not exist</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

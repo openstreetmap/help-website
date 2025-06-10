@@ -1,0 +1,770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Complex routes of nested ways - OSM Help</title>
+        <meta name="description" content="Several abandoned railways in our area have been converted to multi-use trails. Many third party users of OSM data do not support semicolon separated values. So my question is; how to map these complex scenarios where trails have multiple uses and trails do not form a simple hierarchy: Gordon Glaves..." />
+        <meta name="keywords" content="multi-use,railway,route,relation,abandoned" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/32432/complex-routes-of-nested-ways" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/32432/complex-routes-of-nested-ways?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='12wGDQ6kWZVntpOGqfWjO68808JYUgdr' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/32432/complex-routes-of-nested-ways">Complex routes of nested ways</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-32432-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32432/up/" rel="nofollow"> </a>
+<div id="post-32432-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-32432-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32432/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/32432/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Several abandoned railways in our area have been converted to multi-use trails.
+Many third party users of OSM data do not support semicolon separated values.
+So my question is; how to map these complex scenarios where trails have multiple uses and trails do not form a simple hierarchy:</p>
+<p>Gordon Glaves Memorial Parkway in Brantford is a multi-use trail through parks and along riverbanks.  Sites like waymarkedtrails.org expect a separate relations for each use (bicycle, hiking, inline_skating).  This in itself; is not so difficult to code.</p>
+<p>Some sections of the Gordon Glaves Memorial Parkway (GGMP) are part of Trans-Canada Trail (TCT); a cross-Canada multi-use trail that sometimes uses the shoulder of rural roads.</p>
+<p>How is it best to map relations for GGMP and TCT?
+A) Should GGMP be a collection of two routes (one that is part of TCT and the other is not)?
+B) Since third party sites want multi relations for multi use; is it best to create a "hiking" route; then create a parent for "bicycle" and "inline_skates"; or should the base relation be "unknown" with 3 parents (hiking, bicycle, inline_skates)?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/multi-use/" class="post-tag tag-link-multi-use"
+                                        title="see questions tagged 'multi-use'" rel="tag">multi-use</a>
+                                
+                                    <a href="/tags/railway/" class="post-tag tag-link-railway"
+                                        title="see questions tagged 'railway'" rel="tag">railway</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/relation/" class="post-tag tag-link-relation"
+                                        title="see questions tagged 'relation'" rel="tag">relation</a>
+                                
+                                    <a href="/tags/abandoned/" class="post-tag tag-link-abandoned"
+                                        title="see questions tagged 'abandoned'" rel="tag">abandoned</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Apr '14, 15:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c1a722148c903e45bc99a8dcbba4577e?s=32&amp;d=identicon&amp;r=g" alt="fbax's gravatar image" />
+    <p><a href="/users/4680/fbax">fbax</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="fbax has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-32432">
+    
+</div>
+<div id="comment-tools-32432" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32432-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/32432/complex-routes-of-nested-ways?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/32432/complex-routes-of-nested-ways?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/32432/complex-routes-of-nested-ways?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/32432/complex-routes-of-nested-ways?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="32440"></a>
+                    <div id="answer-container-32440" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32440-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32440/up/" rel="nofollow"> </a>
+<div id="post-32440-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-32440-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32440/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi each section of a trail using a way should be part of a relation. Please read this section of the WIKI complicated yes, 
+<a href="http://wiki.openstreetmap.org/wiki/Route#Bus_routes_.28also_trolley_bus.29">http://wiki.openstreetmap.org/wiki/Route#Bus_routes_.28also_trolley_bus.29</a>
+There is even a specific section for bicycle routes as well. If you follow these guidelines the  renderer can read your contributions correctly.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32440/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Apr '14, 10:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32440">
+    
+</div>
+<div id="comment-tools-32440" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32440-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="50714"></a>
+                    <div id="answer-container-50714" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50714-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50714/up/" rel="nofollow"> </a>
+<div id="post-50714-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-50714-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50714/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As a new user, I would like to know why this is a problem. Can you not add multiple attributes in multiple categories for a single way? Can I have surface = gravel as well as surface = dirt, plus width = 5 m as well as other sizes?</p>
+<p>Or (I'm looking for fundamental best practices here), should every section of a way with a unique combination of attributes be separate from the others?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50714/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jul '16, 17:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bd47a2c66ca4f2bbc7994c7805a2359c?s=32&amp;d=identicon&amp;r=g" alt="robinottawa's gravatar image" />
+    <p><a href="/users/12525/robinottawa">robinottawa</a><br/>
+    <span class="score" title="105 reputation points">105</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="robinottawa has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50714">
+    
+        <a name="50716"></a>
+        <div class="comment" id="comment-50716">
+            <div id="post-50716-score" class="comment-score">3</div>
+            <div class="comment-text"><p>robinottawa:</p>
+
+<p>My original question was about ways within relations; not tags (attributes) on ways.</p>
+
+<p>As a follow-up; I'll mention that waymarkedtrails.org site modified their code such that multi-purpose routes are now supported. When I raised my question the site did not support "route=hiking;bicycle" (with a semicolon).  Now tag values with semicolon is supported.</p>
+
+<p>If you have your own question; then you should likely start a new thread.</p></div>
+            <div class="comment-info" id="comment-50716-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jul '16, 17:48)</span>
+                <a class="comment-user userinfo" href="/users/4680/fbax">fbax</a>
+                
+            </div>
+        </div>
+    
+        <a name="50724"></a>
+        <div class="comment" id="comment-50724">
+            <div id="post-50724-score" class="comment-score">3</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/12525/robinottawa">@robinottawa</a> Generally speaking, you'd split a way into sections for which the tagging is unique.  For example, this bit of road <a href="http://www.openstreetmap.org/way/31559293">http://www.openstreetmap.org/way/31559293</a> has mostly the same tags as an adjacent bit <a href="http://www.openstreetmap.org/way/283948074">http://www.openstreetmap.org/way/283948074</a> , but the speed limits are different.  If you tried to add "speed_limit=40 mph;50 mph" you wouldn't know which bit had which speed limit.</p></div>
+            <div class="comment-info" id="comment-50724-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jul '16, 23:34)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50714" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50714-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/32432/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='12wGDQ6kWZVntpOGqfWjO68808JYUgdr' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32432/complex-routes-of-nested-ways?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32432/complex-routes-of-nested-ways?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/relation/"
+            class="tag-link-relation"
+            title="see questions tagged'relation'using tags"
+            rel="tag">relation</a> <span class="tag-number">&#215;128</span><br/>
+        
+        <a href="/tags/railway/"
+            class="tag-link-railway"
+            title="see questions tagged'railway'using tags"
+            rel="tag">railway</a> <span class="tag-number">&#215;68</span><br/>
+        
+        <a href="/tags/abandoned/"
+            class="tag-link-abandoned"
+            title="see questions tagged'abandoned'using tags"
+            rel="tag">abandoned</a> <span class="tag-number">&#215;23</span><br/>
+        
+        <a href="/tags/multi-use/"
+            class="tag-link-multi-use"
+            title="see questions tagged'multi-use'using tags"
+            rel="tag">multi-use</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 18, 2014, 3:06 p.m.">18 Apr '14, 15:06</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,830 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 7, 2016, 11:34 p.m.">07 Jul '16, 23:34</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/18278/new-relation-if-i-add-a-bridge-to-a-small-road">New relation if I add a bridge to a small road?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25399/how-do-i-create-a-scenic-route">How do I create a Scenic Route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13355/using-route-relations-in-garmin-hcx">Using route relations in Garmin Hcx</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15884/whats-the-difference-between-disused-and-abandoned-used-for-a-railway">What’s the difference between disused and abandoned used for a railway ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24758/how-to-create-a-public-transport-route-which-only-runs-on-a-part-of-a-streets-way-divide-the-way">How to create a public transport route which only runs on a part of a street&#39;s way? Divide the way?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25122/how-to-add-part-of-a-way-to-a-relation">How to add part of a way to a relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7207/how-can-i-highlight-a-certain-type-of-ways">How can I highlight a certain type of ways?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11487/how-to-tag-an-abandoned-subway-construction">how to tag an abandoned subway construction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15859/what-does-abandoned-railway-track-really-mean">What does &quot;Abandoned Railway Track&quot; really mean?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26213/bus-route-passes-twice-through-a-way-is-it-correct-to-add-it-twice-to-the-relation">Bus route passes twice through a way. Is it correct to add it twice to the relation?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

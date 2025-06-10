@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>xslt-processor gives back top-results on one dataset and no results on another - OSM Help</title>
+        <meta name="description" content="hello and good day dear xml-friends,  i am new to xml so do not bear with me for the questions... i am currently making some tests with an xslt-processor -  I ve got an script that runs nicely on one test-dataset - and gives back good and valid results and contrary to this behaviour i get back silly..." />
+        <meta name="keywords" content="xml,openstreetmap,mysql" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/12253/xslt-processor-gives-back-top-results-on-one-dataset-and-no-results-on-another" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/12253/xslt-processor-gives-back-top-results-on-one-dataset-and-no-results-on-another?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='8mMKCDRC4dlkLcnsfwOtmgHfckMWPkoZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/12253/xslt-processor-gives-back-top-results-on-one-dataset-and-no-results-on-another">xslt-processor gives back top-results on one dataset and no results on another</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-12253-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12253/up/" rel="nofollow"> </a>
+<div id="post-12253-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-12253-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12253/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/12253/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>hello and good day dear xml-friends, </p>
+<p>i am new to xml so do not bear with me for the questions... i am currently making some tests with an xslt-processor - 
+I ve got an script that   runs nicely on one test-dataset - and gives back good and valid results and contrary to this behaviour
+i get back silly and dumb results if i run the same script - note: i get back a csv-formatted file with 2 MB that contains 
+only tabstops... funny  but true... </p>
+<p>so here my script is: </p>
+<p>if i run this xslt-code on the following test-dataset i get only bad bad results - only tabstops... nothing more... what causes this errors. note - i get better results if i run the code againgst the second dataset .- see far below... and see  the results at the end of this inital posting....</p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+    &lt;xsl:output method="text" encoding="utf-8" /&gt;
+
+    &lt;xsl:template match="/"&gt;
+        &lt;xsl:apply-templates /&gt;
+    &lt;/xsl:template&gt;
+
+    &lt;xsl:template match="osm"&gt;
+        &lt;xsl:apply-templates /&gt;
+    &lt;/xsl:template&gt;
+
+    &lt;xsl:template match="node[tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a>='amenity' and <a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a>='restaurant']]"&gt;
+        &lt;xsl:value-of select="./<a href="/users/260/idoneus">@id</a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./@lat"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./<a href="/users/1350/longestaugust">@lon</a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a> = 'cuisine']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a> = 'name']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a> = 'wheelchair']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a> = 'website']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a> = 'addr:country']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+    &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a> = 'addr:city']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a>"/&gt;
+    &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;        
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a> = 'addr:street']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x09;&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="./tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a> = 'addr:housenumber']/<a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a>"/&gt;
+        &lt;xsl:text&gt;&amp;#x0A;&lt;/xsl:text&gt;
+    &lt;/xsl:template&gt;
+        &lt;!-- all non-restaurant nodes --&gt;
+    &lt;xsl:template match="node[tag[<a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim"><a href="/users/51/ktim">@k</a></a></a></a></a></a></a></a></a></a>='amenity' and <a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski"><a href="/users/121/victor-bielawski">@v</a></a></a></a></a></a></a></a></a></a>!='restaurant']]" /&gt;
+
+&lt;/xsl:stylesheet&gt;
+</code></pre>
+<p>if i run this against this test-dataset - then i get only dumb results  a file with only tabstops in. i have no glue what causes the error?</p>
+
+&lt;xml_split:root xmlns:xml_split="http://xmltwig.com/xml_split"&gt;
+
+<pre><code>&lt;node id="25242198" lat="49.0077605" lon="8.3560676" version="9" changeset="10151199" user="keinname" uid="165061" timestamp="2011-12-18T22:59:43Z"&gt;
+    &lt;tag k="addr:city" v="Karlsruhe" /&gt;
+    &lt;tag k="addr:country" v="DE" /&gt;
+    &lt;tag k="addr:housenumber" v="6" /&gt;
+    &lt;tag k="addr:postcode" v="76185" /&gt;
+    &lt;tag k="addr:street" v="Durmersheimer Straße" /&gt;
+    &lt;tag k="amenity" v="restaurant" /&gt;
+    &lt;tag k="beer_garden" v="yes" /&gt;
+    &lt;tag k="cuisine" v="german" /&gt;
+    &lt;tag k="name" v="Beim Schupi" /&gt;
+    &lt;tag k="opening_hours" v="Mo-Sa 17:00+; Su 12:00+" /&gt;
+    &lt;tag k="phone" v="+49 721 551220" /&gt;
+    &lt;tag k="website" v="http://www.schupi.de" /&gt;
+&lt;/node&gt;
+</code></pre>
+<p>[...]...</p>
+<p>Note: i get back silly and bad results - only tabstops and nothing more.. </p>
+<p>but if if i run the above mentioned xslt-processor-code on the following xml-dataset i get back good results... see below - !!!</p>
+<pre><code>&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;osm version="0.6" generator="Osmosis SNAPSHOT-r26564"&gt;
+  &lt;node id="185612117" version="5" timestamp="2011-01-08T19:23:43Z" uid="290680" user="wheelmap_visitor" changeset="6906586" lat="48.8037523" lon="9.5248779"&gt;
+    &lt;tag k="addr:postcode" v="73614"/&gt;
+    &lt;tag k="wheelchair" v="yes"/&gt;
+    &lt;tag k="website" v="http://www.courage-restaurant.de/"/&gt;
+    &lt;tag k="addr:country" v="DE"/&gt;
+    &lt;tag k="name" v="Courage"/&gt;
+    &lt;tag k="amenity" v="restaurant"/&gt;
+    &lt;tag k="addr:street" v="Künkelinstraße"/&gt;
+    &lt;tag k="addr:city" v="Schorndorf"/&gt;
+    &lt;tag k="addr:housenumber" v="33"/&gt;
+  &lt;/node&gt;
+  &lt;node id="252619189" version="5" timestamp="2011-01-08T19:21:43Z" uid="290680" user="wheelmap_visitor" changeset="6906586" lat="48.8067032" lon="9.5314986"&gt;
+    &lt;tag k="addr:postcode" v="73614"/&gt;
+    &lt;tag k="wheelchair" v="yes"/&gt;
+    &lt;tag k="website" v="www.kesselhaus-schorndorf.de"/&gt;
+    &lt;tag k="addr:country" v="DE"/&gt;
+    &lt;tag k="name" v="Kesselhaus"/&gt;
+    &lt;tag k="amenity" v="restaurant"/&gt;
+    &lt;tag k="addr:street" v="Arnoldstraße"/&gt;
+    &lt;tag k="addr:city" v="Schorndorf"/&gt;
+    &lt;tag k="addr:housenumber" v="3"/&gt;
+  &lt;/node&gt;
+  &lt;node id="319597380" version="1" timestamp="2008-12-17T21:13:15Z" changeset="444629" lat="48.8277913" lon="9.5477029"&gt;
+    &lt;tag k="name" v="Gasthaus zur Linde"/&gt;
+    &lt;tag k="amenity" v="restaurant"/&gt;
+  &lt;/node&gt;
+  &lt;node id="319597382" version="1" timestamp="2008-12-17T21:13:15Z" changeset="444629" lat="48.8282523" lon="9.5503109"&gt;
+    &lt;tag k="name" v="China-Garden"/&gt;
+    &lt;tag k="amenity" v="restaurant"/&gt;
+  &lt;/node&gt;
+  &lt;node id="339591124" version="2" timestamp="2011-09-22T17:33:36Z" uid="290680" user="wheelmap_visitor" changeset="9366746" lat="48.7888015" lon="9.5079525"&gt;
+    &lt;tag k="cuisine" v="italian"/&gt;
+    &lt;tag k="wheelchair" v="limited"/&gt;
+    &lt;tag k="name" v="Pizzeria da Rocco"/&gt;
+    &lt;tag k="amenity" v="restaurant"/&gt;
+  &lt;/node&gt;
+  &lt;node id="392682646" version="3" timestamp="2010-05-11T19:00:20Z" uid="12973" user="MattGPS" changeset="4671372" lat="48.8315734" lon="9.5468864"&gt;
+    &lt;tag k="name" v="Gasthaus an der Wieslauf"/&gt;
+    &lt;tag k="amenity" v="restaurant"/&gt;
+  &lt;/node&gt;
+  &lt;node id="454516720" version="4" timestamp="2010-12-11T15:30:21Z" uid="12982" user="Michael Schulze" changeset="6625571" lat="48.8031264" lon="9.5344371"&gt;
+    &lt;tag k="addr:postcode" v="73614"/&gt;
+    &lt;tag k="cuisine" v="regional"/&gt;
+    &lt;tag k="website" v="http://www.deutscheshaus-schorndorf.de/"/&gt;
+    &lt;tag k="addr:country" v="DE"/&gt;
+    &lt;tag k="name" v="Deutsches Haus"/&gt;
+    &lt;tag k="amenity" v="restaurant"/&gt;
+    &lt;tag k="addr:street" v="Sonnenscheinstraße"/&gt;
+    &lt;tag k="addr:city" v="Schorndorf"/&gt;
+    &lt;tag k="addr:housenumber" v="13"/&gt;
+  &lt;/node&gt;
+  &lt;node id="572362430" version="3" timestamp="2010-07-04T06:59:50Z" uid="106522" user="neuntoeter" changeset="5130101" lat="48.807953" lon="9.5379673"&gt;
+    &lt;tag k="smoking" v="no"/&gt;
+    &lt;tag k="name" v="Club Kneipe"/&gt;
+    &lt;tag k="amenity" v="restaurant"/&gt;
+  &lt;/node&gt;
+  &lt;node id="613988559" version="1" timestamp="2010-01-15T01:20:03Z" uid="24748" user="mabapla" changeset="3621550" lat="48.7991827" lon="9.551828"&gt;
+    &lt;tag k="name" v="Gaststätte Schützenhaus"/&gt;
+    &lt;tag k="amenity" v="restaurant"/&gt;
+  &lt;/node&gt;
+  &lt;node id="859532091" version="1" timestamp="2010-08-13T23:05:14Z" uid="130472" user="fx99" changeset="5486736" lat="48.8062337" lon="9.5278548"&gt;
+    &lt;tag k="website" v="http://www.weinstube-buechsenmacher.de/"/&gt;
+    &lt;tag k="name" v="Weinstube zum Büchsenmacher"/&gt;
+    &lt;tag k="amenity" v="restaurant"/&gt;
+    &lt;tag k="addr:housename" v="5"/&gt;
+    &lt;tag k="addr:street" v="Höllgasse"/&gt;
+  &lt;/node&gt;
+  &lt;node id="1625565012" version="1" timestamp="2012-02-09T18:00:04Z" uid="131968" user="changchun_1" changeset="10636279" lat="48.8151893" lon="9.5310692"&gt;
+    &lt;tag k="name" v="Gasthaus Sonne"/&gt;
+    &lt;tag k="amenity" v="restaurant"/&gt;
+  &lt;/node&gt;
+&lt;/osm&gt;
+</code></pre>
+<p>see the -fairly good !! - results i get when i run the xslt-processor on the second dataset: i have no glue why i get such nasty results - when i apply the xslt-processor on the first dataset...!?</p>
+<pre><code>185612117   48.8037523  9.5248779       Courage yes <a href="http://www.courage-restaurant.de/">http://www.courage-restaurant.de/</a>   DE  Schorndorf  Künkelinstraße  33
+
+252619189   48.8067032  9.5314986       Kesselhaus  yes www.kesselhaus-schorndorf.de    DE  Schorndorf  Arnoldstraße    3
+
+319597380   48.8277913  9.5477029       Gasthaus zur Linde
+
+319597382   48.8282523  9.5503109       China-Garden
+
+339591124   48.7888015  9.5079525   italian Pizzeria da Rocco   limited
+
+392682646   48.8315734  9.5468864       Gasthaus an der Wieslauf
+
+454516720   48.8031264  9.5344371   regional    Deutsches Haus      <a href="http://www.deutscheshaus-schorndorf.de/">http://www.deutscheshaus-schorndorf.de/</a> DE  Schorndorf  Sonnenscheinstraße  13
+</code></pre>
+<p>any idea and pointer towards a solution is greatly wellcome... thx in advance!!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/xml/" class="post-tag tag-link-xml"
+                                        title="see questions tagged 'xml'" rel="tag">xml</a>
+                                
+                                    <a href="/tags/openstreetmap/" class="post-tag tag-link-openstreetmap"
+                                        title="see questions tagged 'openstreetmap'" rel="tag">openstreetmap</a>
+                                
+                                    <a href="/tags/mysql/" class="post-tag tag-link-mysql"
+                                        title="see questions tagged 'mysql'" rel="tag">mysql</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Apr '12, 08:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/600fc90e36ff81dfaba666708cf91dc5?s=32&amp;d=identicon&amp;r=g" alt="tagtheworld's gravatar image" />
+    <p><a href="/users/3389/tagtheworld">tagtheworld</a><br/>
+    <span class="score" title="0 reputation points">0</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tagtheworld has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-12253">
+    
+</div>
+<div id="comment-tools-12253" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12253-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/12253/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='8mMKCDRC4dlkLcnsfwOtmgHfckMWPkoZ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12253/xslt-processor-gives-back-top-results-on-one-dataset-and-no-results-on-another?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12253/xslt-processor-gives-back-top-results-on-one-dataset-and-no-results-on-another?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openstreetmap/"
+            class="tag-link-openstreetmap"
+            title="see questions tagged'openstreetmap'using tags"
+            rel="tag">openstreetmap</a> <span class="tag-number">&#215;362</span><br/>
+        
+        <a href="/tags/xml/"
+            class="tag-link-xml"
+            title="see questions tagged'xml'using tags"
+            rel="tag">xml</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/mysql/"
+            class="tag-link-mysql"
+            title="see questions tagged'mysql'using tags"
+            rel="tag">mysql</a> <span class="tag-number">&#215;21</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 22, 2012, 8:02 a.m.">22 Apr '12, 08:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,263 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 22, 2012, 8:02 a.m.">22 Apr '12, 08:02</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/12334/refactoring-an-xslt-processor-with-minor-correction-beginner-question">refactoring an XSLT processor with minor correction [beginner-question]</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12100/xapi-request-runs-into-server-error-how-can-make-sense-of-xapi">xapi-request runs into server error - How can make sense of XAPI</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12112/transforming-xml-output-from-a-xapi-search-how-to-store-this-in-a-mysql-database">transforming xml-output from a xapi-search: how to store this in a mysql-database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12240/add-new-xml-elements-in-a-xslt-processor-beginner-question">Add new xml-elements in a xslt-processor [beginner-question]</a>
+        </p>
+        
+        <p>
+            <a href="/questions/73476/why-my-osm-file-xml-pbf-osm-osmpbf-cant-be-displayed-in-josm-but-not-in-qgis">Why my osm file (.xml .pbf, .osm, .osm.pbf) can&#39;t be displayed in JOSM but not in QGIS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2505/i-see-some-nodes-on-the-map-but-i-cant-find-them-in-planetosm-why">I see some nodes on the map, but I can&#39;t find them in Planet.osm. Why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12077/change-xslt-to-match-all-osm-tags-in-a-gis-file">change xslt to match all OSM tags in a GIS-file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2336/how-do-i-recover-my-account-details">[closed] How do I recover my account details?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1574/is-it-openstreetmap-or-open-street-maps">Is it OpenStreetMap or Open Street Maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4541/how-to-use-open-street-map-with-php">how to use open street map with php?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

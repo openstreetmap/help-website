@@ -1,0 +1,692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Creating rails database fails with an error while adding a GIST index on changesets? - OSM Help</title>
+        <meta name="description" content="I&#39;m trying to install the rail port.  THis is the command i received an error.  env RAILS_ENV=production rake db:migrate  This is my error: -- add_index(&quot;changesets&quot;, [&quot;min_lat&quot;, &quot;max_lat&quot;, &quot;min_lon&quot;, &quot;max_lon&quot;], {:method=&amp;gt;&quot;GIST&quot;, :name=&amp;gt;&quot;changesets_bbox_idx&quot;}) rake aborted! An error has occur..." />
+        <meta name="keywords" content="gist,rails" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/8610/creating-rails-database-fails-with-an-error-while-adding-a-gist-index-on-changesets" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/8610/creating-rails-database-fails-with-an-error-while-adding-a-gist-index-on-changesets?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qpQ3eNzICzXsQSRSG0Cz6VGfc2qGDYwh' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/8610/creating-rails-database-fails-with-an-error-while-adding-a-gist-index-on-changesets">Creating rails database fails with an error while adding a GIST index on changesets?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-8610-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8610/up/" rel="nofollow"> </a>
+<div id="post-8610-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-8610-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8610/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/8610/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm trying to install the rail port. 
+THis is the command i received an error. <br>
+<code>env RAILS_ENV=production rake db:migrate</code> </p>
+<p>This is my error:<br>
+</p><pre><code>-- add_index("changesets", ["min_lat", "max_lat", "min_lon", "max_lon"], {:method=&gt;"GIST", :name=&gt;"changesets_bbox_idx"})
+rake aborted!
+An error has occurred, this and all later migrations canceled:<p></p>
+<p>PGError: ERROR:  data type integer has no default operator class for access method "gist"
+HINT:  You must specify an operator class for the index or define a default operator class for the data type.
+: CREATE  INDEX "changesets_bbox_idx" ON "changesets" USING GIST ("min_lat", "max_lat", "min_lon", "max_lon")</p>
+</code><p><code>Tasks: TOP =&gt; db:migrate
+(See full trace by running task with --trace)</code></p></pre><p></p>
+<p>I tried deleting the databases and create them all over again but i still get this error. I'm 100% sure i didn't missed the <code>psql -d openstreetmap &lt; /usr/share/postgresql/8.4/contrib/btree_gist.sql</code> part.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/gist/" class="post-tag tag-link-gist"
+                                        title="see questions tagged 'gist'" rel="tag">gist</a>
+                                
+                                    <a href="/tags/rails/" class="post-tag tag-link-rails"
+                                        title="see questions tagged 'rails'" rel="tag">rails</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Oct '11, 09:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc9b01669c0702f230fa57c384b947a8?s=32&amp;d=identicon&amp;r=g" alt="alexz's gravatar image" />
+    <p><a href="/users/2226/alexz">alexz</a><br/>
+    <span class="score" title="225 reputation points">225</span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="26 badges"><span class="bronze">&#9679;</span><span class="badgecount">26</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="alexz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8610/">
+                edited
+                <strong>24 Oct '11, 14:45</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dee41dcf0aa0c08cf6b0eb935b7504b7?s=32&amp;d=identicon&amp;r=g" alt="TomH's gravatar image" />
+            <p><a href="/users/1/tomh">TomH ♦♦</a><br/>
+            <span class="score" title="3325 reputation points"><span class="">3.3k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="43 badges"><span class="bronze">&#9679;</span><span class="badgecount">43</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-8610">
+    
+</div>
+<div id="comment-tools-8610" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8610-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/8610/creating-rails-database-fails-with-an-error-while-adding-a-gist-index-on-changesets?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/8610/creating-rails-database-fails-with-an-error-while-adding-a-gist-index-on-changesets?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/8610/creating-rails-database-fails-with-an-error-while-adding-a-gist-index-on-changesets?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/8610/creating-rails-database-fails-with-an-error-while-adding-a-gist-index-on-changesets?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="8617"></a>
+                    <div id="answer-container-8617" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8617-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8617/up/" rel="nofollow"> </a>
+<div id="post-8617-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-8617-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8617/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="alexz has selected this answer as the correct answer"
+        href="/accept_answer/8617/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Well I'm 100% sure that you did miss that step, as that is exactly the error you will get if you haven't added that contrib module.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8617/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Oct '11, 14:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dee41dcf0aa0c08cf6b0eb935b7504b7?s=32&amp;d=identicon&amp;r=g" alt="TomH's gravatar image" />
+    <p><a href="/users/1/tomh">TomH ♦♦</a><br/>
+    <span class="score" title="3325 reputation points"><span class="">3.3k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="43 badges"><span class="bronze">&#9679;</span><span class="badgecount">43</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TomH has 9 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8617">
+    
+        <a name="8618"></a>
+        <div class="comment" id="comment-8618">
+            <div id="post-8618-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1/tomh"></a><a href="/users/1/tomh">@Tomh</a>, thanks for your input! I tried it once more to configure my db, beginning with table creation. This is my full copy-paste result from the terminal to demonstrate that the error still persists. <a href="http://pastebin.com/VMvsNk9S">http://pastebin.com/VMvsNk9S</a></p></div>
+            <div class="comment-info" id="comment-8618-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '11, 15:06)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8620"></a>
+        <div class="comment" id="comment-8620">
+            <div id="post-8620-score" class="comment-score">1</div>
+            <div class="comment-text"><p>So you have created three databases, but have only installed the btree_gist code in one of them. Presumably a different one to the one you are migrating, but I would need to see your database.yml to be sure.</p></div>
+            <div class="comment-info" id="comment-8620-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '11, 15:08)</span>
+                <a class="comment-user userinfo" href="/users/1/tomh">TomH ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="8631"></a>
+        <div class="comment" id="comment-8631">
+            <div id="post-8631-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you! That worked. I didn't realise i had to execute that command for every db. But i have an error with osmosis now. If you are competent with it and want to help out, please see this post <a href="http://help.openstreetmap.org/questions/8630/osmosis-stops-with-error-insert-or-update-on-table-current_way_nodes-violates-foreign-key-constraint-current_way_nodes_node_id_fkey">http://help.openstreetmap.org/questions/8630/osmosis-stops-with-error-insert-or-update-on-table-current_way_nodes-violates-foreign-key-constraint-current_way_nodes_node_id_fkey</a></p></div>
+            <div class="comment-info" id="comment-8631-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '11, 08:19)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8617" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8617-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/8610/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='qpQ3eNzICzXsQSRSG0Cz6VGfc2qGDYwh' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8610/creating-rails-database-fails-with-an-error-while-adding-a-gist-index-on-changesets?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8610/creating-rails-database-fails-with-an-error-while-adding-a-gist-index-on-changesets?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rails/"
+            class="tag-link-rails"
+            title="see questions tagged'rails'using tags"
+            rel="tag">rails</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/gist/"
+            class="tag-link-gist"
+            title="see questions tagged'gist'using tags"
+            rel="tag">gist</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 24, 2011, 9:15 a.m.">24 Oct '11, 09:15</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,539 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 25, 2011, 8:19 a.m.">25 Oct '11, 08:19</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/4422/rails-port-and-osm-server">Rails Port and OSM Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5492/obsolete-features">obsolete features</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8520/rails-port-installation-error-rake-dbmigrate">[closed] Rails port installation error: rake db:migrate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8611/i-get-a-lot-of-deprication-messages-when-running-rake">I get  a lot of deprication messages when running rake</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8660/does-the-rails-port-work-on-a-64-bit-system">Does the Rails Port work on a 64 bit system?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16967/josm-error-message-atributes-version-and-changeset-1">[closed] JOSM error message: &quot;Atributes version and changeset = -1&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18148/rails-port-on-apache-passenger">Rails port on Apache Passenger</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22927/how-to-begin-routing-rail-lines">How to begin routing rail lines?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23010/how-to-tag-a-stadtbahn">How to tag a &quot;Stadtbahn&quot;?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28027/how-can-i-create-a-custom-and-modified-map-version-to-visualize-train-routes">How can I create a custom and modified map version to visualize train routes?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

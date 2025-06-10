@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Nominatim: Trouble populating website - OSM Help</title>
+        <meta name="description" content="Hi all, I am encountering an annoying error while trying to populate the website (at http://localhost/nominatim). I followed all the instructions listed at link text but, at the moment I call ./utils/setup.php --create-website &amp;lt;Apache document root&amp;gt;/nominatim  I got the following error  WARNIN..." />
+        <meta name="keywords" content="setup,warning,localhost,nominatim" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/49366/nominatim-trouble-populating-website" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/49366/nominatim-trouble-populating-website?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='YDeEjAd2cHyxsz4xh7cfmxTXKDyGiNP3' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/49366/nominatim-trouble-populating-website">Nominatim: Trouble populating website</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-49366-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49366/up/" rel="nofollow"> </a>
+<div id="post-49366-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49366-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49366/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/49366/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all,</p>
+<p>I am encountering an annoying error while trying to populate the website (at <a href="http://localhost/nominatim).">http://localhost/nominatim).</a></p>
+<p>I followed all the instructions listed at <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">link text</a> but, at the moment I call</p>
+<pre><code>./utils/setup.php --create-website &lt;Apache document root&gt;/nominatim
+</code></pre>
+<p>I got the following error </p>
+<pre><code>WARNING: resetting threads to 1
+Symlinks created
+
+WARNING: Unable to access the website at <a href="http://localhost/nominatim/">http://localhost/nominatim/</a>
+You may want to update settings/local.php with @define('CONST_Website_BaseURL', 'http://[HOST]/[PATH]/');
+Setup finished.
+</code></pre>
+<p>I see that some files are generated, but not the tiles (i.e. tiles.js is not present).</p>
+<p>My entry for this in apache2.conf is (I also tried to insert this into my 000-default.conf , but nothing has changed)</p>
+<pre><code>    &lt; Directory /var/www/html/nominatim/&gt;
+          Options MultiViews Indexes FollowSymLinks Includes ExecCGI
+          AllowOverride AuthConfig FileInfo
+          AddType text/html .php
+          Require all granted
+    &lt; /Directory&gt;
+</code></pre>
+<p>While my local.php is</p>
+<pre><code>// Paths
+@define('CONST_Postgresql_Version', '9.3');
+@define('CONST_Postgis_Version', '2.1');
+
+// Website settings
+@define('CONST_Website_BaseURL', 'http://localhost/nominatim/');
+</code></pre>
+<p>Any hints about something else that I can check ?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/setup/" class="post-tag tag-link-setup"
+                                        title="see questions tagged 'setup'" rel="tag">setup</a>
+                                
+                                    <a href="/tags/warning/" class="post-tag tag-link-warning"
+                                        title="see questions tagged 'warning'" rel="tag">warning</a>
+                                
+                                    <a href="/tags/localhost/" class="post-tag tag-link-localhost"
+                                        title="see questions tagged 'localhost'" rel="tag">localhost</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Apr '16, 16:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc400b116300e713442e10b6d3c1dfe4?s=32&amp;d=identicon&amp;r=g" alt="GabBurnout's gravatar image" />
+    <p><a href="/users/12216/gabburnout">GabBurnout</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="GabBurnout has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/49366/">
+                edited
+                <strong>23 Apr '16, 08:44</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/245b73d4390c3408fe3c6da759b9897f?s=32&amp;d=identicon&amp;r=g" alt="stephan75's gravatar image" />
+            <p><a href="/users/99/stephan75">stephan75</a><br/>
+            <span class="score" title="12642 reputation points"><span class="">12.6k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="56 badges"><span class="silver">&#9679;</span><span class="badgecount">56</span></span><span title="210 badges"><span class="bronze">&#9679;</span><span class="badgecount">210</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-49366">
+    
+</div>
+<div id="comment-tools-49366" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49366-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/49366/nominatim-trouble-populating-website?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/49366/nominatim-trouble-populating-website?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/49366/nominatim-trouble-populating-website?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/49366/nominatim-trouble-populating-website?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="49380"></a>
+                    <div id="answer-container-49380" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-49380-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49380/up/" rel="nofollow"> </a>
+<div id="post-49380-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-49380-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49380/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Nominatim is a search engine only and not a tile server. Hence it does not generate tiles. A typical local installation of a Nominatim server will load search results from your own server, but map tiles from OpenStreetMap over the web.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/49380/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Apr '16, 19:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-49380">
+    
+        <a name="49405"></a>
+        <div class="comment" id="comment-49405">
+            <div id="post-49405-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your answer,</p>
+
+<p>I just followed step by step the installation guide where, in the <strong>Import and index OSM data</strong> section indicates to run the command the import of the osm file.</p>
+
+<p>Then, into the <strong>Set up the website</strong> section, the command for populating the website is explained. </p>
+
+<p>Is this the command supposed to be executed in order to import the tiles into the website folder ? Or the first ?</p>
+
+<p>Thanks again,</p>
+
+<p>Cheers</p></div>
+            <div class="comment-info" id="comment-49405-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Apr '16, 12:07)</span>
+                <a class="comment-user userinfo" href="/users/12216/gabburnout">GabBurnout</a>
+                
+            </div>
+        </div>
+    
+        <a name="49406"></a>
+        <div class="comment" id="comment-49406">
+            <div id="post-49406-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Nominatim does not include tiles, and the setup-website command only creates a couple of symlinks so that you can use the search through a web browser and your local Apache web server.</p></div>
+            <div class="comment-info" id="comment-49406-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Apr '16, 12:41)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49411"></a>
+        <div class="comment" id="comment-49411">
+            <div id="post-49411-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Looking into the setup.php file, I can notice that, for the website population, a check for the presence of the file js/tiles.js is performed. In my case, it's the root of my problems (I think) because I don't have this one.</p>
+
+<p>Am I supposed to install a map server (like <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">in here</a> for instance) to have it ?</p>
+
+<p>Cheers,</p>
+
+<p>G.</p></div>
+            <div class="comment-info" id="comment-49411-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Apr '16, 15:07)</span>
+                <a class="comment-user userinfo" href="/users/12216/gabburnout">GabBurnout</a>
+                
+            </div>
+        </div>
+    
+        <a name="49412"></a>
+        <div class="comment" id="comment-49412">
+            <div id="post-49412-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I see. It appears that something has been recently changed in Nominatim and the check whether --setup-website has succeeded still looks for a tiles.js file which doesn't exist anymore. I recommend you raise this issue on the <a href="https://github.com/twain47/Nominatim/issues">Nominatim bug tracker.</a></p></div>
+            <div class="comment-info" id="comment-49412-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Apr '16, 15:22)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49380" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49380-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/49366/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='YDeEjAd2cHyxsz4xh7cfmxTXKDyGiNP3' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49366/nominatim-trouble-populating-website?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49366/nominatim-trouble-populating-website?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/setup/"
+            class="tag-link-setup"
+            title="see questions tagged'setup'using tags"
+            rel="tag">setup</a> <span class="tag-number">&#215;15</span><br/>
+        
+        <a href="/tags/warning/"
+            class="tag-link-warning"
+            title="see questions tagged'warning'using tags"
+            rel="tag">warning</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/localhost/"
+            class="tag-link-localhost"
+            title="see questions tagged'localhost'using tags"
+            rel="tag">localhost</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 22, 2016, 4:06 p.m.">22 Apr '16, 16:06</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,720 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 25, 2016, 3:22 p.m.">25 Apr '16, 15:22</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/27578/nominatim-setup-failed-to-open-stream">Nominatim Setup - Failed to Open Stream</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12958/set-up-nominatim">Set up Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13962/nominatim-setup-error">nominatim setup error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27498/nominatim-setup-error">Nominatim Setup Error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48292/how-to-update-nominatim-250-from-231">how to update nominatim 2.5.0 from 2.3.1</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24678/problem-with-local-nominatim-search">Problem with local nominatim search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12142/nominatim-setup-error">Nominatim setup error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1841/confused-about-nominatim-and-county-boundaries">[closed] Confused about Nominatim and County Boundaries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1447/nominatim-search">nominatim search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer">Why does Nominatim return an error for queries from Internet Explorer?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,899 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to find why a road is not routable - OSM Help</title>
+        <meta name="description" content="Using iD editor. Reference point: 48.510500, -113.307546 While on a trip recently I ran into a situation where OsmAnd (based on OSM) would not find a route to a National Park campground that I was trying to reach. However, it did find a route if I changed the mode from driving to walking or biking. ..." />
+        <meta name="keywords" content="problem,routing,barrier" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/71115/how-to-find-why-a-road-is-not-routable" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/71115/how-to-find-why-a-road-is-not-routable?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='jvasHBXGXxag7AHx9lvJdQNZ2sHqSeek' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/71115/how-to-find-why-a-road-is-not-routable">How to find why a road is not routable</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-71115-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/71115/up/" rel="nofollow"> </a>
+<div id="post-71115-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-71115-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/71115/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/71115/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Using iD editor. Reference point: 48.510500, -113.307546</p>
+<p>While on a trip recently I ran into a situation where OsmAnd (based on OSM) would not find a route to a National Park campground that I was trying to reach.  However, it did find a route if I changed the mode from driving to walking or biking.  In order to find the problem I set the destination just a short ways down the road that I needed to take and gradually kept moving the destination farther down the road until it would no longer find a route.  Then I examined the area near where it broke and found that there was a barrier=gate there.  Evidently, gates do not allow motor traffic to pass even though it was tagged Access=All.  I changed it to barrier=cattle-grid (because there really is a cattle grid there) and now it will route.  </p>
+<p>My question is: how do we find these types of issues with routing. Gradually moving the destination until it breaks is a very tedious process.  When I highlighted the road segment it did not report any issues related to barriers. I am very new to OSM editing but there has to be an easier way.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/problem/" class="post-tag tag-link-problem"
+                                        title="see questions tagged 'problem'" rel="tag">problem</a>
+                                
+                                    <a href="/tags/routing/" class="post-tag tag-link-routing"
+                                        title="see questions tagged 'routing'" rel="tag">routing</a>
+                                
+                                    <a href="/tags/barrier/" class="post-tag tag-link-barrier"
+                                        title="see questions tagged 'barrier'" rel="tag">barrier</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Oct '19, 19:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6b3646ffa8b999016fb03694b7b94a54?s=32&amp;d=identicon&amp;r=g" alt="dremelts's gravatar image" />
+    <p><a href="/users/17300/dremelts">dremelts</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dremelts has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-71115">
+    
+</div>
+<div id="comment-tools-71115" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-71115-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/71115/how-to-find-why-a-road-is-not-routable?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/71115/how-to-find-why-a-road-is-not-routable?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/71115/how-to-find-why-a-road-is-not-routable?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/71115/how-to-find-why-a-road-is-not-routable?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="71139"></a>
+                    <div id="answer-container-71139" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-71139-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/71139/up/" rel="nofollow"> </a>
+<div id="post-71139-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-71139-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/71139/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think you are being misled by the iD editor's way of presenting the data. The original gate <a href="https://www.openstreetmap.org/node/960037163/history">has never had an access tag</a>. You've changed it from gate to toll booth to cattle grid but access was never changed. iD shows
+indeed access all=yes but it is grayed out. I would think so, and I think you did too, that iD thinks access=yes would be the default for the gate. In reality most routers would assume the default for a barrier, at least for a gate, to be access=no or vehicle=no. And actually, the <a href="https://wiki.openstreetmap.org/wiki/Barriers#Routing">wiki page on barriers</a> prescribes that default, too.</p>
+<p>I suggest you add access=yes or access=permissive to both the gate and the cattle grid to make the situation clear. The motor_vehicle=permissive still leaves all non motorized traffic (including pedestrians) at the default which is access=no if in doubt.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/71139/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Oct '19, 22:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-71139">
+    
+        <a name="71172"></a>
+        <div class="comment" id="comment-71172">
+            <div id="post-71172-score" class="comment-score">1</div>
+            <div class="comment-text"><p>TZorn, thank you for the help. Yes, that is VERY confusing the way the iD editor presents the access tags.  But I see now that if I scroll down a little it will show the tags that are actually applied to the object.  So, I have changed the gate from motor_vehicle=permissive to access=permissive and I added access=yes to the cattle_grid.</p></div>
+            <div class="comment-info" id="comment-71172-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '19, 16:57)</span>
+                <a class="comment-user userinfo" href="/users/17300/dremelts">dremelts</a>
+                
+            </div>
+        </div>
+    
+        <a name="71188"></a>
+        <div class="comment" id="comment-71188">
+            <div id="post-71188-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>most routers would assume the default for a barrier, at least for a gate, to be access=no or vehicle=no</p>
+</blockquote>
+
+<p>I don't think that's true. The defaults for OSRM and Graphhopper both presume a gate to be passable (which is surely right - the whole point of a gate is that you can open it). Unfortunately the barrier default documentation on the wiki is notoriously broken.</p></div>
+            <div class="comment-info" id="comment-71188-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Oct '19, 00:36)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="71191"></a>
+        <div class="comment" id="comment-71191">
+            <div id="post-71191-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Richard, maybe "most routers" is exaggerating. But as we see above at least OSMand is treating a gate as access=no and I can see why. Other barriers can be opened (e.g. bollards, swing gates) and OSRM <a href="https://github.com/Project-OSRM/osrm-backend/blob/master/profiles/car.lua#L54">does not treat them as access yes</a>. What I take away is that we should always tag the access restrictions to avoid (wrong) guess work by the routers.</p></div>
+            <div class="comment-info" id="comment-71191-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Oct '19, 08:26)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-71139" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-71139-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="71116"></a>
+                    <div id="answer-container-71116" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-71116-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/71116/up/" rel="nofollow"> </a>
+<div id="post-71116-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-71116-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/71116/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I don't think I have seen <code>access=all</code>. The usual tag if all traffic is legally permitted is <a href="https://wiki.openstreetmap.org/wiki/Key:access"><code>access=yes</code></a> and if it is just generally allowed by the owner then <code>access=permissive</code>.</p>
+<p>If there is actually a gate there then the gate tagging should remain. I'm not sure if there are established tags for mixed type barriers, but if the grid is on one side then this could be sidestepped by using two nodes. </p>
+<p>OsmAnd will route cars through <code>access=permissive</code>, although for completeness I should mention that it's generally considered poor practice to tag because a specific application doesn't behave or <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">render something</a> correctly. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/71116/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Oct '19, 21:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ec8a0cf213f9797ad1c1ae2c28c2332d?s=32&amp;d=identicon&amp;r=g" alt="InsertUser's gravatar image" />
+    <p><a href="/users/4426/insertuser">InsertUser</a><br/>
+    <span class="score" title="11005 reputation points"><span class="">11.0k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="69 badges"><span class="silver">&#9679;</span><span class="badgecount">69</span></span><span title="185 badges"><span class="bronze">&#9679;</span><span class="badgecount">185</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="InsertUser has 73 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/71116/">
+                edited
+                <strong>11 Oct '19, 21:57</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-71116">
+    
+        <a name="71117"></a>
+        <div class="comment" id="comment-71117">
+            <div id="post-71117-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, I'll add another node back in for the gate (they are separated by several feet).  And you are correct; it did say access=yes (I was going from memory).  </p></div>
+            <div class="comment-info" id="comment-71117-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Oct '19, 22:33)</span>
+                <a class="comment-user userinfo" href="/users/17300/dremelts">dremelts</a>
+                
+            </div>
+        </div>
+    
+        <a name="71120"></a>
+        <div class="comment" id="comment-71120">
+            <div id="post-71120-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, I have added the gate node back in so now there are two barriers in succession: cattle grid and gate.  The gate access is set to all=yes, motor vehicles=permissive.  Permissive seems appropriate because over the span of 5 days while we were there I never saw the gate closed. So, it appears to meet the criteria: Access allowed until such time as the owner revokes the permission.</p></div>
+            <div class="comment-info" id="comment-71120-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '19, 13:22)</span>
+                <a class="comment-user userinfo" href="/users/17300/dremelts">dremelts</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-71116" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-71116-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="71203"></a>
+                    <div id="answer-container-71203" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-71203-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/71203/up/" rel="nofollow"> </a>
+<div id="post-71203-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-71203-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/71203/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>A more general answer to "How to find why a road is not routable "  is to test the ways with the map page routers By shuffling the Start (green) and End Flags (red), it is easy to narrow down the problem. Only when you have narrowed it down is it worth opening the editor.  Don't forget recent edits may not be used by the routers for a few days.  Third party apps will, almost certainly, be using older data so check the dates on their downloads as the problem may be there. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/71203/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Oct '19, 14:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-71203">
+    
+</div>
+<div id="comment-tools-71203" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-71203-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/71115/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='jvasHBXGXxag7AHx9lvJdQNZ2sHqSeek' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/71115/how-to-find-why-a-road-is-not-routable?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/71115/how-to-find-why-a-road-is-not-routable?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/routing/"
+            class="tag-link-routing"
+            title="see questions tagged'routing'using tags"
+            rel="tag">routing</a> <span class="tag-number">&#215;305</span><br/>
+        
+        <a href="/tags/problem/"
+            class="tag-link-problem"
+            title="see questions tagged'problem'using tags"
+            rel="tag">problem</a> <span class="tag-number">&#215;69</span><br/>
+        
+        <a href="/tags/barrier/"
+            class="tag-link-barrier"
+            title="see questions tagged'barrier'using tags"
+            rel="tag">barrier</a> <span class="tag-number">&#215;55</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 11, 2019, 7:12 p.m.">11 Oct '19, 19:12</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,606 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 16, 2019, 2:31 p.m.">16 Oct '19, 14:31</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/65855/osrm-is-still-routing-through-barrier-with-accessno-did-i-configure-the-barrier-properly">OSRM is still routing through barrier with access=no. Did I configure the barrier properly?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/310/how-do-you-tag-gates-that-are-open-most-of-the-time">How do you tag gates that are open most of the time?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57016/using-a-barrier-to-keep-drivingwalking-directions-inside-a-cemetery">Using a barrier to keep driving/walking directions inside a cemetery</a>
+        </p>
+        
+        <p>
+            <a href="/questions/66808/how-to-overcome-a-routing-issue">how to overcome a routing issue?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53896/gate-that-is-locked-to-vehicles-but-occasionally-lets-walkers-and-cyclists-out">Gate that is locked to vehicles but occasionally lets walkers and cyclists out.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/737/is-there-any-windows-ce-navigation-software-that-uses-osm-data">Is there any Windows CE navigation software that uses OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/687/are-motorcars-allowed-on-track-roads">Are motorcars allowed on &#39;track&#39; roads ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/275/how-do-i-connect-a-high-speed-bidirectional-trunk-road-to-the-network">How do I connect a high speed bidirectional (trunk) road to the network ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1033/is-there-any-free-libre-traffic-information-data">Is there any free (libre) traffic information data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/467/how-do-i-use-osm-maps-in-my-gps">How do I use OSM maps in my GPS?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>closed changeset constantly reappearing as if it was still opened - OSM Help</title>
+        <meta name="description" content="Since some days, everytime I want to submit a new changeset using JOSM, it fails at first try (JOSM sas that the changeset is closed, thning that there&#39;s already one open). I need to repeat the operation a second time and the submission succeeds. But then JOSM reports an error when I try to close it..." />
+        <meta name="keywords" content="changesets" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/23162/closed-changeset-constantly-reappearing-as-if-it-was-still-opened" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/23162/closed-changeset-constantly-reappearing-as-if-it-was-still-opened?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='wONK0Rlm2EguI9oFmhU8NJWPqQOY2QFP' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/23162/closed-changeset-constantly-reappearing-as-if-it-was-still-opened">closed changeset constantly reappearing as if it was still opened</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-23162-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23162/up/" rel="nofollow"> </a>
+<div id="post-23162-score" class="post-score"
+    title="current number of votes">
+    -2
+</div>
+<a id="post-23162-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23162/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/23162/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Since some days, everytime I want to submit a new changeset using JOSM, it fails at first try (JOSM sas that the changeset is closed, thning that there's already one open). I need to repeat the operation a second time and the submission succeeds.</p>
+<p>But then JOSM reports an error when I try to close it, because JOSM sees another completely unrelated old changeset (which is closed since long).
+It seems that the server has not registered the correct number of changesets submitted by me in my user account, and then it reports detects another changeset randomly from my own list of changesets, for now it is this one: 16393274</p>
+<p>There's nothing wrong with it, it was properly sent and closed.
+It seems that the problem is that my account is not counting correctly my submitted changesets (so sometimes I have submitted and closed a changeset successfully, but the server forgot to increment my account in the same transaction).</p>
+<p>This is very irritating, because I now have to close all changesets explicitly, by selecting them in the CTRL+ALT+Q dialog in JOSM, to select the correct one (the only one which is currently active), and ignore the old one that is still appearing first in the list.</p>
+<p>I tried to investigate this is JOSM, including reinstalling it, purging caches and preferences.
+This affects ALL changesets that I try to create now, whatever their number.
+Potlatch does not seem to be irritated by this. It seems that this bug has been caused since the time I've tried the current beta of the iD editor (just once).</p>
+<p>How can I purge this closed changeset from my history so that it does not block further data submissions ?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/changesets/" class="post-tag tag-link-changesets"
+                                        title="see questions tagged 'changesets'" rel="tag">changesets</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Jun '13, 21:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b0ac3d0a15ce4f96f0d6b29172fca72a?s=32&amp;d=identicon&amp;r=g" alt="Verdy_p's gravatar image" />
+    <p><a href="/users/1555/verdy_p">Verdy_p</a><br/>
+    <span class="score" title="141 reputation points">141</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Verdy_p has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23162/">
+                edited
+                <strong>09 Jun '13, 21:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-23162">
+    
+        <a name="23163"></a>
+        <div class="comment" id="comment-23163">
+            <div id="post-23163-score" class="comment-score"></div>
+            <div class="comment-text"><p>Note that the reappearing changeset sometimes changes, this is not always the same one, but it is always an old one already closed days before.</p></div>
+            <div class="comment-info" id="comment-23163-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '13, 21:02)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="24896"></a>
+        <div class="comment" id="comment-24896">
+            <div id="post-24896-score" class="comment-score"></div>
+            <div class="comment-text"><p>The problem persists. Reinstalling JOSM after clearing all its caches does not solve the problem.
+And now it becomes even worse: when I submit a changeset, the new changeset very frequently inexpectely inherits the comment from an older changeset and ignore my new comment.</p>
+
+<p>The issue is visible if I use the option "leave the changeset open", but now it also affects the changesets that are closed automatically after submission (so I cannot submit another edit to force again the incorrect comment that is being recorded).</p>
+
+<p>Apparently this is caused by the server (more precisely, apparently in the link from the frontend proxy of the API used by JOSM and the server, which apparently has an issue when reading my user profile stored in the database, which is constantly out of sync by 1 changeset, with an additional closed changeset overriding data from the new changeset).</p>
+
+<p>I can no longer track my edits and differentiate them, all too many of my changeset comments are mixed. The ONLY way to avoid it for now is to close JOSM and restart it to force it to load my user status, otherwise the frontend proxy will report the wrong "last open changeset" and will sort the open changeset incorrectly. May be there's a changeset with an unknown status (not the standard value for a closed changeset, sometimes it is handled as if it was open, sometimes it will be treated as closed, and this seems to perturbate also some SQL queries, such as SQL aggregates like "HAVING changeset.date = MAX(changeset.date)" or similar).</p>
+
+<p>It seems that the "last open changeset" is present in the proxy with an incorrect date (offsetted apparently by about 2 or 3 weeks, according to the random changeset that is being used to override what I am submitting).</p>
+
+<p>Note that this does not affect the stored edits themselves which are correctly recorded and correctly associated to the newly create changesets.</p>
+
+<p>Frequently when I send the 1st edit in a new JOSM run it will be sent correctly and closed correctly, but then when I send a newer changeset, it will fail immediately (a new changset is created but the server does not return its ID, but the ID of an older changeset, and the first edited data will be rejected, the submission fails. I need to send it again (changing nothing, my new edit comment is still kept in the submission form, but it will NOT be used on the server, a new changeset will be created, and its ID correctly reported, but with now the comment immediately replaced by the comment of my previous successfully closed changeset, if this was the 1st of my JOSM session, otherwise the comment used in a changeset closed 2-3 weeks ago).</p>
+
+<p>This is very irritating. Each time now I need to close JOSM completely (saving my edits locally, without sending), and then restart it to avoid the error (submissions sent to the old closed changeset) when I will create the new changeset.</p>
+
+<p>Sometimes when I leave the changeset open, and look at my history only, all is OK. Then I use CTRL+ALT+Q to close this changeset with no other data to send, but the dialog displays that there's TWO changesets (the new one still open and the old one already closed) both displayed with the same comment (the comment from the older changeset). I need to select the correct one (I click on the one with the highest ID, the dialog does not permit me to input and correct the comment, and finally the closed changeset will have its comment changed in the database to use the older comment.</p>
+
+<p>I have tried on another PC the same issue appears. I am definitely not convinced that this is an issue of JOSM. In my opinion it is a bug the of the API server, in one of its internal caches for its own internal SQL queries, or a bug in the SQL server.</p></div>
+            <div class="comment-info" id="comment-24896-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '13, 19:44)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23162" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23162-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/23162/closed-changeset-constantly-reappearing-as-if-it-was-still-opened?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/23162/closed-changeset-constantly-reappearing-as-if-it-was-still-opened?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/23162/closed-changeset-constantly-reappearing-as-if-it-was-still-opened?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/23162/closed-changeset-constantly-reappearing-as-if-it-was-still-opened?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="23183"></a>
+                    <div id="answer-container-23183" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23183-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23183/up/" rel="nofollow"> </a>
+<div id="post-23183-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-23183-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23183/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I beleive this should be filed as a JOSM error report on <a href="http://josm.openstreetmap.de/">http://josm.openstreetmap.de/</a> or an as an API issue here: <a href="https://trac.openstreetmap.org/">https://trac.openstreetmap.org/</a> ,if it isn't an operator error.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23183/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Jun '13, 11:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23183/">
+                edited
+                <strong>10 Jun '13, 11:50</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23183">
+    
+        <a name="23186"></a>
+        <div class="comment" id="comment-23186">
+            <div id="post-23186-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't detect anything wrong with the API (when I perform manual requests using GET requests in my web browser. I absolutely don't know where this old changeset is coming from, I cannot find any local occurence of its ID anywhere on my data or in the JOSM caches (that I have deleted completely before retrying with a reinstallation). The extra changeset is not even related to what I want to upload, nothing in common with any object, except that it is part of my old changesets.</p>
+
+<p>But I know that JOSM is performing some additional API requests and I don't see the full HTTP request, just one URL and not the metadata and details of responses. I've tried to use a local proxy to trace these requests, nothing seems wrong. This is a complete mystery (and it just affects JOSM, not other online editors like Potlatch 1/2, iD, or Osmose's rawedit). The extra changeset that appears, and changes sometimes, may be one created under rawedit and not within JOSM. It is unpredictable. May be it's a bug in JOSM that uses some strange cache for changesets.</p>
+
+<p>Or it's something caused by my local antivirus inspecting the HTTP sessions in order to filter some potentially harmful data (I use AVG Antivirus). I've tried disabling it (the normal way) but this does not change things. I also checked if I had some rootkit using other security tools, but nothing found, my system is clean (I've never been infected by any threat on my PCs since many years).</p>
+
+<p>I suspect that the problem is not on my PC but in a remote proxy (on the server side) that hides some data and returns inconsistant data about my account (but I don't know which kind of API may be incorrectly cached by such remote proxy that I absolutely o not control).</p>
+
+<p>I've also tried to use an alternate API server in JOSM config:
+<a href="http://api.openstreetmap.fr/api">http://api.openstreetmap.fr/api</a>
+This does not change the problem (no difference compared to the default API server).</p></div>
+            <div class="comment-info" id="comment-23186-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jun '13, 13:56)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="23436"></a>
+        <div class="comment" id="comment-23436">
+            <div id="post-23436-score" class="comment-score"></div>
+            <div class="comment-text"><p>Problem still not solved. Using a proxy to trace requests does not reveal any problem in them.
+Visibl this is an issue in JOSM, that I cannot understand at all. I don't know from where this spurious closed changeset comes into the list of open changeset and find absolutely nothing in my own local caches explaining this irritating presence...</p></div>
+            <div class="comment-info" id="comment-23436-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '13, 08:20)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+        <a name="23437"></a>
+        <div class="comment" id="comment-23437">
+            <div id="post-23437-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Have you opened an issue with the JOSM developers?</p></div>
+            <div class="comment-info" id="comment-23437-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '13, 08:24)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="24903"></a>
+        <div class="comment" id="comment-24903">
+            <div id="post-24903-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can"t even post anything there, I have an account there, but the connection fails always when I logon (needed to post), even when I try to renew the password. It seems that my account on OSM is in fact corrupted.</p></div>
+            <div class="comment-info" id="comment-24903-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '13, 07:14)</span>
+                <a class="comment-user userinfo" href="/users/1555/verdy_p">Verdy_p</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23183" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23183-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/23162/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='wONK0Rlm2EguI9oFmhU8NJWPqQOY2QFP' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23162/closed-changeset-constantly-reappearing-as-if-it-was-still-opened?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23162/closed-changeset-constantly-reappearing-as-if-it-was-still-opened?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/changesets/"
+            class="tag-link-changesets"
+            title="see questions tagged'changesets'using tags"
+            rel="tag">changesets</a> <span class="tag-number">&#215;16</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 9, 2013, 9 p.m.">09 Jun '13, 21:00</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,648 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 5, 2013, 7:14 a.m.">05 Aug '13, 07:14</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8439/is-it-possible-to-change-comments-in-changeset-history">Is it possible to change comments in changeset history</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12087/potlatch-automation-create-and-retrieve-changeset">Potlatch automation: create and retrieve changeset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15846/creating-weekly-daily-changesets-for-specific-region-country">Creating weekly / daily changesets for specific region / country?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22124/nominatim-how-to-apply-weekly-osm-changesets">Nominatim - how to apply weekly OSM changesets?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43358/how-to-search-for-changesets-that-have-changeset-discussions">How to search for changesets that have changeset discussions?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46157/changesets-with-huge-objects-modified">changesets with huge objects modified</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47402/reporting-a-bad-changeset-comment">Reporting a Bad Changeset Comment?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47560/downloading-change-data-what-data-is-available-and-how-do-i-get-it">Downloading Change Data: What data is available and how do I get it?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49774/how-to-find-changes-to-a-particular-tag-made-by-a-particular-user">How to find changes to a particular tag, made by a particular user?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50757/do-you-know-how-many-changesets-there-are-in-the-openstreetmap-database">Do you know how many changesets there are in the OpenStreetMap database?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

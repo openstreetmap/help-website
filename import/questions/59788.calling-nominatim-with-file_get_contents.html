@@ -1,0 +1,1010 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Calling Nominatim with file_get_contents .. - OSM Help</title>
+        <meta name="description" content="I used in a PHP script to call the Nominativ API with file_get_contents. This worked excellently until 13.09.2017. I have tried CURL but no result or error returns. function file_get_contents_curl($cmd, $query) { $level=error_reporting(); error_reporting(E_ALL); $ch = curl_init(); $query= curl_escap..." />
+        <meta name="keywords" content="nominatim,php,error" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/59788/calling-nominatim-with-file_get_contents" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/59788/calling-nominatim-with-file_get_contents?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='4bYGqCxxhmYck9eYWcL2HB9bP69Dqwl3' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/59788/calling-nominatim-with-file_get_contents">Calling Nominatim with file_get_contents ..</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-59788-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59788/up/" rel="nofollow"> </a>
+<div id="post-59788-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-59788-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59788/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/59788/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I used in a PHP script to call the Nominativ API with file<strong><em>_get</em></strong>_contents. This worked excellently until 13.09.2017.</p>
+<p>I have tried CURL but no result or error returns.</p>
+<pre><code>function file_get_contents_curl($cmd, $query) {
+$level=error_reporting();
+error_reporting(E_ALL);
+$ch = curl_init();
+$query= curl_escape($ch,$query);
+$url = $cmd.$query;
+echo $url.' &lt;--';
+curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
+curl_setopt($ch, CURLOPT_HEADER, 0);
+//Set curl to return the data instead of printing it to the $
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 3);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);       
+$data = curl_exec($ch);
+curl_close($ch);
+error_reporting($level);
+return $data;
+</code></pre>
+<p>}</p>
+<pre><code>/*result of echo
+<a href="http://nominatim.openstreetmap.org/search?format=json&amp;limit=1&amp;addressdetails=1%26email%3Dg%40example.com%26street%3D19%2BAhornweg%26city%3DKoenigswinter%26country%3DDeutschland%26postalcode%3D53639">http://nominatim.openstreetmap.org/search?format=json&amp;limit=1&amp;addressdetails=1%26email%3Dg%40example.com%26street%3D19%2BAhornweg%26city%3DKoenigswinter%26country%3DDeutschland%26postalcode%3D53639</a>
+*/
+</code></pre>
+<p>Can anyone help me with a working solution?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/php/" class="post-tag tag-link-php"
+                                        title="see questions tagged 'php'" rel="tag">php</a>
+                                
+                                    <a href="/tags/error/" class="post-tag tag-link-error"
+                                        title="see questions tagged 'error'" rel="tag">error</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Sep '17, 06:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2608aa8e00ed6db4f5d8090f8983fbb8?s=32&amp;d=identicon&amp;r=g" alt="user_5359's gravatar image" />
+    <p><a href="/users/11635/user_5359">user_5359</a><br/>
+    <span class="score" title="91 reputation points">91</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="user_5359 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/59788/">
+                edited
+                <strong>23 Sep '17, 13:58</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+            <p><a href="/users/5/richard">Richard ♦</a><br/>
+            <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-59788">
+    
+</div>
+<div id="comment-tools-59788" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59788-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/59788/calling-nominatim-with-file_get_contents?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/59788/calling-nominatim-with-file_get_contents?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/59788/calling-nominatim-with-file_get_contents?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/59788/calling-nominatim-with-file_get_contents?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="59819"></a>
+                    <div id="answer-container-59819" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-59819-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59819/up/" rel="nofollow"> </a>
+<div id="post-59819-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-59819-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59819/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="user_5359 has selected this answer as the correct answer"
+        href="/accept_answer/59819/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>PHP's <code>file_get_contents()</code> sends neither HTTP UserAgent nor Referer, which violates the <a href="">usage policy</a> for the server. You can easily add custom HTTP headers by creating an appropriate stream context like that:</p>
+<pre><code>// Create a stream
+$opts = array('http'=&gt;array('header'=&gt;"User-Agent: StevesCleverAddressScript 3.7.6\r\n"));
+$context = stream_context_create($opts);
+
+// Open the file using the HTTP headers set above
+$file = file_get_contents('http://nominatim.openstreetmap.org/search/q=Rome', false, $context);
+</code></pre>
+<p>For more information see the <a href="http://php.net/manual/en/function.file-get-contents.php">PHP user manual</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/59819/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Sep '17, 15:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d888b712d85dee0aa304297f2dc697c7?s=32&amp;d=identicon&amp;r=g" alt="lonvia's gravatar image" />
+    <p><a href="/users/2921/lonvia">lonvia</a><br/>
+    <span class="score" title="6213 reputation points"><span class="">6.2k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="lonvia has 43 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-59819">
+    
+</div>
+<div id="comment-tools-59819" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59819-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="59791"></a>
+                    <div id="answer-container-59791" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-59791-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59791/up/" rel="nofollow"> </a>
+<div id="post-59791-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-59791-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59791/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Do you run the script within the <a href="https://operations.osmfoundation.org/policies/nominatim/">https://operations.osmfoundation.org/policies/nominatim/</a> limits, e.g. Number of requests per second? I see the email parameter is a non-existing email. It's possible you got blocked. That would explain why it stopped working from one day to the next.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/59791/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Sep '17, 08:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/96aad1e1801b7ea36fba50687924c935?s=32&amp;d=identicon&amp;r=g" alt="mtmail's gravatar image" />
+    <p><a href="/users/150/mtmail">mtmail</a><br/>
+    <span class="score" title="4757 reputation points"><span class="">4.8k</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="74 badges"><span class="bronze">&#9679;</span><span class="badgecount">74</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mtmail has 50 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-59791">
+    
+        <a name="59794"></a>
+        <div class="comment" id="comment-59794">
+            <div id="post-59794-score" class="comment-score">1</div>
+            <div class="comment-text"><p>the email address has been changed for security reasons. If I'm blocked, I would get a corresponding HTML text.</p>
+
+<p>Unfortunately, the code runs on my development machine, but not on the server. In which direction do I have to see which parameters (CURL installation?) can have an effect?</p></div>
+            <div class="comment-info" id="comment-59794-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '17, 11:22)</span>
+                <a class="comment-user userinfo" href="/users/11635/user_5359">user_5359</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-59791" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59791-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="65036"></a>
+                    <div id="answer-container-65036" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-65036-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/65036/up/" rel="nofollow"> </a>
+<div id="post-65036-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-65036-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/65036/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I had a similar problem while acquiring coordinates for geocoding. I need to add also my email address to url.
+I combined info from this: <a href="https://gis.stackexchange.com/questions/166006/nominatim-reverse-geocode-gets-blocked-how-do-i-send-a-valid-useragent-or-refe">link text</a> and this: <a href="https://stackoverflow.com/questions/34073169/how-to-header-stream-context-create">link text</a> to get this:</p>
+<pre><code>        $url = 'https://nominatim.openstreetmap.org/search/'.rawurlencode($location).'?format=json&amp;limit=1&amp;email=youremail@gmail.com';
+
+        $data = ''; // empty post
+        $opts = array(
+            'http' =&gt; array(
+            'header' =&gt; "Content-type: text/html\r\nContent-Length: " . strlen($data) . "\r\n",
+            'method' =&gt; 'POST'
+            ),
+        ); 
+        // Create a stream
+        $context = stream_context_create($opts);
+        // Open the file - get the json response using the HTTP headers set above
+        $jsonfile = file_get_contents($url, false, $context);
+        // decode the json 
+        if (!json_decode($jsonfile, TRUE)) {return false;}else{
+        //if (empty(array_filter($resp))) {return false;}else{
+        $resp = json_decode($jsonfile, true);
+        //if(is_string($resp)){$resp = 'true';}else{$resp = 'itsnot';}
+        // Extract data (e.g. latitude and longitude) from the results    
+        $gps['latitude'] = $resp[0]['lat'];
+        $gps['longitude'] = $resp[0]['lon'];
+        return $gps;}
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/65036/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Jul '18, 01:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c8925e2f43f3710d1945cff9f7332105?s=32&amp;d=identicon&amp;r=g" alt="Pablo's gravatar image" />
+    <p><a href="/users/15460/pablo">Pablo</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Pablo has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-65036">
+    
+</div>
+<div id="comment-tools-65036" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-65036-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="67034"></a>
+                    <div id="answer-container-67034" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-67034-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/67034/up/" rel="nofollow"> </a>
+<div id="post-67034-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-67034-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/67034/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Cool, thanks to lonvia here's a practical example to get around this nonsense with php. Using the browsers <a href="https://stackoverflow.com/questions/10243841/how-to-get-user-agent-in-php">user_agent</a> as a variable.  </p>
+<pre><code>function OsmAddress() {
+    //vars
+    $Latitude ='22.56589015';
+    $Longitude ='113.9259518';
+    $USERAGENT = $_SERVER['HTTP_USER_AGENT'];
+
+    //main
+    $opts = array('http'=&gt;array('header'=&gt;"User-Agent: $USERAGENT\r\n"));
+    $context = stream_context_create($opts);
+    $url4 = file_get_contents("https://nominatim.openstreetmap.org/reverse?format=json&amp;lat=$Latitude&amp;lon=$Longitude&amp;zoom=18&amp;addressdetails=1", false, $context);
+    $osmaddress = json_decode($url4);  
+    $osmaddress1 = $osmaddress-&gt;display_name;
+    echo $osmaddress1;
+}
+OsmAddress();
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/67034/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Dec '18, 07:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f64caeeb5ed5d7b1626dda1343714f42?s=32&amp;d=identicon&amp;r=g" alt="J0naz's gravatar image" />
+    <p><a href="/users/15989/j0naz">J0naz</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="J0naz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-67034">
+    
+        <a name="67037"></a>
+        <div class="comment" id="comment-67037">
+            <div id="post-67037-score" class="comment-score"></div>
+            <div class="comment-text"><p>So you are re-using/faking the user's useragent for your server-side script to execute a nominatim query on the user's behalf? Not sure if that is a good idea with regards to complying with <a href="https://operations.osmfoundation.org/policies/nominatim/">https://operations.osmfoundation.org/policies/nominatim/</a> . Do not be surprised if your access will be blocked at some point in time. I guess that setting a proper referer, custom user agent (your application's name) a contact email address would be a better way to go.</p>
+
+<p>Note that to get around that "nonsense" you are free (and very welcome) to set up your own nominatim service using our free data.</p></div>
+            <div class="comment-info" id="comment-67037-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Dec '18, 11:14)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-67034" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-67034-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/59788/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='4bYGqCxxhmYck9eYWcL2HB9bP69Dqwl3' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/59788/calling-nominatim-with-file_get_contents?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/59788/calling-nominatim-with-file_get_contents?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/error/"
+            class="tag-link-error"
+            title="see questions tagged'error'using tags"
+            rel="tag">error</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/php/"
+            class="tag-link-php"
+            title="see questions tagged'php'using tags"
+            rel="tag">php</a> <span class="tag-number">&#215;34</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 23, 2017, 6:22 a.m.">23 Sep '17, 06:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>16,795 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 2, 2018, 11:15 a.m.">02 Dec '18, 11:15</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/27701/nominatim-error-import-out-of-memory-for-node-cache-dense-index">nominatim error import &quot;Out of memory for node cache dense index&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31059/nominatim-internal-server-error">Nominatim internal server error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21125/importing-nominatim-database-error-libgeos-cant-be-opened">Importing Nominatim database error: libgeos can&#39;t be opened</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24678/problem-with-local-nominatim-search">Problem with local nominatim search</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28014/how-do-i-extract-osm_type-from-nominatim-result-using-php">How do i extract osm_type from Nominatim result using PHP?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1301/ajax-issues-with-nominatim">[closed] Ajax issues with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12142/nominatim-setup-error">Nominatim setup error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15563/nominatim-install-problem-final-step-php">Nominatim Install Problem, Final Step. PHP?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21887/nominatim-php-postgres-c-pattern">Nominatim: PHP - Postgres - C pattern</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37670/error-with-lookup-service-nominatimopenstreetmaporg">Error with lookup service nominatim.openstreetmap.org</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

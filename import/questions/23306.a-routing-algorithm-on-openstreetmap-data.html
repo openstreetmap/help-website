@@ -1,0 +1,961 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>A* routing algorithm on OpenStreetMap data - OSM Help</title>
+        <meta name="description" content="Hi, I imported a large area from &quot;planet.osm&quot; file into a postgresql database using Osmosis. Now, I want to implement a routing algorithm based on two locations entered by a user.  Is not really clear for me where in my database structure I should search for this two points. For example if a user en..." />
+        <meta name="keywords" content="routing,osmosis" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/23306/a-routing-algorithm-on-openstreetmap-data" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/23306/a-routing-algorithm-on-openstreetmap-data?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='M7klO7oX7p0H1S1a0HwUnFbnX44UoMT2' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/23306/a-routing-algorithm-on-openstreetmap-data">A* routing algorithm on OpenStreetMap data</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-23306-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23306/up/" rel="nofollow"> </a>
+<div id="post-23306-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23306-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23306/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/23306/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I imported a large area from "planet.osm" file into a postgresql database using Osmosis.<br>
+Now, I want to implement a routing algorithm based on two locations entered by a user.<br>
+</p>
+<p>Is not really clear for me where in my database structure I should search for this two points.
+For example if a user enters as starting point "London, UK" and as end point "Paris, France" where should I search for this two locations so I can start implementing my routing algorithm.<br>
+</p>
+<p>My database structure as created by Osmosis contains the following tables: nodes, relation_members, relations, users, way_nodes and ways.<br>
+</p>
+<p>I need some clear information on how the database is structured because I can not figure out where to start building my graph so I can implement A* algorithm. This routing algorithm is a part of my thesis so I can not use an allready built service.</p>
+<p>Thank you,<br>
+Radu-Stefan</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/routing/" class="post-tag tag-link-routing"
+                                        title="see questions tagged 'routing'" rel="tag">routing</a>
+                                
+                                    <a href="/tags/osmosis/" class="post-tag tag-link-osmosis"
+                                        title="see questions tagged 'osmosis'" rel="tag">osmosis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Jun '13, 08:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/af030346f57b37767fe7e80f23e07d7c?s=32&amp;d=identicon&amp;r=g" alt="raduzugravu's gravatar image" />
+    <p><a href="/users/5873/raduzugravu">raduzugravu</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="raduzugravu has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-23306">
+    
+        <a name="84516"></a>
+        <div class="comment" id="comment-84516">
+            <div id="post-84516-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is there a way to access the graph underlying OSM api?</p></div>
+            <div class="comment-info" id="comment-84516-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 May '22, 01:32)</span>
+                <a class="comment-user userinfo" href="/users/21763/petercullenburbery">PeterCullenB...</a>
+                
+            </div>
+        </div>
+    
+        <a name="84518"></a>
+        <div class="comment" id="comment-84518">
+            <div id="post-84518-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Pls create a new question and do not start new topics in comments.</p></div>
+            <div class="comment-info" id="comment-84518-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 May '22, 08:26)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23306" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23306-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/23306/a-routing-algorithm-on-openstreetmap-data?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/23306/a-routing-algorithm-on-openstreetmap-data?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/23306/a-routing-algorithm-on-openstreetmap-data?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/23306/a-routing-algorithm-on-openstreetmap-data?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="23311"></a>
+                    <div id="answer-container-23311" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23311-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23311/up/" rel="nofollow"> </a>
+<div id="post-23311-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-23311-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23311/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="raduzugravu has selected this answer as the correct answer"
+        href="/accept_answer/23311/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The Snapshot database structure populated by Osmosis is very unsuitable for routing, at least in part because geometry for ways might not exist or be unsuitable and there is no geometry for relations. You really need to transform the data into a more suitable format. This data is really for people who want a pretty much exact copy of current data from the planet database for an area.</p>
+<p>I would start by reading the <a href="http://wiki.openstreetmap.org/wiki/Routing#Libraries.2FDevelopment-Tools">wiki</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23311/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Jun '13, 10:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23311">
+    
+        <a name="23322"></a>
+        <div class="comment" id="comment-23322">
+            <div id="post-23322-score" class="comment-score"></div>
+            <div class="comment-text"><p>But how can I retrive my start and end locations from the list of nodes? Right now I do a search through the hsotore tags and compare name keys with the values introducted by the user. This is really slow. Is there a way to make a search through hstore keys faster? My database implementation uses Postgis functionality. My problem is in retrieving the start and end locations. Once I find my start and end points routing should be done easy using Postgis functions.</p></div>
+            <div class="comment-info" id="comment-23322-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jun '13, 11:45)</span>
+                <a class="comment-user userinfo" href="/users/5873/raduzugravu">raduzugravu</a>
+                
+            </div>
+        </div>
+    
+        <a name="23324"></a>
+        <div class="comment" id="comment-23324">
+            <div id="post-23324-score" class="comment-score"></div>
+            <div class="comment-text"><p>Then you probably need a nameserver like Nominatim, but I'm sceptical that you can use a raw snapshot schema. It's basically a Postgres schema not a PostGIS one (really only the nodes have location).</p></div>
+            <div class="comment-info" id="comment-23324-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jun '13, 12:14)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23311" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23311-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="23337"></a>
+                    <div id="answer-container-23337" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23337-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23337/up/" rel="nofollow"> </a>
+<div id="post-23337-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-23337-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23337/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OpenStreetMap data can be converted into many database structures, for many different purposes. You should decide the database structure that you require first, and then import the data into your chosen structure.</p>
+<p>By picking a schema without checking that it's suitable, then you're almost guaranteed to fail. It's like cementing bricks to one another, and then designing the house afterwards.</p>
+<p>Of course, if you don't want to design the database structure, then you can use one that's already designed for routing, and already has an importer, like <a href="http://pgrouting.org/docs/tools/osm2pgrouting.html">osm2pgrouting</a> - but that might not be the point of the exercise.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23337/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Jun '13, 14:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3743b1b368f5e209eb8aad30164acc4?s=32&amp;d=identicon&amp;r=g" alt="Andy%20Allan's gravatar image" />
+    <p><a href="/users/3/andy-allan">Andy Allan</a><br/>
+    <span class="score" title="12456 reputation points"><span class="">12.5k</span></span><span title="23 badges"><span class="badge1">&#9679;</span><span class="badgecount">23</span></span><span title="128 badges"><span class="silver">&#9679;</span><span class="badgecount">128</span></span><span title="153 badges"><span class="bronze">&#9679;</span><span class="badgecount">153</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andy Allan has 46 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23337">
+    
+</div>
+<div id="comment-tools-23337" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23337-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="23366"></a>
+                    <div id="answer-container-23366" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23366-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23366/up/" rel="nofollow"> </a>
+<div id="post-23366-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-23366-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23366/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is no good way to do performant geocoding with a pgsnapshot database. If you do suitable partial indexes on (lower(tags -&gt; 'name')) (lower(tags -&gt; 'alt_name')) and similar tags you might be able to get some results, but writing a geocoder is a thesis in itself. </p>
+<p>pgsnapshot is written to preserve full OSM data, which is <strong>not</strong> what you want for routing. </p>
+<p>In any case, the three main tables are nodes, ways and relations. They contain the nodes, ways and relations imported into the DB with one row per object. Most of the columns for these are self-evident from the names, but tags is a <a href="http://www.postgresql.org/docs/9.1/static/hstore.html">hstore</a> with the object tags. </p>
+<p>The table-specific columns are</p>
+<ul>
+<li>in nodes geom is the node location stored as a PostGIS POINT</li>
+<li>in ways nodes is a bigint[] with a list of node IDs. Note that using this to find which ways are "parents" of a node is slow operation, even with a GIN index</li>
+<li>The optional bbox and linestring columns on ways have the way bbox or linestring respectively. These probably won't help you with forming the graph as linestrings have no notion of connectivity.</li>
+</ul>
+<p>The way_nodes and relation_members store membership in ways and relations and allow you to find the "parent" ways or relations for a node or other object.</p>
+<p>I suggest you decide if you're trying to write a geocoder or trying to write a routing engine. In either case, pgsnapshot is probably not the place to start.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23366/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Jun '13, 10:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5634c46072077e10f5b7c0da9b4bbb62?s=32&amp;d=identicon&amp;r=g" alt="pnorman's gravatar image" />
+    <p><a href="/users/290/pnorman">pnorman</a><br/>
+    <span class="score" title="2352 reputation points"><span class="">2.4k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="21 badges"><span class="silver">&#9679;</span><span class="badgecount">21</span></span><span title="40 badges"><span class="bronze">&#9679;</span><span class="badgecount">40</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="pnorman has 9 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23366">
+    
+        <a name="23369"></a>
+        <div class="comment" id="comment-23369">
+            <div id="post-23369-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,</p>
+
+<p>Thank you for your answer.
+What I am trying to write is a routing engine. I need to geocode start and end locations in order to know coordinates for locations introduced by the user. To obtain this coordinates I could make a request to nominatim.</p>
+
+<p>Theoretically it should be possible to write an A* algorithm on this set of data after I get my start and end coordinates, right?</p></div>
+            <div class="comment-info" id="comment-23369-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '13, 11:09)</span>
+                <a class="comment-user userinfo" href="/users/5873/raduzugravu">raduzugravu</a>
+                
+            </div>
+        </div>
+    
+        <a name="23370"></a>
+        <div class="comment" id="comment-23370">
+            <div id="post-23370-score" class="comment-score">1</div>
+            <div class="comment-text"><p>yes but whether it will complete before heat-death of the universe is another matter</p></div>
+            <div class="comment-info" id="comment-23370-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '13, 11:22)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23372"></a>
+        <div class="comment" id="comment-23372">
+            <div id="post-23372-score" class="comment-score"></div>
+            <div class="comment-text"><p>Time is not that important. Of course it shouldn't take days to complete. I think somewhere under 1-2 minutes for locations not too far away one from another should be ok.</p>
+
+<p>I have one more question. In order to write my routing algorithm my start and end nodes should be part of a way, right?</p></div>
+            <div class="comment-info" id="comment-23372-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '13, 11:32)</span>
+                <a class="comment-user userinfo" href="/users/5873/raduzugravu">raduzugravu</a>
+                
+            </div>
+        </div>
+    
+        <a name="23410"></a>
+        <div class="comment" id="comment-23410">
+            <div id="post-23410-score" class="comment-score"></div>
+            <div class="comment-text"><p>I mean if someone introduces as starting node a cultural objective (for example the name of a museum) which is not part of a way then I have to find the closest node to that starting node which is part of a way. That can be done using postgis geometry functions?</p></div>
+            <div class="comment-info" id="comment-23410-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jun '13, 07:28)</span>
+                <a class="comment-user userinfo" href="/users/5873/raduzugravu">raduzugravu</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23366" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23366-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/23306/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='M7klO7oX7p0H1S1a0HwUnFbnX44UoMT2' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23306/a-routing-algorithm-on-openstreetmap-data?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23306/a-routing-algorithm-on-openstreetmap-data?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/routing/"
+            class="tag-link-routing"
+            title="see questions tagged'routing'using tags"
+            rel="tag">routing</a> <span class="tag-number">&#215;305</span><br/>
+        
+        <a href="/tags/osmosis/"
+            class="tag-link-osmosis"
+            title="see questions tagged'osmosis'using tags"
+            rel="tag">osmosis</a> <span class="tag-number">&#215;252</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 13, 2013, 8:50 a.m.">13 Jun '13, 08:50</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,153 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 19, 2022, 8:26 a.m.">19 May '22, 08:26</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/38328/building-a-graph-out-of-osm-xml">Building a graph out of OSM XML</a>
+        </p>
+        
+        <p>
+            <a href="/questions/85581/applying-local-changesets-to-osm">Applying local changesets to OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/192/how-are-the-replication-diffs-created">How are the replication diffs created?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/275/how-do-i-connect-a-high-speed-bidirectional-trunk-road-to-the-network">How do I connect a high speed bidirectional (trunk) road to the network ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/310/how-do-you-tag-gates-that-are-open-most-of-the-time">How do you tag gates that are open most of the time?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/467/how-do-i-use-osm-maps-in-my-gps">How do I use OSM maps in my GPS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/737/is-there-any-windows-ce-navigation-software-that-uses-osm-data">Is there any Windows CE navigation software that uses OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/687/are-motorcars-allowed-on-track-roads">Are motorcars allowed on &#39;track&#39; roads ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/804/are-cyclists-allowed-on-trunk-roads">Are cyclists allowed on trunk roads?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/259/what-is-the-recommended-way-to-tag-temporary-road-works-and-traffic-situations">What is the recommended way to tag temporary road works and traffic situations?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

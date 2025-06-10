@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to work with osrm. - OSM Help</title>
+        <meta name="description" content="Hi, I try out how to work with osrm.  Lets say I do have two different points (one in Aachen and one in Brussel). I can ask for the map with: http://map.project-osrm.org/?hl=de&amp;amp;loc=50.776279,6.084859&amp;amp;loc=50.841579,4.366734&amp;amp;z=10&amp;amp;center=50.894572,4.945387&amp;amp;alt=0&amp;amp;df=0&amp;amp;re=0&amp;am..." />
+        <meta name="keywords" content="osrm,json,nominatim,router,distance" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/41407/how-to-work-with-osrm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/41407/how-to-work-with-osrm?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='5gaVLcZAzmoyIXtduFSnTDTBbIocmdYk' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/41407/how-to-work-with-osrm">How to work with osrm.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-41407-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/41407/up/" rel="nofollow"> </a>
+<div id="post-41407-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-41407-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/41407/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/41407/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I try out how to work with osrm. </p>
+<p>Lets say I do have two different points (one in Aachen and one in Brussel).</p>
+<p>I can ask for the map with:  <a href="http://map.project-osrm.org/?hl=de&amp;loc=50.776279,6.084859&amp;loc=50.841579,4.366734&amp;z=10&amp;center=50.894572,4.945387&amp;alt=0&amp;df=0&amp;re=0&amp;ly=763558683">http://map.project-osrm.org/?hl=de&amp;loc=50.776279,6.084859&amp;loc=50.841579,4.366734&amp;z=10&amp;center=50.894572,4.945387&amp;alt=0&amp;df=0&amp;re=0&amp;ly=763558683</a></p>
+<p>Now I want to trace that route and count the distance.  <a href="http://router.project-osrm.org/viaroute?loc=50.776279,6.084859&amp;loc=50.841579,4.366734">http://router.project-osrm.org/viaroute?loc=50.776279,6.084859&amp;loc=50.841579,4.366734</a></p>
+<p>I receive this one:</p>
+<pre><code>{"hint_data":{"locations":["9HUWANgJugEdgiQAAAAAABoAAAAAAAAAAAAAAP____8AAAAA18gGA_vYXAAAABEA","t8gWBP_____HvRQANwAAAEgAAAAiAAAACAAAAHCp3AMAAAAA68cHA46hQgACABEA"],"checksum":1423277062},"route_name":["",""],"via_indices":[0,1055],"via_points":[[50.776279,6.084859],[50.841579,4.366734]],"found_alternative":false,"route_summary":{"end_point":"Avenue des Arts - Kunstlaan","start_point":"Büchel","total_time":5160,"total_distance":142783},"route_geometry":"klcz_BunkrJeAwJmLiN_FaOwNuU_FaIwHaLmDuFeJ}N{PpHuDdBmOgAuCUcLOaEzl@c<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>GeDnl<a href="http://help.openstreetmap.org/users/101/iknowjoseph">@i</a>AxL_@`E[hDcArK}@tGa@fCcEjWoErT_AvEwA~GsIlb<a href="http://help.openstreetmap.org/users/136/acrosscanadatrails">@a</a>DhNeBfIuAlIgApG_AjDyBrDiGbH_F`G{KdNyKzNyFpU{<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>DyBpHwP`h@wFxMwOxZeMjPwBxC_A~QcB~D_F~F_FrDeEnCsCtBqBtBg^~[qYhf@gAhBeF~I}JvQ{f@v|@{Wpe@cCjEuBtDgDfGkAvBqCzE_p<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>jAgD`GiSd^{FfK_DvFcAhBaBrCgItNmDfGwDzGiAnByAfCaMtTmKdR_DtFuA~BsBzDyJrQmChEsCvEsJpO_NlRqMhOyRlOuU`MsOvEmOnBcHr@qWqAiOuA{MaC_Z}IeW{OcRmOsWeXqM}O}T{`<a href="http://help.openstreetmap.org/users/202/kobie">@ko</a>@c}A}Og\\oWic@uOmSaV{V}VoQwZePg[{Ju_@cIic@_EmdA_@wqAeAel@gAwu@oDaf@gEop@wKaOaDeRyEqDw<a href="http://help.openstreetmap.org/users/38/yulik">@y</a>z@_TeZkG{b@wGg[s@}]?cFCg@dHPtc@b@he@~<a href="http://help.openstreetmap.org/users/212/ffx">@ff</a>@lBjR|ChNvF|KnQzTtIxOfEjMhBnPTpG<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>FKzFi@lKyE|f@}h@rsCo`@`~BaK`{@oLteAqFpm@mG~y@{HvvAoBlg@wAdg@e@rp@}<a href="http://help.openstreetmap.org/users/1006/jgsprosser"><a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>g</a>@It}<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>@h}B\\ze@r@bvDKjd@W`iAeCx{A_GfdBcGhbAiEdk@{LjvAyP`sA}RbnAoXnuAo^n_Byd<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>bBse@|uAui@zwAqG|Ngq@`uAsh@hz@cE~FoRpZeIfM_f@lo@ku@h{@_WlXeTlUimAnnAus@rs@ulAjnA}InJuzCd|C_k@bm@u}Cv}CmQbQ}xDb`EydF~fFabDrdDmoBrpBol@ts@sm@lx@sg@zw@on@bmAwHbRsRjb@cx@lkBkcBvnFqMnb<a href="http://help.openstreetmap.org/users/136/acrosscanadatrails">@a</a>qEr|N{s@h|Bsg@z_Bw`@reAkf@vhAqvAjlCaYfc@{Vz\\km@|x@gv@hy@wtAxlAos@pk@kuAn_AwaBffAw`<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>UuyBztAy{BrzA_eA~u@_mArcAgmAvfA}nCdqCk_CtrCgjC`_DgdAbhAqzAn|Aa}@`|<a href="http://help.openstreetmap.org/users/136/acrosscanadatrails">@a</a>]xYmmBzeBcM~Jq~AryAk|<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>{<a href="http://help.openstreetmap.org/users/101/iknowjoseph">@i</a>zBj~BkpBj|Bc{FlnHy|BzrCs|BvnCwgAdmA}vBjsBscHfwG_`@~]m{@`y@uT|S{qAhnAy|AnzAsRvRuX`\\gP`TyUd[iWz_@m\\di@uVpc@gSz^gc@z{<a href="http://help.openstreetmap.org/users/38/yulik">@y</a>\\n{<a href="http://help.openstreetmap.org/users/2454/mfnoise">@mf</a>@luAqUzw@{HzY_XtdAgYdwAi^ljBkcCjsMeFnXevAhuHqCpLmHz[{Jj`@eHtVgItW_Tpj@{f@rnAgm@tuAyUnh@sHtOyO~Y_Sj[gMlO_MzMiLrKof@|^eu@di@}KbIac@zY}Z`SitAtu@{hBt}@gnDxiBqlGdjEeMvJ{bAfu@_VhTuVpX}_@lf@mNnSuYlg@cNzU{[`u@kV|s@wmAl{DeJlYqdAlfDcQzq<a href="http://help.openstreetmap.org/users/136/acrosscanadatrails">@a</a>S~aAoLhr@gJ~w@ghA`~KiSzpC{SdrDoTniDiGbjAeFrs@kEn`@kFxYmHja<a href="http://help.openstreetmap.org/users/101/iknowjoseph">@i</a>GlWuJd\\{Pdh@oHjQshB|aF_U`s@eKdf@kHbg@_`@`jE{BhZsTprCcVfgCkRjxAaIfb<a href="http://help.openstreetmap.org/users/136/acrosscanadatrails">@a</a>Lzi@w{GdsUouBlnHgi@pbBmRpe<a href="http://help.openstreetmap.org/users/136/acrosscanadatrails">@a</a>b@vaAyrCvqF{jBlqDmJjR}pAvhCcEnIaIpPydCfcF}`An_C}k@baBqWpy@gKr_@wL`f@uIzb@mHbc<a href="http://help.openstreetmap.org/users/136/acrosscanadatrails">@a</a>Hhg@eFtb@{Fhn@sCbb@_Dhl@wBtq@s<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>m@Ctx@bAxcAXtO`EbvA|GtcBzI|tAhH~~@`P`fB`Jvy@vNpdAvQ`mAxOr`A|`@dtBrOdq@be@`kBlpBzuGb[|cAlf<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>_BnbBpoFzkAbyDdkB`eGb{@|pCzm@ryBpOnl<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>WjhAlZ~wA~Oxx<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>DxShV`yAhSpyApOdqArJbz@rX|~CzMltBdC`f@bEd{@hGv_CfA`r@bCtaCAj`BgA~aB}D|xB_S|xGiUf_HiGnoBkh@pqOs[h|JoArj@w[rmJsuAbsb@{Chy@eHzsAwExy@{JdxAgLvqA}L~mAkLndAiu@ztFyv@`wFq{<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>{GqRffByRpoB{ZtbEiGz{@mWrlEsO~lDqRnlEe\\t_Iqa@txIo]|eGg]zbFck<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>}Gkb@rjEco@r|Fif<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>{Dw`@blDok@tbEgcCj`RmiAz}Ie`CpuQq_DrbVud@zzCyk@reD_^|iBy_@|hB}}<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>cEkg@d|Bq`AdkEqlGffYmxHro]gOvq@_i@|`CwsB~iJcnApvFuOrr<a href="http://help.openstreetmap.org/users/136/acrosscanadatrails">@a</a>qAz_GoU`iA{^drBkS|mAyNb_AqOxgA{]rpC{OvpA}UhnBer@ryFsOloA_T`dBgSraBs]|uCsnAxdKqcAzkIeRf|Ac{@thHgEn^oQn{AcI`s@kMvhAmmAvqK}jAp~JqvChyVgoAppKa[bbDkOjkBaKpzAuH~sA{Drv@qDtz@eD``AyCrdA}CvzA}AbfAoAxoBm@zpBlDpi_@`BbmMvCphXvBxePp@`lHrAx|Jz@hyH`BtgOVbuA?th@|AvlDxCbiBjCtmArF~tApJhmB`E`p@rNvjBhPvhBle@`wEp_AraJ|RlkB|t<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>dH`f@zuEh{<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>jIfMvqAxKrvApKndBzEf`AlkAr~Uv\\z~GreBjy]r`A~xRtRnyD`Zj`GxV~bFrKr|Brp@rmMzTpfFjMjpBlFrhAjEpt@dDbv@lCpg<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>Y|~Fl_@llHxNjtBnNzfBbMzqArUnzB|d@z_DpRhiArg@tqCzn@peDplKzzi@|k@~uCv^hbBvi@|uBzj@hrBd}Al_Fp}A||Evc@psAvU~s@fjGzmRdn<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>rBx^lfAlnBh`Gl_C|jHhQzj@tn<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>sBz`<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>tAn~@zrDd^fdBh]nlBjLjq@rTvxAz[jiCrWrmCpK|wA|IvyA`HhuA~FjwAbKpdDbI|aDfR|dIpKv}CtCzn@~I~eB`D`h<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>IhhApQ|qBfPh{AtR~{A`Vr}ApAfIbCrOhFb\\`Pd{<a href="http://help.openstreetmap.org/users/3319/pjdevitt">@pJde</a>@hCdMhOtq@rQzx<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>V~~@|Vl_AtWn}@rYv|@~q<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>nB~v@tkBnz@~gB|{@`aBf_AndBnQnZhwCdaFzfC|qEviAf~Bbj<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>nAnYjr@pr@vnBzi<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>fBho@tbCv^lfBdUznAf]`wBjYncCbLrjAvJvlAtQhhDjFjaBtApu@z@rv@b@~y@Ej~<a href="http://help.openstreetmap.org/users/101/iknowjoseph">@i</a>@vgAq<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>c<a href="http://help.openstreetmap.org/users/38/yulik">@y</a>@tb<a href="http://help.openstreetmap.org/users/101/iknowjoseph">@i</a>DtoAsBrk@kC|i@qB``@{IbvAiL|rAiKzaAeLj_AmBjOcJ|q@{Ltw@qMvs@_Rp~<a href="http://help.openstreetmap.org/users/101/iknowjoseph">@i</a>TbcAeQbt@eY`eAsPrj@mj@tcBq~@hcCycAfgCyLjYypBv_F{f@bpA_ChG}Opb@{_@~gAs[paA{Qtm@uRzr@gRpu@wPfu@mNnr@cLxn@oJ`k@_N|_AqEz^oKjaAuJ|eAwFpw@}FnbA{Dr~@}Bnw@kBhcAw@hmAVteAdAhrAlCxlAjGnlBvI|kB|Vb_FjRb{D`Jp|B~GnaC~ChbBnAdbA`Al`A^pbAFtaAO~zAu@~tAaCznBgD`cBaEpuAsHtxBwUjpFuTpsEwSzrEqJpyB{K~oBmP``EaC|f@eG`lAwv@`xOkQ~zEuRbzEaPfjFoG~aCgEh~BgIl~FwHj`GsJj_GyKhaGgMf_GmN`}FkGl~BgHhdCeY|{Iy[`vIuKhnCkL~kCaZtwG}u@fsP_PhrDcMd|D}D|jAqB`dAcB~eAkA`jASp^ObbAh@pdAv<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>~@|Arz@vA|o@bC|k@vB|k@tC|k<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>L`pBtKbmAxSzqBnHrk@~N|cAvPzbAnRpaAfSn`ArYxpAx[~nA`]lmAd^zjAnJpZtHtUfnApoDvpA`lDzcDlwIj]l`AnJ`[zq<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>tB`t@toCtYdnAvV`nA~t@pcEjq@pdEhgA~yGlfBp{KvYdfBzYjeBz[`eBx\\bdBbSh~@~Sz}<a href="http://help.openstreetmap.org/users/6006/ftrebien">@fT</a>~|<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>Td|@~a@h}Avb@`|AhgAjvDjhAxxDtc@h{Anf@~xA|m@raBrWvn@dXtm<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>g@pgAfk@pgAnl@ddAze@zx@vv@lfAjvBrkCndD|_EjfPl`Sz~InxKnlBf`CjM`PheAnqA`J~KjN`QxMhOnhAbsA|kCnbDpMxOzL|Nze@dn@zTb]pQzZpIbSnJnRd[tt<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>Qdl@tmBziHxpBhsHrOfh<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>Yty@hRre@rSpc@`e@t{@vy@ltAfxBhqDhV|b@bXbi@d]vx@|Qjk@zQbn@t`@zzAf{AvtFb]jnAfm@rwB`i@v}Ah[dt@~S~`@lXre@`_@ph@`V`Ztm@fl@lp<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>g<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>lBhpAx[xTx}BrdBff@za@z\\t\\jUlXfY|Zv_<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>h@zXhd@fVxd@|Nr\\lTlk@tJz\\|_@`sAhYplAbJp]db@tlBbUpy@r`<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>fAlZnr@hZne@rWn_<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>Wv[pNtO|YrWf]|Wv[fR|XlNlPbGlb@lNh]`Jxb@hKvs@rQb\\jL|]pPzNxHr[lR`RdNxd@dc<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>tBt}BffDhyDpPxQhw@h`A~Qj\\xIfOlm<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>~<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>QxZxOh^lSlm@vO~i@pVnkAlh@h{CnIz~<a href="http://help.openstreetmap.org/users/139/patcito">@pAt</a>]x@z]Hdm<a href="http://help.openstreetmap.org/users/101/iknowjoseph">@i</a>Bl_AqApWkBza<a href="http://help.openstreetmap.org/users/101/iknowjoseph">@i</a>UnjD}P`~CsS`qDsb@~bGaEji@oDff@uApUad<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>rGm[vlEgPf_Cci@leHquAl|O{w@bsIwEtg@eZfvCu~@llKmD|b@coAbdN_b@hiFmRjyCwLp|B_OjkDkBxe@sLv_DmEtrAuJr{DyHzaFsBv}CcB~zDk<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>dECr{DcBtj\\HpnPJ`nK_@dhHYbz^E`jMxAr_A`CtrBb@tg@dFnnCtIxoCxHlgBhF`eAtHvrAtNlxBdDdc@|Rv_C|e@ftElk@~lE|D`Wv]xaCnDpVht@daFfQjhAjDpVb[psBpf@zcDdk@rcD~AzHrX~tAxhC~pLz]fcBrU`rAxzAtfH`_@r`BdRdu<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>^fpAlc@~{Afu@`aCff@pbBrJb[xGlT`a@~kA`k@rgBl]|_Aj`@ppA|Ohn@fKn[dGfVdH~ZvWziAfPzt@vBhJbDlMpPjl@d_<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>jBxJ`]nOzYtUneAnpAdpJ|Glj<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>Ip]v_@tpAdZn{@hKpTbFbJlJtZpElNnFvOpUhq@p[f~@|Vpv<a href="http://help.openstreetmap.org/users/751/xymotic">@x</a>Lf[~Rjl<a href="http://help.openstreetmap.org/users/45/nakor">@n</a>IpWbBlExClI~t@zsBfC`HkB`CyA`DcAxDk<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>EQfH`@dHrAhG|BzEcAbIaFrf@}@tIoUzlBg@pQcA`IiKxx@t@~HgEr[qBhOiGrf@uYj_C}AbMsGph<a href="http://help.openstreetmap.org/users/101/iknowjoseph">@i</a>@`EiLh_AaA|HcMvbAqGdh@{Fbe@sGxh@mBpOwA~Ke@|DgDnXeF~a@eAdIeAxImBrOgAnIjEtC`Cx@tn@`SrD`Bxc@vRx[|N|FrFxYfMrGlDxDxBfIiAhc<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>PnCbApDvAln<a href="http://help.openstreetmap.org/users/12/jajcus">@j</a>YbH|IrQ~TrCkUmDkGkNmSeh@uW","status_message":"Found route between points","status":0}
+</code></pre>
+<p>I thought that I could forward this information to 
+<a href="http://nominatim.openstreetmap.org/search/format=json">http://nominatim.openstreetmap.org/search/format=json</a> and then the above mentioned file. It just does not work. Any idea how I could do it right?</p>
+<p>Thanks for your advice</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osrm/" class="post-tag tag-link-osrm"
+                                        title="see questions tagged 'osrm'" rel="tag">osrm</a>
+                                
+                                    <a href="/tags/json/" class="post-tag tag-link-json"
+                                        title="see questions tagged 'json'" rel="tag">json</a>
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/router/" class="post-tag tag-link-router"
+                                        title="see questions tagged 'router'" rel="tag">router</a>
+                                
+                                    <a href="/tags/distance/" class="post-tag tag-link-distance"
+                                        title="see questions tagged 'distance'" rel="tag">distance</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Feb '15, 10:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2e4706b690bf4e8533fca09391851d7c?s=32&amp;d=identicon&amp;r=g" alt="Karten-Newbie's gravatar image" />
+    <p><a href="/users/10530/karten-newbie">Karten-Newbie</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Karten-Newbie has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/41407/">
+                edited
+                <strong>27 Feb '15, 12:20</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-41407">
+    
+        <a name="41410"></a>
+        <div class="comment" id="comment-41410">
+            <div id="post-41410-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Why do you want to pass the OSRM output to Nominatim? What result are you expecting? Nominatim is a geocoder, it is just able to convert single addresses to geographic locations and vice-versa. It won't understand route instructions.</p>
+
+<p>Regarding your other questions: 5160 does indeed correspond to the required time in seconds and 142783 corresponds to the distance in meters.</p></div>
+            <div class="comment-info" id="comment-41410-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '15, 11:55)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="41411"></a>
+        <div class="comment" id="comment-41411">
+            <div id="post-41411-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your advice ... </p>
+
+<p>I've deleted the two questions because I realized how dumb they are :-(</p>
+
+<p>What I'm looking for is a tool which receives the route from osrm-website and "answers" with a file in a format which I could analyze in a a way like.</p>
+
+<ul>
+<li>100m, xx sec, Street, Germany </li>
+<li>34567m, xy sec, Highway, Germany </li>
+<li>23235m, zz sec, Highway, Belgium</li>
+</ul>
+
+<p>I thought that nominatim could provide that answer, when I "give" that file to it. </p>
+
+<p>I guess it is a dumb idea. It would be really kind if you give me a hint which tool or way might be the right one. I promise I will try to read and understand the manual of that tool, before I ask again. ;-)</p></div>
+            <div class="comment-info" id="comment-41411-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '15, 12:27)</span>
+                <a class="comment-user userinfo" href="/users/10530/karten-newbie">Karten-Newbie</a>
+                
+            </div>
+        </div>
+    
+        <a name="41412"></a>
+        <div class="comment" id="comment-41412">
+            <div id="post-41412-score" class="comment-score"></div>
+            <div class="comment-text"><p>Don't worry, we all learn something new every day :) But unfortunately I'm not aware of such a tool.</p></div>
+            <div class="comment-info" id="comment-41412-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '15, 12:33)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-41407" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-41407-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/41407/how-to-work-with-osrm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/41407/how-to-work-with-osrm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/41407/how-to-work-with-osrm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/41407/how-to-work-with-osrm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="41446"></a>
+                    <div id="answer-container-41446" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-41446-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/41446/up/" rel="nofollow"> </a>
+<div id="post-41446-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-41446-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/41446/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thanks to google I found the explanation why I could not read the json-file. </p>
+<p><a href="http://router.project-osrm.org/viaroute?compression=false?loc=50.776279,6.084859&amp;loc=50.841579,4.366734">http://router.project-osrm.org/viaroute?compression=false?loc=50.776279,6.084859&amp;loc=50.841579,4.366734</a></p>
+<p>The <strong>?compression=false</strong> makes the difference!</p>
+<p>Now I could use the points and get with nomination the answer in which country the point is. But there is another problem for me:</p>
+<p>I do not know which distance I have! How could I get the distance for these waypoints?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/41446/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Mar '15, 09:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2e4706b690bf4e8533fca09391851d7c?s=32&amp;d=identicon&amp;r=g" alt="Karten-Newbie's gravatar image" />
+    <p><a href="/users/10530/karten-newbie">Karten-Newbie</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Karten-Newbie has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-41446">
+    
+        <a name="41448"></a>
+        <div class="comment" id="comment-41448">
+            <div id="post-41448-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Note that without ?compression=false, the polyline is in Google polyline format. You can decode this into lat/lon pairs with a Google polyline decoding library - one exists in most popular languages.</p></div>
+            <div class="comment-info" id="comment-41448-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '15, 10:46)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-41446" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-41446-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/41407/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='5gaVLcZAzmoyIXtduFSnTDTBbIocmdYk' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/41407/how-to-work-with-osrm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/41407/how-to-work-with-osrm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/osrm/"
+            class="tag-link-osrm"
+            title="see questions tagged'osrm'using tags"
+            rel="tag">osrm</a> <span class="tag-number">&#215;85</span><br/>
+        
+        <a href="/tags/distance/"
+            class="tag-link-distance"
+            title="see questions tagged'distance'using tags"
+            rel="tag">distance</a> <span class="tag-number">&#215;63</span><br/>
+        
+        <a href="/tags/json/"
+            class="tag-link-json"
+            title="see questions tagged'json'using tags"
+            rel="tag">json</a> <span class="tag-number">&#215;28</span><br/>
+        
+        <a href="/tags/router/"
+            class="tag-link-router"
+            title="see questions tagged'router'using tags"
+            rel="tag">router</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 27, 2015, 10:48 a.m.">27 Feb '15, 10:48</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,863 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 2, 2015, 10:46 a.m.">02 Mar '15, 10:46</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/46425/how-to-use-javascript-to-display-marker-for-an-address">How to use javascript to display marker for an address?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/71518/what-units-are-used-for-distance-in-table-service-osrm">What units are used for distance in table service osrm?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45004/get-distance-in-km-from-a-location-to-many-other-locations">Get distance (in km) from a location to many other locations.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46064/nomintaim-is-returning-html-when-asking-for-json-in-php">Nomintaim is returning HTML when asking for JSON in PHP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51423/reverse-geocode-to-full-address">Reverse geocode to full address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62034/given-a-location-with-longitudes-and-lattitudes-how-can-i-get-the-nodeid-for-that-location">Given a location with longitudes and lattitudes, how can I get the nodeID for that location?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37874/any-advices-on-osrm-server-api">Any advices on OSRM Server API</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43586/nominatim-json-output-address-json-object-structure">Nominatim Json Output - Address Json Object Structure</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45342/extracting-data-values-from-osrms-osrmjsonobject-using-c">Extracting data values from OSRM&#39;s osrm::json::object using C++</a>
+        </p>
+        
+        <p>
+            <a href="/questions/71560/setting-up-own-map-server-for-routing">Setting up own map server for routing.</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How To Correct Waterways Intersecting Roads Without A Junction Node? - OSM Help</title>
+        <meta name="description" content="I&#39;m looking at http://keepright.ipax.at and trying to correct some of the problems in my area. The majority seem to be &quot;This highway intersects the waterway but there is no junction node&quot;. This seems to me to be correct as, unless the waterway routinely flows across the road (a ford!) there is no ju..." />
+        <meta name="keywords" content="waterway,tag,keepright,highway,intersection" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='DpQ4H7BbPH5CFsMw5JkjYKccLDosrPDN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node">How To Correct Waterways Intersecting Roads Without A Junction Node?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-3049-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3049/up/" rel="nofollow"> </a>
+<div id="post-3049-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-3049-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3049/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/3049/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm looking at <a href="http://keepright.ipax.at">http://keepright.ipax.at</a> and trying to correct some of the problems in my area. The majority seem to be "This highway intersects the waterway but there is no junction node". This seems to me to be correct as, unless the waterway routinely flows across the road (a ford!) there is no junction. The renderer seems to draw the road over the waterway in the ones I've looked at so far.</p>
+<p>How do you think I should I fix this?<br>
+a) Tell keepright that it's a false positive and to ignore it?<br>
+b) Give the waterway a layer of -1?<br>
+c) Add a junction node but mark it as tunnel=culvert layer=-1 However in some cases I imagine that there is probably a bridge but the mapper has failed to note this in OSM so this is not the most viable/accurate option.<br>
+d) Go and check each one out individually, and then...?</p>
+<p>I favour option b.</p>
+<p>What say you?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/waterway/" class="post-tag tag-link-waterway"
+                                        title="see questions tagged 'waterway'" rel="tag">waterway</a>
+                                
+                                    <a href="/tags/tag/" class="post-tag tag-link-tag"
+                                        title="see questions tagged 'tag'" rel="tag">tag</a>
+                                
+                                    <a href="/tags/keepright/" class="post-tag tag-link-keepright"
+                                        title="see questions tagged 'keepright'" rel="tag">keepright</a>
+                                
+                                    <a href="/tags/highway/" class="post-tag tag-link-highway"
+                                        title="see questions tagged 'highway'" rel="tag">highway</a>
+                                
+                                    <a href="/tags/intersection/" class="post-tag tag-link-intersection"
+                                        title="see questions tagged 'intersection'" rel="tag">intersection</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>15 Feb '11, 02:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/956d6fda0f51e8001832540fa2c716a5?s=32&amp;d=identicon&amp;r=g" alt="vagabond's gravatar image" />
+    <p><a href="/users/351/vagabond">vagabond</a><br/>
+    <span class="score" title="195 reputation points">195</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="vagabond has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-3049">
+    
+        <a name="3129"></a>
+        <div class="comment" id="comment-3129">
+            <div id="post-3129-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I would avoid setting layer tags unless you have multiple bridges, or multiple tunnels crossing.  Otherwise, let the renderers sort it out, they're pretty good about being able to tell that a tunnel is below the surface, the surface is the surface, and bridges are above the surface.  You only really need "layer" tags when you have situations like double-decker bridges on a divided highway, motorway interchanges, major subway stations, and the like, where multiple of the same kind of thing (multiple bridges, multiple tunnels) cross each other.</p></div>
+            <div class="comment-info" id="comment-3129-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Feb '11, 06:12)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3049" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3049-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="3050"></a>
+                    <div id="answer-container-3050" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3050-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3050/up/" rel="nofollow"> </a>
+<div id="post-3050-score" class="post-score"
+    title="current number of votes">
+    15
+</div>
+<a id="post-3050-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3050/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Why mark it as a false positive when it isn't?</p>
+<p>Tunnels should not be marked as a junction nodes, but as ways. See: <a href="http://wiki.openstreetmap.org/wiki/Tunnel">Key:tunnel</a> </p>
+<p>I would suggest d). If the waterway flows in a culvert then enter it as a culvert. If the way runs over a bridge, then enter it as a bridge. If it's a ford, then enter it as a ford. If it's an aqueduct, then enter it as an aqueduct, etc, etc..</p>
+<p>I advice against filling the OSM database with guesses just to make our debugging tools happy. The tools are there to help us find issues where we may need to collect more fact.</p>
+<p>By the way I'm more worried about how the routing softwares handle those issues, than the prevalence of a minor artefact in a rendered map intended for the human eye. A strict routing software might refuse to route your wheelchair via the faintly defined crossing with the river.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3050/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Feb '11, 02:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c2a980da3fdfa1ee2659ad70d1e21f31?s=32&amp;d=identicon&amp;r=g" alt="gnurk's gravatar image" />
+    <p><a href="/users/652/gnurk">gnurk</a><br/>
+    <span class="score" title="6114 reputation points"><span class="">6.1k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="60 badges"><span class="silver">&#9679;</span><span class="badgecount">60</span></span><span title="96 badges"><span class="bronze">&#9679;</span><span class="badgecount">96</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gnurk has 18 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3050/">
+                edited
+                <strong>15 Feb '11, 02:53</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3050">
+    
+        <a name="3084"></a>
+        <div class="comment" id="comment-3084">
+            <div id="post-3084-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Definitely "d".  If you've not been to the location, you don't know what's there, do you?</p></div>
+            <div class="comment-info" id="comment-3084-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Feb '11, 19:38)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="3111"></a>
+        <div class="comment" id="comment-3111">
+            <div id="post-3111-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If the waterway and the highway don't actually cross (due to one being on a bridge or the other in a culvert), is an intersection node actually necessary?  My understanding is that such a waterway-highway joined node would be indicative of a ford or a boat ramp, where one could potentially turn off the highway and use the waterway as a route if they were operating an amphibious vehicle or not adverse to swimming...</p></div>
+            <div class="comment-info" id="comment-3111-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Feb '11, 17:06)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+        <a name="3122"></a>
+        <div class="comment" id="comment-3122">
+            <div id="post-3122-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Ways crossing on different layers should not have a common junction node. Otherwise KeepRight will write messages like "This node is a junction of ways on different layers" and "Connected ways should be on the same layer. Crossings on intermediate nodes of ways on different layers are obviously wrong. Junctions on end-nodes of ways on different layers are also deprecated, but common practice. So you may ignore this part of the check and switch them off separately. Please note that bridges are set to layer +1, and tunnels to -1, anything else to layer 0 implicitly if no layer tag is present."</p></div>
+            <div class="comment-info" id="comment-3122-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Feb '11, 20:03)</span>
+                <a class="comment-user userinfo" href="/users/652/gnurk">gnurk</a>
+                
+            </div>
+        </div>
+    
+        <a name="3136"></a>
+        <div class="comment" id="comment-3136">
+            <div id="post-3136-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah, I've found setting the layer tag for those three levels generally does more harm than good in most cases.</p></div>
+            <div class="comment-info" id="comment-3136-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Feb '11, 19:08)</span>
+                <a class="comment-user userinfo" href="/users/132/baloo-uriza">Baloo Uriza</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3050" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3050-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="3131"></a>
+                    <div id="answer-container-3131" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3131-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3131/up/" rel="nofollow"> </a>
+<div id="post-3131-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-3131-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3131/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Go and survey the place and map what is actually there.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3131/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Feb '11, 12:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b906204accce0fd58bc408b22bae01f2?s=32&amp;d=identicon&amp;r=g" alt="ChrisH's gravatar image" />
+    <p><a href="/users/34/chrish">ChrisH</a><br/>
+    <span class="score" title="4075 reputation points"><span class="">4.1k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="42 badges"><span class="silver">&#9679;</span><span class="badgecount">42</span></span><span title="62 badges"><span class="bronze">&#9679;</span><span class="badgecount">62</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ChrisH has 11 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3131">
+    
+</div>
+<div id="comment-tools-3131" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3131-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="3051"></a>
+                    <div id="answer-container-3051" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3051-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3051/up/" rel="nofollow"> </a>
+<div id="post-3051-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-3051-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3051/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I would recommend option C or D:</p>
+<ul>
+<li>a: is not technically a false positive</li>
+<li>b: In the past there have been those who go through and made mass "corrections" to waterways having just a layer of -1, on the basis that it's a "Ground level feature".   (Which I disagree with)</li>
+<li>c: You are correct - most are culverts, but many will be bridges</li>
+<li>d: Just leave them since there is no immediate harm to routing, etc; correct them as they are surveyed.</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3051/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Feb '11, 02:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1dd5f61a81b99dd54ec6f33d96aa38b2?s=32&amp;d=identicon&amp;r=g" alt="Mike%20N's gravatar image" />
+    <p><a href="/users/21/mike-n">Mike N</a><br/>
+    <span class="score" title="2926 reputation points"><span class="">2.9k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="54 badges"><span class="bronze">&#9679;</span><span class="badgecount">54</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Mike N has 16 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3051/">
+                edited
+                <strong>15 Feb '11, 02:57</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3051">
+    
+        <a name="3110"></a>
+        <div class="comment" id="comment-3110">
+            <div id="post-3110-score" class="comment-score"></div>
+            <div class="comment-text"><p>Some of the ways I've been mapping are tracks and trails across moors and many of these will indeed be fords and therefore pukka intersections.</p>
+
+<p>Many thanks for the responses.</p></div>
+            <div class="comment-info" id="comment-3110-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Feb '11, 17:00)</span>
+                <a class="comment-user userinfo" href="/users/351/vagabond">vagabond</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3051" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3051-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="7324"></a>
+                    <div id="answer-container-7324" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-7324-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7324/up/" rel="nofollow"> </a>
+<div id="post-7324-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-7324-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7324/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I agree with Paul Johnson, the only nodes where roads/rail should intersect water would be fords (or boat ramps), everything else they should be unattached</p>
+<p>There is of course the odd time where the river (canal, ditch) is actually on a bridge.</p>
+<p>Of course there is also THIS... canal crosses a river, and Interstate 10 crosses both.  Of course it doesn't render accurately.
+<a href="http://www.openstreetmap.org/?lat=30.04535&amp;lon=-94.149314&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=30.04535&amp;lon=-94.149314&amp;zoom=18&amp;layers=M</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/7324/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Aug '11, 23:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f6827fbcbfc77428dfb7f8743ab775db?s=32&amp;d=identicon&amp;r=g" alt="Sundance's gravatar image" />
+    <p><a href="/users/1774/sundance">Sundance</a><br/>
+    <span class="score" title="467 reputation points">467</span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Sundance has one accepted answer">3&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/7324/">
+                edited
+                <strong>25 Aug '11, 23:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-7324">
+    
+        <a name="7328"></a>
+        <div class="comment" id="comment-7328">
+            <div id="post-7328-score" class="comment-score"></div>
+            <div class="comment-text"><p>You are not entirely right. Osmarender renders it correctly (the bridges).<br>
+More importantly it does not seem to be mapped right. The river with riverbanks should have a single way for the flow inside (one that corresponds to the river network topology. And the same goes for the canal. It should be drawn as one waterway=canal only, perhaps bound in natural=water area. If you go east along the canal you get to pipes that are likely used to transfer the canal water over the river, but is not mapped at all and the second river/canal is also not...<br>
++1 for the nice example</p></div>
+            <div class="comment-info" id="comment-7328-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Aug '11, 00:13)</span>
+                <a class="comment-user userinfo" href="/users/1619/lm_1">LM_1</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-7324" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7324-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="7320"></a>
+                    <div id="answer-container-7320" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-7320-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7320/up/" rel="nofollow"> </a>
+<div id="post-7320-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-7320-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7320/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I recommend not taking KeepRight too seriously here. Just turn off the <em>waterway/highway</em> checkbox and be happy:</p>
+<ul>
+<li>The rendering tools do a fine job of
+   drawing this case.</li>
+<li>The routing tools
+   are not confused either way.</li>
+<li>The
+   solutions are often worse than the
+   problem.</li>
+</ul>
+<p>If you feel compelled to act, and you know which streams cross at the same level as the road, you can create a junction node and tag it: <a href="http://wiki.openstreetmap.org/wiki/Key:ford">http://wiki.openstreetmap.org/wiki/Key:ford</a>.
+In times of high water knowing which road crossings are definitely wet can be helpful.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/7320/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Aug '11, 19:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/372fabe5d3962d54b0c9474e35a05359?s=32&amp;d=identicon&amp;r=g" alt="Bryce%20C%20Nesbitt's gravatar image" />
+    <p><a href="/users/667/bryce-c-nesbitt">Bryce C Nesbitt</a><br/>
+    <span class="score" title="345 reputation points">345</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="17 badges"><span class="bronze">&#9679;</span><span class="badgecount">17</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bryce C Nesbitt has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-7320">
+    
+        <a name="26521"></a>
+        <div class="comment" id="comment-26521">
+            <div id="post-26521-score" class="comment-score"></div>
+            <div class="comment-text"><p>To bad you can't turn off the waterway/highway checking in JOSM. The error messages complaining about crossing ways when there is a way on a bridge over a river are a constant frustration to this user.</p></div>
+            <div class="comment-info" id="comment-26521-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Sep '13, 04:44)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-7320" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7320-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/3049/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='DpQ4H7BbPH5CFsMw5JkjYKccLDosrPDN' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3049/how-to-correct-waterways-intersecting-roads-without-a-junction-node?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/highway/"
+            class="tag-link-highway"
+            title="see questions tagged'highway'using tags"
+            rel="tag">highway</a> <span class="tag-number">&#215;163</span><br/>
+        
+        <a href="/tags/tag/"
+            class="tag-link-tag"
+            title="see questions tagged'tag'using tags"
+            rel="tag">tag</a> <span class="tag-number">&#215;101</span><br/>
+        
+        <a href="/tags/waterway/"
+            class="tag-link-waterway"
+            title="see questions tagged'waterway'using tags"
+            rel="tag">waterway</a> <span class="tag-number">&#215;52</span><br/>
+        
+        <a href="/tags/intersection/"
+            class="tag-link-intersection"
+            title="see questions tagged'intersection'using tags"
+            rel="tag">intersection</a> <span class="tag-number">&#215;49</span><br/>
+        
+        <a href="/tags/keepright/"
+            class="tag-link-keepright"
+            title="see questions tagged'keepright'using tags"
+            rel="tag">keepright</a> <span class="tag-number">&#215;14</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 15, 2011, 2:01 a.m.">15 Feb '11, 02:01</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>14,755 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 20, 2013, 4:44 a.m.">20 Sep '13, 04:44</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/51929/how-to-map-a-y-intersection">How to map a Y intersection?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70227/highwaystop-stopminor-on-intersection">highway=stop + stop=minor on intersection</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16533/whats-the-difference-between-a-stream-and-a-river">Whats the difference between a stream and a river ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42811/should-a-towpath-be-under-highway-or-waterway">Should a towpath be under highway or waterway?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52417/intersection-mapping-guidelines">Intersection Mapping Guidelines</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63501/highway-naming-conventions">Highway Naming Conventions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2767/branching-roads">Branching Roads</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15800/how-do-i-stop-josm-warning-crossing-waterwayhighway">How do I stop Josm warning &quot;crossing waterway/highway&quot;?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42727/why-are-these-highways-not-connected-to-rest-of-map">Why are these highways not connected to rest of map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/75588/highway-which-is-also-an-intermittent-stream">Highway which is also an intermittent stream</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

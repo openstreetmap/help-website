@@ -1,0 +1,1004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Custom rendering for paper map, is Mapbox Studio Classic a good choice? - OSM Help</title>
+        <meta name="description" content="I don&#39;t believe this is a duplicate question, as other how to print to questions I could find were much more general. I want make a paper map, for outdoor use (Hiking and Camping). I&#39;ve looked at the web based options on the wiki page, and none of them seem to be flexible enough. I want:   about 100..." />
+        <meta name="keywords" content="printing,paper,hiking,mapbox" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/46535/custom-rendering-for-paper-map-is-mapbox-studio-classic-a-good-choice" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/46535/custom-rendering-for-paper-map-is-mapbox-studio-classic-a-good-choice?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='xRTsJ7I0cHUi2WNkLare8G2cZFipoyXM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/46535/custom-rendering-for-paper-map-is-mapbox-studio-classic-a-good-choice">Custom rendering for paper map, is Mapbox Studio Classic a good choice?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-46535-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46535/up/" rel="nofollow"> </a>
+<div id="post-46535-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-46535-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46535/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/46535/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I don't believe this is a duplicate question, as other how to print to questions I could find were much more general.</p>
+<p>I want make a paper map, for outdoor use (Hiking and Camping). I've looked at the web based options on the wiki page, and none of them seem to be flexible enough.</p>
+<p>I want: </p>
+<ul>
+<li>about 100cm x 60cm overall dimension, including key, title, etc.</li>
+<li>1:50,000 scale.</li>
+<li>to be able to selectively emphasize certain features (trails, passes, campsites, etc), and de-emphasize others (vehicular roads). With most options I've looked at, the trails disappear when I have a large area in view.</li>
+<li>must output topographic info.</li>
+</ul>
+<p>Mapbox's Studio Classic seems to be quite capable of what I want, but has a bit of a steep learning curve. I'm totally willing to put the energy into learning CartoCSS and Studio, but I don't want to invest a lot of time into learning to use Mapbox Studio and then find out it's not able to do what I want. </p>
+<ul>
+<li>Will it be able to output big enough images? </li>
+<li>Will the features I want visible be rendered?</li>
+<li>Is there something else that would be able to do the same, but output svg that would let me further tweak the map before printing? </li>
+</ul>
+<p>Thanks for any input.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/printing/" class="post-tag tag-link-printing"
+                                        title="see questions tagged 'printing'" rel="tag">printing</a>
+                                
+                                    <a href="/tags/paper/" class="post-tag tag-link-paper"
+                                        title="see questions tagged 'paper'" rel="tag">paper</a>
+                                
+                                    <a href="/tags/hiking/" class="post-tag tag-link-hiking"
+                                        title="see questions tagged 'hiking'" rel="tag">hiking</a>
+                                
+                                    <a href="/tags/mapbox/" class="post-tag tag-link-mapbox"
+                                        title="see questions tagged 'mapbox'" rel="tag">mapbox</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Nov '15, 21:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f88a467aa884aeb760041004f62448ee?s=32&amp;d=identicon&amp;r=g" alt="keithonearth's gravatar image" />
+    <p><a href="/users/9027/keithonearth">keithonearth</a><br/>
+    <span class="score" title="2939 reputation points"><span class="">2.9k</span></span><span title="56 badges"><span class="badge1">&#9679;</span><span class="badgecount">56</span></span><span title="76 badges"><span class="silver">&#9679;</span><span class="badgecount">76</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="keithonearth has 3 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46535/">
+                edited
+                <strong>17 Nov '15, 05:56</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-46535">
+    
+</div>
+<div id="comment-tools-46535" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46535-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/46535/custom-rendering-for-paper-map-is-mapbox-studio-classic-a-good-choice?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/46535/custom-rendering-for-paper-map-is-mapbox-studio-classic-a-good-choice?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/46535/custom-rendering-for-paper-map-is-mapbox-studio-classic-a-good-choice?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/46535/custom-rendering-for-paper-map-is-mapbox-studio-classic-a-good-choice?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="46536"></a>
+                    <div id="answer-container-46536" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-46536-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46536/up/" rel="nofollow"> </a>
+<div id="post-46536-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-46536-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46536/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>From what I read about Mapbox Studio Classic, it is primarily geared to making webmaps, and only secondarily for print.</p>
+<p>All of your requirements (maximum flexibility in design, topographic quality map output, large dimension printing and layout, map legend), really points to a GIS (Geographical Information System) as a first and likely also final step to process and layout your data.</p>
+<p><a href="http://www.qgis.org">QGIS</a> is of course an obvious choice, as it allows you to download custom sets of data (both geographically and by attribute) and insert this in a SpatialLite or other type of database, but the default option in its interface still doesn't handle multipolygons properly. Therefor, it may be better to use another tool capable of handling multipolygons to process and insert the data in a database, e.g. osm2pgsql and PostGIS, and then use this as the datasource.</p>
+<p>Another option is ESRI's <a href="http://www.arcgis.com/home/item.html?id=75716d933f1c40a784243198e0dc11a1">ArcGIS Editor for OpenStreetMap</a>, which also does a pretty decent job (and handles multipolygons better than QGIS in the latest release). </p>
+<p>Both QGIS and ArcGIS allow you to output your data as vector PDF, meaning you could postprocess it in another application capable of editing or using PDF vector data, and at the same time not being limited by raster output like in Mapbox Studio Classic, as I understood from their website it only outputs high resolution raster for print.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/46536/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Nov '15, 23:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc8a1ef54d3e25744ee52d1ad1459a81?s=32&amp;d=identicon&amp;r=g" alt="mboeringa's gravatar image" />
+    <p><a href="/users/9580/mboeringa">mboeringa</a><br/>
+    <span class="score" title="1542 reputation points"><span class="">1.5k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mboeringa has 4 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46536/">
+                edited
+                <strong>12 Nov '15, 10:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-46536">
+    
+        <a name="46552"></a>
+        <div class="comment" id="comment-46552">
+            <div id="post-46552-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your response, I'll look into QGIS. (I'm on Linux, and I'd like to support free/libre software). </p>
+
+<p>Seems like there's a lot to learn to get functional with any GIS software, but it'd sure be cool to know how to use one.</p></div>
+            <div class="comment-info" id="comment-46552-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Nov '15, 19:56)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46536" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46536-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="46547"></a>
+                    <div id="answer-container-46547" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-46547-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46547/up/" rel="nofollow"> </a>
+<div id="post-46547-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-46547-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46547/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are two options I would traditionally consider. Both do, however, require a little bit of 'hacking' skill; if you're worried by Mapbox Studio's steep learning curve, you'll probably find these near-vertical!</p>
+<p>The first option is to convert raw OpenStreetMap data (in .osm format) to Adobe Illustrator format, and then style the map in Illustrator. There is a Perl script called <strong>osm2ai.pl</strong> which will convert an .osm file to .ai, which I wrote many years ago. Rather than providing a direct download link, I'd actually suggest you Google it as a number of people have provided helpful tutorials.</p>
+<p>The script doesn't do any styling whatsoever. However, it is capable of filtering OSM data into different Illustrator layers - say, a buildings layer, a primary roads layer, a waterway layer, and so on - to make the styling process easier.</p>
+<p>I've used this approach many times to create print maps from OSM data and it works well.</p>
+<p>The second option is to use Mapnik, which is the core of Mapbox Studio Classic. However, instead of asking for output in a raster format such as .png, you configure it to produce PDF maps. This is achieved by using the Cairo renderer rather than the default AGG.</p>
+<p>This way, you do all your styling in CartoCSS, load your data into an OSM database, and then tell Mapnik to make the map. It requires quite a lot of hacking (most usually with Python, though I use Ruby) to get it to work: PDF is a fairly minority pursuit for Mapnik. However, the results can be surprisingly good. The PDF map export feature on <a href="http://cycle.travel">cycle.travel</a> is one place I use this approach.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/46547/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Nov '15, 15:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08324717c25d6067fa4ff23ef37d455f?s=32&amp;d=identicon&amp;r=g" alt="Richard's gravatar image" />
+    <p><a href="/users/5/richard">Richard ♦</a><br/>
+    <span class="score" title="30902 reputation points"><span class="">30.9k</span></span><span title="44 badges"><span class="badge1">&#9679;</span><span class="badgecount">44</span></span><span title="279 badges"><span class="silver">&#9679;</span><span class="badgecount">279</span></span><span title="412 badges"><span class="bronze">&#9679;</span><span class="badgecount">412</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Richard has 98 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46547/">
+                edited
+                <strong>12 Nov '15, 16:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-46547">
+    
+        <a name="46553"></a>
+        <div class="comment" id="comment-46553">
+            <div id="post-46553-score" class="comment-score"></div>
+            <div class="comment-text"><p>What are the benefits of these approaches over Mapbox Studio? I'm also surprised to see you recommend output from mapnik to pdf, rather than svg. It seems that svg would be an easier format to work with, to add title, legend etc.</p></div>
+            <div class="comment-info" id="comment-46553-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Nov '15, 19:57)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+        <a name="46556"></a>
+        <div class="comment" id="comment-46556">
+            <div id="post-46556-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I use Adobe Illustrator and its SVG import, put simply, doesn't work properly. If you generate a PDF from Mapnik, it will usually look the same in Illustrator as long as you have the same fonts. If you generate an SVG, it will look like a pile of multi-coloured spaghetti with some random letters scattered all over it.</p></div>
+            <div class="comment-info" id="comment-46556-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Nov '15, 22:33)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46547" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46547-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="46576"></a>
+                    <div id="answer-container-46576" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-46576-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46576/up/" rel="nofollow"> </a>
+<div id="post-46576-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-46576-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46576/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You might also consider the non-open-software but free-of-charge "Maperitive", a windows program that runs fine on Linux under Mono. It has its own styling language, different from that of TileMill, and it can generate SVG output that can be post-processed with Inkscape. This is useful especially if you want to make some changes that go beyond "all features that have the attribute X should be painted like this" but where you want to style a couple of individual features differently - this is easy to do once you have the data in Inkscape.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/46576/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Nov '15, 22:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-46576">
+    
+</div>
+<div id="comment-tools-46576" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46576-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="72064"></a>
+                    <div id="answer-container-72064" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-72064-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/72064/up/" rel="nofollow"> </a>
+<div id="post-72064-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-72064-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/72064/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Mapbox Studio is a good styling app for pre-visualisation. <a href="https://hebstreits.com/customizer">Hebstreits customizer</a> is a new service working with Mapbox styles and deliver clean maps as Open Vector PDFs for artistic and business use. If open SVG format is desired, this would have to be requested.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/72064/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Dec '19, 15:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8b7dbe317cf4f41d01d004de0b9a9cfd?s=32&amp;d=identicon&amp;r=g" alt="netsign's gravatar image" />
+    <p><a href="/users/17564/netsign">netsign</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="netsign has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/72064/">
+                edited
+                <strong>10 Dec '19, 15:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-72064">
+    
+</div>
+<div id="comment-tools-72064" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-72064-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/46535/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='xRTsJ7I0cHUi2WNkLare8G2cZFipoyXM' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46535/custom-rendering-for-paper-map-is-mapbox-studio-classic-a-good-choice?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46535/custom-rendering-for-paper-map-is-mapbox-studio-classic-a-good-choice?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/printing/"
+            class="tag-link-printing"
+            title="see questions tagged'printing'using tags"
+            rel="tag">printing</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/hiking/"
+            class="tag-link-hiking"
+            title="see questions tagged'hiking'using tags"
+            rel="tag">hiking</a> <span class="tag-number">&#215;41</span><br/>
+        
+        <a href="/tags/mapbox/"
+            class="tag-link-mapbox"
+            title="see questions tagged'mapbox'using tags"
+            rel="tag">mapbox</a> <span class="tag-number">&#215;40</span><br/>
+        
+        <a href="/tags/paper/"
+            class="tag-link-paper"
+            title="see questions tagged'paper'using tags"
+            rel="tag">paper</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 11, 2015, 9:10 p.m.">11 Nov '15, 21:10</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,293 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 10, 2019, 3:35 p.m.">10 Dec '19, 15:35</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/65909/making-a-giant-nationwide-map-for-plottingprinting">Making a giant nationwide map for plotting/printing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/71122/a4-size-bounding-box-for-printing-maps">A4-size bounding box for printing maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/86925/how-to-print-with-strong-colours-that-show-up-well-on-paper">How to print with strong colours that show up well on paper?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/560/how-can-we-print-a-big-map-using-osmarender-a0-size">How can we print a big map using OSMArender (A0 size) ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">Create a wall map of an area 50 kilometers by 120 kilometers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3724/copyright-with-physical-map-printing">Copyright with Physical Map Printing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1736/how-do-i-rotate-the-osm-map-before-printing">How do I rotate the OSM map before printing?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9032/customised-maps-for-orienteering">Customised maps for orienteering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9043/printing-osm-maps-to-paper">Printing OSM maps to paper</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4337/printing-an-archaeological-map">Printing an Archaeological Map</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

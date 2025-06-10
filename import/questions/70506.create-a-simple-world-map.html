@@ -1,0 +1,778 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Create a simple world map - OSM Help</title>
+        <meta name="description" content="Hi everyone... since more than 3 weeks I am trying to create a simple world map (in osm.pbf or o5m format) which contains borders, major cities and rivers (including their names) and countries (including their names). I don´t need buildings, streets etc. I have downloaded planet-latest.osm.pbf from ..." />
+        <meta name="keywords" content="simple,world,create,o5m,map" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/70506/create-a-simple-world-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/70506/create-a-simple-world-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ZlfyHdIpYzbQWjTVUdUF0z8yk7RPGalQ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/70506/create-a-simple-world-map">Create a simple world map</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-70506-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70506/up/" rel="nofollow"> </a>
+<div id="post-70506-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-70506-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70506/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/70506/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi everyone...
+since more than 3 weeks I am trying to create a simple world map (in osm.pbf or o5m format) which contains borders, major cities and rivers (including their names) and countries (including their names). I don´t need buildings, streets etc.</p>
+<p>I have downloaded planet-latest.osm.pbf from <a href="https://planet.osm.org">https://planet.osm.org</a> and used osmfilter to filter out the things I need. But this is where I am failing. There are hundreds of tags with "name" "city" "waterway" etc. Some in capital letters, some not.</p>
+<p>I am using Linux. Doing "osmfilter planet-latest.o5m --keep="cities names waterway" -o=planet-filtered.o5m" creates a huge file with I think unnecessary data and in now way looking like it should be.</p>
+<p>Anybody able providing the steps necessary to create a simple world map in o5m format? The map should pretty much look like this:
+<a href="https://www.openstreetmap.org/#map=5/49.167/8.745">https://www.openstreetmap.org/#map=5/49.167/8.745</a>
+except for that all names should either be in English or German.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/simple/" class="post-tag tag-link-simple"
+                                        title="see questions tagged 'simple'" rel="tag">simple</a>
+                                
+                                    <a href="/tags/world/" class="post-tag tag-link-world"
+                                        title="see questions tagged 'world'" rel="tag">world</a>
+                                
+                                    <a href="/tags/create/" class="post-tag tag-link-create"
+                                        title="see questions tagged 'create'" rel="tag">create</a>
+                                
+                                    <a href="/tags/o5m/" class="post-tag tag-link-o5m"
+                                        title="see questions tagged 'o5m'" rel="tag">o5m</a>
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Aug '19, 16:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/acd93c84995906b20a3b26c47378a669?s=32&amp;d=identicon&amp;r=g" alt="Likonaus's gravatar image" />
+    <p><a href="/users/17093/likonaus">Likonaus</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Likonaus has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/70506/">
+                edited
+                <strong>24 Aug '19, 18:44</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-70506">
+    
+</div>
+<div id="comment-tools-70506" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70506-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/70506/create-a-simple-world-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/70506/create-a-simple-world-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/70506/create-a-simple-world-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/70506/create-a-simple-world-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="70507"></a>
+                    <div id="answer-container-70507" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-70507-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70507/up/" rel="nofollow"> </a>
+<div id="post-70507-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-70507-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70507/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OpenStreetMap is the wrong data set for that because our data is so detailed. For a map like the one you want, you do not need the coastline of Norway in all its beautiful detail, nor the detailed boundary between any two countries. </p>
+<p>It would be much easier for you if you could find a way to use, say, the naturalearthdata.com data set (which comes in the form of shape files, not osm or o5m. What is your use case?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/70507/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Aug '19, 17:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-70507">
+    
+        <a name="70508"></a>
+        <div class="comment" id="comment-70508">
+            <div id="post-70508-score" class="comment-score"></div>
+            <div class="comment-text"><p>I want to run an offline map server and want to be able to feed my GPS position into it. Then I want to add a hundreds of custom markers which will be placed at major airports. These markers contain custom information about this airport which need to be quickly accessible in case of an inflight emergency. There are market solutions for that, unfortunately I am not able to modify the displayed data. 
+I found a script on Github which sets up a tileserver (using o5m or osm.pbf files). Adding the markers is no problem.I am not an expert my knowledge is pretty restricted and that seems momentarily the only way for me to make that happen. 
+I don´t know if I will be able to use GPS data using only files from naturalearthdata.com, which by the way I haven´t been able to load into tile server as the server accepts only the previous mentioned formats.
+The server script I am using can be found here:
+<a href="https://github.com/AcuGIS/OpenTileServer">https://github.com/AcuGIS/OpenTileServer</a>
+There is another server which I am experimenting with (<a href="https://openmaptiles.com/server/#install)">https://openmaptiles.com/server/#install)</a> but it runs in a docker and I am not able to feed my GPS position into it and to add markers. So I am pretty much stuck to the OSM approach...</p></div>
+            <div class="comment-info" id="comment-70508-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Aug '19, 18:43)</span>
+                <a class="comment-user userinfo" href="/users/17093/likonaus">Likonaus</a>
+                
+            </div>
+        </div>
+    
+        <a name="70510"></a>
+        <div class="comment" id="comment-70510">
+            <div id="post-70510-score" class="comment-score"></div>
+            <div class="comment-text"><p>All the solutions you are looking at are geared towards working with OSM data, but your application is not something that calls for OSM data in the first place. You could use a simple map server powered by MapServer or Geoserver; it is quite possible that the whole concept of using a tile server isn't even right for your use case and a simple WMS would be good enough. Adding markers can be done server-side or client-side. If client-side, then you'd deal with it through the Leaflet or OpenLayers libraries which use your tile or WMS server, and the adding-markers-and-using-your-GPS-position question is totally independent of what map backend you use. </p>
+
+<p>If you <em>do</em> want to continue down the OSM route, which I would not recommend, then you should use pre-processed coastline data from  <a href="https://osmdata.openstreetmap.de/">https://osmdata.openstreetmap.de/</a> and use the osmium (recommended) or osmosis or osmfilter tools to extract boundary relations (<code>boundary=administrative</code>), rivers (<code>waterway=river</code>), and large place nodes (<code>place=city</code>) - but even these reduced data sets will be much larger than what you get from naturalearthdata.com where everything is already boiled down to what you need for a map of your scale.</p></div>
+            <div class="comment-info" id="comment-70510-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Aug '19, 09:16)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-70507" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70507-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="70584"></a>
+                    <div id="answer-container-70584" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-70584-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/70584/up/" rel="nofollow"> </a>
+<div id="post-70584-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-70584-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/70584/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I wrote a diary entry around doing this sort of thing <a href="https://www.openstreetmap.org/user/SomeoneElse/diary/47027">here</a>.  The requirement there was very much to use modified boundaries created from OSM data.  If that's not a requirement (and it sounds like it isn't in your case) then as Frederik says, something based on Natural Earth data might be the best way to go.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/70584/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Sep '19, 12:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-70584">
+    
+</div>
+<div id="comment-tools-70584" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-70584-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/70506/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ZlfyHdIpYzbQWjTVUdUF0z8yk7RPGalQ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70506/create-a-simple-world-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/70506/create-a-simple-world-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;535</span><br/>
+        
+        <a href="/tags/world/"
+            class="tag-link-world"
+            title="see questions tagged'world'using tags"
+            rel="tag">world</a> <span class="tag-number">&#215;15</span><br/>
+        
+        <a href="/tags/create/"
+            class="tag-link-create"
+            title="see questions tagged'create'using tags"
+            rel="tag">create</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/o5m/"
+            class="tag-link-o5m"
+            title="see questions tagged'o5m'using tags"
+            rel="tag">o5m</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/simple/"
+            class="tag-link-simple"
+            title="see questions tagged'simple'using tags"
+            rel="tag">simple</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 24, 2019, 4:13 p.m.">24 Aug '19, 16:13</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,550 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 1, 2019, 12:20 p.m.">01 Sep '19, 12:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/68189/how-can-i-download-a-world-map">How can I download a world map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21144/world-map-in-s-57-format">World map in s-57 format</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63896/create-my-own-local-map">Create my own local map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/76787/weltkarte-statt-detailansicht-world-map-instead-of-detail-view">Weltkarte statt Detailansicht | world map instead of detail view</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54648/world-map-repeating-unable-to-zoom-in">World Map Repeating. Unable to zoom in?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/773/map-for-railway-networks">Map for railway network(s)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/420/how-can-i-create-a-map-highlighting-a-relation-which-then-could-be-used-for-wikipedia-articles">How can I create a map highlighting a relation which then could be used for wikipedia articles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/924/is-there-a-list-of-most-important-relations-in-the-world-like-longest-rivers-country-borders-etc">Is there a list of most important relations in the world? Like longest rivers, country borders etc...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

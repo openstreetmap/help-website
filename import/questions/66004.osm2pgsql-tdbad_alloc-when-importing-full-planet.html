@@ -1,0 +1,758 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>osm2pgsql td::bad_alloc when importing full planet - OSM Help</title>
+        <meta name="description" content="Hi, I&#39;ve imported France successfully and now I&#39;m trying to import the full planet but can&#39;t get to the end of it. I&#39;ve logged the output of osm2pgsql and seen a bad_alloc message: osm2pgsql version 0.96.0 (64 bit id space)  Using built-in tag processing pipeline Using projection SRS 3857 (Spherical..." />
+        <meta name="keywords" content="allocate,ram,osm2pgsql,memory" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/66004/osm2pgsql-tdbad_alloc-when-importing-full-planet" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/66004/osm2pgsql-tdbad_alloc-when-importing-full-planet?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mrBTDGmoUxIGIEnPpyK6kawbkM4icZCP' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/66004/osm2pgsql-tdbad_alloc-when-importing-full-planet">osm2pgsql td::bad_alloc when importing full planet</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-66004-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66004/up/" rel="nofollow"> </a>
+<div id="post-66004-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-66004-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66004/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/66004/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I've imported France successfully and now I'm trying to import the full planet but can't get to the end of it. I've logged the output of osm2pgsql and seen a bad_alloc message:</p>
+<pre><code>osm2pgsql version 0.96.0 (64 bit id space)
+
+Using built-in tag processing pipeline
+Using projection SRS 3857 (Spherical Mercator)
+Setting up table: planet_osm_point
+Setting up table: planet_osm_line
+Setting up table: planet_osm_polygon
+Setting up table: planet_osm_roads
+Allocating memory for dense node cache
+Allocating dense node cache in one big chunk
+Allocating memory for sparse node cache
+Sharing dense sparse
+Node-cache: cache=18000MB, maxblocks=288000*65536, allocation method=11
+Mid: loading persistent node cache from /home/renderer/data/flat_nodes/flat_nodes.bin
+Mid: pgsql, cache=18000
+Setting up table: planet_osm_nodes
+Setting up table: planet_osm_ways
+Setting up table: planet_osm_rels
+
+Reading in file: /data.osm.pbf
+Using PBF parser.
+Processing: Node(4725081k 9431.3k/s) Way(523620k 4.45k/s) Relation(646430 43.55/s)terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+</code></pre>
+<p><strong>And I also have some errors and fatals on the postgresql logs (EOF, terminating connection), but I supposed both are linked:</strong></p>
+<pre><code>2018-09-20 21:35:26.442 GMT [134] LOG:  unexpected EOF on client connection with an open transaction
+2018-09-20 21:35:26.442 GMT [138] LOG:  incomplete message from client
+2018-09-20 21:35:26.442 GMT [138] CONTEXT:  COPY planet_osm_rels, line 646433
+2018-09-20 21:35:26.442 GMT [138] STATEMENT:  COPY planet_osm_rels FROM STDIN;
+
+2018-09-20 21:35:26.442 GMT [133] LOG:  incomplete message from client
+2018-09-20 21:35:26.442 GMT [133] CONTEXT:  COPY planet_osm_line, line 116
+2018-09-20 21:35:26.442 GMT [133] STATEMENT:  COPY planet_osm_line (osm_id,"access","admin_level","aerialway","aeroway","amenity","area","barrier","bridge","boundary","building","highway","landuse","layer","leisure","name","int_name","natural","oneway","place","population","railway","ref","service","tourism","tunnel","water","waterway","wetland","z_order","way_area","piste:type","piste:difficulty",tags,way) FROM STDIN
+2018-09-20 21:35:26.442 GMT [135] LOG:  unexpected EOF on client connection with an open transaction
+2018-09-20 21:35:26.444 GMT [137] LOG:  unexpected EOF on client connection with an open transaction
+2018-09-20 21:35:26.447 GMT [133] ERROR:  unexpected EOF on client connection with an open transaction
+2018-09-20 21:35:26.447 GMT [133] CONTEXT:  COPY planet_osm_line, line 116
+2018-09-20 21:35:26.447 GMT [133] STATEMENT:  COPY planet_osm_line (osm_id,"access","admin_level","aerialway","aeroway","amenity","area","barrier","bridge","boundary","building","highway","landuse","layer","leisure","name","int_name","natural","oneway","place","population","railway","ref","service","tourism","tunnel","water","waterway","wetland","z_order","way_area","piste:type","piste:difficulty",tags,way) FROM STDIN
+2018-09-20 21:35:26.449 GMT [138] ERROR:  unexpected EOF on client connection with an open transaction
+2018-09-20 21:35:26.449 GMT [138] CONTEXT:  COPY planet_osm_rels, line 646433
+2018-09-20 21:35:26.449 GMT [138] STATEMENT:  COPY planet_osm_rels FROM STDIN;
+
+2018-09-20 21:35:26.451 GMT [136] ERROR:  unexpected EOF on client connection with an open transaction
+2018-09-20 21:35:26.451 GMT [136] CONTEXT:  COPY planet_osm_nodes, line 1
+2018-09-20 21:35:26.451 GMT [136] STATEMENT:  COPY planet_osm_nodes FROM STDIN;
+
+2018-09-20 21:35:26.453 GMT [132] LOG:  incomplete message from client
+2018-09-20 21:35:26.482 GMT [136] FATAL:  terminating connection because protocol synchronization was lost
+2018-09-20 21:35:26.494 GMT [136] LOG:  could not send data to client: Broken pipe
+2018-09-20 21:35:26.498 GMT [138] FATAL:  terminating connection because protocol synchronization was lost
+2018-09-20 21:35:26.498 GMT [138] LOG:  could not send data to client: Broken pipe
+2018-09-20 21:35:26.647 GMT [133] FATAL:  terminating connection because protocol synchronization was lost
+2018-09-20 21:35:26.647 GMT [133] LOG:  could not send data to client: Broken pipe
+</code></pre>
+<p>I was importing with the following command: </p>
+<p><code>osm2pgsql -d ${DBNAME} -H ${DBHOST} -P ${DBPORT} -U ${DBUSER} --create --slim -G --hstore --hstore-match-only -C 8000 --number-processes 8 -S /home/renderer/src/custom.style --flat-nodes /home/renderer/data/flat_nodes/flat_nodes.bin /data.osm.pbf</code></p>
+<p>I have 32Gb of RAM, 8 cores, 1Gb of SWAP and 1Tb SSD (that's why I'm using flat-nodes).
+I've also tried with the -C option at 18000 (I've seen somewhere that beyond that value there was no difference). But I still have the issue.
+I really don't see how I could have a memory problem knowing that when I checked the usage during the import, I was around 20Gb of use max...</p>
+<p>I've seen <a href="https://github.com/openstreetmap/osm2pgsql/issues/855">this github issue</a> where it is advised to increase swap size but it seems strange to me, isn't the swap supposed to be used then de RAM is full? Anyway this would be a last resort solution.
+Also a guy suggest to remove the -C option and that will let osm2pgsql use what it needs, so I'm trying that right now but it seems strange too because I've seen in <a href="http://www.volkerschatz.com/net/osm/osm2pgsql-usage.html">that doc</a> that the default value is 800 if the parameter is not written.</p>
+<p>I'm monitoring the usage of my server with this last solution just now, and the swap is almost full (960/1021MB), while the RAM is free (only 2Gb used on 32...).</p>
+<p>Does anybody have any idea of where this problem may come from? And what I should do to successfully import the whole planet?</p>
+<p>Thanks!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/allocate/" class="post-tag tag-link-allocate"
+                                        title="see questions tagged 'allocate'" rel="tag">allocate</a>
+                                
+                                    <a href="/tags/ram/" class="post-tag tag-link-ram"
+                                        title="see questions tagged 'ram'" rel="tag">ram</a>
+                                
+                                    <a href="/tags/osm2pgsql/" class="post-tag tag-link-osm2pgsql"
+                                        title="see questions tagged 'osm2pgsql'" rel="tag">osm2pgsql</a>
+                                
+                                    <a href="/tags/memory/" class="post-tag tag-link-memory"
+                                        title="see questions tagged 'memory'" rel="tag">memory</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Sep '18, 16:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/32a7da9bf999cc0ea4f6befea00edd8d?s=32&amp;d=identicon&amp;r=g" alt="voharunado's gravatar image" />
+    <p><a href="/users/15375/voharunado">voharunado</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="voharunado has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-66004">
+    
+</div>
+<div id="comment-tools-66004" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66004-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/66004/osm2pgsql-tdbad_alloc-when-importing-full-planet?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/66004/osm2pgsql-tdbad_alloc-when-importing-full-planet?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/66004/osm2pgsql-tdbad_alloc-when-importing-full-planet?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/66004/osm2pgsql-tdbad_alloc-when-importing-full-planet?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="66015"></a>
+                    <div id="answer-container-66015" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-66015-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/66015/up/" rel="nofollow"> </a>
+<div id="post-66015-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-66015-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/66015/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Surprisingly enough software changes now and then and you shouldn't be assuming that tips given for older version still apply now.</p>
+<p>Current versions of osm2pgsql use a much more efficient caching algorithm and will not degrade as much as previous ones, which essentially required a cache large enough to keep all nodes in memory.</p>
+<p>In any case 1GB swap is not going to get you anywhere, 64 would be more like it (don't forget you have pgsql processes any lots of other stuff running during the import too), maybe even 128.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/66015/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Sep '18, 08:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/66015/">
+                edited
+                <strong>22 Sep '18, 08:37</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-66015">
+    
+        <a name="66032"></a>
+        <div class="comment" id="comment-66032">
+            <div id="post-66032-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for that advice, it still seems strange to me because I thought the RAM was used first, so with 32Gb of it, I assume I wouldn't need much swap. Anyway, I tried this weekend to remove de -C option (as advised in the github issue I linked) and the process terminated without the bad_alloc message. I still have an error but not related to memory, so if it works, I'll stay with that.</p></div>
+            <div class="comment-info" id="comment-66032-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Sep '18, 10:26)</span>
+                <a class="comment-user userinfo" href="/users/15375/voharunado">voharunado</a>
+                
+            </div>
+        </div>
+    
+        <a name="66035"></a>
+        <div class="comment" id="comment-66035">
+            <div id="post-66035-score" class="comment-score"></div>
+            <div class="comment-text"><p>I successfully passed the processing step by removing the <code>-C</code> option from my osm2pgsql command. The process didn't go further but for a totally different reason not relevant to this topic.
+But I still wonder if this advice I've seen on github is good, because it seems to me that this will tell osm2pgsql to use only 800Mb of RAM so this will inevitably slow down the process no?
+It may have allowed me to continue the process beyond the processing step but I'm afraid I will loose a lot of time for the rest of the import...</p></div>
+            <div class="comment-info" id="comment-66035-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Sep '18, 15:19)</span>
+                <a class="comment-user userinfo" href="/users/15375/voharunado">voharunado</a>
+                
+            </div>
+        </div>
+    
+        <a name="66071"></a>
+        <div class="comment" id="comment-66071">
+            <div id="post-66071-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can now confirm that removing the -C option worked.</p>
+
+<p>However the full planet import took almost 3 days (244721s), but I just wanted it to work so it's fine for me.</p></div>
+            <div class="comment-info" id="comment-66071-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Sep '18, 16:08)</span>
+                <a class="comment-user userinfo" href="/users/15375/voharunado">voharunado</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-66015" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-66015-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/66004/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mrBTDGmoUxIGIEnPpyK6kawbkM4icZCP' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/66004/osm2pgsql-tdbad_alloc-when-importing-full-planet?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/66004/osm2pgsql-tdbad_alloc-when-importing-full-planet?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm2pgsql/"
+            class="tag-link-osm2pgsql"
+            title="see questions tagged'osm2pgsql'using tags"
+            rel="tag">osm2pgsql</a> <span class="tag-number">&#215;263</span><br/>
+        
+        <a href="/tags/memory/"
+            class="tag-link-memory"
+            title="see questions tagged'memory'using tags"
+            rel="tag">memory</a> <span class="tag-number">&#215;15</span><br/>
+        
+        <a href="/tags/ram/"
+            class="tag-link-ram"
+            title="see questions tagged'ram'using tags"
+            rel="tag">ram</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/allocate/"
+            class="tag-link-allocate"
+            title="see questions tagged'allocate'using tags"
+            rel="tag">allocate</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 21, 2018, 4:26 p.m.">21 Sep '18, 16:26</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,167 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 27, 2018, 7:20 p.m.">27 Sep '18, 19:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/66626/osm2pgsql-out-of-memory-on-update">osm2pgsql out of memory on update</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5956/how-much-ram-does-osm2pgsql-need">How much RAM does osm2pgsql need?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39111/how-much-ram-does-osm2pgsql-required-in-case-the-progress-wont-be-killed-full-planet-import">How much RAM does osm2pgsql required in case  the progress won&#39;t be killed?  (full planet import)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64748/can-i-resume-a-osm2pgsql-import-after-a-out-of-memory-kill">Can I resume a osm2pgsql import after a out-of-memory-kill?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49588/how-to-keep-osm2pgsql-from-using-swap">how to keep osm2pgsql from using swap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4888/missing-tables-during-osm2pgsql-import">Missing tables during osm2pgsql import</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4789/how-to-configure-postgresql-for-mapnik-hourly-updates">How to configure postgresql for mapnik hourly updates?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2197/drawing-over-traces">drawing over traces</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6256/why-do-osm2pgsql-and-mapnik-use-spherical-projection-900913">Why do osm2pgsql and Mapnik use spherical projection 900913?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2919/osm-memory-map-compatibility">OSM &amp; Memory Map compatibility</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

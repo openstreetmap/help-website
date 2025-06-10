@@ -1,0 +1,959 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I download GPS traces and points from a Garmin GPS? - OSM Help</title>
+        <meta name="description" content="How do I step-by-step download GPS traces and points from a Garmin GPS?" />
+        <meta name="keywords" content="gpsbabel,garmin,usb,trace,gps" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/30337/how-do-i-download-gps-traces-and-points-from-a-garmin-gps" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/30337/how-do-i-download-gps-traces-and-points-from-a-garmin-gps?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='rSYvvqQk2XpZHKGkxYOKnLG6QfylLkFl' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/30337/how-do-i-download-gps-traces-and-points-from-a-garmin-gps">How do I download GPS traces and points from a Garmin GPS?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-30337-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30337/up/" rel="nofollow"> </a>
+<div id="post-30337-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-30337-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30337/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/30337/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How do I step-by-step download GPS traces and points from a Garmin GPS?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/gpsbabel/" class="post-tag tag-link-gpsbabel"
+                                        title="see questions tagged 'gpsbabel'" rel="tag">gpsbabel</a>
+                                
+                                    <a href="/tags/garmin/" class="post-tag tag-link-garmin"
+                                        title="see questions tagged 'garmin'" rel="tag">garmin</a>
+                                
+                                    <a href="/tags/usb/" class="post-tag tag-link-usb"
+                                        title="see questions tagged 'usb'" rel="tag">usb</a>
+                                
+                                    <a href="/tags/trace/" class="post-tag tag-link-trace"
+                                        title="see questions tagged 'trace'" rel="tag">trace</a>
+                                
+                                    <a href="/tags/gps/" class="post-tag tag-link-gps"
+                                        title="see questions tagged 'gps'" rel="tag">gps</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Jan '14, 19:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e79628d44a15e95c607f8c5007d0ccd2?s=32&amp;d=identicon&amp;r=g" alt="Firefishy's gravatar image" />
+    <p><a href="/users/48/firefishy">Firefishy ♦♦</a><br/>
+    <span class="score" title="1296 reputation points"><span class="">1.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="36 badges"><span class="silver">&#9679;</span><span class="badgecount">36</span></span><span title="52 badges"><span class="bronze">&#9679;</span><span class="badgecount">52</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Firefishy has 14 accepted answers">29&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-30337">
+    
+        <a name="30338"></a>
+        <div class="comment" id="comment-30338">
+            <div id="post-30338-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Common newbie question. Step-by-Step screenshots appreciated. Separate answer per platform (Linux / Windows / OSX)</p></div>
+            <div class="comment-info" id="comment-30338-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jan '14, 19:58)</span>
+                <a class="comment-user userinfo" href="/users/48/firefishy">Firefishy ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30360"></a>
+        <div class="comment" id="comment-30360">
+            <div id="post-30360-score" class="comment-score"></div>
+            <div class="comment-text"><p>… if you think that the process is that different: What about separate questions then? Otherwise the upvoting of the "separate" answers does not really work. By the way: there will be dozens of possiblities. You should specify your compentences, use frequency (i.e. how much set-up time is okay for fast process later). </p>
+
+<p>Well, in fact I think it could be best to just link one wiki page (if not existing <a href="//wiki.openstreetmap.org/wiki/Category:GPS">somewhere</a> already). ;-) There this quite hierachical structure may be easier to do.</p></div>
+            <div class="comment-info" id="comment-30360-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jan '14, 15:37)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30361"></a>
+        <div class="comment" id="comment-30361">
+            <div id="post-30361-score" class="comment-score"></div>
+            <div class="comment-text"><p>ah, a tag... do you only want a download guide for gpsbabel using USB?</p></div>
+            <div class="comment-info" id="comment-30361-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jan '14, 15:38)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30362"></a>
+        <div class="comment" id="comment-30362">
+            <div id="post-30362-score" class="comment-score"></div>
+            <div class="comment-text"><p>We have no step-by-step guides on how to use gpsbabel to download tracks+points over USB.</p></div>
+            <div class="comment-info" id="comment-30362-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jan '14, 15:41)</span>
+                <a class="comment-user userinfo" href="/users/48/firefishy">Firefishy ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30363"></a>
+        <div class="comment" id="comment-30363">
+            <div id="post-30363-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.2.1">https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.2.1</a> is the closest we have but it isn't very clear on how to get the tracks + points off the Garmin GPS.</p></div>
+            <div class="comment-info" id="comment-30363-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jan '14, 15:44)</span>
+                <a class="comment-user userinfo" href="/users/48/firefishy">Firefishy ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30369"></a>
+        <div class="comment not_top_scorer" id="comment-30369">
+            <div id="post-30369-score" class="comment-score"></div>
+            <div class="comment-text"><p>well ("how to use gpsbabel"), then please make that also clear in the title.</p></div>
+            <div class="comment-info" id="comment-30369-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jan '14, 23:54)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30370"></a>
+        <div class="comment not_top_scorer" id="comment-30370">
+            <div id="post-30370-score" class="comment-score"></div>
+            <div class="comment-text"><p>oh, and: afaik newer garmin gpses behave differently. Do they only offer .fit or also .gpx on mass storage mode?</p></div>
+            <div class="comment-info" id="comment-30370-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Feb '14, 00:40)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-30337" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30337-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/30337/how-do-i-download-gps-traces-and-points-from-a-garmin-gps?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/30337/how-do-i-download-gps-traces-and-points-from-a-garmin-gps?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/30337/how-do-i-download-gps-traces-and-points-from-a-garmin-gps?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/30337/how-do-i-download-gps-traces-and-points-from-a-garmin-gps?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="34804"></a>
+                    <div id="answer-container-34804" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34804-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34804/up/" rel="nofollow"> </a>
+<div id="post-34804-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-34804-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34804/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Modern models of Garmin GPS simply mount like a hard drive, when connected to a computer.  This works both for handheld GPS units, and car based GPS units:</p>
+<ol>
+<li>Prior to your trip, ensure your Garmin GPS is recording a track log (the exact procedures differ based on the model).</li>
+<li>Connect your GPS to a computer with a USB cable.  The device should "mount" like an external hard drive.</li>
+<li>Visit the Garmin GPX folder or perhaps GPX/Archive.  The files you want end in the ".gpx" extension, and contain track logs.</li>
+<li>You can upload traces to <a href="http://www.openstreetmap.org/traces">http://www.openstreetmap.org/trace</a>s or better yet load them into the JOSM editor, <a href="https://josm.openstreetmap.de/">https://josm.openstreetmap.de/</a> .  Please don't upload GPS traces directly into the map: instead using the air photos and existing data as a guide, trace over your GPS tracks and make adjustments.  You can set the display color of your GPS trace to something wild, to make it distinct compared to the base map.</li>
+</ol>
+<p><img alt="Upload Garmin GPS trace on Linux" src="http://help.openstreetmap.org/upfiles/Archive_044.png"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34804/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Jul '14, 16:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/372fabe5d3962d54b0c9474e35a05359?s=32&amp;d=identicon&amp;r=g" alt="Bryce%20C%20Nesbitt's gravatar image" />
+    <p><a href="/users/667/bryce-c-nesbitt">Bryce C Nesbitt</a><br/>
+    <span class="score" title="345 reputation points">345</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="17 badges"><span class="bronze">&#9679;</span><span class="badgecount">17</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bryce C Nesbitt has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34804/">
+                edited
+                <strong>10 Jul '14, 17:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34804">
+    
+</div>
+<div id="comment-tools-34804" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34804-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="30353"></a>
+                    <div id="answer-container-30353" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30353-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30353/up/" rel="nofollow"> </a>
+<div id="post-30353-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-30353-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30353/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>A word of warning, old ones (such as the old yellow etrex ) without USB port may cost you a lot more for cables and adapters to connect it to a PC, it will also be less good at getting a location. Most newer Garmins (I have used Vista HCX (strong location),the Nuvi 1310T (ok) Oregon 450 (locates in seconds from cold in a new area) can all be connected via a USB They will then appear as another memory device. Look in the various folders for the GPX traces. I use Memory Map (paid for) to open the gpx file and trim off excess trace that is not needed, such as home location, stops and birds nests (the scribble in a trace recorded while stopped and or a poor signal area). Easygps  will also download and draw a trace for you. GPSbabel is popular but I have not used it. Save the tidy trace with a meaningful name in the "ready to upload" folder. You can sign up and login and your first trace can be uploaded.     <br>
+</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30353/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Jan '14, 09:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/efa7ca36d4499200879223dc5ad5ecac?s=32&amp;d=identicon&amp;r=g" alt="andy%20mackey's gravatar image" />
+    <p><a href="/users/644/andy-mackey">andy mackey</a><br/>
+    <span class="score" title="13238 reputation points"><span class="">13.2k</span></span><span title="87 badges"><span class="badge1">&#9679;</span><span class="badgecount">87</span></span><span title="143 badges"><span class="silver">&#9679;</span><span class="badgecount">143</span></span><span title="285 badges"><span class="bronze">&#9679;</span><span class="badgecount">285</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andy mackey has 37 accepted answers">4&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30353">
+    
+</div>
+<div id="comment-tools-30353" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30353-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="30368"></a>
+                    <div id="answer-container-30368" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30368-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30368/up/" rel="nofollow"> </a>
+<div id="post-30368-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-30368-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30368/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi, if you’re able to get the traces out of your GPS by cable or, stick or card and into your PC your problem is solved. With JOSM for instance as an editor in your pc, it starts automatically after clicking at the imported file. The editor even shows the mapped area as a download region. Select it and your ready to use you're tracks.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30368/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Jan '14, 21:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/742e93034cd38ad243f7ab26f350b659?s=32&amp;d=identicon&amp;r=g" alt="Hendrikklaas's gravatar image" />
+    <p><a href="/users/3443/hendrikklaas">Hendrikklaas</a><br/>
+    <span class="score" title="9286 reputation points"><span class="">9.3k</span></span><span title="207 badges"><span class="badge1">&#9679;</span><span class="badgecount">207</span></span><span title="238 badges"><span class="silver">&#9679;</span><span class="badgecount">238</span></span><span title="387 badges"><span class="bronze">&#9679;</span><span class="badgecount">387</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hendrikklaas has 39 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30368">
+    
+</div>
+<div id="comment-tools-30368" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30368-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/30337/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='rSYvvqQk2XpZHKGkxYOKnLG6QfylLkFl' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/30337/how-do-i-download-gps-traces-and-points-from-a-garmin-gps?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/30337/how-do-i-download-gps-traces-and-points-from-a-garmin-gps?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/garmin/"
+            class="tag-link-garmin"
+            title="see questions tagged'garmin'using tags"
+            rel="tag">garmin</a> <span class="tag-number">&#215;309</span><br/>
+        
+        <a href="/tags/gps/"
+            class="tag-link-gps"
+            title="see questions tagged'gps'using tags"
+            rel="tag">gps</a> <span class="tag-number">&#215;235</span><br/>
+        
+        <a href="/tags/trace/"
+            class="tag-link-trace"
+            title="see questions tagged'trace'using tags"
+            rel="tag">trace</a> <span class="tag-number">&#215;42</span><br/>
+        
+        <a href="/tags/gpsbabel/"
+            class="tag-link-gpsbabel"
+            title="see questions tagged'gpsbabel'using tags"
+            rel="tag">gpsbabel</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/usb/"
+            class="tag-link-usb"
+            title="see questions tagged'usb'using tags"
+            rel="tag">usb</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 30, 2014, 7:55 p.m.">30 Jan '14, 19:55</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>26,937 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 10, 2014, 5 p.m.">10 Jul '14, 17:00</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13414/best-software-for-garmin-gps-60-yellow">Best software for Garmin GPS-60 (yellow)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5032/search-gps-trace">search GPS trace</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1171/using-garmin-in-real-time">Using garmin in real time?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3739/how-to-get-lap-points-displayed-from-a-forerunner-305">How to get lap points displayed from a forerunner 305</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4040/hdop-in-gpx-which-device-can-do-it">HDOP in GPX: which device can do it?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5023/how-can-i-display-a-gps-trace-on-a-real-map">How can I display a GPS trace on a real map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2123/ecuador-help">Ecuador HELP!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1761/which-gps-device">Which GPS Device ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3675/gps-trace-on-iphone">GPS trace on iPhone ...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3921/gps-trace-on-foot-near-westminister-bridgeeast-of-landed-in-water">GPS trace on foot near Westminister Bridge(east of) landed in water</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

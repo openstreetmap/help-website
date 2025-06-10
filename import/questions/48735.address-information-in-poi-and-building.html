@@ -1,0 +1,898 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Address information in POI *and* building? - OSM Help</title>
+        <meta name="description" content="Hello everyone, I am getting into OSM mapping and have a question to the community concerning addresses. I know there is no standard for address mapping and several ways to do it (buildings, POIs or relations). I would like to have your take on my question: I am currently mapping in the US, where ma..." />
+        <meta name="keywords" content="buildings,poi,housenumbers,address" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/48735/address-information-in-poi-and-building" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/48735/address-information-in-poi-and-building?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='9W0zs9Ihu5GuHItVL2HNbVolu901pM26' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/48735/address-information-in-poi-and-building">Address information in POI *and* building?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-48735-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48735/up/" rel="nofollow"> </a>
+<div id="post-48735-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-48735-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48735/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/48735/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello everyone,</p>
+<p>I am getting into OSM mapping and have a question to the community concerning addresses. I know there is no standard for address mapping and several ways to do it (buildings, POIs or relations). I would like to have your take on my question:</p>
+<p>I am currently mapping in the US, where many buildings already have addresses (partly from publicly available GIS data sets). This means that the building is a way mapped as
+building=yes
+and with various tags such as
+addr:street = F Street Northwest
+addr:housenumber = 2519
+...</p>
+<p>Now if I add a POI to this building, for example a shop on the ground floor. Would you recommend adding the addr:<em> information (that is already contained in the building information) to the shop's POI? Yes or no?
+</em>Yes<em> would mean that the shop's POI information is as complete as possible, but that the address information is contained in the map twice: once in the building, once in the POI.
+</em>No* would mean that the shop's POI is in some regards incomplete, but it somehow seems cleaner to have no information repetition.</p>
+<p>Cheers and Thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/buildings/" class="post-tag tag-link-buildings"
+                                        title="see questions tagged 'buildings'" rel="tag">buildings</a>
+                                
+                                    <a href="/tags/poi/" class="post-tag tag-link-poi"
+                                        title="see questions tagged 'poi'" rel="tag">poi</a>
+                                
+                                    <a href="/tags/housenumbers/" class="post-tag tag-link-housenumbers"
+                                        title="see questions tagged 'housenumbers'" rel="tag">housenumbers</a>
+                                
+                                    <a href="/tags/address/" class="post-tag tag-link-address"
+                                        title="see questions tagged 'address'" rel="tag">address</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Mar '16, 14:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/964d1a2453f009cfb7858fb7044449f1?s=32&amp;d=identicon&amp;r=g" alt="rabon's gravatar image" />
+    <p><a href="/users/12091/rabon">rabon</a><br/>
+    <span class="score" title="221 reputation points">221</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rabon has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-48735">
+    
+        <a name="48993"></a>
+        <div class="comment" id="comment-48993">
+            <div id="post-48993-score" class="comment-score"></div>
+            <div class="comment-text"><p>Similar question: <a href="https://help.openstreetmap.org/questions/47319/osmose-error-number-twice-in-the-street-when-adding-a-poi-with-house-number">https://help.openstreetmap.org/questions/47319/osmose-error-number-twice-in-the-street-when-adding-a-poi-with-house-number</a></p></div>
+            <div class="comment-info" id="comment-48993-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Apr '16, 10:58)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48735" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48735-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/48735/address-information-in-poi-and-building?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/48735/address-information-in-poi-and-building?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/48735/address-information-in-poi-and-building?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/48735/address-information-in-poi-and-building?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="48744"></a>
+                    <div id="answer-container-48744" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48744-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48744/up/" rel="nofollow"> </a>
+<div id="post-48744-score" class="post-score"
+    title="current number of votes">
+    7
+</div>
+<a id="post-48744-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48744/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="rabon has selected this answer as the correct answer"
+        href="/accept_answer/48744/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>We are dealing with a geographical database under the covers and all the data consumers should easily determine that a point (POI) within a polygon (building) shares the address of the polygon. So it is not necessary and many consider it potentially harmful as if something changes it is one more thing that needs to be maintained. The general philosophy is to enter something only once. And there are some QA tools that will definitely flag that as an error to be corrected, so don't be surprised if some remote mapper fixes that for you.</p>
+<p>Another situation that comes up is a place with multiple buildings all sharing the same address. You can deal with that by drawing another polygon around the buildings and putting the address on that. No need for a relation here either, all the routing and mapping software deduce the buildings all have the address of the surrounding polygon.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48744/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Mar '16, 23:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f60af53a4eba0c21f25c22674fb4a8cc?s=32&amp;d=identicon&amp;r=g" alt="n76's gravatar image" />
+    <p><a href="/users/5918/n76">n76</a><br/>
+    <span class="score" title="10839 reputation points"><span class="">10.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="82 badges"><span class="silver">&#9679;</span><span class="badgecount">82</span></span><span title="172 badges"><span class="bronze">&#9679;</span><span class="badgecount">172</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="n76 has 48 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48744">
+    
+        <a name="48908"></a>
+        <div class="comment" id="comment-48908">
+            <div id="post-48908-score" class="comment-score"></div>
+            <div class="comment-text"><p>I agree with that as well as well as with the opposing point raised above by SK53 about ease-of-readibility.
+I realize that e.g. Osmose flags multiple addresses as erroneous entries.
+In the US, one building often hosts several addresses, which are then shown as their own nodes. That opens a third option, namely adding another node (a shop, for example) close to the address node, or adding the shop tags to the existing address node. I guess, for a good data reader this should make no difference, and I realize that there is no coherent practice for how to do this in OSM.</p></div>
+            <div class="comment-info" id="comment-48908-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Mar '16, 16:43)</span>
+                <a class="comment-user userinfo" href="/users/12091/rabon">rabon</a>
+                
+            </div>
+        </div>
+    
+        <a name="48992"></a>
+        <div class="comment" id="comment-48992">
+            <div id="post-48992-score" class="comment-score">3</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/12091/rabon">@rabon</a>: One building often with several addresses can be elegantly tagged by tagging the entrances, as usually each entrance is assigned one address. If not, you can tag a range (addr:housenumber=33-37). Some mappers also create separate address nodes, but I would not consider that a good idea. Address information should be attached to some object that "has" that address (be it an area, a building, or an entrance).</p></div>
+            <div class="comment-info" id="comment-48992-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Apr '16, 10:57)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="49017"></a>
+        <div class="comment" id="comment-49017">
+            <div id="post-49017-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/666/sleske">@sleske</a>: I think this is a great point. I am currently surveying and mapping in the Washington, DC, area. Most buildings, streets and addresses here come from public GIS data sets. Many of these tag the addresses in a single node on the building (which often comprises several addresses). I realy like the sound of your solution, and will consider it for future mapping. For now, the quasi-standard seems to be individual address nodes on buildings. Which, I agree with you, is not optimal.</p></div>
+            <div class="comment-info" id="comment-49017-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Apr '16, 04:13)</span>
+                <a class="comment-user userinfo" href="/users/12091/rabon">rabon</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48744" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48744-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="48736"></a>
+                    <div id="answer-container-48736" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48736-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48736/up/" rel="nofollow"> </a>
+<div id="post-48736-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-48736-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48736/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I see no problem with adding the address information to the POI as well. </p>
+<p>The very nature of tags in OSM mean that we do duplicate information all over the place so trying to avoid it for notions of a clean dataset is probably self defeating. People who do want this type of clean dataset already have to implement suitable data cleansing processes on OSM data; and this should be good practise for any one using OSM as a source.</p>
+<p>Furthermore a clean implementation of addresses would treat them as first class objects and not as attributes, so any OSM approach to addresses will <strong>never</strong> satisfy the requirements of a truly elegant approach (here just one example of a different issue, <a href="http://www.openstreetmap.org/relation/2164745#map=17/59.45200/24.73431">multiple buildings</a> all having the same address). However, rest assured we are not alone, almost every customer system in the world treats addresses as attributes.</p>
+<p>Having to query buildings or parcels for associated address information does impose more complications for people consuming the information. So the duplication of data may assist people not interested in using the building data. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48736/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Mar '16, 15:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48736">
+    
+        <a name="48737"></a>
+        <div class="comment" id="comment-48737">
+            <div id="post-48737-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your complete answer. I agree with you, it seems to make more sense to add as much information as possible rather than creating a beautiful dataset which then might fail if not read correctly.
+What is your take on using relations for this issue? Some (10% on average I have read in the osm wiki (?)) buildings use relations to connect information shared by POIs and the building or even several buildings such as the house number or the street.
+I presume adding a relation as a third way of storing address information (additionally to storing it in the POI and the building) is a possibility. But it also seems to be not too popular, partly because of relation's more complex nature compared to POI/building mapping.
+Would you agree?
+Cheers</p></div>
+            <div class="comment-info" id="comment-48737-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Mar '16, 16:02)</span>
+                <a class="comment-user userinfo" href="/users/12091/rabon">rabon</a>
+                
+            </div>
+        </div>
+    
+        <a name="48738"></a>
+        <div class="comment" id="comment-48738">
+            <div id="post-48738-score" class="comment-score">5</div>
+            <div class="comment-text"><p>I also see no problem in adding address information twice, just the contrary. But I would rather refrain from using relations. My main reason for both is that we heavily rely on random users contributing to OSM. For those it should be made as easy as possible to add or correct information. While there are enough "specialists" out there heavily getting every detail into the complex railway and public transport relations it's those simple elements as shops and amenities that are still far from completely mapped and where we need the not so data-objects-savvy users for.</p></div>
+            <div class="comment-info" id="comment-48738-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Mar '16, 16:23)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="48742"></a>
+        <div class="comment" id="comment-48742">
+            <div id="post-48742-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/10133/tzorn">@TZorn</a> yes, very good point which I should have made.</p></div>
+            <div class="comment-info" id="comment-48742-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Mar '16, 19:25)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="48988"></a>
+        <div class="comment" id="comment-48988">
+            <div id="post-48988-score" class="comment-score">3</div>
+            <div class="comment-text"><p>While I agree with the "keep it simple" approach, there <em>is</em> a problem with redundant address tagging: It becomes harder to tell wether an address really exists multiple times, or is only stored redundantly. E.g., if I search for "33, Xstreet", which is a building containing multiple shops, I should only get one hit. However, if there really are two buildings with this address, I want two hits. This can be solved with filtering, but it's tricky.</p></div>
+            <div class="comment-info" id="comment-48988-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Apr '16, 09:26)</span>
+                <a class="comment-user userinfo" href="/users/666/sleske">sleske</a>
+                
+            </div>
+        </div>
+    
+        <a name="84043"></a>
+        <div class="comment" id="comment-84043">
+            <div id="post-84043-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/666/sleske">@sleske</a> you would have to distinguish whether the address information is just an attribute of something, or is a first class object on its own (possibly by using different tags)</p></div>
+            <div class="comment-info" id="comment-84043-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Mar '22, 21:20)</span>
+                <a class="comment-user userinfo" href="/users/936/dieterdreist">dieterdreist</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48736" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48736-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/48735/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='9W0zs9Ihu5GuHItVL2HNbVolu901pM26' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48735/address-information-in-poi-and-building?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48735/address-information-in-poi-and-building?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/address/"
+            class="tag-link-address"
+            title="see questions tagged'address'using tags"
+            rel="tag">address</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/poi/"
+            class="tag-link-poi"
+            title="see questions tagged'poi'using tags"
+            rel="tag">poi</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/buildings/"
+            class="tag-link-buildings"
+            title="see questions tagged'buildings'using tags"
+            rel="tag">buildings</a> <span class="tag-number">&#215;75</span><br/>
+        
+        <a href="/tags/housenumbers/"
+            class="tag-link-housenumbers"
+            title="see questions tagged'housenumbers'using tags"
+            rel="tag">housenumbers</a> <span class="tag-number">&#215;63</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 18, 2016, 2:31 p.m.">18 Mar '16, 14:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,116 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 29, 2022, 9:20 p.m.">29 Mar '22, 21:20</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/47166/poi-and-address-node-single-node">POI and address node: single node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36207/adding-a-house-number-from-a-gpx-waypoint">Adding a house number from a GPX waypoint</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1582/adding-metadata-using-websites">Adding &#39;metadata&#39; using websites?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13845/add-my-own-business-to-openstreetmap">Add my Own business to OpenStreetMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25561/addresses-for-pois-spanning-multiple-buildings">Addresses for POIs spanning multiple buildings</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28075/how-to-correctly-map-a-pois-address">How to correctly map a POI&#39;s address ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9411/including-old-addresses-to-osm-and-how">Including old addresses to OSM, and how?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4319/do-i-add-address-tags-to-the-poi-node-or-create-a-separate-node">Do I add address tags to the POI node or create a separate node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10625/copy-values">copy values</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17012/questions-questions-from-a-newbie">Questions questions (from a newbie)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

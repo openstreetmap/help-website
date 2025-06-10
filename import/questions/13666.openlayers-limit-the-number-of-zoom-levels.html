@@ -1,0 +1,879 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>OpenLayers - limit the number of zoom levels - OSM Help</title>
+        <meta name="description" content="Hello, I&#39;m trying to limit the zoom levels of my OpenLayers application. I want to make max zoom level to be 14 using standard zoom levels (nothing fancy like fractional zooms and resolutions) and that is all. I&#39;ve read this article: http://trac.osgeo.org/openlayers/wiki/SettingZoomLevels I&#39;ve tried..." />
+        <meta name="keywords" content="openlayers,zoom" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/13666/openlayers-limit-the-number-of-zoom-levels" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/13666/openlayers-limit-the-number-of-zoom-levels?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='T72FRCd1rEXlD3ZAfgayoSpdlFgrvMC2' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/13666/openlayers-limit-the-number-of-zoom-levels">OpenLayers - limit the number of zoom levels</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-13666-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13666/up/" rel="nofollow"> </a>
+<div id="post-13666-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-13666-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13666/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/13666/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I'm trying to limit the zoom levels of my OpenLayers application. I want to make max zoom level to be 14 using standard zoom levels (nothing fancy like fractional zooms and resolutions) and that is all. I've read this article: <a href="http://trac.osgeo.org/openlayers/wiki/SettingZoomLevels">http://trac.osgeo.org/openlayers/wiki/SettingZoomLevels</a> I've tried tons of combinations of maxExtent, minExtent, maxResolution, minResolution, numZoomLevels and so on... the user is always able to go beyond ZL 14 :(</p>
+<p>Here is my map definition:</p>
+<pre>var options = {
+        projection: new OpenLayers.Projection("EPSG:900913"),
+        units: "m",
+        controls: [
+            new OpenLayers.Control.PanZoomBar(),
+            new OpenLayers.Control.LayerSwitcher(),
+            new OpenLayers.Control.Permalink(),
+            new OpenLayers.Control.Attribution(),
+            new OpenLayers.Control.Navigation(),
+            new OpenLayers.Control.ScaleLine()
+        ],
+        displayProjection: new OpenLayers.Projection("EPSG:4326")
+    }
+    map = new OpenLayers.Map("mapdiv",options);
+    map.addLayer(new OpenLayers.Layer.OSM());
+</pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/openlayers/" class="post-tag tag-link-openlayers"
+                                        title="see questions tagged 'openlayers'" rel="tag">openlayers</a>
+                                
+                                    <a href="/tags/zoom/" class="post-tag tag-link-zoom"
+                                        title="see questions tagged 'zoom'" rel="tag">zoom</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Jun '12, 18:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ca446edd75e87c48db5dd850d9f394a9?s=32&amp;d=identicon&amp;r=g" alt="ivanatora's gravatar image" />
+    <p><a href="/users/191/ivanatora">ivanatora</a><br/>
+    <span class="score" title="2740 reputation points"><span class="">2.7k</span></span><span title="35 badges"><span class="badge1">&#9679;</span><span class="badgecount">35</span></span><span title="55 badges"><span class="silver">&#9679;</span><span class="badgecount">55</span></span><span title="68 badges"><span class="bronze">&#9679;</span><span class="badgecount">68</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ivanatora has one accepted answer">7&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/13666/">
+                retagged
+                <strong>21 Jun '12, 23:18</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f92748c8fa508a936bcf2169b30cabf6?s=32&amp;d=identicon&amp;r=g" alt="ikonor's gravatar image" />
+            <p><a href="/users/2012/ikonor">ikonor</a><br/>
+            <span class="score" title="1286 reputation points"><span class="">1.3k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-13666">
+    
+</div>
+<div id="comment-tools-13666" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13666-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/13666/openlayers-limit-the-number-of-zoom-levels?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/13666/openlayers-limit-the-number-of-zoom-levels?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/13666/openlayers-limit-the-number-of-zoom-levels?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/13666/openlayers-limit-the-number-of-zoom-levels?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="13713"></a>
+                    <div id="answer-container-13713" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13713-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13713/up/" rel="nofollow"> </a>
+<div id="post-13713-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-13713-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13713/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For tile based layers you can set zoomOffset and resolutions. See Wiki <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example#Restricting_the_bounds_.26_zoom_levels">Restricting the bounds &amp; zoom levels</a> and example <a href="http://www.wightpaths.co.uk/">Isle of Wight Paths</a>. Setting maxResolution and numZoomLevels along with serverResolutions should also work, see <a href="http://openlayers.org/dev/examples/bing-tiles-restrictedzoom.html">Bing Tiles with a Subset of Resolutions Example</a>.</p>
+<p>For convenience, I use the serverResolutions array defined in the Bing layer, which corresponds to OSM resolutions (apart from extending to level 21): </p>
+<pre><code>var resolutions = OpenLayers.Layer.Bing.prototype.serverResolutions.slice(14, 19);
+map.addLayer(new OpenLayers.Layer.OSM(null, null, {zoomOffset: 14, resolutions: resolutions}));
+
+// zoom level relative to zoomOffset
+map.setCenter(new OpenLayers.LonLat(-0.1265, 51.5034).transform(
+   new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()), 0);
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13713/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Jun '12, 23:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f92748c8fa508a936bcf2169b30cabf6?s=32&amp;d=identicon&amp;r=g" alt="ikonor's gravatar image" />
+    <p><a href="/users/2012/ikonor">ikonor</a><br/>
+    <span class="score" title="1286 reputation points"><span class="">1.3k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ikonor has 4 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13713">
+    
+</div>
+<div id="comment-tools-13713" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13713-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="13676"></a>
+                    <div id="answer-container-13676" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13676-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13676/up/" rel="nofollow"> </a>
+<div id="post-13676-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-13676-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13676/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'd register an event on movestart (which includes zooming) and prevent zooming if the map's zoomlevel is higher than a certain value</p>
+<pre><code>function handleZoom(event) {
+    var map = event.object;
+    if (map.getZoom() &gt; 14) {
+       event.stop(event);
+    }
+}
+var map = new OpenLayers.Map();¨
+map.events.register('zoomstart', map, handleZoom)
+</code></pre>
+<p>I didn't test this, so you propably need to enhance the event handling function</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13676/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Jun '12, 09:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/30b87850d86c99d1c4f1f72c9abaeb52?s=32&amp;d=identicon&amp;r=g" alt="frabron's gravatar image" />
+    <p><a href="/users/3216/frabron">frabron</a><br/>
+    <span class="score" title="361 reputation points">361</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="frabron has 2 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13676">
+    
+        <a name="13806"></a>
+        <div class="comment" id="comment-13806">
+            <div id="post-13806-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, the first issue was that the event name is 'movestart', not 'zoomstart'. I've changed that and the handler is firing, but I can't stop the event propagation. I keep getting event.stop is not a function. I tried OpenLayers.Event.stop(e) but that seems to do nothing at all. How to get the event from the handler function? 
+The callback argument seem to contain 2 properties - dom element and object (that is not OpenLayers.Event object) and that is all.</p></div>
+            <div class="comment-info" id="comment-13806-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Jun '12, 14:49)</span>
+                <a class="comment-user userinfo" href="/users/191/ivanatora">ivanatora</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13676" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13676-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="50104"></a>
+                    <div id="answer-container-50104" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50104-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50104/up/" rel="nofollow"> </a>
+<div id="post-50104-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-50104-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50104/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><strong>I found the simplest way to restrict the maxZoom levels for a XYZ layer was to override the getNumZoomLevels method:</strong></p>
+<pre><code>  function zoomChanged()
+    {
+        var coor_from = new OpenLayers.Projection("EPSG:4326");
+        var coor_to   = new OpenLayers.Projection("EPSG:900913");
+        var level = map.getZoom();
+        var center =   map.getCenter()
+        center.transform(coor_to,coor_from);
+        var zoomLevel = level;
+        var valid =false;
+        map.getNumZoomLevels = function(){ return 16; };
+        map.isValidZoomLevel = function(zoomLevel) {
+            valid = ( (zoomLevel != null) &amp;&amp;
+            (zoomLevel &gt;= minzoom) &amp;&amp;
+            (zoomLevel &lt;= maxzoom) );
+            console.log(valid);
+            console.log(map.getZoom());
+            if(!valid &amp;&amp; map.getZoom() == 0){
+                map.zoomTo(maxzoom - (maxzoom - minzoom)/2);
+
+            }
+            return valid;
+        }
+        if(valid)
+        {
+            SetCenterPoint(center.lat, center.lon, map.getZoom());
+        }
+        return valid;
+    }
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50104/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jun '16, 11:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f397095f89218f9edf95c98923d5cbe6?s=32&amp;d=identicon&amp;r=g" alt="Vijay%20Rajbhar's gravatar image" />
+    <p><a href="/users/12405/vijay-rajbhar">Vijay Rajbhar</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vijay Rajbhar has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50104">
+    
+</div>
+<div id="comment-tools-50104" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50104-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/13666/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='T72FRCd1rEXlD3ZAfgayoSpdlFgrvMC2' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13666/openlayers-limit-the-number-of-zoom-levels?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13666/openlayers-limit-the-number-of-zoom-levels?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/openlayers/"
+            class="tag-link-openlayers"
+            title="see questions tagged'openlayers'using tags"
+            rel="tag">openlayers</a> <span class="tag-number">&#215;122</span><br/>
+        
+        <a href="/tags/zoom/"
+            class="tag-link-zoom"
+            title="see questions tagged'zoom'using tags"
+            rel="tag">zoom</a> <span class="tag-number">&#215;107</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 20, 2012, 6:52 p.m.">20 Jun '12, 18:52</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>23,408 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 9, 2016, 11:48 a.m.">09 Jun '16, 11:48</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/14324/openlayers-control-zoom-level-granularity">OpenLayers - Control zoom level granularity?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14713/how-can-i-change-zoom-level-dynamically-in-openlayers">How can i change zoom level dynamically in OpenLayers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1804/is-it-easy-to-extract-the-shape-of-country-across-api">Is it easy to extract the shape of country across API?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1828/how-do-i-change-language-of-a-map">How do I change language of a map?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2687/coordinates-to-pixels-based-on-zoom">Coordinates to Pixels based on Zoom</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3615/other-projection-in-openlayers">other Projection in OpenLayers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4037/what-is-the-bandwith-limit">What is the bandwith limit?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4032/openlayers-osm-example-does-not-display-the-right-area">OpenLayers OSM example does not display the right area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4602/openlayers-displaying-out-of-bounds">OpenLayers Displaying out of bounds</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1806/pending-approved-status-and-osm-data-in-an-openlayer">Pending, approved status and OSM data in an openLayer?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

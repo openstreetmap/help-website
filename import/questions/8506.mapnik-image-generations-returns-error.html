@@ -1,0 +1,1557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>mapnik image generations returns error - OSM Help</title>
+        <meta name="description" content="I installed postgresql, gis and mapnik conform this tutorial: http://www.hyperionreactor.net/blog/how-build-your-own-osm-server-part-1-postgis-and-mapnik . But i took a different step and instead of downloading the whole world, i downloaded just my country. Now, when i run generate_xml.py and genera..." />
+        <meta name="keywords" content="osm,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/8506/mapnik-image-generations-returns-error" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/8506/mapnik-image-generations-returns-error?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='dlMLTZWrJQ044XbsWgRoMX5Zn0jVq1c4' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/8506/mapnik-image-generations-returns-error">mapnik image generations returns error</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-8506-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8506/up/" rel="nofollow"> </a>
+<div id="post-8506-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-8506-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8506/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/8506/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I installed postgresql, gis and mapnik conform this tutorial: <a href="http://www.hyperionreactor.net/blog/how-build-your-own-osm-server-part-1-postgis-and-mapnik">http://www.hyperionreactor.net/blog/how-build-your-own-osm-server-part-1-postgis-and-mapnik</a> .
+But i took a different step and instead of downloading the whole world, i downloaded just my country.
+Now, when i run <a href="http://generate_xml.py">generate_xml.py</a> and <a href="http://generate_image.py">generate_image.py</a>(or tiles) i recieve the following error 
+</p><pre><code>./<a href="http://generate_xml.py">generate_xml.py</a> --dbname gis --user prodeng  --accept-none --password apass --symbols ./symbols/ --world_boundaries ./world_boundaries/
+Include files written successfully! Pass the osm.xml file as an argument if you want to serialize a new version or test reading the XML
+alexandru@alex-lap:~/.osm/bin/mapnik$ ./<a href="http://generate_image.py">generate_image.py</a> 
+PostGIS: SRID warning, using srid=-1
+Traceback (most recent call last):
+  File "./<a href="http://generate_image.py">generate_image.py</a>", line 42, in &lt;module&gt;
+    mapnik.load_map(m,mapfile)
+RuntimeError: PSQL error:
+ERROR:  relation "planet_osm_polygon" does not exist
+LINE 4:        from planet_osm_polygon
+                    ^
+Full sql was: 'select * from 
+      (select way,aeroway,amenity,landuse,leisure,man_made,military,"natural",power,tourism,name,highway,
+       case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion
+       from planet_osm_polygon
+       where landuse is not null
+          or leisure is not null
+          or aeroway in ('apron','aerodrome')
+          or amenity in ('parking','university','college','school','hospital','kindergarten','grave_yard')
+          or military in ('barracks','danger_area')
+          or "natural" in ('field','beach','desert','heath','mud','wood','sand','scrub')
+          or power in ('station','sub_station','generator')
+          or tourism in ('attraction','camp_site','caravan_site','picnic_site','zoo')
+          or highway in ('services','rest_area')
+       order by z_order,way_area desc
+      ) as leisure
+       limit 0'
+ (encountered during parsing of layer 'landcover')
+</code></pre><p></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osm/" class="post-tag tag-link-osm"
+                                        title="see questions tagged 'osm'" rel="tag">osm</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Oct '11, 13:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc9b01669c0702f230fa57c384b947a8?s=32&amp;d=identicon&amp;r=g" alt="alexz's gravatar image" />
+    <p><a href="/users/2226/alexz">alexz</a><br/>
+    <span class="score" title="225 reputation points">225</span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="26 badges"><span class="bronze">&#9679;</span><span class="badgecount">26</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="alexz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-8506">
+    
+</div>
+<div id="comment-tools-8506" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8506-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/8506/mapnik-image-generations-returns-error?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/8506/mapnik-image-generations-returns-error?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/8506/mapnik-image-generations-returns-error?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/8506/mapnik-image-generations-returns-error?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="8552"></a>
+                    <div id="answer-container-8552" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8552-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8552/up/" rel="nofollow"> </a>
+<div id="post-8552-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-8552-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8552/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="alexz has selected this answer as the correct answer"
+        href="/accept_answer/8552/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Ok, then it is osm2pgsql not importing your data.
+The tutorial says</p>
+<h1>cd /mnt/bin/osm2pgsql</h1>
+<h1>./osm2pgsql -S default.style --slim -d gis -C 4096 /mnt/planet/planet-latest.osm.bz2</h1>
+<p>How big is the file you import? It may take 1-2 hours per 100mb of compressed data.
+The -C 4096 expectes more than 4GB of RAM on your machine.</p>
+<p>In my toolchain, I use
+osm2pgsql --create --database osmdb --username osmuser --prefix planet --slim --cache 1024 -S default.style --hstore D:/Karten/osm/Geofabrik/duesseldorf.osm.bz2</p>
+<p>osmdb, osmuser and planet to be modified for your needs.</p>
+<p>Could you protocol the output of osm2pgsql?</p>
+<p>HTH,
+ajoessen</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8552/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Oct '11, 07:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/baddeab22266e1533be4ba4c9f3deb49?s=32&amp;d=identicon&amp;r=g" alt="ajoessen's gravatar image" />
+    <p><a href="/users/2221/ajoessen">ajoessen</a><br/>
+    <span class="score" title="168 reputation points">168</span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ajoessen has one accepted answer">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8552/">
+                edited
+                <strong>21 Oct '11, 07:10</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8552">
+    
+        <a name="8555"></a>
+        <div class="comment not_top_scorer" id="comment-8555">
+            <div id="post-8555-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks a lot sir. But i receive errors with that command. 
+</p>
+
+<pre><code>$./osm2pgsql -S default.style --slim -d gis -C 2048 /home/alexandru/.osm/moldova.osm.bz2 --password --user 'prodeng'
+osm2pgsql SVN version 0.80.0 (32bit id space)<p></p>
+<p>Password:
+Using projection SRS 900913 (Spherical Mercator)
+Setting up table: planet_osm_point
+NOTICE:  table "planet_osm_point" does not exist, skipping
+NOTICE:  table "planet_osm_point_tmp" does not exist, skipping
+Setting up table: planet_osm_line</p></code></pre></div>
+            <div class="comment-info" id="comment-8555-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 08:29)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8556"></a>
+        <div class="comment not_top_scorer" id="comment-8556">
+            <div id="post-8556-score" class="comment-score"></div>
+            <div class="comment-text"><p>some more similar messages, then: 
+</p>
+
+<pre><code>NOTICE:  table "planet_osm_rels" does not exist, skipping
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "planet_osm_rels_pkey" for table "planet_osm_rels"<p></p>
+<p>Reading in file: /home/alexandru/.osm/moldova.osm.bz2
+Segmentation fault</p></code></pre></div>
+            <div class="comment-info" id="comment-8556-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 08:30)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8558"></a>
+        <div class="comment" id="comment-8558">
+            <div id="post-8558-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Ah, thats the point it stops. According to
+<a href="http://wiki.openstreetmap.org/wiki/Mapnik#PostgreSQL.2FPostGIS">http://wiki.openstreetmap.org/wiki/Mapnik#PostgreSQL.2FPostGIS</a>
+the _int.sql installed previous is interfering.</p></div>
+            <div class="comment-info" id="comment-8558-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 08:42)</span>
+                <a class="comment-user userinfo" href="/users/2221/ajoessen">ajoessen</a>
+                
+            </div>
+        </div>
+    
+        <a name="8559"></a>
+        <div class="comment not_top_scorer" id="comment-8559">
+            <div id="post-8559-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2221/ajoessen">@ajoessen</a>, yes, i just fixed that by deleting my gis db and recreating it accordingly, with this fix : <a href="http://wiki.openstreetmap.org/wiki/Talk:Openptmap/Installation">http://wiki.openstreetmap.org/wiki/Talk:Openptmap/Installation</a> .
+<br><br>
+But i still have errors. Please help me to sort it out. Check my previous comments, i've edited them.</p></div>
+            <div class="comment-info" id="comment-8559-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 08:56)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8560"></a>
+        <div class="comment" id="comment-8560">
+            <div id="post-8560-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The NOTICE: are ok.
+But the Segmentation fault not. Maybe the file was corrupted while downloading?
+Can you expand it to moldova.osm without error?</p></div>
+            <div class="comment-info" id="comment-8560-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 08:59)</span>
+                <a class="comment-user userinfo" href="/users/2221/ajoessen">ajoessen</a>
+                
+            </div>
+        </div>
+    
+        <a name="8562"></a>
+        <div class="comment not_top_scorer" id="comment-8562">
+            <div id="post-8562-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, extraction worked fine. I changed my cache space to -C 1024 and it seems to work now. Strange how 2048 didn't worked because i have 3 gb on my pc.</p></div>
+            <div class="comment-info" id="comment-8562-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 09:09)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8563"></a>
+        <div class="comment not_top_scorer" id="comment-8563">
+            <div id="post-8563-score" class="comment-score"></div>
+            <div class="comment-text"><p>The operating System still needs some memory ;-)
+Mine (Windows XP) ist satisfied with 500kB.</p></div>
+            <div class="comment-info" id="comment-8563-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 09:11)</span>
+                <a class="comment-user userinfo" href="/users/2221/ajoessen">ajoessen</a>
+                
+            </div>
+        </div>
+    
+        <a name="8564"></a>
+        <div class="comment not_top_scorer" id="comment-8564">
+            <div id="post-8564-score" class="comment-score"></div>
+            <div class="comment-text"><p>So,import finished with</p>
+
+<pre><code>Stopped table:planet_osm_ways in 67s
+Osm2pgsql took 1115s overall</code></pre>
+
+<p><br>
+But i still don't succeed in generating tiles...<br></p><pre><code>./<a href="http://generate_xml.py">generate_xml.py</a> --dbname gis --user=prodeng --accept-none
+Include files written successfully! Pass the osm.xml file as an argument if you want to serialize a new version or test reading the XML
+alexandru@alex-lap:~/.osm/bin/mapnik$ ./<a href="http://generate_tiles.py">generate_tiles.py</a>
+render_tiles( (-180.0, -90.0, 180.0, 90.0) /home/alexandru/<a href="http://svn.openstreetmap.org/applications/rendering/mapnik/osm-local.xml">svn.openstreetmap.org/applications/rendering/mapnik/osm-local.xml</a> /home/alexandru/osm/tiles/ 0 5 World )<p></p></code></pre><p></p></div>
+            <div class="comment-info" id="comment-8564-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 09:35)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8565"></a>
+        <div class="comment not_top_scorer" id="comment-8565">
+            <div id="post-8565-score" class="comment-score"></div>
+            <div class="comment-text"><p>Continue </p>
+
+<pre><code>RuntimeError: Could not load map file '/home/alexandru/<a href="http://svn.openstreetmap.org/applications/rendering/mapnik/osm-local.xml':">svn.openstreetmap.org/applications/rendering/mapnik/osm-local.xml':</a> File does not exist<p></p></code></pre></div>
+            <div class="comment-info" id="comment-8565-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 09:39)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8566"></a>
+        <div class="comment" id="comment-8566">
+            <div id="post-8566-score" class="comment-score">1</div>
+            <div class="comment-text"><p>slowly getting ahead ;-)
+I usually make a copy of <a href="http://generate_tiles.py">generate_tiles.py</a> and change the parameters within that file, found at the end.
+render_tiles may suppress the error messgaes.
+You can try <a href="http://generate_image.py">generate_image.py</a> to produce a single picture for testing the installation.</p></div>
+            <div class="comment-info" id="comment-8566-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 09:46)</span>
+                <a class="comment-user userinfo" href="/users/2221/ajoessen">ajoessen</a>
+                
+            </div>
+        </div>
+    
+        <a name="8567"></a>
+        <div class="comment not_top_scorer" id="comment-8567">
+            <div id="post-8567-score" class="comment-score"></div>
+            <div class="comment-text"><p>OH HEY! <a href="http://generate_image.py">generate_image.py</a> works! I needed to supply a pass for db user prodeng at <a href="http://generate_xml.py">generate_xml.py</a> for it to work. <br>
+Unfortunately <a href="http://generate_tiles.py">generate_tiles.py</a> doesn't work yet. :(</p></div>
+            <div class="comment-info" id="comment-8567-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 09:48)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8568"></a>
+        <div class="comment not_top_scorer" id="comment-8568">
+            <div id="post-8568-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sounds good. In the <a href="http://generate_tiles.py">generate_tiles.py</a>, change the
+NUM_THREADS = 4
+to
+NUM_THREADS = 1
+for a try.</p></div>
+            <div class="comment-info" id="comment-8568-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 09:53)</span>
+                <a class="comment-user userinfo" href="/users/2221/ajoessen">ajoessen</a>
+                
+            </div>
+        </div>
+    
+        <a name="8570"></a>
+        <div class="comment not_top_scorer" id="comment-8570">
+            <div id="post-8570-score" class="comment-score"></div>
+            <div class="comment-text"><p>Nope, that doesn't change anything. Are you sure this may be the cause for now? it says file not found though.</p>
+
+<p>EDIT: where is the xml generated anyway?</p>
+
+<p>Btw, is potlatch and gis db somehow connected? Because i've stumbled on an interesting change. Please visit this topic for relevancy: <a href="http://help.openstreetmap.org/questions/8561/potlatch2-loads-but-then-crashes-on-my-osm-server">http://help.openstreetmap.org/questions/8561/potlatch2-loads-but-then-crashes-on-my-osm-server</a></p></div>
+            <div class="comment-info" id="comment-8570-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 10:02)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8573"></a>
+        <div class="comment" id="comment-8573">
+            <div id="post-8573-score" class="comment-score">1</div>
+            <div class="comment-text"><p>generate_xml creates a few xml.inc in the inc directory.
+For rendering, you want to use osm_local.xml?
+Normally, osm.xml in the same directory as <a href="http://generate_tile.py">generate_tile.py</a> is used.
+You can edit that in the <a href="http://generate_tile.py">generate_tile.py</a>:</p>
+
+<p>if <strong>name</strong> == "<strong>main</strong>":
+    home = 'D:/'
+    try:
+        mapfile = "osm.xml"
+    except KeyError:
+        mapfile = home + "/<a href="http://svn.openstreetmap.org/applications/rendering/mapnik/osm-local.xml">svn.openstreetmap.org/applications/rendering/mapnik/osm-local.xml"</a>
+    try:
+        tile_dir = 'D:/Tiles/myMapnik/'</p></div>
+            <div class="comment-info" id="comment-8573-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 10:18)</span>
+                <a class="comment-user userinfo" href="/users/2221/ajoessen">ajoessen</a>
+                
+            </div>
+        </div>
+    
+        <a name="8574"></a>
+        <div class="comment not_top_scorer" id="comment-8574">
+            <div id="post-8574-score" class="comment-score"></div>
+            <div class="comment-text"><p>Why should i change that, i don't get it. Btw, my text is different:</p>
+
+<p><code>if <strong>name</strong> == "<strong>main</strong>":
+    home = os.environ['HOME']
+    try:
+        mapfile = os.environ['MAPNIK_MAP_FILE']
+    except KeyError:
+        mapfile = home + "/<a href="http://svn.openstreetmap.org/applications/rendering/mapnik/osm-local.xml">svn.openstreetmap.org/applications/rendering/mapnik/osm-local.xml"</a>
+    try:
+        tile_dir = os.environ['MAPNIK_TILE_DIR']
+    except KeyError:
+        tile_dir = home + "/osm/tiles/"
+    if not tile_dir.endswith('/'):
+        tile_dir = tile_dir + '/'</code></p>
+
+<p><code>
+</code></p><p><code>What should i change it to?
+BTW, <code>echo $MAPNIK_MAP_FILE </code> returns nothing. Is it ok?</code></p><p></p></div>
+            <div class="comment-info" id="comment-8574-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 10:31)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8575"></a>
+        <div class="comment" id="comment-8575">
+            <div id="post-8575-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Change the mapfile =  to the local place and file osm.xml you want to use for rendering. The osm-local.xml does not seem to exist in the right place.</p></div>
+            <div class="comment-info" id="comment-8575-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 10:37)</span>
+                <a class="comment-user userinfo" href="/users/2221/ajoessen">ajoessen</a>
+                
+            </div>
+        </div>
+    
+        <a name="8577"></a>
+        <div class="comment not_top_scorer" id="comment-8577">
+            <div id="post-8577-score" class="comment-score"></div>
+            <div class="comment-text"><p>Cool. It works now. THough i get a lot of "unknown: empty tile" messages. Hope it's ok.</p>
+
+<p>Btw, where are these tiles going to be used? Can i see them in JOSM? Will i get something more if i'll use then for my osm server (assuming it doesn't).</p></div>
+            <div class="comment-info" id="comment-8577-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 10:55)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8578"></a>
+        <div class="comment not_top_scorer" id="comment-8578">
+            <div id="post-8578-score" class="comment-score">1</div>
+            <div class="comment-text"><p>What do you expect when you import only moldava and render the hole world from -180° to +180°? Most of the tiles must be empty!
+To see them, you can set up a html-page with openlayers.
+My wiki-Page is only in German, but perhaps useful for you:</p>
+
+<p><a href="http://wiki.openstreetmap.org/wiki/User:Ajoessen/Osmviewer_und_GPXviewer">http://wiki.openstreetmap.org/wiki/User:Ajoessen/Osmviewer_und_GPXviewer</a></p>
+
+<p>You have to change the path for the tiles from <a href="http://osm.org">http://osm.org</a> to your local file system, or setup an apache server to use <a href="http://localhost">http://localhost</a>
+For your potlatch2 problem, I cant help you. I only use josm, but with the original osm servers.</p></div>
+            <div class="comment-info" id="comment-8578-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 11:05)</span>
+                <a class="comment-user userinfo" href="/users/2221/ajoessen">ajoessen</a>
+                
+            </div>
+        </div>
+    
+        <a name="8579"></a>
+        <div class="comment not_top_scorer" id="comment-8579">
+            <div id="post-8579-score" class="comment-score"></div>
+            <div class="comment-text"><p>So then you download the xml from <a href="http://osm.org">osm.org</a>, make changes and then... what? upload the changes to your osm db / gis db / <a href="http://osm.org">osm.org</a> ?
+Just curious :)</p></div>
+            <div class="comment-info" id="comment-8579-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 11:43)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8580"></a>
+        <div class="comment not_top_scorer" id="comment-8580">
+            <div id="post-8580-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The Postgis database is only useful for rendering with mapnik. Osm2pgsql does a bit preprocessing to change route and multipolygon relations to geometry types that mapnik can understand.</p>
+
+<p>A database for editing must have a different database scheme, dealing with changesets and version history of nodes, ways and relations. Rails Port is the software and database behind that.</p>
+
+<p>I make my edits with josm on the <a href="http://osm.org">osm.org</a> servers, and take a copy of my local area every month from Geofabrik to render my area.
+Downloading all the tiles from <a href="http://osm.org">osm.org</a> is causing too much traffic on the tile servers.</p></div>
+            <div class="comment-info" id="comment-8580-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 12:05)</span>
+                <a class="comment-user userinfo" href="/users/2221/ajoessen">ajoessen</a>
+                
+            </div>
+        </div>
+    
+        <a name="8581"></a>
+        <div class="comment not_top_scorer" id="comment-8581">
+            <div id="post-8581-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried reading it a couple of times but still not sure if i understand. As far as i know, you can download the map data from <a href="http://osm.org">osm.org</a> and then begin to edit it. THen you submit and upload the changes with your <a href="http://oms.org">oms.org</a> account. If you need to see the map changed you go to <a href="http://osm.org">osm.org</a> so how does Geofabrik fits in all this? (i don't know what's geofabrik).</p></div>
+            <div class="comment-info" id="comment-8581-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 13:10)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8582"></a>
+        <div class="comment not_top_scorer" id="comment-8582">
+            <div id="post-8582-score" class="comment-score"></div>
+            <div class="comment-text"><p>Geofabrik by Frederik Ramm
+<a href="http://download.geofabrik.de/osm/">http://download.geofabrik.de/osm/</a>
+offers the regional extracts (as cloudemade does, but also smaller extracts for my country).</p>
+
+<p>To see my changes, i visit <a href="http://openstreetmap.org">openstreetmap.org</a>, yes. But I use my own database to make transparent overlays for cycle and hiking routes, bus services, height contour data and borders. These I only use locally in the same way you use the little blue-white "+" on the right of <a href="http://osm.org">osm.org</a>. And I can take them on my mobile device without Internet access.</p></div>
+            <div class="comment-info" id="comment-8582-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 13:18)</span>
+                <a class="comment-user userinfo" href="/users/2221/ajoessen">ajoessen</a>
+                
+            </div>
+        </div>
+    
+        <a name="8606"></a>
+        <div class="comment not_top_scorer" id="comment-8606">
+            <div id="post-8606-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry, but that facebook stuff is not my world.
+You can contact me over my osm profile:
+<a href="http://www.openstreetmap.org/user/ajoessen">http://www.openstreetmap.org/user/ajoessen</a></p></div>
+            <div class="comment-info" id="comment-8606-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '11, 07:17)</span>
+                <a class="comment-user userinfo" href="/users/2221/ajoessen">ajoessen</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8552" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 23
+        </span>
+        <a href="#" class="show-all-comments-link">show 18 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8552-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="8509"></a>
+                    <div id="answer-container-8509" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8509-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8509/up/" rel="nofollow"> </a>
+<div id="post-8509-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-8509-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8509/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Please give us access to your xml file produced at the step 1 to inspect it.</p>
+<p>Have you imported the data with the same options (dbname, user) than in your given command?</p>
+<p>The best way is to look at your DB with a client to see if the table is already there. Can you do this?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8509/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Oct '11, 16:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2839f25c5f2da24f6ffd25de1641684?s=32&amp;d=identicon&amp;r=g" alt="NicolasDumoulin's gravatar image" />
+    <p><a href="/users/868/nicolasdumoulin">NicolasDumoulin</a><br/>
+    <span class="score" title="3327 reputation points"><span class="">3.3k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="56 badges"><span class="bronze">&#9679;</span><span class="badgecount">56</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="NicolasDumoulin has 15 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8509">
+    
+        <a name="8510"></a>
+        <div class="comment" id="comment-8510">
+            <div id="post-8510-score" class="comment-score"></div>
+            <div class="comment-text"><p>1.Which xml file? Where is it located? What does it represent? I'm new to osm and still trying to figure out how everything works.</p></div>
+            <div class="comment-info" id="comment-8510-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Oct '11, 17:10)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8511"></a>
+        <div class="comment" id="comment-8511">
+            <div id="post-8511-score" class="comment-score"></div>
+            <div class="comment-text"><p>2.Different user? No, i don't think so. I used user prodeng. I hope this following table gives some clarity...<br>
+</p>
+
+<pre><code>
+Database | user | etc|etc|
+     gis           | prodeng       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+     openstreetmap | openstreetmap | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+     osm           | openstreetmap | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+     osm_test      | openstreetmap | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+     postgres      | postgres      | UTF8     | en_US.UTF-8 | en_US.UTF-8 |<p></p></code></pre></div>
+            <div class="comment-info" id="comment-8511-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Oct '11, 17:11)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8512"></a>
+        <div class="comment" id="comment-8512">
+            <div id="post-8512-score" class="comment-score"></div>
+            <div class="comment-text"><p>3.What table are we looking for?<br>
+<img alt="alt text" src="http://help.openstreetmap.org/upfiles/Screenshot_1.png"></p></div>
+            <div class="comment-info" id="comment-8512-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Oct '11, 17:12)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8519"></a>
+        <div class="comment" id="comment-8519">
+            <div id="post-8519-score" class="comment-score"></div>
+            <div class="comment-text"><ol>
+<li>
+<p>I was talking about the osm.xml that is outputed by <a href="http://generate_xml.py">generate_xml.py</a>.</p>
+</li>
+<li>
+<p>On the bottom of your screenshot, there is a node "Tables", check that you have the table "planet_osm_polygon" below</p>
+</li>
+<li>
+<p>Can you precise the country you have downloaded?</p>
+</li>
+</ol></div>
+            <div class="comment-info" id="comment-8519-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Oct '11, 08:42)</span>
+                <a class="comment-user userinfo" href="/users/868/nicolasdumoulin">NicolasDumoulin</a>
+                
+            </div>
+        </div>
+    
+        <a name="8535"></a>
+        <div class="comment" id="comment-8535">
+            <div id="post-8535-score" class="comment-score"></div>
+            <div class="comment-text"><ol>
+<li>THat file has a lot of text! I don't think i can copy paste it here.<br></li>
+<li>At the bottom of my screenshot are 2 table and they are both visible. But in the pg_catalog, with 42 table, there is no such thing as planet_osm_polygon.<br></li>
+<li>Moldova.</li>
+</ol></div>
+            <div class="comment-info" id="comment-8535-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Oct '11, 14:55)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+        <a name="8536"></a>
+        <div class="comment not_top_scorer" id="comment-8536">
+            <div id="post-8536-score" class="comment-score"></div>
+            <div class="comment-text"><ol>
+<li>Use <a href="http://pastebin.com">pastebin.com</a>.</li>
+</ol></div>
+            <div class="comment-info" id="comment-8536-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Oct '11, 14:58)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="8571"></a>
+        <div class="comment not_top_scorer" id="comment-8571">
+            <div id="post-8571-score" class="comment-score"></div>
+            <div class="comment-text"><p>here we go. This is osm.xml from my mapnik folder. <a href="http://pastebin.com/1eyEvD8V">http://pastebin.com/1eyEvD8V</a></p>
+
+<p>Btw, i can't generate tiles though i can generate the image.</p></div>
+            <div class="comment-info" id="comment-8571-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Oct '11, 10:11)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8509" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8509-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="8530"></a>
+                    <div id="answer-container-8530" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8530-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8530/up/" rel="nofollow"> </a>
+<div id="post-8530-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-8530-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8530/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The tables-Section usually holds 9 Entrys: the two shown, and planet_osm_line/nodes/point/polygon/rels/roads and ways.
+Maybe you should add --prefix planet_osm when importing with osm2pgsql, or look for error messages at this step.</p>
+<p>In the tutorial, look at the section
+Setup PostGIS for OSM</p>
+<h1>sudo -u postgres -i</h1>
+<h1>createuser prodeng</h1>
+<h1>createdb -E UTF8 -O prodeng gis</h1>
+<h1>createlang plpgsql gis</h1>
+<h1>exit</h1>
+<h1>psql -f /usr/share/postgresql/8.4/contrib/postgis.sql -d gis</h1>
+<h1>echo "ALTER TABLE geometry_columns OWNER TO prodeng; ALTER TABLE spatial_ref_sys OWNER TO prodeng;" | psql -d gis</h1>
+<h1>psql -f /usr/share/postgresql/8.4/contrib/_int.sql -d gis</h1>
+<h1>psql -f /mnt/bin/osm2pgsql/900913.sql -d gis</h1>
+<p>are the sql-files in the place where you call them? Otherwise the database is not ready for import.</p>
+<p>HTH,
+ajoessen</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8530/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Oct '11, 14:04</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/baddeab22266e1533be4ba4c9f3deb49?s=32&amp;d=identicon&amp;r=g" alt="ajoessen's gravatar image" />
+    <p><a href="/users/2221/ajoessen">ajoessen</a><br/>
+    <span class="score" title="168 reputation points">168</span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ajoessen has one accepted answer">9&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8530/">
+                edited
+                <strong>20 Oct '11, 14:10</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8530">
+    
+        <a name="8537"></a>
+        <div class="comment" id="comment-8537">
+            <div id="post-8537-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, i think everything was done by the tutorial. The files where in place, too.</p></div>
+            <div class="comment-info" id="comment-8537-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Oct '11, 14:59)</span>
+                <a class="comment-user userinfo" href="/users/2226/alexz">alexz</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8530" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8530-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/8506/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='dlMLTZWrJQ044XbsWgRoMX5Zn0jVq1c4' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8506/mapnik-image-generations-returns-error?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8506/mapnik-image-generations-returns-error?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/osm/"
+            class="tag-link-osm"
+            title="see questions tagged'osm'using tags"
+            rel="tag">osm</a> <span class="tag-number">&#215;710</span><br/>
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 19, 2011, 1:49 p.m.">19 Oct '11, 13:49</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>20,399 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 24, 2011, 7:17 a.m.">24 Oct '11, 07:17</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/23088/how-to-correctly-import-aster-data-contours-into-a-postgis-database">How to correctly import ASTER data (contours) into a PostGIS database</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31121/osm-ruleset-identical-to-mapnik">OSM Ruleset identical to Mapnik</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18237/map-not-updating-to-changes-made">map not updating to changes made</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21978/mapnik-21x-osm-postgis-2-postgresql-92-python26-only-shorelines-and-no-features">Mapnik 2.1.x + OSM + Postgis 2 + PostgreSQL 9.2 + Python26 = Only shorelines and no features</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26555/crop-or-shrink-osm-file-to-given-bbox">Crop  or shrink OSM file to given bbox</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31077/mapnik-styles-into-maperitive">[closed] Mapnik Styles into Maperitive</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16966/open-street-map-no-map-for-default">Open Street Map &quot;no map for: default&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17398/why-does-our-own-tile-server-sometimes-abort-rendering-tiles">Why does our own tile server sometimes abort rendering tiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20925/how-to-render-plain-bus-routes">How to render plain bus routes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33192/postgis-plugin-geometry-name-lookup-failed-for-table">Postgis Plugin: geometry name lookup failed for table</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

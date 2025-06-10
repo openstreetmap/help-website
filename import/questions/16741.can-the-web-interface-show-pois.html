@@ -1,0 +1,958 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can the web interface show POIs? - OSM Help</title>
+        <meta name="description" content="I know that Points Of Interest are in the database. Is it possible to see them in a browser? For example, I can search for &quot;campground&quot; in google maps and it will show them as little red dots. If this isn&#39;t implemented, I would like to know is anyone working on this and what is the way this is plann..." />
+        <meta name="keywords" content="poi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/16741/can-the-web-interface-show-pois" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/16741/can-the-web-interface-show-pois?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='BoTnkD7yhf1DBKKxB3iPK5KOBJMEciEF' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/16741/can-the-web-interface-show-pois">Can the web interface show POIs?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-16741-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16741/up/" rel="nofollow"> </a>
+<div id="post-16741-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-16741-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16741/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/16741/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I know that Points Of Interest are in the database. Is it possible to see them in a browser?
+For example, I can search for "campground" in google maps and it will show them as little red dots.</p>
+<p>If this isn't implemented, I would like to know is anyone working on this and what is the way this is planned to be implemented?</p>
+<p>I know there is some derivation of openstreetmap at <a href="http://www.openstreetbrowser.org">http://www.openstreetbrowser.org</a>, but it has totally different tile rendering and many POIs don't show (like camping). Also many tiles are missing. Also I found a missing lake in California!</p>
+<p>So any idea how to get similar functionality to openstreetmap?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/poi/" class="post-tag tag-link-poi"
+                                        title="see questions tagged 'poi'" rel="tag">poi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Oct '12, 23:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0b2f25d587c9ef215558ed14884ea603?s=32&amp;d=identicon&amp;r=g" alt="zubr's gravatar image" />
+    <p><a href="/users/4694/zubr">zubr</a><br/>
+    <span class="score" title="76 reputation points">76</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="zubr has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16741/">
+                edited
+                <strong>09 Oct '12, 11:56</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+            <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+            <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-16741">
+    
+</div>
+<div id="comment-tools-16741" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16741-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/16741/can-the-web-interface-show-pois?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/16741/can-the-web-interface-show-pois?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/16741/can-the-web-interface-show-pois?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/16741/can-the-web-interface-show-pois?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="16748"></a>
+                    <div id="answer-container-16748" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16748-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16748/up/" rel="nofollow"> </a>
+<div id="post-16748-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-16748-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16748/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The main page does show some POIs including camp sites (<a href="http://www.openstreetmap.org/?lat=37.93838&amp;lon=-119.24599&amp;zoom=17&amp;layers=M">example</a>), but not every possible <a href="http://wiki.openstreetmap.org/wiki/Map_Features">map feature</a> as this would make the map too cluttered.</p>
+<p>The tile rendering style of <a href="http://wiki.openstreetmap.org/wiki/OpenStreetBrowser">OpenStreetBrowser</a> is just a configuration issue and many other maps also use slightly different styles for their tiles. There are also lots of other <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">OSM based services</a>.
+Some are interactive like OpenStreetBrowser allowing to select specific POIs to show, like <a href="http://www.lenz-online.de/cgi-bin/osmpoi/osmpoi.pl">OSM POI Viewer</a> (standard rendering style) and <a href="http://www.flosm.de/en/POI-map.html">FLOSM</a> (custom rendering style). Others just have different POI rendering priorities like the <a href="http://hikebikemap.de/?lat=37.93838&amp;lon=-119.24599&amp;zoom=13&amp;layers=B0000TFFFF">Hike &amp; Bike map</a> where camp sites already show up at lower zoom levels.</p>
+<p>There is also a list of current <a href="http://wiki.openstreetmap.org/wiki/Top_Ten_Tasks">Top Ten Tasks</a> including <a href="http://wiki.openstreetmap.org/wiki/Top_Ten_Tasks#Clickable_POIs_on_the_frontpage">clickable POIs on the frontpage</a>. This might also lead to different POI layers in the end, let's see.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16748/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Oct '12, 07:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16748">
+    
+</div>
+<div id="comment-tools-16748" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16748-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="16754"></a>
+                    <div id="answer-container-16754" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16754-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16754/up/" rel="nofollow"> </a>
+<div id="post-16754-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-16754-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16754/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The front page of osm.org isn't supposed to be a "Google Maps replacement" - the standard map is just an example showing what you can do with the data.</p>
+<p>There are a few other examples out there:  <a href="http://open.mapquest.co.uk/">Mapquest Open</a> is one, and <a href="http://osm.dumoulin63.net/xapiviewer/?zoom=12&amp;lat=53.18599&amp;lon=-1.59566&amp;layers=B0T&amp;icon=icons%2Faccommodation_camping.n.32.png&amp;request=tourism%3Dcamp_site">this one</a> by <a href="https://help.openstreetmap.org/users/868/nicolasdumoulin">Nicolas Dumoulin</a> is another.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16754/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Oct '12, 12:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16754">
+    
+        <a name="16758"></a>
+        <div class="comment" id="comment-16758">
+            <div id="post-16758-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Having many different sites each having various extra features implemented is horrible from the standpoint of promotion of the idea of openmaps to simple users. openstreetmap.org has nice maps but no POIs, openstretbrowser.org has one coloful map and some POIs and missing data, dimoulin63.net has yet one other rendering and 5 POI types display.</p>
+
+<p>Which one should simple users (non-geeks) use that would like to use openmaps? Even for geeks, this isn't right.</p></div>
+            <div class="comment-info" id="comment-16758-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '12, 16:58)</span>
+                <a class="comment-user userinfo" href="/users/4694/zubr">zubr</a>
+                
+            </div>
+        </div>
+    
+        <a name="16761"></a>
+        <div class="comment" id="comment-16761">
+            <div id="post-16761-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I understand your frustration. I'm a centre-thinking person &amp; this whole project is quite frustrating to define. Right or wrong, OSM promoted itself as "Wikipedia of maps" - but it's only a database of geo-objects - a subset of this appears on the main map. The data is free for others to create their own maps, but the manner in which they render it is out of OSMs control. OSM has tried to be ordinary-person friendly, but firmly remains a geeky backwater. It doesn't want to be "mainstream". This identity confuses people, and I believe causes them to lose interest. Refer to OSMF for reasons why.</p></div>
+            <div class="comment-info" id="comment-16761-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '12, 17:49)</span>
+                <a class="comment-user userinfo" href="/users/2366/wolftracker">wolftracker</a>
+                
+            </div>
+        </div>
+    
+        <a name="16764"></a>
+        <div class="comment" id="comment-16764">
+            <div id="post-16764-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Both these comments are well-founded, but the hard fact is that it takes people to build all this good stuff. Clickable POIs have been a high-priority item on the <a href="http://wiki.openstreetmap.org/wiki/Top_Ten_Tasks">Top Ten Tasks</a> for a year now, and still no-one has stepped up to build it. Saying "it isn't right" is fine, but doesn't help to get the job done; we can't just magic features out of nowhere. Perhaps you could help?</p></div>
+            <div class="comment-info" id="comment-16764-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '12, 18:46)</span>
+                <a class="comment-user userinfo" href="/users/5/richard">Richard ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16765"></a>
+        <div class="comment" id="comment-16765">
+            <div id="post-16765-score" class="comment-score">1</div>
+            <div class="comment-text"><p>@<a href="https://help.openstreetmap.org/users/4694/zubr">zubr</a>: The "but which one should I use" question <a href="http://en.wikipedia.org/wiki/The_Cathedral_and_the_Bazaar">isn't a new one</a>.  The fundamental difference between e.g. Google Maps and OSM is that people here are volunteers.  As <a href="https://help.openstreetmap.org/users/158/scai">scai</a> says, <a href="http://wiki.openstreetmap.org/wiki/Top_Ten_Tasks#Clickable_POIs_on_the_frontpage">clickable POIs on the frontpage</a> is on a list of "<a href="http://wiki.openstreetmap.org/wiki/Top_Ten_Tasks">top ten tasks</a>" - it "just" needs people to volunteer to help with it.</p>
+
+<p>Incidentally, to correct a couple of points about <a href="http://osm.dumoulin63.net/xapiviewer/?zoom=12&amp;lat=53.18599&amp;lon=-1.59566&amp;layers=B0T&amp;icon=icons%2Faccommodation_camping.n.32.png&amp;request=tourism%3Dcamp_site">Nick Dumoulin's map</a> that I linked to - you can select from more than just the 5 canned queries - just select the "custom request" link, and it's not "yet another rendering" - it uses Mapquest tiles by default as a background or (if you select it) OSM's "standard" map.</p></div>
+            <div class="comment-info" id="comment-16765-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '12, 19:02)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16754" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16754-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="16746"></a>
+                    <div id="answer-container-16746" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16746-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16746/up/" rel="nofollow"> </a>
+<div id="post-16746-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16746-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16746/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi there! I've been experimenting a little bit with doing something like that, showing POIs on the map. I just have the problem that my laptop is a quite bit slow, and have overheating problems. But I might be able to continue my experiments on a friends computer. I guess that if it's good enough, they'll put it on the main OSM page.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16746/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Oct '12, 05:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7daf187eb7d7f78223d8f7fc3743fe00?s=32&amp;d=identicon&amp;r=g" alt="knarF's gravatar image" />
+    <p><a href="/users/4700/knarf">knarF</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="knarF has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16746">
+    
+</div>
+<div id="comment-tools-16746" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16746-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="57406"></a>
+                    <div id="answer-container-57406" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57406-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57406/up/" rel="nofollow"> </a>
+<div id="post-57406-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57406-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57406/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is a new website called <a href="http://www.mapcat.com">MAPCAT</a> that uses vector maps based on OSM and allows to show POI search results directly on the map in real time - just go to the website, zoom your map to your desired location and enter "restaurant" or "campsite" into search box in the top left corner of the page and the results will appear on the map immediately. Nice, isn't it?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57406/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Aug '17, 11:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7d327873d48d28e563c9ad7259853c35?s=32&amp;d=identicon&amp;r=g" alt="Kozuch's gravatar image" />
+    <p><a href="/users/237/kozuch">Kozuch</a><br/>
+    <span class="score" title="1720 reputation points"><span class="">1.7k</span></span><span title="58 badges"><span class="badge1">&#9679;</span><span class="badgecount">58</span></span><span title="72 badges"><span class="silver">&#9679;</span><span class="badgecount">72</span></span><span title="85 badges"><span class="bronze">&#9679;</span><span class="badgecount">85</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kozuch has one accepted answer">8&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57406">
+    
+</div>
+<div id="comment-tools-57406" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57406-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/16741/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='BoTnkD7yhf1DBKKxB3iPK5KOBJMEciEF' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16741/can-the-web-interface-show-pois?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16741/can-the-web-interface-show-pois?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/poi/"
+            class="tag-link-poi"
+            title="see questions tagged'poi'using tags"
+            rel="tag">poi</a> <span class="tag-number">&#215;181</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 8, 2012, 11:13 p.m.">08 Oct '12, 23:13</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,408 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 1, 2017, 11:07 a.m.">01 Aug '17, 11:07</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/786/is-there-a-way-to-undelete-a-deleted-node-poi">Is there a way to undelete a deleted node (POI) ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">Can I influence what gets rendered in the main Mapnik layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1167/charging-money-for-creating-and-uploading-pois">Charging money for creating and uploading POIs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1194/what-osm-is-not">What OSM is not</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1311/how-do-i-create-a-map-for-printing-with-specific-poi">How do I create a map for printing with specific POI?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1365/for-groups-of-phone-booths-should-i-add-a-single-poi-or-multiple-pois">For groups of phone booths, should I add a single POI or multiple POIs?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1582/adding-metadata-using-websites">Adding &#39;metadata&#39; using websites?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1696/how-do-i-name-existing-pois-which-are-currently-unnamed">How do I name existing POIs which are currently unnamed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15/getting-point-of-interest-data-from-openstreetmap">Getting point of interest data from OpenStreetMap</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

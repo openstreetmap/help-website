@@ -1,0 +1,678 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Mapping bus route changes - OSM Help</title>
+        <meta name="description" content="I&#39;ve done a few OSM edits for my local area and most roads and buildings are now upto date and correct, however, I recently noticed that the mapping of bus routes is highly out of date or even just totally missing. However, when trying to make some I found some anomalies in the routes and I wasn&#39;t c..." />
+        <meta name="keywords" content="diversions,bus_routes,request,seasonal,buses" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/64026/mapping-bus-route-changes" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/64026/mapping-bus-route-changes?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='JDULdVQOf2yXdHhLCXLheuDaFPZl7Kg9' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/64026/mapping-bus-route-changes">Mapping bus route changes</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-64026-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64026/up/" rel="nofollow"> </a>
+<div id="post-64026-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-64026-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64026/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/64026/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I've done a few OSM edits for my local area and most roads and buildings are now upto date and correct, however, I recently noticed that the mapping of bus routes is highly out of date or even just totally missing. However, when trying to make some I found some anomalies in the routes and I wasn't clear how to map them, ideas/thoughts welcome.</p>
+<p>Notably, that during rural areas some routes partly run on a request basis. For example, the route may run along the main road but deviate into some of the local villages if someone on board wishes to get off. On some of these deviations, it isn't possible to board the bus. You don't need to book, just ask the driver when you get on. In some cases it may be possible to be picked up but you'll ether need to tell the driver earlier in the day or phone up. In other cases the last bus may only run past a certain point if passengers wish to get off (again no booking needed). In my head there should be something I can put as a member (<a href="https://wiki.openstreetmap.org/wiki/Tag:route%3Dbus">https://wiki.openstreetmap.org/wiki/Tag:route%3Dbus</a> - like forwards/backwards) but I can't find anything. The stop entery/exit only members for bus stops aren't realy appropriate as these routes also operate on a hail and ride basis, which means there are no defined bus stops on the ground, the drivers will stop anywhere they deem safe. I could though add these members to the roads rather then the stops?</p>
+<p>If your curious about how this is displayed on the timetable:
+ <a href="https://www.dalesbus.org/uploads/1/1/3/9/113919127/833.pdf">https://www.dalesbus.org/uploads/1/1/3/9/113919127/833.pdf</a> or <a href="https://sites.create-cdn.net/sitefiles/32/0/2/320226/S1_Sat_Sum_2018.pdf">https://sites.create-cdn.net/sitefiles/32/0/2/320226/S1_Sat_Sum_2018.pdf</a></p>
+<p>Also, many of these bus routes only run in the summer, is there a way for routes to be tagged as seasonal? Or should they be deleted and re-added. But this seems like a huge pain. I'm currently adding them in a browser but this seems very annoying, is there a better way, for example, a UI which lets me pick a route and then just click on roads without having to select the relation each time.</p>
+<p>Finally, due to the closure of one of the bridges many routes are running to different routes. Usually if there was a random few days for some roadworks i'd feel like it would be more effort then its worth as they only last a few days, however, in this case the changes are expected to be in place for a year while the bridge is effectively rebuilt. Other mappers have already changed a "highway=construction" tag to the bridge but all bus route relations still pass through it. Should the routes be moved? And is there a way to easily undo them?</p>
+<p>Any thoughts/ideas appreciated.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/diversions/" class="post-tag tag-link-diversions"
+                                        title="see questions tagged 'diversions'" rel="tag">diversions</a>
+                                
+                                    <a href="/tags/bus_routes/" class="post-tag tag-link-bus_routes"
+                                        title="see questions tagged 'bus_routes'" rel="tag">bus_routes</a>
+                                
+                                    <a href="/tags/request/" class="post-tag tag-link-request"
+                                        title="see questions tagged 'request'" rel="tag">request</a>
+                                
+                                    <a href="/tags/seasonal/" class="post-tag tag-link-seasonal"
+                                        title="see questions tagged 'seasonal'" rel="tag">seasonal</a>
+                                
+                                    <a href="/tags/buses/" class="post-tag tag-link-buses"
+                                        title="see questions tagged 'buses'" rel="tag">buses</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jun '18, 11:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2c58b9207373c87e253d0b7433dca98a?s=32&amp;d=identicon&amp;r=g" alt="skifans's gravatar image" />
+    <p><a href="/users/10767/skifans">skifans</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="skifans has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-64026">
+    
+</div>
+<div id="comment-tools-64026" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64026-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/64026/mapping-bus-route-changes?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/64026/mapping-bus-route-changes?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/64026/mapping-bus-route-changes?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/64026/mapping-bus-route-changes?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="64071"></a>
+                    <div id="answer-container-64071" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64071-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64071/up/" rel="nofollow"> </a>
+<div id="post-64071-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-64071-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64071/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="skifans has selected this answer as the correct answer"
+        href="/accept_answer/64071/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi <a href="https://help.openstreetmap.org/users/10767/skifans"><a href="https://help.openstreetmap.org/users/10767/skifans">@skifans</a></a>,</p>
+<blockquote>
+<p>Notably, that during rural areas some routes partly run on a request basis</p>
+</blockquote>
+<p>As per what's being used (see <a href="https://www.openstreetmap.org/relation/1697701">this relation</a> for example), probably you could use a <code>bus=on_demand</code> relation for those. The tag is currently undocumented but is in use according to <a href="https://taginfo.openstreetmap.org/tags/bus=on_demand#overview">taginfo</a>. Practically you group your village stops in the relation; the route itself isn't fixed so you can't add ways to map it.</p>
+<blockquote>
+<p>however, in this case the changes are expected to be in place for a year while the bridge is effectively rebuilt.</p>
+</blockquote>
+<p>IMHO if it will take a year then you should map the routes according to their current [temporary] itinerary and edit it again when the bridge reopens and the bus takes its normal route.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64071/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jun '18, 06:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/15d45a99f101e06c9e79916af33f8336?s=32&amp;d=identicon&amp;r=g" alt="Privatemajory's gravatar image" />
+    <p><a href="/users/14163/privatemajory">Privatemajory</a><br/>
+    <span class="score" title="1125 reputation points"><span class="">1.1k</span></span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="33 badges"><span class="bronze">&#9679;</span><span class="badgecount">33</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Privatemajory has 4 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/64071/">
+                edited
+                <strong>07 Jun '18, 06:45</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64071">
+    
+        <a name="64110"></a>
+        <div class="comment" id="comment-64110">
+            <div id="post-64110-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your help, the tag looks like the closest I'll realy get so even though it isn't quite the same as that Belgium route I'll go for it.</p></div>
+            <div class="comment-info" id="comment-64110-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jun '18, 20:51)</span>
+                <a class="comment-user userinfo" href="/users/10767/skifans">skifans</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64071" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64071-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/64026/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='JDULdVQOf2yXdHhLCXLheuDaFPZl7Kg9' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64026/mapping-bus-route-changes?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64026/mapping-bus-route-changes?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/request/"
+            class="tag-link-request"
+            title="see questions tagged'request'using tags"
+            rel="tag">request</a> <span class="tag-number">&#215;29</span><br/>
+        
+        <a href="/tags/seasonal/"
+            class="tag-link-seasonal"
+            title="see questions tagged'seasonal'using tags"
+            rel="tag">seasonal</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/buses/"
+            class="tag-link-buses"
+            title="see questions tagged'buses'using tags"
+            rel="tag">buses</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/bus_routes/"
+            class="tag-link-bus_routes"
+            title="see questions tagged'bus_routes'using tags"
+            rel="tag">bus_routes</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/diversions/"
+            class="tag-link-diversions"
+            title="see questions tagged'diversions'using tags"
+            rel="tag">diversions</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 5, 2018, 11:30 a.m.">05 Jun '18, 11:30</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,686 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 8, 2018, 8:52 p.m.">08 Jun '18, 20:52</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1301/ajax-issues-with-nominatim">[closed] Ajax issues with nominatim?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2720/how-to-tag-a-seasonal-stream">How to tag a seasonal stream?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5557/save-failed-http-request-error">Save failed: HTTP request error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12538/cannot-send-xapi-query-bad-request">Cannot send XAPI query: &quot;Bad Request&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12756/showing-paths-between-nodes-in-osm">showing paths between nodes in OSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14241/request-for-limit-increase">request for limit increase</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14831/oauth-calling-for-request-token">Oauth calling for Request Token</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15774/adding-an-association">Adding an association</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18639/how-many-request-per-day-from-httpnominatimopenstreetmaporg">how many request per day from http://nominatim.openstreetmap.org/</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1083/tagging-seasonal-use-roads-questions-road-type-blockout-months-4x4">Tagging &quot;seasonal use roads&quot; (questions: road type, blockout months, 4x4)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

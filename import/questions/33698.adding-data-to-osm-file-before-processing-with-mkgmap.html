@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Adding data to OSM file before processing with mkgmap - OSM Help</title>
+        <meta name="description" content="I generate my own garmin map files using mkgmap. I want to be able to search for addresses using postcodes in the uk. This data isn&#39;t widely entered on OSM and its not going to be until we get a paf file. However the office of national statistics publishes a postcode dump which would be sufficient f..." />
+        <meta name="keywords" content="mkgmap,postcode,uk" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/33698/adding-data-to-osm-file-before-processing-with-mkgmap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/33698/adding-data-to-osm-file-before-processing-with-mkgmap?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hjJFvRCUTb29xh03Dgwu1XNLhC6bue1I' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/33698/adding-data-to-osm-file-before-processing-with-mkgmap">Adding data to OSM file before processing with mkgmap</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-33698-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33698/up/" rel="nofollow"> </a>
+<div id="post-33698-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-33698-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33698/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/33698/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I generate my own garmin map files using mkgmap. I want to be able to search for addresses using postcodes in the uk. This data isn't widely entered on OSM and its not going to be until we get a paf file. However the office of national statistics publishes a postcode dump which would be sufficient for my purposes. Essentially I want to download the latest OSM data for the uk and the latest ons postcode file and combine them before putting through mkgmap. What is the best way to achieve this?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mkgmap/" class="post-tag tag-link-mkgmap"
+                                        title="see questions tagged 'mkgmap'" rel="tag">mkgmap</a>
+                                
+                                    <a href="/tags/postcode/" class="post-tag tag-link-postcode"
+                                        title="see questions tagged 'postcode'" rel="tag">postcode</a>
+                                
+                                    <a href="/tags/uk/" class="post-tag tag-link-uk"
+                                        title="see questions tagged 'uk'" rel="tag">uk</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jun '14, 08:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b53da6e71be71966b21548ed7e92a57f?s=32&amp;d=identicon&amp;r=g" alt="mcgin's gravatar image" />
+    <p><a href="/users/8979/mcgin">mcgin</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mcgin has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-33698">
+    
+</div>
+<div id="comment-tools-33698" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33698-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/33698/adding-data-to-osm-file-before-processing-with-mkgmap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/33698/adding-data-to-osm-file-before-processing-with-mkgmap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/33698/adding-data-to-osm-file-before-processing-with-mkgmap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/33698/adding-data-to-osm-file-before-processing-with-mkgmap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="33859"></a>
+                    <div id="answer-container-33859" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33859-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33859/up/" rel="nofollow"> </a>
+<div id="post-33859-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-33859-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33859/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I would simply create two separate layers: one for the OSM data, the other for the ONS or CodePoint Open data. You can then merge these using the --gmapsupp flag of mkgmap.</p>
+<p>The more difficult problem is exactly how to transform the Code Point Open data so as to be usable with a Garmin device. Simply ensuring every postcode is tagged in this way "addr:postcode=SW1A 1AA" may not be adequate for your purposes (I presume using postcodes as a geolocation code, as used in commercial satnavs is one use case). </p>
+<p>I am not familiar with the status of the address branch of the mkgmap code.</p>
+<p>Extending the postcode data to produce approximate locations for actual addresses is theoretically possible (use the 12 million addresses from Land Registry Prices Paid and those from the National Register of Social Housing: both are Open Data sets licensed under OGL), but there are problems in identifying how house numbers increment on particular road segments. Note that most of this latter aspect could be done with OpenData sets without having to use OSM. In the next few months it is likely that some of these data sets will be made available in a modified, and more useful form, on <a href="http://openaddresses.io/">openaddresses.io</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33859/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Jun '14, 19:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/06cd84075f1adc2870ad102c7233e661?s=32&amp;d=identicon&amp;r=g" alt="SK53's gravatar image" />
+    <p><a href="/users/647/sk53">SK53 ♦</a><br/>
+    <span class="score" title="28084 reputation points"><span class="">28.1k</span></span><span title="48 badges"><span class="badge1">&#9679;</span><span class="badgecount">48</span></span><span title="268 badges"><span class="silver">&#9679;</span><span class="badgecount">268</span></span><span title="433 badges"><span class="bronze">&#9679;</span><span class="badgecount">433</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SK53 has 121 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33859">
+    
+        <a name="33862"></a>
+        <div class="comment" id="comment-33862">
+            <div id="post-33862-score" class="comment-score"></div>
+            <div class="comment-text"><p>So it's the creation of that second layer that I'm after, is it simply another IMG file or what format does it need to be in?</p></div>
+            <div class="comment-info" id="comment-33862-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jun '14, 20:52)</span>
+                <a class="comment-user userinfo" href="/users/8979/mcgin">mcgin</a>
+                
+            </div>
+        </div>
+    
+        <a name="33863"></a>
+        <div class="comment" id="comment-33863">
+            <div id="post-33863-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes just another img file, probably also created with the gmapsupp option (necessary if your source needs to be split into several files) </p>
+
+<p>something like mkgmap --gmapsupp gb_osm_gmapsupp.img ons_gmapsupp.img</p></div>
+            <div class="comment-info" id="comment-33863-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jun '14, 21:17)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33864"></a>
+        <div class="comment" id="comment-33864">
+            <div id="post-33864-score" class="comment-score"></div>
+            <div class="comment-text"><p>So the next question is how to convert the postcode file to an IMG file.  I haven't seen any tools that do this, and I'm not sure what the format of the IMG file is in order to do it manually.</p></div>
+            <div class="comment-info" id="comment-33864-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jun '14, 21:47)</span>
+                <a class="comment-user userinfo" href="/users/8979/mcgin">mcgin</a>
+                
+            </div>
+        </div>
+    
+        <a name="33869"></a>
+        <div class="comment" id="comment-33869">
+            <div id="post-33869-score" class="comment-score"></div>
+            <div class="comment-text"><p>You need it as an OSM XML file, so options might be ogr2ogr, QGIS (delimited text layer, save as an OGR compatible layer) &amp; JOSM, or load into PostGIS and use SQL to transform to the snapshot schema format &amp; Osmosis to read it into an OSM file. This may be best as a separate question.</p></div>
+            <div class="comment-info" id="comment-33869-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jun '14, 07:54)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33898"></a>
+        <div class="comment" id="comment-33898">
+            <div id="post-33898-score" class="comment-score"></div>
+            <div class="comment-text"><p>Won't that result in negative ids in the OSM file as its not synced with the main OSM... Are negative ids even a problem?</p></div>
+            <div class="comment-info" id="comment-33898-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '14, 06:26)</span>
+                <a class="comment-user userinfo" href="/users/8979/mcgin">mcgin</a>
+                
+            </div>
+        </div>
+    
+        <a name="56965"></a>
+        <div class="comment not_top_scorer" id="comment-56965">
+            <div id="post-56965-score" class="comment-score"></div>
+            <div class="comment-text"><p>So anyway, 3 years ago someone asked a valid question.
+Pity there was no reply, as I'm in the same boat with no experience how to paddle.</p>
+
+<p>I actually have a comma delimited file: lat, long, postcode, 
+over 2.5 million entries.</p>
+
+<p>I would reckon 85% are negative numbers, being UK postcodes.
+So if I subtracted these numbers from 360 degrees, would that work?</p>
+
+<p>After that, then what would I do?</p></div>
+            <div class="comment-info" id="comment-56965-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jul '17, 21:17)</span>
+                <a class="comment-user userinfo" href="/users/13903/me-again">Me Again</a>
+                
+            </div>
+        </div>
+    
+        <a name="56972"></a>
+        <div class="comment not_top_scorer" id="comment-56972">
+            <div id="post-56972-score" class="comment-score"></div>
+            <div class="comment-text"><p>No longitude is a negative number. And the reply I gave then is still valid now. Convert your file into a suitable OSM form &amp; run mkgmap over the output.</p></div>
+            <div class="comment-info" id="comment-56972-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '17, 12:48)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33859" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33859-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/33698/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hjJFvRCUTb29xh03Dgwu1XNLhC6bue1I' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33698/adding-data-to-osm-file-before-processing-with-mkgmap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33698/adding-data-to-osm-file-before-processing-with-mkgmap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/postcode/"
+            class="tag-link-postcode"
+            title="see questions tagged'postcode'using tags"
+            rel="tag">postcode</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/uk/"
+            class="tag-link-uk"
+            title="see questions tagged'uk'using tags"
+            rel="tag">uk</a> <span class="tag-number">&#215;35</span><br/>
+        
+        <a href="/tags/mkgmap/"
+            class="tag-link-mkgmap"
+            title="see questions tagged'mkgmap'using tags"
+            rel="tag">mkgmap</a> <span class="tag-number">&#215;30</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 5, 2014, 8:32 a.m.">05 Jun '14, 08:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,395 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 9, 2017, 12:48 p.m.">09 Jul '17, 12:48</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/27183/how-i-can-find-postcode-from-osm_id-for-uk">How I can find postcode from osm_id for UK?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31780/adding-uk-postcodes-post-installation">adding uk postcodes post installation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2469/problem-running-mkgmap">[closed] Problem running mkgmap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3346/oregon-450-download">Oregon 450 Download</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5754/where-is-the-postcode-information-of-the-netherlands-stored">Where is the postcode information of the Netherlands stored?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6464/correct-location-and-appropriate-source-for-administrative-boundaries">Correct location and appropriate source for administrative boundaries?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7856/uk-road-speed-limit-completeness">UK road speed limit completeness?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7475/uk-footpaths-designated-and-de-facto-routes">UK Footpaths - designated and de facto routes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8064/how-to-see-bridges-using-mkgmap">How to see bridges using mkgmap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2949/garmin-nuvi-300-addresss-searching">Garmin Nuvi 300, Addresss searching</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,686 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>segfault after rendering projected coords with renderd - OSM Help</title>
+        <meta name="description" content="Following the switch2osm guide I&#39;ve made it to renderd -f -c /usr/local/etc/renderd.conf and navigate to http://localhost/0/0/0.png renderd produces this output:  renderd[17748]: Using web mercator projection settings renderd[17748]: Using web mercator projection settings renderd[17748]: Using web m..." />
+        <meta name="keywords" content="segfault,renderd,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/74212/segfault-after-rendering-projected-coords-with-renderd" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/74212/segfault-after-rendering-projected-coords-with-renderd?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='GbRaE28zECY4OIGE2XPJxoUjXExrfJZf' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/74212/segfault-after-rendering-projected-coords-with-renderd">segfault after rendering projected coords with renderd</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-74212-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74212/up/" rel="nofollow"> </a>
+<div id="post-74212-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-74212-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74212/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/74212/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Following the switch2osm guide I've made it to <code>renderd -f -c /usr/local/etc/renderd.conf</code> and navigate to <a href="http://localhost/0/0/0.png">http://localhost/0/0/0.png</a> renderd produces this output:  </p>
+<p><code>renderd[17748]: Using web mercator projection settings
+renderd[17748]: Using web mercator projection settings
+renderd[17748]: Using web mercator projection settings
+renderd[17748]: Using web mercator projection settings
+renderd[17748]: Using web mercator projection settings
+renderd[17748]: Using web mercator projection settings
+renderd[17748]: Using web mercator projection settings
+renderd[17748]: Using web mercator projection settings
+renderd[17748]: DEBUG: Got incoming connection, fd 5, number 1
+renderd[17748]: DEBUG: Got incoming request with protocol version 2
+renderd[17748]: DEBUG: Got command RenderPrio fd(5) xml(ajt), z(0), x(0), y(0), mime(image/png), options()
+renderd[17748]: DEBUG: START TILE ajt 0 0-0 0-0, new metatile
+renderd[17748]: Rendering projected coordinates 0 0 0 -&gt; -20037508.342800|-20037508.342800 20037508.342800|20037508.342800 to a 1 x 1 tile
+Segmentation fault</code></p>
+<p>The start of renderd running is:<br>
+`
+renderd[17748]: Rendering daemon started<br>
+renderd[17748]: Initiating request_queue<br>
+renderd[17748]: Parsing section renderd<br>
+renderd[17748]: Parsing render section 0<br>
+renderd[17748]: Parsing section mapnik<br>
+renderd[17748]: Parsing section ajt<br>
+renderd[17748]: config renderd: unix socketname=/var/run/renderd/renderd.sock<br>
+renderd[17748]: config renderd: num_threads=8<br>
+renderd[17748]: config renderd: num_slaves=0<br>
+renderd[17748]: config renderd: tile_dir=/var/lib/mod_tile<br>
+renderd[17748]: config renderd: stats_file=/var/run/renderd/renderd.stats<br>
+renderd[17748]: config mapnik:  plugins_dir=/usr/lib/mapnik/3.0/input<br>
+renderd[17748]: config mapnik:  font_dir=/usr/share/fonts/opentype/noto<br>
+renderd[17748]: config mapnik:  font_dir_recurse=1<br>
+renderd[17748]: config renderd(0): Active<br>
+renderd[17748]: config renderd(0): unix socketname=/var/run/renderd/renderd.sock<br>
+renderd[17748]: config renderd(0): num_threads=8<br>
+renderd[17748]: config renderd(0): tile_dir=/var/lib/mod_tile<br>
+renderd[17748]: config renderd(0): stats_file=/var/run/renderd/renderd.stats<br>
+renderd[17748]: config map 0:   name(ajt) file(/home/mseagle/anritsu/mapping/openstreetmap-carto/mapnik.xml) uri(/hot/) htcp() host(localhost)<br>
+renderd[17748]: Initialising unix server socket on /var/run/renderd/renderd.sock<br>
+renderd[17748]: Created server socket 4<br>
+renderd[17748]: Renderd is using mapnik version 3.0.23<br>
+renderd[17748]: DEBUG: Loading font: /usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc<br>
+renderd[17748]: DEBUG: Loading font: /usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc<br>
+renderd[17748]: DEBUG: Loading font: /usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc<br>
+renderd[17748]: DEBUG: Loading font: /usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc<br>
+Running in foreground mode...<br>
+renderd[17748]: Starting stats thread<br>
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile<br>
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile<br>
+renderd[17748]: Loading parameterization function for <br>
+renderd[17748]: Loading parameterization function for <br>
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile<br>
+renderd[17748]: Loading parameterization function for <br>
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile<br>
+renderd[17748]: Loading parameterization function for <br>
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile<br>
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile<br>
+renderd[17748]: Loading parameterization function for <br>
+renderd[17748]: Loading parameterization function for debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile  </p>
+<p>renderd[17748]: Loading parameterization function for <br>
+debug: init_storage_backend: initialising file storage backend at: /var/lib/mod_tile<br>
+renderd[17748]: Loading parameterization function for <br>
+Mapnik LOG&gt; 2020-04-15 14:28:16: warning: unable to find face-name 'Noto Sans Regular' in FontSet 'fontset-0'<br>
+`</p>
+<p>followed by a whole plethora of unable to find font x which can be found in the full output in this pastebin: <a href="https://pastebin.com/PGZvztUu">full output</a></p>
+<p>dmesg shows this output:<br>
+<code>[ 4140.665927] renderd[17755]: segfault at 0 ip 00007f873cd60084 sp 00007f8722fd1a70 error 4 in libmapnik.so.3.0.23[7f873c816000+949000]
+[ 4140.665931] Code: 00 00 00 00 00 90 e9 eb 92 ab ff 66 2e 0f 1f 84 00 00 00 00 00 90 53 48 89 fb 48 8b 7e 08 48 8b 35 f9 2c 51 00 48 39 f7 74 0e &lt;80&gt; 3f 2a 74 17 e8 a2 b2 ab ff 85 c0 75 0e 48 8d 43 10 5b c3 0f 1f</code>  </p>
+<p>Any help is appreciated to even point me in the right direction.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/segfault/" class="post-tag tag-link-segfault"
+                                        title="see questions tagged 'segfault'" rel="tag">segfault</a>
+                                
+                                    <a href="/tags/renderd/" class="post-tag tag-link-renderd"
+                                        title="see questions tagged 'renderd'" rel="tag">renderd</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>15 Apr '20, 22:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/10205e855d83b6ba480cb3023babfbc9?s=32&amp;d=identicon&amp;r=g" alt="mseagull's gravatar image" />
+    <p><a href="/users/18216/mseagull">mseagull</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mseagull has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-74212">
+    
+        <a name="74380"></a>
+        <div class="comment" id="comment-74380">
+            <div id="post-74380-score" class="comment-score"></div>
+            <div class="comment-text"><p>What OS are you using, how much memory have you got and what data did you load?</p>
+
+<p>Any diversions from the switch2osm guide (perhaps, starting from a slightly differet place in terms of installed components)?</p></div>
+            <div class="comment-info" id="comment-74380-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Apr '20, 17:41)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="74424"></a>
+        <div class="comment" id="comment-74424">
+            <div id="post-74424-score" class="comment-score"></div>
+            <div class="comment-text"><p>Debian 10, all the other steps have worked fine. I have 16 Gigs on a 4790K. Rendering the small city of Morgan Hill, CA U.S. I did compile mapnik/mapnik-python manually but it all seems hooked up fine.</p>
+
+<p>As a note, after another day and being unable to figure it out, I switched to my server, a Phenom II X4 BE on 16 gigs running Ubuntu 16 LTS and it works well. Same area, same process as my other system. So possibly just to do with Debian 10?</p>
+
+<p>I'm now looking for information on ways to cross compile the stack.</p></div>
+            <div class="comment-info" id="comment-74424-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Apr '20, 18:28)</span>
+                <a class="comment-user userinfo" href="/users/18216/mseagull">mseagull</a>
+                
+            </div>
+        </div>
+    
+        <a name="74425"></a>
+        <div class="comment" id="comment-74425">
+            <div id="post-74425-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Debian 10</p>
+</blockquote>
+
+<p>Ah, OK.  I'm not aware of a recent "known working" set of instructions there, apart from using Docker (which you presumably don't want to do).  I've certainly had problems of that sort on Debian in the past (and problems reliably building mapnik et al elsewhere).  <a href="https://wiki.debian.org/OSM/tileserver/jessie">https://wiki.debian.org/OSM/tileserver/jessie</a> is ancient history now as far as postgres et al is concerned (although still supported for another month!).</p>
+
+<blockquote>
+<p>I'm now looking for information on ways to cross compile the stack.</p>
+</blockquote>
+
+<p>What problem are you trying to solve by doing here?</p></div>
+            <div class="comment-info" id="comment-74425-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Apr '20, 18:42)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="74426"></a>
+        <div class="comment" id="comment-74426">
+            <div id="post-74426-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Having a local mapping server on an arm based embedded device. </p>
+
+<p>Thanks for the response.</p></div>
+            <div class="comment-info" id="comment-74426-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Apr '20, 18:50)</span>
+                <a class="comment-user userinfo" href="/users/18216/mseagull">mseagull</a>
+                
+            </div>
+        </div>
+    
+        <a name="74427"></a>
+        <div class="comment" id="comment-74427">
+            <div id="post-74427-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks.  If you come up with anything that would be a useful addition to <a href="https://github.com/switch2osm/switch2osm.github.io">https://github.com/switch2osm/switch2osm.github.io</a> please let us know :)</p></div>
+            <div class="comment-info" id="comment-74427-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Apr '20, 18:55)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74212" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74212-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/74212/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='GbRaE28zECY4OIGE2XPJxoUjXExrfJZf' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74212/segfault-after-rendering-projected-coords-with-renderd?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74212/segfault-after-rendering-projected-coords-with-renderd?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/renderd/"
+            class="tag-link-renderd"
+            title="see questions tagged'renderd'using tags"
+            rel="tag">renderd</a> <span class="tag-number">&#215;105</span><br/>
+        
+        <a href="/tags/segfault/"
+            class="tag-link-segfault"
+            title="see questions tagged'segfault'using tags"
+            rel="tag">segfault</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 15, 2020, 10:59 p.m.">15 Apr '20, 22:59</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,310 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 27, 2020, 6:55 p.m.">27 Apr '20, 18:55</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/24290/local-tile-server-extremely-slow-rendering">Local Tile Server - EXTREMELY slow rendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35950/mapnik-pgraster-plugin-creating-8x8-tiles-with-visible-boundaries">Mapnik PGRaster Plugin creating 8x8 tiles with visible boundaries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17225/setting-up-my-own-tile-server">Setting up my own tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20159/fail-to-connect-my-tiles-server">Fail to connect my tiles server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31023/offline-tile-mapnik-segmentation-fault">Offline tile, mapnik segmentation fault</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34960/error-on-rendering-what-unable-to-find-specified-font-face">Error on rendering: what():  Unable to find specified font face &#39;&#39;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16037/how-to-render-high-zoom-level-maps-with-renderd">How to render high zoom level maps with renderd ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16966/open-street-map-no-map-for-default">Open Street Map &quot;no map for: default&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18237/map-not-updating-to-changes-made">map not updating to changes made</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37471/mapnik-not-rendering-changes">Mapnik not rendering Changes</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

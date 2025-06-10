@@ -1,0 +1,870 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can&#39;t figure out how to edit very large incorrect feature - OSM Help</title>
+        <meta name="description" content="Hello,  I&#39;m a brand new user apparently trying to do something complicated. When I was not logged in and looking at the map for southern Guam, the large area for Naval Base Guam Ordnance Annex says &quot;Naval Hospital Guam (Joint Region&quot;, without the closed parentheses. So I figured I would make an acco..." />
+        <meta name="keywords" content="interface,large_area,guam" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/79119/cant-figure-out-how-to-edit-very-large-incorrect-feature" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/79119/cant-figure-out-how-to-edit-very-large-incorrect-feature?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='jRx1Ajz4h01pGDoypED6o0QhPxe66icu' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/79119/cant-figure-out-how-to-edit-very-large-incorrect-feature">Can&#39;t figure out how to edit very large incorrect feature</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-79119-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79119/up/" rel="nofollow"> </a>
+<div id="post-79119-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-79119-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79119/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/79119/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, </p>
+<p>I'm a brand new user apparently trying to do something complicated.</p>
+<p>When I was not logged in and looking at the map for southern Guam, the large area for Naval Base Guam Ordnance Annex says "Naval Hospital Guam (Joint Region", without the closed parentheses. So I figured I would make an account and fix it, but when I hit edit, it now says "Joint Region Marianas". </p>
+<p>Both of these are very wrong and I can't figure out where on the map I should click to edit these large areas. Or maybe I can't edit large areas as a new user?</p>
+<p>I would appreciate any assistance.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/interface/" class="post-tag tag-link-interface"
+                                        title="see questions tagged 'interface'" rel="tag">interface</a>
+                                
+                                    <a href="/tags/large_area/" class="post-tag tag-link-large_area"
+                                        title="see questions tagged 'large_area'" rel="tag">large_area</a>
+                                
+                                    <a href="/tags/guam/" class="post-tag tag-link-guam"
+                                        title="see questions tagged 'guam'" rel="tag">guam</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Mar '21, 01:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/065bfb38e2384b31ad0ea03fbdae4308?s=32&amp;d=identicon&amp;r=g" alt="Kephalonomancy's gravatar image" />
+    <p><a href="/users/19827/kephalonomancy">Kephalonomancy</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kephalonomancy has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-79119">
+    
+        <a name="79133"></a>
+        <div class="comment" id="comment-79133">
+            <div id="post-79133-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thank you all! I managed to find the "Hospital Guam (Joint Region", using TZorn's suggestion and delete the tag.</p>
+
+<p>I still have the second part of my earlier issue in that "Joint Region Marianas" is now plastered over the Naval Magazine location, though the correct label also pops up if I zoom in. When I finally found "Naval Hospital Guam (Joint Region" it highlighted a bunch of military properties around the island in what seems to be a relationship "Joint Region Marianas". JRM does administrative support for military properties on the island. And OSM has decided the Naval Magazine is the place to display that relationship?</p>
+
+<p>I can no longer find this "Joint Region Marianas" relationship by searching in OSM. Can I just ask that someone make it so it doesn't display? It's as if someone created a relations for all the national parks in the US and "National Park Service" displayed in big letters over Wyoming on the U.S. map. </p>
+
+<p>If anyone is feeling really energetic, can someone add Naval Base Guam and Andersen Air Force Base to the "Joint Region Marianas" relationship? It's weird that the most important bits under JRM don't appear. In any case, the situation has upgraded from "blatantly wrong" to "confusing and incomplete." I will not do anything but fiddle with point landmarks and building footprints for a long while, I think. </p>
+
+<p>Thanks again!</p></div>
+            <div class="comment-info" id="comment-79133-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '21, 21:39)</span>
+                <a class="comment-user userinfo" href="/users/19827/kephalonomancy">Kephalonomancy</a>
+                
+            </div>
+        </div>
+    
+        <a name="79172"></a>
+        <div class="comment" id="comment-79172">
+            <div id="post-79172-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi. Just deleting the name is ok but maybe not the best way you could have handled the issue. Is there not an alternative name you could have added instead of the wrong one? </p>
+
+<p>The military area is still tagged with the wikidata object <a href="https://www.wikidata.org/wiki/Q6269350">Q6269350</a> which is named "Joint Region Marianas" and which links back to said OSM relation. In your question you say that is also wrong. If you have the knowledge could you sort that out somehow? </p></div>
+            <div class="comment-info" id="comment-79172-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '21, 20:03)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79119" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79119-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/79119/cant-figure-out-how-to-edit-very-large-incorrect-feature?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/79119/cant-figure-out-how-to-edit-very-large-incorrect-feature?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/79119/cant-figure-out-how-to-edit-very-large-incorrect-feature?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/79119/cant-figure-out-how-to-edit-very-large-incorrect-feature?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="79123"></a>
+                    <div id="answer-container-79123" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79123-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79123/up/" rel="nofollow"> </a>
+<div id="post-79123-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-79123-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79123/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi Kephalonomancy. Welcome to OpenStreetMap. </p>
+<p>There are no limitations as to what a new user can do or not. It's more a matter of the editor to use for large areas. The in-broswer editor iD is not so suited for that but still it works. </p>
+<p>I recommend that you go to the openstreetmap.org website and load the page of the feature you want to edit. You can do so by entering the name "Naval Hospital Guam (Joint Region" into the search box and search for it. Then in the left pain select the object. It will be displayed on the map with orange outline. <a href="https://www.openstreetmap.org/relation/7361545#map=19/13.36347/144.66926">Scroll in to a maximum on any point on the outline</a>. Now hit the editor button to open iD. The object should be pre-selected and the name displayed. You can easily edit it now.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79123/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Mar '21, 08:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ddebc8d5f4e0458413eacf65e36561a9?s=32&amp;d=identicon&amp;r=g" alt="TZorn's gravatar image" />
+    <p><a href="/users/10133/tzorn">TZorn</a><br/>
+    <span class="score" title="12350 reputation points"><span class="">12.3k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="64 badges"><span class="silver">&#9679;</span><span class="badgecount">64</span></span><span title="225 badges"><span class="bronze">&#9679;</span><span class="badgecount">225</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TZorn has 63 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79123">
+    
+</div>
+<div id="comment-tools-79123" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79123-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="79120"></a>
+                    <div id="answer-container-79120" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79120-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79120/up/" rel="nofollow"> </a>
+<div id="post-79120-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-79120-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79120/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In the default web-based iD editor-software, you can see <code>name=Naval Hospital Guam (Joint Region Marianas)</code> <a href="https://www.openstreetmap.org/way/503877744">https://www.openstreetmap.org/way/503877744</a> is enclosed in <code>name=Naval Hospital Guam (Joint Region</code> <a href="https://www.openstreetmap.org/relation/7361545/">https://www.openstreetmap.org/relation/7361545/</a> from the bottom left section. Usually one would be able to select larger overlapping areas by sliding in &amp; out, so I assume this doesn't work for a multipolygon?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79120/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Mar '21, 08:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/76ffbb56c811e8a8ccdd4c28f122399f?s=32&amp;d=identicon&amp;r=g" alt="Kovoschiz's gravatar image" />
+    <p><a href="/users/16887/kovoschiz">Kovoschiz</a><br/>
+    <span class="score" title="2434 reputation points"><span class="">2.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="47 badges"><span class="bronze">&#9679;</span><span class="badgecount">47</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kovoschiz has 22 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/79120/">
+                edited
+                <strong>04 Mar '21, 08:29</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79120">
+    
+</div>
+<div id="comment-tools-79120" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79120-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="79121"></a>
+                    <div id="answer-container-79121" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-79121-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/79121/up/" rel="nofollow"> </a>
+<div id="post-79121-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-79121-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/79121/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi, I think you'll find the problem is with the multipolygon relation:- Relation: Naval Hospital Guam (Joint Region (7361545) In which the name is different from the name on the polygon:- Way: Naval Hospital Guam (Joint Region Marianas) (503877744).</p>
+<p>I don't know how easy this is to fix with the iD editor but it's easy with JOSM editor. Please be aware that the multipolygon name refers to all twenty objects grouped in the multipolygon each of which has its own name. If you want me to fix it please confirm the correct name. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/79121/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Mar '21, 08:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e3283a6b5f83e16214ec39a1478f64f0?s=32&amp;d=identicon&amp;r=g" alt="BCNorwich's gravatar image" />
+    <p><a href="/users/2925/bcnorwich">BCNorwich</a><br/>
+    <span class="score" title="6299 reputation points"><span class="">6.3k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="44 badges"><span class="silver">&#9679;</span><span class="badgecount">44</span></span><span title="89 badges"><span class="bronze">&#9679;</span><span class="badgecount">89</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="BCNorwich has 44 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-79121">
+    
+        <a name="79122"></a>
+        <div class="comment" id="comment-79122">
+            <div id="post-79122-score" class="comment-score"></div>
+            <div class="comment-text"><p>There was another spelling mistake with "Naval Base Guam Harmon", (it had extra white spaces), I've corrected that.</p></div>
+            <div class="comment-info" id="comment-79122-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '21, 08:39)</span>
+                <a class="comment-user userinfo" href="/users/2925/bcnorwich">BCNorwich</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-79121" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-79121-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/79119/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='jRx1Ajz4h01pGDoypED6o0QhPxe66icu' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79119/cant-figure-out-how-to-edit-very-large-incorrect-feature?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/79119/cant-figure-out-how-to-edit-very-large-incorrect-feature?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/interface/"
+            class="tag-link-interface"
+            title="see questions tagged'interface'using tags"
+            rel="tag">interface</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/large_area/"
+            class="tag-link-large_area"
+            title="see questions tagged'large_area'using tags"
+            rel="tag">large_area</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/guam/"
+            class="tag-link-guam"
+            title="see questions tagged'guam'using tags"
+            rel="tag">guam</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 4, 2021, 1:23 a.m.">04 Mar '21, 01:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,525 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 7, 2021, 8:03 p.m.">07 Mar '21, 20:03</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/5424/changing-the-language-of-the-interface-ie-outside-the-map">Changing the language of the interface (i.e. outside the map)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6316/finish-potlatch-interface-no-names-on-buttons-or-other-items">[closed] Finish potlatch interface: no names on buttons or other items</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8094/can-i-insert-the-map-on-my-site">Can I insert the map on  my site ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11581/osm-interface-changes">OSM interface changes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14419/how-to-connect-new-trails-or-ways-to-existing-ones-in-potlatch-2">How to connect new trails or ways to existing ones in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18741/strange-find-function-result">Strange FIND function result</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21790/how-do-i-tell-osm-about-a-large-area-of-the-map-that-is-wrong">How do I tell OSM about a large area of the map that is wrong?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25041/why-are-there-no-tooltips-in-the-id-editor">Why are there no tooltips in the iD editor?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26996/is-it-possible-to-view-changesets-in-readable-form">Is it possible to view changesets in readable form?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2362/search-field-should-be-positioned-top-left">[closed] Search-field should be positioned top left</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

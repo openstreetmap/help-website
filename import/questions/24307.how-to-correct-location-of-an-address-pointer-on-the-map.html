@@ -1,0 +1,1151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to correct location of an address pointer on the map? - OSM Help</title>
+        <meta name="description" content="I&#39;m new to using Openstreetmap.org. I like the idea that users can correct and improve the data, much like Wikipedia, but documentation for doing basic editing tasks seems very hard to find. I&#39;ve searched in various locations on the openstreetmap.org site, including this question database.  When I s..." />
+        <meta name="keywords" content="correction,addresses,correcting,pointers,address" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/24307/how-to-correct-location-of-an-address-pointer-on-the-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/24307/how-to-correct-location-of-an-address-pointer-on-the-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='bLZocOuokafNOji97zJ1dsE2TRihxKcV' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/24307/how-to-correct-location-of-an-address-pointer-on-the-map">How to correct location of an address pointer on the map?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-24307-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24307/up/" rel="nofollow"> </a>
+<div id="post-24307-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-24307-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24307/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/24307/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm new to using Openstreetmap.org. I like the idea that users can correct and improve the data, much like Wikipedia, but documentation for doing basic editing tasks seems very hard to find. I've searched in various locations on the openstreetmap.org site, including this question database. </p>
+<p>When I search for my business address "3720 Canton St, Dallas, TX" Two conflicting locations are returned, one wrong by about a block, and the other is near our building but the pointer is maybe 50 feet away in the middle of a street. Here's the permalink to the area in question:</p>
+<p><a href="http://www.openstreetmap.org/?lat=32.785349&amp;lon=-96.773407&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=32.785349&amp;lon=-96.773407&amp;zoom=18&amp;layers=M</a></p>
+<p>I tried selecting "edit" and various editor options but in each case the address pointer vanishes when the editor loads, so there's nothing I can find to move or edit with regard to the address. One of the two pointers needs to be deleted completely, the other should be moved, presumably to the entrance of the building. I'd like to make the edits myself so that I can learn how and correct other entries as well, if someone can point me to the documentation on how to do it. What I would find helpful is a simple, step-by-step guide for new users with how-tos for basic tasks (e.g. "how to correct an address pointer", "how to remove a non-existent street", "how to correct a street name", etc.) Or if something  like that already exists maybe its location could communicated to new users more effectively - including in the sign-up email or displayed on the sign-up page? </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/correction/" class="post-tag tag-link-correction"
+                                        title="see questions tagged 'correction'" rel="tag">correction</a>
+                                
+                                    <a href="/tags/addresses/" class="post-tag tag-link-addresses"
+                                        title="see questions tagged 'addresses'" rel="tag">addresses</a>
+                                
+                                    <a href="/tags/correcting/" class="post-tag tag-link-correcting"
+                                        title="see questions tagged 'correcting'" rel="tag">correcting</a>
+                                
+                                    <a href="/tags/pointers/" class="post-tag tag-link-pointers"
+                                        title="see questions tagged 'pointers'" rel="tag">pointers</a>
+                                
+                                    <a href="/tags/address/" class="post-tag tag-link-address"
+                                        title="see questions tagged 'address'" rel="tag">address</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Jul '13, 14:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d5b711fb29b5fa42331cb06941514e50?s=32&amp;d=identicon&amp;r=g" alt="Steevithak's gravatar image" />
+    <p><a href="/users/6882/steevithak">Steevithak</a><br/>
+    <span class="score" title="226 reputation points">226</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Steevithak has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-24307">
+    
+</div>
+<div id="comment-tools-24307" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24307-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/24307/how-to-correct-location-of-an-address-pointer-on-the-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/24307/how-to-correct-location-of-an-address-pointer-on-the-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/24307/how-to-correct-location-of-an-address-pointer-on-the-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/24307/how-to-correct-location-of-an-address-pointer-on-the-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="24308"></a>
+                    <div id="answer-container-24308" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24308-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24308/up/" rel="nofollow"> </a>
+<div id="post-24308-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-24308-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24308/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The reason that you can not find anything to edit is because the house in not actually in the OpenStreetMap data set.  This has been found in an external (non-osm) data set called 'tiger' which isn't very acurate.  If you add house numbers in this area in OSM this will be used in preference so simply adding the property in the correct location should fix things.</p>
+<p>There was already an answer to the question on <a href="https://help.openstreetmap.org/questions/7335/how-to-add-a-house-number">how to add house numbers</a> that you may find provides the information you are after.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24308/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '13, 14:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bda08a105bb6a4a606d47c1b27187fac?s=32&amp;d=identicon&amp;r=g" alt="twain's gravatar image" />
+    <p><a href="/users/4/twain">twain</a><br/>
+    <span class="score" title="2381 reputation points"><span class="">2.4k</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="38 badges"><span class="bronze">&#9679;</span><span class="badgecount">38</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="twain has 15 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/24308/">
+                edited
+                <strong>17 Jul '13, 14:31</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24308">
+    
+        <a name="24314"></a>
+        <div class="comment" id="comment-24314">
+            <div id="post-24314-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Partial success - I added the building and assigned an address. Ran into a few minor issues: 1) there doesn't seem to be an easy way to constrain the polygon to a rectangle, so it may not be accurate. 2) the map still refers to the location as a "house" - how do I tell the database that this is a business? 3) this building has multiple tenants, how do I specify the suite numbers and business names?</p></div>
+            <div class="comment-info" id="comment-24314-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '13, 16:24)</span>
+                <a class="comment-user userinfo" href="/users/6882/steevithak">Steevithak</a>
+                
+            </div>
+        </div>
+    
+        <a name="24320"></a>
+        <div class="comment" id="comment-24320">
+            <div id="post-24320-score" class="comment-score"></div>
+            <div class="comment-text"><p>Looks like you've got it figured out and nominatum now finds you if you search for "ncc internet services" as well as the street address.</p></div>
+            <div class="comment-info" id="comment-24320-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '13, 17:41)</span>
+                <a class="comment-user userinfo" href="/users/5918/n76">n76</a>
+                
+            </div>
+        </div>
+    
+        <a name="24327"></a>
+        <div class="comment" id="comment-24327">
+            <div id="post-24327-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, I'm slowly getting there. One thing that still puzzles me. Even though I've now added the building and business name, nothing shows up on the map when browsing that area. It does show up if I do a search for the specific address but if I just browse to that area of the map, the building outline is not visible. Other buildings in nearby areas are visible, so it appears I'm still doing something wrong. I've written the step-by-step of what I did in my own answer below - am I leaving out a step that is needed to make the building outline visible on the map?</p></div>
+            <div class="comment-info" id="comment-24327-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '13, 19:51)</span>
+                <a class="comment-user userinfo" href="/users/6882/steevithak">Steevithak</a>
+                
+            </div>
+        </div>
+    
+        <a name="24328"></a>
+        <div class="comment" id="comment-24328">
+            <div id="post-24328-score" class="comment-score">2</div>
+            <div class="comment-text"><p>That just sounds like the usual "the map hasn't quite updated yet" issue.  There are lots of previous answers on that topic - search for <a href="https://help.openstreetmap.org/search/?Submit=Search&amp;t=question">visible</a> for a list.  It's not that long ago that the main map only updated once a week...</p></div>
+            <div class="comment-info" id="comment-24328-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '13, 23:06)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="24336"></a>
+        <div class="comment" id="comment-24336">
+            <div id="post-24336-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Yes, it's there for me now. I suspect you got a bit unlucky with the time of your edit coinciding with a data replication delay <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/replication_delay.html">http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/replication_delay.html</a> so time to render would have been longer than is (now) usual.</p></div>
+            <div class="comment-info" id="comment-24336-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 08:27)</span>
+                <a class="comment-user userinfo" href="/users/339/edloach">EdLoach ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24308" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24308-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24318"></a>
+                    <div id="answer-container-24318" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24318-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24318/up/" rel="nofollow"> </a>
+<div id="post-24318-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-24318-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24318/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hate to answer my own question because I'm definitely no expert on this but here's what I've figured out so far:</p>
+<ol>
+<li>Click the Edit drop-down menu and select "Edit with iD"</li>
+<li>Click the "area" menu</li>
+<li>Draw a box that outlines the satellite image of the building</li>
+<li>Click the house icon in the center of the new area</li>
+<li>Select the second icon (clockwise) to square up the corners if needed</li>
+<li>On the "Select Feature Type" dialog that appears on the right, pick "Building"</li>
+<li>Fill in the building data including the address (see caveat below)</li>
+<li>Click Save</li>
+</ol>
+<p>Once the correct address is assimilated by the system, it apparently drops any duplicate address pointers.</p>
+<p>Caveats: The system doesn't appear to be able to handle multi-use or multi-tenant buildings, so there's no way to add business names, websites, addresses with suite numbers, etc. for that type of building. A work-around seems to be creating "points" of type "other" to represent each suite and adding the business names and other data to those.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24318/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '13, 16:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d5b711fb29b5fa42331cb06941514e50?s=32&amp;d=identicon&amp;r=g" alt="Steevithak's gravatar image" />
+    <p><a href="/users/6882/steevithak">Steevithak</a><br/>
+    <span class="score" title="226 reputation points">226</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Steevithak has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/24318/">
+                edited
+                <strong>17 Jul '13, 23:24</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24318">
+    
+        <a name="24346"></a>
+        <div class="comment" id="comment-24346">
+            <div id="post-24346-score" class="comment-score">1</div>
+            <div class="comment-text"><p>A very thorough answer. You can potentially add suite numbers by adding addr:suite=lower-upper, and addr:interpolation=all, but this will only work if suites are numbered consecutively, otherwise add all suite numbers (for instance if they are based on floor numbers) addr:suite=suite1;suite3;suite5 ... This still doesn't solve the multiple occupant problem, but at least would represent the set of valid addresses.</p></div>
+            <div class="comment-info" id="comment-24346-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 12:27)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="24360"></a>
+        <div class="comment" id="comment-24360">
+            <div id="post-24360-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, I've seen several references to doing things by "adding X=Y" type stuff but all such explanations leave out any mention of HOW you add X=Y. Is there documentation somewhere on that? The editors themselves don't have any obvious button or control that suggests it would allow you type in arbitrary text of that sort.</p></div>
+            <div class="comment-info" id="comment-24360-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 16:17)</span>
+                <a class="comment-user userinfo" href="/users/6882/steevithak">Steevithak</a>
+                
+            </div>
+        </div>
+    
+        <a name="24361"></a>
+        <div class="comment" id="comment-24361">
+            <div id="post-24361-score" class="comment-score"></div>
+            <div class="comment-text"><p>In Potlatch 2, there are always "simple" and "advanced" views available when you've clicked on something and are displaying details of it.  After adding a new thing initially you'll see in simple mode "no tags set"; if you click "advanced" and then "add" you can add whatever tags you like.</p></div>
+            <div class="comment-info" id="comment-24361-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 17:59)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="24363"></a>
+        <div class="comment" id="comment-24363">
+            <div id="post-24363-score" class="comment-score"></div>
+            <div class="comment-text"><p>At the bottom of the right pane of the iD-editor there is a section "All tags". You might need to scroll down to see it and you probably have to click on it to expand it. Once it is visible, you can click on the big "+" at the bottom to add any tag you want.</p></div>
+            <div class="comment-info" id="comment-24363-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 19:29)</span>
+                <a class="comment-user userinfo" href="/users/2933/cartinus">cartinus</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24318" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24318-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24310"></a>
+                    <div id="answer-container-24310" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24310-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24310/up/" rel="nofollow"> </a>
+<div id="post-24310-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-24310-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24310/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Your business isn't currently in the database, and the search engine (nominatim) is estimating based on the road (and as the road is in sections, the two results you mention are near the midpoint of a couple of the sections that make up Canton Street).</p>
+<p>Adding the building and it's address should mean future searches will pinpoint your business accurately.</p>
+<p>I notice from your earlier changeset that you are using Potlatch 2 to edit. The new iD editor does include a short tutorial for new users. (Aside: I noticed your changeset comment "Changes may be confirmed by view sat images, comparing to Google maps, or checking in person." - just a reminder that the Bing imagery you can see in the editor is OK for use, as is the checking in person, but we can't use Google's maps due to copyright (<a href="http://www.deadlinenews.co.uk/2013/07/05/google-says-sorry-for-sinking-island/">and they might be wrong</a>.)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24310/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '13, 14:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f25a8392e12ed696b16554b3d08e4e2b?s=32&amp;d=identicon&amp;r=g" alt="EdLoach's gravatar image" />
+    <p><a href="/users/339/edloach">EdLoach ♦</a><br/>
+    <span class="score" title="19478 reputation points"><span class="">19.5k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="156 badges"><span class="silver">&#9679;</span><span class="badgecount">156</span></span><span title="280 badges"><span class="bronze">&#9679;</span><span class="badgecount">280</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="EdLoach has 93 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24310">
+    
+        <a name="24316"></a>
+        <div class="comment" id="comment-24316">
+            <div id="post-24316-score" class="comment-score"></div>
+            <div class="comment-text"><p>I wasn't advocating that someone should copy data from a Google map. I assumed there is some sort of moderation process through which my edit would go before becoming public and that the those moderators might want a way of verifying that my changes were legitimate, so I offered several ways they could be validated.</p></div>
+            <div class="comment-info" id="comment-24316-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '13, 16:42)</span>
+                <a class="comment-user userinfo" href="/users/6882/steevithak">Steevithak</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24310" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24310-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24313"></a>
+                    <div id="answer-container-24313" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24313-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24313/up/" rel="nofollow"> </a>
+<div id="post-24313-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-24313-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24313/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Also, when you add your building you can tag with your business name, phone number, web site, etc.</p>
+<p>I don't think the phone number and web site are used for much at the moment, but nominatim will also find things by name so searches for your business name will return your address and location.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24313/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jul '13, 15:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f60af53a4eba0c21f25c22674fb4a8cc?s=32&amp;d=identicon&amp;r=g" alt="n76's gravatar image" />
+    <p><a href="/users/5918/n76">n76</a><br/>
+    <span class="score" title="10839 reputation points"><span class="">10.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="82 badges"><span class="silver">&#9679;</span><span class="badgecount">82</span></span><span title="172 badges"><span class="bronze">&#9679;</span><span class="badgecount">172</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="n76 has 48 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24313">
+    
+        <a name="24317"></a>
+        <div class="comment" id="comment-24317">
+            <div id="post-24317-score" class="comment-score"></div>
+            <div class="comment-text"><p>Unfortunately, this is a mixed use building with multiple residential and business tenants, each with their own suite number. The database appears to assume that each building has only one tenant, so it's unclear how to enter the business names and websites. Otherwise, I'd be happy to do so.</p></div>
+            <div class="comment-info" id="comment-24317-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '13, 16:45)</span>
+                <a class="comment-user userinfo" href="/users/6882/steevithak">Steevithak</a>
+                
+            </div>
+        </div>
+    
+        <a name="24319"></a>
+        <div class="comment" id="comment-24319">
+            <div id="post-24319-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Buildings can be "terraced", that is subdivided and then the individual businesses tagged to each part.</p>
+
+<p>Or you can just add a node for each business, approximately where they are located in the building and tag the information on that.</p>
+
+<p>Not sure how this can be done with iD as I switched from Potlatch to JOSM a while back and never looked at iD.</p></div>
+            <div class="comment-info" id="comment-24319-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '13, 17:36)</span>
+                <a class="comment-user userinfo" href="/users/5918/n76">n76</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24313" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24313-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/24307/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='bLZocOuokafNOji97zJ1dsE2TRihxKcV' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24307/how-to-correct-location-of-an-address-pointer-on-the-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24307/how-to-correct-location-of-an-address-pointer-on-the-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/address/"
+            class="tag-link-address"
+            title="see questions tagged'address'using tags"
+            rel="tag">address</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/correction/"
+            class="tag-link-correction"
+            title="see questions tagged'correction'using tags"
+            rel="tag">correction</a> <span class="tag-number">&#215;28</span><br/>
+        
+        <a href="/tags/addresses/"
+            class="tag-link-addresses"
+            title="see questions tagged'addresses'using tags"
+            rel="tag">addresses</a> <span class="tag-number">&#215;22</span><br/>
+        
+        <a href="/tags/correcting/"
+            class="tag-link-correcting"
+            title="see questions tagged'correcting'using tags"
+            rel="tag">correcting</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/pointers/"
+            class="tag-link-pointers"
+            title="see questions tagged'pointers'using tags"
+            rel="tag">pointers</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 17, 2013, 2:13 p.m.">17 Jul '13, 14:13</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,598 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 18, 2013, 7:29 p.m.">18 Jul '13, 19:29</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/39048/correct-syntax-for-belgian-address">Correct syntax for Belgian address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/70390/address-is-not-showing-correctly">Address is not showing correctly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1669/erroneous-street-address-location">Erroneous Street Address Location</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2630/new-address-range-available-for-quebec-on-canada-geobase">New address range available for Quebec on Canada Geobase....</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2680/can-i-produce-a-database-of-addresses-from-osm-data">Can I produce a database of addresses from OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2949/garmin-nuvi-300-addresss-searching">Garmin Nuvi 300, Addresss searching</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3397/id-like-to-correct-a-wrongly-marked-woodland">I&#39;d like to correct a wrongly marked woodland</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3259/automatic-generation-of-longitude-and-latitude-by-giving-the-address-in-the-backend">Automatic generation of longitude and latitude by giving the address in the backend?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4319/do-i-add-address-tags-to-the-poi-node-or-create-a-separate-node">Do I add address tags to the POI node or create a separate node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2131/tagging-addrhousename">Tagging addr:housename</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

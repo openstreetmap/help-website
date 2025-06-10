@@ -1,0 +1,829 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Routing software cannot find a route accross a border post (Sahara) - OSM Help</title>
+        <meta name="description" content="I have been looking into why OpenStreetMap based routing software cannot find a route from the N1 to the N5 across the no mans land border post in the South of Western Sahara. I signed up as an OpenStreetMap user and used the web editing software to identify exactly where it goes wrong and it appear..." />
+        <meta name="keywords" content="border,mapfactor,newbie,routing" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/40858/routing-software-cannot-find-a-route-accross-a-border-post-sahara" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/40858/routing-software-cannot-find-a-route-accross-a-border-post-sahara?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zvnRNWtKoy0fqngdcXrVBcgMKWorBWZM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/40858/routing-software-cannot-find-a-route-accross-a-border-post-sahara">Routing software cannot find a route accross a border post (Sahara)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-40858-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40858/up/" rel="nofollow"> </a>
+<div id="post-40858-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-40858-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40858/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/40858/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have been looking into why OpenStreetMap based routing software cannot find a route from the N1 to the N5 across the no mans land border post in the South of Western Sahara. I signed up as an OpenStreetMap user and used the web editing software to identify exactly where it goes wrong and it appears to be the border post at the Northern end of no mans land. No route can be found from the N1 to the track through the border post.</p>
+<p>I have never edited OSM data before and would like help/guidance in identifying the exact cause and applying a fix.</p>
+<p>Thanks
+John</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/border/" class="post-tag tag-link-border"
+                                        title="see questions tagged 'border'" rel="tag">border</a>
+                                
+                                    <a href="/tags/mapfactor/" class="post-tag tag-link-mapfactor"
+                                        title="see questions tagged 'mapfactor'" rel="tag">mapfactor</a>
+                                
+                                    <a href="/tags/newbie/" class="post-tag tag-link-newbie"
+                                        title="see questions tagged 'newbie'" rel="tag">newbie</a>
+                                
+                                    <a href="/tags/routing/" class="post-tag tag-link-routing"
+                                        title="see questions tagged 'routing'" rel="tag">routing</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Feb '15, 11:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/180199b9cea32bfe5acf5f2d3dfdeb52?s=32&amp;d=identicon&amp;r=g" alt="MrBassMan's gravatar image" />
+    <p><a href="/users/10438/mrbassman">MrBassMan</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="MrBassMan has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/40858/">
+                edited
+                <strong>09 Feb '15, 19:56</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+            <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+            <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-40858">
+    
+        <a name="40859"></a>
+        <div class="comment" id="comment-40859">
+            <div id="post-40859-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Hi John, welcome! Do you mean this location shown there <a href="http://osrm.at/aUj">OSRM</a>/<a href="//graphhopper.com/maps/?point=21.37604%2C-16.960487&amp;point=21.324079%2C-16.945381&amp;layer=OpenStreetMap">graphopper</a>/<a href="//www.openstreetmap.org/way/251493757">the "track" between the border controls on osm.org</a>?</p>
+
+<p>In fact, this <em>seems</em> to be tagged not correct for a connection between two border controls. This <em>may</em> be why your OSM-based routing software (which?) could not find this route: because you may have set it up to not route over "tracks" (small roads for agricultural use). Or your software avoid borders …</p></div>
+            <div class="comment-info" id="comment-40859-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Feb '15, 11:48)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40860"></a>
+        <div class="comment" id="comment-40860">
+            <div id="post-40860-score" class="comment-score"></div>
+            <div class="comment-text"><p>slightly off topic: just while we are at it, country borders at this country generate interesting results in routing: <a href="http://osrm.at/aUk">rather takes the ferry out and back again</a>, <a href="https://graphhopper.com/maps/?point=35.106428%2C-2.254944&amp;point=35.070469%2C-2.128601&amp;layer=OpenStreetMap">found a whatever track</a>. I do not know how reality is there.</p></div>
+            <div class="comment-info" id="comment-40860-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Feb '15, 11:58)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40862"></a>
+        <div class="comment" id="comment-40862">
+            <div id="post-40862-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes thats the place.  Using navigator 14 trying to route down West africa. Yes i am using bycycle mode on that which should use tracks.  I can route song a start point on the track just south of the border post but not route if the start is before the payout and end after.  Its as if there is a gap in the road at the border.
+Help please.</p></div>
+            <div class="comment-info" id="comment-40862-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Feb '15, 19:56)</span>
+                <a class="comment-user userinfo" href="/users/10438/mrbassman">MrBassMan</a>
+                
+            </div>
+        </div>
+    
+        <a name="40867"></a>
+        <div class="comment" id="comment-40867">
+            <div id="post-40867-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Just for reference: Who is the manufacturer of the software? The name is very unspecific.</p></div>
+            <div class="comment-info" id="comment-40867-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Feb '15, 22:52)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40870"></a>
+        <div class="comment" id="comment-40870">
+            <div id="post-40870-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Yes Mapfactor Navigator 14 - using their latest map data which is updated regularly.</p></div>
+            <div class="comment-info" id="comment-40870-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '15, 02:38)</span>
+                <a class="comment-user userinfo" href="/users/10438/mrbassman">MrBassMan</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40858" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40858-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/40858/routing-software-cannot-find-a-route-accross-a-border-post-sahara?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/40858/routing-software-cannot-find-a-route-accross-a-border-post-sahara?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/40858/routing-software-cannot-find-a-route-accross-a-border-post-sahara?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/40858/routing-software-cannot-find-a-route-accross-a-border-post-sahara?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="40866"></a>
+                    <div id="answer-container-40866" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40866-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40866/up/" rel="nofollow"> </a>
+<div id="post-40866-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-40866-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40866/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>With those two routing engines <a href="http://osrm.at/aUj">OSRM</a>/<a href="//graphhopper.com/maps/?point=21.37604%2C-16.960487&amp;point=21.324079%2C-16.945381&amp;layer=OpenStreetMap">graphopper</a> I see no problem. Both usually have very current data (not older than a week). Please could you have a look if your data is <em>up to date</em>? However, the last edit there is from 2014-11-06 and it did not change anything which would be relevant here, if I <a href="https://overpass-api.de/achavi/?changeset=26588536">see</a> correctly. I now have checked with <a href="http://www.yournavigation.org/?flat=21.379144229378&amp;flon=-16.959609984473&amp;tlat=21.321267420071&amp;tlon=-16.943817137793">yournavigation</a> (select bicycle and click "find route"): also no problem, even with its data being from 2014-09-02.</p>
+<p>I see no connection problem in our data at the  <a href="//www.openstreetmap.org/node/2577079257">northern border control</a> (you mean this one, don't you?): it is the connection between the "unclassified" road towards the north and the track towards the south.</p>
+<p>Other options would be that it does not send you over tracks with <em>special settings</em> (which <a href="//www.openstreetmap.org/way/251493757">this track</a> here has currently – you can click them on the linked way page for explanations):</p>
+<ul>
+<li><code>access=permissive</code></li>
+<li><code>smoothness=horrible</code></li>
+<li><code>surface=sand</code></li>
+</ul>
+<p>Or your software simply avoid to cross <em>borders</em>. Please check at other border controls.</p>
+<p>Or your software has maps cut into <em>separated</em> countries and cannot route between different countries.</p>
+<p>Of course it could just be a software <em>bug</em>. Ask the application developers.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40866/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Feb '15, 22:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/40866/">
+                edited
+                <strong>08 Feb '15, 22:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40866">
+    
+        <a name="40871"></a>
+        <div class="comment" id="comment-40871">
+            <div id="post-40871-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Border crossing is supported by the software.</p>
+
+<p>Routing across countries is fine normally with Mapfactor Navigator</p>
+
+<p>Software bug - I have raised the issue on their forums as well <a href="http://forum.mapfactor.com/discussion/6324/western-sahara-border-routing-using-osm-data">http://forum.mapfactor.com/discussion/6324/western-sahara-border-routing-using-osm-data</a></p></div>
+            <div class="comment-info" id="comment-40871-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '15, 02:40)</span>
+                <a class="comment-user userinfo" href="/users/10438/mrbassman">MrBassMan</a>
+                
+            </div>
+        </div>
+    
+        <a name="40883"></a>
+        <div class="comment" id="comment-40883">
+            <div id="post-40883-score" class="comment-score"></div>
+            <div class="comment-text"><p>note that the <a href="//www.openstreetmap.org/changeset/28723714">"borked N1 at border"</a> was likely not a routing problem (<a href="/upfiles/borked_N1.png">previous data state – I have dragged the bottom node a bit more to the right to make the connections better visible</a>), it as just like an intersection.</p></div>
+            <div class="comment-info" id="comment-40883-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '15, 12:55)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40895"></a>
+        <div class="comment" id="comment-40895">
+            <div id="post-40895-score" class="comment-score"></div>
+            <div class="comment-text"><p>I also don't think that my change fixed the routing problem. Nevertheless the back and forth was an error that had to be fixed.</p></div>
+            <div class="comment-info" id="comment-40895-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '15, 19:40)</span>
+                <a class="comment-user userinfo" href="/users/10452/jojo4u">Jojo4u</a>
+                
+            </div>
+        </div>
+    
+        <a name="40902"></a>
+        <div class="comment" id="comment-40902">
+            <div id="post-40902-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/10452/jojo4u">@jojo4u</a>: ah, okay, I misunderstood you then, thanks Yes, of course, that zig-zag likely was wrong.</p></div>
+            <div class="comment-info" id="comment-40902-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '15, 21:19)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40866" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40866-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/40858/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zvnRNWtKoy0fqngdcXrVBcgMKWorBWZM' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40858/routing-software-cannot-find-a-route-accross-a-border-post-sahara?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40858/routing-software-cannot-find-a-route-accross-a-border-post-sahara?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/routing/"
+            class="tag-link-routing"
+            title="see questions tagged'routing'using tags"
+            rel="tag">routing</a> <span class="tag-number">&#215;305</span><br/>
+        
+        <a href="/tags/newbie/"
+            class="tag-link-newbie"
+            title="see questions tagged'newbie'using tags"
+            rel="tag">newbie</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/border/"
+            class="tag-link-border"
+            title="see questions tagged'border'using tags"
+            rel="tag">border</a> <span class="tag-number">&#215;32</span><br/>
+        
+        <a href="/tags/mapfactor/"
+            class="tag-link-mapfactor"
+            title="see questions tagged'mapfactor'using tags"
+            rel="tag">mapfactor</a> <span class="tag-number">&#215;15</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 8, 2015, 11:35 a.m.">08 Feb '15, 11:35</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,417 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 9, 2015, 9:19 p.m.">09 Feb '15, 21:19</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/36419/seltsame-route">Seltsame Route</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41205/ie8-fails-with-new-release">ie8 fails with new release</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49158/newbie-incorrect-directions-to-newly-created-road">Newbie - incorrect directions to newly created road</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24/how-does-tilesathome-th-work">How does tilesAtHome (t@h) work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/275/how-do-i-connect-a-high-speed-bidirectional-trunk-road-to-the-network">How do I connect a high speed bidirectional (trunk) road to the network ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/310/how-do-you-tag-gates-that-are-open-most-of-the-time">How do you tag gates that are open most of the time?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/259/what-is-the-recommended-way-to-tag-temporary-road-works-and-traffic-situations">What is the recommended way to tag temporary road works and traffic situations?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/687/are-motorcars-allowed-on-track-roads">Are motorcars allowed on &#39;track&#39; roads ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/737/is-there-any-windows-ce-navigation-software-that-uses-osm-data">Is there any Windows CE navigation software that uses OSM data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/467/how-do-i-use-osm-maps-in-my-gps">How do I use OSM maps in my GPS?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

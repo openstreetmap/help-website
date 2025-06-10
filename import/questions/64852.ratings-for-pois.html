@@ -1,0 +1,1106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Ratings for POI&#39;s? - OSM Help</title>
+        <meta name="description" content="Is there something like a rating tag for POI&#39;s (e.g. rating=1-10)? If not then this certainly would be a nice addition. Mappers could check online (Tripadvisor, Google, Booking.com) and enter the value. There is a certain risk of edit wars between POI owner and mappers though..." />
+        <meta name="keywords" content="rating,poi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/64852/ratings-for-pois" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/64852/ratings-for-pois?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='N5PxYA7oCds0GMe91tqdu6FSJcWdGMoh' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/64852/ratings-for-pois">Ratings for POI&#39;s?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-64852-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64852/up/" rel="nofollow"> </a>
+<div id="post-64852-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-64852-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64852/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/64852/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is there something like a rating tag for POI's (e.g. rating=1-10)? If not then this certainly would be a nice addition. Mappers could check online (Tripadvisor, Google, Booking.com) and enter the value. There is a certain risk of edit wars between POI owner and mappers though...</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rating/" class="post-tag tag-link-rating"
+                                        title="see questions tagged 'rating'" rel="tag">rating</a>
+                                
+                                    <a href="/tags/poi/" class="post-tag tag-link-poi"
+                                        title="see questions tagged 'poi'" rel="tag">poi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Jul '18, 09:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a6e2839b04b99e35e45d64fe66b9a500?s=32&amp;d=identicon&amp;r=g" alt="rene78's gravatar image" />
+    <p><a href="/users/1829/rene78">rene78</a><br/>
+    <span class="score" title="700 reputation points">700</span><span title="29 badges"><span class="badge1">&#9679;</span><span class="badgecount">29</span></span><span title="33 badges"><span class="silver">&#9679;</span><span class="badgecount">33</span></span><span title="42 badges"><span class="bronze">&#9679;</span><span class="badgecount">42</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rene78 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-64852">
+    
+</div>
+<div id="comment-tools-64852" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64852-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/64852/ratings-for-pois?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/64852/ratings-for-pois?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/64852/ratings-for-pois?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/64852/ratings-for-pois?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="64864"></a>
+                    <div id="answer-container-64864" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64864-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64864/up/" rel="nofollow"> </a>
+<div id="post-64864-score" class="post-score"
+    title="current number of votes">
+    9
+</div>
+<a id="post-64864-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64864/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>One of the key principals of OpenStreetMap is "Verifiability" -- the idea is that any data entered into OpenStreetMap should be factual not editorial, available to the general public, and verifiable by the next mapper that comes along. See <a href="https://wiki.openstreetmap.org/wiki/Good_practice">Good Practice</a> on the wiki.</p>
+<p>A mapper assigning a rating to a restaurant (etc) is clearly not verifiable -- it's a matter of personal taste and ephemeral experience. So it doesn't belong in the OSM database. And yes, it would immediately motivate spam and edit wars.</p>
+<p>Generally, online ratings are made using weighted averages of reviews. OSM doesn't have any facility for averaging data like this. We don't vote on values for keys; new values simply replace the old ones.</p>
+<p>It would certainly be possible to create a review system that used data from OSM to provide the factual info for the restaurants etc that were being rated -- location, name, phone numbers, opening hours, cuisine, wheelchair accessibility, etc -- and keep its own database for the ratings data. I know of at least one project that intends to provide this review functionality in a way that works alongside OSM data -- It's called <a href="https://lib.reviews/team/developers/post/30c5fb18-e2c3-4a5c-b25d-4d957c5344b7">lib.reviews</a>. There may be others.</p>
+<p>(This also brings to mind the question of "permanent IDs" that's currently being discussed in <a href="https://help.openstreetmap.org/questions/64817/what-are-the-technical-problems-with-permanent-id">another question</a> -- ie, how and whether to maintain a link to the old reviews if a restaurant is remapped from a node to a way, or moves to another location but keeps the same name and menu. How to make sure a spelling correction of a restaurant's name doesn't eliminate old reviews, but a new restaurant opening in the closed space of another doesn't inherit the previous reviews. That sort of thing.)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64864/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jul '18, 17:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/977d95e2184a885d9a01fb3297225872?s=32&amp;d=identicon&amp;r=g" alt="jmapb's gravatar image" />
+    <p><a href="/users/14350/jmapb">jmapb</a><br/>
+    <span class="score" title="3387 reputation points"><span class="">3.4k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">&#9679;</span><span class="badgecount">33</span></span><span title="61 badges"><span class="bronze">&#9679;</span><span class="badgecount">61</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jmapb has 22 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64864">
+    
+        <a name="64884"></a>
+        <div class="comment" id="comment-64884">
+            <div id="post-64884-score" class="comment-score"></div>
+            <div class="comment-text"><p>But isn't it verifiable by simply going to those popular websites and check the rating? I am often surprised how close the ratings for the same POI are on each of them. That shows in my opinion that swarm intelligence works.
+But I already see, that I'm the only one who thinks that it would be a good idea to have a POI-rating in OSM ;)</p>
+
+<p>Your question in brackets could be tackled by Wikidata ID's(?)</p></div>
+            <div class="comment-info" id="comment-64884-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 09:15)</span>
+                <a class="comment-user userinfo" href="/users/1829/rene78">rene78</a>
+                
+            </div>
+        </div>
+    
+        <a name="64891"></a>
+        <div class="comment" id="comment-64891">
+            <div id="post-64891-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The general rule is: Map what can be observed in person by the general public. Some stricter mappers interpret this as just the physical attributes of a POI and whatever signage is visible from the street. Others are more lenient and will consider info gathered from menu cards, talking with staff, and even the official website and social media posts of a business to be the equivalent of signage. But opinions posted by random people and aggregated by Google etc. are beyond the pale. (And also probably prohibited by license.)</p></div>
+            <div class="comment-info" id="comment-64891-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 17:29)</span>
+                <a class="comment-user userinfo" href="/users/14350/jmapb">jmapb</a>
+                
+            </div>
+        </div>
+    
+        <a name="64892"></a>
+        <div class="comment" id="comment-64892">
+            <div id="post-64892-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I think understand your use case -- travelling without reliable internet access and wishing for a simple offline database of amenity ratings to help decide where to eat and sleep. IMO it's a feature best implemented by a third party. A developer could offer it as a feature of an offline map app: At the time of map data download, process the list of POIs and attempt to scrape various web sites for ratings info, using some fuzzy matching of name and location. The result could be added as a tag in the local copy of the map data, on your phone or tablet. This could be quite useful. And it's possible that the developer in question would get a cease-and-desist order from the review sites, but it wouldn't become a legal problem for OSM itself.</p></div>
+            <div class="comment-info" id="comment-64892-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 17:31)</span>
+                <a class="comment-user userinfo" href="/users/14350/jmapb">jmapb</a>
+                
+            </div>
+        </div>
+    
+        <a name="64893"></a>
+        <div class="comment" id="comment-64893">
+            <div id="post-64893-score" class="comment-score"></div>
+            <div class="comment-text"><p>(As far as using Wikidata for a Permanet ID/Persistent Place Identifier -- yes, or something along those lines. But Wikidata inherits Wikipedia's "notability" criteria for things. They'll have a code for a famous restaurant, but not for the corner burrito joint.</p>
+
+<p>One suggestion is that OSM make use of a variety of permanent ID authorities, so if something doesn't warrant a Wikidata ID it can be tagged with an ID from, say, Burritodata. Or both, if it's a famous burrito place. At this point it's still an open discussion and it's not going to be settled for a while.)</p></div>
+            <div class="comment-info" id="comment-64893-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 17:47)</span>
+                <a class="comment-user userinfo" href="/users/14350/jmapb">jmapb</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64864" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64864-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="64854"></a>
+                    <div id="answer-container-64854" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64854-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64854/up/" rel="nofollow"> </a>
+<div id="post-64854-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-64854-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64854/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>All the services you mention have their own rating system. I doubt you are allowed to copy this data. Honestly, I think OSM should stay away from those kind of subjective ratings. </p>
+<p>There is a difference though with the stars you find on hotels on European hotels, as they tend to be visible  for anyone passing the hotel. The tag for such stars is described on the <a href="https://wiki.openstreetmap.org/wiki/Key:stars">wiki</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64854/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jul '18, 10:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/813a136afe7d4c95fd5bccdd78705e0e?s=32&amp;d=identicon&amp;r=g" alt="escada's gravatar image" />
+    <p><a href="/users/5390/escada">escada</a><br/>
+    <span class="score" title="19043 reputation points"><span class="">19.0k</span></span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="166 badges"><span class="silver">&#9679;</span><span class="badgecount">166</span></span><span title="302 badges"><span class="bronze">&#9679;</span><span class="badgecount">302</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="escada has 97 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64854">
+    
+        <a name="64859"></a>
+        <div class="comment" id="comment-64859">
+            <div id="post-64859-score" class="comment-score"></div>
+            <div class="comment-text"><p>A single rating is subjective. Hundreds or thousands of them give a good impression of the quality of a place. All this information is gathered from people like you and me. It belongs to nobody in my opinion. I guess that is the reason why Google collects the ratings from all major sites (i.e. Tripadvisor, booking.com, etc.) in their rating system.</p>
+
+<p>This is the only reason when travelling, that I have to rely on the internet again: To see whether this hotel, restaurant, etc. is any good. Would be nice to stay completely in my OSM based offline navigation app.</p></div>
+            <div class="comment-info" id="comment-64859-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '18, 14:00)</span>
+                <a class="comment-user userinfo" href="/users/1829/rene78">rene78</a>
+                
+            </div>
+        </div>
+    
+        <a name="64861"></a>
+        <div class="comment" id="comment-64861">
+            <div id="post-64861-score" class="comment-score"></div>
+            <div class="comment-text"><p>One more thing. It could be implemented like that: Restaurant x got 3.5/5 from website x, a 7/10 from website y and 7.5/10 from z. Then the OSM rating tag would be set to 7. No rocket science. Just a quick check online.
+(I hope in a decade we'll have independent rating systems based on blockchain though...)</p></div>
+            <div class="comment-info" id="comment-64861-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '18, 15:45)</span>
+                <a class="comment-user userinfo" href="/users/1829/rene78">rene78</a>
+                
+            </div>
+        </div>
+    
+        <a name="64863"></a>
+        <div class="comment" id="comment-64863">
+            <div id="post-64863-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Since those ratings will change over time it is much better that your favorite app would directly integrate the values from those third party sites, instead of copying them first to osm. A bit like OsmAnd works with Wikipadia at this moment.</p>
+
+<p>And again, I doubt that you sre legally allowed copy the data from their websites</p></div>
+            <div class="comment-info" id="comment-64863-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '18, 15:54)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="64876"></a>
+        <div class="comment" id="comment-64876">
+            <div id="post-64876-score" class="comment-score">1</div>
+            <div class="comment-text"><p>One would have expected that someone with over 11000 uploaded changesets would have a better understanding of basic OSM concepts like verifiability and license/copyright issues.</p></div>
+            <div class="comment-info" id="comment-64876-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jul '18, 18:47)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="64880"></a>
+        <div class="comment" id="comment-64880">
+            <div id="post-64880-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/8189/alester"></a><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a>, when TripAdvisor writes on their <a href="https://tripadvisor.mediaroom.com/us-terms-of-use">terms of use page</a></p>
+
+<p>"The content and information on this Website (including, but not limited to, messages, data, information, text, music, sound, photos, graphics, video, maps, icons, software, code or other material), as well as the infrastructure used to provide such content and information, is proprietary to us. You agree not to otherwise modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell or re-sell any information, software, products, or services obtained from or through this Website."</p>
+
+<p>and also "Additionally, you agree not to:</p>
+
+<p>(i) use this Website or its contents for any commercial purpose"</p>
+
+<p>my understanding is that you cannot copy their rating in OSM. but I can be mistaken. Please let me know if you can copy data from another database if they post a text like this on their webiste</p></div>
+            <div class="comment-info" id="comment-64880-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 04:47)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="64881"></a>
+        <div class="comment not_top_scorer" id="comment-64881">
+            <div id="post-64881-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a>: as for verifiability, you are correct that taking ratings from another source is verifiable. Having our own rating system is not. When the OP write "rating tag for POI's" this meant to me, a rating given by mappers. When the OP wrote to copy the value from other sites, it's a DB license issue.</p>
+
+<p>For me, those rating sites live from people visiting their website/use their app and click on ads or make bookings through them after seeing the score and reviews. By moving their ratings elsewhere, they loose clicks and thus revenue. I think that is the reason they do no allow you to copy any content from their website.</p></div>
+            <div class="comment-info" id="comment-64881-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 05:38)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="64885"></a>
+        <div class="comment not_top_scorer" id="comment-64885">
+            <div id="post-64885-score" class="comment-score"></div>
+            <div class="comment-text"><p>"One would have expected that someone with over 11000 uploaded changesets would have a better understanding of basic OSM concepts like verifiability and license/copyright issues."</p>
+
+<p>Verifiablility would be easy. Just go back after a year and check whether the ratings have changed significantly. Regarding copyright I am not sure. Of course the rating portals don't want you to copy pictures and text from their websites, but a simple overall rating number? Google is collecting those numbers at least. But they could have a deal with them.</p></div>
+            <div class="comment-info" id="comment-64885-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 09:26)</span>
+                <a class="comment-user userinfo" href="/users/1829/rene78">rene78</a>
+                
+            </div>
+        </div>
+    
+        <a name="64888"></a>
+        <div class="comment not_top_scorer" id="comment-64888">
+            <div id="post-64888-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/5390/escada"></a><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>: Sorry, I should have been more clear. My comment was referencing rene78, not you. I'm on your side as far as thinking that this is a bad idea. :)</p></div>
+            <div class="comment-info" id="comment-64888-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 16:47)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="64889"></a>
+        <div class="comment not_top_scorer" id="comment-64889">
+            <div id="post-64889-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a>,  thanks for letting  me know! It was indeed confusing.</p></div>
+            <div class="comment-info" id="comment-64889-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 16:49)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+        <a name="64890"></a>
+        <div class="comment not_top_scorer" id="comment-64890">
+            <div id="post-64890-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/1829/rene78">@rene78</a>: A collection or average of subjective data is still subjective data and not verifiable (ie. if you ask a few different people, you'll probably get different results). As for the legal use of third-party data, remember that OSM has very different licensing terms and goals than Google, who can effectively do whatever they want. OSM is limited to sources that are compatible with the ODbL license.</p></div>
+            <div class="comment-info" id="comment-64890-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 16:55)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64854" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64854-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="64883"></a>
+                    <div id="answer-container-64883" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-64883-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64883/up/" rel="nofollow"> </a>
+<div id="post-64883-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-64883-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64883/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>One possible option is to just point to corresponding entries at online rating systems via tags. Example:</p>
+<pre><code>rating:tripadvisor=<a href="http://www.tripadvisor.com/Moes_Tavern.html">http://www.tripadvisor.com/Moes_Tavern.html</a>
+rating:google=<a href="http://www.google.com/super_long_and_ugly_and_mysterious_google_url_gibberish.html">http://www.google.com/super_long_and_ugly_and_mysterious_google_url_gibberish.html</a>
+rating:booking.com=<a href="http://www.booking.com/hotel/Moes_hovel.html">http://www.booking.com/hotel/Moes_hovel.html</a>
+</code></pre>
+<p>This approach would be verifiable and neutral. However I'm still not convinced that this is a good idea.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/64883/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jul '18, 08:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-64883">
+    
+        <a name="64886"></a>
+        <div class="comment" id="comment-64886">
+            <div id="post-64886-score" class="comment-score">3</div>
+            <div class="comment-text"><p>@"not [...] good idea": what about my supercool rating website ( rating:acme=<a href="http://example.com/acme/the_windhound_london">http://example.com/acme/the_windhound_london</a> )? Isn't that spam for unrelated companies (who make money e.g. from ads on their pages)? I tend to think that everybody should use their own favourite web search engine to find ratings or directly go to their favourite ratings website.</p></div>
+            <div class="comment-info" id="comment-64886-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 11:38)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="64887"></a>
+        <div class="comment" id="comment-64887">
+            <div id="post-64887-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes. Sure you can already add links to your favorite spam website via the <code>website</code> key to attract potential visitors. But the above scheme will certainly attract even more spam.</p></div>
+            <div class="comment-info" id="comment-64887-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jul '18, 11:47)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64883" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64883-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/64852/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='N5PxYA7oCds0GMe91tqdu6FSJcWdGMoh' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64852/ratings-for-pois?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64852/ratings-for-pois?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/poi/"
+            class="tag-link-poi"
+            title="see questions tagged'poi'using tags"
+            rel="tag">poi</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/rating/"
+            class="tag-link-rating"
+            title="see questions tagged'rating'using tags"
+            rel="tag">rating</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 22, 2018, 9:51 a.m.">22 Jul '18, 09:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,717 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 24, 2018, 5:47 p.m.">24 Jul '18, 17:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/786/is-there-a-way-to-undelete-a-deleted-node-poi">Is there a way to undelete a deleted node (POI) ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">Can I influence what gets rendered in the main Mapnik layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1167/charging-money-for-creating-and-uploading-pois">Charging money for creating and uploading POIs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1194/what-osm-is-not">What OSM is not</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1311/how-do-i-create-a-map-for-printing-with-specific-poi">How do I create a map for printing with specific POI?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1365/for-groups-of-phone-booths-should-i-add-a-single-poi-or-multiple-pois">For groups of phone booths, should I add a single POI or multiple POIs?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1582/adding-metadata-using-websites">Adding &#39;metadata&#39; using websites?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1696/how-do-i-name-existing-pois-which-are-currently-unnamed">How do I name existing POIs which are currently unnamed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15/getting-point-of-interest-data-from-openstreetmap">Getting point of interest data from OpenStreetMap</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

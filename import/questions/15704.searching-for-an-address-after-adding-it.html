@@ -1,0 +1,830 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Searching for an address after adding it - OSM Help</title>
+        <meta name="description" content="Hi, I am new to OSM and have a question. I added a few locations/addresses to the map. How long should it take for these changes to applied in such a way that I can search for the address and successfully get a result back? I read in some places the map might not get updated for weeks or months, and..." />
+        <meta name="keywords" content="changes,update,address" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/15704/searching-for-an-address-after-adding-it" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/15704/searching-for-an-address-after-adding-it?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CXps1eA36rWJcT1QCoFheSdhyyGOz4JE' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/15704/searching-for-an-address-after-adding-it">Searching for an address after adding it</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-15704-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15704/up/" rel="nofollow"> </a>
+<div id="post-15704-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-15704-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15704/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/15704/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I am new to OSM and have a question. I added a few locations/addresses to the map. How long should it take for these changes to applied in such a way that I can search for the address and successfully get a result back? I read in some places the map might not get updated for weeks or months, and other places said within minutes. I'm also more concerned about searching for the address, not necessarily seeing it on the map.</p>
+<p>Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/changes/" class="post-tag tag-link-changes"
+                                        title="see questions tagged 'changes'" rel="tag">changes</a>
+                                
+                                    <a href="/tags/update/" class="post-tag tag-link-update"
+                                        title="see questions tagged 'update'" rel="tag">update</a>
+                                
+                                    <a href="/tags/address/" class="post-tag tag-link-address"
+                                        title="see questions tagged 'address'" rel="tag">address</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>31 Aug '12, 05:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/43f538e86733e722312e5ba38b7512ad?s=32&amp;d=identicon&amp;r=g" alt="down2party's gravatar image" />
+    <p><a href="/users/4418/down2party">down2party</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="down2party has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-15704">
+    
+</div>
+<div id="comment-tools-15704" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15704-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/15704/searching-for-an-address-after-adding-it?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/15704/searching-for-an-address-after-adding-it?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/15704/searching-for-an-address-after-adding-it?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/15704/searching-for-an-address-after-adding-it?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15724"></a>
+                    <div id="answer-container-15724" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15724-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15724/up/" rel="nofollow"> </a>
+<div id="post-15724-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-15724-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15724/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="down2party has selected this answer as the correct answer"
+        href="/accept_answer/15724/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think I now see what happened here.<br>
+</p>
+<p>The building was added as changeset 12924638 and included an addr:street of "New Castle Road" but "New Castle Road" itself wasn't added until changeset 12926499, nearly 5 hours later, by which time nominatim had already indexed the building - and not being able to find the street given just linked it to the nearest road (Arch Road).</p>
+<p>It is helpful (and more common) that roads are added to places before buildings but this should be resolved as an update bug in nominatim.</p>
+<p>I've edited this area to clean up the building outline and as a result the building was re-indexed.  It now looks like it has the correct address.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15724/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Aug '12, 15:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bda08a105bb6a4a606d47c1b27187fac?s=32&amp;d=identicon&amp;r=g" alt="twain's gravatar image" />
+    <p><a href="/users/4/twain">twain</a><br/>
+    <span class="score" title="2381 reputation points"><span class="">2.4k</span></span><span title="25 badges"><span class="silver">&#9679;</span><span class="badgecount">25</span></span><span title="38 badges"><span class="bronze">&#9679;</span><span class="badgecount">38</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="twain has 15 accepted answers">40&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15724">
+    
+        <a name="15738"></a>
+        <div class="comment" id="comment-15738">
+            <div id="post-15738-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks so much for your assistance twain! I am new to OSM and didn't know street was missing the first time around, or that it even worked that way. I noticed later it was missing and went back to add it. Searching for "4718 New Castle Road, Stockton, CA" works now. Oddly, searching for "4718 New Castle Road, Stockton, CA 95215" does not work.</p></div>
+            <div class="comment-info" id="comment-15738-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Sep '12, 00:16)</span>
+                <a class="comment-user userinfo" href="/users/4418/down2party">down2party</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15724" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15724-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="15710"></a>
+                    <div id="answer-container-15710" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15710-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15710/up/" rel="nofollow"> </a>
+<div id="post-15710-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-15710-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15710/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Searching and rendering are two different things, that's why the rendering intervals don't apply for searching addresses. For searching we currently use <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> which had several update problems in the past, also due to our recent license change. But now it should update more regularly I guess so that your data should appear soon. The date of the last update can be viewed at <a href="http://nominatim.openstreetmap.org/">nominatim.openstreetmap.org</a> at the top of the page.</p>
+<p>If you think your data should already be searchable, but isn't, please be more specific and give use some information about your changes, ideally the ID of an object or of a changeset.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15710/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Aug '12, 06:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/52d3234f3be58156770e8a91d575bfbd?s=32&amp;d=identicon&amp;r=g" alt="scai's gravatar image" />
+    <p><a href="/users/158/scai">scai ♦</a><br/>
+    <span class="score" title="33317 reputation points"><span class="">33.3k</span></span><span title="21 badges"><span class="badge1">&#9679;</span><span class="badgecount">21</span></span><span title="309 badges"><span class="silver">&#9679;</span><span class="badgecount">309</span></span><span title="459 badges"><span class="bronze">&#9679;</span><span class="badgecount">459</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="scai has 168 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15710">
+    
+        <a name="15712"></a>
+        <div class="comment" id="comment-15712">
+            <div id="post-15712-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your input. I am seeing some things updated and others not - I believe there are just some missing pieces that I dont understand yet. Maybe someone can help me figure it out. First example, I'm trying to create an address in Stockton, CA. Somehow the city of Stockton is not married to the postal code 95215. So if I search for </p>
+
+<p></p><address>, Stockton, CA 95215 - it won't find it. Also, the search is finding the street but not the specific address, even though I put in the house number and street name. Changeset: 12926499<p></p></address><p></p></div>
+            <div class="comment-info" id="comment-15712-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '12, 06:58)</span>
+                <a class="comment-user userinfo" href="/users/4418/down2party">down2party</a>
+                
+            </div>
+        </div>
+    
+        <a name="15714"></a>
+        <div class="comment" id="comment-15714">
+            <div id="post-15714-score" class="comment-score"></div>
+            <div class="comment-text"><p>The <a href="http://www.openstreetmap.org/browse/way/178719020/history">building</a> I assume you are talking about has been added on 2012/08/30 which is also the date of Nominatim's last update, so I suggest to wait for the next update first.</p>
+
+<p>But you are probably right about the <a href="http://wiki.openstreetmap.org/wiki/Key:postal_code">postal code</a>, I can't find it anywhere <a href="http://nominatim.openstreetmap.org/details.php?place_id=148850659">here</a>. Seems like postal codes are missing a lot in this area.</p></div>
+            <div class="comment-info" id="comment-15714-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '12, 07:39)</span>
+                <a class="comment-user userinfo" href="/users/158/scai">scai ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15716"></a>
+        <div class="comment" id="comment-15716">
+            <div id="post-15716-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can check also this building on <a href="http://nominatim.openstreetmap.org/details?osmtype=W&amp;osmid=178719020">this page</a>.</p></div>
+            <div class="comment-info" id="comment-15716-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '12, 09:51)</span>
+                <a class="comment-user userinfo" href="/users/868/nicolasdumoulin">NicolasDumoulin</a>
+                
+            </div>
+        </div>
+    
+        <a name="15722"></a>
+        <div class="comment" id="comment-15722">
+            <div id="post-15722-score" class="comment-score"></div>
+            <div class="comment-text"><p>Nicolas, this is the building I'm trying to add. It does not show up in search with the address. (It finds the street name, but not the specific address).</p>
+
+<p>Is there any way to tie the building to the postal code so it will show up in search? Even thought he postal code is missing? Thanks for all the valuable help.</p></div>
+            <div class="comment-info" id="comment-15722-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '12, 15:16)</span>
+                <a class="comment-user userinfo" href="/users/4418/down2party">down2party</a>
+                
+            </div>
+        </div>
+    
+        <a name="15723"></a>
+        <div class="comment" id="comment-15723">
+            <div id="post-15723-score" class="comment-score">2</div>
+            <div class="comment-text"><p>As far as I can tell from the comments the address you are searching for is there: <a href="http://nominatim.openstreetmap.org/search.php?q=4718+Arch+Road%2C+Stockton%2C+CA+95215">http://nominatim.openstreetmap.org/search.php?q=4718+Arch+Road%2C+Stockton%2C+CA+95215</a></p>
+
+<p>if this is not the address you are looking for can you give it and the osm id of the feature you are expecting to be found?</p></div>
+            <div class="comment-info" id="comment-15723-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '12, 15:31)</span>
+                <a class="comment-user userinfo" href="/users/4/twain">twain</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15710" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15710-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/15704/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='CXps1eA36rWJcT1QCoFheSdhyyGOz4JE' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15704/searching-for-an-address-after-adding-it?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15704/searching-for-an-address-after-adding-it?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/address/"
+            class="tag-link-address"
+            title="see questions tagged'address'using tags"
+            rel="tag">address</a> <span class="tag-number">&#215;202</span><br/>
+        
+        <a href="/tags/update/"
+            class="tag-link-update"
+            title="see questions tagged'update'using tags"
+            rel="tag">update</a> <span class="tag-number">&#215;199</span><br/>
+        
+        <a href="/tags/changes/"
+            class="tag-link-changes"
+            title="see questions tagged'changes'using tags"
+            rel="tag">changes</a> <span class="tag-number">&#215;79</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 31, 2012, 5:02 a.m.">31 Aug '12, 05:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,864 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 1, 2012, 12:16 a.m.">01 Sep '12, 00:16</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/45490/why-are-my-changes-visible-only-on-some-but-not-on-all-layers">Why are my changes visible only on some but not on all layers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/65078/how-long-time-editing-goes-to-opencyclemap">How long time editing goes to OpenCycleMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28519/how-long-does-it-take-for-a-new-address-to-be-searchable-in-osmand">How long does it take for a new address to be searchable in OsmAnd?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42199/different-street-name-shown-for-when-zooming">[closed] Different street name shown for when zooming</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59701/update-map">Update map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64132/update-mapsme-when-you-change-something-in-openstreetmap">Update MAPS.ME when you change something in OpenStreetMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">When does a change get updated on the OpenCycleMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21720/i-inserted-some-coffe-bars-and-building-names-but-i-cant-see-changes-on-view">I inserted some coffe bars and building names but I cant see changes on view</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35149/editing-with-potlatch-2">Editing with Potlatch 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/87177/updating-different-layers">Updating different layers</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

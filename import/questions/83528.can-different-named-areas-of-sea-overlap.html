@@ -1,0 +1,1282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can different named areas of sea overlap? - OSM Help</title>
+        <meta name="description" content="An editor renamed some named areas of the sea close to where I live, saying that bodies of water should only have one name for each point. I believe many places, both on land and at sea, are subunits of larger areas, both named. As such I think it is a mistake to avoid overlapping named areas.  It i..." />
+        <meta name="keywords" content="natural,tagging,sea,convention" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/83528/can-different-named-areas-of-sea-overlap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/83528/can-different-named-areas-of-sea-overlap?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sUMkGP2iGxrllbaM2xHTvMVpJOrlNhYS' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/83528/can-different-named-areas-of-sea-overlap">Can different named areas of sea overlap?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-83528-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83528/up/" rel="nofollow"> </a>
+<div id="post-83528-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-83528-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83528/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/83528/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>An editor renamed some named areas of the sea close to where I live, saying that bodies of water should only have one name for each point. I believe many places, both on land and at sea, are subunits of larger areas, both named. As such I think it is a mistake to avoid overlapping named areas. </p>
+<p>It is clear on land that, for example, neighbourhoods are subunits of cities, so there is no issues of having one within another. At sea, there is a less clear hierarchy, with inlets, harbours, bays, coves, sometimes existing as subunits, and sometimes existing independently. </p>
+<p>I think that a Cove may exist independently of a inlet, or as part of an inlet, and should be mapped in whichever way is correct.</p>
+<p>Maybe it's less clear because we have fewer tags for parts of the sea, than we do for human settlements, and the <code>natural=bay</code> tag gets used for all the bodies of water I mention above.</p>
+<p><a href="https://www.openstreetmap.org/changeset/113008604">Here is the changeset</a> where the editor explains their opinion on the matter. </p>
+<p>The Wikipedia entry for Burrard Inlet (<a href="https://en.wikipedia.org/wiki/en:Burrard%20Inlet">link</a>) describes an area many times larger than what we have mapped on OSM (<a href="https://www.openstreetmap.org/relation/8330512"><strike>link</strike></a> <a href="https://www.openstreetmap.org/relation/13838057#map=13/49.2978/-122.9731">updated link</a>, as I've edited the relations around Vancouver). </p>
+<p>Am I missing something?</p>
+<p><strong>Edit:</strong> <a href="https://lists.openstreetmap.org/pipermail/talk-ca/2021-October/subject.html">here's</a> an additional bit of info, there seems to have been a bit of a controversy on the mailing list related to the edits that brought this to my attention. Although that was focused on whether relations were an appropriate choice, not on my question of whether or not named areas should not overlap, even if one is within another.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/natural/" class="post-tag tag-link-natural"
+                                        title="see questions tagged 'natural'" rel="tag">natural</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                                    <a href="/tags/sea/" class="post-tag tag-link-sea"
+                                        title="see questions tagged 'sea'" rel="tag">sea</a>
+                                
+                                    <a href="/tags/convention/" class="post-tag tag-link-convention"
+                                        title="see questions tagged 'convention'" rel="tag">convention</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Feb '22, 05:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f88a467aa884aeb760041004f62448ee?s=32&amp;d=identicon&amp;r=g" alt="keithonearth's gravatar image" />
+    <p><a href="/users/9027/keithonearth">keithonearth</a><br/>
+    <span class="score" title="2939 reputation points"><span class="">2.9k</span></span><span title="56 badges"><span class="badge1">&#9679;</span><span class="badgecount">56</span></span><span title="76 badges"><span class="silver">&#9679;</span><span class="badgecount">76</span></span><span title="108 badges"><span class="bronze">&#9679;</span><span class="badgecount">108</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="keithonearth has 3 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/83528/">
+                edited
+                <strong>09 Mar '22, 21:47</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-83528">
+    
+        <a name="83537"></a>
+        <div class="comment" id="comment-83537">
+            <div id="post-83537-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I believe that the relevant wiki page is 
+<a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element</a> and I don't think that it supports <a href="https://help.openstreetmap.org/users/17085/denelson83">@DENelson83</a>'s approach here (as I've said on the changeset).</p></div>
+            <div class="comment-info" id="comment-83537-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Feb '22, 13:34)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83528" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83528-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/83528/can-different-named-areas-of-sea-overlap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/83528/can-different-named-areas-of-sea-overlap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/83528/can-different-named-areas-of-sea-overlap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/83528/can-different-named-areas-of-sea-overlap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="83531"></a>
+                    <div id="answer-container-83531" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83531-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83531/up/" rel="nofollow"> </a>
+<div id="post-83531-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-83531-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83531/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I would not recommend the naming of water areas by creating large polygons, instead I would just place a node somewhere in the middle of that water area. Most of these areas are somewhat fuzzy at least on the sea side, and creating polygons always forces you to specify an exact (and thereby wrong) boundary. Plus, they make coastline editing more complex as many edits to the coastline will require creating and uploading new versions of the water relations. So just get rid of these polygons and that will neatly solve your overlap problem as well. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83531/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Feb '22, 08:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83531">
+    
+        <a name="83539"></a>
+        <div class="comment" id="comment-83539">
+            <div id="post-83539-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Although your general point is correct, in this case it's a bit different.  This is a fjord, and its area is actually pretty well defined by land on all sides.  It's not a vague sea area where the boundary to other vague sea areas is not well defined, and <a href="https://www.openstreetmap.org/way/978872326">https://www.openstreetmap.org/way/978872326</a> pretty clearly delineates the western end (although as keithonearth says, what is in OSM right now does not really reflect reality).</p></div>
+            <div class="comment-info" id="comment-83539-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Feb '22, 13:42)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="83555"></a>
+        <div class="comment" id="comment-83555">
+            <div id="post-83555-score" class="comment-score"></div>
+            <div class="comment-text"><p>A agree that for many areas of the sea a node is a good choice, as the boundaries are so ambiguous. For other features the boundaries are pretty well defined, and using a multipolygon is appropriate. The advantage of a multipolygon over a node is it allows software to prioritise based on size, for example the renderer showing large features' names, and not small features' names, when there is not room for both. In the case that initially brought this to my attention many bays, and inlets are clearly defined on 3 sides, and often have a small opening to other areas of the sea.</p></div>
+            <div class="comment-info" id="comment-83555-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Feb '22, 23:18)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83531" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83531-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="83542"></a>
+                    <div id="answer-container-83542" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83542-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83542/up/" rel="nofollow"> </a>
+<div id="post-83542-score" class="post-score"
+    title="current number of votes">
+    -1
+</div>
+<a id="post-83542-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83542/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Here is an idea I have for how to solve this.  I have created Burrard Inlet <a href="https://www.openstreetmap.org/relation/13828328">https://www.openstreetmap.org/relation/13828328</a> and Howe Sound <a href="https://www.openstreetmap.org/relation/13828327">https://www.openstreetmap.org/relation/13828327</a> as parent relations for the named bodies of seawater that comprise those larger bodies.  I know that Nominatim will not recognize them in this form at this point, and they will not be painted in on a search, but at least it is a start, and better than nothing, and I hope it goes part of the way to satisfying everyone involved in this, including myself.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83542/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Feb '22, 06:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fd3f710d06987dc73153b9a1e836929a?s=32&amp;d=identicon&amp;r=g" alt="DENelson83's gravatar image" />
+    <p><a href="/users/17085/denelson83">DENelson83</a><br/>
+    <span class="score" title="18 reputation points">18</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DENelson83 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/83542/">
+                edited
+                <strong>20 Feb '22, 06:17</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83542">
+    
+        <a name="83543"></a>
+        <div class="comment" id="comment-83543">
+            <div id="post-83543-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think when you say "solve this", you mean how best to structure the overlaping areas within Burrard Inlet. The question I posted was only asking the validity of your "one point, one name rule for bodies of seawater". I do not think your original rule is valid. </p>
+
+<p>The specifics of how to structure the areas of Burrard Inlet are better discussed on that changeset I initially asked about your rule, but I do not see your new approach as an improvement. Now we have two relations for Burrard Inlet, one that you've renamed "Burrard Inlet (Central)", a term I've never heard used before. I think it would be wise to avoid making further edits until we've come to a consensus.</p></div>
+            <div class="comment-info" id="comment-83543-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Feb '22, 03:15)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+        <a name="83551"></a>
+        <div class="comment" id="comment-83551">
+            <div id="post-83551-score" class="comment-score"></div>
+            <div class="comment-text"><p>I said that is the rule that I use when making these edits, and it is my preference.  For a lot of these bodies of seawater, they did not even have a presence in the OSM database until I put them in.</p>
+
+<p>Besides, the relationship between larger and smaller bodies of seawater can still be understood by context.  If you can only reach a small body of seawater by boat from a larger body by going through a single medium-sized body, then the small body of seawater is a child of the medium-sized body.  In the cases of Howe Sound and Burrard Inlet, those are instead "composite" areas, with several small named bodies of seawater, none of which overlap, added up to make a single bigger body, like a jigsaw puzzle.</p></div>
+            <div class="comment-info" id="comment-83551-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Feb '22, 08:46)</span>
+                <a class="comment-user userinfo" href="/users/17085/denelson83">DENelson83</a>
+                
+            </div>
+        </div>
+    
+        <a name="83632"></a>
+        <div class="comment" id="comment-83632">
+            <div id="post-83632-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not sure what your point is DENelson83. </p>
+
+<p>Yes, Howe Sound does consist of many smaller named bodies which add up to form a larger body of water, sort of like a jigsaw puzzle. </p>
+
+<p>This supports my point that bodies of sea water have areas that do have more than one name. If I'm Snug Cove, I'm also in Howe Sound. One point, two names. It should be mapped as such, just because your preference is to obscure the fact that Snug Cove is in Howe Sound doesn't make it a good idea, or the right way to do things. </p>
+
+<p>No one has supported your approach.</p></div>
+            <div class="comment-info" id="comment-83632-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '22, 21:21)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83542" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83542-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="83529"></a>
+                    <div id="answer-container-83529" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83529-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83529/up/" rel="nofollow"> </a>
+<div id="post-83529-score" class="post-score"
+    title="current number of votes">
+    -2
+</div>
+<a id="post-83529-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83529/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can certainly create an overarching "parent" relation that describes a larger body of water and put in the bodies of water that comprise it as "child" relations.  I use this "one point, one name" rule to minimize interference with coastline edits—if someone wishes to edit a length of coastline, they can do so while breaking as few body-of-water relations as possible, and it makes it a bit easier for me to maintain this kind of data.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83529/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Feb '22, 06:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fd3f710d06987dc73153b9a1e836929a?s=32&amp;d=identicon&amp;r=g" alt="DENelson83's gravatar image" />
+    <p><a href="/users/17085/denelson83">DENelson83</a><br/>
+    <span class="score" title="18 reputation points">18</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DENelson83 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/83529/">
+                edited
+                <strong>19 Feb '22, 06:22</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83529">
+    
+        <a name="83536"></a>
+        <div class="comment" id="comment-83536">
+            <div id="post-83536-score" class="comment-score">4</div>
+            <div class="comment-text"><p>You shouldn't change other people's work based on your own devised rules and habits. When you add new data that is usually acceptable, but here you are destroying data, not nice.</p>
+
+<p>I'm not familiar with sea mapping, I've read a few debates, but I guess there are some conventions worldwide that you should follow. If not, you could start a discussion around your "rules", usually on a mailing list, and try to find a consensus and then document it on the wiki.</p>
+
+<p>Regards.</p></div>
+            <div class="comment-info" id="comment-83536-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Feb '22, 13:24)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83529" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83529-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="83533"></a>
+                    <div id="answer-container-83533" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83533-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83533/up/" rel="nofollow"> </a>
+<div id="post-83533-score" class="post-score"
+    title="current number of votes">
+    -2
+</div>
+<a id="post-83533-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83533/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I say just let people edit the coastline as they see fit.  In Canada, I apply a tag of "ocean=yes" to all such relations so that they can easily be filtered out.  I am fine with just maintaining these relations myself.</p>
+<p>I will say this, area definitions for bodies of water make their identification much easier on Garmin GPS units.  If you move the pointer on a Garmin GPS map to any point on a body of water defined as an area, its name will pop up on the screen.  You do not have to point the map to a specific point in that case.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83533/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Feb '22, 10:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fd3f710d06987dc73153b9a1e836929a?s=32&amp;d=identicon&amp;r=g" alt="DENelson83's gravatar image" />
+    <p><a href="/users/17085/denelson83">DENelson83</a><br/>
+    <span class="score" title="18 reputation points">18</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DENelson83 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/83533/">
+                edited
+                <strong>19 Feb '22, 10:19</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83533">
+    
+        <a name="83535"></a>
+        <div class="comment" id="comment-83535">
+            <div id="post-83535-score" class="comment-score">3</div>
+            <div class="comment-text"><p>You can't map in OSM just for Garmin compliance. Also, it seems you answering to Frederick's answer, please say so to make it clear. You could also have added a comment to his answer.</p>
+
+<p>Regards.</p></div>
+            <div class="comment-info" id="comment-83535-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Feb '22, 13:20)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+        <a name="83538"></a>
+        <div class="comment" id="comment-83538">
+            <div id="post-83538-score" class="comment-score"></div>
+            <div class="comment-text"><p>(somewhat offtopic for this question but) when I create Garmin maps I specifically exclude certain large areas to avoid this "feature" - in my case the "Island of Great Britain", which it's not useful to be told I'm still on :)</p></div>
+            <div class="comment-info" id="comment-83538-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Feb '22, 13:37)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="83540"></a>
+        <div class="comment" id="comment-83540">
+            <div id="post-83540-score" class="comment-score"></div>
+            <div class="comment-text"><p>These relations had been edited as others had seen fit, but you made significant changes, that are inconsistent with the previous consensus, and common definitions.</p></div>
+            <div class="comment-info" id="comment-83540-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Feb '22, 14:35)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83533" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83533-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="83633"></a>
+                    <div id="answer-container-83633" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-83633-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/83633/up/" rel="nofollow"> </a>
+<div id="post-83633-score" class="post-score"
+    title="current number of votes">
+    -3
+</div>
+<a id="post-83633-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/83633/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Well, again, I personally will not support any approach for mapping bodies of seawater other than "one point, one name", and that position is reflected in my changesets.  You can disagree with me, but you cannot change my mind on this.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/83633/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Mar '22, 21:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fd3f710d06987dc73153b9a1e836929a?s=32&amp;d=identicon&amp;r=g" alt="DENelson83's gravatar image" />
+    <p><a href="/users/17085/denelson83">DENelson83</a><br/>
+    <span class="score" title="18 reputation points">18</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DENelson83 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-83633">
+    
+        <a name="83634"></a>
+        <div class="comment" id="comment-83634">
+            <div id="post-83634-score" class="comment-score">2</div>
+            <div class="comment-text"><blockquote>
+<p>You can disagree with me, but you cannot change my mind on this.</p>
+</blockquote>
+
+<p>Indeed - it's perfectly normal that some people in OSM have "views that are shared with few other people".  What's important is that most people agree, the project continues and echoes their consensus.</p>
+
+<p>For example, I tend to think that "highway=path" isn't a great way to map "where someone can walk", because it uses the same tag value for "who the thing is designed for" and "what the access rights are".  It's pretty clear that my view is <a href="https://taginfo.openstreetmap.org/tags/highway=path">not the majority one</a> on that.</p></div>
+            <div class="comment-info" id="comment-83634-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '22, 22:51)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="83647"></a>
+        <div class="comment" id="comment-83647">
+            <div id="post-83647-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/17085/denelson83">@DENelson83</a> As we all work on the same database, this will be hard for all. Note that I don't have opinion about this particular problem, I just think that you need to be able to discuss and find a common way of doing things.</p>
+
+<p>Best regards.</p></div>
+            <div class="comment-info" id="comment-83647-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Mar '22, 17:38)</span>
+                <a class="comment-user userinfo" href="/users/13231/h_mlet">H_mlet</a>
+                
+            </div>
+        </div>
+    
+        <a name="83656"></a>
+        <div class="comment" id="comment-83656">
+            <div id="post-83656-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I am willing to consider your "one point, one name" suggestion. I can personally support any good idea that has been put forward and justified. </p>
+
+<p>In this case, I don't see an advantage, and it seems like a distortion of reality. If presented with sufficient advantages to the approach I will change my mind. But so far all that has been put forth is that one editor likes it, and will not accept any other approach. Also it renders better on Garmin units. </p>
+
+<p>This is far from convincing, and as some bodies bodies of sea have been edited (mostly nodes deleted) to fit this unexplained "rule", I personally view it as vandalism.</p></div>
+            <div class="comment-info" id="comment-83656-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Mar '22, 04:21)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-83633" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-83633-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/83528/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sUMkGP2iGxrllbaM2xHTvMVpJOrlNhYS' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83528/can-different-named-areas-of-sea-overlap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/83528/can-different-named-areas-of-sea-overlap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;930</span><br/>
+        
+        <a href="/tags/natural/"
+            class="tag-link-natural"
+            title="see questions tagged'natural'using tags"
+            rel="tag">natural</a> <span class="tag-number">&#215;20</span><br/>
+        
+        <a href="/tags/sea/"
+            class="tag-link-sea"
+            title="see questions tagged'sea'using tags"
+            rel="tag">sea</a> <span class="tag-number">&#215;17</span><br/>
+        
+        <a href="/tags/convention/"
+            class="tag-link-convention"
+            title="see questions tagged'convention'using tags"
+            rel="tag">convention</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 19, 2022, 5:05 a.m.">19 Feb '22, 05:05</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,125 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 9, 2022, 9:47 p.m.">09 Mar '22, 21:47</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/31027/how-should-we-tag-municipality">How should we tag Municipality?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28266/how-to-mark-a-mountain">How to mark a mountain?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50053/tag-for-mesa-tableland-plateau">Tag for mesa / tableland / plateau?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/87816/what-language-should-we-use-for-the-main-tag-name-in-sri-lanka">What language should we use for the main tag name=* in Sri Lanka ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/153/how-do-you-tell-if-a-minor-service-road-is-accessprivate-destination-or-permissive">How do you tell if a minor service road is access=private, destination, or permissive?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/162/how-do-i-tag-ways-with-partial-access">How do I tag ways with partial access?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/125/how-do-i-stop-rivers-from-rendering-where-the-riverbanks-are-mapped">How do I stop rivers from rendering where the riverbanks are mapped?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/240/how-can-i-get-a-list-of-all-objects-with-a-certain-tag">How can I get a list of all objects with a certain tag?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/134/how-do-i-map-a-road-that-has-traffic-lights-only-in-one-direction">How do I map a road that has traffic lights only in one direction?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/228/uk-road-was-detrunked-why-does-osm-still-have-it-tagged-highwaytrunk">[UK road] was detrunked; why does OSM still have it tagged highway=trunk?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

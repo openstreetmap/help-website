@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>MKTileOverlay Offline OSM Tiles - OSM Help</title>
+        <meta name="description" content="Hi I have a client who requires the use of an offline map in their app. I am writing it in Swift and xCode of IOS use and have a question as to the best solution to use to code it. I have been investigating various products but have become stuck with analysis paralysis.  Here is a brief rundown: App..." />
+        <meta name="keywords" content="xcode,offline,swift,mapping,tiles" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/68705/mktileoverlay-offline-osm-tiles" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/68705/mktileoverlay-offline-osm-tiles?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='nuvTni5rcMuUF4yd0WGXaKBh8iTjm8Gr' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/68705/mktileoverlay-offline-osm-tiles">MKTileOverlay Offline OSM Tiles</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-68705-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/68705/up/" rel="nofollow"> </a>
+<div id="post-68705-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-68705-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/68705/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/68705/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi</p>
+<p>I have a client who requires the use of an offline map in their app. I am writing it in Swift and xCode of IOS use and have a question as to the best solution to use to code it. I have been investigating various products but have become stuck with analysis paralysis. </p>
+<p>Here is a brief rundown:</p>
+<p>App needs a simple world map which will contain custom annotations at various locations. The app does not need anything fancy such as navigation or points of interest. I don’t need the app to zoom to extremely low levels either. </p>
+<p>Question.
+I am thinking OpenStreetMap tiles rendered with MKTileOverlay would suffice but want to gather your thoughts???
+An examples of how to do this?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/xcode/" class="post-tag tag-link-xcode"
+                                        title="see questions tagged 'xcode'" rel="tag">xcode</a>
+                                
+                                    <a href="/tags/offline/" class="post-tag tag-link-offline"
+                                        title="see questions tagged 'offline'" rel="tag">offline</a>
+                                
+                                    <a href="/tags/swift/" class="post-tag tag-link-swift"
+                                        title="see questions tagged 'swift'" rel="tag">swift</a>
+                                
+                                    <a href="/tags/mapping/" class="post-tag tag-link-mapping"
+                                        title="see questions tagged 'mapping'" rel="tag">mapping</a>
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Apr '19, 11:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e15b6bc7cc550c6f76322deb5eff7d7e?s=32&amp;d=identicon&amp;r=g" alt="CloudMapper's gravatar image" />
+    <p><a href="/users/16460/cloudmapper">CloudMapper</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="CloudMapper has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-68705">
+    
+        <a name="73307"></a>
+        <div class="comment" id="comment-73307">
+            <div id="post-73307-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you find any solution? Can you please share it with me?</p></div>
+            <div class="comment-info" id="comment-73307-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '20, 09:25)</span>
+                <a class="comment-user userinfo" href="/users/17981/ilesh18">Ilesh18</a>
+                
+            </div>
+        </div>
+    
+        <a name="73308"></a>
+        <div class="comment" id="comment-73308">
+            <div id="post-73308-score" class="comment-score"></div>
+            <div class="comment-text"><p>Dude, how did you instantaneously (within a minute of you topic creation) get 280 views?</p></div>
+            <div class="comment-info" id="comment-73308-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '20, 09:28)</span>
+                <a class="comment-user userinfo" href="/users/17942/kartman1">kartman1</a>
+                
+            </div>
+        </div>
+    
+        <a name="73311"></a>
+        <div class="comment" id="comment-73311">
+            <div id="post-73311-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/17942/kartman1">@kartman1</a>: This question was posted almost a year ago.</p></div>
+            <div class="comment-info" id="comment-73311-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '20, 19:21)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="73314"></a>
+        <div class="comment" id="comment-73314">
+            <div id="post-73314-score" class="comment-score"></div>
+            <div class="comment-text"><p>... and the way that you handle webviews on iOS has probably changed hugely in this time.  </p>
+
+<p>Thankfully I no longer have to fight with fruity software and hardware on a daily basis, but I work close enough with people who do to know that there are signiificant changes ongoing.</p></div>
+            <div class="comment-info" id="comment-73314-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '20, 20:24)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-68705" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-68705-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/68705/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='nuvTni5rcMuUF4yd0WGXaKBh8iTjm8Gr' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68705/mktileoverlay-offline-osm-tiles?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/68705/mktileoverlay-offline-osm-tiles?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+        <a href="/tags/mapping/"
+            class="tag-link-mapping"
+            title="see questions tagged'mapping'using tags"
+            rel="tag">mapping</a> <span class="tag-number">&#215;193</span><br/>
+        
+        <a href="/tags/offline/"
+            class="tag-link-offline"
+            title="see questions tagged'offline'using tags"
+            rel="tag">offline</a> <span class="tag-number">&#215;106</span><br/>
+        
+        <a href="/tags/xcode/"
+            class="tag-link-xcode"
+            title="see questions tagged'xcode'using tags"
+            rel="tag">xcode</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/swift/"
+            class="tag-link-swift"
+            title="see questions tagged'swift'using tags"
+            rel="tag">swift</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 8, 2019, 11:09 a.m.">08 Apr '19, 11:09</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,284 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 2, 2020, 8:24 p.m.">02 Mar '20, 20:24</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/47949/display-slippy-osm-tiles-offline-c">Display slippy osm tiles offline c++</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54768/get-image-256x256-png">Get image 256x256 png</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31023/offline-tile-mapnik-segmentation-fault">Offline tile, mapnik segmentation fault</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46003/leaflet-tiles-offline">leaflet tiles offline</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48989/how-to-sample-tiles-along-a-long-distance-route">How to sample tiles along a long-distance route</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49088/offline-tile-construction-with-route-inside">Offline tile construction with route inside</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21143/how-to-get-all-tiles-for-a-specific-country-to-use-with-openlayers">How to get all tiles for a specific country to use with Openlayers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26903/offline-openstreetmap">[closed] Offline OpenStreetMap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43792/can-i-download-osm-tiles-for-offline-use">Can i download osm tiles for offline use?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58882/downloading-satellite-map-tiles-for-a-county-in-florida">Downloading satellite map tiles for a county in Florida</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

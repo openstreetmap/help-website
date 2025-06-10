@@ -1,0 +1,838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Editing large structures in JOSM: splitting relations - OSM Help</title>
+        <meta name="description" content="In a recent question, heunigreenfreak asked how to edit large structures. He is using the iD editor with which it&#39;s not really possible. Respondents suggested he use JOSM, which is much more capable. I have been using JOSM for quite a while and feel fairly comfortable with it but yet am unsure about..." />
+        <meta name="keywords" content="large,josm,splitting,relations" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/40118/editing-large-structures-in-josm-splitting-relations" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/40118/editing-large-structures-in-josm-splitting-relations?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='c2ExNfvtpBM2BIa2777bYRWyvln6ZfiI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/40118/editing-large-structures-in-josm-splitting-relations">Editing large structures in JOSM: splitting relations</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-40118-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40118/up/" rel="nofollow"> </a>
+<div id="post-40118-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-40118-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40118/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/40118/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>In a <a href="http://help.openstreetmap.org/questions/40093/how-to-edit-large-structures">recent question</a>, heunigreenfreak asked how to edit large structures. He is using the iD editor with which it's not really possible. Respondents suggested he use JOSM, which is much more capable. I have been using JOSM for quite a while and feel fairly comfortable with it but yet am unsure about the best way to do what  heunigreenfreak asked. In particular, there is a very large multipolygon  (natural=wood) in northern Thailand that has grown to include 769 members. It has many "outer" segments and many "inner" segments. When one is modifying it, adding inner regions for example,  one <em>should first</em> download the entire structure, a task that leaves plenty of time for a long coffee break. (id:<a href="http://www.openstreetmap.org/relation/1599039">1599039</a>). Its become very unwieldy and I would like to break it into several smaller parts, say along river valleys or highways, areas that are not actually wooded.</p>
+<p>So how does one go about splitting such a large structure in JOSM? It cannot be entirely seen in one normal download and worse, because of its size any edits run the risk of encountering conflicts if such editing isn't done in a short time frame. Resolving potentially numerous conflicts is what keeps me from trying this on my own. </p>
+<p>Anybody care to provide a step-by-step guide to splitting large areas in JOSM? </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/large/" class="post-tag tag-link-large"
+                                        title="see questions tagged 'large'" rel="tag">large</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/splitting/" class="post-tag tag-link-splitting"
+                                        title="see questions tagged 'splitting'" rel="tag">splitting</a>
+                                
+                                    <a href="/tags/relations/" class="post-tag tag-link-relations"
+                                        title="see questions tagged 'relations'" rel="tag">relations</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Jan '15, 00:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/04dddf6f5ffde333747d385af3ce5829?s=32&amp;d=identicon&amp;r=g" alt="AlaskaDave's gravatar image" />
+    <p><a href="/users/5016/alaskadave">AlaskaDave</a><br/>
+    <span class="score" title="5415 reputation points"><span class="">5.4k</span></span><span title="76 badges"><span class="badge1">&#9679;</span><span class="badgecount">76</span></span><span title="107 badges"><span class="silver">&#9679;</span><span class="badgecount">107</span></span><span title="164 badges"><span class="bronze">&#9679;</span><span class="badgecount">164</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AlaskaDave has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/40118/">
+                edited
+                <strong>10 Jan '15, 10:06</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-40118">
+    
+        <a name="40120"></a>
+        <div class="comment" id="comment-40120">
+            <div id="post-40120-score" class="comment-score"></div>
+            <div class="comment-text"><p>meta: If your question is "step-by-step guide to splitting large areas in JOSM", I think it would be better to title it that way, don't you think?  And a general best-practise question would deserve another question.</p></div>
+            <div class="comment-info" id="comment-40120-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jan '15, 01:27)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40121"></a>
+        <div class="comment" id="comment-40121">
+            <div id="post-40121-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Perhaps it would but the question that inspired mine has that title and I was intending for user heunigreenfreak to notice it. It's a general title for what I want to know.</p>
+
+<p>As for the second part of your reply, I don't know the difference between asking for help and asking for a "best practices" tutorial. All I know is that I can't proceed without some help.</p></div>
+            <div class="comment-info" id="comment-40121-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jan '15, 02:06)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="40133"></a>
+        <div class="comment" id="comment-40133">
+            <div id="post-40133-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: with "general best-practise question" I meant a question which does not focus on a specific sub-topic of working with "large structures" (like your question here does).</p></div>
+            <div class="comment-info" id="comment-40133-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jan '15, 11:29)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40160"></a>
+        <div class="comment not_top_scorer" id="comment-40160">
+            <div id="post-40160-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just to make sure, are you downloading the entire area (Download from OSM) or just the relation and its members (Download object)? I'm not sure what you meant by "It cannot be entirely seen in one normal download."</p></div>
+            <div class="comment-info" id="comment-40160-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jan '15, 19:59)</span>
+                <a class="comment-user userinfo" href="/users/2041/paul_012">Paul_012</a>
+                
+            </div>
+        </div>
+    
+        <a name="40174"></a>
+        <div class="comment" id="comment-40174">
+            <div id="post-40174-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/2041/paul_012">@Paul_012</a>
+That's a great help. I made a few changes using that technique just now but  it raises new questions. I have not been able to download the "entire relation" because it seems to be composed of  many individual smaller relations. The id I gave in the original post, 1599039, is only one piece of the giant one. When splitting other portions of the giant, how can I be sure I'm not splitting a "shared" way, that is, one shared by two or more pieces of the puzzle? </p>
+
+<p>I find it difficult to even describe the problem in words LOL. Perhaps there is a "parent relation" - if so, I cannot find it.</p></div>
+            <div class="comment-info" id="comment-40174-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '15, 01:43)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="40179"></a>
+        <div class="comment" id="comment-40179">
+            <div id="post-40179-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5016/alaskadave"></a><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: <a href="//www.openstreetmap.org/relation/1599039">relation 1599039</a> has no "parent relation" – otherwise it would be listed at the bottom of the linked data page with the text "Part of Relation xxxx".</p>
+
+<p>Alternatively, you could also see this in JOSM if you select the relation in the <a href="https://josm.openstreetmap.de/wiki/Help/Dialog/TagsMembership">TagsMembership</a> dialog (see the example image on the docu page). This way you also find out to which "pieces of the puzzle" a "shared" way belongs (select the way to be inspected before, of course).</p></div>
+            <div class="comment-info" id="comment-40179-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '15, 13:00)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40118" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40118-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/40118/editing-large-structures-in-josm-splitting-relations?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/40118/editing-large-structures-in-josm-splitting-relations?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/40118/editing-large-structures-in-josm-splitting-relations?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/40118/editing-large-structures-in-josm-splitting-relations?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="40136"></a>
+                    <div id="answer-container-40136" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40136-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40136/up/" rel="nofollow"> </a>
+<div id="post-40136-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-40136-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40136/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If there are no common attributes of the areas (for example a name or similar) there is nothing stoping you from moving individual outer polygons to their own multi-polygons (with any enclosed inner polygons), or even better (if small enough and no holes) to normal polygons.</p>
+<p>Doing this has a minimal risk of causing conflcts and is simple to carry out without causing the need for artificial breaks.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40136/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Jan '15, 11:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+    <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+    <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SimonPoole has 209 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40136">
+    
+        <a name="40147"></a>
+        <div class="comment" id="comment-40147">
+            <div id="post-40147-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Thanks for your suggestions. I couldn't begin to figure out which inner multipolygon belongs with which outer one. This thing is a monster! 325 km north to south and 150 km wide.</p>
+
+<p>I'm whittling away at it by combining inner polygons that delimit a major highway one at a time. When I reach the outer edges, I'll be in a better place to split it.</p></div>
+            <div class="comment-info" id="comment-40147-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jan '15, 13:16)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="40148"></a>
+        <div class="comment" id="comment-40148">
+            <div id="post-40148-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's too big for even mapki to process at the moment!:</p>
+
+<p><a href="http://osm.mapki.com/history/relation.php?id=1599039">http://osm.mapki.com/history/relation.php?id=1599039</a></p>
+
+<p>Further to what Simon says above, if you're working on a section at the edge of it I'd artificially split the bit that you're working on into a new outer polygon (with new ways separating it from the rest of the monster if needed), then make sure each new relation has only the correct inners for it (and not the other one).</p></div>
+            <div class="comment-info" id="comment-40148-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jan '15, 13:33)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40150"></a>
+        <div class="comment" id="comment-40150">
+            <div id="post-40150-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I can see your problem, however there do seem to be natural features, for example I just saw a river that is not in OSM on the imagery, that should make the monster easier to break up at obviously places.</p></div>
+            <div class="comment-info" id="comment-40150-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jan '15, 13:44)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40187"></a>
+        <div class="comment" id="comment-40187">
+            <div id="post-40187-score" class="comment-score">2</div>
+            <div class="comment-text"><p>The project I had envisioned is simply too complex for me at this point. Some of the ways are part of the Burma-Thailand border, some have roles in two or more relations. Grrrrr....</p>
+
+<p>However, I have learned a bit from fooling around. Adding and removing ways from relations is easier than it was before. As I split out areas that are not wooded (creating &amp; expanding inners) I had to redefine certain inner ways as outers to make the resultant multipolygon correct. I will continue working at it piecemeal and eventually maybe the overall task will become clearer.</p>
+
+<p>Thanks for your comments.</p></div>
+            <div class="comment-info" id="comment-40187-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jan '15, 10:05)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40136" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40136-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/40118/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='c2ExNfvtpBM2BIa2777bYRWyvln6ZfiI' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40118/editing-large-structures-in-josm-splitting-relations?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40118/editing-large-structures-in-josm-splitting-relations?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/relations/"
+            class="tag-link-relations"
+            title="see questions tagged'relations'using tags"
+            rel="tag">relations</a> <span class="tag-number">&#215;236</span><br/>
+        
+        <a href="/tags/splitting/"
+            class="tag-link-splitting"
+            title="see questions tagged'splitting'using tags"
+            rel="tag">splitting</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/large/"
+            class="tag-link-large"
+            title="see questions tagged'large'using tags"
+            rel="tag">large</a> <span class="tag-number">&#215;11</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 8, 2015, 12:36 a.m.">08 Jan '15, 00:36</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,464 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 10, 2015, 10:06 a.m.">10 Jan '15, 10:06</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/9613/filter-relation-by-member-tag">Filter relation by member tag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27306/splitting-relations">Splitting relations?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8196/adding-ways-to-relation-without-visual-editor">Adding ways to relation without visual editor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9139/removing-inner-relations">Removing inner relations</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21377/help-me-understand-warning-messages-for-relation-id2871705">Help me understand warning messages for relation id=2871705</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27086/problem-with-relation-roles">Problem with relation roles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4255/josm-copy-relations-from-one-way-to-another">JOSM - Copy relations from one way to another</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5629/no-outer-way-errors">No outer way errors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/903/relations-in-josm">Relations in JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27442/how-best-to-split-a-large-multipolygon">How best to split a large multipolygon</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

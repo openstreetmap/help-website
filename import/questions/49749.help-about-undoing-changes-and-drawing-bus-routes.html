@@ -1,0 +1,807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Help about undoing changes and drawing bus routes. - OSM Help</title>
+        <meta name="description" content="Good night. As of now, I&#39;m using Potlach 2 to try to draw bus routes. While learning how to use the tool, I thought I had to add manually the relations (using the Ctrl-R hotkey to repeat the last relation, which has some bugs) to draw the route, not knowing that using the cursor to draw is just enou..." />
+        <meta name="keywords" content="brazil,bus,route,changes,undo" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/49749/help-about-undoing-changes-and-drawing-bus-routes" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/49749/help-about-undoing-changes-and-drawing-bus-routes?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='dlcVK5ER4gVenLrhnog0t3uJuWFhntXy' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/49749/help-about-undoing-changes-and-drawing-bus-routes">Help about undoing changes and drawing bus routes.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-49749-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49749/up/" rel="nofollow"> </a>
+<div id="post-49749-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49749-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49749/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/49749/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Good night. As of now, I'm using Potlach 2 to try to draw bus routes. While learning how to use the tool, I thought I had to add manually the relations (using the Ctrl-R hotkey to repeat the last relation, which has some bugs) to draw the route, not knowing that using the cursor to draw is just enough to add the nodes to the route, as I checked later when trying to extract the data via Overpass Turbo.</p>
+<p>However, today, I notice that due to some accident, I've changed some routes that use the same ways, and as a result, I want to, if possible, to undo all my changes done by me in the last, as of this writing, 24 hours. I suppose there won't be much problem in doing so since there seems to be very little activity in my city (Foz do Iguaçu, PR, Brazil), and deleting routes don't seem to do the trick.</p>
+<p>I suppose the problem started with accidental misuse of Potlach's features. I probably copied the relations of a node leaving the central bus hub, which had many bus routes associated with it, and even when I realized that mistake, there's also the way Potlach draws routes - You automatically get a cursor from the last point in the route, and at some point I probably got a loose end with several routes attached to it.</p>
+<p>Relations 3586878, 3586977 and 3587121, the very few bus routes we had tracked beforehand now are "damaged" by my sloppy job, I just wanted to be able to undo my changes on them, I'm fine with deleting the other two routes I did before and doing them more carefully.</p>
+<p>[EDIT]: Upon closer inspection, it seems that I managed to elongate a street somehow - In addition to the three routes I accidentally dragged while drawing the now-deleted (I believe) 335-Centro Morumbi route, looks like the nodes of the route are now counted as part of Rua Tarobá (Tarobá Street). This was a little too good, tried a few softwares to draw bus routes, lost so much time that it was much better if I had done them manually on iD from day one. I was a bit too happy when I realized that Potlach 2 could do it.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/brazil/" class="post-tag tag-link-brazil"
+                                        title="see questions tagged 'brazil'" rel="tag">brazil</a>
+                                
+                                    <a href="/tags/bus/" class="post-tag tag-link-bus"
+                                        title="see questions tagged 'bus'" rel="tag">bus</a>
+                                
+                                    <a href="/tags/route/" class="post-tag tag-link-route"
+                                        title="see questions tagged 'route'" rel="tag">route</a>
+                                
+                                    <a href="/tags/changes/" class="post-tag tag-link-changes"
+                                        title="see questions tagged 'changes'" rel="tag">changes</a>
+                                
+                                    <a href="/tags/undo/" class="post-tag tag-link-undo"
+                                        title="see questions tagged 'undo'" rel="tag">undo</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 May '16, 00:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b1766e693b5356aaa12c4de8302c9eac?s=32&amp;d=identicon&amp;r=g" alt="thribeiro's gravatar image" />
+    <p><a href="/users/12303/thribeiro">thribeiro</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="thribeiro has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/49749/">
+                edited
+                <strong>20 May '16, 00:55</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-49749">
+    
+        <a name="49752"></a>
+        <div class="comment" id="comment-49752">
+            <div id="post-49752-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I just had a short look: <a href="https://www.openstreetmap.org/relation/3586878">https://www.openstreetmap.org/relation/3586878</a> was not touched by you. Where is it "damaged"?</p>
+
+<p>So you want a revert of #39439327 until #39413772 (see <a href="https://www.openstreetmap.org/user/thribeiro/history">https://www.openstreetmap.org/user/thribeiro/history</a> )? Could you confirm? And then just wait a bit. Someone experienced will do it for you (maybe myself in about 12 hours), that's no problem. Reverting is not possible with Potlatch after you have saved/uploaded the edit.</p></div>
+            <div class="comment-info" id="comment-49752-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 May '16, 06:41)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49765"></a>
+        <div class="comment" id="comment-49765">
+            <div id="post-49765-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, I confirm that I want my changes #39439327, #39439273,  #39413948 and  #39413772 undone. I hope that does the trick. Thank you for your time.</p>
+
+<p>You can see here <a href="http://i.imgsafe.org/357de83.jpg">http://i.imgsafe.org/357de83.jpg</a> an example of what's going on now (one street counting now as three). In the meantime, I stopped entirely to avoid further problems.</p>
+
+<p>I find it odd that I don't appear on the changeset for those. However, now on another computer (so I can confirm those aren't cache issues) I see that not only Rua/Street Tarobá is affected, but also Rua Maguari too, both of them now spanning the entire length of the bus routes I tried to add.</p>
+
+<p>Even though I don't show up, I believe this is somehow my fault - It's no coincidence that those three routes and streets now share the exact same shape as the relation I drew before.</p>
+
+<p>I gave up trying to use gtfs-editor (too many issues), and commercial software trials revealed to be worse than iD. We'd have to add the routes to OSM afterwards anyway.</p></div>
+            <div class="comment-info" id="comment-49765-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 May '16, 17:40)</span>
+                <a class="comment-user userinfo" href="/users/12303/thribeiro">thribeiro</a>
+                
+            </div>
+        </div>
+    
+        <a name="49766"></a>
+        <div class="comment" id="comment-49766">
+            <div id="post-49766-score" class="comment-score"></div>
+            <div class="comment-text"><p>half-offtopic: If you want to map bus route relations please use <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>.  Take a slow start, maybe first also map other stuff. It takes a bit to learn but really pays off! :-)</p>
+
+<p>I will look at the revert stuff now.</p></div>
+            <div class="comment-info" id="comment-49766-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 May '16, 21:16)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49767"></a>
+        <div class="comment" id="comment-49767">
+            <div id="post-49767-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: could you please comment too instead of just voting down my comment (which should not really happen UI-wise)? I am confused. In case you mean my typo ("bug" instead of "bus") - fixed.</p></div>
+            <div class="comment-info" id="comment-49767-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 May '16, 21:25)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49769"></a>
+        <div class="comment" id="comment-49769">
+            <div id="post-49769-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you, I'll check JOSM.</p></div>
+            <div class="comment-info" id="comment-49769-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 May '16, 22:51)</span>
+                <a class="comment-user userinfo" href="/users/12303/thribeiro">thribeiro</a>
+                
+            </div>
+        </div>
+    
+        <a name="49771"></a>
+        <div class="comment not_top_scorer" id="comment-49771">
+            <div id="post-49771-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> It simply isn't true to say that "errors wouldn't be made if users used JOSM" instead of some other editor.  A quick count back through the last dozen or so issues where I've had to get involved fixing stuff (either locally or, with a DWG hat on, more widely).  Here's the tally of the editors used:</p>
+
+<pre><code>JOSM                                         6
+iD                                           2
+osmapi (i.e. some other front-end program):  2
+Potlatch 2                                   1
+</code></pre>
+
+<p>I suspect that that ratio (apart from osmapi) isn't that far away from the amount of data those editors are used for within OSM.  The most time consuming of that list above were jointly a series of sock-puppet accounts making the same unwelcome changes (which happened to be JOSM, but would have been problematic regardless of editor) and a series of "delete and redraw" errors that were done by JOSM, and had an editor been used that showed relation membership more prominently may not have been made.</p></div>
+            <div class="comment-info" id="comment-49771-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 May '16, 00:07)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49775"></a>
+        <div class="comment not_top_scorer" id="comment-49775">
+            <div id="post-49775-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> thanks for the explanation. Please note that I did not say what you've quoted. Not at all. It is just my personal experience that JOSM gives you a clearer more data centric view, more tools to check your edits and, hence, is easier to use than Potlatch2 or iD. This is at least true for complex tasks. And I, personally, made the switch far too late (torture myself by using Potlatch2 for too long) and I want help others to be more productive and have more fun. I remember how time consuming and annoying it was to separate terraced buildings into single ones with Potlatch2.</p></div>
+            <div class="comment-info" id="comment-49775-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 May '16, 10:13)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49749" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49749-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/49749/help-about-undoing-changes-and-drawing-bus-routes?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/49749/help-about-undoing-changes-and-drawing-bus-routes?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/49749/help-about-undoing-changes-and-drawing-bus-routes?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/49749/help-about-undoing-changes-and-drawing-bus-routes?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="49768"></a>
+                    <div id="answer-container-49768" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-49768-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49768/up/" rel="nofollow"> </a>
+<div id="post-49768-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-49768-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49768/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I have reverted your changesets 39439327  39439273 39413948 39413772 by <a href="https://www.openstreetmap.org/changeset/39459612">https://www.openstreetmap.org/changeset/39459612</a></p>
+<p>What seems to be the main cause of the issue is that you have elongated two ways (streets) by very much: Rua Tarobá and Rua Maguari. See <a href="https://overpass-api.de/achavi/?changeset=39413948">https://overpass-api.de/achavi/?changeset=39413948</a> (may take about a minute to load). The green lines are the new positions of the ways. You can position your mouse pointer over those to see the whole way highlighted and its name.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/49768/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 May '16, 21:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/49768/">
+                edited
+                <strong>21 May '16, 12:14</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-49768">
+    
+</div>
+<div id="comment-tools-49768" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49768-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/49749/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='dlcVK5ER4gVenLrhnog0t3uJuWFhntXy' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49749/help-about-undoing-changes-and-drawing-bus-routes?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49749/help-about-undoing-changes-and-drawing-bus-routes?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/route/"
+            class="tag-link-route"
+            title="see questions tagged'route'using tags"
+            rel="tag">route</a> <span class="tag-number">&#215;179</span><br/>
+        
+        <a href="/tags/bus/"
+            class="tag-link-bus"
+            title="see questions tagged'bus'using tags"
+            rel="tag">bus</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/changes/"
+            class="tag-link-changes"
+            title="see questions tagged'changes'using tags"
+            rel="tag">changes</a> <span class="tag-number">&#215;79</span><br/>
+        
+        <a href="/tags/undo/"
+            class="tag-link-undo"
+            title="see questions tagged'undo'using tags"
+            rel="tag">undo</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/brazil/"
+            class="tag-link-brazil"
+            title="see questions tagged'brazil'using tags"
+            rel="tag">brazil</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 20, 2016, 12:45 a.m.">20 May '16, 00:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,477 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 21, 2016, 12:14 p.m.">21 May '16, 12:14</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/22037/oneway-bus-routes">Oneway bus routes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27213/bus-routes-that-travel-back-and-forth">Bus routes that travel back and forth</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12435/dolmus-route">Dolmuş route?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20925/how-to-render-plain-bus-routes">How to render plain bus routes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26213/bus-route-passes-twice-through-a-way-is-it-correct-to-add-it-twice-to-the-relation">Bus route passes twice through a way. Is it correct to add it twice to the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27210/bus-routes-which-have-an-alternate-route-eg-as-a-school-bus-service">Bus routes which have an alternate route, e.g. as a school bus service?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2751/roundabouts-as-part-of-bus-routes-or-cycle-routes-or">Roundabouts as part of bus routes (or cycle routes, or…)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9775/how-can-i-set-up-a-public-transport-route_master-in-potlatch-2">How can I set up a public transport route_master in Potlatch 2 ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18033/bus-route-map-managua">bus route map managua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27214/bus-routes-that-occasionally-terminate-or-start-in-the-middle-of-the-standard-route">Bus routes that occasionally terminate or start in the middle of the standard route</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1088 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I convert shp files to GPX - OSM Help</title>
+        <meta name="description" content="I have access to un-copyrighted shape files for the National Parks in Alaska and want to add them to OSM. I have read of problems with the plugin for JOSM and wonder if any of you know of a good freeware conversion program that will generate a GPX file that I can then import into JOSM. I&#39;m about to ..." />
+        <meta name="keywords" content="shp,josm,conversion,shapefile,import" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/31868/how-do-i-convert-shp-files-to-gpx" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/31868/how-do-i-convert-shp-files-to-gpx?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ySt1N82CwNt1CmBI32p1fZ7oUblQzRVz' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/31868/how-do-i-convert-shp-files-to-gpx">How do I convert shp files to GPX</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-31868-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31868/up/" rel="nofollow"> </a>
+<div id="post-31868-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31868-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31868/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/31868/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have access to un-copyrighted shape files for the National Parks in Alaska and want to add them to OSM. I have read of problems with the plugin for JOSM and wonder if any of you know of a good freeware conversion program that will generate a GPX file that I can then import into JOSM.</p>
+<p>I'm about to set up a program called DNRGarmin, which will reportedly do the conversion, but will wait for some input here before I proceed.</p>
+<p>There are many National Parks in what we Alaskans call "the lower 48" already in the OSM database. I'm curious to know how these got there.</p>
+<p>Thanks</p>
+<p>Dave</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/shp/" class="post-tag tag-link-shp"
+                                        title="see questions tagged 'shp'" rel="tag">shp</a>
+                                
+                                    <a href="/tags/josm/" class="post-tag tag-link-josm"
+                                        title="see questions tagged 'josm'" rel="tag">josm</a>
+                                
+                                    <a href="/tags/conversion/" class="post-tag tag-link-conversion"
+                                        title="see questions tagged 'conversion'" rel="tag">conversion</a>
+                                
+                                    <a href="/tags/shapefile/" class="post-tag tag-link-shapefile"
+                                        title="see questions tagged 'shapefile'" rel="tag">shapefile</a>
+                                
+                                    <a href="/tags/import/" class="post-tag tag-link-import"
+                                        title="see questions tagged 'import'" rel="tag">import</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Mar '14, 04:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/04dddf6f5ffde333747d385af3ce5829?s=32&amp;d=identicon&amp;r=g" alt="AlaskaDave's gravatar image" />
+    <p><a href="/users/5016/alaskadave">AlaskaDave</a><br/>
+    <span class="score" title="5415 reputation points"><span class="">5.4k</span></span><span title="76 badges"><span class="badge1">&#9679;</span><span class="badgecount">76</span></span><span title="107 badges"><span class="silver">&#9679;</span><span class="badgecount">107</span></span><span title="164 badges"><span class="bronze">&#9679;</span><span class="badgecount">164</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="AlaskaDave has 17 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31868/">
+                edited
+                <strong>25 Mar '14, 07:12</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/49a7d0e0408e9cf2f698faac0f4d837a?s=32&amp;d=identicon&amp;r=g" alt="iii's gravatar image" />
+            <p><a href="/users/4984/iii">iii</a><br/>
+            <span class="score" title="4892 reputation points"><span class="">4.9k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="40 badges"><span class="silver">&#9679;</span><span class="badgecount">40</span></span><span title="82 badges"><span class="bronze">&#9679;</span><span class="badgecount">82</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-31868">
+    
+        <a name="31872"></a>
+        <div class="comment" id="comment-31872">
+            <div id="post-31872-score" class="comment-score"></div>
+            <div class="comment-text"><p>There is a great need for these additions in Alaska as many are missing. I added this state park a few days ago but there are National Wildlife Refuges, Nat'l Parks, Wilderness Areas, and National Forests aplenty in Alaska.
+Way: Denali State Park (268206171)</p></div>
+            <div class="comment-info" id="comment-31872-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '14, 08:39)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="67851"></a>
+        <div class="comment" id="comment-67851">
+            <div id="post-67851-score" class="comment-score"></div>
+            <div class="comment-text"><p>Alaska Dave, I have a similar project - adding shape files (.shp) for 48 election precincts to the Bell County, Texas, area of "the map".  Actually, I'd like to add the shape files for all 254 counties of Texas - I have the zip file from the Texas Legislative Council GIS team.
+. . . I just searched for and studied GPX format.  Apparently, I do not need to convert to that.
+. . . I just want to import the shp files as a layer of OpenStreetMap.  I'll just contact the Texas Legislative ofc and ask them for help.  No reply necessary.</p></div>
+            <div class="comment-info" id="comment-67851-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Feb '19, 20:13)</span>
+                <a class="comment-user userinfo" href="/users/16239/dcarter2080">dcarter2080</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31868" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31868-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/31868/how-do-i-convert-shp-files-to-gpx?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/31868/how-do-i-convert-shp-files-to-gpx?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/31868/how-do-i-convert-shp-files-to-gpx?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/31868/how-do-i-convert-shp-files-to-gpx?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="31870"></a>
+                    <div id="answer-container-31870" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31870-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31870/up/" rel="nofollow"> </a>
+<div id="post-31870-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-31870-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31870/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Well they say that JOSM with OpenData plugin can handle shapefiles without any external help:<br>
+<a href="http://wiki.openstreetmap.org/wiki/Import/Shapefile">http://wiki.openstreetmap.org/wiki/Import/Shapefile</a></p>
+<p>There are also a lot of conversion scripts at the website. I guess it's worth a try as you get real OSM shapes in high quality and you don't need to manually trace the shape.</p>
+<p>Of course you should always <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits/Code_of_Conduct">pay attention</a> when you do imports.</p>
+<p>Good luck!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31870/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Mar '14, 07:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/49a7d0e0408e9cf2f698faac0f4d837a?s=32&amp;d=identicon&amp;r=g" alt="iii's gravatar image" />
+    <p><a href="/users/4984/iii">iii</a><br/>
+    <span class="score" title="4892 reputation points"><span class="">4.9k</span></span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="40 badges"><span class="silver">&#9679;</span><span class="badgecount">40</span></span><span title="82 badges"><span class="bronze">&#9679;</span><span class="badgecount">82</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="iii has 16 accepted answers">10&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31870">
+    
+        <a name="31871"></a>
+        <div class="comment" id="comment-31871">
+            <div id="post-31871-score" class="comment-score"></div>
+            <div class="comment-text"><p>The data file I have is quite large (9 MB) and contains the boundary data for ALL Alaska national parks. There are many precautions and warnings about imports and I will not simply import all of that data and upload it to OSM. What would be ideal is to deal with one park at a time, convert it to GPX and look it over carefully before adding it to OSM.</p>
+
+<p>My hope is that there is a program out there that will convert that big shapefile into pieces for each park that are in either GPX, KML or some other more user friendly format, so they can be massaged before attempting to open them with JOSM.</p></div>
+            <div class="comment-info" id="comment-31871-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '14, 08:30)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="31875"></a>
+        <div class="comment" id="comment-31875">
+            <div id="post-31875-score" class="comment-score"></div>
+            <div class="comment-text"><p>As the wiki link say, you might want to use QGIS to do this filtering and splitup/export. But I highly recommend to get in touch with the local community to coordinate the final data import. IMHO thats in the spirit of a crowd :)</p></div>
+            <div class="comment-info" id="comment-31875-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '14, 09:04)</span>
+                <a class="comment-user userinfo" href="/users/4984/iii">iii</a>
+                
+            </div>
+        </div>
+    
+        <a name="31876"></a>
+        <div class="comment not_top_scorer" id="comment-31876">
+            <div id="post-31876-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, there simply aren't many mappers working in Alaska. Who do you recommend I coordinate with?</p></div>
+            <div class="comment-info" id="comment-31876-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '14, 09:19)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="31877"></a>
+        <div class="comment" id="comment-31877">
+            <div id="post-31877-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I'm not familar with the Alaska community but we have multiple ways to get in touch with people: <a href="http://wiki.openstreetmap.org/wiki/Contact">http://wiki.openstreetmap.org/wiki/Contact</a><br>
+If you don't find a superlocal channel, you might consider to ask at TALK or IMPORTS mailinglists.</p></div>
+            <div class="comment-info" id="comment-31877-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '14, 09:23)</span>
+                <a class="comment-user userinfo" href="/users/4984/iii">iii</a>
+                
+            </div>
+        </div>
+    
+        <a name="31878"></a>
+        <div class="comment" id="comment-31878">
+            <div id="post-31878-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Josm can handle shape files of 9Mb or larger. For larger shapes (hundreds of MB) I use Qgis to select smaller shapes and edit that in Josm. This also depends on your computer power. In Josm you can also copy the shape that you are interested in (a park boundary for instance) to a new data layer, edit it and upload it from there, no need to upload the whole dataset at once.</p></div>
+            <div class="comment-info" id="comment-31878-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '14, 09:25)</span>
+                <a class="comment-user userinfo" href="/users/1077/ligfietser">ligfietser</a>
+                
+            </div>
+        </div>
+    
+        <a name="31907"></a>
+        <div class="comment" id="comment-31907">
+            <div id="post-31907-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I was able to import the 9 MB file into JOSM with the OpenData plugin but it took about 30 minutes to do it. This on a pretty fast i7 laptop with 8 GB of RAM. I stopped waiting after a while and watched a movie — eventually it finished. The data looks good but it's complex. Some parks have several pieces and they're all too big to get into a single JOSM window. So, how to proceed?</p>
+
+<p>I plan to talk to the Imports mailing list before doing anything else.</p></div>
+            <div class="comment-info" id="comment-31907-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '14, 06:06)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31870" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31870-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="31915"></a>
+                    <div id="answer-container-31915" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31915-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31915/up/" rel="nofollow"> </a>
+<div id="post-31915-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-31915-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31915/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>(I know that you've not suggested doing it, but for the benefit of anyone else reading this question in the future):<br>
+</p>
+<p><strong>What I wouldn't do is to upload any resulting GPX to OSM.</strong></p>
+<p>That would be problematic for a couple of reasons - one is that GPS traces in OSM are a bit like a "roach motel" - once traces are uploaded and other services (like iD's background GPS layer) read them, there's sometimes no way of removing those traces.</p>
+<p>The other is that, in places where GPS traces representing roads and tracks are few and far between, uploaded traces that don't represent actual paths get horribly confusing.  Someone uploaded some low-level administrative boundaries in central England, and when trying to average out a position based on GPS traces you need (if not filtering manually with JOSM) to continually mentally remove the ones that aren't.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31915/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Mar '14, 12:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31915">
+    
+        <a name="31918"></a>
+        <div class="comment" id="comment-31918">
+            <div id="post-31918-score" class="comment-score"></div>
+            <div class="comment-text"><p>But aren't all boundaries merely sets of points on a line, i.e., a set of points that is functionally identical to a GPX file?</p>
+
+<p>I have uploaded boundaries for a couple of designated Wilderness Areas in Alaska using a GPX file I converted from KML that I obtained from Wilderness.net. See the Kenai Wilderness and the Togiak Wilderness for example. They appear perfectly fine. </p>
+
+<p>Way: Kenai Wilderness (264567744) 994 nodes part of Kenai National Wildlife Refuge relation (not yet entirely added)</p>
+
+<p>How else can one do this if not to use a GPX file?</p></div>
+            <div class="comment-info" id="comment-31918-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '14, 13:53)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="31919"></a>
+        <div class="comment" id="comment-31919">
+            <div id="post-31919-score" class="comment-score"></div>
+            <div class="comment-text"><p>A boundary is a set of points, but it's not a set of points that corresponds to anything in the real world.  By all means use a GPX file locally (in JOSM or iD you can definitely do this), but uploading that GPX to OSM would make other people think that it corresponds to a road or track.</p></div>
+            <div class="comment-info" id="comment-31919-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '14, 13:57)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31920"></a>
+        <div class="comment" id="comment-31920">
+            <div id="post-31920-score" class="comment-score"></div>
+            <div class="comment-text"><p>I added those areas without consulting anybody else because a) I didn't think it was any big deal, and b) they were relatively simple. I was, and am, excited to be able to add some important information to the map of Alaska.</p></div>
+            <div class="comment-info" id="comment-31920-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '14, 13:58)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="31922"></a>
+        <div class="comment" id="comment-31922">
+            <div id="post-31922-score" class="comment-score"></div>
+            <div class="comment-text"><p>Of course I tagged the boundary with appropriate tags — leisure=nature_reserve, etc. I uploaded it as a relation, not as a GPX track.</p></div>
+            <div class="comment-info" id="comment-31922-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '14, 14:03)</span>
+                <a class="comment-user userinfo" href="/users/5016/alaskadave">AlaskaDave</a>
+                
+            </div>
+        </div>
+    
+        <a name="31923"></a>
+        <div class="comment" id="comment-31923">
+            <div id="post-31923-score" class="comment-score">1</div>
+            <div class="comment-text"><pre><code>I uploaded it as a relation, not as a GPX track.
+</code></pre>
+
+<p>... which is not a problem at all, of course.</p></div>
+            <div class="comment-info" id="comment-31923-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Mar '14, 14:26)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31915" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31915-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="67852"></a>
+                    <div id="answer-container-67852" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-67852-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/67852/up/" rel="nofollow"> </a>
+<div id="post-67852-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-67852-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/67852/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I don't know much about shape files, but in looking into adding land cover found some US Gov. (okay copyright for OSM) shape files and found that you can load them directly in JOSM. Might need a open data or some such plug-in. You can then copy the boundary/area polygon from the shape layer and paste it into the OSM data layer, change the tags to be those used by OSM, and you are ready to upload. Well, not quite ready: You should do all the recommended QA checks, etc. before uploading.</p>
+<p>With respect to landcover, the data set I found was okay for a "broad brush" but I sure had to go into the area looking at satellite imagery and photos from when I hiked the area to get the detail better. You shouldn't have that issue with boundary information but you may have overlaps with older polygons that attempted to show the boundaries, etc.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/67852/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Feb '19, 22:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f60af53a4eba0c21f25c22674fb4a8cc?s=32&amp;d=identicon&amp;r=g" alt="n76's gravatar image" />
+    <p><a href="/users/5918/n76">n76</a><br/>
+    <span class="score" title="10839 reputation points"><span class="">10.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="82 badges"><span class="silver">&#9679;</span><span class="badgecount">82</span></span><span title="172 badges"><span class="bronze">&#9679;</span><span class="badgecount">172</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="n76 has 48 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-67852">
+    
+</div>
+<div id="comment-tools-67852" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-67852-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/31868/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ySt1N82CwNt1CmBI32p1fZ7oUblQzRVz' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31868/how-do-i-convert-shp-files-to-gpx?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31868/how-do-i-convert-shp-files-to-gpx?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/josm/"
+            class="tag-link-josm"
+            title="see questions tagged'josm'using tags"
+            rel="tag">josm</a> <span class="tag-number">&#215;622</span><br/>
+        
+        <a href="/tags/import/"
+            class="tag-link-import"
+            title="see questions tagged'import'using tags"
+            rel="tag">import</a> <span class="tag-number">&#215;196</span><br/>
+        
+        <a href="/tags/shapefile/"
+            class="tag-link-shapefile"
+            title="see questions tagged'shapefile'using tags"
+            rel="tag">shapefile</a> <span class="tag-number">&#215;87</span><br/>
+        
+        <a href="/tags/conversion/"
+            class="tag-link-conversion"
+            title="see questions tagged'conversion'using tags"
+            rel="tag">conversion</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/shp/"
+            class="tag-link-shp"
+            title="see questions tagged'shp'using tags"
+            rel="tag">shp</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 25, 2014, 4:53 a.m.">25 Mar '14, 04:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>15,981 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 4, 2019, 12:27 a.m.">04 Feb '19, 00:27</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2">Importing shapefile and saving to OSM with Potlatch2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18166/ogr2osm-imported-data-shifted-by-176m-222exported-from-arcgis">Ogr2Osm: Imported data shifted by 176m, 222°(exported from ArcGIS)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8444/is-there-any-possibility-to-download-data-into-shape-format-shp">Is there any possibility to download data into shape format? (.shp)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9153/import-image-into-josm">import image into JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9622/numeros-de-portal-en-shp-como-los-subo-todos-de-una-en-addrhousenumber">números de portal en SHP como los subo todos de una en addr:housenumber</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13287/create-local-new-osm-file-from-3rd-party-shapefile">Create local new .osm file from 3rd party shapefile</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1677/importing-pdf-josm">Importing PDF JOSM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5716/can-i-import-shape-files">Can I import shape files?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/518/how-do-i-import-map-data-from-a-dwg-file-to-openstreetmap">How do I import map data from a .dwg file to OpenStreetMap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21371/how-to-import-building-shapefiles">[closed] How to Import Building Shapefiles</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

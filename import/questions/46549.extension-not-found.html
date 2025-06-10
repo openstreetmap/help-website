@@ -1,0 +1,1253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Extension not found - OSM Help</title>
+        <meta name="description" content="I enter de command: ./utils/setup.php --osm-file ~/brazil-latest.osm --all 2&amp;gt;&amp;amp;1 | tee setup.log  And returns error: ERROR: DB Error: extension not found Complete error message: Create DB Setup DB string(19) &quot;pgsql://@/nominatim&quot; object(DB_Error)#4 (8) {  [&quot;error_message_prefix&quot;]=&amp;gt;  string(..." />
+        <meta name="keywords" content="nominatim,installation" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/46549/extension-not-found" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/46549/extension-not-found?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gQc4Upit3PN2TxKiUho7CTVazc66oeQg' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/46549/extension-not-found">Extension not found</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-46549-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46549/up/" rel="nofollow"> </a>
+<div id="post-46549-score" class="post-score"
+    title="current number of votes">
+    -2
+</div>
+<a id="post-46549-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46549/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/46549/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I enter de command:</p>
+<pre><code>./utils/setup.php --osm-file ~/brazil-latest.osm  --all  2&gt;&amp;1 | tee setup.log
+</code></pre>
+<p>And returns error:
+<strong>ERROR: DB Error: extension not found</strong></p>
+<p>Complete error message:</p>
+<pre><code>Create DB
+Setup DB
+string(19) "pgsql://@/nominatim"
+object(DB_Error)#4 (8) {
+  ["error_message_prefix"]=&gt;
+  string(0) ""
+  ["mode"]=&gt;
+  int(1)
+  ["level"]=&gt;
+  int(1024)
+  ["code"]=&gt;
+  int(-25)
+  ["message"]=&gt;
+  string(29) "DB Error: extension not found"
+  ["userinfo"]=&gt;
+  string(55) " [DB Error: extension not found] ** pgsql://@/nominatim"
+  ["backtrace"]=&gt;
+  array(7) {
+    [0]=&gt;
+    array(6) {
+      ["file"]=&gt;
+      string(21) "/usr/share/php/DB.php"
+      ["line"]=&gt;
+      int(967)
+      ["function"]=&gt;
+      string(10) "PEAR_Error"
+      ["class"]=&gt;
+      string(10) "PEAR_Error"
+      ["type"]=&gt;
+      string(2) "-&gt;"
+      ["args"]=&gt;
+      array(5) {
+        [0]=&gt;
+        string(29) "DB Error: extension not found"
+        [1]=&gt;
+        int(-25)
+        [2]=&gt;
+        int(1)
+        [3]=&gt;
+        int(1024)
+        [4]=&gt;
+        string(32) " [DB Error: extension not found]"
+      }
+    }
+    [1]=&gt;
+    array(7) {
+      ["file"]=&gt;
+      string(23) "/usr/share/php/PEAR.php"
+      ["line"]=&gt;
+      int(531)
+      ["function"]=&gt;
+      string(8) "DB_Error"
+      ["class"]=&gt;
+      string(8) "DB_Error"
+      ["object"]=&gt;
+      *RECURSION*
+      ["type"]=&gt;
+      string(2) "-&gt;"
+      ["args"]=&gt;
+      array(4) {
+        [0]=&gt;
+        int(-25)
+        [1]=&gt;
+        int(1)
+        [2]=&gt;
+        int(1024)
+        [3]=&gt;
+        string(32) " [DB Error: extension not found]"
+      }
+    }
+    [2]=&gt;
+    array(7) {
+      ["file"]=&gt;
+      string(28) "/usr/share/php/DB/common.php"
+      ["line"]=&gt;
+      int(1907)
+      ["function"]=&gt;
+      string(10) "raiseError"
+      ["class"]=&gt;
+      string(4) "PEAR"
+      ["object"]=&gt;
+      object(DB_pgsql)#3 (28) {
+        ["phptype"]=&gt;
+        string(5) "pgsql"
+        ["dbsyntax"]=&gt;
+        string(5) "pgsql"
+        ["features"]=&gt;
+        array(7) {
+          ["limit"]=&gt;
+          string(5) "alter"
+          ["new_link"]=&gt;
+          string(5) "4.3.0"
+          ["numrows"]=&gt;
+          bool(true)
+          ["pconnect"]=&gt;
+          bool(true)
+          ["prepare"]=&gt;
+          bool(false)
+          ["ssl"]=&gt;
+          bool(true)
+          ["transactions"]=&gt;
+          bool(true)
+        }
+        ["errorcode_map"]=&gt;
+        array(0) {
+        }
+        ["connection"]=&gt;
+        NULL
+        ["dsn"]=&gt;
+        array(0) {
+        }
+        ["autocommit"]=&gt;
+        bool(true)
+        ["transaction_opcount"]=&gt;
+        int(0)
+        ["affected"]=&gt;
+        int(0)
+        ["row"]=&gt;
+        array(0) {
+        }
+        ["_num_rows"]=&gt;
+        array(0) {
+        }
+        ["fetchmode"]=&gt;
+        int(1)
+        ["fetchmode_object_class"]=&gt;
+        string(8) "stdClass"
+        ["was_connected"]=&gt;
+        NULL
+        ["last_query"]=&gt;
+        string(0) ""
+        ["options"]=&gt;
+        array(8) {
+          ["result_buffering"]=&gt;
+          int(500)
+          ["persistent"]=&gt;
+          bool(false)
+          ["ssl"]=&gt;
+          bool(false)
+          ["debug"]=&gt;
+          int(0)
+          ["seqname_format"]=&gt;
+          string(6) "%s_seq"
+          ["autofree"]=&gt;
+          bool(false)
+          ["portability"]=&gt;
+          int(0)
+          ["optimize"]=&gt;
+          string(11) "performance"
+        }
+        ["last_parameters"]=&gt;
+        array(0) {
+        }
+        ["prepare_tokens"]=&gt;
+        array(0) {
+        }
+        ["prepare_types"]=&gt;
+        array(0) {
+        }
+        ["prepared_queries"]=&gt;
+        array(0) {
+        }
+        ["_last_query_manip"]=&gt;
+        bool(false)
+        ["_next_query_manip"]=&gt;
+        bool(false)
+        ["_debug"]=&gt;
+        bool(false)
+        ["_default_error_mode"]=&gt;
+        NULL
+        ["_default_error_options"]=&gt;
+        NULL
+        ["_default_error_handler"]=&gt;
+        string(0) ""
+        ["_error_class"]=&gt;
+        string(8) "DB_Error"
+        ["_expected_errors"]=&gt;
+        array(0) {
+        }
+      }
+      ["type"]=&gt;
+      string(2) "-&gt;"
+      ["args"]=&gt;
+      array(7) {
+        [0]=&gt;
+        NULL
+        [1]=&gt;
+        int(-25)
+        [2]=&gt;
+        NULL
+        [3]=&gt;
+        NULL
+        [4]=&gt;
+        string(32) " [DB Error: extension not found]"
+        [5]=&gt;
+        string(8) "DB_Error"
+        [6]=&gt;
+        bool(true)
+      }
+    }
+    [3]=&gt;
+    array(7) {
+      ["file"]=&gt;
+      string(27) "/usr/share/php/DB/pgsql.php"
+      ["line"]=&gt;
+      int(212)
+      ["function"]=&gt;
+      string(10) "raiseError"
+      ["class"]=&gt;
+      string(9) "DB_common"
+      ["object"]=&gt;
+      object(DB_pgsql)#3 (28) {
+        ["phptype"]=&gt;
+        string(5) "pgsql"
+        ["dbsyntax"]=&gt;
+        string(5) "pgsql"
+        ["features"]=&gt;
+        array(7) {
+          ["limit"]=&gt;
+          string(5) "alter"
+          ["new_link"]=&gt;
+          string(5) "4.3.0"
+          ["numrows"]=&gt;
+          bool(true)
+          ["pconnect"]=&gt;
+          bool(true)
+          ["prepare"]=&gt;
+          bool(false)
+          ["ssl"]=&gt;
+          bool(true)
+          ["transactions"]=&gt;
+          bool(true)
+        }
+        ["errorcode_map"]=&gt;
+        array(0) {
+        }
+        ["connection"]=&gt;
+        NULL
+        ["dsn"]=&gt;
+        array(0) {
+        }
+        ["autocommit"]=&gt;
+        bool(true)
+        ["transaction_opcount"]=&gt;
+        int(0)
+        ["affected"]=&gt;
+        int(0)
+        ["row"]=&gt;
+        array(0) {
+        }
+        ["_num_rows"]=&gt;
+        array(0) {
+        }
+        ["fetchmode"]=&gt;
+        int(1)
+        ["fetchmode_object_class"]=&gt;
+        string(8) "stdClass"
+        ["was_connected"]=&gt;
+        NULL
+        ["last_query"]=&gt;
+        string(0) ""
+        ["options"]=&gt;
+        array(8) {
+          ["result_buffering"]=&gt;
+          int(500)
+          ["persistent"]=&gt;
+          bool(false)
+          ["ssl"]=&gt;
+          bool(false)
+          ["debug"]=&gt;
+          int(0)
+          ["seqname_format"]=&gt;
+          string(6) "%s_seq"
+          ["autofree"]=&gt;
+          bool(false)
+          ["portability"]=&gt;
+          int(0)
+          ["optimize"]=&gt;
+          string(11) "performance"
+        }
+        ["last_parameters"]=&gt;
+        array(0) {
+        }
+        ["prepare_tokens"]=&gt;
+        array(0) {
+        }
+        ["prepare_types"]=&gt;
+        array(0) {
+        }
+        ["prepared_queries"]=&gt;
+        array(0) {
+        }
+        ["_last_query_manip"]=&gt;
+        bool(false)
+        ["_next_query_manip"]=&gt;
+        bool(false)
+        ["_debug"]=&gt;
+        bool(false)
+        ["_default_error_mode"]=&gt;
+        NULL
+        ["_default_error_options"]=&gt;
+        NULL
+        ["_default_error_handler"]=&gt;
+        string(0) ""
+        ["_error_class"]=&gt;
+        string(8) "DB_Error"
+        ["_expected_errors"]=&gt;
+        array(0) {
+        }
+      }
+      ["type"]=&gt;
+      string(2) "-&gt;"
+      ["args"]=&gt;
+      array(1) {
+        [0]=&gt;
+        int(-25)
+      }
+    }
+    [4]=&gt;
+    array(7) {
+      ["file"]=&gt;
+      string(21) "/usr/share/php/DB.php"
+      ["line"]=&gt;
+      int(557)
+      ["function"]=&gt;
+      string(7) "connect"
+      ["class"]=&gt;
+      string(8) "DB_pgsql"
+      ["object"]=&gt;
+      object(DB_pgsql)#3 (28) {
+        ["phptype"]=&gt;
+        string(5) "pgsql"
+        ["dbsyntax"]=&gt;
+        string(5) "pgsql"
+        ["features"]=&gt;
+        array(7) {
+          ["limit"]=&gt;
+          string(5) "alter"
+          ["new_link"]=&gt;
+          string(5) "4.3.0"
+          ["numrows"]=&gt;
+          bool(true)
+          ["pconnect"]=&gt;
+          bool(true)
+          ["prepare"]=&gt;
+          bool(false)
+          ["ssl"]=&gt;
+          bool(true)
+          ["transactions"]=&gt;
+          bool(true)
+        }
+        ["errorcode_map"]=&gt;
+        array(0) {
+        }
+        ["connection"]=&gt;
+        NULL
+        ["dsn"]=&gt;
+        array(0) {
+        }
+        ["autocommit"]=&gt;
+        bool(true)
+        ["transaction_opcount"]=&gt;
+        int(0)
+        ["affected"]=&gt;
+        int(0)
+        ["row"]=&gt;
+        array(0) {
+        }
+        ["_num_rows"]=&gt;
+        array(0) {
+        }
+        ["fetchmode"]=&gt;
+        int(1)
+        ["fetchmode_object_class"]=&gt;
+        string(8) "stdClass"
+        ["was_connected"]=&gt;
+        NULL
+        ["last_query"]=&gt;
+        string(0) ""
+        ["options"]=&gt;
+        array(8) {
+          ["result_buffering"]=&gt;
+          int(500)
+          ["persistent"]=&gt;
+          bool(false)
+          ["ssl"]=&gt;
+          bool(false)
+          ["debug"]=&gt;
+          int(0)
+          ["seqname_format"]=&gt;
+          string(6) "%s_seq"
+          ["autofree"]=&gt;
+          bool(false)
+          ["portability"]=&gt;
+          int(0)
+          ["optimize"]=&gt;
+          string(11) "performance"
+        }
+        ["last_parameters"]=&gt;
+        array(0) {
+        }
+        ["prepare_tokens"]=&gt;
+        array(0) {
+        }
+        ["prepare_types"]=&gt;
+        array(0) {
+        }
+        ["prepared_queries"]=&gt;
+        array(0) {
+        }
+        ["_last_query_manip"]=&gt;
+        bool(false)
+        ["_next_query_manip"]=&gt;
+        bool(false)
+        ["_debug"]=&gt;
+        bool(false)
+        ["_default_error_mode"]=&gt;
+        NULL
+        ["_default_error_options"]=&gt;
+        NULL
+        ["_default_error_handler"]=&gt;
+        string(0) ""
+        ["_error_class"]=&gt;
+        string(8) "DB_Error"
+        ["_expected_errors"]=&gt;
+        array(0) {
+        }
+      }
+      ["type"]=&gt;
+      string(2) "-&gt;"
+      ["args"]=&gt;
+      array(2) {
+        [0]=&gt;
+        array(9) {
+          ["phptype"]=&gt;
+          string(5) "pgsql"
+          ["dbsyntax"]=&gt;
+          string(5) "pgsql"
+          ["username"]=&gt;
+          string(0) ""
+          ["password"]=&gt;
+          bool(false)
+          ["protocol"]=&gt;
+          string(3) "tcp"
+          ["hostspec"]=&gt;
+          string(0) ""
+          ["port"]=&gt;
+          bool(false)
+          ["socket"]=&gt;
+          bool(false)
+          ["database"]=&gt;
+          string(9) "nominatim"
+        }
+        [1]=&gt;
+        bool(false)
+      }
+    }
+    [5]=&gt;
+    array(6) {
+      ["file"]=&gt;
+      string(39) "/home/ubuntu/Nominatim-2.4.0/lib/db.php"
+      ["line"]=&gt;
+      int(7)
+      ["function"]=&gt;
+      string(7) "connect"
+      ["class"]=&gt;
+      string(2) "DB"
+      ["type"]=&gt;
+      string(2) "::"
+      ["args"]=&gt;
+      array(2) {
+        [0]=&gt;
+        string(19) "pgsql://@/nominatim"
+        [1]=&gt;
+        bool(false)
+      }
+    }
+    [6]=&gt;
+    array(4) {
+      ["file"]=&gt;
+      string(44) "/home/ubuntu/Nominatim-2.4.0/utils/setup.php"
+      ["line"]=&gt;
+      int(112)
+      ["function"]=&gt;
+      string(5) "getDB"
+      ["args"]=&gt;
+      array(0) {
+      }
+    }
+  }
+  ["callback"]=&gt;
+  NULL
+}
+ERROR: DB Error: extension not found
+DB Error: extension not found
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/nominatim/" class="post-tag tag-link-nominatim"
+                                        title="see questions tagged 'nominatim'" rel="tag">nominatim</a>
+                                
+                                    <a href="/tags/installation/" class="post-tag tag-link-installation"
+                                        title="see questions tagged 'installation'" rel="tag">installation</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Nov '15, 18:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/90d0aa1917d54b295653368c358c0359?s=32&amp;d=identicon&amp;r=g" alt="jeancz's gravatar image" />
+    <p><a href="/users/11678/jeancz">jeancz</a><br/>
+    <span class="score" title="47 reputation points">47</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jeancz has one accepted answer">33&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46549/">
+                edited
+                <strong>13 Nov '15, 21:03</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-46549">
+    
+        <a name="46551"></a>
+        <div class="comment" id="comment-46551">
+            <div id="post-46551-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is a little too concise. I would check that your PostgreSQL database has at least PostGIS, and hstore installed. We really need to see more of the error message to provide further guidance.</p></div>
+            <div class="comment-info" id="comment-46551-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Nov '15, 19:55)</span>
+                <a class="comment-user userinfo" href="/users/647/sk53">SK53 ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46549" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46549-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/46549/extension-not-found?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/46549/extension-not-found?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/46549/extension-not-found?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/46549/extension-not-found?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="46567"></a>
+                    <div id="answer-container-46567" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-46567-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46567/up/" rel="nofollow"> </a>
+<div id="post-46567-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-46567-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46567/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="SomeoneElse has selected this answer as the correct answer"
+        href="/accept_answer/46567/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>SOLVED.</p>
+<p>I created a new virtual machine and reinstall all.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/46567/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Nov '15, 12:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/90d0aa1917d54b295653368c358c0359?s=32&amp;d=identicon&amp;r=g" alt="jeancz's gravatar image" />
+    <p><a href="/users/11678/jeancz">jeancz</a><br/>
+    <span class="score" title="47 reputation points">47</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jeancz has one accepted answer">33&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-46567">
+    
+</div>
+<div id="comment-tools-46567" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46567-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="59862"></a>
+                    <div id="answer-container-59862" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-59862-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59862/up/" rel="nofollow"> </a>
+<div id="post-59862-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-59862-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59862/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>this worked for me:</p>
+<blockquote>
+<p>dpkg --get-selections | grep -i php</p>
+</blockquote>
+<p>...</p>
+<p>php5.6-pgsql                    install</p>
+<p>php7.0-pgsql                    deinstall   &lt;--- look</p>
+<p>...</p>
+<blockquote>
+<p>sudo apt-get install php7.0-pgsql</p>
+</blockquote>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/59862/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Sep '17, 20:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/46f203350f96ab645a0a04ed99cfa0d2?s=32&amp;d=identicon&amp;r=g" alt="Carlos%20Brys's gravatar image" />
+    <p><a href="/users/13662/carlos-brys">Carlos Brys</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Carlos Brys has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/59862/">
+                edited
+                <strong>27 Sep '17, 20:51</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-59862">
+    
+</div>
+<div id="comment-tools-59862" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59862-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/46549/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gQc4Upit3PN2TxKiUho7CTVazc66oeQg' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46549/extension-not-found?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46549/extension-not-found?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nominatim/"
+            class="tag-link-nominatim"
+            title="see questions tagged'nominatim'using tags"
+            rel="tag">nominatim</a> <span class="tag-number">&#215;689</span><br/>
+        
+        <a href="/tags/installation/"
+            class="tag-link-installation"
+            title="see questions tagged'installation'using tags"
+            rel="tag">installation</a> <span class="tag-number">&#215;61</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 12, 2015, 6:17 p.m.">12 Nov '15, 18:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,505 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 27, 2017, 8:51 p.m.">27 Sep '17, 20:51</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/15563/nominatim-install-problem-final-step-php">Nominatim Install Problem, Final Step. PHP?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21125/importing-nominatim-database-error-libgeos-cant-be-opened">Importing Nominatim database error: libgeos can&#39;t be opened</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10955/nominatim-planet_osm_rels-does-not-exist">Nominatim: planet_osm_rels does not exist</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12958/set-up-nominatim">Set up Nominatim</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16175/nominatim-installation-problem-projection-code-failed">Nominatim Installation Problem - Projection Code Failed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20326/nominatim-installation-not-finding-proj-headers">Nominatim installation - Not finding proj headers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3651/problem-installing-the-nominatim-web-front-end">Problem installing the Nominatim web front-end</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9467/installing-osm-main-objective-is-reverse-geocoding-on-windows-2008-server">Installing OSM (main objective is reverse geocoding) on windows 2008 server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12373/import-error-with-nominatim-installation-no-data-and-db-error-insufficient-permissions">Import error with Nominatim installation: No Data and DB Error: insufficient permissions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21579/error-while-installing-nominatim">Error while installing Nominatim</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

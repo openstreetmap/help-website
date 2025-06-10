@@ -1,0 +1,785 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Adding new company to the map - OSM Help</title>
+        <meta name="description" content="Hello! How can I add information about a company to openstreetmap? Which tool should I use?" />
+        <meta name="keywords" content="localbusiness,editing,common,addressing,poi" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/54492/adding-new-company-to-the-map" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54492/adding-new-company-to-the-map?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='LsePDMobfslG6ELpjVUlik95evsO9nzZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54492/adding-new-company-to-the-map">Adding new company to the map</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54492-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54492/up/" rel="nofollow"> </a>
+<div id="post-54492-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54492-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54492/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54492/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello!</p>
+<p>How can I add information about a company to openstreetmap? Which tool should I use?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/localbusiness/" class="post-tag tag-link-localbusiness"
+                                        title="see questions tagged 'localbusiness'" rel="tag">localbusiness</a>
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                                    <a href="/tags/common/" class="post-tag tag-link-common"
+                                        title="see questions tagged 'common'" rel="tag">common</a>
+                                
+                                    <a href="/tags/addressing/" class="post-tag tag-link-addressing"
+                                        title="see questions tagged 'addressing'" rel="tag">addressing</a>
+                                
+                                    <a href="/tags/poi/" class="post-tag tag-link-poi"
+                                        title="see questions tagged 'poi'" rel="tag">poi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Feb '17, 02:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/75bbd23a2a32a81068ea42eddae93bda?s=32&amp;d=identicon&amp;r=g" alt="Rasvet's gravatar image" />
+    <p><a href="/users/13304/rasvet">Rasvet</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Rasvet has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54492/">
+                edited
+                <strong>06 Feb '17, 08:38</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e5674dd96938593e0af5130dfffe0f90?s=32&amp;d=identicon&amp;r=g" alt="nevw's gravatar image" />
+            <p><a href="/users/7380/nevw">nevw</a><br/>
+            <span class="score" title="9843 reputation points"><span class="">9.8k</span></span><span title="26 badges"><span class="badge1">&#9679;</span><span class="badgecount">26</span></span><span title="90 badges"><span class="silver">&#9679;</span><span class="badgecount">90</span></span><span title="178 badges"><span class="bronze">&#9679;</span><span class="badgecount">178</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54492">
+    
+</div>
+<div id="comment-tools-54492" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54492-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54492/adding-new-company-to-the-map?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54492/adding-new-company-to-the-map?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54492/adding-new-company-to-the-map?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54492/adding-new-company-to-the-map?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54494"></a>
+                    <div id="answer-container-54494" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54494-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54494/up/" rel="nofollow"> </a>
+<div id="post-54494-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-54494-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54494/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Rasvet has selected this answer as the correct answer"
+        href="/accept_answer/54494/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>At the <a href="https://www.openstreetmap.org/">Openstreetmap.org site</a> you will see and edit button at the top from which you could use iD or Pollatch 2. Help is available when you select one of the editors. It is best to draw an outline of the building and add the correct tags to he building.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54494/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Feb '17, 03:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e5674dd96938593e0af5130dfffe0f90?s=32&amp;d=identicon&amp;r=g" alt="nevw's gravatar image" />
+    <p><a href="/users/7380/nevw">nevw</a><br/>
+    <span class="score" title="9843 reputation points"><span class="">9.8k</span></span><span title="26 badges"><span class="badge1">&#9679;</span><span class="badgecount">26</span></span><span title="90 badges"><span class="silver">&#9679;</span><span class="badgecount">90</span></span><span title="178 badges"><span class="bronze">&#9679;</span><span class="badgecount">178</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="nevw has 32 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54494">
+    
+        <a name="54495"></a>
+        <div class="comment" id="comment-54495">
+            <div id="post-54495-score" class="comment-score"></div>
+            <div class="comment-text"><p>Should I use this tool?: <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">http://wiki.openstreetmap.org/wiki/Potlatch_2</a></p></div>
+            <div class="comment-info" id="comment-54495-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '17, 03:28)</span>
+                <a class="comment-user userinfo" href="/users/13304/rasvet">Rasvet</a>
+                
+            </div>
+        </div>
+    
+        <a name="54496"></a>
+        <div class="comment" id="comment-54496">
+            <div id="post-54496-score" class="comment-score"></div>
+            <div class="comment-text"><p>..or this tool?:  <a href="http://wiki.openstreetmap.org/wiki/ID">http://wiki.openstreetmap.org/wiki/ID</a></p></div>
+            <div class="comment-info" id="comment-54496-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '17, 04:09)</span>
+                <a class="comment-user userinfo" href="/users/7380/nevw">nevw</a>
+                
+            </div>
+        </div>
+    
+        <a name="54497"></a>
+        <div class="comment" id="comment-54497">
+            <div id="post-54497-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've added marker <a href="https://yadi.sk/i/DfnI536l3D6k4J">https://yadi.sk/i/DfnI536l3D6k4J</a> , but no see it on general map <a href="http://www.openstreetmap.org/#map=18/55.09389/59.69411&amp;layers=N">http://www.openstreetmap.org/#map=18/55.09389/59.69411&amp;layers=N</a>
+Maybe we should wait for new point approving?</p></div>
+            <div class="comment-info" id="comment-54497-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '17, 05:37)</span>
+                <a class="comment-user userinfo" href="/users/13304/rasvet">Rasvet</a>
+                
+            </div>
+        </div>
+    
+        <a name="54498"></a>
+        <div class="comment" id="comment-54498">
+            <div id="post-54498-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I assume you put the details on a separate node instead of the existing building outline because there is more than one business here. 
+If the company occupies the entire building, you could select the building outline and add those tags to the building and delete the node.
+There is no approvals process - what you add is what you will see in the database. Not all items are rendered on a particular map, but the info is available for searching. It may take a while before all zoom levels get rendered using the latest data. Refreshing your browser may help clear you cache.</p></div>
+            <div class="comment-info" id="comment-54498-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '17, 06:06)</span>
+                <a class="comment-user userinfo" href="/users/7380/nevw">nevw</a>
+                
+            </div>
+        </div>
+    
+        <a name="54510"></a>
+        <div class="comment" id="comment-54510">
+            <div id="post-54510-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can see the point you mapped, when i edit (with potlatch2) but it may take a while to render. Better to draw an outline and add the name and other tags. But it will need a a while to show up.</p></div>
+            <div class="comment-info" id="comment-54510-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '17, 08:54)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+        <a name="54512"></a>
+        <div class="comment not_top_scorer" id="comment-54512">
+            <div id="post-54512-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/1725/andy">@andy</a> Good news. I added 2 objects: <a href="https://yadi.sk/i/w_38nOeK3D9Hcg">https://yadi.sk/i/w_38nOeK3D9Hcg</a> and <a href="https://yadi.sk/i/rUPq_XyP3D9HqT">https://yadi.sk/i/rUPq_XyP3D9HqT</a>  Is it correct?</p></div>
+            <div class="comment-info" id="comment-54512-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '17, 10:53)</span>
+                <a class="comment-user userinfo" href="/users/13304/rasvet">Rasvet</a>
+                
+            </div>
+        </div>
+    
+        <a name="54533"></a>
+        <div class="comment not_top_scorer" id="comment-54533">
+            <div id="post-54533-score" class="comment-score"></div>
+            <div class="comment-text"><p>It would be easy for us to check if you post an OSM link like this <a href="http://www.openstreetmap.org/#map=17/52.34546/-0.19746">http://www.openstreetmap.org/#map=17/52.34546/-0.19746</a></p></div>
+            <div class="comment-info" id="comment-54533-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Feb '17, 12:35)</span>
+                <a class="comment-user userinfo" href="/users/644/andy-mackey">andy mackey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54494" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54494-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54492/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='LsePDMobfslG6ELpjVUlik95evsO9nzZ' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54492/adding-new-company-to-the-map?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54492/adding-new-company-to-the-map?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+        <a href="/tags/poi/"
+            class="tag-link-poi"
+            title="see questions tagged'poi'using tags"
+            rel="tag">poi</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/addressing/"
+            class="tag-link-addressing"
+            title="see questions tagged'addressing'using tags"
+            rel="tag">addressing</a> <span class="tag-number">&#215;30</span><br/>
+        
+        <a href="/tags/common/"
+            class="tag-link-common"
+            title="see questions tagged'common'using tags"
+            rel="tag">common</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/localbusiness/"
+            class="tag-link-localbusiness"
+            title="see questions tagged'localbusiness'using tags"
+            rel="tag">localbusiness</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 6, 2017, 2:28 a.m.">06 Feb '17, 02:28</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,998 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 7, 2017, 1:09 p.m.">07 Feb '17, 13:09</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/35777/how-to-import-an-osmand-bookmarked-point-into-the-osm-online-editor-id">How to import an OsmAnd bookmarked point into the OSM online editor iD?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/69362/why-my-poi-is-not-searchable">Why my POI is not searchable?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities">What is the best way to address / add POIs and Amenities?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26351/how-can-i-add-a-missing-poi">How can I add a missing POI?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56819/how-to-get-all-the-editing-history-for-poi">How to get all the editing history for POI</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62590/how-to-edit-a-comment-or-a-rate-for-a-location-in-open-street-map">[closed] How to edit a comment or a rate for a Location in open street map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4319/do-i-add-address-tags-to-the-poi-node-or-create-a-separate-node">Do I add address tags to the POI node or create a separate node?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13706/best-way-to-add-house-numbers-with-reverse-geolocating-in-mind">Best way to add house numbers with reverse geolocating in mind?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/71986/single-address-line-from-addr-tags">Single address line from addr:* tags</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

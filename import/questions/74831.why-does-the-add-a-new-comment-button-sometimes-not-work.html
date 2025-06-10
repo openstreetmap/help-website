@@ -1,0 +1,981 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why does the &quot;add a new comment&quot;  button sometimes not work? - OSM Help</title>
+        <meta name="description" content="I experienced this issue on and off infrequently over the past weeks or month, and notice eg Escada https://help.openstreetmap.org/answer_link/74804/ mentioned this recently. It fails to respond visibly to clicks. The cursor does change when hovering over. (Sorry, haven&#39;t checked console output or a..." />
+        <meta name="keywords" content="meta,osqa,bug,comments" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='RDQAYaXT5hDk0sE8TrnS0kSZNyZ06tz7' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work">Why does the &quot;add a new comment&quot;  button sometimes not work?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-74831-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74831/up/" rel="nofollow"> </a>
+<div id="post-74831-score" class="post-score"
+    title="current number of votes">
+    5
+</div>
+<a id="post-74831-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74831/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/74831/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I experienced this issue on and off infrequently over the past weeks or month, and notice eg Escada <a href="https://help.openstreetmap.org/answer_link/74804/">https://help.openstreetmap.org/answer_link/74804/</a> mentioned this recently. It fails to respond visibly to clicks. The cursor does change when hovering over. (Sorry, haven't checked console output or any status when I reproduced it) I know editing/updating and related actions may be glitchy here.</p>
+<p>Am on Firefox 74, standard Enhanced Tracking Protection. Enabled all in NoScript for this website with nothing blocked. </p>
+<p>(is there any more proper channel for this website's issue reporting? not sure if OSM.org's repo is appropriate - guess I should ask here anyway for visibility and relevance)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/meta/" class="post-tag tag-link-meta"
+                                        title="see questions tagged 'meta'" rel="tag">meta</a>
+                                
+                                    <a href="/tags/osqa/" class="post-tag tag-link-osqa"
+                                        title="see questions tagged 'osqa'" rel="tag">osqa</a>
+                                
+                                    <a href="/tags/bug/" class="post-tag tag-link-bug"
+                                        title="see questions tagged 'bug'" rel="tag">bug</a>
+                                
+                                    <a href="/tags/comments/" class="post-tag tag-link-comments"
+                                        title="see questions tagged 'comments'" rel="tag">comments</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>15 May '20, 12:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/76ffbb56c811e8a8ccdd4c28f122399f?s=32&amp;d=identicon&amp;r=g" alt="Kovoschiz's gravatar image" />
+    <p><a href="/users/16887/kovoschiz">Kovoschiz</a><br/>
+    <span class="score" title="2434 reputation points"><span class="">2.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="47 badges"><span class="bronze">&#9679;</span><span class="badgecount">47</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kovoschiz has 22 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/74831/">
+                edited
+                <strong>15 May '20, 13:15</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-74831">
+    
+        <a name="74929"></a>
+        <div class="comment" id="comment-74929">
+            <div id="post-74929-score" class="comment-score">2</div>
+            <div class="comment-text"><p>I've brought the topic up on talk: <a href="https://lists.openstreetmap.org/pipermail/talk/2020-May/084700.html">talk archive</a>.</p></div>
+            <div class="comment-info" id="comment-74929-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 May '20, 12:58)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+        <a name="75307"></a>
+        <div class="comment" id="comment-75307">
+            <div id="post-75307-score" class="comment-score">1</div>
+            <div class="comment-text"><p>One workaround that works that will be an option for at least some users - use Internet Explorer as opposed to another browser.  Currently it's broken everywhere else, but I'm adding this comment from IE 11.</p></div>
+            <div class="comment-info" id="comment-75307-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '20, 19:15)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="75526"></a>
+        <div class="comment" id="comment-75526">
+            <div id="post-75526-score" class="comment-score">3</div>
+            <div class="comment-text"><p>I’ve posted a brief report on these issues from the Ops group, at <a href="https://lists.openstreetmap.org/pipermail/talk/2020-July/085068.html.">https://lists.openstreetmap.org/pipermail/talk/2020-July/085068.html.</a> I’ll be watching this thread for further problems while we deprecated competing Trac and SVN services on this server.</p></div>
+            <div class="comment-info" id="comment-75526-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jul '20, 06:43)</span>
+                <a class="comment-user userinfo" href="/users/715/migurski">migurski</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74831" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74831-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="74911"></a>
+                    <div id="answer-container-74911" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74911-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74911/up/" rel="nofollow"> </a>
+<div id="post-74911-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-74911-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74911/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Kovoschiz has selected this answer as the correct answer"
+        href="/accept_answer/74911/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It happened just now. JSAPI seems deprecated. On this occasion it did work again after few Ctrl+Shift+R...</p>
+<p>The weirdest is that the mentioned files are loaded later, but maybe too late for other scripts.</p>
+<p><img src="https://help.openstreetmap.org/upfiles/2020-05-19_19-05-10.png" alt="js console">
+<img src="https://help.openstreetmap.org/upfiles/2020-05-19_19-06-25.png" alt="network">
+<img src="https://help.openstreetmap.org/upfiles/2020-05-19_19-07-41.png" alt="network error">
+<img src="https://help.openstreetmap.org/upfiles/2020-05-19_19-08-02.png" alt="network ok"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74911/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 May '20, 18:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9434692e9afccaf03af5acf20b3a3279?s=32&amp;d=identicon&amp;r=g" alt="H_mlet's gravatar image" />
+    <p><a href="/users/13231/h_mlet">H_mlet</a><br/>
+    <span class="score" title="5443 reputation points"><span class="">5.4k</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="81 badges"><span class="bronze">&#9679;</span><span class="badgecount">81</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="H_mlet has 40 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74911">
+    
+</div>
+<div id="comment-tools-74911" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74911-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="74928"></a>
+                    <div id="answer-container-74928" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74928-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74928/up/" rel="nofollow"> </a>
+<div id="post-74928-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-74928-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74928/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>That's it. Comments is entirely broken (including show more comments) Have to make an "answer" here. I can't upvote either. Answer preview also seems broken. </p>
+<p><code>Loading modules with the jsapi loader is deprecated.
+Please load jquery directly from <a href="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js.">https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js.</a> jsapi:93:231
+Loading modules with the jsapi loader is deprecated.
+Please load jqueryui directly from <a href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js.">https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js.</a> jsapi:93:231
+ReferenceError: $ is not defined
+osqa.main.js:6:1
+    &lt;anonymous&gt; <a href="https://help.openstreetmap.org/m/default/media/js/osqa.main.js:6">https://help.openstreetmap.org/m/default/media/js/osqa.main.js:6</a>
+ReferenceError: $ is not defined
+osqa.question.js:1:1
+    &lt;anonymous&gt; <a href="https://help.openstreetmap.org/m/default/media/js/osqa.question.js:1">https://help.openstreetmap.org/m/default/media/js/osqa.question.js:1</a>
+ReferenceError: jQuery is not defined
+jquery.caret.js:10:1
+    &lt;anonymous&gt; jQuery
+ReferenceError: jQuery is not defined
+wmd.js:1:1
+    &lt;anonymous&gt; <a href="https://help.openstreetmap.org/m/default/media/js/wmd/wmd.js:1">https://help.openstreetmap.org/m/default/media/js/wmd/wmd.js:1</a>
+ReferenceError: jQuery is not defined
+viewbox_min.js line 1 &gt; eval:1:2
+    &lt;anonymous&gt; <a href="https://help.openstreetmap.org/m/default/media/js/viewbox_min.js">https://help.openstreetmap.org/m/default/media/js/viewbox_min.js</a> line 1 &gt; eval:1
+    &lt;anonymous&gt; <a href="https://help.openstreetmap.org/m/default/media/js/viewbox_min.js:1">https://help.openstreetmap.org/m/default/media/js/viewbox_min.js:1</a>
+ReferenceError: $ is not defined
+youtube.js:1:1
+    &lt;anonymous&gt; <a href="https://help.openstreetmap.org/m/default/media/js/youtube.js:1">https://help.openstreetmap.org/m/default/media/js/youtube.js:1</a>
+ReferenceError: $ is not defined
+why-does-the-add-a-new-comment-button-sometimes-not-work:76:9
+    &lt;anonymous&gt; <a href="https://help.openstreetmap.org/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work#:76">https://help.openstreetmap.org/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work#:76</a>
+JQMIGRATE: jQuery.browser is deprecated jquery-migrate-1.0.0.js:29:12</code></p>
+<p>On top of that, there's this as well <code>The resource from “<a href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css”">https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css”</a> was blocked due to MIME type (“text/html”) mismatch (X-Content-Type-Options: nosniff).
+why-does-the-add-a-new-comment-button-sometimes-not-work</code></p>
+<p><code>HTTP/1.1 404 Not Found
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+Date: Wed, 20 May 2020 11:30:29 GMT
+Content-Type: text/html; charset=UTF-8
+Server: sffe
+Content-Length: 1607
+X-XSS-Protection: 0
+Alt-Svc: h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"</code></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74928/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 May '20, 12:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/76ffbb56c811e8a8ccdd4c28f122399f?s=32&amp;d=identicon&amp;r=g" alt="Kovoschiz's gravatar image" />
+    <p><a href="/users/16887/kovoschiz">Kovoschiz</a><br/>
+    <span class="score" title="2434 reputation points"><span class="">2.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="47 badges"><span class="bronze">&#9679;</span><span class="badgecount">47</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kovoschiz has 22 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/74928/">
+                edited
+                <strong>20 May '20, 12:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74928">
+    
+</div>
+<div id="comment-tools-74928" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74928-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="74833"></a>
+                    <div id="answer-container-74833" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-74833-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/74833/up/" rel="nofollow"> </a>
+<div id="post-74833-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-74833-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/74833/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think the answer is "because the javascript hasn't loaded yet".  In my experience if you can see a bunch of icons above the answer box, "add new comment" will work.  If you can't it won't - refresh the screen and try again.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/74833/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 May '20, 13:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0bf1aa22f7f5e045b0eb8beb79fe7907?s=32&amp;d=identicon&amp;r=g" alt="SomeoneElse's gravatar image" />
+    <p><a href="/users/387/someoneelse">SomeoneElse ♦</a><br/>
+    <span class="score" title="36866 reputation points"><span class="">36.9k</span></span><span title="71 badges"><span class="badge1">&#9679;</span><span class="badgecount">71</span></span><span title="370 badges"><span class="silver">&#9679;</span><span class="badgecount">370</span></span><span title="866 badges"><span class="bronze">&#9679;</span><span class="badgecount">866</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SomeoneElse has 228 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-74833">
+    
+        <a name="74837"></a>
+        <div class="comment" id="comment-74837">
+            <div id="post-74837-score" class="comment-score">4</div>
+            <div class="comment-text"><p>I suspect the problem is jquery related, this is loaded from a remote (google) site and seemed to have some issues yesterday. Might naturally be something completely different.</p>
+
+<p>That said, just as a general reminder: we are still looking for somebody to migrate to <a href="https://github.com/ASKBOT/askbot-devel">https://github.com/ASKBOT/askbot-devel</a> , which, while not a pinnacle of developer frenzy, is actually maintained.</p></div>
+            <div class="comment-info" id="comment-74837-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 May '20, 15:16)</span>
+                <a class="comment-user userinfo" href="/users/2053/simonpoole">SimonPoole ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="74845"></a>
+        <div class="comment" id="comment-74845">
+            <div id="post-74845-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> The issue persisted as I waited, tried clicking multiple times, and refreshing. Non-technically speaking, perhaps clicking the button before whatever-it-is finishes loading interrupts the thing?  I hadn't notice icons being off yet, but thanks, will keep an eye on it next time and update here (or ask a new question if appropriate).</p></div>
+            <div class="comment-info" id="comment-74845-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 May '20, 22:25)</span>
+                <a class="comment-user userinfo" href="/users/16887/kovoschiz">Kovoschiz</a>
+                
+            </div>
+        </div>
+    
+        <a name="74989"></a>
+        <div class="comment" id="comment-74989">
+            <div id="post-74989-score" class="comment-score"></div>
+            <div class="comment-text"><p>So does anyone have a clue why it is back to normal now? Did someone change something in the configuration of this site or was it an external fix? How lasting could that be (I know, speculative question)?</p></div>
+            <div class="comment-info" id="comment-74989-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '20, 08:16)</span>
+                <a class="comment-user userinfo" href="/users/10133/tzorn">TZorn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-74833" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-74833-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/74831/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='RDQAYaXT5hDk0sE8TrnS0kSZNyZ06tz7' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/bug/"
+            class="tag-link-bug"
+            title="see questions tagged'bug'using tags"
+            rel="tag">bug</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/meta/"
+            class="tag-link-meta"
+            title="see questions tagged'meta'using tags"
+            rel="tag">meta</a> <span class="tag-number">&#215;58</span><br/>
+        
+        <a href="/tags/osqa/"
+            class="tag-link-osqa"
+            title="see questions tagged'osqa'using tags"
+            rel="tag">osqa</a> <span class="tag-number">&#215;34</span><br/>
+        
+        <a href="/tags/comments/"
+            class="tag-link-comments"
+            title="see questions tagged'comments'using tags"
+            rel="tag">comments</a> <span class="tag-number">&#215;12</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 15, 2020, 12:59 p.m.">15 May '20, 12:59</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,773 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 7, 2020, 9:30 a.m.">07 Jul '20, 09:30</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/50830/unable-to-convert-comment-to-answer">Unable to convert comment to answer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21160/meta-accept-own-answer">[Meta] Accept Own Answer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1858/comment-how-does-one-ask-a-question-about-a-post-answer">Comment? How does one ask a Question about a Post Answer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8169/meta-zero-acceptance-rate">Meta: Zero Acceptance Rate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21058/how-to-track-your-karma-history">How to track your karma history ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/377/where-does-meta-discussion-on-helpopenstreetmaporg-occur">Where does meta discussion on help.openstreetmap.org occur?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6390/meta-howto-delete-account">[Meta] HOWTO Delete Account?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2169/adding-a-comment-to-answers-on-this-help-site-does-not-work-text-box-disappears">Adding a comment to answers on this help site does not work - text box disappears</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6449/language-in-osqa">Language in OSQA</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11589/how-do-i-put-a-screen-image-into-a-question">How do I put a screen image into a question</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

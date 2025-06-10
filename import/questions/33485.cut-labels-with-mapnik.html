@@ -1,0 +1,934 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Cut Labels with Mapnik - OSM Help</title>
+        <meta name="description" content="I&#39;m getting cut labels on my maps. Same thing is happening on the main map here: http://www.openstreetmap.org/#map=11/52.3303/-1.3774 (look between Coventry and Rugby) Anyone know how to fix them? I made a dynamic tileserver with Mapnik, renderd and Apache mod-tile. Also made a static one with Mapni..." />
+        <meta name="keywords" content="labels,osm.xml,cut,mapnik" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/33485/cut-labels-with-mapnik" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/33485/cut-labels-with-mapnik?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='0LcRWu0tfKoCLeTvr0ttsURsEuAGHwrN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/33485/cut-labels-with-mapnik">Cut Labels with Mapnik</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-33485-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33485/up/" rel="nofollow"> </a>
+<div id="post-33485-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33485-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33485/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/33485/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm getting cut labels on my maps.  Same thing is happening on the main map here:</p>
+<p><a href="http://www.openstreetmap.org/#map=11/52.3303/-1.3774">http://www.openstreetmap.org/#map=11/52.3303/-1.3774</a></p>
+<p>(look between Coventry and Rugby)</p>
+<p>Anyone know how to fix them?</p>
+<p>I made a dynamic tileserver with Mapnik, renderd and Apache mod-tile.  Also made a static one with Mapnik and generate_tiles.py to make the tiles.  Same thing is happening in both cases.</p>
+<p>Did some research and discovered that the problem is caused by not having a buffer around the rendered tiles.  So I stated a buffer size in my main xml style file (osm.xml):</p>
+<p>&lt;Map background-color="#b5d0d0" buffer-size="128" srs="&amp;srs900913;" minimum-version="2.0.0"&gt;</p>
+<p>Did so for the dynamic and the static servers.  Made no difference.  Tried different sizes for the buffer: 256, 1024, made no difference.  I know osm.xml is being loaded because every time I edit it I change the background colour and I can see the new colour in newly rendered tiles.</p>
+<p>So Mapnik is reading osm.xml but apparently ignoring the buffer size.  Why so?</p>
+<p>Thank you.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/labels/" class="post-tag tag-link-labels"
+                                        title="see questions tagged 'labels'" rel="tag">labels</a>
+                                
+                                    <a href="/tags/osm.xml/" class="post-tag tag-link-osm.xml"
+                                        title="see questions tagged 'osm.xml'" rel="tag">osm.xml</a>
+                                
+                                    <a href="/tags/cut/" class="post-tag tag-link-cut"
+                                        title="see questions tagged 'cut'" rel="tag">cut</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>26 May '14, 18:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/11e6e819b91b4d177c249c5123d2fa15?s=32&amp;d=identicon&amp;r=g" alt="Charles%20Sweeney's gravatar image" />
+    <p><a href="/users/8924/charles-sweeney">Charles Sweeney</a><br/>
+    <span class="score" title="101 reputation points">101</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Charles Sweeney has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-33485">
+    
+</div>
+<div id="comment-tools-33485" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33485-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/33485/cut-labels-with-mapnik?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/33485/cut-labels-with-mapnik?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/33485/cut-labels-with-mapnik?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/33485/cut-labels-with-mapnik?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="33509"></a>
+                    <div id="answer-container-33509" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33509-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33509/up/" rel="nofollow"> </a>
+<div id="post-33509-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-33509-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33509/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Fixed it myself.  Not sure if it's the "correct" solution but it works very well for me and gets rid of all the cut labels.</p>
+<p>Used "avoid-edges" in the xml.</p>
+<p>On the dynamic server (Mapnik, renderd, mod_tile):</p>
+<p>Edited the main xml file /etc/mapnik-osm-data/osm.xml</p>
+<p>Added the "avoid-edges" parameter with a value of "true" to every instance of the &lt;ShieldSymbolizer&gt; tag (13 of them).  So for example, this line:</p>
+<p>&lt;ShieldSymbolizer size="10" fill="#fff" placement="line" file="&amp;symbols;/mot_shield[length].png" spacing="750" minimum-distance="30" fontset-name="bold-fonts"&gt;[ref]&lt;/ShieldSymbolizer&gt;</p>
+<p>...became:</p>
+<p>&lt;ShieldSymbolizer size="10" fill="#fff" avoid-edges="true" placement="line" file="&amp;symbols;/mot_shield[length].png" spacing="750" minimum-distance="30" fontset-name="bold-fonts"&gt;[ref]&lt;/ShieldSymbolizer&gt;</p>
+<p>After editing, stop and start renderd:</p>
+<p>/etc/init.d/renderd stop</p>
+<p>/etc/init.d/renderd start</p>
+<p>You can go to a new area of the map to see newly generated tiles to see the effect of the changes.  In my case on a test server I deleted ALL existing tiles, then went onto the map again, getting every tile fresh.</p>
+<p>The tiles are here (on my setup):</p>
+<p>/var/lib/mod_tile/default</p>
+<p>To delete all the tiles, delete the "default" directory:</p>
+<p>cd /var/lib/mod_tile/</p>
+<p>rm -fr default</p>
+<p>The "default" directory is automatically created again the next time a tile is rendered.</p>
+<p>I was delighted with the result.  My worry was that there would be more labels and pairs of labels where there was previously cut labels, but to my pleasant surprise there was the same number of labels as before but those that were previously cut had been moved slightly (within the edge of the tile) and displayed perfectly!</p>
+<p>Still had buffer-size="128" in the &lt;Map&gt; attribute, though not sure if that is necessary as it didn't appear to make any difference there.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33509/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 May '14, 15:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/11e6e819b91b4d177c249c5123d2fa15?s=32&amp;d=identicon&amp;r=g" alt="Charles%20Sweeney's gravatar image" />
+    <p><a href="/users/8924/charles-sweeney">Charles Sweeney</a><br/>
+    <span class="score" title="101 reputation points">101</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Charles Sweeney has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33509">
+    
+        <a name="33510"></a>
+        <div class="comment" id="comment-33510">
+            <div id="post-33510-score" class="comment-score"></div>
+            <div class="comment-text"><p>similar solutions for the label cutting problem are discussed in this video <a href="http://stateofthemap.us/session/advanced-cartocss-tricks/,">http://stateofthemap.us/session/advanced-cartocss-tricks/,</a> but for CartoCss</p></div>
+            <div class="comment-info" id="comment-33510-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '14, 17:17)</span>
+                <a class="comment-user userinfo" href="/users/5390/escada">escada</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33509" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33509-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55502"></a>
+                    <div id="answer-container-55502" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55502-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55502/up/" rel="nofollow"> </a>
+<div id="post-55502-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55502-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55502/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi. I applied the solution above, but I am still having road labels being a little cut off. Why is this and can I fix it ?</p>
+<p><img src="https://help.openstreetmap.org/upfiles/s3.png" alt="alt text"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55502/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Apr '17, 23:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f98ed179efe75af596090a497cefeb90?s=32&amp;d=identicon&amp;r=g" alt="Koles500's gravatar image" />
+    <p><a href="/users/13229/koles500">Koles500</a><br/>
+    <span class="score" title="68 reputation points">68</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Koles500 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55502">
+    
+        <a name="55504"></a>
+        <div class="comment" id="comment-55504">
+            <div id="post-55504-score" class="comment-score"></div>
+            <div class="comment-text"><p>The answer at <a href="https://help.openstreetmap.org/questions/54196/how-to-make-symbols-visible-on-a-lesser-zoom-level/54202">https://help.openstreetmap.org/questions/54196/how-to-make-symbols-visible-on-a-lesser-zoom-level/54202</a> suggests that you might have been using the old pre-carto style.  If you are, then there are two things that you're doing differently to "most people" (the other is running this on Windows).  My guess is that your problem here is related to something that you're doing differently - perhaps try a more recent map style, or the same style on differently-built version of Mapnik (for example <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> just fetches from a repository so there's less to go wrong).</p></div>
+            <div class="comment-info" id="comment-55504-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '17, 00:09)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="55522"></a>
+        <div class="comment" id="comment-55522">
+            <div id="post-55522-score" class="comment-score"></div>
+            <div class="comment-text"><p>We have newest mapnik tools that I downloaded from SVN repository. I can try different style. Which one exactly do you suggest? Maybe this one : ? <a href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a></p></div>
+            <div class="comment-info" id="comment-55522-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '17, 14:04)</span>
+                <a class="comment-user userinfo" href="/users/13229/koles500">Koles500</a>
+                
+            </div>
+        </div>
+    
+        <a name="55584"></a>
+        <div class="comment" id="comment-55584">
+            <div id="post-55584-score" class="comment-score"></div>
+            <div class="comment-text"><p>I downloaded style from <a href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a> and compared it with my usual default.style file and they are exactly the same. I re-imported data and re-rendered tiles and the problem is still the same as shown above. Any ideas ?</p></div>
+            <div class="comment-info" id="comment-55584-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '17, 15:53)</span>
+                <a class="comment-user userinfo" href="/users/13229/koles500">Koles500</a>
+                
+            </div>
+        </div>
+    
+        <a name="55585"></a>
+        <div class="comment" id="comment-55585">
+            <div id="post-55585-score" class="comment-score"></div>
+            <div class="comment-text"><p>As mentioned elsewhere, the "default.style" file just determines what columns are imported, not what map style you get.  That file is usually called "mapnik.xml".  To take one example of how that is created see <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> up to where it says "carto project.mml &gt; mapnik.xml".  In that example the "source" for the style is in the files referred to by "project.mml" and "carto" converts that into "mapnik.xml" which is something that Mapnik can understand (but most humans can't).</p>
+
+<p>To compare non-carto map styles you'd need to compare the mapnik.xml files, but that will be difficult because the file format is very difficult to understand.</p></div>
+            <div class="comment-info" id="comment-55585-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '17, 16:36)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55502" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55502-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55586"></a>
+                    <div id="answer-container-55586" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55586-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55586/up/" rel="nofollow"> </a>
+<div id="post-55586-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55586-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55586/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Finally, I fixed it!
+&lt;Map buffer-size="512"
+AND
+&lt;ShieldSymbolizer clip="false"
+instead of 
+&lt;ShieldSymbolizer avoid-edges="true"
+(all occurences) in osm.xml worked.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55586/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Apr '17, 16:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f98ed179efe75af596090a497cefeb90?s=32&amp;d=identicon&amp;r=g" alt="Koles500's gravatar image" />
+    <p><a href="/users/13229/koles500">Koles500</a><br/>
+    <span class="score" title="68 reputation points">68</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Koles500 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55586/">
+                edited
+                <strong>12 Apr '17, 16:55</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55586">
+    
+</div>
+<div id="comment-tools-55586" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55586-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/33485/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='0LcRWu0tfKoCLeTvr0ttsURsEuAGHwrN' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33485/cut-labels-with-mapnik?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33485/cut-labels-with-mapnik?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/labels/"
+            class="tag-link-labels"
+            title="see questions tagged'labels'using tags"
+            rel="tag">labels</a> <span class="tag-number">&#215;63</span><br/>
+        
+        <a href="/tags/osm.xml/"
+            class="tag-link-osm.xml"
+            title="see questions tagged'osm.xml'using tags"
+            rel="tag">osm.xml</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/cut/"
+            class="tag-link-cut"
+            title="see questions tagged'cut'using tags"
+            rel="tag">cut</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 26, 2014, 6:12 p.m.">26 May '14, 18:12</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,701 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 12, 2017, 4:55 p.m.">12 Apr '17, 16:55</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/33486/cut-labels-with-mapnik">[closed] Cut Labels with Mapnik</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46818/is-it-possible-to-show-two-name-labels-on-a-road">Is it possible to show two name labels on a road?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7291/label-rendering-errors-at-fernvale-qld-australia">label rendering errors at Fernvale, Qld, Australia</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30978/missing-names-related-to-pedestrianstepsserviceliving_s-highways">missing names related to pedestrian/steps/service/living_s highways ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34358/runtimeerror-could-not-load-map-file-file-does-not-exist-of-rootsvnopenstreetmaporgapplicationsrenderingmapnikosm-localxml">RuntimeError: Could not load map file: File does not exist of &#39;/root/svn.openstreetmap.org/applications/rendering/mapnik/osm-local.xml&#39;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43276/map-without-names-toolserver-locale-no-longer-available">Map without names: toolserver / locale no longer available</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28719/label-for-a-multipolygon-gets-placed-on-a-vertex">Label for a multipolygon gets placed on a vertex</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11542/mapnik-error-column-generatorsource-does-not-exist">Mapnik error:  column &quot;generator:source&quot; does not exist</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33784/how-do-i-use-my-new-style-osmxml-file-to-generate-new-tiles">How do I use my new style (OSM.xml) file to generate new tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47147/how-can-we-make-philadelphia-show-on-openstreetmaporg-at-zoom-levels-6-and-7">How can we make Philadelphia show on openstreetmap.org at zoom levels 6 and 7?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

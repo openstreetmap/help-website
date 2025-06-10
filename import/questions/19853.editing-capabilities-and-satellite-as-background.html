@@ -1,0 +1,815 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Editing capabilities and satellite as background - OSM Help</title>
+        <meta name="description" content="you can add on your website editing function of the map? Also how you can add a satellite as a background? Who you may ask?" />
+        <meta name="keywords" content="editing" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/19853/editing-capabilities-and-satellite-as-background" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/19853/editing-capabilities-and-satellite-as-background?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='eUJ4IHn0UNgwmexVumoPBo4wZ3Kv9WbF' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/19853/editing-capabilities-and-satellite-as-background">Editing capabilities and satellite as background</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-19853-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/19853/up/" rel="nofollow"> </a>
+<div id="post-19853-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-19853-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/19853/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/19853/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>you can add on your website editing function of the map?
+Also how you can add a satellite as a background? Who you may ask?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/editing/" class="post-tag tag-link-editing"
+                                        title="see questions tagged 'editing'" rel="tag">editing</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Feb '13, 09:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5ee3dd95993217959973e9da6f21039d?s=32&amp;d=identicon&amp;r=g" alt="Francesco's gravatar image" />
+    <p><a href="/users/5609/francesco">Francesco</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Francesco has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-19853">
+    
+        <a name="19884"></a>
+        <div class="comment" id="comment-19884">
+            <div id="post-19884-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hi, your question is capable of being interpreted in a couple of different ways, so it would greatly help if you could explain in a bit more detail what you would like to do.</p>
+
+<p>If it helps, trying adding information in your native language.</p></div>
+            <div class="comment-info" id="comment-19884-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '13, 20:50)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="20019"></a>
+        <div class="comment not_top_scorer" id="comment-20019">
+            <div id="post-20019-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, since the OSM is largely incomplete and I need to use a map at a reduced cost, I'd like to implement a system that allows users to add roads of interest in your area of ​​interest is through the use of satellite imagery, directly from my site. Thanks for the reply.</p></div>
+            <div class="comment-info" id="comment-20019-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '13, 15:41)</span>
+                <a class="comment-user userinfo" href="/users/5609/francesco">Francesco</a>
+                
+            </div>
+        </div>
+    
+        <a name="20022"></a>
+        <div class="comment" id="comment-20022">
+            <div id="post-20022-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It would be far easier for everybody if you directed your users to edit OSM at the main website or using JOSM with the main OSM servers. The energy you would lose by implementing all that yourself could be used much better by just mapping at the existing OSM site. Also, you save yourself a lot of trouble (legal as well as technical).</p>
+
+<p>So, short answer: direct your users to map at openstreetmap.org .</p></div>
+            <div class="comment-info" id="comment-20022-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '13, 16:00)</span>
+                <a class="comment-user userinfo" href="/users/4653/gormo">gormo</a>
+                
+            </div>
+        </div>
+    
+        <a name="20023"></a>
+        <div class="comment not_top_scorer" id="comment-20023">
+            <div id="post-20023-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is a great idea but I would like to prevent users enroll twice as to entries in our database will need to register on the site.
+There is the possibility of registering users to OSM with the account you created for our database?</p></div>
+            <div class="comment-info" id="comment-20023-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '13, 16:13)</span>
+                <a class="comment-user userinfo" href="/users/5609/francesco">Francesco</a>
+                
+            </div>
+        </div>
+    
+        <a name="20026"></a>
+        <div class="comment not_top_scorer" id="comment-20026">
+            <div id="post-20026-score" class="comment-score"></div>
+            <div class="comment-text"><p>You would like your users not to have to create two accounts: one at your site and one at openstreetmap.org?</p></div>
+            <div class="comment-info" id="comment-20026-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '13, 16:21)</span>
+                <a class="comment-user userinfo" href="/users/4653/gormo">gormo</a>
+                
+            </div>
+        </div>
+    
+        <a name="20027"></a>
+        <div class="comment not_top_scorer" id="comment-20027">
+            <div id="post-20027-score" class="comment-score"></div>
+            <div class="comment-text"><p>exactly!!!</p></div>
+            <div class="comment-info" id="comment-20027-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '13, 16:24)</span>
+                <a class="comment-user userinfo" href="/users/5609/francesco">Francesco</a>
+                
+            </div>
+        </div>
+    
+        <a name="20028"></a>
+        <div class="comment" id="comment-20028">
+            <div id="post-20028-score" class="comment-score">4</div>
+            <div class="comment-text"><p>If you set up an OpenID identity provider you can have your users log into Openstreetmap <a href="https://wiki.openstreetmap.org/wiki/OpenID">https://wiki.openstreetmap.org/wiki/OpenID</a></p>
+
+<p>The other way around is also possible to implement. Have users log into your site with Openstreetmap credentials.</p></div>
+            <div class="comment-info" id="comment-20028-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '13, 18:06)</span>
+                <a class="comment-user userinfo" href="/users/4840/schnitzelinmypocket">schnitzelinm...</a>
+                
+            </div>
+        </div>
+    
+        <a name="20029"></a>
+        <div class="comment not_top_scorer" id="comment-20029">
+            <div id="post-20029-score" class="comment-score"></div>
+            <div class="comment-text"><p>It was just what I wanted. Thank you very much.</p></div>
+            <div class="comment-info" id="comment-20029-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '13, 18:44)</span>
+                <a class="comment-user userinfo" href="/users/5609/francesco">Francesco</a>
+                
+            </div>
+        </div>
+    
+        <a name="20036"></a>
+        <div class="comment" id="comment-20036">
+            <div id="post-20036-score" class="comment-score">2</div>
+            <div class="comment-text"><p><a href="/users/5609/francesco">@Francesco</a>, you mention" use of satellite imagery" - please be sure to not encourage your users to create copyright violations. If you set up editing at your site (and do not direct the users to edit here), please do only use public domain imagery to trace from. Google maps / satellite is NOT public domain. </p>
+
+<p>In addition, edits which create OSM data are allowed to use the aerial imagery (not the map!) from bing. That is a special agreement and only valid for OSM.</p></div>
+            <div class="comment-info" id="comment-20036-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '13, 22:11)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="20037"></a>
+        <div class="comment" id="comment-20037">
+            <div id="post-20037-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I am aware of these limitations and for this I follow the advice of @ Schnitzelinm and redirect users to OSM for changes.
+Thanks anyway for the information.</p></div>
+            <div class="comment-info" id="comment-20037-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Feb '13, 08:17)</span>
+                <a class="comment-user userinfo" href="/users/5609/francesco">Francesco</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-19853" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-19853-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/19853/editing-capabilities-and-satellite-as-background?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/19853/editing-capabilities-and-satellite-as-background?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/19853/editing-capabilities-and-satellite-as-background?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/19853/editing-capabilities-and-satellite-as-background?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="19856"></a>
+                    <div id="answer-container-19856" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-19856-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/19856/up/" rel="nofollow"> </a>
+<div id="post-19856-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-19856-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/19856/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Use <a href="http://leafletjs.com/">Leaflet</a> if you want a map on your website. You can configure it to show a wide range of (satellite) layers.
+Editing functionality is a littlebit more complex. With Potlatch being Open Source it should be possible to do it but it would require a lot of work.</p>
+<p>Maybe you can add a littlebit more information about what you are trying to do.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/19856/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Feb '13, 09:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0fc93eab65a9b078d251e34774c3f0b5?s=32&amp;d=identicon&amp;r=g" alt="schnitzelinmypocket's gravatar image" />
+    <p><a href="/users/4840/schnitzelinmypocket">schnitzelinm...</a><br/>
+    <span class="score" title="121 reputation points">121</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="schnitzelinmypocket has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-19856">
+    
+        <a name="20020"></a>
+        <div class="comment" id="comment-20020">
+            <div id="post-20020-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you very much for your reply</p></div>
+            <div class="comment-info" id="comment-20020-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '13, 15:42)</span>
+                <a class="comment-user userinfo" href="/users/5609/francesco">Francesco</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-19856" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-19856-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/19853/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='eUJ4IHn0UNgwmexVumoPBo4wZ3Kv9WbF' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/19853/editing-capabilities-and-satellite-as-background?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/19853/editing-capabilities-and-satellite-as-background?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/editing/"
+            class="tag-link-editing"
+            title="see questions tagged'editing'using tags"
+            rel="tag">editing</a> <span class="tag-number">&#215;352</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 12, 2013, 9:42 a.m.">12 Feb '13, 09:42</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,900 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 19, 2013, 8:17 a.m.">19 Feb '13, 08:17</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/60/what-is-the-difference-between-live-and-with-save-mode-in-map-edit-with-potlatch">What is the difference between live and with save mode in map edit (with Potlatch)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don&#39;t show up on the map</a>
+        </p>
+        
+        <p>
+            <a href="/questions/216/what-should-i-do-about-vandalism">What should I do about vandalism?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/231/how-can-i-edit-all-ways-with-certain-tag-in-an-area">How can I edit all ways with certain tag in an area?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/497/how-can-i-edit-gpx-tracks-in-potlatch-2">How can I edit GPX tracks in Potlatch 2?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/685/how-do-i-addeditremove-presets-in-josm">How do I add/edit/remove Presets in JOSM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/947/cant-see-an-object-in-edit-mode">Can&#39;t see an object in edit mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/954/how-do-i-set-my-home-location">How do I set my home location?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1012/fixing-a-subway-stop">Fixing a subway stop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch">How do I ensure that ways are connected in Potlatch ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

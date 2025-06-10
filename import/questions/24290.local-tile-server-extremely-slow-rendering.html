@@ -1,0 +1,770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Local Tile Server - EXTREMELY slow rendering - OSM Help</title>
+        <meta name="description" content="I have my own tile server on Oracle Linux. My rendering is extremely slow. I rendered an 8x8 Z16 metatile that took 124 minutes to complete. Foreground Renderd put out: renderd[5601]: DEBUG: Got incoming connection, fd 8, number 1 renderd[5601]: DEBUG: Got command RenderPrio fd(8) xml(default), z(16..." />
+        <meta name="keywords" content="tileserver,renderd,postgresql,mapnik,mod_tile" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/24290/local-tile-server-extremely-slow-rendering" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/24290/local-tile-server-extremely-slow-rendering?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='5VGSWBSOG5qbRAdibfFpp1FhufiqtlNt' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/24290/local-tile-server-extremely-slow-rendering">Local Tile Server - EXTREMELY slow rendering</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-24290-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24290/up/" rel="nofollow"> </a>
+<div id="post-24290-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-24290-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24290/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/24290/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have my own tile server on Oracle Linux. My rendering is <strong>extremely</strong> slow. I rendered an 8x8 Z16 metatile that took 124 minutes to complete. Foreground Renderd put out:</p>
+<pre><code>renderd[5601]: DEBUG: Got incoming connection, fd 8, number 1
+renderd[5601]: DEBUG: Got command RenderPrio fd(8) xml(default), z(16), x(17723), y(25170)
+renderd[5601]: DEBUG: Connection 0, fd 8 closed, now 0 left
+renderd[5601]: DEBUG: DONE TILE default 16 17720-17727 25168-25175 in 7474.548 seconds
+debug: Creating and writing a metatile to /var/lib/mod_tile/default/16/0/70/82/53/128.meta
+</code></pre>
+<p>I have some PostgreSQL log statements on the order of 300,000 ms as in:</p>
+<pre><code>2013-07-15 18:31:04 EDT:::1(33790):user@osm_planet:[5610]:LOG:  duration: 340648.541 ms  execute &lt;unnamed&gt;: SELECT ST_AsBinary("way") AS geom,"amenity","ele","landuse","leisure","man_made","military","name","natural","place","point","shop","tourism","waterway" FROM (select way,aeroway,shop,access,amenity,leisure,landuse,man_made,"natural",place,tourism,NULL as ele,name,ref,military,waterway,historic,'no'::text as point
+               from planet_osm_polygon
+               where amenity is not null
+                  or shop in ('supermarket','bakery','clothes','fashion','convenience','doityourself','hairdresser','department_store', 'butcher','car','car_repair','bicycle')
+                  or leisure is not null
+                  or landuse is not null
+                  or tourism is not null
+                  or "natural" is not null
+                  or man_made in ('lighthouse','windmill')
+                  or place='island'
+                  or military='danger_area'
+                  or historic in ('memorial','archaeological_site')
+              ) as text WHERE "way" &amp;&amp; ST_SetSRID('BOX3D(-9202100.961200738 4642173.601817815,-9196597.495164203 4647677.067854352)'::box3d, 900913)
+
+2013-07-15 18:36:25 EDT:::1(33790):user@osm_planet:[5610]:LOG:  duration: 320782.717 ms  execute &lt;unnamed&gt;: SELECT ST_AsBinary("way") AS geom,"name","way_area" FROM (select way,way_area,name
+               from planet_osm_polygon
+               where name is not null
+                 and (waterway is null or waterway != 'riverbank')
+                 and place is null
+               order by way_area desc
+              ) as text WHERE "way" &amp;&amp; ST_SetSRID('BOX3D(-9202100.961200738 4642173.601817815,-9196597.495164203 4647677.067854352)'::box3d, 900913)
+
+2013-07-15 18:41:49 EDT:::1(33790):user@osm_planet:[5610]:LOG:  duration: 324224.378 ms  execute &lt;unnamed&gt;: SELECT ST_AsBinary("way") AS geom FROM (select way,way_area,name,boundary from planet_osm_polygon where boundary='national_park' and building is null) as boundary WHERE "way" &amp;&amp; ST_SetSRID('BOX3D(-9202100.961200738 4642173.601817815,-9196597.495164203 4647677.067854352)'::box3d, 900913)
+</code></pre>
+<p>I am using Mapnik 2.1.0, PostgreSQL 9.2, PostGIS 2. I have a 16GB instance in my company's virtual environment.</p>
+<p>I tried adjusting my postgres.conf settings with pg_tune, but no luck. Something must be really wrong for 1 metatile to take 2 hours to render LOL. Any thoughts at all????</p>
+<p><strong>In Response to Frederik's answer:</strong>
+I think you nailed it. On my sick tile server I ran EXPLAIN and got back: </p>
+<pre><code>Seq Scan on planet_osm_polygon  (cost=0.00..6997002.90 rows=2 width=362)
+   Filter: ((way &amp;&amp; '010300002031BF0D0001000000050000000D28C29E368D61C1DE2E84665FB551410D28C29E368D61C1C8B95744BFBA51419962D8AF868A61C1C8B95744BFBA51419962D8AF868A61C1DE2E84665FB551410D28C29E368D61C1DE2E84665FB55141'::geometry) AND ((ame
+nity IS NOT NULL) OR (shop = ANY ('{supermarket,bakery,clothes,fashion,convenience,doityourself,hairdresser,department_store,butcher,car,car_repair,bicycle}'::text[])) OR (leisure IS NOT NULL) OR (landuse IS NOT NULL) OR (tourism IS NOT
+NULL) OR ("natural" IS NOT NULL) OR (man_made = ANY ('{lighthouse,windmill}'::text[])) OR (place = 'island'::text) OR (military = 'danger_area'::text) OR (historic = ANY ('{memorial,archaeological_site}'::text[]))))
+(2 rows)
+</code></pre>
+<p>On a different tile server that is working better I ran the same query and got back:</p>
+<pre><code> Index Scan using planet_osm_polygon_index on planet_osm_polygon  (cost=0.00..9.44 rows=1 width=1133)
+   Index Cond: (way &amp;&amp; '010300002031BF0D0001000000050000000D28C29E368D61C1DE2E84665FB551410D28C29E368D61C1C8B95744BFBA51419962D8AF868A61C1C8B95744BFBA51419962D8AF868A61C1DE2E84665FB551410D28C29E368D61C1DE2E84665FB55141'::geometry)
+   Filter: ((amenity IS NOT NULL) OR (shop = ANY ('{supermarket,bakery,clothes,fashion,convenience,doityourself,hairdresser,department_store,butcher,car,car_repair,bicycle}'::text[])) OR (leisure IS NOT NULL) OR (landuse IS NOT NULL) OR
+(tourism IS NOT NULL) OR ("natural" IS NOT NULL) OR (man_made = ANY ('{lighthouse,windmill}'::text[])) OR (place = 'island'::text) OR (military = 'danger_area'::text) OR (historic = ANY ('{memorial,archaeological_site}'::text[])))
+(3 rows)
+</code></pre>
+<p>To my untrained eyes, this looks like my indexes are messed up on the slow server? Here is the exact osm2pgsql statement I ran, do you see anything wrong with it? Or do you think something just got arbitrarily messed up during the import and I should just try again?</p>
+<pre><code>time /tiles/osm2pgsql/osm2pgsql-master/osm2pgsql -S /tiles/osm2pgsql/osm2pgsql-master/default.style --flat-nodes /tiles/flat --number-processes 4 --cache-strategy dense --slim -d osm_planet -C 8192 /tiles/planet-1304121/planet-latest.osm.pbf
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tileserver/" class="post-tag tag-link-tileserver"
+                                        title="see questions tagged 'tileserver'" rel="tag">tileserver</a>
+                                
+                                    <a href="/tags/renderd/" class="post-tag tag-link-renderd"
+                                        title="see questions tagged 'renderd'" rel="tag">renderd</a>
+                                
+                                    <a href="/tags/postgresql/" class="post-tag tag-link-postgresql"
+                                        title="see questions tagged 'postgresql'" rel="tag">postgresql</a>
+                                
+                                    <a href="/tags/mapnik/" class="post-tag tag-link-mapnik"
+                                        title="see questions tagged 'mapnik'" rel="tag">mapnik</a>
+                                
+                                    <a href="/tags/mod_tile/" class="post-tag tag-link-mod_tile"
+                                        title="see questions tagged 'mod_tile'" rel="tag">mod_tile</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Jul '13, 17:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fbb15843641ffaf1c2259cc7ebb4735c?s=32&amp;d=identicon&amp;r=g" alt="maw269's gravatar image" />
+    <p><a href="/users/233/maw269">maw269</a><br/>
+    <span class="score" title="115 reputation points">115</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="maw269 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/24290/">
+                edited
+                <strong>16 Jul '13, 19:07</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-24290">
+    
+</div>
+<div id="comment-tools-24290" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24290-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/24290/local-tile-server-extremely-slow-rendering?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/24290/local-tile-server-extremely-slow-rendering?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/24290/local-tile-server-extremely-slow-rendering?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/24290/local-tile-server-extremely-slow-rendering?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="24291"></a>
+                    <div id="answer-container-24291" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24291-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24291/up/" rel="nofollow"> </a>
+<div id="post-24291-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-24291-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24291/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="maw269 has selected this answer as the correct answer"
+        href="/accept_answer/24291/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'd normally say the performance of your virtual disk must be the culprit and it is quite possible to achieve rendering times in excess of one hour for a z7 or z8 tile if your disk is very slow, but a z16 tile - unlikely. I suggest you check whether your geometry indexes have been created correctly, by running one of the above queries past "explain" and see if it uses the index at all.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24291/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Jul '13, 18:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24291">
+    
+        <a name="24294"></a>
+        <div class="comment" id="comment-24294">
+            <div id="post-24294-score" class="comment-score"></div>
+            <div class="comment-text"><p>I put my response in my question. I think you nailed it. Any thoughts?</p></div>
+            <div class="comment-info" id="comment-24294-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '13, 19:09)</span>
+                <a class="comment-user userinfo" href="/users/233/maw269">maw269</a>
+                
+            </div>
+        </div>
+    
+        <a name="24295"></a>
+        <div class="comment" id="comment-24295">
+            <div id="post-24295-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Check whether the index actually exists (start the psql shell and type \d planet_osm_polygon). If the index does not exist: A standard osm2pgsql run will always create these indexes, so either the import was aborted or you accidentally deleted the indexes. Re-create them with "create index planet_osm_polygon_index on planet_osm_polygon using gist(way)". Same for line, road, point. If the index does exist, then for some reason PostgreSQL seems to think it isn't worth using; a simple "analyze" command might fix that (takes a couple hours though).</p></div>
+            <div class="comment-info" id="comment-24295-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '13, 20:13)</span>
+                <a class="comment-user userinfo" href="/users/104/frederik-ramm">Frederik Ramm ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="24296"></a>
+        <div class="comment" id="comment-24296">
+            <div id="post-24296-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Perfect, I did a "\d" from the psql shell, and I am definitely missing the planet_osm_polygon_index. I am currently creating the index with "CREATE INDEX planet_osm_polygon_index ON planet_osm_polygon USING gist (way);"
+I compared a \d to a working tile server I have using PostgreSQL 8.4 (PostGIS 1.5), and noticed my broken 9.2 osm_planet DB also doesn't have the "geometry_columns_pg" constraint nor the "planet_osm_ways_nodes" index. Should I create these also on my broken 9.2 DB?</p></div>
+            <div class="comment-info" id="comment-24296-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '13, 21:05)</span>
+                <a class="comment-user userinfo" href="/users/233/maw269">maw269</a>
+                
+            </div>
+        </div>
+    
+        <a name="24297"></a>
+        <div class="comment" id="comment-24297">
+            <div id="post-24297-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Problem Fixed. Now rendering Z15 8x8 metatiles in around 1 second. Thanks Frederik.</p></div>
+            <div class="comment-info" id="comment-24297-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '13, 22:37)</span>
+                <a class="comment-user userinfo" href="/users/233/maw269">maw269</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24291" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24291-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/24290/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='5VGSWBSOG5qbRAdibfFpp1FhufiqtlNt' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24290/local-tile-server-extremely-slow-rendering?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24290/local-tile-server-extremely-slow-rendering?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mapnik/"
+            class="tag-link-mapnik"
+            title="see questions tagged'mapnik'using tags"
+            rel="tag">mapnik</a> <span class="tag-number">&#215;341</span><br/>
+        
+        <a href="/tags/tileserver/"
+            class="tag-link-tileserver"
+            title="see questions tagged'tileserver'using tags"
+            rel="tag">tileserver</a> <span class="tag-number">&#215;204</span><br/>
+        
+        <a href="/tags/postgresql/"
+            class="tag-link-postgresql"
+            title="see questions tagged'postgresql'using tags"
+            rel="tag">postgresql</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/renderd/"
+            class="tag-link-renderd"
+            title="see questions tagged'renderd'using tags"
+            rel="tag">renderd</a> <span class="tag-number">&#215;105</span><br/>
+        
+        <a href="/tags/mod_tile/"
+            class="tag-link-mod_tile"
+            title="see questions tagged'mod_tile'using tags"
+            rel="tag">mod_tile</a> <span class="tag-number">&#215;80</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 16, 2013, 5:30 p.m.">16 Jul '13, 17:30</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>14,172 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 16, 2013, 10:37 p.m.">16 Jul '13, 22:37</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/68173/build-tile-server-manually-with-postgres-db-on-a-different-server">build tile server manually with Postgres db on a different server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41600/how-to-split-up-osm-8x8-meta-file-into-64-single-tiles">How to split up osm 8x8 meta file into 64 single tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18237/map-not-updating-to-changes-made">map not updating to changes made</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34036/tiles-taking-too-long-to-render-on-my-tile-server">Tiles taking too long to render on my tile server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35950/mapnik-pgraster-plugin-creating-8x8-tiles-with-visible-boundaries">Mapnik PGRaster Plugin creating 8x8 tiles with visible boundaries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37611/renderd-doesnt-update-tiles">Renderd doesn&#39;t update tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20286/mod_tile-build-on-rhel5">mod_tile build on RHEL5</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20159/fail-to-connect-my-tiles-server">Fail to connect my tiles server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22201/how-to-install-renderd-as-a-service">[closed] How to install renderd as a service</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35317/local-tile-server-from-packages-404-when-displaying-tiles">Local Tile Server from Packages: 404 when displaying tiles</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

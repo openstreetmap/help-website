@@ -1,0 +1,783 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>[closed] Guide to building osmand - OSM Help</title>
+        <meta name="description" content="Obviously I&#39;m new to this. After digging through the internet for some time, I&#39;ve found no tutorial on how to get started on using osmandroid. The gitHub repository is full of resources however, there is no real guide on steps that can walk me through. I&#39;ve downloaded the whole github file and I&#39;ve ..." />
+        <meta name="keywords" content="guide,android,explain,beginner,help" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/53754/guide-to-building-osmand" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/53754/guide-to-building-osmand?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='51mvdSfapjXO7VQ9qw4VmPgqna98TpB8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/53754/guide-to-building-osmand">[closed] Guide to building osmand</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-53754-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53754/up/" rel="nofollow"> </a>
+<div id="post-53754-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53754-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53754/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/53754/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Obviously I'm new to this. After digging through the internet for some time, I've found no tutorial on how to get started on using osmandroid. The gitHub repository is full of resources however, there is no real guide on steps that can walk me through. I've downloaded the whole github file and I've managed to get some things working from a video I found in Portuguese, but I'm getting compile errors and it's seriously hard to debug. I'm opening this question so that other users like me looking to join the OSM community can have a step by step guide to:</p>
+<p>i) Adding ALL of the resources off git hub to their proper folder
+ii) Adding these resources as a library and/or dependencies 
+iii) Adding any other OSM resources that are available</p>
+<p>With the objective of new programmers being able to start programming seamlessly with ALL of the osm resources after the guide is complete.</p>
+<p>P.S. Don't waste anyone's time complaining about a newbie guide or question. This will be good for the community and new comers alike.</p>
+<p>Thanks (:</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/guide/" class="post-tag tag-link-guide"
+                                        title="see questions tagged 'guide'" rel="tag">guide</a>
+                                
+                                    <a href="/tags/android/" class="post-tag tag-link-android"
+                                        title="see questions tagged 'android'" rel="tag">android</a>
+                                
+                                    <a href="/tags/explain/" class="post-tag tag-link-explain"
+                                        title="see questions tagged 'explain'" rel="tag">explain</a>
+                                
+                                    <a href="/tags/beginner/" class="post-tag tag-link-beginner"
+                                        title="see questions tagged 'beginner'" rel="tag">beginner</a>
+                                
+                                    <a href="/tags/help/" class="post-tag tag-link-help"
+                                        title="see questions tagged 'help'" rel="tag">help</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Dec '16, 00:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/148a8942010a0a0d831217851dfcf0ec?s=32&amp;d=identicon&amp;r=g" alt="Jeflex's gravatar image" />
+    <p><a href="/users/13131/jeflex">Jeflex</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jeflex has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/53754/">
+                edited
+                <strong>31 Dec '16, 10:28</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad2513d6f8e3d709d576ace900c12fa5?s=32&amp;d=identicon&amp;r=g" alt="SimonPoole's gravatar image" />
+            <p><a href="/users/2053/simonpoole">SimonPoole ♦</a><br/>
+            <span class="score" title="44667 reputation points"><span class="">44.7k</span></span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="326 badges"><span class="silver">&#9679;</span><span class="badgecount">326</span></span><span title="701 badges"><span class="bronze">&#9679;</span><span class="badgecount">701</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-53754">
+    
+        <a name="53765"></a>
+        <div class="comment" id="comment-53765">
+            <div id="post-53765-score" class="comment-score"></div>
+            <div class="comment-text"><p>Disappointing how the osm HELP forum can't fabricate a guide on how to install and use their own software.</p></div>
+            <div class="comment-info" id="comment-53765-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '16, 19:24)</span>
+                <a class="comment-user userinfo" href="/users/13131/jeflex">Jeflex</a>
+                
+            </div>
+        </div>
+    
+        <a name="53766"></a>
+        <div class="comment" id="comment-53766">
+            <div id="post-53766-score" class="comment-score"></div>
+            <div class="comment-text"><p>The OSM Help site and osmdroid are unrelated. If anyone would be creating a step-by-step guide, it would need to be the creators of the osmdroid software.</p>
+
+<p>There seems to be a lot of documentation on the GitHub site related to using osmdroid. Is none of it useful to you?</p></div>
+            <div class="comment-info" id="comment-53766-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '16, 19:34)</span>
+                <a class="comment-user userinfo" href="/users/8189/alester">alester</a>
+                
+            </div>
+        </div>
+    
+        <a name="53767"></a>
+        <div class="comment" id="comment-53767">
+            <div id="post-53767-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I think that you might be misunderstanding something.  "OpenStreetMap" is essentially just a big pile of data.  Lots of people write software that works with it, and OsmAnd is one of those things - it's designed and built entirely independently of the people who look after the OSM servers and data.  Also, the help site here is designed for "questions with answers" like "how do I do X".  Your question here essentially boils down to "OsmAnd's build documentation is crap", which isn't really an answerable question.  </p>
+
+<p>As suggested below you need to explain what you were trying to do, what instructions you followed, and what didn't work.  There's a <a href="https://groups.google.com/forum/#!forum/osmand">Google Group</a> for OsmAnd - you're more likely to get an answer from someone familiar with the software there.</p>
+
+<p>For my part I've not built a version of OsmAnd for about 3 years - I found it quite straightforward at the time, but 3 years is a lifetime in the Android world and lots of things (including the default Android build environment) have changed since then.</p></div>
+            <div class="comment-info" id="comment-53767-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '16, 19:42)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53768"></a>
+        <div class="comment" id="comment-53768">
+            <div id="post-53768-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/8189/alester">@alester</a> Thankyou for aiming to understand (: yes some of it is however it's really outdated, and when you do run into an issue it seems like you go down a rabbit trail for explanation.</p></div>
+            <div class="comment-info" id="comment-53768-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '16, 19:51)</span>
+                <a class="comment-user userinfo" href="/users/13131/jeflex">Jeflex</a>
+                
+            </div>
+        </div>
+    
+        <a name="53769"></a>
+        <div class="comment" id="comment-53769">
+            <div id="post-53769-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Thankyou for replying (: I'll contact the Google group for more assistance, but yes a lot of it is outdated and difficult to follow. Push come to shove I'll take initiative and begin a top to bottom run through because it's long overdue.</p></div>
+            <div class="comment-info" id="comment-53769-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '16, 19:58)</span>
+                <a class="comment-user userinfo" href="/users/13131/jeflex">Jeflex</a>
+                
+            </div>
+        </div>
+    
+        <a name="53770"></a>
+        <div class="comment not_top_scorer" id="comment-53770">
+            <div id="post-53770-score" class="comment-score"></div>
+            <div class="comment-text"><p>In fact I feel so passionately about this issue I'll be using one of my domains for this very topic and other OsmAnd related issues. Will be posting a link to the site once complete(:</p></div>
+            <div class="comment-info" id="comment-53770-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '16, 20:13)</span>
+                <a class="comment-user userinfo" href="/users/13131/jeflex">Jeflex</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53754" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53754-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="question-status" style="margin-bottom:15px">
+            <h3>
+                The question has been closed for the following reason "Not a Question" by
+                <a href="/users/104/frederik-ramm">Frederik Ramm</a>
+                 30 Dec '16, 17:10
+            </h3>
+            </div>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/53754/guide-to-building-osmand?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/53754/guide-to-building-osmand?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/53754/guide-to-building-osmand?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/53754/guide-to-building-osmand?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="53762"></a>
+                    <div id="answer-container-53762" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53762-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53762/up/" rel="nofollow"> </a>
+<div id="post-53762-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53762-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53762/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This Q&amp;A forum is unsuitable for issue tracking. I recommend that you create a wiki page on which you record your findings until now and then other Android developers can chip in.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53762/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Dec '16, 17:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a2b38d937e70ab39d895d17da0dd1ba4?s=32&amp;d=identicon&amp;r=g" alt="Frederik%20Ramm's gravatar image" />
+    <p><a href="/users/104/frederik-ramm">Frederik Ramm ♦</a><br/>
+    <span class="score" title="82494 reputation points"><span class="">82.5k</span></span><span title="92 badges"><span class="badge1">&#9679;</span><span class="badgecount">92</span></span><span title="720 badges"><span class="silver">&#9679;</span><span class="badgecount">720</span></span><span title="1273 badges"><span class="bronze">&#9679;</span><span class="badgecount">1273</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Frederik Ramm has 417 accepted answers">23&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53762">
+    
+        <a name="53763"></a>
+        <div class="comment" id="comment-53763">
+            <div id="post-53763-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't think it's that large of a task. Given the latest osm source, could you recommend me a guide to follow?</p></div>
+            <div class="comment-info" id="comment-53763-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '16, 18:58)</span>
+                <a class="comment-user userinfo" href="/users/13131/jeflex">Jeflex</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53762" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53762-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/53754/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='51mvdSfapjXO7VQ9qw4VmPgqna98TpB8' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53754/guide-to-building-osmand?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53754/guide-to-building-osmand?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/android/"
+            class="tag-link-android"
+            title="see questions tagged'android'using tags"
+            rel="tag">android</a> <span class="tag-number">&#215;181</span><br/>
+        
+        <a href="/tags/help/"
+            class="tag-link-help"
+            title="see questions tagged'help'using tags"
+            rel="tag">help</a> <span class="tag-number">&#215;100</span><br/>
+        
+        <a href="/tags/beginner/"
+            class="tag-link-beginner"
+            title="see questions tagged'beginner'using tags"
+            rel="tag">beginner</a> <span class="tag-number">&#215;32</span><br/>
+        
+        <a href="/tags/guide/"
+            class="tag-link-guide"
+            title="see questions tagged'guide'using tags"
+            rel="tag">guide</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/explain/"
+            class="tag-link-explain"
+            title="see questions tagged'explain'using tags"
+            rel="tag">explain</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 30, 2016, 12:32 a.m.">30 Dec '16, 00:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,768 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 31, 2016, 10:28 a.m.">31 Dec '16, 10:28</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/41148/maps-behind-a-pay-wall-is-this-allowed">maps behind a pay-wall - is this allowed?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/85493/how-can-i-use-osm-in-a-custom-map-app">How can I use OSM in a custom map app?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/308/when-starts-dehelpopenstreetmaporg">[closed] When starts de.help.openstreetmap.org ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/414/can-i-disable-the-notification-that-i-have-a-new-badge">Can I disable the notification that I have a new &#39;badge&#39;?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1034/what-are-the-software-options-for-a-symbian-smartphone">What are the software options for a Symbian smartphone?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1472/failed-to-upload-gps-track">Failed to upload GPS track</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3056/power-user-android-app">Power-user Android app?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1918/the-existing-street-is-incorrectly-split-how-to-split-correctly">the existing street is incorrectly split. How to split correctly?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3137/beginner-in-josm-stuck-at-download">beginner in josm stuck at download</a>
+        </p>
+        
+        <p>
+            <a href="/questions/357/how-can-i-post-my-location-on-facebook-or-other-sites-from-android-while-linking-to-osm">How can I post my location on Facebook or other sites, from Android, while linking to OSM ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

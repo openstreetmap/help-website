@@ -1,0 +1,862 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Get bus stops by given area and relation. - OSM Help</title>
+        <meta name="description" content="Wondering how to write an Overpass query to get only nodes with bus_stops from this query: [out:json][timeout:25]; area[name=&quot;Radom&quot;]-&amp;gt;.searchArea; (   relation[&quot;name&quot;=&quot;8: Os. Wośniki =&amp;gt; Kierzków&quot;](area.searchArea); ); out body; &amp;gt;; out skel qt;  in shortcut get bus stops by given area and r..." />
+        <meta name="keywords" content="bus,stop,relation,overpass" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/75196/get-bus-stops-by-given-area-and-relation" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/75196/get-bus-stops-by-given-area-and-relation?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='m2bP1lleqqEkPwUh3nMpyuMhGDQYkJij' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/75196/get-bus-stops-by-given-area-and-relation">Get bus stops by given area and relation.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-75196-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/75196/up/" rel="nofollow"> </a>
+<div id="post-75196-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-75196-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/75196/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/75196/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Wondering how to write an Overpass query to get only nodes with bus_stops from this query:</p>
+<pre><code>[out:json][timeout:25];
+area[name="Radom"]-&gt;.searchArea;
+( 
+  relation["name"="8: Os. Wośniki =&gt; Kierzków"](area.searchArea);
+);
+out body;
+&gt;;
+out skel qt;
+</code></pre>
+<p>in shortcut get bus stops by given area and relation.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bus/" class="post-tag tag-link-bus"
+                                        title="see questions tagged 'bus'" rel="tag">bus</a>
+                                
+                                    <a href="/tags/stop/" class="post-tag tag-link-stop"
+                                        title="see questions tagged 'stop'" rel="tag">stop</a>
+                                
+                                    <a href="/tags/relation/" class="post-tag tag-link-relation"
+                                        title="see questions tagged 'relation'" rel="tag">relation</a>
+                                
+                                    <a href="/tags/overpass/" class="post-tag tag-link-overpass"
+                                        title="see questions tagged 'overpass'" rel="tag">overpass</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Jun '20, 09:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/20a6e9808fa4fa75b537e684bb8a9030?s=32&amp;d=identicon&amp;r=g" alt="macik1423's gravatar image" />
+    <p><a href="/users/18512/macik1423">macik1423</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="macik1423 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/75196/">
+                edited
+                <strong>08 Jun '20, 10:14</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-75196">
+    
+        <a name="75201"></a>
+        <div class="comment" id="comment-75201">
+            <div id="post-75201-score" class="comment-score"></div>
+            <div class="comment-text"><p>Don't know much about Overpass QL, but if the relation is according to PTv2 it <a href="https://wiki.openstreetmap.org/wiki/Tag:route%3Dbus">should have</a> a role of <code>platform</code>, <code>platform_exit_only</code> or <code>platform_entry_only</code>. In the more traditional tagging they would have no role and you would have to look for nodes nodes in the relation that have the <code>highway=bus_stop</code> tag.</p></div>
+            <div class="comment-info" id="comment-75201-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jun '20, 13:29)</span>
+                <a class="comment-user userinfo" href="/users/4426/insertuser">InsertUser</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-75196" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-75196-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/75196/get-bus-stops-by-given-area-and-relation?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/75196/get-bus-stops-by-given-area-and-relation?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/75196/get-bus-stops-by-given-area-and-relation?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/75196/get-bus-stops-by-given-area-and-relation?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="75247"></a>
+                    <div id="answer-container-75247" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-75247-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/75247/up/" rel="nofollow"> </a>
+<div id="post-75247-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-75247-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/75247/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="macik1423 has selected this answer as the correct answer"
+        href="/accept_answer/75247/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OK. We should get only the nodes belonging to the relation. I think it should be better like this :</p>
+<pre><code>[out:json][timeout:25];
+area[name="Radom"]-&gt;.searchArea;
+
+relation["name"="8: Os. Wośniki =&gt; Kierzków"](area.searchArea);
+node(r)[highway=bus_stop];
+out body qt;
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/75247/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jun '20, 19:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a588fbc312ece948db9faa4cc02b40de?s=32&amp;d=identicon&amp;r=g" alt="zorglubu's gravatar image" />
+    <p><a href="/users/14264/zorglubu">zorglubu</a><br/>
+    <span class="score" title="324 reputation points">324</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="zorglubu has 3 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-75247">
+    
+        <a name="75257"></a>
+        <div class="comment" id="comment-75257">
+            <div id="post-75257-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks a lot! This is what I have been looking for. :D</p></div>
+            <div class="comment-info" id="comment-75257-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '20, 21:29)</span>
+                <a class="comment-user userinfo" href="/users/18512/macik1423">macik1423</a>
+                
+            </div>
+        </div>
+    
+        <a name="77904"></a>
+        <div class="comment" id="comment-77904">
+            <div id="post-77904-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have another question, is it possible to get order of nodes in data as same as relation in map? For example in this query</p>
+
+<p><code>[out:json][timeout:25];
+area[name="Radom"]-&gt;.searchArea;
+(
+relation(5347191)(area.searchArea);
+node(r)[highway=bus_stop];
+);
+out geom;</code></p>
+
+<p>order is random, not fit to relation on map.</p></div>
+            <div class="comment-info" id="comment-77904-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '20, 11:03)</span>
+                <a class="comment-user userinfo" href="/users/18512/macik1423">macik1423</a>
+                
+            </div>
+        </div>
+    
+        <a name="77905"></a>
+        <div class="comment" id="comment-77905">
+            <div id="post-77905-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I am not sure, but I think that it is not possible directly with overpass. In my mind, the order is the one of the BDD.
+I am interested if somebody else has a better answer :-)</p>
+
+<p>I have checked this request :
+[out:json][timeout:25];
+relation(5347191);
+out meta;</p>
+
+<p>The order seems to be the one shown in JOSM. Then you will need a post processing treatment.</p></div>
+            <div class="comment-info" id="comment-77905-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '20, 11:27)</span>
+                <a class="comment-user userinfo" href="/users/14264/zorglubu">zorglubu</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-75247" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-75247-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="75209"></a>
+                    <div id="answer-container-75209" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-75209-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/75209/up/" rel="nofollow"> </a>
+<div id="post-75209-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-75209-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/75209/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hello,
+Could you try :</p>
+<pre><code>[out:json][timeout:25];
+area[name="Radom"]-&gt;.searchArea;
+
+relation["name"="8: Os. Wośniki =&gt; Kierzków"](area.searchArea);
+
+&gt; -&gt; .a;
+node.a[highway=bus_stop];
+
+out body qt;
+</code></pre>
+<p>This should extract the elements of the relation, and then only the nodes with the good tag.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/75209/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Jun '20, 17:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a588fbc312ece948db9faa4cc02b40de?s=32&amp;d=identicon&amp;r=g" alt="zorglubu's gravatar image" />
+    <p><a href="/users/14264/zorglubu">zorglubu</a><br/>
+    <span class="score" title="324 reputation points">324</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="zorglubu has 3 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-75209">
+    
+        <a name="75235"></a>
+        <div class="comment" id="comment-75235">
+            <div id="post-75235-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for respond! It's not quite what I expect. Query returns all bus stops (relation "8: Os. Wośniki =&gt; Kierzków" and reverse relation "8: Kierzków =&gt; Os. Wośniki"), I wanna bus stops from one direction.</p></div>
+            <div class="comment-info" id="comment-75235-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '20, 10:14)</span>
+                <a class="comment-user userinfo" href="/users/18512/macik1423">macik1423</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-75209" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-75209-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/75196/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='m2bP1lleqqEkPwUh3nMpyuMhGDQYkJij' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/75196/get-bus-stops-by-given-area-and-relation?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/75196/get-bus-stops-by-given-area-and-relation?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/overpass/"
+            class="tag-link-overpass"
+            title="see questions tagged'overpass'using tags"
+            rel="tag">overpass</a> <span class="tag-number">&#215;483</span><br/>
+        
+        <a href="/tags/relation/"
+            class="tag-link-relation"
+            title="see questions tagged'relation'using tags"
+            rel="tag">relation</a> <span class="tag-number">&#215;128</span><br/>
+        
+        <a href="/tags/bus/"
+            class="tag-link-bus"
+            title="see questions tagged'bus'using tags"
+            rel="tag">bus</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/stop/"
+            class="tag-link-stop"
+            title="see questions tagged'stop'using tags"
+            rel="tag">stop</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 8, 2020, 9:46 a.m.">08 Jun '20, 09:46</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,796 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 12, 2020, 11:48 a.m.">12 Dec '20, 11:48</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/27291/how-do-you-use-route_relations">How do you use route_relations?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34112/overpassapi-order-bus-stops-by-id-relation">OverpassAPI: order bus stops by id relation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17365/overpass-is-it-possible-to-use-it-as-an-alternative-to-the-api-relation-full-call">Overpass:  Is it possible to use it as an alternative to the API relation /full call?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26213/bus-route-passes-twice-through-a-way-is-it-correct-to-add-it-twice-to-the-relation">Bus route passes twice through a way. Is it correct to add it twice to the relation?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1039/bus-stop-tagging">Bus stop tagging</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33325/bus-stops-by-line-bus">Bus stops by line bus</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13668/bus-stop-description">Bus stop description</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17336/overpass-api-query-question">Overpass API query question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23438/how-to-load-all-nodes-from-relation-via-overpassapi">How to load all Nodes from Relation via OverpassAPI</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57030/validate-points-in-a-path-close-to-a-bus-stop">Validate points in a path close to a bus stop</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

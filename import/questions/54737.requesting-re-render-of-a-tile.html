@@ -1,0 +1,985 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Requesting re-render of a tile - OSM Help</title>
+        <meta name="description" content="Hi, I used to follow the procedure described below (and in my case it was working perfectly): http://wiki.openstreetmap.org/w/images/2/25/Rendering.pdf Recently I noticed that right-click function has been changed and now a new menu appears which consists of six options: &#39;Directions from here&#39; &#39;Dire..." />
+        <meta name="keywords" content="osm.org,rendering,tiles,dirty" />
+        
+        <link rel="canonical" href="https://help.openstreetmap.org/questions/54737/requesting-re-render-of-a-tile" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54737/requesting-re-render-of-a-tile?type=rss">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/themes/base/jquery-ui.min.css" integrity="sha512-Lzjd1ELD6YCIwIU5uaJldvbibV5Fi7HThNZjrwJHALBJRT6q2a6ndgi8TNgcKcUqGsH6bpT7xyTEi8qRzN1ASg==" crossorigin="anonymous" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js" integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js" integrity="sha512-leN1LJ2B5s9cBINeKL5bbT3cQvOebXsezoYGyuMq9oaytpFJgJ1uBOU86lJZObKTFLbMHqP0zFXR/1N6Nnlskw==" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var i18nLang = 'en';
+            var appUrl = 'https://help.openstreetmap.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="OSM Help Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/osm_help_logo_6.png" title="back to home page" alt="OpenStreetMap Help Forum logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        <!-- <a id="nav_ask" href="/questions/ask/" class="special">ask a question</a> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <iframe src="https://duckduckgo.com/search.html?site=help.openstreetmap.org&prefill=Search questions using DuckDuckGo&focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+    <!--
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='jwRZaWZRNks5KtX3acVKXPjkSvKZo1RO' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+    -->
+	</div>
+
+	
+  <div id="announcement">
+      <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54737/requesting-re-render-of-a-tile">Requesting re-render of a tile</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54737-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54737/up/" rel="nofollow"> </a>
+<div id="post-54737-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-54737-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54737/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54737/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+I used to follow the procedure described below (and in my case it was working perfectly):</p>
+<p><a href="http://wiki.openstreetmap.org/w/images/2/25/Rendering.pdf">http://wiki.openstreetmap.org/w/images/2/25/Rendering.pdf</a></p>
+<p>Recently I noticed that right-click function has been changed and now a new menu appears which consists of six options:
+'Directions from here'
+'Directions to here'
+'Add a note here'
+'Show address'
+'Query features'
+'Centre map here'</p>
+<p>The question is how do we check a tile's name now.</p>
+<p>TIA
+Michal</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/osm.org/" class="post-tag tag-link-osm.org"
+                                        title="see questions tagged 'osm.org'" rel="tag">osm.org</a>
+                                
+                                    <a href="/tags/rendering/" class="post-tag tag-link-rendering"
+                                        title="see questions tagged 'rendering'" rel="tag">rendering</a>
+                                
+                                    <a href="/tags/tiles/" class="post-tag tag-link-tiles"
+                                        title="see questions tagged 'tiles'" rel="tag">tiles</a>
+                                
+                                    <a href="/tags/dirty/" class="post-tag tag-link-dirty"
+                                        title="see questions tagged 'dirty'" rel="tag">dirty</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Feb '17, 22:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cde755e8ab6fcc1c37864170c84f98db?s=32&amp;d=identicon&amp;r=g" alt="michau's gravatar image" />
+    <p><a href="/users/13370/michau">michau</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="michau has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54737/">
+                edited
+                <strong>19 Feb '17, 23:34</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+            <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+            <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54737">
+    
+        <a name="54738"></a>
+        <div class="comment" id="comment-54738">
+            <div id="post-54738-score" class="comment-score">3</div>
+            <div class="comment-text"><p>For info, there's discussion on this right now at github at <a href="https://github.com/openstreetmap/openstreetmap-website/issues/1446">https://github.com/openstreetmap/openstreetmap-website/issues/1446</a> .</p></div>
+            <div class="comment-info" id="comment-54738-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Feb '17, 23:12)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="54808"></a>
+        <div class="comment" id="comment-54808">
+            <div id="post-54808-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, that discussion has now been closed, with claims of "canvassing", and the developer is refusing to discuss how to allow users to view individual tiles.</p></div>
+            <div class="comment-info" id="comment-54808-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '17, 01:55)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+        <a name="54834"></a>
+        <div class="comment" id="comment-54834">
+            <div id="post-54834-score" class="comment-score">3</div>
+            <div class="comment-text"><p>And that discussion has spilled over into the dev mailing list: <a href="https://lists.openstreetmap.org/pipermail/dev/2017-February/029713.html">https://lists.openstreetmap.org/pipermail/dev/2017-February/029713.html</a></p></div>
+            <div class="comment-info" id="comment-54834-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '17, 13:34)</span>
+                <a class="comment-user userinfo" href="/users/10142/joost-schouppe">joost schouppe</a>
+                
+            </div>
+        </div>
+    
+        <a name="54841"></a>
+        <div class="comment" id="comment-54841">
+            <div id="post-54841-score" class="comment-score"></div>
+            <div class="comment-text"><p>After digging through many pages of that discussion - <a href="https://lists.openstreetmap.org/pipermail/dev/2017-February/029713.html">https://lists.openstreetmap.org/pipermail/dev/2017-February/029713.html</a> - I found a satisfying tool with right-click functionality I was looking for:
+<a href="http://www.sammyshp.de/fsmap/">http://www.sammyshp.de/fsmap/</a>
+Cheers,
+Michal</p></div>
+            <div class="comment-info" id="comment-54841-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '17, 20:34)</span>
+                <a class="comment-user userinfo" href="/users/13370/michau">michau</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54737" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54737-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54737/requesting-re-render-of-a-tile?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54737/requesting-re-render-of-a-tile?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54737/requesting-re-render-of-a-tile?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54737/requesting-re-render-of-a-tile?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54739"></a>
+                    <div id="answer-container-54739" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54739-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54739/up/" rel="nofollow"> </a>
+<div id="post-54739-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-54739-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54739/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As  <em>workaround</em> you can try it over there: <a href="https://mc.bbbike.org/mc/?num=1&amp;mt0=mapnik">https://mc.bbbike.org/mc/?num=1&amp;mt0=mapnik</a> (it uses tiles from openstreetmap.org).</p>
+<p><em>In general</em>, how-to get the browser's original right-click context menu:</p>
+<ul>
+<li>do a right click while pressing shift </li>
+<li>or hit ESC after the right click  </li>
+<li>or do a double right click </li>
+<li>or tell your browser to not respect scripts hijacking the right click menu (for Firefox:   <code>dom.event.contextmenu.enabled</code> see <a href="http://kb.mozillazine.org/About:config_entries">http://kb.mozillazine.org/About:config_entries</a> )</li>
+</ul>
+<p>However, we do not get the clicked tile's (image) address via that original context menu... due to the way leaflet is programmed.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54739/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Feb '17, 23:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66f0dc05b44574e3894be07b0b37cf37?s=32&amp;d=identicon&amp;r=g" alt="aseerel4c26's gravatar image" />
+    <p><a href="/users/5179/aseerel4c26">aseerel4c26 ♦</a><br/>
+    <span class="score" title="32615 reputation points"><span class="">32.6k</span></span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="248 badges"><span class="silver">&#9679;</span><span class="badgecount">248</span></span><span title="554 badges"><span class="bronze">&#9679;</span><span class="badgecount">554</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aseerel4c26 has 169 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54739/">
+                edited
+                <strong>28 Jul '18, 09:55</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54739">
+    
+        <a name="54805"></a>
+        <div class="comment" id="comment-54805">
+            <div id="post-54805-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Maybe I'm missing something, but I've not been able to get the <code>view image</code> option from the right click menu on the main osm website for a month or two now. I had gotten the right click menu w/o issues until a few days ago, and can get it still by holding the shift key, but the <code>view image</code> option is missing. I've tried firefox, and chrome, both on Linux. I am able to get it on leaflet based maps.</p>
+
+<p>Any idea what's going on?</p></div>
+            <div class="comment-info" id="comment-54805-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '17, 22:22)</span>
+                <a class="comment-user userinfo" href="/users/9027/keithonearth">keithonearth</a>
+                
+            </div>
+        </div>
+    
+        <a name="54806"></a>
+        <div class="comment" id="comment-54806">
+            <div id="post-54806-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://help.openstreetmap.org/users/9027/keithonearth">@keithonearth</a>: I agree, updated my answer. I guess it is due to the way  leaflet shows the map tiles.</p></div>
+            <div class="comment-info" id="comment-54806-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '17, 22:51)</span>
+                <a class="comment-user userinfo" href="/users/5179/aseerel4c26">aseerel4c26 ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="54807"></a>
+        <div class="comment" id="comment-54807">
+            <div id="post-54807-score" class="comment-score">3</div>
+            <div class="comment-text"><p>It was actually a change at the Leaflet level (which is what OSM uses to show tiles).  <a href="https://lists.openstreetmap.org/pipermail/dev/2017-February/029720.html">https://lists.openstreetmap.org/pipermail/dev/2017-February/029720.html</a> has the details.</p></div>
+            <div class="comment-info" id="comment-54807-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '17, 23:35)</span>
+                <a class="comment-user userinfo" href="/users/387/someoneelse">SomeoneElse ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54739" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54739-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="63118"></a>
+                    <div id="answer-container-63118" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-63118-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63118/up/" rel="nofollow"> </a>
+<div id="post-63118-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-63118-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63118/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As said at <a href="https://help.openstreetmap.org/questions/60223">https://help.openstreetmap.org/questions/60223</a>, another way to get the tile URL is, with Firefox, to access the page information (which may be in the browser Tools menu or in the non-Javascript right-click menu, which you can open with Ctrl-Shift-right click).</p>
+<p>The page information contains a Media tab with the URL of all images. It's not very handy, but it's feasible.</p>
+<p>Of course it would be more sensible to have a "Request rendering" option somewhere.</p>
+<p>However the best way may be to use the latest version of JOSM, where you may see the tile status or force rendering (right-click on the map).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/63118/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Apr '18, 03:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/38e38455e803e897459edc9755a2c5e7?s=32&amp;d=identicon&amp;r=g" alt="thbz's gravatar image" />
+    <p><a href="/users/10963/thbz">thbz</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="thbz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/63118/">
+                edited
+                <strong>25 Apr '18, 05:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-63118">
+    
+</div>
+<div id="comment-tools-63118" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63118-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="82337"></a>
+                    <div id="answer-container-82337" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-82337-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/82337/up/" rel="nofollow"> </a>
+<div id="post-82337-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-82337-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/82337/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In Google Chrome, open the developers tools (f12) and click on the Network tab, then reload the page (f5). You can then see a list of PNGs, and you can get the URL for the ones you want.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/82337/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Oct '21, 08:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5662d1262516ccbd70249e7aeaf58901?s=32&amp;d=identicon&amp;r=g" alt="dan000's gravatar image" />
+    <p><a href="/users/20806/dan000">dan000</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dan000 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-82337">
+    
+</div>
+<div id="comment-tools-82337" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-82337-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54737/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='jwRZaWZRNks5KtX3acVKXPjkSvKZo1RO' />
+            <div style="clear:both">
+            </div>
+
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54737/requesting-re-render-of-a-tile?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54737/requesting-re-render-of-a-tile?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rendering/"
+            class="tag-link-rendering"
+            title="see questions tagged'rendering'using tags"
+            rel="tag">rendering</a> <span class="tag-number">&#215;440</span><br/>
+        
+        <a href="/tags/tiles/"
+            class="tag-link-tiles"
+            title="see questions tagged'tiles'using tags"
+            rel="tag">tiles</a> <span class="tag-number">&#215;287</span><br/>
+        
+        <a href="/tags/osm.org/"
+            class="tag-link-osm.org"
+            title="see questions tagged'osm.org'using tags"
+            rel="tag">osm.org</a> <span class="tag-number">&#215;89</span><br/>
+        
+        <a href="/tags/dirty/"
+            class="tag-link-dirty"
+            title="see questions tagged'dirty'using tags"
+            rel="tag">dirty</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 19, 2017, 10:57 p.m.">19 Feb '17, 22:57</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,853 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 24, 2021, 8:03 a.m.">24 Oct '21, 08:03</strong>
+    </p>
+</div>
+
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/53598/are-there-any-statistics-about-how-often-manually-dirtying-of-tiles-occurs-per-day">Are there any statistics about how often manually dirtying of tiles occurs per day?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13250/what-is-the-correct-projection-i-should-use-with-mapnik">What is the correct projection I should use with Mapnik?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/840/problem-with-map-scale-when-generating-maps-with-osmarender">Problem with map scale when generating maps with Osmarender</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5274/uk-topographic-maps">UK topographic maps</a>
+        </p>
+        
+        <p>
+            <a href="/questions/242/how-to-download-rendered-osm-maps">How to download rendered OSM maps?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8641/what-is-the-best-way-to-render-tiles-and-to-bind-them-to-my-osm-server">[closed] What is the best way to render tiles and to bind them to my osm server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3909/tile-rendering-queue-limit">Tile rendering queue limit?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2562/trinidad-coastline-not-rerendering">Trinidad coastline not rerendering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4343/dirty-tiles">dirty tiles</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8395/how-to-set-zoom-levels-while-generating-tiles">How to set zoom levels while generating tiles?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            
+            <div id="ground">
+                
+                    <p>NOTICE: <a href="https://community.openstreetmap.org/t/archiving-of-help-openstreetmap-org-1st-march-2024/108483">help.openstreetmap.org is no longer in use from 1st March 2024</a>. Please use the <a href="https://community.openstreetmap.org/">OpenStreetMap Community Forum</a></p>
+                
+            </div>
+            
+        
+        
+
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->
